@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLOSX — WoW TRENES</title>
+  <meta name="description" content="WoW TRENES — Real-time train schedules across Europe. Spain, France, Germany, Switzerland, Italy, Belgium, Portugal, Austria and more." />
+  <meta property="og:title" content="WoW TRENES by GLOSX" />
+  <meta property="og:description" content="Real-time European train departures in your pocket." />
+  <meta property="og:url" content="https://glosx.app" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚄</text></svg>" />
+
+  <!-- Travelpayouts Drive -->
+  <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
+    (function () {
+      var script = document.createElement("script");
+      script.async = 1;
+      script.src = 'https://emrldtp.com/NTM0NTcw.js?t=534570';
+      document.head.appendChild(script);
+    })();
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0a0f;
+      --surface:  #13131a;
+      --border:   rgba(255,255,255,0.08);
+      --primary:  #7c3aed;
+      --primary2: #a78bfa;
+      --text:     #f0f0f5;
+      --muted:    #8888aa;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--primary2), #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 14px;
+      font-weight: 500; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 30%,
+        rgba(124,58,237,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 100px; padding: 6px 16px; margin-bottom: 32px;
+      font-size: 13px; font-weight: 600; color: var(--primary2);
+    }
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 88px);
+      font-weight: 800; letter-spacing: -2px; line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--primary2) 0%, #fff 60%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--muted); max-width: 560px; line-height: 1.6;
+      margin-bottom: 48px;
+    }
+    .hero-cta {
+      display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    }
+    .btn-primary {
+      background: var(--primary); color: #fff;
+      padding: 16px 32px; border-radius: 100px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 40px rgba(124,58,237,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(124,58,237,0.6);
+    }
+    .btn-secondary {
+      background: var(--surface); color: var(--text);
+      padding: 16px 32px; border-radius: 100px;
+      font-size: 16px; font-weight: 600; text-decoration: none;
+      border: 1px solid var(--border); transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); }
+
+    /* ── Countries strip ── */
+    .countries {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      justify-content: center; margin-top: 64px;
+    }
+    .country-chip {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 100px; padding: 8px 16px;
+      font-size: 13px; font-weight: 500; color: var(--muted);
+    }
+
+    /* ── Features ── */
+    .section {
+      padding: 100px 24px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 2px;
+      color: var(--primary2); text-transform: uppercase; margin-bottom: 16px;
+    }
+    .section h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800; letter-spacing: -1.5px; margin-bottom: 16px;
+    }
+    .section p.lead {
+      font-size: 18px; color: var(--muted); max-width: 560px; line-height: 1.6;
+      margin-bottom: 64px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover {
+      border-color: rgba(124,58,237,0.3);
+      transform: translateY(-4px);
+    }
+    .feature-icon {
+      font-size: 36px; margin-bottom: 20px; display: block;
+    }
+    .feature-card h3 {
+      font-size: 18px; font-weight: 700; margin-bottom: 10px;
+    }
+    .feature-card p {
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+
+    /* ── Stats ── */
+    .stats {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 24px;
+    }
+    .stats-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px; text-align: center;
+    }
+    .stat-number {
+      font-size: 48px; font-weight: 800; letter-spacing: -2px;
+      background: linear-gradient(135deg, var(--primary2), #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .stat-label { font-size: 14px; color: var(--muted); margin-top: 4px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    footer p { font-size: 13px; color: var(--muted); }
+    footer a { color: var(--primary2); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <span class="nav-logo">GLOSX</span>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#countries">Countries</a>
+      <a href="mailto:jasinskysebastian@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">🚄 WoW TRENES — Now available</div>
+    <h1>Train travel,<br /><span>real-time.</span></h1>
+    <p>
+      Live departures, delays and platforms across 9 European countries.
+      Search, compare and book — all in one app.
+    </p>
+    <div class="hero-cta">
+      <a href="#" class="btn-primary">Download on iOS</a>
+      <a href="#" class="btn-secondary">Get it on Android</a>
+    </div>
+
+    <div class="countries" id="countries">
+      <span class="country-chip">🇪🇸 España</span>
+      <span class="country-chip">🇨🇭 Switzerland</span>
+      <span class="country-chip">🇫🇷 France</span>
+      <span class="country-chip">🇩🇪 Germany</span>
+      <span class="country-chip">🇮🇹 Italy</span>
+      <span class="country-chip">🇧🇪 Belgium</span>
+      <span class="country-chip">🇳🇱 Netherlands</span>
+      <span class="country-chip">🇦🇹 Austria</span>
+      <span class="country-chip">🇵🇹 Portugal</span>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div>
+        <div class="stat-number">9</div>
+        <div class="stat-label">Countries covered</div>
+      </div>
+      <div>
+        <div class="stat-number">500k+</div>
+        <div class="stat-label">Train schedules</div>
+      </div>
+      <div>
+        <div class="stat-number">8</div>
+        <div class="stat-label">Real-time APIs</div>
+      </div>
+      <div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Free to use</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <p class="section-label">Why WoW TRENES</p>
+    <h2>Everything you need<br />on the platform.</h2>
+    <p class="lead">Built for travelers who move fast across Europe. No subscriptions, no paywalls.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <h3>Real-time departures</h3>
+        <p>Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🌍</span>
+        <h3>9 countries, one app</h3>
+        <p>Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal in a single interface.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔍</span>
+        <h3>Journey search</h3>
+        <p>Find trains between any two stations across Europe with real prices and schedules.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📍</span>
+        <h3>Location-aware</h3>
+        <p>Automatically detects your nearest station and shows upcoming departures without any input.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔔</span>
+        <h3>Smart alerts</h3>
+        <p>Get notified when your train is approaching or when there are delays on your route.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🌙</span>
+        <h3>Works offline</h3>
+        <p>Full timetable access even without internet. GTFS data stored locally on your device.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 GLOSX — <a href="mailto:jasinskysebastian@gmail.com">jasinskysebastian@gmail.com</a></p>
+    <p style="margin-top: 8px;">
+      <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/terms">Terms of Use</a>
+    </p>
+  </footer>
+
+</body>
+</html>
