@@ -16,6 +16,13 @@
   <meta name="twitter:title" content="WoW TRENES — Real-time European train travel" />
   <meta name="twitter:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
   <link rel="canonical" href="https://glosx.app" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app?lang=es" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app?lang=fr" />
+  <link rel="alternate" hreflang="de" href="https://glosx.app?lang=de" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app?lang=it" />
+  <link rel="alternate" hreflang="pt" href="https://glosx.app?lang=pt" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚄</text></svg>" />
 
   <!-- Travelpayouts Drive -->
@@ -90,6 +97,35 @@
       font-weight: 500; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--text); }
+
+    /* ── Language selector ── */
+    .lang-wrapper { position: relative; }
+    .lang-btn {
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 100px;
+      padding: 6px 12px; font-size: 13px; font-weight: 600;
+      cursor: pointer; font-family: inherit;
+      display: flex; align-items: center; gap: 6px;
+      transition: border-color 0.2s;
+    }
+    .lang-btn:hover { border-color: rgba(255,255,255,0.2); }
+    .lang-dropdown {
+      position: absolute; top: calc(100% + 8px); right: 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 6px;
+      min-width: 160px; z-index: 200;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      display: none;
+    }
+    .lang-dropdown.open { display: block; }
+    .lang-option {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 10px; border-radius: 8px;
+      font-size: 13px; color: var(--text);
+      cursor: pointer; transition: background 0.15s;
+    }
+    .lang-option:hover { background: rgba(124,58,237,0.15); }
+    .lang-option.active { background: rgba(124,58,237,0.25); color: var(--primary2); }
 
     /* ── Hero ── */
     .hero {
@@ -414,36 +450,51 @@
   <nav>
     <a href="/" class="nav-logo">GLOSX</a>
     <div class="nav-links">
-      <a href="#scenic">Scenic Trains</a>
-      <a href="#partners">Travel Essentials</a>
-      <a href="#features">Features</a>
-      <a href="#download">Download</a>
+      <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
+      <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <div class="lang-wrapper">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
+          <span id="langFlag">🇬🇧</span>
+          <span id="langCode">EN</span>
+          <span style="font-size:10px;opacity:0.6">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option" data-lang="en" onclick="setLang('en')"><span>🇬🇧</span><span>English</span></div>
+          <div class="lang-option" data-lang="es" onclick="setLang('es')"><span>🇪🇸</span><span>Español</span></div>
+          <div class="lang-option" data-lang="fr" onclick="setLang('fr')"><span>🇫🇷</span><span>Français</span></div>
+          <div class="lang-option" data-lang="de" onclick="setLang('de')"><span>🇩🇪</span><span>Deutsch</span></div>
+          <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>🇮🇹</span><span>Italiano</span></div>
+          <div class="lang-option" data-lang="pt" onclick="setLang('pt')"><span>🇵🇹</span><span>Português</span></div>
+        </div>
+      </div>
     </div>
   </nav>
 
   <!-- Hero with functional search -->
   <section class="hero">
-    <div class="hero-badge">🚄 WoW TRENES — Real-time across 9 countries</div>
-    <h1>Train travel,<br /><span>real-time.</span></h1>
-    <p>
+    <div class="hero-badge" data-i18n="hero_badge">🚄 WoW TRENES — Real-time across 9 countries</div>
+    <h1><span data-i18n="hero_title1">Train travel,</span><br /><span data-i18n="hero_title2">real-time.</span></h1>
+    <p data-i18n="hero_subtitle">
       Live departures, scenic routes and travel essentials across Europe.
       Search, compare and book — all in one place.
     </p>
 
     <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
       <div class="search-field">
-        <label for="origin">From</label>
+        <label for="origin" data-i18n="search_from">From</label>
         <input type="text" id="origin" placeholder="Madrid" required autocomplete="off" />
       </div>
       <div class="search-field">
-        <label for="dest">To</label>
+        <label for="dest" data-i18n="search_to">To</label>
         <input type="text" id="dest" placeholder="Barcelona" required autocomplete="off" />
       </div>
       <div class="search-field">
-        <label for="date">Date</label>
+        <label for="date" data-i18n="search_date">Date</label>
         <input type="date" id="date" required />
       </div>
-      <button type="submit" class="search-btn">Search →</button>
+      <button type="submit" class="search-btn" data-i18n="search_btn">Search →</button>
     </form>
 
     <div class="countries" id="countries">
@@ -464,28 +515,28 @@
     <div class="stats-inner">
       <div>
         <div class="stat-number">9</div>
-        <div class="stat-label">Countries covered</div>
+        <div class="stat-label" data-i18n="stat_countries">Countries covered</div>
       </div>
       <div>
         <div class="stat-number">500k+</div>
-        <div class="stat-label">Train schedules</div>
+        <div class="stat-label" data-i18n="stat_schedules">Train schedules</div>
       </div>
       <div>
         <div class="stat-number">13</div>
-        <div class="stat-label">Scenic routes</div>
+        <div class="stat-label" data-i18n="stat_scenic">Scenic routes</div>
       </div>
       <div>
         <div class="stat-number">8</div>
-        <div class="stat-label">Real-time APIs</div>
+        <div class="stat-label" data-i18n="stat_apis">Real-time APIs</div>
       </div>
     </div>
   </div>
 
   <!-- Scenic trains -->
   <section class="section" id="scenic">
-    <p class="section-label">Iconic European routes</p>
-    <h2>Scenic train<br />experiences.</h2>
-    <p class="lead">The most spectacular train journeys in Europe — book directly from here.</p>
+    <p class="section-label" data-i18n="scenic_label">Iconic European routes</p>
+    <h2><span data-i18n="scenic_title1">Scenic train</span><br /><span data-i18n="scenic_title2">experiences.</span></h2>
+    <p class="lead" data-i18n="scenic_lead">The most spectacular train journeys in Europe — book directly from here.</p>
 
     <div class="scenic-grid" id="scenicGrid">
       <!-- Filled by JS -->
@@ -494,115 +545,115 @@
 
   <!-- Partner products -->
   <section class="section" id="partners">
-    <p class="section-label">Everything for your trip</p>
-    <h2>Travel essentials<br />for Europe.</h2>
-    <p class="lead">Curated services that complement your train journey.</p>
+    <p class="section-label" data-i18n="partners_label">Everything for your trip</p>
+    <h2><span data-i18n="partners_title1">Travel essentials</span><br /><span data-i18n="partners_title2">for Europe.</span></h2>
+    <p class="lead" data-i18n="partners_lead">Curated services that complement your train journey.</p>
 
     <div class="partners-grid">
       <a href="#" class="partner-card" onclick="goPartner('klook', event)">
         <div class="partner-icon-badge" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);">🎫</div>
-        <div class="partner-title">City Passes</div>
-        <div class="partner-desc">Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.</div>
-        <div class="partner-cta">Browse passes →</div>
+        <div class="partner-title" data-i18n="p_klook_title">City Passes</div>
+        <div class="partner-desc" data-i18n="p_klook_desc">Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.</div>
+        <div class="partner-cta" data-i18n="p_klook_cta">Browse passes →</div>
       </a>
 
       <a href="#" class="partner-card" onclick="goPartner('kiwitaxi', event)">
         <div class="partner-icon-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🚗</div>
-        <div class="partner-title">Airport Transfers</div>
-        <div class="partner-desc">Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.</div>
-        <div class="partner-cta">Book transfer →</div>
+        <div class="partner-title" data-i18n="p_kiwi_title">Airport Transfers</div>
+        <div class="partner-desc" data-i18n="p_kiwi_desc">Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.</div>
+        <div class="partner-cta" data-i18n="p_kiwi_cta">Book transfer →</div>
       </a>
 
       <a href="#" class="partner-card" onclick="goPartner('yesim', event)">
         <div class="partner-icon-badge" style="background: linear-gradient(135deg, #10b981, #059669);">🌐</div>
-        <div class="partner-title">eSIM Europe</div>
-        <div class="partner-desc">Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.</div>
-        <div class="partner-cta">Activate eSIM →</div>
+        <div class="partner-title" data-i18n="p_yesim_title">eSIM Europe</div>
+        <div class="partner-desc" data-i18n="p_yesim_desc">Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.</div>
+        <div class="partner-cta" data-i18n="p_yesim_cta">Activate eSIM →</div>
       </a>
 
       <a href="#" class="partner-card" onclick="goPartner('tiqets', event)">
         <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ec4899, #be185d);">🎟️</div>
-        <div class="partner-title">Attraction Tickets</div>
-        <div class="partner-desc">Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.</div>
-        <div class="partner-cta">Browse tickets →</div>
+        <div class="partner-title" data-i18n="p_tiqets_title">Attraction Tickets</div>
+        <div class="partner-desc" data-i18n="p_tiqets_desc">Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.</div>
+        <div class="partner-cta" data-i18n="p_tiqets_cta">Browse tickets →</div>
       </a>
 
       <a href="#" class="partner-card" onclick="goPartner('storage', event)">
         <div class="partner-icon-badge" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">🧳</div>
-        <div class="partner-title">Luggage Storage</div>
-        <div class="partner-desc">Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.</div>
-        <div class="partner-cta">Find storage →</div>
+        <div class="partner-title" data-i18n="p_storage_title">Luggage Storage</div>
+        <div class="partner-desc" data-i18n="p_storage_desc">Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.</div>
+        <div class="partner-cta" data-i18n="p_storage_cta">Find storage →</div>
       </a>
 
       <a href="#" class="partner-card" onclick="goPartner('insurance', event)">
         <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">🛡️</div>
-        <div class="partner-title">Travel Insurance</div>
-        <div class="partner-desc">Comprehensive coverage for medical, cancellations and lost luggage. Instant policy via EKTA — trusted by 3M+ travelers.</div>
-        <div class="partner-cta">Get insured →</div>
+        <div class="partner-title" data-i18n="p_ins_title">Travel Insurance</div>
+        <div class="partner-desc" data-i18n="p_ins_desc">Comprehensive coverage for medical, cancellations and lost luggage. Instant policy via EKTA — trusted by 3M+ travelers.</div>
+        <div class="partner-cta" data-i18n="p_ins_cta">Get insured →</div>
       </a>
     </div>
   </section>
 
   <!-- Features -->
   <section class="section" id="features">
-    <p class="section-label">Why WoW TRENES</p>
-    <h2>Built for travelers<br />who move fast.</h2>
-    <p class="lead">No subscriptions, no paywalls. Just real-time data and smart tools.</p>
+    <p class="section-label" data-i18n="features_label">Why WoW TRENES</p>
+    <h2><span data-i18n="features_title1">Built for travelers</span><br /><span data-i18n="features_title2">who move fast.</span></h2>
+    <p class="lead" data-i18n="features_lead">No subscriptions, no paywalls. Just real-time data and smart tools.</p>
 
     <div class="features-grid">
       <div class="feature-card">
         <span class="feature-icon">⚡</span>
-        <h3>Real-time departures</h3>
-        <p>Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.</p>
+        <h3 data-i18n="f1_title">Real-time departures</h3>
+        <p data-i18n="f1_desc">Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🌍</span>
-        <h3>9 countries, one app</h3>
-        <p>Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal in a single interface.</p>
+        <h3 data-i18n="f2_title">9 countries, one app</h3>
+        <p data-i18n="f2_desc">Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal in a single interface.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🔍</span>
-        <h3>Journey search</h3>
-        <p>Find trains between any two stations across Europe with real prices and schedules.</p>
+        <h3 data-i18n="f3_title">Journey search</h3>
+        <p data-i18n="f3_desc">Find trains between any two stations across Europe with real prices and schedules.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">📍</span>
-        <h3>Location-aware</h3>
-        <p>Automatically detects your nearest station and shows upcoming departures without any input.</p>
+        <h3 data-i18n="f4_title">Location-aware</h3>
+        <p data-i18n="f4_desc">Automatically detects your nearest station and shows upcoming departures without any input.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🔔</span>
-        <h3>Smart alerts</h3>
-        <p>Get notified when your train is approaching or when there are delays on your route.</p>
+        <h3 data-i18n="f5_title">Smart alerts</h3>
+        <p data-i18n="f5_desc">Get notified when your train is approaching or when there are delays on your route.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🌙</span>
-        <h3>Works offline</h3>
-        <p>Full timetable access even without internet. GTFS data stored locally on your device.</p>
+        <h3 data-i18n="f6_title">Works offline</h3>
+        <p data-i18n="f6_desc">Full timetable access even without internet. GTFS data stored locally on your device.</p>
       </div>
     </div>
   </section>
 
   <!-- Download CTA -->
   <section class="download" id="download">
-    <h2>Take it on the road.</h2>
-    <p>Download WoW TRENES on your phone for GPS-based station detection, offline schedules and smart alerts.</p>
+    <h2 data-i18n="dl_title">Take it on the road.</h2>
+    <p data-i18n="dl_subtitle">Download WoW TRENES on your phone for GPS-based station detection, offline schedules and smart alerts.</p>
     <div class="download-cta">
-      <a href="#" class="btn-primary" id="iosBtn">📱 Coming soon · iOS</a>
-      <a href="#" class="btn-secondary" id="androidBtn">🤖 Coming soon · Android</a>
+      <a href="#" class="btn-primary" id="iosBtn" data-i18n="dl_ios">📱 Coming soon · iOS</a>
+      <a href="#" class="btn-secondary" id="androidBtn" data-i18n="dl_android">🤖 Coming soon · Android</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="footer-links">
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/support.html">Support</a>
-      <a href="/terms.html">Terms of Use</a>
-      <a href="mailto:glosx@outlook.com">Contact</a>
+      <a href="/privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+      <a href="/support.html" data-i18n="footer_support">Support</a>
+      <a href="/terms.html"   data-i18n="footer_terms">Terms of Use</a>
+      <a href="mailto:glosx@outlook.com" data-i18n="footer_contact">Contact</a>
     </div>
-    <p>© 2026 GLOSX — All rights reserved.</p>
-    <p class="disclaimer">
+    <p data-i18n="footer_copy">© 2026 GLOSX — All rights reserved.</p>
+    <p class="disclaimer" data-i18n="footer_disclaimer">
       WoW TRENES is an independent travel platform. Bookings are processed by verified partners (Omio, Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.
     </p>
   </footer>
@@ -610,6 +661,256 @@
   <script>
     // ── Config ─────────────────────────────────────────────────────────────
     const PROXY_BASE = 'https://voxa-production-dc15.up.railway.app/affiliate';
+
+    // ── i18n — Multilenguaje ───────────────────────────────────────────────
+    const TRANSLATIONS = {
+      en: {
+        nav_scenic: 'Scenic Trains', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Download',
+        hero_badge: '🚄 WoW TRENES — Real-time across 9 countries',
+        hero_title1: 'Train travel,', hero_title2: 'real-time.',
+        hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
+        search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search →',
+        stat_countries: 'Countries covered', stat_schedules: 'Train schedules', stat_scenic: 'Scenic routes', stat_apis: 'Real-time APIs',
+        scenic_label: 'Iconic European routes', scenic_title1: 'Scenic train', scenic_title2: 'experiences.',
+        scenic_lead: 'The most spectacular train journeys in Europe — book directly from here.',
+        partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
+        partners_lead: 'Curated services that complement your train journey.',
+        p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
+        p_kiwi_title: 'Airport Transfers', p_kiwi_desc: 'Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.', p_kiwi_cta: 'Book transfer →',
+        p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.', p_yesim_cta: 'Activate eSIM →',
+        p_tiqets_title: 'Attraction Tickets', p_tiqets_desc: 'Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.', p_tiqets_cta: 'Browse tickets →',
+        p_storage_title: 'Luggage Storage', p_storage_desc: 'Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.', p_storage_cta: 'Find storage →',
+        p_ins_title: 'Travel Insurance', p_ins_desc: 'Comprehensive coverage for medical, cancellations and lost luggage. Instant policy via EKTA — trusted by 3M+ travelers.', p_ins_cta: 'Get insured →',
+        features_label: 'Why WoW TRENES', features_title1: 'Built for travelers', features_title2: 'who move fast.',
+        features_lead: 'No subscriptions, no paywalls. Just real-time data and smart tools.',
+        f1_title: 'Real-time departures', f1_desc: 'Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.',
+        f2_title: '9 countries, one app', f2_desc: 'Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal in a single interface.',
+        f3_title: 'Journey search', f3_desc: 'Find trains between any two stations across Europe with real prices and schedules.',
+        f4_title: 'Location-aware', f4_desc: 'Automatically detects your nearest station and shows upcoming departures without any input.',
+        f5_title: 'Smart alerts', f5_desc: 'Get notified when your train is approaching or when there are delays on your route.',
+        f6_title: 'Works offline', f6_desc: 'Full timetable access even without internet. GTFS data stored locally on your device.',
+        dl_title: 'Take it on the road.',
+        dl_subtitle: 'Download WoW TRENES on your phone for GPS-based station detection, offline schedules and smart alerts.',
+        dl_ios: '📱 Coming soon · iOS', dl_android: '🤖 Coming soon · Android',
+        footer_privacy: 'Privacy Policy', footer_support: 'Support', footer_terms: 'Terms of Use', footer_contact: 'Contact',
+        footer_copy: '© 2026 GLOSX — All rights reserved.',
+        footer_disclaimer: 'WoW TRENES is an independent travel platform. Bookings are processed by verified partners (Omio, Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.',
+      },
+      es: {
+        nav_scenic: 'Trenes panorámicos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Descargar',
+        hero_badge: '🚄 WoW TRENES — En tiempo real en 9 países',
+        hero_title1: 'Viajar en tren,', hero_title2: 'en tiempo real.',
+        hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
+        search_from: 'Desde', search_to: 'Hasta', search_date: 'Fecha', search_btn: 'Buscar →',
+        stat_countries: 'Países cubiertos', stat_schedules: 'Horarios de trenes', stat_scenic: 'Rutas panorámicas', stat_apis: 'APIs en tiempo real',
+        scenic_label: 'Rutas europeas icónicas', scenic_title1: 'Experiencias en', scenic_title2: 'tren panorámico.',
+        scenic_lead: 'Los viajes en tren más espectaculares de Europa — reservá directo desde aquí.',
+        partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
+        partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
+        p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
+        p_kiwi_title: 'Traslados aeropuerto', p_kiwi_desc: 'Taxi privado desde cualquier aeropuerto europeo hasta tu hotel o estación. Precio fijo, sin sorpresas.', p_kiwi_cta: 'Reservar traslado →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Conectate en más de 30 países europeos desde €4.90. Activación instantánea en tu teléfono — sin cambiar la SIM.', p_yesim_cta: 'Activar eSIM →',
+        p_tiqets_title: 'Entradas a atracciones', p_tiqets_desc: 'Entrada sin filas a Sagrada Familia, Coliseo, Louvre, Torre Eiffel y más de 6.000 atracciones en Europa.', p_tiqets_cta: 'Ver entradas →',
+        p_storage_title: 'Guardar equipaje', p_storage_desc: 'Custodia segura de equipaje en más de 1.000 puntos en ciudades europeas. Dejá tus valijas desde €5 y explorá libremente.', p_storage_cta: 'Buscar custodia →',
+        p_ins_title: 'Seguro de viaje', p_ins_desc: 'Cobertura completa para salud, cancelaciones y equipaje perdido. Póliza instantánea con EKTA — confiada por más de 3 millones de viajeros.', p_ins_cta: 'Asegurarme →',
+        features_label: 'Por qué WoW TRENES', features_title1: 'Hecho para viajeros', features_title2: 'que se mueven rápido.',
+        features_lead: 'Sin suscripciones, sin paywalls. Solo datos en tiempo real y herramientas inteligentes.',
+        f1_title: 'Salidas en tiempo real', f1_desc: 'Retrasos en vivo, cambios de andén y cancelaciones actualizados cada 90 segundos desde APIs ferroviarias oficiales.',
+        f2_title: '9 países, una app', f2_desc: 'España, Francia, Alemania, Suiza, Italia, Bélgica, Países Bajos, Austria y Portugal en una sola interfaz.',
+        f3_title: 'Búsqueda de viaje', f3_desc: 'Encontrá trenes entre cualquier par de estaciones de Europa con precios y horarios reales.',
+        f4_title: 'Geolocalización', f4_desc: 'Detecta automáticamente tu estación más cercana y muestra las próximas salidas sin tocar nada.',
+        f5_title: 'Alertas inteligentes', f5_desc: 'Recibí avisos cuando tu tren está por llegar o hay retrasos en tu ruta.',
+        f6_title: 'Funciona offline', f6_desc: 'Acceso completo a horarios sin internet. Datos GTFS guardados localmente en tu dispositivo.',
+        dl_title: 'Llevalo de viaje.',
+        dl_subtitle: 'Descargá WoW TRENES en tu teléfono para detección GPS de estaciones, horarios offline y alertas inteligentes.',
+        dl_ios: '📱 Próximamente · iOS', dl_android: '🤖 Próximamente · Android',
+        footer_privacy: 'Política de privacidad', footer_support: 'Soporte', footer_terms: 'Términos de uso', footer_contact: 'Contacto',
+        footer_copy: '© 2026 GLOSX — Todos los derechos reservados.',
+        footer_disclaimer: 'WoW TRENES es una plataforma de viajes independiente. Las reservas las procesan partners verificados (Omio, Trainline, Klook, Kiwitaxi, Yesim). Podemos ganar una comisión por compras elegibles sin costo extra para ti.',
+      },
+      fr: {
+        nav_scenic: 'Trains panoramiques', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Télécharger',
+        hero_badge: '🚄 WoW TRENES — En temps réel dans 9 pays',
+        hero_title1: 'Voyage en train,', hero_title2: 'en temps réel.',
+        hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
+        search_from: 'Départ', search_to: 'Arrivée', search_date: 'Date', search_btn: 'Rechercher →',
+        stat_countries: 'Pays couverts', stat_schedules: 'Horaires de trains', stat_scenic: 'Itinéraires panoramiques', stat_apis: 'APIs temps réel',
+        scenic_label: 'Itinéraires européens emblématiques', scenic_title1: 'Expériences en', scenic_title2: 'train panoramique.',
+        scenic_lead: 'Les plus beaux voyages en train d\'Europe — réservez directement ici.',
+        partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
+        partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
+        p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
+        p_kiwi_title: 'Transferts aéroport', p_kiwi_desc: 'Taxi privé depuis n\'importe quel grand aéroport européen jusqu\'à votre hôtel ou gare. Prix fixe, aucune surprise.', p_kiwi_cta: 'Réserver transfert →',
+        p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Restez connecté dans plus de 30 pays européens dès €4.90. Activation instantanée sur votre téléphone — sans changer de SIM.', p_yesim_cta: 'Activer eSIM →',
+        p_tiqets_title: 'Billets d\'attractions', p_tiqets_desc: 'Accès coupe-file à la Sagrada Familia, Colisée, Louvre, Tour Eiffel et 6 000+ attractions en Europe.', p_tiqets_cta: 'Voir les billets →',
+        p_storage_title: 'Consigne à bagages', p_storage_desc: 'Consigne sécurisée dans plus de 1 000 points dans les villes européennes. Déposez vos bagages dès €5 et explorez librement.', p_storage_cta: 'Trouver consigne →',
+        p_ins_title: 'Assurance voyage', p_ins_desc: 'Couverture complète pour santé, annulations et bagages perdus. Police instantanée via EKTA — choisie par 3M+ voyageurs.', p_ins_cta: 'M\'assurer →',
+        features_label: 'Pourquoi WoW TRENES', features_title1: 'Conçu pour les voyageurs', features_title2: 'qui bougent vite.',
+        features_lead: 'Pas d\'abonnement, pas de paywall. Juste des données en temps réel et des outils intelligents.',
+        f1_title: 'Départs en temps réel', f1_desc: 'Retards en direct, changements de voie et annulations mis à jour toutes les 90 secondes depuis les APIs ferroviaires officielles.',
+        f2_title: '9 pays, une app', f2_desc: 'Espagne, France, Allemagne, Suisse, Italie, Belgique, Pays-Bas, Autriche et Portugal dans une seule interface.',
+        f3_title: 'Recherche de trajet', f3_desc: 'Trouvez des trains entre n\'importe quelles deux gares d\'Europe avec prix et horaires réels.',
+        f4_title: 'Géolocalisation', f4_desc: 'Détecte automatiquement votre gare la plus proche et affiche les départs sans aucune action.',
+        f5_title: 'Alertes intelligentes', f5_desc: 'Soyez averti quand votre train approche ou s\'il y a des retards sur votre route.',
+        f6_title: 'Fonctionne hors ligne', f6_desc: 'Accès complet aux horaires même sans internet. Données GTFS stockées localement sur votre appareil.',
+        dl_title: 'Emportez-le en voyage.',
+        dl_subtitle: 'Téléchargez WoW TRENES sur votre téléphone pour la détection GPS des gares, horaires hors ligne et alertes intelligentes.',
+        dl_ios: '📱 Bientôt · iOS', dl_android: '🤖 Bientôt · Android',
+        footer_privacy: 'Politique de confidentialité', footer_support: 'Support', footer_terms: 'Conditions d\'utilisation', footer_contact: 'Contact',
+        footer_copy: '© 2026 GLOSX — Tous droits réservés.',
+        footer_disclaimer: 'WoW TRENES est une plateforme de voyage indépendante. Les réservations sont traitées par des partenaires vérifiés (Omio, Trainline, Klook, Kiwitaxi, Yesim). Nous pouvons gagner une commission sur les achats éligibles sans coût supplémentaire pour vous.',
+      },
+      de: {
+        nav_scenic: 'Panoramazüge', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Herunterladen',
+        hero_badge: '🚄 WoW TRENES — Echtzeit in 9 Ländern',
+        hero_title1: 'Zugreisen,', hero_title2: 'in Echtzeit.',
+        hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
+        search_from: 'Von', search_to: 'Nach', search_date: 'Datum', search_btn: 'Suchen →',
+        stat_countries: 'Abgedeckte Länder', stat_schedules: 'Zugfahrpläne', stat_scenic: 'Panoramastrecken', stat_apis: 'Echtzeit-APIs',
+        scenic_label: 'Ikonische europäische Routen', scenic_title1: 'Panoramazug-', scenic_title2: 'Erlebnisse.',
+        scenic_lead: 'Die spektakulärsten Zugreisen Europas — direkt von hier buchen.',
+        partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
+        partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
+        p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
+        p_kiwi_title: 'Flughafentransfer', p_kiwi_desc: 'Privattaxi von jedem großen europäischen Flughafen direkt zu Ihrem Hotel oder Bahnhof. Festpreis, keine Überraschungen.', p_kiwi_cta: 'Transfer buchen →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Bleiben Sie in 30+ europäischen Ländern verbunden ab €4.90. Sofortige Aktivierung auf Ihrem Telefon — kein SIM-Wechsel.', p_yesim_cta: 'eSIM aktivieren →',
+        p_tiqets_title: 'Attraktionstickets', p_tiqets_desc: 'Skip-the-Line-Eintritt zur Sagrada Familia, Kolosseum, Louvre, Eiffelturm und 6.000+ Attraktionen in Europa.', p_tiqets_cta: 'Tickets ansehen →',
+        p_storage_title: 'Gepäckaufbewahrung', p_storage_desc: 'Sichere Gepäckaufbewahrung an 1.000+ Standorten in europäischen Städten. Geben Sie Ihr Gepäck ab €5 ab und erkunden Sie frei.', p_storage_cta: 'Aufbewahrung finden →',
+        p_ins_title: 'Reiseversicherung', p_ins_desc: 'Umfassender Schutz für Medizin, Stornierungen und verlorenes Gepäck. Sofortige Police über EKTA — von 3M+ Reisenden vertraut.', p_ins_cta: 'Versichern →',
+        features_label: 'Warum WoW TRENES', features_title1: 'Gemacht für Reisende,', features_title2: 'die sich schnell bewegen.',
+        features_lead: 'Keine Abonnements, keine Paywalls. Nur Echtzeitdaten und intelligente Tools.',
+        f1_title: 'Echtzeit-Abfahrten', f1_desc: 'Live-Verspätungen, Gleisänderungen und Stornierungen alle 90 Sekunden von offiziellen Bahn-APIs aktualisiert.',
+        f2_title: '9 Länder, eine App', f2_desc: 'Spanien, Frankreich, Deutschland, Schweiz, Italien, Belgien, Niederlande, Österreich und Portugal in einer Oberfläche.',
+        f3_title: 'Reisesuche', f3_desc: 'Finden Sie Züge zwischen beliebigen Bahnhöfen in Europa mit echten Preisen und Fahrplänen.',
+        f4_title: 'Standorterkennung', f4_desc: 'Erkennt automatisch Ihren nächsten Bahnhof und zeigt kommende Abfahrten ohne Eingabe.',
+        f5_title: 'Intelligente Warnungen', f5_desc: 'Werden Sie benachrichtigt, wenn Ihr Zug naht oder es Verspätungen auf Ihrer Route gibt.',
+        f6_title: 'Funktioniert offline', f6_desc: 'Voller Fahrplanzugriff auch ohne Internet. GTFS-Daten lokal auf Ihrem Gerät gespeichert.',
+        dl_title: 'Nimm es mit auf die Reise.',
+        dl_subtitle: 'Lade WoW TRENES auf dein Telefon für GPS-basierte Bahnhofserkennung, Offline-Fahrpläne und intelligente Warnungen.',
+        dl_ios: '📱 Bald · iOS', dl_android: '🤖 Bald · Android',
+        footer_privacy: 'Datenschutz', footer_support: 'Support', footer_terms: 'Nutzungsbedingungen', footer_contact: 'Kontakt',
+        footer_copy: '© 2026 GLOSX — Alle Rechte vorbehalten.',
+        footer_disclaimer: 'WoW TRENES ist eine unabhängige Reiseplattform. Buchungen werden von verifizierten Partnern verarbeitet (Omio, Trainline, Klook, Kiwitaxi, Yesim). Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie verdienen.',
+      },
+      it: {
+        nav_scenic: 'Treni panoramici', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Scarica',
+        hero_badge: '🚄 WoW TRENES — In tempo reale in 9 paesi',
+        hero_title1: 'Viaggi in treno,', hero_title2: 'in tempo reale.',
+        hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
+        search_from: 'Da', search_to: 'A', search_date: 'Data', search_btn: 'Cerca →',
+        stat_countries: 'Paesi coperti', stat_schedules: 'Orari dei treni', stat_scenic: 'Percorsi panoramici', stat_apis: 'API in tempo reale',
+        scenic_label: 'Percorsi europei iconici', scenic_title1: 'Esperienze in', scenic_title2: 'treno panoramico.',
+        scenic_lead: 'I viaggi in treno più spettacolari d\'Europa — prenota direttamente da qui.',
+        partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
+        partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
+        p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
+        p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Taxi privato da qualsiasi grande aeroporto europeo direttamente al tuo hotel o stazione. Prezzo fisso, nessuna sorpresa.', p_kiwi_cta: 'Prenota transfer →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Resta connesso in 30+ paesi europei da €4.90. Attivazione istantanea sul tuo telefono — nessun cambio SIM.', p_yesim_cta: 'Attiva eSIM →',
+        p_tiqets_title: 'Biglietti attrazioni', p_tiqets_desc: 'Ingresso prioritario a Sagrada Familia, Colosseo, Louvre, Torre Eiffel e 6.000+ attrazioni in Europa.', p_tiqets_cta: 'Vedi biglietti →',
+        p_storage_title: 'Deposito bagagli', p_storage_desc: 'Deposito sicuro in 1.000+ punti nelle città europee. Lascia i tuoi bagagli da €5 ed esplora liberamente.', p_storage_cta: 'Trova deposito →',
+        p_ins_title: 'Assicurazione viaggio', p_ins_desc: 'Copertura completa per medico, cancellazioni e bagaglio smarrito. Polizza istantanea via EKTA — usata da 3M+ viaggiatori.', p_ins_cta: 'Assicurati →',
+        features_label: 'Perché WoW TRENES', features_title1: 'Pensato per chi viaggia', features_title2: 'velocemente.',
+        features_lead: 'Niente abbonamenti, niente paywall. Solo dati in tempo reale e strumenti intelligenti.',
+        f1_title: 'Partenze in tempo reale', f1_desc: 'Ritardi in diretta, cambi di binario e cancellazioni aggiornati ogni 90 secondi dalle API ferroviarie ufficiali.',
+        f2_title: '9 paesi, un\'app', f2_desc: 'Spagna, Francia, Germania, Svizzera, Italia, Belgio, Paesi Bassi, Austria e Portogallo in un\'unica interfaccia.',
+        f3_title: 'Ricerca viaggio', f3_desc: 'Trova treni tra qualsiasi coppia di stazioni in Europa con prezzi e orari reali.',
+        f4_title: 'Geolocalizzazione', f4_desc: 'Rileva automaticamente la tua stazione più vicina e mostra le prossime partenze senza alcun input.',
+        f5_title: 'Avvisi intelligenti', f5_desc: 'Ricevi notifiche quando il tuo treno si avvicina o ci sono ritardi sul tuo percorso.',
+        f6_title: 'Funziona offline', f6_desc: 'Accesso completo agli orari anche senza internet. Dati GTFS memorizzati localmente sul tuo dispositivo.',
+        dl_title: 'Portalo in viaggio.',
+        dl_subtitle: 'Scarica WoW TRENES sul tuo telefono per rilevamento GPS delle stazioni, orari offline e avvisi intelligenti.',
+        dl_ios: '📱 Presto · iOS', dl_android: '🤖 Presto · Android',
+        footer_privacy: 'Informativa privacy', footer_support: 'Supporto', footer_terms: 'Termini d\'uso', footer_contact: 'Contatto',
+        footer_copy: '© 2026 GLOSX — Tutti i diritti riservati.',
+        footer_disclaimer: 'WoW TRENES è una piattaforma di viaggio indipendente. Le prenotazioni sono elaborate da partner verificati (Omio, Trainline, Klook, Kiwitaxi, Yesim). Possiamo guadagnare una commissione dagli acquisti idonei senza costi aggiuntivi per te.',
+      },
+      pt: {
+        nav_scenic: 'Comboios panorâmicos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Baixar',
+        hero_badge: '🚄 WoW TRENES — Em tempo real em 9 países',
+        hero_title1: 'Viagens de comboio,', hero_title2: 'em tempo real.',
+        hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
+        search_from: 'De', search_to: 'Para', search_date: 'Data', search_btn: 'Pesquisar →',
+        stat_countries: 'Países cobertos', stat_schedules: 'Horários de comboios', stat_scenic: 'Rotas panorâmicas', stat_apis: 'APIs em tempo real',
+        scenic_label: 'Rotas europeias icónicas', scenic_title1: 'Experiências em', scenic_title2: 'comboio panorâmico.',
+        scenic_lead: 'As viagens de comboio mais espetaculares da Europa — reserve diretamente aqui.',
+        partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
+        partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
+        p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
+        p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Táxi privado a partir de qualquer grande aeroporto europeu até ao seu hotel ou estação. Preço fixo, sem surpresas.', p_kiwi_cta: 'Reservar transfer →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Mantenha-se ligado em mais de 30 países europeus desde €4.90. Ativação instantânea no seu telefone — sem trocar de SIM.', p_yesim_cta: 'Ativar eSIM →',
+        p_tiqets_title: 'Bilhetes para atrações', p_tiqets_desc: 'Entrada prioritária na Sagrada Família, Coliseu, Louvre, Torre Eiffel e mais de 6.000 atrações na Europa.', p_tiqets_cta: 'Ver bilhetes →',
+        p_storage_title: 'Guardar bagagem', p_storage_desc: 'Custódia segura de bagagem em mais de 1.000 locais nas cidades europeias. Deixe as suas malas desde €5 e explore livremente.', p_storage_cta: 'Encontrar depósito →',
+        p_ins_title: 'Seguro de viagem', p_ins_desc: 'Cobertura completa para saúde, cancelamentos e bagagem perdida. Apólice instantânea via EKTA — usado por mais de 3 milhões de viajantes.', p_ins_cta: 'Segurar →',
+        features_label: 'Porquê WoW TRENES', features_title1: 'Feito para viajantes', features_title2: 'que se movem depressa.',
+        features_lead: 'Sem subscrições, sem paywalls. Apenas dados em tempo real e ferramentas inteligentes.',
+        f1_title: 'Partidas em tempo real', f1_desc: 'Atrasos ao vivo, mudanças de plataforma e cancelamentos atualizados a cada 90 segundos das APIs ferroviárias oficiais.',
+        f2_title: '9 países, uma app', f2_desc: 'Espanha, França, Alemanha, Suíça, Itália, Bélgica, Países Baixos, Áustria e Portugal numa única interface.',
+        f3_title: 'Pesquisa de viagem', f3_desc: 'Encontre comboios entre quaisquer duas estações da Europa com preços e horários reais.',
+        f4_title: 'Geolocalização', f4_desc: 'Deteta automaticamente a sua estação mais próxima e mostra as próximas partidas sem qualquer entrada.',
+        f5_title: 'Alertas inteligentes', f5_desc: 'Receba notificações quando o seu comboio se aproxima ou quando há atrasos na sua rota.',
+        f6_title: 'Funciona offline', f6_desc: 'Acesso completo ao horário mesmo sem internet. Dados GTFS armazenados localmente no seu dispositivo.',
+        dl_title: 'Leve-o de viagem.',
+        dl_subtitle: 'Baixe WoW TRENES no seu telefone para deteção GPS de estações, horários offline e alertas inteligentes.',
+        dl_ios: '📱 Em breve · iOS', dl_android: '🤖 Em breve · Android',
+        footer_privacy: 'Política de privacidade', footer_support: 'Suporte', footer_terms: 'Termos de utilização', footer_contact: 'Contacto',
+        footer_copy: '© 2026 GLOSX — Todos os direitos reservados.',
+        footer_disclaimer: 'WoW TRENES é uma plataforma de viagens independente. As reservas são processadas por parceiros verificados (Omio, Trainline, Klook, Kiwitaxi, Yesim). Podemos ganhar uma comissão por compras elegíveis sem custo adicional para si.',
+      },
+    };
+
+    const LANG_META = {
+      en: { flag: '🇬🇧', code: 'EN' }, es: { flag: '🇪🇸', code: 'ES' },
+      fr: { flag: '🇫🇷', code: 'FR' }, de: { flag: '🇩🇪', code: 'DE' },
+      it: { flag: '🇮🇹', code: 'IT' }, pt: { flag: '🇵🇹', code: 'PT' },
+    };
+
+    function detectLang() {
+      // 1. localStorage (preferencia guardada)
+      const saved = localStorage.getItem('glosx_lang');
+      if (saved && TRANSLATIONS[saved]) return saved;
+      // 2. URL query param (?lang=es)
+      const param = new URLSearchParams(location.search).get('lang');
+      if (param && TRANSLATIONS[param]) return param;
+      // 3. Browser language
+      const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      if (TRANSLATIONS[browser]) return browser;
+      return 'en';
+    }
+
+    function applyLang(lang) {
+      const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+      // Actualizar selector
+      const meta = LANG_META[lang] || LANG_META.en;
+      document.getElementById('langFlag').textContent = meta.flag;
+      document.getElementById('langCode').textContent = meta.code;
+      document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.lang === lang);
+      });
+    }
+
+    function setLang(lang) {
+      localStorage.setItem('glosx_lang', lang);
+      applyLang(lang);
+      document.getElementById('langDropdown').classList.remove('open');
+    }
+
+    function toggleLang(e) {
+      e.stopPropagation();
+      document.getElementById('langDropdown').classList.toggle('open');
+    }
+
+    // Cerrar dropdown al clickear afuera
+    document.addEventListener('click', () => {
+      document.getElementById('langDropdown').classList.remove('open');
+    });
+
+    // Aplicar idioma inicial
+    applyLang(detectLang());
 
     // ── Default date (today) ───────────────────────────────────────────────
     document.getElementById('date').valueAsDate = new Date();
