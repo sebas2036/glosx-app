@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — WoW TRENES</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚄</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f; --surface: #13131a; --border: rgba(255,255,255,0.08);
+      --primary: #7c3aed; --primary2: #a78bfa; --text: #f0f0f5; --muted: #8888aa;
+    }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(10,10,15,0.85); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--primary2), #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-back:hover { color: var(--text); }
+    main {
+      max-width: 720px; margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 100px; padding: 5px 14px; margin-bottom: 24px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--primary2); text-transform: uppercase;
+    }
+    h1 { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 8px; }
+    .updated { font-size: 13px; color: var(--muted); margin-bottom: 48px; }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 18px; font-weight: 700; margin-bottom: 12px;
+      color: var(--primary2);
+    }
+    p, li {
+      font-size: 15px; color: var(--muted); line-height: 1.8;
+    }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--primary2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px; margin-top: 16px;
+    }
+    .card p { font-size: 14px; }
+    footer {
+      border-top: 1px solid var(--border); padding: 32px 24px;
+      text-align: center;
+    }
+    footer p { font-size: 13px; color: var(--muted); }
+    @media (max-width: 600px) { nav { padding: 16px 20px; } h1 { font-size: 32px; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">GLOSX</a>
+    <a href="/" class="nav-back">← Back</a>
+  </nav>
+
+  <main>
+    <div class="badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 2026</p>
+
+    <section>
+      <p>WoW TRENES ("the App") is developed by GLOSX (Sebastian Jasinsky). This policy explains what data we collect, how we use it, and your rights. The short version: we collect as little as possible and never sell your data.</p>
+    </section>
+
+    <section>
+      <h2>1. Location Data</h2>
+      <p>The App uses your GPS location to detect your nearest train station and trigger geofencing alerts. Location data is processed <strong style="color:var(--text)">entirely on your device</strong> and is never transmitted to our servers or any third party.</p>
+    </section>
+
+    <section>
+      <h2>2. Tickets & Boarding Passes</h2>
+      <p>QR tickets stored in the App are saved locally on your device using the operating system's encrypted secure storage (Expo SecureStore). We do not have access to your tickets and they are never uploaded to any server.</p>
+    </section>
+
+    <section>
+      <h2>3. Payments</h2>
+      <p>Ticket purchases are handled entirely by <strong style="color:var(--text)">Trainline Ltd</strong> as Merchant of Record, via an in-app WebView. WoW TRENES never receives, processes, or stores any payment card data.</p>
+    </section>
+
+    <section>
+      <h2>4. Train Schedule Data</h2>
+      <p>GTFS timetable databases are bundled with the App and stored locally on your device. Real-time departure data is fetched directly from official public railway APIs (SNCF, DB, NS, etc.) and is not logged or stored by us.</p>
+    </section>
+
+    <section>
+      <h2>5. Analytics & Tracking</h2>
+      <p>We do not use any analytics SDKs, crash reporters, or advertising trackers. No behavioral data is collected or shared with third parties.</p>
+    </section>
+
+    <section>
+      <h2>6. Affiliate Links</h2>
+      <p>Some booking links use affiliate programs (Trainline via Partnerize/Impact). Clicking these links may set cookies on the Trainline website, subject to their own privacy policy. WoW TRENES does not receive any personal data from this process.</p>
+    </section>
+
+    <section>
+      <h2>7. Children's Privacy</h2>
+      <p>The App does not knowingly collect any data from children under 13. It contains no features directed at children.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to this Policy</h2>
+      <p>We may update this policy. Changes will be posted at this URL with an updated date. Continued use of the App after changes constitutes acceptance.</p>
+    </section>
+
+    <section>
+      <h2>9. Contact</h2>
+      <div class="card">
+        <p>For any privacy questions or data requests, contact us at:<br />
+        <a href="mailto:jasinskysebastian@gmail.com">jasinskysebastian@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 GLOSX · <a href="/">wowtrenes.app</a> · <a href="/support">Support</a></p>
+  </footer>
+</body>
+</html>
