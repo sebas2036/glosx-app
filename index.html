@@ -519,6 +519,27 @@
         <div class="partner-desc">Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.</div>
         <div class="partner-cta">Activate eSIM →</div>
       </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('tiqets', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ec4899, #be185d);">🎟️</div>
+        <div class="partner-title">Attraction Tickets</div>
+        <div class="partner-desc">Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.</div>
+        <div class="partner-cta">Browse tickets →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('storage', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">🧳</div>
+        <div class="partner-title">Luggage Storage</div>
+        <div class="partner-desc">Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.</div>
+        <div class="partner-cta">Find storage →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('insurance', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">🛡️</div>
+        <div class="partner-title">Travel Insurance</div>
+        <div class="partner-desc">Comprehensive coverage for medical, cancellations and lost luggage. Instant policy via EKTA — trusted by 3M+ travelers.</div>
+        <div class="partner-cta">Get insured →</div>
+      </a>
     </div>
   </section>
 
@@ -629,9 +650,12 @@
     function goPartner(type, e) {
       e.preventDefault();
       let url;
-      if (type === 'klook')    url = `${PROXY_BASE}/klook`;
-      if (type === 'kiwitaxi') url = `${PROXY_BASE}/kiwitaxi?from=Airport&to=City+Center`;
-      if (type === 'yesim')    url = `${PROXY_BASE}/yesim`;
+      if (type === 'klook')     url = `${PROXY_BASE}/klook`;
+      if (type === 'kiwitaxi')  url = `${PROXY_BASE}/kiwitaxi`;
+      if (type === 'yesim')     url = `${PROXY_BASE}/yesim`;
+      if (type === 'tiqets')    url = `${PROXY_BASE}/tiqets`;
+      if (type === 'storage')   url = `${PROXY_BASE}/storage`;
+      if (type === 'insurance') url = `${PROXY_BASE}/insurance`;
       if (url) window.open(url, '_blank');
       return false;
     }
