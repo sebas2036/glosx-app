@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GLOSX — WoW TRENES</title>
-  <meta name="description" content="WoW TRENES — Real-time train schedules across Europe. Spain, France, Germany, Switzerland, Italy, Belgium, Portugal, Austria and more." />
-  <meta property="og:title" content="WoW TRENES by GLOSX" />
-  <meta property="og:description" content="Real-time European train departures in your pocket." />
+  <title>GLOSX — WoW TRENES · Real-time European train travel</title>
+  <meta name="description" content="Real-time train schedules, scenic routes, city passes and travel essentials across 9 European countries. Search, compare and book — Spain, France, Germany, Switzerland, Italy, Belgium, Portugal, Austria, Netherlands." />
+  <meta name="keywords" content="European trains, Trainline, Omio, AVE, TGV, ICE, Frecciarossa, Glacier Express, Bernina Express, train tickets Europe, real-time train app" />
+  <meta name="author" content="GLOSX" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WoW TRENES — Real-time European train travel" />
+  <meta property="og:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
   <meta property="og:url" content="https://glosx.app" />
+  <meta property="og:site_name" content="GLOSX" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WoW TRENES — Real-time European train travel" />
+  <meta name="twitter:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
+  <link rel="canonical" href="https://glosx.app" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚄</text></svg>" />
 
   <!-- Travelpayouts Drive -->
@@ -20,15 +28,33 @@
     })();
   </script>
 
+  <!-- Schema.org Mobile App -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "WoW TRENES",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "TravelApplication",
+    "description": "Real-time European train schedules and bookings.",
+    "url": "https://glosx.app",
+    "publisher": { "@type": "Organization", "name": "GLOSX" }
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --bg:       #0a0a0f;
       --surface:  #13131a;
+      --elevated: #1a1a24;
       --border:   rgba(255,255,255,0.08);
+      --border2:  rgba(255,255,255,0.04);
       --primary:  #7c3aed;
       --primary2: #a78bfa;
+      --green:    #10b981;
+      --amber:    #f59e0b;
       --text:     #f0f0f5;
       --muted:    #8888aa;
     }
@@ -56,6 +82,7 @@
       font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
       background: linear-gradient(135deg, var(--primary2), #fff);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
     }
     .nav-links { display: flex; gap: 32px; }
     .nav-links a {
@@ -70,7 +97,7 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 120px 24px 80px;
+      padding: 120px 24px 60px;
       position: relative;
       overflow: hidden;
     }
@@ -101,32 +128,59 @@
       color: var(--muted); max-width: 560px; line-height: 1.6;
       margin-bottom: 48px;
     }
-    .hero-cta {
-      display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+
+    /* ── Search box ── */
+    .search-box {
+      width: 100%; max-width: 720px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
-    .btn-primary {
+    .search-field {
+      background: var(--elevated);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex; flex-direction: column;
+      text-align: left;
+      transition: border-color 0.2s;
+    }
+    .search-field:hover { border-color: rgba(124,58,237,0.3); }
+    .search-field label {
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      color: var(--muted); text-transform: uppercase; margin-bottom: 4px;
+    }
+    .search-field input {
+      background: transparent; border: none; outline: none;
+      color: var(--text); font-size: 14px; font-weight: 600;
+      font-family: inherit;
+      width: 100%;
+    }
+    .search-field input::placeholder { color: var(--muted); opacity: 0.6; }
+    .search-btn {
       background: var(--primary); color: #fff;
-      padding: 16px 32px; border-radius: 100px;
-      font-size: 16px; font-weight: 700; text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 0 40px rgba(124,58,237,0.4);
+      border: none; border-radius: 12px;
+      padding: 0 24px;
+      font-size: 14px; font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(124,58,237,0.4);
+      font-family: inherit;
     }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 60px rgba(124,58,237,0.6);
+    .search-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 40px rgba(124,58,237,0.6);
     }
-    .btn-secondary {
-      background: var(--surface); color: var(--text);
-      padding: 16px 32px; border-radius: 100px;
-      font-size: 16px; font-weight: 600; text-decoration: none;
-      border: 1px solid var(--border); transition: border-color 0.2s;
-    }
-    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); }
 
     /* ── Countries strip ── */
     .countries {
       display: flex; gap: 12px; flex-wrap: wrap;
-      justify-content: center; margin-top: 64px;
+      justify-content: center; margin-top: 48px;
     }
     .country-chip {
       background: var(--surface); border: 1px solid var(--border);
@@ -134,10 +188,10 @@
       font-size: 13px; font-weight: 500; color: var(--muted);
     }
 
-    /* ── Features ── */
+    /* ── Sections ── */
     .section {
       padding: 100px 24px;
-      max-width: 1100px; margin: 0 auto;
+      max-width: 1200px; margin: 0 auto;
     }
     .section-label {
       font-size: 12px; font-weight: 700; letter-spacing: 2px;
@@ -151,6 +205,91 @@
       font-size: 18px; color: var(--muted); max-width: 560px; line-height: 1.6;
       margin-bottom: 64px;
     }
+
+    /* ── Scenic trains carousel ── */
+    .scenic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .scenic-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex; align-items: center; gap: 16px;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .scenic-card:hover {
+      border-color: rgba(124,58,237,0.4);
+      transform: translateY(-3px);
+    }
+    .scenic-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .scenic-body { flex: 1; min-width: 0; }
+    .scenic-name {
+      font-size: 15px; font-weight: 700; color: var(--text);
+      margin-bottom: 4px;
+    }
+    .scenic-route {
+      font-size: 12px; color: var(--muted); line-height: 1.4;
+    }
+    .scenic-cta {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px; font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    /* ── Partner products ── */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .partner-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-card:hover {
+      border-color: rgba(124,58,237,0.3);
+      transform: translateY(-4px);
+    }
+    .partner-icon-badge {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .partner-title {
+      font-size: 18px; font-weight: 700; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .partner-desc {
+      font-size: 13px; color: var(--muted); line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .partner-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 700;
+      color: var(--primary2);
+    }
+
+    /* ── Features ── */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -176,6 +315,43 @@
       font-size: 14px; color: var(--muted); line-height: 1.6;
     }
 
+    /* ── Download section ── */
+    .download {
+      padding: 80px 24px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent, rgba(124,58,237,0.05));
+      border-top: 1px solid var(--border);
+    }
+    .download h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800; letter-spacing: -1px; margin-bottom: 16px;
+    }
+    .download p {
+      color: var(--muted); margin-bottom: 36px;
+      max-width: 480px; margin-left: auto; margin-right: auto;
+    }
+    .download-cta {
+      display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    }
+    .btn-primary {
+      background: var(--primary); color: #fff;
+      padding: 16px 32px; border-radius: 100px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 40px rgba(124,58,237,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(124,58,237,0.6);
+    }
+    .btn-secondary {
+      background: var(--surface); color: var(--text);
+      padding: 16px 32px; border-radius: 100px;
+      font-size: 16px; font-weight: 600; text-decoration: none;
+      border: 1px solid var(--border); transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); }
+
     /* ── Stats ── */
     .stats {
       background: var(--surface);
@@ -198,16 +374,37 @@
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 40px 24px;
+      padding: 60px 24px 40px;
       text-align: center;
     }
-    footer p { font-size: 13px; color: var(--muted); }
-    footer a { color: var(--primary2); text-decoration: none; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 24px;
+      margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--muted); text-decoration: none; font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--primary2); }
+    footer p { font-size: 12px; color: var(--muted); }
+    footer .disclaimer {
+      margin-top: 16px; font-size: 11px; opacity: 0.7;
+      max-width: 600px; margin-left: auto; margin-right: auto;
+      line-height: 1.5;
+    }
 
+    @media (max-width: 768px) {
+      .search-box {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .search-btn { padding: 14px; }
+    }
     @media (max-width: 600px) {
       nav { padding: 16px 20px; }
       .nav-links { display: none; }
       .hero { padding: 100px 20px 60px; }
+      .section { padding: 60px 20px; }
     }
   </style>
 </head>
@@ -215,26 +412,39 @@
 
   <!-- Nav -->
   <nav>
-    <span class="nav-logo">GLOSX</span>
+    <a href="/" class="nav-logo">GLOSX</a>
     <div class="nav-links">
+      <a href="#scenic">Scenic Trains</a>
+      <a href="#partners">Travel Essentials</a>
       <a href="#features">Features</a>
-      <a href="#countries">Countries</a>
-      <a href="mailto:jasinskysebastian@gmail.com">Contact</a>
+      <a href="#download">Download</a>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero with functional search -->
   <section class="hero">
-    <div class="hero-badge">🚄 WoW TRENES — Now available</div>
+    <div class="hero-badge">🚄 WoW TRENES — Real-time across 9 countries</div>
     <h1>Train travel,<br /><span>real-time.</span></h1>
     <p>
-      Live departures, delays and platforms across 9 European countries.
-      Search, compare and book — all in one app.
+      Live departures, scenic routes and travel essentials across Europe.
+      Search, compare and book — all in one place.
     </p>
-    <div class="hero-cta">
-      <a href="#" class="btn-primary">Download on iOS</a>
-      <a href="#" class="btn-secondary">Get it on Android</a>
-    </div>
+
+    <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
+      <div class="search-field">
+        <label for="origin">From</label>
+        <input type="text" id="origin" placeholder="Madrid" required autocomplete="off" />
+      </div>
+      <div class="search-field">
+        <label for="dest">To</label>
+        <input type="text" id="dest" placeholder="Barcelona" required autocomplete="off" />
+      </div>
+      <div class="search-field">
+        <label for="date">Date</label>
+        <input type="date" id="date" required />
+      </div>
+      <button type="submit" class="search-btn">Search →</button>
+    </form>
 
     <div class="countries" id="countries">
       <span class="country-chip">🇪🇸 España</span>
@@ -261,21 +471,62 @@
         <div class="stat-label">Train schedules</div>
       </div>
       <div>
-        <div class="stat-number">8</div>
-        <div class="stat-label">Real-time APIs</div>
+        <div class="stat-number">13</div>
+        <div class="stat-label">Scenic routes</div>
       </div>
       <div>
-        <div class="stat-number">100%</div>
-        <div class="stat-label">Free to use</div>
+        <div class="stat-number">8</div>
+        <div class="stat-label">Real-time APIs</div>
       </div>
     </div>
   </div>
 
+  <!-- Scenic trains -->
+  <section class="section" id="scenic">
+    <p class="section-label">Iconic European routes</p>
+    <h2>Scenic train<br />experiences.</h2>
+    <p class="lead">The most spectacular train journeys in Europe — book directly from here.</p>
+
+    <div class="scenic-grid" id="scenicGrid">
+      <!-- Filled by JS -->
+    </div>
+  </section>
+
+  <!-- Partner products -->
+  <section class="section" id="partners">
+    <p class="section-label">Everything for your trip</p>
+    <h2>Travel essentials<br />for Europe.</h2>
+    <p class="lead">Curated services that complement your train journey.</p>
+
+    <div class="partners-grid">
+      <a href="#" class="partner-card" onclick="goPartner('klook', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);">🎫</div>
+        <div class="partner-title">City Passes</div>
+        <div class="partner-desc">Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.</div>
+        <div class="partner-cta">Browse passes →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('kiwitaxi', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🚗</div>
+        <div class="partner-title">Airport Transfers</div>
+        <div class="partner-desc">Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.</div>
+        <div class="partner-cta">Book transfer →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('yesim', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #10b981, #059669);">🌐</div>
+        <div class="partner-title">eSIM Europe</div>
+        <div class="partner-desc">Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.</div>
+        <div class="partner-cta">Activate eSIM →</div>
+      </a>
+    </div>
+  </section>
+
   <!-- Features -->
   <section class="section" id="features">
     <p class="section-label">Why WoW TRENES</p>
-    <h2>Everything you need<br />on the platform.</h2>
-    <p class="lead">Built for travelers who move fast across Europe. No subscriptions, no paywalls.</p>
+    <h2>Built for travelers<br />who move fast.</h2>
+    <p class="lead">No subscriptions, no paywalls. Just real-time data and smart tools.</p>
 
     <div class="features-grid">
       <div class="feature-card">
@@ -311,14 +562,119 @@
     </div>
   </section>
 
+  <!-- Download CTA -->
+  <section class="download" id="download">
+    <h2>Take it on the road.</h2>
+    <p>Download WoW TRENES on your phone for GPS-based station detection, offline schedules and smart alerts.</p>
+    <div class="download-cta">
+      <a href="#" class="btn-primary" id="iosBtn">📱 Coming soon · iOS</a>
+      <a href="#" class="btn-secondary" id="androidBtn">🤖 Coming soon · Android</a>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <p>© 2026 GLOSX — <a href="mailto:jasinskysebastian@gmail.com">jasinskysebastian@gmail.com</a></p>
-    <p style="margin-top: 8px;">
-      <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp;
-      <a href="/terms">Terms of Use</a>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="mailto:glosx@outlook.com">Contact</a>
+    </div>
+    <p>© 2026 GLOSX — All rights reserved.</p>
+    <p class="disclaimer">
+      WoW TRENES is an independent travel platform. Bookings are processed by verified partners (Omio, Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.
     </p>
   </footer>
+
+  <script>
+    // ── Config ─────────────────────────────────────────────────────────────
+    const PROXY_BASE = 'https://voxa-production-dc15.up.railway.app/affiliate';
+
+    // ── Default date (today) ───────────────────────────────────────────────
+    document.getElementById('date').valueAsDate = new Date();
+
+    // ── Search trains → redirige al proxy con tracking ─────────────────────
+    function searchTrains(e) {
+      e.preventDefault();
+      const origin = document.getElementById('origin').value.trim();
+      const dest   = document.getElementById('dest').value.trim();
+      const date   = document.getElementById('date').value;
+      if (!origin || !dest) return false;
+
+      // Detectar país de origen para elegir Omio (Europa) o Trip.com (resto)
+      const country = detectCountry(origin);
+
+      const url = `${PROXY_BASE}/redirect?origin=${encodeURIComponent(origin)}` +
+                  `&dest=${encodeURIComponent(dest)}` +
+                  `&date=${date}&country=${country}&passengers=1`;
+      window.open(url, '_blank');
+      return false;
+    }
+
+    function detectCountry(cityName) {
+      const c = cityName.toLowerCase();
+      if (/madrid|barcelona|sevilla|valencia|bilbao|málaga|malaga/.test(c)) return 'ES';
+      if (/paris|lyon|marseille|bordeaux|toulouse|nice|lille/.test(c)) return 'FR';
+      if (/berlin|münchen|munich|hamburg|frankfurt|köln|koln/.test(c)) return 'DE';
+      if (/zurich|zürich|geneva|geneve|bern|basel|lausanne/.test(c)) return 'CH';
+      if (/roma|rome|milano|milan|napoli|naples|firenze|florence|venezia|venice/.test(c)) return 'IT';
+      if (/bruxelles|brussels|antwerp|gent/.test(c)) return 'BE';
+      if (/amsterdam|rotterdam|utrecht|the hague/.test(c)) return 'NL';
+      if (/wien|vienna|salzburg|innsbruck|graz/.test(c)) return 'AT';
+      if (/lisboa|lisbon|porto|coimbra/.test(c)) return 'PT';
+      return 'ES'; // default Europa
+    }
+
+    // ── Partner products → redirige al proxy correspondiente ───────────────
+    function goPartner(type, e) {
+      e.preventDefault();
+      let url;
+      if (type === 'klook')    url = `${PROXY_BASE}/klook`;
+      if (type === 'kiwitaxi') url = `${PROXY_BASE}/kiwitaxi?from=Airport&to=City+Center`;
+      if (type === 'yesim')    url = `${PROXY_BASE}/yesim`;
+      if (url) window.open(url, '_blank');
+      return false;
+    }
+
+    // ── Scenic trains data + render ────────────────────────────────────────
+    const SCENIC_TRAINS = [
+      { name: 'Glacier Express',     route: 'Zermatt → St. Moritz · 7h 45min',  origin: 'Zermatt',           dest: 'St. Moritz',      icon: '🏔️', g1: '#C0392B', g2: '#922B21' },
+      { name: 'Bernina Express',     route: 'Chur → Tirano · 4h 0min',          origin: 'Chur',              dest: 'Tirano',          icon: '🚂', g1: '#1A5276', g2: '#154360' },
+      { name: 'GoldenPass Express',  route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux',          dest: 'Interlaken Ost',  icon: '🌄', g1: '#B7950B', g2: '#9A7D0A' },
+      { name: 'TGV Lyria',           route: 'Paris → Geneva · 3h 5min',         origin: 'Paris Gare de Lyon',dest: 'Genève',          icon: '🚄', g1: '#C0392B', g2: '#922B21' },
+      { name: 'Train des Merveilles',route: 'Nice → Tende · 2h 10min',          origin: 'Nice Ville',        dest: 'Tende',           icon: '🏞️', g1: '#2471A3', g2: '#1A5276' },
+      { name: 'Cinque Terre Express',route: 'La Spezia → Levanto · 30min',      origin: 'La Spezia Centrale',dest: 'Levanto',         icon: '🌊', g1: '#1E8449', g2: '#196F3D' },
+      { name: 'Frecciarossa',        route: 'Rome → Venice · 3h 45min',         origin: 'Roma Termini',      dest: 'Venezia S. Lucia',icon: '🚄', g1: '#C0392B', g2: '#7B241C' },
+      { name: 'Rhine Valley',        route: 'Köln → Mainz · 1h 55min',          origin: 'Köln Hbf',          dest: 'Mainz Hbf',       icon: '🏰', g1: '#922B21', g2: '#7B241C' },
+      { name: 'Bavaria Alps',        route: 'München → Salzburg · 1h 30min',    origin: 'München Hbf',       dest: 'Salzburg Hbf',    icon: '⛰️', g1: '#1A5276', g2: '#154360' },
+      { name: 'Semmering Express',   route: 'Vienna → Graz · 2h 39min',         origin: 'Wien Hbf',          dest: 'Graz Hbf',        icon: '🏔️', g1: '#B7950B', g2: '#9A7D0A' },
+      { name: 'Douro Valley',        route: 'Porto → Pocinho · 3h 30min',       origin: 'Porto Campanhã',    dest: 'Pocinho',         icon: '🍇', g1: '#784212', g2: '#6E2C00' },
+      { name: 'Intercity Direct',    route: 'Amsterdam → Brussels · 1h 51min',  origin: 'Amsterdam Centraal',dest: 'Brussel-Zuid',    icon: '🚂', g1: '#E67E22', g2: '#CA6F1E' },
+      { name: 'Thalys',              route: 'Brussels → Paris · 1h 22min',      origin: 'Brussel-Zuid',      dest: 'Paris Gare du Nord',icon:'🚄',g1: '#C0392B', g2: '#7B241C' },
+    ];
+
+    function renderScenic() {
+      const grid = document.getElementById('scenicGrid');
+      grid.innerHTML = SCENIC_TRAINS.map(t => `
+        <a href="#" class="scenic-card" onclick="goScenic('${encodeURIComponent(t.origin)}','${encodeURIComponent(t.dest)}', event)">
+          <div class="scenic-icon" style="background: linear-gradient(135deg, ${t.g1}, ${t.g2});">${t.icon}</div>
+          <div class="scenic-body">
+            <div class="scenic-name">${t.name}</div>
+            <div class="scenic-route">${t.route}</div>
+          </div>
+          <div class="scenic-cta" style="background: ${t.g1};">Book</div>
+        </a>
+      `).join('');
+    }
+    renderScenic();
+
+    function goScenic(origin, dest, e) {
+      e.preventDefault();
+      const url = `${PROXY_BASE}/scenic?origin=${origin}&dest=${dest}`;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
 
 </body>
 </html>
