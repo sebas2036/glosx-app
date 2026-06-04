@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — WoW TRENES</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚄</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f; --surface: #13131a; --border: rgba(255,255,255,0.08);
+      --primary: #7c3aed; --primary2: #a78bfa; --text: #f0f0f5; --muted: #8888aa;
+    }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(10,10,15,0.85); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--primary2), #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-back:hover { color: var(--text); }
+    main { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+    .badge {
+      display: inline-block;
+      background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 100px; padding: 5px 14px; margin-bottom: 24px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--primary2); text-transform: uppercase;
+    }
+    h1 { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 12px; }
+    .subtitle { font-size: 18px; color: var(--muted); margin-bottom: 56px; line-height: 1.6; }
+    .contact-card {
+      background: var(--surface); border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 20px; padding: 36px; margin-bottom: 48px; text-align: center;
+    }
+    .contact-card .icon { font-size: 40px; margin-bottom: 16px; display: block; }
+    .contact-card h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .contact-card p { font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+    .btn {
+      display: inline-block;
+      background: var(--primary); color: #fff;
+      padding: 14px 28px; border-radius: 100px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 30px rgba(124,58,237,0.4);
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 0 50px rgba(124,58,237,0.6); }
+    h2.section-title { font-size: 24px; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.5px; }
+    .faq-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px; margin-bottom: 12px;
+    }
+    .faq-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+    .faq-item p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    a { color: var(--primary2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid var(--border); padding: 32px 24px; text-align: center;
+    }
+    footer p { font-size: 13px; color: var(--muted); }
+    @media (max-width: 600px) { nav { padding: 16px 20px; } h1 { font-size: 32px; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">GLOSX</a>
+    <a href="/" class="nav-back">← Back</a>
+  </nav>
+
+  <main>
+    <div class="badge">Support</div>
+    <h1>We're here to help</h1>
+    <p class="subtitle">WoW TRENES is built by a small team. We respond to every message, usually within 24 hours.</p>
+
+    <div class="contact-card">
+      <span class="icon">✉️</span>
+      <h2>Contact us directly</h2>
+      <p>For bug reports, feature requests, or anything else — send us an email. Include your device model and iOS/Android version if reporting a bug.</p>
+      <a href="mailto:jasinskysebastian@gmail.com?subject=WoW%20TRENES%20Support" class="btn">Send a message</a>
+    </div>
+
+    <h2 class="section-title">Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <h3>Why aren't real-time departures showing?</h3>
+      <p>Real-time data requires an internet connection. Make sure you have mobile data or Wi-Fi enabled. Some countries (e.g. Norway, USA) show scheduled times only as their APIs don't provide live data yet.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>The app isn't detecting my nearest station</h3>
+      <p>Go to your device Settings → Privacy → Location Services → WoW TRENES, and make sure location access is set to "While Using" or "Always". Then restart the app.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I store a ticket in the app?</h3>
+      <p>After booking through the in-app Trainline WebView, your QR ticket will be saved automatically. You can also add tickets manually from the Tickets screen using the "+" button.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Which countries are supported?</h3>
+      <p>Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria, Portugal, Norway, and the USA (New York, Los Angeles, Chicago). More countries are in progress.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does the app work offline?</h3>
+      <p>Yes — full GTFS timetable data is stored on your device, so scheduled departures are available offline. Real-time delay info requires internet.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I delete my data?</h3>
+      <p>WoW TRENES doesn't store any personal data on external servers. All app data (tickets, favorites, settings) lives only on your device. To delete everything, uninstall the app.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>I found a bug — how do I report it?</h3>
+      <p>Email us at <a href="mailto:jasinskysebastian@gmail.com">jasinskysebastian@gmail.com</a> with a description of what happened, your device model, and OS version. Screenshots are always helpful.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 GLOSX · <a href="/">wowtrenes.app</a> · <a href="/privacy">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
