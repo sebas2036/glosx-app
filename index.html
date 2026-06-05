@@ -492,19 +492,25 @@
       background: var(--surface);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 28px 24px;
+      padding: 16px 24px;
     }
     .stats-inner {
-      max-width: 900px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 40px; text-align: center;
+      max-width: 700px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0; text-align: center;
+    }
+    .stats-inner > div {
+      padding: 0 40px;
+    }
+    .stats-inner > div:not(:last-child) {
+      border-right: 1px solid var(--border);
     }
     .stat-number {
-      font-size: 48px; font-weight: 800; letter-spacing: -2px;
+      font-size: 32px; font-weight: 800; letter-spacing: -1px;
       background: linear-gradient(135deg, var(--primary2), #fff);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .stat-label { font-size: 14px; color: var(--muted); margin-top: 4px; }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
 
     /* ── Photo carousel ── */
     .photo-carousel {
@@ -679,10 +685,6 @@
       <div>
         <div class="stat-number">13</div>
         <div class="stat-label" data-i18n="stat_scenic">Scenic routes</div>
-      </div>
-      <div>
-        <div class="stat-number">8</div>
-        <div class="stat-label" data-i18n="stat_apis">Real-time APIs</div>
       </div>
     </div>
   </div>
