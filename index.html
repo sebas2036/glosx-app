@@ -1128,7 +1128,7 @@
       const gridCenter = grid.getBoundingClientRect().left + grid.offsetWidth / 2;
       grid.querySelectorAll('.scenic-card').forEach(card => {
         const cardCenter = card.getBoundingClientRect().left + card.offsetWidth / 2;
-        card.classList.toggle('desc-left', cardCenter > gridCenter);
+        card.classList.toggle('desc-left', cardCenter < gridCenter);
       });
     }
     requestAnimationFrame(positionScenicDescs);
