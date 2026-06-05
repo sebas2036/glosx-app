@@ -1188,6 +1188,10 @@
       document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.dataset.lang === lang);
       });
+      if (typeof renderScenic === 'function' && document.getElementById('scenicGrid')) {
+        renderScenic();
+        if (typeof positionScenicDescs === 'function') positionScenicDescs();
+      }
     }
 
     function setLang(lang) {
@@ -1260,26 +1264,42 @@
 
     // ── Scenic trains data + render ────────────────────────────────────────
     const SCENIC_TRAINS = [
-      { name: 'Glacier Express',     route: 'Zermatt → St. Moritz · 7h 45min',  origin: 'Zermatt',           dest: 'St. Moritz',      desc: '291 puentes y 91 túneles entre glaciares y cumbres nevadas de los Alpes suizos.', g1: '#C0392B', g2: '#922B21' },
-      { name: 'Bernina Express',     route: 'Chur → Tirano · 4h 0min',          origin: 'Chur',              dest: 'Tirano',          desc: 'Patrimonio UNESCO. El paso de montaña más alto de Europa en tren.', g1: '#1A5276', g2: '#154360' },
-      { name: 'GoldenPass Express',  route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux',          dest: 'Interlaken Ost',  desc: 'Del Lago Lemán al Oberland bernés en vagones panorámicos con ventanas extra anchas.', g1: '#B7950B', g2: '#9A7D0A' },
-      { name: 'TGV Lyria',           route: 'Paris → Geneva · 3h 5min',         origin: 'Paris Gare de Lyon',dest: 'Genève',          desc: 'Alta velocidad franco-suiza con vistas de los Alpes antes de llegar al lago.', g1: '#C0392B', g2: '#922B21' },
-      { name: 'Train des Merveilles',route: 'Nice → Tende · 2h 10min',          origin: 'Nice Ville',        dest: 'Tende',           desc: 'Del Mediterráneo a los valles alpinos con grabados rupestres de 5.000 años.', g1: '#2471A3', g2: '#1A5276' },
-      { name: 'Cinque Terre Express',route: 'La Spezia → Levanto · 30min',      origin: 'La Spezia Centrale',dest: 'Levanto',         desc: 'Cinco aldeas de colores pegadas al acantilado. La forma más cómoda de recorrerlas.', g1: '#1E8449', g2: '#196F3D' },
-      { name: 'Frecciarossa',        route: 'Rome → Venice · 3h 45min',         origin: 'Roma Termini',      dest: 'Venezia S. Lucia',desc: 'El tren más icónico de Italia. Roma a Venecia a 300 km/h.', g1: '#C0392B', g2: '#7B241C' },
-      { name: 'Rhine Valley',        route: 'Köln → Mainz · 1h 55min',          origin: 'Köln Hbf',          dest: 'Mainz Hbf',       desc: 'Castillos medievales, viñedos en terrazas y el legendario peñasco de Loreley.', g1: '#922B21', g2: '#7B241C' },
-      { name: 'Bavaria Alps',        route: 'München → Salzburg · 1h 30min',    origin: 'München Hbf',       dest: 'Salzburg Hbf',    desc: 'De la capital bávara a Mozart bordeando los Alpes. Lagos turquesa y cumbres nevadas.', g1: '#1A5276', g2: '#154360' },
-      { name: 'Semmering Express',   route: 'Vienna → Graz · 2h 39min',         origin: 'Wien Hbf',          dest: 'Graz Hbf',        desc: 'El ferrocarril de montaña más antiguo del mundo. Patrimonio UNESCO desde el siglo XIX.', g1: '#B7950B', g2: '#9A7D0A' },
-      { name: 'Douro Valley',        route: 'Porto → Pocinho · 3h 30min',       origin: 'Porto Campanhã',    dest: 'Pocinho',         desc: 'Viñedos del Oporto en terrazas de esquisto. Uno de los trayectos más bellos del mundo.', g1: '#784212', g2: '#6E2C00' },
-      { name: 'Intercity Direct',    route: 'Amsterdam → Brussels · 1h 51min',  origin: 'Amsterdam Centraal',dest: 'Brussel-Zuid',    desc: 'De los canales de Ámsterdam al Grand Place atravesando pólderes y campiña belga.', g1: '#E67E22', g2: '#CA6F1E' },
-      { name: 'Thalys',              route: 'Brussels → Paris · 1h 22min',      origin: 'Brussel-Zuid',      dest: 'Paris Gare du Nord',desc:'El tren rojo más famoso de Europa. Bruselas a París en menos de hora y media a 300 km/h.', g1: '#C0392B', g2: '#7B241C' },
+      { name: 'Glacier Express', route: 'Zermatt → St. Moritz · 7h 45min', origin: 'Zermatt', dest: 'St. Moritz', g1: '#C0392B', g2: '#922B21',
+        desc: { en: '291 bridges and 91 tunnels through glaciers and snow-capped Swiss Alps.', es: '291 puentes y 91 túneles entre glaciares y cumbres nevadas de los Alpes suizos.', fr: '291 ponts et 91 tunnels entre glaciers et cimes enneigées des Alpes suisses.', de: '291 Brücken und 91 Tunnel zwischen Gletschern und schneebedeckten Schweizer Alpen.', it: '291 ponti e 91 gallerie tra ghiacciai e cime innevate delle Alpi svizzere.', pt: '291 pontes e 91 túneis entre glaciares e picos nevados dos Alpes suíços.' } },
+      { name: 'Bernina Express', route: 'Chur → Tirano · 4h 0min', origin: 'Chur', dest: 'Tirano', g1: '#1A5276', g2: '#154360',
+        desc: { en: 'UNESCO heritage. Europe\'s highest mountain pass by train.', es: 'Patrimonio UNESCO. El paso de montaña más alto de Europa en tren.', fr: 'Patrimoine UNESCO. Le col le plus haut d\'Europe en train.', de: 'UNESCO-Welterbe. Europas höchster Bergpass mit dem Zug.', it: 'Patrimonio UNESCO. Il valico più alto d\'Europa in treno.', pt: 'Patrimônio UNESCO. A passagem de montanha mais alta da Europa de comboio.' } },
+      { name: 'GoldenPass Express', route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux', dest: 'Interlaken Ost', g1: '#B7950B', g2: '#9A7D0A',
+        desc: { en: 'From Lake Geneva to the Bernese Oberland in panoramic cars with extra-wide windows.', es: 'Del Lago Lemán al Oberland bernés en vagones panorámicos con ventanas extra anchas.', fr: 'Du Léman à l\'Oberland bernois en voitures panoramiques aux fenêtres extra larges.', de: 'Vom Genfersee ins Berner Oberland in Panoramawagen mit extra breiten Fenstern.', it: 'Dal Lago Lemano all\'Oberland bernese in carrozze panoramiche con finestre extra larghe.', pt: 'Do Lago Léman ao Oberland bernês em vagões panorâmicos com janelas extra largas.' } },
+      { name: 'TGV Lyria', route: 'Paris → Geneva · 3h 5min', origin: 'Paris Gare de Lyon', dest: 'Genève', g1: '#C0392B', g2: '#922B21',
+        desc: { en: 'French-Swiss high-speed with Alpine views before reaching the lake.', es: 'Alta velocidad franco-suiza con vistas de los Alpes antes de llegar al lago.', fr: 'Grande vitesse franco-suisse avec vue sur les Alpes avant le lac.', de: 'Französisch-schweizerischer Hochgeschwindigkeitszug mit Alpenblick.', it: 'Alta velocità franco-svizzera con vista sulle Alpi prima del lago.', pt: 'Alta velocidade franco-suíça com vistas dos Alpes antes do lago.' } },
+      { name: 'Train des Merveilles', route: 'Nice → Tende · 2h 10min', origin: 'Nice Ville', dest: 'Tende', g1: '#2471A3', g2: '#1A5276',
+        desc: { en: 'From the Mediterranean to Alpine valleys with 5,000-year-old rock carvings.', es: 'Del Mediterráneo a los valles alpinos con grabados rupestres de 5.000 años.', fr: 'De la Méditerranée aux vallées alpines avec des gravures rupestres de 5 000 ans.', de: 'Vom Mittelmeer zu den Alpentälern mit 5.000 Jahre alten Felsgravuren.', it: 'Dal Mediterraneo alle valli alpine con incisioni rupestri di 5.000 anni.', pt: 'Do Mediterrâneo aos vales alpinos com gravuras rupestres de 5.000 anos.' } },
+      { name: 'Cinque Terre Express', route: 'La Spezia → Levanto · 30min', origin: 'La Spezia Centrale', dest: 'Levanto', g1: '#1E8449', g2: '#196F3D',
+        desc: { en: 'Five colorful villages clinging to the cliffs. The easiest way to visit them all.', es: 'Cinco aldeas de colores pegadas al acantilado. La forma más cómoda de recorrerlas.', fr: 'Cinq villages colorés accrochés à la falaise. La façon la plus simple de tous les visiter.', de: 'Fünf bunte Dörfer an der Steilküste. Der einfachste Weg, sie alle zu besuchen.', it: 'Cinque borghi colorati a strapiombo sul mare. Il modo più comodo per visitarli.', pt: 'Cinco aldeias coloridas sobre a falésia. A forma mais cómoda de as visitar.' } },
+      { name: 'Frecciarossa', route: 'Rome → Venice · 3h 45min', origin: 'Roma Termini', dest: 'Venezia S. Lucia', g1: '#C0392B', g2: '#7B241C',
+        desc: { en: 'Italy\'s most iconic train. Rome to Venice at 300 km/h.', es: 'El tren más icónico de Italia. Roma a Venecia a 300 km/h.', fr: 'Le train le plus emblématique d\'Italie. Rome-Venise à 300 km/h.', de: 'Italiens berühmtester Zug. Rom nach Venedig mit 300 km/h.', it: 'Il treno più iconico d\'Italia. Roma-Venezia a 300 km/h.', pt: 'O comboio mais icónico de Itália. Roma a Veneza a 300 km/h.' } },
+      { name: 'Rhine Valley', route: 'Köln → Mainz · 1h 55min', origin: 'Köln Hbf', dest: 'Mainz Hbf', g1: '#922B21', g2: '#7B241C',
+        desc: { en: 'Medieval castles, terraced vineyards and the legendary Lorelei rock.', es: 'Castillos medievales, viñedos en terrazas y el legendario peñasco de Loreley.', fr: 'Châteaux médiévaux, vignobles en terrasses et le légendaire rocher de la Lorelei.', de: 'Mittelalterliche Burgen, Weinterrassen und der legendäre Loreley-Felsen.', it: 'Castelli medievali, vigneti terrazzati e la leggendaria rupe di Loreley.', pt: 'Castelos medievais, vinhas em terraços e o lendário penhasco de Loreley.' } },
+      { name: 'Bavaria Alps', route: 'München → Salzburg · 1h 30min', origin: 'München Hbf', dest: 'Salzburg Hbf', g1: '#1A5276', g2: '#154360',
+        desc: { en: 'From Bavaria\'s capital to Mozart\'s city along the Alps. Turquoise lakes and snowy peaks.', es: 'De la capital bávara a Mozart bordeando los Alpes. Lagos turquesa y cumbres nevadas.', fr: 'De la capitale bavaroise à Mozart en longeant les Alpes. Lacs turquoise et sommets enneigés.', de: 'Von der bayerischen Hauptstadt nach Mozart entlang der Alpen. Türkisfarbene Seen und schneebedeckte Gipfel.', it: 'Dalla capitale bavarese alla città di Mozart lungo le Alpi. Laghi turchesi e cime innevate.', pt: 'Da capital bávara a Mozart ao longo dos Alpes. Lagos turquesa e picos nevados.' } },
+      { name: 'Semmering Express', route: 'Vienna → Graz · 2h 39min', origin: 'Wien Hbf', dest: 'Graz Hbf', g1: '#B7950B', g2: '#9A7D0A',
+        desc: { en: 'The world\'s oldest mountain railway. UNESCO heritage since the 19th century.', es: 'El ferrocarril de montaña más antiguo del mundo. Patrimonio UNESCO desde el siglo XIX.', fr: 'Le plus ancien chemin de fer de montagne au monde. Patrimoine UNESCO depuis le XIXe siècle.', de: 'Die älteste Gebirgsbahn der Welt. UNESCO-Welterbe seit dem 19. Jahrhundert.', it: 'La più antica ferrovia di montagna del mondo. Patrimonio UNESCO dal XIX secolo.', pt: 'A ferrovia de montanha mais antiga do mundo. Patrimônio UNESCO desde o século XIX.' } },
+      { name: 'Douro Valley', route: 'Porto → Pocinho · 3h 30min', origin: 'Porto Campanhã', dest: 'Pocinho', g1: '#784212', g2: '#6E2C00',
+        desc: { en: 'Port wine vineyards on schist terraces. One of the world\'s most beautiful train rides.', es: 'Viñedos del Oporto en terrazas de esquisto. Uno de los trayectos más bellos del mundo.', fr: 'Vignobles de Porto en terrasses de schiste. L\'un des plus beaux trajets au monde.', de: 'Portwein-Weinberge auf Schieferterrassen. Eine der schönsten Bahnstrecken der Welt.', it: 'Vigneti del Porto su terrazze di scisto. Uno dei viaggi in treno più belli del mondo.', pt: 'Vinhas do Porto em socalcos de xisto. Uma das viagens de comboio mais belas do mundo.' } },
+      { name: 'Intercity Direct', route: 'Amsterdam → Brussels · 1h 51min', origin: 'Amsterdam Centraal', dest: 'Brussel-Zuid', g1: '#E67E22', g2: '#CA6F1E',
+        desc: { en: 'From Amsterdam\'s canals to the Grand Place through polders and Belgian countryside.', es: 'De los canales de Ámsterdam al Grand Place atravesando pólderes y campiña belga.', fr: 'Des canaux d\'Amsterdam à la Grand-Place à travers les polders et la campagne belge.', de: 'Von Amsterdams Grachten zum Grand Place durch Polder und belgische Landschaft.', it: 'Dai canali di Amsterdam alla Grand Place tra polder e campagna belga.', pt: 'Dos canais de Amesterdão à Grand Place atravessando pôlderes e o campo belga.' } },
+      { name: 'Thalys', route: 'Brussels → Paris · 1h 22min', origin: 'Brussel-Zuid', dest: 'Paris Gare du Nord', g1: '#C0392B', g2: '#7B241C',
+        desc: { en: 'Europe\'s most famous red train. Brussels to Paris in under 90 minutes at 300 km/h.', es: 'El tren rojo más famoso de Europa. Bruselas a París en menos de hora y media a 300 km/h.', fr: 'Le train rouge le plus célèbre d\'Europe. Bruxelles-Paris en moins d\'1h30 à 300 km/h.', de: 'Europas berühmtester roter Zug. Brüssel nach Paris in unter 90 Minuten mit 300 km/h.', it: 'Il treno rosso più famoso d\'Europa. Bruxelles-Parigi in meno di 90 minuti a 300 km/h.', pt: 'O comboio vermelho mais famoso da Europa. Bruxelas a Paris em menos de 90 minutos a 300 km/h.' } },
     ];
 
     let scenicExpanded = false;
     function renderScenic() {
       const grid = document.getElementById('scenicGrid');
+      const lang = document.documentElement.lang || 'en';
       const list = scenicExpanded ? SCENIC_TRAINS : SCENIC_TRAINS.slice(0, 6);
-      grid.innerHTML = list.map(t => `
+      grid.innerHTML = list.map(t => {
+        const desc = (t.desc && t.desc[lang]) || (t.desc && t.desc.en) || '';
+        return `
         <div class="scenic-wrapper">
           <a href="#" class="scenic-card" onclick="goScenic('${encodeURIComponent(t.origin)}','${encodeURIComponent(t.dest)}', event)">
             <div class="scenic-icon" style="background: linear-gradient(135deg, ${t.g1}, ${t.g2});"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/><path d="M7 11h10"/><path d="M12 4v7"/></svg></div>
@@ -1289,9 +1309,9 @@
             </div>
             <div class="scenic-cta" data-i18n="scenic_book">Reservar</div>
           </a>
-          <div class="scenic-desc">${t.desc}</div>
-        </div>
-      `).join('');
+          <div class="scenic-desc">${desc}</div>
+        </div>`;
+      }).join('');
     }
     function toggleScenic() {
       scenicExpanded = !scenicExpanded;
