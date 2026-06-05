@@ -296,6 +296,17 @@
       transform: translateX(0);
       pointer-events: auto;
     }
+    .scenic-card.desc-left .scenic-desc {
+      left: auto;
+      right: 100%;
+      border-radius: 16px 0 0 16px;
+      border-left: 1px solid var(--border);
+      border-right: 2px solid rgba(124,58,237,0.4);
+      transform: translateX(10px);
+    }
+    .scenic-card.desc-left:hover .scenic-desc {
+      transform: translateX(0);
+    }
     .scenic-icon {
       width: 48px; height: 48px;
       border-radius: 12px;
@@ -1110,6 +1121,18 @@
       `).join('');
     }
     renderScenic();
+
+    function positionScenicDescs() {
+      const grid = document.getElementById('scenicGrid');
+      if (!grid) return;
+      const gridCenter = grid.getBoundingClientRect().left + grid.offsetWidth / 2;
+      grid.querySelectorAll('.scenic-card').forEach(card => {
+        const cardCenter = card.getBoundingClientRect().left + card.offsetWidth / 2;
+        card.classList.toggle('desc-left', cardCenter > gridCenter);
+      });
+    }
+    requestAnimationFrame(positionScenicDescs);
+    window.addEventListener('resize', positionScenicDescs);
 
     function goScenic(origin, dest, e) {
       e.preventDefault();
