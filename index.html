@@ -293,7 +293,16 @@
     }
     .scenic-card:hover {
       border-color: rgba(124,58,237,0.4);
-      border-right-color: transparent;
+    }
+    .scenic-card:hover::after {
+      content: '';
+      position: absolute;
+      right: -2px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--surface);
+      z-index: 11;
     }
     .scenic-card:hover .scenic-desc {
       opacity: 1;
@@ -308,9 +317,18 @@
       border-right: none;
       transform: translateX(10px);
     }
-    .scenic-card.desc-left:hover {
-      border-right-color: rgba(124,58,237,0.4);
-      border-left-color: transparent;
+    .scenic-card.desc-left:hover::after {
+      display: none;
+    }
+    .scenic-card.desc-left:hover::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--surface);
+      z-index: 11;
     }
     .scenic-card.desc-left:hover .scenic-desc {
       transform: translateX(0);
