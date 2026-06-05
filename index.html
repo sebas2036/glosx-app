@@ -337,6 +337,21 @@
       border: 1px solid rgba(124,58,237,0.6);
       flex-shrink: 0;
     }
+    .scenic-toggle {
+      background: transparent;
+      color: var(--primary2);
+      border: 1px solid rgba(124,58,237,0.6);
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .scenic-toggle:hover {
+      background: rgba(124,58,237,0.12);
+      border-color: rgba(124,58,237,0.9);
+    }
 
     /* ── Partner products ── */
     .partners-grid {
@@ -705,6 +720,9 @@
     <div class="scenic-grid" id="scenicGrid">
       <!-- Filled by JS -->
     </div>
+    <div style="text-align:center; margin-top: 24px;">
+      <button id="scenicToggle" class="scenic-toggle" onclick="toggleScenic()" data-i18n="scenic_more">Ver más rutas</button>
+    </div>
   </section>
 
   <!-- Stats -->
@@ -946,6 +964,7 @@
         stat_free_val: 'Free', stat_free: 'No cost, forever', stat_realtime_val: 'Real-time', stat_realtime: 'Live departures 24/7', stat_noreg_val: 'No sign-up', stat_noreg: 'Open and search, no account',
         scenic_label: 'Iconic European routes', scenic_title1: 'Scenic train', scenic_title2: 'experiences.',
         scenic_lead: 'The most spectacular train journeys in Europe — book directly from here.',
+        scenic_more: 'See more routes', scenic_less: 'See less',
         partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
         partners_lead: 'Curated services that complement your train journey.',
         p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
@@ -978,6 +997,7 @@
         stat_free_val: 'Gratis', stat_free: 'Sin costo, para siempre', stat_realtime_val: 'Tiempo real', stat_realtime: 'Salidas en vivo 24/7', stat_noreg_val: 'Sin registro', stat_noreg: 'Abrí y buscá, sin cuenta',
         scenic_label: 'Rutas europeas icónicas', scenic_title1: 'Experiencias en', scenic_title2: 'tren panorámico.',
         scenic_lead: 'Los viajes en tren más espectaculares de Europa — reservá directo desde aquí.',
+        scenic_more: 'Ver más rutas', scenic_less: 'Ver menos',
         partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
         partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
         p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
@@ -1010,6 +1030,7 @@
         stat_free_val: 'Gratuit', stat_free: 'Sans frais, pour toujours', stat_realtime_val: 'Temps réel', stat_realtime: 'Départs en direct 24/7', stat_noreg_val: 'Sans inscription', stat_noreg: 'Ouvrez et cherchez, sans compte',
         scenic_label: 'Itinéraires européens emblématiques', scenic_title1: 'Expériences en', scenic_title2: 'train panoramique.',
         scenic_lead: 'Les plus beaux voyages en train d\'Europe — réservez directement ici.',
+        scenic_more: 'Voir plus d\'itinéraires', scenic_less: 'Voir moins',
         partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
         partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
         p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
@@ -1042,6 +1063,7 @@
         stat_free_val: 'Kostenlos', stat_free: 'Keine Kosten, für immer', stat_realtime_val: 'Echtzeit', stat_realtime: 'Live-Abfahrten 24/7', stat_noreg_val: 'Ohne Anmeldung', stat_noreg: 'Öffnen und suchen, kein Konto',
         scenic_label: 'Ikonische europäische Routen', scenic_title1: 'Panoramazug-', scenic_title2: 'Erlebnisse.',
         scenic_lead: 'Die spektakulärsten Zugreisen Europas — direkt von hier buchen.',
+        scenic_more: 'Mehr Strecken anzeigen', scenic_less: 'Weniger anzeigen',
         partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
         partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
         p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
@@ -1074,6 +1096,7 @@
         stat_free_val: 'Gratis', stat_free: 'Senza costi, per sempre', stat_realtime_val: 'Tempo reale', stat_realtime: 'Partenze in diretta 24/7', stat_noreg_val: 'Senza registrazione', stat_noreg: 'Apri e cerca, senza account',
         scenic_label: 'Percorsi europei iconici', scenic_title1: 'Esperienze in', scenic_title2: 'treno panoramico.',
         scenic_lead: 'I viaggi in treno più spettacolari d\'Europa — prenota direttamente da qui.',
+        scenic_more: 'Vedi altri percorsi', scenic_less: 'Vedi meno',
         partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
         partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
@@ -1106,6 +1129,7 @@
         stat_free_val: 'Grátis', stat_free: 'Sem custo, para sempre', stat_realtime_val: 'Tempo real', stat_realtime: 'Partidas ao vivo 24/7', stat_noreg_val: 'Sem registo', stat_noreg: 'Abra e pesquise, sem conta',
         scenic_label: 'Rotas europeias icónicas', scenic_title1: 'Experiências em', scenic_title2: 'comboio panorâmico.',
         scenic_lead: 'As viagens de comboio mais espetaculares da Europa — reserve diretamente aqui.',
+        scenic_more: 'Ver mais rotas', scenic_less: 'Ver menos',
         partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
         partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
@@ -1251,9 +1275,11 @@
       { name: 'Thalys',              route: 'Brussels → Paris · 1h 22min',      origin: 'Brussel-Zuid',      dest: 'Paris Gare du Nord',desc:'El tren rojo más famoso de Europa. Bruselas a París en menos de hora y media a 300 km/h.', g1: '#C0392B', g2: '#7B241C' },
     ];
 
+    let scenicExpanded = false;
     function renderScenic() {
       const grid = document.getElementById('scenicGrid');
-      grid.innerHTML = SCENIC_TRAINS.map(t => `
+      const list = scenicExpanded ? SCENIC_TRAINS : SCENIC_TRAINS.slice(0, 6);
+      grid.innerHTML = list.map(t => `
         <div class="scenic-wrapper">
           <a href="#" class="scenic-card" onclick="goScenic('${encodeURIComponent(t.origin)}','${encodeURIComponent(t.dest)}', event)">
             <div class="scenic-icon" style="background: linear-gradient(135deg, ${t.g1}, ${t.g2});"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/><path d="M7 11h10"/><path d="M12 4v7"/></svg></div>
@@ -1266,6 +1292,14 @@
           <div class="scenic-desc">${t.desc}</div>
         </div>
       `).join('');
+    }
+    function toggleScenic() {
+      scenicExpanded = !scenicExpanded;
+      renderScenic();
+      const btn = document.getElementById('scenicToggle');
+      btn.setAttribute('data-i18n', scenicExpanded ? 'scenic_less' : 'scenic_more');
+      applyLang(document.documentElement.lang || 'en');
+      positionScenicDescs();
     }
     renderScenic();
 
