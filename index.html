@@ -506,7 +506,7 @@
       border-right: 1px solid var(--border);
     }
     .stat-number {
-      font-size: 32px; font-weight: 800; letter-spacing: -1px;
+      font-size: 20px; font-weight: 700; letter-spacing: 0;
       background: linear-gradient(135deg, var(--primary2), #fff);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
@@ -675,16 +675,16 @@
   <div class="stats">
     <div class="stats-inner">
       <div>
-        <div class="stat-number">9</div>
-        <div class="stat-label" data-i18n="stat_countries">Countries covered</div>
+        <div class="stat-number" data-i18n="stat_free_val">Gratis</div>
+        <div class="stat-label" data-i18n="stat_free">Sin costo, para siempre</div>
       </div>
       <div>
-        <div class="stat-number">500k+</div>
-        <div class="stat-label" data-i18n="stat_schedules">Train schedules</div>
+        <div class="stat-number" data-i18n="stat_realtime_val">Tiempo real</div>
+        <div class="stat-label" data-i18n="stat_realtime">Salidas en vivo 24/7</div>
       </div>
       <div>
-        <div class="stat-number">13</div>
-        <div class="stat-label" data-i18n="stat_scenic">Scenic routes</div>
+        <div class="stat-number" data-i18n="stat_noreg_val">Sin registro</div>
+        <div class="stat-label" data-i18n="stat_noreg">Abrí y buscá, sin cuenta</div>
       </div>
     </div>
   </div>
@@ -875,7 +875,7 @@
         hero_title1: 'Your train.', hero_title2: 'Your world.',
         hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
         search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search →',
-        stat_countries: 'Countries covered', stat_schedules: 'Train schedules', stat_scenic: 'Scenic routes', stat_apis: 'Real-time APIs',
+        stat_free_val: 'Free', stat_free: 'No cost, forever', stat_realtime_val: 'Real-time', stat_realtime: 'Live departures 24/7', stat_noreg_val: 'No sign-up', stat_noreg: 'Open and search, no account',
         scenic_label: 'Iconic European routes', scenic_title1: 'Scenic train', scenic_title2: 'experiences.',
         scenic_lead: 'The most spectacular train journeys in Europe — book directly from here.',
         partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
@@ -907,7 +907,7 @@
         hero_title1: 'Tu tren.', hero_title2: 'Tu mundo.',
         hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
         search_from: 'Desde', search_to: 'Hasta', search_date: 'Fecha', search_btn: 'Buscar →',
-        stat_countries: 'Países cubiertos', stat_schedules: 'Horarios de trenes', stat_scenic: 'Rutas panorámicas', stat_apis: 'APIs en tiempo real',
+        stat_free_val: 'Gratis', stat_free: 'Sin costo, para siempre', stat_realtime_val: 'Tiempo real', stat_realtime: 'Salidas en vivo 24/7', stat_noreg_val: 'Sin registro', stat_noreg: 'Abrí y buscá, sin cuenta',
         scenic_label: 'Rutas europeas icónicas', scenic_title1: 'Experiencias en', scenic_title2: 'tren panorámico.',
         scenic_lead: 'Los viajes en tren más espectaculares de Europa — reservá directo desde aquí.',
         partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
@@ -939,7 +939,7 @@
         hero_title1: 'Ton train.', hero_title2: 'Ton monde.',
         hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
         search_from: 'Départ', search_to: 'Arrivée', search_date: 'Date', search_btn: 'Rechercher →',
-        stat_countries: 'Pays couverts', stat_schedules: 'Horaires de trains', stat_scenic: 'Itinéraires panoramiques', stat_apis: 'APIs temps réel',
+        stat_free_val: 'Gratuit', stat_free: 'Sans frais, pour toujours', stat_realtime_val: 'Temps réel', stat_realtime: 'Départs en direct 24/7', stat_noreg_val: 'Sans inscription', stat_noreg: 'Ouvrez et cherchez, sans compte',
         scenic_label: 'Itinéraires européens emblématiques', scenic_title1: 'Expériences en', scenic_title2: 'train panoramique.',
         scenic_lead: 'Les plus beaux voyages en train d\'Europe — réservez directement ici.',
         partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
@@ -971,7 +971,7 @@
         hero_title1: 'Dein Zug.', hero_title2: 'Deine Welt.',
         hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
         search_from: 'Von', search_to: 'Nach', search_date: 'Datum', search_btn: 'Suchen →',
-        stat_countries: 'Abgedeckte Länder', stat_schedules: 'Zugfahrpläne', stat_scenic: 'Panoramastrecken', stat_apis: 'Echtzeit-APIs',
+        stat_free_val: 'Kostenlos', stat_free: 'Keine Kosten, für immer', stat_realtime_val: 'Echtzeit', stat_realtime: 'Live-Abfahrten 24/7', stat_noreg_val: 'Ohne Anmeldung', stat_noreg: 'Öffnen und suchen, kein Konto',
         scenic_label: 'Ikonische europäische Routen', scenic_title1: 'Panoramazug-', scenic_title2: 'Erlebnisse.',
         scenic_lead: 'Die spektakulärsten Zugreisen Europas — direkt von hier buchen.',
         partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
@@ -1003,7 +1003,7 @@
         hero_title1: 'Il tuo treno.', hero_title2: 'Il tuo mondo.',
         hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
         search_from: 'Da', search_to: 'A', search_date: 'Data', search_btn: 'Cerca →',
-        stat_countries: 'Paesi coperti', stat_schedules: 'Orari dei treni', stat_scenic: 'Percorsi panoramici', stat_apis: 'API in tempo reale',
+        stat_free_val: 'Gratis', stat_free: 'Senza costi, per sempre', stat_realtime_val: 'Tempo reale', stat_realtime: 'Partenze in diretta 24/7', stat_noreg_val: 'Senza registrazione', stat_noreg: 'Apri e cerca, senza account',
         scenic_label: 'Percorsi europei iconici', scenic_title1: 'Esperienze in', scenic_title2: 'treno panoramico.',
         scenic_lead: 'I viaggi in treno più spettacolari d\'Europa — prenota direttamente da qui.',
         partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
@@ -1035,7 +1035,7 @@
         hero_title1: 'O teu comboio.', hero_title2: 'O teu mundo.',
         hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
         search_from: 'De', search_to: 'Para', search_date: 'Data', search_btn: 'Pesquisar →',
-        stat_countries: 'Países cobertos', stat_schedules: 'Horários de comboios', stat_scenic: 'Rotas panorâmicas', stat_apis: 'APIs em tempo real',
+        stat_free_val: 'Grátis', stat_free: 'Sem custo, para sempre', stat_realtime_val: 'Tempo real', stat_realtime: 'Partidas ao vivo 24/7', stat_noreg_val: 'Sem registo', stat_noreg: 'Abra e pesquise, sem conta',
         scenic_label: 'Rotas europeias icónicas', scenic_title1: 'Experiências em', scenic_title2: 'comboio panorâmico.',
         scenic_lead: 'As viagens de comboio mais espetaculares da Europa — reserve diretamente aqui.',
         partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
