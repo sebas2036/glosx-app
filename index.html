@@ -443,18 +443,36 @@
     /* ── Screenshots ── */
     .screenshots-row {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       justify-content: center;
       overflow-x: auto;
-      padding: 20px 0 40px;
+      padding: 40px 0 60px;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
+      align-items: center;
+      position: relative;
+    }
+    .screenshots-row::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 60%;
+      background: radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 70%);
+      pointer-events: none;
     }
     .screenshot-item {
       flex-shrink: 0;
       text-align: center;
       scroll-snap-align: center;
+      position: relative;
     }
+    .screenshot-item:nth-child(1) { transform: rotate(-4deg) translateY(16px); }
+    .screenshot-item:nth-child(2) { transform: rotate(-1.5deg) translateY(6px); z-index: 2; }
+    .screenshot-item:nth-child(3) { transform: rotate(1.5deg) translateY(6px); z-index: 2; }
+    .screenshot-item:nth-child(4) { transform: rotate(4deg) translateY(16px); }
+    .screenshot-item:hover { transform: rotate(0deg) translateY(-8px) scale(1.03) !important; z-index: 10; transition: transform 0.4s ease; }
     .screenshot-phone {
       width: 220px;
       height: 440px;
