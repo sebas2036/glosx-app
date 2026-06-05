@@ -135,11 +135,11 @@
 
     /* ── Hero ── */
     .hero {
-      min-height: 100vh;
+      min-height: auto;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 120px 24px 60px;
+      padding: 100px 24px 40px;
       position: relative;
       overflow: hidden;
     }
@@ -222,7 +222,7 @@
     /* ── Countries strip ── */
     .countries {
       display: flex; gap: 12px; flex-wrap: wrap;
-      justify-content: center; margin-top: 48px;
+      justify-content: center; margin-top: 12px;
     }
     .country-chip {
       background: var(--surface); border: 1px solid var(--border);
@@ -232,7 +232,7 @@
 
     /* ── Sections ── */
     .section {
-      padding: 100px 24px;
+      padding: 60px 24px;
       max-width: 1200px; margin: 0 auto;
     }
     .section-label {
@@ -446,7 +446,7 @@
       background: var(--surface);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 64px 24px;
+      padding: 40px 24px;
     }
     .stats-inner {
       max-width: 900px; margin: 0 auto;
@@ -493,7 +493,7 @@
       nav { padding: 16px 20px; }
       .nav-links { display: none; }
       .hero { padding: 100px 20px 60px; }
-      .section { padding: 60px 20px; }
+      .section { padding: 40px 20px; }
     }
   </style>
 </head>
@@ -553,7 +553,7 @@
   </section>
 
   <!-- Countries chips -->
-  <div class="countries" id="countries" style="padding-top: 40px;">
+  <div class="countries" id="countries" style="padding-top: 16px;">
     <span class="country-chip">🇪🇸 España</span>
     <span class="country-chip">🇨🇭 Switzerland</span>
     <span class="country-chip">🇫🇷 France</span>
