@@ -257,6 +257,7 @@
     }
     .scenic-grid .scenic-card {
       flex: 0 1 380px;
+      overflow: visible;
     }
     .scenic-card {
       background: var(--surface);
@@ -265,24 +266,35 @@
       padding: 20px;
       display: flex; align-items: center; gap: 16px;
       text-decoration: none;
-      transition: border-color 0.3s, flex-basis 0.4s ease, box-shadow 0.3s;
+      transition: border-color 0.2s;
       position: relative;
-      overflow: hidden;
-    }
-    .scenic-card .scenic-desc {
-      max-width: 0; opacity: 0; overflow: hidden;
-      font-size: 12px; color: var(--muted); line-height: 1.5;
-      white-space: normal;
-      transition: max-width 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
-      padding: 0;
     }
     .scenic-card:hover {
       border-color: rgba(124,58,237,0.4);
-      box-shadow: 0 8px 30px rgba(124,58,237,0.15);
-      flex-basis: 600px !important;
+    }
+    .scenic-card .scenic-desc {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      height: 100%;
+      width: 240px;
+      background: var(--elevated);
+      border: 1px solid var(--border);
+      border-left: 2px solid rgba(124,58,237,0.4);
+      border-radius: 0 16px 16px 0;
+      padding: 16px;
+      font-size: 12px; color: var(--muted); line-height: 1.5;
+      display: flex; align-items: center;
+      opacity: 0;
+      transform: translateX(-10px);
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 10;
     }
     .scenic-card:hover .scenic-desc {
-      max-width: 220px; opacity: 1; padding-left: 12px;
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
     }
     .scenic-icon {
       width: 48px; height: 48px;
