@@ -33,6 +33,12 @@
       script.src = 'https://emrldtp.com/NTM0NTcw.js?t=534570';
       document.head.appendChild(script);
     })();
+    // Limpiar parámetros de tracking de la URL para que no se vean
+    setTimeout(function () {
+      if (window.location.search) {
+        window.history.replaceState({}, '', window.location.pathname + window.location.hash);
+      }
+    }, 500);
   </script>
 
   <!-- Schema.org Mobile App -->
@@ -388,6 +394,53 @@
     }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.2); }
 
+    /* ── Screenshots ── */
+    .screenshots-row {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      overflow-x: auto;
+      padding: 20px 0 40px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .screenshot-item {
+      flex-shrink: 0;
+      text-align: center;
+      scroll-snap-align: center;
+    }
+    .screenshot-phone {
+      width: 220px;
+      height: 440px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 3px solid rgba(124,58,237,0.3);
+      box-shadow: 0 20px 60px rgba(124,58,237,0.15), 0 0 0 1px rgba(255,255,255,0.05);
+      background: var(--surface);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .screenshot-phone:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(124,58,237,0.25), 0 0 0 1px rgba(255,255,255,0.1);
+    }
+    .screenshot-phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .screenshot-caption {
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 768px) {
+      .screenshots-row { justify-content: flex-start; padding: 20px 16px 40px; }
+      .screenshot-phone { width: 180px; height: 360px; border-radius: 20px; }
+    }
+
     /* ── Stats ── */
     .stats {
       background: var(--surface);
@@ -507,6 +560,40 @@
       <span class="country-chip">🇳🇱 Netherlands</span>
       <span class="country-chip">🇦🇹 Austria</span>
       <span class="country-chip">🇵🇹 Portugal</span>
+    </div>
+  </section>
+
+  <!-- App Screenshots -->
+  <section class="section" id="app-preview">
+    <p class="section-label" data-i18n="preview_label">See it in action</p>
+    <h2><span data-i18n="preview_title1">Designed for</span><br /><span data-i18n="preview_title2">real travelers.</span></h2>
+    <p class="lead" data-i18n="preview_lead">GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.</p>
+
+    <div class="screenshots-row">
+      <div class="screenshot-item">
+        <div class="screenshot-phone">
+          <img src="screen-home.jpg" alt="WoW TRENES — Home" loading="lazy" />
+        </div>
+        <p class="screenshot-caption" data-i18n="ss_home">Choose your country</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="screenshot-phone">
+          <img src="screen-live.jpg" alt="WoW TRENES — Live departures" loading="lazy" />
+        </div>
+        <p class="screenshot-caption" data-i18n="ss_live">Live departures</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="screenshot-phone">
+          <img src="screen-board.jpg" alt="WoW TRENES — Departure board" loading="lazy" />
+        </div>
+        <p class="screenshot-caption" data-i18n="ss_board">Departure board</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="screenshot-phone">
+          <img src="screen-translator.jpg" alt="WoW TRENES — Sign translator" loading="lazy" />
+        </div>
+        <p class="screenshot-caption" data-i18n="ss_translator">Sign translator</p>
+      </div>
     </div>
   </section>
 
