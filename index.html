@@ -1188,10 +1188,12 @@
       document.querySelectorAll('.lang-option').forEach(opt => {
         opt.classList.toggle('active', opt.dataset.lang === lang);
       });
-      if (typeof renderScenic === 'function' && document.getElementById('scenicGrid')) {
-        renderScenic();
-        if (typeof positionScenicDescs === 'function') positionScenicDescs();
-      }
+      try {
+        if (typeof renderScenic === 'function' && document.getElementById('scenicGrid')) {
+          renderScenic();
+          if (typeof positionScenicDescs === 'function') positionScenicDescs();
+        }
+      } catch (e) { /* SCENIC_TRAINS aún no definido en primer applyLang */ }
     }
 
     function setLang(lang) {
