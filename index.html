@@ -265,11 +265,24 @@
       padding: 20px;
       display: flex; align-items: center; gap: 16px;
       text-decoration: none;
-      transition: border-color 0.2s, transform 0.2s;
+      transition: border-color 0.3s, flex-basis 0.4s ease, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .scenic-card .scenic-desc {
+      max-width: 0; opacity: 0; overflow: hidden;
+      font-size: 12px; color: var(--muted); line-height: 1.5;
+      white-space: normal;
+      transition: max-width 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+      padding: 0;
     }
     .scenic-card:hover {
       border-color: rgba(124,58,237,0.4);
-      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(124,58,237,0.15);
+      flex-basis: 600px !important;
+    }
+    .scenic-card:hover .scenic-desc {
+      max-width: 220px; opacity: 1; padding-left: 12px;
     }
     .scenic-icon {
       width: 48px; height: 48px;
@@ -1055,19 +1068,19 @@
 
     // ── Scenic trains data + render ────────────────────────────────────────
     const SCENIC_TRAINS = [
-      { name: 'Glacier Express',     route: 'Zermatt → St. Moritz · 7h 45min',  origin: 'Zermatt',           dest: 'St. Moritz',      icon: '🏔️', g1: '#C0392B', g2: '#922B21' },
-      { name: 'Bernina Express',     route: 'Chur → Tirano · 4h 0min',          origin: 'Chur',              dest: 'Tirano',          icon: '🚂', g1: '#1A5276', g2: '#154360' },
-      { name: 'GoldenPass Express',  route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux',          dest: 'Interlaken Ost',  icon: '🌄', g1: '#B7950B', g2: '#9A7D0A' },
-      { name: 'TGV Lyria',           route: 'Paris → Geneva · 3h 5min',         origin: 'Paris Gare de Lyon',dest: 'Genève',          icon: '🚄', g1: '#C0392B', g2: '#922B21' },
-      { name: 'Train des Merveilles',route: 'Nice → Tende · 2h 10min',          origin: 'Nice Ville',        dest: 'Tende',           icon: '🏞️', g1: '#2471A3', g2: '#1A5276' },
-      { name: 'Cinque Terre Express',route: 'La Spezia → Levanto · 30min',      origin: 'La Spezia Centrale',dest: 'Levanto',         icon: '🌊', g1: '#1E8449', g2: '#196F3D' },
-      { name: 'Frecciarossa',        route: 'Rome → Venice · 3h 45min',         origin: 'Roma Termini',      dest: 'Venezia S. Lucia',icon: '🚄', g1: '#C0392B', g2: '#7B241C' },
-      { name: 'Rhine Valley',        route: 'Köln → Mainz · 1h 55min',          origin: 'Köln Hbf',          dest: 'Mainz Hbf',       icon: '🏰', g1: '#922B21', g2: '#7B241C' },
-      { name: 'Bavaria Alps',        route: 'München → Salzburg · 1h 30min',    origin: 'München Hbf',       dest: 'Salzburg Hbf',    icon: '⛰️', g1: '#1A5276', g2: '#154360' },
-      { name: 'Semmering Express',   route: 'Vienna → Graz · 2h 39min',         origin: 'Wien Hbf',          dest: 'Graz Hbf',        icon: '🏔️', g1: '#B7950B', g2: '#9A7D0A' },
-      { name: 'Douro Valley',        route: 'Porto → Pocinho · 3h 30min',       origin: 'Porto Campanhã',    dest: 'Pocinho',         icon: '🍇', g1: '#784212', g2: '#6E2C00' },
-      { name: 'Intercity Direct',    route: 'Amsterdam → Brussels · 1h 51min',  origin: 'Amsterdam Centraal',dest: 'Brussel-Zuid',    icon: '🚂', g1: '#E67E22', g2: '#CA6F1E' },
-      { name: 'Thalys',              route: 'Brussels → Paris · 1h 22min',      origin: 'Brussel-Zuid',      dest: 'Paris Gare du Nord',icon:'🚄',g1: '#C0392B', g2: '#7B241C' },
+      { name: 'Glacier Express',     route: 'Zermatt → St. Moritz · 7h 45min',  origin: 'Zermatt',           dest: 'St. Moritz',      desc: '291 puentes y 91 túneles entre glaciares y cumbres nevadas de los Alpes suizos.', g1: '#C0392B', g2: '#922B21' },
+      { name: 'Bernina Express',     route: 'Chur → Tirano · 4h 0min',          origin: 'Chur',              dest: 'Tirano',          desc: 'Patrimonio UNESCO. El paso de montaña más alto de Europa en tren.', g1: '#1A5276', g2: '#154360' },
+      { name: 'GoldenPass Express',  route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux',          dest: 'Interlaken Ost',  desc: 'Del Lago Lemán al Oberland bernés en vagones panorámicos con ventanas extra anchas.', g1: '#B7950B', g2: '#9A7D0A' },
+      { name: 'TGV Lyria',           route: 'Paris → Geneva · 3h 5min',         origin: 'Paris Gare de Lyon',dest: 'Genève',          desc: 'Alta velocidad franco-suiza con vistas de los Alpes antes de llegar al lago.', g1: '#C0392B', g2: '#922B21' },
+      { name: 'Train des Merveilles',route: 'Nice → Tende · 2h 10min',          origin: 'Nice Ville',        dest: 'Tende',           desc: 'Del Mediterráneo a los valles alpinos con grabados rupestres de 5.000 años.', g1: '#2471A3', g2: '#1A5276' },
+      { name: 'Cinque Terre Express',route: 'La Spezia → Levanto · 30min',      origin: 'La Spezia Centrale',dest: 'Levanto',         desc: 'Cinco aldeas de colores pegadas al acantilado. La forma más cómoda de recorrerlas.', g1: '#1E8449', g2: '#196F3D' },
+      { name: 'Frecciarossa',        route: 'Rome → Venice · 3h 45min',         origin: 'Roma Termini',      dest: 'Venezia S. Lucia',desc: 'El tren más icónico de Italia. Roma a Venecia a 300 km/h.', g1: '#C0392B', g2: '#7B241C' },
+      { name: 'Rhine Valley',        route: 'Köln → Mainz · 1h 55min',          origin: 'Köln Hbf',          dest: 'Mainz Hbf',       desc: 'Castillos medievales, viñedos en terrazas y el legendario peñasco de Loreley.', g1: '#922B21', g2: '#7B241C' },
+      { name: 'Bavaria Alps',        route: 'München → Salzburg · 1h 30min',    origin: 'München Hbf',       dest: 'Salzburg Hbf',    desc: 'De la capital bávara a Mozart bordeando los Alpes. Lagos turquesa y cumbres nevadas.', g1: '#1A5276', g2: '#154360' },
+      { name: 'Semmering Express',   route: 'Vienna → Graz · 2h 39min',         origin: 'Wien Hbf',          dest: 'Graz Hbf',        desc: 'El ferrocarril de montaña más antiguo del mundo. Patrimonio UNESCO desde el siglo XIX.', g1: '#B7950B', g2: '#9A7D0A' },
+      { name: 'Douro Valley',        route: 'Porto → Pocinho · 3h 30min',       origin: 'Porto Campanhã',    dest: 'Pocinho',         desc: 'Viñedos del Oporto en terrazas de esquisto. Uno de los trayectos más bellos del mundo.', g1: '#784212', g2: '#6E2C00' },
+      { name: 'Intercity Direct',    route: 'Amsterdam → Brussels · 1h 51min',  origin: 'Amsterdam Centraal',dest: 'Brussel-Zuid',    desc: 'De los canales de Ámsterdam al Grand Place atravesando pólderes y campiña belga.', g1: '#E67E22', g2: '#CA6F1E' },
+      { name: 'Thalys',              route: 'Brussels → Paris · 1h 22min',      origin: 'Brussel-Zuid',      dest: 'Paris Gare du Nord',desc:'El tren rojo más famoso de Europa. Bruselas a París en menos de hora y media a 300 km/h.', g1: '#C0392B', g2: '#7B241C' },
     ];
 
     function renderScenic() {
@@ -1079,6 +1092,7 @@
             <div class="scenic-name">${t.name}</div>
             <div class="scenic-route">${t.route}</div>
           </div>
+          <div class="scenic-desc">${t.desc}</div>
           <div class="scenic-cta" style="background: ${t.g1};" data-i18n="scenic_book">Reservar</div>
         </a>
       `).join('');
