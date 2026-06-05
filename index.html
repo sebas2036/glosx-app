@@ -255,83 +255,51 @@
       justify-content: center;
       gap: 16px;
     }
-    .scenic-grid .scenic-card {
+    .scenic-wrapper {
       flex: 0 1 380px;
-      overflow: visible;
+      display: flex;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: border-color 0.2s;
+    }
+    .scenic-wrapper:hover {
+      border-color: rgba(124,58,237,0.4);
+    }
+    .scenic-wrapper.desc-left {
+      flex-direction: row-reverse;
     }
     .scenic-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
+      flex: 1;
       padding: 20px;
       display: flex; align-items: center; gap: 16px;
       text-decoration: none;
-      transition: border-color 0.2s;
-      position: relative;
+      min-width: 0;
     }
-    .scenic-card:hover {
-      border-color: rgba(124,58,237,0.4);
-    }
-    .scenic-card .scenic-desc {
-      position: absolute;
-      left: calc(100% - 1px);
-      top: -1px;
-      height: calc(100% + 2px);
-      width: 220px;
-      background: var(--surface);
-      border: 1px solid rgba(124,58,237,0.4);
-      border-left: none;
-      border-radius: 0 16px 16px 0;
-      padding: 16px;
+    .scenic-desc {
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
       font-size: 12px; color: var(--muted); line-height: 1.5;
       display: flex; align-items: center;
-      opacity: 0;
-      transform: translateX(-10px);
-      pointer-events: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      z-index: 10;
+      padding: 0;
+      border-left: 0px solid rgba(124,58,237,0.3);
+      transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease, border-width 0.3s ease;
+      white-space: normal;
     }
-    .scenic-card:hover {
-      border-color: rgba(124,58,237,0.4);
+    .scenic-wrapper.desc-left .scenic-desc {
+      border-left: none;
+      border-right: 0px solid rgba(124,58,237,0.3);
     }
-    .scenic-card:hover::after {
-      content: '';
-      position: absolute;
-      right: -2px;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--surface);
-      z-index: 11;
-    }
-    .scenic-card:hover .scenic-desc {
+    .scenic-wrapper:hover .scenic-desc {
+      width: 200px;
       opacity: 1;
-      transform: translateX(0);
-      pointer-events: auto;
+      padding: 16px;
+      border-left-width: 1px;
     }
-    .scenic-card.desc-left .scenic-desc {
-      left: auto;
-      right: calc(100% - 1px);
-      border-radius: 16px 0 0 16px;
-      border-left: 1px solid rgba(124,58,237,0.4);
-      border-right: none;
-      transform: translateX(10px);
-    }
-    .scenic-card.desc-left:hover::after {
-      display: none;
-    }
-    .scenic-card.desc-left:hover::before {
-      content: '';
-      position: absolute;
-      left: -2px;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--surface);
-      z-index: 11;
-    }
-    .scenic-card.desc-left:hover .scenic-desc {
-      transform: translateX(0);
+    .scenic-wrapper.desc-left:hover .scenic-desc {
+      border-left-width: 0;
+      border-right-width: 1px;
     }
     .scenic-icon {
       width: 48px; height: 48px;
@@ -1135,15 +1103,17 @@
     function renderScenic() {
       const grid = document.getElementById('scenicGrid');
       grid.innerHTML = SCENIC_TRAINS.map(t => `
-        <a href="#" class="scenic-card" onclick="goScenic('${encodeURIComponent(t.origin)}','${encodeURIComponent(t.dest)}', event)">
-          <div class="scenic-icon" style="background: linear-gradient(135deg, ${t.g1}, ${t.g2});"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/><path d="M7 11h10"/><path d="M12 4v7"/></svg></div>
-          <div class="scenic-body">
-            <div class="scenic-name">${t.name}</div>
-            <div class="scenic-route">${t.route}</div>
-          </div>
+        <div class="scenic-wrapper">
+          <a href="#" class="scenic-card" onclick="goScenic('${encodeURIComponent(t.origin)}','${encodeURIComponent(t.dest)}', event)">
+            <div class="scenic-icon" style="background: linear-gradient(135deg, ${t.g1}, ${t.g2});"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/><path d="M7 11h10"/><path d="M12 4v7"/></svg></div>
+            <div class="scenic-body">
+              <div class="scenic-name">${t.name}</div>
+              <div class="scenic-route">${t.route}</div>
+            </div>
+            <div class="scenic-cta" style="background: ${t.g1};" data-i18n="scenic_book">Reservar</div>
+          </a>
           <div class="scenic-desc">${t.desc}</div>
-          <div class="scenic-cta" style="background: ${t.g1};" data-i18n="scenic_book">Reservar</div>
-        </a>
+        </div>
       `).join('');
     }
     renderScenic();
@@ -1152,9 +1122,9 @@
       const grid = document.getElementById('scenicGrid');
       if (!grid) return;
       const gridCenter = grid.getBoundingClientRect().left + grid.offsetWidth / 2;
-      grid.querySelectorAll('.scenic-card').forEach(card => {
-        const cardCenter = card.getBoundingClientRect().left + card.offsetWidth / 2;
-        card.classList.toggle('desc-left', cardCenter < gridCenter);
+      grid.querySelectorAll('.scenic-wrapper').forEach(wrapper => {
+        const wrapperCenter = wrapper.getBoundingClientRect().left + wrapper.offsetWidth / 2;
+        wrapper.classList.toggle('desc-left', wrapperCenter < gridCenter);
       });
     }
     requestAnimationFrame(positionScenicDescs);
