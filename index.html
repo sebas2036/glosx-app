@@ -506,6 +506,50 @@
     }
     .stat-label { font-size: 14px; color: var(--muted); margin-top: 4px; }
 
+    /* ── Photo carousel ── */
+    .photo-carousel {
+      width: 100%;
+      overflow: hidden;
+      padding: 48px 0;
+      background: var(--bg);
+      position: relative;
+    }
+    .photo-carousel::before,
+    .photo-carousel::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .photo-carousel::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+    .photo-carousel::after  { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+    .carousel-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: carousel-scroll 40s linear infinite;
+    }
+    .photo-carousel:hover .carousel-track {
+      animation-play-state: paused;
+    }
+    @keyframes carousel-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .carousel-photo {
+      width: 320px;
+      height: 200px;
+      border-radius: 16px;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+      filter: brightness(0.85);
+      transition: filter 0.3s;
+    }
+    .carousel-photo:hover { filter: brightness(1); }
+
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
@@ -640,6 +684,31 @@
         <div class="stat-number">8</div>
         <div class="stat-label" data-i18n="stat_apis">Real-time APIs</div>
       </div>
+    </div>
+  </div>
+
+  <!-- Photo carousel -->
+  <div class="photo-carousel">
+    <div class="carousel-track">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=640&q=80" alt="Swiss Alps">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=640&q=80" alt="Alpine train">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1467269204594-f2e8bdf9b9a9?w=640&q=80" alt="Rhine Valley">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=640&q=80" alt="Venice">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=640&q=80" alt="European landscape">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Mountain valley">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Waterfall Alps">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Mountain peak">
+      <!-- duplicate for seamless loop -->
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=640&q=80" alt="Swiss Alps">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=640&q=80" alt="Alpine train">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1467269204594-f2e8bdf9b9a9?w=640&q=80" alt="Rhine Valley">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=640&q=80" alt="Venice">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=640&q=80" alt="European landscape">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Mountain valley">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Waterfall Alps">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Mountain peak">
     </div>
   </div>
 
