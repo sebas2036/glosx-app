@@ -458,22 +458,48 @@
     .screenshot-phone {
       width: 220px;
       height: 440px;
-      border-radius: 24px;
+      border-radius: 36px;
       overflow: hidden;
-      border: 3px solid rgba(124,58,237,0.3);
-      box-shadow: 0 20px 60px rgba(124,58,237,0.15), 0 0 0 1px rgba(255,255,255,0.05);
-      background: var(--surface);
+      border: 2px solid rgba(255,255,255,0.08);
+      box-shadow: 0 20px 60px rgba(124,58,237,0.2), 0 0 0 1px rgba(124,58,237,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+      background: #0a0a0f;
       transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
     }
     .screenshot-phone:hover {
       transform: translateY(-8px);
-      box-shadow: 0 30px 80px rgba(124,58,237,0.25), 0 0 0 1px rgba(255,255,255,0.1);
+      box-shadow: 0 40px 80px rgba(124,58,237,0.3), 0 0 0 1px rgba(124,58,237,0.25);
     }
+    .screenshot-statusbar {
+      background: #0a0a0f;
+      padding: 8px 16px 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+    .statusbar-time {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.2px;
+    }
+    .statusbar-icons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .statusbar-icons svg { display: block; }
     .screenshot-phone img {
       width: 100%;
-      height: 100%;
+      flex: 1;
       object-fit: cover;
       object-position: top;
+      margin-top: -28px;
     }
     .screenshot-caption {
       margin-top: 14px;
@@ -814,24 +840,56 @@
     <div class="screenshots-row">
       <div class="screenshot-item">
         <div class="screenshot-phone">
+          <div class="screenshot-statusbar">
+            <span class="statusbar-time">9:41</span>
+            <div class="statusbar-icons">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4" y="2.5" width="3" height="8.5" rx="1"/><rect x="8" y="1" width="3" height="10" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="15" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#fff"/></svg>
+              <svg width="25" height="11" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#fff" stroke-opacity="0.35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="#fff"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="#fff" fill-opacity="0.4"/></svg>
+            </div>
+          </div>
           <img src="screen-home.jpg" alt="WoW TRENES — Home" loading="lazy" />
         </div>
         <p class="screenshot-caption" data-i18n="ss_home">Choose your country</p>
       </div>
       <div class="screenshot-item">
         <div class="screenshot-phone">
+          <div class="screenshot-statusbar">
+            <span class="statusbar-time">9:41</span>
+            <div class="statusbar-icons">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4" y="2.5" width="3" height="8.5" rx="1"/><rect x="8" y="1" width="3" height="10" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="15" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#fff"/></svg>
+              <svg width="25" height="11" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#fff" stroke-opacity="0.35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="#fff"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="#fff" fill-opacity="0.4"/></svg>
+            </div>
+          </div>
           <img src="screen-live.jpg" alt="WoW TRENES — Live departures" loading="lazy" />
         </div>
         <p class="screenshot-caption" data-i18n="ss_live">Live departures</p>
       </div>
       <div class="screenshot-item">
         <div class="screenshot-phone">
+          <div class="screenshot-statusbar">
+            <span class="statusbar-time">9:41</span>
+            <div class="statusbar-icons">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4" y="2.5" width="3" height="8.5" rx="1"/><rect x="8" y="1" width="3" height="10" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="15" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#fff"/></svg>
+              <svg width="25" height="11" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#fff" stroke-opacity="0.35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="#fff"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="#fff" fill-opacity="0.4"/></svg>
+            </div>
+          </div>
           <img src="screen-board.jpg" alt="WoW TRENES — Departure board" loading="lazy" />
         </div>
         <p class="screenshot-caption" data-i18n="ss_board">Departure board</p>
       </div>
       <div class="screenshot-item">
         <div class="screenshot-phone">
+          <div class="screenshot-statusbar">
+            <span class="statusbar-time">9:41</span>
+            <div class="statusbar-icons">
+              <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4" y="2.5" width="3" height="8.5" rx="1"/><rect x="8" y="1" width="3" height="10" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="15" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#fff"/></svg>
+              <svg width="25" height="11" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#fff" stroke-opacity="0.35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="#fff"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="#fff" fill-opacity="0.4"/></svg>
+            </div>
+          </div>
           <img src="screen-translator.jpg" alt="WoW TRENES — Sign translator" loading="lazy" />
         </div>
         <p class="screenshot-caption" data-i18n="ss_translator">Sign translator</p>
