@@ -332,7 +332,9 @@
       padding: 6px 14px;
       border-radius: 8px;
       font-size: 12px; font-weight: 700;
-      color: #fff;
+      color: var(--primary2);
+      background: transparent;
+      border: 1px solid rgba(124,58,237,0.6);
       flex-shrink: 0;
     }
 
@@ -1259,7 +1261,7 @@
               <div class="scenic-name">${t.name}</div>
               <div class="scenic-route">${t.route}</div>
             </div>
-            <div class="scenic-cta" style="background: ${t.g1};" data-i18n="scenic_book">Reservar</div>
+            <div class="scenic-cta" data-i18n="scenic_book">Reservar</div>
           </a>
           <div class="scenic-desc">${t.desc}</div>
         </div>
