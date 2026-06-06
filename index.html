@@ -12,9 +12,13 @@
   <meta property="og:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
   <meta property="og:url" content="https://glosx.app" />
   <meta property="og:site_name" content="GLOSX" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1200&q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="WoW Train — Real-time European train travel" />
   <meta name="twitter:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1200&q=80" />
   <link rel="canonical" href="https://glosx.app" />
   <link rel="alternate" hreflang="en" href="https://glosx.app?lang=en" />
   <link rel="alternate" hreflang="es" href="https://glosx.app?lang=es" />
@@ -25,7 +29,7 @@
   <link rel="alternate" hreflang="x-default" href="https://glosx.app" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚄</text></svg>" />
 
-  <!-- Google Analytics — reemplazar G-XPTSM1EJQJ con tu ID real -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -638,6 +642,25 @@
       line-height: 1.5;
     }
 
+    /* ── FAQ ── */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      cursor: pointer;
+    }
+    .faq-q {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+    }
+    .faq-arrow { color: var(--primary2); font-size: 18px; transition: transform 0.2s; flex-shrink: 0; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      font-size: 14px; color: var(--muted); line-height: 1.7;
+      margin-top: 12px; display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+
     @media (max-width: 768px) {
       .search-box {
         grid-template-columns: 1fr;
@@ -786,16 +809,16 @@
   <div class="stats">
     <div class="stats-inner">
       <div>
-        <div class="stat-number" data-i18n="stat_free_val">Gratis</div>
-        <div class="stat-label" data-i18n="stat_free">Sin costo, para siempre</div>
+        <div class="stat-number">9</div>
+        <div class="stat-label" data-i18n="stat_free">Countries covered</div>
       </div>
       <div>
-        <div class="stat-number" data-i18n="stat_realtime_val">Tiempo real</div>
-        <div class="stat-label" data-i18n="stat_realtime">Salidas en vivo 24/7</div>
+        <div class="stat-number">45+</div>
+        <div class="stat-label" data-i18n="stat_realtime">Scenic train routes</div>
       </div>
       <div>
-        <div class="stat-number" data-i18n="stat_noreg_val">Sin registro</div>
-        <div class="stat-label" data-i18n="stat_noreg">Abrí y buscá, sin cuenta</div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label" data-i18n="stat_noreg">Free, no sign-up</div>
       </div>
     </div>
   </div>
@@ -982,6 +1005,34 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <p class="section-label">Frequently asked questions</p>
+    <h2><span>Everything you</span><br /><span>need to know.</span></h2>
+    <div style="margin-top:32px;max-width:720px;">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Is WoW Train free to use? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">Yes, completely free. No subscription, no paywall, no account required. Just open and search.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Which countries are supported? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal — with real-time GTFS data from official railway operators.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How do I book a ticket? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">Search your route and click "Search →". You'll be redirected to Trainline or Omio — certified operators that handle the booking securely. WoW Train never processes payments.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Does it work offline? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">Yes. Full timetable access without internet. GTFS data is stored locally on your device — useful when travelling through tunnels or areas with no signal.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Is my data private? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">WoW Train does not collect, store or share personal data on external servers. No accounts, no tracking, no ads. Only anonymous analytics via Google Analytics to improve the experience.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- Download CTA -->
   <section class="download" id="download">
     <h2 data-i18n="dl_title">Start your journey now.</h2>
@@ -1012,6 +1063,11 @@
   <script>
     // ── Config ─────────────────────────────────────────────────────────────
     const PROXY_BASE = 'https://voxa-production-dc15.up.railway.app/affiliate';
+
+    // ── FAQ toggle ─────────────────────────────────────────────────────────
+    function toggleFaq(el) {
+      el.classList.toggle('open');
+    }
 
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
     const TRANSLATIONS = {
