@@ -642,6 +642,67 @@
       line-height: 1.5;
     }
 
+    /* ── Calendar glassmorphism ── */
+    .cal-popup {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 500;
+      width: 300px;
+      background: rgba(20, 10, 40, 0.55);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(167,139,250,0.35);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 40px rgba(124,58,237,0.25), 0 0 0 1px rgba(255,255,255,0.04);
+      display: none;
+    }
+    .cal-popup.open { display: block; }
+    .cal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .cal-title {
+      font-size: 15px; font-weight: 700; color: #fff;
+      background: linear-gradient(135deg, #a78bfa, #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .cal-nav {
+      background: rgba(124,58,237,0.2); border: 1px solid rgba(124,58,237,0.4);
+      color: #a78bfa; border-radius: 8px; width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 14px; transition: background 0.2s;
+    }
+    .cal-nav:hover { background: rgba(124,58,237,0.4); }
+    .cal-weekdays {
+      display: grid; grid-template-columns: repeat(7,1fr);
+      margin-bottom: 8px;
+    }
+    .cal-weekdays span {
+      text-align: center; font-size: 10px; font-weight: 700;
+      color: rgba(167,139,250,0.7); letter-spacing: 0.5px; padding: 4px 0;
+    }
+    .cal-days {
+      display: grid; grid-template-columns: repeat(7,1fr); gap: 2px;
+    }
+    .cal-day {
+      aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.8);
+      border-radius: 8px; cursor: pointer; transition: background 0.15s, color 0.15s;
+    }
+    .cal-day:hover { background: rgba(124,58,237,0.3); color: #fff; }
+    .cal-day.today { border: 1px solid rgba(167,139,250,0.5); color: #a78bfa; }
+    .cal-day.selected {
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      color: #fff; font-weight: 700;
+      box-shadow: 0 0 12px rgba(124,58,237,0.5);
+    }
+    .cal-day.other-month { color: rgba(255,255,255,0.2); cursor: default; }
+    .cal-day.disabled { color: rgba(255,255,255,0.15); cursor: not-allowed; }
+    .cal-day.disabled:hover { background: transparent; }
+
     /* ── FAQ ── */
     .faq-item {
       border-bottom: 1px solid var(--border);
@@ -769,9 +830,10 @@
         <label for="dest" data-i18n="search_to">To</label>
         <input type="text" id="dest" placeholder="Barcelona" required autocomplete="off" />
       </div>
-      <div class="search-field">
-        <label for="date" data-i18n="search_date">Date</label>
-        <input type="date" id="date" required />
+      <div class="search-field" style="position:relative;" onclick="toggleCal(event)">
+        <label data-i18n="search_date">Date</label>
+        <div id="dateDisplay" style="font-size:14px;font-weight:600;color:var(--text);cursor:pointer;padding-top:2px;"></div>
+        <input type="hidden" id="date" required />
       </div>
       <button type="submit" class="search-btn" data-i18n="search_btn">Search →</button>
     </form>
@@ -1065,9 +1127,112 @@
     const PROXY_BASE = 'https://voxa-production-dc15.up.railway.app/affiliate';
 
     // ── FAQ toggle ─────────────────────────────────────────────────────────
-    function toggleFaq(el) {
-      el.classList.toggle('open');
+    function toggleFaq(el) { el.classList.toggle('open'); }
+
+    // ── Glassmorphism Calendar ─────────────────────────────────────────────
+    let calDate = new Date();
+    let calSelected = new Date();
+
+    const MONTH_NAMES = {
+      en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+      es: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      fr: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+      de: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+      it: ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'],
+      pt: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    };
+    const DAY_NAMES = {
+      en: ['Mo','Tu','We','Th','Fr','Sa','Su'],
+      es: ['Lu','Ma','Mi','Ju','Vi','Sá','Do'],
+      fr: ['Lu','Ma','Me','Je','Ve','Sa','Di'],
+      de: ['Mo','Di','Mi','Do','Fr','Sa','So'],
+      it: ['Lu','Ma','Me','Gi','Ve','Sa','Do'],
+      pt: ['Se','Te','Qu','Qu','Se','Sá','Do'],
+    };
+
+    function renderCal() {
+      const lang = document.documentElement.lang || 'en';
+      const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
+      const days   = DAY_NAMES[lang]   || DAY_NAMES.en;
+      const today  = new Date(); today.setHours(0,0,0,0);
+      const y = calDate.getFullYear(), m = calDate.getMonth();
+      const first = new Date(y, m, 1).getDay(); // 0=Sun
+      const startOffset = (first === 0) ? 6 : first - 1; // Monday start
+      const daysInMonth = new Date(y, m+1, 0).getDate();
+
+      let html = `
+        <div class="cal-header">
+          <button class="cal-nav" onclick="calPrev(event)">‹</button>
+          <div class="cal-title">${months[m]} ${y}</div>
+          <button class="cal-nav" onclick="calNext(event)">›</button>
+        </div>
+        <div class="cal-weekdays">${days.map(d=>`<span>${d}</span>`).join('')}</div>
+        <div class="cal-days">`;
+
+      // Empty cells before first day
+      for (let i = 0; i < startOffset; i++) {
+        const prevDay = new Date(y, m, 0 - (startOffset - i - 1));
+        html += `<div class="cal-day other-month">${prevDay.getDate()}</div>`;
+      }
+      // Days of month
+      for (let d = 1; d <= daysInMonth; d++) {
+        const dt = new Date(y, m, d); dt.setHours(0,0,0,0);
+        const isToday    = dt.getTime() === today.getTime();
+        const isSelected = calSelected && dt.getTime() === calSelected.getTime();
+        const isPast     = dt < today;
+        let cls = 'cal-day';
+        if (isSelected) cls += ' selected';
+        else if (isToday) cls += ' today';
+        if (isPast) cls += ' disabled';
+        const onclick = isPast ? '' : `onclick="calSelect(${y},${m},${d},event)"`;
+        html += `<div class="${cls}" ${onclick}>${d}</div>`;
+      }
+      html += `</div>`;
+
+      let popup = document.getElementById('calPopup');
+      if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'calPopup';
+        popup.className = 'cal-popup';
+        document.querySelector('.search-field:nth-child(3)').appendChild(popup);
+      }
+      popup.innerHTML = html;
     }
+
+    function toggleCal(e) {
+      e.stopPropagation();
+      const popup = document.getElementById('calPopup') || (() => { renderCal(); return document.getElementById('calPopup'); })();
+      renderCal();
+      popup.classList.toggle('open');
+    }
+
+    function calPrev(e) {
+      e.stopPropagation();
+      calDate = new Date(calDate.getFullYear(), calDate.getMonth() - 1, 1);
+      renderCal();
+    }
+    function calNext(e) {
+      e.stopPropagation();
+      calDate = new Date(calDate.getFullYear(), calDate.getMonth() + 1, 1);
+      renderCal();
+    }
+    function calSelect(y, m, d, e) {
+      e.stopPropagation();
+      calSelected = new Date(y, m, d);
+      const pad = n => String(n).padStart(2,'0');
+      const val = `${y}-${pad(m+1)}-${pad(d)}`;
+      document.getElementById('date').value = val;
+      const lang = document.documentElement.lang || 'en';
+      const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
+      document.getElementById('dateDisplay').textContent = `${d} ${months[m]} ${y}`;
+      document.getElementById('calPopup').classList.remove('open');
+    }
+
+    // Cerrar al clickear fuera
+    document.addEventListener('click', () => {
+      const p = document.getElementById('calPopup');
+      if (p) p.classList.remove('open');
+    });
 
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
     const TRANSLATIONS = {
@@ -1373,8 +1538,17 @@
     // Aplicar idioma inicial
     applyLang(detectLang());
 
-    // ── Default date (today) ───────────────────────────────────────────────
-    document.getElementById('date').valueAsDate = new Date();
+    // ── Default date (today) — calendar ───────────────────────────────────
+    (function() {
+      const today = new Date();
+      const y = today.getFullYear(), m = today.getMonth(), d = today.getDate();
+      const pad = n => String(n).padStart(2,'0');
+      document.getElementById('date').value = `${y}-${pad(m+1)}-${pad(d)}`;
+      calSelected = today; calDate = new Date(y, m, 1);
+      const lang = document.documentElement.lang || 'en';
+      const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
+      document.getElementById('dateDisplay').textContent = `${d} ${months[m]} ${y}`;
+    })();
 
     // ── Search trains → redirige al proxy con tracking ─────────────────────
     function searchTrains(e) {
