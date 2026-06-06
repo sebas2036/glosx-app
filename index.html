@@ -650,6 +650,33 @@
       .nav-links { display: none; }
       .hero { padding: 100px 20px 60px; }
       .section { padding: 30px 16px; }
+
+      /* ── Fix overflow horizontal en mobile ── */
+      html, body { overflow-x: hidden; }
+
+      /* ── Scenic cards — sin panel lateral, todo dentro de la tarjeta ── */
+      .scenic-desc { display: none !important; }
+      .scenic-wrapper { overflow: hidden; width: 100%; flex: 0 1 100%; }
+      .scenic-wrapper:hover { border-radius: 16px; }
+      .scenic-grid { gap: 10px; }
+      .scenic-card { padding: 14px; }
+      .scenic-name { font-size: 14px; }
+      .scenic-route { font-size: 11px; }
+
+      /* ── Stats — 3 columnas en mobile ── */
+      .stats-inner { gap: 0; }
+      .stats-inner > div { padding: 0 12px; }
+      .stat-number { font-size: 14px; }
+      .stat-label { font-size: 10px; }
+
+      /* ── Partners grid — 1 columna ── */
+      .partners-grid { grid-template-columns: 1fr; }
+
+      /* ── Features grid — 1 columna ── */
+      .features-grid { grid-template-columns: 1fr; }
+
+      /* ── Selector de idioma — siempre visible ── */
+      .lang-wrapper { display: block !important; }
     }
   </style>
 </head>
