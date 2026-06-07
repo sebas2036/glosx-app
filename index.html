@@ -474,13 +474,13 @@
     /* ── Screenshots ── */
     .screenshots-row {
       display: flex;
-      gap: 20px;
+      gap: 36px;
       justify-content: center;
       overflow-x: auto;
-      padding: 40px 0 60px;
+      padding: 50px 20px 70px;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      align-items: center;
+      align-items: flex-end;
       position: relative;
     }
     .screenshots-row::before {
@@ -493,63 +493,109 @@
       background: radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 70%);
       pointer-events: none;
     }
+
+    /* ── Item wrapper — recto + hover adelante ── */
     .screenshot-item {
       flex-shrink: 0;
       text-align: center;
       scroll-snap-align: center;
       position: relative;
+      transition: transform 0.38s cubic-bezier(0.34,1.56,0.64,1);
     }
-    .screenshot-item:nth-child(1) { transform: rotate(-4deg) translateY(16px); }
-    .screenshot-item:nth-child(2) { transform: rotate(-1.5deg) translateY(6px); z-index: 2; }
-    .screenshot-item:nth-child(3) { transform: rotate(1.5deg) translateY(6px); z-index: 2; }
-    .screenshot-item:nth-child(4) { transform: rotate(4deg) translateY(16px); }
-    .screenshot-item:hover { transform: rotate(0deg) translateY(-8px) scale(1.03) !important; z-index: 10; transition: transform 0.4s ease; }
-    .screenshot-phone {
-      width: 220px;
-      height: 440px;
-      border-radius: 36px;
-      overflow: hidden;
-      border: 2px solid rgba(255,255,255,0.08);
-      box-shadow: 0 20px 60px rgba(124,58,237,0.2), 0 0 0 1px rgba(124,58,237,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
-      background: #0a0a0f;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .screenshot-item:hover {
+      transform: translateY(-18px) scale(1.05) !important;
+      z-index: 10;
+    }
+
+    /* ── Phone mockup (casing externo) ── */
+    .phone-mockup {
       position: relative;
-      display: flex;
-      flex-direction: column;
+      display: inline-block;
     }
-    .screenshot-phone:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 40px 80px rgba(124,58,237,0.3), 0 0 0 1px rgba(124,58,237,0.25);
+    /* Botón power (derecha) */
+    .phone-mockup::after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      top: 130px;
+      width: 4px;
+      height: 58px;
+      background: linear-gradient(180deg, #2e2e30, #1c1c1e 40%, #2e2e30);
+      border-radius: 0 3px 3px 0;
     }
+    /* Botones volumen (izquierda) */
+    .phone-mockup::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 110px;
+      width: 4px;
+      height: 34px;
+      background: linear-gradient(180deg, #2e2e30, #1c1c1e 40%, #2e2e30);
+      border-radius: 3px 0 0 3px;
+      box-shadow: 0 46px 0 #1c1c1e, 0 47px 0 #2a2a2c, 0 80px 0 #1c1c1e, 0 81px 0 #2a2a2c;
+    }
+
+    /* ── Pantalla iPhone ── */
+    .screenshot-phone {
+      width: 222px;
+      height: 480px;
+      border-radius: 48px;
+      background: #000;
+      /* Casing iPhone: capa interna + rim metálico + capa externa */
+      box-shadow:
+        0 0 0 8px #1c1c1e,
+        0 0 0 9px rgba(255,255,255,0.18),
+        0 0 0 11px #111114,
+        0 28px 70px rgba(0,0,0,0.75),
+        0 0 60px rgba(124,58,237,0.28);
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.38s ease;
+    }
+    .screenshot-item:hover .screenshot-phone {
+      box-shadow:
+        0 0 0 8px #1c1c1e,
+        0 0 0 9px rgba(255,255,255,0.22),
+        0 0 0 11px #111114,
+        0 45px 90px rgba(0,0,0,0.85),
+        0 0 80px rgba(124,58,237,0.45);
+    }
+
+    /* Dynamic Island */
+    .phone-island {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 86px;
+      height: 28px;
+      background: #000;
+      border-radius: 14px;
+      z-index: 10;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
     .screenshot-statusbar { display: none; }
-    .statusbar-time {
-      font-size: 11px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.2px;
-    }
-    .statusbar-icons {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .statusbar-icons svg { display: block; }
+
     .screenshot-phone img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top;
+      display: block;
     }
     .screenshot-caption {
-      margin-top: 14px;
+      margin-top: 18px;
       font-size: 13px;
       font-weight: 600;
       color: var(--muted);
       letter-spacing: 0.5px;
     }
     @media (max-width: 768px) {
-      .screenshots-row { justify-content: flex-start; padding: 20px 16px 40px; }
-      .screenshot-phone { width: 180px; height: 360px; border-radius: 20px; }
+      .screenshots-row { justify-content: flex-start; padding: 20px 16px 40px; gap: 20px; }
+      .screenshot-phone { width: 170px; height: 368px; border-radius: 38px; }
+      .phone-island { width: 70px; height: 22px; top: 10px; }
     }
 
     /* ── Stats ── */
@@ -1010,44 +1056,29 @@
 
     <div class="screenshots-row">
       <div class="screenshot-item">
-        <div class="screenshot-phone">
-          <div class="screenshot-statusbar">
-            <span class="statusbar-time">9:41</span>
-            <div class="statusbar-icons">
-              <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4" y="2.5" width="3" height="8.5" rx="1"/><rect x="8" y="1" width="3" height="10" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
-              <svg width="15" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#fff"/></svg>
-              <svg width="25" height="11" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#fff" stroke-opacity="0.35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="#fff"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="#fff" fill-opacity="0.4"/></svg>
-            </div>
+        <div class="phone-mockup">
+          <div class="screenshot-phone">
+            <div class="phone-island"></div>
+            <img src="screen-home.jpg" alt="WoW Train — Home" loading="lazy" />
           </div>
-          <img src="screen-home.jpg" alt="WoW Train — Home" loading="lazy" />
         </div>
         <p class="screenshot-caption" data-i18n="ss_home">Choose your country</p>
       </div>
       <div class="screenshot-item">
-        <div class="screenshot-phone">
-          <div class="screenshot-statusbar">
-            <span class="statusbar-time">9:41</span>
-            <div class="statusbar-icons">
-              <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4" y="2.5" width="3" height="8.5" rx="1"/><rect x="8" y="1" width="3" height="10" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
-              <svg width="15" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#fff"/></svg>
-              <svg width="25" height="11" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#fff" stroke-opacity="0.35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="#fff"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="#fff" fill-opacity="0.4"/></svg>
-            </div>
+        <div class="phone-mockup">
+          <div class="screenshot-phone">
+            <div class="phone-island"></div>
+            <img src="screen-live.jpg" alt="WoW Train — Live departures" loading="lazy" />
           </div>
-          <img src="screen-live.jpg" alt="WoW Train — Live departures" loading="lazy" />
         </div>
         <p class="screenshot-caption" data-i18n="ss_live">Live departures</p>
       </div>
       <div class="screenshot-item">
-        <div class="screenshot-phone">
-          <div class="screenshot-statusbar">
-            <span class="statusbar-time">9:41</span>
-            <div class="statusbar-icons">
-              <svg width="15" height="11" viewBox="0 0 15 11" fill="#fff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4" y="2.5" width="3" height="8.5" rx="1"/><rect x="8" y="1" width="3" height="10" rx="1"/><rect x="12" y="0" width="3" height="11" rx="1"/></svg>
-              <svg width="15" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="#fff"/></svg>
-              <svg width="25" height="11" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="#fff" stroke-opacity="0.35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="#fff"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="#fff" fill-opacity="0.4"/></svg>
-            </div>
+        <div class="phone-mockup">
+          <div class="screenshot-phone">
+            <div class="phone-island"></div>
+            <img src="screen-board.jpg" alt="WoW Train — Departure board" loading="lazy" />
           </div>
-          <img src="screen-board.jpg" alt="WoW Train — Departure board" loading="lazy" />
         </div>
         <p class="screenshot-caption" data-i18n="ss_board">Departure board</p>
       </div>
