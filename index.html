@@ -1472,15 +1472,13 @@
     };
 
     function detectLang() {
-      // 1. localStorage (preferencia guardada)
+      // 1. localStorage (preferencia guardada por el usuario)
       const saved = localStorage.getItem('glosx_lang');
       if (saved && TRANSLATIONS[saved]) return saved;
       // 2. URL query param (?lang=es)
       const param = new URLSearchParams(location.search).get('lang');
       if (param && TRANSLATIONS[param]) return param;
-      // 3. Browser language
-      const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
-      if (TRANSLATIONS[browser]) return browser;
+      // 3. Siempre inglés por defecto (sitio internacional)
       return 'en';
     }
 
