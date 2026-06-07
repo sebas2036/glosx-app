@@ -1472,13 +1472,18 @@
     };
 
     function detectLang() {
-      // 1. localStorage (preferencia guardada por el usuario)
-      const saved = localStorage.getItem('glosx_lang');
-      if (saved && TRANSLATIONS[saved]) return saved;
+      // 1. Solo si el usuario eligió EXPLÍCITAMENTE con el selector
+      if (localStorage.getItem('glosx_lang_manual') === '1') {
+        const saved = localStorage.getItem('glosx_lang');
+        if (saved && TRANSLATIONS[saved]) return saved;
+      }
       // 2. URL query param (?lang=es)
       const param = new URLSearchParams(location.search).get('lang');
       if (param && TRANSLATIONS[param]) return param;
-      // 3. Siempre inglés por defecto (sitio internacional)
+      // 3. Idioma del navegador / teléfono
+      const nav = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+      if (TRANSLATIONS[nav]) return nav;
+      // 4. Inglés por defecto
       return 'en';
     }
 
@@ -1506,6 +1511,7 @@
 
     function setLang(lang) {
       localStorage.setItem('glosx_lang', lang);
+      localStorage.setItem('glosx_lang_manual', '1'); // el usuario eligió explícitamente
       applyLang(lang);
       document.getElementById('langDropdown').classList.remove('open');
     }
