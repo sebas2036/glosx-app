@@ -562,8 +562,9 @@
         0 0 80px rgba(124,58,237,0.45);
     }
 
-    /* Dynamic Island */
+    /* Dynamic Island — oculta: tapaba el status bar de la captura */
     .phone-island {
+      display: none;
       position: absolute;
       top: 14px;
       left: 50%;
@@ -1256,11 +1257,11 @@
     const TRANSLATIONS = {
       en: {
         nav_scenic: 'Scenic Trains', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started',
-        hero_badge: '🚄 WoW Train — Europe &amp; beyond',
+        hero_badge: '🚄 WoW Train — Europe & beyond',
         hero_title1: 'Your train.', hero_title2: 'Your world.',
         hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
         search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search →',
-        stat_world: 'Europe &amp; beyond', stat_free_val: 'Free', stat_free: 'No cost, forever', stat_realtime_val: 'Real-time', stat_realtime: 'Live departures 24/7', stat_noreg_val: 'No sign-up', stat_noreg: 'Open and search, no account',
+        stat_world: 'Europe & beyond', stat_free_val: 'Free', stat_free: 'No cost, forever', stat_realtime_val: 'Real-time', stat_realtime: 'Live departures 24/7', stat_noreg_val: 'No sign-up', stat_noreg: 'Open and search, no account',
         scenic_label: 'Iconic European routes', scenic_title1: 'Scenic train', scenic_title2: 'experiences.',
         scenic_lead: 'The most spectacular train journeys in Europe — book directly from here.',
         scenic_more: 'See more routes', scenic_less: 'See less',
@@ -1275,7 +1276,7 @@
         features_label: 'Why WoW Train', features_title1: 'Built for travelers', features_title2: 'who move fast.',
         features_lead: 'No subscriptions, no paywalls. Just real-time data and smart tools.',
         f1_title: 'Real-time departures', f1_desc: 'Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.',
-        f2_title: 'Europe &amp; beyond, one app', f2_desc: 'Spain, France, Germany, Switzerland, Italy and more — all in a single interface.',
+        f2_title: 'Europe & beyond, one app', f2_desc: 'Spain, France, Germany, Switzerland, Italy and more — all in a single interface.',
         f3_title: 'Journey search', f3_desc: 'Find trains between any two stations across Europe with real prices and schedules.',
         f4_title: 'Location-aware', f4_desc: 'Automatically detects your nearest station and shows upcoming departures without any input.',
         f5_title: 'Smart alerts', f5_desc: 'Get notified when your train is approaching or when there are delays on your route.',
@@ -1508,13 +1509,10 @@
         const saved = localStorage.getItem('glosx_lang');
         if (saved && TRANSLATIONS[saved]) return saved;
       }
-      // 2. URL query param (?lang=es)
+      // 2. URL query param (?lang=es) — links explícitos / SEO
       const param = new URLSearchParams(location.search).get('lang');
       if (param && TRANSLATIONS[param]) return param;
-      // 3. Idioma del navegador / teléfono
-      const nav = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
-      if (TRANSLATIONS[nav]) return nav;
-      // 4. Inglés por defecto
+      // 3. Inglés por defecto SIEMPRE (no auto-detectar idioma del navegador)
       return 'en';
     }
 
