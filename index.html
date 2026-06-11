@@ -1699,7 +1699,7 @@
               <div class="scenic-name">${t.name}</div>
               <div class="scenic-route">${t.route}</div>
             </div>
-            <div class="scenic-cta" data-i18n="scenic_book">Reservar</div>
+            <div class="scenic-cta" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>
           </a>
           <div class="scenic-desc">${desc}</div>
         </div>`;
