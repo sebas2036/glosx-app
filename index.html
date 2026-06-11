@@ -184,6 +184,33 @@
       margin-bottom: 24px;
     }
 
+    /* ── Hero device mockup ── */
+    .hero-device-wrap {
+      position: relative; display: flex; justify-content: center;
+      margin: 44px auto 8px; padding: 0 24px;
+    }
+    .hero-device-wrap::before {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      width: 380px; height: 380px; max-width: 90vw; transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(124,58,237,0.38), transparent 65%);
+      filter: blur(18px); z-index: 0; pointer-events: none;
+    }
+    .hero-device {
+      position: relative; z-index: 1;
+      width: 258px; max-width: 68vw;
+      border-radius: 38px; padding: 9px;
+      background: linear-gradient(160deg, #1b1b26, #0c0c14);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,58,237,0.25);
+      animation: heroFloat 6s ease-in-out infinite;
+    }
+    .hero-device img { width: 100%; display: block; border-radius: 30px; }
+    @keyframes heroFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-device { animation: none; } }
+
     /* ── Search box ── */
     .search-box {
       width: 100%; max-width: 720px;
@@ -941,6 +968,13 @@
     <span class="country-chip">🇳🇱 Netherlands<img class="country-photo" src="country-pics/nl.jpg" alt="Netherlands" loading="lazy" onerror="this.remove()"></span>
     <span class="country-chip">🇦🇹 Austria<img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()"></span>
     <span class="country-chip">🇵🇹 Portugal<img class="country-photo" src="country-pics/pt.jpg" alt="Portugal" loading="lazy" onerror="this.remove()"></span>
+  </div>
+
+  <!-- Hero device mockup -->
+  <div class="hero-device-wrap">
+    <div class="hero-device">
+      <img src="screen-live.jpg" alt="WoW Train — live departures" loading="lazy" onerror="this.closest('.hero-device-wrap').remove()">
+    </div>
   </div>
 
   <!-- Scenic trains -->
