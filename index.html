@@ -639,22 +639,29 @@
       padding: 16px 24px;
     }
     .stats-inner {
-      max-width: 700px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      max-width: 880px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
       gap: 0; text-align: center;
     }
     .stats-inner > div {
-      padding: 0 40px;
+      padding: 4px 22px;
     }
     .stats-inner > div:not(:last-child) {
       border-right: 1px solid var(--border);
     }
+    .stat-icon {
+      width: 26px; height: 26px; color: var(--primary2);
+      margin: 0 auto 10px; display: block; opacity: 0.9;
+      transition: transform 0.25s ease;
+    }
+    .stat-item:hover .stat-icon { transform: translateY(-2px) scale(1.08); }
     .stat-number {
-      font-size: 20px; font-weight: 700; letter-spacing: 0;
+      font-size: 30px; font-weight: 800; letter-spacing: -0.5px; line-height: 1;
       background: linear-gradient(135deg, var(--primary2), #fff);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      font-variant-numeric: tabular-nums;
     }
-    .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
 
     /* ── Photo carousel ── */
     .photo-carousel {
@@ -828,11 +835,14 @@
       .scenic-name { font-size: 14px; }
       .scenic-route { font-size: 11px; }
 
-      /* ── Stats — compacto ── */
-      .stats-inner { max-width: 100%; }
+      /* ── Stats — 2×2 ── */
+      .stats-inner { max-width: 100%; grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
       .stats-inner > div { padding: 0 8px; }
-      .stat-number { font-size: 13px; }
-      .stat-label { font-size: 10px; }
+      .stats-inner > div:not(:last-child) { border-right: none; }
+      .stats-inner > div:nth-child(odd) { border-right: 1px solid var(--border); }
+      .stat-icon { width: 22px; height: 22px; margin-bottom: 6px; }
+      .stat-number { font-size: 26px; }
+      .stat-label { font-size: 11px; }
 
       /* ── Partners grid — 1 columna ── */
       .partners-grid { grid-template-columns: 1fr; }
@@ -950,17 +960,25 @@
   <!-- Stats -->
   <div class="stats">
     <div class="stats-inner">
-      <div>
-        <div class="stat-number">🌍</div>
-        <div class="stat-label" data-i18n="stat_world">Europe &amp; beyond</div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>
+        <div class="stat-number" data-count="9">0</div>
+        <div class="stat-label" data-i18n="stat_countries">Live countries</div>
       </div>
-      <div>
-        <div class="stat-number">45+</div>
-        <div class="stat-label" data-i18n="stat_realtime">Scenic train routes</div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21l5-7 4 4 5-9"/><path d="M3 21h18"/><circle cx="10" cy="14" r="1"/><circle cx="14" cy="18" r="1"/></svg>
+        <div class="stat-number" data-count="13">0</div>
+        <div class="stat-label" data-i18n="stat_scenic">Scenic routes</div>
       </div>
-      <div>
-        <div class="stat-number">100%</div>
-        <div class="stat-label" data-i18n="stat_noreg">Free, no sign-up</div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z"/></svg>
+        <div class="stat-number" data-count="90" data-suffix="s">0</div>
+        <div class="stat-label" data-i18n="stat_realtime2">Real-time data</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-1.9"/></svg>
+        <div class="stat-number" data-count="0">0</div>
+        <div class="stat-label" data-i18n="stat_free2">Account or payment</div>
       </div>
     </div>
   </div>
@@ -1327,6 +1345,7 @@
         footer_copy: '© 2026 GLOSX — All rights reserved.',
         footer_disclaimer: 'WoW Train is an independent travel platform. Bookings are processed by verified partners (Omio, Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.',
         scenic_book: 'Book now', preview_label: 'See it in action', preview_title1: 'Designed for', preview_title2: 'real travelers.', preview_lead: 'GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.', ss_home: 'Choose your country', ss_board: 'Departure board', ss_live: 'Live departures',
+        stat_countries: 'Live countries', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_free2: 'Account or payment',
       },
       es: {
         nav_scenic: 'Trenes panorámicos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
@@ -1368,6 +1387,7 @@
         footer_copy: '© 2026 GLOSX — Todos los derechos reservados.',
         footer_disclaimer: 'WoW Train es una plataforma de viajes independiente. Las reservas las procesan partners verificados (Omio, Trainline, Klook, Kiwitaxi, Yesim). Podemos ganar una comisión por compras elegibles sin costo extra para ti.',
         scenic_book: 'Reservar', preview_label: 'Velo en acción', preview_title1: 'Diseñada para', preview_title2: 'viajeros de verdad.', preview_lead: 'Detección por GPS, horarios en tiempo real, rutas escénicas y un traductor integrado — todo en tu bolsillo.', ss_home: 'Elegí tu país', ss_board: 'Tablero de salidas', ss_live: 'Salidas en vivo',
+        stat_countries: 'Países en vivo', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_free2: 'Cuenta o pago',
       },
       fr: {
         nav_scenic: 'Trains panoramiques', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
@@ -1409,6 +1429,7 @@
         footer_copy: '© 2026 GLOSX — Tous droits réservés.',
         footer_disclaimer: 'WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées par des partenaires vérifiés (Omio, Trainline, Klook, Kiwitaxi, Yesim). Nous pouvons gagner une commission sur les achats éligibles sans coût supplémentaire pour vous.',
         scenic_book: 'Réserver', preview_label: 'Voyez-le en action', preview_title1: 'Conçue pour', preview_title2: 'les vrais voyageurs.', preview_lead: 'Détection GPS, horaires en temps réel, itinéraires panoramiques et un traducteur intégré — le tout dans votre poche.', ss_home: 'Choisissez votre pays', ss_board: 'Tableau des départs', ss_live: 'Départs en direct',
+        stat_countries: 'Pays en direct', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_free2: 'Compte ou paiement',
       },
       de: {
         nav_scenic: 'Panoramazüge', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
@@ -1450,6 +1471,7 @@
         footer_copy: '© 2026 GLOSX — Alle Rechte vorbehalten.',
         footer_disclaimer: 'WoW Train ist eine unabhängige Reiseplattform. Buchungen werden von verifizierten Partnern verarbeitet (Omio, Trainline, Klook, Kiwitaxi, Yesim). Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie verdienen.',
         scenic_book: 'Buchen', preview_label: 'In Aktion erleben', preview_title1: 'Gemacht für', preview_title2: 'echte Reisende.', preview_lead: 'GPS-Erkennung, Echtzeit-Fahrpläne, Panoramastrecken und integrierter Übersetzer — alles in deiner Tasche.', ss_home: 'Wähle dein Land', ss_board: 'Abfahrtstafel', ss_live: 'Live-Abfahrten',
+        stat_countries: 'Länder live', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_free2: 'Konto oder Zahlung',
       },
       it: {
         nav_scenic: 'Treni panoramici', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
@@ -1491,6 +1513,7 @@
         footer_copy: '© 2026 GLOSX — Tutti i diritti riservati.',
         footer_disclaimer: 'WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni sono elaborate da partner verificati (Omio, Trainline, Klook, Kiwitaxi, Yesim). Possiamo guadagnare una commissione dagli acquisti idonei senza costi aggiuntivi per te.',
         scenic_book: 'Prenota', preview_label: 'Guardalo in azione', preview_title1: 'Progettata per', preview_title2: 'veri viaggiatori.', preview_lead: 'Rilevamento GPS, orari in tempo reale, percorsi panoramici e traduttore integrato — tutto in tasca.', ss_home: 'Scegli il tuo paese', ss_board: 'Tabellone partenze', ss_live: 'Partenze in tempo reale',
+        stat_countries: 'Paesi in diretta', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_free2: 'Account o pagamento',
       },
       pt: {
         nav_scenic: 'Comboios panorâmicos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
@@ -1532,6 +1555,7 @@
         footer_copy: '© 2026 GLOSX — Todos os direitos reservados.',
         footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas por parceiros verificados (Omio, Trainline, Klook, Kiwitaxi, Yesim). Podemos ganhar uma comissão por compras elegíveis sem custo adicional para si.',
         scenic_book: 'Reservar', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
+        stat_countries: 'Países ao vivo', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_free2: 'Conta ou pagamento',
       },
     };
 
@@ -1733,6 +1757,37 @@
       window.open(url, '_blank');
       return false;
     }
+
+    // ── Stats: animación de conteo al entrar en viewport ──
+    (function () {
+      const stats = document.querySelector('.stats');
+      if (!stats) return;
+      let done = false;
+      function animate() {
+        if (done) return; done = true;
+        document.querySelectorAll('.stat-number[data-count]').forEach(function (el) {
+          const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+          const suffix = el.getAttribute('data-suffix') || '';
+          const dur = 1200, start = performance.now();
+          function step(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+            else el.textContent = target + suffix;
+          }
+          requestAnimationFrame(step);
+        });
+      }
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { animate(); io.disconnect(); } });
+        }, { threshold: 0.4 });
+        io.observe(stats);
+      } else {
+        animate();
+      }
+    })();
   </script>
 
 </body>
