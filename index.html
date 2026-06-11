@@ -690,6 +690,22 @@
     }
     .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
 
+    /* ── Trust strip (fuentes de datos oficiales) ── */
+    .trust-strip { text-align: center; padding: 10px 24px 38px; }
+    .trust-label {
+      font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px;
+    }
+    .trust-ops {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 10px 22px; max-width: 760px; margin: 0 auto;
+    }
+    .trust-ops span {
+      font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.3px; transition: color 0.2s ease;
+    }
+    .trust-ops span:hover { color: rgba(255,255,255,0.9); }
+
     /* ── Photo carousel ── */
     .photo-carousel {
       width: 100%;
@@ -1014,6 +1030,14 @@
         <div class="stat-number" data-count="0">0</div>
         <div class="stat-label" data-i18n="stat_free2">Account or payment</div>
       </div>
+    </div>
+  </div>
+
+  <!-- Trust strip: official railway data sources -->
+  <div class="trust-strip">
+    <p class="trust-label" data-i18n="trust_data">Real-time data from official railways</p>
+    <div class="trust-ops">
+      <span>Renfe</span><span>SNCF</span><span>Deutsche Bahn</span><span>SBB</span><span>Trenitalia</span><span>ÖBB</span><span>NS</span><span>SNCB</span><span>CP</span>
     </div>
   </div>
 
@@ -1380,6 +1404,7 @@
         footer_disclaimer: 'WoW Train is an independent travel platform. Bookings are processed by verified partners (Omio, Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.',
         scenic_book: 'Book now', preview_label: 'See it in action', preview_title1: 'Designed for', preview_title2: 'real travelers.', preview_lead: 'GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.', ss_home: 'Choose your country', ss_board: 'Departure board', ss_live: 'Live departures',
         stat_countries: 'Live countries', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_free2: 'Account or payment',
+        trust_data: 'Real-time data from official railways',
       },
       es: {
         nav_scenic: 'Trenes panorámicos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
@@ -1422,6 +1447,7 @@
         footer_disclaimer: 'WoW Train es una plataforma de viajes independiente. Las reservas las procesan partners verificados (Omio, Trainline, Klook, Kiwitaxi, Yesim). Podemos ganar una comisión por compras elegibles sin costo extra para ti.',
         scenic_book: 'Reservar', preview_label: 'Velo en acción', preview_title1: 'Diseñada para', preview_title2: 'viajeros de verdad.', preview_lead: 'Detección por GPS, horarios en tiempo real, rutas escénicas y un traductor integrado — todo en tu bolsillo.', ss_home: 'Elegí tu país', ss_board: 'Tablero de salidas', ss_live: 'Salidas en vivo',
         stat_countries: 'Países en vivo', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_free2: 'Cuenta o pago',
+        trust_data: 'Datos en tiempo real de ferroviarias oficiales',
       },
       fr: {
         nav_scenic: 'Trains panoramiques', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
@@ -1464,6 +1490,7 @@
         footer_disclaimer: 'WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées par des partenaires vérifiés (Omio, Trainline, Klook, Kiwitaxi, Yesim). Nous pouvons gagner une commission sur les achats éligibles sans coût supplémentaire pour vous.',
         scenic_book: 'Réserver', preview_label: 'Voyez-le en action', preview_title1: 'Conçue pour', preview_title2: 'les vrais voyageurs.', preview_lead: 'Détection GPS, horaires en temps réel, itinéraires panoramiques et un traducteur intégré — le tout dans votre poche.', ss_home: 'Choisissez votre pays', ss_board: 'Tableau des départs', ss_live: 'Départs en direct',
         stat_countries: 'Pays en direct', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_free2: 'Compte ou paiement',
+        trust_data: 'Données en temps réel des chemins de fer officiels',
       },
       de: {
         nav_scenic: 'Panoramazüge', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
@@ -1506,6 +1533,7 @@
         footer_disclaimer: 'WoW Train ist eine unabhängige Reiseplattform. Buchungen werden von verifizierten Partnern verarbeitet (Omio, Trainline, Klook, Kiwitaxi, Yesim). Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie verdienen.',
         scenic_book: 'Buchen', preview_label: 'In Aktion erleben', preview_title1: 'Gemacht für', preview_title2: 'echte Reisende.', preview_lead: 'GPS-Erkennung, Echtzeit-Fahrpläne, Panoramastrecken und integrierter Übersetzer — alles in deiner Tasche.', ss_home: 'Wähle dein Land', ss_board: 'Abfahrtstafel', ss_live: 'Live-Abfahrten',
         stat_countries: 'Länder live', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_free2: 'Konto oder Zahlung',
+        trust_data: 'Echtzeitdaten offizieller Bahnen',
       },
       it: {
         nav_scenic: 'Treni panoramici', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
@@ -1548,6 +1576,7 @@
         footer_disclaimer: 'WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni sono elaborate da partner verificati (Omio, Trainline, Klook, Kiwitaxi, Yesim). Possiamo guadagnare una commissione dagli acquisti idonei senza costi aggiuntivi per te.',
         scenic_book: 'Prenota', preview_label: 'Guardalo in azione', preview_title1: 'Progettata per', preview_title2: 'veri viaggiatori.', preview_lead: 'Rilevamento GPS, orari in tempo reale, percorsi panoramici e traduttore integrato — tutto in tasca.', ss_home: 'Scegli il tuo paese', ss_board: 'Tabellone partenze', ss_live: 'Partenze in tempo reale',
         stat_countries: 'Paesi in diretta', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_free2: 'Account o pagamento',
+        trust_data: 'Dati in tempo reale dalle ferrovie ufficiali',
       },
       pt: {
         nav_scenic: 'Comboios panorâmicos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
@@ -1590,6 +1619,7 @@
         footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas por parceiros verificados (Omio, Trainline, Klook, Kiwitaxi, Yesim). Podemos ganhar uma comissão por compras elegíveis sem custo adicional para si.',
         scenic_book: 'Reservar', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
         stat_countries: 'Países ao vivo', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_free2: 'Conta ou pagamento',
+        trust_data: 'Dados em tempo real de ferrovias oficiais',
       },
     };
 
