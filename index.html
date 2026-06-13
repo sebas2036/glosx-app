@@ -771,10 +771,30 @@
       gap: 10px 22px; max-width: 760px; margin: 0 auto;
     }
     .trust-ops span {
-      font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.5);
-      letter-spacing: 0.3px; transition: color 0.2s ease;
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.62);
+      letter-spacing: 0.3px;
+      padding: 6px 14px; border-radius: 100px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(139,92,246,0.18);
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
-    .trust-ops span:hover { color: rgba(255,255,255,0.9); }
+    .trust-ops span:hover {
+      color: #fff; border-color: rgba(139,92,246,0.5); background: rgba(139,92,246,0.10);
+    }
+    /* Badges de confianza (señales reales, no ratings inventados) */
+    .trust-badges {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 10px 14px; margin: 22px auto 0; max-width: 760px;
+    }
+    .trust-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.82);
+      padding: 8px 15px; border-radius: 100px;
+      background: linear-gradient(180deg, rgba(30,27,58,0.6), rgba(18,16,38,0.6));
+      border: 1px solid rgba(139,92,246,0.25);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .trust-badge svg { width: 15px; height: 15px; color: var(--primary2); flex-shrink: 0; }
 
     /* ── Photo carousel ── */
     .photo-carousel {
@@ -1107,6 +1127,12 @@
     <p class="trust-label" data-i18n="trust_data">Real-time data from official railways</p>
     <div class="trust-ops">
       <span>Renfe</span><span>SNCF</span><span>Deutsche Bahn</span><span>SBB</span><span>Trenitalia</span><span>ÖBB</span><span>NS</span><span>SNCB</span><span>CP</span>
+    </div>
+    <div class="trust-badges">
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">Official GTFS data</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="trust_b2">Live every 90 seconds</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg><span data-i18n="trust_b3">No sign-up needed</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">Book via Trainline &amp; Omio</span></span>
     </div>
   </div>
 
@@ -1487,6 +1513,7 @@
         scenic_book: 'Book now', preview_label: 'See it in action', preview_title1: 'Designed for', preview_title2: 'real travelers.', preview_lead: 'GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.', ss_home: 'Choose your country', ss_board: 'Departure board', ss_live: 'Live departures',
         stat_countries: 'Live countries', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_free2: 'Account or payment',
         trust_data: 'Real-time data from official railways',
+        trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Book via Trainline & Omio',
       },
       es: {
         nav_scenic: 'Trenes panorámicos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
@@ -1530,6 +1557,7 @@
         scenic_book: 'Reservar', preview_label: 'Velo en acción', preview_title1: 'Diseñada para', preview_title2: 'viajeros de verdad.', preview_lead: 'Detección por GPS, horarios en tiempo real, rutas escénicas y un traductor integrado — todo en tu bolsillo.', ss_home: 'Elegí tu país', ss_board: 'Tablero de salidas', ss_live: 'Salidas en vivo',
         stat_countries: 'Países en vivo', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_free2: 'Cuenta o pago',
         trust_data: 'Datos en tiempo real de ferroviarias oficiales',
+        trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Reservá con Trainline y Omio',
       },
       fr: {
         nav_scenic: 'Trains panoramiques', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
@@ -1573,6 +1601,7 @@
         scenic_book: 'Réserver', preview_label: 'Voyez-le en action', preview_title1: 'Conçue pour', preview_title2: 'les vrais voyageurs.', preview_lead: 'Détection GPS, horaires en temps réel, itinéraires panoramiques et un traducteur intégré — le tout dans votre poche.', ss_home: 'Choisissez votre pays', ss_board: 'Tableau des départs', ss_live: 'Départs en direct',
         stat_countries: 'Pays en direct', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_free2: 'Compte ou paiement',
         trust_data: 'Données en temps réel des chemins de fer officiels',
+        trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Réservez via Trainline & Omio',
       },
       de: {
         nav_scenic: 'Panoramazüge', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
@@ -1616,6 +1645,7 @@
         scenic_book: 'Buchen', preview_label: 'In Aktion erleben', preview_title1: 'Gemacht für', preview_title2: 'echte Reisende.', preview_lead: 'GPS-Erkennung, Echtzeit-Fahrpläne, Panoramastrecken und integrierter Übersetzer — alles in deiner Tasche.', ss_home: 'Wähle dein Land', ss_board: 'Abfahrtstafel', ss_live: 'Live-Abfahrten',
         stat_countries: 'Länder live', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_free2: 'Konto oder Zahlung',
         trust_data: 'Echtzeitdaten offizieller Bahnen',
+        trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Buchen über Trainline & Omio',
       },
       it: {
         nav_scenic: 'Treni panoramici', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
@@ -1659,6 +1689,7 @@
         scenic_book: 'Prenota', preview_label: 'Guardalo in azione', preview_title1: 'Progettata per', preview_title2: 'veri viaggiatori.', preview_lead: 'Rilevamento GPS, orari in tempo reale, percorsi panoramici e traduttore integrato — tutto in tasca.', ss_home: 'Scegli il tuo paese', ss_board: 'Tabellone partenze', ss_live: 'Partenze in tempo reale',
         stat_countries: 'Paesi in diretta', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_free2: 'Account o pagamento',
         trust_data: 'Dati in tempo reale dalle ferrovie ufficiali',
+        trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Prenota con Trainline e Omio',
       },
       pt: {
         nav_scenic: 'Comboios panorâmicos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
@@ -1702,6 +1733,7 @@
         scenic_book: 'Reservar', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
         stat_countries: 'Países ao vivo', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_free2: 'Conta ou pagamento',
         trust_data: 'Dados em tempo real de ferrovias oficiais',
+        trust_b1: 'Dados GTFS oficiais', trust_b2: 'Ao vivo a cada 90 segundos', trust_b3: 'Sem registo', trust_b4: 'Reserve via Trainline e Omio',
       },
     };
 
