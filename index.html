@@ -150,18 +150,10 @@
     /* Wrapper con el fondo del mapa: cubre hero + chips de países */
     .hero-bgwrap {
       position: relative;
-      overflow: hidden;
-      aspect-ratio: 1600 / 864;         /* misma proporción que el mapa → entra completo */
       background-image: url('hero-bg.jpg');
-      background-size: 100% 100%;        /* mapa completo, sin recortar */
-      background-position: center top;
+      background-size: cover;            /* llena el hero a cualquier ancho, sin huecos */
+      background-position: center 42%;
       background-repeat: no-repeat;
-    }
-    /* Chips quedan pegados al buscador (arriba); Scenic sube sobre el mapa
-       para mantener una distancia coherente con la de hero→chips */
-    #scenic {
-      margin-top: -22vw;
-      position: relative; z-index: 2;
     }
     .hero-bgwrap::before {
       content: '';
