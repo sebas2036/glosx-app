@@ -147,6 +147,29 @@
     .lang-option.active { background: rgba(124,58,237,0.25); color: var(--primary2); }
 
     /* ── Hero ── */
+    /* Wrapper con el fondo del mapa: cubre hero + chips de países */
+    .hero-bgwrap {
+      position: relative;
+      overflow: hidden;
+      background-image: url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center 70%;
+      background-repeat: no-repeat;
+    }
+    .hero-bgwrap::before {
+      content: '';
+      position: absolute; inset: 0;
+      /* Glow violeta + oscurecido para legibilidad + fundido a negro abajo */
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 25%,
+          rgba(124,58,237,0.22) 0%, transparent 70%),
+        linear-gradient(180deg,
+          rgba(10,10,15,0.55) 0%,
+          rgba(10,10,15,0.68) 70%,
+          var(--bg) 100%);
+      pointer-events: none;
+    }
+    .hero-bgwrap > * { position: relative; z-index: 1; }
     .hero {
       min-height: auto;
       display: flex; flex-direction: column;
@@ -155,24 +178,6 @@
       padding: 80px 24px 24px;
       position: relative;
       overflow: visible;
-      /* Fondo: red mundial de nodos (solo en el hero) */
-      background-image: url('hero-bg.jpg');
-      background-size: cover;
-      background-position: center 62%;
-      background-repeat: no-repeat;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      /* Glow violeta + oscurecido para legibilidad + fundido a negro abajo */
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 30%,
-          rgba(124,58,237,0.22) 0%, transparent 70%),
-        linear-gradient(180deg,
-          rgba(10,10,15,0.55) 0%,
-          rgba(10,10,15,0.70) 55%,
-          var(--bg) 100%);
-      pointer-events: none;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
@@ -962,6 +967,9 @@
     </div>
   </nav>
 
+  <!-- Fondo del mapa: envuelve hero + chips -->
+  <div class="hero-bgwrap">
+
   <!-- Hero with functional search -->
   <section class="hero">
     <h1><span data-i18n="hero_title1">Your train.</span><br /><span data-i18n="hero_title2">Your world.</span></h1>
@@ -1001,6 +1009,8 @@
     <span class="country-chip">🇦🇹 Austria<img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()"></span>
     <span class="country-chip">🇵🇹 Portugal<img class="country-photo" src="country-pics/pt.jpg" alt="Portugal" loading="lazy" onerror="this.remove()"></span>
   </div>
+
+  </div><!-- /hero-bgwrap -->
 
   <!-- Scenic trains -->
   <section class="section" id="scenic">
