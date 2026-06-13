@@ -345,6 +345,7 @@
       .country-chip:hover {
         border-color: rgba(124,58,237,0.6);
         color: #fff;
+        z-index: 40;   /* sobre el hero (20) → la miniatura sale adelante */
       }
       .country-chip:hover .country-photo {
         opacity: 1;
@@ -352,7 +353,7 @@
       }
     }
     /* En touch se revela al tocar el chip (clase .show-photo vía JS) */
-    .country-chip.show-photo { border-color: rgba(124,58,237,0.6); color: #fff; }
+    .country-chip.show-photo { border-color: rgba(124,58,237,0.6); color: #fff; z-index: 40; }
     .country-chip.show-photo .country-photo {
       opacity: 1;
       transform: translate(-50%, 0) scale(1);
