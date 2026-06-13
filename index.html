@@ -151,21 +151,23 @@
     .hero-bgwrap {
       position: relative;
       overflow: hidden;
+      aspect-ratio: 1600 / 864;         /* misma proporción que el mapa → entra completo */
       background-image: url('hero-bg.jpg');
-      background-size: 100% auto;       /* mapa completo (ancho entero), sin recortar */
-      background-position: center top;  /* desde el margen superior hacia abajo */
+      background-size: 100% 100%;        /* mapa completo, sin recortar */
+      background-position: center top;
       background-repeat: no-repeat;
     }
     .hero-bgwrap::before {
       content: '';
       position: absolute; inset: 0;
-      /* Glow violeta + oscurecido para legibilidad + fundido a negro abajo */
+      /* Glow violeta + leve oscurecido para legibilidad + fundido a negro abajo */
       background:
-        radial-gradient(ellipse 80% 50% at 50% 25%,
-          rgba(124,58,237,0.22) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 50% at 50% 22%,
+          rgba(124,58,237,0.20) 0%, transparent 70%),
         linear-gradient(180deg,
-          rgba(10,10,15,0.55) 0%,
-          rgba(10,10,15,0.68) 70%,
+          rgba(10,10,15,0.50) 0%,
+          rgba(10,10,15,0.30) 35%,
+          rgba(10,10,15,0.28) 80%,
           var(--bg) 100%);
       pointer-events: none;
     }
