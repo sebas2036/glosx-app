@@ -168,23 +168,29 @@
     /* Wrapper con el fondo del mapa: cubre hero + chips de países */
     .hero-bgwrap {
       position: relative;
-      background-image: url('hero-bg.jpg');
-      background-size: cover;            /* llena el hero a cualquier ancho, sin huecos */
-      background-position: center 42%;
-      background-repeat: no-repeat;
+    }
+    /* Capa del mapa (detrás del contenido) — se disuelve hacia abajo con máscara
+       para que el cambio de tono sea natural y no un corte plano */
+    .hero-bgwrap::after {
+      content: '';
+      position: absolute; inset: 0; z-index: 0;
+      background: url('hero-bg.jpg') center 42% / cover no-repeat;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,0.55) 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,0.55) 80%, transparent 100%);
     }
     .hero-bgwrap::before {
       content: '';
-      position: absolute; inset: 0;
-      /* Glow violeta + leve oscurecido para legibilidad + fundido a negro abajo */
+      position: absolute; inset: 0; z-index: 1;
+      /* Glow violeta + leve oscurecido para legibilidad; se funde a transparente
+         abajo para que el body asome de forma natural (sin corte) */
       background:
         radial-gradient(ellipse 80% 50% at 50% 22%,
           rgba(124,58,237,0.20) 0%, transparent 70%),
         linear-gradient(180deg,
           rgba(10,10,15,0.50) 0%,
-          rgba(10,10,15,0.30) 35%,
-          rgba(10,10,15,0.28) 80%,
-          var(--bg) 100%);
+          rgba(10,10,15,0.28) 35%,
+          rgba(10,10,15,0.18) 70%,
+          transparent 100%);
       pointer-events: none;
     }
     .hero-bgwrap > * { position: relative; z-index: 1; }
