@@ -349,9 +349,11 @@
         transform: translate(-50%, 0) scale(1);
       }
     }
-    /* En móvil/touch nunca se muestra (no hay hover) */
-    @media (hover: none) {
-      .country-photo { display: none; }
+    /* En touch se revela al tocar el chip (clase .show-photo vía JS) */
+    .country-chip.show-photo { border-color: rgba(124,58,237,0.6); color: #fff; }
+    .country-chip.show-photo .country-photo {
+      opacity: 1;
+      transform: translate(-50%, 0) scale(1);
     }
 
     /* ── Sections ── */
@@ -1414,6 +1416,19 @@
     document.addEventListener('click', () => {
       const p = document.getElementById('calPopup');
       if (p) p.classList.remove('open');
+      // Ocultar miniaturas de chips abiertas en touch
+      document.querySelectorAll('.country-chip.show-photo').forEach(c => c.classList.remove('show-photo'));
+    });
+
+    // Chips de países: tap revela/oculta la miniatura (touch). En desktop el
+    // hover sigue funcionando; esto le da función al toque en móvil.
+    document.querySelectorAll('.country-chip').forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const wasOpen = chip.classList.contains('show-photo');
+        document.querySelectorAll('.country-chip.show-photo').forEach(c => c.classList.remove('show-photo'));
+        if (!wasOpen) chip.classList.add('show-photo');
+      });
     });
 
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
