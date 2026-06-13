@@ -155,12 +155,23 @@
       padding: 80px 24px 24px;
       position: relative;
       overflow: visible;
+      /* Fondo: red mundial de nodos (solo en el hero) */
+      background-image: url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
     }
     .hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 30%,
-        rgba(124,58,237,0.18) 0%, transparent 70%);
+      /* Glow violeta + oscurecido para legibilidad + fundido a negro abajo */
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%,
+          rgba(124,58,237,0.22) 0%, transparent 70%),
+        linear-gradient(180deg,
+          rgba(10,10,15,0.55) 0%,
+          rgba(10,10,15,0.70) 55%,
+          var(--bg) 100%);
       pointer-events: none;
     }
     .hero-badge {
@@ -984,13 +995,6 @@
     <span class="country-chip">🇳🇱 Netherlands<img class="country-photo" src="country-pics/nl.jpg" alt="Netherlands" loading="lazy" onerror="this.remove()"></span>
     <span class="country-chip">🇦🇹 Austria<img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()"></span>
     <span class="country-chip">🇵🇹 Portugal<img class="country-photo" src="country-pics/pt.jpg" alt="Portugal" loading="lazy" onerror="this.remove()"></span>
-  </div>
-
-  <!-- Hero device mockup -->
-  <div class="hero-device-wrap">
-    <div class="hero-device">
-      <img src="screen-live.jpg" alt="WoW Train — live departures" loading="lazy" onerror="this.closest('.hero-device-wrap').remove()">
-    </div>
   </div>
 
   <!-- Scenic trains -->
