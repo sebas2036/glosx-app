@@ -156,7 +156,11 @@
       background-size: 100% 100%;        /* mapa completo, sin recortar */
       background-position: center top;
       background-repeat: no-repeat;
+      /* Distribuir contenido: hero ocupa el alto, chips quedan cerca del fondo */
+      display: flex; flex-direction: column;
     }
+    .hero-bgwrap > .hero { flex: 1 1 auto; }
+    .hero-bgwrap > .countries { padding-bottom: 36px !important; }
     .hero-bgwrap::before {
       content: '';
       position: absolute; inset: 0;
@@ -330,11 +334,6 @@
     .section {
       padding: 24px 24px;
       max-width: 1200px; margin: 0 auto;
-    }
-    /* Achicar el espacio muerto entre el mapa y la sección Scenic */
-    #scenic {
-      margin-top: -9vw;
-      position: relative; z-index: 2;
     }
     .section-label {
       font-size: 12px; font-weight: 700; letter-spacing: 2px;
