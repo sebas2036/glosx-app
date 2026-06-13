@@ -228,29 +228,30 @@
     /* ── Search box ── */
     .search-box {
       width: 100%; max-width: 720px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: rgba(26,26,46,0.92);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(139,92,246,0.45);
       border-radius: 20px;
       padding: 20px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr auto;
       gap: 8px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 60px rgba(124,58,237,0.25);
       overflow: visible;
     }
     .search-field {
-      background: var(--elevated);
-      border: 1px solid var(--border2);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 12px;
       padding: 12px 14px;
       display: flex; flex-direction: column;
       text-align: left;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, background 0.2s;
     }
-    .search-field:hover { border-color: rgba(124,58,237,0.3); }
+    .search-field:hover { border-color: rgba(139,92,246,0.5); background: rgba(255,255,255,0.09); }
     .search-field label {
       font-size: 10px; font-weight: 700; letter-spacing: 1px;
-      color: var(--muted); text-transform: uppercase; margin-bottom: 4px;
+      color: #B7B9C9; text-transform: uppercase; margin-bottom: 4px;
     }
     .search-field input {
       background: transparent; border: none; outline: none;
@@ -258,20 +259,21 @@
       font-family: inherit;
       width: 100%;
     }
-    .search-field input::placeholder { color: var(--muted); opacity: 0.6; }
+    .search-field input::placeholder { color: var(--muted); opacity: 0.7; }
     .search-btn {
-      background: var(--primary); color: #fff;
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      color: #fff;
       border: none; border-radius: 12px;
       padding: 0 24px;
       font-size: 14px; font-weight: 700;
       cursor: pointer;
       transition: transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 0 30px rgba(124,58,237,0.4);
+      box-shadow: 0 6px 20px rgba(124,58,237,0.5);
       font-family: inherit;
     }
     .search-btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 0 40px rgba(124,58,237,0.6);
+      box-shadow: 0 8px 28px rgba(124,58,237,0.7);
     }
 
     /* ── Countries strip ── */
