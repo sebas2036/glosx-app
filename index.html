@@ -156,11 +156,13 @@
       background-size: 100% 100%;        /* mapa completo, sin recortar */
       background-position: center top;
       background-repeat: no-repeat;
-      /* Distribuir contenido: hero ocupa el alto, chips quedan cerca del fondo */
-      display: flex; flex-direction: column;
     }
-    .hero-bgwrap > .hero { flex: 1 1 auto; }
-    .hero-bgwrap > .countries { padding-bottom: 36px !important; }
+    /* Chips quedan pegados al buscador (arriba); Scenic sube sobre el mapa
+       para mantener una distancia coherente con la de hero→chips */
+    #scenic {
+      margin-top: -22vw;
+      position: relative; z-index: 2;
+    }
     .hero-bgwrap::before {
       content: '';
       position: absolute; inset: 0;
