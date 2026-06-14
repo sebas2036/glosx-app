@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GLOSX — WoW Train · Real-time European train travel</title>
+  <title>WoW Train — Real-time European train travel | glosx.app</title>
+  <meta name="application-name" content="WoW Train" />
+  <meta name="apple-mobile-web-app-title" content="WoW Train" />
   <meta name="description" content="Real-time train schedules, scenic routes, city passes and travel essentials across 9 European countries. Search, compare and book — Spain, France, Germany, Switzerland, Italy, Belgium, Portugal, Austria, Netherlands." />
   <meta name="keywords" content="European trains, Trainline, AVE, TGV, ICE, Frecciarossa, Glacier Express, Bernina Express, train tickets Europe, real-time train app" />
   <meta name="author" content="GLOSX" />
@@ -12,13 +14,13 @@
   <meta property="og:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
   <meta property="og:url" content="https://glosx.app" />
   <meta property="og:site_name" content="GLOSX" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1200&q=80" />
+  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="WoW Train — Real-time European train travel" />
   <meta name="twitter:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1200&q=80" />
+  <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
   <link rel="canonical" href="https://glosx.app" />
   <link rel="alternate" hreflang="en" href="https://glosx.app?lang=en" />
   <link rel="alternate" hreflang="es" href="https://glosx.app?lang=es" />
@@ -60,11 +62,34 @@
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "WoW Train",
+    "alternateName": ["Glosx", "WoW Train app", "glosx.app"],
     "operatingSystem": "iOS, Android",
     "applicationCategory": "TravelApplication",
     "description": "Real-time European train schedules and bookings.",
     "url": "https://glosx.app",
     "publisher": { "@type": "Organization", "name": "GLOSX" }
+  }
+  </script>
+
+  <!-- Schema.org WebSite + Organization (asocia la marca WoW Train ↔ Glosx ↔ glosx.app) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WoW Train",
+    "alternateName": ["Glosx", "glosx", "glosx.app", "WoW Train app"],
+    "url": "https://glosx.app"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GLOSX",
+    "alternateName": "WoW Train",
+    "url": "https://glosx.app",
+    "logo": "https://glosx.app/hero-bg.jpg",
+    "email": "glosx@outlook.com"
   }
   </script>
 
