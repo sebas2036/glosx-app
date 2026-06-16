@@ -904,6 +904,37 @@
     }
     .essential-item:hover .essential-cta { color: var(--primary2); }
 
+    /* ── Franja VIP "Trusted partners" (Booking / Tripadvisor) ── */
+    .vip-bar { max-width: 1180px; margin: 0 auto 14px; }
+    .vip-label {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #e7c66b; margin: 0 0 10px 4px;
+    }
+    .vip-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .vip-card {
+      display: flex; align-items: center; gap: 16px;
+      padding: 18px 22px; border-radius: 16px;
+      border: 1px solid rgba(231,198,107,0.45);
+      background: linear-gradient(100deg, rgba(231,198,107,0.10), rgba(231,198,107,0.03));
+      box-shadow: 0 0 22px rgba(231,198,107,0.12);
+      text-decoration: none; cursor: pointer;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .vip-card:hover {
+      border-color: rgba(231,198,107,0.85);
+      box-shadow: 0 0 30px rgba(231,198,107,0.28);
+      transform: translateY(-2px);
+    }
+    .vip-icon {
+      flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(231,198,107,0.12); color: #e7c66b;
+    }
+    .vip-text { display: flex; flex-direction: column; min-width: 0; }
+    .vip-brand { font-size: 16px; font-weight: 800; color: #fff; line-height: 1.15; }
+    .vip-sub { font-size: 12px; color: #cbb97e; margin-top: 3px; }
+
     /* ── Panel de widget de partner (desplegable bajo la barra) ── */
     .partner-widgets { max-width: 1180px; margin: 14px auto 0; }
     .pw-panel {
@@ -1134,6 +1165,8 @@
 
       /* ── Essentials bar — 1 columna (móvil) ── */
       .essentials-inner { grid-template-columns: 1fr; }
+      /* ── VIP — 1 columna (móvil) ── */
+      .vip-inner { grid-template-columns: 1fr; }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
@@ -1295,6 +1328,26 @@
     <p class="section-label" data-i18n="partners_label">Everything for your trip</p>
     <h2><span data-i18n="partners_title1">Travel essentials</span><br /><span data-i18n="partners_title2">for Europe.</span></h2>
     <p class="lead" data-i18n="partners_lead">Curated services that complement your train journey.</p>
+
+  <div class="vip-bar">
+    <p class="vip-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7z"/></svg><span data-i18n="vip_label">Trusted partners</span></p>
+    <div class="vip-inner">
+      <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" class="vip-card">
+        <div class="vip-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17V7a1 1 0 0 1 1-1h7a3 3 0 0 1 3 3v4"/><path d="M2 13h18a2 2 0 0 1 2 2v2"/><path d="M2 17v2"/><path d="M22 17v2"/></svg></div>
+        <div class="vip-text">
+          <span class="vip-brand">Booking.com</span>
+          <span class="vip-sub" data-i18n="vip_booking">Hotels &amp; stays →</span>
+        </div>
+      </a>
+      <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" class="vip-card">
+        <div class="vip-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="12" r="3.5"/><circle cx="17.5" cy="12" r="3.5"/><path d="M10 12h4"/><path d="M5 8.5C6 6.5 8 5 12 5s6 1.5 7 3.5"/></svg></div>
+        <div class="vip-text">
+          <span class="vip-brand">Tripadvisor</span>
+          <span class="vip-sub" data-i18n="vip_tripadvisor">Experiences &amp; reviews →</span>
+        </div>
+      </a>
+    </div>
+  </div>
 
   <div class="essentials-bar">
     <div class="essentials-inner">
@@ -1706,6 +1759,7 @@
         scenic_more: 'See more routes', scenic_less: 'See less',
         partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
         partners_lead: 'Curated services that complement your train journey.',
+        vip_label: 'Trusted partners', vip_booking: 'Hotels & stays →', vip_tripadvisor: 'Experiences & reviews →',
         p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
         p_kiwi_title: 'Airport Transfers', p_kiwi_desc: 'Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.', p_kiwi_cta: 'Book transfer →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.', p_yesim_cta: 'Activate eSIM →',
@@ -1750,6 +1804,7 @@
         scenic_more: 'Ver más rutas', scenic_less: 'Ver menos',
         partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
         partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
+        vip_label: 'Partners de confianza', vip_booking: 'Hoteles y alojamiento →', vip_tripadvisor: 'Experiencias y reseñas →',
         p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
         p_kiwi_title: 'Traslados aeropuerto', p_kiwi_desc: 'Taxi privado desde cualquier aeropuerto europeo hasta tu hotel o estación. Precio fijo, sin sorpresas.', p_kiwi_cta: 'Reservar traslado →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Conectate en más de 30 países europeos desde €4.90. Activación instantánea en tu teléfono — sin cambiar la SIM.', p_yesim_cta: 'Activar eSIM →',
@@ -1794,6 +1849,7 @@
         scenic_more: 'Voir plus d\'itinéraires', scenic_less: 'Voir moins',
         partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
         partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
+        vip_label: 'Partenaires de confiance', vip_booking: 'Hôtels & séjours →', vip_tripadvisor: 'Expériences & avis →',
         p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
         p_kiwi_title: 'Transferts aéroport', p_kiwi_desc: 'Taxi privé depuis n\'importe quel grand aéroport européen jusqu\'à votre hôtel ou gare. Prix fixe, aucune surprise.', p_kiwi_cta: 'Réserver transfert →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Restez connecté dans plus de 30 pays européens dès €4.90. Activation instantanée sur votre téléphone — sans changer de SIM.', p_yesim_cta: 'Activer eSIM →',
@@ -1838,6 +1894,7 @@
         scenic_more: 'Mehr Strecken anzeigen', scenic_less: 'Weniger anzeigen',
         partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
         partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
+        vip_label: 'Vertrauenspartner', vip_booking: 'Hotels & Unterkünfte →', vip_tripadvisor: 'Erlebnisse & Bewertungen →',
         p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
         p_kiwi_title: 'Flughafentransfer', p_kiwi_desc: 'Privattaxi von jedem großen europäischen Flughafen direkt zu Ihrem Hotel oder Bahnhof. Festpreis, keine Überraschungen.', p_kiwi_cta: 'Transfer buchen →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Bleiben Sie in 30+ europäischen Ländern verbunden ab €4.90. Sofortige Aktivierung auf Ihrem Telefon — kein SIM-Wechsel.', p_yesim_cta: 'eSIM aktivieren →',
@@ -1882,6 +1939,7 @@
         scenic_more: 'Vedi altri percorsi', scenic_less: 'Vedi meno',
         partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
         partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
+        vip_label: 'Partner di fiducia', vip_booking: 'Hotel e soggiorni →', vip_tripadvisor: 'Esperienze e recensioni →',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Taxi privato da qualsiasi grande aeroporto europeo direttamente al tuo hotel o stazione. Prezzo fisso, nessuna sorpresa.', p_kiwi_cta: 'Prenota transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Resta connesso in 30+ paesi europei da €4.90. Attivazione istantanea sul tuo telefono — nessun cambio SIM.', p_yesim_cta: 'Attiva eSIM →',
@@ -1926,6 +1984,7 @@
         scenic_more: 'Ver mais rotas', scenic_less: 'Ver menos',
         partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
         partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
+        vip_label: 'Parceiros de confiança', vip_booking: 'Hotéis e estadias →', vip_tripadvisor: 'Experiências e avaliações →',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Táxi privado a partir de qualquer grande aeroporto europeu até ao seu hotel ou estação. Preço fixo, sem surpresas.', p_kiwi_cta: 'Reservar transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Mantenha-se ligado em mais de 30 países europeus desde €4.90. Ativação instantânea no seu telefone — sem trocar de SIM.', p_yesim_cta: 'Ativar eSIM →',
