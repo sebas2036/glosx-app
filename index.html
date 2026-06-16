@@ -857,25 +857,28 @@
     }
     .essential-item {
       display: flex; align-items: center; gap: 16px;
-      padding: 16px 20px; border-radius: 12px;
-      border: 1px solid transparent;
+      padding: 16px 20px; border-radius: 14px;
+      border: 1px solid rgba(168,85,247,0.18);
+      background: linear-gradient(90deg, rgba(99,102,241,0.05), rgba(168,85,247,0.05));
+      box-shadow: 0 0 14px rgba(168,85,247,0.06);
       text-decoration: none; text-align: left; cursor: pointer;
-      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     }
     .essential-item:hover {
-      background: linear-gradient(90deg, rgba(99,102,241,0.10), rgba(168,85,247,0.10));
-      border-color: rgba(168,85,247,0.40);
-      box-shadow: 0 0 20px rgba(168,85,247,0.15);
+      background: linear-gradient(90deg, rgba(99,102,241,0.14), rgba(168,85,247,0.14));
+      border-color: rgba(168,85,247,0.55);
+      box-shadow: 0 0 26px rgba(168,85,247,0.22);
+      transform: translateY(-2px);
     }
     .essential-icon {
       flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-      color: #9ca3af;
+      color: #b4a6d6;
       transition: color 0.3s ease, transform 0.3s ease;
     }
     .essential-item:hover .essential-icon { color: #c084fc; transform: scale(1.06); }
     .essential-text { display: flex; flex-direction: column; min-width: 0; }
     .essential-title {
-      font-size: 16px; font-weight: 700; color: #d1d5db; line-height: 1.2;
+      font-size: 16px; font-weight: 700; color: #ececf3; line-height: 1.2;
       transition: color 0.3s ease;
     }
     .essential-item:hover .essential-title { color: #fff; }
