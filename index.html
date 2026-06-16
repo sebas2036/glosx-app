@@ -923,9 +923,10 @@
       display: flex; align-items: center; justify-content: center;
     }
     .pw-close:hover { background: rgba(168,85,247,0.30); }
-    /* Kiwitaxi: el buscador solo necesita ~200px; recorto el hueco gigante */
-    #pw-kiwitaxi > div { height: 230px !important; overflow: hidden !important; }
-    #pw-kiwitaxi iframe { height: 230px !important; }
+    /* Kiwitaxi: el buscador solo necesita ~210px; recorto el hueco gigante */
+    #pw-kiwitaxi { max-height: 250px !important; overflow: hidden !important; }
+    #pw-kiwitaxi > div { height: 210px !important; overflow: hidden !important; }
+    #pw-kiwitaxi iframe { height: 210px !important; }
 
     /* ── Trust strip (fuentes de datos oficiales) ── */
     .trust-strip { text-align: center; padding: 10px 24px 38px; }
