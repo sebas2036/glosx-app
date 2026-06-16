@@ -840,6 +840,54 @@
     }
     .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
 
+    /* ── Essentials bar (partners, estilo barra dividida como .stats) ── */
+    .essentials-bar {
+      background:
+        radial-gradient(ellipse 60% 120% at 50% 50%, rgba(124,58,237,0.14), transparent 70%),
+        linear-gradient(180deg, rgba(30,27,58,0.55) 0%, rgba(18,16,38,0.55) 100%);
+      border-top: 1px solid rgba(139,92,246,0.20);
+      border-bottom: 1px solid rgba(139,92,246,0.20);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      padding: 22px 24px;
+      border-radius: 20px;
+      border-left: 1px solid rgba(139,92,246,0.20);
+      border-right: 1px solid rgba(139,92,246,0.20);
+    }
+    .essentials-inner {
+      max-width: 1180px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+    }
+    .essential-item {
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 8px; padding: 8px 16px;
+      text-decoration: none; cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .essentials-inner > a:not(:last-child) {
+      border-right: 1px solid rgba(139,92,246,0.18);
+    }
+    .essential-item:hover { transform: translateY(-3px); }
+    .essential-icon {
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .essential-item:hover .essential-icon {
+      transform: scale(1.08);
+      box-shadow: 0 8px 22px rgba(124,58,237,0.30);
+    }
+    .essential-title {
+      font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.2;
+    }
+    .essential-cta {
+      font-size: 12px; font-weight: 700; color: var(--primary2);
+      opacity: 0.85; transition: opacity 0.2s ease;
+    }
+    .essential-item:hover .essential-cta { opacity: 1; }
+
     /* ── Trust strip (fuentes de datos oficiales) ── */
     .trust-strip { text-align: center; padding: 10px 24px 38px; }
     .trust-label {
@@ -1027,6 +1075,11 @@
       nav { padding: 16px 20px; }
       .nav-links { display: none; }
       .hero { padding: 100px 20px 60px; }
+
+      /* ── Essentials bar — 2 columnas ── */
+      .essentials-inner { grid-template-columns: repeat(2, 1fr); }
+      .essentials-inner > a:not(:nth-child(3n)) { border-right: none; }
+      .essentials-inner > a:not(:nth-child(2n)) { border-right: 1px solid rgba(139,92,246,0.18); }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
@@ -1051,8 +1104,12 @@
       .stat-number { font-size: 26px; }
       .stat-label { font-size: 11px; }
 
-      /* ── Partners grid — 1 columna ── */
-      .partners-grid { grid-template-columns: 1fr; }
+      /* ── Essentials bar — 3 columnas (tablet/móvil) ── */
+      .essentials-inner { grid-template-columns: repeat(3, 1fr); gap: 22px 0; }
+      .essentials-inner > a:not(:last-child) { border-right: none; }
+      .essentials-inner > a:not(:nth-child(3n)) { border-right: 1px solid rgba(139,92,246,0.18); }
+      .essential-item { padding: 6px 8px; }
+      .essential-title { font-size: 12px; }
 
       /* ── Features grid — 1 columna ── */
       .features-grid { grid-template-columns: 1fr; }
@@ -1249,48 +1306,44 @@
     <h2><span data-i18n="partners_title1">Travel essentials</span><br /><span data-i18n="partners_title2">for Europe.</span></h2>
     <p class="lead" data-i18n="partners_lead">Curated services that complement your train journey.</p>
 
-    <div class="partners-grid">
-      <a href="#" class="partner-card" onclick="goPartner('klook', event)">
-        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-        <div class="partner-title" data-i18n="p_klook_title">City Passes</div>
-        <div class="partner-desc" data-i18n="p_klook_desc">Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.</div>
-        <div class="partner-cta" data-i18n="p_klook_cta">Browse passes →</div>
-      </a>
+    <div class="essentials-bar">
+      <div class="essentials-inner">
+        <a href="#" class="essential-item" onclick="goPartner('klook', event)">
+          <div class="essential-icon" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+          <div class="essential-title" data-i18n="p_klook_title">City Passes</div>
+          <div class="essential-cta" data-i18n="p_klook_cta">Browse passes →</div>
+        </a>
 
-      <a href="#" class="partner-card" onclick="goPartner('kiwitaxi', event)">
-        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
-        <div class="partner-title" data-i18n="p_kiwi_title">Airport Transfers</div>
-        <div class="partner-desc" data-i18n="p_kiwi_desc">Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.</div>
-        <div class="partner-cta" data-i18n="p_kiwi_cta">Book transfer →</div>
-      </a>
+        <a href="#" class="essential-item" onclick="goPartner('kiwitaxi', event)">
+          <div class="essential-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
+          <div class="essential-title" data-i18n="p_kiwi_title">Airport Transfers</div>
+          <div class="essential-cta" data-i18n="p_kiwi_cta">Book transfer →</div>
+        </a>
 
-      <a href="#" class="partner-card" onclick="goPartner('yesim', event)">
-        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #10b981, #059669);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg></div>
-        <div class="partner-title" data-i18n="p_yesim_title">eSIM Europe</div>
-        <div class="partner-desc" data-i18n="p_yesim_desc">Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.</div>
-        <div class="partner-cta" data-i18n="p_yesim_cta">Activate eSIM →</div>
-      </a>
+        <a href="#" class="essential-item" onclick="goPartner('yesim', event)">
+          <div class="essential-icon" style="background: linear-gradient(135deg, #10b981, #059669);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg></div>
+          <div class="essential-title" data-i18n="p_yesim_title">eSIM Europe</div>
+          <div class="essential-cta" data-i18n="p_yesim_cta">Activate eSIM →</div>
+        </a>
 
-      <a href="#" class="partner-card" onclick="goPartner('tiqets', event)">
-        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ec4899, #be185d);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
-        <div class="partner-title" data-i18n="p_tiqets_title">Attraction Tickets</div>
-        <div class="partner-desc" data-i18n="p_tiqets_desc">Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.</div>
-        <div class="partner-cta" data-i18n="p_tiqets_cta">Browse tickets →</div>
-      </a>
+        <a href="#" class="essential-item" onclick="goPartner('tiqets', event)">
+          <div class="essential-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
+          <div class="essential-title" data-i18n="p_tiqets_title">Attraction Tickets</div>
+          <div class="essential-cta" data-i18n="p_tiqets_cta">Browse tickets →</div>
+        </a>
 
-      <a href="#" class="partner-card" onclick="goPartner('storage', event)">
-        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h12"/><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3"/><path d="M15 3v3"/></svg></div>
-        <div class="partner-title" data-i18n="p_storage_title">Luggage Storage</div>
-        <div class="partner-desc" data-i18n="p_storage_desc">Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.</div>
-        <div class="partner-cta" data-i18n="p_storage_cta">Find storage →</div>
-      </a>
+        <a href="#" class="essential-item" onclick="goPartner('storage', event)">
+          <div class="essential-icon" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h12"/><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3"/><path d="M15 3v3"/></svg></div>
+          <div class="essential-title" data-i18n="p_storage_title">Luggage Storage</div>
+          <div class="essential-cta" data-i18n="p_storage_cta">Find storage →</div>
+        </a>
 
-      <a href="#" class="partner-card" onclick="goPartner('insurance', event)">
-        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ef4444, #b91c1c);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div class="partner-title" data-i18n="p_ins_title">Travel Insurance</div>
-        <div class="partner-desc" data-i18n="p_ins_desc">Comprehensive coverage for medical, cancellations and lost luggage. Instant policy via EKTA — trusted by 3M+ travelers.</div>
-        <div class="partner-cta" data-i18n="p_ins_cta">Get insured →</div>
-      </a>
+        <a href="#" class="essential-item" onclick="goPartner('insurance', event)">
+          <div class="essential-icon" style="background: linear-gradient(135deg, #ef4444, #b91c1c);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="essential-title" data-i18n="p_ins_title">Travel Insurance</div>
+          <div class="essential-cta" data-i18n="p_ins_cta">Get insured →</div>
+        </a>
+      </div>
     </div>
   </section>
 
