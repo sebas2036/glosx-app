@@ -840,53 +840,50 @@
     }
     .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
 
-    /* ── Essentials bar (partners, estilo barra dividida como .stats) ── */
+    /* ── Essentials bar (partners, estilo glass horizontal) ── */
     .essentials-bar {
-      background:
-        radial-gradient(ellipse 60% 120% at 50% 50%, rgba(124,58,237,0.14), transparent 70%),
-        linear-gradient(180deg, rgba(30,27,58,0.55) 0%, rgba(18,16,38,0.55) 100%);
-      border-top: 1px solid rgba(139,92,246,0.20);
-      border-bottom: 1px solid rgba(139,92,246,0.20);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-      padding: 22px 24px;
-      border-radius: 20px;
-      border-left: 1px solid rgba(139,92,246,0.20);
-      border-right: 1px solid rgba(139,92,246,0.20);
+      max-width: 1180px; margin: 0 auto;
+      background: rgba(12,13,20,0.40);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
     }
     .essentials-inner {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(6, 1fr);
-      gap: 0;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
     }
     .essential-item {
-      display: flex; flex-direction: column; align-items: center; text-align: center;
-      gap: 8px; padding: 8px 16px;
-      text-decoration: none; cursor: pointer;
-      transition: transform 0.2s ease;
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px 20px; border-radius: 12px;
+      border: 1px solid transparent;
+      text-decoration: none; text-align: left; cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .essentials-inner > a:not(:last-child) {
-      border-right: 1px solid rgba(139,92,246,0.18);
+    .essential-item:hover {
+      background: linear-gradient(90deg, rgba(99,102,241,0.10), rgba(168,85,247,0.10));
+      border-color: rgba(168,85,247,0.40);
+      box-shadow: 0 0 20px rgba(168,85,247,0.15);
     }
-    .essential-item:hover { transform: translateY(-3px); }
     .essential-icon {
-      width: 40px; height: 40px;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      color: #9ca3af;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
-    .essential-item:hover .essential-icon {
-      transform: scale(1.08);
-      box-shadow: 0 8px 22px rgba(124,58,237,0.30);
-    }
+    .essential-item:hover .essential-icon { color: #c084fc; transform: scale(1.06); }
+    .essential-text { display: flex; flex-direction: column; min-width: 0; }
     .essential-title {
-      font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.2;
+      font-size: 16px; font-weight: 700; color: #d1d5db; line-height: 1.2;
+      transition: color 0.3s ease;
     }
+    .essential-item:hover .essential-title { color: #fff; }
     .essential-cta {
-      font-size: 12px; font-weight: 700; color: var(--primary2);
-      opacity: 0.85; transition: opacity 0.2s ease;
+      font-size: 12px; color: #6b7280; margin-top: 3px;
+      transition: color 0.3s ease;
     }
-    .essential-item:hover .essential-cta { opacity: 1; }
+    .essential-item:hover .essential-cta { color: var(--primary2); }
 
     /* ── Trust strip (fuentes de datos oficiales) ── */
     .trust-strip { text-align: center; padding: 10px 24px 38px; }
@@ -1076,10 +1073,8 @@
       .nav-links { display: none; }
       .hero { padding: 100px 20px 60px; }
 
-      /* ── Essentials bar — 2 columnas ── */
-      .essentials-inner { grid-template-columns: repeat(2, 1fr); }
-      .essentials-inner > a:not(:nth-child(3n)) { border-right: none; }
-      .essentials-inner > a:not(:nth-child(2n)) { border-right: 1px solid rgba(139,92,246,0.18); }
+      /* ── Essentials bar — 1 columna (móvil) ── */
+      .essentials-inner { grid-template-columns: 1fr; }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
@@ -1104,12 +1099,10 @@
       .stat-number { font-size: 26px; }
       .stat-label { font-size: 11px; }
 
-      /* ── Essentials bar — 3 columnas (tablet/móvil) ── */
-      .essentials-inner { grid-template-columns: repeat(3, 1fr); gap: 22px 0; }
-      .essentials-inner > a:not(:last-child) { border-right: none; }
-      .essentials-inner > a:not(:nth-child(3n)) { border-right: 1px solid rgba(139,92,246,0.18); }
-      .essential-item { padding: 6px 8px; }
-      .essential-title { font-size: 12px; }
+      /* ── Essentials bar — 2 columnas (tablet) ── */
+      .essentials-inner { grid-template-columns: repeat(2, 1fr); }
+      .essential-item { padding: 14px 16px; gap: 14px; }
+      .essential-title { font-size: 15px; }
 
       /* ── Features grid — 1 columna ── */
       .features-grid { grid-template-columns: 1fr; }
@@ -1244,39 +1237,51 @@
   <div class="essentials-bar">
     <div class="essentials-inner">
       <a href="#" class="essential-item" onclick="goPartner('klook', event)">
-        <div class="essential-icon" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-        <div class="essential-title" data-i18n="p_klook_title">City Passes</div>
-        <div class="essential-cta" data-i18n="p_klook_cta">Browse passes →</div>
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V10a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12"/><path d="M18 22V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4"/><path d="M2 22h20"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-title" data-i18n="p_klook_title">City Passes</span>
+          <span class="essential-cta" data-i18n="p_klook_cta">Browse passes →</span>
+        </div>
       </a>
 
       <a href="#" class="essential-item" onclick="goPartner('kiwitaxi', event)">
-        <div class="essential-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
-        <div class="essential-title" data-i18n="p_kiwi_title">Airport Transfers</div>
-        <div class="essential-cta" data-i18n="p_kiwi_cta">Book transfer →</div>
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-title" data-i18n="p_kiwi_title">Airport Transfers</span>
+          <span class="essential-cta" data-i18n="p_kiwi_cta">Book transfer →</span>
+        </div>
       </a>
 
       <a href="#" class="essential-item" onclick="goPartner('yesim', event)">
-        <div class="essential-icon" style="background: linear-gradient(135deg, #10b981, #059669);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg></div>
-        <div class="essential-title" data-i18n="p_yesim_title">eSIM Europe</div>
-        <div class="essential-cta" data-i18n="p_yesim_cta">Activate eSIM →</div>
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 11h.01"/><path d="M12 15h.01"/><path d="M10 13h4"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-title" data-i18n="p_yesim_title">eSIM Europe</span>
+          <span class="essential-cta" data-i18n="p_yesim_cta">Activate eSIM →</span>
+        </div>
       </a>
 
       <a href="#" class="essential-item" onclick="goPartner('tiqets', event)">
-        <div class="essential-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
-        <div class="essential-title" data-i18n="p_tiqets_title">Attraction Tickets</div>
-        <div class="essential-cta" data-i18n="p_tiqets_cta">Browse tickets →</div>
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-title" data-i18n="p_tiqets_title">Attraction Tickets</span>
+          <span class="essential-cta" data-i18n="p_tiqets_cta">Browse tickets →</span>
+        </div>
       </a>
 
       <a href="#" class="essential-item" onclick="goPartner('storage', event)">
-        <div class="essential-icon" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h12"/><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3"/><path d="M15 3v3"/></svg></div>
-        <div class="essential-title" data-i18n="p_storage_title">Luggage Storage</div>
-        <div class="essential-cta" data-i18n="p_storage_cta">Find storage →</div>
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="14" x="4" y="6" rx="2"/><path d="M9 6V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/><path d="M8 22h.01"/><path d="M16 22h.01"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-title" data-i18n="p_storage_title">Luggage Storage</span>
+          <span class="essential-cta" data-i18n="p_storage_cta">Find storage →</span>
+        </div>
       </a>
 
       <a href="#" class="essential-item" onclick="goPartner('insurance', event)">
-        <div class="essential-icon" style="background: linear-gradient(135deg, #ef4444, #b91c1c);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div class="essential-title" data-i18n="p_ins_title">Travel Insurance</div>
-        <div class="essential-cta" data-i18n="p_ins_cta">Get insured →</div>
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-title" data-i18n="p_ins_title">Travel Insurance</span>
+          <span class="essential-cta" data-i18n="p_ins_cta">Get insured →</span>
+        </div>
       </a>
     </div>
   </div>
