@@ -927,9 +927,9 @@
     #pw-kiwitaxi { max-height: 250px !important; overflow: hidden !important; }
     #pw-kiwitaxi > div { height: 210px !important; overflow: hidden !important; }
     #pw-kiwitaxi iframe { height: 210px !important; }
-    /* EconomyBookings: el iframe pide height:100%; le damos altura para verlo completo */
-    #pw-car > div { height: 720px !important; }
-    #pw-car iframe { height: 720px !important; }
+    /* EconomyBookings: recorto el auto gigante de arriba; dejo SEARCH + logos */
+    #pw-car > div { height: 340px !important; overflow: hidden !important; position: relative; }
+    #pw-car iframe { height: 720px !important; width: 100% !important; position: absolute; left: 0; top: -380px; }
 
     /* ── Trust strip (fuentes de datos oficiales) ── */
     .trust-strip { text-align: center; padding: 10px 24px 38px; }
