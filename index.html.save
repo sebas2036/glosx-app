@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="wydgWqGcYChD0ADQ8MZPtBQm1DdwU8a7c1OFLr1BkSM" />
+  <title>WoW Train — Real-time European train travel | glosx.app</title>
+  <meta name="application-name" content="WoW Train" />
+  <meta name="apple-mobile-web-app-title" content="WoW Train" />
+  <meta name="description" content="Real-time train schedules, scenic routes, city passes and travel essentials across 9 European countries. Search, compare and book — Spain, France, Germany, Switzerland, Italy, Belgium, Portugal, Austria, Netherlands." />
+  <meta name="keywords" content="European trains, Trainline, AVE, TGV, ICE, Frecciarossa, Glacier Express, Bernina Express, train tickets Europe, real-time train app" />
+  <meta name="author" content="GLOSX" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WoW Train — Real-time European train travel" />
+  <meta property="og:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
+  <meta property="og:url" content="https://glosx.app" />
+  <meta property="og:site_name" content="GLOSX" />
+  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WoW Train — Real-time European train travel" />
+  <meta name="twitter:description" content="Live departures, scenic routes and travel essentials for Europe in one app." />
+  <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
+  <link rel="canonical" href="https://glosx.app" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app?lang=es" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app?lang=fr" />
+  <link rel="alternate" hreflang="de" href="https://glosx.app?lang=de" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app?lang=it" />
+  <link rel="alternate" hreflang="pt" href="https://glosx.app?lang=pt" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚄</text></svg>" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XPTSM1EJQJ');
+  </script>
+
+  <!-- Travelpayouts Drive -->
+  <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
+    (function () {
+      var script = document.createElement("script");
+      script.async = 1;
+      script.src = 'https://emrldtp.com/NTM0NTcw.js?t=534570';
+      document.head.appendChild(script);
+    })();
+    // Limpiar parámetros de tracking de la URL para que no se vean
+    setTimeout(function () {
+      if (window.location.search) {
+        window.history.replaceState({}, '', window.location.pathname + window.location.hash);
+      }
+    }, 500);
+  </script>
+
+  <!-- Schema.org Mobile App -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "WoW Train",
+    "alternateName": ["Glosx", "WoW Train app", "glosx.app"],
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "TravelApplication",
+    "description": "Real-time European train schedules and bookings.",
+    "url": "https://glosx.app",
+    "publisher": { "@type": "Organization", "name": "GLOSX" }
+  }
+  </script>
+
+  <!-- Schema.org WebSite + Organization (asocia la marca WoW Train ↔ Glosx ↔ glosx.app) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WoW Train",
+    "alternateName": ["Glosx", "glosx", "glosx.app", "WoW Train app"],
+    "url": "https://glosx.app"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GLOSX",
+    "alternateName": "WoW Train",
+    "url": "https://glosx.app",
+    "logo": "https://glosx.app/hero-bg.jpg",
+    "email": "glosx@outlook.com"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0a0f;
+      --surface:  #13131a;
+      --elevated: #1a1a24;
+      --border:   rgba(255,255,255,0.08);
+      --border2:  rgba(255,255,255,0.04);
+      --primary:  #7c3aed;
+      --primary2: #a78bfa;
+      --green:    #10b981;
+      --amber:    #f59e0b;
+      --text:     #f0f0f5;
+      --muted:    #8888aa;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* Textura de grano sutil sobre todo el fondo — evita el negro plano */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.035;
+      mix-blend-mode: overlay;
+    }
+    /* El contenido va por encima del grano */
+    nav, .hero-bgwrap, .section, footer { position: relative; z-index: 1; }
+
+    body {
+      /* Fondo con profundidad: halos violeta sutiles en vez de negro plano */
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 0%, rgba(124,58,237,0.16), transparent 60%),
+        radial-gradient(ellipse 75% 55% at 85% 75%, rgba(124,58,237,0.12), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 12% 40%, rgba(99,102,241,0.10), transparent 55%),
+        radial-gradient(ellipse 65% 45% at 50% 100%, rgba(124,58,237,0.10), transparent 60%),
+        var(--bg);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      /* Glass translúcido con un toque violeta arriba, en vez de negro plano */
+      background: linear-gradient(180deg, rgba(26,22,48,0.72) 0%, rgba(10,10,15,0.66) 100%);
+      backdrop-filter: blur(22px) saturate(140%);
+      -webkit-backdrop-filter: blur(22px) saturate(140%);
+      border-bottom: 1px solid rgba(139,92,246,0.18);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 30px rgba(0,0,0,0.35);
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--primary2), #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 14px;
+      font-weight: 500; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Language selector ── */
+    .lang-wrapper { position: relative; }
+    .lang-btn {
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 100px;
+      padding: 6px 12px; font-size: 13px; font-weight: 600;
+      cursor: pointer; font-family: inherit;
+      display: flex; align-items: center; gap: 6px;
+      transition: border-color 0.2s;
+    }
+    .lang-btn:hover { border-color: rgba(255,255,255,0.2); }
+    .lang-dropdown {
+      position: absolute; top: calc(100% + 8px); right: 0;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 6px;
+      min-width: 160px; z-index: 200;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      display: none;
+    }
+    .lang-dropdown.open { display: block; }
+    .lang-option {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 10px; border-radius: 8px;
+      font-size: 13px; color: var(--text);
+      cursor: pointer; transition: background 0.15s;
+    }
+    .lang-option:hover { background: rgba(124,58,237,0.15); }
+    .lang-option.active { background: rgba(124,58,237,0.25); color: var(--primary2); }
+
+    /* ── Hero ── */
+    /* Wrapper con el fondo del mapa: cubre hero + chips de países */
+    .hero-bgwrap {
+      position: relative;
+    }
+    /* Capa del mapa (detrás del contenido) — se disuelve hacia abajo con máscara
+       para que el cambio de tono sea natural y no un corte plano */
+    .hero-bgwrap::after {
+      content: '';
+      position: absolute; inset: 0; z-index: 0;
+      pointer-events: none;   /* capa decorativa: nunca debe robar taps/clicks */
+      background: url('hero-bg.jpg') center 42% / cover no-repeat;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 45%, rgba(0,0,0,0.8) 62%, rgba(0,0,0,0.45) 78%, rgba(0,0,0,0.18) 90%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0%, #000 45%, rgba(0,0,0,0.8) 62%, rgba(0,0,0,0.45) 78%, rgba(0,0,0,0.18) 90%, transparent 100%);
+    }
+    .hero-bgwrap::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      /* Glow violeta + leve oscurecido para legibilidad; se funde a transparente
+         abajo para que el body asome de forma natural (sin corte) */
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 22%,
+          rgba(124,58,237,0.20) 0%, transparent 70%),
+        linear-gradient(180deg,
+          rgba(10,10,15,0.50) 0%,
+          rgba(10,10,15,0.28) 35%,
+          rgba(10,10,15,0.18) 70%,
+          transparent 100%);
+      pointer-events: none;
+    }
+    .hero-bgwrap > * { position: relative; }
+    .hero {
+      min-height: auto;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 80px 24px 24px;
+      position: relative;
+      z-index: 20;            /* por encima de los chips → el calendario no queda detrás */
+      overflow: visible;
+    }
+    /* Sin z-index propio: así NO crea un stacking-context que atrape la
+       miniatura del chip (z-index 30) por detrás del hero. El calendario igual
+       queda arriba porque .hero tiene z-index 20 (positivo gana sobre auto). */
+    .countries { position: relative; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(124,58,237,0.22); border: 1px solid rgba(167,139,250,0.45);
+      border-radius: 100px; padding: 6px 16px; margin-bottom: 20px;
+      font-size: 13px; font-weight: 600; color: #E9E3FB;
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 4px 18px rgba(10,10,15,0.6);
+    }
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 88px);
+      font-weight: 800; letter-spacing: -2px; line-height: 1.05;
+      margin-bottom: 16px;
+      /* Halo para despegar del mapa de fondo */
+      filter: drop-shadow(0 4px 28px rgba(10,10,15,0.95));
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, #C4B5FD 0%, #fff 55%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: #F3F4F6; font-weight: 500; max-width: 560px; line-height: 1.6;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 10px rgba(10,10,15,1), 0 0 30px rgba(10,10,15,0.85);
+    }
+
+    /* ── Hero device mockup ── */
+    .hero-device-wrap {
+      position: relative; display: flex; justify-content: center;
+      margin: 44px auto 8px; padding: 0 24px;
+    }
+    .hero-device-wrap::before {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      width: 380px; height: 380px; max-width: 90vw; transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(124,58,237,0.38), transparent 65%);
+      filter: blur(18px); z-index: 0; pointer-events: none;
+    }
+    .hero-device {
+      position: relative; z-index: 1;
+      width: 258px; max-width: 68vw;
+      border-radius: 38px; padding: 9px;
+      background: linear-gradient(160deg, #1b1b26, #0c0c14);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,58,237,0.25);
+      animation: heroFloat 6s ease-in-out infinite;
+    }
+    .hero-device img { width: 100%; display: block; border-radius: 30px; }
+    @keyframes heroFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-device { animation: none; } }
+
+    /* ── Search box ── */
+    .search-box {
+      width: 100%; max-width: 720px;
+      background: rgba(26,26,46,0.92);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(139,92,246,0.45);
+      border-radius: 20px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 8px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.6), 0 0 60px rgba(124,58,237,0.25);
+      overflow: visible;
+    }
+    .search-field {
+      background: linear-gradient(180deg, rgba(30,27,58,0.75) 0%, rgba(18,16,38,0.75) 100%);
+      border: 1px solid rgba(139,92,246,0.22);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex; flex-direction: column;
+      text-align: left;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .search-field:hover { border-color: rgba(139,92,246,0.55); background: linear-gradient(180deg, rgba(36,32,68,0.85) 0%, rgba(22,20,46,0.85) 100%); }
+    .search-field label {
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      color: #B7B9C9; text-transform: uppercase; margin-bottom: 4px;
+    }
+    .search-field input {
+      background: transparent; border: none; outline: none;
+      color: var(--text); font-size: 14px; font-weight: 600;
+      font-family: inherit;
+      width: 100%;
+    }
+    .search-field input::placeholder { color: var(--muted); opacity: 0.7; }
+    .search-btn {
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      color: #fff;
+      border: none; border-radius: 12px;
+      padding: 0 24px;
+      font-size: 14px; font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 6px 20px rgba(124,58,237,0.5), 0 0 32px rgba(124,58,237,0.45);
+      font-family: inherit;
+    }
+    .search-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(124,58,237,0.65), 0 0 44px rgba(124,58,237,0.6);
+    }
+
+    /* ── Countries strip ── */
+    .countries {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      justify-content: center; margin-top: 12px;
+    }
+    .country-chip {
+      position: relative;
+      z-index: 2;   /* por encima de las capas del mapa (::after 0, ::before 1) */
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 100px; padding: 8px 16px;
+      font-size: 13px; font-weight: 500; color: var(--muted);
+      transition: border-color 0.25s ease, color 0.25s ease;
+    }
+    /* Foto del país que asoma al pasar el mouse (solo desktop con puntero fino) */
+    .country-photo {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      width: 200px; height: 130px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 0 40px rgba(124,58,237,0.25);
+      opacity: 0;
+      transform: translate(-50%, 12px) scale(0.94);
+      transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22,1,0.36,1);
+      pointer-events: none;
+      z-index: 30;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .country-chip:hover {
+        border-color: rgba(124,58,237,0.6);
+        color: #fff;
+        z-index: 40;   /* sobre el hero (20) → la miniatura sale adelante */
+      }
+      .country-chip:hover .country-photo {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+      }
+    }
+    /* En touch se revela al tocar el chip (clase .show-photo vía JS) */
+    .country-chip.show-photo { border-color: rgba(124,58,237,0.6); color: #fff; z-index: 40; }
+    .country-chip.show-photo .country-photo {
+      opacity: 1;
+      transform: translate(-50%, 0) scale(1);
+    }
+
+    /* ── Sections ── */
+    .section {
+      padding: 24px 24px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 2px;
+      color: var(--primary2); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .section h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800; letter-spacing: -1.5px; margin-bottom: 10px;
+    }
+    .section p.lead {
+      font-size: 18px; color: var(--muted); max-width: 560px; line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    /* ── Scenic trains carousel ── */
+    .scenic-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+    .scenic-wrapper {
+      flex: 0 1 380px;
+      position: relative;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #1c1c28 0%, var(--surface) 100%);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      overflow: visible;
+    }
+    .scenic-wrapper:hover { box-shadow: 0 14px 36px rgba(124,58,237,0.18), inset 0 1px 0 rgba(255,255,255,0.06); }
+    .scenic-wrapper:hover {
+      border-color: rgba(124,58,237,0.4);
+      border-radius: 16px 0 0 16px;
+    }
+    .scenic-wrapper.desc-left:hover {
+      border-radius: 0 16px 16px 0;
+    }
+    .scenic-card {
+      display: flex; align-items: center; gap: 16px;
+      padding: 20px;
+      text-decoration: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .scenic-desc {
+      position: absolute;
+      top: -1px;
+      left: calc(100% - 1px);
+      height: calc(100% + 2px);
+      width: 220px;
+      background: var(--surface);
+      border: 1px solid rgba(124,58,237,0.4);
+      border-left: none;
+      border-radius: 0 16px 16px 0;
+      padding: 16px;
+      font-size: 12px; color: var(--muted); line-height: 1.5;
+      display: flex; align-items: center;
+      opacity: 0;
+      transform: translateX(-8px);
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 10;
+    }
+    .scenic-wrapper:hover .scenic-desc {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+    .scenic-wrapper.desc-left .scenic-desc {
+      left: auto;
+      right: calc(100% - 1px);
+      border-radius: 16px 0 0 16px;
+      border-left: 1px solid rgba(124,58,237,0.4);
+      border-right: none;
+      transform: translateX(8px);
+    }
+    .scenic-wrapper.desc-left:hover .scenic-desc {
+      transform: translateX(0);
+    }
+    .scenic-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .scenic-body { flex: 1; min-width: 0; }
+    .scenic-name {
+      font-size: 15px; font-weight: 700; color: var(--text);
+      margin-bottom: 4px;
+    }
+    .scenic-route {
+      font-size: 12px; color: var(--muted); line-height: 1.4;
+    }
+    .scenic-cta {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px; font-weight: 700;
+      color: var(--primary2);
+      background: transparent;
+      border: 1px solid rgba(124,58,237,0.6);
+      flex-shrink: 0;
+    }
+    .scenic-toggle {
+      background: transparent;
+      color: var(--primary2);
+      border: 1px solid rgba(124,58,237,0.6);
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .scenic-toggle:hover {
+      background: rgba(124,58,237,0.12);
+      border-color: rgba(124,58,237,0.9);
+    }
+
+    /* ── Partner products ── */
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .partner-card {
+      background: linear-gradient(180deg, #1c1c28 0%, var(--surface) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-card:hover {
+      border-color: rgba(124,58,237,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(124,58,237,0.20), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .partner-icon-badge {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    .partner-title {
+      font-size: 18px; font-weight: 700; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .partner-desc {
+      font-size: 13px; color: var(--muted); line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .partner-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 700;
+      color: var(--primary2);
+    }
+
+    /* ── Features ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: linear-gradient(180deg, #1c1c28 0%, var(--surface) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      border-color: rgba(124,58,237,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(124,58,237,0.20), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .feature-icon {
+      font-size: 36px; margin-bottom: 20px; display: block;
+    }
+    .feature-card h3 {
+      font-size: 18px; font-weight: 700; margin-bottom: 10px;
+    }
+    .feature-card p {
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+
+    /* ── Download section ── */
+    .download {
+      padding: 80px 24px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent, rgba(124,58,237,0.05));
+      border-top: 1px solid var(--border);
+    }
+    .download h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800; letter-spacing: -1px; margin-bottom: 16px;
+    }
+    .download p {
+      color: var(--muted); margin-bottom: 36px;
+      max-width: 480px; margin-left: auto; margin-right: auto;
+    }
+    .download-cta {
+      display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    }
+    .btn-primary {
+      background: var(--primary); color: #fff;
+      padding: 16px 32px; border-radius: 100px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 40px rgba(124,58,237,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(124,58,237,0.6);
+    }
+    .btn-secondary {
+      background: var(--surface); color: var(--text);
+      padding: 16px 32px; border-radius: 100px;
+      font-size: 16px; font-weight: 600; text-decoration: none;
+      border: 1px solid var(--border); transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); }
+
+    /* ── Screenshots ── */
+    .screenshots-row {
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      overflow-x: auto;
+      padding: 50px 20px 70px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      align-items: flex-end;
+      position: relative;
+    }
+    .screenshots-row::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 60%;
+      background: radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Item wrapper — recto + hover adelante ── */
+    .screenshot-item {
+      flex-shrink: 0;
+      text-align: center;
+      scroll-snap-align: center;
+      position: relative;
+      transition: transform 0.38s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .screenshot-item:hover {
+      transform: translateY(-18px) scale(1.05) !important;
+      z-index: 10;
+    }
+
+    /* ── Phone mockup (casing externo) ── */
+    .phone-mockup {
+      position: relative;
+      display: inline-block;
+    }
+    /* Botón power (derecha) */
+    .phone-mockup::after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      top: 130px;
+      width: 4px;
+      height: 58px;
+      background: linear-gradient(180deg, #2e2e30, #1c1c1e 40%, #2e2e30);
+      border-radius: 0 3px 3px 0;
+    }
+    /* Botones volumen (izquierda) */
+    .phone-mockup::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 110px;
+      width: 4px;
+      height: 34px;
+      background: linear-gradient(180deg, #2e2e30, #1c1c1e 40%, #2e2e30);
+      border-radius: 3px 0 0 3px;
+      box-shadow: 0 46px 0 #1c1c1e, 0 47px 0 #2a2a2c, 0 80px 0 #1c1c1e, 0 81px 0 #2a2a2c;
+    }
+
+    /* ── Pantalla iPhone ── */
+    .screenshot-phone {
+      width: 222px;
+      height: 480px;
+      border-radius: 48px;
+      background: #000;
+      /* Casing iPhone: capa interna + rim metálico + capa externa */
+      box-shadow:
+        0 0 0 8px #1c1c1e,
+        0 0 0 9px rgba(255,255,255,0.18),
+        0 0 0 11px #111114,
+        0 28px 70px rgba(0,0,0,0.75),
+        0 0 60px rgba(124,58,237,0.28);
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.38s ease;
+    }
+    .screenshot-item:hover .screenshot-phone {
+      box-shadow:
+        0 0 0 8px #1c1c1e,
+        0 0 0 9px rgba(255,255,255,0.22),
+        0 0 0 11px #111114,
+        0 45px 90px rgba(0,0,0,0.85),
+        0 0 80px rgba(124,58,237,0.45);
+    }
+
+    /* Dynamic Island — oculta: tapaba el status bar de la captura */
+    .phone-island {
+      display: none;
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 86px;
+      height: 28px;
+      background: #000;
+      border-radius: 14px;
+      z-index: 10;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    .screenshot-statusbar { display: none; }
+
+    .screenshot-phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .screenshot-caption {
+      margin-top: 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 768px) {
+      .screenshots-row { justify-content: flex-start; padding: 20px 16px 40px; gap: 20px; }
+      .screenshot-phone { width: 170px; height: 368px; border-radius: 38px; }
+      .phone-island { width: 70px; height: 22px; top: 10px; }
+    }
+
+    /* ── Stats ── */
+    .stats {
+      background:
+        radial-gradient(ellipse 60% 120% at 50% 50%, rgba(124,58,237,0.14), transparent 70%),
+        linear-gradient(180deg, rgba(30,27,58,0.55) 0%, rgba(18,16,38,0.55) 100%);
+      border-top: 1px solid rgba(139,92,246,0.20);
+      border-bottom: 1px solid rgba(139,92,246,0.20);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      padding: 18px 24px;
+    }
+    .stats-inner {
+      max-width: 880px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; text-align: center;
+    }
+    .stats-inner > div {
+      padding: 4px 22px;
+    }
+    .stats-inner > div:not(:last-child) {
+      border-right: 1px solid rgba(139,92,246,0.18);
+    }
+    .stat-icon {
+      width: 26px; height: 26px; color: var(--primary2);
+      margin: 0 auto 10px; display: block; opacity: 0.9;
+      transition: transform 0.25s ease;
+    }
+    .stat-item:hover .stat-icon { transform: translateY(-2px) scale(1.08); }
+    .stat-number {
+      font-size: 30px; font-weight: 800; letter-spacing: -0.5px; line-height: 1;
+      background: linear-gradient(135deg, var(--primary2), #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+    /* ── Trust strip (fuentes de datos oficiales) ── */
+    .trust-strip { text-align: center; padding: 10px 24px 38px; }
+    .trust-label {
+      font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px;
+    }
+    .trust-ops {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 8px 12px; max-width: 1120px; margin: 0 auto;
+    }
+    .trust-ops span {
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.3px;
+      padding: 4px 12px; border-radius: 100px;
+      border: 1px solid rgba(139,92,246,0.14);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .trust-ops span:hover { color: #fff; border-color: rgba(139,92,246,0.4); }
+    /* Badges de confianza (señales reales) — livianos, sin pastilla, a lo ancho */
+    .trust-badges {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 8px 26px; margin: 16px auto 0; max-width: 1120px;
+    }
+    .trust-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7);
+      padding: 0; background: none; border: none; box-shadow: none;
+    }
+    .trust-badge svg { width: 15px; height: 15px; color: var(--primary2); flex-shrink: 0; }
+
+    /* ── Photo carousel ── */
+    .photo-carousel {
+      width: 100%;
+      overflow: hidden;
+      padding: 24px 0;
+      background: var(--bg);
+      position: relative;
+    }
+    .photo-carousel::before,
+    .photo-carousel::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .photo-carousel::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+    .photo-carousel::after  { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+    .carousel-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: carousel-scroll 40s linear infinite;
+    }
+    .photo-carousel:hover .carousel-track {
+      animation-play-state: paused;
+    }
+    @keyframes carousel-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .carousel-photo {
+      width: 320px;
+      height: 200px;
+      border-radius: 16px;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+      filter: brightness(0.85);
+      transition: filter 0.3s;
+    }
+    .carousel-photo:hover { filter: brightness(1); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex; justify-content: center; gap: 24px;
+      margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--muted); text-decoration: none; font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--primary2); }
+    footer p { font-size: 12px; color: var(--muted); }
+    footer .disclaimer {
+      margin-top: 16px; font-size: 11px; opacity: 0.7;
+      max-width: 600px; margin-left: auto; margin-right: auto;
+      line-height: 1.5;
+    }
+
+    /* ── Calendar glassmorphism ── */
+    .cal-popup {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 500;
+      width: 300px;
+      background: rgba(18, 14, 34, 0.985);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(167,139,250,0.35);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 40px rgba(124,58,237,0.25), 0 0 0 1px rgba(255,255,255,0.04);
+      display: none;
+    }
+    .cal-popup.open { display: block; }
+    .cal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .cal-title {
+      font-size: 15px; font-weight: 700; color: #fff;
+      background: linear-gradient(135deg, #a78bfa, #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .cal-nav {
+      background: rgba(124,58,237,0.2); border: 1px solid rgba(124,58,237,0.4);
+      color: #a78bfa; border-radius: 8px; width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 14px; transition: background 0.2s;
+    }
+    .cal-nav:hover { background: rgba(124,58,237,0.4); }
+    .cal-weekdays {
+      display: grid; grid-template-columns: repeat(7,1fr);
+      margin-bottom: 8px;
+    }
+    .cal-weekdays span {
+      text-align: center; font-size: 10px; font-weight: 700;
+      color: rgba(167,139,250,0.7); letter-spacing: 0.5px; padding: 4px 0;
+    }
+    .cal-days {
+      display: grid; grid-template-columns: repeat(7,1fr); gap: 2px;
+    }
+    .cal-day {
+      aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.8);
+      border-radius: 8px; cursor: pointer; transition: background 0.15s, color 0.15s;
+    }
+    .cal-day:hover { background: rgba(124,58,237,0.3); color: #fff; }
+    .cal-day.today { border: 1px solid rgba(167,139,250,0.5); color: #a78bfa; }
+    .cal-day.selected {
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      color: #fff; font-weight: 700;
+      box-shadow: 0 0 12px rgba(124,58,237,0.5);
+    }
+    .cal-day.other-month { color: rgba(255,255,255,0.2); cursor: default; }
+    .cal-day.disabled { color: rgba(255,255,255,0.15); cursor: not-allowed; }
+    .cal-day.disabled:hover { background: transparent; }
+
+    /* ── FAQ ── */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      cursor: pointer;
+    }
+    .faq-q {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+    }
+    .faq-arrow { color: var(--primary2); font-size: 18px; transition: transform 0.2s; flex-shrink: 0; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      font-size: 14px; color: var(--muted); line-height: 1.7;
+      margin-top: 12px; display: none;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    @media (max-width: 768px) {
+      .search-box {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .search-btn { padding: 14px; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 20px 60px; }
+      .section { padding: 30px 16px; }
+
+      /* ── Fix overflow horizontal en mobile ── */
+      html, body { overflow-x: hidden; max-width: 100vw; }
+      * { max-width: 100%; box-sizing: border-box; }
+
+      /* ── Scenic cards — ancho completo, sin panel lateral ── */
+      .scenic-desc { display: none !important; }
+      .scenic-grid { flex-direction: column; gap: 10px; padding: 0; }
+      .scenic-wrapper { flex: none; width: 100%; overflow: hidden; }
+      .scenic-wrapper:hover { border-radius: 16px; }
+      .scenic-card { padding: 14px; width: 100%; }
+      .scenic-name { font-size: 14px; }
+      .scenic-route { font-size: 11px; }
+
+      /* ── Stats — 2×2 ── */
+      .stats-inner { max-width: 100%; grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
+      .stats-inner > div { padding: 0 8px; }
+      .stats-inner > div:not(:last-child) { border-right: none; }
+      .stats-inner > div:nth-child(odd) { border-right: 1px solid var(--border); }
+      .stat-icon { width: 22px; height: 22px; margin-bottom: 6px; }
+      .stat-number { font-size: 26px; }
+      .stat-label { font-size: 11px; }
+
+      /* ── Partners grid — 1 columna ── */
+      .partners-grid { grid-template-columns: 1fr; }
+
+      /* ── Features grid — 1 columna ── */
+      .features-grid { grid-template-columns: 1fr; }
+
+      /* ── Selector de idioma — siempre visible ── */
+      .lang-wrapper { display: block !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cookie consent banner — GDPR -->
+  <div id="cookieBanner" style="display:none;position:fixed;bottom:16px;left:16px;right:16px;max-width:560px;margin:0 auto;background:#13131a;border:1px solid rgba(124,58,237,0.5);border-radius:14px;padding:18px 20px;z-index:9999;box-shadow:0 20px 60px rgba(0,0,0,0.6);font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
+    <p style="font-size:13px;color:#e0e0e8;line-height:1.5;margin-bottom:12px;" data-i18n="cookie_text">We use essential cookies for site functionality and anonymous analytics to improve your experience. By continuing you accept our <a href="/cookies.html" style="color:#a78bfa;text-decoration:underline;">Cookie Policy</a>.</p>
+    <div style="display:flex;gap:8px;justify-content:flex-end;">
+      <button onclick="cookieChoice('declined')" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#bbb;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;" data-i18n="cookie_decline">Decline</button>
+      <button onclick="cookieChoice('accepted')" style="background:#7c3aed;border:none;color:#fff;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;" data-i18n="cookie_accept">Accept</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if (!localStorage.getItem('cookie_consent')) {
+        document.getElementById('cookieBanner').style.display = 'block';
+      }
+    })();
+    function cookieChoice(choice) {
+      localStorage.setItem('cookie_consent', choice);
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+  </script>
+
+
+  <!-- Nav -->
+  <nav>
+    <a href="/" class="nav-logo" style="font-size:24px;display:inline-flex;align-items:center;gap:0;"><span style="color:#7c3aed;font-style:italic;font-weight:900;margin-right:8px;">WoW</span><span style="letter-spacing:6px;font-weight:300;color:#fff;">TRAIN</span><svg width="48" height="4" viewBox="0 0 48 4" style="margin-left:4px;margin-top:2px;"><line x1="0" y1="1" x2="48" y2="1" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/><line x1="8" y1="3.5" x2="40" y2="3.5" stroke="#a78bfa" stroke-width="1" stroke-linecap="round" opacity="0.6"/></svg></a>
+    <div class="nav-links">
+      <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
+      <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="/blog.html">Blog</a>
+      <a href="#download" data-i18n="nav_download">Download</a>
+      <div class="lang-wrapper">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
+          <span id="langFlag">🇬🇧</span>
+          <span id="langCode">EN</span>
+          <span style="font-size:10px;opacity:0.6">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option" data-lang="en" onclick="setLang('en')"><span>🇬🇧</span><span>English</span></div>
+          <div class="lang-option" data-lang="es" onclick="setLang('es')"><span>🇪🇸</span><span>Español</span></div>
+          <div class="lang-option" data-lang="fr" onclick="setLang('fr')"><span>🇫🇷</span><span>Français</span></div>
+          <div class="lang-option" data-lang="de" onclick="setLang('de')"><span>🇩🇪</span><span>Deutsch</span></div>
+          <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>🇮🇹</span><span>Italiano</span></div>
+          <div class="lang-option" data-lang="pt" onclick="setLang('pt')"><span>🇵🇹</span><span>Português</span></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fondo del mapa: envuelve hero + chips -->
+  <div class="hero-bgwrap">
+
+  <!-- Hero with functional search -->
+  <section class="hero">
+    <span class="hero-badge" data-i18n="hero_badge">🚄 WoW Train — Europe &amp; beyond</span>
+    <h1><span data-i18n="hero_title1">Your train.</span><br /><span data-i18n="hero_title2">Your world.</span></h1>
+    <p data-i18n="hero_subtitle">
+      Live departures, scenic routes and travel essentials across Europe.
+      Search, compare and book — all in one place.
+    </p>
+
+    <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
+      <div class="search-field">
+        <label for="origin" data-i18n="search_from">From</label>
+        <input type="text" id="origin" placeholder="Madrid" required autocomplete="off" />
+      </div>
+      <div class="search-field">
+        <label for="dest" data-i18n="search_to">To</label>
+        <input type="text" id="dest" placeholder="Barcelona" required autocomplete="off" />
+      </div>
+      <div class="search-field" style="position:relative;" onclick="toggleCal(event)">
+        <label data-i18n="search_date">Date</label>
+        <div id="dateDisplay" style="font-size:14px;font-weight:600;color:var(--text);cursor:pointer;padding-top:2px;"></div>
+        <input type="hidden" id="date" required />
+      </div>
+      <button type="submit" class="search-btn" data-i18n="search_btn">Search →</button>
+    </form>
+
+  </section>
+
+  <!-- Countries chips -->
+  <div class="countries" id="countries" style="padding: 8px 24px 0;">
+    <span class="country-chip">🇪🇸 Spain<img class="country-photo" src="country-pics/es.jpg" alt="Spain" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇨🇭 Switzerland<img class="country-photo" src="country-pics/ch.jpg" alt="Switzerland" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇫🇷 France<img class="country-photo" src="country-pics/fr.jpg" alt="France" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇩🇪 Germany<img class="country-photo" src="country-pics/de.jpg" alt="Germany" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇮🇹 Italy<img class="country-photo" src="country-pics/it.jpg" alt="Italy" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇧🇪 Belgium<img class="country-photo" src="country-pics/be.jpg" alt="Belgium" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇳🇱 Netherlands<img class="country-photo" src="country-pics/nl.jpg" alt="Netherlands" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇦🇹 Austria<img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()"></span>
+    <span class="country-chip">🇵🇹 Portugal<img class="country-photo" src="country-pics/pt.jpg" alt="Portugal" loading="lazy" onerror="this.remove()"></span>
+  </div>
+
+  </div><!-- /hero-bgwrap -->
+
+  <!-- Scenic trains -->
+  <section class="section" id="scenic">
+    <p class="section-label" data-i18n="scenic_label">Iconic European routes</p>
+    <h2><span data-i18n="scenic_title1">Scenic train</span><br /><span data-i18n="scenic_title2">experiences.</span></h2>
+    <p class="lead" data-i18n="scenic_lead">The most spectacular train journeys in Europe — book directly from here.</p>
+
+    <div class="scenic-grid" id="scenicGrid">
+      <!-- Filled by JS -->
+    </div>
+    <div style="text-align:center; margin-top: 24px;">
+      <button id="scenicToggle" class="scenic-toggle" onclick="toggleScenic()" data-i18n="scenic_more">Ver más rutas</button>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>
+        <div class="stat-number" data-count="9">0</div>
+        <div class="stat-label" data-i18n="stat_countries">Live countries</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21l5-7 4 4 5-9"/><path d="M3 21h18"/><circle cx="10" cy="14" r="1"/><circle cx="14" cy="18" r="1"/></svg>
+        <div class="stat-number" data-count="13">0</div>
+        <div class="stat-label" data-i18n="stat_scenic">Scenic routes</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z"/></svg>
+        <div class="stat-number" data-count="90" data-suffix="s">0</div>
+        <div class="stat-label" data-i18n="stat_realtime2">Real-time data</div>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-1.9"/></svg>
+        <div class="stat-number" data-count="0">0</div>
+        <div class="stat-label" data-i18n="stat_free2">Account or payment</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust strip: official railway data sources -->
+  <div class="trust-strip">
+    <p class="trust-label" data-i18n="trust_data">Real-time data from official railways</p>
+    <div class="trust-ops">
+      <span>Renfe</span><span>SNCF</span><span>Deutsche Bahn</span><span>SBB</span><span>Trenitalia</span><span>ÖBB</span><span>NS</span><span>SNCB</span><span>CP</span>
+    </div>
+    <div class="trust-badges">
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">Official GTFS data</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="trust_b2">Live every 90 seconds</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg><span data-i18n="trust_b3">No sign-up needed</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">Book via Trainline</span></span>
+    </div>
+  </div>
+
+  <!-- Photo carousel -->
+  <div class="photo-carousel">
+    <div class="carousel-track">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=640&q=80" alt="Bernina Express">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=640&q=80" alt="Glacier Express nieve">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1629653403102-8033bbaff2bc?w=640&q=80" alt="Tren junto al lago">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207195-7b66c5f7f416?w=640&q=80" alt="Tren en viaducto de montaña">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Valle alpino">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207181-5dd20188ec02?w=640&q=80" alt="Vista desde tren Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Cascada Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Cumbre montaña">
+      <!-- duplicate for seamless loop -->
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=640&q=80" alt="Bernina Express">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=640&q=80" alt="Glacier Express nieve">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1629653403102-8033bbaff2bc?w=640&q=80" alt="Tren junto al lago">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207195-7b66c5f7f416?w=640&q=80" alt="Tren en viaducto de montaña">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Valle alpino">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207181-5dd20188ec02?w=640&q=80" alt="Vista desde tren Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Cascada Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Cumbre montaña">
+    </div>
+  </div>
+
+  <!-- Partner products -->
+  <section class="section" id="partners">
+    <p class="section-label" data-i18n="partners_label">Everything for your trip</p>
+    <h2><span data-i18n="partners_title1">Travel essentials</span><br /><span data-i18n="partners_title2">for Europe.</span></h2>
+    <p class="lead" data-i18n="partners_lead">Curated services that complement your train journey.</p>
+
+    <div class="partners-grid">
+      <a href="#" class="partner-card" onclick="goPartner('klook', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #7c3aed, #5b21b6);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <div class="partner-title" data-i18n="p_klook_title">City Passes</div>
+        <div class="partner-desc" data-i18n="p_klook_desc">Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.</div>
+        <div class="partner-cta" data-i18n="p_klook_cta">Browse passes →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('kiwitaxi', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
+        <div class="partner-title" data-i18n="p_kiwi_title">Airport Transfers</div>
+        <div class="partner-desc" data-i18n="p_kiwi_desc">Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.</div>
+        <div class="partner-cta" data-i18n="p_kiwi_cta">Book transfer →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('yesim', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #10b981, #059669);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg></div>
+        <div class="partner-title" data-i18n="p_yesim_title">eSIM Europe</div>
+        <div class="partner-desc" data-i18n="p_yesim_desc">Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.</div>
+        <div class="partner-cta" data-i18n="p_yesim_cta">Activate eSIM →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('tiqets', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ec4899, #be185d);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
+        <div class="partner-title" data-i18n="p_tiqets_title">Attraction Tickets</div>
+        <div class="partner-desc" data-i18n="p_tiqets_desc">Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.</div>
+        <div class="partner-cta" data-i18n="p_tiqets_cta">Browse tickets →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('storage', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h12"/><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3"/><path d="M15 3v3"/></svg></div>
+        <div class="partner-title" data-i18n="p_storage_title">Luggage Storage</div>
+        <div class="partner-desc" data-i18n="p_storage_desc">Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.</div>
+        <div class="partner-cta" data-i18n="p_storage_cta">Find storage →</div>
+      </a>
+
+      <a href="#" class="partner-card" onclick="goPartner('insurance', event)">
+        <div class="partner-icon-badge" style="background: linear-gradient(135deg, #ef4444, #b91c1c);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="partner-title" data-i18n="p_ins_title">Travel Insurance</div>
+        <div class="partner-desc" data-i18n="p_ins_desc">Comprehensive coverage for medical, cancellations and lost luggage. Instant policy via EKTA — trusted by 3M+ travelers.</div>
+        <div class="partner-cta" data-i18n="p_ins_cta">Get insured →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <p class="section-label" data-i18n="features_label">Why WoW Train</p>
+    <h2><span data-i18n="features_title1">Built for travelers</span><br /><span data-i18n="features_title2">who move fast.</span></h2>
+    <p class="lead" data-i18n="features_lead">No subscriptions, no paywalls. Just real-time data and smart tools.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+        <h3 data-i18n="f1_title">Real-time departures</h3>
+        <p data-i18n="f1_desc">Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+        <h3 data-i18n="f2_title">Europe &amp; beyond, one app</h3>
+        <p data-i18n="f2_desc">Spain, France, Germany, Switzerland, Italy and more — all in a single interface.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span>
+        <h3 data-i18n="f3_title">Journey search</h3>
+        <p data-i18n="f3_desc">Find trains between any two stations across Europe with real prices and schedules.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <h3 data-i18n="f4_title">Location-aware</h3>
+        <p data-i18n="f4_desc">Automatically detects your nearest station and shows upcoming departures without any input.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+        <h3 data-i18n="f5_title">Smart alerts</h3>
+        <p data-i18n="f5_desc">Get notified when your train is approaching or when there are delays on your route.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg></span>
+        <h3 data-i18n="f6_title">Works offline</h3>
+        <p data-i18n="f6_desc">Full timetable access even without internet. GTFS data stored locally on your device.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Screenshots -->
+  <section class="section" id="app-preview">
+    <p class="section-label" data-i18n="preview_label">See it in action</p>
+    <h2><span data-i18n="preview_title1">Designed for</span><br /><span data-i18n="preview_title2">real travelers.</span></h2>
+    <p class="lead" data-i18n="preview_lead">GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.</p>
+
+    <div class="screenshots-row">
+      <div class="screenshot-item">
+        <div class="phone-mockup">
+          <div class="screenshot-phone">
+            <div class="phone-island"></div>
+            <img src="screen-home.jpg" alt="WoW Train — Home" loading="lazy" />
+          </div>
+        </div>
+        <p class="screenshot-caption" data-i18n="ss_home">Choose your country</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-mockup">
+          <div class="screenshot-phone">
+            <div class="phone-island"></div>
+            <img src="screen-live.jpg" alt="WoW Train — Live departures" loading="lazy" />
+          </div>
+        </div>
+        <p class="screenshot-caption" data-i18n="ss_live">Live departures</p>
+      </div>
+      <div class="screenshot-item">
+        <div class="phone-mockup">
+          <div class="screenshot-phone">
+            <div class="phone-island"></div>
+            <img src="screen-board.jpg" alt="WoW Train — Departure board" loading="lazy" />
+          </div>
+        </div>
+        <p class="screenshot-caption" data-i18n="ss_board">Departure board</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <p class="section-label" data-i18n="faq_label">Frequently asked questions</p>
+    <h2><span data-i18n="faq_title1">Everything you</span><br /><span data-i18n="faq_title2">need to know.</span></h2>
+    <div style="margin-top:32px;max-width:720px;">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq1_q">Is WoW Train free to use?</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq1_a">Yes, completely free. No subscription, no paywall, no account required. Just open and search.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq2_q">Which countries are supported?</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq2_a">Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal — with real-time GTFS data from official railway operators.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq3_q">How do I book a ticket?</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq3_a">Search your route and click "Search →". You'll be redirected to Trainline — a certified operator that handles the booking securely. WoW Train never processes payments.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq4_q">Does it work offline?</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq4_a">Yes. Full timetable access without internet. GTFS data is stored locally on your device — useful when travelling through tunnels or areas with no signal.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq5_q">Is my data private?</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq5_a">WoW Train does not collect, store or share personal data on external servers. No accounts, no tracking, no ads. Only anonymous analytics via Google Analytics to improve the experience.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA -->
+  <section class="download" id="download">
+    <h2 data-i18n="dl_title">Start your journey now.</h2>
+    <p data-i18n="dl_subtitle">Search trains, browse scenic routes and book through verified partners — all from your browser, no app needed.</p>
+    <div class="download-cta">
+      <a href="#hero" class="btn-primary" id="webBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span data-i18n="dl_web">Search trains now</span></a>
+      <a href="#scenic" class="btn-secondary" id="scenicBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/></svg><span data-i18n="dl_scenic">Explore scenic routes</span></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html"   data-i18n="footer_about">About</a>
+      <a href="/privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
+      <a href="/cookies.html" data-i18n="footer_cookies">Cookie Policy</a>
+      <a href="/terms.html"   data-i18n="footer_terms">Terms of Use</a>
+      <a href="/imprint.html" data-i18n="footer_imprint">Legal Notice</a>
+      <a href="/support.html" data-i18n="footer_support">Support</a>
+      <a href="mailto:glosx@outlook.com" data-i18n="footer_contact">Contact</a>
+    </div>
+    <p data-i18n="footer_copy">© 2026 GLOSX — All rights reserved.</p>
+    <p class="disclaimer" data-i18n="footer_disclaimer">
+      WoW Train is an independent travel platform. Bookings are processed by verified partners (Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.
+    </p>
+  </footer>
+
+  <script>
+    // ── Config ─────────────────────────────────────────────────────────────
+    const PROXY_BASE = 'https://voxa-production-dc15.up.railway.app/affiliate';
+
+    // ── FAQ toggle ─────────────────────────────────────────────────────────
+    function toggleFaq(el) { el.classList.toggle('open'); }
+
+    // ── Glassmorphism Calendar ─────────────────────────────────────────────
+    let calDate = new Date();
+    let calSelected = new Date();
+
+    const MONTH_NAMES = {
+      en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+      es: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      fr: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+      de: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+      it: ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'],
+      pt: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    };
+    const DAY_NAMES = {
+      en: ['Mo','Tu','We','Th','Fr','Sa','Su'],
+      es: ['Lu','Ma','Mi','Ju','Vi','Sá','Do'],
+      fr: ['Lu','Ma','Me','Je','Ve','Sa','Di'],
+      de: ['Mo','Di','Mi','Do','Fr','Sa','So'],
+      it: ['Lu','Ma','Me','Gi','Ve','Sa','Do'],
+      pt: ['Se','Te','Qu','Qu','Se','Sá','Do'],
+    };
+
+    function renderCal() {
+      const lang = document.documentElement.lang || 'en';
+      const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
+      const days   = DAY_NAMES[lang]   || DAY_NAMES.en;
+      const today  = new Date(); today.setHours(0,0,0,0);
+      const y = calDate.getFullYear(), m = calDate.getMonth();
+      const first = new Date(y, m, 1).getDay(); // 0=Sun
+      const startOffset = (first === 0) ? 6 : first - 1; // Monday start
+      const daysInMonth = new Date(y, m+1, 0).getDate();
+
+      let html = `
+        <div class="cal-header">
+          <button class="cal-nav" onclick="calPrev(event)">‹</button>
+          <div class="cal-title">${months[m]} ${y}</div>
+          <button class="cal-nav" onclick="calNext(event)">›</button>
+        </div>
+        <div class="cal-weekdays">${days.map(d=>`<span>${d}</span>`).join('')}</div>
+        <div class="cal-days">`;
+
+      // Empty cells before first day
+      for (let i = 0; i < startOffset; i++) {
+        const prevDay = new Date(y, m, 0 - (startOffset - i - 1));
+        html += `<div class="cal-day other-month">${prevDay.getDate()}</div>`;
+      }
+      // Days of month
+      for (let d = 1; d <= daysInMonth; d++) {
+        const dt = new Date(y, m, d); dt.setHours(0,0,0,0);
+        const isToday    = dt.getTime() === today.getTime();
+        const isSelected = calSelected && dt.getTime() === calSelected.getTime();
+        const isPast     = dt < today;
+        let cls = 'cal-day';
+        if (isSelected) cls += ' selected';
+        else if (isToday) cls += ' today';
+        if (isPast) cls += ' disabled';
+        const onclick = isPast ? '' : `onclick="calSelect(${y},${m},${d},event)"`;
+        html += `<div class="${cls}" ${onclick}>${d}</div>`;
+      }
+      html += `</div>`;
+
+      let popup = document.getElementById('calPopup');
+      if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'calPopup';
+        popup.className = 'cal-popup';
+        document.querySelector('.search-field:nth-child(3)').appendChild(popup);
+      }
+      popup.innerHTML = html;
+    }
+
+    function toggleCal(e) {
+      e.stopPropagation();
+      const popup = document.getElementById('calPopup') || (() => { renderCal(); return document.getElementById('calPopup'); })();
+      renderCal();
+      popup.classList.toggle('open');
+    }
+
+    function calPrev(e) {
+      e.stopPropagation();
+      calDate = new Date(calDate.getFullYear(), calDate.getMonth() - 1, 1);
+      renderCal();
+    }
+    function calNext(e) {
+      e.stopPropagation();
+      calDate = new Date(calDate.getFullYear(), calDate.getMonth() + 1, 1);
+      renderCal();
+    }
+    function calSelect(y, m, d, e) {
+      e.stopPropagation();
+      calSelected = new Date(y, m, d);
+      const pad = n => String(n).padStart(2,'0');
+      const val = `${y}-${pad(m+1)}-${pad(d)}`;
+      document.getElementById('date').value = val;
+      const lang = document.documentElement.lang || 'en';
+      const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
+      document.getElementById('dateDisplay').textContent = `${d} ${months[m]} ${y}`;
+      document.getElementById('calPopup').classList.remove('open');
+    }
+
+    // Cerrar al clickear fuera
+    document.addEventListener('click', () => {
+      const p = document.getElementById('calPopup');
+      if (p) p.classList.remove('open');
+      // Ocultar miniaturas de chips abiertas en touch
+      document.querySelectorAll('.country-chip.show-photo').forEach(c => c.classList.remove('show-photo'));
+    });
+
+    // Chips de países: tap revela/oculta la miniatura (touch). En desktop el
+    // hover sigue funcionando; esto le da función al toque en móvil.
+    document.querySelectorAll('.country-chip').forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const wasOpen = chip.classList.contains('show-photo');
+        document.querySelectorAll('.country-chip.show-photo').forEach(c => c.classList.remove('show-photo'));
+        if (!wasOpen) chip.classList.add('show-photo');
+      });
+    });
+
+    // ── i18n — Multilenguaje ───────────────────────────────────────────────
+    const TRANSLATIONS = {
+      en: {
+        nav_scenic: 'Scenic Trains', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started',
+        hero_badge: '🚄 WoW Train — Europe & beyond',
+        hero_title1: 'Your train.', hero_title2: 'Your world.',
+        hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
+        search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search →',
+        stat_world: 'Europe & beyond', stat_free_val: 'Free', stat_free: 'No cost, forever', stat_realtime_val: 'Real-time', stat_realtime: 'Live departures 24/7', stat_noreg_val: 'No sign-up', stat_noreg: 'Open and search, no account',
+        scenic_label: 'Iconic European routes', scenic_title1: 'Scenic train', scenic_title2: 'experiences.',
+        scenic_lead: 'The most spectacular train journeys in Europe — book directly from here.',
+        scenic_more: 'See more routes', scenic_less: 'See less',
+        partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
+        partners_lead: 'Curated services that complement your train journey.',
+        p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
+        p_kiwi_title: 'Airport Transfers', p_kiwi_desc: 'Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.', p_kiwi_cta: 'Book transfer →',
+        p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.', p_yesim_cta: 'Activate eSIM →',
+        p_tiqets_title: 'Attraction Tickets', p_tiqets_desc: 'Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.', p_tiqets_cta: 'Browse tickets →',
+        p_storage_title: 'Luggage Storage', p_storage_desc: 'Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.', p_storage_cta: 'Find storage →',
+        p_ins_title: 'Travel Insurance', p_ins_desc: 'Comprehensive coverage for medical, cancellations and lost luggage. Instant policy via EKTA — trusted by 3M+ travelers.', p_ins_cta: 'Get insured →',
+        features_label: 'Why WoW Train', features_title1: 'Built for travelers', features_title2: 'who move fast.',
+        features_lead: 'No subscriptions, no paywalls. Just real-time data and smart tools.',
+        f1_title: 'Real-time departures', f1_desc: 'Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.',
+        f2_title: 'Europe & beyond, one app', f2_desc: 'Spain, France, Germany, Switzerland, Italy and more — all in a single interface.',
+        f3_title: 'Journey search', f3_desc: 'Find trains between any two stations across Europe with real prices and schedules.',
+        f4_title: 'Location-aware', f4_desc: 'Automatically detects your nearest station and shows upcoming departures without any input.',
+        f5_title: 'Smart alerts', f5_desc: 'Get notified when your train is approaching or when there are delays on your route.',
+        f6_title: 'Works offline', f6_desc: 'Full timetable access even without internet. GTFS data stored locally on your device.',
+        dl_title: 'Start your journey now.',
+        dl_subtitle: 'Search trains, browse scenic routes and book through verified partners — all from your browser, no app needed.',
+        dl_web: 'Search trains now', dl_scenic: 'Explore scenic routes',
+        faq_label: 'Frequently asked questions', faq_title1: 'Everything you', faq_title2: 'need to know.',
+        faq1_q: 'Is WoW Train free to use?', faq1_a: 'Yes, completely free. No subscription, no paywall, no account required. Just open and search.',
+        faq2_q: 'Which countries are supported?', faq2_a: 'Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal — with real-time GTFS data from official railway operators.',
+        faq3_q: 'How do I book a ticket?', faq3_a: 'Search your route and click "Search →". You\'ll be redirected to Trainline — a certified operator that handles the booking securely. WoW Train never processes payments.',
+        faq4_q: 'Does it work offline?', faq4_a: 'Yes. Full timetable access without internet. GTFS data is stored locally on your device — useful when travelling through tunnels or areas with no signal.',
+        faq5_q: 'Is my data private?', faq5_a: 'WoW Train does not collect, store or share personal data on external servers. No accounts, no tracking, no ads. Only anonymous analytics via Google Analytics to improve the experience.',
+        footer_about: 'About', footer_privacy: 'Privacy Policy', footer_cookies: 'Cookie Policy', footer_imprint: 'Legal Notice', footer_support: 'Support', footer_terms: 'Terms of Use', footer_contact: 'Contact',
+        cookie_text: 'We use essential cookies for site functionality and anonymous analytics to improve your experience.', cookie_accept: 'Accept', cookie_decline: 'Decline',
+        footer_copy: '© 2026 GLOSX — All rights reserved.',
+        footer_disclaimer: 'WoW Train is an independent travel platform. Bookings are processed by verified partners (Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.',
+        scenic_book: 'Book now', preview_label: 'See it in action', preview_title1: 'Designed for', preview_title2: 'real travelers.', preview_lead: 'GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.', ss_home: 'Choose your country', ss_board: 'Departure board', ss_live: 'Live departures',
+        stat_countries: 'Live countries', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_free2: 'Account or payment',
+        trust_data: 'Real-time data from official railways',
+        trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Book via Trainline',
+      },
+      es: {
+        nav_scenic: 'Trenes panorámicos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
+        hero_badge: '🚄 WoW Train — Europa y el mundo',
+        hero_title1: 'Tu tren.', hero_title2: 'Tu mundo.',
+        hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
+        search_from: 'Desde', search_to: 'Hasta', search_date: 'Fecha', search_btn: 'Buscar →',
+        stat_world: 'Europa y el mundo', stat_free_val: 'Gratis', stat_free: 'Sin costo, para siempre', stat_realtime_val: 'Tiempo real', stat_realtime: 'Salidas en vivo 24/7', stat_noreg_val: 'Sin registro', stat_noreg: 'Abrí y buscá, sin cuenta',
+        scenic_label: 'Rutas europeas icónicas', scenic_title1: 'Experiencias en', scenic_title2: 'tren panorámico.',
+        scenic_lead: 'Los viajes en tren más espectaculares de Europa — reservá directo desde aquí.',
+        scenic_more: 'Ver más rutas', scenic_less: 'Ver menos',
+        partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
+        partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
+        p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
+        p_kiwi_title: 'Traslados aeropuerto', p_kiwi_desc: 'Taxi privado desde cualquier aeropuerto europeo hasta tu hotel o estación. Precio fijo, sin sorpresas.', p_kiwi_cta: 'Reservar traslado →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Conectate en más de 30 países europeos desde €4.90. Activación instantánea en tu teléfono — sin cambiar la SIM.', p_yesim_cta: 'Activar eSIM →',
+        p_tiqets_title: 'Entradas a atracciones', p_tiqets_desc: 'Entrada sin filas a Sagrada Familia, Coliseo, Louvre, Torre Eiffel y más de 6.000 atracciones en Europa.', p_tiqets_cta: 'Ver entradas →',
+        p_storage_title: 'Guardar equipaje', p_storage_desc: 'Custodia segura de equipaje en más de 1.000 puntos en ciudades europeas. Dejá tus valijas desde €5 y explorá libremente.', p_storage_cta: 'Buscar custodia →',
+        p_ins_title: 'Seguro de viaje', p_ins_desc: 'Cobertura completa para salud, cancelaciones y equipaje perdido. Póliza instantánea con EKTA — confiada por más de 3 millones de viajeros.', p_ins_cta: 'Asegurarme →',
+        features_label: 'Por qué WoW Train', features_title1: 'Hecho para viajeros', features_title2: 'que se mueven rápido.',
+        features_lead: 'Sin suscripciones, sin paywalls. Solo datos en tiempo real y herramientas inteligentes.',
+        f1_title: 'Salidas en tiempo real', f1_desc: 'Retrasos en vivo, cambios de andén y cancelaciones actualizados cada 90 segundos desde APIs ferroviarias oficiales.',
+        f2_title: 'Tu tren, tu mundo', f2_desc: 'España, Francia, Alemania, Suiza, Italia y más — todo en una sola interfaz.',
+        f3_title: 'Búsqueda de viaje', f3_desc: 'Encontrá trenes entre cualquier par de estaciones de Europa con precios y horarios reales.',
+        f4_title: 'Geolocalización', f4_desc: 'Detecta automáticamente tu estación más cercana y muestra las próximas salidas sin tocar nada.',
+        f5_title: 'Alertas inteligentes', f5_desc: 'Recibí avisos cuando tu tren está por llegar o hay retrasos en tu ruta.',
+        f6_title: 'Funciona offline', f6_desc: 'Acceso completo a horarios sin internet. Datos GTFS guardados localmente en tu dispositivo.',
+        dl_title: 'Empezá tu viaje ahora.',
+        dl_subtitle: 'Buscá trenes, explorá rutas panorámicas y reservá con partners verificados — todo desde tu navegador, sin instalar nada.',
+        dl_web: 'Buscar trenes ahora', dl_scenic: 'Explorar rutas panorámicas',
+        faq_label: 'Preguntas frecuentes', faq_title1: 'Todo lo que', faq_title2: 'necesitás saber.',
+        faq1_q: '¿WoW Train es gratis?', faq1_a: 'Sí, completamente gratis. Sin suscripción, sin paywall, sin cuenta. Solo abrí y buscá.',
+        faq2_q: '¿Qué países están disponibles?', faq2_a: 'España, Francia, Alemania, Suiza, Italia, Bélgica, Países Bajos, Austria y Portugal — con datos GTFS en tiempo real de operadoras ferroviarias oficiales.',
+        faq3_q: '¿Cómo reservo un billete?', faq3_a: 'Buscá tu ruta y hacé click en "Buscar →". Serás redirigido a Trainline — operadoras certificadas que gestionan la reserva de forma segura. WoW Train nunca procesa pagos.',
+        faq4_q: '¿Funciona sin internet?', faq4_a: 'Sí. Acceso completo a horarios sin internet. Los datos GTFS se guardan localmente en tu dispositivo — útil en túneles o zonas sin señal.',
+        faq5_q: '¿Son privados mis datos?', faq5_a: 'WoW Train no recopila, almacena ni comparte datos personales en servidores externos. Sin cuentas, sin rastreo, sin publicidad.',
+        footer_about: 'Sobre nosotros', footer_privacy: 'Política de privacidad', footer_cookies: 'Política de cookies', footer_imprint: 'Aviso legal', footer_support: 'Soporte', footer_terms: 'Términos de uso', footer_contact: 'Contacto',
+        cookie_text: 'Usamos cookies esenciales para el funcionamiento del sitio y analíticas anónimas para mejorar tu experiencia.', cookie_accept: 'Aceptar', cookie_decline: 'Rechazar',
+        footer_copy: '© 2026 GLOSX — Todos los derechos reservados.',
+        footer_disclaimer: 'WoW Train es una plataforma de viajes independiente. Las reservas las procesan partners verificados (Trainline, Klook, Kiwitaxi, Yesim). Podemos ganar una comisión por compras elegibles sin costo extra para ti.',
+        scenic_book: 'Reservar', preview_label: 'Velo en acción', preview_title1: 'Diseñada para', preview_title2: 'viajeros de verdad.', preview_lead: 'Detección por GPS, horarios en tiempo real, rutas escénicas y un traductor integrado — todo en tu bolsillo.', ss_home: 'Elegí tu país', ss_board: 'Tablero de salidas', ss_live: 'Salidas en vivo',
+        stat_countries: 'Países en vivo', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_free2: 'Cuenta o pago',
+        trust_data: 'Datos en tiempo real de ferroviarias oficiales',
+        trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Reservá con Trainline',
+      },
+      fr: {
+        nav_scenic: 'Trains panoramiques', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
+        hero_badge: '🚄 WoW Train — Europe et au-delà',
+        hero_title1: 'Ton train.', hero_title2: 'Ton monde.',
+        hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
+        search_from: 'Départ', search_to: 'Arrivée', search_date: 'Date', search_btn: 'Rechercher →',
+        stat_world: 'Europe et au-delà', stat_free_val: 'Gratuit', stat_free: 'Sans frais, pour toujours', stat_realtime_val: 'Temps réel', stat_realtime: 'Départs en direct 24/7', stat_noreg_val: 'Sans inscription', stat_noreg: 'Ouvrez et cherchez, sans compte',
+        scenic_label: 'Itinéraires européens emblématiques', scenic_title1: 'Expériences en', scenic_title2: 'train panoramique.',
+        scenic_lead: 'Les plus beaux voyages en train d\'Europe — réservez directement ici.',
+        scenic_more: 'Voir plus d\'itinéraires', scenic_less: 'Voir moins',
+        partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
+        partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
+        p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
+        p_kiwi_title: 'Transferts aéroport', p_kiwi_desc: 'Taxi privé depuis n\'importe quel grand aéroport européen jusqu\'à votre hôtel ou gare. Prix fixe, aucune surprise.', p_kiwi_cta: 'Réserver transfert →',
+        p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Restez connecté dans plus de 30 pays européens dès €4.90. Activation instantanée sur votre téléphone — sans changer de SIM.', p_yesim_cta: 'Activer eSIM →',
+        p_tiqets_title: 'Billets d\'attractions', p_tiqets_desc: 'Accès coupe-file à la Sagrada Familia, Colisée, Louvre, Tour Eiffel et 6 000+ attractions en Europe.', p_tiqets_cta: 'Voir les billets →',
+        p_storage_title: 'Consigne à bagages', p_storage_desc: 'Consigne sécurisée dans plus de 1 000 points dans les villes européennes. Déposez vos bagages dès €5 et explorez librement.', p_storage_cta: 'Trouver consigne →',
+        p_ins_title: 'Assurance voyage', p_ins_desc: 'Couverture complète pour santé, annulations et bagages perdus. Police instantanée via EKTA — choisie par 3M+ voyageurs.', p_ins_cta: 'M\'assurer →',
+        features_label: 'Pourquoi WoW Train', features_title1: 'Conçu pour les voyageurs', features_title2: 'qui bougent vite.',
+        features_lead: 'Pas d\'abonnement, pas de paywall. Juste des données en temps réel et des outils intelligents.',
+        f1_title: 'Départs en temps réel', f1_desc: 'Retards en direct, changements de voie et annulations mis à jour toutes les 90 secondes depuis les APIs ferroviaires officielles.',
+        f2_title: 'Ton train, ton monde', f2_desc: 'Espagne, France, Allemagne, Suisse, Italie et plus — tout dans une seule interface.',
+        f3_title: 'Recherche de trajet', f3_desc: 'Trouvez des trains entre n\'importe quelles deux gares d\'Europe avec prix et horaires réels.',
+        f4_title: 'Géolocalisation', f4_desc: 'Détecte automatiquement votre gare la plus proche et affiche les départs sans aucune action.',
+        f5_title: 'Alertes intelligentes', f5_desc: 'Soyez averti quand votre train approche ou s\'il y a des retards sur votre route.',
+        f6_title: 'Fonctionne hors ligne', f6_desc: 'Accès complet aux horaires même sans internet. Données GTFS stockées localement sur votre appareil.',
+        dl_title: 'Commencez votre voyage maintenant.',
+        dl_subtitle: 'Cherchez des trains, parcourez les itinéraires panoramiques et réservez auprès de partenaires vérifiés — directement depuis votre navigateur.',
+        dl_web: 'Rechercher des trains', dl_scenic: 'Explorer les itinéraires',
+        faq_label: 'Questions fréquentes', faq_title1: 'Tout ce que', faq_title2: 'vous devez savoir.',
+        faq1_q: 'WoW Train est-il gratuit?', faq1_a: 'Oui, complètement gratuit. Pas d\'abonnement, pas de paywall, pas de compte requis.',
+        faq2_q: 'Quels pays sont disponibles?', faq2_a: 'Espagne, France, Allemagne, Suisse, Italie, Belgique, Pays-Bas, Autriche et Portugal — avec données GTFS en temps réel.',
+        faq3_q: 'Comment réserver un billet?', faq3_a: 'Cherchez votre trajet et cliquez sur "Rechercher →". Vous serez redirigé vers Trainline. WoW Train ne traite jamais les paiements.',
+        faq4_q: 'Fonctionne-t-il hors ligne?', faq4_a: 'Oui. Accès complet aux horaires sans internet. Les données GTFS sont stockées localement sur votre appareil.',
+        faq5_q: 'Mes données sont-elles privées?', faq5_a: 'WoW Train ne collecte, ne stocke ni ne partage de données personnelles. Pas de comptes, pas de tracking, pas de publicité.',
+        footer_about: 'À propos', footer_privacy: 'Politique de confidentialité', footer_cookies: 'Politique des cookies', footer_imprint: 'Mentions légales', footer_support: 'Support', footer_terms: 'Conditions d\'utilisation', footer_contact: 'Contact',
+        cookie_text: 'Nous utilisons des cookies essentiels et des analyses anonymes pour améliorer votre expérience.', cookie_accept: 'Accepter', cookie_decline: 'Refuser',
+        footer_copy: '© 2026 GLOSX — Tous droits réservés.',
+        footer_disclaimer: 'WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées par des partenaires vérifiés (Trainline, Klook, Kiwitaxi, Yesim). Nous pouvons gagner une commission sur les achats éligibles sans coût supplémentaire pour vous.',
+        scenic_book: 'Réserver', preview_label: 'Voyez-le en action', preview_title1: 'Conçue pour', preview_title2: 'les vrais voyageurs.', preview_lead: 'Détection GPS, horaires en temps réel, itinéraires panoramiques et un traducteur intégré — le tout dans votre poche.', ss_home: 'Choisissez votre pays', ss_board: 'Tableau des départs', ss_live: 'Départs en direct',
+        stat_countries: 'Pays en direct', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_free2: 'Compte ou paiement',
+        trust_data: 'Données en temps réel des chemins de fer officiels',
+        trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Réservez via Trainline',
+      },
+      de: {
+        nav_scenic: 'Panoramazüge', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
+        hero_badge: '🚄 WoW Train — Europa und die Welt',
+        hero_title1: 'Dein Zug.', hero_title2: 'Deine Welt.',
+        hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
+        search_from: 'Von', search_to: 'Nach', search_date: 'Datum', search_btn: 'Suchen →',
+        stat_world: 'Europa und die Welt', stat_free_val: 'Kostenlos', stat_free: 'Keine Kosten, für immer', stat_realtime_val: 'Echtzeit', stat_realtime: 'Live-Abfahrten 24/7', stat_noreg_val: 'Ohne Anmeldung', stat_noreg: 'Öffnen und suchen, kein Konto',
+        scenic_label: 'Ikonische europäische Routen', scenic_title1: 'Panoramazug-', scenic_title2: 'Erlebnisse.',
+        scenic_lead: 'Die spektakulärsten Zugreisen Europas — direkt von hier buchen.',
+        scenic_more: 'Mehr Strecken anzeigen', scenic_less: 'Weniger anzeigen',
+        partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
+        partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
+        p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
+        p_kiwi_title: 'Flughafentransfer', p_kiwi_desc: 'Privattaxi von jedem großen europäischen Flughafen direkt zu Ihrem Hotel oder Bahnhof. Festpreis, keine Überraschungen.', p_kiwi_cta: 'Transfer buchen →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Bleiben Sie in 30+ europäischen Ländern verbunden ab €4.90. Sofortige Aktivierung auf Ihrem Telefon — kein SIM-Wechsel.', p_yesim_cta: 'eSIM aktivieren →',
+        p_tiqets_title: 'Attraktionstickets', p_tiqets_desc: 'Skip-the-Line-Eintritt zur Sagrada Familia, Kolosseum, Louvre, Eiffelturm und 6.000+ Attraktionen in Europa.', p_tiqets_cta: 'Tickets ansehen →',
+        p_storage_title: 'Gepäckaufbewahrung', p_storage_desc: 'Sichere Gepäckaufbewahrung an 1.000+ Standorten in europäischen Städten. Geben Sie Ihr Gepäck ab €5 ab und erkunden Sie frei.', p_storage_cta: 'Aufbewahrung finden →',
+        p_ins_title: 'Reiseversicherung', p_ins_desc: 'Umfassender Schutz für Medizin, Stornierungen und verlorenes Gepäck. Sofortige Police über EKTA — von 3M+ Reisenden vertraut.', p_ins_cta: 'Versichern →',
+        features_label: 'Warum WoW Train', features_title1: 'Gemacht für Reisende,', features_title2: 'die sich schnell bewegen.',
+        features_lead: 'Keine Abonnements, keine Paywalls. Nur Echtzeitdaten und intelligente Tools.',
+        f1_title: 'Echtzeit-Abfahrten', f1_desc: 'Live-Verspätungen, Gleisänderungen und Stornierungen alle 90 Sekunden von offiziellen Bahn-APIs aktualisiert.',
+        f2_title: 'Dein Zug, deine Welt', f2_desc: 'Spanien, Frankreich, Deutschland, Schweiz, Italien und mehr — alles in einer Oberfläche.',
+        f3_title: 'Reisesuche', f3_desc: 'Finden Sie Züge zwischen beliebigen Bahnhöfen in Europa mit echten Preisen und Fahrplänen.',
+        f4_title: 'Standorterkennung', f4_desc: 'Erkennt automatisch Ihren nächsten Bahnhof und zeigt kommende Abfahrten ohne Eingabe.',
+        f5_title: 'Intelligente Warnungen', f5_desc: 'Werden Sie benachrichtigt, wenn Ihr Zug naht oder es Verspätungen auf Ihrer Route gibt.',
+        f6_title: 'Funktioniert offline', f6_desc: 'Voller Fahrplanzugriff auch ohne Internet. GTFS-Daten lokal auf Ihrem Gerät gespeichert.',
+        dl_title: 'Starten Sie Ihre Reise jetzt.',
+        dl_subtitle: 'Züge suchen, Panoramastrecken entdecken und über verifizierte Partner buchen — direkt im Browser, ohne App.',
+        dl_web: 'Züge jetzt suchen', dl_scenic: 'Panoramastrecken entdecken',
+        faq_label: 'Häufige Fragen', faq_title1: 'Alles was Sie', faq_title2: 'wissen müssen.',
+        faq1_q: 'Ist WoW Train kostenlos?', faq1_a: 'Ja, völlig kostenlos. Kein Abo, keine Paywall, kein Konto erforderlich.',
+        faq2_q: 'Welche Länder werden unterstützt?', faq2_a: 'Spanien, Frankreich, Deutschland, Schweiz, Italien, Belgien, Niederlande, Österreich und Portugal — mit Echtzeit-GTFS-Daten.',
+        faq3_q: 'Wie buche ich ein Ticket?', faq3_a: 'Suchen Sie Ihre Route und klicken Sie auf "Suchen →". Sie werden zu Trainline weitergeleitet. WoW Train verarbeitet keine Zahlungen.',
+        faq4_q: 'Funktioniert es offline?', faq4_a: 'Ja. Vollständiger Fahrplanzugriff ohne Internet. GTFS-Daten werden lokal auf Ihrem Gerät gespeichert.',
+        faq5_q: 'Sind meine Daten privat?', faq5_a: 'WoW Train erfasst, speichert oder teilt keine persönlichen Daten. Keine Konten, kein Tracking, keine Werbung.',
+        footer_about: 'Über uns', footer_privacy: 'Datenschutz', footer_cookies: 'Cookie-Richtlinie', footer_imprint: 'Impressum', footer_support: 'Support', footer_terms: 'Nutzungsbedingungen', footer_contact: 'Kontakt',
+        cookie_text: 'Wir verwenden essenzielle Cookies und anonyme Analysen, um Ihr Erlebnis zu verbessern.', cookie_accept: 'Akzeptieren', cookie_decline: 'Ablehnen',
+        footer_copy: '© 2026 GLOSX — Alle Rechte vorbehalten.',
+        footer_disclaimer: 'WoW Train ist eine unabhängige Reiseplattform. Buchungen werden von verifizierten Partnern verarbeitet (Trainline, Klook, Kiwitaxi, Yesim). Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie verdienen.',
+        scenic_book: 'Buchen', preview_label: 'In Aktion erleben', preview_title1: 'Gemacht für', preview_title2: 'echte Reisende.', preview_lead: 'GPS-Erkennung, Echtzeit-Fahrpläne, Panoramastrecken und integrierter Übersetzer — alles in deiner Tasche.', ss_home: 'Wähle dein Land', ss_board: 'Abfahrtstafel', ss_live: 'Live-Abfahrten',
+        stat_countries: 'Länder live', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_free2: 'Konto oder Zahlung',
+        trust_data: 'Echtzeitdaten offizieller Bahnen',
+        trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Buchen über Trainline',
+      },
+      it: {
+        nav_scenic: 'Treni panoramici', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
+        hero_badge: '🚄 WoW Train — Europa e oltre',
+        hero_title1: 'Il tuo treno.', hero_title2: 'Il tuo mondo.',
+        hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
+        search_from: 'Da', search_to: 'A', search_date: 'Data', search_btn: 'Cerca →',
+        stat_world: 'Europa e oltre', stat_free_val: 'Gratis', stat_free: 'Senza costi, per sempre', stat_realtime_val: 'Tempo reale', stat_realtime: 'Partenze in diretta 24/7', stat_noreg_val: 'Senza registrazione', stat_noreg: 'Apri e cerca, senza account',
+        scenic_label: 'Percorsi europei iconici', scenic_title1: 'Esperienze in', scenic_title2: 'treno panoramico.',
+        scenic_lead: 'I viaggi in treno più spettacolari d\'Europa — prenota direttamente da qui.',
+        scenic_more: 'Vedi altri percorsi', scenic_less: 'Vedi meno',
+        partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
+        partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
+        p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
+        p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Taxi privato da qualsiasi grande aeroporto europeo direttamente al tuo hotel o stazione. Prezzo fisso, nessuna sorpresa.', p_kiwi_cta: 'Prenota transfer →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Resta connesso in 30+ paesi europei da €4.90. Attivazione istantanea sul tuo telefono — nessun cambio SIM.', p_yesim_cta: 'Attiva eSIM →',
+        p_tiqets_title: 'Biglietti attrazioni', p_tiqets_desc: 'Ingresso prioritario a Sagrada Familia, Colosseo, Louvre, Torre Eiffel e 6.000+ attrazioni in Europa.', p_tiqets_cta: 'Vedi biglietti →',
+        p_storage_title: 'Deposito bagagli', p_storage_desc: 'Deposito sicuro in 1.000+ punti nelle città europee. Lascia i tuoi bagagli da €5 ed esplora liberamente.', p_storage_cta: 'Trova deposito →',
+        p_ins_title: 'Assicurazione viaggio', p_ins_desc: 'Copertura completa per medico, cancellazioni e bagaglio smarrito. Polizza istantanea via EKTA — usata da 3M+ viaggiatori.', p_ins_cta: 'Assicurati →',
+        features_label: 'Perché WoW Train', features_title1: 'Pensato per chi viaggia', features_title2: 'velocemente.',
+        features_lead: 'Niente abbonamenti, niente paywall. Solo dati in tempo reale e strumenti intelligenti.',
+        f1_title: 'Partenze in tempo reale', f1_desc: 'Ritardi in diretta, cambi di binario e cancellazioni aggiornati ogni 90 secondi dalle API ferroviarie ufficiali.',
+        f2_title: 'Il tuo treno, il tuo mondo', f2_desc: 'Spagna, Francia, Germania, Svizzera, Italia e altri — tutto in un\'unica interfaccia.',
+        f3_title: 'Ricerca viaggio', f3_desc: 'Trova treni tra qualsiasi coppia di stazioni in Europa con prezzi e orari reali.',
+        f4_title: 'Geolocalizzazione', f4_desc: 'Rileva automaticamente la tua stazione più vicina e mostra le prossime partenze senza alcun input.',
+        f5_title: 'Avvisi intelligenti', f5_desc: 'Ricevi notifiche quando il tuo treno si avvicina o ci sono ritardi sul tuo percorso.',
+        f6_title: 'Funziona offline', f6_desc: 'Accesso completo agli orari anche senza internet. Dati GTFS memorizzati localmente sul tuo dispositivo.',
+        dl_title: 'Inizia il tuo viaggio ora.',
+        dl_subtitle: 'Cerca treni, esplora percorsi panoramici e prenota con partner verificati — direttamente dal browser, senza app.',
+        dl_web: 'Cerca treni ora', dl_scenic: 'Esplora percorsi panoramici',
+        faq_label: 'Domande frequenti', faq_title1: 'Tutto quello che', faq_title2: 'devi sapere.',
+        faq1_q: 'WoW Train è gratuito?', faq1_a: 'Sì, completamente gratuito. Nessun abbonamento, nessun paywall, nessun account richiesto.',
+        faq2_q: 'Quali paesi sono supportati?', faq2_a: 'Spagna, Francia, Germania, Svizzera, Italia, Belgio, Paesi Bassi, Austria e Portogallo — con dati GTFS in tempo reale.',
+        faq3_q: 'Come prenoto un biglietto?', faq3_a: 'Cerca il tuo percorso e clicca "Cerca →". Verrai reindirizzato a Trainline. WoW Train non elabora mai i pagamenti.',
+        faq4_q: 'Funziona offline?', faq4_a: 'Sì. Accesso completo agli orari senza internet. I dati GTFS sono memorizzati localmente sul tuo dispositivo.',
+        faq5_q: 'I miei dati sono privati?', faq5_a: 'WoW Train non raccoglie, memorizza né condivide dati personali. Nessun account, nessun tracking, nessuna pubblicità.',
+        footer_about: 'Chi siamo', footer_privacy: 'Informativa privacy', footer_cookies: 'Politica dei cookie', footer_imprint: 'Note legali', footer_support: 'Supporto', footer_terms: 'Termini d\'uso', footer_contact: 'Contatto',
+        cookie_text: 'Utilizziamo cookie essenziali e analisi anonime per migliorare la tua esperienza.', cookie_accept: 'Accetta', cookie_decline: 'Rifiuta',
+        footer_copy: '© 2026 GLOSX — Tutti i diritti riservati.',
+        footer_disclaimer: 'WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni sono elaborate da partner verificati (Trainline, Klook, Kiwitaxi, Yesim). Possiamo guadagnare una commissione dagli acquisti idonei senza costi aggiuntivi per te.',
+        scenic_book: 'Prenota', preview_label: 'Guardalo in azione', preview_title1: 'Progettata per', preview_title2: 'veri viaggiatori.', preview_lead: 'Rilevamento GPS, orari in tempo reale, percorsi panoramici e traduttore integrato — tutto in tasca.', ss_home: 'Scegli il tuo paese', ss_board: 'Tabellone partenze', ss_live: 'Partenze in tempo reale',
+        stat_countries: 'Paesi in diretta', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_free2: 'Account o pagamento',
+        trust_data: 'Dati in tempo reale dalle ferrovie ufficiali',
+        trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Prenota con Trainline',
+      },
+      pt: {
+        nav_scenic: 'Comboios panorâmicos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
+        hero_badge: '🚄 WoW Train — Europa e além',
+        hero_title1: 'O teu comboio.', hero_title2: 'O teu mundo.',
+        hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
+        search_from: 'De', search_to: 'Para', search_date: 'Data', search_btn: 'Pesquisar →',
+        stat_world: 'Europa e além', stat_free_val: 'Grátis', stat_free: 'Sem custo, para sempre', stat_realtime_val: 'Tempo real', stat_realtime: 'Partidas ao vivo 24/7', stat_noreg_val: 'Sem registo', stat_noreg: 'Abra e pesquise, sem conta',
+        scenic_label: 'Rotas europeias icónicas', scenic_title1: 'Experiências em', scenic_title2: 'comboio panorâmico.',
+        scenic_lead: 'As viagens de comboio mais espetaculares da Europa — reserve diretamente aqui.',
+        scenic_more: 'Ver mais rotas', scenic_less: 'Ver menos',
+        partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
+        partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
+        p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
+        p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Táxi privado a partir de qualquer grande aeroporto europeu até ao seu hotel ou estação. Preço fixo, sem surpresas.', p_kiwi_cta: 'Reservar transfer →',
+        p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Mantenha-se ligado em mais de 30 países europeus desde €4.90. Ativação instantânea no seu telefone — sem trocar de SIM.', p_yesim_cta: 'Ativar eSIM →',
+        p_tiqets_title: 'Bilhetes para atrações', p_tiqets_desc: 'Entrada prioritária na Sagrada Família, Coliseu, Louvre, Torre Eiffel e mais de 6.000 atrações na Europa.', p_tiqets_cta: 'Ver bilhetes →',
+        p_storage_title: 'Guardar bagagem', p_storage_desc: 'Custódia segura de bagagem em mais de 1.000 locais nas cidades europeias. Deixe as suas malas desde €5 e explore livremente.', p_storage_cta: 'Encontrar depósito →',
+        p_ins_title: 'Seguro de viagem', p_ins_desc: 'Cobertura completa para saúde, cancelamentos e bagagem perdida. Apólice instantânea via EKTA — usado por mais de 3 milhões de viajantes.', p_ins_cta: 'Segurar →',
+        features_label: 'Porquê WoW Train', features_title1: 'Feito para viajantes', features_title2: 'que se movem depressa.',
+        features_lead: 'Sem subscrições, sem paywalls. Apenas dados em tempo real e ferramentas inteligentes.',
+        f1_title: 'Partidas em tempo real', f1_desc: 'Atrasos ao vivo, mudanças de plataforma e cancelamentos atualizados a cada 90 segundos das APIs ferroviárias oficiais.',
+        f2_title: 'O teu comboio, o teu mundo', f2_desc: 'Espanha, França, Alemanha, Suíça, Itália e mais — tudo numa única interface.',
+        f3_title: 'Pesquisa de viagem', f3_desc: 'Encontre comboios entre quaisquer duas estações da Europa com preços e horários reais.',
+        f4_title: 'Geolocalização', f4_desc: 'Deteta automaticamente a sua estação mais próxima e mostra as próximas partidas sem qualquer entrada.',
+        f5_title: 'Alertas inteligentes', f5_desc: 'Receba notificações quando o seu comboio se aproxima ou quando há atrasos na sua rota.',
+        f6_title: 'Funciona offline', f6_desc: 'Acesso completo ao horário mesmo sem internet. Dados GTFS armazenados localmente no seu dispositivo.',
+        dl_title: 'Comece a sua viagem agora.',
+        dl_subtitle: 'Pesquise comboios, explore rotas panorâmicas e reserve com parceiros verificados — diretamente do navegador, sem app.',
+        dl_web: 'Pesquisar comboios', dl_scenic: 'Explorar rotas panorâmicas',
+        faq_label: 'Perguntas frequentes', faq_title1: 'Tudo o que', faq_title2: 'precisa de saber.',
+        faq1_q: 'O WoW Train é gratuito?', faq1_a: 'Sim, completamente gratuito. Sem subscrição, sem paywall, sem conta necessária.',
+        faq2_q: 'Que países estão disponíveis?', faq2_a: 'Espanha, França, Alemanha, Suíça, Itália, Bélgica, Países Baixos, Áustria e Portugal — com dados GTFS em tempo real.',
+        faq3_q: 'Como reservo um bilhete?', faq3_a: 'Pesquise a sua rota e clique em "Pesquisar →". Será redirecionado para a Trainline. O WoW Train nunca processa pagamentos.',
+        faq4_q: 'Funciona offline?', faq4_a: 'Sim. Acesso completo aos horários sem internet. Os dados GTFS são armazenados localmente no seu dispositivo.',
+        faq5_q: 'Os meus dados são privados?', faq5_a: 'O WoW Train não recolhe, armazena nem partilha dados pessoais. Sem contas, sem rastreamento, sem publicidade.',
+        footer_about: 'Sobre nós', footer_privacy: 'Política de privacidade', footer_cookies: 'Política de cookies', footer_imprint: 'Aviso legal', footer_support: 'Suporte', footer_terms: 'Termos de utilização', footer_contact: 'Contacto',
+        cookie_text: 'Utilizamos cookies essenciais e análises anónimas para melhorar a sua experiência.', cookie_accept: 'Aceitar', cookie_decline: 'Recusar',
+        footer_copy: '© 2026 GLOSX — Todos os direitos reservados.',
+        footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas por parceiros verificados (Trainline, Klook, Kiwitaxi, Yesim). Podemos ganhar uma comissão por compras elegíveis sem custo adicional para si.',
+        scenic_book: 'Reservar', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
+        stat_countries: 'Países ao vivo', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_free2: 'Conta ou pagamento',
+        trust_data: 'Dados em tempo real de ferrovias oficiais',
+        trust_b1: 'Dados GTFS oficiais', trust_b2: 'Ao vivo a cada 90 segundos', trust_b3: 'Sem registo', trust_b4: 'Reserve via Trainline',
+      },
+    };
+
+    const LANG_META = {
+      en: { flag: '🇬🇧', code: 'EN' }, es: { flag: '🇪🇸', code: 'ES' },
+      fr: { flag: '🇫🇷', code: 'FR' }, de: { flag: '🇩🇪', code: 'DE' },
+      it: { flag: '🇮🇹', code: 'IT' }, pt: { flag: '🇵🇹', code: 'PT' },
+    };
+
+    function detectLang() {
+      // 1. Solo si el usuario eligió EXPLÍCITAMENTE con el selector
+      if (localStorage.getItem('glosx_lang_manual') === '1') {
+        const saved = localStorage.getItem('glosx_lang');
+        if (saved && TRANSLATIONS[saved]) return saved;
+      }
+      // 2. URL query param (?lang=es) — links explícitos / SEO
+      const param = new URLSearchParams(location.search).get('lang');
+      if (param && TRANSLATIONS[param]) return param;
+      // 3. Inglés por defecto SIEMPRE (no auto-detectar idioma del navegador)
+      return 'en';
+    }
+
+    function applyLang(lang) {
+      const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+      // Actualizar selector
+      const meta = LANG_META[lang] || LANG_META.en;
+      document.getElementById('langFlag').textContent = meta.flag;
+      document.getElementById('langCode').textContent = meta.code;
+      document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.lang === lang);
+      });
+      try {
+        if (typeof renderScenic === 'function' && document.getElementById('scenicGrid')) {
+          renderScenic();
+          if (typeof positionScenicDescs === 'function') positionScenicDescs();
+        }
+      } catch (e) { /* SCENIC_TRAINS aún no definido en primer applyLang */ }
+    }
+
+    function setLang(lang) {
+      localStorage.setItem('glosx_lang', lang);
+      localStorage.setItem('glosx_lang_manual', '1'); // el usuario eligió explícitamente
+      applyLang(lang);
+      document.getElementById('langDropdown').classList.remove('open');
+    }
+
+    function toggleLang(e) {
+      e.stopPropagation();
+      document.getElementById('langDropdown').classList.toggle('open');
+    }
+
+    // Cerrar dropdown al clickear afuera
+    document.addEventListener('click', () => {
+      document.getElementById('langDropdown').classList.remove('open');
+    });
+
+    // Aplicar idioma inicial
+    applyLang(detectLang());
+
+    // ── Default date (today) — calendar ───────────────────────────────────
+    (function() {
+      const today = new Date();
+      const y = today.getFullYear(), m = today.getMonth(), d = today.getDate();
+      const pad = n => String(n).padStart(2,'0');
+      document.getElementById('date').value = `${y}-${pad(m+1)}-${pad(d)}`;
+      calSelected = today; calDate = new Date(y, m, 1);
+      const lang = document.documentElement.lang || 'en';
+      const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
+      document.getElementById('dateDisplay').textContent = `${d} ${months[m]} ${y}`;
+    })();
+
+    // ── Search trains → redirige al proxy con tracking ─────────────────────
+    function searchTrains(e) {
+      e.preventDefault();
+      const origin = document.getElementById('origin').value.trim();
+      const dest   = document.getElementById('dest').value.trim();
+      const date   = document.getElementById('date').value;
+      if (!origin || !dest) return false;
+
+      // Detectar país de origen para elegir Trainline (Europa) o Trip.com (resto)
+      const country = detectCountry(origin);
+
+      const url = `${PROXY_BASE}/redirect?origin=${encodeURIComponent(origin)}` +
+                  `&dest=${encodeURIComponent(dest)}` +
+                  `&date=${date}&country=${country}&passengers=1`;
+      window.open(url, '_blank');
+      return false;
+    }
+
+    function detectCountry(cityName) {
+      const c = cityName.toLowerCase();
+      if (/madrid|barcelona|sevilla|valencia|bilbao|málaga|malaga/.test(c)) return 'ES';
+      if (/paris|lyon|marseille|bordeaux|toulouse|nice|lille/.test(c)) return 'FR';
+      if (/berlin|münchen|munich|hamburg|frankfurt|köln|koln/.test(c)) return 'DE';
+      if (/zurich|zürich|geneva|geneve|bern|basel|lausanne/.test(c)) return 'CH';
+      if (/roma|rome|milano|milan|napoli|naples|firenze|florence|venezia|venice/.test(c)) return 'IT';
+      if (/bruxelles|brussels|antwerp|gent/.test(c)) return 'BE';
+      if (/amsterdam|rotterdam|utrecht|the hague/.test(c)) return 'NL';
+      if (/wien|vienna|salzburg|innsbruck|graz/.test(c)) return 'AT';
+      if (/lisboa|lisbon|porto|coimbra/.test(c)) return 'PT';
+      return 'ES'; // default Europa
+    }
+
+    // ── Partner products → redirige al proxy correspondiente ───────────────
+    function goPartner(type, e) {
+      e.preventDefault();
+      let url;
+      if (type === 'klook')     url = `${PROXY_BASE}/klook`;
+      if (type === 'kiwitaxi')  url = `${PROXY_BASE}/kiwitaxi`;
+      if (type === 'yesim')     url = `${PROXY_BASE}/yesim`;
+      if (type === 'tiqets')    url = `${PROXY_BASE}/tiqets`;
+      if (type === 'storage')   url = `${PROXY_BASE}/storage`;
+      if (type === 'insurance') url = `${PROXY_BASE}/insurance`;
+      if (url) window.open(url, '_blank');
+      return false;
+    }
+
+    // ── Scenic trains data + render ────────────────────────────────────────
+    const SCENIC_TRAINS = [
+      { name: 'Glacier Express', route: 'Zermatt → St. Moritz · 7h 45min', origin: 'Zermatt', dest: 'St. Moritz', g1: '#C0392B', g2: '#922B21',
+        desc: { en: '291 bridges and 91 tunnels through glaciers and snow-capped Swiss Alps.', es: '291 puentes y 91 túneles entre glaciares y cumbres nevadas de los Alpes suizos.', fr: '291 ponts et 91 tunnels entre glaciers et cimes enneigées des Alpes suisses.', de: '291 Brücken und 91 Tunnel zwischen Gletschern und schneebedeckten Schweizer Alpen.', it: '291 ponti e 91 gallerie tra ghiacciai e cime innevate delle Alpi svizzere.', pt: '291 pontes e 91 túneis entre glaciares e picos nevados dos Alpes suíços.' } },
+      { name: 'Bernina Express', route: 'Chur → Tirano · 4h 0min', origin: 'Chur', dest: 'Tirano', g1: '#1A5276', g2: '#154360',
+        desc: { en: 'UNESCO heritage. Europe\'s highest mountain pass by train.', es: 'Patrimonio UNESCO. El paso de montaña más alto de Europa en tren.', fr: 'Patrimoine UNESCO. Le col le plus haut d\'Europe en train.', de: 'UNESCO-Welterbe. Europas höchster Bergpass mit dem Zug.', it: 'Patrimonio UNESCO. Il valico più alto d\'Europa in treno.', pt: 'Patrimônio UNESCO. A passagem de montanha mais alta da Europa de comboio.' } },
+      { name: 'GoldenPass Express', route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux', dest: 'Interlaken Ost', g1: '#B7950B', g2: '#9A7D0A',
+        desc: { en: 'From Lake Geneva to the Bernese Oberland in panoramic cars with extra-wide windows.', es: 'Del Lago Lemán al Oberland bernés en vagones panorámicos con ventanas extra anchas.', fr: 'Du Léman à l\'Oberland bernois en voitures panoramiques aux fenêtres extra larges.', de: 'Vom Genfersee ins Berner Oberland in Panoramawagen mit extra breiten Fenstern.', it: 'Dal Lago Lemano all\'Oberland bernese in carrozze panoramiche con finestre extra larghe.', pt: 'Do Lago Léman ao Oberland bernês em vagões panorâmicos com janelas extra largas.' } },
+      { name: 'TGV Lyria', route: 'Paris → Geneva · 3h 5min', origin: 'Paris Gare de Lyon', dest: 'Genève', g1: '#C0392B', g2: '#922B21',
+        desc: { en: 'French-Swiss high-speed with Alpine views before reaching the lake.', es: 'Alta velocidad franco-suiza con vistas de los Alpes antes de llegar al lago.', fr: 'Grande vitesse franco-suisse avec vue sur les Alpes avant le lac.', de: 'Französisch-schweizerischer Hochgeschwindigkeitszug mit Alpenblick.', it: 'Alta velocità franco-svizzera con vista sulle Alpi prima del lago.', pt: 'Alta velocidade franco-suíça com vistas dos Alpes antes do lago.' } },
+      { name: 'Train des Merveilles', route: 'Nice → Tende · 2h 10min', origin: 'Nice Ville', dest: 'Tende', g1: '#2471A3', g2: '#1A5276',
+        desc: { en: 'From the Mediterranean to Alpine valleys with 5,000-year-old rock carvings.', es: 'Del Mediterráneo a los valles alpinos con grabados rupestres de 5.000 años.', fr: 'De la Méditerranée aux vallées alpines avec des gravures rupestres de 5 000 ans.', de: 'Vom Mittelmeer zu den Alpentälern mit 5.000 Jahre alten Felsgravuren.', it: 'Dal Mediterraneo alle valli alpine con incisioni rupestri di 5.000 anni.', pt: 'Do Mediterrâneo aos vales alpinos com gravuras rupestres de 5.000 anos.' } },
+      { name: 'Cinque Terre Express', route: 'La Spezia → Levanto · 30min', origin: 'La Spezia Centrale', dest: 'Levanto', g1: '#1E8449', g2: '#196F3D',
+        desc: { en: 'Five colorful villages clinging to the cliffs. The easiest way to visit them all.', es: 'Cinco aldeas de colores pegadas al acantilado. La forma más cómoda de recorrerlas.', fr: 'Cinq villages colorés accrochés à la falaise. La façon la plus simple de tous les visiter.', de: 'Fünf bunte Dörfer an der Steilküste. Der einfachste Weg, sie alle zu besuchen.', it: 'Cinque borghi colorati a strapiombo sul mare. Il modo più comodo per visitarli.', pt: 'Cinco aldeias coloridas sobre a falésia. A forma mais cómoda de as visitar.' } },
+      { name: 'Frecciarossa', route: 'Rome → Venice · 3h 45min', origin: 'Roma Termini', dest: 'Venezia S. Lucia', g1: '#C0392B', g2: '#7B241C',
+        desc: { en: 'Italy\'s most iconic train. Rome to Venice at 300 km/h.', es: 'El tren más icónico de Italia. Roma a Venecia a 300 km/h.', fr: 'Le train le plus emblématique d\'Italie. Rome-Venise à 300 km/h.', de: 'Italiens berühmtester Zug. Rom nach Venedig mit 300 km/h.', it: 'Il treno più iconico d\'Italia. Roma-Venezia a 300 km/h.', pt: 'O comboio mais icónico de Itália. Roma a Veneza a 300 km/h.' } },
+      { name: 'Rhine Valley', route: 'Köln → Mainz · 1h 55min', origin: 'Köln Hbf', dest: 'Mainz Hbf', g1: '#922B21', g2: '#7B241C',
+        desc: { en: 'Medieval castles, terraced vineyards and the legendary Lorelei rock.', es: 'Castillos medievales, viñedos en terrazas y el legendario peñasco de Loreley.', fr: 'Châteaux médiévaux, vignobles en terrasses et le légendaire rocher de la Lorelei.', de: 'Mittelalterliche Burgen, Weinterrassen und der legendäre Loreley-Felsen.', it: 'Castelli medievali, vigneti terrazzati e la leggendaria rupe di Loreley.', pt: 'Castelos medievais, vinhas em terraços e o lendário penhasco de Loreley.' } },
+      { name: 'Bavaria Alps', route: 'München → Salzburg · 1h 30min', origin: 'München Hbf', dest: 'Salzburg Hbf', g1: '#1A5276', g2: '#154360',
+        desc: { en: 'From Bavaria\'s capital to Mozart\'s city along the Alps. Turquoise lakes and snowy peaks.', es: 'De la capital bávara a Mozart bordeando los Alpes. Lagos turquesa y cumbres nevadas.', fr: 'De la capitale bavaroise à Mozart en longeant les Alpes. Lacs turquoise et sommets enneigés.', de: 'Von der bayerischen Hauptstadt nach Mozart entlang der Alpen. Türkisfarbene Seen und schneebedeckte Gipfel.', it: 'Dalla capitale bavarese alla città di Mozart lungo le Alpi. Laghi turchesi e cime innevate.', pt: 'Da capital bávara a Mozart ao longo dos Alpes. Lagos turquesa e picos nevados.' } },
+      { name: 'Semmering Express', route: 'Vienna → Graz · 2h 39min', origin: 'Wien Hbf', dest: 'Graz Hbf', g1: '#B7950B', g2: '#9A7D0A',
+        desc: { en: 'The world\'s oldest mountain railway. UNESCO heritage since the 19th century.', es: 'El ferrocarril de montaña más antiguo del mundo. Patrimonio UNESCO desde el siglo XIX.', fr: 'Le plus ancien chemin de fer de montagne au monde. Patrimoine UNESCO depuis le XIXe siècle.', de: 'Die älteste Gebirgsbahn der Welt. UNESCO-Welterbe seit dem 19. Jahrhundert.', it: 'La più antica ferrovia di montagna del mondo. Patrimonio UNESCO dal XIX secolo.', pt: 'A ferrovia de montanha mais antiga do mundo. Patrimônio UNESCO desde o século XIX.' } },
+      { name: 'Douro Valley', route: 'Porto → Pocinho · 3h 30min', origin: 'Porto Campanhã', dest: 'Pocinho', g1: '#784212', g2: '#6E2C00',
+        desc: { en: 'Port wine vineyards on schist terraces. One of the world\'s most beautiful train rides.', es: 'Viñedos del Oporto en terrazas de esquisto. Uno de los trayectos más bellos del mundo.', fr: 'Vignobles de Porto en terrasses de schiste. L\'un des plus beaux trajets au monde.', de: 'Portwein-Weinberge auf Schieferterrassen. Eine der schönsten Bahnstrecken der Welt.', it: 'Vigneti del Porto su terrazze di scisto. Uno dei viaggi in treno più belli del mondo.', pt: 'Vinhas do Porto em socalcos de xisto. Uma das viagens de comboio mais belas do mundo.' } },
+      { name: 'Intercity Direct', route: 'Amsterdam → Brussels · 1h 51min', origin: 'Amsterdam Centraal', dest: 'Brussel-Zuid', g1: '#E67E22', g2: '#CA6F1E',
+        desc: { en: 'From Amsterdam\'s canals to the Grand Place through polders and Belgian countryside.', es: 'De los canales de Ámsterdam al Grand Place atravesando pólderes y campiña belga.', fr: 'Des canaux d\'Amsterdam à la Grand-Place à travers les polders et la campagne belge.', de: 'Von Amsterdams Grachten zum Grand Place durch Polder und belgische Landschaft.', it: 'Dai canali di Amsterdam alla Grand Place tra polder e campagna belga.', pt: 'Dos canais de Amesterdão à Grand Place atravessando pôlderes e o campo belga.' } },
+      { name: 'Thalys', route: 'Brussels → Paris · 1h 22min', origin: 'Brussel-Zuid', dest: 'Paris Gare du Nord', g1: '#C0392B', g2: '#7B241C',
+        desc: { en: 'Europe\'s most famous red train. Brussels to Paris in under 90 minutes at 300 km/h.', es: 'El tren rojo más famoso de Europa. Bruselas a París en menos de hora y media a 300 km/h.', fr: 'Le train rouge le plus célèbre d\'Europe. Bruxelles-Paris en moins d\'1h30 à 300 km/h.', de: 'Europas berühmtester roter Zug. Brüssel nach Paris in unter 90 Minuten mit 300 km/h.', it: 'Il treno rosso più famoso d\'Europa. Bruxelles-Parigi in meno di 90 minuti a 300 km/h.', pt: 'O comboio vermelho mais famoso da Europa. Bruxelas a Paris em menos de 90 minutos a 300 km/h.' } },
+    ];
+
+    let scenicExpanded = false;
+    function renderScenic() {
+      const grid = document.getElementById('scenicGrid');
+      const lang = document.documentElement.lang || 'en';
+      const list = scenicExpanded ? SCENIC_TRAINS : SCENIC_TRAINS.slice(0, 6);
+      grid.innerHTML = list.map(t => {
+        const desc = (t.desc && t.desc[lang]) || (t.desc && t.desc.en) || '';
+        return `
+        <div class="scenic-wrapper">
+          <a href="#" class="scenic-card" onclick="goScenic('${encodeURIComponent(t.origin)}','${encodeURIComponent(t.dest)}', event)">
+            <div class="scenic-icon" style="background: linear-gradient(135deg, ${t.g1}, ${t.g2});"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/><path d="M7 11h10"/><path d="M12 4v7"/></svg></div>
+            <div class="scenic-body">
+              <div class="scenic-name">${t.name}</div>
+              <div class="scenic-route">${t.route}</div>
+            </div>
+            <div class="scenic-cta" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>
+          </a>
+          <div class="scenic-desc">${desc}</div>
+        </div>`;
+      }).join('');
+    }
+    function toggleScenic() {
+      scenicExpanded = !scenicExpanded;
+      renderScenic();
+      const btn = document.getElementById('scenicToggle');
+      btn.setAttribute('data-i18n', scenicExpanded ? 'scenic_less' : 'scenic_more');
+      applyLang(document.documentElement.lang || 'en');
+      positionScenicDescs();
+    }
+    renderScenic();
+
+    function positionScenicDescs() {
+      const grid = document.getElementById('scenicGrid');
+      if (!grid) return;
+      const gridCenter = grid.getBoundingClientRect().left + grid.offsetWidth / 2;
+      grid.querySelectorAll('.scenic-wrapper').forEach(wrapper => {
+        const wrapperCenter = wrapper.getBoundingClientRect().left + wrapper.offsetWidth / 2;
+        wrapper.classList.toggle('desc-left', wrapperCenter < gridCenter);
+      });
+    }
+    requestAnimationFrame(positionScenicDescs);
+    window.addEventListener('resize', positionScenicDescs);
+
+    function goScenic(origin, dest, e) {
+      e.preventDefault();
+      const url = `${PROXY_BASE}/scenic?origin=${origin}&dest=${dest}`;
+      window.open(url, '_blank');
+      return false;
+    }
+
+    // ── Stats: animación de conteo al entrar en viewport ──
+    (function () {
+      const stats = document.querySelector('.stats');
+      if (!stats) return;
+      let done = false;
+      function animate() {
+        if (done) return; done = true;
+        document.querySelectorAll('.stat-number[data-count]').forEach(function (el) {
+          const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+          const suffix = el.getAttribute('data-suffix') || '';
+          const dur = 1200, start = performance.now();
+          function step(now) {
+            const p = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+            else el.textContent = target + suffix;
+          }
+          requestAnimationFrame(step);
+        });
+      }
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { animate(); io.disconnect(); } });
+        }, { threshold: 0.4 });
+        io.observe(stats);
+      } else {
+        animate();
+      }
+    })();
+  </script>
+
+</body>
+</html>

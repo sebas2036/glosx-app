@@ -21,6 +21,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://glosx.app/blog-italy-interrail-itinerary.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://glosx.app/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
