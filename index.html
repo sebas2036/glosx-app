@@ -1356,6 +1356,11 @@
       <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
       <script async src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&locale=en&city_id=2&category=4&amount=3&powered_by=true&campaign_id=137&promo_id=4497" charset="utf-8"></script>
     </div>
+    <!-- Kiwitaxi · Shuttles Search Form -->
+    <div class="pw-panel" id="pw-kiwitaxi">
+      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
+      <script async src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&language=en&theme=1&powered_by=true&campaign_id=1&promo_id=1486" charset="utf-8"></script>
+    </div>
   </div>
   </section>
 
@@ -2072,7 +2077,7 @@
 
     // ── Partner products → redirige al proxy correspondiente ───────────────
     // Partners con widget embebido (panel desplegable). El resto va al proxy.
-    const WIDGET_PANELS = { klook: 'pw-klook' };
+    const WIDGET_PANELS = { klook: 'pw-klook', kiwitaxi: 'pw-kiwitaxi' };
 
     function goPartner(type, e) {
       e.preventDefault();
