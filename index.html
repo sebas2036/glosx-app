@@ -157,12 +157,22 @@
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       text-decoration: none;
     }
-    .nav-links { display: flex; gap: 32px; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a {
       color: var(--muted); text-decoration: none; font-size: 14px;
       font-weight: 500; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--text); }
+
+    /* ── Botón hamburguesa (solo móvil) ── */
+    .nav-toggle {
+      display: none;
+      background: none; cursor: pointer; padding: 0;
+      width: 42px; height: 42px; border-radius: 10px;
+      border: 1px solid rgba(139,92,246,0.30);
+      align-items: center; justify-content: center;
+    }
+    .nav-toggle svg { width: 24px; height: 24px; stroke: #fff; }
 
     /* ── Language selector ── */
     .lang-wrapper { position: relative; }
@@ -1073,7 +1083,23 @@
     }
     @media (max-width: 600px) {
       nav { padding: 16px 20px; }
-      .nav-links { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .nav-links {
+        display: none;
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: linear-gradient(180deg, rgba(26,22,48,0.98) 0%, rgba(10,10,15,0.98) 100%);
+        -webkit-backdrop-filter: blur(22px) saturate(140%);
+        backdrop-filter: blur(22px) saturate(140%);
+        border-bottom: 1px solid rgba(139,92,246,0.18);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+        padding: 6px 20px 16px;
+      }
+      .nav-links.show { display: flex; }
+      .nav-links a {
+        padding: 15px 4px; font-size: 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
       .hero { padding: 100px 20px 60px; }
 
       /* ── Essentials bar — 1 columna (móvil) ── */
@@ -1110,8 +1136,8 @@
       /* ── Features grid — 1 columna ── */
       .features-grid { grid-template-columns: 1fr; }
 
-      /* ── Selector de idioma — siempre visible ── */
-      .lang-wrapper { display: block !important; }
+      /* ── Selector de idioma — dentro del panel desplegable ── */
+      .lang-wrapper { margin-top: 12px; }
     }
   </style>
 </head>
@@ -1140,7 +1166,10 @@
   <!-- Nav -->
   <nav>
     <a href="/" class="nav-logo" style="font-size:24px;display:inline-flex;align-items:center;gap:0;"><span style="color:#7c3aed;font-style:italic;font-weight:900;margin-right:8px;">WoW</span><span style="letter-spacing:6px;font-weight:300;color:#fff;">TRAIN</span><svg width="48" height="4" viewBox="0 0 48 4" style="margin-left:4px;margin-top:2px;"><line x1="0" y1="1" x2="48" y2="1" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/><line x1="8" y1="3.5" x2="40" y2="3.5" stroke="#a78bfa" stroke-width="1" stroke-linecap="round" opacity="0.6"/></svg></a>
-    <div class="nav-links">
+    <button class="nav-toggle" id="navToggle" onclick="toggleMenu(event)" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
       <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
       <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
       <a href="#features" data-i18n="nav_features">Features</a>
@@ -1933,6 +1962,21 @@
       e.stopPropagation();
       document.getElementById('langDropdown').classList.toggle('open');
     }
+
+    // Menú móvil (hamburguesa)
+    function toggleMenu(e) {
+      e.stopPropagation();
+      const links = document.getElementById('navLinks');
+      const open = links.classList.toggle('show');
+      document.getElementById('navToggle').setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    // Cerrar el menú al tocar un enlace de navegación
+    document.querySelectorAll('#navLinks a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+        document.getElementById('navToggle').setAttribute('aria-expanded', 'false');
+      });
+    });
 
     // Cerrar dropdown al clickear afuera
     document.addEventListener('click', () => {
