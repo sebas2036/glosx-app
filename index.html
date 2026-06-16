@@ -887,6 +887,12 @@
     }
     .essential-item:hover .essential-icon { color: #c084fc; transform: scale(1.06); }
     .essential-text { display: flex; flex-direction: column; min-width: 0; }
+    .essential-brand {
+      font-size: 11px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: #a78bcf; margin-bottom: 3px;
+      transition: color 0.3s ease;
+    }
+    .essential-item:hover .essential-brand { color: #c084fc; }
     .essential-title {
       font-size: 16px; font-weight: 700; color: #ececf3; line-height: 1.2;
       transition: color 0.3s ease;
@@ -1291,6 +1297,7 @@
       <a href="#" class="essential-item" onclick="goPartner('klook', event)">
         <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V10a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12"/><path d="M18 22V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4"/><path d="M2 22h20"/></svg></div>
         <div class="essential-text">
+          <span class="essential-brand">Klook</span>
           <span class="essential-title" data-i18n="p_klook_title">City Passes</span>
           <span class="essential-cta" data-i18n="p_klook_cta">Browse passes →</span>
         </div>
@@ -1299,6 +1306,7 @@
       <a href="#" class="essential-item" onclick="goPartner('kiwitaxi', event)">
         <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
         <div class="essential-text">
+          <span class="essential-brand">Kiwitaxi</span>
           <span class="essential-title" data-i18n="p_kiwi_title">Airport Transfers</span>
           <span class="essential-cta" data-i18n="p_kiwi_cta">Book transfer →</span>
         </div>
@@ -1307,6 +1315,7 @@
       <a href="#" class="essential-item" onclick="goPartner('yesim', event)">
         <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 11h.01"/><path d="M12 15h.01"/><path d="M10 13h4"/></svg></div>
         <div class="essential-text">
+          <span class="essential-brand">Yesim</span>
           <span class="essential-title" data-i18n="p_yesim_title">eSIM Europe</span>
           <span class="essential-cta" data-i18n="p_yesim_cta">Activate eSIM →</span>
         </div>
@@ -1315,6 +1324,7 @@
       <a href="#" class="essential-item" onclick="goPartner('tiqets', event)">
         <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
         <div class="essential-text">
+          <span class="essential-brand">Tiqets</span>
           <span class="essential-title" data-i18n="p_tiqets_title">Attraction Tickets</span>
           <span class="essential-cta" data-i18n="p_tiqets_cta">Browse tickets →</span>
         </div>
@@ -1323,6 +1333,7 @@
       <a href="#" class="essential-item" onclick="goPartner('storage', event)">
         <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="14" x="4" y="6" rx="2"/><path d="M9 6V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/><path d="M8 22h.01"/><path d="M16 22h.01"/></svg></div>
         <div class="essential-text">
+          <span class="essential-brand">Radical Storage</span>
           <span class="essential-title" data-i18n="p_storage_title">Luggage Storage</span>
           <span class="essential-cta" data-i18n="p_storage_cta">Find storage →</span>
         </div>
@@ -1331,6 +1342,7 @@
       <a href="#" class="essential-item" onclick="goPartner('insurance', event)">
         <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div class="essential-text">
+          <span class="essential-brand">EKTA</span>
           <span class="essential-title" data-i18n="p_ins_title">Travel Insurance</span>
           <span class="essential-cta" data-i18n="p_ins_cta">Get insured →</span>
         </div>
