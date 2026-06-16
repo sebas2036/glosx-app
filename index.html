@@ -904,6 +904,56 @@
     }
     .essential-item:hover .essential-cta { color: var(--primary2); }
 
+    /* ── Descubramos juntos (comunidad · acento teal, estilo postal) ── */
+    .discover-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px;
+    }
+    .discover-card {
+      position: relative;
+      background: linear-gradient(160deg, rgba(17,34,33,0.65) 0%, var(--surface) 70%);
+      border: 1px solid rgba(45,212,191,0.18);
+      border-left: 3px solid rgba(45,212,191,0.75);
+      border-radius: 16px; padding: 22px 22px 18px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .discover-card:hover {
+      border-color: rgba(45,212,191,0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(45,212,191,0.12);
+    }
+    .discover-pin {
+      position: absolute; top: 16px; right: 18px; font-size: 15px; opacity: 0.85;
+    }
+    .discover-country {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: #2dd4bf;
+    }
+    .discover-place { font-size: 19px; font-weight: 800; color: var(--text); margin: 4px 0 12px; letter-spacing: -0.3px; }
+    .discover-route {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13px; color: #bfe8e1; font-weight: 600; margin-bottom: 6px;
+    }
+    .discover-season { font-size: 12px; color: #7dd3c8; font-weight: 600; margin-bottom: 10px; }
+    .discover-tip { font-size: 14px; color: var(--muted); line-height: 1.65; }
+    .discover-by {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 10.5px; color: #5fae9f; margin-top: 16px;
+      letter-spacing: 0.5px; text-transform: uppercase; font-weight: 700;
+    }
+    .discover-cta {
+      background: linear-gradient(135deg, rgba(45,212,191,0.14), rgba(13,148,136,0.08));
+      border: 1px solid rgba(45,212,191,0.30);
+      border-radius: 18px; padding: 28px; margin-top: 24px; text-align: center;
+    }
+    .discover-cta h3 { font-size: 21px; font-weight: 800; margin-bottom: 8px; }
+    .discover-cta p { font-size: 15px; color: #c8c8d8; margin-bottom: 18px; }
+    .discover-cta-btn {
+      display: inline-block; background: linear-gradient(135deg, #2dd4bf, #0d9488);
+      color: #04201c; font-weight: 800; padding: 12px 28px; border-radius: 12px;
+      text-decoration: none; box-shadow: 0 6px 20px rgba(45,212,191,0.35);
+    }
+    .discover-cta-btn:hover { filter: brightness(1.08); }
+
     /* ── Franja VIP "Trusted partners" (Booking / Tripadvisor) ── */
     .vip-bar { max-width: 1180px; margin: 0 auto 14px; }
     .vip-label {
@@ -1163,6 +1213,8 @@
       .essentials-inner { grid-template-columns: 1fr; }
       /* ── VIP — 1 columna (móvil) ── */
       .vip-inner { grid-template-columns: 1fr; }
+      /* ── Descubramos juntos — 1 columna (móvil) ── */
+      .discover-grid { grid-template-columns: 1fr; }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
@@ -1230,6 +1282,7 @@
     </button>
     <div class="nav-links" id="navLinks">
       <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
+      <a href="#discover" data-i18n="nav_discover">Discover</a>
       <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
       <a href="#features" data-i18n="nav_features">Features</a>
       <a href="/blog.html">Blog</a>
@@ -1316,6 +1369,67 @@
     </div>
     <div style="text-align:center; margin-top: 24px;">
       <button id="scenicToggle" class="scenic-toggle" onclick="toggleScenic()" data-i18n="scenic_more">Ver más rutas</button>
+    </div>
+  </section>
+
+  <!-- Descubramos juntos (comunidad) -->
+  <section class="section" id="discover">
+    <p class="section-label" data-i18n="disc_label">Community</p>
+    <h2><span data-i18n="disc_title1">Let's discover</span><br /><span data-i18n="disc_title2">together.</span></h2>
+    <p class="lead" data-i18n="disc_lead">Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.</p>
+
+    <div class="discover-grid">
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Austria</div>
+        <div class="discover-place">Hallstatt</div>
+        <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
+        <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
+        <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Slovenia</div>
+        <div class="discover-place">Lake Bled</div>
+        <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
+        <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
+        <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Portugal</div>
+        <div class="discover-place">Sintra</div>
+        <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
+        <div class="discover-season">Best: year-round · easy day trip</div>
+        <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">France</div>
+        <div class="discover-place">Colmar</div>
+        <div class="discover-route">🚂 Alsace regional line</div>
+        <div class="discover-season">Best: Dec (markets) &amp; spring</div>
+        <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Switzerland</div>
+        <div class="discover-place">Lauterbrunnen</div>
+        <div class="discover-route">🚂 Mountain rail via Interlaken</div>
+        <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
+        <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+    </div>
+
+    <div class="discover-cta">
+      <h3 data-i18n="disc_cta_title">Know a place only the train reveals? 🚂</h3>
+      <p data-i18n="disc_cta_text">Share the route, the town, the hidden stop — and help other travelers discover it too.</p>
+      <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
     </div>
   </section>
 
@@ -1767,7 +1881,7 @@
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
     const TRANSLATIONS = {
       en: {
-        nav_scenic: 'Scenic Trains', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started',
+        nav_scenic: 'Scenic Trains', nav_discover: 'Discover', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started',
         hero_badge: '🚄 WoW Train — Europe & beyond',
         hero_title1: 'Your train.', hero_title2: 'Your world.',
         hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
@@ -1779,6 +1893,7 @@
         partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
         partners_lead: 'Curated services that complement your train journey.',
         vip_label: 'Trusted partners', vip_booking: 'Hotels & stays →', vip_tripadvisor: 'Experiences & reviews →',
+        disc_label: 'Community', disc_title1: "Let's discover", disc_title2: 'together.', disc_lead: "Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.", disc_cta_title: 'Know a place only the train reveals? 🚂', disc_cta_text: 'Share the route, the town, the hidden stop — and help other travelers discover it too.', disc_cta_btn: 'Share your discovery →',
         p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
         p_kiwi_title: 'Airport Transfers', p_kiwi_desc: 'Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.', p_kiwi_cta: 'Book transfer →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.', p_yesim_cta: 'Activate eSIM →',
@@ -1812,7 +1927,7 @@
         trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Book via Trainline',
       },
       es: {
-        nav_scenic: 'Trenes panorámicos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
+        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubrir', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
         hero_badge: '🚄 WoW Train — Europa y el mundo',
         hero_title1: 'Tu tren.', hero_title2: 'Tu mundo.',
         hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
@@ -1824,6 +1939,7 @@
         partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
         partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
         vip_label: 'Partners de confianza', vip_booking: 'Hoteles y alojamiento →', vip_tripadvisor: 'Experiencias y reseñas →',
+        disc_label: 'Comunidad', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Pueblos y rincones de Europa que solo encontrás en tren — compartidos por viajeros, para viajeros.', disc_cta_title: '¿Conocés un lugar que solo revela el tren? 🚂', disc_cta_text: 'Compartí la ruta, el pueblo, la parada secreta — y ayudá a otros viajeros a descubrirlo.', disc_cta_btn: 'Compartí tu descubrimiento →',
         p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
         p_kiwi_title: 'Traslados aeropuerto', p_kiwi_desc: 'Taxi privado desde cualquier aeropuerto europeo hasta tu hotel o estación. Precio fijo, sin sorpresas.', p_kiwi_cta: 'Reservar traslado →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Conectate en más de 30 países europeos desde €4.90. Activación instantánea en tu teléfono — sin cambiar la SIM.', p_yesim_cta: 'Activar eSIM →',
@@ -1857,7 +1973,7 @@
         trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Reservá con Trainline',
       },
       fr: {
-        nav_scenic: 'Trains panoramiques', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
+        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrir', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
         hero_badge: '🚄 WoW Train — Europe et au-delà',
         hero_title1: 'Ton train.', hero_title2: 'Ton monde.',
         hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
@@ -1869,6 +1985,7 @@
         partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
         partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
         vip_label: 'Partenaires de confiance', vip_booking: 'Hôtels & séjours →', vip_tripadvisor: 'Expériences & avis →',
+        disc_label: 'Communauté', disc_title1: 'Découvrons', disc_title2: 'ensemble.', disc_lead: "Des villages et des recoins d'Europe que l'on ne trouve qu'en train — partagés par les voyageurs, pour les voyageurs.", disc_cta_title: 'Vous connaissez un lieu que seul le train révèle ? 🚂', disc_cta_text: "Partagez l'itinéraire, le village, l'arrêt caché — et aidez d'autres voyageurs à le découvrir.", disc_cta_btn: 'Partagez votre découverte →',
         p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
         p_kiwi_title: 'Transferts aéroport', p_kiwi_desc: 'Taxi privé depuis n\'importe quel grand aéroport européen jusqu\'à votre hôtel ou gare. Prix fixe, aucune surprise.', p_kiwi_cta: 'Réserver transfert →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Restez connecté dans plus de 30 pays européens dès €4.90. Activation instantanée sur votre téléphone — sans changer de SIM.', p_yesim_cta: 'Activer eSIM →',
@@ -1902,7 +2019,7 @@
         trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Réservez via Trainline',
       },
       de: {
-        nav_scenic: 'Panoramazüge', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
+        nav_scenic: 'Panoramazüge', nav_discover: 'Entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
         hero_badge: '🚄 WoW Train — Europa und die Welt',
         hero_title1: 'Dein Zug.', hero_title2: 'Deine Welt.',
         hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
@@ -1914,6 +2031,7 @@
         partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
         partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
         vip_label: 'Vertrauenspartner', vip_booking: 'Hotels & Unterkünfte →', vip_tripadvisor: 'Erlebnisse & Bewertungen →',
+        disc_label: 'Community', disc_title1: 'Entdecken wir', disc_title2: 'gemeinsam.', disc_lead: 'Orte und Winkel Europas, die man nur mit dem Zug findet — geteilt von Reisenden, für Reisende.', disc_cta_title: 'Kennst du einen Ort, den nur der Zug zeigt? 🚂', disc_cta_text: 'Teile die Strecke, den Ort, den versteckten Halt — und hilf anderen Reisenden, ihn zu entdecken.', disc_cta_btn: 'Teile deine Entdeckung →',
         p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
         p_kiwi_title: 'Flughafentransfer', p_kiwi_desc: 'Privattaxi von jedem großen europäischen Flughafen direkt zu Ihrem Hotel oder Bahnhof. Festpreis, keine Überraschungen.', p_kiwi_cta: 'Transfer buchen →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Bleiben Sie in 30+ europäischen Ländern verbunden ab €4.90. Sofortige Aktivierung auf Ihrem Telefon — kein SIM-Wechsel.', p_yesim_cta: 'eSIM aktivieren →',
@@ -1947,7 +2065,7 @@
         trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Buchen über Trainline',
       },
       it: {
-        nav_scenic: 'Treni panoramici', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
+        nav_scenic: 'Treni panoramici', nav_discover: 'Scopri', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
         hero_badge: '🚄 WoW Train — Europa e oltre',
         hero_title1: 'Il tuo treno.', hero_title2: 'Il tuo mondo.',
         hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
@@ -1959,6 +2077,7 @@
         partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
         partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
         vip_label: 'Partner di fiducia', vip_booking: 'Hotel e soggiorni →', vip_tripadvisor: 'Esperienze e recensioni →',
+        disc_label: 'Community', disc_title1: 'Scopriamo', disc_title2: 'insieme.', disc_lead: "Borghi e angoli d'Europa che trovi solo in treno — condivisi dai viaggiatori, per i viaggiatori.", disc_cta_title: 'Conosci un posto che solo il treno svela? 🚂', disc_cta_text: "Condividi il percorso, il borgo, la fermata nascosta — e aiuta altri viaggiatori a scoprirlo.", disc_cta_btn: 'Condividi la tua scoperta →',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Taxi privato da qualsiasi grande aeroporto europeo direttamente al tuo hotel o stazione. Prezzo fisso, nessuna sorpresa.', p_kiwi_cta: 'Prenota transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Resta connesso in 30+ paesi europei da €4.90. Attivazione istantanea sul tuo telefono — nessun cambio SIM.', p_yesim_cta: 'Attiva eSIM →',
@@ -1992,7 +2111,7 @@
         trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Prenota con Trainline',
       },
       pt: {
-        nav_scenic: 'Comboios panorâmicos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
+        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descobrir', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
         hero_badge: '🚄 WoW Train — Europa e além',
         hero_title1: 'O teu comboio.', hero_title2: 'O teu mundo.',
         hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
@@ -2004,6 +2123,7 @@
         partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
         partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
         vip_label: 'Parceiros de confiança', vip_booking: 'Hotéis e estadias →', vip_tripadvisor: 'Experiências e avaliações →',
+        disc_label: 'Comunidade', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Vilas e recantos da Europa que só se encontram de comboio — partilhados por viajantes, para viajantes.', disc_cta_title: 'Conhece um lugar que só o comboio revela? 🚂', disc_cta_text: 'Partilha a rota, a vila, a paragem escondida — e ajuda outros viajantes a descobri-la.', disc_cta_btn: 'Partilha a tua descoberta →',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Táxi privado a partir de qualquer grande aeroporto europeu até ao seu hotel ou estação. Preço fixo, sem surpresas.', p_kiwi_cta: 'Reservar transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Mantenha-se ligado em mais de 30 países europeus desde €4.90. Ativação instantânea no seu telefone — sem trocar de SIM.', p_yesim_cta: 'Ativar eSIM →',
