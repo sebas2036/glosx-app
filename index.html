@@ -1365,11 +1365,6 @@
       <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
       <script async src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&language=en&theme=1&powered_by=true&campaign_id=1&promo_id=1486" charset="utf-8"></script>
     </div>
-    <!-- GetRentacar · Car Rental Search -->
-    <div class="pw-panel" id="pw-rentacar">
-      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
-      <script async src="https://tp.media/content?campaign_id=222&promo_id=8813&shmarker=734304&trs=534570" charset="utf-8"></script>
-    </div>
   </div>
   </section>
 
@@ -2086,7 +2081,7 @@
 
     // ── Partner products → redirige al proxy correspondiente ───────────────
     // Partners con widget embebido (panel desplegable). El resto va al proxy.
-    const WIDGET_PANELS = { klook: 'pw-klook', kiwitaxi: 'pw-kiwitaxi', rentacar: 'pw-rentacar' };
+    const WIDGET_PANELS = { klook: 'pw-klook', kiwitaxi: 'pw-kiwitaxi' };
 
     function goPartner(type, e) {
       e.preventDefault();
