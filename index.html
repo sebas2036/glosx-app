@@ -898,6 +898,26 @@
     }
     .essential-item:hover .essential-cta { color: var(--primary2); }
 
+    /* ── Panel de widget de partner (desplegable bajo la barra) ── */
+    .partner-widgets { max-width: 1180px; margin: 14px auto 0; }
+    .pw-panel {
+      display: none; position: relative;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(168,85,247,0.22);
+      border-radius: 16px; padding: 20px;
+      box-shadow: 0 0 24px rgba(168,85,247,0.10);
+    }
+    .pw-panel.show { display: block; animation: pwIn 0.25s ease; }
+    @keyframes pwIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+    .pw-close {
+      position: absolute; top: 10px; right: 12px; z-index: 2;
+      width: 30px; height: 30px; border-radius: 8px;
+      background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.12);
+      color: #fff; font-size: 16px; line-height: 1; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pw-close:hover { background: rgba(168,85,247,0.30); }
+
     /* ── Trust strip (fuentes de datos oficiales) ── */
     .trust-strip { text-align: center; padding: 10px 24px 38px; }
     .trust-label {
@@ -1315,6 +1335,14 @@
           <span class="essential-cta" data-i18n="p_ins_cta">Get insured →</span>
         </div>
       </a>
+    </div>
+  </div>
+
+  <div class="partner-widgets">
+    <!-- Klook · Tours & Activities -->
+    <div class="pw-panel" id="pw-klook">
+      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
+      <script async src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&locale=en&city_id=2&category=4&amount=3&powered_by=true&campaign_id=137&promo_id=4497" charset="utf-8"></script>
     </div>
   </div>
   </section>
@@ -2031,17 +2059,29 @@
     }
 
     // ── Partner products → redirige al proxy correspondiente ───────────────
+    // Partners con widget embebido (panel desplegable). El resto va al proxy.
+    const WIDGET_PANELS = { klook: 'pw-klook' };
+
     function goPartner(type, e) {
       e.preventDefault();
-      let url;
-      if (type === 'klook')     url = `${PROXY_BASE}/klook`;
-      if (type === 'kiwitaxi')  url = `${PROXY_BASE}/kiwitaxi`;
-      if (type === 'yesim')     url = `${PROXY_BASE}/yesim`;
-      if (type === 'tiqets')    url = `${PROXY_BASE}/tiqets`;
-      if (type === 'storage')   url = `${PROXY_BASE}/storage`;
-      if (type === 'insurance') url = `${PROXY_BASE}/insurance`;
-      if (url) window.open(url, '_blank');
+      // Si el partner tiene widget embebido, abrir el panel en vez del proxy
+      const panelId = WIDGET_PANELS[type];
+      if (panelId) { openWidget(panelId); return false; }
+      const url = `${PROXY_BASE}/${type}`;
+      window.open(url, '_blank');
       return false;
+    }
+
+    function openWidget(panelId) {
+      document.querySelectorAll('.pw-panel').forEach(p => p.classList.remove('show'));
+      const panel = document.getElementById(panelId);
+      if (!panel) return;
+      panel.classList.add('show');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function closeWidget() {
+      document.querySelectorAll('.pw-panel').forEach(p => p.classList.remove('show'));
     }
 
     // ── Scenic trains data + render ────────────────────────────────────────
