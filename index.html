@@ -163,6 +163,8 @@
       font-weight: 500; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--text); }
+    .nav-links a.nav-accent { color: #2dd4bf; font-weight: 700; }
+    .nav-links a.nav-accent:hover { color: #5eead4; }
 
     /* ── Botón hamburguesa (solo móvil) ── */
     .nav-toggle {
@@ -1281,9 +1283,9 @@
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <div class="nav-links" id="navLinks">
+      <a href="#discover" class="nav-accent" data-i18n="nav_discover">Discover together</a>
       <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
       <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
-      <a href="#discover" data-i18n="nav_discover">Discover</a>
       <a href="#features" data-i18n="nav_features">Features</a>
       <a href="/blog.html">Blog</a>
       <a href="#download" data-i18n="nav_download">Download</a>
@@ -1881,7 +1883,7 @@
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
     const TRANSLATIONS = {
       en: {
-        nav_scenic: 'Scenic Trains', nav_discover: 'Discover', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started',
+        nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started',
         hero_badge: '🚄 WoW Train — Europe & beyond',
         hero_title1: 'Your train.', hero_title2: 'Your world.',
         hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
@@ -1927,7 +1929,7 @@
         trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Book via Trainline',
       },
       es: {
-        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubrir', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
+        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
         hero_badge: '🚄 WoW Train — Europa y el mundo',
         hero_title1: 'Tu tren.', hero_title2: 'Tu mundo.',
         hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
@@ -1973,7 +1975,7 @@
         trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Reservá con Trainline',
       },
       fr: {
-        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrir', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
+        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
         hero_badge: '🚄 WoW Train — Europe et au-delà',
         hero_title1: 'Ton train.', hero_title2: 'Ton monde.',
         hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
@@ -2019,7 +2021,7 @@
         trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Réservez via Trainline',
       },
       de: {
-        nav_scenic: 'Panoramazüge', nav_discover: 'Entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
+        nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
         hero_badge: '🚄 WoW Train — Europa und die Welt',
         hero_title1: 'Dein Zug.', hero_title2: 'Deine Welt.',
         hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
@@ -2065,7 +2067,7 @@
         trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Buchen über Trainline',
       },
       it: {
-        nav_scenic: 'Treni panoramici', nav_discover: 'Scopri', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
+        nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
         hero_badge: '🚄 WoW Train — Europa e oltre',
         hero_title1: 'Il tuo treno.', hero_title2: 'Il tuo mondo.',
         hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
@@ -2111,7 +2113,7 @@
         trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Prenota con Trainline',
       },
       pt: {
-        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descobrir', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
+        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
         hero_badge: '🚄 WoW Train — Europa e além',
         hero_title1: 'O teu comboio.', hero_title2: 'O teu mundo.',
         hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
