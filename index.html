@@ -1253,6 +1253,129 @@
       .lang-wrapper { margin-top: 12px; }
     }
   </style>
+
+<style>
+/* === WoW TRAIN · secciones nuevas (rutas Trainline + testimonios) === */
+/* ===================== WoW TRAIN · secciones nuevas ===================== */
+
+  /* ---- Tarea 2: Arma tu propia aventura ---- */
+  .wt-route-buttons {
+    display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px;
+  }
+  .wt-route-btn {
+    appearance: none; cursor: pointer;
+    font-family: inherit; font-size: 15px; font-weight: 600; color: var(--text);
+    padding: 14px 22px; border-radius: 100px;
+    border: 1px solid rgba(124,58,237,0.30);
+    background: linear-gradient(180deg, rgba(26,22,48,0.72) 0%, rgba(10,10,15,0.55) 100%);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    transition: transform .18s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+  }
+  .wt-route-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 28px rgba(124,58,237,0.30);
+  }
+  .wt-route-btn[aria-pressed="true"] {
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    border-color: transparent;
+    box-shadow: 0 10px 32px rgba(124,58,237,0.45);
+  }
+  .wt-route-btn .wt-emoji { margin-right: 8px; }
+
+  .wt-timeline-wrap {
+    background: linear-gradient(180deg, rgba(26,22,48,0.72) 0%, rgba(10,10,15,0.66) 100%);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    border: 1px solid rgba(139,92,246,0.18);
+    border-radius: 18px;
+    padding: 34px clamp(20px, 4vw, 44px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  }
+  .wt-timeline-head { margin-bottom: 26px; }
+  .wt-timeline-head h3 { font-size: 22px; font-weight: 800; margin: 0 0 6px; letter-spacing: -0.3px; }
+  .wt-timeline-head .wt-route-meta { color: var(--primary2); font-weight: 600; font-size: 14px; }
+  .wt-timeline-empty { color: var(--muted); font-size: 16px; text-align: center; padding: 18px 0; margin: 0; }
+
+  .wt-timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+  .wt-timeline::before {
+    content: ""; position: absolute; left: 11px; top: 6px; bottom: 6px; width: 2px;
+    background: linear-gradient(180deg, var(--primary), rgba(124,58,237,0.12));
+  }
+  .wt-stop {
+    position: relative; padding: 0 0 28px 44px;
+    opacity: 0; transform: translateX(-12px);
+    animation: wt-stop-in .5s ease forwards;
+  }
+  .wt-stop:last-child { padding-bottom: 0; }
+  @keyframes wt-stop-in { to { opacity: 1; transform: translateX(0); } }
+  .wt-stop::before {
+    content: ""; position: absolute; left: 4px; top: 4px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 0 4px rgba(124,58,237,0.18), 0 0 18px var(--primary2);
+  }
+  .wt-stop-station { font-size: 18px; font-weight: 800; margin: 0 0 4px; letter-spacing: -0.3px; }
+  .wt-stop-train {
+    display: inline-block; font-size: 12.5px; font-weight: 600; color: var(--primary2);
+    background: rgba(124,58,237,0.12); border: 1px solid rgba(139,92,246,0.25);
+    border-radius: 100px; padding: 3px 11px; margin: 0 0 8px;
+  }
+  .wt-stop-desc { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+  /* CTA hacia Trainline al final de cada timeline */
+  .wt-tl-cta {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 26px;
+    font-family: inherit; font-size: 15px; font-weight: 700; color: #fff;
+    text-decoration: none; cursor: pointer;
+    padding: 14px 26px; border-radius: 100px;
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    box-shadow: 0 10px 30px rgba(124,58,237,0.40);
+    transition: transform .18s ease, box-shadow .25s ease, filter .2s ease;
+  }
+  .wt-tl-cta:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 14px 38px rgba(124,58,237,0.5); }
+  .wt-tl-arrow { transition: transform .2s ease; }
+  .wt-tl-cta:hover .wt-tl-arrow { transform: translateX(3px); }
+
+  /* ---- Tarea 3: Valoraciones & experiencias ---- */
+  .wt-reviews-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px;
+  }
+  .wt-review-card {
+    position: relative;
+    background: linear-gradient(160deg, rgba(26,22,48,0.65) 0%, var(--surface) 70%);
+    border: 1px solid rgba(124,58,237,0.20);
+    border-left: 3px solid rgba(124,58,237,0.75);
+    border-radius: 16px; padding: 24px 22px 20px;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+  .wt-review-card:hover {
+    border-color: rgba(124,58,237,0.55);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(124,58,237,0.18);
+  }
+  .wt-review-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .wt-avatar {
+    width: 50px; height: 50px; border-radius: 50%; flex: 0 0 auto;
+    display: grid; place-items: center; font-weight: 800; font-size: 17px; color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    box-shadow: 0 0 18px rgba(124,58,237,0.4);
+  }
+  .wt-review-name { font-size: 16px; font-weight: 800; margin: 0; letter-spacing: -0.3px; }
+  .wt-review-route { font-size: 12.5px; color: var(--muted); margin: 3px 0 0; }
+  .wt-momento {
+    display: block; color: var(--primary2); font-weight: 800; font-size: 14px; margin-bottom: 6px;
+    text-shadow: 0 0 12px rgba(167,139,250,0.45);
+  }
+  .wt-review-body { color: var(--text); font-size: 14px; line-height: 1.65; margin: 0; }
+  .wt-stars { color: var(--primary2); font-size: 14px; letter-spacing: 2px; margin-top: 14px; }
+
+  /* ---- Responsive (igual breakpoint que la web: 1 columna en móvil) ---- */
+  @media (max-width: 720px) {
+    .wt-reviews-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
   <!-- Cookie consent banner — GDPR -->
@@ -1352,6 +1475,34 @@
   </div>
 
   </div><!-- /hero-bgwrap -->
+
+  <section class="section wt-adventure">
+  <p class="section-label">Plan with Trainline</p>
+  <h2>Build your own<br />adventure.</h2>
+  <p class="lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
+
+  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
+    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
+      <span class="wt-emoji">🍷</span>Ruta Clásica (Francia-Italia)
+    </button>
+    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
+      <span class="wt-emoji">🏔️</span>Ruta Alpina (Suiza-Austria)
+    </button>
+    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
+      <span class="wt-emoji">👑</span>Ruta Imperial (Europa Central)
+    </button>
+  </div>
+
+  <div class="wt-timeline-wrap">
+    <div class="wt-timeline-head" id="wt-timeline-head" hidden>
+      <h3 id="wt-route-title"></h3>
+      <span class="wt-route-meta" id="wt-route-meta"></span>
+    </div>
+    <p class="wt-timeline-empty" id="wt-timeline-empty">👆 Tap a route to unfold its timeline.</p>
+    <ol class="wt-timeline" id="wt-timeline"></ol>
+    <div id="wt-cta-slot"></div>
+  </div>
+</section>
 
   <!-- Scenic trains -->
   <section class="section" id="scenic">
@@ -1598,6 +1749,53 @@
       <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
     </div>
   </section>
+
+  <section class="section wt-reviews">
+  <p class="section-label">Traveler voices</p>
+  <h2>Ratings &amp;<br />experiences.</h2>
+  <p class="lead">What they really remember isn't the destination — it's the moment the train changed everything.</p>
+
+  <div class="wt-reviews-grid">
+    <article class="wt-review-card">
+      <div class="wt-review-head">
+        <div class="wt-avatar">LM</div>
+        <div>
+          <p class="wt-review-name">Lucía Moreau</p>
+          <p class="wt-review-route">Paris → Milan · Ruta Clásica</p>
+        </div>
+      </div>
+      <span class="wt-momento">Momento WoW:</span>
+      <p class="wt-review-body">Pure comfort. I crossed the Alps with a hot coffee and my laptop open — arrived in Milan rested, not wrecked like after a flight.</p>
+      <div class="wt-stars">★★★★★</div>
+    </article>
+
+    <article class="wt-review-card">
+      <div class="wt-review-head">
+        <div class="wt-avatar">DK</div>
+        <div>
+          <p class="wt-review-name">David Klein</p>
+          <p class="wt-review-route">Zurich → Vienna · Ruta Alpina</p>
+        </div>
+      </div>
+      <span class="wt-momento">Momento WoW:</span>
+      <p class="wt-review-body">Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.</p>
+      <div class="wt-stars">★★★★★</div>
+    </article>
+
+    <article class="wt-review-card">
+      <div class="wt-review-head">
+        <div class="wt-avatar">SA</div>
+        <div>
+          <p class="wt-review-name">Sofía Álvarez</p>
+          <p class="wt-review-route">Prague → Budapest · Ruta Imperial</p>
+        </div>
+      </div>
+      <span class="wt-momento">Momento WoW:</span>
+      <p class="wt-review-body">The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.</p>
+      <div class="wt-stars">★★★★★</div>
+    </article>
+  </div>
+</section>
 
   <!-- Features -->
   <section class="section" id="features">
@@ -2450,5 +2648,113 @@
     })();
   </script>
 
+<script>
+(function () {
+  /* ─────────────────────────────────────────────────────────────────────
+     TRAINLINE · configuración de afiliado
+     🔑 Pega aquí tu Affiliate ID cuando lo tengas. Si lo dejas vacío (""),
+        los botones abren enlaces normales de Trainline (sin afiliación).
+     ───────────────────────────────────────────────────────────────────── */
+  const TRAINLINE_AFFILIATE_ID    = "";      // <-- TU AFFILIATE ID AQUÍ, p.ej. "1101l12345"
+  const TRAINLINE_AFFILIATE_PARAM = "awc";   // nombre del parámetro de tu programa (AWIN usa "awc")
+
+  // Construye la URL de búsqueda real de Trainline para una ruta (origen → destino).
+  function buildTrainlineUrl(route) {
+    const base = "https://www.thetrainline.com/train-times/" + route.from + "-to-" + route.to;
+    if (!TRAINLINE_AFFILIATE_ID) return base;
+    const sep = base.indexOf("?") === -1 ? "?" : "&";
+    return base + sep + TRAINLINE_AFFILIATE_PARAM + "=" + encodeURIComponent(TRAINLINE_AFFILIATE_ID);
+  }
+
+  const ROUTES = {
+    classic: {
+      title: "Ruta Clásica · France–Italy",
+      meta: "Paris → Lyon → Turin → Milan · high-speed, ~7–8 h",
+      from: "paris", to: "milan",
+      stops: [
+        { station: "Paris (Gare de Lyon)", train: "TGV INOUI",
+          desc: "You set off under the iron vault of Gare de Lyon. The TGV hurls you south at 300 km/h as the city dissolves into vineyards." },
+        { station: "Lyon (Part-Dieu)", train: "TGV → Frecciarossa link",
+          desc: "France's gastronomic capital. You switch onto the alpine corridor — ahead lie the Fréjus tunnel and the Italian border." },
+        { station: "Turin (Porta Susa)", train: "Frecciarossa",
+          desc: "First Italian breath. Baroque arcades, the Alps at your back, and Trenitalia's red bullet to carry you the final leg." },
+        { station: "Milan (Centrale)", train: "Arrival",
+          desc: "You step out into Milan's cathedral-station. Fashion, the Duomo and a victory espresso: your Ruta Clásica is complete." }
+      ]
+    },
+    alpine: {
+      title: "Ruta Alpina · Switzerland–Austria",
+      meta: "Zurich → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB",
+      from: "zurich", to: "vienna",
+      stops: [
+        { station: "Zurich (HB)", train: "Railjet / EC",
+          desc: "The most punctual station on earth waves you off. The train skirts postcard lakes before burrowing into the heart of the Alps." },
+        { station: "Sargans", train: "EuroCity",
+          desc: "Alpine gateway between Switzerland and the Rhine valley. Snow peaks rise on both sides of the window, almost close enough to touch." },
+        { station: "Innsbruck (Hbf)", train: "Railjet ÖBB",
+          desc: "Tyrol at its purest — the Olympic city cradled by mountains. Here Austria's imperial train takes over toward the east." },
+        { station: "Vienna (Hbf)", train: "Arrival",
+          desc: "You reach the capital of waltzes after crossing Europe's spine. A well-earned Viennese coffee: alpine mission accomplished." }
+      ]
+    },
+    imperial: {
+      title: "Ruta Imperial · Central Europe",
+      meta: "Prague → Brno → Vienna → Budapest · Railjet / EuroCity",
+      from: "prague", to: "budapest",
+      stops: [
+        { station: "Prague (hl. n.)", train: "Railjet",
+          desc: "The city of a hundred spires falls behind. The Railjet sweeps into Moravia past castles and golden fields." },
+        { station: "Brno (hl. n.)", train: "EuroCity",
+          desc: "Moravian heart and a historic rail hub of the Empire. A brief stop before crossing into Austrian lands." },
+        { station: "Vienna (Hbf)", train: "Railjet ÖBB",
+          desc: "The old Habsburg capital — palaces, opera and monumental platforms. From here, the final hop toward the Danube." },
+        { station: "Budapest (Keleti)", train: "Arrival",
+          desc: "Keleti station, a 19th-century jewel, welcomes you. Buda and Pest split by the river: the imperial finale of your adventure." }
+      ]
+    }
+  };
+
+  const buttons  = document.querySelectorAll(".wt-route-btn");
+  const timeline = document.getElementById("wt-timeline");
+  const head     = document.getElementById("wt-timeline-head");
+  const titleEl  = document.getElementById("wt-route-title");
+  const metaEl   = document.getElementById("wt-route-meta");
+  const emptyEl  = document.getElementById("wt-timeline-empty");
+  const ctaSlot  = document.getElementById("wt-cta-slot");
+
+  function render(key) {
+    const route = ROUTES[key];
+    if (!route) return;
+    emptyEl.hidden = true;
+    head.hidden = false;
+    titleEl.textContent = route.title;
+    metaEl.textContent = route.meta;
+    timeline.innerHTML = "";
+    route.stops.forEach((stop, i) => {
+      const li = document.createElement("li");
+      li.className = "wt-stop";
+      li.style.animationDelay = (i * 0.12) + "s";
+      li.innerHTML =
+        '<p class="wt-stop-station">' + stop.station + '</p>' +
+        '<span class="wt-stop-train">🚆 ' + stop.train + '</span>' +
+        '<p class="wt-stop-desc">' + stop.desc + '</p>';
+      timeline.appendChild(li);
+    });
+    // CTA dinámico hacia Trainline con la URL real de esta ruta.
+    const url = buildTrainlineUrl(route);
+    ctaSlot.innerHTML =
+      '<a class="wt-tl-cta" href="' + url + '" target="_blank" rel="noopener sponsored">' +
+      'Ver horarios y precios en Trainline <span class="wt-tl-arrow">→</span></a>';
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
+      btn.setAttribute("aria-pressed", "true");
+      render(btn.dataset.route);
+    });
+  });
+})();
+</script>
 </body>
 </html>
