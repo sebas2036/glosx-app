@@ -1296,12 +1296,6 @@
     border-color: transparent;
     box-shadow: 0 10px 32px rgba(124,58,237,0.45);
   }
-  .wt-route-num {
-    font-style: italic; font-size: 11px; letter-spacing: 1.5px;
-    opacity: 0.65; margin-right: 9px;
-    font-variant-numeric: oldstyle-nums; color: var(--primary2);
-  }
-  .wt-route-btn[aria-pressed="true"] .wt-route-num { opacity: 0.9; color: #fff; }
 
   .wt-timeline-wrap {
     position: relative;
@@ -1310,31 +1304,32 @@
     -webkit-backdrop-filter: blur(22px) saturate(140%);
     border: 1px solid rgba(139,92,246,0.18);
     border-radius: 18px;
-    padding: 34px clamp(20px, 4vw, 44px);
+    padding: 28px clamp(20px, 4vw, 44px);
     box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    height: fit-content;
   }
-  .wt-timeline-head { margin-bottom: 26px; }
+  .wt-timeline-head { margin-bottom: 22px; }
   .wt-timeline-head h3 { font-size: 22px; font-weight: 800; margin: 0 0 6px; letter-spacing: -0.3px; }
   .wt-timeline-head .wt-route-meta { color: var(--primary2); font-weight: 600; font-size: 14px; }
-  .wt-timeline-empty { color: var(--muted); font-size: 16px; text-align: center; padding: 18px 0; margin: 0; }
+  .wt-timeline-empty { display: none; }
 
   .wt-timeline { list-style: none; margin: 0; padding: 0; position: relative; }
   .wt-timeline::before {
-    content: ""; position: absolute; left: 11px; top: 6px; bottom: 6px; width: 2px;
-    background: linear-gradient(180deg, var(--primary), rgba(124,58,237,0.12));
+    content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px; width: 1.5px;
+    background: rgba(168,85,247,0.4);
   }
   .wt-stop {
-    position: relative; padding: 0 0 28px 44px;
-    opacity: 0; transform: translateX(-12px);
-    animation: wt-stop-in .5s ease forwards;
+    position: relative; padding: 0 0 26px 32px;
+    opacity: 0; transform: translateX(-10px);
+    animation: wt-stop-in .45s ease forwards;
   }
   .wt-stop:last-child { padding-bottom: 0; }
   @keyframes wt-stop-in { to { opacity: 1; transform: translateX(0); } }
   .wt-stop::before {
-    content: ""; position: absolute; left: 4px; top: 4px;
-    width: 16px; height: 16px; border-radius: 50%;
-    background: var(--primary);
-    box-shadow: 0 0 0 4px rgba(124,58,237,0.18), 0 0 18px var(--primary2);
+    content: ""; position: absolute; left: 0; top: 6px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: #a855f7;
+    box-shadow: 0 0 0 3px rgba(168,85,247,0.18);
   }
   .wt-stop-station { font-size: 18px; font-weight: 800; margin: 0 0 4px; letter-spacing: -0.3px; }
   .wt-stop-train {
@@ -1379,36 +1374,37 @@
 
   /* ---- Tarea 3: Valoraciones & experiencias ---- */
   .wt-reviews-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px;
+    max-width: 1200px; margin-left: auto; margin-right: auto;
   }
   .wt-review-card {
     position: relative;
     background: linear-gradient(160deg, rgba(26,22,48,0.65) 0%, var(--surface) 70%);
     border: 1px solid rgba(124,58,237,0.20);
     border-left: 3px solid rgba(124,58,237,0.75);
-    border-radius: 16px; padding: 24px 22px 20px;
+    border-radius: 14px; padding: 20px 18px 16px;
     transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   }
   .wt-review-card:hover {
     border-color: rgba(124,58,237,0.55);
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(124,58,237,0.18);
+    box-shadow: 0 10px 26px rgba(124,58,237,0.16);
   }
-  .wt-review-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .wt-review-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
   .wt-avatar {
-    width: 50px; height: 50px; border-radius: 50%; flex: 0 0 auto;
-    display: grid; place-items: center; font-weight: 800; font-size: 17px; color: #fff;
+    width: 42px; height: 42px; border-radius: 50%; flex: 0 0 auto;
+    display: grid; place-items: center; font-weight: 800; font-size: 14px; color: #fff;
     background: linear-gradient(135deg, var(--primary), var(--primary2));
-    box-shadow: 0 0 18px rgba(124,58,237,0.4);
+    box-shadow: 0 0 14px rgba(124,58,237,0.35);
   }
-  .wt-review-name { font-size: 16px; font-weight: 800; margin: 0; letter-spacing: -0.3px; }
-  .wt-review-route { font-size: 12.5px; color: var(--muted); margin: 3px 0 0; }
+  .wt-review-name { font-size: 14px; font-weight: 800; margin: 0; letter-spacing: -0.2px; }
+  .wt-review-route { font-size: 11.5px; color: var(--muted); margin: 2px 0 0; }
   .wt-momento {
-    display: block; color: var(--primary2); font-weight: 800; font-size: 14px; margin-bottom: 6px;
-    text-shadow: 0 0 12px rgba(167,139,250,0.45);
+    display: block; color: var(--primary2); font-weight: 800; font-size: 12px; margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(167,139,250,0.4);
   }
-  .wt-review-body { color: var(--text); font-size: 14px; line-height: 1.65; margin: 0; }
-  .wt-stars { color: var(--primary2); font-size: 14px; letter-spacing: 2px; margin-top: 14px; }
+  .wt-review-body { color: var(--text); font-size: 0.95rem; line-height: 1.5; margin: 0; }
+  .wt-stars { color: var(--primary2); font-size: 13px; letter-spacing: 2px; margin-top: 10px; }
 
   /* ---- Responsive (igual breakpoint que la web: 1 columna en móvil) ---- */
   @media (max-width: 720px) {
@@ -1536,6 +1532,145 @@
       <button id="scenicToggle" class="scenic-toggle" onclick="toggleScenic()" data-i18n="scenic_more">Ver más rutas</button>
     </div>
   </section>
+  <!-- Descubramos juntos (comunidad) -->
+  <section class="section" id="discover">
+    <p class="section-label" data-i18n="disc_label">Community</p>
+    <h2><span data-i18n="disc_title1">Let's discover</span><br /><span data-i18n="disc_title2">together.</span></h2>
+    <p class="lead" data-i18n="disc_lead">Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.</p>
+
+    <div class="discover-grid">
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Austria</div>
+        <div class="discover-place">Hallstatt</div>
+        <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
+        <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
+        <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Slovenia</div>
+        <div class="discover-place">Lake Bled</div>
+        <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
+        <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
+        <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Portugal</div>
+        <div class="discover-place">Sintra</div>
+        <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
+        <div class="discover-season">Best: year-round · easy day trip</div>
+        <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">France</div>
+        <div class="discover-place">Colmar</div>
+        <div class="discover-route">🚂 Alsace regional line</div>
+        <div class="discover-season">Best: Dec (markets) &amp; spring</div>
+        <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+      <div class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Switzerland</div>
+        <div class="discover-place">Lauterbrunnen</div>
+        <div class="discover-route">🚂 Mountain rail via Interlaken</div>
+        <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
+        <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
+        <div class="discover-by">★ Curated by WoW Train</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arma tu propia aventura — justo debajo de la cuadrícula de destinos -->
+  <section class="section wt-adventure" id="adventure">
+  <p class="section-label" data-i18n="adv_label">Plan your adventure</p>
+  <h2><span data-i18n="adv_title1">Build your own</span><br /><span data-i18n="adv_title2">adventure.</span></h2>
+  <p class="lead" data-i18n="adv_lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
+
+  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
+    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
+      <span data-i18n="route_classic">Classic Route (France–Italy)</span>
+    </button>
+    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
+      <span data-i18n="route_alpine">Alpine Route (Switzerland–Austria)</span>
+    </button>
+    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
+      <span data-i18n="route_imperial">Imperial Route (Central Europe)</span>
+    </button>
+  </div>
+
+  <div class="wt-timeline-wrap">
+    <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
+    <div class="wt-timeline-head" id="wt-timeline-head" hidden>
+      <h3 id="wt-route-title"></h3>
+      <span class="wt-route-meta" id="wt-route-meta"></span>
+    </div>
+    <p class="wt-timeline-empty" id="wt-timeline-empty" data-i18n="tl_empty" hidden>Tap a route to unfold its timeline.</p>
+    <ol class="wt-timeline" id="wt-timeline"></ol>
+    <div id="wt-cta-slot"></div>
+  </div>
+  </section>
+
+  <section class="section" id="discover-cta-wrap">
+    <div class="discover-cta">
+      <h3 data-i18n="disc_cta_title">Know a place only the train reveals?</h3>
+      <p data-i18n="disc_cta_text">Share the route, the town, the hidden stop — and help other travelers discover it too.</p>
+      <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
+    </div>
+  </section>
+
+  <section class="section wt-reviews">
+  <p class="section-label" data-i18n="reviews_label">Traveler voices</p>
+  <h2><span data-i18n="reviews_title1">Ratings &amp;</span><br /><span data-i18n="reviews_title2">experiences.</span></h2>
+  <p class="lead" data-i18n="reviews_lead">What they really remember isn't the destination — it's the moment the train changed everything.</p>
+
+  <div class="wt-reviews-grid">
+    <article class="wt-review-card">
+      <div class="wt-review-head">
+        <div class="wt-avatar">LM</div>
+        <div>
+          <p class="wt-review-name">Lucía, France</p>
+          <p class="wt-review-route" data-i18n="rv1_route">Paris → Milan · Classic Route</p>
+        </div>
+      </div>
+      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
+      <p class="wt-review-body" data-i18n="rv1_body">Pure comfort. I crossed the Alps with a hot coffee and my laptop open — arrived in Milan rested, not wrecked like after a flight.</p>
+      <div class="wt-stars">★★★★★</div>
+    </article>
+
+    <article class="wt-review-card">
+      <div class="wt-review-head">
+        <div class="wt-avatar">DK</div>
+        <div>
+          <p class="wt-review-name">David, Germany</p>
+          <p class="wt-review-route" data-i18n="rv2_route">Zurich → Vienna · Alpine Route</p>
+        </div>
+      </div>
+      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
+      <p class="wt-review-body" data-i18n="rv2_body">Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.</p>
+      <div class="wt-stars">★★★★★</div>
+    </article>
+
+    <article class="wt-review-card">
+      <div class="wt-review-head">
+        <div class="wt-avatar">SA</div>
+        <div>
+          <p class="wt-review-name">Sofía, Spain</p>
+          <p class="wt-review-route" data-i18n="rv3_route">Prague → Budapest · Imperial Route</p>
+        </div>
+      </div>
+      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
+      <p class="wt-review-body" data-i18n="rv3_body">The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.</p>
+      <div class="wt-stars">★★★★★</div>
+    </article>
+  </div>
+</section>
 
   <!-- Travel essentials (partners) — barra dividida, alto en la página -->
   <section class="section" id="partners">
@@ -1700,146 +1835,6 @@
         </div>
       </div>
     </div>
-
-  <!-- Descubramos juntos (comunidad) -->
-  <section class="section" id="discover">
-    <p class="section-label" data-i18n="disc_label">Community</p>
-    <h2><span data-i18n="disc_title1">Let's discover</span><br /><span data-i18n="disc_title2">together.</span></h2>
-    <p class="lead" data-i18n="disc_lead">Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.</p>
-
-    <div class="discover-grid">
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Austria</div>
-        <div class="discover-place">Hallstatt</div>
-        <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
-        <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
-        <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Slovenia</div>
-        <div class="discover-place">Lake Bled</div>
-        <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
-        <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
-        <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Portugal</div>
-        <div class="discover-place">Sintra</div>
-        <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
-        <div class="discover-season">Best: year-round · easy day trip</div>
-        <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">France</div>
-        <div class="discover-place">Colmar</div>
-        <div class="discover-route">🚂 Alsace regional line</div>
-        <div class="discover-season">Best: Dec (markets) &amp; spring</div>
-        <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Switzerland</div>
-        <div class="discover-place">Lauterbrunnen</div>
-        <div class="discover-route">🚂 Mountain rail via Interlaken</div>
-        <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
-        <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Arma tu propia aventura — justo debajo de la cuadrícula de destinos -->
-  <section class="section wt-adventure" id="adventure">
-  <p class="section-label" data-i18n="adv_label">Plan your adventure</p>
-  <h2><span data-i18n="adv_title1">Build your own</span><br /><span data-i18n="adv_title2">adventure.</span></h2>
-  <p class="lead" data-i18n="adv_lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
-
-  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
-    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
-      <span class="wt-route-num">I</span><span data-i18n="route_classic">Classic Route (France–Italy)</span>
-    </button>
-    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
-      <span class="wt-route-num">II</span><span data-i18n="route_alpine">Alpine Route (Switzerland–Austria)</span>
-    </button>
-    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
-      <span class="wt-route-num">III</span><span data-i18n="route_imperial">Imperial Route (Central Europe)</span>
-    </button>
-  </div>
-
-  <div class="wt-timeline-wrap">
-    <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
-    <div class="wt-timeline-head" id="wt-timeline-head" hidden>
-      <h3 id="wt-route-title"></h3>
-      <span class="wt-route-meta" id="wt-route-meta"></span>
-    </div>
-    <p class="wt-timeline-empty" id="wt-timeline-empty" data-i18n="tl_empty">Tap a route to unfold its timeline.</p>
-    <ol class="wt-timeline" id="wt-timeline"></ol>
-    <div id="wt-cta-slot"></div>
-  </div>
-  </section>
-
-  <section class="section" id="discover-cta-wrap">
-    <div class="discover-cta">
-      <h3 data-i18n="disc_cta_title">Know a place only the train reveals?</h3>
-      <p data-i18n="disc_cta_text">Share the route, the town, the hidden stop — and help other travelers discover it too.</p>
-      <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
-    </div>
-  </section>
-
-  <section class="section wt-reviews">
-  <p class="section-label" data-i18n="reviews_label">Traveler voices</p>
-  <h2><span data-i18n="reviews_title1">Ratings &amp;</span><br /><span data-i18n="reviews_title2">experiences.</span></h2>
-  <p class="lead" data-i18n="reviews_lead">What they really remember isn't the destination — it's the moment the train changed everything.</p>
-
-  <div class="wt-reviews-grid">
-    <article class="wt-review-card">
-      <div class="wt-review-head">
-        <div class="wt-avatar">LM</div>
-        <div>
-          <p class="wt-review-name">Lucía, France</p>
-          <p class="wt-review-route" data-i18n="rv1_route">Paris → Milan · Classic Route</p>
-        </div>
-      </div>
-      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
-      <p class="wt-review-body" data-i18n="rv1_body">Pure comfort. I crossed the Alps with a hot coffee and my laptop open — arrived in Milan rested, not wrecked like after a flight.</p>
-      <div class="wt-stars">★★★★★</div>
-    </article>
-
-    <article class="wt-review-card">
-      <div class="wt-review-head">
-        <div class="wt-avatar">DK</div>
-        <div>
-          <p class="wt-review-name">David, Germany</p>
-          <p class="wt-review-route" data-i18n="rv2_route">Zurich → Vienna · Alpine Route</p>
-        </div>
-      </div>
-      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
-      <p class="wt-review-body" data-i18n="rv2_body">Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.</p>
-      <div class="wt-stars">★★★★★</div>
-    </article>
-
-    <article class="wt-review-card">
-      <div class="wt-review-head">
-        <div class="wt-avatar">SA</div>
-        <div>
-          <p class="wt-review-name">Sofía, Spain</p>
-          <p class="wt-review-route" data-i18n="rv3_route">Prague → Budapest · Imperial Route</p>
-        </div>
-      </div>
-      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
-      <p class="wt-review-body" data-i18n="rv3_body">The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.</p>
-      <div class="wt-stars">★★★★★</div>
-    </article>
-  </div>
-</section>
 
   <!-- Features -->
   <section class="section" id="features">
@@ -2791,51 +2786,180 @@
 
   const ROUTES = {
     classic: {
-      title: "Ruta Clásica · France–Italy",
-      meta: "Paris → Lyon → Turin → Milan · high-speed, ~7–8 h",
+      title: {
+        en: "Classic Route · France–Italy",
+        es: "Ruta Clásica · Francia–Italia",
+        fr: "Route Classique · France–Italie",
+        de: "Klassische Route · Frankreich–Italien",
+        it: "Percorso Classico · Francia–Italia",
+        pt: "Rota Clássica · França–Itália"
+      },
+      meta: {
+        en: "Paris → Lyon → Turin → Milan · high-speed, ~7–8 h",
+        es: "Paris → Lyon → Turín → Milán · alta velocidad, ~7–8 h",
+        fr: "Paris → Lyon → Turin → Milan · grande vitesse, ~7–8 h",
+        de: "Paris → Lyon → Turin → Mailand · Hochgeschwindigkeit, ~7–8 Std.",
+        it: "Parigi → Lione → Torino → Milano · alta velocità, ~7–8 h",
+        pt: "Paris → Lyon → Turim → Milão · alta velocidade, ~7–8 h"
+      },
       from: "paris", to: "milan",
       stops: [
-        { station: "Paris (Gare de Lyon)", train: "TGV INOUI",
-          desc: "You set off under the iron vault of Gare de Lyon. The TGV hurls you south at 300 km/h as the city dissolves into vineyards." },
-        { station: "Lyon (Part-Dieu)", train: "TGV → Frecciarossa link",
-          desc: "France's gastronomic capital. You switch onto the alpine corridor — ahead lie the Fréjus tunnel and the Italian border." },
-        { station: "Turin (Porta Susa)", train: "Frecciarossa",
-          desc: "First Italian breath. Baroque arcades, the Alps at your back, and Trenitalia's red bullet to carry you the final leg." },
-        { station: "Milan (Centrale)", train: "Arrival",
-          desc: "You step out into Milan's cathedral-station. Fashion, the Duomo and a victory espresso: your Ruta Clásica is complete." }
+        {
+          station: "Paris (Gare de Lyon)", train: "TGV INOUI",
+          desc_en: "You set off under the iron vault of Gare de Lyon. The TGV hurls you south at 300 km/h as the city dissolves into vineyards.",
+          desc_es: "Partes bajo la bóveda de hierro de la Gare de Lyon. El TGV te lanza hacia el sur a 300 km/h mientras la ciudad se disuelve en viñedos.",
+          desc_fr: "Vous partez sous la voûte de fer de la Gare de Lyon. Le TGV vous propulse vers le sud à 300 km/h tandis que la ville se fond dans les vignes.",
+          desc_de: "Sie starten unter dem Eisengewölbe des Gare de Lyon. Der TGV schleudert Sie mit 300 km/h gen Süden, während die Stadt in Weinbergen verblasst.",
+          desc_it: "Parti sotto la volta di ferro della Gare de Lyon. Il TGV ti lancia a sud a 300 km/h mentre la città svanisce tra i vigneti.",
+          desc_pt: "Partes sob a abóbada de ferro da Gare de Lyon. O TGV lança-te para sul a 300 km/h enquanto a cidade se dissolve em vinhedos."
+        },
+        {
+          station: "Lyon (Part-Dieu)", train: "TGV → Frecciarossa link",
+          desc_en: "France's gastronomic capital. You switch onto the alpine corridor — ahead lie the Fréjus tunnel and the Italian border.",
+          desc_es: "La capital gastronómica de Francia. Tomás el corredor alpino — por delante el túnel de Fréjus y la frontera italiana.",
+          desc_fr: "La capitale gastronomique de France. Vous prenez le corridor alpin — devant vous, le tunnel du Fréjus et la frontière italienne.",
+          desc_de: "Frankreichs gastronomische Hauptstadt. Sie wechseln auf den Alpenkorridor — vor Ihnen liegen der Fréjus-Tunnel und die italienische Grenze.",
+          desc_it: "La capitale gastronomica della Francia. Si prende il corridoio alpino — avanti il tunnel del Fréjus e il confine italiano.",
+          desc_pt: "A capital gastronómica de França. Trocas para o corredor alpino — à frente o túnel do Fréjus e a fronteira italiana."
+        },
+        {
+          station: "Turin (Porta Susa)", train: "Frecciarossa",
+          desc_en: "First Italian breath. Baroque arcades, the Alps at your back, and Trenitalia's red bullet to carry you the final leg.",
+          desc_es: "Primer aire italiano. Arcadas barrocas, los Alpes a tu espalda, y la bala roja de Trenitalia para el último tramo.",
+          desc_fr: "Premier souffle italien. Arcades baroques, les Alpes dans votre dos, et le TGV rouge de Trenitalia pour la dernière étape.",
+          desc_de: "Erster italienischer Atemzug. Barocke Arkaden, die Alpen im Rücken, und Trenitalia's roter Bullet für den letzten Abschnitt.",
+          desc_it: "Primo respiro italiano. Portici barocchi, le Alpi alle spalle, e il Frecciarossa per l'ultima tappa.",
+          desc_pt: "Primeiro fôlego italiano. Arcadas barrocas, os Alpes às costas, e o bala vermelho da Trenitalia para o trecho final."
+        },
+        {
+          station: "Milan (Centrale)", train: "Arrival",
+          desc_en: "You step out into Milan's cathedral-station. Fashion, the Duomo and a victory espresso: your Classic Route is complete.",
+          desc_es: "Salís a la estación-catedral de Milán. Moda, el Duomo y un espresso de victoria: tu Ruta Clásica está completa.",
+          desc_fr: "Vous sortez dans la gare-cathédrale de Milan. Mode, le Dôme et un espresso de victoire : votre Route Classique est accomplie.",
+          desc_de: "Sie treten in Mailands Kathedralenbahnhof hinaus. Mode, der Dom und ein Sieges-Espresso: Ihre Klassische Route ist vollbracht.",
+          desc_it: "Esci nella stazione-cattedrale di Milano. Moda, il Duomo e un espresso della vittoria: il tuo Percorso Classico è completo.",
+          desc_pt: "Sais para a estação-catedral de Milão. Moda, o Duomo e um espresso da vitória: a tua Rota Clássica está completa."
+        }
       ]
     },
     alpine: {
-      title: "Ruta Alpina · Switzerland–Austria",
-      meta: "Zurich → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB",
+      title: {
+        en: "Alpine Route · Switzerland–Austria",
+        es: "Ruta Alpina · Suiza–Austria",
+        fr: "Route Alpine · Suisse–Autriche",
+        de: "Alpine Route · Schweiz–Österreich",
+        it: "Percorso Alpino · Svizzera–Austria",
+        pt: "Rota Alpina · Suíça–Áustria"
+      },
+      meta: {
+        en: "Zurich → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB",
+        es: "Zúrich → Sargans → Innsbruck → Viena · Railjet ÖBB/SBB",
+        fr: "Zurich → Sargans → Innsbruck → Vienne · Railjet ÖBB/SBB",
+        de: "Zürich → Sargans → Innsbruck → Wien · Railjet ÖBB/SBB",
+        it: "Zurigo → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB",
+        pt: "Zurique → Sargans → Innsbruck → Viena · Railjet ÖBB/SBB"
+      },
       from: "zurich", to: "vienna",
       stops: [
-        { station: "Zurich (HB)", train: "Railjet / EC",
-          desc: "The most punctual station on earth waves you off. The train skirts postcard lakes before burrowing into the heart of the Alps." },
-        { station: "Sargans", train: "EuroCity",
-          desc: "Alpine gateway between Switzerland and the Rhine valley. Snow peaks rise on both sides of the window, almost close enough to touch." },
-        { station: "Innsbruck (Hbf)", train: "Railjet ÖBB",
-          desc: "Tyrol at its purest — the Olympic city cradled by mountains. Here Austria's imperial train takes over toward the east." },
-        { station: "Vienna (Hbf)", train: "Arrival",
-          desc: "You reach the capital of waltzes after crossing Europe's spine. A well-earned Viennese coffee: alpine mission accomplished." }
+        {
+          station: "Zurich (HB)", train: "Railjet / EC",
+          desc_en: "The most punctual station on earth waves you off. The train skirts postcard lakes before burrowing into the heart of the Alps.",
+          desc_es: "La estación más puntual de la tierra te despide. El tren bordea lagos de postal antes de adentrarse en el corazón de los Alpes.",
+          desc_fr: "La gare la plus ponctuelle du monde vous dit au revoir. Le train longe des lacs de carte postale avant de plonger au cœur des Alpes.",
+          desc_de: "Der pünktlichste Bahnhof der Welt verabschiedet Sie. Der Zug umfährt malerische Seen, bevor er ins Herz der Alpen taucht.",
+          desc_it: "La stazione più puntuale della terra ti saluta. Il treno costeggia laghi da cartolina prima di inoltrarsi nel cuore delle Alpi.",
+          desc_pt: "A estação mais pontual do mundo despede-se de ti. O comboio contorna lagos de postal antes de mergulhar no coração dos Alpes."
+        },
+        {
+          station: "Sargans", train: "EuroCity",
+          desc_en: "Alpine gateway between Switzerland and the Rhine valley. Snow peaks rise on both sides of the window, almost close enough to touch.",
+          desc_es: "Puerta alpina entre Suiza y el valle del Rin. Cimas nevadas se alzan a ambos lados de la ventanilla, casi al alcance de la mano.",
+          desc_fr: "Porte alpine entre la Suisse et la vallée du Rhin. Des sommets enneigés s'élèvent des deux côtés de la fenêtre, presque à portée de main.",
+          desc_de: "Alpentor zwischen der Schweiz und dem Rheintal. Schneebedeckte Gipfel erheben sich auf beiden Seiten des Fensters, fast zum Greifen nah.",
+          desc_it: "Porta alpina tra la Svizzera e la valle del Reno. Vette innevate si alzano su entrambi i lati del finestrino, quasi a portata di mano.",
+          desc_pt: "Porta alpina entre a Suíça e o vale do Reno. Picos nevados erguem-se em ambos os lados da janela, quase ao alcance da mão."
+        },
+        {
+          station: "Innsbruck (Hbf)", train: "Railjet ÖBB",
+          desc_en: "Tyrol at its purest — the Olympic city cradled by mountains. Here Austria's imperial train takes over toward the east.",
+          desc_es: "El Tirol en estado puro — la ciudad olímpica entre montañas. Aquí el tren imperial austriaco toma el relevo hacia el este.",
+          desc_fr: "Le Tyrol dans toute sa splendeur — la ville olympique entre les montagnes. Ici, le train impérial autrichien prend le relais vers l'est.",
+          desc_de: "Tirol in seiner reinsten Form — die Olympiastadt eingebettet in Berge. Hier übernimmt Österreichs kaiserlicher Zug nach Osten.",
+          desc_it: "Il Tirolo nella sua essenza — la città olimpica abbracciata dalle montagne. Qui il treno imperiale austriaco prende il comando verso est.",
+          desc_pt: "O Tirol na sua forma mais pura — a cidade olímpica embalada pelas montanhas. Aqui o comboio imperial austríaco assume o caminho para leste."
+        },
+        {
+          station: "Vienna (Hbf)", train: "Arrival",
+          desc_en: "You reach the capital of waltzes after crossing Europe's spine. A well-earned Viennese coffee: alpine mission accomplished.",
+          desc_es: "Llegás a la capital de los valses tras cruzar la espina de Europa. Un merecido café vienés: misión alpina cumplida.",
+          desc_fr: "Vous arrivez à la capitale des valses après avoir traversé l'épine de l'Europe. Un café viennois bien mérité : mission alpine accomplie.",
+          desc_de: "Sie erreichen die Walzerstadt nach dem Überqueren von Europas Rückgrat. Ein wohlverdienter Wiener Kaffee: Alpenmission erfüllt.",
+          desc_it: "Arrivi alla capitale dei valzer dopo aver attraversato la spina dorsale d'Europa. Un meritato caffè viennese: missione alpina compiuta.",
+          desc_pt: "Chegas à capital das valsas após cruzar a espinha dorsal da Europa. Um bem-merecido café vienense: missão alpina cumprida."
+        }
       ]
     },
     imperial: {
-      title: "Ruta Imperial · Central Europe",
-      meta: "Prague → Brno → Vienna → Budapest · Railjet / EuroCity",
+      title: {
+        en: "Imperial Route · Central Europe",
+        es: "Ruta Imperial · Europa Central",
+        fr: "Route Impériale · Europe Centrale",
+        de: "Imperiale Route · Mitteleuropa",
+        it: "Percorso Imperiale · Europa Centrale",
+        pt: "Rota Imperial · Europa Central"
+      },
+      meta: {
+        en: "Prague → Brno → Vienna → Budapest · Railjet / EuroCity",
+        es: "Praga → Brno → Viena → Budapest · Railjet / EuroCity",
+        fr: "Prague → Brno → Vienne → Budapest · Railjet / EuroCity",
+        de: "Prag → Brno → Wien → Budapest · Railjet / EuroCity",
+        it: "Praga → Brno → Vienna → Budapest · Railjet / EuroCity",
+        pt: "Praga → Brno → Viena → Budapeste · Railjet / EuroCity"
+      },
       from: "prague", to: "budapest",
       stops: [
-        { station: "Prague (hl. n.)", train: "Railjet",
-          desc: "The city of a hundred spires falls behind. The Railjet sweeps into Moravia past castles and golden fields." },
-        { station: "Brno (hl. n.)", train: "EuroCity",
-          desc: "Moravian heart and a historic rail hub of the Empire. A brief stop before crossing into Austrian lands." },
-        { station: "Vienna (Hbf)", train: "Railjet ÖBB",
-          desc: "The old Habsburg capital — palaces, opera and monumental platforms. From here, the final hop toward the Danube." },
-        { station: "Budapest (Keleti)", train: "Arrival",
-          desc: "Keleti station, a 19th-century jewel, welcomes you. Buda and Pest split by the river: the imperial finale of your adventure." }
+        {
+          station: "Prague (hl. n.)", train: "Railjet",
+          desc_en: "The city of a hundred spires falls behind. The Railjet sweeps into Moravia past castles and golden fields.",
+          desc_es: "La ciudad de las cien torres queda atrás. El Railjet se adentra en Moravia entre castillos y campos dorados.",
+          desc_fr: "La ville aux cent clochers reste derrière. Le Railjet s'élance en Moravie entre châteaux et champs dorés.",
+          desc_de: "Die Stadt der hundert Türme bleibt zurück. Der Railjet fährt durch Mähren an Burgen und goldenen Feldern vorbei.",
+          desc_it: "La città delle cento guglie rimane indietro. Il Railjet si lancia in Moravia tra castelli e campi dorati.",
+          desc_pt: "A cidade das cem torres fica para trás. O Railjet avança pela Morávia entre castelos e campos dourados."
+        },
+        {
+          station: "Brno (hl. n.)", train: "EuroCity",
+          desc_en: "Moravian heart and a historic rail hub of the Empire. A brief stop before crossing into Austrian lands.",
+          desc_es: "Corazón de Moravia y nudo ferroviario histórico del Imperio. Una breve parada antes de cruzar a tierras austriacas.",
+          desc_fr: "Cœur de la Moravie et carrefour ferroviaire historique de l'Empire. Un bref arrêt avant de passer en terres autrichiennes.",
+          desc_de: "Mährisches Herz und historischer Eisenbahnknotenpunkt des Reiches. Ein kurzer Halt, bevor es nach Österreich geht.",
+          desc_it: "Cuore della Moravia e storico nodo ferroviario dell'Impero. Una breve sosta prima di entrare in terra austriaca.",
+          desc_pt: "Coração da Morávia e histórico nó ferroviário do Império. Uma breve paragem antes de cruzar para terras austríacas."
+        },
+        {
+          station: "Vienna (Hbf)", train: "Railjet ÖBB",
+          desc_en: "The old Habsburg capital — palaces, opera and monumental platforms. From here, the final hop toward the Danube.",
+          desc_es: "La antigua capital habsburga — palacios, ópera y andenes monumentales. Desde aquí, el último salto hacia el Danubio.",
+          desc_fr: "L'ancienne capitale des Habsbourg — palais, opéra et quais monumentaux. D'ici, le dernier saut vers le Danube.",
+          desc_de: "Die alte Habsburger Hauptstadt — Paläste, Oper und monumentale Bahnsteige. Von hier der letzte Sprung zur Donau.",
+          desc_it: "L'antica capitale asburgica — palazzi, opera e banchine monumentali. Da qui, l'ultimo salto verso il Danubio.",
+          desc_pt: "A antiga capital habsburga — palácios, ópera e plataformas monumentais. Daqui, o último salto em direção ao Danúbio."
+        },
+        {
+          station: "Budapest (Keleti)", train: "Arrival",
+          desc_en: "Keleti station, a 19th-century jewel, welcomes you. Buda and Pest split by the river: the imperial finale of your adventure.",
+          desc_es: "La estación Keleti, joya del siglo XIX, te recibe. Buda y Pest separadas por el río: el final imperial de tu aventura.",
+          desc_fr: "La gare Keleti, joyau du XIXe siècle, vous accueille. Buda et Pest séparées par le fleuve : le final impérial de votre aventure.",
+          desc_de: "Der Keleti-Bahnhof, ein Juwel des 19. Jahrhunderts, empfängt Sie. Buda und Pest durch den Fluss getrennt: das imperiale Finale Ihres Abenteuers.",
+          desc_it: "La stazione Keleti, gioiello del XIX secolo, ti dà il benvenuto. Buda e Pest separate dal fiume: il finale imperiale della tua avventura.",
+          desc_pt: "A estação Keleti, joia do século XIX, dá-te as boas-vindas. Buda e Pest separadas pelo rio: o final imperial da tua aventura."
+        }
       ]
     }
   };
+
+  // Clave de ruta actualmente visible (para re-renderizar al cambiar idioma)
+  let _activeRouteKey = null;
 
   const buttons  = document.querySelectorAll(".wt-route-btn");
   const timeline = document.getElementById("wt-timeline");
@@ -2847,6 +2971,7 @@
   const closeBtn = document.getElementById("wt-close");
 
   function closeTimeline() {
+    _activeRouteKey = null;
     buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
     head.hidden = true;
     timeline.innerHTML = "";
@@ -2859,35 +2984,43 @@
   function render(key) {
     const route = ROUTES[key];
     if (!route) return;
+    _activeRouteKey = key;
+    const lang = document.documentElement.lang || 'en';
+    const safeLang = route.title[lang] ? lang : 'en';
     emptyEl.hidden = true;
     head.hidden = false;
-    titleEl.textContent = route.title;
-    metaEl.textContent = route.meta;
+    titleEl.textContent = route.title[safeLang];
+    metaEl.textContent  = route.meta[safeLang];
     timeline.innerHTML = "";
     route.stops.forEach((stop, i) => {
+      const desc = stop['desc_' + safeLang] || stop.desc_en;
       const li = document.createElement("li");
       li.className = "wt-stop";
       li.style.animationDelay = (i * 0.12) + "s";
       li.innerHTML =
         '<p class="wt-stop-station">' + stop.station + '</p>' +
         '<span class="wt-stop-train">&#8594; ' + stop.train + '</span>' +
-        '<p class="wt-stop-desc">' + stop.desc + '</p>';
+        '<p class="wt-stop-desc">' + desc + '</p>';
       timeline.appendChild(li);
     });
     // CTA dinámico — texto bilingüe, sin mostrar el nombre del operador en pantalla.
     const url = buildTrainlineUrl(route);
-    const _lang = document.documentElement.lang || 'en';
-    const _ctaText = (_lang === 'es' || _lang === 'pt')
+    const _ctaText = (lang === 'es' || lang === 'pt')
       ? 'Ver horarios y tarifas'
-      : (_lang === 'fr') ? 'Voir horaires et tarifs'
-      : (_lang === 'de') ? 'Fahrpläne und Tarife ansehen'
-      : (_lang === 'it') ? 'Vedi orari e tariffe'
+      : (lang === 'fr') ? 'Voir horaires et tarifs'
+      : (lang === 'de') ? 'Fahrpläne und Tarife ansehen'
+      : (lang === 'it') ? 'Vedi orari e tariffe'
       : 'Check schedules and rates';
     ctaSlot.innerHTML =
       '<a class="wt-tl-cta" href="' + url + '" target="_blank" rel="noopener sponsored">' +
       _ctaText + ' <span class="wt-tl-arrow">→</span></a>';
     closeBtn.hidden = false;
   }
+
+  // Exponer para que applyLang() re-renderice la ruta activa al cambiar idioma
+  window.wtRefreshTimeline = function () {
+    if (_activeRouteKey) render(_activeRouteKey);
+  };
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -2896,6 +3029,11 @@
       render(btn.dataset.route);
     });
   });
+
+  // Auto-renderizar la primera ruta al cargar para evitar la caja vacía
+  const firstBtn = document.querySelector('.wt-route-btn[data-route="classic"]');
+  if (firstBtn) firstBtn.setAttribute("aria-pressed", "true");
+  render("classic");
 })();
 </script>
 </body>
