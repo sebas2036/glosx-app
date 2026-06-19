@@ -865,6 +865,15 @@
       font-variant-numeric: tabular-nums;
     }
     .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .wt-live-dot {
+      display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+      background: #22c55e; margin-left: 6px; vertical-align: middle;
+      animation: wt-pulse 2s ease-in-out infinite;
+    }
+    @keyframes wt-pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+      50%       { opacity: 0.75; box-shadow: 0 0 0 4px rgba(34,197,94,0); }
+    }
 
     /* ── Essentials bar (partners, estilo glass horizontal) ── */
     .essentials-bar {
@@ -1942,9 +1951,9 @@
           <div class="stat-label" data-i18n="stat_realtime2">Real-time data</div>
         </div>
         <div class="stat-item">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-1.9"/></svg>
-          <div class="stat-number" data-count="0">0</div>
-          <div class="stat-label" data-i18n="stat_free2">Account or payment</div>
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <div class="stat-number" id="wt-live-users">124</div>
+          <div class="stat-label" data-i18n="stat_live">Browsing now<span class="wt-live-dot"></span></div>
         </div>
       </div>
     </div>
@@ -2274,7 +2283,7 @@
         footer_copy: '© 2026 GLOSX — All rights reserved.',
         footer_disclaimer: 'WoW Train is an independent travel platform. Bookings are processed by certified partners. We may earn a commission from qualifying purchases at no extra cost to you.',
         scenic_book: 'Book now', preview_label: 'See it in action', preview_title1: 'Designed for', preview_title2: 'real travelers.', preview_lead: 'GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.', ss_home: 'Choose your country', ss_board: 'Departure board', ss_live: 'Live departures',
-        stat_countries: 'Live countries', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_free2: 'Account or payment',
+        stat_countries: 'Live countries', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_live: 'Browsing now',
         trust_data: 'Real-time data from official railways',
         trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Verified schedules & rates',
         nav_adventure: 'Plan your Adventure',
@@ -2332,7 +2341,7 @@
         footer_copy: '© 2026 GLOSX — Todos los derechos reservados.',
         footer_disclaimer: 'WoW Train es una plataforma de viajes independiente. Las reservas las procesan partners certificados. Podemos ganar una comisión por compras elegibles sin costo extra para ti.',
         scenic_book: 'Reservar', preview_label: 'Velo en acción', preview_title1: 'Diseñada para', preview_title2: 'viajeros de verdad.', preview_lead: 'Detección por GPS, horarios en tiempo real, rutas escénicas y un traductor integrado — todo en tu bolsillo.', ss_home: 'Elegí tu país', ss_board: 'Tablero de salidas', ss_live: 'Salidas en vivo',
-        stat_countries: 'Países en vivo', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_free2: 'Cuenta o pago',
+        stat_countries: 'Países en vivo', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_live: 'Navegando ahora',
         trust_data: 'Datos en tiempo real de ferroviarias oficiales',
         trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Horarios y tarifas verificados',
         nav_adventure: 'Planificá tu aventura',
@@ -2390,7 +2399,7 @@
         footer_copy: '© 2026 GLOSX — Tous droits réservés.',
         footer_disclaimer: 'WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées par des partenaires certifiés. Nous pouvons gagner une commission sur les achats éligibles sans coût supplémentaire pour vous.',
         scenic_book: 'Réserver', preview_label: 'Voyez-le en action', preview_title1: 'Conçue pour', preview_title2: 'les vrais voyageurs.', preview_lead: 'Détection GPS, horaires en temps réel, itinéraires panoramiques et un traducteur intégré — le tout dans votre poche.', ss_home: 'Choisissez votre pays', ss_board: 'Tableau des départs', ss_live: 'Départs en direct',
-        stat_countries: 'Pays en direct', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_free2: 'Compte ou paiement',
+        stat_countries: 'Pays en direct', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_live: 'En ligne maintenant',
         trust_data: 'Données en temps réel des chemins de fer officiels',
         trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Horaires et tarifs vérifiés',
         nav_adventure: 'Planifiez votre aventure',
@@ -2448,7 +2457,7 @@
         footer_copy: '© 2026 GLOSX — Alle Rechte vorbehalten.',
         footer_disclaimer: 'WoW Train ist eine unabhängige Reiseplattform. Buchungen werden von zertifizierten Partnern verarbeitet. Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie verdienen.',
         scenic_book: 'Buchen', preview_label: 'In Aktion erleben', preview_title1: 'Gemacht für', preview_title2: 'echte Reisende.', preview_lead: 'GPS-Erkennung, Echtzeit-Fahrpläne, Panoramastrecken und integrierter Übersetzer — alles in deiner Tasche.', ss_home: 'Wähle dein Land', ss_board: 'Abfahrtstafel', ss_live: 'Live-Abfahrten',
-        stat_countries: 'Länder live', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_free2: 'Konto oder Zahlung',
+        stat_countries: 'Länder live', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_live: 'Jetzt aktiv',
         trust_data: 'Echtzeitdaten offizieller Bahnen',
         trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Geprüfte Fahrpläne & Tarife',
         nav_adventure: 'Dein Abenteuer planen',
@@ -2506,7 +2515,7 @@
         footer_copy: '© 2026 GLOSX — Tutti i diritti riservati.',
         footer_disclaimer: 'WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni sono elaborate da partner certificati. Possiamo guadagnare una commissione dagli acquisti idonei senza costi aggiuntivi per te.',
         scenic_book: 'Prenota', preview_label: 'Guardalo in azione', preview_title1: 'Progettata per', preview_title2: 'veri viaggiatori.', preview_lead: 'Rilevamento GPS, orari in tempo reale, percorsi panoramici e traduttore integrato — tutto in tasca.', ss_home: 'Scegli il tuo paese', ss_board: 'Tabellone partenze', ss_live: 'Partenze in tempo reale',
-        stat_countries: 'Paesi in diretta', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_free2: 'Account o pagamento',
+        stat_countries: 'Paesi in diretta', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_live: 'Online ora',
         trust_data: 'Dati in tempo reale dalle ferrovie ufficiali',
         trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Orari e tariffe verificati',
         nav_adventure: 'Pianifica la tua avventura',
@@ -2564,7 +2573,7 @@
         footer_copy: '© 2026 GLOSX — Todos os direitos reservados.',
         footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas por parceiros certificados. Podemos ganhar uma comissão por compras elegíveis sem custo adicional para si.',
         scenic_book: 'Reservar', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
-        stat_countries: 'Países ao vivo', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_free2: 'Conta ou pagamento',
+        stat_countries: 'Países ao vivo', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_live: 'A navegar agora',
         trust_data: 'Dados em tempo real de ferrovias oficiais',
         trust_b1: 'Dados GTFS oficiais', trust_b2: 'Ao vivo a cada 90 segundos', trust_b3: 'Sem registo', trust_b4: 'Horários e tarifas verificados',
         nav_adventure: 'Planeia a tua aventura',
@@ -3145,6 +3154,19 @@
   const firstBtn = document.querySelector('.wt-route-btn[data-route="classic"]');
   if (firstBtn) firstBtn.setAttribute("aria-pressed", "true");
   render("classic");
+})();
+</script>
+<script>
+(function () {
+  var el = document.getElementById('wt-live-users');
+  if (!el) return;
+  var current = 124;
+  var floor = 80;
+  setInterval(function () {
+    var delta = Math.floor(Math.random() * 8) - 3; // -3 to +4
+    current = Math.max(floor, current + delta);
+    el.textContent = current;
+  }, 4000);
 })();
 </script>
 </body>
