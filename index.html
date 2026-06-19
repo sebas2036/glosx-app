@@ -1264,7 +1264,7 @@
       /* ── Descubramos juntos — 1 columna (móvil) ── */
       .discover-carousel { -webkit-mask-image: none; mask-image: none; }
       .discover-card { width: 260px; flex: 0 0 260px; height: 130px; }
-      .wt-route-btn { width: 100%; flex: 0 0 100%; height: 52px; }
+      .wt-route-btn { width: 100%; flex: 0 0 100%; height: 100px; }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
@@ -1312,33 +1312,51 @@
   }
   .wt-route-btn {
     position: relative; overflow: hidden;
-    flex: 1; min-width: 180px; height: 56px;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 12px;
+    width: 320px; flex: 0 0 320px; height: 120px;
+    display: flex; align-items: flex-end;
+    border-radius: 15px;
     appearance: none; cursor: pointer;
-    border: 1px solid rgba(168,85,247,0.25);
-    padding: 0 20px;
-    background: rgba(13,13,26,0.55);
-    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border: 2px solid rgba(168,85,247,0.25);
+    padding: 0; background: #0d0d1a;
     font-family: inherit;
-    transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .wt-route-btn::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+  .wt-route-btn[data-route="classic"]::before {
+    background-image: url('assets/img/tgv-route.jpg');
+  }
+  .wt-route-btn[data-route="alpine"]::before {
+    background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=640&q=80&auto=format&fit=crop');
+  }
+  .wt-route-btn[data-route="imperial"]::before {
+    background-image: url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=640&q=80&auto=format&fit=crop');
+  }
+  .wt-route-btn::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.72));
+    z-index: 1;
+    transition: background 0.3s ease;
   }
   .wt-route-btn span {
-    position: relative;
-    color: rgba(255,255,255,0.82); font-size: 13.5px; font-weight: 600;
-    letter-spacing: 0.2px;
+    position: relative; z-index: 2;
+    display: block; padding: 0 16px 14px;
+    color: #fff; font-size: 14px; font-weight: 700;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.85);
+    letter-spacing: 0.1px;
   }
-  .wt-route-btn:hover {
-    border-color: rgba(168,85,247,0.5);
-    background: rgba(168,85,247,0.08);
-    box-shadow: 0 0 12px rgba(168,85,247,0.2);
+  .wt-route-btn:hover::before { transform: scale(1.06); }
+  .wt-route-btn:hover { box-shadow: 0 0 15px rgba(168,85,247,0.4); border-color: #8b5cf6; }
+  .wt-route-btn[aria-pressed="true"] { border-color: #a855f7; box-shadow: 0 0 20px rgba(168,85,247,0.55); }
+  .wt-route-btn[aria-pressed="true"]::after {
+    background: linear-gradient(rgba(0,0,0,0.15), rgba(55,10,100,0.65));
   }
-  .wt-route-btn[aria-pressed="true"] {
-    border-color: #a855f7;
-    background: rgba(168,85,247,0.15);
-    box-shadow: 0 0 18px rgba(168,85,247,0.4);
-  }
-  .wt-route-btn[aria-pressed="true"] span { color: #fff; }
 
   .wt-timeline-wrap {
     position: relative;
