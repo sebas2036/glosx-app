@@ -1264,7 +1264,7 @@
       /* ── Descubramos juntos — 1 columna (móvil) ── */
       .discover-carousel { -webkit-mask-image: none; mask-image: none; }
       .discover-card { width: 260px; flex: 0 0 260px; height: 130px; }
-      .wt-route-btn { width: 100%; flex: 0 0 100%; height: 100px; }
+      .wt-route-btn { width: 100%; flex: 0 0 100%; height: 52px; }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
@@ -1312,74 +1312,56 @@
   }
   .wt-route-btn {
     position: relative; overflow: hidden;
-    width: 320px; flex: 0 0 320px; height: 120px;
-    display: flex; align-items: flex-end;
-    border-radius: 15px;
+    flex: 1; min-width: 180px; height: 56px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 12px;
     appearance: none; cursor: pointer;
-    border: 2px solid rgba(168,85,247,0.25);
-    padding: 0; background: #0d0d1a;
+    border: 1px solid rgba(168,85,247,0.25);
+    padding: 0 20px;
+    background: rgba(13,13,26,0.55);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
     font-family: inherit;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   }
-  /* Photo background layer */
-  .wt-route-btn::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-size: cover; background-position: center;
-    transition: transform 0.4s ease;
-    z-index: 0;
-  }
-  .wt-route-btn[data-route="classic"]::before {
-    background-image: url('assets/img/tgv-route.jpg');
-  }
-  .wt-route-btn[data-route="alpine"]::before {
-    background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=640&q=80&auto=format&fit=crop');
-  }
-  .wt-route-btn[data-route="imperial"]::before {
-    background-image: url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=640&q=80&auto=format&fit=crop');
-  }
-  /* Dark gradient overlay */
-  .wt-route-btn::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.72));
-    z-index: 1;
-    transition: background 0.3s ease;
-  }
-  /* Text label at bottom */
   .wt-route-btn span {
-    position: relative; z-index: 2;
-    display: block; padding: 0 16px 14px;
-    color: #fff; font-size: 14px; font-weight: 700;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.85);
-    letter-spacing: 0.1px;
+    position: relative;
+    color: rgba(255,255,255,0.82); font-size: 13.5px; font-weight: 600;
+    letter-spacing: 0.2px;
   }
-  /* Hover: zoom photo + purple glow */
-  .wt-route-btn:hover::before { transform: scale(1.06); }
   .wt-route-btn:hover {
-    box-shadow: 0 0 15px rgba(168,85,247,0.4);
-    border-color: #8b5cf6;
+    border-color: rgba(168,85,247,0.5);
+    background: rgba(168,85,247,0.08);
+    box-shadow: 0 0 12px rgba(168,85,247,0.2);
   }
-  /* Active state */
   .wt-route-btn[aria-pressed="true"] {
     border-color: #a855f7;
-    box-shadow: 0 0 20px rgba(168,85,247,0.55);
+    background: rgba(168,85,247,0.15);
+    box-shadow: 0 0 18px rgba(168,85,247,0.4);
   }
-  .wt-route-btn[aria-pressed="true"]::after {
-    background: linear-gradient(rgba(0,0,0,0.15), rgba(55,10,100,0.65));
-  }
+  .wt-route-btn[aria-pressed="true"] span { color: #fff; }
 
   .wt-timeline-wrap {
     position: relative;
-    background: linear-gradient(180deg, rgba(26,22,48,0.72) 0%, rgba(10,10,15,0.66) 100%);
-    backdrop-filter: blur(22px) saturate(140%);
-    -webkit-backdrop-filter: blur(22px) saturate(140%);
-    border: 1px solid rgba(139,92,246,0.18);
+    background-color: rgba(10,10,15,0.95);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(139,92,246,0.22);
     border-radius: 18px;
     padding: 28px clamp(20px, 4vw, 44px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.55);
     height: fit-content;
+    overflow: hidden;
   }
+  .wt-timeline-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.85));
+    z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .wt-timeline-head, #wt-timeline, #wt-cta-slot { position: relative; z-index: 1; }
+  .wt-close { z-index: 2; }
   .wt-timeline-head { margin-bottom: 22px; }
   .wt-timeline-head h3 { font-size: 22px; font-weight: 800; margin: 0 0 6px; letter-spacing: -0.3px; }
   .wt-timeline-head .wt-route-meta { color: var(--primary2); font-weight: 600; font-size: 14px; }
@@ -3174,12 +3156,19 @@
   const ctaSlot  = document.getElementById("wt-cta-slot");
   const closeBtn = document.getElementById("wt-close");
 
+  var ROUTE_BG = {
+    classic:  "url('assets/img/tgv-route.jpg')",
+    alpine:   "url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=1280&q=80&auto=format&fit=crop')",
+    imperial: "url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=1280&q=80&auto=format&fit=crop')"
+  };
+
   function closeTimeline() {
     _activeRouteKey = null;
     buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
     timeline.innerHTML = "";
     ctaSlot.innerHTML = "";
     closeBtn.hidden = true;
+    wrapEl.style.backgroundImage = '';
     wrapEl.hidden = true;
   }
   if (closeBtn) closeBtn.addEventListener("click", closeTimeline);
@@ -3190,6 +3179,7 @@
     _activeRouteKey = key;
     const lang = document.documentElement.lang || 'en';
     const safeLang = route.title[lang] ? lang : 'en';
+    wrapEl.style.backgroundImage = ROUTE_BG[key] || '';
     wrapEl.hidden = false;
     titleEl.textContent = route.title[safeLang];
     metaEl.textContent  = route.meta[safeLang];
