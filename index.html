@@ -1550,6 +1550,35 @@
       <button id="scenicToggle" class="scenic-toggle" onclick="toggleScenic()" data-i18n="scenic_more">Ver más rutas</button>
     </div>
   </section>
+  <!-- Arma tu propia aventura — justo debajo de la cuadrícula de destinos -->
+  <section class="section wt-adventure" id="adventure">
+  <p class="section-label" data-i18n="adv_label">Plan your adventure</p>
+  <h2><span data-i18n="adv_title1">Build your own</span><br /><span data-i18n="adv_title2">adventure.</span></h2>
+  <p class="lead" data-i18n="adv_lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
+
+  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
+    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
+      <span data-i18n="route_classic">Classic Route (France–Italy)</span>
+    </button>
+    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
+      <span data-i18n="route_alpine">Alpine Route (Switzerland–Austria)</span>
+    </button>
+    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
+      <span data-i18n="route_imperial">Imperial Route (Central Europe)</span>
+    </button>
+  </div>
+
+  <div class="wt-timeline-wrap" id="wt-wrap" hidden>
+    <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
+    <div class="wt-timeline-head" id="wt-timeline-head">
+      <h3 id="wt-route-title"></h3>
+      <span class="wt-route-meta" id="wt-route-meta"></span>
+    </div>
+    <ol class="wt-timeline" id="wt-timeline"></ol>
+    <div id="wt-cta-slot"></div>
+  </div>
+  </section>
+
   <!-- Descubramos juntos (comunidad) -->
   <section class="section" id="discover">
     <p class="section-label" data-i18n="disc_label">Community</p>
@@ -1657,35 +1686,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Arma tu propia aventura — justo debajo de la cuadrícula de destinos -->
-  <section class="section wt-adventure" id="adventure">
-  <p class="section-label" data-i18n="adv_label">Plan your adventure</p>
-  <h2><span data-i18n="adv_title1">Build your own</span><br /><span data-i18n="adv_title2">adventure.</span></h2>
-  <p class="lead" data-i18n="adv_lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
-
-  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
-    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
-      <span data-i18n="route_classic">Classic Route (France–Italy)</span>
-    </button>
-    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
-      <span data-i18n="route_alpine">Alpine Route (Switzerland–Austria)</span>
-    </button>
-    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
-      <span data-i18n="route_imperial">Imperial Route (Central Europe)</span>
-    </button>
-  </div>
-
-  <div class="wt-timeline-wrap" id="wt-wrap" hidden>
-    <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
-    <div class="wt-timeline-head" id="wt-timeline-head">
-      <h3 id="wt-route-title"></h3>
-      <span class="wt-route-meta" id="wt-route-meta"></span>
-    </div>
-    <ol class="wt-timeline" id="wt-timeline"></ol>
-    <div id="wt-cta-slot"></div>
-  </div>
   </section>
 
   <section class="section wt-reviews">
