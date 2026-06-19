@@ -165,6 +165,20 @@
     .nav-links a:hover { color: var(--text); }
     .nav-links a.nav-accent { color: #2dd4bf; font-weight: 700; }
     .nav-links a.nav-accent:hover { color: #5eead4; }
+    .nav-links a.nav-adventure {
+      color: #a855f7; font-weight: 700; position: relative;
+    }
+    .nav-links a.nav-adventure::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 1.5px; background: #a855f7;
+      box-shadow: 0 0 8px rgba(168,85,247,0.8);
+      transform: scaleX(0.7); transition: transform 0.22s ease, box-shadow 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-links a.nav-adventure:hover { color: #c084fc; }
+    .nav-links a.nav-adventure:hover::after {
+      transform: scaleX(1); box-shadow: 0 0 14px rgba(192,132,252,0.9);
+    }
 
     /* ── Botón hamburguesa (solo móvil) ── */
     .nav-toggle {
@@ -1282,9 +1296,15 @@
     border-color: transparent;
     box-shadow: 0 10px 32px rgba(124,58,237,0.45);
   }
-  .wt-route-btn .wt-emoji { margin-right: 8px; }
+  .wt-route-num {
+    font-style: italic; font-size: 11px; letter-spacing: 1.5px;
+    opacity: 0.65; margin-right: 9px;
+    font-variant-numeric: oldstyle-nums; color: var(--primary2);
+  }
+  .wt-route-btn[aria-pressed="true"] .wt-route-num { opacity: 0.9; color: #fff; }
 
   .wt-timeline-wrap {
+    position: relative;
     background: linear-gradient(180deg, rgba(26,22,48,0.72) 0%, rgba(10,10,15,0.66) 100%);
     backdrop-filter: blur(22px) saturate(140%);
     -webkit-backdrop-filter: blur(22px) saturate(140%);
@@ -1323,6 +1343,25 @@
     border-radius: 100px; padding: 3px 11px; margin: 0 0 8px;
   }
   .wt-stop-desc { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+  /* Botón de cierre (X) de la tarjeta de rutas */
+  .wt-close {
+    position: absolute; top: 14px; right: 14px;
+    width: 34px; height: 34px; padding: 0;
+    display: none; place-items: center; cursor: pointer;
+    font-family: inherit; font-size: 20px; line-height: 1; font-weight: 700;
+    color: var(--primary2);
+    border: 1px solid rgba(139,92,246,0.35); border-radius: 50%;
+    background: rgba(124,58,237,0.10);
+    transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+  }
+  .wt-close:not([hidden]) { display: grid; }
+  .wt-close:hover {
+    color: #fff; border-color: transparent; transform: rotate(90deg);
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    box-shadow: 0 6px 18px rgba(124,58,237,0.45);
+  }
+  .wt-close:focus-visible { outline: 2px solid var(--primary2); outline-offset: 2px; }
 
   /* CTA hacia Trainline al final de cada timeline */
   .wt-tl-cta {
@@ -1407,6 +1446,7 @@
     </button>
     <div class="nav-links" id="navLinks">
       <a href="#discover" class="nav-accent" data-i18n="nav_discover">Discover together</a>
+      <a href="#adventure" class="nav-adventure" data-i18n="nav_adventure">Plan your Adventure</a>
       <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
       <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
       <a href="#features" data-i18n="nav_features">Features</a>
@@ -1475,34 +1515,6 @@
   </div>
 
   </div><!-- /hero-bgwrap -->
-
-  <section class="section wt-adventure">
-  <p class="section-label">Plan with Trainline</p>
-  <h2>Build your own<br />adventure.</h2>
-  <p class="lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
-
-  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
-    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
-      <span class="wt-emoji">🍷</span>Ruta Clásica (Francia-Italia)
-    </button>
-    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
-      <span class="wt-emoji">🏔️</span>Ruta Alpina (Suiza-Austria)
-    </button>
-    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
-      <span class="wt-emoji">👑</span>Ruta Imperial (Europa Central)
-    </button>
-  </div>
-
-  <div class="wt-timeline-wrap">
-    <div class="wt-timeline-head" id="wt-timeline-head" hidden>
-      <h3 id="wt-route-title"></h3>
-      <span class="wt-route-meta" id="wt-route-meta"></span>
-    </div>
-    <p class="wt-timeline-empty" id="wt-timeline-empty">👆 Tap a route to unfold its timeline.</p>
-    <ol class="wt-timeline" id="wt-timeline"></ol>
-    <div id="wt-cta-slot"></div>
-  </div>
-</section>
 
   <!-- Scenic trains -->
   <section class="section" id="scenic">
@@ -1634,7 +1646,7 @@
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">Official GTFS data</span></span>
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="trust_b2">Live every 90 seconds</span></span>
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg><span data-i18n="trust_b3">No sign-up needed</span></span>
-      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">Book via Trainline</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">Verified schedules &amp; rates</span></span>
     </div>
   </div>
 
@@ -1742,30 +1754,62 @@
         <div class="discover-by">★ Curated by WoW Train</div>
       </div>
     </div>
+  </section>
 
+  <!-- Arma tu propia aventura — justo debajo de la cuadrícula de destinos -->
+  <section class="section wt-adventure" id="adventure">
+  <p class="section-label" data-i18n="adv_label">Plan your adventure</p>
+  <h2><span data-i18n="adv_title1">Build your own</span><br /><span data-i18n="adv_title2">adventure.</span></h2>
+  <p class="lead" data-i18n="adv_lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
+
+  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
+    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
+      <span class="wt-route-num">I</span><span data-i18n="route_classic">Classic Route (France–Italy)</span>
+    </button>
+    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
+      <span class="wt-route-num">II</span><span data-i18n="route_alpine">Alpine Route (Switzerland–Austria)</span>
+    </button>
+    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
+      <span class="wt-route-num">III</span><span data-i18n="route_imperial">Imperial Route (Central Europe)</span>
+    </button>
+  </div>
+
+  <div class="wt-timeline-wrap">
+    <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
+    <div class="wt-timeline-head" id="wt-timeline-head" hidden>
+      <h3 id="wt-route-title"></h3>
+      <span class="wt-route-meta" id="wt-route-meta"></span>
+    </div>
+    <p class="wt-timeline-empty" id="wt-timeline-empty" data-i18n="tl_empty">Tap a route to unfold its timeline.</p>
+    <ol class="wt-timeline" id="wt-timeline"></ol>
+    <div id="wt-cta-slot"></div>
+  </div>
+  </section>
+
+  <section class="section" id="discover-cta-wrap">
     <div class="discover-cta">
-      <h3 data-i18n="disc_cta_title">Know a place only the train reveals? 🚂</h3>
+      <h3 data-i18n="disc_cta_title">Know a place only the train reveals?</h3>
       <p data-i18n="disc_cta_text">Share the route, the town, the hidden stop — and help other travelers discover it too.</p>
       <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
     </div>
   </section>
 
   <section class="section wt-reviews">
-  <p class="section-label">Traveler voices</p>
-  <h2>Ratings &amp;<br />experiences.</h2>
-  <p class="lead">What they really remember isn't the destination — it's the moment the train changed everything.</p>
+  <p class="section-label" data-i18n="reviews_label">Traveler voices</p>
+  <h2><span data-i18n="reviews_title1">Ratings &amp;</span><br /><span data-i18n="reviews_title2">experiences.</span></h2>
+  <p class="lead" data-i18n="reviews_lead">What they really remember isn't the destination — it's the moment the train changed everything.</p>
 
   <div class="wt-reviews-grid">
     <article class="wt-review-card">
       <div class="wt-review-head">
         <div class="wt-avatar">LM</div>
         <div>
-          <p class="wt-review-name">Lucía Moreau</p>
-          <p class="wt-review-route">Paris → Milan · Ruta Clásica</p>
+          <p class="wt-review-name">Lucía, France</p>
+          <p class="wt-review-route" data-i18n="rv1_route">Paris → Milan · Classic Route</p>
         </div>
       </div>
-      <span class="wt-momento">Momento WoW:</span>
-      <p class="wt-review-body">Pure comfort. I crossed the Alps with a hot coffee and my laptop open — arrived in Milan rested, not wrecked like after a flight.</p>
+      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
+      <p class="wt-review-body" data-i18n="rv1_body">Pure comfort. I crossed the Alps with a hot coffee and my laptop open — arrived in Milan rested, not wrecked like after a flight.</p>
       <div class="wt-stars">★★★★★</div>
     </article>
 
@@ -1773,12 +1817,12 @@
       <div class="wt-review-head">
         <div class="wt-avatar">DK</div>
         <div>
-          <p class="wt-review-name">David Klein</p>
-          <p class="wt-review-route">Zurich → Vienna · Ruta Alpina</p>
+          <p class="wt-review-name">David, Germany</p>
+          <p class="wt-review-route" data-i18n="rv2_route">Zurich → Vienna · Alpine Route</p>
         </div>
       </div>
-      <span class="wt-momento">Momento WoW:</span>
-      <p class="wt-review-body">Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.</p>
+      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
+      <p class="wt-review-body" data-i18n="rv2_body">Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.</p>
       <div class="wt-stars">★★★★★</div>
     </article>
 
@@ -1786,12 +1830,12 @@
       <div class="wt-review-head">
         <div class="wt-avatar">SA</div>
         <div>
-          <p class="wt-review-name">Sofía Álvarez</p>
-          <p class="wt-review-route">Prague → Budapest · Ruta Imperial</p>
+          <p class="wt-review-name">Sofía, Spain</p>
+          <p class="wt-review-route" data-i18n="rv3_route">Prague → Budapest · Imperial Route</p>
         </div>
       </div>
-      <span class="wt-momento">Momento WoW:</span>
-      <p class="wt-review-body">The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.</p>
+      <span class="wt-momento" data-i18n="wt_momento">WoW Moment:</span>
+      <p class="wt-review-body" data-i18n="rv3_body">The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.</p>
       <div class="wt-stars">★★★★★</div>
     </article>
   </div>
@@ -1889,7 +1933,7 @@
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq3_q">How do I book a ticket?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq3_a">Search your route and click "Search →". You'll be redirected to Trainline — a certified operator that handles the booking securely. WoW Train never processes payments.</div>
+        <div class="faq-a" data-i18n="faq3_a">Search your route and click "Search →". You'll be redirected to our certified booking partner who handles the purchase securely. WoW Train never processes payments.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq4_q">Does it work offline?</span> <span class="faq-arrow">▾</span></div>
@@ -1926,7 +1970,7 @@
     </div>
     <p data-i18n="footer_copy">© 2026 GLOSX — All rights reserved.</p>
     <p class="disclaimer" data-i18n="footer_disclaimer">
-      WoW Train is an independent travel platform. Bookings are processed by verified partners (Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.
+      WoW Train is an independent travel platform. Bookings are processed by certified partners. We may earn a commission from qualifying purchases at no extra cost to you.
     </p>
   </footer>
 
@@ -2114,17 +2158,29 @@
         faq_label: 'Frequently asked questions', faq_title1: 'Everything you', faq_title2: 'need to know.',
         faq1_q: 'Is WoW Train free to use?', faq1_a: 'Yes, completely free. No subscription, no paywall, no account required. Just open and search.',
         faq2_q: 'Which countries are supported?', faq2_a: 'Spain, France, Germany, Switzerland, Italy, Belgium, Netherlands, Austria and Portugal — with real-time GTFS data from official railway operators.',
-        faq3_q: 'How do I book a ticket?', faq3_a: 'Search your route and click "Search →". You\'ll be redirected to Trainline — a certified operator that handles the booking securely. WoW Train never processes payments.',
+        faq3_q: 'How do I book a ticket?', faq3_a: 'Search your route and click "Search →". You\'ll be redirected to our certified booking partner who handles the purchase securely. WoW Train never processes payments.',
         faq4_q: 'Does it work offline?', faq4_a: 'Yes. Full timetable access without internet. GTFS data is stored locally on your device — useful when travelling through tunnels or areas with no signal.',
         faq5_q: 'Is my data private?', faq5_a: 'WoW Train does not collect, store or share personal data on external servers. No accounts, no tracking, no ads. Only anonymous analytics via Google Analytics to improve the experience.',
         footer_about: 'About', footer_privacy: 'Privacy Policy', footer_cookies: 'Cookie Policy', footer_imprint: 'Legal Notice', footer_support: 'Support', footer_terms: 'Terms of Use', footer_contact: 'Contact',
         cookie_text: 'We use essential cookies for site functionality and anonymous analytics to improve your experience.', cookie_accept: 'Accept', cookie_decline: 'Decline',
         footer_copy: '© 2026 GLOSX — All rights reserved.',
-        footer_disclaimer: 'WoW Train is an independent travel platform. Bookings are processed by verified partners (Trainline, Klook, Kiwitaxi, Yesim). We may earn a commission from qualifying purchases at no extra cost to you.',
+        footer_disclaimer: 'WoW Train is an independent travel platform. Bookings are processed by certified partners. We may earn a commission from qualifying purchases at no extra cost to you.',
         scenic_book: 'Book now', preview_label: 'See it in action', preview_title1: 'Designed for', preview_title2: 'real travelers.', preview_lead: 'GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.', ss_home: 'Choose your country', ss_board: 'Departure board', ss_live: 'Live departures',
         stat_countries: 'Live countries', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_free2: 'Account or payment',
         trust_data: 'Real-time data from official railways',
-        trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Book via Trainline',
+        trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Verified schedules & rates',
+        nav_adventure: 'Plan your Adventure',
+        adv_label: 'Plan your adventure', adv_title1: 'Build your own', adv_title2: 'adventure.',
+        adv_lead: 'Pick a journey archetype and we\'ll trace the logical chain of real trains that carries you city to city — every connection, a scene.',
+        route_classic: 'Classic Route (France–Italy)', route_alpine: 'Alpine Route (Switzerland–Austria)', route_imperial: 'Imperial Route (Central Europe)',
+        tl_empty: 'Tap a route to unfold its timeline.', wt_close_aria: 'Close route',
+        disc_cta_title: 'Know a place only the train reveals?',
+        reviews_label: 'Wagon Stories', reviews_title1: 'Voices from', reviews_title2: 'the journey.',
+        reviews_lead: 'What they really remember isn\'t the destination — it\'s the moment the train changed everything.',
+        wt_momento: 'WoW Moment:',
+        rv1_route: 'Paris ➔ Milan · Classic Route', rv1_body: 'Pure comfort. I crossed the Alps with a hot coffee and my laptop open — arrived in Milan rested, not wrecked like after a flight.',
+        rv2_route: 'Zurich ➔ Vienna · Alpine Route', rv2_body: 'Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.',
+        rv3_route: 'Prague ➔ Budapest · Imperial Route', rv3_body: 'The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.',
       },
       es: {
         nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
@@ -2160,17 +2216,29 @@
         faq_label: 'Preguntas frecuentes', faq_title1: 'Todo lo que', faq_title2: 'necesitás saber.',
         faq1_q: '¿WoW Train es gratis?', faq1_a: 'Sí, completamente gratis. Sin suscripción, sin paywall, sin cuenta. Solo abrí y buscá.',
         faq2_q: '¿Qué países están disponibles?', faq2_a: 'España, Francia, Alemania, Suiza, Italia, Bélgica, Países Bajos, Austria y Portugal — con datos GTFS en tiempo real de operadoras ferroviarias oficiales.',
-        faq3_q: '¿Cómo reservo un billete?', faq3_a: 'Buscá tu ruta y hacé click en "Buscar →". Serás redirigido a Trainline — operadoras certificadas que gestionan la reserva de forma segura. WoW Train nunca procesa pagos.',
+        faq3_q: '¿Cómo reservo un billete?', faq3_a: 'Buscá tu ruta y hacé click en "Buscar →". Serás redirigido a nuestro partner de reservas certificado que gestiona la compra de forma segura. WoW Train nunca procesa pagos.',
         faq4_q: '¿Funciona sin internet?', faq4_a: 'Sí. Acceso completo a horarios sin internet. Los datos GTFS se guardan localmente en tu dispositivo — útil en túneles o zonas sin señal.',
         faq5_q: '¿Son privados mis datos?', faq5_a: 'WoW Train no recopila, almacena ni comparte datos personales en servidores externos. Sin cuentas, sin rastreo, sin publicidad.',
         footer_about: 'Sobre nosotros', footer_privacy: 'Política de privacidad', footer_cookies: 'Política de cookies', footer_imprint: 'Aviso legal', footer_support: 'Soporte', footer_terms: 'Términos de uso', footer_contact: 'Contacto',
         cookie_text: 'Usamos cookies esenciales para el funcionamiento del sitio y analíticas anónimas para mejorar tu experiencia.', cookie_accept: 'Aceptar', cookie_decline: 'Rechazar',
         footer_copy: '© 2026 GLOSX — Todos los derechos reservados.',
-        footer_disclaimer: 'WoW Train es una plataforma de viajes independiente. Las reservas las procesan partners verificados (Trainline, Klook, Kiwitaxi, Yesim). Podemos ganar una comisión por compras elegibles sin costo extra para ti.',
+        footer_disclaimer: 'WoW Train es una plataforma de viajes independiente. Las reservas las procesan partners certificados. Podemos ganar una comisión por compras elegibles sin costo extra para ti.',
         scenic_book: 'Reservar', preview_label: 'Velo en acción', preview_title1: 'Diseñada para', preview_title2: 'viajeros de verdad.', preview_lead: 'Detección por GPS, horarios en tiempo real, rutas escénicas y un traductor integrado — todo en tu bolsillo.', ss_home: 'Elegí tu país', ss_board: 'Tablero de salidas', ss_live: 'Salidas en vivo',
         stat_countries: 'Países en vivo', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_free2: 'Cuenta o pago',
         trust_data: 'Datos en tiempo real de ferroviarias oficiales',
-        trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Reservá con Trainline',
+        trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Horarios y tarifas verificados',
+        nav_adventure: 'Planificá tu aventura',
+        adv_label: 'Arma tu aventura', adv_title1: 'Arma tu propia', adv_title2: 'aventura.',
+        adv_lead: 'Elegí un arquetipo de viaje y trazamos la cadena lógica de trenes reales que te lleva de ciudad en ciudad — cada conexión, una escena.',
+        route_classic: 'Ruta Clásica (Francia–Italia)', route_alpine: 'Ruta Alpina (Suiza–Austria)', route_imperial: 'Ruta Imperial (Europa Central)',
+        tl_empty: 'Tocá una ruta para desplegar su línea de tiempo.', wt_close_aria: 'Cerrar ruta',
+        disc_cta_title: '¿Conocés un lugar que solo revela el tren?',
+        reviews_label: 'Historias del Vagón', reviews_title1: 'Voces del', reviews_title2: 'trayecto.',
+        reviews_lead: 'Lo que recuerdan no es el destino — es el momento en que el tren lo cambió todo.',
+        wt_momento: 'Momento WoW:',
+        rv1_route: 'París ➔ Milán · Ruta Clásica', rv1_body: 'Puro confort. Crucé los Alpes con un café caliente y la laptop abierta — llegué a Milán descansada, no destruida como después de un vuelo.',
+        rv2_route: 'Zúrich ➔ Viena · Ruta Alpina', rv2_body: 'Sin estrés. Un solo billete, conexiones que encajaron solas, sin las interminables colas de seguridad. Me senté y simplemente lo disfruté.',
+        rv3_route: 'Praga ➔ Budapest · Ruta Imperial', rv3_body: 'El paisaje. El Danubio apareció en un recodo al atardecer y todo el vagón quedó en silencio. Ninguna ventanilla de avión te da eso.',
       },
       fr: {
         nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
@@ -2206,17 +2274,29 @@
         faq_label: 'Questions fréquentes', faq_title1: 'Tout ce que', faq_title2: 'vous devez savoir.',
         faq1_q: 'WoW Train est-il gratuit?', faq1_a: 'Oui, complètement gratuit. Pas d\'abonnement, pas de paywall, pas de compte requis.',
         faq2_q: 'Quels pays sont disponibles?', faq2_a: 'Espagne, France, Allemagne, Suisse, Italie, Belgique, Pays-Bas, Autriche et Portugal — avec données GTFS en temps réel.',
-        faq3_q: 'Comment réserver un billet?', faq3_a: 'Cherchez votre trajet et cliquez sur "Rechercher →". Vous serez redirigé vers Trainline. WoW Train ne traite jamais les paiements.',
+        faq3_q: 'Comment réserver un billet?', faq3_a: 'Cherchez votre trajet et cliquez sur "Rechercher →". Vous serez redirigé vers notre partenaire de réservation certifié. WoW Train ne traite jamais les paiements.',
         faq4_q: 'Fonctionne-t-il hors ligne?', faq4_a: 'Oui. Accès complet aux horaires sans internet. Les données GTFS sont stockées localement sur votre appareil.',
         faq5_q: 'Mes données sont-elles privées?', faq5_a: 'WoW Train ne collecte, ne stocke ni ne partage de données personnelles. Pas de comptes, pas de tracking, pas de publicité.',
         footer_about: 'À propos', footer_privacy: 'Politique de confidentialité', footer_cookies: 'Politique des cookies', footer_imprint: 'Mentions légales', footer_support: 'Support', footer_terms: 'Conditions d\'utilisation', footer_contact: 'Contact',
         cookie_text: 'Nous utilisons des cookies essentiels et des analyses anonymes pour améliorer votre expérience.', cookie_accept: 'Accepter', cookie_decline: 'Refuser',
         footer_copy: '© 2026 GLOSX — Tous droits réservés.',
-        footer_disclaimer: 'WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées par des partenaires vérifiés (Trainline, Klook, Kiwitaxi, Yesim). Nous pouvons gagner une commission sur les achats éligibles sans coût supplémentaire pour vous.',
+        footer_disclaimer: 'WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées par des partenaires certifiés. Nous pouvons gagner une commission sur les achats éligibles sans coût supplémentaire pour vous.',
         scenic_book: 'Réserver', preview_label: 'Voyez-le en action', preview_title1: 'Conçue pour', preview_title2: 'les vrais voyageurs.', preview_lead: 'Détection GPS, horaires en temps réel, itinéraires panoramiques et un traducteur intégré — le tout dans votre poche.', ss_home: 'Choisissez votre pays', ss_board: 'Tableau des départs', ss_live: 'Départs en direct',
         stat_countries: 'Pays en direct', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_free2: 'Compte ou paiement',
         trust_data: 'Données en temps réel des chemins de fer officiels',
-        trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Réservez via Trainline',
+        trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Horaires et tarifs vérifiés',
+        nav_adventure: 'Planifiez votre aventure',
+        adv_label: 'Planifiez votre aventure', adv_title1: 'Créez votre propre', adv_title2: 'aventure.',
+        adv_lead: 'Choisissez un archétype de voyage et nous traçons la chaîne logique de vrais trains qui vous emmènent de ville en ville — chaque correspondance, une scène.',
+        route_classic: 'Route Classique (France–Italie)', route_alpine: 'Route Alpine (Suisse–Autriche)', route_imperial: 'Route Impériale (Europe Centrale)',
+        tl_empty: 'Appuyez sur un itinéraire pour déplier sa ligne de temps.', wt_close_aria: 'Fermer l\'itinéraire',
+        disc_cta_title: 'Vous connaissez un lieu que seul le train révèle ?',
+        reviews_label: 'Histoires du Wagon', reviews_title1: 'Voix du', reviews_title2: 'voyage.',
+        reviews_lead: 'Ce qu\'ils retiennent vraiment n\'est pas la destination — c\'est le moment où le train a tout changé.',
+        wt_momento: 'Moment WoW :',
+        rv1_route: 'Paris ➔ Milan · Route Classique', rv1_body: 'Pur confort. J\'ai traversé les Alpes avec un café chaud et mon ordinateur ouvert — arrivée à Milan reposée, pas épuisée comme après un vol.',
+        rv2_route: 'Zurich ➔ Vienne · Route Alpine', rv2_body: 'Zéro stress. Un seul billet, des correspondances qui s\'enchaînaient, sans les interminables files de sécurité. Je me suis assis et j\'ai simplement profité.',
+        rv3_route: 'Prague ➔ Budapest · Route Impériale', rv3_body: 'Le paysage. Le Danube est apparu au détour d\'un virage au coucher du soleil et tout le wagon s\'est tu. Aucun hublot d\'avion ne vous offre ça.',
       },
       de: {
         nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
@@ -2252,17 +2332,29 @@
         faq_label: 'Häufige Fragen', faq_title1: 'Alles was Sie', faq_title2: 'wissen müssen.',
         faq1_q: 'Ist WoW Train kostenlos?', faq1_a: 'Ja, völlig kostenlos. Kein Abo, keine Paywall, kein Konto erforderlich.',
         faq2_q: 'Welche Länder werden unterstützt?', faq2_a: 'Spanien, Frankreich, Deutschland, Schweiz, Italien, Belgien, Niederlande, Österreich und Portugal — mit Echtzeit-GTFS-Daten.',
-        faq3_q: 'Wie buche ich ein Ticket?', faq3_a: 'Suchen Sie Ihre Route und klicken Sie auf "Suchen →". Sie werden zu Trainline weitergeleitet. WoW Train verarbeitet keine Zahlungen.',
+        faq3_q: 'Wie buche ich ein Ticket?', faq3_a: 'Suchen Sie Ihre Route und klicken Sie auf "Suchen →". Sie werden zu unserem zertifizierten Buchungspartner weitergeleitet. WoW Train verarbeitet keine Zahlungen.',
         faq4_q: 'Funktioniert es offline?', faq4_a: 'Ja. Vollständiger Fahrplanzugriff ohne Internet. GTFS-Daten werden lokal auf Ihrem Gerät gespeichert.',
         faq5_q: 'Sind meine Daten privat?', faq5_a: 'WoW Train erfasst, speichert oder teilt keine persönlichen Daten. Keine Konten, kein Tracking, keine Werbung.',
         footer_about: 'Über uns', footer_privacy: 'Datenschutz', footer_cookies: 'Cookie-Richtlinie', footer_imprint: 'Impressum', footer_support: 'Support', footer_terms: 'Nutzungsbedingungen', footer_contact: 'Kontakt',
         cookie_text: 'Wir verwenden essenzielle Cookies und anonyme Analysen, um Ihr Erlebnis zu verbessern.', cookie_accept: 'Akzeptieren', cookie_decline: 'Ablehnen',
         footer_copy: '© 2026 GLOSX — Alle Rechte vorbehalten.',
-        footer_disclaimer: 'WoW Train ist eine unabhängige Reiseplattform. Buchungen werden von verifizierten Partnern verarbeitet (Trainline, Klook, Kiwitaxi, Yesim). Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie verdienen.',
+        footer_disclaimer: 'WoW Train ist eine unabhängige Reiseplattform. Buchungen werden von zertifizierten Partnern verarbeitet. Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie verdienen.',
         scenic_book: 'Buchen', preview_label: 'In Aktion erleben', preview_title1: 'Gemacht für', preview_title2: 'echte Reisende.', preview_lead: 'GPS-Erkennung, Echtzeit-Fahrpläne, Panoramastrecken und integrierter Übersetzer — alles in deiner Tasche.', ss_home: 'Wähle dein Land', ss_board: 'Abfahrtstafel', ss_live: 'Live-Abfahrten',
         stat_countries: 'Länder live', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_free2: 'Konto oder Zahlung',
         trust_data: 'Echtzeitdaten offizieller Bahnen',
-        trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Buchen über Trainline',
+        trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Geprüfte Fahrpläne & Tarife',
+        nav_adventure: 'Dein Abenteuer planen',
+        adv_label: 'Plan dein Abenteuer', adv_title1: 'Bau dein eigenes', adv_title2: 'Abenteuer.',
+        adv_lead: 'Wähle einen Reisetyp und wir zeichnen die logische Kette echter Züge, die dich von Stadt zu Stadt bringt — jede Verbindung, eine Szene.',
+        route_classic: 'Klassische Route (Frankreich–Italien)', route_alpine: 'Alpine Route (Schweiz–Österreich)', route_imperial: 'Imperiale Route (Mitteleuropa)',
+        tl_empty: 'Tippe auf eine Route, um ihre Zeitleiste zu öffnen.', wt_close_aria: 'Route schließen',
+        disc_cta_title: 'Kennst du einen Ort, den nur der Zug zeigt?',
+        reviews_label: 'Geschichten aus dem Zug', reviews_title1: 'Stimmen von', reviews_title2: 'der Reise.',
+        reviews_lead: 'Was sie wirklich in Erinnerung behalten, ist nicht das Ziel — es ist der Moment, als der Zug alles veränderte.',
+        wt_momento: 'WoW-Moment:',
+        rv1_route: 'Paris ➔ Mailand · Klassische Route', rv1_body: 'Purer Komfort. Ich überquerte die Alpen mit einem heißen Kaffee und geöffnetem Laptop — kam in Mailand ausgeruht an, nicht kaputt wie nach einem Flug.',
+        rv2_route: 'Zürich ➔ Wien · Alpine Route', rv2_body: 'Null Stress. Ein Ticket, Anschlüsse, die einfach passten, keine endlosen Sicherheitsschlangen. Ich setzte mich hin und genoss es einfach.',
+        rv3_route: 'Prag ➔ Budapest · Imperiale Route', rv3_body: 'Die Landschaft. Die Donau erschien bei Sonnenuntergang um eine Biegung und das ganze Abteil wurde still. Kein Flugzeugfenster gibt dir das.',
       },
       it: {
         nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
@@ -2298,17 +2390,29 @@
         faq_label: 'Domande frequenti', faq_title1: 'Tutto quello che', faq_title2: 'devi sapere.',
         faq1_q: 'WoW Train è gratuito?', faq1_a: 'Sì, completamente gratuito. Nessun abbonamento, nessun paywall, nessun account richiesto.',
         faq2_q: 'Quali paesi sono supportati?', faq2_a: 'Spagna, Francia, Germania, Svizzera, Italia, Belgio, Paesi Bassi, Austria e Portogallo — con dati GTFS in tempo reale.',
-        faq3_q: 'Come prenoto un biglietto?', faq3_a: 'Cerca il tuo percorso e clicca "Cerca →". Verrai reindirizzato a Trainline. WoW Train non elabora mai i pagamenti.',
+        faq3_q: 'Come prenoto un biglietto?', faq3_a: 'Cerca il tuo percorso e clicca "Cerca →". Verrai reindirizzato al nostro partner di prenotazione certificato. WoW Train non elabora mai i pagamenti.',
         faq4_q: 'Funziona offline?', faq4_a: 'Sì. Accesso completo agli orari senza internet. I dati GTFS sono memorizzati localmente sul tuo dispositivo.',
         faq5_q: 'I miei dati sono privati?', faq5_a: 'WoW Train non raccoglie, memorizza né condivide dati personali. Nessun account, nessun tracking, nessuna pubblicità.',
         footer_about: 'Chi siamo', footer_privacy: 'Informativa privacy', footer_cookies: 'Politica dei cookie', footer_imprint: 'Note legali', footer_support: 'Supporto', footer_terms: 'Termini d\'uso', footer_contact: 'Contatto',
         cookie_text: 'Utilizziamo cookie essenziali e analisi anonime per migliorare la tua esperienza.', cookie_accept: 'Accetta', cookie_decline: 'Rifiuta',
         footer_copy: '© 2026 GLOSX — Tutti i diritti riservati.',
-        footer_disclaimer: 'WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni sono elaborate da partner verificati (Trainline, Klook, Kiwitaxi, Yesim). Possiamo guadagnare una commissione dagli acquisti idonei senza costi aggiuntivi per te.',
+        footer_disclaimer: 'WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni sono elaborate da partner certificati. Possiamo guadagnare una commissione dagli acquisti idonei senza costi aggiuntivi per te.',
         scenic_book: 'Prenota', preview_label: 'Guardalo in azione', preview_title1: 'Progettata per', preview_title2: 'veri viaggiatori.', preview_lead: 'Rilevamento GPS, orari in tempo reale, percorsi panoramici e traduttore integrato — tutto in tasca.', ss_home: 'Scegli il tuo paese', ss_board: 'Tabellone partenze', ss_live: 'Partenze in tempo reale',
         stat_countries: 'Paesi in diretta', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_free2: 'Account o pagamento',
         trust_data: 'Dati in tempo reale dalle ferrovie ufficiali',
-        trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Prenota con Trainline',
+        trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Orari e tariffe verificati',
+        nav_adventure: 'Pianifica la tua avventura',
+        adv_label: 'Pianifica la tua avventura', adv_title1: 'Costruisci la tua', adv_title2: 'avventura.',
+        adv_lead: 'Scegli un archetipo di viaggio e tracceremo la catena logica di treni reali che ti porta di città in città — ogni connessione, una scena.',
+        route_classic: 'Percorso Classico (Francia–Italia)', route_alpine: 'Percorso Alpino (Svizzera–Austria)', route_imperial: 'Percorso Imperiale (Europa Centrale)',
+        tl_empty: 'Tocca un percorso per aprire la sua linea del tempo.', wt_close_aria: 'Chiudi percorso',
+        disc_cta_title: 'Conosci un posto che solo il treno svela?',
+        reviews_label: 'Storie del Vagone', reviews_title1: 'Voci del', reviews_title2: 'viaggio.',
+        reviews_lead: 'Quello che ricordano davvero non è la destinazione — è il momento in cui il treno ha cambiato tutto.',
+        wt_momento: 'Momento WoW:',
+        rv1_route: 'Parigi ➔ Milano · Percorso Classico', rv1_body: 'Puro comfort. Ho attraversato le Alpi con un caffè caldo e il laptop aperto — arrivata a Milano riposata, non distrutta come dopo un volo.',
+        rv2_route: 'Zurigo ➔ Vienna · Percorso Alpino', rv2_body: 'Zero stress. Un biglietto, coincidenze perfette, nessuna fila di sicurezza infinita. Mi sono seduto e ho semplicemente goduto.',
+        rv3_route: 'Praga ➔ Budapest · Percorso Imperiale', rv3_body: 'Il paesaggio. Il Danubio è apparso attorno a una curva al tramonto e tutto il vagone è rimasto in silenzio. Nessun oblò d\'aereo ti dà questo.',
       },
       pt: {
         nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
@@ -2344,17 +2448,29 @@
         faq_label: 'Perguntas frequentes', faq_title1: 'Tudo o que', faq_title2: 'precisa de saber.',
         faq1_q: 'O WoW Train é gratuito?', faq1_a: 'Sim, completamente gratuito. Sem subscrição, sem paywall, sem conta necessária.',
         faq2_q: 'Que países estão disponíveis?', faq2_a: 'Espanha, França, Alemanha, Suíça, Itália, Bélgica, Países Baixos, Áustria e Portugal — com dados GTFS em tempo real.',
-        faq3_q: 'Como reservo um bilhete?', faq3_a: 'Pesquise a sua rota e clique em "Pesquisar →". Será redirecionado para a Trainline. O WoW Train nunca processa pagamentos.',
+        faq3_q: 'Como reservo um bilhete?', faq3_a: 'Pesquise a sua rota e clique em "Pesquisar →". Será redirecionado para o nosso parceiro de reservas certificado. O WoW Train nunca processa pagamentos.',
         faq4_q: 'Funciona offline?', faq4_a: 'Sim. Acesso completo aos horários sem internet. Os dados GTFS são armazenados localmente no seu dispositivo.',
         faq5_q: 'Os meus dados são privados?', faq5_a: 'O WoW Train não recolhe, armazena nem partilha dados pessoais. Sem contas, sem rastreamento, sem publicidade.',
         footer_about: 'Sobre nós', footer_privacy: 'Política de privacidade', footer_cookies: 'Política de cookies', footer_imprint: 'Aviso legal', footer_support: 'Suporte', footer_terms: 'Termos de utilização', footer_contact: 'Contacto',
         cookie_text: 'Utilizamos cookies essenciais e análises anónimas para melhorar a sua experiência.', cookie_accept: 'Aceitar', cookie_decline: 'Recusar',
         footer_copy: '© 2026 GLOSX — Todos os direitos reservados.',
-        footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas por parceiros verificados (Trainline, Klook, Kiwitaxi, Yesim). Podemos ganhar uma comissão por compras elegíveis sem custo adicional para si.',
+        footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas por parceiros certificados. Podemos ganhar uma comissão por compras elegíveis sem custo adicional para si.',
         scenic_book: 'Reservar', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
         stat_countries: 'Países ao vivo', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_free2: 'Conta ou pagamento',
         trust_data: 'Dados em tempo real de ferrovias oficiais',
-        trust_b1: 'Dados GTFS oficiais', trust_b2: 'Ao vivo a cada 90 segundos', trust_b3: 'Sem registo', trust_b4: 'Reserve via Trainline',
+        trust_b1: 'Dados GTFS oficiais', trust_b2: 'Ao vivo a cada 90 segundos', trust_b3: 'Sem registo', trust_b4: 'Horários e tarifas verificados',
+        nav_adventure: 'Planeia a tua aventura',
+        adv_label: 'Planeia a tua aventura', adv_title1: 'Constrói a tua', adv_title2: 'aventura.',
+        adv_lead: 'Escolhe um arquétipo de viagem e traçamos a cadeia lógica de comboios reais que te leva de cidade em cidade — cada ligação, uma cena.',
+        route_classic: 'Rota Clássica (França–Itália)', route_alpine: 'Rota Alpina (Suíça–Áustria)', route_imperial: 'Rota Imperial (Europa Central)',
+        tl_empty: 'Toca numa rota para abrir a sua linha do tempo.', wt_close_aria: 'Fechar rota',
+        disc_cta_title: 'Conheces um lugar que só o comboio revela?',
+        reviews_label: 'Histórias do Vagão', reviews_title1: 'Vozes da', reviews_title2: 'viagem.',
+        reviews_lead: 'O que realmente recordam não é o destino — é o momento em que o comboio mudou tudo.',
+        wt_momento: 'Momento WoW:',
+        rv1_route: 'Paris ➔ Milão · Rota Clássica', rv1_body: 'Puro conforto. Atravessei os Alpes com um café quente e o portátil aberto — cheguei a Milão descansada, não destruída como depois de um voo.',
+        rv2_route: 'Zurique ➔ Viena · Rota Alpina', rv2_body: 'Zero stress. Um bilhete, ligações que encaixaram, sem as intermináveis filas de segurança. Sentei-me e simplesmente desfrutei.',
+        rv3_route: 'Praga ➔ Budapeste · Rota Imperial', rv3_body: 'A paisagem. O Danúbio apareceu numa curva ao pôr do sol e todo o vagão ficou em silêncio. Nenhuma janela de avião te dá isso.',
       },
     };
 
@@ -2384,6 +2500,11 @@
         const key = el.getAttribute('data-i18n');
         if (dict[key] !== undefined) el.textContent = dict[key];
       });
+      // Traducción de atributos (aria-label/title) para controles sin texto visible
+      document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria-label');
+        if (dict[key] !== undefined) { el.setAttribute('aria-label', dict[key]); el.setAttribute('title', dict[key]); }
+      });
       // Actualizar selector
       const meta = LANG_META[lang] || LANG_META.en;
       document.getElementById('langFlag').textContent = meta.flag;
@@ -2397,6 +2518,8 @@
           if (typeof positionScenicDescs === 'function') positionScenicDescs();
         }
       } catch (e) { /* SCENIC_TRAINS aún no definido en primer applyLang */ }
+      // Re-renderiza la timeline de rutas abierta en el nuevo idioma
+      if (typeof window.wtRefreshTimeline === 'function') window.wtRefreshTimeline();
     }
 
     function setLang(lang) {
@@ -2721,6 +2844,17 @@
   const metaEl   = document.getElementById("wt-route-meta");
   const emptyEl  = document.getElementById("wt-timeline-empty");
   const ctaSlot  = document.getElementById("wt-cta-slot");
+  const closeBtn = document.getElementById("wt-close");
+
+  function closeTimeline() {
+    buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
+    head.hidden = true;
+    timeline.innerHTML = "";
+    ctaSlot.innerHTML = "";
+    closeBtn.hidden = true;
+    emptyEl.hidden = false;
+  }
+  if (closeBtn) closeBtn.addEventListener("click", closeTimeline);
 
   function render(key) {
     const route = ROUTES[key];
@@ -2736,15 +2870,23 @@
       li.style.animationDelay = (i * 0.12) + "s";
       li.innerHTML =
         '<p class="wt-stop-station">' + stop.station + '</p>' +
-        '<span class="wt-stop-train">🚆 ' + stop.train + '</span>' +
+        '<span class="wt-stop-train">&#8594; ' + stop.train + '</span>' +
         '<p class="wt-stop-desc">' + stop.desc + '</p>';
       timeline.appendChild(li);
     });
-    // CTA dinámico hacia Trainline con la URL real de esta ruta.
+    // CTA dinámico — texto bilingüe, sin mostrar el nombre del operador en pantalla.
     const url = buildTrainlineUrl(route);
+    const _lang = document.documentElement.lang || 'en';
+    const _ctaText = (_lang === 'es' || _lang === 'pt')
+      ? 'Ver horarios y tarifas'
+      : (_lang === 'fr') ? 'Voir horaires et tarifs'
+      : (_lang === 'de') ? 'Fahrpläne und Tarife ansehen'
+      : (_lang === 'it') ? 'Vedi orari e tariffe'
+      : 'Check schedules and rates';
     ctaSlot.innerHTML =
       '<a class="wt-tl-cta" href="' + url + '" target="_blank" rel="noopener sponsored">' +
-      'Ver horarios y precios en Trainline <span class="wt-tl-arrow">→</span></a>';
+      _ctaText + ' <span class="wt-tl-arrow">→</span></a>';
+    closeBtn.hidden = false;
   }
 
   buttons.forEach((btn) => {
