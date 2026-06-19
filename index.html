@@ -332,6 +332,7 @@
       overflow: visible;
     }
     .search-field {
+      position: relative;
       background: linear-gradient(180deg, rgba(30,27,58,0.75) 0%, rgba(18,16,38,0.75) 100%);
       border: 1px solid rgba(139,92,246,0.22);
       border-radius: 12px;
@@ -368,6 +369,23 @@
       transform: translateY(-1px);
       box-shadow: 0 10px 28px rgba(124,58,237,0.65), 0 0 44px rgba(124,58,237,0.6);
     }
+
+    .ac-dropdown {
+      position: absolute; top: calc(100% + 6px); left: -1px; right: -1px;
+      background: rgba(14,12,32,0.98);
+      -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+      border: 1px solid rgba(168,85,247,0.38);
+      border-radius: 10px; overflow: hidden; z-index: 9999;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.65), 0 0 16px rgba(168,85,247,0.1);
+      display: none;
+    }
+    .ac-item {
+      padding: 10px 14px; font-size: 13px; font-weight: 500;
+      color: rgba(220,218,240,0.9); cursor: pointer;
+      transition: background 0.1s;
+    }
+    .ac-item + .ac-item { border-top: 1px solid rgba(168,85,247,0.1); }
+    .ac-item:hover, .ac-item.ac-active { background: rgba(168,85,247,0.2); color: #fff; }
 
     /* ── Countries strip ── */
     .countries {
@@ -2771,33 +2789,29 @@
     // ── Search trains → redirige al proxy con tracking ─────────────────────
     function searchTrains(e) {
       e.preventDefault();
-      const origin = document.getElementById('origin').value.trim();
-      const dest   = document.getElementById('dest').value.trim();
-      const date   = document.getElementById('date').value;
-      if (!origin || !dest) return false;
-
-      // Detectar país de origen para elegir Trainline (Europa) o Trip.com (resto)
-      const country = detectCountry(origin);
-
-      const url = `${PROXY_BASE}/redirect?origin=${encodeURIComponent(origin)}` +
-                  `&dest=${encodeURIComponent(dest)}` +
-                  `&date=${date}&country=${country}&passengers=1`;
-      window.open(url, '_blank');
+      var originEl = document.getElementById('origin');
+      var destEl   = document.getElementById('dest');
+      var dateVal  = document.getElementById('date').value;
+      var fromSlug = originEl.getAttribute('data-slug') || originEl.value.trim().toLowerCase().replace(/\s+/g, '-');
+      var toSlug   = destEl.getAttribute('data-slug')   || destEl.value.trim().toLowerCase().replace(/\s+/g, '-');
+      if (!fromSlug || !toSlug) return false;
+      var lang = document.documentElement.lang || 'en';
+      window.open(buildSearchUrl(fromSlug, toSlug, lang, dateVal), '_blank');
       return false;
     }
 
-    function detectCountry(cityName) {
-      const c = cityName.toLowerCase();
-      if (/madrid|barcelona|sevilla|valencia|bilbao|málaga|malaga/.test(c)) return 'ES';
-      if (/paris|lyon|marseille|bordeaux|toulouse|nice|lille/.test(c)) return 'FR';
-      if (/berlin|münchen|munich|hamburg|frankfurt|köln|koln/.test(c)) return 'DE';
-      if (/zurich|zürich|geneva|geneve|bern|basel|lausanne/.test(c)) return 'CH';
-      if (/roma|rome|milano|milan|napoli|naples|firenze|florence|venezia|venice/.test(c)) return 'IT';
-      if (/bruxelles|brussels|antwerp|gent/.test(c)) return 'BE';
-      if (/amsterdam|rotterdam|utrecht|the hague/.test(c)) return 'NL';
-      if (/wien|vienna|salzburg|innsbruck|graz/.test(c)) return 'AT';
-      if (/lisboa|lisbon|porto|coimbra/.test(c)) return 'PT';
-      return 'ES'; // default Europa
+    function buildSearchUrl(from, to, lang, date) {
+      var tl = {
+        es: ['https://www.thetrainline.com/es/horarios-trenes/', '-a-'],
+        fr: ['https://www.thetrainline.com/fr/horaires-trains/', '-a-'],
+        de: ['https://www.thetrainline.com/de/zugverbindungen/', '-nach-'],
+        it: ['https://www.thetrainline.com/it/orari-treni/',     '-a-'],
+        pt: ['https://www.thetrainline.com/pt/horarios-comboios/','-a-']
+      };
+      var r = tl[lang] || ['https://www.thetrainline.com/train-times/', '-to-'];
+      var url = r[0] + from + r[1] + to;
+      if (date) url += '?outboundDate=' + encodeURIComponent(date);
+      return url;
     }
 
     // ── Partner products → redirige al proxy correspondiente ───────────────
@@ -3387,6 +3401,115 @@
     current = Math.max(floor, current + delta);
     el.textContent = current;
   }, 4000);
+})();
+</script>
+<script>
+(function () {
+  var CITIES = [
+    { display: 'París / Paris',                   slug: 'paris',     keywords: ['paris','parís'] },
+    { display: 'Londres / London',                slug: 'london',    keywords: ['london','londres'] },
+    { display: 'Madrid',                          slug: 'madrid',    keywords: ['madrid'] },
+    { display: 'Barcelona',                       slug: 'barcelona', keywords: ['barcelona'] },
+    { display: 'Roma / Rome',                     slug: 'rome',      keywords: ['rome','roma'] },
+    { display: 'Milán / Milano / Milan',          slug: 'milan',     keywords: ['milan','milán','milano'] },
+    { display: 'Venecia / Venezia / Venice',      slug: 'venice',    keywords: ['venice','venecia','venezia'] },
+    { display: 'Florencia / Firenze / Florence',  slug: 'florence',  keywords: ['florence','florencia','firenze'] },
+    { display: 'Berlín / Berlin',                 slug: 'berlin',    keywords: ['berlin','berlín'] },
+    { display: 'Múnich / München / Munich',       slug: 'munich',    keywords: ['munich','múnich','munchen','münchen'] },
+    { display: 'Hamburgo / Hamburg',              slug: 'hamburg',   keywords: ['hamburg','hamburgo'] },
+    { display: 'Frankfurt',                       slug: 'frankfurt', keywords: ['frankfurt'] },
+    { display: 'Colonia / Köln / Cologne',        slug: 'cologne',   keywords: ['cologne','colonia','koln','köln'] },
+    { display: 'Zúrich / Zürich / Zurich',        slug: 'zurich',    keywords: ['zurich','zúrich','zürich','zuerich'] },
+    { display: 'Ginebra / Genève / Geneva',       slug: 'geneva',    keywords: ['geneva','ginebra','geneve','genève'] },
+    { display: 'Ámsterdam / Amsterdam',           slug: 'amsterdam', keywords: ['amsterdam','ámsterdam'] },
+    { display: 'Bruselas / Bruxelles / Brussels', slug: 'brussels',  keywords: ['brussels','bruselas','bruxelles'] },
+    { display: 'Viena / Wien / Vienna',           slug: 'vienna',    keywords: ['vienna','viena','wien'] },
+    { display: 'Praga / Praha / Prague',          slug: 'prague',    keywords: ['prague','praga','praha'] },
+    { display: 'Budapest',                        slug: 'budapest',  keywords: ['budapest'] },
+    { display: 'Varsovia / Warszawa / Warsaw',    slug: 'warsaw',    keywords: ['warsaw','varsovia','warszawa'] },
+    { display: 'Lisboa / Lisbon',                 slug: 'lisbon',    keywords: ['lisbon','lisboa'] },
+    { display: 'Oporto / Porto',                  slug: 'porto',     keywords: ['porto','oporto'] },
+    { display: 'Lyon',                            slug: 'lyon',      keywords: ['lyon'] },
+    { display: 'Marsella / Marseille',            slug: 'marseille', keywords: ['marseille','marsella'] },
+    { display: 'Niza / Nice',                     slug: 'nice',      keywords: ['nice','niza'] },
+    { display: 'Burdeos / Bordeaux',              slug: 'bordeaux',  keywords: ['bordeaux','burdeos'] },
+    { display: 'Basilea / Bâle / Basel',          slug: 'basel',     keywords: ['basel','basilea','bale','bâle'] },
+    { display: 'Turín / Torino / Turin',          slug: 'turin',     keywords: ['turin','turín','torino'] },
+    { display: 'Nápoles / Napoli / Naples',       slug: 'naples',    keywords: ['naples','nápoles','napoli'] }
+  ];
+
+  function norm(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function filterCities(q) {
+    var nq = norm(q);
+    return CITIES.filter(function (c) {
+      return c.keywords.some(function (k) { return norm(k).indexOf(nq) === 0; });
+    }).slice(0, 6);
+  }
+
+  function attachTypeahead(inputEl) {
+    var wrap = inputEl.closest('.search-field');
+    if (!wrap) return;
+    var dd = document.createElement('div');
+    dd.className = 'ac-dropdown';
+    wrap.appendChild(dd);
+
+    inputEl.addEventListener('input', function () {
+      var q = inputEl.value.trim();
+      inputEl.removeAttribute('data-slug');
+      if (q.length < 2) { dd.style.display = 'none'; return; }
+      var matches = filterCities(q);
+      if (!matches.length) { dd.style.display = 'none'; return; }
+      dd.innerHTML = matches.map(function (c) {
+        return '<div class="ac-item" data-slug="' + c.slug + '">' + c.display + '</div>';
+      }).join('');
+      dd.style.display = 'block';
+    });
+
+    dd.addEventListener('mousedown', function (e) {
+      var item = e.target.closest('.ac-item');
+      if (!item) return;
+      e.preventDefault();
+      inputEl.value = item.textContent;
+      inputEl.setAttribute('data-slug', item.dataset.slug);
+      dd.style.display = 'none';
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!wrap.contains(e.target)) dd.style.display = 'none';
+    });
+
+    inputEl.addEventListener('keydown', function (e) {
+      if (dd.style.display === 'none') return;
+      var items = dd.querySelectorAll('.ac-item');
+      var active = dd.querySelector('.ac-active');
+      var idx = active ? Array.from(items).indexOf(active) : -1;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (active) active.classList.remove('ac-active');
+        items[Math.min(idx + 1, items.length - 1)].classList.add('ac-active');
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (active) active.classList.remove('ac-active');
+        if (idx > 0) items[idx - 1].classList.add('ac-active');
+      } else if (e.key === 'Enter') {
+        var sel = dd.querySelector('.ac-active');
+        if (sel) {
+          e.preventDefault();
+          inputEl.value = sel.textContent;
+          inputEl.setAttribute('data-slug', sel.dataset.slug);
+          dd.style.display = 'none';
+        }
+      } else if (e.key === 'Escape') {
+        dd.style.display = 'none';
+      }
+    });
+  }
+
+  attachTypeahead(document.getElementById('origin'));
+  attachTypeahead(document.getElementById('dest'));
 })();
 </script>
 </body>
