@@ -943,36 +943,41 @@
     }
     .discover-card {
       position: relative;
-      width: 220px; flex: 0 0 220px;
+      width: 320px; flex: 0 0 320px;
+      height: 140px; box-sizing: border-box; overflow: hidden;
       background: linear-gradient(160deg, rgba(17,34,33,0.65) 0%, var(--surface) 70%);
       border: 1px solid rgba(45,212,191,0.18);
       border-left: 3px solid rgba(45,212,191,0.75);
-      border-radius: 13px; padding: 15px 16px 13px;
+      border-radius: 12px; padding: 10px 15px;
+      display: flex; flex-direction: column; justify-content: space-between;
       transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
     .discover-card:hover {
       border-color: rgba(45,212,191,0.5);
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(45,212,191,0.10);
+      box-shadow: 0 8px 18px rgba(45,212,191,0.10);
     }
     .discover-pin {
-      position: absolute; top: 12px; right: 13px; font-size: 12px; opacity: 0.7;
+      position: absolute; top: 10px; right: 12px; font-size: 11px; opacity: 0.65;
     }
     .discover-country {
-      font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-      color: #2dd4bf;
+      font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: #2dd4bf; margin: 0;
     }
-    .discover-place { font-size: 15px; font-weight: 800; color: var(--text); margin: 3px 0 8px; letter-spacing: -0.2px; }
+    .discover-place { font-size: 14px; font-weight: 800; color: var(--text); margin: 2px 0 4px; letter-spacing: -0.2px; }
     .discover-route {
-      display: flex; align-items: center; gap: 5px;
-      font-size: 11px; color: #bfe8e1; font-weight: 600; margin-bottom: 4px;
+      display: flex; align-items: center; gap: 4px;
+      font-size: 10.5px; color: #bfe8e1; font-weight: 600; margin-bottom: 3px;
     }
-    .discover-season { font-size: 10.5px; color: #7dd3c8; font-weight: 600; margin-bottom: 7px; }
-    .discover-tip { font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
+    .discover-season { font-size: 10px; color: #7dd3c8; font-weight: 600; margin: 0; }
+    .discover-tip {
+      font-size: 0.8rem; color: var(--muted); line-height: 1.3; margin: 3px 0 0;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
     .discover-by {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 9px; color: #5fae9f; margin-top: 10px;
-      letter-spacing: 0.4px; text-transform: uppercase; font-weight: 700; opacity: 0.8;
+      display: inline-flex; align-items: center; gap: 3px;
+      font-size: 8.5px; color: #5fae9f; margin: 0;
+      letter-spacing: 0.3px; text-transform: uppercase; font-weight: 700; opacity: 0.75;
     }
     .discover-cta {
       background: linear-gradient(135deg, rgba(45,212,191,0.14), rgba(13,148,136,0.08));
@@ -1249,7 +1254,7 @@
       .vip-inner { grid-template-columns: 1fr; }
       /* ── Descubramos juntos — 1 columna (móvil) ── */
       .discover-carousel { -webkit-mask-image: none; mask-image: none; }
-      .discover-card { width: 200px; flex: 0 0 200px; }
+      .discover-card { width: 260px; flex: 0 0 260px; height: 130px; }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
