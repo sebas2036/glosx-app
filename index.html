@@ -921,11 +921,29 @@
     .essential-item:hover .essential-cta { color: var(--primary2); }
 
     /* ── Descubramos juntos (comunidad · acento teal, estilo postal) ── */
-    .discover-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px;
+    /* ── Infinite carousel ── */
+    .discover-carousel {
+      overflow: hidden;
+      margin-top: 28px;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+      mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+    }
+    .discover-carousel-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: dc-scroll 40s linear infinite;
+    }
+    .discover-carousel:hover .discover-carousel-track {
+      animation-play-state: paused;
+    }
+    @keyframes dc-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
     }
     .discover-card {
       position: relative;
+      width: 285px; flex: 0 0 285px;
       background: linear-gradient(160deg, rgba(17,34,33,0.65) 0%, var(--surface) 70%);
       border: 1px solid rgba(45,212,191,0.18);
       border-left: 3px solid rgba(45,212,191,0.75);
@@ -1230,7 +1248,8 @@
       /* ── VIP — 1 columna (móvil) ── */
       .vip-inner { grid-template-columns: 1fr; }
       /* ── Descubramos juntos — 1 columna (móvil) ── */
-      .discover-grid { grid-template-columns: 1fr; }
+      .discover-carousel { -webkit-mask-image: none; mask-image: none; }
+      .discover-card { width: 240px; flex: 0 0 240px; }
       .section { padding: 30px 16px; }
 
       /* ── Fix overflow horizontal en mobile ── */
@@ -1311,7 +1330,6 @@
   .wt-timeline-head { margin-bottom: 22px; }
   .wt-timeline-head h3 { font-size: 22px; font-weight: 800; margin: 0 0 6px; letter-spacing: -0.3px; }
   .wt-timeline-head .wt-route-meta { color: var(--primary2); font-weight: 600; font-size: 14px; }
-  .wt-timeline-empty { display: none; }
 
   .wt-timeline { list-style: none; margin: 0; padding: 0; position: relative; }
   .wt-timeline::before {
@@ -1538,51 +1556,105 @@
     <h2><span data-i18n="disc_title1">Let's discover</span><br /><span data-i18n="disc_title2">together.</span></h2>
     <p class="lead" data-i18n="disc_lead">Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.</p>
 
-    <div class="discover-grid">
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Austria</div>
-        <div class="discover-place">Hallstatt</div>
-        <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
-        <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
-        <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Slovenia</div>
-        <div class="discover-place">Lake Bled</div>
-        <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
-        <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
-        <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Portugal</div>
-        <div class="discover-place">Sintra</div>
-        <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
-        <div class="discover-season">Best: year-round · easy day trip</div>
-        <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">France</div>
-        <div class="discover-place">Colmar</div>
-        <div class="discover-route">🚂 Alsace regional line</div>
-        <div class="discover-season">Best: Dec (markets) &amp; spring</div>
-        <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
-      </div>
-      <div class="discover-card">
-        <span class="discover-pin">📍</span>
-        <div class="discover-country">Switzerland</div>
-        <div class="discover-place">Lauterbrunnen</div>
-        <div class="discover-route">🚂 Mountain rail via Interlaken</div>
-        <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
-        <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
-        <div class="discover-by">★ Curated by WoW Train</div>
+    <div class="discover-cta">
+      <h3 data-i18n="disc_cta_title">Know a place only the train reveals?</h3>
+      <p data-i18n="disc_cta_text">Share the route, the town, the hidden stop — and help other travelers discover it too.</p>
+      <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
+    </div>
+
+    <div class="discover-carousel">
+      <div class="discover-carousel-track">
+        <div class="discover-card">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Austria</div>
+          <div class="discover-place">Hallstatt</div>
+          <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
+          <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
+          <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Slovenia</div>
+          <div class="discover-place">Lake Bled</div>
+          <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
+          <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
+          <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Portugal</div>
+          <div class="discover-place">Sintra</div>
+          <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
+          <div class="discover-season">Best: year-round · easy day trip</div>
+          <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">France</div>
+          <div class="discover-place">Colmar</div>
+          <div class="discover-route">🚂 Alsace regional line</div>
+          <div class="discover-season">Best: Dec (markets) &amp; spring</div>
+          <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Switzerland</div>
+          <div class="discover-place">Lauterbrunnen</div>
+          <div class="discover-route">🚂 Mountain rail via Interlaken</div>
+          <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
+          <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <!-- Duplicates for seamless infinite loop -->
+        <div class="discover-card" aria-hidden="true">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Austria</div>
+          <div class="discover-place">Hallstatt</div>
+          <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
+          <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
+          <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card" aria-hidden="true">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Slovenia</div>
+          <div class="discover-place">Lake Bled</div>
+          <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
+          <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
+          <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card" aria-hidden="true">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Portugal</div>
+          <div class="discover-place">Sintra</div>
+          <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
+          <div class="discover-season">Best: year-round · easy day trip</div>
+          <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card" aria-hidden="true">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">France</div>
+          <div class="discover-place">Colmar</div>
+          <div class="discover-route">🚂 Alsace regional line</div>
+          <div class="discover-season">Best: Dec (markets) &amp; spring</div>
+          <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
+        <div class="discover-card" aria-hidden="true">
+          <span class="discover-pin">📍</span>
+          <div class="discover-country">Switzerland</div>
+          <div class="discover-place">Lauterbrunnen</div>
+          <div class="discover-route">🚂 Mountain rail via Interlaken</div>
+          <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
+          <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
+          <div class="discover-by">★ Curated by WoW Train</div>
+        </div>
       </div>
     </div>
   </section>
@@ -1605,24 +1677,15 @@
     </button>
   </div>
 
-  <div class="wt-timeline-wrap">
+  <div class="wt-timeline-wrap" id="wt-wrap" hidden>
     <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
-    <div class="wt-timeline-head" id="wt-timeline-head" hidden>
+    <div class="wt-timeline-head" id="wt-timeline-head">
       <h3 id="wt-route-title"></h3>
       <span class="wt-route-meta" id="wt-route-meta"></span>
     </div>
-    <p class="wt-timeline-empty" id="wt-timeline-empty" data-i18n="tl_empty" hidden>Tap a route to unfold its timeline.</p>
     <ol class="wt-timeline" id="wt-timeline"></ol>
     <div id="wt-cta-slot"></div>
   </div>
-  </section>
-
-  <section class="section" id="discover-cta-wrap">
-    <div class="discover-cta">
-      <h3 data-i18n="disc_cta_title">Know a place only the train reveals?</h3>
-      <p data-i18n="disc_cta_text">Share the route, the town, the hidden stop — and help other travelers discover it too.</p>
-      <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
-    </div>
   </section>
 
   <section class="section wt-reviews">
@@ -2963,21 +3026,20 @@
 
   const buttons  = document.querySelectorAll(".wt-route-btn");
   const timeline = document.getElementById("wt-timeline");
+  const wrapEl   = document.getElementById("wt-wrap");
   const head     = document.getElementById("wt-timeline-head");
   const titleEl  = document.getElementById("wt-route-title");
   const metaEl   = document.getElementById("wt-route-meta");
-  const emptyEl  = document.getElementById("wt-timeline-empty");
   const ctaSlot  = document.getElementById("wt-cta-slot");
   const closeBtn = document.getElementById("wt-close");
 
   function closeTimeline() {
     _activeRouteKey = null;
     buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
-    head.hidden = true;
     timeline.innerHTML = "";
     ctaSlot.innerHTML = "";
     closeBtn.hidden = true;
-    emptyEl.hidden = false;
+    wrapEl.hidden = true;
   }
   if (closeBtn) closeBtn.addEventListener("click", closeTimeline);
 
@@ -2987,8 +3049,7 @@
     _activeRouteKey = key;
     const lang = document.documentElement.lang || 'en';
     const safeLang = route.title[lang] ? lang : 'en';
-    emptyEl.hidden = true;
-    head.hidden = false;
+    wrapEl.hidden = false;
     titleEl.textContent = route.title[safeLang];
     metaEl.textContent  = route.meta[safeLang];
     timeline.innerHTML = "";
