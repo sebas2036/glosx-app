@@ -1487,6 +1487,40 @@
     .wt-reviews-grid { grid-template-columns: 1fr; }
     .wt-review-card { height: auto; min-height: 130px; }
   }
+  /* ── Review submission form ── */
+  .wt-review-form {
+    max-width: 1200px; margin: 20px auto 0;
+    background: linear-gradient(160deg, rgba(26,22,48,0.55), var(--surface));
+    border: 1px solid rgba(124,58,237,0.22); border-radius: 14px; padding: 18px 16px 14px;
+  }
+  .wt-form-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: center; }
+  .wt-form-input {
+    flex: 1; font-family: inherit; font-size: 12.5px; color: var(--text);
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(124,58,237,0.22);
+    border-radius: 8px; padding: 9px 12px; outline: none;
+    transition: border-color 0.2s;
+  }
+  .wt-form-input:focus { border-color: rgba(168,85,247,0.55); }
+  .wt-form-textarea {
+    width: 100%; box-sizing: border-box; resize: none; height: 60px;
+    font-family: inherit; font-size: 12.5px; color: var(--text);
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(124,58,237,0.22);
+    border-radius: 8px; padding: 9px 12px; outline: none;
+    transition: border-color 0.2s;
+  }
+  .wt-form-textarea:focus { border-color: rgba(168,85,247,0.55); }
+  .wt-submit-btn {
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    color: #fff; border: none; cursor: pointer; white-space: nowrap;
+    font-family: inherit; font-size: 13px; font-weight: 700;
+    padding: 9px 20px; border-radius: 8px; flex: 0 0 auto;
+    transition: filter 0.2s, opacity 0.2s;
+  }
+  .wt-submit-btn:hover { filter: brightness(1.1); }
+  .wt-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; filter: none; }
+  .wt-char-row { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; }
+  .wt-char-count { font-size: 11px; color: var(--muted); }
+  .wt-form-status { font-size: 12px; min-height: 16px; }
 </style>
 </head>
 <body>
@@ -1890,6 +1924,19 @@
       <p class="wt-review-body" data-i18n="rv3_body">The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.</p>
       <div class="wt-stars">★★★★★</div>
     </article>
+  </div>
+
+  <div class="wt-review-form">
+    <div class="wt-form-row">
+      <input class="wt-form-input" id="wt-r-name"  type="text" maxlength="40" data-i18n-placeholder="rv_ph_name"  placeholder="Name, Country">
+      <input class="wt-form-input" id="wt-r-route" type="text" maxlength="60" data-i18n-placeholder="rv_ph_route" placeholder="Your train route">
+      <button class="wt-submit-btn" id="wt-r-submit" data-i18n="rv_publish">Publish</button>
+    </div>
+    <textarea class="wt-form-textarea" id="wt-r-body" maxlength="140" data-i18n-placeholder="rv_ph_body" placeholder="Your WoW train moment (max 140 chars)"></textarea>
+    <div class="wt-char-row">
+      <span class="wt-form-status" id="wt-r-status"></span>
+      <span class="wt-char-count"><span id="wt-r-chars">0</span>/140</span>
+    </div>
   </div>
 </section>
 
@@ -2298,6 +2345,7 @@
         rv1_route: 'Paris ➔ Milan · Classic Route', rv1_body: 'Pure comfort. I crossed the Alps with a hot coffee and my laptop open — arrived in Milan rested, not wrecked like after a flight.',
         rv2_route: 'Zurich ➔ Vienna · Alpine Route', rv2_body: 'Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.',
         rv3_route: 'Prague ➔ Budapest · Imperial Route', rv3_body: 'The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.',
+        rv_ph_name: 'Name, Country', rv_ph_route: 'Your train route', rv_ph_body: 'Your WoW train moment (max 140 chars)', rv_publish: 'Publish', rv_ok: 'Published!', rv_error_empty: 'Fill in your name and comment.',
       },
       es: {
         nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
@@ -2356,6 +2404,7 @@
         rv1_route: 'París ➔ Milán · Ruta Clásica', rv1_body: 'Puro confort. Crucé los Alpes con un café caliente y la laptop abierta — llegué a Milán descansada, no destruida como después de un vuelo.',
         rv2_route: 'Zúrich ➔ Viena · Ruta Alpina', rv2_body: 'Sin estrés. Un solo billete, conexiones que encajaron solas, sin las interminables colas de seguridad. Me senté y simplemente lo disfruté.',
         rv3_route: 'Praga ➔ Budapest · Ruta Imperial', rv3_body: 'El paisaje. El Danubio apareció en un recodo al atardecer y todo el vagón quedó en silencio. Ninguna ventanilla de avión te da eso.',
+        rv_ph_name: 'Nombre, País', rv_ph_route: 'Tu ruta en tren', rv_ph_body: 'Tu momento WoW en tren (máx. 140 car.)', rv_publish: 'Publicar', rv_ok: '¡Publicado!', rv_error_empty: 'Completá tu nombre y comentario.',
       },
       fr: {
         nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
@@ -2414,6 +2463,7 @@
         rv1_route: 'Paris ➔ Milan · Route Classique', rv1_body: 'Pur confort. J\'ai traversé les Alpes avec un café chaud et mon ordinateur ouvert — arrivée à Milan reposée, pas épuisée comme après un vol.',
         rv2_route: 'Zurich ➔ Vienne · Route Alpine', rv2_body: 'Zéro stress. Un seul billet, des correspondances qui s\'enchaînaient, sans les interminables files de sécurité. Je me suis assis et j\'ai simplement profité.',
         rv3_route: 'Prague ➔ Budapest · Route Impériale', rv3_body: 'Le paysage. Le Danube est apparu au détour d\'un virage au coucher du soleil et tout le wagon s\'est tu. Aucun hublot d\'avion ne vous offre ça.',
+        rv_ph_name: 'Prénom, Pays', rv_ph_route: 'Votre itinéraire en train', rv_ph_body: 'Votre moment WoW en train (max 140 car.)', rv_publish: 'Publier', rv_ok: 'Publié !', rv_error_empty: 'Indiquez votre prénom et votre commentaire.',
       },
       de: {
         nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
@@ -2472,6 +2522,7 @@
         rv1_route: 'Paris ➔ Mailand · Klassische Route', rv1_body: 'Purer Komfort. Ich überquerte die Alpen mit einem heißen Kaffee und geöffnetem Laptop — kam in Mailand ausgeruht an, nicht kaputt wie nach einem Flug.',
         rv2_route: 'Zürich ➔ Wien · Alpine Route', rv2_body: 'Null Stress. Ein Ticket, Anschlüsse, die einfach passten, keine endlosen Sicherheitsschlangen. Ich setzte mich hin und genoss es einfach.',
         rv3_route: 'Prag ➔ Budapest · Imperiale Route', rv3_body: 'Die Landschaft. Die Donau erschien bei Sonnenuntergang um eine Biegung und das ganze Abteil wurde still. Kein Flugzeugfenster gibt dir das.',
+        rv_ph_name: 'Name, Land', rv_ph_route: 'Deine Bahnstrecke', rv_ph_body: 'Dein WoW-Moment im Zug (max. 140 Z.)', rv_publish: 'Veröffentlichen', rv_ok: 'Veröffentlicht!', rv_error_empty: 'Bitte Name und Kommentar ausfüllen.',
       },
       it: {
         nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
@@ -2530,6 +2581,7 @@
         rv1_route: 'Parigi ➔ Milano · Percorso Classico', rv1_body: 'Puro comfort. Ho attraversato le Alpi con un caffè caldo e il laptop aperto — arrivata a Milano riposata, non distrutta come dopo un volo.',
         rv2_route: 'Zurigo ➔ Vienna · Percorso Alpino', rv2_body: 'Zero stress. Un biglietto, coincidenze perfette, nessuna fila di sicurezza infinita. Mi sono seduto e ho semplicemente goduto.',
         rv3_route: 'Praga ➔ Budapest · Percorso Imperiale', rv3_body: 'Il paesaggio. Il Danubio è apparso attorno a una curva al tramonto e tutto il vagone è rimasto in silenzio. Nessun oblò d\'aereo ti dà questo.',
+        rv_ph_name: 'Nome, Paese', rv_ph_route: 'Il tuo percorso in treno', rv_ph_body: 'Il tuo momento WoW in treno (max 140 car.)', rv_publish: 'Pubblica', rv_ok: 'Pubblicato!', rv_error_empty: 'Inserisci nome e commento.',
       },
       pt: {
         nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
@@ -2588,6 +2640,7 @@
         rv1_route: 'Paris ➔ Milão · Rota Clássica', rv1_body: 'Puro conforto. Atravessei os Alpes com um café quente e o portátil aberto — cheguei a Milão descansada, não destruída como depois de um voo.',
         rv2_route: 'Zurique ➔ Viena · Rota Alpina', rv2_body: 'Zero stress. Um bilhete, ligações que encaixaram, sem as intermináveis filas de segurança. Sentei-me e simplesmente desfrutei.',
         rv3_route: 'Praga ➔ Budapeste · Rota Imperial', rv3_body: 'A paisagem. O Danúbio apareceu numa curva ao pôr do sol e todo o vagão ficou em silêncio. Nenhuma janela de avião te dá isso.',
+        rv_ph_name: 'Nome, País', rv_ph_route: 'O teu percurso de comboio', rv_ph_body: 'O teu momento WoW no comboio (máx. 140 car.)', rv_publish: 'Publicar', rv_ok: 'Publicado!', rv_error_empty: 'Preenche o nome e o comentário.',
       },
     };
 
@@ -2621,6 +2674,11 @@
       document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
         const key = el.getAttribute('data-i18n-aria-label');
         if (dict[key] !== undefined) { el.setAttribute('aria-label', dict[key]); el.setAttribute('title', dict[key]); }
+      });
+      // Placeholders de inputs/textareas
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
       });
       // Actualizar selector
       const meta = LANG_META[lang] || LANG_META.en;
@@ -3154,6 +3212,111 @@
   const firstBtn = document.querySelector('.wt-route-btn[data-route="classic"]');
   if (firstBtn) firstBtn.setAttribute("aria-pressed", "true");
   render("classic");
+})();
+</script>
+<script>
+/* ── Supabase review form ─────────────────────────────────────────────────────
+   Table required (run once in Supabase SQL editor):
+   CREATE TABLE reviews (
+     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+     name text NOT NULL,
+     route text,
+     body text NOT NULL,
+     created_at timestamptz DEFAULT now()
+   );
+   ALTER TABLE reviews ENABLE ROW LEVEL SECURITY;
+   CREATE POLICY "Anyone can insert" ON reviews FOR INSERT WITH CHECK (true);
+   CREATE POLICY "Anyone can read"   ON reviews FOR SELECT USING (true);
+   ─────────────────────────────────────────────────────────────────────────── */
+(function () {
+  var SB_URL = 'https://yhhqmcgpowhypfyowmuc.supabase.co';
+  var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InloaHFtY2dwb3doeXBmeW93bXVjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2MTAyMjUsImV4cCI6MjA5NDE4NjIyNX0.H6Hq8M8scCA61TuJ9jTy43oiBQjkNCCeHFolCPvvY8Q';
+
+  var nameEl    = document.getElementById('wt-r-name');
+  var routeEl   = document.getElementById('wt-r-route');
+  var bodyEl    = document.getElementById('wt-r-body');
+  var charsEl   = document.getElementById('wt-r-chars');
+  var submitBtn = document.getElementById('wt-r-submit');
+  var statusEl  = document.getElementById('wt-r-status');
+  var grid      = document.querySelector('.wt-reviews-grid');
+
+  if (!bodyEl || !grid) return;
+
+  bodyEl.addEventListener('input', function () {
+    charsEl.textContent = bodyEl.value.length;
+  });
+
+  function getInitials(name) {
+    return name.trim().split(/\s+/).slice(0, 2).map(function (w) { return w[0].toUpperCase(); }).join('').slice(0, 2);
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function insertCard(data) {
+    var initials = getInitials(data.name || '?');
+    var lang = document.documentElement.lang || 'en';
+    var momento = (window.TRANSLATIONS && TRANSLATIONS[lang] && TRANSLATIONS[lang].wt_momento) || 'WoW Moment:';
+    var art = document.createElement('article');
+    art.className = 'wt-review-card';
+    art.innerHTML =
+      '<div class="wt-review-head">' +
+        '<div class="wt-avatar">' + escHtml(initials) + '</div>' +
+        '<div>' +
+          '<p class="wt-review-name">' + escHtml(data.name) + '</p>' +
+          (data.route ? '<p class="wt-review-route">' + escHtml(data.route) + '</p>' : '') +
+        '</div>' +
+      '</div>' +
+      '<span class="wt-momento">' + escHtml(momento) + '</span>' +
+      '<p class="wt-review-body">' + escHtml(data.body) + '</p>' +
+      '<div class="wt-stars">★★★★★</div>';
+    grid.prepend(art);
+  }
+
+  submitBtn.addEventListener('click', async function () {
+    var lang   = document.documentElement.lang || 'en';
+    var dict   = (window.TRANSLATIONS && TRANSLATIONS[lang]) || {};
+    var name   = nameEl.value.trim();
+    var route  = routeEl.value.trim();
+    var body   = bodyEl.value.trim();
+
+    if (!name || !body) {
+      statusEl.style.color = '#f87171';
+      statusEl.textContent = dict.rv_error_empty || 'Fill in your name and comment.';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    statusEl.style.color = 'var(--muted)';
+    statusEl.textContent = '...';
+
+    try {
+      var res = await fetch(SB_URL + '/rest/v1/reviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SB_KEY,
+          'Authorization': 'Bearer ' + SB_KEY,
+          'Prefer': 'return=representation'
+        },
+        body: JSON.stringify({ name: name, route: route || null, body: body })
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      var rows = await res.json();
+      insertCard(rows[0] || { name: name, route: route, body: body });
+      nameEl.value = ''; routeEl.value = ''; bodyEl.value = '';
+      charsEl.textContent = '0';
+      statusEl.style.color = '#22c55e';
+      statusEl.textContent = dict.rv_ok || 'Published!';
+      setTimeout(function () { statusEl.textContent = ''; }, 3000);
+    } catch (e) {
+      statusEl.style.color = '#f87171';
+      statusEl.textContent = 'Error: ' + e.message;
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
 })();
 </script>
 <script>
