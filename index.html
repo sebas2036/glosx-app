@@ -1330,7 +1330,7 @@
     z-index: 0;
   }
   .wt-route-btn[data-route="classic"]::before {
-    background-image: url('https://images.unsplash.com/photo-1673086636059-0f4abc8b853b?w=640&q=80&auto=format&fit=crop');
+    background-image: url('assets/img/tgv-route.jpg');
   }
   .wt-route-btn[data-route="alpine"]::before {
     background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=640&q=80&auto=format&fit=crop');
@@ -1498,6 +1498,7 @@
     flex: 1; font-family: inherit; font-size: 12.5px; color: var(--text);
     background: rgba(255,255,255,0.04); border: 1px solid rgba(124,58,237,0.22);
     border-radius: 8px; padding: 9px 12px; outline: none;
+    box-sizing: border-box;
     transition: border-color 0.2s;
   }
   .wt-form-input:focus { border-color: rgba(168,85,247,0.55); }
@@ -1529,6 +1530,14 @@
   }
   .wt-star-btn:hover { transform: scale(1.18); }
   .wt-star-btn.lit { color: #a855f7; }
+
+  @media (max-width: 768px) {
+    .wt-review-form { padding: 15px; }
+    .wt-form-row { flex-direction: column; align-items: stretch; }
+    .wt-form-input { width: 100%; flex: none; }
+    .wt-submit-btn { width: 100%; }
+    .wt-star-row { justify-content: center; }
+  }
 </style>
 </head>
 <body>
