@@ -323,7 +323,7 @@
 
     /* ── Search box ── */
     .search-box {
-      width: 100%; max-width: 720px;
+      width: 100%; max-width: 820px;
       background: rgba(26,26,46,0.92);
       backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(139,92,246,0.45);
@@ -362,7 +362,7 @@
       background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
       color: #fff;
       border: none; border-radius: 12px;
-      padding: 0 24px;
+      padding: 0 22px; white-space: nowrap;
       font-size: 14px; font-weight: 700;
       cursor: pointer;
       transition: transform 0.15s, box-shadow 0.2s;
@@ -1657,7 +1657,7 @@
         <div id="dateDisplay" style="font-size:14px;font-weight:600;color:var(--text);cursor:pointer;padding-top:2px;"></div>
         <input type="hidden" id="date" required />
       </div>
-      <button type="submit" class="search-btn" data-i18n="search_btn">Search →</button>
+      <button type="submit" class="search-btn" data-i18n="search_btn">Search Tickets &amp; Schedules →</button>
     </form>
 
   </section>
@@ -2419,7 +2419,7 @@
         hero_badge: '🚄 WoW Train — Europe & beyond',
         hero_title1: 'Your train.', hero_title2: 'Your world.',
         hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
-        search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search →',
+        search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search Tickets & Schedules →',
         stat_world: 'Europe & beyond', stat_free_val: 'Free', stat_free: 'No cost, forever', stat_realtime_val: 'Real-time', stat_realtime: 'Live departures 24/7', stat_noreg_val: 'No sign-up', stat_noreg: 'Open and search, no account',
         scenic_label: 'Iconic European routes', scenic_title1: 'Scenic train', scenic_title2: 'experiences.',
         scenic_lead: 'The most spectacular train journeys in Europe — book directly from here.',
@@ -2478,7 +2478,7 @@
         hero_badge: '🚄 WoW Train — Europa y el mundo',
         hero_title1: 'Tu tren.', hero_title2: 'Tu mundo.',
         hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
-        search_from: 'Desde', search_to: 'Hasta', search_date: 'Fecha', search_btn: 'Buscar →',
+        search_from: 'Desde', search_to: 'Hasta', search_date: 'Fecha', search_btn: 'Buscar pasajes y horarios →',
         stat_world: 'Europa y el mundo', stat_free_val: 'Gratis', stat_free: 'Sin costo, para siempre', stat_realtime_val: 'Tiempo real', stat_realtime: 'Salidas en vivo 24/7', stat_noreg_val: 'Sin registro', stat_noreg: 'Abrí y buscá, sin cuenta',
         scenic_label: 'Rutas europeas icónicas', scenic_title1: 'Experiencias en', scenic_title2: 'tren panorámico.',
         scenic_lead: 'Los viajes en tren más espectaculares de Europa — reservá directo desde aquí.',
@@ -2537,7 +2537,7 @@
         hero_badge: '🚄 WoW Train — Europe et au-delà',
         hero_title1: 'Ton train.', hero_title2: 'Ton monde.',
         hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
-        search_from: 'Départ', search_to: 'Arrivée', search_date: 'Date', search_btn: 'Rechercher →',
+        search_from: 'Départ', search_to: 'Arrivée', search_date: 'Date', search_btn: 'Billets et horaires →',
         stat_world: 'Europe et au-delà', stat_free_val: 'Gratuit', stat_free: 'Sans frais, pour toujours', stat_realtime_val: 'Temps réel', stat_realtime: 'Départs en direct 24/7', stat_noreg_val: 'Sans inscription', stat_noreg: 'Ouvrez et cherchez, sans compte',
         scenic_label: 'Itinéraires européens emblématiques', scenic_title1: 'Expériences en', scenic_title2: 'train panoramique.',
         scenic_lead: 'Les plus beaux voyages en train d\'Europe — réservez directement ici.',
@@ -2596,7 +2596,7 @@
         hero_badge: '🚄 WoW Train — Europa und die Welt',
         hero_title1: 'Dein Zug.', hero_title2: 'Deine Welt.',
         hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
-        search_from: 'Von', search_to: 'Nach', search_date: 'Datum', search_btn: 'Suchen →',
+        search_from: 'Von', search_to: 'Nach', search_date: 'Datum', search_btn: 'Tickets & Fahrpläne suchen →',
         stat_world: 'Europa und die Welt', stat_free_val: 'Kostenlos', stat_free: 'Keine Kosten, für immer', stat_realtime_val: 'Echtzeit', stat_realtime: 'Live-Abfahrten 24/7', stat_noreg_val: 'Ohne Anmeldung', stat_noreg: 'Öffnen und suchen, kein Konto',
         scenic_label: 'Ikonische europäische Routen', scenic_title1: 'Panoramazug-', scenic_title2: 'Erlebnisse.',
         scenic_lead: 'Die spektakulärsten Zugreisen Europas — direkt von hier buchen.',
@@ -2655,7 +2655,7 @@
         hero_badge: '🚄 WoW Train — Europa e oltre',
         hero_title1: 'Il tuo treno.', hero_title2: 'Il tuo mondo.',
         hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
-        search_from: 'Da', search_to: 'A', search_date: 'Data', search_btn: 'Cerca →',
+        search_from: 'Da', search_to: 'A', search_date: 'Data', search_btn: 'Cerca biglietti e orari →',
         stat_world: 'Europa e oltre', stat_free_val: 'Gratis', stat_free: 'Senza costi, per sempre', stat_realtime_val: 'Tempo reale', stat_realtime: 'Partenze in diretta 24/7', stat_noreg_val: 'Senza registrazione', stat_noreg: 'Apri e cerca, senza account',
         scenic_label: 'Percorsi europei iconici', scenic_title1: 'Esperienze in', scenic_title2: 'treno panoramico.',
         scenic_lead: 'I viaggi in treno più spettacolari d\'Europa — prenota direttamente da qui.',
@@ -2714,7 +2714,7 @@
         hero_badge: '🚄 WoW Train — Europa e além',
         hero_title1: 'O teu comboio.', hero_title2: 'O teu mundo.',
         hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
-        search_from: 'De', search_to: 'Para', search_date: 'Data', search_btn: 'Pesquisar →',
+        search_from: 'De', search_to: 'Para', search_date: 'Data', search_btn: 'Bilhetes e horários →',
         stat_world: 'Europa e além', stat_free_val: 'Grátis', stat_free: 'Sem custo, para sempre', stat_realtime_val: 'Tempo real', stat_realtime: 'Partidas ao vivo 24/7', stat_noreg_val: 'Sem registo', stat_noreg: 'Abra e pesquise, sem conta',
         scenic_label: 'Rotas europeias icónicas', scenic_title1: 'Experiências em', scenic_title2: 'comboio panorâmico.',
         scenic_lead: 'As viagens de comboio mais espetaculares da Europa — reserve diretamente aqui.',
