@@ -1463,11 +1463,17 @@
 
   /* ---- Tarea 3: Valoraciones & experiencias ---- */
   .wt-reviews-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px;
+    display: flex; gap: 14px; margin-top: 8px;
     max-width: 1200px; margin-left: auto; margin-right: auto;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 10px; -webkit-overflow-scrolling: touch;
   }
+  .wt-reviews-grid::-webkit-scrollbar { height: 6px; }
+  .wt-reviews-grid::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.4); border-radius: 4px; }
+  .wt-reviews-grid::-webkit-scrollbar-track { background: transparent; }
   .wt-review-card {
     position: relative;
+    flex: 0 0 300px; scroll-snap-align: start;
     height: 140px; box-sizing: border-box; overflow: hidden;
     display: flex; flex-direction: column; justify-content: space-between;
     background: linear-gradient(160deg, rgba(26,22,48,0.65) 0%, var(--surface) 70%);
@@ -1502,8 +1508,7 @@
 
   /* ---- Responsive ---- */
   @media (max-width: 720px) {
-    .wt-reviews-grid { grid-template-columns: 1fr; }
-    .wt-review-card { height: auto; min-height: 130px; }
+    .wt-review-card { flex: 0 0 82%; height: auto; min-height: 130px; }
   }
   /* ── Review submission form ── */
   .wt-review-form {
@@ -3375,6 +3380,7 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       var rows = await res.json();
       insertCard(rows[0] || { name: name, route: route, body: body, rating: _rating });
+      trimGrid();
       nameEl.value = ''; routeEl.value = ''; bodyEl.value = '';
       charsEl.textContent = '0';
       _rating = 0; renderStars();
@@ -3388,6 +3394,25 @@
       submitBtn.disabled = false;
     }
   });
+
+  // ── Tope de tarjetas y carga de las últimas reseñas reales ─────────────────
+  var MAX_CARDS = 15;
+  function trimGrid() {
+    var cards = grid.querySelectorAll('.wt-review-card');
+    for (var i = cards.length - 1; i >= MAX_CARDS; i--) cards[i].remove();
+  }
+
+  (async function loadReviews() {
+    try {
+      var res = await fetch(SB_URL + '/rest/v1/reviews?select=*&order=created_at.desc&limit=' + MAX_CARDS, {
+        headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+      });
+      if (!res.ok) return;
+      var rows = await res.json();
+      rows.reverse().forEach(insertCard);
+      trimGrid();
+    } catch (e) {}
+  })();
 })();
 </script>
 <script>
