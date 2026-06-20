@@ -39,6 +39,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
+    // Evento: click saliente hacia Trainline (para medir demanda enviada al partner)
+    window.trackTrainline = function (src) {
+      try { gtag('event', 'trainline_click', { source: src || 'unknown' }); } catch (e) {}
+    };
   </script>
 
   <!-- Travelpayouts Drive -->
@@ -2882,6 +2886,7 @@
         var toSlug   = destEl.getAttribute('data-slug')   || destEl.value.trim().toLowerCase().replace(/\s+/g, '-');
         if (!fromSlug || !toSlug) return false;
         var lang = document.documentElement.lang || 'en';
+        trackTrainline('hero_search');
         window.open(buildSearchUrl(fromSlug, toSlug, lang, dateVal), '_blank');
         return false;
       };
@@ -3020,6 +3025,7 @@
 
     function goScenic(from, to, e) {
       e.preventDefault();
+      trackTrainline('scenic_route');
       window.open('https://www.thetrainline.com/train-times/' + from + '-to-' + to, '_blank');
       return false;
     }
@@ -3308,7 +3314,7 @@
       : (lang === 'it') ? 'Vedi orari e tariffe'
       : 'Check schedules and rates';
     ctaSlot.innerHTML =
-      '<a class="wt-tl-cta" href="' + url + '" target="_blank" rel="noopener sponsored">' +
+      '<a class="wt-tl-cta" href="' + url + '" target="_blank" rel="noopener sponsored" onclick="trackTrainline(\'route_panel\')">' +
       _ctaText + ' <span class="wt-tl-arrow">→</span></a>';
     closeBtn.hidden = false;
   }
