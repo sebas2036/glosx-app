@@ -87,6 +87,15 @@
       background: #000;
     }
     .video-wrap video { display: block; width: 100%; height: auto; }
+    .hero-media { flex: 0 0 320px; display: flex; flex-direction: column; gap: 14px; }
+    .hero-media .video-wrap { flex: initial; width: 100%; }
+    .cta-btn-inline {
+      display: block; text-align: center;
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      color: #fff; font-weight: 700; padding: 12px 18px; border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(124,58,237,0.5); text-decoration: none;
+    }
+    .cta-btn-inline:hover { text-decoration: none; filter: brightness(1.08); }
     .hero-text { flex: 1; min-width: 0; }
     .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; }
     h2 { font-size: 24px; font-weight: 700; margin: 36px 0 12px; letter-spacing: -0.5px; }
@@ -121,7 +130,7 @@
     @media (max-width: 760px) {
       nav { padding: 16px 20px; } main { padding: 96px 20px 60px; } h1 { font-size: 30px; }
       .hero { flex-direction: column; align-items: center; }
-      .video-wrap { flex: 0 0 auto; width: 100%; max-width: 340px; }
+      .hero-media { flex: 0 0 auto; width: 100%; max-width: 340px; }
     }
   </style>
 </head>
@@ -140,9 +149,14 @@
     <p class="meta">Por WoW Train · Actualizado junio 2026 · 3 min de lectura</p>
 
     <div class="hero">
-      <div class="video-wrap">
-        <video src="/destinos/video/lauterbrunnen.mp4" poster="/destinos/video/lauterbrunnen-poster.jpg"
-               controls playsinline preload="metadata" muted loop></video>
+      <div class="hero-media">
+        <div class="video-wrap">
+          <video src="/destinos/video/lauterbrunnen.mp4" poster="/destinos/video/lauterbrunnen-poster.jpg"
+                 controls playsinline preload="metadata" muted loop></video>
+        </div>
+        <a href="https://www.thetrainline.com/es/horarios-trenes/zurich-a-interlaken-ost"
+           class="cta-btn-inline" target="_blank" rel="noopener sponsored"
+           onclick="trackTrainline('dest_lauterbrunnen_es')">Trenes a Interlaken →</a>
       </div>
       <div class="hero-text">
         <p class="lead">
