@@ -26,6 +26,76 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://glosx.app/rutas/lyon-turin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/lyon-turin/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/lyon-turin/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/lyon-turin/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-barcelona/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-barcelona/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-barcelona/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-barcelona/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/vienna-prague/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/vienna-prague/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/vienna-prague/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/vienna-prague/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-amsterdam/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-amsterdam/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-amsterdam/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-amsterdam/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/munich-venice/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/munich-venice/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/munich-venice/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/munich-venice/es/" />
+  </url>
+  <url>
     <loc>https://glosx.app/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
