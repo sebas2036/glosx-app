@@ -110,6 +110,20 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/hallstatt/es/" />
   </url>
   <url>
+    <loc>https://glosx.app/destinos/lake-bled/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lake-bled/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/destinos/lake-bled/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lake-bled/es/" />
+  </url>
+  <url>
     <loc>https://glosx.app/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
