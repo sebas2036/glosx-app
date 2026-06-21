@@ -984,33 +984,43 @@
     .discover-grid .discover-card.is-featured {
       border-color: rgba(139,92,246,0.45);
       border-left-color: var(--primary);
-      background: linear-gradient(160deg, rgba(124,58,237,0.16) 0%, var(--surface) 75%);
     }
+    .discover-grid .discover-card { min-height: 168px; }
     .discover-grid .discover-tip { margin-bottom: 8px; }
     .discover-grid .discover-watch {
       position: static; align-self: flex-end; margin-top: auto;
     }
     .discover-card {
-      position: relative;
+      position: relative; isolation: isolate;
       width: 320px; flex: 0 0 320px;
       height: 140px; box-sizing: border-box; overflow: hidden;
-      background: linear-gradient(160deg, rgba(17,34,33,0.65) 0%, var(--surface) 70%);
-      border: 1px solid rgba(45,212,191,0.18);
+      background-color: var(--surface);
+      background-size: cover; background-position: center;
+      border: 1px solid rgba(255,255,255,0.08);
       border-left: 3px solid rgba(45,212,191,0.75);
-      border-radius: 12px; padding: 10px 15px;
+      border-radius: 16px; padding: 12px 16px;
       display: flex; flex-direction: column; justify-content: space-between;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       text-decoration: none; color: inherit;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
     }
+    .discover-card::before {
+      content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit;
+      background: linear-gradient(165deg, rgba(10,8,18,0.42) 0%, rgba(10,8,18,0.72) 52%, rgba(10,8,18,0.93) 100%);
+      transition: background 0.25s ease;
+    }
+    .discover-card > * { position: relative; z-index: 1; }
     a.discover-card:hover { text-decoration: none; }
     .discover-watch {
       position: absolute; bottom: 9px; right: 12px; font-size: 9px; font-weight: 800;
       letter-spacing: 0.5px; color: #2dd4bf; text-transform: uppercase; opacity: 0.9;
     }
     .discover-card:hover {
-      border-color: rgba(45,212,191,0.5);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(45,212,191,0.10);
+      transform: translateY(-5px) scale(1.012);
+      box-shadow: 0 22px 50px rgba(0,0,0,0.6);
+    }
+    .discover-card:hover::before {
+      background: linear-gradient(165deg, rgba(10,8,18,0.28) 0%, rgba(10,8,18,0.6) 52%, rgba(10,8,18,0.9) 100%);
     }
     .discover-pin {
       position: absolute; top: 10px; right: 12px; font-size: 11px; opacity: 0.65;
@@ -1019,14 +1029,15 @@
       font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
       color: #2dd4bf; margin: 0;
     }
-    .discover-place { font-size: 14px; font-weight: 800; color: var(--text); margin: 2px 0 4px; letter-spacing: -0.2px; }
+    .discover-place { font-size: 14px; font-weight: 800; color: var(--text); margin: 2px 0 4px; letter-spacing: -0.2px; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+    .discover-country, .discover-route, .discover-season, .discover-tip, .discover-watch { text-shadow: 0 1px 6px rgba(0,0,0,0.85); }
     .discover-route {
       display: flex; align-items: center; gap: 4px;
       font-size: 10.5px; color: #bfe8e1; font-weight: 600; margin-bottom: 3px;
     }
     .discover-season { font-size: 10px; color: #7dd3c8; font-weight: 600; margin: 0; }
     .discover-tip {
-      font-size: 0.8rem; color: var(--muted); line-height: 1.3; margin: 3px 0 0;
+      font-size: 0.8rem; color: #cfcfdb; line-height: 1.3; margin: 3px 0 0;
       display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
     .discover-by {
@@ -1863,7 +1874,7 @@
     </div>
 
     <div class="discover-grid">
-      <a href="/destinos/hallstatt/" class="discover-card is-featured">
+      <a href="/destinos/hallstatt/" class="discover-card is-featured" style="background-image:url('/destinos/video/hallstatt-poster.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">Austria · Hidden gem</div>
         <div class="discover-place">Hallstatt</div>
@@ -1872,7 +1883,7 @@
         <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
         <span class="discover-watch">▶ Video + guide</span>
       </a>
-      <a href="/destinos/lake-bled/" class="discover-card is-featured">
+      <a href="/destinos/lake-bled/" class="discover-card is-featured" style="background-image:url('/destinos/video/bled-poster.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">Slovenia · Hidden gem</div>
         <div class="discover-place">Lake Bled</div>
@@ -1881,7 +1892,7 @@
         <div class="discover-tip">An island church on an emerald lake under a clifftop castle. Two stations, one secret — pick the right one and the train drops you by the water.</div>
         <span class="discover-watch">▶ Video + guide</span>
       </a>
-      <a href="/destinos/lauterbrunnen/" class="discover-card is-featured">
+      <a href="/destinos/lauterbrunnen/" class="discover-card is-featured" style="background-image:url('/destinos/video/lauterbrunnen-poster.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">Switzerland · Hidden gem</div>
         <div class="discover-place">Lauterbrunnen</div>
@@ -1890,7 +1901,7 @@
         <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. No direct line — change at Interlaken onto a mountain railway that's half the magic.</div>
         <span class="discover-watch">▶ Video + guide</span>
       </a>
-      <a href="/destinos/colmar/" class="discover-card is-featured">
+      <a href="/destinos/colmar/" class="discover-card is-featured" style="background-image:url('/destinos/video/colmar-poster.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">France · Hidden gem</div>
         <div class="discover-place">Colmar</div>
@@ -1899,7 +1910,7 @@
         <div class="discover-tip">The "Little Venice" of Alsace — half-timbered houses and flower-lined canals, a short walk from a direct TGV station.</div>
         <span class="discover-watch">▶ Video + guide</span>
       </a>
-      <a href="/rutas/munich-venice/" class="discover-card">
+      <a href="/rutas/munich-venice/" class="discover-card" style="background-image:url('/assets/img/route-munich-venice.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">Germany → Italy</div>
         <div class="discover-place">Munich → Venice</div>
@@ -1908,7 +1919,7 @@
         <div class="discover-tip">One of Europe's most scenic rides — from Bavaria over the Alps, down through vineyards to the edge of the Venetian lagoon.</div>
         <span class="discover-watch">▶ Route guide</span>
       </a>
-      <a href="/rutas/lyon-turin/" class="discover-card">
+      <a href="/rutas/lyon-turin/" class="discover-card" style="background-image:url('/assets/img/route-lyon-turin.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">France → Italy</div>
         <div class="discover-place">Lyon → Turin</div>
@@ -1917,7 +1928,7 @@
         <div class="discover-tip">From Lyon's riverside to baroque Turin, threading the Maurienne valley and the historic Alpine tunnel into Italy.</div>
         <span class="discover-watch">▶ Route guide</span>
       </a>
-      <a href="/rutas/paris-barcelona/" class="discover-card">
+      <a href="/rutas/paris-barcelona/" class="discover-card" style="background-image:url('/assets/img/route-paris-barcelona.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">France → Spain</div>
         <div class="discover-place">Paris → Barcelona</div>
@@ -1926,7 +1937,7 @@
         <div class="discover-tip">One train from Paris through the south of France and the Pyrenees, straight into the heart of Barcelona.</div>
         <span class="discover-watch">▶ Route guide</span>
       </a>
-      <a href="/rutas/paris-amsterdam/" class="discover-card">
+      <a href="/rutas/paris-amsterdam/" class="discover-card" style="background-image:url('/assets/img/route-paris-amsterdam.jpg')">
         <span class="discover-pin"></span>
         <div class="discover-country">France → Netherlands</div>
         <div class="discover-place">Paris → Amsterdam</div>
