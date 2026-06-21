@@ -96,6 +96,20 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/munich-venice/es/" />
   </url>
   <url>
+    <loc>https://glosx.app/destinos/hallstatt/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/hallstatt/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/destinos/hallstatt/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/hallstatt/es/" />
+  </url>
+  <url>
     <loc>https://glosx.app/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

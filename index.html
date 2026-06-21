@@ -982,6 +982,12 @@
       border-radius: 12px; padding: 10px 15px;
       display: flex; flex-direction: column; justify-content: space-between;
       transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      text-decoration: none; color: inherit;
+    }
+    a.discover-card:hover { text-decoration: none; }
+    .discover-watch {
+      position: absolute; bottom: 9px; right: 12px; font-size: 9px; font-weight: 800;
+      letter-spacing: 0.5px; color: #2dd4bf; text-transform: uppercase; opacity: 0.9;
     }
     .discover-card:hover {
       border-color: rgba(45,212,191,0.5);
@@ -1839,15 +1845,15 @@
 
     <div class="discover-carousel">
       <div class="discover-carousel-track">
-        <div class="discover-card">
+        <a href="/destinos/hallstatt/" class="discover-card">
           <span class="discover-pin">📍</span>
           <div class="discover-country">Austria</div>
           <div class="discover-place">Hallstatt</div>
           <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
           <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
           <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
+          <span class="discover-watch">▶ Video + guide</span>
+        </a>
         <div class="discover-card">
           <span class="discover-pin">📍</span>
           <div class="discover-country">Slovenia</div>
@@ -2898,6 +2904,26 @@
         window.open(buildSearchUrl(fromSlug, toSlug, lang, dateVal), '_blank');
         return false;
       };
+    })();
+
+    // ── Prefill del buscador por URL (?from= / ?to=) — usado por páginas /destinos/ y /rutas/ ──
+    (function() {
+      try {
+        var p = new URLSearchParams(window.location.search);
+        var from = p.get('from'); var to = p.get('to');
+        if (!from && !to) return;
+        var originEl = document.getElementById('origin');
+        var destEl   = document.getElementById('dest');
+        if (from && originEl) originEl.value = from;
+        if (to && destEl) destEl.value = to;
+        var form = document.getElementById('trainSearch');
+        if (form) {
+          form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // foco en el campo que falta completar (origen si vino destino, y viceversa)
+          var focusEl = (to && !from) ? originEl : destEl;
+          if (focusEl) setTimeout(function(){ focusEl.focus(); }, 600);
+        }
+      } catch (e) {}
     })();
 
     // ── Partner products → redirige al proxy correspondiente ───────────────
