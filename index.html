@@ -972,6 +972,24 @@
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
     }
+    .discover-grid {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .discover-grid .discover-card {
+      width: auto; flex: initial; height: auto; min-height: 150px;
+    }
+    .discover-grid .discover-card.is-featured {
+      border-color: rgba(139,92,246,0.45);
+      border-left-color: var(--primary);
+      background: linear-gradient(160deg, rgba(124,58,237,0.16) 0%, var(--surface) 75%);
+    }
+    .discover-grid .discover-tip { margin-bottom: 8px; }
+    .discover-grid .discover-watch {
+      position: static; align-self: flex-end; margin-top: auto;
+    }
     .discover-card {
       position: relative;
       width: 320px; flex: 0 0 320px;
@@ -1843,100 +1861,52 @@
       <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer" class="discover-cta-btn" data-i18n="disc_cta_btn">Share your discovery →</a>
     </div>
 
-    <div class="discover-carousel">
-      <div class="discover-carousel-track">
-        <a href="/destinos/hallstatt/" class="discover-card">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Austria</div>
-          <div class="discover-place">Hallstatt</div>
-          <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
-          <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
-          <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
-          <span class="discover-watch">▶ Video + guide</span>
-        </a>
-        <div class="discover-card">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Slovenia</div>
-          <div class="discover-place">Lake Bled</div>
-          <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
-          <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
-          <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <div class="discover-card">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Portugal</div>
-          <div class="discover-place">Sintra</div>
-          <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
-          <div class="discover-season">Best: year-round · easy day trip</div>
-          <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <div class="discover-card">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">France</div>
-          <div class="discover-place">Colmar</div>
-          <div class="discover-route">🚂 Alsace regional line</div>
-          <div class="discover-season">Best: Dec (markets) &amp; spring</div>
-          <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <div class="discover-card">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Switzerland</div>
-          <div class="discover-place">Lauterbrunnen</div>
-          <div class="discover-route">🚂 Mountain rail via Interlaken</div>
-          <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
-          <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <!-- Duplicates for seamless infinite loop -->
-        <div class="discover-card" aria-hidden="true">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Austria</div>
-          <div class="discover-place">Hallstatt</div>
-          <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
-          <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
-          <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <div class="discover-card" aria-hidden="true">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Slovenia</div>
-          <div class="discover-place">Lake Bled</div>
-          <div class="discover-route">🚂 Bohinj Railway · Lesce-Bled</div>
-          <div class="discover-season">Best: Jun–Sep · scenic Bohinj line</div>
-          <div class="discover-tip">An island church on an emerald lake under a cliff-top castle. The historic Bohinj line is one of Europe's most underrated mountain railways.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <div class="discover-card" aria-hidden="true">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Portugal</div>
-          <div class="discover-place">Sintra</div>
-          <div class="discover-route">🚂 40 min from Lisbon (Rossio)</div>
-          <div class="discover-season">Best: year-round · easy day trip</div>
-          <div class="discover-tip">Pastel palaces in misty green hills, a quick train ride from central Lisbon. No car needed — and no parking nightmares on those tiny roads.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <div class="discover-card" aria-hidden="true">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">France</div>
-          <div class="discover-place">Colmar</div>
-          <div class="discover-route">🚂 Alsace regional line</div>
-          <div class="discover-season">Best: Dec (markets) &amp; spring</div>
-          <div class="discover-tip">Half-timbered houses and flower-lined canals — "Little Venice" in Alsace. Easy to reach by regional train from Strasbourg or Basel.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-        <div class="discover-card" aria-hidden="true">
-          <span class="discover-pin">📍</span>
-          <div class="discover-country">Switzerland</div>
-          <div class="discover-place">Lauterbrunnen</div>
-          <div class="discover-route">🚂 Mountain rail via Interlaken</div>
-          <div class="discover-season">Best: Jun–Oct · waterfalls flowing</div>
-          <div class="discover-tip">A valley of 72 waterfalls beneath sheer cliffs. The train ride in, hugging the mountainside, is half the experience.</div>
-          <div class="discover-by">★ Curated by WoW Train</div>
-        </div>
-      </div>
+    <div class="discover-grid">
+      <a href="/destinos/hallstatt/" class="discover-card is-featured">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Austria · Hidden gem</div>
+        <div class="discover-place">Hallstatt</div>
+        <div class="discover-route">🚂 Train to Hallstatt + lake ferry</div>
+        <div class="discover-season">Best: May–Sep · ~3h 30 from Salzburg</div>
+        <div class="discover-tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
+        <span class="discover-watch">▶ Video + guide</span>
+      </a>
+      <a href="/rutas/munich-venice/" class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">Germany → Italy</div>
+        <div class="discover-place">Munich → Venice</div>
+        <div class="discover-route">🚂 EuroCity over the Brenner Pass</div>
+        <div class="discover-season">~7h · Alps, Tyrol &amp; the Adige valley</div>
+        <div class="discover-tip">One of Europe's most scenic rides — from Bavaria over the Alps, down through vineyards to the edge of the Venetian lagoon.</div>
+        <span class="discover-watch">▶ Route guide</span>
+      </a>
+      <a href="/rutas/lyon-turin/" class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">France → Italy</div>
+        <div class="discover-place">Lyon → Turin</div>
+        <div class="discover-route">🚂 TGV / Frecciarossa · Fréjus tunnel</div>
+        <div class="discover-season">Crossing the Alps · France to Piedmont</div>
+        <div class="discover-tip">From Lyon's riverside to baroque Turin, threading the Maurienne valley and the historic Alpine tunnel into Italy.</div>
+        <span class="discover-watch">▶ Route guide</span>
+      </a>
+      <a href="/rutas/paris-barcelona/" class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">France → Spain</div>
+        <div class="discover-place">Paris → Barcelona</div>
+        <div class="discover-route">🚂 Direct TGV high-speed</div>
+        <div class="discover-season">~6h 30 · city centre to city centre</div>
+        <div class="discover-tip">One train from Paris through the south of France and the Pyrenees, straight into the heart of Barcelona.</div>
+        <span class="discover-watch">▶ Route guide</span>
+      </a>
+      <a href="/rutas/paris-amsterdam/" class="discover-card">
+        <span class="discover-pin">📍</span>
+        <div class="discover-country">France → Netherlands</div>
+        <div class="discover-place">Paris → Amsterdam</div>
+        <div class="discover-route">🚂 Eurostar direct · via Brussels</div>
+        <div class="discover-season">~3h 20 · several departures a day</div>
+        <div class="discover-tip">From the cafés of Paris to the canals of Amsterdam in a single high-speed hop — easily beating the plane door to door.</div>
+        <span class="discover-watch">▶ Route guide</span>
+      </a>
     </div>
   </section>
 
