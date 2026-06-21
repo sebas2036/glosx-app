@@ -124,6 +124,34 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lake-bled/es/" />
   </url>
   <url>
+    <loc>https://glosx.app/destinos/lauterbrunnen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lauterbrunnen/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/destinos/lauterbrunnen/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lauterbrunnen/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/destinos/colmar/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/colmar/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/destinos/colmar/es/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/colmar/es/" />
+  </url>
+  <url>
     <loc>https://glosx.app/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
