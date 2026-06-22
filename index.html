@@ -154,6 +154,12 @@
       -webkit-backdrop-filter: blur(22px) saturate(140%);
       border-bottom: 1px solid rgba(139,92,246,0.18);
       box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 30px rgba(0,0,0,0.35);
+      transition: padding 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    nav.scrolled {
+      padding-top: 12px; padding-bottom: 12px;
+      background: linear-gradient(180deg, rgba(18,15,34,0.92) 0%, rgba(10,10,15,0.9) 100%);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 10px 34px rgba(0,0,0,0.5);
     }
     .nav-logo {
       font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
@@ -164,25 +170,26 @@
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a {
       color: var(--muted); text-decoration: none; font-size: 14px;
-      font-weight: 500; transition: color 0.2s;
+      font-weight: 500; position: relative; transition: color 0.2s ease;
     }
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a.nav-accent { color: #2dd4bf; font-weight: 700; }
-    .nav-links a.nav-accent:hover { color: #5eead4; }
-    .nav-links a.nav-adventure {
-      color: #a855f7; font-weight: 700; position: relative;
+    .nav-links a:not(.nav-cta)::after {
+      content: ''; position: absolute; bottom: -6px; left: 0; right: 0;
+      height: 2px; border-radius: 2px;
+      background: linear-gradient(90deg, var(--primary2), var(--primary));
+      box-shadow: 0 0 10px rgba(168,85,247,0.7);
+      transform: scaleX(0); transform-origin: center;
+      transition: transform 0.25s ease;
     }
-    .nav-links a.nav-adventure::after {
-      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
-      height: 1.5px; background: #a855f7;
-      box-shadow: 0 0 8px rgba(168,85,247,0.8);
-      transform: scaleX(0.7); transition: transform 0.22s ease, box-shadow 0.22s ease;
-      transform-origin: center;
+    .nav-links a:not(.nav-cta):hover { color: #fff; }
+    .nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
+    /* CTA principal del header */
+    .nav-links a.nav-cta {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: #fff; font-weight: 700;
+      padding: 9px 20px; border-radius: 100px;
+      box-shadow: 0 6px 18px rgba(124,58,237,0.45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
     }
-    .nav-links a.nav-adventure:hover { color: #c084fc; }
-    .nav-links a.nav-adventure:hover::after {
-      transform: scaleX(1); box-shadow: 0 0 14px rgba(192,132,252,0.9);
-    }
+    .nav-links a.nav-cta:hover { color: #fff; transform: translateY(-1px); box-shadow: 0 10px 26px rgba(124,58,237,0.6); filter: brightness(1.05); }
 
     /* ── Botón hamburguesa (solo móvil) ── */
     .nav-toggle {
@@ -1668,13 +1675,13 @@
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="#discover" class="nav-accent" data-i18n="nav_discover">Discover together</a>
-      <a href="#adventure" class="nav-adventure" data-i18n="nav_adventure">Plan your Adventure</a>
+      <a href="#discover" data-i18n="nav_discover">Discover together</a>
+      <a href="#adventure" data-i18n="nav_adventure">Plan your Adventure</a>
       <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
       <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
       <a href="#features" data-i18n="nav_features">Features</a>
       <a href="/blog.html">Blog</a>
-      <a href="#download" data-i18n="nav_download">Download</a>
+      <a href="#download" class="nav-cta" data-i18n="nav_download">Download</a>
       <div class="lang-wrapper">
         <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
           <span id="langCode">EN</span>
@@ -3579,6 +3586,15 @@
     current = Math.max(floor, current + delta);
     el.textContent = current;
   }, 4000);
+})();
+</script>
+<script>
+(function () {
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 24); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();
 </script>
 <script>
