@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>European Train Routes — Pick Yours, Get the Guides | WoW Train</title>
+  <meta name="description" content="Browse the best train routes across Europe — France, Spain, Italy, Switzerland, Austria and more. Pick your favorites and get the route guides by email, free." />
+  <meta name="keywords" content="European train routes, train routes Europe list, best train journeys Europe, interrail routes, train route guides Europe" />
+  <link rel="canonical" href="https://glosx.app/explore/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="European Train Routes — Pick Yours, Get the Guides" />
+  <meta property="og:description" content="Browse Europe's best train routes, pick your favorites and get the guides by email." />
+  <meta property="og:url" content="https://glosx.app/explore/" />
+  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c3aed'/><text x='50' y='72' font-family='Helvetica,Arial,sans-serif' font-size='62' font-weight='700' fill='%23ffffff' text-anchor='middle'>W</text></svg>" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XPTSM1EJQJ');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #16131f; --surface: #221f30; --border: rgba(255,255,255,0.08);
+      --primary: #7c3aed; --primary2: #a78bfa; --text: #f0f0f5; --muted: #8888aa;
+    }
+    body {
+      background: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(124,58,237,0.12), transparent 60%), var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: linear-gradient(180deg, rgba(26,22,48,0.72), rgba(16,13,31,0.66));
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(139,92,246,0.18);
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px; text-decoration: none;
+      background: linear-gradient(135deg, var(--primary2), #fff);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-back:hover { color: var(--text); }
+    main { max-width: 1040px; margin: 0 auto; padding: 120px 24px 140px; }
+    .badge {
+      display: inline-block; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 100px; padding: 5px 14px; margin-bottom: 20px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--primary2); text-transform: uppercase;
+    }
+    h1 { font-size: 46px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 14px; }
+    .lead { font-size: 18px; color: #c8c8d8; line-height: 1.7; max-width: 620px; margin-bottom: 14px; }
+    .sub { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+    .filter-chip {
+      font-size: 12.5px; font-weight: 600; color: var(--muted); cursor: pointer;
+      padding: 7px 15px; border-radius: 100px; border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+      transition: all .18s ease;
+    }
+    .filter-chip:hover { color: var(--text); border-color: rgba(139,92,246,0.4); }
+    .filter-chip.active { color: #fff; background: rgba(124,58,237,0.25); border-color: rgba(139,92,246,0.6); }
+    .routes-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px;
+    }
+    .route-card {
+      position: relative; isolation: isolate; cursor: pointer;
+      background: var(--surface); border-radius: 14px; padding: 16px 16px 14px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.05);
+      transition: transform .2s ease, box-shadow .2s ease;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .route-card:hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(167,139,250,0.35); }
+    .route-card.selected { box-shadow: 0 16px 36px rgba(124,58,237,0.3), inset 0 0 0 1.5px rgba(167,139,250,0.85); }
+    .route-region { font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--primary2); }
+    .route-name { font-size: 17px; font-weight: 800; letter-spacing: -0.3px; color: var(--text); }
+    .route-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+    .route-guide { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #a78bfa; text-decoration: none; }
+    .route-guide.none { color: #5b5b70; }
+    .route-check {
+      width: 22px; height: 22px; border-radius: 7px; border: 1.5px solid rgba(139,92,246,0.5);
+      display: grid; place-items: center; flex: 0 0 auto; transition: all .15s ease;
+    }
+    .route-card.selected .route-check { background: var(--primary); border-color: var(--primary); }
+    .route-check svg { width: 13px; height: 13px; color: #fff; opacity: 0; transition: opacity .15s ease; }
+    .route-card.selected .route-check svg { opacity: 1; }
+
+    /* Barra de captura de email (sticky abajo) */
+    .signup-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+      background: linear-gradient(180deg, rgba(26,22,48,0.92), rgba(16,13,31,0.96));
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-top: 1px solid rgba(139,92,246,0.3);
+      box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
+      padding: 14px 24px;
+    }
+    .signup-inner { max-width: 1040px; margin: 0 auto; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .signup-count { font-size: 13px; color: var(--muted); white-space: nowrap; }
+    .signup-count b { color: var(--text); }
+    .signup-form { display: flex; gap: 10px; flex: 1; min-width: 280px; justify-content: flex-end; }
+    .signup-form input {
+      flex: 1; max-width: 320px; font-family: inherit; font-size: 14px; color: var(--text);
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 100px; padding: 12px 18px; outline: none; transition: border-color .2s, box-shadow .2s;
+    }
+    .signup-form input:focus { border-color: rgba(168,85,247,0.7); box-shadow: 0 0 0 3px rgba(124,58,237,0.2); }
+    .signup-btn {
+      font-family: inherit; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; white-space: nowrap;
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed); border: none; border-radius: 100px; padding: 12px 24px;
+      box-shadow: 0 6px 20px rgba(124,58,237,0.45); transition: transform .2s, box-shadow .2s, filter .2s, opacity .2s;
+    }
+    .signup-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 10px 28px rgba(124,58,237,0.6); }
+    .signup-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .signup-msg { font-size: 13px; color: #a78bfa; width: 100%; text-align: center; min-height: 0; }
+    footer { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 24px 4px; }
+    footer a { color: var(--muted); margin: 0 8px; }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; } main { padding: 100px 20px 180px; } h1 { font-size: 34px; }
+      .signup-form { justify-content: stretch; } .signup-form input { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">WoW Train</a>
+    <a href="/" class="nav-back">← Home</a>
+  </nav>
+
+  <main>
+    <span class="badge">Routes</span>
+    <h1>Europe by train,<br/>all in one place.</h1>
+    <p class="lead">Browse the best rail journeys across Europe. Pick the ones you're dreaming of — we'll send you the full guides (how to get there, stations, scenery and how to book).</p>
+    <p class="sub">Tap the routes you like, drop your email below, and the guides land in your inbox. Free, no spam.</p>
+
+    <div class="filter-row" id="filterRow"></div>
+    <div class="routes-grid" id="routesGrid"></div>
+  </main>
+
+  <div class="signup-bar">
+    <div class="signup-inner">
+      <div class="signup-count"><b id="selCount">0</b> routes selected</div>
+      <form class="signup-form" id="signupForm">
+        <input type="email" id="emailInput" placeholder="your@email.com" required aria-label="Email" />
+        <button type="submit" class="signup-btn" id="signupBtn">Send me the guides →</button>
+      </form>
+      <div class="signup-msg" id="signupMsg"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 GLOSX — WoW Train · <a href="/privacy.html">Privacy</a> · <a href="/blog.html">Blog</a></p>
+  </footer>
+
+  <script>
+  (function () {
+    // ── Catálogo de rutas (region + slug de guía si existe) ───────────────
+    var GUIDES = {
+      'paris-barcelona': '/rutas/paris-barcelona/',
+      'lyon-turin': '/rutas/lyon-turin/',
+      'vienna-prague': '/rutas/vienna-prague/',
+      'paris-amsterdam': '/rutas/paris-amsterdam/',
+      'munich-venice': '/rutas/munich-venice/'
+    };
+    var ROUTES = [
+      ['Paris → Barcelona','France → Spain','paris-barcelona'],
+      ['Lyon → Turin','France → Italy','lyon-turin'],
+      ['Vienna → Prague','Austria → Czechia','vienna-prague'],
+      ['Paris → Amsterdam','France → Netherlands','paris-amsterdam'],
+      ['Munich → Venice','Germany → Italy','munich-venice'],
+      ['Paris → London','France → UK',''],
+      ['London → Edinburgh','UK',''],
+      ['Amsterdam → Berlin','Netherlands → Germany',''],
+      ['Madrid → Barcelona','Spain',''],
+      ['Madrid → Seville','Spain',''],
+      ['Barcelona → Valencia','Spain',''],
+      ['Rome → Florence','Italy',''],
+      ['Florence → Venice','Italy',''],
+      ['Milan → Rome','Italy',''],
+      ['Zurich → Milan','Switzerland → Italy',''],
+      ['Geneva → Zermatt','Switzerland',''],
+      ['Munich → Berlin','Germany',''],
+      ['Berlin → Prague','Germany → Czechia',''],
+      ['Vienna → Budapest','Austria → Hungary',''],
+      ['Vienna → Salzburg','Austria',''],
+      ['Prague → Budapest','Czechia → Hungary',''],
+      ['Brussels → Paris','Belgium → France',''],
+      ['Amsterdam → Brussels','Netherlands → Belgium',''],
+      ['Lisbon → Porto','Portugal',''],
+      ['Paris → Nice','France',''],
+      ['Nice → Monaco','France → Monaco',''],
+      ['Copenhagen → Stockholm','Denmark → Sweden',''],
+      ['Oslo → Bergen','Norway',''],
+      ['Stockholm → Oslo','Sweden → Norway',''],
+      ['Interlaken → Lauterbrunnen','Switzerland','']
+    ];
+
+    var selected = new Set();
+    var grid = document.getElementById('routesGrid');
+    var checkSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+    function regionGroup(r){ return r.split(' → ')[0]; }
+
+    function render(filter) {
+      grid.innerHTML = '';
+      ROUTES.forEach(function (r, idx) {
+        var name = r[0], region = r[1], slug = r[2];
+        if (filter && filter !== 'All' && region.indexOf(filter) === -1) return;
+        var card = document.createElement('div');
+        card.className = 'route-card' + (selected.has(name) ? ' selected' : '');
+        card.dataset.name = name;
+        var guide = slug
+          ? '<a class="route-guide" href="' + GUIDES[slug] + '" onclick="event.stopPropagation()">Guide ready →</a>'
+          : '<span class="route-guide none">Guide on the way</span>';
+        card.innerHTML =
+          '<div class="route-region">' + region + '</div>' +
+          '<div class="route-name">' + name + '</div>' +
+          '<div class="route-foot">' + guide +
+            '<span class="route-check">' + checkSvg + '</span></div>';
+        card.addEventListener('click', function () {
+          if (selected.has(name)) selected.delete(name); else selected.add(name);
+          card.classList.toggle('selected');
+          updateCount();
+        });
+        grid.appendChild(card);
+      });
+    }
+
+    function updateCount(){ document.getElementById('selCount').textContent = selected.size; }
+
+    // Filtros por país (derivados)
+    var countries = {};
+    ROUTES.forEach(function(r){ r[1].split(' → ').forEach(function(c){ countries[c]=1; }); });
+    var fr = document.getElementById('filterRow');
+    var allChip = document.createElement('span'); allChip.className='filter-chip active'; allChip.textContent='All';
+    allChip.addEventListener('click', function(){ setFilter('All', allChip); });
+    fr.appendChild(allChip);
+    Object.keys(countries).sort().forEach(function(c){
+      var chip=document.createElement('span'); chip.className='filter-chip'; chip.textContent=c;
+      chip.addEventListener('click', function(){ setFilter(c, chip); });
+      fr.appendChild(chip);
+    });
+    function setFilter(f, el){
+      document.querySelectorAll('.filter-chip').forEach(function(x){x.classList.remove('active');});
+      el.classList.add('active'); render(f);
+    }
+
+    render('All');
+
+    // ── Formulario → MailerLite (listo para enchufar) ─────────────────────
+    // PASO PENDIENTE: pegar aquí la URL "action" del formulario embebido de MailerLite.
+    // Ej: 'https://assets.mailerlite.com/jsonp/XXXXX/forms/YYYYY/subscribe'
+    var MAILERLITE_ACTION = '';
+
+    var form = document.getElementById('signupForm');
+    var btn = document.getElementById('signupBtn');
+    var msg = document.getElementById('signupMsg');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('emailInput').value.trim();
+      if (!email) return;
+      var routes = Array.from(selected).join(', ');
+      btn.disabled = true; msg.style.color = '#a78bfa'; msg.textContent = 'Sending…';
+      try { gtag('event', 'route_signup', { routes_count: selected.size }); } catch (e) {}
+
+      if (!MAILERLITE_ACTION) {
+        // Modo demo (todavía sin conectar MailerLite)
+        setTimeout(function () {
+          msg.style.color = '#a78bfa';
+          msg.textContent = '✓ Thanks! Your guides are on the way' + (routes ? ' (' + selected.size + ' routes)' : '') + '.';
+          btn.disabled = false; form.reset();
+        }, 500);
+        return;
+      }
+      var body = new FormData();
+      body.append('fields[email]', email);
+      body.append('fields[routes]', routes);
+      fetch(MAILERLITE_ACTION, { method: 'POST', body: body, mode: 'no-cors' })
+        .then(function () {
+          msg.style.color = '#a78bfa';
+          msg.textContent = '✓ Thanks! Your guides are on the way.';
+          form.reset();
+        })
+        .catch(function () { msg.style.color = '#fca5a5'; msg.textContent = 'Something went wrong — try again.'; })
+        .finally(function () { btn.disabled = false; });
+    });
+  })();
+  </script>
+</body>
+</html>
