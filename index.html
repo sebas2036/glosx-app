@@ -102,8 +102,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #110f19;
-      --surface:  #1a1826;
+      --bg:       #16131f;
+      --surface:  #221f30;
       --elevated: #1a1a24;
       --border:   rgba(255,255,255,0.08);
       --border2:  rgba(255,255,255,0.04);
@@ -1462,7 +1462,7 @@
     content: '';
     position: absolute; inset: 0;
     background:
-      radial-gradient(135% 130% at 50% 42%, transparent 60%, rgba(17,15,25,0.78) 90%, #110f19 100%),
+      radial-gradient(135% 130% at 50% 42%, transparent 60%, rgba(22,19,31,0.78) 90%, #16131f 100%),
       linear-gradient(90deg, rgba(8,6,18,0.85) 0%, rgba(8,6,18,0.55) 44%, rgba(8,6,18,0.08) 100%),
       linear-gradient(180deg, rgba(8,6,18,0.32) 0%, rgba(8,6,18,0.12) 38%, rgba(8,6,18,0.58) 100%);
     z-index: 0;
@@ -1648,7 +1648,7 @@
 </head>
 <body>
   <!-- Cookie consent banner — GDPR -->
-  <div id="cookieBanner" style="display:none;position:fixed;bottom:16px;left:16px;right:16px;max-width:560px;margin:0 auto;background:#1a1826;border:1px solid rgba(124,58,237,0.5);border-radius:14px;padding:18px 20px;z-index:9999;box-shadow:0 20px 60px rgba(0,0,0,0.6);font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
+  <div id="cookieBanner" style="display:none;position:fixed;bottom:16px;left:16px;right:16px;max-width:560px;margin:0 auto;background:#221f30;border:1px solid rgba(124,58,237,0.5);border-radius:14px;padding:18px 20px;z-index:9999;box-shadow:0 20px 60px rgba(0,0,0,0.6);font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
     <p style="font-size:13px;color:#e0e0e8;line-height:1.5;margin-bottom:12px;" data-i18n="cookie_text">We use essential cookies for site functionality and anonymous analytics to improve your experience. By continuing you accept our <a href="/cookies.html" style="color:#a78bfa;text-decoration:underline;">Cookie Policy</a>.</p>
     <div style="display:flex;gap:8px;justify-content:flex-end;">
       <button onclick="cookieChoice('declined')" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#bbb;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;" data-i18n="cookie_decline">Decline</button>
@@ -2189,7 +2189,7 @@
       <div class="feature-card">
         <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
         <h3 data-i18n="f1_title">Real-time departures</h3>
-        <p data-i18n="f1_desc">Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.</p>
+        <p data-i18n="f1_desc">Live delays, platform changes and cancellations from official railway data.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
@@ -2214,7 +2214,7 @@
       <div class="feature-card">
         <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
         <h3 data-i18n="f6_title">Unified Ecosystem</h3>
-        <p data-i18n="f6_desc">Train routes, hotels and eSIM in one place. Everything you need for your trip, one single platform.</p>
+        <p data-i18n="f6_desc">Train routes, eSIM and travel essentials — everything for your trip in one place.</p>
       </div>
     </div>
   </section>
@@ -2484,12 +2484,12 @@
         p_car_title: 'Car Rental', p_car_cta: 'Rent a car →',
         features_label: 'Why WoW Train', features_title1: 'Built for travelers', features_title2: 'who move fast.',
         features_lead: 'No subscriptions, no paywalls. Just real-time data and smart tools.',
-        f1_title: 'Real-time departures', f1_desc: 'Live delays, platform changes and cancellations updated every 90 seconds from official railway APIs.',
+        f1_title: 'Real-time departures', f1_desc: 'Live delays, platform changes and cancellations from official railway data.',
         f2_title: 'Europe & beyond, one app', f2_desc: 'Spain, France, Germany, Switzerland, Italy and more — all in a single interface.',
         f3_title: 'Journey search', f3_desc: 'Find trains between any two stations across Europe with real prices and schedules.',
         f4_title: 'Zero Consulting Fees', f4_desc: 'Design complex multi-country European routes 100% free. No travel agent required.',
         f5_title: 'Smart alerts', f5_desc: 'Get notified when your train is approaching or when there are delays on your route.',
-        f6_title: 'Unified Ecosystem', f6_desc: 'Train routes, hotels and eSIM in one place. Everything you need for your trip, one single platform.',
+        f6_title: 'Unified Ecosystem', f6_desc: 'Train routes, eSIM and travel essentials — everything for your trip in one place.',
         dl_title: 'Start your journey now.',
         dl_subtitle: 'Search trains, browse scenic routes and book through verified partners — all from your browser, no app needed.',
         dl_web: 'Search trains now', dl_scenic: 'Explore scenic routes',
@@ -2543,12 +2543,12 @@
         p_car_title: 'Alquiler de autos', p_car_cta: 'Alquilar auto →',
         features_label: 'Por qué WoW Train', features_title1: 'Hecho para viajeros', features_title2: 'que se mueven rápido.',
         features_lead: 'Sin suscripciones, sin paywalls. Solo datos en tiempo real y herramientas inteligentes.',
-        f1_title: 'Salidas en tiempo real', f1_desc: 'Retrasos en vivo, cambios de andén y cancelaciones actualizados cada 90 segundos desde APIs ferroviarias oficiales.',
+        f1_title: 'Salidas en tiempo real', f1_desc: 'Retrasos en vivo, cambios de andén y cancelaciones desde datos oficiales de los ferrocarriles.',
         f2_title: 'Tu tren, tu mundo', f2_desc: 'España, Francia, Alemania, Suiza, Italia y más — todo en una sola interfaz.',
         f3_title: 'Búsqueda de viaje', f3_desc: 'Encontrá trenes entre cualquier par de estaciones de Europa con precios y horarios reales.',
         f4_title: 'Sin costos de consultoría', f4_desc: 'Diseñá rutas complejas por Europa con múltiples países 100% gratis. Sin agencia de viajes.',
         f5_title: 'Alertas inteligentes', f5_desc: 'Recibí avisos cuando tu tren está por llegar o hay retrasos en tu ruta.',
-        f6_title: 'Ecosistema unificado', f6_desc: 'Rutas de tren, hoteles y eSIM en un solo lugar. Todo lo que necesitás para tu viaje, en una sola plataforma.',
+        f6_title: 'Ecosistema unificado', f6_desc: 'Rutas de tren, eSIM y esenciales de viaje — todo para tu viaje en un solo lugar.',
         dl_title: 'Empezá tu viaje ahora.',
         dl_subtitle: 'Buscá trenes, explorá rutas panorámicas y reservá con partners verificados — todo desde tu navegador, sin instalar nada.',
         dl_web: 'Buscar trenes ahora', dl_scenic: 'Explorar rutas panorámicas',
@@ -2602,12 +2602,12 @@
         p_car_title: 'Location de voiture', p_car_cta: 'Louer une voiture →',
         features_label: 'Pourquoi WoW Train', features_title1: 'Conçu pour les voyageurs', features_title2: 'qui bougent vite.',
         features_lead: 'Pas d\'abonnement, pas de paywall. Juste des données en temps réel et des outils intelligents.',
-        f1_title: 'Départs en temps réel', f1_desc: 'Retards en direct, changements de voie et annulations mis à jour toutes les 90 secondes depuis les APIs ferroviaires officielles.',
+        f1_title: 'Départs en temps réel', f1_desc: 'Retards en direct, changements de voie et annulations à partir des données ferroviaires officielles.',
         f2_title: 'Ton train, ton monde', f2_desc: 'Espagne, France, Allemagne, Suisse, Italie et plus — tout dans une seule interface.',
         f3_title: 'Recherche de trajet', f3_desc: 'Trouvez des trains entre n\'importe quelles deux gares d\'Europe avec prix et horaires réels.',
         f4_title: 'Consultation 100% gratuite', f4_desc: 'Concevez des itinéraires européens complexes gratuitement. Aucun agent de voyage requis.',
         f5_title: 'Alertes intelligentes', f5_desc: 'Soyez averti quand votre train approche ou s\'il y a des retards sur votre route.',
-        f6_title: 'Écosystème unifié', f6_desc: 'Trajets en train, hôtels et eSIM en un seul endroit. Tout ce dont vous avez besoin pour votre voyage.',
+        f6_title: 'Écosystème unifié', f6_desc: 'Trajets en train, eSIM et essentiels de voyage — tout pour votre voyage au même endroit.',
         dl_title: 'Commencez votre voyage maintenant.',
         dl_subtitle: 'Cherchez des trains, parcourez les itinéraires panoramiques et réservez auprès de partenaires vérifiés — directement depuis votre navigateur.',
         dl_web: 'Rechercher des trains', dl_scenic: 'Explorer les itinéraires',
@@ -2661,12 +2661,12 @@
         p_car_title: 'Mietwagen', p_car_cta: 'Auto mieten →',
         features_label: 'Warum WoW Train', features_title1: 'Gemacht für Reisende,', features_title2: 'die sich schnell bewegen.',
         features_lead: 'Keine Abonnements, keine Paywalls. Nur Echtzeitdaten und intelligente Tools.',
-        f1_title: 'Echtzeit-Abfahrten', f1_desc: 'Live-Verspätungen, Gleisänderungen und Stornierungen alle 90 Sekunden von offiziellen Bahn-APIs aktualisiert.',
+        f1_title: 'Echtzeit-Abfahrten', f1_desc: 'Live-Verspätungen, Gleisänderungen und Stornierungen aus offiziellen Bahndaten.',
         f2_title: 'Dein Zug, deine Welt', f2_desc: 'Spanien, Frankreich, Deutschland, Schweiz, Italien und mehr — alles in einer Oberfläche.',
         f3_title: 'Reisesuche', f3_desc: 'Finden Sie Züge zwischen beliebigen Bahnhöfen in Europa mit echten Preisen und Fahrplänen.',
         f4_title: 'Kostenlose Routenplanung', f4_desc: 'Entwerfen Sie komplexe europäische Mehrländer-Routen 100% kostenlos. Kein Reisebüro nötig.',
         f5_title: 'Intelligente Warnungen', f5_desc: 'Werden Sie benachrichtigt, wenn Ihr Zug naht oder es Verspätungen auf Ihrer Route gibt.',
-        f6_title: 'Einheitliches Ökosystem', f6_desc: 'Zugstrecken, Hotels und eSIM an einem Ort. Alles für Ihre Reise auf einer einzigen Plattform.',
+        f6_title: 'Einheitliches Ökosystem', f6_desc: 'Zugstrecken, eSIM und Reise-Essentials — alles für Ihre Reise an einem Ort.',
         dl_title: 'Starten Sie Ihre Reise jetzt.',
         dl_subtitle: 'Züge suchen, Panoramastrecken entdecken und über verifizierte Partner buchen — direkt im Browser, ohne App.',
         dl_web: 'Züge jetzt suchen', dl_scenic: 'Panoramastrecken entdecken',
@@ -2720,12 +2720,12 @@
         p_car_title: 'Noleggio auto', p_car_cta: 'Noleggia auto →',
         features_label: 'Perché WoW Train', features_title1: 'Pensato per chi viaggia', features_title2: 'velocemente.',
         features_lead: 'Niente abbonamenti, niente paywall. Solo dati in tempo reale e strumenti intelligenti.',
-        f1_title: 'Partenze in tempo reale', f1_desc: 'Ritardi in diretta, cambi di binario e cancellazioni aggiornati ogni 90 secondi dalle API ferroviarie ufficiali.',
+        f1_title: 'Partenze in tempo reale', f1_desc: 'Ritardi in diretta, cambi di binario e cancellazioni dai dati ferroviari ufficiali.',
         f2_title: 'Il tuo treno, il tuo mondo', f2_desc: 'Spagna, Francia, Germania, Svizzera, Italia e altri — tutto in un\'unica interfaccia.',
         f3_title: 'Ricerca viaggio', f3_desc: 'Trova treni tra qualsiasi coppia di stazioni in Europa con prezzi e orari reali.',
         f4_title: 'Consulenza gratuita', f4_desc: 'Progetta itinerari europei complessi 100% gratis. Nessuna agenzia di viaggi richiesta.',
         f5_title: 'Avvisi intelligenti', f5_desc: 'Ricevi notifiche quando il tuo treno si avvicina o ci sono ritardi sul tuo percorso.',
-        f6_title: 'Ecosistema unificato', f6_desc: 'Percorsi in treno, hotel e eSIM in un unico posto. Tutto ciò di cui hai bisogno per il tuo viaggio.',
+        f6_title: 'Ecosistema unificato', f6_desc: 'Percorsi in treno, eSIM ed essenziali di viaggio — tutto per il tuo viaggio in un unico posto.',
         dl_title: 'Inizia il tuo viaggio ora.',
         dl_subtitle: 'Cerca treni, esplora percorsi panoramici e prenota con partner verificati — direttamente dal browser, senza app.',
         dl_web: 'Cerca treni ora', dl_scenic: 'Esplora percorsi panoramici',
@@ -2779,12 +2779,12 @@
         p_car_title: 'Aluguel de carro', p_car_cta: 'Alugar carro →',
         features_label: 'Porquê WoW Train', features_title1: 'Feito para viajantes', features_title2: 'que se movem depressa.',
         features_lead: 'Sem subscrições, sem paywalls. Apenas dados em tempo real e ferramentas inteligentes.',
-        f1_title: 'Partidas em tempo real', f1_desc: 'Atrasos ao vivo, mudanças de plataforma e cancelamentos atualizados a cada 90 segundos das APIs ferroviárias oficiais.',
+        f1_title: 'Partidas em tempo real', f1_desc: 'Atrasos ao vivo, mudanças de plataforma e cancelamentos a partir de dados ferroviários oficiais.',
         f2_title: 'O teu comboio, o teu mundo', f2_desc: 'Espanha, França, Alemanha, Suíça, Itália e mais — tudo numa única interface.',
         f3_title: 'Pesquisa de viagem', f3_desc: 'Encontre comboios entre quaisquer duas estações da Europa com preços e horários reais.',
         f4_title: 'Sem taxas de consultoria', f4_desc: 'Planifique rotas europeias complexas 100% grátis. Sem agência de viagens necessária.',
         f5_title: 'Alertas inteligentes', f5_desc: 'Receba notificações quando o seu comboio se aproxima ou quando há atrasos na sua rota.',
-        f6_title: 'Ecossistema unificado', f6_desc: 'Rotas de comboio, hotéis e eSIM num só lugar. Tudo o que precisa para a sua viagem, numa plataforma.',
+        f6_title: 'Ecossistema unificado', f6_desc: 'Rotas de comboio, eSIM e essenciais de viagem — tudo para a sua viagem num só lugar.',
         dl_title: 'Comece a sua viagem agora.',
         dl_subtitle: 'Pesquise comboios, explore rotas panorâmicas e reserve com parceiros verificados — diretamente do navegador, sem app.',
         dl_web: 'Pesquisar comboios', dl_scenic: 'Explorar rotas panorâmicas',
