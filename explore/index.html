@@ -22,6 +22,12 @@
     gtag('config', 'G-XPTSM1EJQJ');
   </script>
 
+  <!-- MailerLite Universal -->
+  <script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','2463301');
+  </script>
+
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -255,7 +261,7 @@
     // ── Formulario → MailerLite (listo para enchufar) ─────────────────────
     // PASO PENDIENTE: pegar aquí la URL "action" del formulario embebido de MailerLite.
     // Ej: 'https://assets.mailerlite.com/jsonp/XXXXX/forms/YYYYY/subscribe'
-    var MAILERLITE_ACTION = '';
+    var MAILERLITE_ACTION = 'https://assets.mailerlite.com/jsonp/2463301/forms/y1D3vA/subscribe';
 
     var form = document.getElementById('signupForm');
     var btn = document.getElementById('signupBtn');
@@ -279,6 +285,7 @@
       }
       var body = new FormData();
       body.append('fields[email]', email);
+      body.append('ml-submit', '1');
       body.append('fields[routes]', routes);
       fetch(MAILERLITE_ACTION, { method: 'POST', body: body, mode: 'no-cors' })
         .then(function () {
