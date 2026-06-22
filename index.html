@@ -34,6 +34,7 @@
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -1545,6 +1546,18 @@
   .wt-tl-cta:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 14px 38px rgba(124,58,237,0.5); }
   .wt-tl-arrow { transition: transform .2s ease; }
   .wt-tl-cta:hover .wt-tl-arrow { transform: translateX(3px); }
+  .wt-cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 26px; }
+  .wt-cta-row .wt-tl-cta { margin-top: 0; }
+  .wt-pdf-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: inherit; font-size: 14px; font-weight: 700; color: var(--primary2);
+    cursor: pointer; padding: 13px 22px; border-radius: 100px;
+    background: rgba(124,58,237,0.10); border: 1px solid rgba(139,92,246,0.5);
+    transition: background .2s ease, transform .18s ease, border-color .2s ease;
+  }
+  .wt-pdf-btn svg { width: 16px; height: 16px; }
+  .wt-pdf-btn:hover { background: rgba(124,58,237,0.22); transform: translateY(-2px); border-color: rgba(139,92,246,0.85); }
+  .wt-pdf-btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
 
   /* ---- Tarea 3: Valoraciones & experiencias ---- */
   .wt-reviews-grid {
@@ -3387,15 +3400,70 @@
       : (lang === 'de') ? 'Fahrpläne und Tarife ansehen'
       : (lang === 'it') ? 'Vedi orari e tariffe'
       : 'Check schedules and rates';
+    var _pdfText = (lang==='es')?'Descargar itinerario (PDF)':(lang==='fr')?"Télécharger l'itinéraire (PDF)":(lang==='de')?'Reiseplan herunterladen (PDF)':(lang==='it')?'Scarica itinerario (PDF)':(lang==='pt')?'Baixar itinerário (PDF)':'Download itinerary (PDF)';
+    var _dlIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
     ctaSlot.innerHTML =
+      '<div class="wt-cta-row">' +
       '<a class="wt-tl-cta" href="' + url + '" target="_blank" rel="noopener sponsored" onclick="trackTrainline(\'route_panel\')">' +
-      _ctaText + ' <span class="wt-tl-arrow">→</span></a>';
+      _ctaText + ' <span class="wt-tl-arrow">→</span></a>' +
+      '<button type="button" class="wt-pdf-btn" onclick="downloadItinerary(\'' + key + '\')">' + _dlIcon + '<span>' + _pdfText + '</span></button>' +
+      '</div>';
     closeBtn.hidden = false;
   }
 
   // Exponer para que applyLang() re-renderice la ruta activa al cambiar idioma
   window.wtRefreshTimeline = function () {
     if (_activeRouteKey) render(_activeRouteKey);
+  };
+
+  // Generar y descargar el itinerario en PDF (marca + mapa + recorrido + link)
+  window.downloadItinerary = async function (key) {
+    var route = ROUTES[key];
+    if (!route || !window.jspdf) return;
+    var btn = document.querySelector('.wt-pdf-btn');
+    if (btn) btn.disabled = true;
+    try {
+      var lang = document.documentElement.lang || 'en';
+      var L = route.title[lang] ? lang : 'en';
+      var jsPDF = window.jspdf.jsPDF;
+      var doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      var P = 40, W = 595.28, CW = W - P * 2, y;
+      doc.setFillColor(124, 58, 237); doc.rect(0, 0, W, 6, 'F');
+      doc.setFont('helvetica', 'bold'); doc.setTextColor(124, 58, 237); doc.setFontSize(20);
+      doc.text('WoW Train', P, 48);
+      doc.setFont('helvetica', 'normal'); doc.setTextColor(130, 130, 150); doc.setFontSize(10);
+      doc.text('glosx.app', P + 98, 48);
+      doc.setFont('helvetica', 'bold'); doc.setTextColor(25, 25, 35); doc.setFontSize(16);
+      doc.text(route.title[L], P, 82);
+      doc.setFont('helvetica', 'normal'); doc.setTextColor(110, 110, 130); doc.setFontSize(10);
+      doc.text(route.meta[L], P, 98);
+      var img = await new Promise(function (res, rej) {
+        var im = new Image(); im.onload = function () { res(im); }; im.onerror = rej;
+        im.src = '/assets/img/map-' + key + '.jpg';
+      });
+      var ratio = img.naturalHeight / img.naturalWidth;
+      var mw = CW, mh = CW * ratio;
+      if (mh > 340) { mh = 340; mw = mh / ratio; }
+      var mx = P + (CW - mw) / 2;
+      doc.addImage(img, 'JPEG', mx, 112, mw, mh);
+      y = 112 + mh + 26;
+      for (var i = 0; i < route.stops.length; i++) {
+        var s = route.stops[i];
+        if (y > 770) { doc.addPage(); y = 56; }
+        doc.setFont('helvetica', 'bold'); doc.setTextColor(124, 58, 237); doc.setFontSize(12);
+        doc.text((i + 1) + '.  ' + s.station + '   ·   ' + s.train, P, y); y += 16;
+        doc.setFont('helvetica', 'normal'); doc.setTextColor(55, 55, 70); doc.setFontSize(10);
+        var desc = s['desc_' + L] || s.desc_en;
+        var lines = doc.splitTextToSize(desc, CW);
+        doc.text(lines, P, y); y += lines.length * 13 + 14;
+      }
+      if (y > 760) { doc.addPage(); y = 56; }
+      doc.setDrawColor(220, 220, 228); doc.line(P, y, W - P, y); y += 18;
+      doc.setFont('helvetica', 'bold'); doc.setTextColor(124, 58, 237); doc.setFontSize(11);
+      doc.text('Plan & book your route at glosx.app', P, y);
+      doc.save('WoW-Train-' + key + '.pdf');
+    } catch (e) { console.error('PDF error', e); }
+    finally { if (btn) btn.disabled = false; }
   };
 
   buttons.forEach((btn) => {
