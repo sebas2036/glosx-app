@@ -1,3 +1,5 @@
-
-# Claude Code (no versionar)
+# Local editor / tooling config
 .claude/
+CLAUDE.md
+.DS_Store
+*.save
