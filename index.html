@@ -1706,7 +1706,7 @@
       <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
       <a href="#features" data-i18n="nav_features">Features</a>
       <a href="/blog.html">Blog</a>
-      <a href="/explore/">Routes</a>
+      <a href="/explore/" data-i18n="nav_routes">Routes</a>
       <a href="#download" class="nav-cta" data-i18n="nav_download">Download</a>
       <div class="lang-wrapper">
         <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
@@ -2484,7 +2484,7 @@
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
     const TRANSLATIONS = {
       en: {
-        nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started',
+        nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started', nav_routes: 'Routes',
         hero_badge: 'WoW Train — Europe & beyond',
         hero_title1: 'Your train.', hero_title2: 'Your world.',
         hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
@@ -2543,7 +2543,7 @@
         rv_ph_name: 'Name, Country', rv_ph_route: 'Your train route', rv_ph_body: 'Your WoW train moment...', rv_publish: 'Publish', rv_ok: 'Published!', rv_error_empty: 'Fill in your name and comment.', rv_chars_label: 'characters remaining',
       },
       es: {
-        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar',
+        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar', nav_routes: 'Rutas',
         hero_badge: 'WoW Train — Europa y el mundo',
         hero_title1: 'Tu tren.', hero_title2: 'Tu mundo.',
         hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
@@ -2602,7 +2602,7 @@
         rv_ph_name: 'Nombre, País', rv_ph_route: 'Tu ruta de tren', rv_ph_body: 'Tu momento WoW en el tren...', rv_publish: 'Publicar', rv_ok: '¡Publicado!', rv_error_empty: 'Completá tu nombre y comentario.', rv_chars_label: 'caracteres restantes',
       },
       fr: {
-        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer',
+        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer', nav_routes: 'Itinéraires',
         hero_badge: 'WoW Train — Europe et au-delà',
         hero_title1: 'Ton train.', hero_title2: 'Ton monde.',
         hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
@@ -2661,7 +2661,7 @@
         rv_ph_name: 'Prénom, Pays', rv_ph_route: 'Votre itinéraire en train', rv_ph_body: 'Votre moment WoW en train...', rv_publish: 'Publier', rv_ok: 'Publié !', rv_error_empty: 'Indiquez votre prénom et votre commentaire.', rv_chars_label: 'caractères restants',
       },
       de: {
-        nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen',
+        nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen', nav_routes: 'Routen',
         hero_badge: 'WoW Train — Europa und die Welt',
         hero_title1: 'Dein Zug.', hero_title2: 'Deine Welt.',
         hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
@@ -2720,7 +2720,7 @@
         rv_ph_name: 'Name, Land', rv_ph_route: 'Deine Bahnstrecke', rv_ph_body: 'Dein WoW-Moment im Zug...', rv_publish: 'Veröffentlichen', rv_ok: 'Veröffentlicht!', rv_error_empty: 'Bitte Name und Kommentar ausfüllen.', rv_chars_label: 'Zeichen verbleibend',
       },
       it: {
-        nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia',
+        nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia', nav_routes: 'Itinerari',
         hero_badge: 'WoW Train — Europa e oltre',
         hero_title1: 'Il tuo treno.', hero_title2: 'Il tuo mondo.',
         hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
@@ -2779,7 +2779,7 @@
         rv_ph_name: 'Nome, Paese', rv_ph_route: 'Il tuo percorso in treno', rv_ph_body: 'Il tuo momento WoW in treno...', rv_publish: 'Pubblica', rv_ok: 'Pubblicato!', rv_error_empty: 'Inserisci nome e commento.', rv_chars_label: 'caratteri rimanenti',
       },
       pt: {
-        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar',
+        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar', nav_routes: 'Rotas',
         hero_badge: 'WoW Train — Europa e além',
         hero_title1: 'O teu comboio.', hero_title2: 'O teu mundo.',
         hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
