@@ -151,11 +151,7 @@
   <div class="signup-bar">
     <div class="signup-inner">
       <div class="signup-count"><b id="selCount">0</b> routes selected</div>
-      <form class="signup-form" id="signupForm">
-        <input type="email" id="emailInput" placeholder="your@email.com" required aria-label="Email" />
-        <button type="submit" class="signup-btn" id="signupBtn">Send me the guides →</button>
-      </form>
-      <div class="signup-msg" id="signupMsg"></div>
+      <div class="ml-embedded" data-form="y1D3vA"></div>
     </div>
   </div>
 
@@ -283,44 +279,11 @@
 
     render('All');
 
-    // ── Formulario → MailerLite (listo para enchufar) ─────────────────────
-    // PASO PENDIENTE: pegar aquí la URL "action" del formulario embebido de MailerLite.
-    // Ej: 'https://assets.mailerlite.com/jsonp/XXXXX/forms/YYYYY/subscribe'
-    var MAILERLITE_ACTION = 'https://assets.mailerlite.com/jsonp/2463301/forms/y1D3vA/subscribe';
-
-    var form = document.getElementById('signupForm');
-    var btn = document.getElementById('signupBtn');
-    var msg = document.getElementById('signupMsg');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var email = document.getElementById('emailInput').value.trim();
-      if (!email) return;
-      var routes = Array.from(selected).join(', ');
-      btn.disabled = true; msg.style.color = '#a78bfa'; msg.textContent = 'Sending…';
+    // El formulario es el embed oficial de MailerLite (<div class="ml-embedded" data-form="y1D3vA">),
+    // renderizado por universal.js: agrega al grupo "Route guides", aplica double opt-in y dispara la automatización.
+    try { document.querySelector('.ml-embedded').addEventListener('submit', function () {
       try { gtag('event', 'route_signup', { routes_count: selected.size }); } catch (e) {}
-
-      if (!MAILERLITE_ACTION) {
-        // Modo demo (todavía sin conectar MailerLite)
-        setTimeout(function () {
-          msg.style.color = '#a78bfa';
-          msg.textContent = '✓ Thanks! Your guides are on the way' + (routes ? ' (' + selected.size + ' routes)' : '') + '.';
-          btn.disabled = false; form.reset();
-        }, 500);
-        return;
-      }
-      var body = new FormData();
-      body.append('fields[email]', email);
-      body.append('ml-submit', '1');
-      body.append('fields[routes]', routes);
-      fetch(MAILERLITE_ACTION, { method: 'POST', body: body, mode: 'no-cors' })
-        .then(function () {
-          msg.style.color = '#a78bfa';
-          msg.textContent = '✓ Thanks! Your guides are on the way.';
-          form.reset();
-        })
-        .catch(function () { msg.style.color = '#fca5a5'; msg.textContent = 'Something went wrong — try again.'; })
-        .finally(function () { btn.disabled = false; });
-    });
+    }, true); } catch (e) {}
   })();
   </script>
 </body>
