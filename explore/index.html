@@ -139,10 +139,10 @@
   </nav>
 
   <main>
-    <span class="badge">Routes</span>
-    <h1>Europe by train,<br/>all in one place.</h1>
-    <p class="lead">Browse the best rail journeys across Europe. Pick the ones you're dreaming of — we'll send you the full guides (how to get there, stations, scenery and how to book).</p>
-    <p class="sub">Tap the routes you like, drop your email below, and the guides land in your inbox. Free, no spam.</p>
+    <span class="badge" data-i18n="exp_badge">Routes</span>
+    <h1><span data-i18n="exp_title1">Europe by train,</span><br/><span data-i18n="exp_title2">all in one place.</span></h1>
+    <p class="lead" data-i18n="exp_lead">Browse the best rail journeys across Europe. Pick the ones you're dreaming of — we'll send you the full guides (how to get there, stations, scenery and how to book).</p>
+    <p class="sub" data-i18n="exp_sub">Tap the routes you like, drop your email below, and the guides land in your inbox. Free, no spam.</p>
 
     <div class="filter-row" id="filterRow"></div>
     <div class="routes-grid" id="routesGrid"></div>
@@ -150,7 +150,7 @@
 
   <div class="signup-bar">
     <div class="signup-inner">
-      <div class="signup-count"><b id="selCount">0</b> routes selected</div>
+      <div class="signup-count"><b id="selCount">0</b> <span data-i18n="exp_count">routes selected</span></div>
       <div class="ml-embedded" data-form="y1D3vA"></div>
     </div>
   </div>
@@ -264,7 +264,7 @@
     var countries = {};
     ROUTES.forEach(function(r){ r[1].split(' → ').forEach(function(c){ countries[c]=1; }); });
     var fr = document.getElementById('filterRow');
-    var allChip = document.createElement('span'); allChip.className='filter-chip active'; allChip.textContent='All';
+    var allChip = document.createElement('span'); allChip.className='filter-chip active'; allChip.textContent='All'; allChip.setAttribute('data-i18n','exp_all');
     allChip.addEventListener('click', function(){ setFilter('All', allChip); });
     fr.appendChild(allChip);
     Object.keys(countries).sort().forEach(function(c){
@@ -284,6 +284,30 @@
     try { document.querySelector('.ml-embedded').addEventListener('submit', function () {
       try { gtag('event', 'route_signup', { routes_count: selected.size }); } catch (e) {}
     }, true); } catch (e) {}
+  })();
+  </script>
+
+  <!-- i18n: traduce los textos de /explore/ según el idioma elegido en el sitio (localStorage glosx_lang) -->
+  <script>
+  (function(){
+    var T = {
+      en:{exp_badge:'Routes',exp_title1:'Europe by train,',exp_title2:'all in one place.',exp_lead:"Browse the best rail journeys across Europe. Pick the ones you're dreaming of — we'll send you the full guides (how to get there, stations, scenery and how to book).",exp_sub:'Tap the routes you like, drop your email below, and the guides land in your inbox. Free, no spam.',exp_count:'routes selected',exp_all:'All'},
+      es:{exp_badge:'Rutas',exp_title1:'Europa en tren,',exp_title2:'todo en un solo lugar.',exp_lead:'Descubrí los mejores viajes en tren por Europa. Elegí los que soñás y te enviamos las guías completas (cómo llegar, estaciones, paisajes y cómo reservar).',exp_sub:'Tocá las rutas que te gusten, dejá tu email y las guías llegan a tu casilla. Gratis, sin spam.',exp_count:'rutas seleccionadas',exp_all:'Todas'},
+      fr:{exp_badge:'Itinéraires',exp_title1:"L'Europe en train,",exp_title2:'tout au même endroit.',exp_lead:"Découvrez les plus beaux voyages en train d'Europe. Choisissez ceux qui vous font rêver — nous vous enverrons les guides complets (comment s'y rendre, gares, paysages et réservation).",exp_sub:'Touchez les itinéraires qui vous plaisent, laissez votre e-mail et les guides arrivent dans votre boîte. Gratuit, sans spam.',exp_count:'itinéraires sélectionnés',exp_all:'Tous'},
+      de:{exp_badge:'Routen',exp_title1:'Europa mit dem Zug,',exp_title2:'alles an einem Ort.',exp_lead:'Entdecke die schönsten Zugreisen Europas. Wähle deine Favoriten — wir senden dir die kompletten Guides (Anreise, Bahnhöfe, Landschaft und Buchung).',exp_sub:'Tippe auf die Routen, die dir gefallen, gib deine E-Mail ein und die Guides landen in deinem Postfach. Kostenlos, kein Spam.',exp_count:'Routen ausgewählt',exp_all:'Alle'},
+      it:{exp_badge:'Itinerari',exp_title1:"L'Europa in treno,",exp_title2:'tutto in un posto.',exp_lead:"Scopri i migliori viaggi in treno d'Europa. Scegli quelli dei tuoi sogni: ti invieremo le guide complete (come arrivare, stazioni, paesaggi e come prenotare).",exp_sub:'Tocca gli itinerari che ti piacciono, lascia la tua email e le guide arrivano nella tua casella. Gratis, senza spam.',exp_count:'itinerari selezionati',exp_all:'Tutti'},
+      pt:{exp_badge:'Rotas',exp_title1:'A Europa de trem,',exp_title2:'tudo num só lugar.',exp_lead:'Descubra as melhores viagens de trem pela Europa. Escolha as que você sonha — enviaremos os guias completos (como chegar, estações, paisagens e como reservar).',exp_sub:'Toque nas rotas que você gosta, deixe seu e-mail e os guias chegam na sua caixa. Grátis, sem spam.',exp_count:'rotas selecionadas',exp_all:'Todas'}
+    };
+    function detect(){
+      try { if(localStorage.getItem('glosx_lang_manual')==='1'){ var s=localStorage.getItem('glosx_lang'); if(s&&T[s]) return s; } } catch(e){}
+      var p=new URLSearchParams(location.search).get('lang'); if(p&&T[p]) return p;
+      return 'en';
+    }
+    var d = T[detect()] || T.en;
+    document.documentElement.lang = detect();
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k=el.getAttribute('data-i18n'); if(d[k]!==undefined) el.textContent=d[k];
+    });
   })();
   </script>
 </body>
