@@ -1672,71 +1672,72 @@
 
   /* === AI Route Planner === */
   .ai-planner {
-    padding: 60px 24px;
-    background: linear-gradient(180deg, rgba(124,58,237,0.08), transparent);
+    padding: 80px 24px 60px;
+    background: linear-gradient(180deg, rgba(124,58,237,0.05), transparent);
     position: relative;
     overflow: hidden;
   }
   .ai-planner-header {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
   .ai-label {
     display: inline-block;
-    background: rgba(124,58,237,0.15);
-    border: 1px solid rgba(124,58,237,0.3);
+    background: rgba(124,58,237,0.12);
+    border: 1px solid rgba(124,58,237,0.25);
     border-radius: 100px;
-    padding: 5px 14px;
-    margin-bottom: 16px;
-    font-size: 12px;
+    padding: 6px 16px;
+    margin-bottom: 20px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.5px;
     color: var(--primary2);
     text-transform: uppercase;
   }
   .ai-planner-header h2 {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 800;
     letter-spacing: -1.5px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    line-height: 1.1;
   }
   .ai-subtitle {
-    font-size: 16px;
+    font-size: 17px;
     color: #c8c8d8;
-    line-height: 1.6;
-    max-width: 600px;
+    line-height: 1.7;
+    max-width: 650px;
     margin: 0 auto;
   }
   .ai-input-wrapper {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
     transition: all 0.4s ease;
   }
   .ai-input-container {
     display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 16px;
+    margin-bottom: 20px;
   }
   .ai-input-container input {
     flex: 1;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--text);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
     border-radius: 100px;
-    padding: 16px 24px;
+    padding: 18px 28px;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
   }
   .ai-input-container input:focus {
-    border-color: rgba(168,85,247,0.7);
-    box-shadow: 0 0 0 3px rgba(124,58,237,0.2);
-    background: rgba(255,255,255,0.08);
+    border-color: rgba(168,85,247,0.8);
+    box-shadow: 0 0 0 4px rgba(124,58,237,0.15);
+    background: rgba(255,255,255,0.1);
   }
   .ai-generate-btn {
     font-family: inherit;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: #fff;
     cursor: pointer;
@@ -1744,14 +1745,14 @@
     background: linear-gradient(135deg, #8b5cf6, #7c3aed);
     border: none;
     border-radius: 100px;
-    padding: 16px 28px;
-    box-shadow: 0 6px 20px rgba(124,58,237,0.45);
+    padding: 18px 32px;
+    box-shadow: 0 8px 24px rgba(124,58,237,0.5);
     transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
   }
   .ai-generate-btn:hover {
     transform: translateY(-2px);
-    filter: brightness(1.06);
-    box-shadow: 0 10px 28px rgba(124,58,237,0.6);
+    filter: brightness(1.08);
+    box-shadow: 0 12px 32px rgba(124,58,237,0.65);
   }
   .ai-generate-btn:disabled {
     opacity: 0.5;
@@ -1760,29 +1761,29 @@
   }
   .ai-suggestions {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
   }
   .ai-suggestion {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--muted);
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: 100px;
-    padding: 8px 16px;
+    padding: 10px 18px;
     cursor: pointer;
     transition: all 0.2s;
   }
   .ai-suggestion:hover {
     color: var(--text);
-    border-color: rgba(139,92,246,0.4);
-    background: rgba(124,58,237,0.1);
+    border-color: rgba(139,92,246,0.5);
+    background: rgba(124,58,237,0.12);
   }
   .ai-restore-btn {
     display: block;
-    margin: 20px auto 0;
-    font-size: 14px;
+    margin: 24px auto 0;
+    font-size: 15px;
     color: var(--primary2);
     background: none;
     border: none;
@@ -1793,12 +1794,12 @@
     color: #fff;
   }
   .ai-results {
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
-    background: rgba(26,22,48,0.9);
-    border: 1px solid rgba(139,92,246,0.3);
-    border-radius: 24px;
-    padding: 32px;
+    background: rgba(26,22,48,0.95);
+    border: 1px solid rgba(139,92,246,0.35);
+    border-radius: 28px;
+    padding: 48px;
     position: relative;
     animation: aiFadeIn 0.5s ease;
   }
@@ -1808,11 +1809,11 @@
   }
   .ai-close-btn {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
     color: var(--muted);
     background: none;
     border: none;
@@ -1826,20 +1827,21 @@
   }
   .ai-results-header {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
   .ai-results-header h3 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    line-height: 1.2;
   }
   .ai-results-header p {
-    font-size: 16px;
+    font-size: 17px;
     color: var(--muted);
   }
   .ai-route-line {
-    height: 120px;
-    margin: 24px 0;
+    height: 140px;
+    margin: 32px 0;
     position: relative;
   }
   .route-svg {
@@ -1848,9 +1850,9 @@
   }
   .route-path {
     fill: none;
-    stroke: rgba(139,92,246,0.4);
-    stroke-width: 2;
-    stroke-dasharray: 10 5;
+    stroke: rgba(139,92,246,0.5);
+    stroke-width: 2.5;
+    stroke-dasharray: 12 6;
     animation: routeDash 20s linear infinite;
   }
   @keyframes routeDash {
@@ -1858,115 +1860,120 @@
   }
   .route-dot {
     fill: var(--primary);
-    filter: drop-shadow(0 0 8px rgba(124,58,237,0.6));
+    filter: drop-shadow(0 0 10px rgba(124,58,237,0.7));
   }
   .ai-stops {
     display: flex;
     justify-content: space-between;
-    margin: 24px 0;
+    margin: 32px 0;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
   }
   .ai-stop {
-    background: rgba(124,58,237,0.1);
-    border: 1px solid rgba(139,92,246,0.3);
-    border-radius: 12px;
-    padding: 12px 20px;
+    background: rgba(124,58,237,0.12);
+    border: 1px solid rgba(139,92,246,0.35);
+    border-radius: 14px;
+    padding: 14px 24px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
   }
   .ai-segments {
-    margin: 24px 0;
+    margin: 32px 0;
   }
   .ai-segment {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 20px;
   }
   .ai-segment-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   .ai-segment-route {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 17px;
   }
   .ai-segment-time {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 15px;
   }
   .ai-segment-train {
     display: inline-block;
-    background: rgba(124,58,237,0.15);
-    border: 1px solid rgba(139,92,246,0.3);
+    background: rgba(124,58,237,0.18);
+    border: 1px solid rgba(139,92,246,0.35);
     border-radius: 100px;
-    padding: 4px 12px;
-    font-size: 12px;
+    padding: 6px 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--primary2);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   .ai-segment-desc {
     color: #c8c8d8;
-    line-height: 1.6;
-    font-size: 14px;
+    line-height: 1.7;
+    font-size: 15px;
   }
   .ai-partners {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     justify-content: center;
-    margin: 24px 0;
+    margin: 32px 0;
     flex-wrap: wrap;
   }
   .ai-partner-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
     border-radius: 100px;
-    padding: 12px 24px;
+    padding: 14px 28px;
     color: var(--text);
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     transition: all 0.2s;
   }
   .ai-partner-btn:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(139,92,246,0.4);
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(139,92,246,0.5);
     transform: translateY(-2px);
   }
   .ai-reset-btn {
     display: block;
-    margin: 24px auto 0;
+    margin: 32px auto 0;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
     border-radius: 100px;
-    padding: 14px 28px;
+    padding: 16px 32px;
     cursor: pointer;
     transition: all 0.2s;
   }
   .ai-reset-btn:hover {
-    background: rgba(124,58,237,0.15);
-    border-color: rgba(139,92,246,0.4);
+    background: rgba(124,58,237,0.18);
+    border-color: rgba(139,92,246,0.5);
   }
   @media (max-width: 768px) {
-    .ai-planner { padding: 40px 20px; }
-    .ai-planner-header h2 { font-size: 28px; }
+    .ai-planner { padding: 60px 20px 40px; }
+    .ai-planner-header h2 { font-size: 32px; }
+    .ai-subtitle { font-size: 16px; }
     .ai-input-container { flex-direction: column; }
     .ai-generate-btn { width: 100%; }
-    .ai-results { padding: 24px 20px; }
-    .ai-results-header h3 { font-size: 22px; }
+    .ai-results { padding: 32px 24px; }
+    .ai-results-header h3 { font-size: 26px; }
+    .ai-results-header p { font-size: 15px; }
     .ai-stops { flex-direction: column; }
+    .ai-segment { padding: 20px; }
+    .ai-segment-route { font-size: 15px; }
+    .ai-segment-desc { font-size: 14px; }
   }
 </style>
 </head>
