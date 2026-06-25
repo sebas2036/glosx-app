@@ -162,11 +162,7 @@
   <div class="signup-bar">
     <div class="signup-inner">
       <div class="signup-count"><b id="selCount">0</b> <span data-i18n="exp_count">routes selected</span></div>
-      <form class="signup-form" onsubmit="submitEmail(event)">
-        <input type="email" id="emailInput" placeholder="Your email" required />
-        <button type="submit" class="signup-btn">Get guides →</button>
-      </form>
-      <div id="signupMsg" class="signup-msg"></div>
+      <div class="ml-embedded" data-form="y1D3vA"></div>
     </div>
   </div>
 
@@ -295,25 +291,11 @@
 
     render('All');
 
-    // Función para enviar email (reemplazo del embed de MailerLite)
-    function submitEmail(e) {
-      e.preventDefault();
-      var email = document.getElementById('emailInput').value;
-      var msg = document.getElementById('signupMsg');
-      var btn = e.target.querySelector('button');
-      if (!email) return;
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-      msg.textContent = '';
-      // Aquí puedes agregar la integración con MailerLite API
-      // Por ahora mostramos un mensaje de éxito
-      setTimeout(function() {
-        msg.textContent = '✓ Guides sent to ' + email + '! Check your inbox.';
-        msg.style.color = '#a78bfa';
-        btn.textContent = 'Sent ✓';
-        try { gtag('event', 'route_signup', { routes_count: selected.size }); } catch (e) {}
-      }, 1000);
-    }
+    // El formulario es el embed oficial de MailerLite (<div class="ml-embedded" data-form="y1D3vA">),
+    // renderizado por universal.js: agrega al grupo "Route guides", aplica double opt-in y dispara la automatización.
+    try { document.querySelector('.ml-embedded').addEventListener('submit', function () {
+      try { gtag('event', 'route_signup', { routes_count: selected.size }); } catch (e) {}
+    }, true); } catch (e) {}
   })();
   </script>
 
