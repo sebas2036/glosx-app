@@ -1669,6 +1669,305 @@
     .wt-submit-btn { width: 100%; }
     .wt-star-row { justify-content: center; }
   }
+
+  /* === AI Route Planner === */
+  .ai-planner {
+    padding: 60px 24px;
+    background: linear-gradient(180deg, rgba(124,58,237,0.08), transparent);
+    position: relative;
+    overflow: hidden;
+  }
+  .ai-planner-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .ai-label {
+    display: inline-block;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.3);
+    border-radius: 100px;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary2);
+    text-transform: uppercase;
+  }
+  .ai-planner-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+  }
+  .ai-subtitle {
+    font-size: 16px;
+    color: #c8c8d8;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .ai-input-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+  }
+  .ai-input-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .ai-input-container input {
+    flex: 1;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    padding: 16px 24px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+  .ai-input-container input:focus {
+    border-color: rgba(168,85,247,0.7);
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.2);
+    background: rgba(255,255,255,0.08);
+  }
+  .ai-generate-btn {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border: none;
+    border-radius: 100px;
+    padding: 16px 28px;
+    box-shadow: 0 6px 20px rgba(124,58,237,0.45);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+  }
+  .ai-generate-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+    box-shadow: 0 10px 28px rgba(124,58,237,0.6);
+  }
+  .ai-generate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+  .ai-suggestions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ai-suggestion {
+    font-size: 13px;
+    color: var(--muted);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 100px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ai-suggestion:hover {
+    color: var(--text);
+    border-color: rgba(139,92,246,0.4);
+    background: rgba(124,58,237,0.1);
+  }
+  .ai-restore-btn {
+    display: block;
+    margin: 20px auto 0;
+    font-size: 14px;
+    color: var(--primary2);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .ai-restore-btn:hover {
+    color: #fff;
+  }
+  .ai-results {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(26,22,48,0.9);
+    border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 24px;
+    padding: 32px;
+    position: relative;
+    animation: aiFadeIn 0.5s ease;
+  }
+  @keyframes aiFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .ai-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    color: var(--muted);
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ai-close-btn:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+  }
+  .ai-results-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .ai-results-header h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .ai-results-header p {
+    font-size: 16px;
+    color: var(--muted);
+  }
+  .ai-route-line {
+    height: 120px;
+    margin: 24px 0;
+    position: relative;
+  }
+  .route-svg {
+    width: 100%;
+    height: 100%;
+  }
+  .route-path {
+    fill: none;
+    stroke: rgba(139,92,246,0.4);
+    stroke-width: 2;
+    stroke-dasharray: 10 5;
+    animation: routeDash 20s linear infinite;
+  }
+  @keyframes routeDash {
+    to { stroke-dashoffset: -1000; }
+  }
+  .route-dot {
+    fill: var(--primary);
+    filter: drop-shadow(0 0 8px rgba(124,58,237,0.6));
+  }
+  .ai-stops {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .ai-stop {
+    background: rgba(124,58,237,0.1);
+    border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .ai-segments {
+    margin: 24px 0;
+  }
+  .ai-segment {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .ai-segment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .ai-segment-route {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .ai-segment-time {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .ai-segment-train {
+    display: inline-block;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 100px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary2);
+    margin-bottom: 8px;
+  }
+  .ai-segment-desc {
+    color: #c8c8d8;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .ai-partners {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+  .ai-partner-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    padding: 12px 24px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .ai-partner-btn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(139,92,246,0.4);
+    transform: translateY(-2px);
+  }
+  .ai-reset-btn {
+    display: block;
+    margin: 24px auto 0;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ai-reset-btn:hover {
+    background: rgba(124,58,237,0.15);
+    border-color: rgba(139,92,246,0.4);
+  }
+  @media (max-width: 768px) {
+    .ai-planner { padding: 40px 20px; }
+    .ai-planner-header h2 { font-size: 28px; }
+    .ai-input-container { flex-direction: column; }
+    .ai-generate-btn { width: 100%; }
+    .ai-results { padding: 24px 20px; }
+    .ai-results-header h3 { font-size: 22px; }
+    .ai-stops { flex-direction: column; }
+  }
 </style>
 </head>
 <body>
@@ -1754,6 +2053,54 @@
       <button type="submit" class="search-btn" data-i18n="search_btn">Search Tickets &amp; Schedules →</button>
     </form>
 
+  </section>
+
+  <!-- AI Route Planner -->
+  <section class="ai-planner" id="aiPlanner">
+    <div class="ai-planner-header">
+      <p class="ai-label" data-i18n="ai_label">AI Route Planner</p>
+      <h2><span data-i18n="ai_title1">Describe your</span><br /><span data-i18n="ai_title2">dream journey.</span></h2>
+      <p class="ai-subtitle" data-i18n="ai_subtitle">From simple city-to-city to complex multi-day adventures — our AI plans the perfect train route.</p>
+    </div>
+
+    <div class="ai-input-wrapper" id="aiInputWrapper">
+      <div class="ai-input-container">
+        <input type="text" id="aiInput" placeholder="e.g., 'Madrid to Paris scenic route' or '5 days through Swiss Alps'" autocomplete="off" />
+        <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Generate Itinerary ✨</button>
+      </div>
+      <div class="ai-suggestions">
+        <span class="ai-suggestion" onclick="setAISuggestion('Madrid to Paris')">Madrid to Paris</span>
+        <span class="ai-suggestion" onclick="setAISuggestion('Swiss Alps scenic route')">Swiss Alps</span>
+        <span class="ai-suggestion" onclick="setAISuggestion('5 days Italy')">5 days Italy</span>
+      </div>
+      <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;">View my last route →</button>
+    </div>
+
+    <div class="ai-results" id="aiResults" style="display:none;">
+      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
+      <div class="ai-results-header">
+        <h3 id="aiRouteTitle"></h3>
+        <p id="aiRouteDuration"></p>
+      </div>
+      <div class="ai-route-line" id="aiRouteLine">
+        <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+          <path class="route-path" d="" />
+          <circle class="route-dot" cx="50" cy="100" r="8" />
+          <circle class="route-dot" cx="950" cy="100" r="8" />
+        </svg>
+      </div>
+      <div class="ai-stops" id="aiStops"></div>
+      <div class="ai-segments" id="aiSegments"></div>
+      <div class="ai-partners">
+        <a href="https://www.booking.com" target="_blank" rel="noopener" class="ai-partner-btn">
+          <span>🏨</span> Hotels
+        </a>
+        <a href="https://www.yesim.com" target="_blank" rel="noopener" class="ai-partner-btn">
+          <span>📱</span> eSIM
+        </a>
+      </div>
+      <button class="ai-reset-btn" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Create another route</button>
+    </div>
   </section>
 
   <!-- Countries chips -->
@@ -2541,6 +2888,9 @@
         rv2_route: 'Zurich ➔ Vienna · Alpine Route', rv2_body: 'Zero stress. One ticket, connections that just lined up, and none of the endless security lines. I sat down and simply enjoyed it.',
         rv3_route: 'Prague ➔ Budapest · Imperial Route', rv3_body: 'The scenery. The Danube appeared around a bend at sunset and the whole carriage went silent. No airplane window gives you that.',
         rv_ph_name: 'Name, Country', rv_ph_route: 'Your train route', rv_ph_body: 'Your WoW train moment...', rv_publish: 'Publish', rv_ok: 'Published!', rv_error_empty: 'Fill in your name and comment.', rv_chars_label: 'characters remaining',
+        ai_label: 'AI Route Planner', ai_title1: 'Describe your', ai_title2: 'dream journey.',
+        ai_subtitle: 'From simple city-to-city to complex multi-day adventures — our AI plans the perfect train route.',
+        ai_generate: 'Generate Itinerary ✨', ai_reset: '↺ Create another route',
       },
       es: {
         nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar', nav_routes: 'Rutas',
@@ -2600,6 +2950,9 @@
         rv2_route: 'Zúrich ➔ Viena · Ruta Alpina', rv2_body: 'Sin estrés. Un solo billete, conexiones que encajaron solas, sin las interminables colas de seguridad. Me senté y simplemente lo disfruté.',
         rv3_route: 'Praga ➔ Budapest · Ruta Imperial', rv3_body: 'El paisaje. El Danubio apareció en un recodo al atardecer y todo el vagón quedó en silencio. Ninguna ventanilla de avión te da eso.',
         rv_ph_name: 'Nombre, País', rv_ph_route: 'Tu ruta de tren', rv_ph_body: 'Tu momento WoW en el tren...', rv_publish: 'Publicar', rv_ok: '¡Publicado!', rv_error_empty: 'Completá tu nombre y comentario.', rv_chars_label: 'caracteres restantes',
+        ai_label: 'Planificador IA', ai_title1: 'Describí tu', ai_title2: 'viaje soñado.',
+        ai_subtitle: 'Desde rutas simples ciudad a ciudad hasta aventuras complejas de varios días — nuestra IA planifica la ruta perfecta en tren.',
+        ai_generate: 'Generar Itinerario ✨', ai_reset: '↺ Crear otra ruta',
       },
       fr: {
         nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer', nav_routes: 'Itinéraires',
@@ -2659,6 +3012,9 @@
         rv2_route: 'Zurich ➔ Vienne · Route Alpine', rv2_body: 'Zéro stress. Un seul billet, des correspondances qui s\'enchaînaient, sans les interminables files de sécurité. Je me suis assis et j\'ai simplement profité.',
         rv3_route: 'Prague ➔ Budapest · Route Impériale', rv3_body: 'Le paysage. Le Danube est apparu au détour d\'un virage au coucher du soleil et tout le wagon s\'est tu. Aucun hublot d\'avion ne vous offre ça.',
         rv_ph_name: 'Prénom, Pays', rv_ph_route: 'Votre itinéraire en train', rv_ph_body: 'Votre moment WoW en train...', rv_publish: 'Publier', rv_ok: 'Publié !', rv_error_empty: 'Indiquez votre prénom et votre commentaire.', rv_chars_label: 'caractères restants',
+        ai_label: 'Planificateur IA', ai_title1: 'Décrivez votre', ai_title2: 'voyage de rêve.',
+        ai_subtitle: 'De simples trajets ville à ville aux aventures complexes de plusieurs jours — notre IA planifie l\'itinéraire ferroviaire parfait.',
+        ai_generate: 'Générer l\'itinéraire ✨', ai_reset: '↺ Créer une autre route',
       },
       de: {
         nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen', nav_routes: 'Routen',
@@ -2718,6 +3074,9 @@
         rv2_route: 'Zürich ➔ Wien · Alpine Route', rv2_body: 'Null Stress. Ein Ticket, Anschlüsse, die einfach passten, keine endlosen Sicherheitsschlangen. Ich setzte mich hin und genoss es einfach.',
         rv3_route: 'Prag ➔ Budapest · Imperiale Route', rv3_body: 'Die Landschaft. Die Donau erschien bei Sonnenuntergang um eine Biegung und das ganze Abteil wurde still. Kein Flugzeugfenster gibt dir das.',
         rv_ph_name: 'Name, Land', rv_ph_route: 'Deine Bahnstrecke', rv_ph_body: 'Dein WoW-Moment im Zug...', rv_publish: 'Veröffentlichen', rv_ok: 'Veröffentlicht!', rv_error_empty: 'Bitte Name und Kommentar ausfüllen.', rv_chars_label: 'Zeichen verbleibend',
+        ai_label: 'KI-Route-Planer', ai_title1: 'Beschreibe deinen', ai_title2: 'Traumreise.',
+        ai_subtitle: 'Von einfachen Stadt-zu-Stadt-Verbindungen bis zu komplexen Mehrtagesabenteuern — unsere KI plant die perfekte Zugroute.',
+        ai_generate: 'Reiseplan erstellen ✨', ai_reset: '↺ Eine andere Route erstellen',
       },
       it: {
         nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia', nav_routes: 'Itinerari',
@@ -2777,6 +3136,9 @@
         rv2_route: 'Zurigo ➔ Vienna · Percorso Alpino', rv2_body: 'Zero stress. Un biglietto, coincidenze perfette, nessuna fila di sicurezza infinita. Mi sono seduto e ho semplicemente goduto.',
         rv3_route: 'Praga ➔ Budapest · Percorso Imperiale', rv3_body: 'Il paesaggio. Il Danubio è apparso attorno a una curva al tramonto e tutto il vagone è rimasto in silenzio. Nessun oblò d\'aereo ti dà questo.',
         rv_ph_name: 'Nome, Paese', rv_ph_route: 'Il tuo percorso in treno', rv_ph_body: 'Il tuo momento WoW in treno...', rv_publish: 'Pubblica', rv_ok: 'Pubblicato!', rv_error_empty: 'Inserisci nome e commento.', rv_chars_label: 'caratteri rimanenti',
+        ai_label: 'Pianificatore IA', ai_title1: 'Descrivi il tuo', ai_title2: 'viaggio dei sogni.',
+        ai_subtitle: 'Da semplici collegamenti città a città ad avventure complesse di più giorni — la nostra IA pianifica il perfetto itinerario ferroviario.',
+        ai_generate: 'Genera itinerario ✨', ai_reset: '↺ Crea un\'altra route',
       },
       pt: {
         nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar', nav_routes: 'Rotas',
@@ -2836,6 +3198,9 @@
         rv2_route: 'Zurique ➔ Viena · Rota Alpina', rv2_body: 'Zero stress. Um bilhete, ligações que encaixaram, sem as intermináveis filas de segurança. Sentei-me e simplesmente desfrutei.',
         rv3_route: 'Praga ➔ Budapeste · Rota Imperial', rv3_body: 'A paisagem. O Danúbio apareceu numa curva ao pôr do sol e todo o vagão ficou em silêncio. Nenhuma janela de avião te dá isso.',
         rv_ph_name: 'Nome, País', rv_ph_route: 'O teu percurso de comboio', rv_ph_body: 'O teu momento WoW no comboio...', rv_publish: 'Publicar', rv_ok: 'Publicado!', rv_error_empty: 'Preenche o nome e o comentário.', rv_chars_label: 'caracteres restantes',
+        ai_label: 'Planeador IA', ai_title1: 'Descreve a tua', ai_title2: 'viagem dos sonhos.',
+        ai_subtitle: 'De simples ligações cidade a cidade a aventuras complexas de vários dias — a nossa IA planeia a perfeita rota ferroviária.',
+        ai_generate: 'Gerar itinerário ✨', ai_reset: '↺ Criar outra rota',
       },
     };
 
@@ -3780,6 +4145,253 @@
 
   attachTypeahead(document.getElementById('origin'));
   attachTypeahead(document.getElementById('dest'));
+
+  // === AI Route Planner ===
+  
+  // CONFIGURACIÓN DE API - CAMBIAR ESTA URL CUANDO TENGAS EL BACKEND
+  const AI_API_URL = 'YOUR_API_ENDPOINT_HERE'; // Reemplazar con tu URL real
+  
+  // Datos de ejemplo (mock) para demostración
+  const MOCK_ROUTE_DATA = {
+    "resumen": {
+      "origen_fin_o_concepto": "Madrid to Paris scenic route through Spanish and French countryside",
+      "duracion_estimada_total": "10-12 hours total journey time"
+    },
+    "paradas_principales": ["Madrid", "Barcelona", "Perpignan", "Lyon", "Paris"],
+    "tramos": [
+      {
+        "orden": 1,
+        "origen": "Madrid Atocha",
+        "destino": "Barcelona Sants",
+        "tiempo_trayecto": "2h 30m",
+        "tipo_tren_sugerido": "AVE",
+        "breve_descripcion_conexion": "High-speed AVE train connects Madrid to Barcelona in just 2.5 hours. Comfortable seating with WiFi and power outlets."
+      },
+      {
+        "orden": 2,
+        "origen": "Barcelona Sants",
+        "destino": "Perpignan",
+        "tiempo_trayecto": "1h 45m",
+        "tipo_tren_sugerido": "TGV",
+        "breve_descripcion_conexion": "Cross-border TGV from Barcelona to France. Scenic route through Pyrenees mountains. Requires seat reservation."
+      },
+      {
+        "orden": 3,
+        "origen": "Perpignan",
+        "destino": "Lyon Part-Dieu",
+        "tiempo_trayecto": "2h 15m",
+        "tipo_tren_sugerido": "TGV",
+        "breve_descripcion_conexion": "TGV continues north through French countryside. Lyon is a major hub with excellent connections."
+      },
+      {
+        "orden": 4,
+        "origen": "Lyon Part-Dieu",
+        "destino": "Paris Gare de Lyon",
+        "tiempo_trayecto": "2h 00m",
+        "tipo_tren_sugerido": "TGV",
+        "breve_descripcion_conexion": "Final high-speed segment to Paris. Arrives at Gare de Lyon in the heart of the city."
+      }
+    ]
+  };
+
+  // Función para establecer sugerencia
+  function setAISuggestion(text) {
+    document.getElementById('aiInput').value = text;
+  }
+
+  // Función principal para generar ruta
+  async function generateAIRoute() {
+    const input = document.getElementById('aiInput').value.trim();
+    const btn = document.querySelector('.ai-generate-btn');
+    
+    if (!input) {
+      alert('Please enter a route or travel idea');
+      return;
+    }
+
+    // Validación básica - debe contener nombres de lugares
+    if (!containsPlaceNames(input)) {
+      alert('Please include destination names or a valid travel idea');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
+
+    try {
+      // Intentar usar API real si está configurada
+      if (AI_API_URL !== 'YOUR_API_ENDPOINT_HERE') {
+        const response = await callAIAPI(input);
+        displayAIRoute(response);
+      } else {
+        // Usar datos mock si no hay API configurada
+        await new Promise(resolve => setTimeout(resolve, 1500)); // Simular delay
+        displayAIRoute(MOCK_ROUTE_DATA);
+      }
+      
+      // Guardar en localStorage
+      saveRouteToCache(input, AI_API_URL !== 'YOUR_API_ENDPOINT_HERE' ? await callAIAPI(input) : MOCK_ROUTE_DATA);
+      
+    } catch (error) {
+      console.error('Error generating route:', error);
+      alert('Error generating route. Please try again.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Generate Itinerary ✨';
+    }
+  }
+
+  // Función para llamar a la API (genérica)
+  async function callAIAPI(prompt) {
+    const response = await fetch(AI_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt: prompt })
+    });
+    
+    if (!response.ok) {
+      throw new Error('API request failed');
+    }
+    
+    return await response.json();
+  }
+
+  // Función para validar que el input contiene nombres de lugares
+  function containsPlaceNames(text) {
+    // Lista básica de ciudades europeas comunes
+    const cities = ['madrid', 'barcelona', 'paris', 'london', 'rome', 'berlin', 'amsterdam', 'vienna', 'prague', 'milan', 'florence', 'venice', 'munich', 'zurich', 'geneva', 'lisbon', 'porto', 'brussels', 'lyon', 'nice', 'seville', 'valencia', 'bilbao', 'naples', 'turin', 'bologna', 'copenhagen', 'stockholm', 'oslo', 'helsinki', 'budapest', 'warsaw', 'krakow', 'dublin', 'edinburgh', 'glasgow', 'manchester', 'athens', 'thessaloniki', 'sofia', 'bucharest', 'zagreb', 'split', 'ljubljana', 'bratislava', 'vilnius', 'riga', 'tallinn', 'reykjavik', 'reykjavik', 'luxembourg', 'monaco', 'andorra', 'san marino', 'vatican', 'malta', 'cyprus', 'iceland', 'norway', 'sweden', 'finland', 'denmark', 'netherlands', 'belgium', 'germany', 'france', 'spain', 'portugal', 'italy', 'switzerland', 'austria', 'czech', 'poland', 'hungary', 'slovakia', 'slovenia', 'croatia', 'bosnia', 'serbia', 'montenegro', 'albania', 'greece', 'bulgaria', 'romania', 'ukraine', 'belarus', 'lithuania', 'latvia', 'estonia', 'russia', 'turkey', 'georgia', 'armenia', 'azerbaijan', 'kazakhstan', 'uzbekistan', 'kyrgyzstan', 'tajikistan', 'turkmenistan', 'afghanistan', 'pakistan', 'india', 'china', 'japan', 'korea', 'vietnam', 'thailand', 'cambodia', 'laos', 'myanmar', 'bangladesh', 'nepal', 'bhutan', 'sri lanka', 'maldives', 'indonesia', 'malaysia', 'singapore', 'philippines', 'brunei', 'east timor', 'papua new guinea', 'australia', 'new zealand', 'fiji', 'solomon islands', 'vanuatu', 'samoa', 'tonga', 'tuvalu', 'kiribati', 'marshall islands', 'micronesia', 'palau', 'nauru', 'canada', 'united states', 'mexico', 'guatemala', 'belize', 'honduras', 'el salvador', 'nicaragua', 'costa rica', 'panama', 'colombia', 'venezuela', 'guyana', 'suriname', 'french guiana', 'ecuador', 'peru', 'bolivia', 'paraguay', 'uruguay', 'argentina', 'chile', 'brazil', 'alps', 'pyrenees', 'carpathians', 'scandinavia', 'baltic', 'iberia', 'british isles', 'balkans', 'adriatic', 'mediterranean', 'rhine', 'danube', 'rhone', 'seine', 'thames', 'po', 'tagus', 'ebro', 'guadalquivir', 'douro', 'garonne', 'loire', 'meuse', 'scheldt', 'elbe', 'oder', 'vistula', 'dnieper', 'don', 'volga', 'ural', 'dniester', 'sava', 'mura', 'drava', 'tisa', 'tisza', 'prut', 'siret', 'olt', 'jiu', 'argesh', 'ialomita', 'siret', 'mures', 'somes', 'crisuri', 'timis', 'baraolt', 'prit', 'cerna', 'nera', 'cara', 'bega', 'tisa', 'danube', 'sava', 'drina', 'lim', 'drina', 'kolubara', 'mora', 'great morava', 'south morava', 'west morava', 'ibar', 'timok', 'pek', 'mlava', 'resava', 'ravanica', 'vit', 'osam', 'yantra', 'kamchiya', 'tundzha', 'maritsa', 'struma', 'nestos', 'vardar', 'crna', 'bregalnica', 'drin', 'buna', 'vjosa', 'semeni', 'shkumbin', 'mat', 'ishm', 'erzen', 'shkumbin', 'drin', 'buna', 'vjosa', 'semeni', 'shkumbin', 'mat', 'ishm', 'erzen', 'neretva', 'trebisnjica', 'bregava', 'krivaja', 'bosna', 'usora', 'spreca', 'tinja', 'drina', 'sana', 'una', 'vrbanja', 'ukrina', 'janja', 'tinja', 'drina', 'lim', 'piva', 'tara', 'cehotina', 'bijela', 'komarnica', 'moraca', 'zeta', 'cijevna', 'rmnica', 'grnjar', 'lje'];
+    
+    const lowerText = text.toLowerCase();
+    return cities.some(city => lowerText.includes(city));
+  }
+
+  // Función para mostrar la ruta generada
+  function displayAIRoute(data) {
+    const inputWrapper = document.getElementById('aiInputWrapper');
+    const results = document.getElementById('aiResults');
+    
+    // Ocultar input, mostrar resultados
+    inputWrapper.style.display = 'none';
+    results.style.display = 'block';
+    
+    // Llenar datos
+    document.getElementById('aiRouteTitle').textContent = data.resumen.origen_fin_o_concepto;
+    document.getElementById('aiRouteDuration').textContent = data.resumen.duracion_estimada_total;
+    
+    // Mostrar paradas
+    const stopsContainer = document.getElementById('aiStops');
+    stopsContainer.innerHTML = data.paradas_principales.map(stop => 
+      `<div class="ai-stop">${stop}</div>`
+    ).join('');
+    
+    // Mostrar tramos con efecto typewriter
+    const segmentsContainer = document.getElementById('aiSegments');
+    segmentsContainer.innerHTML = '';
+    
+    data.tramos.forEach((segment, index) => {
+      setTimeout(() => {
+        const segmentHTML = `
+          <div class="ai-segment" style="animation: aiFadeIn 0.5s ease">
+            <div class="ai-segment-header">
+              <span class="ai-segment-route">${segment.origen} → ${segment.destino}</span>
+              <span class="ai-segment-time">${segment.tiempo_trayecto}</span>
+            </div>
+            <div class="ai-segment-train">${segment.tipo_tren_sugerido}</div>
+            <div class="ai-segment-desc">${segment.breve_descripcion_conexion}</div>
+          </div>
+        `;
+        segmentsContainer.innerHTML += segmentHTML;
+      }, index * 300);
+    });
+    
+    // Dibujar línea SVG
+    drawRouteLine(data.paradas_principales.length);
+  }
+
+  // Función para dibujar la línea de ruta
+  function drawRouteLine(numStops) {
+    const path = document.querySelector('.route-path');
+    const width = 1000;
+    const height = 200;
+    const padding = 50;
+    const availableWidth = width - (padding * 2);
+    
+    let d = `M ${padding} ${height/2}`;
+    
+    if (numStops > 2) {
+      const step = availableWidth / (numStops - 1);
+      for (let i = 1; i < numStops - 1; i++) {
+        const x = padding + (step * i);
+        const y = height/2 + (Math.sin(i) * 30);
+        d += ` L ${x} ${y}`;
+      }
+    }
+    
+    d += ` L ${width - padding} ${height/2}`;
+    path.setAttribute('d', d);
+  }
+
+  // Función para resetear el planner
+  function resetAIPlanner() {
+    const inputWrapper = document.getElementById('aiInputWrapper');
+    const results = document.getElementById('aiResults');
+    const input = document.getElementById('aiInput');
+    
+    results.style.display = 'none';
+    inputWrapper.style.display = 'block';
+    input.value = '';
+    
+    // Mostrar botón de restaurar si hay caché
+    checkRouteCache();
+  }
+
+  // Función para guardar ruta en caché
+  function saveRouteToCache(input, data) {
+    try {
+      localStorage.setItem('ai_last_route_input', input);
+      localStorage.setItem('ai_last_route_data', JSON.stringify(data));
+      localStorage.setItem('ai_last_route_timestamp', Date.now().toString());
+    } catch (e) {
+      console.error('Error saving to cache:', e);
+    }
+  }
+
+  // Función para restaurar última ruta
+  function restoreLastRoute() {
+    try {
+      const data = localStorage.getItem('ai_last_route_data');
+      if (data) {
+        displayAIRoute(JSON.parse(data));
+      }
+    } catch (e) {
+      console.error('Error restoring from cache:', e);
+    }
+  }
+
+  // Función para verificar caché
+  function checkRouteCache() {
+    try {
+      const timestamp = localStorage.getItem('ai_last_route_timestamp');
+      const restoreBtn = document.getElementById('aiRestoreBtn');
+      
+      if (timestamp) {
+        const hoursSince = (Date.now() - parseInt(timestamp)) / (1000 * 60 * 60);
+        if (hoursSince < 24) {
+          restoreBtn.style.display = 'block';
+          return;
+        }
+      }
+      restoreBtn.style.display = 'none';
+    } catch (e) {
+      console.error('Error checking cache:', e);
+    }
+  }
+
+  // Inicializar verificación de caché al cargar
+  document.addEventListener('DOMContentLoaded', checkRouteCache);
+
 })();
 </script>
 </body>
