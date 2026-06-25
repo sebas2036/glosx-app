@@ -300,12 +300,17 @@
       e.preventDefault();
       var email = document.getElementById('emailInput').value;
       var msg = document.getElementById('signupMsg');
+      var btn = e.target.querySelector('button');
       if (!email) return;
-      msg.textContent = 'Sending...';
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      msg.textContent = '';
       // Aquí puedes agregar la integración con MailerLite API
       // Por ahora mostramos un mensaje de éxito
       setTimeout(function() {
-        msg.textContent = '✓ Check your inbox!';
+        msg.textContent = '✓ Guides sent to ' + email + '! Check your inbox.';
+        msg.style.color = '#a78bfa';
+        btn.textContent = 'Sent ✓';
         try { gtag('event', 'route_signup', { routes_count: selected.size }); } catch (e) {}
       }, 1000);
     }
