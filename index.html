@@ -1673,20 +1673,17 @@
   /* === AI Route Planner === */
   .ai-planner {
     padding: 80px 24px 60px;
-    background: linear-gradient(160deg, #0d0a1a 0%, #130d2e 50%, #0a0f1e 100%);
+    background: transparent;
     position: relative;
-    z-index: 1;
     overflow: hidden;
   }
   .ai-planner::before {
     content: '';
     position: absolute;
-    top: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 500px;
-    background: radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 70%);
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 50%, rgba(124,58,237,0.22) 0%, transparent 70%),
+      linear-gradient(180deg, rgba(10,6,25,0.55) 0%, rgba(10,6,25,0.75) 100%);
     pointer-events: none;
     z-index: 0;
   }
@@ -2089,8 +2086,6 @@
 
   </section>
 
-  </div><!-- /hero-bgwrap -->
-
   <!-- AI Route Planner -->
   <section class="ai-planner" id="aiPlanner">
     <div class="ai-planner-header">
@@ -2151,6 +2146,8 @@
     <span class="country-chip">Austria<img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()"></span>
     <span class="country-chip">Portugal<img class="country-photo" src="country-pics/pt.jpg" alt="Portugal" loading="lazy" onerror="this.remove()"></span>
   </div>
+
+  </div><!-- /hero-bgwrap -->
 
   <!-- Scenic trains -->
   <section class="section" id="scenic">
