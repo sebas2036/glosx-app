@@ -4257,11 +4257,15 @@
         await new Promise(resolve => setTimeout(resolve, 1500));
         routeData = MOCK_ROUTE_DATA;
       }
-      displayAIRoute(routeData);
-      saveRouteToCache(input, routeData);
+      if (routeData.valido === false) {
+        showAIPlannerError(routeData.mensajeError || 'Contame a dónde querés viajar por Europa.');
+      } else {
+        displayAIRoute(routeData);
+        saveRouteToCache(input, routeData);
+      }
     } catch (error) {
       console.error('Error generating route:', error);
-      alert('Error generating route. Please try again.');
+      showAIPlannerError('Hubo un problema de conexión. Intentá de nuevo.');
     } finally {
       btn.disabled = false;
       btn.textContent = 'Generate Itinerary ✨';
@@ -4418,6 +4422,17 @@
 
   // Inicializar verificación de caché al cargar
   document.addEventListener('DOMContentLoaded', checkRouteCache);
+
+  function showAIPlannerError(msg) {
+    const existing = document.getElementById('aiPlannerError');
+    if (existing) existing.remove();
+    const el = document.createElement('p');
+    el.id = 'aiPlannerError';
+    el.style.cssText = 'color:#a78bfa;font-size:15px;margin-top:16px;text-align:center;';
+    el.textContent = msg;
+    document.getElementById('aiInputWrapper').appendChild(el);
+    setTimeout(() => el.remove(), 6000);
+  }
 
   // Exponer funciones al scope global (llamadas desde onclick en el HTML)
   window.generateAIRoute = generateAIRoute;
