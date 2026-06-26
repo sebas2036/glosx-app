@@ -4419,6 +4419,12 @@
   // Inicializar verificación de caché al cargar
   document.addEventListener('DOMContentLoaded', checkRouteCache);
 
+  // Exponer funciones al scope global (llamadas desde onclick en el HTML)
+  window.generateAIRoute = generateAIRoute;
+  window.resetAIPlanner = resetAIPlanner;
+  window.restoreLastRoute = restoreLastRoute;
+  window.setAISuggestion = setAISuggestion;
+
 })();
 </script>
 </body>
