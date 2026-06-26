@@ -4250,19 +4250,15 @@
     btn.textContent = 'Generating...';
 
     try {
-      // Intentar usar API real si está configurada
+      let routeData;
       if (AI_API_URL !== 'YOUR_API_ENDPOINT_HERE') {
-        const response = await callAIAPI(input);
-        displayAIRoute(response);
+        routeData = await callAIAPI(input);
       } else {
-        // Usar datos mock si no hay API configurada
-        await new Promise(resolve => setTimeout(resolve, 1500)); // Simular delay
-        displayAIRoute(MOCK_ROUTE_DATA);
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        routeData = MOCK_ROUTE_DATA;
       }
-      
-      // Guardar en localStorage
-      saveRouteToCache(input, AI_API_URL !== 'YOUR_API_ENDPOINT_HERE' ? await callAIAPI(input) : MOCK_ROUTE_DATA);
-      
+      displayAIRoute(routeData);
+      saveRouteToCache(input, routeData);
     } catch (error) {
       console.error('Error generating route:', error);
       alert('Error generating route. Please try again.');
