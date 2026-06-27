@@ -1886,12 +1886,20 @@
     fill: none;
     stroke: var(--primary);
     stroke-width: 2.5;
-    stroke-dasharray: 12 6;
-    animation: routeDash 20s linear infinite;
-    opacity: 0.6;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    opacity: 0.7;
+    animation: routeDraw 1.4s cubic-bezier(0.4,0,0.2,1) forwards;
   }
-  @keyframes routeDash {
-    to { stroke-dashoffset: -1000; }
+  @keyframes routeDraw {
+    to { stroke-dashoffset: 0; }
+  }
+  .ai-route-meta {
+    font-size: 12px;
+    color: rgba(167,139,250,0.6);
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top: 6px;
   }
   .route-dot {
     fill: var(--primary);
@@ -1908,10 +1916,21 @@
     background: rgba(30,41,59,0.8);
     border: 1px solid rgba(124,58,237,0.3);
     border-radius: 14px;
-    padding: 14px 24px;
+    padding: 12px 20px;
     font-weight: 600;
     font-size: 15px;
     color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .ai-stop-num {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: rgba(167,139,250,0.6);
+    text-transform: uppercase;
   }
   .ai-segments {
     margin: 32px 0;
@@ -1940,15 +1959,15 @@
   }
   .ai-segment-train {
     display: inline-block;
-    background: rgba(124,58,237,0.25);
-    border: 1px solid rgba(124,58,237,0.5);
     border-radius: 100px;
     padding: 6px 14px;
     font-size: 13px;
     font-weight: 600;
-    color: var(--primary2);
     margin-bottom: 12px;
   }
+  .ai-segment-train.train-high  { background: rgba(124,58,237,0.25); border: 1px solid rgba(124,58,237,0.5); color: #c084fc; }
+  .ai-segment-train.train-intl  { background: rgba(231,198,107,0.15); border: 1px solid rgba(231,198,107,0.45); color: #e7c66b; }
+  .ai-segment-train.train-reg   { background: rgba(56,189,248,0.15);  border: 1px solid rgba(56,189,248,0.4);  color: #7dd3fc; }
   .ai-segment-desc {
     color: var(--muted);
     line-height: 1.7;
@@ -2152,6 +2171,7 @@
       <div class="ai-results-header">
         <h3 id="aiRouteTitle"></h3>
         <p id="aiRouteDuration"></p>
+        <p class="ai-route-meta" id="aiRouteMeta"></p>
       </div>
       <div class="ai-route-line" id="aiRouteLine">
         <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
@@ -4545,35 +4565,48 @@
     // Llenar datos
     document.getElementById('aiRouteTitle').textContent = data.resumen.origen_fin_o_concepto;
     document.getElementById('aiRouteDuration').textContent = data.resumen.duracion_estimada_total;
-    
-    // Mostrar paradas
+    document.getElementById('aiRouteMeta').textContent =
+      '✦ Ruta optimizada por IA · ' + data.paradas_principales.length + ' paradas · ' + data.resumen.duracion_estimada_total;
+
+    // Mostrar paradas numeradas
     const stopsContainer = document.getElementById('aiStops');
-    stopsContainer.innerHTML = data.paradas_principales.map(stop => 
-      `<div class="ai-stop">${stop}</div>`
+    stopsContainer.innerHTML = data.paradas_principales.map((stop, i) =>
+      `<div class="ai-stop"><span class="ai-stop-num">Parada ${i + 1}</span>${stop}</div>`
     ).join('');
-    
-    // Mostrar tramos con efecto typewriter
+
+    // Clasificar tipo de tren para badge
+    function trainClass(name) {
+      const n = (name || '').toLowerCase();
+      if (/ave|tgv|ice|eurostar|thalys|frecciarossa|italo|alvia|avlo|ouigo|high.?speed|alta.?vel/.test(n)) return 'train-high';
+      if (/eurocity|ec\b|intercity.?int|international|nacht|night|sleeper|railjet/.test(n)) return 'train-intl';
+      return 'train-reg';
+    }
+
+    // Mostrar tramos con fade escalonado
     const segmentsContainer = document.getElementById('aiSegments');
     segmentsContainer.innerHTML = '';
-    
     data.tramos.forEach((segment, index) => {
       setTimeout(() => {
+        const cls = trainClass(segment.tipo_tren_sugerido);
         const segmentHTML = `
           <div class="ai-segment" style="animation: aiFadeIn 0.5s ease">
             <div class="ai-segment-header">
               <span class="ai-segment-route">${segment.origen} → ${segment.destino}</span>
               <span class="ai-segment-time">${segment.tiempo_trayecto}</span>
             </div>
-            <div class="ai-segment-train">${segment.tipo_tren_sugerido}</div>
+            <div class="ai-segment-train ${cls}">${segment.tipo_tren_sugerido}</div>
             <div class="ai-segment-desc">${segment.breve_descripcion_conexion}</div>
-          </div>
-        `;
+          </div>`;
         segmentsContainer.innerHTML += segmentHTML;
       }, index * 300);
     });
-    
-    // Dibujar línea SVG
+
+    // Dibujar línea SVG con animación de dibujado
     drawRouteLine(data.paradas_principales.length);
+    const path = document.querySelector('.route-path');
+    path.style.animation = 'none';
+    path.getBoundingClientRect();
+    path.style.animation = 'routeDraw 1.4s cubic-bezier(0.4,0,0.2,1) forwards';
   }
 
   // Función para dibujar la línea de ruta
