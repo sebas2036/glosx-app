@@ -1899,12 +1899,12 @@
     color: #fff;
   }
   .ai-results {
-    max-width: 950px;
+    max-width: 1050px;
     margin: 0 auto;
-    background: rgba(30,41,59,0.95);
+    background: rgba(26,21,53,0.97);
     border: 1px solid rgba(124,58,237,0.3);
-    border-radius: 28px;
-    padding: 48px;
+    border-radius: 24px;
+    padding: 28px 36px;
     position: relative;
     animation: aiFadeIn 0.5s ease;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
@@ -1933,22 +1933,22 @@
   }
   .ai-results-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
   .ai-results-header h3 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 800;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     line-height: 1.2;
     color: var(--text);
   }
   .ai-results-header p {
-    font-size: 17px;
+    font-size: 14px;
     color: var(--muted);
   }
   .ai-route-line {
-    height: 140px;
-    margin: 32px 0;
+    height: 90px;
+    margin: 12px 0;
     position: relative;
   }
   .route-svg {
@@ -1981,91 +1981,98 @@
   .ai-stops {
     display: flex;
     justify-content: space-between;
-    margin: 32px 0;
+    margin: 10px 0;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
   }
   .ai-stop {
-    background: rgba(30,41,59,0.8);
+    background: rgba(26,21,53,0.95);
     border: 1px solid rgba(124,58,237,0.3);
-    border-radius: 14px;
-    padding: 12px 20px;
+    border-radius: 10px;
+    padding: 8px 14px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 13px;
     color: var(--text);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
   }
   .ai-stop-num {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: rgba(167,139,250,0.6);
     text-transform: uppercase;
   }
   .ai-stop-hotel {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
     color: rgba(167,139,250,0.55);
     text-decoration: none;
     letter-spacing: 0.04em;
     transition: color 0.2s;
     border-top: 1px solid rgba(124,58,237,0.15);
-    padding-top: 6px;
+    padding-top: 4px;
     margin-top: 2px;
     width: 100%;
     text-align: center;
   }
   .ai-stop-hotel:hover { color: rgba(167,139,250,1); }
   .ai-segments {
-    margin: 32px 0;
+    margin: 16px 0;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
   }
+  .ai-segments.cols-2 { grid-template-columns: 1fr 1fr; }
+  .ai-segments.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .ai-segments.cols-2x2 { grid-template-columns: 1fr 1fr; }
   .ai-segment {
-    background: rgba(30,41,59,0.8);
+    background: rgba(26,21,53,0.95);
     border: 1px solid rgba(124,58,237,0.25);
-    border-radius: 18px;
-    padding: 24px;
-    margin-bottom: 20px;
+    border-radius: 14px;
+    padding: 16px;
   }
   .ai-segment-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   .ai-segment-route {
     font-weight: 700;
-    font-size: 17px;
+    font-size: 14px;
     color: var(--text);
   }
   .ai-segment-time {
     color: var(--muted);
-    font-size: 15px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-left: 8px;
   }
   .ai-segment-train {
     display: inline-block;
     border-radius: 100px;
-    padding: 6px 14px;
-    font-size: 13px;
+    padding: 4px 10px;
+    font-size: 11px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
   .ai-segment-train.train-high  { background: rgba(124,58,237,0.25); border: 1px solid rgba(124,58,237,0.5); color: #c084fc; }
   .ai-segment-train.train-intl  { background: rgba(231,198,107,0.15); border: 1px solid rgba(231,198,107,0.45); color: #e7c66b; }
   .ai-segment-train.train-reg   { background: rgba(56,189,248,0.15);  border: 1px solid rgba(56,189,248,0.4);  color: #7dd3fc; }
   .ai-segment-stations {
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(167,139,250,0.5);
     letter-spacing: 0.04em;
-    margin-top: -10px;
-    margin-bottom: 14px;
+    margin-top: -6px;
+    margin-bottom: 8px;
   }
-  .ai-segment-stations span { color: rgba(167,139,250,0.35); margin: 0 5px; }
-  .ai-segment-body { display: flex; align-items: center; gap: 16px; }
-  .ai-segment-desc { flex: 1; color: var(--muted); line-height: 1.7; font-size: 15px; }
-  .ai-segment-img-wrap { flex-shrink: 0; width: 120px; height: 72px; border-radius: 10px; overflow: hidden; }
+  .ai-segment-stations span { color: rgba(167,139,250,0.35); margin: 0 4px; }
+  .ai-segment-body { display: flex; align-items: center; gap: 10px; }
+  .ai-segment-desc { flex: 1; color: var(--muted); line-height: 1.5; font-size: 12px; }
+  .ai-segment-img-wrap { flex-shrink: 0; width: 80px; height: 52px; border-radius: 8px; overflow: hidden; }
   .ai-segment-img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .ai-plan-btn {
     background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(167,139,250,0.15));
@@ -4870,9 +4877,11 @@
       return 'train-reg';
     }
 
-    // Mostrar tramos con fade escalonado
+    // Mostrar tramos con grid adaptativo sin scroll
     const segmentsContainer = document.getElementById('aiSegments');
     segmentsContainer.innerHTML = '';
+    const n = data.tramos.length;
+    segmentsContainer.className = 'ai-segments' + (n === 1 ? '' : n === 2 ? ' cols-2' : n === 3 ? ' cols-3' : ' cols-2x2');
     const SPEED_TERMS = {
       en: { 'Alta Velocidad': 'High Speed', 'Alta velocidad': 'High Speed', 'Larga Distancia': 'Long Distance', 'Regional': 'Regional', 'Internacional': 'International', 'Interurbano': 'Intercity' },
       fr: { 'Alta Velocidad': 'Grande Vitesse', 'Alta velocidad': 'Grande Vitesse', 'Larga Distancia': 'Longue Distance', 'Internacional': 'International' },
