@@ -302,6 +302,30 @@
       text-shadow: 0 2px 10px rgba(10,10,15,1), 0 0 30px rgba(10,10,15,0.85);
     }
 
+    .hero-ai-cta {
+      background: linear-gradient(135deg, #7c3aed, #9f67f5);
+      border: none;
+      border-radius: 100px;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 16px 40px;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hero-ai-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.6); }
+    .hero-search-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(167,139,250,0.6);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .hero-search-link:hover { color: rgba(167,139,250,1); }
+
     /* ── Hero device mockup ── */
     .hero-device-wrap {
       position: relative; display: flex; justify-content: center;
@@ -2211,15 +2235,21 @@
   <!-- Fondo del mapa: envuelve hero + chips -->
   <div class="hero-bgwrap">
 
-  <!-- Hero with functional search -->
+  <!-- Hero -->
   <section class="hero">
-    <span class="hero-badge" data-i18n="hero_badge">WoW Train — Europe &amp; beyond</span>
-    <h1><span data-i18n="hero_title1">Your train.</span><br /><span data-i18n="hero_title2">Your world.</span></h1>
+    <span class="hero-badge" data-i18n="hero_badge">AI-Powered European Rail Planner</span>
+    <h1><span data-i18n="hero_title1">Describe your trip.</span><br /><span data-i18n="hero_title2">We plan the trains.</span></h1>
     <p data-i18n="hero_subtitle">
-      Live departures, scenic routes and travel essentials across Europe.
-      Search, compare and book — all in one place.
+      Tell us where you want to go — our AI builds the full itinerary, connects you to Trainline to buy tickets, and finds hotels along the way.
     </p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:8px;">
+      <button class="hero-ai-cta" onclick="focusAIPlanner()" data-i18n="hero_ai_cta">Plan my trip with AI →</button>
+      <a href="#trainSearch" class="hero-search-link" data-i18n="hero_search_link">Already know your route? Search direct →</a>
+    </div>
+  </section>
 
+  <!-- Search box (debajo del hero) -->
+  <section style="display:flex;justify-content:center;padding:0 24px 48px;" id="trainSearchSection">
     <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
       <div class="search-field">
         <label for="origin" data-i18n="search_from">From</label>
@@ -2236,7 +2266,6 @@
       </div>
       <button type="submit" class="search-btn" data-i18n="search_btn">Search Tickets &amp; Schedules →</button>
     </form>
-
   </section>
 
   <!-- AI Route Planner -->
@@ -3044,9 +3073,10 @@
     const TRANSLATIONS = {
       en: {
         nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started', nav_routes: 'Routes',
-        hero_badge: 'WoW Train — Europe & beyond',
-        hero_title1: 'Your train.', hero_title2: 'Your world.',
-        hero_subtitle: 'Live departures, scenic routes and travel essentials across Europe. Search, compare and book — all in one place.',
+        hero_badge: 'AI-Powered European Rail Planner',
+        hero_title1: 'Describe your trip.', hero_title2: 'We plan the trains.',
+        hero_subtitle: 'Tell us where you want to go — our AI builds the full itinerary, connects you to Trainline to buy tickets, and finds hotels along the way.',
+        hero_ai_cta: 'Plan my trip with AI →', hero_search_link: 'Already know your route? Search direct →',
         search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search Tickets & Schedules →',
         stat_world: 'Europe & beyond', stat_free_val: 'Free', stat_free: 'No cost, forever', stat_realtime_val: 'Real-time', stat_realtime: 'Live departures 24/7', stat_noreg_val: 'No sign-up', stat_noreg: 'Open and search, no account',
         scenic_label: 'Iconic European routes', scenic_title1: 'Scenic train', scenic_title2: 'experiences.',
@@ -3109,9 +3139,10 @@
       },
       es: {
         nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar', nav_routes: 'Rutas',
-        hero_badge: 'WoW Train — Europa y el mundo',
-        hero_title1: 'Tu tren.', hero_title2: 'Tu mundo.',
-        hero_subtitle: 'Salidas en vivo, rutas panorámicas y esenciales de viaje por toda Europa. Buscá, compará y reservá — todo en un solo lugar.',
+        hero_badge: 'Planificador IA de trenes europeos',
+        hero_title1: 'Describí tu viaje.', hero_title2: 'Nosotros planificamos.',
+        hero_subtitle: 'Contanos a dónde querés ir — nuestra IA arma el itinerario completo, te conecta con Trainline para comprar los billetes y encuentra hoteles en cada parada.',
+        hero_ai_cta: 'Planificá mi viaje con IA →', hero_search_link: '¿Ya sabés tu ruta? Buscá directo →',
         search_from: 'Desde', search_to: 'Hasta', search_date: 'Fecha', search_btn: 'Buscar pasajes y horarios →',
         stat_world: 'Europa y el mundo', stat_free_val: 'Gratis', stat_free: 'Sin costo, para siempre', stat_realtime_val: 'Tiempo real', stat_realtime: 'Salidas en vivo 24/7', stat_noreg_val: 'Sin registro', stat_noreg: 'Abrí y buscá, sin cuenta',
         scenic_label: 'Rutas europeas icónicas', scenic_title1: 'Experiencias en', scenic_title2: 'tren panorámico.',
@@ -3174,9 +3205,10 @@
       },
       fr: {
         nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer', nav_routes: 'Itinéraires',
-        hero_badge: 'WoW Train — Europe et au-delà',
-        hero_title1: 'Ton train.', hero_title2: 'Ton monde.',
-        hero_subtitle: 'Départs en direct, itinéraires panoramiques et essentiels de voyage à travers l\'Europe. Recherchez, comparez et réservez — tout au même endroit.',
+        hero_badge: 'Planificateur IA de trains européens',
+        hero_title1: 'Décris ton voyage.', hero_title2: 'On planifie les trains.',
+        hero_subtitle: 'Dis-nous où tu veux aller — notre IA construit l\'itinéraire complet, te connecte à Trainline pour acheter les billets et trouve des hôtels à chaque étape.',
+        hero_ai_cta: 'Planifier mon voyage avec l\'IA →', hero_search_link: 'Tu connais déjà ton trajet ? Cherche directement →',
         search_from: 'Départ', search_to: 'Arrivée', search_date: 'Date', search_btn: 'Billets et horaires →',
         stat_world: 'Europe et au-delà', stat_free_val: 'Gratuit', stat_free: 'Sans frais, pour toujours', stat_realtime_val: 'Temps réel', stat_realtime: 'Départs en direct 24/7', stat_noreg_val: 'Sans inscription', stat_noreg: 'Ouvrez et cherchez, sans compte',
         scenic_label: 'Itinéraires européens emblématiques', scenic_title1: 'Expériences en', scenic_title2: 'train panoramique.',
@@ -3239,9 +3271,10 @@
       },
       de: {
         nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen', nav_routes: 'Routen',
-        hero_badge: 'WoW Train — Europa und die Welt',
-        hero_title1: 'Dein Zug.', hero_title2: 'Deine Welt.',
-        hero_subtitle: 'Live-Abfahrten, Panoramastrecken und Reiseessentials in ganz Europa. Suchen, vergleichen und buchen — alles an einem Ort.',
+        hero_badge: 'KI-gestützter Europazug-Planer',
+        hero_title1: 'Beschreib deine Reise.', hero_title2: 'Wir planen die Züge.',
+        hero_subtitle: 'Sag uns, wohin du möchtest — unsere KI erstellt den kompletten Reiseplan, verbindet dich mit Trainline für Tickets und findet Hotels auf dem Weg.',
+        hero_ai_cta: 'Reise mit KI planen →', hero_search_link: 'Route bereits bekannt? Direkt suchen →',
         search_from: 'Von', search_to: 'Nach', search_date: 'Datum', search_btn: 'Tickets & Fahrpläne suchen →',
         stat_world: 'Europa und die Welt', stat_free_val: 'Kostenlos', stat_free: 'Keine Kosten, für immer', stat_realtime_val: 'Echtzeit', stat_realtime: 'Live-Abfahrten 24/7', stat_noreg_val: 'Ohne Anmeldung', stat_noreg: 'Öffnen und suchen, kein Konto',
         scenic_label: 'Ikonische europäische Routen', scenic_title1: 'Panoramazug-', scenic_title2: 'Erlebnisse.',
@@ -3304,9 +3337,10 @@
       },
       it: {
         nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia', nav_routes: 'Itinerari',
-        hero_badge: 'WoW Train — Europa e oltre',
-        hero_title1: 'Il tuo treno.', hero_title2: 'Il tuo mondo.',
-        hero_subtitle: 'Partenze in diretta, percorsi panoramici ed essenziali di viaggio in tutta Europa. Cerca, confronta e prenota — tutto in un unico posto.',
+        hero_badge: 'Pianificatore IA di treni europei',
+        hero_title1: 'Descrivi il tuo viaggio.', hero_title2: 'Pensiamo noi ai treni.',
+        hero_subtitle: 'Dicci dove vuoi andare — la nostra IA costruisce l\'itinerario completo, ti collega a Trainline per acquistare i biglietti e trova hotel ad ogni tappa.',
+        hero_ai_cta: 'Pianifica il mio viaggio con l\'IA →', hero_search_link: 'Conosci già il tuo percorso? Cerca direttamente →',
         search_from: 'Da', search_to: 'A', search_date: 'Data', search_btn: 'Cerca biglietti e orari →',
         stat_world: 'Europa e oltre', stat_free_val: 'Gratis', stat_free: 'Senza costi, per sempre', stat_realtime_val: 'Tempo reale', stat_realtime: 'Partenze in diretta 24/7', stat_noreg_val: 'Senza registrazione', stat_noreg: 'Apri e cerca, senza account',
         scenic_label: 'Percorsi europei iconici', scenic_title1: 'Esperienze in', scenic_title2: 'treno panoramico.',
@@ -3369,9 +3403,10 @@
       },
       pt: {
         nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar', nav_routes: 'Rotas',
-        hero_badge: 'WoW Train — Europa e além',
-        hero_title1: 'O teu comboio.', hero_title2: 'O teu mundo.',
-        hero_subtitle: 'Partidas ao vivo, rotas panorâmicas e essenciais de viagem em toda a Europa. Pesquise, compare e reserve — tudo num só lugar.',
+        hero_badge: 'Planificador IA de comboios europeus',
+        hero_title1: 'Descreve a tua viagem.', hero_title2: 'Nós planeamos os comboios.',
+        hero_subtitle: 'Diz-nos onde queres ir — a nossa IA constrói o itinerário completo, liga-te ao Trainline para comprar os bilhetes e encontra hotéis ao longo do caminho.',
+        hero_ai_cta: 'Planear a minha viagem com IA →', hero_search_link: 'Já conheces o teu percurso? Pesquisa direto →',
         search_from: 'De', search_to: 'Para', search_date: 'Data', search_btn: 'Bilhetes e horários →',
         stat_world: 'Europa e além', stat_free_val: 'Grátis', stat_free: 'Sem custo, para sempre', stat_realtime_val: 'Tempo real', stat_realtime: 'Partidas ao vivo 24/7', stat_noreg_val: 'Sem registo', stat_noreg: 'Abra e pesquise, sem conta',
         scenic_label: 'Rotas europeias icónicas', scenic_title1: 'Experiências em', scenic_title2: 'comboio panorâmico.',
@@ -4865,6 +4900,13 @@
   }
 
   // Función para resetear el planner
+  window.focusAIPlanner = function() {
+    const planner = document.getElementById('aiPlanner');
+    const input = document.getElementById('aiInput');
+    if (planner) planner.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => { if (input) input.focus(); }, 600);
+  }
+
   function resetAIPlanner() {
     const inputWrapper = document.getElementById('aiInputWrapper');
     const results = document.getElementById('aiResults');
