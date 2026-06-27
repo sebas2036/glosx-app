@@ -4250,13 +4250,7 @@
     const btn = document.querySelector('.ai-generate-btn');
     
     if (!input) {
-      alert('Please enter a route or travel idea');
-      return;
-    }
-
-    // Validación básica - debe contener nombres de lugares
-    if (!containsPlaceNames(input)) {
-      alert('Please include destination names or a valid travel idea');
+      showAIPlannerError('Escribí un destino o idea de viaje para comenzar.');
       return;
     }
 
