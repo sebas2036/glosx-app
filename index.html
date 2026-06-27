@@ -272,9 +272,9 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center;
-      padding: 90px 24px 12px;
+      padding: 100px 24px 8px;
       position: relative;
-      z-index: 20;            /* por encima de los chips → el calendario no queda detrás */
+      z-index: 20;
       overflow: visible;
     }
     /* Sin z-index propio: así NO crea un stacking-context que atrape la
@@ -284,15 +284,15 @@
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(124,58,237,0.22); border: 1px solid rgba(167,139,250,0.45);
-      border-radius: 100px; padding: 6px 16px; margin-bottom: 20px;
-      font-size: 13px; font-weight: 600; color: #E9E3FB;
+      border-radius: 100px; padding: 5px 14px; margin-bottom: 14px;
+      font-size: 11px; font-weight: 600; color: rgba(196,181,253,0.85);
       backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-      box-shadow: 0 4px 18px rgba(10,10,15,0.6);
+      letter-spacing: 0.06em; text-transform: uppercase;
     }
     .hero h1 {
-      font-size: clamp(48px, 8vw, 88px);
-      font-weight: 800; letter-spacing: -2px; line-height: 1.05;
-      margin-bottom: 16px;
+      font-size: clamp(34px, 5.5vw, 58px);
+      font-weight: 800; letter-spacing: -1.5px; line-height: 1.08;
+      margin-bottom: 10px;
       filter: drop-shadow(0 4px 28px rgba(10,10,15,0.95));
     }
     .hero h1 span {
@@ -300,10 +300,10 @@
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .hero p {
-      font-size: clamp(16px, 2.5vw, 20px);
-      color: #F3F4F6; font-weight: 500; max-width: 560px; line-height: 1.6;
-      margin-bottom: 24px;
-      text-shadow: 0 2px 10px rgba(10,10,15,1), 0 0 30px rgba(10,10,15,0.85);
+      font-size: clamp(14px, 1.8vw, 16px);
+      color: rgba(209,213,219,0.8); font-weight: 400; max-width: 500px; line-height: 1.55;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 10px rgba(10,10,15,1);
     }
 
     .hero-ai-cta {
