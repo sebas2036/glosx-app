@@ -1994,6 +1994,20 @@
   .ai-segment-desc { flex: 1; color: var(--muted); line-height: 1.7; font-size: 15px; }
   .ai-segment-img-wrap { flex-shrink: 0; width: 120px; height: 72px; border-radius: 10px; overflow: hidden; }
   .ai-segment-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ai-kiwi-cta {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(167,139,250,0.7);
+    text-decoration: none;
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 100px;
+    padding: 5px 14px;
+    letter-spacing: 0.03em;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .ai-kiwi-cta:hover { color: #c084fc; border-color: rgba(124,58,237,0.6); }
   @media (max-width: 600px) { .ai-segment-body { flex-direction: column; } .ai-segment-img-wrap { width: 100%; height: 140px; } }
   .ai-route-partners { margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; }
   .ai-route-partners-label { font-size: 11px; letter-spacing: 0.1em; color: rgba(167,139,250,0.5); text-transform: uppercase; margin-bottom: 14px; text-align: center; }
@@ -4625,11 +4639,15 @@
       const cls = trainClass(operador);
       const imgUrl = await getCityImage(segment.destino);
       const altTag = segment.imagen_alt_tag || segment.destino;
+      const isLast = index === data.tramos.length - 1;
       const imgHTML = imgUrl
         ? `<div class="ai-segment-img-wrap"><img src="${imgUrl}" alt="${altTag}" class="ai-segment-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
         : '';
       const stationsHTML = (segment.estacion_salida && segment.estacion_llegada)
         ? `<div class="ai-segment-stations">${segment.estacion_salida}<span>→</span>${segment.estacion_llegada}</div>`
+        : '';
+      const kiwiHTML = isLast
+        ? `<a href="#" class="ai-kiwi-cta" onclick="goPartner('kiwitaxi',event)">Transfer al llegar a ${segment.destino} →</a>`
         : '';
       setTimeout(() => {
         const segmentHTML = `
@@ -4644,6 +4662,7 @@
               <div class="ai-segment-desc">${segment.descripcion_contextual || segment.breve_descripcion_conexion || ''}</div>
               ${imgHTML}
             </div>
+            ${kiwiHTML}
           </div>`;
         segmentsContainer.innerHTML += segmentHTML;
       }, index * 300);
