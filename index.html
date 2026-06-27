@@ -4712,13 +4712,16 @@
     // Llenar datos
     document.getElementById('aiRouteTitle').textContent = data.resumen.origen_fin_o_concepto;
     document.getElementById('aiRouteDuration').textContent = data.resumen.duracion_estimada_total;
+    const operadoresUnicos = [...new Set(data.tramos.map(t => (t.operador_tren || t.tipo_tren_sugerido || '').split('·')[0].trim()))].filter(Boolean).join(' · ');
+    const origen = data.paradas_principales[0] || '';
+    const destino = data.paradas_principales[data.paradas_principales.length - 1] || '';
     document.getElementById('aiRouteMeta').textContent =
-      '✦ Ruta optimizada por IA · ' + data.paradas_principales.length + ' paradas · ' + data.resumen.duracion_estimada_total;
+      `✦ Tren de ${origen} a ${destino} · ${operadoresUnicos}`;
 
     // Mostrar paradas numeradas
     const stopsContainer = document.getElementById('aiStops');
     stopsContainer.innerHTML = data.paradas_principales.map((stop, i) =>
-      `<div class="ai-stop"><span class="ai-stop-num">Parada ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="https://www.booking.com/search.html?ss=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">Book hotel ↗</a></div>`
+      `<div class="ai-stop"><span class="ai-stop-num">Parada ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="https://www.booking.com/search.html?ss=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">Ver hoteles ↗</a></div>`
     ).join('');
 
     const CITY_IMG_API = 'https://glosx-backend-production.up.railway.app/api/city-image/';
@@ -4789,25 +4792,36 @@
 
   // Función para dibujar la línea de ruta
   function drawRouteLine(numStops) {
+    const svg = document.querySelector('.route-svg');
     const path = document.querySelector('.route-path');
     const width = 1000;
     const height = 200;
     const padding = 50;
     const availableWidth = width - (padding * 2);
-    
-    let d = `M ${padding} ${height/2}`;
-    
-    if (numStops > 2) {
-      const step = availableWidth / (numStops - 1);
-      for (let i = 1; i < numStops - 1; i++) {
-        const x = padding + (step * i);
-        const y = height/2 + (Math.sin(i) * 30);
-        d += ` L ${x} ${y}`;
-      }
+
+    // Calcular puntos de la curva
+    const points = [];
+    for (let i = 0; i < numStops; i++) {
+      const x = numStops === 1 ? padding : padding + (availableWidth / (numStops - 1)) * i;
+      const y = height / 2 + (numStops > 2 && i > 0 && i < numStops - 1 ? Math.sin(i) * 30 : 0);
+      points.push({ x, y });
     }
-    
-    d += ` L ${width - padding} ${height/2}`;
+
+    // Trazar path
+    let d = `M ${points[0].x} ${points[0].y}`;
+    for (let i = 1; i < points.length; i++) d += ` L ${points[i].x} ${points[i].y}`;
     path.setAttribute('d', d);
+
+    // Limpiar dots anteriores y redibujar
+    svg.querySelectorAll('.route-dot').forEach(el => el.remove());
+    points.forEach(({ x, y }) => {
+      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      circle.setAttribute('class', 'route-dot');
+      circle.setAttribute('cx', x);
+      circle.setAttribute('cy', y);
+      circle.setAttribute('r', '8');
+      svg.appendChild(circle);
+    });
   }
 
   // Función para resetear el planner
