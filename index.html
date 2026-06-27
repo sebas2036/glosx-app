@@ -4445,7 +4445,9 @@
         await new Promise(resolve => setTimeout(resolve, 1500));
         routeData = MOCK_ROUTE_DATA;
       }
-      if (routeData.valido === false) {
+      if (routeData.error && !routeData.valido) {
+        showAIPlannerError(routeData.error);
+      } else if (routeData.valido === false) {
         showAIPlannerError(routeData.mensajeError || 'Contame a dónde querés viajar por Europa.');
       } else {
         displayAIRoute(routeData);
