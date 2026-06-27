@@ -1968,11 +1968,11 @@
   .ai-segment-train.train-high  { background: rgba(124,58,237,0.25); border: 1px solid rgba(124,58,237,0.5); color: #c084fc; }
   .ai-segment-train.train-intl  { background: rgba(231,198,107,0.15); border: 1px solid rgba(231,198,107,0.45); color: #e7c66b; }
   .ai-segment-train.train-reg   { background: rgba(56,189,248,0.15);  border: 1px solid rgba(56,189,248,0.4);  color: #7dd3fc; }
-  .ai-segment-desc {
-    color: var(--muted);
-    line-height: 1.7;
-    font-size: 15px;
-  }
+  .ai-segment-body { display: flex; align-items: center; gap: 16px; }
+  .ai-segment-desc { flex: 1; color: var(--muted); line-height: 1.7; font-size: 15px; }
+  .ai-segment-img-wrap { flex-shrink: 0; width: 120px; height: 72px; border-radius: 10px; overflow: hidden; }
+  .ai-segment-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 600px) { .ai-segment-body { flex-direction: column; } .ai-segment-img-wrap { width: 100%; height: 140px; } }
   .ai-route-partners { margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; }
   .ai-route-partners-label { font-size: 11px; letter-spacing: 0.1em; color: rgba(167,139,250,0.5); text-transform: uppercase; margin-bottom: 14px; text-align: center; }
   .ai-vip-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
@@ -4574,7 +4574,21 @@
       `<div class="ai-stop"><span class="ai-stop-num">Parada ${i + 1}</span>${stop}</div>`
     ).join('');
 
-    // Clasificar tipo de tren para badge
+    // Cache de imágenes por tipo (se cargan desde el backend la primera vez)
+    const TRAIN_IMAGES = { 'train-high': null, 'train-intl': null, 'train-reg': null };
+    const TYPE_KEY = { 'train-high': 'high', 'train-intl': 'intl', 'train-reg': 'reg' };
+    const IMG_API = 'https://glosx-backend-production.up.railway.app/api/train-image/';
+
+    async function getTrainImage(cls) {
+      if (TRAIN_IMAGES[cls]) return TRAIN_IMAGES[cls];
+      try {
+        const r = await fetch(IMG_API + TYPE_KEY[cls]);
+        const d = await r.json();
+        TRAIN_IMAGES[cls] = d.url || null;
+        return TRAIN_IMAGES[cls];
+      } catch { return null; }
+    }
+
     function trainClass(name) {
       const n = (name || '').toLowerCase();
       if (/ave|tgv|ice|eurostar|thalys|frecciarossa|italo|alvia|avlo|ouigo|high.?speed|alta.?vel/.test(n)) return 'train-high';
@@ -4585,9 +4599,13 @@
     // Mostrar tramos con fade escalonado
     const segmentsContainer = document.getElementById('aiSegments');
     segmentsContainer.innerHTML = '';
-    data.tramos.forEach((segment, index) => {
+    data.tramos.forEach(async (segment, index) => {
+      const cls = trainClass(segment.tipo_tren_sugerido);
+      const imgUrl = await getTrainImage(cls);
+      const imgHTML = imgUrl
+        ? `<div class="ai-segment-img-wrap"><img src="${imgUrl}" alt="${segment.tipo_tren_sugerido}" class="ai-segment-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+        : '';
       setTimeout(() => {
-        const cls = trainClass(segment.tipo_tren_sugerido);
         const segmentHTML = `
           <div class="ai-segment" style="animation: aiFadeIn 0.5s ease">
             <div class="ai-segment-header">
@@ -4595,7 +4613,10 @@
               <span class="ai-segment-time">${segment.tiempo_trayecto}</span>
             </div>
             <div class="ai-segment-train ${cls}">${segment.tipo_tren_sugerido}</div>
-            <div class="ai-segment-desc">${segment.breve_descripcion_conexion}</div>
+            <div class="ai-segment-body">
+              <div class="ai-segment-desc">${segment.breve_descripcion_conexion}</div>
+              ${imgHTML}
+            </div>
           </div>`;
         segmentsContainer.innerHTML += segmentHTML;
       }, index * 300);
