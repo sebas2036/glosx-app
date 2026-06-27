@@ -1982,6 +1982,14 @@
   .ai-segment-train.train-high  { background: rgba(124,58,237,0.25); border: 1px solid rgba(124,58,237,0.5); color: #c084fc; }
   .ai-segment-train.train-intl  { background: rgba(231,198,107,0.15); border: 1px solid rgba(231,198,107,0.45); color: #e7c66b; }
   .ai-segment-train.train-reg   { background: rgba(56,189,248,0.15);  border: 1px solid rgba(56,189,248,0.4);  color: #7dd3fc; }
+  .ai-segment-stations {
+    font-size: 11px;
+    color: rgba(167,139,250,0.5);
+    letter-spacing: 0.04em;
+    margin-top: -10px;
+    margin-bottom: 14px;
+  }
+  .ai-segment-stations span { color: rgba(167,139,250,0.35); margin: 0 5px; }
   .ai-segment-body { display: flex; align-items: center; gap: 16px; }
   .ai-segment-desc { flex: 1; color: var(--muted); line-height: 1.7; font-size: 15px; }
   .ai-segment-img-wrap { flex-shrink: 0; width: 120px; height: 72px; border-radius: 10px; overflow: hidden; }
@@ -4613,10 +4621,15 @@
     const segmentsContainer = document.getElementById('aiSegments');
     segmentsContainer.innerHTML = '';
     data.tramos.forEach(async (segment, index) => {
-      const cls = trainClass(segment.tipo_tren_sugerido);
+      const operador = segment.operador_tren || segment.tipo_tren_sugerido || '';
+      const cls = trainClass(operador);
       const imgUrl = await getCityImage(segment.destino);
+      const altTag = segment.imagen_alt_tag || segment.destino;
       const imgHTML = imgUrl
-        ? `<div class="ai-segment-img-wrap"><img src="${imgUrl}" alt="${segment.destino}" class="ai-segment-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+        ? `<div class="ai-segment-img-wrap"><img src="${imgUrl}" alt="${altTag}" class="ai-segment-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+        : '';
+      const stationsHTML = (segment.estacion_salida && segment.estacion_llegada)
+        ? `<div class="ai-segment-stations">${segment.estacion_salida}<span>→</span>${segment.estacion_llegada}</div>`
         : '';
       setTimeout(() => {
         const segmentHTML = `
@@ -4625,9 +4638,10 @@
               <span class="ai-segment-route">${segment.origen} → ${segment.destino}</span>
               <span class="ai-segment-time">${segment.tiempo_trayecto}</span>
             </div>
-            <div class="ai-segment-train ${cls}">${segment.tipo_tren_sugerido}</div>
+            ${stationsHTML}
+            <div class="ai-segment-train ${cls}">${operador}</div>
             <div class="ai-segment-body">
-              <div class="ai-segment-desc">${segment.breve_descripcion_conexion}</div>
+              <div class="ai-segment-desc">${segment.descripcion_contextual || segment.breve_descripcion_conexion || ''}</div>
               ${imgHTML}
             </div>
           </div>`;
