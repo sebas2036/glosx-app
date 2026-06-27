@@ -1899,7 +1899,7 @@
     color: #fff;
   }
   .ai-results {
-    max-width: 1050px;
+    max-width: min(1300px, 94vw);
     margin: 0 auto;
     background: rgba(26,21,53,0.97);
     border: 1px solid rgba(124,58,237,0.3);
@@ -2060,6 +2060,10 @@
     font-weight: 700;
     font-size: 14px;
     color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
   }
   .ai-segment-time {
     color: var(--muted);
