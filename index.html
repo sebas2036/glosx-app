@@ -1855,13 +1855,14 @@
   }
   .ai-suggestions-label {
     font-size: 12px;
-    color: rgba(167,139,250,0.6);
+    color: rgba(196,181,253,0.9);
     letter-spacing: 0.05em;
     margin-right: 4px;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.8);
   }
   .ai-suggestion {
     font-size: 13px;
-    color: rgba(167,139,250,0.55);
+    color: rgba(196,181,253,0.85);
     background: transparent;
     border: none;
     border-radius: 0;
@@ -1869,11 +1870,13 @@
     cursor: pointer;
     transition: color 0.2s;
     text-decoration: none;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+    font-weight: 500;
   }
   .ai-suggestion + .ai-suggestion::before {
     content: '·';
     margin-right: 8px;
-    color: rgba(167,139,250,0.3);
+    color: rgba(196,181,253,0.5);
   }
   .ai-suggestion:hover {
     color: rgba(167,139,250,1);
