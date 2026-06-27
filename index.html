@@ -4296,10 +4296,6 @@
       body: JSON.stringify({ prompt: prompt })
     });
     
-    if (!response.ok) {
-      throw new Error('API request failed');
-    }
-    
     return await response.json();
   }
 
