@@ -2033,14 +2033,15 @@
   }
   .ai-stop-hotel:hover { color: #e7c66b; }
   .ai-segments {
-    margin: 16px 0;
+    margin: 16px auto;
     display: grid;
     gap: 12px;
     grid-template-columns: 1fr;
+    max-width: 520px;
   }
-  .ai-segments.cols-2 { grid-template-columns: 1fr 1fr; }
-  .ai-segments.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
-  .ai-segments.cols-2x2 { grid-template-columns: 1fr 1fr; }
+  .ai-segments.cols-2 { grid-template-columns: 1fr 1fr; max-width: 100%; }
+  .ai-segments.cols-3 { grid-template-columns: 1fr 1fr 1fr; max-width: 100%; }
+  .ai-segments.cols-2x2 { grid-template-columns: 1fr 1fr; max-width: 100%; }
   .ai-segment {
     background: rgba(26,21,53,0.95);
     border: 1px solid rgba(124,58,237,0.25);
