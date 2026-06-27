@@ -1954,6 +1954,32 @@
     line-height: 1.7;
     font-size: 15px;
   }
+  .ai-route-partners { margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; }
+  .ai-route-partners-label { font-size: 11px; letter-spacing: 0.1em; color: rgba(167,139,250,0.5); text-transform: uppercase; margin-bottom: 14px; text-align: center; }
+  .ai-vip-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .ai-vip-card {
+    display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 12px;
+    border: 1px solid rgba(231,198,107,0.4);
+    background: linear-gradient(100deg, rgba(231,198,107,0.08), rgba(231,198,107,0.02));
+    text-decoration: none; transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  }
+  .ai-vip-card:hover { border-color: rgba(231,198,107,0.8); box-shadow: 0 0 20px rgba(231,198,107,0.2); transform: translateY(-1px); }
+  .ai-vip-icon { width: 36px; height: 36px; border-radius: 9px; display:flex; align-items:center; justify-content:center; background: rgba(231,198,107,0.1); color: #e7c66b; flex-shrink:0; }
+  .ai-vip-icon svg { width:18px; height:18px; }
+  .ai-vip-name { font-size: 13px; font-weight: 600; color: #fff; }
+  .ai-vip-sub { font-size: 11px; color: rgba(255,255,255,0.45); }
+  .ai-essential-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .ai-ess-item {
+    display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 8px; border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
+    text-decoration: none; transition: border-color 0.2s, background 0.2s;
+  }
+  .ai-ess-item:hover { border-color: rgba(167,139,250,0.4); background: rgba(167,139,250,0.06); }
+  .ai-ess-icon { width: 30px; height: 30px; display:flex; align-items:center; justify-content:center; color: rgba(167,139,250,0.7); }
+  .ai-ess-icon svg { width:16px; height:16px; }
+  .ai-ess-name { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); text-align:center; }
+  .ai-ess-cta { font-size: 9px; color: rgba(167,139,250,0.6); text-align:center; }
+  @media (max-width: 600px) { .ai-vip-row { grid-template-columns: 1fr; } .ai-essential-row { grid-template-columns: repeat(2,1fr); } }
   .ai-partners {
     display: flex;
     gap: 16px;
@@ -2136,13 +2162,36 @@
       </div>
       <div class="ai-stops" id="aiStops"></div>
       <div class="ai-segments" id="aiSegments"></div>
-      <div class="ai-partners">
-        <a href="https://www.booking.com" target="_blank" rel="noopener" class="ai-partner-btn">
-          <span>🏨</span> Hotels
-        </a>
-        <a href="https://www.yesim.com" target="_blank" rel="noopener" class="ai-partner-btn">
-          <span>📱</span> eSIM
-        </a>
+      <div class="ai-route-partners">
+        <p class="ai-route-partners-label">Trusted Partners</p>
+        <div class="ai-vip-row">
+          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" class="ai-vip-card">
+            <div class="ai-vip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div><div class="ai-vip-name">Booking.com</div><div class="ai-vip-sub">Hotels &amp; stays</div></div>
+          </a>
+          <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" class="ai-vip-card">
+            <div class="ai-vip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <div><div class="ai-vip-name">Tripadvisor</div><div class="ai-vip-sub">Experiences &amp; reviews</div></div>
+          </a>
+        </div>
+        <div class="ai-essential-row">
+          <a href="#" onclick="goPartner('klook',event)" class="ai-ess-item">
+            <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2"/></svg></div>
+            <span class="ai-ess-name">Klook</span><span class="ai-ess-cta">City Passes</span>
+          </a>
+          <a href="#" onclick="goPartner('kiwitaxi',event)" class="ai-ess-item">
+            <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v9a2 2 0 01-2 2h-2"/><circle cx="9" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
+            <span class="ai-ess-name">KiwiTaxi</span><span class="ai-ess-cta">Transfers</span>
+          </a>
+          <a href="#" onclick="goPartner('yesim',event)" class="ai-ess-item">
+            <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div>
+            <span class="ai-ess-name">YeSIM</span><span class="ai-ess-cta">eSIM Europe</span>
+          </a>
+          <a href="#" onclick="goPartner('rentacar',event)" class="ai-ess-item">
+            <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17H3a2 2 0 01-2-2V9l3-6h12l3 6v6a2 2 0 01-2 2h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg></div>
+            <span class="ai-ess-name">Car Rental</span><span class="ai-ess-cta">EconomyBookings</span>
+          </a>
+        </div>
       </div>
       <button class="ai-reset-btn" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Create another route</button>
     </div>
