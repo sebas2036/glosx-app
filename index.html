@@ -1932,6 +1932,20 @@
     color: rgba(167,139,250,0.6);
     text-transform: uppercase;
   }
+  .ai-stop-hotel {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(167,139,250,0.55);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+    border-top: 1px solid rgba(124,58,237,0.15);
+    padding-top: 6px;
+    margin-top: 2px;
+    width: 100%;
+    text-align: center;
+  }
+  .ai-stop-hotel:hover { color: rgba(167,139,250,1); }
   .ai-segments {
     margin: 32px 0;
   }
@@ -4571,7 +4585,7 @@
     // Mostrar paradas numeradas
     const stopsContainer = document.getElementById('aiStops');
     stopsContainer.innerHTML = data.paradas_principales.map((stop, i) =>
-      `<div class="ai-stop"><span class="ai-stop-num">Parada ${i + 1}</span>${stop}</div>`
+      `<div class="ai-stop"><span class="ai-stop-num">Parada ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="https://www.booking.com/search.html?ss=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">Book hotel ↗</a></div>`
     ).join('');
 
     // Cache de imágenes por tipo (se cargan desde el backend la primera vez)
