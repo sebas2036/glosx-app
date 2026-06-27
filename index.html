@@ -291,17 +291,12 @@
       box-shadow: 0 4px 18px rgba(10,10,15,0.6);
     }
     .hero h1 {
-      font-size: clamp(13px, 1.4vw, 15px);
-      font-weight: 400; letter-spacing: 0.12em; line-height: 1.2;
-      margin-bottom: 10px; text-transform: uppercase;
-      color: rgba(196,181,253,0.55);
-      filter: drop-shadow(0 2px 8px rgba(10,10,15,0.9));
-    }
-    .hero-tagline {
       font-size: clamp(48px, 8vw, 88px);
       font-weight: 800; letter-spacing: -2px; line-height: 1.05;
       margin-bottom: 16px;
       filter: drop-shadow(0 4px 28px rgba(10,10,15,0.95));
+    }
+    .hero h1 span {
       background: linear-gradient(135deg, #C4B5FD 0%, #fff 55%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
@@ -2272,8 +2267,7 @@
   <!-- Hero -->
   <section class="hero">
     <span class="hero-badge" data-i18n="hero_badge">AI-Powered European Rail Planner</span>
-    <h1 data-i18n="hero_h1">AI European Train Route Planner</h1>
-    <p class="hero-tagline"><span data-i18n="hero_title1">Describe your trip.</span> <span data-i18n="hero_title2">We plan the trains.</span></p>
+    <h1><span data-i18n="hero_title1">Describe your trip.</span><br /><span data-i18n="hero_title2">We plan the trains.</span></h1>
     <p data-i18n="hero_subtitle">
       Tell us where you want to go — our AI builds the full itinerary, connects you to Trainline to buy tickets, and finds hotels along the way.
     </p>
