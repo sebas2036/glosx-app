@@ -4658,7 +4658,7 @@
   // Función para mostrar la ruta generada
   let _currentTripData = null;
 
-  function openTripPlan() {
+  window.openTripPlan = function openTripPlan() {
     if (!_currentTripData) return;
     const data = _currentTripData;
     const dict = TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en;
@@ -4694,12 +4694,12 @@
     document.body.style.overflow = 'hidden';
   }
 
-  function closeTripPlan() {
+  window.closeTripPlan = function closeTripPlan() {
     document.getElementById('tripPlanModal').style.display = 'none';
     document.body.style.overflow = '';
   }
 
-  function copyTripPlan() {
+  window.copyTripPlan = function copyTripPlan() {
     if (!_currentTripData) return;
     const data = _currentTripData;
     let text = `PLAN DE VIAJE - ${data.resumen.origen_fin_o_concepto}\n`;
