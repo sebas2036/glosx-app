@@ -2074,9 +2074,21 @@
   }
   .ai-segment-stations span { color: rgba(167,139,250,0.35); margin: 0 4px; }
   .ai-segment-body { display: flex; align-items: center; gap: 10px; }
-  .ai-segment-desc { flex: 1; color: var(--muted); line-height: 1.5; font-size: 12px; }
-  .ai-segment-img-wrap { flex-shrink: 0; width: 80px; height: 52px; border-radius: 8px; overflow: hidden; }
-  .ai-segment-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ai-segment-desc { flex: 1; color: var(--muted); line-height: 1.5; font-size: 12px; transition: opacity 0.3s; }
+  .ai-segment-img-wrap {
+    flex-shrink: 0; width: 80px; height: 52px; border-radius: 8px; overflow: hidden;
+    transition: width 0.35s ease, height 0.35s ease;
+    cursor: zoom-in;
+  }
+  .ai-segment:hover .ai-segment-img-wrap {
+    width: 100%;
+    height: 120px;
+  }
+  .ai-segment:hover .ai-segment-body { flex-direction: column; align-items: stretch; }
+  .ai-segment:hover .ai-segment-desc { order: 2; }
+  .ai-segment:hover .ai-segment-img-wrap { order: 1; }
+  .ai-segment-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+  .ai-segment:hover .ai-segment-img { transform: scale(1.04); }
   .ai-plan-btn {
     background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(167,139,250,0.15));
     border: 1px solid rgba(124,58,237,0.5);
