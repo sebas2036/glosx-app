@@ -4911,11 +4911,33 @@
       return 'train-reg';
     }
 
+    // Ordenar tramos encadenando origen→destino (Gemini a veces los devuelve en orden incorrecto)
+    function sortTramos(tramos) {
+      if (tramos.length <= 1) return tramos;
+      const sorted = [];
+      const used = new Array(tramos.length).fill(false);
+      const destSet = new Set(tramos.map(t => (t.destino || '').toLowerCase()));
+      let start = tramos.findIndex(t => !destSet.has((t.origen || '').toLowerCase()));
+      if (start === -1) start = 0;
+      sorted.push(tramos[start]);
+      used[start] = true;
+      while (sorted.length < tramos.length) {
+        const last = sorted[sorted.length - 1];
+        const next = tramos.findIndex((t, i) => !used[i] && (t.origen || '').toLowerCase() === (last.destino || '').toLowerCase());
+        if (next === -1) { tramos.forEach((t, i) => { if (!used[i]) { sorted.push(t); used[i] = true; } }); break; }
+        sorted.push(tramos[next]);
+        used[next] = true;
+      }
+      return sorted;
+    }
+    const tramosOrdenados = sortTramos(data.tramos);
+
     // Mostrar tramos con grid adaptativo sin scroll
     const segmentsContainer = document.getElementById('aiSegments');
     segmentsContainer.innerHTML = '';
-    const n = data.tramos.length;
+    const n = tramosOrdenados.length;
     segmentsContainer.className = 'ai-segments' + (n === 1 ? '' : n === 2 ? ' cols-2' : n === 3 ? ' cols-3' : ' cols-2x2');
+    data.tramos = tramosOrdenados;
     const SPEED_TERMS = {
       en: { 'Alta Velocidad': 'High Speed', 'Alta velocidad': 'High Speed', 'Larga Distancia': 'Long Distance', 'Regional': 'Regional', 'Internacional': 'International', 'Interurbano': 'Intercity' },
       fr: { 'Alta Velocidad': 'Grande Vitesse', 'Alta velocidad': 'Grande Vitesse', 'Larga Distancia': 'Longue Distance', 'Internacional': 'International' },
