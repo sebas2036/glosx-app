@@ -4588,18 +4588,17 @@
       `<div class="ai-stop"><span class="ai-stop-num">Parada ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="https://www.booking.com/search.html?ss=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">Book hotel ↗</a></div>`
     ).join('');
 
-    // Cache de imágenes por tipo (se cargan desde el backend la primera vez)
-    const TRAIN_IMAGES = { 'train-high': null, 'train-intl': null, 'train-reg': null };
-    const TYPE_KEY = { 'train-high': 'high', 'train-intl': 'intl', 'train-reg': 'reg' };
-    const IMG_API = 'https://glosx-backend-production.up.railway.app/api/train-image/';
+    const CITY_IMG_API = 'https://glosx-backend-production.up.railway.app/api/city-image/';
+    const cityImageCache = {};
 
-    async function getTrainImage(cls) {
-      if (TRAIN_IMAGES[cls]) return TRAIN_IMAGES[cls];
+    async function getCityImage(city) {
+      const key = city.toLowerCase();
+      if (cityImageCache[key] !== undefined) return cityImageCache[key];
       try {
-        const r = await fetch(IMG_API + TYPE_KEY[cls]);
+        const r = await fetch(CITY_IMG_API + encodeURIComponent(city));
         const d = await r.json();
-        TRAIN_IMAGES[cls] = d.url || null;
-        return TRAIN_IMAGES[cls];
+        cityImageCache[key] = d.url || null;
+        return cityImageCache[key];
       } catch { return null; }
     }
 
@@ -4615,9 +4614,9 @@
     segmentsContainer.innerHTML = '';
     data.tramos.forEach(async (segment, index) => {
       const cls = trainClass(segment.tipo_tren_sugerido);
-      const imgUrl = await getTrainImage(cls);
+      const imgUrl = await getCityImage(segment.destino);
       const imgHTML = imgUrl
-        ? `<div class="ai-segment-img-wrap"><img src="${imgUrl}" alt="${segment.tipo_tren_sugerido}" class="ai-segment-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+        ? `<div class="ai-segment-img-wrap"><img src="${imgUrl}" alt="${segment.destino}" class="ai-segment-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
         : '';
       setTimeout(() => {
         const segmentHTML = `
