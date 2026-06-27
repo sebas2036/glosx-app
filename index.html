@@ -438,11 +438,14 @@
     }
     .country-chip {
       position: relative;
-      z-index: 2;   /* por encima de las capas del mapa (::after 0, ::before 1) */
-      background: var(--surface); border: 1px solid var(--border);
+      z-index: 2;
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(139,92,246,0.45);
       border-radius: 100px; padding: 8px 16px;
-      font-size: 13px; font-weight: 500; color: var(--muted);
-      transition: border-color 0.25s ease, color 0.25s ease;
+      font-size: 13px; font-weight: 600; color: rgba(196,181,253,0.85);
+      box-shadow: 0 2px 12px rgba(124,58,237,0.18), inset 0 1px 0 rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
     }
     /* Foto del país que asoma al pasar el mouse (solo desktop con puntero fino) */
     .country-photo {
@@ -462,9 +465,11 @@
     }
     @media (hover: hover) and (pointer: fine) {
       .country-chip:hover {
-        border-color: rgba(124,58,237,0.6);
+        border-color: rgba(167,139,250,0.85);
+        background: rgba(124,58,237,0.25);
         color: #fff;
-        z-index: 40;   /* sobre el hero (20) → la miniatura sale adelante */
+        box-shadow: 0 4px 20px rgba(124,58,237,0.35), inset 0 1px 0 rgba(255,255,255,0.1);
+        z-index: 40;
       }
       .country-chip:hover .country-photo {
         opacity: 1;
@@ -1379,6 +1384,16 @@
       .search-btn { padding: 14px; }
     }
     @media (max-width: 600px) {
+      .hero-bgwrap::after {
+        -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, rgba(0,0,0,0.7) 78%, rgba(0,0,0,0.3) 90%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 0%, #000 60%, rgba(0,0,0,0.7) 78%, rgba(0,0,0,0.3) 90%, transparent 100%);
+        background-position: center 30%;
+      }
+      .hero-bgwrap::before {
+        background:
+          radial-gradient(ellipse 120% 60% at 50% 20%, rgba(124,58,237,0.25) 0%, transparent 70%),
+          linear-gradient(180deg, rgba(10,10,15,0.25) 0%, transparent 70%);
+      }
       nav { padding: 16px 20px; }
       .nav-toggle { display: inline-flex; }
       .nav-links {
