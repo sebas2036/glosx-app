@@ -2249,7 +2249,7 @@
   </section>
 
   <!-- Search box (debajo del hero) -->
-  <section style="display:flex;justify-content:center;padding:0 24px 48px;" id="trainSearchSection">
+  <section style="display:flex;justify-content:center;padding:0 24px 24px;margin-top:-40px;" id="trainSearchSection">
     <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
       <div class="search-field">
         <label for="origin" data-i18n="search_from">From</label>
@@ -2269,12 +2269,8 @@
   </section>
 
   <!-- AI Route Planner -->
-  <section class="ai-planner" id="aiPlanner">
-    <div class="ai-planner-header">
-      <p class="ai-label" data-i18n="ai_label">AI Route Planner</p>
-      <h2><span data-i18n="ai_title1">Describe your</span><br /><span data-i18n="ai_title2">dream journey.</span></h2>
-      <p class="ai-subtitle" data-i18n="ai_subtitle">From simple city-to-city to complex multi-day adventures — our AI plans the perfect train route.</p>
-    </div>
+  <section class="ai-planner" id="aiPlanner" style="padding-top:0;">
+    <div class="ai-planner-header" style="display:none;"></div>
 
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
