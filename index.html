@@ -2248,26 +2248,6 @@
     </div>
   </section>
 
-  <!-- Search box (debajo del hero) -->
-  <section style="display:flex;justify-content:center;padding:0 24px 24px;margin-top:-40px;" id="trainSearchSection">
-    <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
-      <div class="search-field">
-        <label for="origin" data-i18n="search_from">From</label>
-        <input type="text" id="origin" placeholder="Madrid" required autocomplete="off" />
-      </div>
-      <div class="search-field">
-        <label for="dest" data-i18n="search_to">To</label>
-        <input type="text" id="dest" placeholder="Barcelona" required autocomplete="off" />
-      </div>
-      <div class="search-field" style="position:relative;" onclick="toggleCal(event)">
-        <label data-i18n="search_date">Date</label>
-        <div id="dateDisplay" style="font-size:14px;font-weight:600;color:var(--text);cursor:pointer;padding-top:2px;"></div>
-        <input type="hidden" id="date" required />
-      </div>
-      <button type="submit" class="search-btn" data-i18n="search_btn">Search Tickets &amp; Schedules →</button>
-    </form>
-  </section>
-
   <!-- AI Route Planner -->
   <section class="ai-planner" id="aiPlanner" style="padding-top:0;">
     <div class="ai-planner-header" style="display:none;"></div>
@@ -2338,6 +2318,26 @@
       </div>
       <button class="ai-reset-btn" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Create another route</button>
     </div>
+  </section>
+
+  <!-- Search box clásico -->
+  <section style="display:flex;justify-content:center;padding:48px 24px;" id="trainSearchSection">
+    <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
+      <div class="search-field">
+        <label for="origin" data-i18n="search_from">From</label>
+        <input type="text" id="origin" placeholder="Madrid" required autocomplete="off" />
+      </div>
+      <div class="search-field">
+        <label for="dest" data-i18n="search_to">To</label>
+        <input type="text" id="dest" placeholder="Barcelona" required autocomplete="off" />
+      </div>
+      <div class="search-field" style="position:relative;" onclick="toggleCal(event)">
+        <label data-i18n="search_date">Date</label>
+        <div id="dateDisplay" style="font-size:14px;font-weight:600;color:var(--text);cursor:pointer;padding-top:2px;"></div>
+        <input type="hidden" id="date" required />
+      </div>
+      <button type="submit" class="search-btn" data-i18n="search_btn">Search Tickets &amp; Schedules →</button>
+    </form>
   </section>
 
   <!-- Countries chips -->
