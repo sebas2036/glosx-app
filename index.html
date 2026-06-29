@@ -3680,8 +3680,21 @@
         var originEl = document.getElementById('origin');
         var destEl   = document.getElementById('dest');
         var dateVal  = document.getElementById('date').value;
-        var fromSlug = originEl.getAttribute('data-slug') || originEl.value.trim().toLowerCase().replace(/\s+/g, '-');
-        var toSlug   = destEl.getAttribute('data-slug')   || destEl.value.trim().toLowerCase().replace(/\s+/g, '-');
+        function resolveSlug(el) {
+          if (el.getAttribute('data-slug')) return el.getAttribute('data-slug');
+          var q = el.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+          var cities = window._GLOSX_CITIES || [];
+          for (var i = 0; i < cities.length; i++) {
+            var c = cities[i];
+            for (var j = 0; j < c.keywords.length; j++) {
+              var kw = c.keywords[j].toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+              if (kw === q || kw.indexOf(q) === 0 || q.indexOf(kw) === 0) return c.slug;
+            }
+          }
+          return el.value.trim().toLowerCase().replace(/\s+/g, '-');
+        }
+        var fromSlug = resolveSlug(originEl);
+        var toSlug   = resolveSlug(destEl);
         if (!fromSlug || !toSlug) return false;
         var lang = document.documentElement.lang || 'en';
         trackTrainline('hero_search');
@@ -4397,7 +4410,7 @@
 </script>
 <script>
 (function () {
-  var CITIES = [
+  var CITIES = window._GLOSX_CITIES = [
     // España
     { display: 'Madrid',                                slug: 'madrid',          keywords: ['madrid'] },
     { display: 'Barcelona',                             slug: 'barcelona',       keywords: ['barcelona'] },
