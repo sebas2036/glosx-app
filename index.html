@@ -22,14 +22,14 @@
   <meta name="twitter:title" content="WoW Train — AI European Train Planner" />
   <meta name="twitter:description" content="Describe your trip — our AI builds the full European rail itinerary with connections, hotels and tickets across 9 countries." />
   <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
-  <link rel="canonical" href="https://glosx.app" />
-  <link rel="alternate" hreflang="en" href="https://glosx.app?lang=en" />
-  <link rel="alternate" hreflang="es" href="https://glosx.app?lang=es" />
-  <link rel="alternate" hreflang="fr" href="https://glosx.app?lang=fr" />
-  <link rel="alternate" hreflang="de" href="https://glosx.app?lang=de" />
-  <link rel="alternate" hreflang="it" href="https://glosx.app?lang=it" />
-  <link rel="alternate" hreflang="pt" href="https://glosx.app?lang=pt" />
-  <link rel="alternate" hreflang="x-default" href="https://glosx.app" />
+  <link rel="canonical" href="https://glosx.app/" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/?lang=es" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/?lang=fr" />
+  <link rel="alternate" hreflang="de" href="https://glosx.app/?lang=de" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/?lang=it" />
+  <link rel="alternate" hreflang="pt" href="https://glosx.app/?lang=pt" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c3aed'/><text x='50' y='72' font-family='Helvetica,Arial,sans-serif' font-size='62' font-weight='700' fill='%23ffffff' text-anchor='middle'>W</text></svg>" />
 
   <!-- Google Analytics -->
@@ -66,15 +66,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
+    "@type": ["WebApplication", "MobileApplication"],
     "name": "WoW Train",
     "alternateName": ["Glosx", "WoW Train app", "glosx.app"],
-    "operatingSystem": "iOS, Android",
+    "operatingSystem": "iOS, Android, Web",
     "applicationCategory": "TravelApplication",
+    "browserRequirements": "Requires JavaScript",
     "description": "AI-powered European train route planner. Describe your trip and get a full itinerary with connections across 9 countries — Spain, France, Germany, Italy, Switzerland, Portugal, Austria, Belgium, Netherlands.",
     "featureList": ["AI train route planning", "Real-time schedules", "Scenic train routes", "Hotel suggestions", "Multi-country itineraries"],
-    "url": "https://glosx.app",
-    "publisher": { "@type": "Organization", "name": "GLOSX" }
+    "url": "https://glosx.app/",
+    "publisher": { "@type": "Organization", "name": "WoW Train" }
   }
   </script>
 
@@ -2364,7 +2365,7 @@
     <div class="ai-results" id="aiResults" style="display:none;">
       <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
       <div class="ai-results-header">
-        <h3 id="aiRouteTitle"></h3>
+        <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
         <p id="aiRouteDuration"></p>
         <p class="ai-route-meta" id="aiRouteMeta"></p>
       </div>
@@ -2491,7 +2492,7 @@
   <div class="wt-timeline-wrap" id="wt-wrap" hidden>
     <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
     <div class="wt-timeline-head" id="wt-timeline-head">
-      <h3 id="wt-route-title"></h3>
+      <h3 id="wt-route-title">Scenic Train Routes in Europe</h3>
       <span class="wt-route-meta" id="wt-route-meta"></span>
     </div>
     <ol class="wt-timeline" id="wt-timeline"></ol>
