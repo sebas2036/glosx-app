@@ -4829,7 +4829,7 @@
         [op, s.tipo_tren_sugerido, stations].join(' ')
       );
       const ticketUrl = noTrain
-        ? `https://www.omio.com/search/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
+        ? `https://www.google.com/maps/dir/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
         : `https://voxa-production-dc15.up.railway.app/affiliate/redirect?origin=${encodeURIComponent(s.origen)}&dest=${encodeURIComponent(s.destino)}&country=INTL`;
       const btnLabel = noTrain ? (dict.ai_view_options || 'Ver opciones →') : (dict.ai_buy_ticket || 'Buy ticket →');
       html += `<div class="trip-segment-row" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
