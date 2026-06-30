@@ -14,7 +14,7 @@
   <meta property="og:title" content="Tren de Lyon a Turín: cruzar los Alpes (Guía 2026)" />
   <meta property="og:description" content="De las orillas del Ródano a la Turín barroca — el viaje en tren por los Alpes entre Francia e Italia, y cómo reservarlo." />
   <meta property="og:url" content="https://glosx.app/rutas/lyon-turin/es/" />
-  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta property="og:image" content="https://glosx.app/rutas/video/lyon-turin-poster.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c3aed'/><text x='50' y='72' font-family='Helvetica,Arial,sans-serif' font-size='62' font-weight='700' fill='%23ffffff' text-anchor='middle'>W</text></svg>" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
@@ -41,6 +41,61 @@
     "datePublished": "2026-06-20",
     "inLanguage": "es",
     "mainEntityOfPage": "https://glosx.app/rutas/lyon-turin/es/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Lyon a Turín en tren — cruzando los Alpes",
+    "description": "Video referencial del trayecto en tren de Lyon a Turín cruzando los Alpes por el túnel del Fréjus.",
+    "thumbnailUrl": "https://glosx.app/rutas/video/lyon-turin-poster.jpg",
+    "contentUrl": "https://glosx.app/rutas/video/lyon-turin.mp4",
+    "uploadDate": "2026-06-20",
+    "inLanguage": "es",
+    "duration": "PT8S"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto dura el tren de Lyon a Turín?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tiempo de viaje varía según el servicio y la temporada en esta línea alpina transfronteriza — consultá el horario en vivo para tu fecha exacta en vez de un número fijo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hay tren directo de Lyon a Turín?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Existen opciones directas y con combinación en este corredor, operado en conjunto por SNCF y Trenitalia, cruzando los Alpes por el histórico túnel ferroviario del Fréjus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué estaciones se usan para el tren Lyon-Turín?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los trenes salen de Lyon Part-Dieu y llegan a Torino Porta Susa, ambas en el centro de sus ciudades."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es panorámico el tren de Lyon a Turín?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. La ruta sube por el valle de la Maurienne y cruza los Alpes por el túnel del Fréjus, uno de los grandes cruces ferroviarios históricos entre Francia e Italia."
+        }
+      }
+    ]
   }
   </script>
 
@@ -81,7 +136,20 @@
     }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
-    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 40px; }
+    .hero { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 8px; }
+    .video-wrap {
+      flex: 0 0 280px; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(139,92,246,0.35); box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      background: #000;
+    }
+    .video-wrap video { display: block; width: 100%; height: auto; }
+    .hero-media { flex: 0 0 280px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 0; }
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: center; }
+      .hero-media { flex: 0 0 auto; width: 100%; max-width: 320px; }
+    }
     h2 { font-size: 26px; font-weight: 700; margin: 44px 0 12px; letter-spacing: -0.5px; }
     p { font-size: 16px; color: #b9b9c9; line-height: 1.8; }
     p + p { margin-top: 14px; }
@@ -90,6 +158,15 @@
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .facts {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 28px; margin: 32px 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .fact-item { display: flex; flex-direction: column; gap: 4px; }
+    .fact-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+    .fact-value { font-size: 22px; font-weight: 800; color: var(--text); }
+    .fact-sub { font-size: 13px; color: var(--muted); }
     .cta {
       background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(109,40,217,0.12));
       border: 1px solid rgba(139,92,246,0.35);
@@ -103,10 +180,28 @@
       box-shadow: 0 6px 20px rgba(124,58,237,0.5);
     }
     .cta-btn:hover { text-decoration: none; }
+    .faq { margin-top: 48px; }
+    .faq-item { border-top: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: #b9b9c9; line-height: 1.7; }
+    .related { margin-top: 48px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .related-link {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 18px; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color 0.15s;
+    }
+    .related-link:hover { border-color: var(--primary2); text-decoration: none; color: var(--primary2); }
+    .related-link span { display: block; font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 2px; }
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
-    @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; } }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; }
+      .facts { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -123,9 +218,42 @@
     <h1>Tren de Lyon a Turín: cruzar los Alpes</h1>
     <p class="meta">Por WoW Train · Actualizado junio 2026 · 4 min de lectura</p>
 
-    <p class="lead">
-      Pocos viajes en tren en Europa se sienten tan cinematográficos como este. Salís de Lyon —la capital gastronómica de Francia, a orillas del Ródano— y unas horas después bajás entre las arcadas barrocas de Turín, del lado italiano de los Alpes. En el medio: valles de río, túneles de montaña y uno de los grandes cruces alpinos del continente.
-    </p>
+    <div class="hero">
+      <div class="hero-media">
+        <div class="video-wrap">
+          <video src="/rutas/video/lyon-turin.mp4" poster="/rutas/video/lyon-turin-poster.jpg"
+                 controls playsinline preload="metadata" muted loop></video>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="lead">
+          Pocos viajes en tren en Europa se sienten tan cinematográficos como este. Salís de Lyon —la capital gastronómica de Francia, a orillas del Ródano— y unas horas después bajás entre las arcadas barrocas de Turín, del lado italiano de los Alpes. En el medio: valles de río, túneles de montaña y uno de los grandes cruces alpinos del continente.
+        </p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact-item">
+        <span class="fact-label">Duración</span>
+        <span class="fact-value">Variable</span>
+        <span class="fact-sub">Consultá horario en vivo</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Cruce</span>
+        <span class="fact-value">Túnel del Fréjus</span>
+        <span class="fact-sub">Ruta alpina histórica</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Operador</span>
+        <span class="fact-value">SNCF · Trenitalia</span>
+        <span class="fact-sub">Directo y con combinación</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Estaciones</span>
+        <span class="fact-value">Lyon Part-Dieu → Porta Susa</span>
+        <span class="fact-sub">Centro a centro</span>
+      </div>
+    </div>
 
     <h2>El viaje, parada por parada</h2>
     <p>
@@ -173,6 +301,54 @@
       <a href="https://www.thetrainline.com/es/horarios-trenes/lyon-a-turin"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_lyon_turin_es')">Ver horarios y reservar →</a>
+    </div>
+
+    <hr/>
+
+    <div class="faq">
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Cuánto dura el tren de Lyon a Turín?</p>
+        <p class="faq-a">El tiempo de viaje varía según el servicio y la temporada en esta línea alpina transfronteriza — <strong>consultá el horario en vivo para tu fecha exacta</strong> en vez de un número fijo.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Hay tren directo de Lyon a Turín?</p>
+        <p class="faq-a">Existen opciones directas y con combinación en este corredor, operado en conjunto por <strong>SNCF</strong> y <strong>Trenitalia</strong>, cruzando los Alpes por el histórico túnel ferroviario del Fréjus.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Qué estaciones se usan?</p>
+        <p class="faq-a">Los trenes salen de <strong>Lyon Part-Dieu</strong> y llegan a <strong>Torino Porta Susa</strong>, ambas en el centro de sus ciudades.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Es panorámico el tren de Lyon a Turín?</p>
+        <p class="faq-a">Sí. La ruta sube por el valle de la Maurienne y cruza los Alpes por el túnel del Fréjus, uno de los grandes cruces ferroviarios históricos entre Francia e Italia.</p>
+      </div>
+    </div>
+
+    <div class="related">
+      <h2>Rutas relacionadas</h2>
+      <div class="related-grid">
+        <a href="/rutas/zurich-milan/" class="related-link">
+          Zúrich → Milán
+          <span>Cruce alpino</span>
+        </a>
+        <a href="/rutas/milan-rome/" class="related-link">
+          Milán → Roma
+          <span>Alta velocidad Italia</span>
+        </a>
+        <a href="/rutas/munich-venice/" class="related-link">
+          Múnich → Venecia
+          <span>Paso del Brennero</span>
+        </a>
+        <a href="/rutas/geneva-zermatt/" class="related-link">
+          Ginebra → Zermatt
+          <span>Alpes suizos</span>
+        </a>
+      </div>
     </div>
   </main>
 

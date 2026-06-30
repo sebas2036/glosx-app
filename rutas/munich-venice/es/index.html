@@ -14,7 +14,7 @@
   <meta property="og:title" content="Tren de Múnich a Venecia: EuroCity alpino (Guía 2026)" />
   <meta property="og:description" content="Cruzando el paso del Brennero de Baviera a la laguna veneciana — ruta, estaciones, operadores y cómo reservarlo." />
   <meta property="og:url" content="https://glosx.app/rutas/munich-venice/es/" />
-  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta property="og:image" content="https://glosx.app/rutas/video/munich-venice-poster.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c3aed'/><text x='50' y='72' font-family='Helvetica,Arial,sans-serif' font-size='62' font-weight='700' fill='%23ffffff' text-anchor='middle'>W</text></svg>" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
@@ -40,6 +40,61 @@
     "datePublished": "2026-06-20",
     "inLanguage": "es",
     "mainEntityOfPage": "https://glosx.app/rutas/munich-venice/es/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Múnich a Venecia en tren — cruzando el paso del Brennero",
+    "description": "Video referencial del trayecto en tren de Múnich a Venecia por los Alpes vía el paso del Brennero.",
+    "thumbnailUrl": "https://glosx.app/rutas/video/munich-venice-poster.jpg",
+    "contentUrl": "https://glosx.app/rutas/video/munich-venice.mp4",
+    "uploadDate": "2026-06-20",
+    "inLanguage": "es",
+    "duration": "PT8S"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto dura el tren de Múnich a Venecia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tren directo EuroCity cubre la ruta en alrededor de 7 horas, cruzando los Alpes por el paso del Brennero y Verona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hay tren directo de Múnich a Venecia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Los trenes EuroCity operados en conjunto por DB, ÖBB y Trenitalia conectan München Hauptbahnhof con Venezia Santa Lucia de forma directa, sin necesidad de cambiar de tren."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué estaciones se usan para el tren Múnich-Venecia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los trenes salen de München Hauptbahnhof y llegan a Venezia Santa Lucia, ambas en el centro de sus ciudades. En el camino paran en Innsbruck, Bolzano, Trento y Verona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es panorámico el tren de Múnich a Venecia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí — está considerado uno de los trayectos en tren más panorámicos de Europa, cruzando los Alpes tiroleses y el paso del Brennero antes de descender por los viñedos del Tirol del Sur hacia la laguna veneciana."
+        }
+      }
+    ]
   }
   </script>
 
@@ -80,7 +135,20 @@
     }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
-    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 40px; }
+    .hero { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 8px; }
+    .video-wrap {
+      flex: 0 0 280px; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(139,92,246,0.35); box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      background: #000;
+    }
+    .video-wrap video { display: block; width: 100%; height: auto; }
+    .hero-media { flex: 0 0 280px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 0; }
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: center; }
+      .hero-media { flex: 0 0 auto; width: 100%; max-width: 320px; }
+    }
     h2 { font-size: 26px; font-weight: 700; margin: 44px 0 12px; letter-spacing: -0.5px; }
     p { font-size: 16px; color: #b9b9c9; line-height: 1.8; }
     p + p { margin-top: 14px; }
@@ -89,6 +157,15 @@
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .facts {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 28px; margin: 32px 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .fact-item { display: flex; flex-direction: column; gap: 4px; }
+    .fact-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+    .fact-value { font-size: 22px; font-weight: 800; color: var(--text); }
+    .fact-sub { font-size: 13px; color: var(--muted); }
     .cta {
       background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(109,40,217,0.12));
       border: 1px solid rgba(139,92,246,0.35);
@@ -102,10 +179,28 @@
       box-shadow: 0 6px 20px rgba(124,58,237,0.5);
     }
     .cta-btn:hover { text-decoration: none; }
+    .faq { margin-top: 48px; }
+    .faq-item { border-top: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: #b9b9c9; line-height: 1.7; }
+    .related { margin-top: 48px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .related-link {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 18px; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color 0.15s;
+    }
+    .related-link:hover { border-color: var(--primary2); text-decoration: none; color: var(--primary2); }
+    .related-link span { display: block; font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 2px; }
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
-    @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; } }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; }
+      .facts { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -122,9 +217,42 @@
     <h1>Tren de Múnich a Venecia: cruzando el Brennero</h1>
     <p class="meta">Por WoW Train · Actualizado junio 2026 · 4 min de lectura</p>
 
-    <p class="lead">
-      Este es uno de los viajes en tren más hermosos de Europa. El tren directo sale de Baviera, sube a los Alpes tiroleses, cruza el paso del Brennero hacia Italia y desciende serpenteando entre viñedos y lagos hasta el borde de la laguna veneciana. El paisaje solo ya vale el billete.
-    </p>
+    <div class="hero">
+      <div class="hero-media">
+        <div class="video-wrap">
+          <video src="/rutas/video/munich-venice.mp4" poster="/rutas/video/munich-venice-poster.jpg"
+                 controls playsinline preload="metadata" muted loop></video>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="lead">
+          Este es uno de los viajes en tren más hermosos de Europa. El tren directo sale de Baviera, sube a los Alpes tiroleses, cruza el paso del Brennero hacia Italia y desciende serpenteando entre viñedos y lagos hasta el borde de la laguna veneciana. El paisaje solo ya vale el billete.
+        </p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact-item">
+        <span class="fact-label">Duración</span>
+        <span class="fact-value">~7h</span>
+        <span class="fact-sub">EuroCity directo</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Ruta</span>
+        <span class="fact-value">Paso del Brennero</span>
+        <span class="fact-sub">Cruce de los Alpes tiroleses</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Operador</span>
+        <span class="fact-value">DB · ÖBB · Trenitalia</span>
+        <span class="fact-sub">Servicio EuroCity conjunto</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Estaciones</span>
+        <span class="fact-value">München Hbf → Venezia S.L.</span>
+        <span class="fact-sub">Centro a centro</span>
+      </div>
+    </div>
 
     <h2>El viaje, parada por parada</h2>
     <p>
@@ -172,6 +300,54 @@
       <a href="https://www.thetrainline.com/es/horarios-trenes/munich-a-venice"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_munich_venice_es')">Ver horarios y reservar →</a>
+    </div>
+
+    <hr/>
+
+    <div class="faq">
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Cuánto dura el tren de Múnich a Venecia?</p>
+        <p class="faq-a">El tren directo <strong>EuroCity</strong> cubre la ruta en alrededor de <strong>7 horas</strong>, cruzando los Alpes por el paso del Brennero y Verona.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Hay tren directo de Múnich a Venecia?</p>
+        <p class="faq-a">Sí. Los trenes EuroCity operados en conjunto por <strong>DB, ÖBB y Trenitalia</strong> conectan München Hauptbahnhof con Venezia Santa Lucia de forma directa, sin necesidad de cambiar de tren.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Qué estaciones se usan?</p>
+        <p class="faq-a">Los trenes salen de <strong>München Hauptbahnhof</strong> y llegan a <strong>Venezia Santa Lucia</strong>, ambas en el centro de sus ciudades, parando en Innsbruck, Bolzano, Trento y Verona en el camino.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">¿Es panorámico el tren de Múnich a Venecia?</p>
+        <p class="faq-a">Sí — está considerado uno de los trayectos en tren más panorámicos de Europa, cruzando los Alpes tiroleses y el paso del Brennero antes de descender por los viñedos del Tirol del Sur hacia la laguna veneciana.</p>
+      </div>
+    </div>
+
+    <div class="related">
+      <h2>Rutas relacionadas</h2>
+      <div class="related-grid">
+        <a href="/rutas/zurich-milan/" class="related-link">
+          Zúrich → Milán
+          <span>Cruce alpino</span>
+        </a>
+        <a href="/rutas/milan-rome/" class="related-link">
+          Milán → Roma
+          <span>Alta velocidad Italia</span>
+        </a>
+        <a href="/rutas/vienna-salzburg/" class="related-link">
+          Viena → Salzburgo
+          <span>Alpes austríacos</span>
+        </a>
+        <a href="/rutas/florence-venice/" class="related-link">
+          Florencia → Venecia
+          <span>Norte de Italia</span>
+        </a>
+      </div>
     </div>
   </main>
 

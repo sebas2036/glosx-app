@@ -14,7 +14,7 @@
   <meta property="og:title" content="Tren de París a Ámsterdam: Eurostar directo (Guía 2026)" />
   <meta property="og:description" content="El viaje directo rápido de París a Ámsterdam vía Bruselas — ruta, estaciones, operadores y cómo reservarlo." />
   <meta property="og:url" content="https://glosx.app/rutas/paris-amsterdam/es/" />
-  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta property="og:image" content="https://glosx.app/rutas/video/paris-amsterdam-poster.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c3aed'/><text x='50' y='72' font-family='Helvetica,Arial,sans-serif' font-size='62' font-weight='700' fill='%23ffffff' text-anchor='middle'>W</text></svg>" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
@@ -40,6 +40,49 @@
     "datePublished": "2026-06-20",
     "inLanguage": "es",
     "mainEntityOfPage": "https://glosx.app/rutas/paris-amsterdam/es/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "París a Ámsterdam en tren — el directo",
+    "description": "Imágenes referenciales del trayecto en tren de alta velocidad de París a Ámsterdam vía Bruselas y Róterdam.",
+    "thumbnailUrl": "https://glosx.app/rutas/video/paris-amsterdam-poster.jpg",
+    "contentUrl": "https://glosx.app/rutas/video/paris-amsterdam.mp4",
+    "uploadDate": "2026-06-20",
+    "duration": "PT8S",
+    "inLanguage": "es"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto dura el tren de París a Ámsterdam?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Los servicios directos más rápidos cubren la ruta en alrededor de 3 horas 20 minutos, con varias salidas al día." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hay tren directo de París a Ámsterdam?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Eurostar (que absorbió al antiguo Thalys) opera el corredor directo, parando en Bruselas, Amberes y Róterdam antes de llegar a Ámsterdam." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué estaciones usa esta ruta?",
+        "acceptedAnswer": { "@type": "Answer", "text": "El tren sale de París Gare du Nord y llega a Amsterdam Centraal, justo al borde del anillo de canales." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es más rápido el tren que el avión?",
+        "acceptedAnswer": { "@type": "Answer", "text": "De puerta a puerta sí, en la mayoría de los casos. Sumando el viaje al aeropuerto, los controles y el traslado al centro, el tren directo entre estaciones céntricas suele ganarle al avión." }
+      }
+    ]
   }
   </script>
 
@@ -80,7 +123,16 @@
     }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
-    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 40px; }
+    .hero { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 8px; }
+    .video-wrap {
+      flex: 0 0 280px; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(139,92,246,0.35); box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      background: #000;
+    }
+    .video-wrap video { display: block; width: 100%; height: auto; }
+    .hero-media { flex: 0 0 280px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 0; }
     h2 { font-size: 26px; font-weight: 700; margin: 44px 0 12px; letter-spacing: -0.5px; }
     p { font-size: 16px; color: #b9b9c9; line-height: 1.8; }
     p + p { margin-top: 14px; }
@@ -89,6 +141,37 @@
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .facts {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 28px; margin: 32px 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .fact-item { display: flex; flex-direction: column; gap: 4px; }
+    .fact-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+    .fact-value { font-size: 22px; font-weight: 800; color: var(--text); }
+    .fact-sub { font-size: 13px; color: var(--muted); }
+    .faq { margin-top: 48px; }
+    .faq-item { border-top: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: #b9b9c9; line-height: 1.7; }
+    .related { margin-top: 48px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .related-link {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 18px; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color 0.15s;
+    }
+    .related-link:hover { border-color: var(--primary2); text-decoration: none; color: var(--primary2); }
+    .related-link span { display: block; font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 2px; }
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: center; }
+      .hero-media { flex: 0 0 auto; width: 100%; max-width: 320px; }
+    }
+    @media (max-width: 600px) {
+      .facts { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
     .cta {
       background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(109,40,217,0.12));
       border: 1px solid rgba(139,92,246,0.35);
@@ -122,9 +205,42 @@
     <h1>Tren de París a Ámsterdam: el directo rápido</h1>
     <p class="meta">Por WoW Train · Actualizado junio 2026 · 4 min de lectura</p>
 
-    <p class="lead">
-      De los cafés de París a los canales de Ámsterdam en un solo salto de alta velocidad. El tren directo sube hacia el norte saliendo de Francia, hace escala en Bruselas y los Países Bajos, y entra al centro de Ámsterdam en poco más de tres horas — le gana fácil al avión una vez que contás todo lo que rodea a un vuelo.
-    </p>
+    <div class="hero">
+      <div class="hero-media">
+        <div class="video-wrap">
+          <video src="/rutas/video/paris-amsterdam.mp4" poster="/rutas/video/paris-amsterdam-poster.jpg"
+                 controls playsinline preload="metadata" muted loop></video>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="lead">
+          De los cafés de París a los canales de Ámsterdam en un solo salto de alta velocidad. El tren directo sube hacia el norte saliendo de Francia, hace escala en Bruselas y los Países Bajos, y entra al centro de Ámsterdam en poco más de tres horas — le gana fácil al avión una vez que contás todo lo que rodea a un vuelo.
+        </p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact-item">
+        <span class="fact-label">Duración</span>
+        <span class="fact-value">~3h 20m</span>
+        <span class="fact-sub">Servicio directo más rápido</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Operador</span>
+        <span class="fact-value">Eurostar</span>
+        <span class="fact-sub">Antes Thalys</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Estaciones</span>
+        <span class="fact-value">Gare du Nord → Centraal</span>
+        <span class="fact-sub">Centro a centro</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Paradas</span>
+        <span class="fact-value">Bruselas, Amberes, Róterdam</span>
+        <span class="fact-sub">En el camino</span>
+      </div>
+    </div>
 
     <h2>El viaje, parada por parada</h2>
     <p>
@@ -172,6 +288,36 @@
       <a href="https://www.thetrainline.com/es/horarios-trenes/paris-a-amsterdam"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_paris_amsterdam_es')">Ver horarios y reservar →</a>
+    </div>
+
+    <div class="faq">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-item">
+        <div class="faq-q">¿Cuánto dura el tren de París a Ámsterdam?</div>
+        <div class="faq-a">Los servicios directos más rápidos cubren la ruta en alrededor de 3 horas 20 minutos, con varias salidas al día.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Hay tren directo de París a Ámsterdam?</div>
+        <div class="faq-a">Sí. Eurostar (que absorbió al antiguo Thalys) opera el corredor directo, parando en Bruselas, Amberes y Róterdam antes de llegar a Ámsterdam.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Qué estaciones usa esta ruta?</div>
+        <div class="faq-a">El tren sale de París Gare du Nord y llega a Amsterdam Centraal, justo al borde del anillo de canales.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Es más rápido el tren que el avión?</div>
+        <div class="faq-a">De puerta a puerta sí, en la mayoría de los casos. Sumando el viaje al aeropuerto, los controles y el traslado al centro, el tren directo entre estaciones céntricas suele ganarle al avión.</div>
+      </div>
+    </div>
+
+    <div class="related">
+      <h2>Más rutas en tren</h2>
+      <div class="related-grid">
+        <a href="/rutas/lyon-turin/es/" class="related-link">Lyon → Turín<span>Cruce de los Alpes</span></a>
+        <a href="/rutas/munich-venice/es/" class="related-link">Múnich → Venecia<span>Vía los Alpes austríacos</span></a>
+        <a href="/rutas/paris-barcelona/es/" class="related-link">París → Barcelona<span>Vía los Pirineos</span></a>
+        <a href="/destinos/colmar/es/" class="related-link">Colmar<span>Pueblos de Alsacia</span></a>
+      </div>
     </div>
   </main>
 
