@@ -141,13 +141,19 @@
     @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; } .related-grid { grid-template-columns: 1fr; } }
 
     .route-hero {
+      position: relative;
       width: 100%;
       height: 280px;
       margin-top: 56px;
       background-size: cover;
       background-position: center 40%;
-      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,0.5) 75%, transparent 100%);
-      mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,0.5) 75%, transparent 100%);
+    }
+    .route-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(22,19,31,0.28) 0%, rgba(22,19,31,0.28) 45%, rgba(22,19,31,0.72) 70%, rgba(22,19,31,1) 100%);
+      pointer-events: none;
     }
     @media (max-width: 600px) { .route-hero { height: 200px; margin-top: 52px; } }
   </style>
