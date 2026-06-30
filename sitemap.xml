@@ -21,6 +21,16 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://glosx.app/blog-night-trains-europe.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://glosx.app/es/blog-night-trains-europe.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://glosx.app/blog-scenic-train-routes-europe.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
