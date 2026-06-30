@@ -121,7 +121,60 @@
       pointer-events: none;
     }
     @media (max-width: 600px) { .route-hero { height: 200px; margin-top: 52px; } }
+      .related-routes {
+      margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .related-routes h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.3px; }
+    .related-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .related-link {
+      display: inline-block;
+      background: rgba(124,58,237,0.10); border: 1px solid rgba(139,92,246,0.3);
+      border-radius: 100px; padding: 8px 18px;
+      font-size: 14px; font-weight: 600; color: #a78bfa; text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long is the train from Nice to Monaco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The train from Nice-Ville to Monaco-Monte-Carlo takes approximately 25 minutes. There are multiple departures per day — check the live schedule for your exact travel date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a Nice to Monaco train ticket cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tickets start from around €4. Booking as early as possible gives you the best chance of the cheapest fares — prices rise as the departure date approaches."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a direct train from Nice to Monaco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, regional TER trains run very frequently throughout the day. Nice-Ville and Monaco-Monte-Carlo are the main departure and arrival points."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who operates the Nice to Monaco train?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The route is served by SNCF TER. Comparing all departures in one search is the quickest way to find the best time and price."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <nav>
@@ -208,7 +261,16 @@
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_nice_monaco_en')">Check schedules &amp; book →</a>
     </div>
-  </main>
+  
+  <div class="related-routes">
+    <h2>More European train routes</h2>
+    <div class="related-grid">
+      <a href="/rutas/paris-nice/" class="related-link">Paris to Nice</a>
+      <a href="/rutas/lyon-turin/" class="related-link">Lyon to Turin</a>
+      <a href="/rutas/paris-barcelona/" class="related-link">Paris to Barcelona</a>
+    </div>
+  </div>
+</main>
 
   <footer>
     <p>© 2026 GLOSX — WoW Train</p>
