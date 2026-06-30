@@ -576,4 +576,18 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lauterbrunnen/" />
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/interlaken-lauterbrunnen/es/" />
   </url>
+  <url>
+    <loc>https://glosx.app/guide-how-to-travel-europe-by-train.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/guide-how-to-travel-europe-by-train.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
+  </url>
 </urlset>
