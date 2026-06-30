@@ -67,11 +67,15 @@
     h1 { font-size: 48px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .lead { font-size: 18px; color: var(--muted); line-height: 1.7; margin-bottom: 48px; max-width: 600px; }
     .post {
-      display: block; background: var(--surface); border: 1px solid var(--border);
+      display: block;
+      background: rgba(124,58,237,0.12);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(139,92,246,0.45);
       border-radius: 18px; padding: 28px; margin-bottom: 18px;
-      transition: border-color 0.2s, transform 0.2s; text-decoration: none;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+      transition: border-color 0.2s, transform 0.2s, background 0.2s; text-decoration: none;
     }
-    .post:hover { border-color: rgba(139,92,246,0.45); transform: translateY(-2px); }
+    .post:hover { background: rgba(124,58,237,0.18); border-color: rgba(139,92,246,0.65); transform: translateY(-2px); }
     .post-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--primary2); text-transform: uppercase; }
     .post-title { font-size: 24px; font-weight: 800; color: var(--text); margin: 10px 0 8px; letter-spacing: -0.5px; }
     .post-desc { font-size: 15px; color: var(--muted); line-height: 1.7; }
