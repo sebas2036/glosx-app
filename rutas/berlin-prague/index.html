@@ -102,7 +102,7 @@
     .nav-back:hover { color: var(--text); }
     .lang { color: var(--muted); font-size: 13px; font-weight: 600; text-decoration: none; }
     .lang:hover { color: var(--primary2); }
-    main { max-width: 760px; margin: 0 auto; padding: 120px 24px 80px; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     .badge { display: inline-block; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); border-radius: 100px; padding: 5px 14px; margin-bottom: 24px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--primary2); text-transform: uppercase; }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
@@ -139,6 +139,17 @@
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
     @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; } .related-grid { grid-template-columns: 1fr; } }
+
+    .route-hero {
+      width: 100%;
+      height: 280px;
+      margin-top: 56px;
+      background-size: cover;
+      background-position: center 40%;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,0.5) 75%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,0.5) 75%, transparent 100%);
+    }
+    @media (max-width: 600px) { .route-hero { height: 200px; margin-top: 52px; } }
   </style>
 </head>
 <body>
@@ -149,6 +160,8 @@
       <a href="/blog.html" class="nav-back">← All articles</a>
     </div>
   </nav>
+
+  <div class="route-hero" style="background-image:url('https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1400&q=80')"></div>
 
   <main>
     <span class="badge">Route guide · Germany → Czechia</span>
