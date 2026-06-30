@@ -6,8 +6,8 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>European Train Routes — Pick Yours, Get the Guides | WoW Train</title>
-  <meta name="description" content="Browse the best train routes across Europe — France, Spain, Italy, Switzerland, Austria and more. Pick your favorites and get the route guides by email, free." />
+  <title>Free Guide: Europe's Best Train Routes | WoW Train</title>
+  <meta name="description" content="The free guide to Europe's best train routes — France, Spain, Italy, Switzerland, Austria and more. Prices, stations, scenery and when to book. Pick your favorites, get it by email." />
   <meta name="keywords" content="European train routes, train routes Europe list, best train journeys Europe, interrail routes, train route guides Europe" />
   <link rel="canonical" href="https://glosx.app/explore/" />
   <meta property="og:type" content="website" />
@@ -33,6 +33,7 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     :root {
       --bg: #16131f; --surface: #221f30; --border: rgba(255,255,255,0.08);
       --primary: #7c3aed; --primary2: #a78bfa; --text: #f0f0f5; --muted: #8888aa;
@@ -66,7 +67,13 @@
     }
     h1 { font-size: 46px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 14px; }
     .lead { font-size: 18px; color: #c8c8d8; line-height: 1.7; max-width: 620px; margin-bottom: 14px; }
-    .sub { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
+    .sub { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .quick-cta {
+      display: inline-block; font-size: 13.5px; font-weight: 700; color: var(--primary2);
+      text-decoration: none; margin-bottom: 40px; border-bottom: 1px solid rgba(167,139,250,0.4);
+      padding-bottom: 1px; transition: color .18s ease, border-color .18s ease;
+    }
+    .quick-cta:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
     .filter-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
     .filter-chip {
       font-size: 12.5px; font-weight: 600; color: var(--muted); cursor: pointer;
@@ -127,6 +134,7 @@
     .signup-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 10px 28px rgba(124,58,237,0.6); }
     .signup-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
     .signup-msg { font-size: 13px; color: #a78bfa; width: 100%; text-align: center; min-height: 0; }
+    .signup-trust { font-size: 12px; color: var(--muted); width: 100%; text-align: center; margin-top: 6px; }
     footer { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 24px 4px; }
     footer a { color: var(--muted); margin: 0 8px; }
     @media (max-width: 600px) {
@@ -143,18 +151,20 @@
 
   <main>
     <span class="badge" data-i18n="exp_badge">Routes</span>
-    <h1><span data-i18n="exp_title1">Europe by train,</span><br/><span data-i18n="exp_title2">all in one place.</span></h1>
-    <p class="lead" data-i18n="exp_lead">Browse the best rail journeys across Europe. Pick the ones you're dreaming of — we'll send you the full guides (how to get there, stations, scenery and how to book).</p>
-    <p class="sub" data-i18n="exp_sub">Tap the routes you like, drop your email below, and the guides land in your inbox. Free, no spam.</p>
+    <h1><span data-i18n="exp_title1">The free guide to</span><br/><span data-i18n="exp_title2">Europe's best train routes.</span></h1>
+    <p class="lead" data-i18n="exp_lead">30 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.</p>
+    <p class="sub" data-i18n="exp_sub">Tap the routes you like, then grab your guide below.</p>
+    <a href="#signupBar" class="quick-cta" data-i18n="exp_quick_cta">Just want all 30 guides? Get them now →</a>
 
     <div class="filter-row" id="filterRow"></div>
     <div class="routes-grid" id="routesGrid"></div>
   </main>
 
-  <div class="signup-bar">
+  <div class="signup-bar" id="signupBar">
     <div class="signup-inner">
       <div class="signup-count"><b id="selCount">0</b> <span data-i18n="exp_count">routes selected</span></div>
       <div class="ml-embedded" data-form="y1D3vA"></div>
+      <div class="signup-trust" data-i18n="exp_trust">Free guides, no spam, unsubscribe anytime.</div>
     </div>
   </div>
 
@@ -295,12 +305,12 @@
   <script>
   (function(){
     var T = {
-      en:{exp_badge:'Routes',exp_title1:'Europe by train,',exp_title2:'all in one place.',exp_lead:"Browse the best rail journeys across Europe. Pick the ones you're dreaming of — we'll send you the full guides (how to get there, stations, scenery and how to book).",exp_sub:'Tap the routes you like, drop your email below, and the guides land in your inbox. Free, no spam.',exp_count:'routes selected',exp_all:'All',exp_guide_ready:'Guide ready →',exp_guide_soon:'Guide on the way',exp_home:'← Home'},
-      es:{exp_badge:'Rutas',exp_title1:'Europa en tren,',exp_title2:'todo en un solo lugar.',exp_lead:'Descubrí los mejores viajes en tren por Europa. Elegí los que soñás y te enviamos las guías completas (cómo llegar, estaciones, paisajes y cómo reservar).',exp_sub:'Tocá las rutas que te gusten, dejá tu email y las guías llegan a tu casilla. Gratis, sin spam.',exp_count:'rutas seleccionadas',exp_all:'Todas',exp_guide_ready:'Guía lista →',exp_guide_soon:'Guía en camino',exp_home:'← Inicio'},
-      fr:{exp_badge:'Itinéraires',exp_title1:"L'Europe en train,",exp_title2:'tout au même endroit.',exp_lead:"Découvrez les plus beaux voyages en train d'Europe. Choisissez ceux qui vous font rêver — nous vous enverrons les guides complets (comment s'y rendre, gares, paysages et réservation).",exp_sub:'Touchez les itinéraires qui vous plaisent, laissez votre e-mail et les guides arrivent dans votre boîte. Gratuit, sans spam.',exp_count:'itinéraires sélectionnés',exp_all:'Tous',exp_guide_ready:'Guide prêt →',exp_guide_soon:'Guide à venir',exp_home:'← Accueil'},
-      de:{exp_badge:'Routen',exp_title1:'Europa mit dem Zug,',exp_title2:'alles an einem Ort.',exp_lead:'Entdecke die schönsten Zugreisen Europas. Wähle deine Favoriten — wir senden dir die kompletten Guides (Anreise, Bahnhöfe, Landschaft und Buchung).',exp_sub:'Tippe auf die Routen, die dir gefallen, gib deine E-Mail ein und die Guides landen in deinem Postfach. Kostenlos, kein Spam.',exp_count:'Routen ausgewählt',exp_all:'Alle',exp_guide_ready:'Guide bereit →',exp_guide_soon:'Guide folgt',exp_home:'← Startseite'},
-      it:{exp_badge:'Itinerari',exp_title1:"L'Europa in treno,",exp_title2:'tutto in un posto.',exp_lead:"Scopri i migliori viaggi in treno d'Europa. Scegli quelli dei tuoi sogni: ti invieremo le guide complete (come arrivare, stazioni, paesaggi e come prenotare).",exp_sub:'Tocca gli itinerari che ti piacciono, lascia la tua email e le guide arrivano nella tua casella. Gratis, senza spam.',exp_count:'itinerari selezionati',exp_all:'Tutti',exp_guide_ready:'Guida pronta →',exp_guide_soon:'Guida in arrivo',exp_home:'← Home'},
-      pt:{exp_badge:'Rotas',exp_title1:'A Europa de trem,',exp_title2:'tudo num só lugar.',exp_lead:'Descubra as melhores viagens de trem pela Europa. Escolha as que você sonha — enviaremos os guias completos (como chegar, estações, paisagens e como reservar).',exp_sub:'Toque nas rotas que você gosta, deixe seu e-mail e os guias chegam na sua caixa. Grátis, sem spam.',exp_count:'rotas selecionadas',exp_all:'Todas',exp_guide_ready:'Guia pronto →',exp_guide_soon:'Guia a caminho',exp_home:'← Início'}
+      en:{exp_badge:'Routes',exp_title1:'The free guide to',exp_title2:"Europe's best train routes.",exp_lead:"30 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.",exp_sub:'Tap the routes you like, then grab your guide below.',exp_quick_cta:'Just want all 30 guides? Get them now →',exp_trust:'Free guides, no spam, unsubscribe anytime.',exp_count:'routes selected',exp_all:'All',exp_guide_ready:'Guide ready →',exp_guide_soon:'Guide on the way',exp_home:'← Home'},
+      es:{exp_badge:'Rutas',exp_title1:'La guía gratis de',exp_title2:'las mejores rutas en tren de Europa.',exp_lead:'30 rutas reales — precios, estaciones, paisajes y cuándo reservar. Elegí las que querés y las guías completas llegan directo a tu casilla.',exp_sub:'Tocá las rutas que te gusten y conseguí tu guía abajo.',exp_quick_cta:'¿Querés las 30 guías? Conseguilas ahora →',exp_trust:'Guías gratis, sin spam, date de baja cuando quieras.',exp_count:'rutas seleccionadas',exp_all:'Todas',exp_guide_ready:'Guía lista →',exp_guide_soon:'Guía en camino',exp_home:'← Inicio'},
+      fr:{exp_badge:'Itinéraires',exp_title1:'Le guide gratuit des',exp_title2:"meilleurs itinéraires en train d'Europe.",exp_lead:"30 itinéraires réels — prix, gares, paysages et quand réserver. Choisissez ceux que vous voulez et les guides complets arrivent directement dans votre boîte.",exp_sub:'Touchez les itinéraires qui vous plaisent, puis récupérez votre guide ci-dessous.',exp_quick_cta:'Vous voulez les 30 guides ? Obtenez-les maintenant →',exp_trust:'Guides gratuits, sans spam, désabonnement à tout moment.',exp_count:'itinéraires sélectionnés',exp_all:'Tous',exp_guide_ready:'Guide prêt →',exp_guide_soon:'Guide à venir',exp_home:'← Accueil'},
+      de:{exp_badge:'Routen',exp_title1:'Der kostenlose Guide zu',exp_title2:'Europas besten Zugrouten.',exp_lead:'30 echte Routen — Preise, Bahnhöfe, Landschaft und wann man bucht. Wähle deine Favoriten und die kompletten Guides landen direkt in deinem Postfach.',exp_sub:'Tippe auf die Routen, die dir gefallen, und hol dir deinen Guide unten.',exp_quick_cta:'Willst du alle 30 Guides? Jetzt holen →',exp_trust:'Kostenlose Guides, kein Spam, jederzeit abbestellbar.',exp_count:'Routen ausgewählt',exp_all:'Alle',exp_guide_ready:'Guide bereit →',exp_guide_soon:'Guide folgt',exp_home:'← Startseite'},
+      it:{exp_badge:'Itinerari',exp_title1:'La guida gratuita ai',exp_title2:"migliori itinerari in treno d'Europa.",exp_lead:"30 itinerari reali — prezzi, stazioni, paesaggi e quando prenotare. Scegli quelli che vuoi e le guide complete arrivano direttamente nella tua casella.",exp_sub:'Tocca gli itinerari che ti piacciono, poi prendi la tua guida qui sotto.',exp_quick_cta:'Vuoi tutte le 30 guide? Prendile ora →',exp_trust:'Guide gratuite, niente spam, disiscrizione in qualsiasi momento.',exp_count:'itinerari selezionati',exp_all:'Tutti',exp_guide_ready:'Guida pronta →',exp_guide_soon:'Guida in arrivo',exp_home:'← Home'},
+      pt:{exp_badge:'Rotas',exp_title1:'O guia grátis das',exp_title2:'melhores rotas de trem da Europa.',exp_lead:'30 rotas reais — preços, estações, paisagens e quando reservar. Escolha as que você quer e os guias completos chegam direto na sua caixa.',exp_sub:'Toque nas rotas que você gosta e pegue seu guia abaixo.',exp_quick_cta:'Quer os 30 guias? Pegue agora →',exp_trust:'Guias grátis, sem spam, cancele quando quiser.',exp_count:'rotas selecionadas',exp_all:'Todas',exp_guide_ready:'Guia pronto →',exp_guide_soon:'Guia a caminho',exp_home:'← Início'}
     };
     function detect(){
       try { if(localStorage.getItem('glosx_lang_manual')==='1'){ var s=localStorage.getItem('glosx_lang'); if(s&&T[s]) return s; } } catch(e){}
