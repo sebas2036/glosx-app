@@ -14,7 +14,7 @@
   <meta property="og:title" content="Munich to Venice by Train: Alpine EuroCity Guide (2026)" />
   <meta property="og:description" content="Over the Brenner Pass from Bavaria to the Venetian lagoon — route, stations, operators and how to book it." />
   <meta property="og:url" content="https://glosx.app/rutas/munich-venice/" />
-  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta property="og:image" content="https://glosx.app/rutas/video/munich-venice-poster.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c3aed'/><text x='50' y='72' font-family='Helvetica,Arial,sans-serif' font-size='62' font-weight='700' fill='%23ffffff' text-anchor='middle'>W</text></svg>" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
@@ -39,6 +39,60 @@
     "publisher": { "@type": "Organization", "name": "GLOSX", "alternateName": "WoW Train" },
     "datePublished": "2026-06-20",
     "mainEntityOfPage": "https://glosx.app/rutas/munich-venice/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long is the train from Munich to Venice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The direct EuroCity train covers Munich to Venice in around 7 hours, crossing the Alps via the Brenner Pass and Verona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a direct train from Munich to Venice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. EuroCity trains run jointly by DB, ÖBB and Trenitalia connect München Hauptbahnhof to Venezia Santa Lucia directly, with no need to change trains."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which stations are used for the Munich to Venice train?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trains depart from München Hauptbahnhof and arrive at Venezia Santa Lucia, both in the heart of their respective cities. Along the way the train calls at Innsbruck, Bolzano, Trento and Verona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Munich to Venice train scenic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — it's considered one of the most scenic rail journeys in Europe, crossing the Tyrolean Alps and the Brenner Pass before descending through the vineyards of South Tyrol toward the Venetian lagoon."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Munich to Venice by train — over the Brenner Pass",
+    "description": "Referential journey footage of the Munich to Venice train route over the Alps via the Brenner Pass.",
+    "thumbnailUrl": "https://glosx.app/rutas/video/munich-venice-poster.jpg",
+    "contentUrl": "https://glosx.app/rutas/video/munich-venice.mp4",
+    "uploadDate": "2026-06-20",
+    "duration": "PT8S"
   }
   </script>
 
@@ -79,7 +133,20 @@
     }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
-    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 40px; }
+    .hero { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 8px; }
+    .video-wrap {
+      flex: 0 0 280px; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(139,92,246,0.35); box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      background: #000;
+    }
+    .video-wrap video { display: block; width: 100%; height: auto; }
+    .hero-media { flex: 0 0 280px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 0; }
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: center; }
+      .hero-media { flex: 0 0 auto; width: 100%; max-width: 320px; }
+    }
     h2 { font-size: 26px; font-weight: 700; margin: 44px 0 12px; letter-spacing: -0.5px; }
     p { font-size: 16px; color: #b9b9c9; line-height: 1.8; }
     p + p { margin-top: 14px; }
@@ -88,6 +155,15 @@
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .facts {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 28px; margin: 32px 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .fact-item { display: flex; flex-direction: column; gap: 4px; }
+    .fact-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+    .fact-value { font-size: 22px; font-weight: 800; color: var(--text); }
+    .fact-sub { font-size: 13px; color: var(--muted); }
     .cta {
       background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(109,40,217,0.12));
       border: 1px solid rgba(139,92,246,0.35);
@@ -101,10 +177,28 @@
       box-shadow: 0 6px 20px rgba(124,58,237,0.5);
     }
     .cta-btn:hover { text-decoration: none; }
+    .faq { margin-top: 48px; }
+    .faq-item { border-top: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: #b9b9c9; line-height: 1.7; }
+    .related { margin-top: 48px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .related-link {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 18px; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color 0.15s;
+    }
+    .related-link:hover { border-color: var(--primary2); text-decoration: none; color: var(--primary2); }
+    .related-link span { display: block; font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 2px; }
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
-    @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; } }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; }
+      .facts { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -121,9 +215,42 @@
     <h1>Munich to Venice by Train: Over the Brenner Pass</h1>
     <p class="meta">By WoW Train · Updated June 2026 · 4 min read</p>
 
-    <p class="lead">
-      This is one of the most beautiful train rides in Europe. The direct train leaves Bavaria, climbs into the Tyrolean Alps, crosses the Brenner Pass into Italy and winds down through vineyards and lakes to the edge of the Venetian lagoon. The scenery alone is worth the ticket.
-    </p>
+    <div class="hero">
+      <div class="hero-media">
+        <div class="video-wrap">
+          <video src="/rutas/video/munich-venice.mp4" poster="/rutas/video/munich-venice-poster.jpg"
+                 controls playsinline preload="metadata" muted loop></video>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="lead">
+          This is one of the most beautiful train rides in Europe. The direct train leaves Bavaria, climbs into the Tyrolean Alps, crosses the Brenner Pass into Italy and winds down through vineyards and lakes to the edge of the Venetian lagoon. The scenery alone is worth the ticket.
+        </p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact-item">
+        <span class="fact-label">Journey time</span>
+        <span class="fact-value">~7h</span>
+        <span class="fact-sub">Direct EuroCity</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Route</span>
+        <span class="fact-value">Brenner Pass</span>
+        <span class="fact-sub">Tyrolean Alps crossing</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Operator</span>
+        <span class="fact-value">DB · ÖBB · Trenitalia</span>
+        <span class="fact-sub">Joint EuroCity service</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Stations</span>
+        <span class="fact-value">München Hbf → Venezia S.L.</span>
+        <span class="fact-sub">City-centre to city-centre</span>
+      </div>
+    </div>
 
     <h2>The journey, stop by stop</h2>
     <p>
@@ -171,6 +298,54 @@
       <a href="https://www.thetrainline.com/train-times/munich-to-venice"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_munich_venice_en')">Check schedules &amp; book →</a>
+    </div>
+
+    <hr/>
+
+    <div class="faq">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">How long is the train from Munich to Venice?</p>
+        <p class="faq-a">The direct <strong>EuroCity</strong> train covers the route in around <strong>7 hours</strong>, crossing the Alps via the Brenner Pass and Verona.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Is there a direct train from Munich to Venice?</p>
+        <p class="faq-a">Yes. EuroCity trains run jointly by <strong>DB, ÖBB and Trenitalia</strong> connect München Hauptbahnhof to Venezia Santa Lucia directly, with no need to change trains.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Which stations are used?</p>
+        <p class="faq-a">Trains depart from <strong>München Hauptbahnhof</strong> and arrive at <strong>Venezia Santa Lucia</strong>, both in the heart of their respective cities, calling at Innsbruck, Bolzano, Trento and Verona along the way.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Is the Munich to Venice train scenic?</p>
+        <p class="faq-a">Yes — it's one of the most scenic rail journeys in Europe, crossing the Tyrolean Alps and the Brenner Pass before descending through South Tyrol's vineyards toward the Venetian lagoon.</p>
+      </div>
+    </div>
+
+    <div class="related">
+      <h2>Related routes</h2>
+      <div class="related-grid">
+        <a href="/rutas/zurich-milan/" class="related-link">
+          Zurich → Milan
+          <span>Alpine crossing</span>
+        </a>
+        <a href="/rutas/milan-rome/" class="related-link">
+          Milan → Rome
+          <span>High-speed Italy</span>
+        </a>
+        <a href="/rutas/vienna-salzburg/" class="related-link">
+          Vienna → Salzburg
+          <span>Austrian Alps</span>
+        </a>
+        <a href="/rutas/florence-venice/" class="related-link">
+          Florence → Venice
+          <span>Northern Italy</span>
+        </a>
+      </div>
     </div>
   </main>
 

@@ -14,7 +14,7 @@
   <meta property="og:title" content="Paris to Barcelona by Train: Direct TGV Guide (2026)" />
   <meta property="og:description" content="The direct high-speed ride from Paris to Catalonia — route, stations, operators and how to book it." />
   <meta property="og:url" content="https://glosx.app/rutas/paris-barcelona/" />
-  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta property="og:image" content="https://glosx.app/rutas/video/paris-barcelona-poster.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c3aed'/><text x='50' y='72' font-family='Helvetica,Arial,sans-serif' font-size='62' font-weight='700' fill='%23ffffff' text-anchor='middle'>W</text></svg>" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
@@ -39,6 +39,60 @@
     "publisher": { "@type": "Organization", "name": "GLOSX", "alternateName": "WoW Train" },
     "datePublished": "2026-06-20",
     "mainEntityOfPage": "https://glosx.app/rutas/paris-barcelona/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long is the train from Paris to Barcelona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The direct high-speed train covers Paris to Barcelona in roughly 6.5 hours, running city-centre to city-centre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a direct train from Paris to Barcelona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. High-speed trains run by SNCF and Renfe connect Paris Gare de Lyon directly to Barcelona Sants, crossing the Pyrenees via Perpignan, Figueres and Girona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which stations are used for the Paris to Barcelona train?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trains depart from Paris Gare de Lyon and arrive at Barcelona Sants, both centrally located with easy onward metro connections."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the train faster than flying from Paris to Barcelona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Once you factor in airport transfers, check-in and security, the direct city-centre to city-centre train is often just as fast as flying, with far more comfort and no baggage fees."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Paris to Barcelona by train — direct TGV",
+    "description": "Referential journey footage of the Paris to Barcelona direct high-speed train route.",
+    "thumbnailUrl": "https://glosx.app/rutas/video/paris-barcelona-poster.jpg",
+    "contentUrl": "https://glosx.app/rutas/video/paris-barcelona.mp4",
+    "uploadDate": "2026-06-20",
+    "duration": "PT8S"
   }
   </script>
 
@@ -79,7 +133,20 @@
     }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
-    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 40px; }
+    .hero { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 8px; }
+    .video-wrap {
+      flex: 0 0 280px; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(139,92,246,0.35); box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      background: #000;
+    }
+    .video-wrap video { display: block; width: 100%; height: auto; }
+    .hero-media { flex: 0 0 280px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 0; }
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: center; }
+      .hero-media { flex: 0 0 auto; width: 100%; max-width: 320px; }
+    }
     h2 { font-size: 26px; font-weight: 700; margin: 44px 0 12px; letter-spacing: -0.5px; }
     p { font-size: 16px; color: #b9b9c9; line-height: 1.8; }
     p + p { margin-top: 14px; }
@@ -88,6 +155,15 @@
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .facts {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 28px; margin: 32px 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .fact-item { display: flex; flex-direction: column; gap: 4px; }
+    .fact-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+    .fact-value { font-size: 22px; font-weight: 800; color: var(--text); }
+    .fact-sub { font-size: 13px; color: var(--muted); }
     .cta {
       background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(109,40,217,0.12));
       border: 1px solid rgba(139,92,246,0.35);
@@ -101,10 +177,28 @@
       box-shadow: 0 6px 20px rgba(124,58,237,0.5);
     }
     .cta-btn:hover { text-decoration: none; }
+    .faq { margin-top: 48px; }
+    .faq-item { border-top: 1px solid var(--border); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: #b9b9c9; line-height: 1.7; }
+    .related { margin-top: 48px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .related-link {
+      display: block; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 18px; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color 0.15s;
+    }
+    .related-link:hover { border-color: var(--primary2); text-decoration: none; color: var(--primary2); }
+    .related-link span { display: block; font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 2px; }
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
-    @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; } }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; }
+      .facts { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -121,9 +215,42 @@
     <h1>Paris to Barcelona by Train: The Direct TGV</h1>
     <p class="meta">By WoW Train · Updated June 2026 · 4 min read</p>
 
-    <p class="lead">
-      One train, two of Europe's great cities. The direct high-speed service slips out of Paris, runs down through the south of France and the vineyards of Languedoc, crosses into Catalonia and drops you in the heart of Barcelona — no airport, no transfers, no border queues.
-    </p>
+    <div class="hero">
+      <div class="hero-media">
+        <div class="video-wrap">
+          <video src="/rutas/video/paris-barcelona.mp4" poster="/rutas/video/paris-barcelona-poster.jpg"
+                 controls playsinline preload="metadata" muted loop></video>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="lead">
+          One train, two of Europe's great cities. The direct high-speed service slips out of Paris, runs down through the south of France and the vineyards of Languedoc, crosses into Catalonia and drops you in the heart of Barcelona — no airport, no transfers, no border queues.
+        </p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact-item">
+        <span class="fact-label">Journey time</span>
+        <span class="fact-value">~6h 30m</span>
+        <span class="fact-sub">Direct high-speed</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Crossing</span>
+        <span class="fact-value">Pyrenees</span>
+        <span class="fact-sub">Via Perpignan &amp; Girona</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Operator</span>
+        <span class="fact-value">SNCF · Renfe</span>
+        <span class="fact-sub">High-speed service</span>
+      </div>
+      <div class="fact-item">
+        <span class="fact-label">Stations</span>
+        <span class="fact-value">Gare de Lyon → Sants</span>
+        <span class="fact-sub">City-centre to city-centre</span>
+      </div>
+    </div>
 
     <h2>The journey, stop by stop</h2>
     <p>
@@ -171,6 +298,54 @@
       <a href="https://www.thetrainline.com/train-times/paris-to-barcelona"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_paris_barcelona_en')">Check schedules &amp; book →</a>
+    </div>
+
+    <hr/>
+
+    <div class="faq">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">How long is the train from Paris to Barcelona?</p>
+        <p class="faq-a">The direct high-speed train covers the route in roughly <strong>6½ hours</strong>, running city-centre to city-centre.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Is there a direct train from Paris to Barcelona?</p>
+        <p class="faq-a">Yes. High-speed trains run by <strong>SNCF</strong> and <strong>Renfe</strong> connect Paris Gare de Lyon directly to Barcelona Sants, crossing the Pyrenees via Perpignan, Figueres and Girona.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Which stations are used?</p>
+        <p class="faq-a">Trains depart from <strong>Paris Gare de Lyon</strong> and arrive at <strong>Barcelona Sants</strong>, both centrally located with easy onward metro connections.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Is the train faster than flying from Paris to Barcelona?</p>
+        <p class="faq-a">Once you factor in airport transfers, check-in and security, the direct city-centre to city-centre train is often just as fast as flying — with far more comfort and no baggage fees.</p>
+      </div>
+    </div>
+
+    <div class="related">
+      <h2>Related routes</h2>
+      <div class="related-grid">
+        <a href="/rutas/madrid-barcelona/" class="related-link">
+          Madrid → Barcelona
+          <span>High-speed Spain</span>
+        </a>
+        <a href="/rutas/barcelona-valencia/" class="related-link">
+          Barcelona → Valencia
+          <span>Mediterranean coast</span>
+        </a>
+        <a href="/rutas/paris-london/" class="related-link">
+          Paris → London
+          <span>~2h 20m</span>
+        </a>
+        <a href="/rutas/paris-nice/" class="related-link">
+          Paris → Nice
+          <span>French Riviera</span>
+        </a>
+      </div>
     </div>
   </main>
 
