@@ -616,4 +616,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://glosx.app/rutas/munich-vienna/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/prague-vienna/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/milan-zurich/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/frankfurt-munich/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-munich/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/brussels-bruges/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-bruges/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-toulouse/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/montreux-interlaken/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
+  </url>
 </urlset>
