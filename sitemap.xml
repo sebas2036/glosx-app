@@ -682,4 +682,10 @@
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-cologne/" />
   </url>
+  <url>
+    <loc>https://glosx.app/rutas/madrid-malaga/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-malaga/" />
+  </url>
 </urlset>
