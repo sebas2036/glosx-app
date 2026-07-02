@@ -3749,6 +3749,14 @@
     })();
 
     (function() {
+      window.GLOSX_ROUTE_PAGES = new Set(["amsterdam-berlin","amsterdam-brussels","barcelona-valencia","berlin-hamburg","berlin-prague","brussels-bruges","brussels-paris","copenhagen-stockholm","florence-pisa","florence-venice","frankfurt-cologne","frankfurt-munich","geneva-zermatt","interlaken-lauterbrunnen","lisbon-porto","london-edinburgh","london-manchester","london-paris","lyon-turin","madrid-barcelona","madrid-malaga","madrid-seville","madrid-valencia","milan-rome","milan-zurich","montreux-interlaken","munich-berlin","munich-venice","munich-vienna","nice-monaco","oslo-bergen","paris-amsterdam","paris-barcelona","paris-bordeaux","paris-london","paris-nice","paris-toulouse","prague-budapest","prague-vienna","rome-florence","rome-naples","rome-venice","stockholm-oslo","vienna-budapest","vienna-prague","vienna-salzburg","zurich-lucerne","zurich-milan"]);
+      window.glosxBookTarget = function(a, b) {
+        function sl(x){ return (x||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+        var f=sl(a), t=sl(b), pair=f+'-'+t, rev=t+'-'+f, rp=window.GLOSX_ROUTE_PAGES;
+        if (rp && rp.has(pair)) return '/rutas/'+pair+'/';
+        if (rp && rp.has(rev))  return '/rutas/'+rev+'/';
+        return 'https://voxa-production-dc15.up.railway.app/affiliate/klook';
+      };
       function buildSearchUrl(from, to, lang, date) {
         var tl = {
           es: ['https://www.thetrainline.com/es/horarios-trenes/', '-a-'],
@@ -3785,8 +3793,13 @@
         var toSlug   = resolveSlug(destEl);
         if (!fromSlug || !toSlug) return false;
         var lang = document.documentElement.lang || 'en';
-        trackTrainline('hero_search');
-        window.open(buildSearchUrl(fromSlug, toSlug, lang, dateVal), '_blank');
+        var _pair = fromSlug + '-' + toSlug, _rev = toSlug + '-' + fromSlug;
+        var _rp = window.GLOSX_ROUTE_PAGES;
+        var _target = (_rp && _rp.has(_pair)) ? '/rutas/' + _pair + '/'
+                    : (_rp && _rp.has(_rev)) ? '/rutas/' + _rev + '/'
+                    : 'https://voxa-production-dc15.up.railway.app/affiliate/klook';
+        try { gtag('event','search_route',{ pair:_pair, target:_target }); } catch(_){}
+        window.open(_target, '_blank');
         return false;
       };
     })();
@@ -3944,8 +3957,8 @@
 
     function goScenic(from, to, e) {
       e.preventDefault();
-      trackTrainline('scenic_route');
-      window.open('https://voxa-production-dc15.up.railway.app/affiliate/redirect?origin=' + encodeURIComponent(from) + '&dest=' + encodeURIComponent(to) + '&country=INTL', '_blank');
+      try { gtag('event','scenic_route',{ from:from, to:to }); } catch(_){}
+      window.open(window.glosxBookTarget(from, to), '_blank');
       return false;
     }
 
@@ -3993,7 +4006,7 @@
 
   // Construye la URL de búsqueda real de Trainline para una ruta (origen → destino).
   function buildTrainlineUrl(route) {
-    return 'https://voxa-production-dc15.up.railway.app/affiliate/redirect?origin=' + encodeURIComponent(route.from) + '&dest=' + encodeURIComponent(route.to) + '&country=INTL';
+    return window.glosxBookTarget(route.from, route.to);
   }
 
   const ROUTES = {
@@ -4915,7 +4928,7 @@
       );
       const ticketUrl = noTrain
         ? `https://www.google.com/maps/dir/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
-        : `https://voxa-production-dc15.up.railway.app/affiliate/redirect?origin=${encodeURIComponent(s.origen)}&dest=${encodeURIComponent(s.destino)}&country=INTL`;
+        : window.glosxBookTarget(s.origen, s.destino);
       const btnLabel = noTrain ? (dict.ai_view_options || 'Ver opciones →') : (dict.ai_buy_ticket || 'Buy ticket →');
       html += `<div class="trip-segment-row" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
         <div>
