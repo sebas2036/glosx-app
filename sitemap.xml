@@ -688,4 +688,16 @@
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-malaga/" />
   </url>
+  <url>
+    <loc>https://glosx.app/rutas/rome-venice/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/zurich-lucerne/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
+  </url>
 </urlset>
