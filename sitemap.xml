@@ -670,4 +670,16 @@
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
   </url>
+  <url>
+    <loc>https://glosx.app/rutas/berlin-hamburg/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-hamburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/frankfurt-cologne/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-cologne/" />
+  </url>
 </urlset>
