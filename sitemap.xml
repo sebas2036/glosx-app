@@ -596,4 +596,24 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
   </url>
+  <url>
+    <loc>https://glosx.app/trains-from-france-to-spain/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://glosx.app/trains-from-france-to-italy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://glosx.app/trains-from-germany-to-italy/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://glosx.app/trains-from-uk-to-europe/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
