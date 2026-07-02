@@ -658,4 +658,10 @@
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
   </url>
+  <url>
+    <loc>https://glosx.app/rutas/london-manchester/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-manchester/" />
+  </url>
 </urlset>
