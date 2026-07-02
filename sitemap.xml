@@ -712,4 +712,10 @@
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-pisa/" />
   </url>
+  <url>
+    <loc>https://glosx.app/rutas/london-paris/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-paris/" />
+  </url>
 </urlset>
