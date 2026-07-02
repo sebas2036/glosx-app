@@ -2448,6 +2448,10 @@
             <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17H3a2 2 0 01-2-2V9l3-6h12l3 6v6a2 2 0 01-2 2h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg></div>
             <span class="ai-ess-name">Car Rental</span><span class="ai-ess-cta">EconomyBookings</span>
           </a>
+          <a href="#" onclick="goPartner('insurance',event)" class="ai-ess-item">
+            <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 01-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 011-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 011.52 0C14.51 3.81 17 5 19 5a1 1 0 011 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <span class="ai-ess-name">EKTA</span><span class="ai-ess-cta">Travel Insurance</span>
+          </a>
         </div>
       </div>
       <button class="ai-reset-btn" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Create another route</button>
@@ -2616,6 +2620,15 @@
           <span class="essential-brand">EconomyBookings</span>
           <span class="essential-title" data-i18n="p_car_title">Car Rental</span>
           <span class="essential-cta" data-i18n="p_car_cta">Rent a car →</span>
+        </div>
+      </a>
+
+      <a href="#" class="essential-item" onclick="goPartner('insurance', event)">
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-brand">EKTA</span>
+          <span class="essential-title" data-i18n="p_insurance_title">Travel Insurance</span>
+          <span class="essential-cta" data-i18n="p_insurance_cta">Get covered →</span>
         </div>
       </a>
 
@@ -3260,7 +3273,7 @@
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.', p_yesim_cta: 'Activate eSIM →',
         p_tiqets_title: 'Attraction Tickets', p_tiqets_desc: 'Skip-the-line entry to Sagrada Familia, Colosseum, Louvre, Eiffel Tower and 6,000+ attractions across Europe.', p_tiqets_cta: 'Browse tickets →',
         p_storage_title: 'Luggage Storage', p_storage_desc: 'Safe luggage storage in 1,000+ locations across European cities. Drop your bags from €5 and explore freely.', p_storage_cta: 'Find storage →',
-        p_car_title: 'Car Rental', p_car_cta: 'Rent a car →',
+        p_car_title: 'Car Rental', p_car_cta: 'Rent a car →', p_insurance_title: 'Travel Insurance', p_insurance_cta: 'Get covered →',
         features_label: 'Why WoW Train', features_title1: 'Built for travelers', features_title2: 'who move fast.',
         features_lead: 'No subscriptions, no paywalls. Just real-time data and smart tools.',
         f1_title: 'Real-time departures', f1_desc: 'Live delays, platform changes and cancellations from official railway data.',
@@ -3328,7 +3341,7 @@
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Conectate en más de 30 países europeos desde €4.90. Activación instantánea en tu teléfono — sin cambiar la SIM.', p_yesim_cta: 'Activar eSIM →',
         p_tiqets_title: 'Entradas a atracciones', p_tiqets_desc: 'Entrada sin filas a Sagrada Familia, Coliseo, Louvre, Torre Eiffel y más de 6.000 atracciones en Europa.', p_tiqets_cta: 'Ver entradas →',
         p_storage_title: 'Guardar equipaje', p_storage_desc: 'Custodia segura de equipaje en más de 1.000 puntos en ciudades europeas. Dejá tus valijas desde €5 y explorá libremente.', p_storage_cta: 'Buscar custodia →',
-        p_car_title: 'Alquiler de autos', p_car_cta: 'Alquilar auto →',
+        p_car_title: 'Alquiler de autos', p_car_cta: 'Alquilar auto →', p_insurance_title: 'Seguro de viaje', p_insurance_cta: 'Asegurate →',
         features_label: 'Por qué WoW Train', features_title1: 'Hecho para viajeros', features_title2: 'que se mueven rápido.',
         features_lead: 'Sin suscripciones, sin paywalls. Solo datos en tiempo real y herramientas inteligentes.',
         f1_title: 'Salidas en tiempo real', f1_desc: 'Retrasos en vivo, cambios de andén y cancelaciones desde datos oficiales de los ferrocarriles.',
@@ -3396,7 +3409,7 @@
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Restez connecté dans plus de 30 pays européens dès €4.90. Activation instantanée sur votre téléphone — sans changer de SIM.', p_yesim_cta: 'Activer eSIM →',
         p_tiqets_title: 'Billets d\'attractions', p_tiqets_desc: 'Accès coupe-file à la Sagrada Familia, Colisée, Louvre, Tour Eiffel et 6 000+ attractions en Europe.', p_tiqets_cta: 'Voir les billets →',
         p_storage_title: 'Consigne à bagages', p_storage_desc: 'Consigne sécurisée dans plus de 1 000 points dans les villes européennes. Déposez vos bagages dès €5 et explorez librement.', p_storage_cta: 'Trouver consigne →',
-        p_car_title: 'Location de voiture', p_car_cta: 'Louer une voiture →',
+        p_car_title: 'Location de voiture', p_car_cta: 'Louer une voiture →', p_insurance_title: 'Assurance voyage', p_insurance_cta: 'Assurez-vous →',
         features_label: 'Pourquoi WoW Train', features_title1: 'Conçu pour les voyageurs', features_title2: 'qui bougent vite.',
         features_lead: 'Pas d\'abonnement, pas de paywall. Juste des données en temps réel et des outils intelligents.',
         f1_title: 'Départs en temps réel', f1_desc: 'Retards en direct, changements de voie et annulations à partir des données ferroviaires officielles.',
@@ -3464,7 +3477,7 @@
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Bleiben Sie in 30+ europäischen Ländern verbunden ab €4.90. Sofortige Aktivierung auf Ihrem Telefon — kein SIM-Wechsel.', p_yesim_cta: 'eSIM aktivieren →',
         p_tiqets_title: 'Attraktionstickets', p_tiqets_desc: 'Skip-the-Line-Eintritt zur Sagrada Familia, Kolosseum, Louvre, Eiffelturm und 6.000+ Attraktionen in Europa.', p_tiqets_cta: 'Tickets ansehen →',
         p_storage_title: 'Gepäckaufbewahrung', p_storage_desc: 'Sichere Gepäckaufbewahrung an 1.000+ Standorten in europäischen Städten. Geben Sie Ihr Gepäck ab €5 ab und erkunden Sie frei.', p_storage_cta: 'Aufbewahrung finden →',
-        p_car_title: 'Mietwagen', p_car_cta: 'Auto mieten →',
+        p_car_title: 'Mietwagen', p_car_cta: 'Auto mieten →', p_insurance_title: 'Reiseversicherung', p_insurance_cta: 'Absichern →',
         features_label: 'Warum WoW Train', features_title1: 'Gemacht für Reisende,', features_title2: 'die sich schnell bewegen.',
         features_lead: 'Keine Abonnements, keine Paywalls. Nur Echtzeitdaten und intelligente Tools.',
         f1_title: 'Echtzeit-Abfahrten', f1_desc: 'Live-Verspätungen, Gleisänderungen und Stornierungen aus offiziellen Bahndaten.',
@@ -3532,7 +3545,7 @@
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Resta connesso in 30+ paesi europei da €4.90. Attivazione istantanea sul tuo telefono — nessun cambio SIM.', p_yesim_cta: 'Attiva eSIM →',
         p_tiqets_title: 'Biglietti attrazioni', p_tiqets_desc: 'Ingresso prioritario a Sagrada Familia, Colosseo, Louvre, Torre Eiffel e 6.000+ attrazioni in Europa.', p_tiqets_cta: 'Vedi biglietti →',
         p_storage_title: 'Deposito bagagli', p_storage_desc: 'Deposito sicuro in 1.000+ punti nelle città europee. Lascia i tuoi bagagli da €5 ed esplora liberamente.', p_storage_cta: 'Trova deposito →',
-        p_car_title: 'Noleggio auto', p_car_cta: 'Noleggia auto →',
+        p_car_title: 'Noleggio auto', p_car_cta: 'Noleggia auto →', p_insurance_title: 'Assicurazione viaggio', p_insurance_cta: 'Assicurati →',
         features_label: 'Perché WoW Train', features_title1: 'Pensato per chi viaggia', features_title2: 'velocemente.',
         features_lead: 'Niente abbonamenti, niente paywall. Solo dati in tempo reale e strumenti intelligenti.',
         f1_title: 'Partenze in tempo reale', f1_desc: 'Ritardi in diretta, cambi di binario e cancellazioni dai dati ferroviari ufficiali.',
@@ -3600,7 +3613,7 @@
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Mantenha-se ligado em mais de 30 países europeus desde €4.90. Ativação instantânea no seu telefone — sem trocar de SIM.', p_yesim_cta: 'Ativar eSIM →',
         p_tiqets_title: 'Bilhetes para atrações', p_tiqets_desc: 'Entrada prioritária na Sagrada Família, Coliseu, Louvre, Torre Eiffel e mais de 6.000 atrações na Europa.', p_tiqets_cta: 'Ver bilhetes →',
         p_storage_title: 'Guardar bagagem', p_storage_desc: 'Custódia segura de bagagem em mais de 1.000 locais nas cidades europeias. Deixe as suas malas desde €5 e explore livremente.', p_storage_cta: 'Encontrar depósito →',
-        p_car_title: 'Aluguel de carro', p_car_cta: 'Alugar carro →',
+        p_car_title: 'Aluguel de carro', p_car_cta: 'Alugar carro →', p_insurance_title: 'Seguro de viagem', p_insurance_cta: 'Proteja-se →',
         features_label: 'Porquê WoW Train', features_title1: 'Feito para viajantes', features_title2: 'que se movem depressa.',
         features_lead: 'Sem subscrições, sem paywalls. Apenas dados em tempo real e ferramentas inteligentes.',
         f1_title: 'Partidas em tempo real', f1_desc: 'Atrasos ao vivo, mudanças de plataforma e cancelamentos a partir de dados ferroviários oficiais.',
