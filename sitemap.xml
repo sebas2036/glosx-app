@@ -339,6 +339,12 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/florence-venice/es/" />
   </url>
   <url>
+    <loc>https://glosx.app/rutas/rome-naples/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
+  </url>
+  <url>
     <loc>https://glosx.app/rutas/milan-rome/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
