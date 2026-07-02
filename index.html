@@ -275,6 +275,17 @@
     }
     .lang-option:hover { background: rgba(124,58,237,0.15); }
     .lang-option.active { background: rgba(124,58,237,0.25); color: var(--primary2); }
+    /* ── Partners dropdown (nav) ── */
+    .partners-wrapper { position: relative; }
+    .nav-partners-btn { cursor: pointer; }
+    .partners-dropdown { position: absolute; top: calc(100% + 10px); left: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 6px; min-width: 240px; z-index: 300; box-shadow: 0 24px 48px rgba(0,0,0,0.55); display: none; }
+    .partners-dropdown.open { display: block; }
+    .partner-row { display: flex; align-items: center; gap: 11px; padding: 9px 10px; border-radius: 9px; text-decoration: none; transition: background 0.15s; }
+    .partner-row:hover { background: rgba(255,255,255,0.06); text-decoration: none; }
+    .partner-logo { width: 22px; height: 22px; border-radius: 5px; object-fit: contain; background:#fff; padding:2px; flex-shrink:0; }
+    .partner-name { font-size: 13px; font-weight: 700; }
+    .partner-sub { font-size: 11px; color: var(--muted); margin-left: auto; }
+    .partners-all { display:block; text-align:center; padding:8px; margin-top:4px; border-top:1px solid var(--border); font-size:12px; font-weight:600; color: var(--primary2); text-decoration:none; }
 
     /* ── Hero ── */
     /* Wrapper con el fondo del mapa: cubre hero + chips de países */
@@ -2344,7 +2355,20 @@
       <a href="#discover" data-i18n="nav_discover">Discover together</a>
       <a href="#adventure" data-i18n="nav_adventure">Plan your Adventure</a>
       <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
-      <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
+      <div class="partners-wrapper">
+        <a href="#partners" class="nav-partners-btn" onclick="togglePartners(event)" data-i18n="nav_essentials">Travel Essentials <span style="font-size:10px;opacity:0.6">▾</span></a>
+        <div class="partners-dropdown" id="partnersDropdown">
+          <a href="#" onclick="goPartner('klook',event)" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/klook.com" alt="Klook" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub">Trains &amp; tours</span></a>
+          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub">Attractions</span></a>
+          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub">Transfers</span></a>
+          <a href="#" onclick="goPartner('yesim',event)" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/yesim.com" alt="Yesim" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#A78BFA">Yesim</span><span class="partner-sub">eSIM</span></a>
+          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub">Insurance</span></a>
+          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub">Luggage</span></a>
+          <a href="#" onclick="goPartner('rentacar',event)" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/economybookings.com" alt="EconomyBookings" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#F59E0B">EconomyBookings</span><span class="partner-sub">Car rental</span></a>
+          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="partner-row"><img class="partner-logo" src="https://logo.clearbit.com/booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub">Hotels</span></a>
+          <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">See all essentials →</a>
+        </div>
+      </div>
       <a href="#features" data-i18n="nav_features">Features</a>
       <a href="/blog.html">Blog</a>
       <a href="/explore/" data-i18n="nav_routes">Routes</a>
@@ -2562,6 +2586,13 @@
         <div class="vip-text">
           <span class="vip-brand">Tripadvisor</span>
           <span class="vip-sub" data-i18n="vip_tripadvisor">Experiences &amp; reviews →</span>
+        </div>
+      </a>
+      <a href="#" onclick="goPartner('klook', event)" class="vip-card">
+        <div class="vip-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
+        <div class="vip-text">
+          <span class="vip-brand">Klook</span>
+          <span class="vip-sub" data-i18n="vip_klook">Tickets &amp; experiences →</span>
         </div>
       </a>
     </div>
@@ -3725,6 +3756,12 @@
       e.stopPropagation();
       document.getElementById('langDropdown').classList.toggle('open');
     }
+
+    function togglePartners(e) {
+      e.preventDefault(); e.stopPropagation();
+      document.getElementById('partnersDropdown').classList.toggle('open');
+    }
+    document.addEventListener('click', function(){ var d=document.getElementById('partnersDropdown'); if(d) d.classList.remove('open'); });
 
     // Menú móvil (hamburguesa)
     function toggleMenu(e) {
