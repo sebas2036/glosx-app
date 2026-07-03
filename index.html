@@ -2402,7 +2402,6 @@
     </p>
     <div style="display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:8px;">
       <button class="hero-ai-cta" onclick="focusAIPlanner()" data-i18n="hero_ai_cta">Plan my trip with AI →</button>
-      <a href="#trainSearch" class="hero-search-link" data-i18n="hero_search_link">Already know your route? Search direct →</a>
     </div>
   </section>
 
@@ -2480,26 +2479,6 @@
       </div>
       <button class="ai-reset-btn" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Create another route</button>
     </div>
-  </section>
-
-  <!-- Search box clásico -->
-  <section style="display:flex;justify-content:center;padding:48px 24px;" id="trainSearchSection">
-    <form class="search-box" id="trainSearch" onsubmit="return searchTrains(event)">
-      <div class="search-field">
-        <label for="origin" data-i18n="search_from">From</label>
-        <input type="text" id="origin" placeholder="Madrid" required autocomplete="off" />
-      </div>
-      <div class="search-field">
-        <label for="dest" data-i18n="search_to">To</label>
-        <input type="text" id="dest" placeholder="Barcelona" required autocomplete="off" />
-      </div>
-      <div class="search-field" style="position:relative;" onclick="toggleCal(event)">
-        <label data-i18n="search_date">Date</label>
-        <div id="dateDisplay" style="font-size:14px;font-weight:600;color:var(--text);cursor:pointer;padding-top:2px;"></div>
-        <input type="hidden" id="date" required />
-      </div>
-      <button type="submit" class="search-btn" data-i18n="search_btn">Search Tickets &amp; Schedules →</button>
-    </form>
   </section>
 
   <!-- Countries chips -->
@@ -3777,16 +3756,20 @@
     // Aplicar idioma inicial
     applyLang(detectLang());
 
-    // ── Default date (today) — calendar ───────────────────────────────────
+    // ── Default date (today) — calendar (buscador clásico eliminado, se guarda null-safe) ──
     (function() {
       const today = new Date();
       const y = today.getFullYear(), m = today.getMonth(), d = today.getDate();
       const pad = n => String(n).padStart(2,'0');
-      document.getElementById('date').value = `${y}-${pad(m+1)}-${pad(d)}`;
       calSelected = today; calDate = new Date(y, m, 1);
-      const lang = document.documentElement.lang || 'en';
-      const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
-      document.getElementById('dateDisplay').textContent = `${d} ${months[m]} ${y}`;
+      const dateEl = document.getElementById('date');
+      const dateDisplayEl = document.getElementById('dateDisplay');
+      if (dateEl) dateEl.value = `${y}-${pad(m+1)}-${pad(d)}`;
+      if (dateDisplayEl) {
+        const lang = document.documentElement.lang || 'en';
+        const months = MONTH_NAMES[lang] || MONTH_NAMES.en;
+        dateDisplayEl.textContent = `${d} ${months[m]} ${y}`;
+      }
     })();
 
     (function() {
@@ -4824,8 +4807,8 @@
     });
   }
 
-  attachTypeahead(document.getElementById('origin'));
-  attachTypeahead(document.getElementById('dest'));
+  if (document.getElementById('origin')) attachTypeahead(document.getElementById('origin'));
+  if (document.getElementById('dest'))   attachTypeahead(document.getElementById('dest'));
 
   // === AI Route Planner ===
   
