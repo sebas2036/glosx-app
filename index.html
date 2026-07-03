@@ -1958,10 +1958,8 @@
     filter: brightness(1.1);
     box-shadow: 0 6px 26px rgba(124,58,237,0.55), inset 0 1px 0 rgba(255,255,255,0.22);
   }
-  /* Estado "pensando" mientras la IA genera — mismo look sólido, sin aurora (dura muy poco para apreciarse) */
   .ai-generate-btn.loading {
     cursor: wait;
-    filter: brightness(0.95);
   }
   .ai-generate-btn:disabled {
     opacity: 0.5;
@@ -1969,7 +1967,7 @@
     transform: none;
   }
   .ai-generate-btn.loading:disabled {
-    opacity: 0.85;
+    opacity: 1;
     cursor: wait;
   }
   .ai-suggestions {
