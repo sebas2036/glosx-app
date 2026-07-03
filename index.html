@@ -1902,35 +1902,61 @@
     color: rgba(196,181,253,0.65);
   }
   .ai-input-container input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(124,58,237,0.15);
+    border-color: rgba(167,139,250,0.9);
+    box-shadow: 0 0 0 4px rgba(124,58,237,0.18), 0 0 20px rgba(124,58,237,0.25);
     background: var(--elevated);
   }
+  /* Botón de acción sólido (a diferencia del CTA hero "etéreo" con aurora) */
   .ai-generate-btn {
+    position: relative;
     font-family: inherit;
     font-size: 15px;
     font-weight: 700;
-    color: #E9E3FB;
+    color: #fff;
     cursor: pointer;
     white-space: nowrap;
-    background: rgba(124,58,237,0.18);
-    border: 1px solid rgba(139,92,246,0.65);
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed 55%, #6d28d9);
+    border: none;
     border-radius: 100px;
     padding: 18px 32px;
-    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 4px 24px rgba(124,58,237,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 4px 20px rgba(124,58,237,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    overflow: hidden;
   }
   .ai-generate-btn:hover {
     transform: translateY(-2px);
-    border-color: rgba(196,181,253,0.9);
-    background: rgba(124,58,237,0.28);
-    box-shadow: 0 4px 20px rgba(124,58,237,0.25), inset 0 1px 0 rgba(255,255,255,0.12);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 26px rgba(124,58,237,0.55), inset 0 1px 0 rgba(255,255,255,0.22);
+  }
+  /* Estado "pensando" mientras la IA genera — mismo lenguaje aurora del CTA hero, más rápido */
+  .ai-generate-btn.loading {
+    background: rgba(124,58,237,0.22);
+    color: #E9E3FB;
+    box-shadow: 0 4px 24px rgba(124,58,237,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+  .ai-generate-btn.loading::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(115deg, #7c3aed, #f97066 30%, #22d3ee 60%, #a78bfa 85%, #7c3aed);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    filter: drop-shadow(0 0 8px rgba(124,58,237,0.55)) drop-shadow(0 0 12px rgba(34,211,238,0.3));
+    animation: auroraShift 1.6s ease infinite;
   }
   .ai-generate-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
+  }
+  .ai-generate-btn.loading:disabled {
+    opacity: 1;
+    cursor: wait;
   }
   .ai-suggestions {
     display: flex;
@@ -4908,6 +4934,7 @@
     }
 
     btn.disabled = true;
+    btn.classList.add('loading');
     btn.textContent = 'Generating...';
 
     try {
@@ -4931,6 +4958,7 @@
       showAIPlannerError('Hubo un problema de conexión. Intentá de nuevo.');
     } finally {
       btn.disabled = false;
+      btn.classList.remove('loading');
       btn.textContent = 'Generate Itinerary';
     }
   }
