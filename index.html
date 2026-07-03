@@ -1883,9 +1883,39 @@
     margin-bottom: 20px;
     flex-wrap: nowrap;
   }
+  .ai-input-aurora {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    border-radius: 100px;
+  }
+  .ai-input-aurora::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(115deg, #7c3aed, #f97066 30%, #22d3ee 60%, #a78bfa 85%, #7c3aed);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    filter: drop-shadow(0 0 6px rgba(124,58,237,0.45)) drop-shadow(0 0 10px rgba(34,211,238,0.2));
+    animation: auroraShift 7s ease infinite;
+    transition: opacity 0.3s, filter 0.3s, animation-duration 0.3s;
+    z-index: 1;
+  }
+  .ai-input-aurora.active::before {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(124,58,237,0.55)) drop-shadow(0 0 12px rgba(34,211,238,0.3));
+    animation-duration: 2.5s;
+  }
   .ai-input-container input {
     flex: 1;
     min-width: 0;
+    width: 100%;
     font-family: inherit;
     font-size: 17px;
     color: var(--text);
@@ -2455,7 +2485,9 @@
 
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
-        <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="e.g., 'Madrid to Paris scenic route' or '5 days through Swiss Alps'" autocomplete="off" />
+        <div class="ai-input-aurora" id="aiInputAurora">
+          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="e.g., 'Madrid to Paris scenic route' or '5 days through Swiss Alps'" autocomplete="off" oninput="document.getElementById('aiInputAurora').classList.toggle('active', this.value.trim().length > 0)" />
+        </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Generate Itinerary</button>
       </div>
       <div class="ai-suggestions">
@@ -4905,18 +4937,21 @@
   // Función para establecer sugerencia
   function setAISuggestion(text) {
     document.getElementById('aiInput').value = text;
+    document.getElementById('aiInputAurora').classList.toggle('active', text.trim().length > 0);
   }
 
   // Función principal para generar ruta
   async function generateAIRoute() {
     const input = document.getElementById('aiInput').value.trim();
     const btn = document.querySelector('.ai-generate-btn');
-    
+    const inputAurora = document.getElementById('aiInputAurora');
+
     if (!input) {
       showAIPlannerError('Escribí un destino o idea de viaje para comenzar.');
       return;
     }
 
+    inputAurora.classList.add('active');
     btn.disabled = true;
     btn.classList.add('loading');
     btn.textContent = 'Generating...';
