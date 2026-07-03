@@ -534,21 +534,48 @@
       backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
       transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
     }
-    /* Foto del país que asoma al pasar el mouse (solo desktop con puntero fino) */
-    .country-photo {
+    /* Panel que asoma al pasar el mouse (solo desktop con puntero fino): foto + rutas populares */
+    .country-popup {
       position: absolute;
       bottom: calc(100% + 10px);
       left: 50%;
-      width: 200px; height: 130px;
-      object-fit: cover;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 0 40px rgba(124,58,237,0.25);
+      width: 220px;
       opacity: 0;
-      transform: translate(-50%, 12px) scale(0.94);
+      transform: translate(-50%, 12px) scale(0.96);
       transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.22,1,0.36,1);
       pointer-events: none;
       z-index: 30;
+      background: rgba(20,14,38,0.92);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.55), 0 0 40px rgba(124,58,237,0.25);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      overflow: hidden;
+      text-align: left;
+    }
+    .country-photo {
+      display: block;
+      width: 100%; height: 110px;
+      object-fit: cover;
+    }
+    .country-routes {
+      display: flex; flex-direction: column;
+      padding: 8px;
+      gap: 3px;
+    }
+    .country-routes a {
+      display: block;
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-size: 12.5px; font-weight: 600;
+      color: rgba(220,214,250,0.9);
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+      transition: background 0.15s, color 0.15s;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .country-routes a:hover { background: rgba(124,58,237,0.3); color: #fff; }
     }
     @media (hover: hover) and (pointer: fine) {
       .country-chip:hover {
@@ -558,16 +585,18 @@
         box-shadow: 0 4px 20px rgba(124,58,237,0.35), inset 0 1px 0 rgba(255,255,255,0.1);
         z-index: 40;
       }
-      .country-chip:hover .country-photo {
+      .country-chip:hover .country-popup {
         opacity: 1;
         transform: translate(-50%, 0) scale(1);
+        pointer-events: auto;
       }
     }
     /* En touch se revela al tocar el chip (clase .show-photo vía JS) */
     .country-chip.show-photo { border-color: rgba(124,58,237,0.6); color: #fff; z-index: 40; }
-    .country-chip.show-photo .country-photo {
+    .country-chip.show-photo .country-popup {
       opacity: 1;
       transform: translate(-50%, 0) scale(1);
+      pointer-events: auto;
     }
 
     /* ── Sections ── */
@@ -2557,15 +2586,50 @@
 
   <!-- Countries chips -->
   <div class="countries" id="countries" style="padding: 8px 24px 0;">
-    <span class="country-chip">Spain<img class="country-photo" src="country-pics/es.jpg" alt="Spain" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">Switzerland<img class="country-photo" src="country-pics/ch.jpg" alt="Switzerland" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">France<img class="country-photo" src="country-pics/fr.jpg" alt="France" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">Germany<img class="country-photo" src="country-pics/de.jpg" alt="Germany" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">Italy<img class="country-photo" src="country-pics/it.jpg" alt="Italy" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">Belgium<img class="country-photo" src="country-pics/be.jpg" alt="Belgium" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">Netherlands<img class="country-photo" src="country-pics/nl.jpg" alt="Netherlands" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">Austria<img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
-    <span class="country-chip">United Kingdom<img class="country-photo" src="country-pics/gb.jpg" alt="United Kingdom" loading="lazy" width="32" height="32" onerror="this.remove()"></span>
+    <span class="country-chip">Spain<span class="country-popup"><img class="country-photo" src="country-pics/es.jpg" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/madrid-barcelona/">Madrid → Barcelona</a>
+      <a href="/rutas/paris-barcelona/">Paris → Barcelona</a>
+      <a href="/rutas/madrid-valencia/">Madrid → Valencia</a>
+    </span></span></span>
+    <span class="country-chip">Switzerland<span class="country-popup"><img class="country-photo" src="country-pics/ch.jpg" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/zurich-lucerne/">Zurich → Lucerne</a>
+      <a href="/rutas/zurich-milan/">Zurich → Milan</a>
+      <a href="/rutas/geneva-zermatt/">Geneva → Zermatt</a>
+    </span></span></span>
+    <span class="country-chip">France<span class="country-popup"><img class="country-photo" src="country-pics/fr.jpg" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/paris-london/">Paris → London</a>
+      <a href="/rutas/paris-amsterdam/">Paris → Amsterdam</a>
+      <a href="/rutas/paris-barcelona/">Paris → Barcelona</a>
+    </span></span></span>
+    <span class="country-chip">Germany<span class="country-popup"><img class="country-photo" src="country-pics/de.jpg" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/amsterdam-berlin/">Amsterdam → Berlin</a>
+      <a href="/rutas/munich-berlin/">Munich → Berlin</a>
+      <a href="/rutas/frankfurt-munich/">Frankfurt → Munich</a>
+    </span></span></span>
+    <span class="country-chip">Italy<span class="country-popup"><img class="country-photo" src="country-pics/it.jpg" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/rome-florence/">Rome → Florence</a>
+      <a href="/rutas/florence-venice/">Florence → Venice</a>
+      <a href="/rutas/milan-rome/">Milan → Rome</a>
+    </span></span></span>
+    <span class="country-chip">Belgium<span class="country-popup"><img class="country-photo" src="country-pics/be.jpg" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/brussels-bruges/">Brussels → Bruges</a>
+      <a href="/rutas/brussels-paris/">Brussels → Paris</a>
+    </span></span></span>
+    <span class="country-chip">Netherlands<span class="country-popup"><img class="country-photo" src="country-pics/nl.jpg" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/paris-amsterdam/">Paris → Amsterdam</a>
+      <a href="/rutas/amsterdam-berlin/">Amsterdam → Berlin</a>
+      <a href="/rutas/amsterdam-brussels/">Amsterdam → Brussels</a>
+    </span></span></span>
+    <span class="country-chip">Austria<span class="country-popup"><img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/vienna-salzburg/">Vienna → Salzburg</a>
+      <a href="/rutas/vienna-prague/">Vienna → Prague</a>
+      <a href="/rutas/vienna-budapest/">Vienna → Budapest</a>
+    </span></span></span>
+    <span class="country-chip">United Kingdom<span class="country-popup"><img class="country-photo" src="country-pics/gb.jpg" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/london-paris/">London → Paris</a>
+      <a href="/rutas/london-manchester/">London → Manchester</a>
+      <a href="/rutas/london-edinburgh/">London → Edinburgh</a>
+    </span></span></span>
   </div>
 
   </div><!-- /hero-bgwrap -->
