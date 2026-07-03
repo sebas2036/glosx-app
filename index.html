@@ -358,8 +358,9 @@
     }
 
     .hero-ai-cta {
+      position: relative;
       background: rgba(124,58,237,0.18);
-      border: 1px solid rgba(139,92,246,0.65);
+      border: none;
       border-radius: 100px;
       color: #E9E3FB;
       font-size: 17px;
@@ -369,9 +370,42 @@
       cursor: pointer;
       backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       box-shadow: 0 4px 24px rgba(124,58,237,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      z-index: 1;
     }
-    .hero-ai-cta:hover { transform: translateY(-2px); border-color: rgba(196,181,253,0.9); background: rgba(124,58,237,0.28); box-shadow: 0 4px 20px rgba(124,58,237,0.25), inset 0 1px 0 rgba(255,255,255,0.12); }
+    /* Borde "aurora" — anillo de gradiente fino (1.5px) vía mask, look IA */
+    .hero-ai-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: linear-gradient(115deg, #7c3aed, #f97066 30%, #22d3ee 60%, #a78bfa 85%, #7c3aed);
+      background-size: 300% 300%;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.75;
+      filter: drop-shadow(0 0 6px rgba(124,58,237,0.45)) drop-shadow(0 0 10px rgba(34,211,238,0.2));
+      animation: auroraShift 7s ease infinite;
+      transition: opacity 0.3s, filter 0.3s, animation-duration 0.3s;
+      z-index: -1;
+    }
+    @keyframes auroraShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .hero-ai-cta:hover {
+      transform: translateY(-2px);
+      background: rgba(124,58,237,0.28);
+      box-shadow: 0 4px 20px rgba(124,58,237,0.25), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .hero-ai-cta:hover::before {
+      opacity: 1;
+      filter: drop-shadow(0 0 10px rgba(124,58,237,0.65)) drop-shadow(0 0 16px rgba(34,211,238,0.4));
+      animation-duration: 2.5s;
+    }
     .hero-search-link {
       font-size: 13px;
       font-weight: 500;
@@ -2400,13 +2434,13 @@
     <p data-i18n="hero_subtitle">
       Tell us where you want to go — our AI builds the full itinerary, connects you to buy tickets, and finds hotels along the way.
     </p>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:8px;">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:8px;margin-bottom:36px;">
       <button class="hero-ai-cta" onclick="focusAIPlanner()" data-i18n="hero_ai_cta">Plan my trip with AI →</button>
     </div>
   </section>
 
   <!-- AI Route Planner -->
-  <section class="ai-planner" id="aiPlanner" style="padding-top:0;">
+  <section class="ai-planner" id="aiPlanner" style="padding-top:12px;">
     <div class="ai-planner-header" style="display:none;"></div>
 
     <div class="ai-input-wrapper" id="aiInputWrapper">
