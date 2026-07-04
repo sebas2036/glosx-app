@@ -4046,9 +4046,9 @@
 
     // ── Scenic trains data + render ────────────────────────────────────────
     const SCENIC_TRAINS = [
-      { name: 'Glacier Express', from: 'zermatt', to: 'st-moritz', photo: 'https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=1000&q=80', route: 'Zermatt → St. Moritz · 7h 45min', origin: 'Zermatt', dest: 'St. Moritz', g1: '#C0392B', g2: '#922B21',
+      { name: 'Glacier Express', from: 'zermatt', to: 'st-moritz', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F101898-glacier-express-panoramic-train-private-day-tour%2F&campaign_id=137', photo: 'https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=1000&q=80', route: 'Zermatt → St. Moritz · 7h 45min', origin: 'Zermatt', dest: 'St. Moritz', g1: '#C0392B', g2: '#922B21',
         desc: { en: '291 bridges and 91 tunnels through glaciers and snow-capped Swiss Alps.', es: '291 puentes y 91 túneles entre glaciares y cumbres nevadas de los Alpes suizos.', fr: '291 ponts et 91 tunnels entre glaciers et cimes enneigées des Alpes suisses.', de: '291 Brücken und 91 Tunnel zwischen Gletschern und schneebedeckten Schweizer Alpen.', it: '291 ponti e 91 gallerie tra ghiacciai e cime innevate delle Alpi svizzere.', pt: '291 pontes e 91 túneis entre glaciares e picos nevados dos Alpes suíços.' } },
-      { name: 'Bernina Express', from: 'chur', to: 'tirano', photo: 'https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1000&q=80', route: 'Chur → Tirano · 4h 0min', origin: 'Chur', dest: 'Tirano', g1: '#1A5276', g2: '#154360',
+      { name: 'Bernina Express', from: 'chur', to: 'tirano', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F50302-bernina-trenino-svizzera-alpi%2F&campaign_id=137', photo: 'https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1000&q=80', route: 'Chur → Tirano · 4h 0min', origin: 'Chur', dest: 'Tirano', g1: '#1A5276', g2: '#154360',
         desc: { en: 'UNESCO heritage. Europe\'s highest mountain pass by train.', es: 'Patrimonio UNESCO. El paso de montaña más alto de Europa en tren.', fr: 'Patrimoine UNESCO. Le col le plus haut d\'Europe en train.', de: 'UNESCO-Welterbe. Europas höchster Bergpass mit dem Zug.', it: 'Patrimonio UNESCO. Il valico più alto d\'Europa in treno.', pt: 'Patrimônio UNESCO. A passagem de montanha mais alta da Europa de comboio.' } },
       { name: 'GoldenPass Express', from: 'montreux', to: 'interlaken-ost', photo: '/scenic/goldenpass.jpg', route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux', dest: 'Interlaken Ost', g1: '#B7950B', g2: '#9A7D0A',
         desc: { en: 'From Lake Geneva to the Bernese Oberland in panoramic cars with extra-wide windows.', es: 'Del Lago Lemán al Oberland bernés en vagones panorámicos con ventanas extra anchas.', fr: 'Du Léman à l\'Oberland bernois en voitures panoramiques aux fenêtres extra larges.', de: 'Vom Genfersee ins Berner Oberland in Panoramawagen mit extra breiten Fenstern.', it: 'Dal Lago Lemano all\'Oberland bernese in carrozze panoramiche con finestre extra larghe.', pt: 'Do Lago Léman ao Oberland bernês em vagões panorâmicos com janelas extra largas.' } },
@@ -4066,7 +4066,7 @@
         desc: { en: 'From Bavaria\'s capital to Mozart\'s city along the Alps. Turquoise lakes and snowy peaks.', es: 'De la capital bávara a Mozart bordeando los Alpes. Lagos turquesa y cumbres nevadas.', fr: 'De la capitale bavaroise à Mozart en longeant les Alpes. Lacs turquoise et sommets enneigés.', de: 'Von der bayerischen Hauptstadt nach Mozart entlang der Alpen. Türkisfarbene Seen und schneebedeckte Gipfel.', it: 'Dalla capitale bavarese alla città di Mozart lungo le Alpi. Laghi turchesi e cime innevate.', pt: 'Da capital bávara a Mozart ao longo dos Alpes. Lagos turquesa e picos nevados.' } },
       { name: 'Semmering Express', from: 'vienna', to: 'graz', photo: '/scenic/semmering.jpg', route: 'Vienna → Graz · 2h 39min', origin: 'Wien Hbf', dest: 'Graz Hbf', g1: '#B7950B', g2: '#9A7D0A',
         desc: { en: 'The world\'s oldest mountain railway. UNESCO heritage since the 19th century.', es: 'El ferrocarril de montaña más antiguo del mundo. Patrimonio UNESCO desde el siglo XIX.', fr: 'Le plus ancien chemin de fer de montagne au monde. Patrimoine UNESCO depuis le XIXe siècle.', de: 'Die älteste Gebirgsbahn der Welt. UNESCO-Welterbe seit dem 19. Jahrhundert.', it: 'La più antica ferrovia di montagna del mondo. Patrimonio UNESCO dal XIX secolo.', pt: 'A ferrovia de montanha mais antiga do mundo. Patrimônio UNESCO desde o século XIX.' } },
-      { name: 'Douro Valley', from: 'porto', to: 'pocinho', photo: '/scenic/douro-valley.jpg', route: 'Porto → Pocinho · 3h 30min', origin: 'Porto Campanhã', dest: 'Pocinho', g1: '#784212', g2: '#6E2C00',
+      { name: 'Douro Valley', from: 'porto', to: 'pocinho', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F113775-douro-valley-small-group-day-tour-lunch%2F&campaign_id=137', photo: '/scenic/douro-valley.jpg', route: 'Porto → Pocinho · 3h 30min', origin: 'Porto Campanhã', dest: 'Pocinho', g1: '#784212', g2: '#6E2C00',
         desc: { en: 'Port wine vineyards on schist terraces. One of the world\'s most beautiful train rides.', es: 'Viñedos del Oporto en terrazas de esquisto. Uno de los trayectos más bellos del mundo.', fr: 'Vignobles de Porto en terrasses de schiste. L\'un des plus beaux trajets au monde.', de: 'Portwein-Weinberge auf Schieferterrassen. Eine der schönsten Bahnstrecken der Welt.', it: 'Vigneti del Porto su terrazze di scisto. Uno dei viaggi in treno più belli del mondo.', pt: 'Vinhas do Porto em socalcos de xisto. Uma das viagens de comboio mais belas do mundo.' } },
       { name: 'Intercity Direct', from: 'amsterdam', to: 'brussels', photo: '/scenic/intercity-direct.jpg', route: 'Amsterdam → Brussels · 1h 51min', origin: 'Amsterdam Centraal', dest: 'Brussel-Zuid', g1: '#E67E22', g2: '#CA6F1E',
         desc: { en: 'From Amsterdam\'s canals to the Grand Place through polders and Belgian countryside.', es: 'De los canales de Ámsterdam al Grand Place atravesando pólderes y campiña belga.', fr: 'Des canaux d\'Amsterdam à la Grand-Place à travers les polders et la campagne belge.', de: 'Von Amsterdams Grachten zum Grand Place durch Polder und belgische Landschaft.', it: 'Dai canali di Amsterdam alla Grand Place tra polder e campagna belga.', pt: 'Dos canais de Amesterdão à Grand Place atravessando pôlderes e o campo belga.' } },
@@ -4096,7 +4096,7 @@
           <div class="sf-name">${t.name}</div>
           <div class="sf-route">${t.route}</div>
           <div class="sf-desc">${desc}</div>
-          <button class="sf-btn" onclick="goScenic('${t.from}','${t.to}', event)">${book} →</button>
+          <button class="sf-btn" onclick="goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})">${book} →</button>
         </div>`;
       const c = fe.querySelector('.sf-content');
       if (c) { c.style.opacity = '0'; requestAnimationFrame(() => { c.style.opacity = '1'; }); }
@@ -4119,7 +4119,7 @@
               <div class="scenic-name">${t.name}</div>
               <div class="scenic-route">${t.route}</div>
             </div>
-            <div class="scenic-cta" onclick="event.stopPropagation(); goScenic('${t.from}','${t.to}', event)" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>
+            <div class="scenic-cta" onclick="event.stopPropagation(); goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>
           </a>
           <div class="scenic-desc">${desc}</div>
         </div>`;
@@ -4149,10 +4149,10 @@
     requestAnimationFrame(positionScenicDescs);
     window.addEventListener('resize', positionScenicDescs);
 
-    function goScenic(from, to, e) {
+    function goScenic(from, to, e, tourUrl) {
       e.preventDefault();
-      try { gtag('event','scenic_route',{ from:from, to:to }); } catch(_){}
-      window.open(window.glosxBookTarget(from, to), '_blank');
+      try { gtag('event','scenic_route',{ from:from, to:to, isTour: !!tourUrl }); } catch(_){}
+      window.open(tourUrl || window.glosxBookTarget(from, to), '_blank');
       return false;
     }
 
