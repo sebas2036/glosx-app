@@ -2357,6 +2357,7 @@
   .ai-vip-card:hover { border-color: rgba(231,198,107,0.8); box-shadow: 0 0 20px rgba(231,198,107,0.2); transform: translateY(-1px); }
   .ai-vip-icon { width: 36px; height: 36px; border-radius: 9px; display:flex; align-items:center; justify-content:center; background: rgba(231,198,107,0.1); color: #e7c66b; flex-shrink:0; }
   .ai-vip-icon svg { width:18px; height:18px; }
+  .ai-vip-icon img { width:100%; height:100%; object-fit:contain; border-radius:9px; background:#fff; padding:5px; }
   .ai-vip-name { font-size: 13px; font-weight: 600; color: #fff; }
   .ai-vip-sub { font-size: 11px; color: rgba(255,255,255,0.45); }
   .ai-essential-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
@@ -2572,6 +2573,14 @@
           <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="ai-vip-card">
             <div class="ai-vip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
             <div><div class="ai-vip-name">Tripadvisor</div><div class="ai-vip-sub">Experiences &amp; reviews</div></div>
+          </a>
+          <a href="#" onclick="goPartner('klook',event)" class="ai-vip-card">
+            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="" loading="lazy" /></div>
+            <div><div class="ai-vip-name">Klook</div><div class="ai-vip-sub">Trains &amp; activities</div></div>
+          </a>
+          <a href="https://www.thetrainline.com" target="_blank" rel="noopener noreferrer sponsored" class="ai-vip-card">
+            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=thetrainline.com" alt="" loading="lazy" /></div>
+            <div><div class="ai-vip-name">Trainline</div><div class="ai-vip-sub">Every train, one search</div></div>
           </a>
         </div>
         <div class="ai-essential-row">
