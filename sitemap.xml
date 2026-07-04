@@ -718,4 +718,28 @@
     <priority>0.9</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-paris/" />
   </url>
+  <url>
+    <loc>https://glosx.app/rutas/frankfurt-paris/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-paris/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-bruges/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/london-liverpool/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-liverpool/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/london-amsterdam/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-amsterdam/" />
+  </url>
 </urlset>
