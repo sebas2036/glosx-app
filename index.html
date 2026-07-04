@@ -1304,14 +1304,20 @@
       display: flex; flex-wrap: wrap; justify-content: center;
       gap: 8px 12px; max-width: 1120px; margin: 0 auto;
     }
-    .trust-ops span {
-      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5);
+    .op-chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.75);
       letter-spacing: 0.3px;
-      padding: 4px 12px; border-radius: 100px;
+      padding: 5px 14px 5px 7px; border-radius: 100px;
+      background: rgba(255,255,255,0.03);
       border: 1px solid rgba(139,92,246,0.14);
-      transition: color 0.2s ease, border-color 0.2s ease;
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
-    .trust-ops span:hover { color: #fff; border-color: rgba(139,92,246,0.4); }
+    .op-chip:hover { background: rgba(255,255,255,0.06); border-color: rgba(139,92,246,0.4); }
+    .op-chip img {
+      width: 18px; height: 18px; border-radius: 4px; flex-shrink: 0;
+      background: #fff; padding: 2px; object-fit: contain;
+    }
     /* Badges de confianza (señales reales) — livianos, sin pastilla, a lo ancho */
     .trust-badges {
       display: flex; flex-wrap: wrap; justify-content: center;
@@ -3028,7 +3034,15 @@
   <div class="trust-strip">
     <p class="trust-label" data-i18n="trust_data">Real-time data from official railways</p>
     <div class="trust-ops">
-      <span>Renfe</span><span>SNCF</span><span>Deutsche Bahn</span><span>SBB</span><span>Trenitalia</span><span>ÖBB</span><span>NS</span><span>SNCB</span><span>CP</span>
+      <span class="op-chip"><b style="color:#E30016">Renfe</b></span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="" loading="lazy" />SNCF</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="" loading="lazy" />Deutsche Bahn</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="" loading="lazy" />SBB</span>
+      <span class="op-chip"><b style="color:#E4032E">Trenitalia</b></span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="" loading="lazy" />ÖBB</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="" loading="lazy" />NS</span>
+      <span class="op-chip"><b style="color:#003DA5">SNCB</b></span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="" loading="lazy" />CP</span>
     </div>
     <div class="trust-badges">
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">Official GTFS data</span></span>
