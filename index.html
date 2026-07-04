@@ -1955,7 +1955,7 @@
     background: rgba(124,58,237,0.18);
     border: 1px solid rgba(139,92,246,0.65);
     border-radius: 100px;
-    padding: 18px 28px;
+    padding: 18px 52px 18px 28px;
     outline: none;
     backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 4px 24px rgba(124,58,237,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
@@ -1968,6 +1968,28 @@
     border-color: rgba(167,139,250,0.9);
     box-shadow: 0 0 0 4px rgba(124,58,237,0.18), 0 0 20px rgba(124,58,237,0.25);
     background: var(--elevated);
+  }
+  .ai-swap-btn {
+    position: absolute;
+    right: 8px; top: 50%;
+    transform: translateY(-50%);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(139,92,246,0.45);
+    background: rgba(124,58,237,0.22);
+    color: rgba(220,214,250,0.9);
+    font-size: 15px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.15s, border-color 0.15s, transform 0.2s;
+    z-index: 2;
+  }
+  .ai-swap-btn:hover {
+    background: rgba(124,58,237,0.4);
+    border-color: rgba(167,139,250,0.85);
+  }
+  .ai-swap-btn:active {
+    transform: translateY(-50%) rotate(180deg);
   }
   /* Botón de acción sólido (a diferencia del CTA hero "etéreo" con aurora) */
   .ai-generate-btn {
@@ -2518,6 +2540,7 @@
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora">
           <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="e.g., 'Madrid to Paris scenic route' or '5 days through Swiss Alps'" autocomplete="off" oninput="document.getElementById('aiInputAurora').classList.toggle('active', this.value.trim().length > 0)" />
+          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Generate Itinerary</button>
       </div>
@@ -5019,6 +5042,20 @@
     document.getElementById('aiInputWrapper').scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
+  // Invierte origen/destino en el input del planner AI ("Madrid to Paris" -> "Paris to Madrid").
+  // El conector varía según idioma (to/a/à/nach), así que se prueban todos.
+  function invertAIRoute() {
+    const value = document.getElementById('aiInput').value;
+    const connectors = ['to', 'à', 'nach', 'a'];
+    for (const conn of connectors) {
+      const match = value.match(new RegExp('^(.+?)\\s' + conn + '\\s(.+)$', 'i'));
+      if (match) {
+        setAISuggestion(match[2].trim() + ' ' + conn + ' ' + match[1].trim());
+        return;
+      }
+    }
+  }
+
   // Función principal para generar ruta
   async function generateAIRoute() {
     const input = document.getElementById('aiInput').value.trim();
@@ -5414,6 +5451,7 @@
   window.restoreLastRoute = restoreLastRoute;
   window.setAISuggestion = setAISuggestion;
   window.planRouteFromChip = planRouteFromChip;
+  window.invertAIRoute = invertAIRoute;
 
 })();
 </script>
