@@ -2142,11 +2142,12 @@
   }
   .route-path {
     fill: none;
-    stroke: var(--primary);
+    stroke: url(#auroraLineGradient);
     stroke-width: 2.5;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    opacity: 0.7;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 6px rgba(124,58,237,0.5));
     animation: routeDraw 1.4s cubic-bezier(0.4,0,0.2,1) forwards;
   }
   @keyframes routeDraw {
@@ -2162,6 +2163,11 @@
   .route-dot {
     fill: var(--primary);
     filter: drop-shadow(0 0 10px rgba(124,58,237,0.6));
+    animation: routeDotPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes routeDotPulse {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(124,58,237,0.5)); }
+    50% { filter: drop-shadow(0 0 14px rgba(167,139,250,0.9)); }
   }
   .ai-stops {
     display: flex;
@@ -2569,6 +2575,16 @@
       </div>
       <div class="ai-route-line" id="aiRouteLine">
         <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="auroraLineGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="30%" stop-color="#f97066"/>
+              <stop offset="60%" stop-color="#22d3ee"/>
+              <stop offset="85%" stop-color="#a78bfa"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+              <animateTransform attributeName="gradientTransform" type="translate" from="-1000 0" to="1000 0" dur="5s" repeatCount="indefinite"/>
+            </linearGradient>
+          </defs>
           <path class="route-path" d="" />
           <circle class="route-dot" cx="50" cy="100" r="8" />
           <circle class="route-dot" cx="950" cy="100" r="8" />
