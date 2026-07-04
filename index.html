@@ -1025,63 +1025,33 @@
       .phone-island { width: 70px; height: 22px; top: 10px; }
     }
 
-    /* ── Stats ── */
-    .stats { padding: 32px 24px; }
-    .stats-inner {
-      position: relative; isolation: isolate; overflow: hidden;
+    /* ── Stats (frase + cinta de rutas) ── */
+    .stats { padding: 40px 24px; }
+    .stats-prose {
+      text-align: center; color: #a8a8bd; font-size: 19px; font-weight: 400;
+      line-height: 1.6; margin: 0 auto 36px; max-width: 560px;
+    }
+    .stats-prose strong { color: #e9e3fb; font-weight: 600; }
+    .stats-marquee {
+      position: relative; overflow: hidden; padding: 6px 0;
       max-width: 1040px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 0; text-align: center;
-      padding: 30px 30px;
-      border-radius: 28px;
-      background:
-        radial-gradient(ellipse 60% 120% at 25% 50%, rgba(124,58,237,0.18), transparent 70%),
-        linear-gradient(180deg, rgba(30,27,58,0.85) 0%, rgba(14,12,30,0.92) 100%);
-      box-shadow: 0 30px 70px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(139,92,246,0.18);
     }
-    .stats-inner::before {
-      content: ''; position: absolute; inset: 0; z-index: -2; border-radius: inherit;
-      background: url('hero-bg.jpg') center 40% / cover no-repeat;
-      opacity: 0.42; filter: brightness(1.25);
-      -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 52%, transparent 88%);
-              mask-image: linear-gradient(90deg, #000 0%, #000 52%, transparent 88%);
+    .stats-marquee::before, .stats-marquee::after {
+      content: ''; position: absolute; top: 0; bottom: 0; width: 70px; z-index: 2;
     }
-    .stats-inner::after {
-      content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit;
-      background: linear-gradient(180deg, rgba(14,12,30,0.35) 0%, rgba(14,12,30,0.6) 100%);
+    .stats-marquee::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+    .stats-marquee::after { right: 0; background: linear-gradient(270deg, var(--bg), transparent); }
+    .stats-track {
+      display: flex; gap: 14px; white-space: nowrap; width: max-content;
+      animation: statsScroll 30s linear infinite;
     }
-    .stats-spark {
-      position: absolute; right: 18px; bottom: 14px; width: 16px; height: 16px;
-      color: var(--primary2); opacity: 0.55; z-index: 1;
+    .route-chip {
+      color: #9d8fd6; font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+      background: rgba(167,139,250,0.06); border: 1px solid rgba(167,139,250,0.15);
+      padding: 7px 16px; border-radius: 100px;
     }
-    .stats-inner > div {
-      padding: 4px 22px;
-    }
-    .stats-inner > div:not(:last-child) {
-      border-right: 1px solid rgba(139,92,246,0.18);
-    }
-    .stat-icon {
-      width: 26px; height: 26px; color: var(--primary2);
-      margin: 0 auto 10px; display: block; opacity: 0.9;
-      transition: transform 0.25s ease;
-    }
-    .stat-item:hover .stat-icon { transform: translateY(-2px) scale(1.08); }
-    .stat-number {
-      font-size: 30px; font-weight: 800; letter-spacing: -0.5px; line-height: 1;
-      background: linear-gradient(135deg, var(--primary2), #fff);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      font-variant-numeric: tabular-nums;
-    }
-    .stat-label { font-size: 13px; color: var(--muted); margin-top: 6px; }
-    .wt-live-dot {
-      display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-      background: #22c55e; margin-left: 6px; vertical-align: middle;
-      animation: wt-pulse 2s ease-in-out infinite;
-    }
-    @keyframes wt-pulse {
-      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
-      50%       { opacity: 0.75; box-shadow: 0 0 0 4px rgba(34,197,94,0); }
-    }
+    @keyframes statsScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (max-width: 600px) { .stats-prose { font-size: 16px; } }
 
     /* ── Essentials bar (partners, estilo glass horizontal) ── */
     .essentials-bar {
@@ -1556,15 +1526,6 @@
       .scenic-card { padding: 14px; width: 100%; }
       .scenic-name { font-size: 14px; }
       .scenic-route { font-size: 11px; }
-
-      /* ── Stats — 2×2 ── */
-      .stats-inner { max-width: 100%; grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
-      .stats-inner > div { padding: 0 8px; }
-      .stats-inner > div:not(:last-child) { border-right: none; }
-      .stats-inner > div:nth-child(odd) { border-right: 1px solid var(--border); }
-      .stat-icon { width: 22px; height: 22px; margin-bottom: 6px; }
-      .stat-number { font-size: 26px; }
-      .stat-label { font-size: 11px; }
 
       /* ── Essentials bar — 2 columnas (tablet) ── */
       .essentials-inner { grid-template-columns: repeat(2, 1fr); }
@@ -3104,25 +3065,30 @@
 
   <!-- Stats -->
   <div class="stats">
-      <div class="stats-inner">
-        <div class="stat-item">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>
-          <div class="stat-number" data-count="95" data-suffix="+">0</div>
-          <div class="stat-label" data-i18n="stat_countries">Global coverage</div>
-        </div>
-        <div class="stat-item">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21l5-7 4 4 5-9"/><path d="M3 21h18"/><circle cx="10" cy="14" r="1"/><circle cx="14" cy="18" r="1"/></svg>
-          <div class="stat-number" data-count="13">0</div>
-          <div class="stat-label" data-i18n="stat_scenic">Scenic routes</div>
-        </div>
-        <div class="stat-item">
-          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z"/></svg>
-          <div class="stat-number" data-count="90" data-suffix="s">0</div>
-          <div class="stat-label" data-i18n="stat_realtime2">Real-time data</div>
-        </div>
-        <svg class="stats-spark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c.5 4.5 2.5 6.5 7 7-4.5.5-6.5 2.5-7 7-.5-4.5-2.5-6.5-7-7 4.5-.5 6.5-2.5 7-7z"/></svg>
+    <p class="stats-prose" id="statsProse">
+      From <strong>52 real routes</strong> in <strong>16 countries</strong> to your next trip — free, no signup.
+    </p>
+    <div class="stats-marquee">
+      <div class="stats-track">
+        <span class="route-chip">Madrid → Barcelona</span>
+        <span class="route-chip">Vienna → Prague</span>
+        <span class="route-chip">Nice → Monaco</span>
+        <span class="route-chip">Paris → Amsterdam</span>
+        <span class="route-chip">Zurich → Milan</span>
+        <span class="route-chip">London → Edinburgh</span>
+        <span class="route-chip">Berlin → Prague</span>
+        <span class="route-chip">Lyon → Turin</span>
+        <span class="route-chip">Madrid → Barcelona</span>
+        <span class="route-chip">Vienna → Prague</span>
+        <span class="route-chip">Nice → Monaco</span>
+        <span class="route-chip">Paris → Amsterdam</span>
+        <span class="route-chip">Zurich → Milan</span>
+        <span class="route-chip">London → Edinburgh</span>
+        <span class="route-chip">Berlin → Prague</span>
+        <span class="route-chip">Lyon → Turin</span>
       </div>
     </div>
+  </div>
 
   <!-- Features -->
   <section class="section" id="features">
@@ -3492,7 +3458,7 @@
         footer_copy: '© 2026 GLOSX — All rights reserved.',
         footer_disclaimer: 'WoW Train is an independent travel platform. Bookings are processed through certified partners under their own terms; we are not a party to those transactions. We may receive a commission from qualifying purchases at no extra cost to you.',
         scenic_book: 'Book now', preview_label: 'See it in action', preview_title1: 'Designed for', preview_title2: 'real travelers.', preview_lead: 'GPS detection, real-time schedules, scenic routes and a built-in translator — all in your pocket.', ss_home: 'Choose your country', ss_board: 'Departure board', ss_live: 'Live departures',
-        stat_countries: 'Global coverage', stat_scenic: 'Scenic routes', stat_realtime2: 'Real-time data', stat_live: 'Browsing now',
+        stats_prose: 'From <strong>52 real routes</strong> in <strong>16 countries</strong> to your next trip — free, no signup.', stat_live: 'Browsing now',
         trust_data: 'Real-time data from official railways',
         trust_b1: 'Official GTFS data', trust_b2: 'Live every 90 seconds', trust_b3: 'No sign-up needed', trust_b4: 'Verified schedules & rates',
         nav_adventure: 'Plan your Adventure',
@@ -3561,7 +3527,7 @@
         footer_copy: '© 2026 GLOSX — Todos los derechos reservados.',
         footer_disclaimer: 'WoW Train es una plataforma de viajes independiente. Las reservas se procesan bajo los términos del socio correspondiente; no somos parte de esa transacción. Podemos recibir una comisión por compras cualificadas sin costo adicional para usted.',
         scenic_book: 'Reservar', preview_label: 'Velo en acción', preview_title1: 'Diseñada para', preview_title2: 'viajeros de verdad.', preview_lead: 'Detección por GPS, horarios en tiempo real, rutas escénicas y un traductor integrado — todo en tu bolsillo.', ss_home: 'Elegí tu país', ss_board: 'Tablero de salidas', ss_live: 'Salidas en vivo',
-        stat_countries: 'Cobertura global', stat_scenic: 'Rutas escénicas', stat_realtime2: 'Datos en tiempo real', stat_live: 'Navegando ahora',
+        stats_prose: 'De <strong>52 rutas reales</strong> en <strong>16 países</strong> a tu próximo viaje — gratis, sin registro.', stat_live: 'Navegando ahora',
         trust_data: 'Datos en tiempo real de ferroviarias oficiales',
         trust_b1: 'Datos GTFS oficiales', trust_b2: 'En vivo cada 90 segundos', trust_b3: 'Sin registro', trust_b4: 'Horarios y tarifas verificados',
         nav_adventure: 'Planificá tu aventura',
@@ -3630,7 +3596,7 @@
         footer_copy: '© 2026 GLOSX — Tous droits réservés.',
         footer_disclaimer: 'WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées selon les conditions du partenaire concerné ; nous ne sommes pas partie à cette transaction. Nous pouvons percevoir une commission sur les achats qualifiés sans frais supplémentaires pour vous.',
         scenic_book: 'Réserver', preview_label: 'Voyez-le en action', preview_title1: 'Conçue pour', preview_title2: 'les vrais voyageurs.', preview_lead: 'Détection GPS, horaires en temps réel, itinéraires panoramiques et un traducteur intégré — le tout dans votre poche.', ss_home: 'Choisissez votre pays', ss_board: 'Tableau des départs', ss_live: 'Départs en direct',
-        stat_countries: 'Couverture mondiale', stat_scenic: 'Itinéraires panoramiques', stat_realtime2: 'Données en temps réel', stat_live: 'En ligne maintenant',
+        stats_prose: 'De <strong>52 itinéraires réels</strong> dans <strong>16 pays</strong> vers votre prochain voyage — gratuit, sans inscription.', stat_live: 'En ligne maintenant',
         trust_data: 'Données en temps réel des chemins de fer officiels',
         trust_b1: 'Données GTFS officielles', trust_b2: 'En direct toutes les 90 s', trust_b3: 'Sans inscription', trust_b4: 'Horaires et tarifs vérifiés',
         nav_adventure: 'Planifiez votre aventure',
@@ -3699,7 +3665,7 @@
         footer_copy: '© 2026 GLOSX — Alle Rechte vorbehalten.',
         footer_disclaimer: 'WoW Train ist eine unabhängige Reiseplattform. Buchungen werden gemäß den Bedingungen des jeweiligen Partners abgewickelt; wir sind nicht Teil dieser Transaktion. Wir können eine Provision aus qualifizierenden Käufen ohne zusätzliche Kosten für Sie erhalten.',
         scenic_book: 'Buchen', preview_label: 'In Aktion erleben', preview_title1: 'Gemacht für', preview_title2: 'echte Reisende.', preview_lead: 'GPS-Erkennung, Echtzeit-Fahrpläne, Panoramastrecken und integrierter Übersetzer — alles in deiner Tasche.', ss_home: 'Wähle dein Land', ss_board: 'Abfahrtstafel', ss_live: 'Live-Abfahrten',
-        stat_countries: 'Globale Abdeckung', stat_scenic: 'Panoramastrecken', stat_realtime2: 'Echtzeitdaten', stat_live: 'Jetzt aktiv',
+        stats_prose: 'Von <strong>52 echten Routen</strong> in <strong>16 Ländern</strong> zu deiner nächsten Reise — kostenlos, ohne Anmeldung.', stat_live: 'Jetzt aktiv',
         trust_data: 'Echtzeitdaten offizieller Bahnen',
         trust_b1: 'Offizielle GTFS-Daten', trust_b2: 'Live alle 90 Sekunden', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Geprüfte Fahrpläne & Tarife',
         nav_adventure: 'Dein Abenteuer planen',
@@ -3768,7 +3734,7 @@
         footer_copy: '© 2026 GLOSX — Tutti i diritti riservati.',
         footer_disclaimer: 'WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni vengono elaborate secondo i termini del partner corrispondente; non siamo parte di tale transazione. Potremmo ricevere una commissione sugli acquisti qualificati senza costi aggiuntivi per te.',
         scenic_book: 'Prenota', preview_label: 'Guardalo in azione', preview_title1: 'Progettata per', preview_title2: 'veri viaggiatori.', preview_lead: 'Rilevamento GPS, orari in tempo reale, percorsi panoramici e traduttore integrato — tutto in tasca.', ss_home: 'Scegli il tuo paese', ss_board: 'Tabellone partenze', ss_live: 'Partenze in tempo reale',
-        stat_countries: 'Copertura globale', stat_scenic: 'Percorsi panoramici', stat_realtime2: 'Dati in tempo reale', stat_live: 'Online ora',
+        stats_prose: 'Da <strong>52 percorsi reali</strong> in <strong>16 paesi</strong> al tuo prossimo viaggio — gratis, senza registrazione.', stat_live: 'Online ora',
         trust_data: 'Dati in tempo reale dalle ferrovie ufficiali',
         trust_b1: 'Dati GTFS ufficiali', trust_b2: 'In diretta ogni 90 secondi', trust_b3: 'Nessuna registrazione', trust_b4: 'Orari e tariffe verificati',
         nav_adventure: 'Pianifica la tua avventura',
@@ -3837,7 +3803,7 @@
         footer_copy: '© 2026 GLOSX — Todos os direitos reservados.',
         footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas segundo os termos do parceiro correspondente; não somos parte dessa transação. Podemos receber uma comissão por compras qualificadas sem custo adicional para si.',
         scenic_book: 'Reservar', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
-        stat_countries: 'Cobertura global', stat_scenic: 'Rotas cénicas', stat_realtime2: 'Dados em tempo real', stat_live: 'A navegar agora',
+        stats_prose: 'De <strong>52 rotas reais</strong> em <strong>16 países</strong> para a sua próxima viagem — grátis, sem cadastro.', stat_live: 'A navegar agora',
         trust_data: 'Dados em tempo real de ferrovias oficiais',
         trust_b1: 'Dados GTFS oficiais', trust_b2: 'Ao vivo a cada 90 segundos', trust_b3: 'Sem registo', trust_b4: 'Horários e tarifas verificados',
         nav_adventure: 'Planeia a tua aventura',
@@ -3890,6 +3856,9 @@
         const key = el.getAttribute('data-i18n');
         if (dict[key] !== undefined) el.textContent = dict[key];
       });
+      // Frase de la barra de stats — usa innerHTML porque trae <strong> embebido
+      const statsProse = document.getElementById('statsProse');
+      if (statsProse && dict.stats_prose) statsProse.innerHTML = dict.stats_prose;
       // Traducción de atributos (aria-label/title) para controles sin texto visible
       document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
         const key = el.getAttribute('data-i18n-aria-label');
@@ -4179,36 +4148,6 @@
       return false;
     }
 
-    // ── Stats: animación de conteo al entrar en viewport ──
-    (function () {
-      const stats = document.querySelector('.stats');
-      if (!stats) return;
-      let done = false;
-      function animate() {
-        if (done) return; done = true;
-        document.querySelectorAll('.stat-number[data-count]').forEach(function (el) {
-          const target = parseInt(el.getAttribute('data-count'), 10) || 0;
-          const suffix = el.getAttribute('data-suffix') || '';
-          const dur = 1200, start = performance.now();
-          function step(now) {
-            const p = Math.min((now - start) / dur, 1);
-            const eased = 1 - Math.pow(1 - p, 3);
-            el.textContent = Math.round(target * eased) + suffix;
-            if (p < 1) requestAnimationFrame(step);
-            else el.textContent = target + suffix;
-          }
-          requestAnimationFrame(step);
-        });
-      }
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) { animate(); io.disconnect(); } });
-        }, { threshold: 0.4 });
-        io.observe(stats);
-      } else {
-        animate();
-      }
-    })();
   </script>
 
 <script>
