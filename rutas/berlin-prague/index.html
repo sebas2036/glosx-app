@@ -169,6 +169,9 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -280,12 +283,6 @@
       <li><strong>Consider the Dresden stopover.</strong> Breaking the journey in Dresden (2h from Berlin) can sometimes yield cheaper separate tickets, plus you see one of Germany's most beautiful cities.</li>
       <li><strong>First class</strong> on EuroCity is comfortable and often worth it for a 4h+ journey — check if the price difference is small.</li>
     </ul>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Prague</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=333&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=berlin&to=prague" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_berlin_prague_en')">Check schedules &amp; book →</a>
     </p>
@@ -352,7 +349,13 @@
       </div>
     </div>
   
-  <div class="related-routes">
+      <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/18192580/pexels-photo-18192580.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Aerial view of Prague old town with iconic St. George's Basilica and scenic cityscape." loading="lazy" />
+      <img src="https://images.pexels.com/photos/31914950/pexels-photo-31914950.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Dramatic view of historical buildings under a cloudy Prague sky in the city center." loading="lazy" />
+      <img src="https://images.pexels.com/photos/16922426/pexels-photo-16922426.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Explore the intricate Gothic architecture of St. Vitus Cathedral in Prague, a stunning landmark." loading="lazy" />
+    </div>
+
+    <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">
       <a href="/rutas/prague-budapest/" class="related-link">Prague to Budapest</a>

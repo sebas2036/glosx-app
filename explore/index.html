@@ -25,12 +25,6 @@
     gtag('config', 'G-XPTSM1EJQJ');
   </script>
 
-  <!-- MailerLite Universal -->
-  <script>
-  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','2463301');
-  </script>
-
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -135,6 +129,14 @@
     .signup-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
     .signup-msg { font-size: 13px; color: #a78bfa; width: 100%; text-align: center; min-height: 0; }
     .signup-trust { font-size: 12px; color: var(--muted); width: 100%; text-align: center; margin-top: 6px; }
+    .wa-btn {
+      display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-size: 14px; font-weight: 700;
+      color: #fff; cursor: pointer; white-space: nowrap; text-decoration: none;
+      background: linear-gradient(135deg, #25D366, #128C7E); border: none; border-radius: 100px; padding: 12px 22px;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.35); transition: transform .2s, box-shadow .2s, filter .2s;
+    }
+    .wa-btn:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 28px rgba(37,211,102,0.5); }
+    .wa-btn svg { width: 18px; height: 18px; flex: 0 0 auto; }
     footer { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 24px 4px; }
     footer a { color: var(--muted); margin: 0 8px; }
     @media (max-width: 600px) {
@@ -163,8 +165,11 @@
   <div class="signup-bar" id="signupBar">
     <div class="signup-inner">
       <div class="signup-count"><b id="selCount">0</b> <span data-i18n="exp_count">routes selected</span></div>
-      <div class="ml-embedded" data-form="y1D3vA"></div>
-      <div class="signup-trust" data-i18n="exp_trust">Free guides, no spam, unsubscribe anytime.</div>
+      <a href="#" id="waGuidesBtn" class="wa-btn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.15c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.91-1.26-4.81-4.19-4.96-4.38-.14-.2-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.26-.29.58-.36.77-.36h.56c.18 0 .42-.03.65.5.24.53.8 1.83.87 1.96.07.14.12.3.02.49-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.01 1.12.99 2.05 1.3 2.34 1.45.29.14.46.12.62-.07.17-.2.72-.84.92-1.12.19-.29.38-.24.63-.15.26.1 1.62.77 1.9.91.29.15.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+        <span data-i18n="exp_wa_cta">Send me the guides on WhatsApp</span>
+      </a>
+      <div class="signup-trust" data-i18n="exp_trust">Free guides, no spam.</div>
     </div>
   </div>
 
@@ -272,7 +277,19 @@
       if (window.applyExploreI18n) window.applyExploreI18n();
     }
 
-    function updateCount(){ document.getElementById('selCount').textContent = selected.size; }
+    function updateCount(){
+      document.getElementById('selCount').textContent = selected.size;
+      var lines = [];
+      ROUTES.forEach(function (r) {
+        var name = r[0], slug = r[2];
+        if (selected.has(name) && GUIDES[slug]) lines.push(name + ': https://glosx.app' + GUIDES[slug]);
+      });
+      var msg = lines.length
+        ? "Here are the train guides I picked on WoW Train:\n\n" + lines.join('\n')
+        : "Check out WoW Train's free European train route guides: https://glosx.app/explore/";
+      var waBtn = document.getElementById('waGuidesBtn');
+      if (waBtn) waBtn.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msg);
+    }
 
     // Filtros por país (derivados)
     var countries = {};
@@ -292,12 +309,12 @@
     }
 
     render('All');
+    updateCount();
 
-    // El formulario es el embed oficial de MailerLite (<div class="ml-embedded" data-form="y1D3vA">),
-    // renderizado por universal.js: agrega al grupo "Route guides", aplica double opt-in y dispara la automatización.
-    try { document.querySelector('.ml-embedded').addEventListener('submit', function () {
-      try { gtag('event', 'route_signup', { routes_count: selected.size }); } catch (e) {}
-    }, true); } catch (e) {}
+    var waBtnTrack = document.getElementById('waGuidesBtn');
+    if (waBtnTrack) waBtnTrack.addEventListener('click', function () {
+      try { gtag('event', 'route_whatsapp_share', { routes_count: selected.size }); } catch (e) {}
+    });
   })();
   </script>
 
@@ -305,12 +322,12 @@
   <script>
   (function(){
     var T = {
-      en:{exp_badge:'Routes',exp_title1:'The free guide to',exp_title2:"Europe's best train routes.",exp_lead:"30 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.",exp_sub:'Tap the routes you like, then grab your guide below.',exp_quick_cta:'Just want all 30 guides? Get them now →',exp_trust:'Free guides, no spam, unsubscribe anytime.',exp_count:'routes selected',exp_all:'All',exp_guide_ready:'Guide ready →',exp_guide_soon:'Guide on the way',exp_home:'← Home'},
-      es:{exp_badge:'Rutas',exp_title1:'La guía gratis de',exp_title2:'las mejores rutas en tren de Europa.',exp_lead:'30 rutas reales — precios, estaciones, paisajes y cuándo reservar. Elegí las que querés y las guías completas llegan directo a tu casilla.',exp_sub:'Tocá las rutas que te gusten y conseguí tu guía abajo.',exp_quick_cta:'¿Querés las 30 guías? Conseguilas ahora →',exp_trust:'Guías gratis, sin spam, date de baja cuando quieras.',exp_count:'rutas seleccionadas',exp_all:'Todas',exp_guide_ready:'Guía lista →',exp_guide_soon:'Guía en camino',exp_home:'← Inicio'},
-      fr:{exp_badge:'Itinéraires',exp_title1:'Le guide gratuit des',exp_title2:"meilleurs itinéraires en train d'Europe.",exp_lead:"30 itinéraires réels — prix, gares, paysages et quand réserver. Choisissez ceux que vous voulez et les guides complets arrivent directement dans votre boîte.",exp_sub:'Touchez les itinéraires qui vous plaisent, puis récupérez votre guide ci-dessous.',exp_quick_cta:'Vous voulez les 30 guides ? Obtenez-les maintenant →',exp_trust:'Guides gratuits, sans spam, désabonnement à tout moment.',exp_count:'itinéraires sélectionnés',exp_all:'Tous',exp_guide_ready:'Guide prêt →',exp_guide_soon:'Guide à venir',exp_home:'← Accueil'},
-      de:{exp_badge:'Routen',exp_title1:'Der kostenlose Guide zu',exp_title2:'Europas besten Zugrouten.',exp_lead:'30 echte Routen — Preise, Bahnhöfe, Landschaft und wann man bucht. Wähle deine Favoriten und die kompletten Guides landen direkt in deinem Postfach.',exp_sub:'Tippe auf die Routen, die dir gefallen, und hol dir deinen Guide unten.',exp_quick_cta:'Willst du alle 30 Guides? Jetzt holen →',exp_trust:'Kostenlose Guides, kein Spam, jederzeit abbestellbar.',exp_count:'Routen ausgewählt',exp_all:'Alle',exp_guide_ready:'Guide bereit →',exp_guide_soon:'Guide folgt',exp_home:'← Startseite'},
-      it:{exp_badge:'Itinerari',exp_title1:'La guida gratuita ai',exp_title2:"migliori itinerari in treno d'Europa.",exp_lead:"30 itinerari reali — prezzi, stazioni, paesaggi e quando prenotare. Scegli quelli che vuoi e le guide complete arrivano direttamente nella tua casella.",exp_sub:'Tocca gli itinerari che ti piacciono, poi prendi la tua guida qui sotto.',exp_quick_cta:'Vuoi tutte le 30 guide? Prendile ora →',exp_trust:'Guide gratuite, niente spam, disiscrizione in qualsiasi momento.',exp_count:'itinerari selezionati',exp_all:'Tutti',exp_guide_ready:'Guida pronta →',exp_guide_soon:'Guida in arrivo',exp_home:'← Home'},
-      pt:{exp_badge:'Rotas',exp_title1:'O guia grátis das',exp_title2:'melhores rotas de trem da Europa.',exp_lead:'30 rotas reais — preços, estações, paisagens e quando reservar. Escolha as que você quer e os guias completos chegam direto na sua caixa.',exp_sub:'Toque nas rotas que você gosta e pegue seu guia abaixo.',exp_quick_cta:'Quer os 30 guias? Pegue agora →',exp_trust:'Guias grátis, sem spam, cancele quando quiser.',exp_count:'rotas selecionadas',exp_all:'Todas',exp_guide_ready:'Guia pronto →',exp_guide_soon:'Guia a caminho',exp_home:'← Início'}
+      en:{exp_badge:'Routes',exp_title1:'The free guide to',exp_title2:"Europe's best train routes.",exp_lead:"30 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.",exp_sub:'Tap the routes you like, then grab your guide below.',exp_quick_cta:'Just want all 30 guides? Get them now →',exp_wa_cta:'Send me the guides on WhatsApp',exp_trust:'Free guides, no spam.',exp_count:'routes selected',exp_all:'All',exp_guide_ready:'Guide ready →',exp_guide_soon:'Guide on the way',exp_home:'← Home'},
+      es:{exp_badge:'Rutas',exp_title1:'La guía gratis de',exp_title2:'las mejores rutas en tren de Europa.',exp_lead:'30 rutas reales — precios, estaciones, paisajes y cuándo reservar. Elegí las que querés y las guías completas llegan directo a tu casilla.',exp_sub:'Tocá las rutas que te gusten y conseguí tu guía abajo.',exp_quick_cta:'¿Querés las 30 guías? Conseguilas ahora →',exp_wa_cta:'Enviarme las guías por WhatsApp',exp_trust:'Guías gratis, sin spam.',exp_count:'rutas seleccionadas',exp_all:'Todas',exp_guide_ready:'Guía lista →',exp_guide_soon:'Guía en camino',exp_home:'← Inicio'},
+      fr:{exp_badge:'Itinéraires',exp_title1:'Le guide gratuit des',exp_title2:"meilleurs itinéraires en train d'Europe.",exp_lead:"30 itinéraires réels — prix, gares, paysages et quand réserver. Choisissez ceux que vous voulez et les guides complets arrivent directement dans votre boîte.",exp_sub:'Touchez les itinéraires qui vous plaisent, puis récupérez votre guide ci-dessous.',exp_quick_cta:'Vous voulez les 30 guides ? Obtenez-les maintenant →',exp_wa_cta:'Envoyer les guides sur WhatsApp',exp_trust:'Guides gratuits, sans spam.',exp_count:'itinéraires sélectionnés',exp_all:'Tous',exp_guide_ready:'Guide prêt →',exp_guide_soon:'Guide à venir',exp_home:'← Accueil'},
+      de:{exp_badge:'Routen',exp_title1:'Der kostenlose Guide zu',exp_title2:'Europas besten Zugrouten.',exp_lead:'30 echte Routen — Preise, Bahnhöfe, Landschaft und wann man bucht. Wähle deine Favoriten und die kompletten Guides landen direkt in deinem Postfach.',exp_sub:'Tippe auf die Routen, die dir gefallen, und hol dir deinen Guide unten.',exp_quick_cta:'Willst du alle 30 Guides? Jetzt holen →',exp_wa_cta:'Guides per WhatsApp senden',exp_trust:'Kostenlose Guides, kein Spam.',exp_count:'Routen ausgewählt',exp_all:'Alle',exp_guide_ready:'Guide bereit →',exp_guide_soon:'Guide folgt',exp_home:'← Startseite'},
+      it:{exp_badge:'Itinerari',exp_title1:'La guida gratuita ai',exp_title2:"migliori itinerari in treno d'Europa.",exp_lead:"30 itinerari reali — prezzi, stazioni, paesaggi e quando prenotare. Scegli quelli che vuoi e le guide complete arrivano direttamente nella tua casella.",exp_sub:'Tocca gli itinerari che ti piacciono, poi prendi la tua guida qui sotto.',exp_quick_cta:'Vuoi tutte le 30 guide? Prendile ora →',exp_wa_cta:'Inviami le guide su WhatsApp',exp_trust:'Guide gratuite, niente spam.',exp_count:'itinerari selezionati',exp_all:'Tutti',exp_guide_ready:'Guida pronta →',exp_guide_soon:'Guida in arrivo',exp_home:'← Home'},
+      pt:{exp_badge:'Rotas',exp_title1:'O guia grátis das',exp_title2:'melhores rotas de trem da Europa.',exp_lead:'30 rotas reais — preços, estações, paisagens e quando reservar. Escolha as que você quer e os guias completos chegam direto na sua caixa.',exp_sub:'Toque nas rotas que você gosta e pegue seu guia abaixo.',exp_quick_cta:'Quer os 30 guias? Pegue agora →',exp_wa_cta:'Enviar as guias pelo WhatsApp',exp_trust:'Guias grátis, sem spam.',exp_count:'rotas selecionadas',exp_all:'Todas',exp_guide_ready:'Guia pronto →',exp_guide_soon:'Guia a caminho',exp_home:'← Início'}
     };
     function detect(){
       try { if(localStorage.getItem('glosx_lang_manual')==='1'){ var s=localStorage.getItem('glosx_lang'); if(s&&T[s]) return s; } } catch(e){}

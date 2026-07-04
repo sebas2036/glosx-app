@@ -134,6 +134,9 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -264,15 +267,16 @@
     <p>
       Ready to go? Check live <strong>Nice → Monaco</strong> times and fares and book your seat on Trainline — secure checkout, mobile tickets, every operator in one search.
     </p>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Monaco</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=4646&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=nice&to=monaco" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_nice_monaco_en')">Check schedules &amp; book →</a>
     </p>
+
+    <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/7372484/pexels-photo-7372484.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Monte Carlo Casino, Monaco" loading="lazy" />
+      <img src="https://images.pexels.com/photos/11956743/pexels-photo-11956743.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Monaco harbor and coastline" loading="lazy" />
+      <img src="https://images.pexels.com/photos/30673492/pexels-photo-30673492.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Monaco skyline" loading="lazy" />
+    </div>
+
     <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">

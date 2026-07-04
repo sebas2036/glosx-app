@@ -134,6 +134,9 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -270,15 +273,15 @@
     <p>
       Ready to go? Check live <strong>Milan → Rome</strong> times and fares and book your seat on Trainline — secure checkout, mobile tickets, every operator in one search.
     </p>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Rome</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=92&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=milan&to=rome" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_milan_rome_en')">Check schedules &amp; book →</a>
     </p>
+        <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/27541217/pexels-photo-27541217.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="The Colosseum stands majestically amidst bustling Rome, an iconic remnant of ancient architecture." loading="lazy" />
+      <img src="https://images.pexels.com/photos/33008929/pexels-photo-33008929.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Beautiful view of Ponte Sant'Angelo spanning the Tiber River in Rome, Italy under a clear sky." loading="lazy" />
+      <img src="https://images.pexels.com/photos/20559554/pexels-photo-20559554.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Explore the grandeur of Vatican City's architecture with majestic columns and statues." loading="lazy" />
+    </div>
+
     <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">

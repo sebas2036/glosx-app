@@ -72,6 +72,9 @@
     .related-grid { display: flex; flex-wrap: wrap; gap: 10px; }
     .related-link { display: inline-block; background: rgba(124,58,237,0.10); border: 1px solid rgba(139,92,246,0.3); border-radius: 100px; padding: 8px 18px; font-size: 14px; font-weight: 600; color: #a78bfa; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -157,14 +160,15 @@
     <h2>The Leaning Tower day trip</h2><p>With trains every half hour, Pisa works perfectly as a half-day trip from Florence — see the Piazza dei Miracoli and the famous tower, then be back in Florence for the afternoon. Combine it with Lucca on the same line if you have a full day.</p>
     <hr/>
     <p>Ready to go? Check live <strong>Florence → Pisa</strong> times and fares and book your seat on Trainline — secure checkout, mobile tickets, every operator in one search.</p>
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Pisa</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=409&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=florence&to=pisa" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_florence_pisa_en')">Check schedules &amp; book →</a>
     </p>
+        <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/18463143/pexels-photo-18463143.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Iconic view of the Leaning Tower and Pisa Cathedral in Tuscany, Italy, on a clear sunny day." loading="lazy" />
+      <img src="https://images.pexels.com/photos/10733379/pexels-photo-10733379.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Leaning Tower of Pisa in Italy framed by rooftops and distant mountains under a clear blue sky." loading="lazy" />
+      <img src="https://images.pexels.com/photos/22848767/pexels-photo-22848767.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Iconic Pisa Baptistery and Cathedral with tourists, ideal for travel or architecture themes." loading="lazy" />
+    </div>
+
     <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">

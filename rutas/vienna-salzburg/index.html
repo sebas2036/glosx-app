@@ -134,6 +134,9 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -264,15 +267,15 @@
     <p>
       Ready to go? Check live <strong>Vienna → Salzburg</strong> times and fares and book your seat on Trainline — secure checkout, mobile tickets, every operator in one search.
     </p>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Salzburg</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=354&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=vienna&to=salzburg" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_vienna_salzburg_en')">Check schedules &amp; book →</a>
     </p>
+        <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/34190244/pexels-photo-34190244.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Explore the architectural charm of Salzburg's Dom Quartier with Hohensalzburg Fortress in the backdrop." loading="lazy" />
+      <img src="https://images.pexels.com/photos/37887299/pexels-photo-37887299.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="View of Hohensalzburg Castle from Mirabell Gardens in Salzburg. A blend of historical architecture and nature." loading="lazy" />
+      <img src="https://images.pexels.com/photos/37861319/pexels-photo-37861319.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="View of Hohensalzburg Fortress with historic Salzburg architecture and lush greenery on a sunny day." loading="lazy" />
+    </div>
+
     <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">

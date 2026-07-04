@@ -134,6 +134,9 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -267,6 +270,12 @@
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://www.thetrainline.com/" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_stockholm_oslo_en')">Check schedules on Trainline →</a>
     </p>
+        <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/24024574/pexels-photo-24024574.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Stunning view of the contemporary Munch Museum and Oslo skyline reflected on the waterfront under a clear blue sky." loading="lazy" />
+      <img src="https://images.pexels.com/photos/19549105/pexels-photo-19549105.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Stunning view of Oslo Opera House illuminated at night with city reflections." loading="lazy" />
+      <img src="https://images.pexels.com/photos/34931888/pexels-photo-34931888.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="View of Oslo City Hall, Norway with fountain and statues on a cloudy day." loading="lazy" />
+    </div>
+
     <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">

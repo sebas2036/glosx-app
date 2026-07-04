@@ -72,6 +72,9 @@
     .related-grid { display: flex; flex-wrap: wrap; gap: 10px; }
     .related-link { display: inline-block; background: rgba(124,58,237,0.10); border: 1px solid rgba(139,92,246,0.3); border-radius: 100px; padding: 8px 18px; font-size: 14px; font-weight: 600; color: #a78bfa; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -157,14 +160,15 @@
     <h2>Málaga: gateway to the Costa del Sol</h2><p>Beyond the city itself — with its cathedral, Picasso museum and beaches — Málaga is the rail gateway to the whole southern coast. Towns like Marbella and Nerja have no train station, so most visitors arrive by AVE to Málaga and continue by bus or transfer along the Costa del Sol.</p>
     <hr/>
     <p>Ready to go? Check live <strong>Madrid → Málaga</strong> times and fares and book your seat on Trainline — secure checkout, mobile tickets, every operator in one search.</p>
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Málaga</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=35920&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=madrid&to=malaga" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_madrid_malaga_en')">Check schedules &amp; book →</a>
     </p>
+        <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/38322218/pexels-photo-38322218.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Explore the historic architecture and cityscape of Malaga, Spain." loading="lazy" />
+      <img src="https://images.pexels.com/photos/38322166/pexels-photo-38322166.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Stunning aerial shot of Malaga's bullring surrounded by modern buildings and the Mediterranean Sea." loading="lazy" />
+      <img src="https://images.pexels.com/photos/37373117/pexels-photo-37373117.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Stunning aerial shot of Málaga, Spain, showcasing landmarks at sunset." loading="lazy" />
+    </div>
+
     <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">

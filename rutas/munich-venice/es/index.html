@@ -208,6 +208,9 @@
       .facts { grid-template-columns: 1fr 1fr; gap: 16px; }
       .related-grid { grid-template-columns: 1fr; }
     }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
 </head>
 <body>
@@ -303,12 +306,6 @@
     <p>
       ¿Listo para ir? Consultá los horarios y precios de <strong>Múnich → Venecia</strong> en vivo y reservá tu asiento en Trainline — pago seguro, billetes en el móvil y todos los operadores en una sola búsqueda.
     </p>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Reservá tickets, traslados y experiencias en Venecia</h2>
-      <p>Billetes de tren, traslados desde el aeropuerto y experiencias mejor valoradas — reservá en un clic.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=es&amp;city_id=117&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       ¿Preferís comparar todos los operadores? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=munich&to=venice" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_munich_venice_es')">Ver horarios y reservar →</a>
     </p>
@@ -359,7 +356,12 @@
         </a>
       </div>
     </div>
-  </main>
+      <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/18781080/pexels-photo-18781080.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Charming Venetian buildings and tower in warm sunlight creating classic cityscape." loading="lazy" />
+      <img src="https://images.pexels.com/photos/20052608/pexels-photo-20052608.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Explore the iconic cityscape of Venice's Grand Canal with stunning architecture and vibrant colors." loading="lazy" />
+      <img src="https://images.pexels.com/photos/19663612/pexels-photo-19663612.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Explore the stunning architecture of Venice's iconic basilica with majestic domes under a bright blue sky." loading="lazy" />
+    </div>
+    </main>
 
   <footer>
     <p>© 2026 GLOSX — WoW Train</p>

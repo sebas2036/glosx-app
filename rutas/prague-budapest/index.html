@@ -224,6 +224,9 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -330,12 +333,6 @@
       <li><strong>Consider a railpass</strong> if you're combining this with other Central European routes — it can work out cheaper across multiple legs.</li>
       <li><strong>First class</strong> on EuroCity is often only €10–€15 more and worth it for a 6h+ journey.</li>
     </ul>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Budapest</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=307&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=prague&to=budapest" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_prague_budapest_en')">Check schedules &amp; book →</a>
     </p>
@@ -405,7 +402,13 @@
       </div>
     </div>
   
-  <div class="related-routes">
+      <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/16532817/pexels-photo-16532817.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="The iconic dome of the Hungarian Parliament Building in Budapest, bathed in sunlight." loading="lazy" />
+      <img src="https://images.pexels.com/photos/16451141/pexels-photo-16451141.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Buda Castle glowing at night, reflecting on the Danube River in Budapest, Hungary." loading="lazy" />
+      <img src="https://images.pexels.com/photos/4597879/pexels-photo-4597879.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="A breathtaking aerial view of Budapest with the iconic Chain Bridge over the Danube." loading="lazy" />
+    </div>
+
+    <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">
       <a href="/rutas/berlin-prague/" class="related-link">Berlin to Prague</a>

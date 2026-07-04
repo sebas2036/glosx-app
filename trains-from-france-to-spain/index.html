@@ -158,6 +158,9 @@
       nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; }
       .route-grid { grid-template-columns: 1fr; }
     }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
 </head>
 <body>
@@ -241,14 +244,8 @@
     <p>
       For longer journeys — say, Paris to Madrid — a flight is faster overall, but the overnight or daytime train is a genuine experience in itself.
     </p>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Barcelona</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=108&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
-      Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/redirect?origin=Paris+Nord&destination=Barcelona+Sants&lang=en" target="_blank" rel="noopener sponsored" onclick="trackTrainline('hub_france_spain')">Check schedules on Trainline →</a>
+      Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=paris&to=barcelona" target="_blank" rel="noopener sponsored" onclick="trackTrainline('hub_france_spain')">Check schedules &amp; book →</a>
     </p>
     <div class="faq">
       <h2>Frequently asked questions</h2>
@@ -291,7 +288,12 @@
         <div class="details"><span class="tag"><strong>~3h 20m</strong> · Eurostar direct</span></div>
       </a>
     </div>
-  </main>
+      <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/16984552/pexels-photo-16984552.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Capture of the iconic Sagrada Familia in Barcelona at sunset with reflections on a nearby pond." loading="lazy" />
+      <img src="https://images.pexels.com/photos/17889942/pexels-photo-17889942.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Stunning aerial shot of the iconic Sagrada Familia cathedral in Barcelona, showcasing its intricate architecture and surrounding urban landscape." loading="lazy" />
+      <img src="https://images.pexels.com/photos/27348502/pexels-photo-27348502.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Gaudí's iconic mosaic architecture in Park Güell with a view of Barcelona's cityscape." loading="lazy" />
+    </div>
+    </main>
 
   <footer>
     <p>© 2026 GLOSX — WoW Train</p>

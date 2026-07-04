@@ -144,6 +144,9 @@
       .hero { flex-direction: column; align-items: center; }
       .hero-media { flex: 0 0 auto; width: 100%; max-width: 340px; }
     }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
 </head>
 <body>
@@ -166,7 +169,7 @@
           <video src="/destinos/video/bled.mp4" poster="/destinos/video/bled-poster.jpg"
                  controls playsinline preload="metadata" muted loop></video>
         </div>
-        <a href="https://www.thetrainline.com/train-times/vienna-to-ljubljana"
+        <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=vienna&to=ljubljana"
            class="cta-btn-inline" target="_blank" rel="noopener sponsored"
            onclick="trackTrainline('dest_bled_en')">View timetables and tickets on Trainline →</a>
       </div>
@@ -207,15 +210,14 @@
     <p>
       You've seen it. Now go. The gateway is <strong>Ljubljana</strong> — book your train there, then it's a short regional hop to the lake. Trainline covers every operator in one secure checkout.
     </p>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=345&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
-      Prefer to compare every rail operator? <a href="https://www.thetrainline.com/train-times/vienna-to-ljubljana" target="_blank" rel="noopener sponsored" onclick="trackTrainline('dest_bled_en')">Check schedules on Trainline →</a>
+      Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=vienna&to=ljubljana" target="_blank" rel="noopener sponsored" onclick="trackTrainline('dest_bled_en')">Check schedules &amp; book →</a>
     </p>
+        <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/11003575/pexels-photo-11003575.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Bled Castle and St. Martin's Church, Slovenia" loading="lazy" />
+      <img src="https://images.pexels.com/photos/258136/pexels-photo-258136.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Lake Bled with church on island, Julian Alps" loading="lazy" />
+      <img src="https://images.pexels.com/photos/32281453/pexels-photo-32281453.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Lake Bled with the iconic church and castle, Slovenia" loading="lazy" />
+    </div>
     </main>
 
   <footer>

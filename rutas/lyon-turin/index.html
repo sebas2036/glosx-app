@@ -221,6 +221,9 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -352,12 +355,6 @@
     <p>
       Ready to go? Check live <strong>Lyon → Turin</strong> times and fares and book your seat on Trainline, the official European booking platform — secure checkout, mobile tickets, every operator in one search.
     </p>
-
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Lyon</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=365009&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=lyon&to=turin" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_lyon_turin_en')">Check schedules &amp; book →</a>
     </p>
@@ -409,7 +406,13 @@
       </div>
     </div>
   
-  <div class="related-routes">
+      <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/33040847/pexels-photo-33040847.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Discover the stunning cityscape of Turin with the iconic Mole Antonelliana and the Alps in the background." loading="lazy" />
+      <img src="https://images.pexels.com/photos/14699793/pexels-photo-14699793.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="View of Turin's skyline with the iconic Mole Antonelliana landmark under clear skies." loading="lazy" />
+      <img src="https://images.pexels.com/photos/16430460/pexels-photo-16430460.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Stunning view of the historic Superga Basilica in Turin, Italy, bathed in sunlight against a clear blue sky." loading="lazy" />
+    </div>
+
+    <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">
       <a href="/rutas/paris-barcelona/" class="related-link">Paris to Barcelona</a>

@@ -72,6 +72,9 @@
     .related-grid { display: flex; flex-wrap: wrap; gap: 10px; }
     .related-link { display: inline-block; background: rgba(124,58,237,0.10); border: 1px solid rgba(139,92,246,0.3); border-radius: 100px; padding: 8px 18px; font-size: 14px; font-weight: 600; color: #a78bfa; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -157,14 +160,15 @@
     
     <hr/>
     <p>Ready to go? Check live <strong>Frankfurt → Munich</strong> times and fares and book your seat on Trainline — secure checkout, mobile tickets, every operator in one search.</p>
-    <div class="klook-widget" style="margin:40px 0 8px;">
-      <h2>Book your tickets, transfers &amp; experiences in Munich</h2>
-      <p>Train tickets, airport transfers and top-rated experiences — compare and book in a click.</p>
-      <script async src="https://tpwidg.com/content?currency=EUR&amp;trs=534570&amp;shmarker=734304&amp;locale=en&amp;city_id=118&amp;category=5&amp;amount=3&amp;powered_by=true&amp;campaign_id=137&amp;promo_id=4497" charset="utf-8"></script>
-    </div>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
       Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=frankfurt&to=munich" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_frankfurt_munich_en')">Check schedules &amp; book →</a>
     </p>
+        <div class="photo-grid">
+      <img src="https://images.pexels.com/photos/18558643/pexels-photo-18558643.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="A majestic gothic clock tower in Munich with dramatic clouds in the background." loading="lazy" />
+      <img src="https://images.pexels.com/photos/15926306/pexels-photo-15926306.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Capture of St. Michael's Church and Frauenkirche tower in Munich, Germany, under a clear blue sky." loading="lazy" />
+      <img src="https://images.pexels.com/photos/23106809/pexels-photo-23106809.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Aerial photo showcasing the historic architecture and vibrant rooftops of Munich's old town." loading="lazy" />
+    </div>
+
     <div class="related-routes">
     <h2>More European train routes</h2>
     <div class="related-grid">
