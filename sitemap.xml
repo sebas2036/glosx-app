@@ -31,6 +31,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://glosx.app/blog-klook-vs-trainline.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://glosx.app/blog-night-trains-europe.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
