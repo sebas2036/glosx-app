@@ -4038,7 +4038,7 @@
     const KLOOK_HOTEL_CITIES = [
       'Amsterdam','Barcelona','Berlin','Bordeaux','Brno','Bruges','Brussels','Budapest',
       'Copenhagen','Edinburgh','Florence','Frankfurt','Geneva','Graz','Innsbruck',
-      'Interlaken','Lauterbrunnen','Liverpool','London','Lucerne','Lyon','Madrid',
+      'Interlaken','Jungfraujoch','Lauterbrunnen','Liverpool','London','Lucerne','Lyon','Madrid',
       'Manchester','Milan','Monaco','Munich','Naples','Nice','Oxford','Paris','Prague',
       'Rome','Salzburg','Sargans','Seville','Stockholm','Tende','Turin','Valencia',
       'Venice','Vienna','York','Zermatt','Zurich'
@@ -5125,8 +5125,8 @@
       const stations = (s.estacion_salida && s.estacion_llegada)
         ? `${s.estacion_salida} → ${s.estacion_llegada}`
         : `${s.origen} → ${s.destino}`;
-      const noTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n|circumvesuviana/i.test(
-        [op, s.tipo_tren_sugerido, stations].join(' ')
+      const noTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n|circumvesuviana|jungfraujoch|jungfrau/i.test(
+        [op, s.tipo_tren_sugerido, stations, s.origen, s.destino].join(' ')
       );
       const ticketUrl = noTrain
         ? `https://www.google.com/maps/dir/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
