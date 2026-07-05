@@ -2361,7 +2361,7 @@
   .ai-vip-icon img { width:100%; height:100%; object-fit:contain; border-radius:9px; background:#fff; padding:5px; }
   .ai-vip-name { font-size: 13px; font-weight: 600; color: #fff; }
   .ai-vip-sub { font-size: 11px; color: rgba(255,255,255,0.45); }
-  .ai-essential-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .ai-essential-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
   .ai-ess-item {
     display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 8px; border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
@@ -2372,7 +2372,7 @@
   .ai-ess-icon svg { width:16px; height:16px; }
   .ai-ess-name { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); text-align:center; }
   .ai-ess-cta { font-size: 9px; color: rgba(167,139,250,0.6); text-align:center; }
-  @media (max-width: 600px) { .ai-vip-row { grid-template-columns: 1fr; } .ai-essential-row { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 600px) { .ai-vip-row { grid-template-columns: 1fr; } }
   .ai-partners {
     display: flex;
     gap: 16px;
@@ -2585,10 +2585,6 @@
           </a>
         </div>
         <div class="ai-essential-row">
-          <a href="#" onclick="goPartner('klook',event)" class="ai-ess-item">
-            <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2"/></svg></div>
-            <span class="ai-ess-name">Klook</span><span class="ai-ess-cta">City Passes</span>
-          </a>
           <a href="#" onclick="goPartner('kiwitaxi',event)" class="ai-ess-item">
             <div class="ai-ess-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v9a2 2 0 01-2 2h-2"/><circle cx="9" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
             <span class="ai-ess-name">KiwiTaxi</span><span class="ai-ess-cta">Transfers</span>
