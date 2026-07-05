@@ -5316,6 +5316,36 @@
       photo: 'https://balandret.com/wp-content/uploads/2022/03/Hotel-en-Playa-Valencia.jpg',
       url: `${PROXY_BASE}/klook-hotel?city=valencia`,
     },
+    bordeaux: {
+      name: 'InterContinental Bordeaux – Le Grand Hôtel',
+      loc: 'Bordeaux, France',
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Fa%C3%A7ade_Grand_H%C3%B4tel_de_Bordeaux.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=bordeaux`,
+    },
+    graz: {
+      name: 'Schlossberg Hotel',
+      loc: 'Graz, Austria',
+      photo: 'https://backend.schlossberghotel.at/wp-content/uploads/2023/11/KurtBauer_Schlossberghotel_FIN-4672-scaled.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=graz`,
+    },
+    sargans: {
+      name: 'Hotel Post Sargans',
+      loc: 'Sargans, Switzerland',
+      photo: 'https://static.wixstatic.com/media/6f78ae_b5faa03b72bf47b8ad119ed8d06cc9d5~mv2.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=sargans`,
+    },
+    tende: {
+      name: 'Hôtel du Centre',
+      loc: 'Tende, France',
+      photo: 'https://hotel-du-centre-tende.fr/og-image.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=tende`,
+    },
+    bruges: {
+      name: 'Hotel Heritage',
+      loc: 'Bruges, Belgium',
+      photo: 'https://www.hotel-heritage.com/wp-content/uploads/elementor/thumbs/289A0021-res7vp7qbz0q15g3rbg8tyy91gvwawbd8f3n5fvlnu.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=bruges`,
+    },
   };
   function findCuratedHotel(city) {
     const key = (city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
