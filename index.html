@@ -1065,10 +1065,11 @@
       box-shadow: 0 24px 60px rgba(0,0,0,0.45);
     }
     .essentials-inner {
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      display: flex; flex-wrap: wrap; justify-content: center;
       gap: 8px;
     }
     .essential-item {
+      flex: 1 1 calc(33.333% - 6px); min-width: 220px;
       display: flex; align-items: center; gap: 16px;
       padding: 16px 20px; border-radius: 14px;
       border: 1px solid rgba(168,85,247,0.18);
@@ -1512,7 +1513,7 @@
       .hero { padding: 100px 20px 60px; }
 
       /* ── Essentials bar — 1 columna (móvil) ── */
-      .essentials-inner { grid-template-columns: 1fr; }
+      .essential-item { flex-basis: 100%; }
       /* ── VIP — 1 columna (móvil) ── */
       .vip-inner { grid-template-columns: 1fr; }
       /* ── Descubramos juntos — 1 columna (móvil) ── */
@@ -1534,8 +1535,7 @@
       .scenic-name { font-size: 14px; }
       .scenic-route { font-size: 11px; }
 
-      /* ── Essentials bar — 2 columnas (tablet) ── */
-      .essentials-inner { grid-template-columns: repeat(2, 1fr); }
+      /* ── Essentials bar — ajuste de padding (móvil) ── */
       .essential-item { padding: 14px 16px; gap: 14px; }
       .essential-title { font-size: 15px; }
 
