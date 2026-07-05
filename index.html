@@ -5346,6 +5346,36 @@
       photo: 'https://www.hotel-heritage.com/wp-content/uploads/elementor/thumbs/289A0021-res7vp7qbz0q15g3rbg8tyy91gvwawbd8f3n5fvlnu.jpg',
       url: `${PROXY_BASE}/klook-hotel?city=bruges`,
     },
+    berlin: {
+      name: 'Hotel Adlon Kempinski',
+      loc: 'Berlin, Germany',
+      photo: 'https://storage.kempinski.com/cdn-cgi/image/w=1920,f=auto,fit=scale-down/ki-cms-prod/images/7/2/3/5/2625327-1-eng-GB/885bd49e79c3-89887320_4K.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=berlin`,
+    },
+    brno: {
+      name: 'Grandhotel Brno',
+      loc: 'Brno, Czech Republic',
+      photo: 'https://grandhotelbrno.cz/wp-content/uploads/bitmap-15.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=brno`,
+    },
+    zermatt: {
+      name: 'Mont Cervin Palace',
+      loc: 'Zermatt, Switzerland',
+      photo: 'https://www.montcervinpalace.ch/wp-content/uploads/2023/11/winter_mcp-exterior-6-1.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=zermatt`,
+    },
+    liverpool: {
+      name: '30 James Street',
+      loc: 'Liverpool, United Kingdom',
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Albion_House%2C_Liverpool_4.jpg/330px-Albion_House%2C_Liverpool_4.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=liverpool`,
+    },
+    frankfurt: {
+      name: 'Steigenberger Icon Frankfurter Hof',
+      loc: 'Frankfurt, Germany',
+      photo: 'https://assets.hrewards.com/assets/jpg.large_44521_SHR_Frankfurter_Hof_exterior_7_close_36918af2dc.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=frankfurt`,
+    },
   };
   function findCuratedHotel(city) {
     const key = (city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
