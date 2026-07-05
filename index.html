@@ -5256,6 +5256,36 @@
       photo: 'https://www.schweizerhof-luzern.ch/bilder/seo/_800xAUTO_crop_center-center_none/socialMediaFallbackImage.jpg',
       url: `${PROXY_BASE}/klook-hotel?city=lucerne`,
     },
+    geneva: {
+      name: 'Hôtel Beau-Rivage Genève',
+      loc: 'Geneva, Switzerland',
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Facade_of_Beau-Rivage_-_Geneva_-_Switzerland_%2816439266897%29.jpg/250px-Facade_of_Beau-Rivage_-_Geneva_-_Switzerland_%2816439266897%29.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=geneva`,
+    },
+    innsbruck: {
+      name: 'Hotel Grauer Bär',
+      loc: 'Innsbruck, Austria',
+      photo: 'https://www.grauer-baer.at/wp-content/uploads/2024/01/hotel-grauer-baer-innsbruck-boutiquehotel-1.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=innsbruck`,
+    },
+    naples: {
+      name: 'Grand Hotel Vesuvio',
+      loc: 'Naples, Italy',
+      photo: 'https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/165/2016/07/01100414/gallery_35-620x700.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=naples`,
+    },
+    turin: {
+      name: 'Turin Palace Hotel',
+      loc: 'Turin, Italy',
+      photo: 'https://www.turinpalacehotel.com/wp-content/uploads/2025/02/dscf2986-hdr.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=turin`,
+    },
+    monaco: {
+      name: 'Hôtel de Paris Monte-Carlo',
+      loc: 'Monaco',
+      photo: 'https://asset.montecarlosbm.com/styles/hero_image_desktop/s3/media/orphea/hotel-de-paris-monte-carlo-facade-de-jour-2024-013_1.jpg.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=monaco`,
+    },
   };
   function findCuratedHotel(city) {
     const key = (city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
