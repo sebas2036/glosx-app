@@ -5117,7 +5117,7 @@
 
     html += `<div class="trip-section-title">${dict.ai_plan_hotels || 'Hotels per stop'}</div>`;
     data.paradas_principales.forEach(ciudad => {
-      const url = `https://www.booking.com/searchresults.html?ss=${encodeURIComponent(ciudad)}`;
+      const url = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(ciudad)}`;
       html += `<a href="${url}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-row">
         <span class="trip-hotel-city">${ciudad}</span>
         <span class="trip-hotel-cta">${dict.ai_hotel_link || 'Find hotels →'}</span>
@@ -5204,7 +5204,7 @@
     // Mostrar paradas numeradas
     const stopsContainer = document.getElementById('aiStops');
     stopsContainer.innerHTML = data.paradas_principales.map((stop, i) =>
-      `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="https://www.booking.com/searchresults.html?ss=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_hotel_link || 'Find hotels →'}</a></div>`
+      `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_hotel_link || 'Find hotels →'}</a></div>`
     ).join('');
 
     const CITY_IMG_API = 'https://glosx-backend-production.up.railway.app/api/city-image/';
