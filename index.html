@@ -3498,6 +3498,7 @@
         dl_title: 'Start your journey now.',
         dl_subtitle: 'Search trains, browse scenic routes and book through verified partners — all from your browser, no app needed.',
         dl_web: 'Search trains now', dl_scenic: 'Explore scenic routes',
+        ai_route_meta_train: '✦ Train from {from} to {to}',
         faq_label: 'Frequently asked questions', faq_title1: 'Everything you', faq_title2: 'need to know.',
         faq1_q: 'What is WoW Train?', faq1_a: 'An independent and free platform to design scenic train itineraries across Europe. No account, no subscription — just explore, plan and book through certified partners.',
         faq2_q: 'How do I book a ticket?', faq2_a: 'We connect you directly and transparently to official operators like Trainline. Search your route, click "Check schedules →" and complete the booking on the partner\'s secure platform.',
@@ -3567,6 +3568,7 @@
         dl_title: 'Empezá tu viaje ahora.',
         dl_subtitle: 'Buscá trenes, explorá rutas panorámicas y reservá con partners verificados — todo desde tu navegador, sin instalar nada.',
         dl_web: 'Buscar trenes ahora', dl_scenic: 'Explorar rutas panorámicas',
+        ai_route_meta_train: '✦ Tren de {from} a {to}',
         faq_label: 'Preguntas frecuentes', faq_title1: 'Todo lo que', faq_title2: 'necesitás saber.',
         faq1_q: '¿Qué es WoW Train?', faq1_a: 'Una plataforma independiente y gratuita para diseñar itinerarios escénicos en tren por Europa. Sin cuenta, sin suscripción — explorá, planificá y reservá a través de socios certificados.',
         faq2_q: '¿Cómo reservo un pasaje?', faq2_a: 'Te conectamos de forma directa y transparente con operadores oficiales como Trainline. Buscá tu ruta, hacé clic en "Ver horarios →" y completá la reserva en la plataforma segura del socio.',
@@ -3636,6 +3638,7 @@
         dl_title: 'Commencez votre voyage maintenant.',
         dl_subtitle: 'Cherchez des trains, parcourez les itinéraires panoramiques et réservez auprès de partenaires vérifiés — directement depuis votre navigateur.',
         dl_web: 'Rechercher des trains', dl_scenic: 'Explorer les itinéraires',
+        ai_route_meta_train: '✦ Train de {from} à {to}',
         faq_label: 'Questions fréquentes', faq_title1: 'Tout ce que', faq_title2: 'vous devez savoir.',
         faq1_q: 'Qu\'est-ce que WoW Train ?', faq1_a: 'Une plateforme indépendante et gratuite pour concevoir des itinéraires pittoresques en train à travers l\'Europe. Sans compte, sans abonnement — explorez, planifiez et réservez via des partenaires certifiés.',
         faq2_q: 'Comment réserver un billet ?', faq2_a: 'Nous vous connectons directement et de manière transparente avec des opérateurs officiels comme Trainline. Cherchez votre trajet, cliquez sur "Voir les horaires →" et finalisez la réservation.',
@@ -3705,6 +3708,7 @@
         dl_title: 'Starten Sie Ihre Reise jetzt.',
         dl_subtitle: 'Züge suchen, Panoramastrecken entdecken und über verifizierte Partner buchen — direkt im Browser, ohne App.',
         dl_web: 'Züge jetzt suchen', dl_scenic: 'Panoramastrecken entdecken',
+        ai_route_meta_train: '✦ Zug von {from} nach {to}',
         faq_label: 'Häufige Fragen', faq_title1: 'Alles was Sie', faq_title2: 'wissen müssen.',
         faq1_q: 'Was ist WoW Train?', faq1_a: 'Eine unabhängige und kostenlose Plattform zur Gestaltung szenischer Zugreisen in Europa. Kein Konto, kein Abonnement — erkunden, planen und buchen Sie über zertifizierte Partner.',
         faq2_q: 'Wie buche ich ein Ticket?', faq2_a: 'Wir verbinden Sie direkt und transparent mit offiziellen Betreibern wie Trainline. Suchen Sie Ihre Strecke, klicken Sie auf "Fahrpläne anzeigen →" und schließen Sie die Buchung ab.',
@@ -3774,6 +3778,7 @@
         dl_title: 'Inizia il tuo viaggio ora.',
         dl_subtitle: 'Cerca treni, esplora percorsi panoramici e prenota con partner verificati — direttamente dal browser, senza app.',
         dl_web: 'Cerca treni ora', dl_scenic: 'Esplora percorsi panoramici',
+        ai_route_meta_train: '✦ Treno da {from} a {to}',
         faq_label: 'Domande frequenti', faq_title1: 'Tutto quello che', faq_title2: 'devi sapere.',
         faq1_q: 'Cos\'è WoW Train?', faq1_a: 'Una piattaforma indipendente e gratuita per progettare itinerari ferroviari panoramici in Europa. Nessun account, nessun abbonamento — esplora, pianifica e prenota tramite partner certificati.',
         faq2_q: 'Come prenoto un biglietto?', faq2_a: 'Ti colleghiamo direttamente e in modo trasparente con operatori ufficiali come Trainline. Cerca il tuo percorso, clicca su "Vedi orari →" e completa la prenotazione sulla piattaforma del partner.',
@@ -3843,6 +3848,7 @@
         dl_title: 'Comece a sua viagem agora.',
         dl_subtitle: 'Pesquise comboios, explore rotas panorâmicas e reserve com parceiros verificados — diretamente do navegador, sem app.',
         dl_web: 'Pesquisar comboios', dl_scenic: 'Explorar rotas panorâmicas',
+        ai_route_meta_train: '✦ Comboio de {from} para {to}',
         faq_label: 'Perguntas frequentes', faq_title1: 'Tudo o que', faq_title2: 'precisa de saber.',
         faq1_q: 'O que é o WoW Train?', faq1_a: 'Uma plataforma independente e gratuita para desenhar itinerários ferroviários cénicos pela Europa. Sem conta, sem subscrição — explore, planeie e reserve através de parceiros certificados.',
         faq2_q: 'Como reservo um bilhete?', faq2_a: 'Ligamo-lo diretamente e de forma transparente a operadores oficiais como a Trainline. Pesquise a sua rota, clique em "Ver horários →" e complete a reserva na plataforma do parceiro.',
@@ -5655,8 +5661,9 @@
     // Origen y destino reales desde los tramos (más fiable que paradas_principales)
     const origen = data.tramos[0]?.origen || data.paradas_principales[0] || '';
     const destino = data.tramos[data.tramos.length - 1]?.destino || data.paradas_principales[data.paradas_principales.length - 1] || '';
+    const metaTpl = (TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_route_meta_train || '✦ Train from {from} to {to}';
     document.getElementById('aiRouteMeta').textContent =
-      `✦ Tren de ${origen} a ${destino} · ${operadoresUnicos}`;
+      `${metaTpl.replace('{from}', origen).replace('{to}', destino)} · ${operadoresUnicos}`;
 
     // Klook (Trusted Partners) apunta a los hoteles de la ciudad destino de esta ruta
     const vipKlook = document.getElementById('aiVipKlook');
