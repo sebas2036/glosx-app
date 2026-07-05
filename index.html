@@ -2735,13 +2735,16 @@
           <span class="vip-sub" data-i18n="vip_tripadvisor">Experiences &amp; reviews →</span>
         </div>
       </a>
-      <a href="#" onclick="goPartner('klook', event)" class="vip-card">
-        <div class="vip-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
+      <div class="vip-card" style="position:relative;">
+        <div class="vip-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22V10a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12"/><path d="M18 22V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4"/><path d="M2 22h20"/></svg></div>
         <div class="vip-text">
-          <span class="vip-brand">Klook</span>
-          <span class="vip-sub" data-i18n="vip_klook">Tickets &amp; experiences →</span>
+          <span class="vip-brand">Klook Hotels</span>
+          <span class="vip-sub" data-i18n="vip_klook_hotels">Choose your city →</span>
         </div>
-      </a>
+        <select id="klookHotelSelect" onchange="goKlookHotelCity(this.value)" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;">
+          <option value="" data-i18n-opt="vip_klook_hotels_opt0">Choose a city…</option>
+        </select>
+      </div>
     </div>
   </div>
 
@@ -3437,7 +3440,7 @@
         scenic_more: 'See more routes', scenic_less: 'See less',
         partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
         partners_lead: 'Curated services that complement your train journey.',
-        vip_label: 'Trusted partners', vip_booking: 'Hotels & stays →', vip_tripadvisor: 'Experiences & reviews →',
+        vip_label: 'Trusted partners', vip_booking: 'Hotels & stays →', vip_tripadvisor: 'Experiences & reviews →', vip_klook_hotels: 'Choose your city →',
         disc_label: 'Community', disc_title1: "Let's discover", disc_title2: 'together.', disc_lead: "Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.", disc_cta_title: 'Know a place only the train reveals? ', disc_cta_text: 'Share the route, the town, the hidden stop — and help other travelers discover it too.', disc_cta_btn: 'Share your discovery →',
         p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
         p_kiwi_title: 'Airport Transfers', p_kiwi_desc: 'Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.', p_kiwi_cta: 'Book transfer →',
@@ -3506,7 +3509,7 @@
         scenic_more: 'Ver más rutas', scenic_less: 'Ver menos',
         partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
         partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
-        vip_label: 'Partners de confianza', vip_booking: 'Hoteles y alojamiento →', vip_tripadvisor: 'Experiencias y reseñas →',
+        vip_label: 'Partners de confianza', vip_booking: 'Hoteles y alojamiento →', vip_tripadvisor: 'Experiencias y reseñas →', vip_klook_hotels: 'Elegí tu ciudad →',
         disc_label: 'Comunidad', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Pueblos y rincones de Europa que solo encontrás en tren — compartidos por viajeros, para viajeros.', disc_cta_title: '¿Conocés un lugar que solo revela el tren? ', disc_cta_text: 'Compartí la ruta, el pueblo, la parada secreta — y ayudá a otros viajeros a descubrirlo.', disc_cta_btn: 'Compartí tu descubrimiento →',
         p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
         p_kiwi_title: 'Traslados aeropuerto', p_kiwi_desc: 'Taxi privado desde cualquier aeropuerto europeo hasta tu hotel o estación. Precio fijo, sin sorpresas.', p_kiwi_cta: 'Reservar traslado →',
@@ -3575,7 +3578,7 @@
         scenic_more: 'Voir plus d\'itinéraires', scenic_less: 'Voir moins',
         partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
         partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
-        vip_label: 'Partenaires de confiance', vip_booking: 'Hôtels & séjours →', vip_tripadvisor: 'Expériences & avis →',
+        vip_label: 'Partenaires de confiance', vip_booking: 'Hôtels & séjours →', vip_tripadvisor: 'Expériences & avis →', vip_klook_hotels: 'Choisissez votre ville →',
         disc_label: 'Communauté', disc_title1: 'Découvrons', disc_title2: 'ensemble.', disc_lead: "Des villages et des recoins d'Europe que l'on ne trouve qu'en train — partagés par les voyageurs, pour les voyageurs.", disc_cta_title: 'Vous connaissez un lieu que seul le train révèle ? ', disc_cta_text: "Partagez l'itinéraire, le village, l'arrêt caché — et aidez d'autres voyageurs à le découvrir.", disc_cta_btn: 'Partagez votre découverte →',
         p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
         p_kiwi_title: 'Transferts aéroport', p_kiwi_desc: 'Taxi privé depuis n\'importe quel grand aéroport européen jusqu\'à votre hôtel ou gare. Prix fixe, aucune surprise.', p_kiwi_cta: 'Réserver transfert →',
@@ -3644,7 +3647,7 @@
         scenic_more: 'Mehr Strecken anzeigen', scenic_less: 'Weniger anzeigen',
         partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
         partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
-        vip_label: 'Vertrauenspartner', vip_booking: 'Hotels & Unterkünfte →', vip_tripadvisor: 'Erlebnisse & Bewertungen →',
+        vip_label: 'Vertrauenspartner', vip_booking: 'Hotels & Unterkünfte →', vip_tripadvisor: 'Erlebnisse & Bewertungen →', vip_klook_hotels: 'Stadt auswählen →',
         disc_label: 'Community', disc_title1: 'Entdecken wir', disc_title2: 'gemeinsam.', disc_lead: 'Orte und Winkel Europas, die man nur mit dem Zug findet — geteilt von Reisenden, für Reisende.', disc_cta_title: 'Kennst du einen Ort, den nur der Zug zeigt? ', disc_cta_text: 'Teile die Strecke, den Ort, den versteckten Halt — und hilf anderen Reisenden, ihn zu entdecken.', disc_cta_btn: 'Teile deine Entdeckung →',
         p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
         p_kiwi_title: 'Flughafentransfer', p_kiwi_desc: 'Privattaxi von jedem großen europäischen Flughafen direkt zu Ihrem Hotel oder Bahnhof. Festpreis, keine Überraschungen.', p_kiwi_cta: 'Transfer buchen →',
@@ -3713,7 +3716,7 @@
         scenic_more: 'Vedi altri percorsi', scenic_less: 'Vedi meno',
         partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
         partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
-        vip_label: 'Partner di fiducia', vip_booking: 'Hotel e soggiorni →', vip_tripadvisor: 'Esperienze e recensioni →',
+        vip_label: 'Partner di fiducia', vip_booking: 'Hotel e soggiorni →', vip_tripadvisor: 'Esperienze e recensioni →', vip_klook_hotels: 'Scegli la tua città →',
         disc_label: 'Community', disc_title1: 'Scopriamo', disc_title2: 'insieme.', disc_lead: "Borghi e angoli d'Europa che trovi solo in treno — condivisi dai viaggiatori, per i viaggiatori.", disc_cta_title: 'Conosci un posto che solo il treno svela? ', disc_cta_text: "Condividi il percorso, il borgo, la fermata nascosta — e aiuta altri viaggiatori a scoprirlo.", disc_cta_btn: 'Condividi la tua scoperta →',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Taxi privato da qualsiasi grande aeroporto europeo direttamente al tuo hotel o stazione. Prezzo fisso, nessuna sorpresa.', p_kiwi_cta: 'Prenota transfer →',
@@ -3782,7 +3785,7 @@
         scenic_more: 'Ver mais rotas', scenic_less: 'Ver menos',
         partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
         partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
-        vip_label: 'Parceiros de confiança', vip_booking: 'Hotéis e estadias →', vip_tripadvisor: 'Experiências e avaliações →',
+        vip_label: 'Parceiros de confiança', vip_booking: 'Hotéis e estadias →', vip_tripadvisor: 'Experiências e avaliações →', vip_klook_hotels: 'Escolha sua cidade →',
         disc_label: 'Comunidade', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Vilas e recantos da Europa que só se encontram de comboio — partilhados por viajantes, para viajantes.', disc_cta_title: 'Conhece um lugar que só o comboio revela? ', disc_cta_text: 'Partilha a rota, a vila, a paragem escondida — e ajuda outros viajantes a descobri-la.', disc_cta_btn: 'Partilha a tua descoberta →',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Táxi privado a partir de qualquer grande aeroporto europeu até ao seu hotel ou estação. Preço fixo, sem surpresas.', p_kiwi_cta: 'Reservar transfer →',
@@ -4031,6 +4034,31 @@
       const url = `${PROXY_BASE}/${type}`;
       window.open(url, '_blank');
       return false;
+    }
+
+    // ── Klook Hotels: selector de ciudad (44 ciudades con link de afiliado) ──
+    const KLOOK_HOTEL_CITIES = [
+      'Amsterdam','Barcelona','Berlin','Bordeaux','Brno','Bruges','Brussels','Budapest',
+      'Copenhagen','Edinburgh','Florence','Frankfurt','Geneva','Graz','Innsbruck',
+      'Interlaken','Lauterbrunnen','Liverpool','London','Lucerne','Lyon','Madrid',
+      'Manchester','Milan','Monaco','Munich','Naples','Nice','Oxford','Paris','Prague',
+      'Rome','Salzburg','Sargans','Seville','Stockholm','Tende','Turin','Valencia',
+      'Venice','Vienna','York','Zermatt','Zurich'
+    ];
+    (function () {
+      const sel = document.getElementById('klookHotelSelect');
+      if (!sel) return;
+      KLOOK_HOTEL_CITIES.forEach(city => {
+        const opt = document.createElement('option');
+        opt.value = city;
+        opt.textContent = city;
+        sel.appendChild(opt);
+      });
+    })();
+    function goKlookHotelCity(city) {
+      if (!city) return;
+      window.open(`${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(city)}`, '_blank');
+      document.getElementById('klookHotelSelect').value = '';
     }
 
     function openWidget(panelId) {
