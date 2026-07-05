@@ -5508,7 +5508,7 @@
     });
 
     tlItems.push({ type: 'title', html: `<div class="trip-section-title">${dict.ai_plan_hotels || 'Hotels per stop'}</div>` });
-    data.paradas_principales.forEach(ciudad => {
+    getRouteStops(data).forEach(ciudad => {
       const curated = findCuratedHotel(ciudad);
       if (curated) {
         tlItems.push({ type: 'hotel', html: `<a href="${curated.url}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-row has-photo">
@@ -5556,7 +5556,7 @@
       if (s.estacion_salida) text += `  ${s.estacion_salida} → ${s.estacion_llegada}\n`;
     });
     text += `\nHOTELES:\n`;
-    data.paradas_principales.forEach(c => {
+    getRouteStops(data).forEach(c => {
       text += `• ${c}: https://www.booking.com/search.html?ss=${encodeURIComponent(c)}\n`;
     });
     const dict = TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en;
@@ -5585,6 +5585,16 @@
       used[next] = true;
     }
     return sorted;
+  }
+
+  // Paradas reales derivadas de los tramos (origen del primero + destino de cada uno,
+  // sin duplicados). paradas_principales a veces no coincide con los tramos generados
+  // (ej. incluye una ciudad que no aparece en ningun tramo) y rompia "Hotels per stop".
+  function getRouteStops(data) {
+    if (!data.tramos || !data.tramos.length) return data.paradas_principales || [];
+    const stops = [data.tramos[0].origen];
+    data.tramos.forEach(t => { if (t.destino && !stops.some(s => s.toLowerCase() === t.destino.toLowerCase())) stops.push(t.destino); });
+    return stops.filter(Boolean);
   }
 
   function displayAIRoute(data) {
@@ -5619,9 +5629,10 @@
       if (sub) sub.textContent = `Hotels in ${destino}`;
     }
 
-    // Mostrar paradas numeradas
+    // Mostrar paradas numeradas (derivadas de los tramos, no de paradas_principales)
+    const routeStops = getRouteStops(data);
     const stopsContainer = document.getElementById('aiStops');
-    stopsContainer.innerHTML = data.paradas_principales.map((stop, i) =>
+    stopsContainer.innerHTML = routeStops.map((stop, i) =>
       `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_hotel_link || 'Find hotels →'}</a></div>`
     ).join('');
 
@@ -5703,7 +5714,7 @@
     });
 
     // Dibujar línea SVG con animación de dibujado
-    drawRouteLine(data.paradas_principales.length);
+    drawRouteLine(routeStops.length);
     const path = document.querySelector('.route-path');
     path.style.animation = 'none';
     path.getBoundingClientRect();
