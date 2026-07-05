@@ -2747,15 +2747,6 @@
 
   <div class="essentials-bar">
     <div class="essentials-inner">
-      <a href="#" class="essential-item" onclick="goPartner('klook', event)">
-        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V10a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12"/><path d="M18 22V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4"/><path d="M2 22h20"/></svg></div>
-        <div class="essential-text">
-          <span class="essential-brand">Klook</span>
-          <span class="essential-title" data-i18n="p_klook_title">City Passes</span>
-          <span class="essential-cta" data-i18n="p_klook_cta">Browse passes →</span>
-        </div>
-      </a>
-
       <a href="#" class="essential-item" onclick="goPartner('kiwitaxi', event)">
         <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
         <div class="essential-text">
@@ -2805,11 +2796,6 @@
   </div>
 
   <div class="partner-widgets">
-    <!-- Klook · Tours & Activities -->
-    <div class="pw-panel" id="pw-klook">
-      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
-      <script async src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&locale=en&city_id=2&category=4&amount=3&powered_by=true&campaign_id=137&promo_id=4497" charset="utf-8"></script>
-    </div>
     <!-- Kiwitaxi · Shuttles Search Form -->
     <div class="pw-panel" id="pw-kiwitaxi">
       <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
@@ -4035,7 +4021,7 @@
 
     // ── Partner products → redirige al proxy correspondiente ───────────────
     // Partners con widget embebido (panel desplegable). El resto va al proxy.
-    const WIDGET_PANELS = { klook: 'pw-klook', kiwitaxi: 'pw-kiwitaxi' };
+    const WIDGET_PANELS = { kiwitaxi: 'pw-kiwitaxi' };
 
     function goPartner(type, e) {
       e.preventDefault();
