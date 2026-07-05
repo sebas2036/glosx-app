@@ -5286,6 +5286,36 @@
       photo: 'https://asset.montecarlosbm.com/styles/hero_image_desktop/s3/media/orphea/hotel-de-paris-monte-carlo-facade-de-jour-2024-013_1.jpg.jpeg',
       url: `${PROXY_BASE}/klook-hotel?city=monaco`,
     },
+    lyon: {
+      name: 'Villa Florentine',
+      loc: 'Lyon, France',
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Villa_Florentine_%40_Lyon_%2836389389615%29.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=lyon`,
+    },
+    manchester: {
+      name: 'The Midland Hotel',
+      loc: 'Manchester, United Kingdom',
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Midland_Hotel_west%2C_Manchester.jpg/330px-Midland_Hotel_west%2C_Manchester.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=manchester`,
+    },
+    oxford: {
+      name: 'Old Bank Hotel',
+      loc: 'Oxford, United Kingdom',
+      photo: 'https://www.oldbankhotel.co.uk/wp-content/uploads/2023/10/0009-2018-Old-Bank-Hotel-Oxford-High-Res-Old-Bank-Hotel-Quod-Facade-Web-Hero.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=oxford`,
+    },
+    york: {
+      name: 'The Grand, York',
+      loc: 'York, United Kingdom',
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Grand_Hotel_%26_Spa%2C_York.jpg/330px-The_Grand_Hotel_%26_Spa%2C_York.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=york`,
+    },
+    valencia: {
+      name: 'Hotel Boutique Balandret',
+      loc: 'Valencia, Spain',
+      photo: 'https://balandret.com/wp-content/uploads/2022/03/Hotel-en-Playa-Valencia.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=valencia`,
+    },
   };
   function findCuratedHotel(city) {
     const key = (city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
