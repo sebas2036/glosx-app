@@ -797,7 +797,7 @@
       'France': ['Bordeaux', 'Lyon', 'Nice', 'Paris', 'Tende'],
       'Germany': ['Berlin', 'Frankfurt', 'Munich'],
       'Hungary': ['Budapest'],
-      'Italy': ['Florence', 'Milan', 'Naples', 'Positano', 'Rome', 'Sorrento', 'Turin', 'Venice'],
+      'Italy': ['Florence', 'Milan', 'Naples', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],
       'Spain': ['Barcelona', 'Figueres', 'Girona', 'Madrid', 'Seville', 'Valencia', 'Zaragoza'],
@@ -2232,6 +2232,13 @@
       stars: 3,
       photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/19/c1/c1332927fb38208c45a7d20689b523813cf9ee9542530d8559dbc5912cda.jpeg',
       url: `${PROXY_BASE}/klook-hotel?city=figueres`,
+    },
+    salerno: {
+      name: 'Hotel Plaza',
+      loc: 'Salerno, Italy',
+      stars: 3,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/hotelier-images/65/77/702e7322aeb415a8ce6155f06a2c511da6d0bc1a9cd348bf0f9722598cd5.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=salerno`,
     },
   };
   function findCuratedHotel(city) {
