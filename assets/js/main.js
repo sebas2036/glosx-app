@@ -2198,6 +2198,41 @@
       photo: 'https://cdn.prod.website-files.com/65b186476e59e33563a59cdf/65c53f1bae14910723ebbfa5_65bcd2b113e6815013ee49f0_hotel-braunbaer-wengen.webp',
       url: `${PROXY_BASE}/klook-hotel?city=lauterbrunnen`,
     },
+    sorrento: {
+      name: 'Grand Hotel Excelsior Vittoria',
+      loc: 'Sorrento, Italy',
+      stars: 5,
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Excelsior_Vittoria_hotel%2C_Sorrento.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=sorrento`,
+    },
+    positano: {
+      name: 'Le Sirenuse',
+      loc: 'Positano, Amalfi Coast, Italy',
+      stars: 5,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/hotelier-images/26/fa/35042564145e028306fddaeea2292caa8eac784057b628241af7dcf0d513.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=positano`,
+    },
+    zaragoza: {
+      name: 'Hotel Reina Petronila',
+      loc: 'Zaragoza, Spain',
+      stars: 5,
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Zaragoza_-_Complejo_Aragonia_-_Hotel_Reina_Petronila_1.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=zaragoza`,
+    },
+    girona: {
+      name: 'Hotel Peninsular',
+      loc: 'Girona, Spain',
+      stars: 3,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/hotelier-images/78/af/d0bb670163cca63359cc85c6da098a5779c27c3547402d3118965311a49b.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=girona`,
+    },
+    figueres: {
+      name: 'Hotel Empordà',
+      loc: 'Figueres, Spain',
+      stars: 3,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/19/c1/c1332927fb38208c45a7d20689b523813cf9ee9542530d8559dbc5912cda.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=figueres`,
+    },
   };
   function findCuratedHotel(city) {
     const key = (city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
