@@ -157,7 +157,7 @@
       content: '';
       position: absolute; inset: 0; z-index: 0;
       pointer-events: none;   /* capa decorativa: nunca debe robar taps/clicks */
-      background: url('hero-bg.jpg') center 42% / cover no-repeat;
+      background: url('/hero-bg.jpg') center 42% / cover no-repeat;
       -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.55) 82%, rgba(0,0,0,0.25) 92%, transparent 100%);
       mask-image: linear-gradient(to bottom, #000 0%, #000 55%, rgba(0,0,0,0.85) 70%, rgba(0,0,0,0.55) 82%, rgba(0,0,0,0.25) 92%, transparent 100%);
     }
