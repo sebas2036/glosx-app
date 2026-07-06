@@ -2254,6 +2254,12 @@
       photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/1b/35/904b7435487e16addcf95a1bac9ae9d4e512a058735be3628ceddb6f3808.jpeg',
       url: `${PROXY_BASE}/klook-hotel?city=lourdes`,
     },
+    jungfraujoch: {
+      name: 'Sphinx Observatory – Top of Europe',
+      loc: 'Jungfraujoch, Switzerland',
+      photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Jungfraujoch_Aerial_View_-_Flickr_-_kuhnmi.jpg/500px-Jungfraujoch_Aerial_View_-_Flickr_-_kuhnmi.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=jungfraujoch`,
+    },
   };
   function findCuratedHotel(city) {
     const key = (city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
