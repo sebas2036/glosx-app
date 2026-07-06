@@ -794,7 +794,7 @@
       'Belgium': ['Bruges', 'Brussels'],
       'Czech Republic': ['Brno', 'Prague'],
       'Denmark': ['Copenhagen'],
-      'France': ['Bordeaux', 'Lyon', 'Nice', 'Paris', 'Tende'],
+      'France': ['Bordeaux', 'Lyon', 'Nice', 'Paris', 'Tende', 'Toulouse'],
       'Germany': ['Berlin', 'Frankfurt', 'Munich'],
       'Hungary': ['Budapest'],
       'Italy': ['Florence', 'Milan', 'Naples', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
@@ -2239,6 +2239,13 @@
       stars: 3,
       photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/hotelier-images/65/77/702e7322aeb415a8ce6155f06a2c511da6d0bc1a9cd348bf0f9722598cd5.jpeg',
       url: `${PROXY_BASE}/klook-hotel?city=salerno`,
+    },
+    toulouse: {
+      name: "Hôtel d'Orsay",
+      loc: 'Toulouse, France',
+      stars: 3,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/5f/e6/0389a4600856b2b9f3d1eb3c02d842aff368c5c17be9d60f8d6c0d77ac02.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=toulouse`,
     },
   };
   function findCuratedHotel(city) {
