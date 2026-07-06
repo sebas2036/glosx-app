@@ -2,86 +2,103 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://glosx.app/</loc>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://glosx.app/blog.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/es/blog.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/explore/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://glosx.app/blog-flying-vs-train-europe.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/es/blog-flying-vs-train-europe.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/blog-klook-vs-trainline.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/es/blog-klook-vs-trainline.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/blog-night-trains-europe.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/es/blog-night-trains-europe.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/blog-scenic-train-routes-europe.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/es/blog-scenic-train-routes-europe.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/blog-madrid-barcelona-train-guide.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/es/blog-madrid-barcelona-train-guide.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/blog-italy-interrail-itinerary.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/es/blog-italy-interrail-itinerary.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://glosx.app/rutas/lyon-turin/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
@@ -89,6 +106,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lyon-turin/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
@@ -96,6 +114,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-barcelona/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
@@ -103,6 +122,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-barcelona/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
@@ -110,6 +130,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-prague/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
@@ -117,6 +138,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-prague/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
@@ -124,6 +146,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-amsterdam/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
@@ -131,6 +154,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-amsterdam/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
@@ -138,6 +162,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-venice/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
@@ -145,6 +170,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-venice/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
@@ -152,6 +178,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/hallstatt/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
@@ -159,6 +186,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/hallstatt/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
@@ -166,6 +194,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/lake-bled/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
@@ -173,6 +202,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/lake-bled/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
@@ -180,6 +210,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/lauterbrunnen/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
@@ -187,6 +218,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/lauterbrunnen/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
@@ -194,6 +226,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/colmar/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
@@ -201,6 +234,7 @@
   </url>
   <url>
     <loc>https://glosx.app/destinos/colmar/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
@@ -208,36 +242,43 @@
   </url>
   <url>
     <loc>https://glosx.app/about.html</loc>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://glosx.app/support.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://glosx.app/privacy.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://glosx.app/terms.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://glosx.app/cookies.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://glosx.app/imprint.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-london/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-london/" />
@@ -245,6 +286,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-london/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-london/" />
@@ -252,6 +294,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-edinburgh/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-edinburgh/" />
@@ -259,6 +302,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-edinburgh/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-edinburgh/" />
@@ -266,6 +310,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-berlin/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-berlin/" />
@@ -273,6 +318,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-berlin/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-berlin/" />
@@ -280,6 +326,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-barcelona/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-barcelona/" />
@@ -287,6 +334,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-barcelona/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-barcelona/" />
@@ -294,6 +342,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-seville/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-seville/" />
@@ -301,6 +350,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-seville/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-seville/" />
@@ -308,6 +358,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-valencia/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-valencia/" />
@@ -315,6 +366,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-valencia/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-valencia/" />
@@ -322,6 +374,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-florence/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-florence/" />
@@ -329,6 +382,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-florence/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-florence/" />
@@ -336,6 +390,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-venice/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-venice/" />
@@ -343,6 +398,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-venice/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-venice/" />
@@ -350,12 +406,14 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-naples/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-rome/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-rome/" />
@@ -363,6 +421,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-rome/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-rome/" />
@@ -370,6 +429,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-milan/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-milan/" />
@@ -377,6 +437,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-milan/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-milan/" />
@@ -384,6 +445,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-zermatt/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-zermatt/" />
@@ -391,6 +453,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-zermatt/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-zermatt/" />
@@ -398,6 +461,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-berlin/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-berlin/" />
@@ -405,6 +469,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-berlin/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-berlin/" />
@@ -412,6 +477,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-prague/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-prague/" />
@@ -419,6 +485,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-prague/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-prague/" />
@@ -426,6 +493,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-budapest/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-budapest/" />
@@ -433,6 +501,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-budapest/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-budapest/" />
@@ -440,6 +509,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-salzburg/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-salzburg/" />
@@ -447,6 +517,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-salzburg/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-salzburg/" />
@@ -454,6 +525,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-budapest/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-budapest/" />
@@ -461,6 +533,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-budapest/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-budapest/" />
@@ -468,6 +541,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-paris/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-paris/" />
@@ -475,6 +549,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-paris/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-paris/" />
@@ -482,6 +557,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-brussels/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-brussels/" />
@@ -489,6 +565,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-brussels/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-brussels/" />
@@ -496,6 +573,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lisbon-porto/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-porto/" />
@@ -503,6 +581,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lisbon-porto/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-porto/" />
@@ -510,6 +589,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-nice/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-nice/" />
@@ -517,6 +597,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-nice/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-nice/" />
@@ -524,6 +605,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/nice-monaco/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/nice-monaco/" />
@@ -531,6 +613,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/nice-monaco/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/nice-monaco/" />
@@ -538,6 +621,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-stockholm/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-stockholm/" />
@@ -545,6 +629,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-stockholm/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-stockholm/" />
@@ -552,6 +637,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/oslo-bergen/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-bergen/" />
@@ -559,6 +645,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/oslo-bergen/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-bergen/" />
@@ -566,6 +653,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stockholm-oslo/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/stockholm-oslo/" />
@@ -573,6 +661,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stockholm-oslo/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/stockholm-oslo/" />
@@ -580,6 +669,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lauterbrunnen/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lauterbrunnen/" />
@@ -587,6 +677,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lauterbrunnen/es/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lauterbrunnen/" />
@@ -594,6 +685,7 @@
   </url>
   <url>
     <loc>https://glosx.app/guide-how-to-travel-europe-by-train.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
@@ -601,6 +693,7 @@
   </url>
   <url>
     <loc>https://glosx.app/es/guide-how-to-travel-europe-by-train.html</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
@@ -608,146 +701,171 @@
   </url>
   <url>
     <loc>https://glosx.app/trains-from-france-to-spain/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/trains-from-france-to-italy/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/trains-from-germany-to-italy/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/trains-from-uk-to-europe/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-vienna/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-vienna/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-zurich/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-munich/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-munich/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-bruges/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-bruges/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-toulouse/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/montreux-interlaken/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-manchester/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-manchester/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bordeaux/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-hamburg/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-hamburg/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-cologne/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-cologne/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-malaga/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-malaga/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-venice/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-lucerne/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-valencia/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-valencia/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-pisa/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-pisa/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-paris/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-paris/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-paris/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-paris/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bruges/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-liverpool/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-liverpool/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-amsterdam/</loc>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-amsterdam/" />
