@@ -794,7 +794,7 @@
       'Belgium': ['Bruges', 'Brussels'],
       'Czech Republic': ['Brno', 'Prague'],
       'Denmark': ['Copenhagen'],
-      'France': ['Bordeaux', 'Lyon', 'Nice', 'Paris', 'Tende', 'Toulouse'],
+      'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Nice', 'Paris', 'Tende', 'Toulouse'],
       'Germany': ['Berlin', 'Frankfurt', 'Munich'],
       'Hungary': ['Budapest'],
       'Italy': ['Florence', 'Milan', 'Naples', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
@@ -2246,6 +2246,13 @@
       stars: 3,
       photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/5f/e6/0389a4600856b2b9f3d1eb3c02d842aff368c5c17be9d60f8d6c0d77ac02.jpeg',
       url: `${PROXY_BASE}/klook-hotel?city=toulouse`,
+    },
+    lourdes: {
+      name: 'Hôtel Roissy',
+      loc: 'Lourdes, France',
+      stars: 4,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/1b/35/904b7435487e16addcf95a1bac9ae9d4e512a058735be3628ceddb6f3808.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=lourdes`,
     },
   };
   function findCuratedHotel(city) {
