@@ -2292,7 +2292,7 @@
       const stations = (s.estacion_salida && s.estacion_llegada)
         ? `${s.estacion_salida} → ${s.estacion_llegada}`
         : `${s.origen} → ${s.destino}`;
-      const noTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n|jungfraujoch|jungfrau/i.test(
+      const noTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n/i.test(
         [op, s.tipo_tren_sugerido, stations, s.origen, s.destino].join(' ')
       );
       const ticketUrl = noTrain
