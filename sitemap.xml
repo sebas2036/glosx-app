@@ -410,6 +410,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/rome-naples/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/rome-naples/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/rome-naples/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-rome/</loc>
@@ -729,6 +738,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/munich-vienna/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/munich-vienna/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/munich-vienna/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-vienna/</loc>
@@ -736,6 +754,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/prague-vienna/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/prague-vienna/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/prague-vienna/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-zurich/</loc>
@@ -743,6 +770,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/milan-zurich/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/milan-zurich/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/milan-zurich/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-munich/</loc>
@@ -782,6 +818,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-toulouse/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-toulouse/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-toulouse/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/montreux-interlaken/</loc>
@@ -789,6 +834,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/montreux-interlaken/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/montreux-interlaken/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/montreux-interlaken/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-manchester/</loc>
@@ -812,6 +866,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-bordeaux/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-bordeaux/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-bordeaux/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-hamburg/</loc>
@@ -867,6 +930,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/rome-venice/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/rome-venice/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/rome-venice/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-lucerne/</loc>
@@ -874,6 +946,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/zurich-lucerne/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/zurich-lucerne/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/zurich-lucerne/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-valencia/</loc>
@@ -945,6 +1026,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-bruges/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/paris-bruges/es/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/paris-bruges/es/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-liverpool/</loc>
