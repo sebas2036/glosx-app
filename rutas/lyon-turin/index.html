@@ -25,7 +25,10 @@
     gtag('config', 'G-XPTSM1EJQJ');
     // Click saliente hacia Trainline (mismo evento que el resto del sitio)
     window.trackTrainline = function (src) {
-      try { gtag('event', 'trainline_click', { source: src || 'unknown' }); } catch (e) {}
+      try {
+        var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
+        gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
+      } catch (e) {}
     };
   </script>
 

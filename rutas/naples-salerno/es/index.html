@@ -21,7 +21,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) { try { gtag('event', 'trainline_click', { source: src || 'unknown' }); } catch (e) {} };
+    window.trackTrainline = function (src) {
+      try {
+        var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
+        gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
+      } catch (e) {}
+    };
   </script>
   <script type="application/ld+json">
   {
