@@ -476,6 +476,24 @@
       margin-bottom: 28px;
     }
 
+    /* ── Encabezado de sección con foto al costado (humaniza el fondo oscuro) ── */
+    .section-head-split {
+      display: flex; gap: 32px; align-items: center; flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .section-head-split .section-head-text { flex: 1 1 380px; min-width: 280px; }
+    .section-head-split .section-head-text p.lead,
+    .section-head-split .section-head-text h2 { margin-bottom: 10px; }
+    .section-head-split .section-head-text p.lead { margin-bottom: 0; }
+    .section-head-photo {
+      flex: 1 1 280px; max-width: 360px; aspect-ratio: 1 / 1;
+      border-radius: 20px; object-fit: cover;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    @media (max-width: 700px) {
+      .section-head-photo { max-width: 100%; aspect-ratio: 16 / 10; order: -1; }
+    }
+
     /* ── Scenic: encabezado + panel destacado (2 columnas) ── */
     .scenic-top {
       display: flex; gap: 28px; align-items: stretch;
