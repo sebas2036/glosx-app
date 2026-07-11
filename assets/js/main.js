@@ -790,7 +790,7 @@
 
     // ── Klook Hotels: menu de ciudad agrupado por pais (45 ciudades con link de afiliado) ──
     const KLOOK_HOTEL_CITIES_BY_COUNTRY = {
-      'Austria': ['Graz', 'Innsbruck', 'Salzburg', 'Vienna'],
+      'Austria': ['Graz', 'Innsbruck', 'Krems', 'Salzburg', 'Vienna'],
       'Belgium': ['Bruges', 'Brussels'],
       'Czech Republic': ['Brno', 'Prague'],
       'Denmark': ['Copenhagen'],
