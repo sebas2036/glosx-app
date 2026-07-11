@@ -1904,6 +1904,13 @@
       photo: 'https://www.sacher.com/en/wp-content/uploads/sites/4/fly-images/10561/hotel-sacher-architektur-wien-80-scaled-1920x9999.jpg.webp',
       url: `${PROXY_BASE}/klook-hotel?city=vienna`,
     },
+    cologne: {
+      name: 'Excelsior Hotel Ernst am Dom',
+      loc: 'Cologne, Germany',
+      stars: 5,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/8a/f4/2769ee5759ee0ccbc46ddba428c8aa267f5245551d00699bdde306970fa8.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=cologne`,
+    },
     venice: {
       name: 'Hotel Danieli',
       loc: 'Venice, Italy',
