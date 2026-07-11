@@ -2476,7 +2476,7 @@
     const routeStops = getRouteStops(data);
     const stopsContainer = document.getElementById('aiStops');
     stopsContainer.innerHTML = routeStops.map((stop, i) =>
-      `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(stop)}" target="_blank" rel="noopener noreferrer sponsored">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_hotel_link || 'Find hotels →'}</a></div>`
+      `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="#" onclick="event.preventDefault(); openTripPlan();">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_hotel_link || 'Find hotels →'}</a></div>`
     ).join('');
 
     const CITY_IMG_API = 'https://glosx-backend-production.up.railway.app/api/city-image/';
