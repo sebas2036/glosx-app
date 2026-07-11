@@ -1433,6 +1433,22 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/brno-vienna/es/" />
   </url>
   <url>
+    <loc>https://glosx.app/rutas/vienna-krems/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-krems/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/vienna-krems/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/vienna-krems/es/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-krems/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/vienna-krems/es/" />
+  </url>
+  <url>
     <loc>https://glosx.app/rutas/paris-lourdes/</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
