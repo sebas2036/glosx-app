@@ -1141,6 +1141,12 @@
       50% { border-color: rgba(231,198,107,1); box-shadow: 0 0 34px rgba(231,198,107,0.55); }
     }
     .klook-city-picker { z-index: 10; }
+    /* Cada .section tiene su propio contexto de apilamiento (z-index:1 global) —
+       sin esto, el menu queda atrapado detras de la seccion siguiente aunque
+       tenga z-index 9999 puertas adentro (empate de z-index = gana el que
+       viene despues en el DOM). Sube toda la seccion #partners mientras el
+       menu esta abierto para que escape ese contexto. */
+    #partners:has(.klook-city-menu.open) { z-index: 500; }
     .klook-city-menu {
       display: none;
       position: absolute; top: calc(100% + 8px); left: 0; right: 0;
