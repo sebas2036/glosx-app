@@ -502,20 +502,12 @@
     .scenic-head { flex: 1 1 320px; min-width: 280px; align-self: center; }
     .scenic-feature {
       flex: 1 1 440px; min-width: 300px; min-height: 340px;
-      border-radius: 22px; position: relative;
+      border-radius: 22px; position: relative; overflow: hidden;
       display: flex; flex-direction: column; justify-content: flex-end;
       padding: 28px; cursor: default;
       background-size: cover; background-position: center;
       transition: background-image 0.4s ease, background-color 0.4s ease;
-      /* Funde la foto hacia el fondo (arriba y derecha) — no queda pegada */
-      -webkit-mask-image:
-        linear-gradient(to bottom, transparent 0%, #000 28%),
-        linear-gradient(to left, transparent 0%, #000 24%);
-      mask-image:
-        linear-gradient(to bottom, transparent 0%, #000 28%),
-        linear-gradient(to left, transparent 0%, #000 24%);
-      -webkit-mask-composite: source-in;
-      mask-composite: intersect;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.08);
     }
     .scenic-feature::before {
       content: ''; position: absolute; inset: 0;
