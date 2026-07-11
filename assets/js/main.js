@@ -1998,6 +1998,13 @@
       photo: 'https://x3jh6o6w.cdn.imgeng.in/assets/uploads/Starhotels-Collezione/Helvetia_Bristol/GALLERY/helvetia-bristol-fi-facciata1.jpg?imgeng=/w_1200/h_630/m_cropbox',
       url: `${PROXY_BASE}/klook-hotel?city=florence`,
     },
+    pisa: {
+      name: 'Hotel Pisa Tower',
+      loc: 'Pisa, Italy',
+      stars: 3,
+      photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/a5/fd/ae188e72b48d5360d4999fbd4b9070ec56590963d18a91196daca91fcb95.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=pisa`,
+    },
     bern: {
       name: 'Hotel Schweizerhof Bern & Spa',
       loc: 'Bern, Switzerland',
