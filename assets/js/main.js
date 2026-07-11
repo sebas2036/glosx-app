@@ -797,7 +797,7 @@
       'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Nice', 'Paris', 'Tende', 'Toulouse'],
       'Germany': ['Berlin', 'Cologne', 'Dortmund', 'Frankfurt', 'Hamburg', 'Mainz', 'Munich'],
       'Hungary': ['Budapest'],
-      'Italy': ['Florence', 'Milan', 'Naples', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
+      'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],
       'Spain': ['Barcelona', 'Figueres', 'Girona', 'Madrid', 'Seville', 'Valencia', 'Zaragoza'],
