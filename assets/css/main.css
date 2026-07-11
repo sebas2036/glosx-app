@@ -1096,9 +1096,9 @@
     .discover-cta::before {
       content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit;
       background:
-        radial-gradient(120% 130% at 50% 45%, transparent 55%, rgba(22,19,31,0.85) 90%, #16131f 100%),
-        radial-gradient(ellipse 80% 130% at 50% 50%, rgba(16,12,26,0.4), rgba(16,12,26,0.78)),
-        linear-gradient(180deg, rgba(16,12,26,0.5) 0%, rgba(16,12,26,0.78) 100%);
+        radial-gradient(120% 130% at 50% 45%, transparent 60%, rgba(22,19,31,0.55) 92%, #16131f 100%),
+        radial-gradient(ellipse 80% 130% at 50% 50%, rgba(16,12,26,0.2), rgba(16,12,26,0.5)),
+        linear-gradient(180deg, rgba(16,12,26,0.28) 0%, rgba(16,12,26,0.5) 100%);
     }
     .discover-cta > * { position: relative; z-index: 1; }
     .discover-cta h3 { font-size: 21px; font-weight: 800; margin-bottom: 8px; text-shadow: 0 2px 14px rgba(0,0,0,0.7); }
