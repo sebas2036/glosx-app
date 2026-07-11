@@ -1175,6 +1175,7 @@
       li.className = "wt-stop";
       li.style.animationDelay = (i * 0.12) + "s";
       li.innerHTML =
+        '<span class="wt-stop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="M8 19l-2 3"/><path d="M18 22l-2-3"/><circle cx="7.5" cy="14.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="16.5" cy="14.5" r="1.4" fill="currentColor" stroke="none"/></svg></span>' +
         '<p class="wt-stop-station">' + stop.station + '</p>' +
         '<span class="wt-stop-train">&#8594; ' + stop.train + '</span>' +
         '<p class="wt-stop-desc">' + desc + '</p>' +

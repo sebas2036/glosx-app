@@ -1533,22 +1533,24 @@
 
   .wt-timeline { list-style: none; margin: 0; padding: 0; position: relative; }
   .wt-timeline::before {
-    content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px; width: 1.5px;
-    background: rgba(168,85,247,0.4);
+    content: ""; position: absolute; left: 15px; top: 32px; bottom: 10px; width: 2px;
+    background: rgba(124,58,237,0.25);
   }
   .wt-stop {
-    position: relative; padding: 0 0 26px 32px;
+    position: relative; padding: 0 0 26px 44px;
     opacity: 0; transform: translateX(-10px);
     animation: wt-stop-in .45s ease forwards;
   }
   .wt-stop:last-child { padding-bottom: 0; }
   @keyframes wt-stop-in { to { opacity: 1; transform: translateX(0); } }
-  .wt-stop::before {
-    content: ""; position: absolute; left: 0; top: 6px;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: #a855f7;
-    box-shadow: 0 0 0 3px rgba(168,85,247,0.18);
+  .wt-stop-icon {
+    position: absolute; left: 0; top: 0;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #f0ecfc; color: #7c3aed;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
   }
+  .wt-stop-icon svg { width: 16px; height: 16px; }
   .wt-stop-station { font-size: 18px; font-weight: 800; margin: 0 0 4px; letter-spacing: -0.3px; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
   .wt-stop-train {
     display: inline-block; font-size: 12.5px; font-weight: 600; color: var(--primary2);
