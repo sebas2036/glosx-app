@@ -619,12 +619,20 @@
       transform: translateX(0);
     }
     .scenic-icon {
-      width: 48px; height: 48px;
-      border-radius: 12px;
+      width: 52px; height: 52px;
+      border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
       font-size: 22px;
       flex-shrink: 0;
+      position: relative; overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -8px 14px rgba(0,0,0,0.25);
     }
+    .scenic-icon::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(120% 90% at 30% 15%, rgba(255,255,255,0.35), transparent 55%);
+      pointer-events: none;
+    }
+    .scenic-icon svg { position: relative; z-index: 1; filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25)); }
     .scenic-body { flex: 1; min-width: 0; }
     .scenic-name {
       font-size: 15px; font-weight: 700; color: var(--text);
