@@ -795,7 +795,7 @@
       'Czech Republic': ['Brno', 'Prague'],
       'Denmark': ['Copenhagen'],
       'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Nice', 'Paris', 'Tende', 'Toulouse'],
-      'Germany': ['Berlin', 'Dortmund', 'Frankfurt', 'Hamburg', 'Munich'],
+      'Germany': ['Berlin', 'Cologne', 'Dortmund', 'Frankfurt', 'Hamburg', 'Mainz', 'Munich'],
       'Hungary': ['Budapest'],
       'Italy': ['Florence', 'Milan', 'Naples', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
