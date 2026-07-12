@@ -1836,6 +1836,9 @@
       return;
     }
 
+    if (typeof fbq === 'function') { fbq('track', 'Lead', { content_name: 'ai_itinerary_generated' }); }
+    if (typeof gtag === 'function') { gtag('event', 'generate_lead', { source: 'ai_planner' }); }
+
     inputAurora.classList.add('active');
     btn.disabled = true;
     btn.classList.add('loading');
