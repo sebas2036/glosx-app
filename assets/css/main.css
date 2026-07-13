@@ -433,6 +433,11 @@
       overflow: hidden; text-overflow: ellipsis;
       transition: background 0.15s, color 0.15s;
     }
+    .chip-budget-badge {
+      display: inline-block; margin-left: 6px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.01em;
+      color: #c9a84c; white-space: nowrap;
+    }
     @media (hover: hover) and (pointer: fine) {
       .country-routes a:hover { background: rgba(124,58,237,0.3); color: #fff; }
     }

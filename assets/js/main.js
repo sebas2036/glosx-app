@@ -2525,6 +2525,28 @@
     `;
   }
 
+  // Agrega un badge de presupuesto diario estimado (hostel+comida en destino) a cada
+  // chip de ruta del sitio (planRouteFromChip). No depende de la IA, se calcula al
+  // instante con los mismos rangos de referencia usados en el card del planner.
+  function injectChipBudgetBadges() {
+    const chips = document.querySelectorAll('a[onclick^="planRouteFromChip"]');
+    chips.forEach(chip => {
+      if (chip.querySelector('.chip-budget-badge')) return; // ya tiene badge
+      const m = chip.getAttribute('onclick').match(/planRouteFromChip\(event,'([^']*)','([^']*)'\)/);
+      if (!m) return;
+      const dest = m[2];
+      const tier = COUNTRY_BUDGET_TIER[cityTier(dest)];
+      const low = tier.hostel[0] + tier.food[0];
+      const high = tier.hostel[1] + tier.food[1];
+      const badge = document.createElement('span');
+      badge.className = 'chip-budget-badge';
+      badge.textContent = `~€${low}-${high}/day`;
+      chip.appendChild(badge);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', injectChipBudgetBadges);
+  if (document.readyState !== 'loading') injectChipBudgetBadges();
+
   function displayAIRoute(data) {
     // Ordenar tramos al inicio para que todo lo que sigue use el orden correcto
     data.tramos = sortTramos(data.tramos);
