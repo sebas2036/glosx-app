@@ -2364,7 +2364,8 @@
     });
 
     tlItems.push({ type: 'title', html: `<div class="trip-section-title">${dict.ai_plan_hotels || 'Hotels per stop'}</div>` });
-    getRouteStops(data).forEach(ciudad => {
+    getRouteStops(data).forEach(ciudadRaw => {
+      const ciudad = cleanCityForKlook(ciudadRaw) || ciudadRaw;
       const curated = findCuratedHotel(ciudad);
       if (curated) {
         const budgetUrl = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(ciudad)}`;
@@ -2455,6 +2456,17 @@
     return stops.filter(Boolean);
   }
 
+  // A veces la IA mete el nombre de la estacion en el campo de ciudad (ej. "Viena
+  // Hauptbahnhof" en vez de "Vienna") — eso rompe el lookup de ciudad de Klook del
+  // lado del backend (klookNorm solo conoce nombres de ciudad limpios). Sacamos los
+  // sufijos de estacion mas comunes en varios idiomas antes de armar el link.
+  function cleanCityForKlook(name) {
+    return (name || '')
+      .replace(/\b(hauptbahnhof|hbf|bahnhof|central station|centraal station|central|station|gare(?:\s+du\s+nord|\s+de\s+lyon)?|estaci[oó]n(?:\s+de\s+\w+)?|stazione(?:\s+centrale)?|n[aá]dra[zž][ií]|f[oő]p[aá]lyaudvar|glavni\s+kolodvor)\b/gi, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+  }
+
   function trainClass(name) {
     const n = (name || '').toLowerCase();
     if (/ave|tgv|ice|eurostar|thalys|frecciarossa|italo|alvia|avlo|ouigo|high.?speed|alta.?vel/.test(n)) return 'train-high';
@@ -2491,7 +2503,7 @@
     // Klook (Trusted Partners) apunta a los hoteles de la ciudad destino de esta ruta
     const vipKlook = document.getElementById('aiVipKlook');
     if (vipKlook && destino) {
-      vipKlook.href = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(destino)}`;
+      vipKlook.href = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(cleanCityForKlook(destino) || destino)}`;
       vipKlook.target = '_blank';
       vipKlook.rel = 'noopener noreferrer sponsored';
       vipKlook.removeAttribute('onclick');
