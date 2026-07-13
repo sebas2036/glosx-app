@@ -2458,7 +2458,11 @@
   function trainClass(name) {
     const n = (name || '').toLowerCase();
     if (/ave|tgv|ice|eurostar|thalys|frecciarossa|italo|alvia|avlo|ouigo|high.?speed|alta.?vel/.test(n)) return 'train-high';
-    if (/eurocity|ec\b|intercity.?int|international|nacht|night|sleeper|railjet/.test(n)) return 'train-intl';
+    if (/eurocity|ec\b|intercity.?international|international|nacht|night|sleeper|railjet/.test(n)) return 'train-intl';
+    // "InterCity" domestico plano (ej. Avanti West Coast en UK) es un servicio rapido
+    // principal, no un tren regional/de cercanias — antes caia mal a train-reg y
+    // subestimaba mucho el precio (verificado contra Klook: Londres-Manchester real).
+    if (/intercity/.test(n)) return 'train-high';
     return 'train-reg';
   }
 
@@ -2550,13 +2554,20 @@
   // Multiplicador de costo de vida por pais (mismo tier que hostel/comida): un tramo
   // regional corto en Suiza cuesta mucho mas que uno igual de corto en Espana.
   const COUNTRY_COST_MULTIPLIER = { high: 1.3, mid: 1.0, budget: 0.75 };
+  // Reino Unido es un caso atipico real, no solo "caro" como Suiza/Francia: varios
+  // estudios (Transport & Environment, Railway Magazine) muestran tarifas hasta 2.5x
+  // el promedio UE/Suiza por la falta de competencia low-cost en su red domestica.
+  // Verificado contra Klook (Londres-Manchester, 262km): real ronda €56-193 segun
+  // franja horaria/anticipacion, muy por encima de lo que da el tier "high" generico.
+  const COUNTRY_MULTIPLIER_OVERRIDE = { 'United Kingdom': 2.2 };
 
   function estimateLegFare(origen, destino, operadorTren, tipoTrenSugerido) {
     const cls = trainClass(operadorTren || tipoTrenSugerido || '');
     const params = TRAIN_FARE_PER_KM[cls] || TRAIN_FARE_PER_KM['train-reg'];
     const a = CITY_COORDS[normalizeCityKey(origen)];
     const b = CITY_COORDS[normalizeCityKey(destino)];
-    const mult = COUNTRY_COST_MULTIPLIER[cityTier(destino)] || 1.0;
+    const destCountry = CITY_TO_COUNTRY[normalizeCityKey(destino)];
+    const mult = COUNTRY_MULTIPLIER_OVERRIDE[destCountry] || COUNTRY_COST_MULTIPLIER[cityTier(destino)] || 1.0;
     if (!a || !b) {
       // Sin coordenadas para alguna ciudad: usamos una distancia tipica por clase
       // en vez de romper el calculo (mejor una estimacion razonable que nada).
