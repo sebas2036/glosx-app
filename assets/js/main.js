@@ -2482,8 +2482,25 @@
   Object.entries(KLOOK_HOTEL_CITIES_BY_COUNTRY).forEach(([country, cities]) => {
     cities.forEach(c => { CITY_TO_COUNTRY[c.toLowerCase()] = country; });
   });
+  // El SYSTEM_PROMPT le pide a la IA no traducir nombres de ciudad, pero en la practica
+  // a veces igual devuelve la version local (ej. "Praga" en vez de "Prague" en respuestas
+  // en espanol) — sin este alias, el lookup en CITY_COORDS/CITY_TO_COUNTRY fallaba y
+  // caia a un valor generico de respaldo, dando estimaciones bastante alejadas de lo real.
+  const CITY_NAME_ALIASES = {
+    praga: 'prague', roma: 'rome', florencia: 'florence', viena: 'vienna', venecia: 'venice',
+    ginebra: 'geneva', milan: 'milan', turin: 'turin', brujas: 'bruges', colonia: 'cologne',
+    copenhague: 'copenhagen', estocolmo: 'stockholm', edimburgo: 'edinburgh', amberes: 'antwerp',
+    munich: 'munich', zurich: 'zurich', basilea: 'basel', berna: 'bern', ginevra: 'geneva',
+    firenze: 'florence', wien: 'vienna', venise: 'venice', florence: 'florence',
+    munchen: 'munich', köln: 'cologne', bruegge: 'bruges', londres: 'london', paris: 'paris',
+    lisboa: 'lisbon', sevilla: 'seville', varsovia: 'warsaw',
+  };
+  function normalizeCityKey(city) {
+    const key = (city || '').toLowerCase().trim();
+    return CITY_NAME_ALIASES[key] || key;
+  }
   function cityTier(city) {
-    const country = CITY_TO_COUNTRY[(city || '').toLowerCase().trim()];
+    const country = CITY_TO_COUNTRY[normalizeCityKey(city)];
     return COUNTRY_TIER[country] || 'mid'; // fallback razonable si la ciudad no esta mapeada
   }
   // Coordenadas de las ciudades que aparecen en rutas/chips (para calcular distancia
@@ -2537,8 +2554,8 @@
   function estimateLegFare(origen, destino, operadorTren, tipoTrenSugerido) {
     const cls = trainClass(operadorTren || tipoTrenSugerido || '');
     const params = TRAIN_FARE_PER_KM[cls] || TRAIN_FARE_PER_KM['train-reg'];
-    const a = CITY_COORDS[(origen || '').toLowerCase().trim()];
-    const b = CITY_COORDS[(destino || '').toLowerCase().trim()];
+    const a = CITY_COORDS[normalizeCityKey(origen)];
+    const b = CITY_COORDS[normalizeCityKey(destino)];
     const mult = COUNTRY_COST_MULTIPLIER[cityTier(destino)] || 1.0;
     if (!a || !b) {
       // Sin coordenadas para alguna ciudad: usamos una distancia tipica por clase
@@ -2599,13 +2616,19 @@
       if (chip.querySelector('.chip-budget-badge')) return; // ya tiene badge
       const m = chip.getAttribute('onclick').match(/planRouteFromChip\(event,'([^']*)','([^']*)'\)/);
       if (!m) return;
-      const dest = m[2];
+      const origin = m[1], dest = m[2];
       const tier = COUNTRY_BUDGET_TIER[cityTier(dest)];
-      const low = tier.hostel[0] + tier.food[0];
-      const high = tier.hostel[1] + tier.food[1];
+      const dailyLow = tier.hostel[0] + tier.food[0];
+      const dailyHigh = tier.hostel[1] + tier.food[1];
+      // Heuristica simple para el chip (no sabemos que operador va a elegir la IA):
+      // mismo pais de origen/destino -> alta velocidad domestica, distinto pais -> internacional.
+      const sameCountry = CITY_TO_COUNTRY[normalizeCityKey(origin)] && CITY_TO_COUNTRY[normalizeCityKey(origin)] === CITY_TO_COUNTRY[normalizeCityKey(dest)];
+      const fakeOperador = sameCountry ? 'high-speed' : 'international';
+      const trainFare = estimateLegFare(origin, dest, fakeOperador);
+      const trainLow = Math.round(trainFare.low), trainHigh = Math.round(trainFare.high);
       const badge = document.createElement('span');
       badge.className = 'chip-budget-badge';
-      badge.textContent = `~€${low}-${high}/day`;
+      badge.textContent = `~€${trainLow}-${trainHigh} tren · €${dailyLow}-${dailyHigh}/day`;
       chip.appendChild(badge);
     });
   }
