@@ -2500,10 +2500,15 @@
       const range = TRAIN_FARE_RANGE[cls] || TRAIN_FARE_RANGE['train-reg'];
       trainLow += range[0]; trainHigh += range[1];
     });
+    // Usamos el tier de la ciudad destino (misma logica que injectChipBudgetBadges()),
+    // no un min/max mezclando todas las paradas: eso daba rangos que no coincidian
+    // con el badge del chip de la misma ruta (ej. Paris-alta + Praga-budget -> rango
+    // absurdamente ancho que no representaba ni una ciudad ni la otra).
     const stops = getRouteStops(data);
-    const tiers = stops.map(cityTier);
-    const dailyLow  = Math.min(...tiers.map(t => COUNTRY_BUDGET_TIER[t].hostel[0] + COUNTRY_BUDGET_TIER[t].food[0]));
-    const dailyHigh = Math.max(...tiers.map(t => COUNTRY_BUDGET_TIER[t].hostel[1] + COUNTRY_BUDGET_TIER[t].food[1]));
+    const destino = stops[stops.length - 1];
+    const tier = COUNTRY_BUDGET_TIER[cityTier(destino)];
+    const dailyLow = tier.hostel[0] + tier.food[0];
+    const dailyHigh = tier.hostel[1] + tier.food[1];
     return { trainLow, trainHigh, dailyLow, dailyHigh };
   }
 
