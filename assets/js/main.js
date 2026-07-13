@@ -800,9 +800,9 @@
       'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],
-      'Spain': ['Barcelona', 'Figueres', 'Girona', 'Madrid', 'Seville', 'Valencia', 'Zaragoza'],
+      'Spain': ['Barcelona', 'Figueres', 'Girona', 'Madrid', 'Malaga', 'Seville', 'Valencia', 'Zaragoza'],
       'Sweden': ['Stockholm'],
-      'Switzerland': ['Basel', 'Bern', 'Geneva', 'Interlaken', 'Jungfraujoch', 'Lauterbrunnen', 'Lucerne', 'Sargans', 'Zermatt', 'Zurich'],
+      'Switzerland': ['Basel', 'Bern', 'Geneva', 'Interlaken', 'Jungfraujoch', 'Lauterbrunnen', 'Lucerne', 'Montreux', 'Sargans', 'Zermatt', 'Zurich'],
       'United Kingdom': ['Cambridge', 'Edinburgh', 'Liverpool', 'London', 'Manchester', 'Oxford', 'York'],
     };
     (function () {
@@ -1897,6 +1897,20 @@
   // para que nunca quede un numero viejo congelado en el sitio). Clave = ciudad en minuscula,
   // sin acentos ni sufijo de estacion (ej. "interlaken" matchea "Interlaken Ost").
   const CURATED_HOTELS = {
+    montreux: {
+      name: 'Fairmont Le Montreux Palace',
+      loc: 'Montreux, Switzerland',
+      stars: 5,
+      photo: 'https://m.ahstatic.com/is/image/accorhotels/acf_p_B015_22:8by10?fmt=jpg&op_usm=1.75,0.3,2,0&resMode=sharp2&iccEmbed=true&icc=sRGB&dpr=on,1.5&wid=943&hei=1178&qlt=80',
+      url: `${PROXY_BASE}/klook-hotel?city=montreux`,
+    },
+    malaga: {
+      name: 'Gran Hotel Miramar',
+      loc: 'Malaga, Spain',
+      stars: 5,
+      photo: 'https://www.granhotelmiramarmalaga.com/wp-content/blogs.dir/1833/files/home/malaga-new.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=malaga`,
+    },
     interlaken: {
       name: 'Grand Hotel Beau-Rivage',
       loc: 'Interlaken, Switzerland',
