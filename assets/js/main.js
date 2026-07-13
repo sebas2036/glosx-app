@@ -802,7 +802,7 @@
       'Netherlands': ['Amsterdam'],
       'Spain': ['Barcelona', 'Figueres', 'Girona', 'Madrid', 'Malaga', 'Seville', 'Valencia', 'Zaragoza'],
       'Sweden': ['Stockholm'],
-      'Switzerland': ['Basel', 'Bern', 'Geneva', 'Interlaken', 'Jungfraujoch', 'Lauterbrunnen', 'Lucerne', 'Montreux', 'Sargans', 'Zermatt', 'Zurich'],
+      'Switzerland': ['Basel', 'Bern', 'Geneva', 'Interlaken', 'Jungfraujoch', 'Lauterbrunnen', 'Lucerne', 'Montreux', 'Sargans', 'Spiez', 'Zermatt', 'Zurich', 'Zweisimmen'],
       'United Kingdom': ['Cambridge', 'Edinburgh', 'Liverpool', 'London', 'Manchester', 'Oxford', 'York'],
     };
     (function () {
@@ -1897,6 +1897,20 @@
   // para que nunca quede un numero viejo congelado en el sitio). Clave = ciudad en minuscula,
   // sin acentos ni sufijo de estacion (ej. "interlaken" matchea "Interlaken Ost").
   const CURATED_HOTELS = {
+    zweisimmen: {
+      name: 'TOP Rinderberg Swiss Alpine Lodge',
+      loc: 'Zweisimmen, Switzerland',
+      stars: 4,
+      photo: 'https://lucidcm.imgix.net/148247/Hotel/334/Image/yHbLWBaU02rR0ghsP0EDw_Exterior_view_1_TOP_Rinderberg_Swiss_Alpine_Lodge.jpg.jpg?h=1366&w=2048&fm=webp',
+      url: `${PROXY_BASE}/klook-hotel?city=zweisimmen`,
+    },
+    spiez: {
+      name: 'Belvédère Strandhotel',
+      loc: 'Spiez, Switzerland',
+      stars: 4,
+      photo: 'https://cdn.prod.website-files.com/5f587732b83d08afd5efdc43/69a7177119c70216176e4376_67ed31a03599f61809ab9252_Hero_Intro_Belve%CC%81de%CC%80re.avif',
+      url: `${PROXY_BASE}/klook-hotel?city=spiez`,
+    },
     montreux: {
       name: 'Fairmont Le Montreux Palace',
       loc: 'Montreux, Switzerland',
