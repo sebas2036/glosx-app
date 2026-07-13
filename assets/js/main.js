@@ -2352,7 +2352,7 @@
       );
       const ticketUrl = noTrain
         ? `https://www.google.com/maps/dir/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
-        : window.glosxBookTarget(s.origen, s.destino);
+        : window.glosxBookTarget(cleanCityForKlook(s.origen) || s.origen, cleanCityForKlook(s.destino) || s.destino);
       const btnLabel = noTrain ? (dict.ai_view_options || 'Ver opciones →') : (dict.ai_buy_ticket || 'Buy ticket →');
       tlItems.push({ type: 'train', html: `<div class="trip-segment-row" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
         <div>
