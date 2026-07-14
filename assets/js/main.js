@@ -2349,8 +2349,26 @@
       url: `${PROXY_BASE}/klook-hotel?city=jungfraujoch`,
     },
   };
+  // Resuelve un nombre de ciudad en cualquier idioma (ej. "Roma", "Florencia") a su
+  // slug canónico en inglés (ej. "rome", "florence") usando _GLOSX_CITIES, para que
+  // el match contra CURATED_HOTELS (claves siempre en inglés) funcione sin importar
+  // en qué idioma haya devuelto la ciudad el planificador de IA.
+  function resolveCitySlug(name) {
+    const q = (name || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const cities = window._GLOSX_CITIES || [];
+    for (let i = 0; i < cities.length; i++) {
+      const c = cities[i];
+      for (let j = 0; j < c.keywords.length; j++) {
+        const kw = c.keywords[j].toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+        if (kw === q || kw.indexOf(q) === 0 || q.indexOf(kw) === 0) return c.slug;
+      }
+    }
+    return null;
+  }
+
   function findCuratedHotel(city) {
-    const key = (city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
+    const slug = resolveCitySlug(city);
+    const key = (slug || city || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
     const match = Object.keys(CURATED_HOTELS).find(k => key.startsWith(k));
     return match ? CURATED_HOTELS[match] : null;
   }
