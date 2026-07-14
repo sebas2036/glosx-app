@@ -797,7 +797,7 @@
       'Belgium': ['Bruges', 'Brussels'],
       'Czech Republic': ['Brno', 'Prague'],
       'Denmark': ['Copenhagen'],
-      'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Nice', 'Paris', 'Tende', 'Toulouse'],
+      'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Marseille', 'Miramas', 'Nice', 'Paris', 'Tende', 'Toulouse'],
       'Germany': ['Berlin', 'Cologne', 'Dortmund', 'Frankfurt', 'Hamburg', 'Mainz', 'Munich'],
       'Hungary': ['Budapest'],
       'Slovenia': ['Ljubljana'],
