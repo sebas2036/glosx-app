@@ -457,6 +457,13 @@
     @media (hover: hover) and (pointer: fine) {
       .country-routes a:hover { background: rgba(124,58,237,0.3); color: #fff; }
     }
+    .country-popup.wide { width: 260px; }
+    .country-routes .group-label {
+      font-size: 10.5px; font-weight: 800; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(231,198,107,0.75);
+      padding: 8px 8px 2px; margin-top: 4px;
+    }
+    .country-routes .group-label:first-child { margin-top: 0; }
     @media (hover: hover) and (pointer: fine) {
       .country-chip:hover {
         border-color: rgba(167,139,250,0.85);
