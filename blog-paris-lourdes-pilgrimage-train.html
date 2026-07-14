@@ -111,19 +111,24 @@
     .blog-hero {
       position: relative;
       width: 100%;
-      height: 280px;
-      margin-top: 56px;
+      height: 78vh;
+      min-height: 520px;
       background-size: cover;
-      background-position: center 40%;
+      background-position: 80% 20%;
     }
     .blog-hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(22,19,31,0.28) 0%, rgba(22,19,31,0.28) 45%, rgba(22,19,31,0.72) 70%, rgba(22,19,31,1) 100%);
+      background: linear-gradient(to bottom, rgba(22,19,31,0) 0%, rgba(22,19,31,0) 45%, rgba(22,19,31,0.35) 70%, rgba(22,19,31,0.75) 100%);
       pointer-events: none;
     }
-    @media (max-width: 600px) { .blog-hero { height: 200px; margin-top: 52px; } }
+    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; z-index: 2; }
+    .hero-content .badge, .hero-content h1 { margin-bottom: 12px; }
+    .hero-content h1 { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7); }
+    .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
+    main { padding-top: 40px; }
+    @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
   </style>
 </head>
 <body>
@@ -135,12 +140,15 @@
     </div>
   </nav>
 
-  <div class="blog-hero" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/84/France-002018_-_Grotto_Service_%2815153278134%29.jpg');background-position:80% 20%;"></div>
+  <div class="blog-hero" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/84/France-002018_-_Grotto_Service_%2815153278134%29.jpg')">
+    <div class="hero-content">
+      <span class="badge">Pilgrimage</span>
+      <h1>Paris to Lourdes by Train: A Pilgrimage of Faith and Hope (2026)</h1>
+      <p class="meta">By WoW Train · July 2026 · 6 min read</p>
+    </div>
+  </div>
 
   <main>
-    <span class="badge">Pilgrimage</span>
-    <h1>Paris to Lourdes by Train: A Pilgrimage of Faith and Hope (2026)</h1>
-    <p class="meta">By WoW Train · July 2026 · 6 min read</p>
 
     <p class="lead">
       Every year, millions travel to a small grotto in the foothills of the Pyrenees, drawn by the same quiet hope that has pulled pilgrims here since 1858. The journey from Paris to Lourdes by train is more than a transfer between two cities — it's the first step of a pilgrimage, and for many, the beginning of something they carry home for the rest of their lives.
