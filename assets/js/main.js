@@ -1677,7 +1677,23 @@
     { display: 'Bernina Express (Chur→Tirano)',        slug: 'chur',            keywords: ['bernina','bernina express','tirano'] },
     { display: 'Glacier Express (Zermatt→St.Moritz)',  slug: 'zermatt',         keywords: ['glacier express','glaciar express'] },
     { display: 'Flåm (Tren panorámico Noruega)',       slug: 'myrdal',          keywords: ['flam','flåm','flamsbana','flamsbanen'] },
-    { display: 'Orient Express (Venecia→Estambul)',    slug: 'venice',          keywords: ['orient express','oriente express'] }
+    { display: 'Orient Express (Venecia→Estambul)',    slug: 'venice',          keywords: ['orient express','oriente express'] },
+    // Pueblos y ciudades chicas — agregados para que el match de hoteles curados
+    // (findCuratedHotel) funcione aunque la IA devuelva el nombre con acentos/variantes.
+    { display: 'Marsella / Marseille',                  slug: 'marseille',       keywords: ['marseille','marsella'] },
+    { display: 'Miramas',                               slug: 'miramas',         keywords: ['miramas'] },
+    { display: 'Zweisimmen',                            slug: 'zweisimmen',      keywords: ['zweisimmen'] },
+    { display: 'Spiez',                                 slug: 'spiez',           keywords: ['spiez'] },
+    { display: 'Dortmund',                              slug: 'dortmund',        keywords: ['dortmund'] },
+    { display: 'Oxford',                                slug: 'oxford',          keywords: ['oxford'] },
+    { display: 'Sargans',                                slug: 'sargans',        keywords: ['sargans'] },
+    { display: 'Tende',                                 slug: 'tende',           keywords: ['tende'] },
+    { display: 'Lauterbrunnen',                         slug: 'lauterbrunnen',   keywords: ['lauterbrunnen'] },
+    { display: 'Sorrento',                               slug: 'sorrento',       keywords: ['sorrento'] },
+    { display: 'Positano',                               slug: 'positano',       keywords: ['positano'] },
+    { display: 'Figueres',                               slug: 'figueres',       keywords: ['figueres','figueras'] },
+    { display: 'Lourdes',                                slug: 'lourdes',        keywords: ['lourdes'] },
+    { display: 'Jungfraujoch',                           slug: 'jungfraujoch',   keywords: ['jungfraujoch','top of europe'] }
   ];
 
   function norm(s) {
@@ -2347,6 +2363,20 @@
       loc: 'Jungfraujoch, Switzerland',
       photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Jungfraujoch_Aerial_View_-_Flickr_-_kuhnmi.jpg/500px-Jungfraujoch_Aerial_View_-_Flickr_-_kuhnmi.jpg',
       url: `${PROXY_BASE}/klook-hotel?city=jungfraujoch`,
+    },
+    marseille: {
+      name: 'InterContinental Marseille – Hôtel Dieu',
+      loc: 'Marseille, France',
+      stars: 5,
+      photo: 'https://marseille.intercontinental.com/wp-content/uploads/sites/5/2023/10/InterContinental-Marseille-Facade-c-Eric-Cuvillier-Perf.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=marseille`,
+    },
+    miramas: {
+      name: 'ibis Styles Miramas - Provence',
+      loc: 'Miramas, France',
+      stars: 3,
+      photo: 'https://www.ahstatic.com/photos/c0d8_ho_00_p_1024x768.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=miramas`,
     },
   };
   // Resuelve un nombre de ciudad en cualquier idioma (ej. "Roma", "Florencia") a su
