@@ -743,7 +743,7 @@
     })();
 
     // ── Prefill del planner AI por URL (?from= / ?to=) — usado por CTAs del blog ──
-    (function() {
+    function runAIPrefillFromUrl() {
       try {
         var p = new URLSearchParams(window.location.search);
         var from = p.get('from'); var to = p.get('to');
@@ -756,7 +756,14 @@
           setTimeout(function(){ document.getElementById('aiInput')?.focus(); }, 600);
         }
       } catch (e) {}
-    })();
+    }
+    runAIPrefillFromUrl();
+    // Red de seguridad: si algo bloqueó la ejecución sincrónica de arriba
+    // (script cargado antes de tiempo, DOM aún no listo, etc.), reintentar
+    // apenas el DOM esté completamente parseado.
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', runAIPrefillFromUrl);
+    }
 
     // ── Partner products → redirige al proxy correspondiente ───────────────
     // Partners con widget embebido (panel desplegable). El resto va al proxy.
