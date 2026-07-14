@@ -72,9 +72,15 @@
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
-    .route-hero { position: relative; width: 100%; height: 280px; margin-top: 56px; background-size: cover; background-position: center 40%; }
-    .route-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0.28) 0%, rgba(22,19,31,0.28) 45%, rgba(22,19,31,0.72) 70%, rgba(22,19,31,1) 100%); pointer-events: none; }
-    @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 16px 20px 60px; } h1 { font-size: 32px; } .route-hero { height: 200px; margin-top: 52px; } }
+    .route-hero { position: relative; width: 100%; height: 78vh; min-height: 520px; background-size: cover; background-position: center 45%; }
+    .route-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0) 0%, rgba(22,19,31,0) 45%, rgba(22,19,31,0.35) 70%, rgba(22,19,31,0.75) 100%); pointer-events: none; }
+    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; z-index: 2; }
+    .hero-content .badge, .hero-content h1 { margin-bottom: 12px; }
+    .hero-content h1 { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7); }
+    .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
+    main { padding-top: 40px; }
+    @media (max-width: 600px) { .route-hero { height: 64vh; min-height: 380px; } }
+@media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 16px 20px 60px; } h1 { font-size: 32px; } .route-hero { height: 200px; margin-top: 52px; } }
     .related-routes { margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); }
     .related-routes h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.3px; }
     .related-grid { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -109,12 +115,15 @@
     <a href="/" class="nav-logo">WoW Train</a>
     <div class="nav-right"><a href="https://glosx.app/rutas/basel-paris/" class="lang">EN</a><a href="/blog.html" class="nav-back">← Todos los artículos</a></div>
   </nav>
-  <div class="route-hero" style="background-image:url('https://glosx.app/hero-bg.jpg')"></div>
+  <div class="route-hero" style="background-image:url('https://images.pexels.com/photos/16999888/pexels-photo-16999888.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+    <div class="hero-content">
+      <span class="badge">Guía de ruta · Switzerland</span>
+      <h1>Basel a Paris en tren</h1>
+      <p class="meta">Por WoW Train · Actualizado julio 2026 · 4 min de lectura</p>
+    </div>
+  </div>
   <main>
-    <span class="badge">Guía de ruta · Switzerland</span>
-    <h1>Basel a Paris en tren</h1>
-    <p class="meta">Por WoW Train · Actualizado julio 2026 · 4 min de lectura</p>
-    <p class="lead">Un recorrido directo de alta velocidad desde la ciudad fronteriza suizo-germano-francesa hasta la capital francesa.</p>
+<p class="lead">Un recorrido directo de alta velocidad desde la ciudad fronteriza suizo-germano-francesa hasta la capital francesa.</p>
     <h2>El recorrido, parada por parada</h2>
     <p>Desde <strong>Basel SBB</strong>, los trenes se dirigen hacia <strong>Paris</strong>, llegando a Paris Gare de Lyon.</p>
     <h2>¿Cuánto dura?</h2>
