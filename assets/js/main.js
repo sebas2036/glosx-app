@@ -797,6 +797,7 @@
       'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Nice', 'Paris', 'Tende', 'Toulouse'],
       'Germany': ['Berlin', 'Cologne', 'Dortmund', 'Frankfurt', 'Hamburg', 'Mainz', 'Munich'],
       'Hungary': ['Budapest'],
+      'Slovenia': ['Ljubljana'],
       'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],
@@ -1897,6 +1898,13 @@
   // para que nunca quede un numero viejo congelado en el sitio). Clave = ciudad en minuscula,
   // sin acentos ni sufijo de estacion (ej. "interlaken" matchea "Interlaken Ost").
   const CURATED_HOTELS = {
+    ljubljana: {
+      name: 'Grand Hotel Union',
+      loc: 'Ljubljana, Slovenia',
+      stars: 4,
+      photo: 'https://media.booking-channel.com/api/hotels/2281/images/109.jpeg',
+      url: `${PROXY_BASE}/klook-hotel?city=ljubljana`,
+    },
     zweisimmen: {
       name: 'TOP Rinderberg Swiss Alpine Lodge',
       loc: 'Zweisimmen, Switzerland',
