@@ -672,7 +672,7 @@
     }
     .scenic-toggle {
       background: transparent;
-      color: var(--primary2);
+      color: #ffffff;
       border: 1px solid rgba(124,58,237,0.6);
       padding: 10px 24px;
       border-radius: 10px;
