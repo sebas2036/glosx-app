@@ -742,22 +742,18 @@
       };
     })();
 
-    // ── Prefill del buscador por URL (?from= / ?to=) — usado por páginas /destinos/ y /rutas/ ──
+    // ── Prefill del planner AI por URL (?from= / ?to=) — usado por CTAs del blog ──
     (function() {
       try {
         var p = new URLSearchParams(window.location.search);
         var from = p.get('from'); var to = p.get('to');
         if (!from && !to) return;
-        var originEl = document.getElementById('origin');
-        var destEl   = document.getElementById('dest');
-        if (from && originEl) originEl.value = from;
-        if (to && destEl) destEl.value = to;
-        var form = document.getElementById('trainSearch');
-        if (form) {
-          form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          // foco en el campo que falta completar (origen si vino destino, y viceversa)
-          var focusEl = (to && !from) ? originEl : destEl;
-          if (focusEl) setTimeout(function(){ focusEl.focus(); }, 600);
+        var text = (from && to) ? (from + ' to ' + to) : (from || to);
+        setAISuggestion(text);
+        var wrapper = document.getElementById('aiInputWrapper');
+        if (wrapper) {
+          wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(function(){ document.getElementById('aiInput')?.focus(); }, 600);
         }
       } catch (e) {}
     })();
