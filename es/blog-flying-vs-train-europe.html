@@ -175,23 +175,15 @@
       .comparison-table th, .comparison-table td { padding: 10px 10px; font-size: 13px; }
     }
 
-    .blog-hero {
-      position: relative;
-      width: 100%;
-      height: 280px;
-      margin-top: 56px;
-      background-size: cover;
-      background-position: center 40%;
-    }
-    .blog-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(22,19,31,0.28) 0%, rgba(22,19,31,0.28) 45%, rgba(22,19,31,0.72) 70%, rgba(22,19,31,1) 100%);
-      pointer-events: none;
-    }
-    @media (max-width: 600px) { .blog-hero { height: 200px; margin-top: 52px; } }
-  </style>
+    .blog-hero { position: relative; width: 100%; height: 78vh; min-height: 520px; background-size: cover; background-position: center 45%; }
+    .blog-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0) 0%, rgba(22,19,31,0) 45%, rgba(22,19,31,0.35) 70%, rgba(22,19,31,0.75) 100%); pointer-events: none; }
+    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; z-index: 2; }
+    .hero-content .badge, .hero-content h1 { margin-bottom: 12px; }
+    .hero-content h1 { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7); }
+    .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
+    main { padding-top: 40px; }
+    @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
+</style>
 </head>
 <body>
   <nav>
@@ -202,14 +194,16 @@
     </div>
   </nav>
 
-  <div class="blog-hero" style="background-image:url('https://images.pexels.com/photos/36023564/pexels-photo-36023564.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div>
+  <div class="blog-hero" style="background-image:url('https://images.pexels.com/photos/36023564/pexels-photo-36023564.jpeg?auto=compress&cs=tinysrgb&w=1400')">
+    <div class="hero-content">
+      <span class="badge">Tren vs Avión</span>
+      <h1>Avión vs Tren en Europa: El Costo Real (2026)</h1>
+      <p class="meta">Por WoW Train · Junio 2026 · 7 min de lectura</p>
+    </div>
+  </div>
 
   <main>
-    <span class="badge">Tren vs Avión</span>
-    <h1>Avión vs Tren en Europa: El Costo Real (2026)</h1>
-    <p class="meta">Por WoW Train · Junio 2026 · 7 min de lectura</p>
-
-    <p class="lead">
+<p class="lead">
       El vuelo a Barcelona por €19 parece una ganga — hasta que sumás el bus al aeropuerto (€18), la maleta facturada (€40), la cola de seguridad de 90 minutos y el metro de 40 minutos al llegar. Hicimos los números reales en los pares de ciudades más populares de Europa. Los resultados pueden sorprenderte.
     </p>
 

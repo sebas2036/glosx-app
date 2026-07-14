@@ -109,23 +109,15 @@
     footer a { color: var(--muted); margin: 0 8px; }
     @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 100px 20px 60px; } h1 { font-size: 32px; } }
 
-    .blog-hero {
-      position: relative;
-      width: 100%;
-      height: 280px;
-      margin-top: 56px;
-      background-size: cover;
-      background-position: center 40%;
-    }
-    .blog-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(22,19,31,0.28) 0%, rgba(22,19,31,0.28) 45%, rgba(22,19,31,0.72) 70%, rgba(22,19,31,1) 100%);
-      pointer-events: none;
-    }
-    @media (max-width: 600px) { .blog-hero { height: 200px; margin-top: 52px; } }
-  </style>
+    .blog-hero { position: relative; width: 100%; height: 78vh; min-height: 520px; background-size: cover; background-position: center 45%; }
+    .blog-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0) 0%, rgba(22,19,31,0) 45%, rgba(22,19,31,0.35) 70%, rgba(22,19,31,0.75) 100%); pointer-events: none; }
+    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; z-index: 2; }
+    .hero-content .badge, .hero-content h1 { margin-bottom: 12px; }
+    .hero-content h1 { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7); }
+    .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
+    main { padding-top: 40px; }
+    @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
+</style>
 </head>
 <body>
   <nav>
@@ -136,14 +128,16 @@
     </div>
   </nav>
 
-  <div class="blog-hero" style="background-image:url('https://images.pexels.com/photos/27541217/pexels-photo-27541217.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div>
+  <div class="blog-hero" style="background-image:url('https://images.pexels.com/photos/27541217/pexels-photo-27541217.jpeg?auto=compress&cs=tinysrgb&w=1400')">
+    <div class="hero-content">
+      <span class="badge">Itinerario</span>
+      <h1>7 días recorriendo Italia en tren: el itinerario perfecto</h1>
+      <p class="meta">Por WoW Train · Junio 2026 · 7 min de lectura</p>
+    </div>
+  </div>
 
   <main>
-    <span class="badge">Itinerario</span>
-    <h1>7 días recorriendo Italia en tren: el itinerario perfecto</h1>
-    <p class="meta">Por WoW Train · Junio 2026 · 7 min de lectura</p>
-
-    <p class="lead">
+<p class="lead">
       Italia está hecha para el tren. Las líneas rápidas conectan las grandes ciudades en un par de horas, y un corto trayecto regional te deja en los acantilados de las Cinque Terre. Acá tenés una ruta relajada pero completa de una semana — Roma, Florencia, Venecia y la costa — que podés recorrer enteramente en ferrocarril.
     </p>
 

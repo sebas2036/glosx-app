@@ -123,23 +123,15 @@
     footer a { color: var(--muted); margin: 0 8px; }
     @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 16px 20px 60px; } h1 { font-size: 32px; } .route-hero { height: 200px; margin-top: 52px; } }
 
-    .route-hero {
-      position: relative;
-      width: 100%;
-      height: 280px;
-      margin-top: 56px;
-      background-size: cover;
-      background-position: center 40%;
-    }
-    .route-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(22,19,31,0.28) 0%, rgba(22,19,31,0.28) 45%, rgba(22,19,31,0.72) 70%, rgba(22,19,31,1) 100%);
-      pointer-events: none;
-    }
-    @media (max-width: 600px) { .route-hero { height: 200px; margin-top: 52px; } }
-      .related-routes {
+    .route-hero { position: relative; width: 100%; height: 78vh; min-height: 520px; background-size: cover; background-position: center 45%; }
+    .route-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0) 0%, rgba(22,19,31,0) 45%, rgba(22,19,31,0.35) 70%, rgba(22,19,31,0.75) 100%); pointer-events: none; }
+    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; z-index: 2; }
+    .hero-content .badge, .hero-content h1 { margin-bottom: 12px; }
+    .hero-content h1 { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7); }
+    .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
+    main { padding-top: 40px; }
+    @media (max-width: 600px) { .route-hero { height: 64vh; min-height: 380px; } }
+.related-routes {
       margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08);
     }
     .related-routes h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.3px; }
@@ -177,14 +169,15 @@
     </div>
   </nav>
 
-  <div class="route-hero" style="background-image:url('https://images.pexels.com/photos/15939547/pexels-photo-15939547.jpeg?auto=compress&cs=tinysrgb&w=1400')"></div>
-
+  <div class="route-hero" style="background-image:url('https://images.pexels.com/photos/15939547/pexels-photo-15939547.jpeg?auto=compress&cs=tinysrgb&w=1400')">
+    <div class="hero-content">
+      <span class="badge">Route guide · Switzerland → Italy</span>
+      <h1>Zurich to Milan by Train</h1>
+      <p class="meta">By WoW Train · Updated June 2026 · 4 min read</p>
+    </div>
+  </div>
   <main>
-    <span class="badge">Route guide · Switzerland → Italy</span>
-    <h1>Zurich to Milan by Train</h1>
-    <p class="meta">By WoW Train · Updated June 2026 · 4 min read</p>
-
-    <p class="lead">
+<p class="lead">
       One of the great Alpine crossings — from the lakes of Switzerland through the Gotthard to the gateway of northern Italy.
     </p>
 
