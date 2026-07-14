@@ -73,10 +73,11 @@
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
     .route-hero { position: relative; width: 100%; height: 78vh; min-height: 520px; background-size: cover; background-position: center 48%; }
-    .route-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0.05) 0%, rgba(22,19,31,0.10) 40%, rgba(22,19,31,0.75) 78%, rgba(22,19,31,0.97) 100%); pointer-events: none; }
-    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; }
+    .route-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0.05) 0%, rgba(22,19,31,0.10) 30%, rgba(22,19,31,0.55) 55%, rgba(22,19,31,0.92) 82%, rgba(22,19,31,1) 100%); pointer-events: none; }
+    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 90px 24px 36px; z-index: 2; background: linear-gradient(to top, rgba(10,9,15,0.98) 0%, rgba(10,9,15,0.85) 55%, rgba(10,9,15,0) 100%); }
     .hero-content .badge, .hero-content h1 { margin-bottom: 12px; }
-    .hero-content h1 { text-shadow: 0 2px 24px rgba(0,0,0,0.4); }
+    .hero-content h1 { color: #ffffff; text-shadow: 0 2px 16px rgba(0,0,0,0.85), 0 0 40px rgba(0,0,0,0.6); }
+    .hero-content .meta { color: #d4d4de; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
     .hero-content .meta { margin-bottom: 0; }
     main { padding-top: 40px; }
     @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 16px 20px 60px; } h1 { font-size: 32px; } .route-hero { height: 64vh; min-height: 380px; } }
