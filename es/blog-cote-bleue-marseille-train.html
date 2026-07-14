@@ -123,19 +123,24 @@
     .blog-hero {
       position: relative;
       width: 100%;
-      height: 280px;
-      margin-top: 56px;
+      height: 78vh;
+      min-height: 520px;
       background-size: cover;
-      background-position: center 40%;
+      background-position: center 48%;
     }
     .blog-hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(22,19,31,0.28) 0%, rgba(22,19,31,0.28) 45%, rgba(22,19,31,0.72) 70%, rgba(22,19,31,1) 100%);
+      background: linear-gradient(to bottom, rgba(22,19,31,0.05) 0%, rgba(22,19,31,0.10) 40%, rgba(22,19,31,0.75) 78%, rgba(22,19,31,0.97) 100%);
       pointer-events: none;
     }
-    @media (max-width: 600px) { .blog-hero { height: 200px; margin-top: 52px; } }
+    .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; }
+    .hero-content .badge, .hero-content h1 { margin-bottom: 12px; }
+    .hero-content h1 { text-shadow: 0 2px 24px rgba(0,0,0,0.4); }
+    .hero-content .meta { margin-bottom: 0; }
+    main { padding-top: 40px; }
+    @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
   </style>
 </head>
 <body>
@@ -147,13 +152,15 @@
     </div>
   </nav>
 
-  <div class="blog-hero" style="background-image:url('https://images.pexels.com/photos/35599457/pexels-photo-35599457.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div>
+  <div class="blog-hero" style="background-image:url('https://images.pexels.com/photos/35599457/pexels-photo-35599457.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+    <div class="hero-content">
+      <span class="badge">Rutas panorámicas · Francia</span>
+      <h1>El tren de la Côte Bleue: el ferrocarril costero secreto de Marseille</h1>
+      <p class="meta">Por WoW Train · Julio 2026 · 5 min de lectura</p>
+    </div>
+  </div>
 
   <main>
-    <span class="badge">Rutas panorámicas · Francia</span>
-    <h1>El tren de la Côte Bleue: el ferrocarril costero secreto de Marseille</h1>
-    <p class="meta">Por WoW Train · Julio 2026 · 5 min de lectura</p>
-
     <p class="lead">
       La mayoría de los que visitan Marseille nunca se enteran de que existe. El tren de la Côte Bleue sale de Marseille Saint-Charles, sube a viaductos sobre acantilados y bordea el Mediterráneo pasando por calas escondidas hasta llegar a Miramas — una alternativa panorámica y económica al TGV que los locales conocen desde hace más de un siglo.
     </p>
