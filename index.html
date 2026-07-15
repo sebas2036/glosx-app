@@ -77,7 +77,10 @@
     })();
     // Limpiar parámetros de tracking de la URL para que no se vean
     // (conserva from/to, usados por los CTA del blog para precargar el planner AI)
-    setTimeout(function () {
+    // Corre INMEDIATO (no en un setTimeout) para minimizar la ventana en la que
+    // el navegador puede guardar en el historial/autocompletado una URL con
+    // marker/trs de afiliado expuestos.
+    (function () {
       if (window.location.search) {
         var p = new URLSearchParams(window.location.search);
         var from = p.get('from'); var to = p.get('to');
@@ -87,7 +90,7 @@
         var qs = keep.toString();
         window.history.replaceState({}, '', window.location.pathname + (qs ? '?' + qs : '') + window.location.hash);
       }
-    }, 500);
+    })();
   </script>
 
   <!-- Schema.org Mobile App -->
