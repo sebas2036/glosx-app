@@ -2598,6 +2598,15 @@
       if (sub) sub.textContent = `Hotels in ${destino}`;
     }
 
+    // CTA Klook destacado: tren origen → destino
+    const klookCta = document.getElementById('aiKlookCta');
+    if (klookCta && origen && destino) {
+      klookCta.href = `${PROXY_BASE}/klook-train?from=${encodeURIComponent(cleanCityForKlook(origen) || origen)}&to=${encodeURIComponent(cleanCityForKlook(destino) || destino)}`;
+      klookCta.style.display = 'flex';
+      const ctaTitle = klookCta.querySelector('.ai-klook-cta-title');
+      if (ctaTitle) ctaTitle.textContent = `Book your ${origen} → ${destino} train on Klook`;
+    }
+
     // Mostrar paradas numeradas (derivadas de los tramos, no de paradas_principales)
     const routeStops = getRouteStops(data);
     const stopsContainer = document.getElementById('aiStops');

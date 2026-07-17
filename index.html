@@ -322,6 +322,18 @@
       </div>
       <div class="ai-stops" id="aiStops"></div>
       <div class="ai-segments" id="aiSegments"></div>
+
+      <!-- CTA Klook destacado — se activa via JS con la ruta generada -->
+      <a href="#" id="aiKlookCta" class="ai-klook-cta" target="_blank" rel="noopener sponsored" style="display:none;"
+         onclick="gtag('event','klook_click',{source:'ai_planner_cta'});">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" class="ai-klook-cta-logo" loading="lazy">
+        <div class="ai-klook-cta-text">
+          <span class="ai-klook-cta-title">Book your train tickets on Klook</span>
+          <span class="ai-klook-cta-sub">Compare times &amp; prices &middot; Instant confirmation &middot; Free cancellation on select fares</span>
+        </div>
+        <span class="ai-klook-cta-arrow">&#8594;</span>
+      </a>
+
       <div style="text-align:center;margin:28px 0 8px;">
         <button class="ai-plan-btn" id="aiPlanBtn" onclick="openTripPlan()" data-i18n="ai_plan_btn">Armar mi viaje completo</button>
       </div>
