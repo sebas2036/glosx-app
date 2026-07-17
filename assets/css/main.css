@@ -2273,7 +2273,7 @@
   }
   .trip-hotel-row:hover { border-color: rgba(124,58,237,0.35); }
   .trip-hotel-city { color: #16131f; font-size: 14px; font-weight: 600; }
-  .trip-hotel-cta { color: #7c3aed; font-size: 12px; font-weight: 600; }
+  .trip-hotel-cta { flex-shrink: 0; font-size: 12px; font-weight: 700; color: #fff; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 100px; padding: 7px 14px; white-space: nowrap; transition: filter 0.2s; }
   .trip-hotel-row.has-photo { align-items: center; gap: 12px; padding: 10px; margin-bottom: 4px; }
   .trip-hotel-photo { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
   .trip-hotel-budget-alt {
