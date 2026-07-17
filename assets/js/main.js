@@ -2434,29 +2434,7 @@
     const content = document.getElementById('tripPlanContent');
     const tlItems = [];
 
-    tlItems.push({ type: 'title', html: `<div class="trip-section-title" style="margin-top:0">${dict.ai_plan_trains || 'Trains'}</div>` });
-    data.tramos.forEach(s => {
-      const op = s.operador_tren || s.tipo_tren_sugerido || '';
-      const stations = (s.estacion_salida && s.estacion_llegada)
-        ? `${s.estacion_salida} → ${s.estacion_llegada}`
-        : `${s.origen} → ${s.destino}`;
-      const noTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n/i.test(
-        [op, s.tipo_tren_sugerido, stations, s.origen, s.destino].join(' ')
-      );
-      const ticketUrl = noTrain
-        ? `https://www.google.com/maps/dir/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
-        : window.glosxBookTarget(cleanCityForKlook(s.origen) || s.origen, cleanCityForKlook(s.destino) || s.destino);
-      const btnLabel = noTrain ? (dict.ai_view_options || 'Ver opciones →') : (dict.ai_buy_ticket || 'Buy ticket →');
-      tlItems.push({ type: 'train', html: `<div class="trip-segment-row" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
-        <div>
-          <strong>${s.origen} → ${s.destino}</strong>
-          <span>${stations} · ${s.tiempo_trayecto} · ${op}</span>
-        </div>
-        <a href="${ticketUrl}" target="_blank" rel="noopener noreferrer" class="trip-ticket-btn">${btnLabel}</a>
-      </div>` });
-    });
-
-    tlItems.push({ type: 'title', html: `<div class="trip-section-title">${dict.ai_plan_hotels || 'Hotels per stop'}</div>` });
+    tlItems.push({ type: 'title', html: `<div class="trip-section-title" style="margin-top:0">${dict.ai_plan_hotels || 'Hotels per stop'}</div>` });
     getRouteStops(data).forEach(ciudadRaw => {
       const ciudad = cleanCityForKlook(ciudadRaw) || ciudadRaw;
       const curated = findCuratedHotel(ciudad);
@@ -2479,6 +2457,28 @@
         <span class="trip-hotel-city">${ciudad}</span>
         <span class="trip-hotel-cta">${dict.ai_hotel_link || 'Find hotels →'}</span>
       </a>` });
+    });
+
+    tlItems.push({ type: 'title', html: `<div class="trip-section-title">${dict.ai_plan_trains || 'Trains'}</div>` });
+    data.tramos.forEach(s => {
+      const op = s.operador_tren || s.tipo_tren_sugerido || '';
+      const stations = (s.estacion_salida && s.estacion_llegada)
+        ? `${s.estacion_salida} → ${s.estacion_llegada}`
+        : `${s.origen} → ${s.destino}`;
+      const noTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n/i.test(
+        [op, s.tipo_tren_sugerido, stations, s.origen, s.destino].join(' ')
+      );
+      const ticketUrl = noTrain
+        ? `https://www.google.com/maps/dir/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
+        : window.glosxBookTarget(cleanCityForKlook(s.origen) || s.origen, cleanCityForKlook(s.destino) || s.destino);
+      const btnLabel = noTrain ? (dict.ai_view_options || 'Ver opciones →') : (dict.ai_buy_ticket || 'Buy ticket →');
+      tlItems.push({ type: 'train', html: `<div class="trip-segment-row" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+        <div>
+          <strong>${s.origen} → ${s.destino}</strong>
+          <span>${stations} · ${s.tiempo_trayecto} · ${op}</span>
+        </div>
+        <a href="${ticketUrl}" target="_blank" rel="noopener noreferrer" class="trip-ticket-btn">${btnLabel}</a>
+      </div>` });
     });
 
     const html = `<div class="trip-timeline">${tripTimelineWrap(tlItems)}</div>`;
