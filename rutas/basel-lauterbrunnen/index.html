@@ -86,7 +86,20 @@
     .related-grid { display: flex; flex-wrap: wrap; gap: 10px; }
     .related-link { display: inline-block; background: rgba(124,58,237,0.10); border: 1px solid rgba(139,92,246,0.3); border-radius: 100px; padding: 8px 18px; font-size: 14px; font-weight: 600; color: #a78bfa; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
     .related-link:hover { background: rgba(124,58,237,0.20); border-color: rgba(139,92,246,0.6); text-decoration: none; }
-  </style>
+      .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35);
+      border-radius: 14px; padding: 18px 22px; margin: 0 0 32px;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-cta-logo { width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; min-width: 0; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; flex-shrink: 0; font-weight: 700; }
+    </style>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
       {
@@ -124,6 +137,16 @@
   </div>
   <main>
 <p class="lead">No direct train covers this route, but the connection is smooth and one of the most scenic in Switzerland — from the Rhine at Basel to the waterfall village at the foot of the Jungfrau.</p>
+    <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=basel&to=lauterbrunnen" class="klook-cta" target="_blank" rel="noopener sponsored"
+       onclick="gtag('event','klook_click',{source:'cta_block',route:'basel_lauterbrunnen'});">
+      <img class="klook-cta-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" loading="lazy">
+      <div class="klook-cta-text">
+        <span class="klook-cta-title">Book your train ticket on Klook</span>
+        <span class="klook-cta-sub">Compare times &amp; prices &middot; Instant confirmation &middot; Free cancellation on select fares</span>
+      </div>
+      <span class="klook-cta-arrow">&#8594;</span>
+    </a>
+
     <h2>The journey, stop by stop</h2>
     <p>From <strong>Basel SBB</strong>, InterCity trains run south to <strong>Bern</strong>, then continue to <strong>Interlaken Ost</strong>, where you change to the narrow-gauge BOB (Berner Oberland Bahn) for the short final climb to <strong>Lauterbrunnen</strong>.</p>
     <h2>How long does it take?</h2>
