@@ -221,9 +221,32 @@
     }
     footer a { color: var(--muted); }
     footer a:hover { color: var(--primary2); }
+    .blog-hero {
+      position: relative; width: 100%; height: 72vh; min-height: 480px;
+      background-size: cover; background-position: center 40%;
+      margin-top: 56px;
+    }
+    .blog-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(22,19,31,0) 30%, rgba(22,19,31,0.55) 70%, rgba(22,19,31,0.92) 100%);
+    }
+    .hero-content {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      max-width: 760px; margin: 0 auto; padding: 0 24px 40px; z-index: 2;
+    }
+    .photo-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 36px 0;
+    }
+    .photo-grid img {
+      width: 100%; height: 160px; object-fit: cover;
+      border-radius: 14px; border: 1px solid var(--border); display: block;
+    }
     @media (max-width: 600px) {
       h1 { font-size: 30px; }
       nav { padding: 16px 20px; }
+      .blog-hero { height: 60vh; min-height: 340px; margin-top: 52px; }
+      .photo-grid { grid-template-columns: 1fr; }
+      .photo-grid img { height: 180px; }
     }
   </style>
 </head>
@@ -236,13 +259,12 @@
   </div>
 </nav>
 
-<div class="hero">
-  <span class="badge">Rail Travel · 2026</span>
-  <h1>Eurail Pass vs Point-to-Point Tickets</h1>
-  <p class="meta">By WoW Train · July 2026 · 9 min read</p>
-  <p class="lead">
-    The eternal debate for Europe rail travellers. We ran the numbers on 5 real itineraries and the answer isn't what most travel blogs tell you.
-  </p>
+<div class="blog-hero" style="background-image:url('https://images.pexels.com/photos/30639286/pexels-photo-30639286.jpeg?auto=compress&cs=tinysrgb&w=1400')">
+  <div class="hero-content">
+    <span class="badge">Rail Travel · 2026</span>
+    <h1>Eurail Pass vs Point-to-Point Tickets</h1>
+    <p class="meta" style="color:#ddd;margin-top:10px;">By WoW Train · July 2026 · 9 min read</p>
+  </div>
 </div>
 
 <main>
@@ -253,6 +275,12 @@
   <p>
     The short answer: it depends almost entirely on how far in advance you book and how many countries you visit. Here's the full breakdown.
   </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/37172059/pexels-photo-37172059.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Eurostar high-speed train emerging from the Channel Tunnel onto the platform." loading="lazy" />
+    <img src="https://images.pexels.com/photos/33608240/pexels-photo-33608240.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Modern train interior with colourful seats on a Swiss railway service." loading="lazy" />
+    <img src="https://images.pexels.com/photos/5779300/pexels-photo-5779300.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Deutsche Bahn ICE high-speed train at Frankfurt Hauptbahnhof at night." loading="lazy" />
+  </div>
 
   <hr />
 
