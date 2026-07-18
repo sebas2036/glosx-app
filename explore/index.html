@@ -148,6 +148,16 @@
       nav { padding: 16px 20px; } main { padding: 100px 20px 380px; } h1 { font-size: 34px; }
       .signup-form { justify-content: stretch; } .signup-form input { max-width: none; }
     }
+    /* Índice estático de rutas (enlazado interno crawleable EN + ES) */
+    .routes-index { max-width: 1100px; margin: 48px auto 8px; padding: 0 24px; }
+    .routes-index h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #a78bfa; margin-bottom: 18px; text-align: center; font-weight: 700; }
+    .routes-index-list { list-style: none; padding: 0; margin: 0; columns: 3; column-gap: 30px; font-size: 13.5px; }
+    .routes-index-list li { break-inside: avoid; margin-bottom: 9px; line-height: 1.4; }
+    .routes-index-list a { color: #C9C6D6; text-decoration: none; }
+    .routes-index-list a:hover { color: #fff; text-decoration: underline; }
+    .routes-index-list .ri-es { color: #8b7bc0; font-size: 11px; font-weight: 700; margin-left: 5px; letter-spacing: 0.5px; }
+    @media (max-width: 760px) { .routes-index-list { columns: 2; } }
+    @media (max-width: 460px) { .routes-index-list { columns: 1; } }
   </style>
 </head>
 <body>
@@ -177,6 +187,98 @@
       <div class="signup-trust" data-i18n="exp_trust">Free guides, no spam.</div>
     </div>
   </div>
+
+  <section class="routes-index" aria-label="All route guides">
+    <h2 data-i18n="exp_all_routes">All route guides · Todas las guías de rutas</h2>
+    <ul class="routes-index-list">
+      <li><a href="/rutas/amsterdam-berlin/">Amsterdam → Berlin</a> <a class="ri-es" href="/rutas/amsterdam-berlin/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/amsterdam-brussels/">Amsterdam → Brussels</a> <a class="ri-es" href="/rutas/amsterdam-brussels/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/barcelona-girona/">Barcelona → Girona</a> <a class="ri-es" href="/rutas/barcelona-girona/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/barcelona-lyon/">Barcelona → Lyon</a> <a class="ri-es" href="/rutas/barcelona-lyon/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/barcelona-valencia/">Barcelona → Valencia</a> <a class="ri-es" href="/rutas/barcelona-valencia/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/basel-lauterbrunnen/">Basel → Lauterbrunnen</a> <a class="ri-es" href="/rutas/basel-lauterbrunnen/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/basel-paris/">Basel → Paris</a> <a class="ri-es" href="/rutas/basel-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/berlin-hamburg/">Berlin → Hamburg</a> <a class="ri-es" href="/rutas/berlin-hamburg/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/berlin-prague/">Berlin → Prague</a> <a class="ri-es" href="/rutas/berlin-prague/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/bordeaux-lourdes/">Bordeaux → Lourdes</a> <a class="ri-es" href="/rutas/bordeaux-lourdes/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/brno-vienna/">Brno → Vienna</a> <a class="ri-es" href="/rutas/brno-vienna/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/brussels-bruges/">Brussels → Bruges</a> <a class="ri-es" href="/rutas/brussels-bruges/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/brussels-paris/">Brussels → Paris</a> <a class="ri-es" href="/rutas/brussels-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/budapest-ljubljana/">Budapest → Ljubljana</a> <a class="ri-es" href="/rutas/budapest-ljubljana/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/copenhagen-stockholm/">Copenhagen → Stockholm</a> <a class="ri-es" href="/rutas/copenhagen-stockholm/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/dortmund-munich/">Dortmund → Munich</a> <a class="ri-es" href="/rutas/dortmund-munich/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/florence-pisa/">Florence → Pisa</a> <a class="ri-es" href="/rutas/florence-pisa/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/florence-venice/">Florence → Venice</a> <a class="ri-es" href="/rutas/florence-venice/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/frankfurt-cologne/">Frankfurt → Cologne</a> <a class="ri-es" href="/rutas/frankfurt-cologne/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/frankfurt-munich/">Frankfurt → Munich</a> <a class="ri-es" href="/rutas/frankfurt-munich/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/frankfurt-paris/">Frankfurt → Paris</a> <a class="ri-es" href="/rutas/frankfurt-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/geneva-paris/">Geneva → Paris</a> <a class="ri-es" href="/rutas/geneva-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/geneva-zermatt/">Geneva → Zermatt</a> <a class="ri-es" href="/rutas/geneva-zermatt/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/girona-figueres/">Girona → Figueres</a> <a class="ri-es" href="/rutas/girona-figueres/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/interlaken-lauterbrunnen/">Interlaken → Lauterbrunnen</a> <a class="ri-es" href="/rutas/interlaken-lauterbrunnen/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/lisbon-porto/">Lisbon → Porto</a> <a class="ri-es" href="/rutas/lisbon-porto/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-amsterdam/">London → Amsterdam</a> <a class="ri-es" href="/rutas/london-amsterdam/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-brussels/">London → Brussels</a> <a class="ri-es" href="/rutas/london-brussels/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-cambridge/">London → Cambridge</a> <a class="ri-es" href="/rutas/london-cambridge/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-edinburgh/">London → Edinburgh</a> <a class="ri-es" href="/rutas/london-edinburgh/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-liverpool/">London → Liverpool</a> <a class="ri-es" href="/rutas/london-liverpool/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-manchester/">London → Manchester</a> <a class="ri-es" href="/rutas/london-manchester/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-oxford/">London → Oxford</a> <a class="ri-es" href="/rutas/london-oxford/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-paris/">London → Paris</a> <a class="ri-es" href="/rutas/london-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/london-york/">London → York</a> <a class="ri-es" href="/rutas/london-york/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/lyon-turin/">Lyon → Turin</a> <a class="ri-es" href="/rutas/lyon-turin/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/madrid-barcelona/">Madrid → Barcelona</a> <a class="ri-es" href="/rutas/madrid-barcelona/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/madrid-malaga/">Madrid → Malaga</a> <a class="ri-es" href="/rutas/madrid-malaga/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/madrid-seville/">Madrid → Seville</a> <a class="ri-es" href="/rutas/madrid-seville/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/madrid-valencia/">Madrid → Valencia</a> <a class="ri-es" href="/rutas/madrid-valencia/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/madrid-zaragoza/">Madrid → Zaragoza</a> <a class="ri-es" href="/rutas/madrid-zaragoza/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/marseille-miramas/">Marseille → Miramas</a> <a class="ri-es" href="/rutas/marseille-miramas/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/milan-florence/">Milan → Florence</a> <a class="ri-es" href="/rutas/milan-florence/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/milan-rome/">Milan → Rome</a> <a class="ri-es" href="/rutas/milan-rome/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/milan-zurich/">Milan → Zurich</a> <a class="ri-es" href="/rutas/milan-zurich/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/montreux-interlaken/">Montreux → Interlaken</a> <a class="ri-es" href="/rutas/montreux-interlaken/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/munich-berlin/">Munich → Berlin</a> <a class="ri-es" href="/rutas/munich-berlin/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/munich-prague/">Munich → Prague</a> <a class="ri-es" href="/rutas/munich-prague/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/munich-venice/">Munich → Venice</a> <a class="ri-es" href="/rutas/munich-venice/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/munich-vienna/">Munich → Vienna</a> <a class="ri-es" href="/rutas/munich-vienna/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/naples-salerno/">Naples → Salerno</a> <a class="ri-es" href="/rutas/naples-salerno/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/naples-sorrento/">Naples → Sorrento</a> <a class="ri-es" href="/rutas/naples-sorrento/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/nice-monaco/">Nice → Monaco</a> <a class="ri-es" href="/rutas/nice-monaco/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/oslo-bergen/">Oslo → Bergen</a> <a class="ri-es" href="/rutas/oslo-bergen/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-amsterdam/">Paris → Amsterdam</a> <a class="ri-es" href="/rutas/paris-amsterdam/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-barcelona/">Paris → Barcelona</a> <a class="ri-es" href="/rutas/paris-barcelona/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-berlin/">Paris → Berlin</a> <a class="ri-es" href="/rutas/paris-berlin/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-bordeaux/">Paris → Bordeaux</a> <a class="ri-es" href="/rutas/paris-bordeaux/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-bruges/">Paris → Bruges</a> <a class="ri-es" href="/rutas/paris-bruges/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-london/">Paris → London</a> <a class="ri-es" href="/rutas/paris-london/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-lourdes/">Paris → Lourdes</a> <a class="ri-es" href="/rutas/paris-lourdes/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-lucerne/">Paris → Lucerne</a> <a class="ri-es" href="/rutas/paris-lucerne/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-lyon/">Paris → Lyon</a> <a class="ri-es" href="/rutas/paris-lyon/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-milan/">Paris → Milan</a> <a class="ri-es" href="/rutas/paris-milan/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-nice/">Paris → Nice</a> <a class="ri-es" href="/rutas/paris-nice/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-rome/">Paris → Rome</a> <a class="ri-es" href="/rutas/paris-rome/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-toulouse/">Paris → Toulouse</a> <a class="ri-es" href="/rutas/paris-toulouse/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-venice/">Paris → Venice</a> <a class="ri-es" href="/rutas/paris-venice/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/paris-zurich/">Paris → Zurich</a> <a class="ri-es" href="/rutas/paris-zurich/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/prague-brno/">Prague → Brno</a> <a class="ri-es" href="/rutas/prague-brno/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/prague-budapest/">Prague → Budapest</a> <a class="ri-es" href="/rutas/prague-budapest/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/prague-vienna/">Prague → Vienna</a> <a class="ri-es" href="/rutas/prague-vienna/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/rome-florence/">Rome → Florence</a> <a class="ri-es" href="/rutas/rome-florence/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/rome-naples/">Rome → Naples</a> <a class="ri-es" href="/rutas/rome-naples/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/rome-venice/">Rome → Venice</a> <a class="ri-es" href="/rutas/rome-venice/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/stockholm-oslo/">Stockholm → Oslo</a> <a class="ri-es" href="/rutas/stockholm-oslo/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/toulouse-lourdes/">Toulouse → Lourdes</a> <a class="ri-es" href="/rutas/toulouse-lourdes/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/turin-milan/">Turin → Milan</a> <a class="ri-es" href="/rutas/turin-milan/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/venice-milan/">Venice → Milan</a> <a class="ri-es" href="/rutas/venice-milan/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/vienna-budapest/">Vienna → Budapest</a> <a class="ri-es" href="/rutas/vienna-budapest/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/vienna-krems/">Vienna → Krems</a> <a class="ri-es" href="/rutas/vienna-krems/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/vienna-prague/">Vienna → Prague</a> <a class="ri-es" href="/rutas/vienna-prague/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/vienna-salzburg/">Vienna → Salzburg</a> <a class="ri-es" href="/rutas/vienna-salzburg/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/zaragoza-barcelona/">Zaragoza → Barcelona</a> <a class="ri-es" href="/rutas/zaragoza-barcelona/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/zurich-lucerne/">Zurich → Lucerne</a> <a class="ri-es" href="/rutas/zurich-lucerne/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/zurich-milan/">Zurich → Milan</a> <a class="ri-es" href="/rutas/zurich-milan/es/" hreflang="es" lang="es">ES</a></li>
+    </ul>
+  </section>
 
   <footer>
     <p>© 2026 GLOSX — WoW Train · <a href="/privacy.html">Privacy</a> · <a href="/blog.html">Blog</a></p>
