@@ -227,13 +227,13 @@
       <div class="partners-wrapper">
         <a href="#partners" class="nav-partners-btn" onclick="togglePartners(event)" data-i18n="nav_essentials">Travel Essentials <span style="font-size:10px;opacity:0.6">▾</span></a>
         <div class="partners-dropdown" id="partnersDropdown">
-          <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'" width="64" height="64"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub">Hotels by city →</span></a>
-          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'" width="64" height="64"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub">Attractions</span></a>
-          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'" width="64" height="64"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub">Transfers</span></a>
-          <a href="#" onclick="goPartner('yesim',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=yesim.com" alt="Yesim" onerror="this.style.visibility='hidden'" width="64" height="64"><span class="partner-name" style="color:#A78BFA">Yesim</span><span class="partner-sub">eSIM</span></a>
-          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'" width="64" height="64"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub">Insurance</span></a>
-          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'" width="64" height="64"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub">Luggage</span></a>
-          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'" width="64" height="64"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub">Hotels</span></a>
+          <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub">Hotels by city →</span></a>
+          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub">Attractions</span></a>
+          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub">Transfers</span></a>
+          <a href="#" onclick="goPartner('yesim',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=yesim.com" alt="Yesim" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#A78BFA">Yesim</span><span class="partner-sub">eSIM</span></a>
+          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub">Insurance</span></a>
+          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub">Luggage</span></a>
+          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub">Hotels</span></a>
           <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">See all essentials →</a>
         </div>
       </div>
@@ -343,7 +343,7 @@
       <!-- CTA Klook destacado — se activa via JS con la ruta generada -->
       <a href="#" id="aiKlookCta" class="ai-klook-cta" style="display:none;"
          onclick="gtag('event','klook_click',{source:'ai_planner_cta'}); openTripPlan(); return false;">
-        <img src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" class="ai-klook-cta-logo" loading="lazy" width="64" height="64">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" class="ai-klook-cta-logo" loading="lazy">
         <div class="ai-klook-cta-text">
           <span class="ai-klook-cta-title">Book your train tickets on Klook</span>
           <span class="ai-klook-cta-sub">Compare times &amp; prices &middot; Instant confirmation &middot; Free cancellation on select fares</span>
@@ -354,33 +354,33 @@
         <p class="ai-route-partners-label">Trusted Partners</p>
         <div class="ai-vip-row">
           <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=booking.com" alt="" loading="lazy"  width="64" height="64"/></div>
+            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=booking.com" alt="" loading="lazy"/></div>
             <div><div class="ai-vip-name">Booking.com</div><div class="ai-vip-sub">Hotels &amp; stays</div></div>
           </a>
           <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=tripadvisor.com" alt="" loading="lazy"  width="64" height="64"/></div>
+            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=tripadvisor.com" alt="" loading="lazy"/></div>
             <div><div class="ai-vip-name">Tripadvisor</div><div class="ai-vip-sub">Experiences &amp; reviews</div></div>
           </a>
           <a href="#" id="aiVipKlook" onclick="goPartner('klook',event)" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="" loading="lazy"  width="64" height="64"/></div>
+            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="" loading="lazy"/></div>
             <div><div class="ai-vip-name">Klook</div><div class="ai-vip-sub" id="aiVipKlookSub">Trains &amp; activities</div></div>
           </a>
           <a href="https://www.thetrainline.com" target="_blank" rel="noopener noreferrer sponsored" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=thetrainline.com" alt="" loading="lazy"  width="64" height="64"/></div>
+            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=thetrainline.com" alt="" loading="lazy"/></div>
             <div><div class="ai-vip-name">Trainline</div><div class="ai-vip-sub">Every train, one search</div></div>
           </a>
         </div>
         <div class="ai-essential-row">
           <a href="#" onclick="goPartner('kiwitaxi',event)" class="ai-ess-item">
-            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=kiwitaxi.com" alt="" loading="lazy"  width="64" height="64"/></div>
+            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=kiwitaxi.com" alt="" loading="lazy"/></div>
             <span class="ai-ess-name">KiwiTaxi</span><span class="ai-ess-cta">Transfers</span>
           </a>
           <a href="#" onclick="goPartner('yesim',event)" class="ai-ess-item">
-            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=yesim.com" alt="" loading="lazy"  width="64" height="64"/></div>
+            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=yesim.com" alt="" loading="lazy"/></div>
             <span class="ai-ess-name">YeSIM</span><span class="ai-ess-cta">eSIM Europe</span>
           </a>
           <a href="#" onclick="goPartner('insurance',event)" class="ai-ess-item">
-            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ektatraveling.com" alt="" loading="lazy"  width="64" height="64"/></div>
+            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ektatraveling.com" alt="" loading="lazy"/></div>
             <span class="ai-ess-name">EKTA</span><span class="ai-ess-cta">Travel Insurance</span>
           </a>
         </div>
@@ -392,7 +392,7 @@
   <!-- Countries chips -->
   <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ Popular routes · book instantly</p>
   <div class="countries" id="countries" style="padding: 0 24px 0;">
-    <span class="country-chip">Spain<span class="country-popup"><img class="country-photo" src="country-pics/es.jpg" alt="Spain" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">Spain<span class="country-popup"><img class="country-photo" src="country-pics/es.jpg" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Madrid','Barcelona')">Madrid → Barcelona</a>
       <a href="#" onclick="planRouteFromChip(event,'Barcelona','Valencia')">Barcelona → Valencia</a>
       <a href="#" onclick="planRouteFromChip(event,'Madrid','Seville')">Madrid → Seville</a>
@@ -403,7 +403,7 @@
       <a href="#" onclick="planRouteFromChip(event,'Madrid','Valencia')">Madrid → Valencia</a>
       <a href="#" onclick="planRouteFromChip(event,'Barcelona','Zaragoza')">Barcelona → Zaragoza</a>
     </span></span></span>
-    <span class="country-chip">Switzerland<span class="country-popup"><img class="country-photo" src="country-pics/ch.jpg" alt="Switzerland" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">Switzerland<span class="country-popup"><img class="country-photo" src="country-pics/ch.jpg" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Zurich','Lucerne')">Zurich → Lucerne</a>
       <a href="#" onclick="planRouteFromChip(event,'Zurich','Milan')">Zurich → Milan</a>
       <a href="#" onclick="planRouteFromChip(event,'Geneva','Zermatt')">Geneva → Zermatt</a>
@@ -413,7 +413,7 @@
       <a href="#" onclick="planRouteFromChip(event,'Montreux','Interlaken')">Montreux → Interlaken</a>
       <a href="#" onclick="planRouteFromChip(event,'Basel','Lauterbrunnen')">Basel → Lauterbrunnen</a>
     </span></span></span>
-    <span class="country-chip">France<span class="country-popup"><img class="country-photo" src="country-pics/fr.jpg" alt="France" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">France<span class="country-popup"><img class="country-photo" src="country-pics/fr.jpg" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Paris','London')">Paris → London</a>
       <a href="#" onclick="planRouteFromChip(event,'Paris','Nice')">Paris → Nice</a>
       <a href="#" onclick="planRouteFromChip(event,'Nice','Monaco')">Nice → Monaco</a>
@@ -437,7 +437,7 @@
       <a href="#" onclick="planRouteFromChip(event,'Paris','Venice')">Paris → Venice</a>
       <a href="#" onclick="planRouteFromChip(event,'Barcelona','Lyon')">Barcelona → Lyon</a>
     </span></span></span>
-    <span class="country-chip">Germany<span class="country-popup"><img class="country-photo" src="country-pics/de.jpg" alt="Germany" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">Germany<span class="country-popup"><img class="country-photo" src="country-pics/de.jpg" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
       <a href="#" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlin → Prague</a>
       <a href="#" onclick="planRouteFromChip(event,'Munich','Venice')">Munich → Venice</a>
@@ -450,7 +450,7 @@
       <a href="#" onclick="planRouteFromChip(event,'Berlin','Munich')">Berlin → Munich</a>
       <a href="#" onclick="planRouteFromChip(event,'Munich','Prague')">Munich → Prague</a>
     </span></span></span>
-    <span class="country-chip">Italy<span class="country-popup"><img class="country-photo" src="country-pics/it.jpg" alt="Italy" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">Italy<span class="country-popup"><img class="country-photo" src="country-pics/it.jpg" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Rome','Florence')">Rome → Florence</a>
       <a href="#" onclick="planRouteFromChip(event,'Florence','Venice')">Florence → Venice</a>
       <a href="#" onclick="planRouteFromChip(event,'Milan','Rome')">Milan → Rome</a>
@@ -464,26 +464,26 @@
       <a href="#" onclick="planRouteFromChip(event,'Naples','Rome')">Naples → Rome</a>
       <a href="#" onclick="planRouteFromChip(event,'Naples','Salerno')">Naples → Salerno</a>
     </span></span></span>
-    <span class="country-chip">Belgium<span class="country-popup"><img class="country-photo" src="country-pics/be.jpg" alt="Belgium" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">Belgium<span class="country-popup"><img class="country-photo" src="country-pics/be.jpg" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Paris','Bruges')">Paris → Bruges</a>
       <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
       <a href="#" onclick="planRouteFromChip(event,'Brussels','Cologne')">Brussels → Cologne</a>
       <a href="#" onclick="planRouteFromChip(event,'Brussels','Bruges')">Brussels → Bruges</a>
     </span></span></span>
-    <span class="country-chip">Netherlands<span class="country-popup"><img class="country-photo" src="country-pics/nl.jpg" alt="Netherlands" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">Netherlands<span class="country-popup"><img class="country-photo" src="country-pics/nl.jpg" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Paris','Amsterdam')">Paris → Amsterdam</a>
       <a href="#" onclick="planRouteFromChip(event,'London','Amsterdam')">London → Amsterdam</a>
       <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
       <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
     </span></span></span>
-    <span class="country-chip">Austria<span class="country-popup"><img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">Austria<span class="country-popup"><img class="country-photo" src="country-pics/at.jpg" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'Vienna','Salzburg')">Vienna → Salzburg</a>
       <a href="#" onclick="planRouteFromChip(event,'Vienna','Prague')">Vienna → Prague</a>
       <a href="#" onclick="planRouteFromChip(event,'Vienna','Budapest')">Vienna → Budapest</a>
       <a href="#" onclick="planRouteFromChip(event,'Innsbruck','Salzburg')">Innsbruck → Salzburg</a>
       <a href="#" onclick="planRouteFromChip(event,'Vienna','Krems')">Vienna → Krems</a>
     </span></span></span>
-    <span class="country-chip">United Kingdom<span class="country-popup"><img class="country-photo" src="country-pics/gb.jpg" alt="United Kingdom" loading="lazy" onerror="this.remove()" width="400" height="267"><span class="country-routes">
+    <span class="country-chip">United Kingdom<span class="country-popup"><img class="country-photo" src="country-pics/gb.jpg" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="#" onclick="planRouteFromChip(event,'London','Paris')">London → Paris</a>
       <a href="#" onclick="planRouteFromChip(event,'London','Manchester')">London → Manchester</a>
       <a href="#" onclick="planRouteFromChip(event,'London','Liverpool')">London → Liverpool</a>
@@ -535,7 +535,7 @@
       <h2><span data-i18n="adv_title1">Build your own</span><br /><span data-i18n="adv_title2">adventure.</span></h2>
       <p class="lead" data-i18n="adv_lead">Pick a journey archetype and we'll trace the logical chain of real trains that carries you city to city — every connection, a scene.</p>
     </div>
-    <img class="section-head-photo" src="/assets/img/community/plan-adventure.webp" alt="Travelers planning their route with a map" loading="lazy" width="1000" height="1000">
+    <img class="section-head-photo" src="/assets/img/community/plan-adventure.webp" alt="Travelers planning their route with a map" loading="lazy">
   </div>
 
   <div class="wt-route-buttons" role="group" aria-label="Choose a route">
@@ -568,28 +568,28 @@
         <h2><span data-i18n="partners_title1">Travel essentials</span><br /><span data-i18n="partners_title2">for Europe.</span></h2>
         <p class="lead" data-i18n="partners_lead">Curated services that complement your train journey.</p>
       </div>
-      <img class="section-head-photo" src="/assets/img/community/travel-essentials.webp" alt="Travel essentials: map, hat, camera, watch" loading="lazy" width="1000" height="1000">
+      <img class="section-head-photo" src="/assets/img/community/travel-essentials.webp" alt="Travel essentials: map, hat, camera, watch" loading="lazy">
     </div>
 
   <div class="vip-bar">
     <p class="vip-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7z"/></svg><span data-i18n="vip_label">Trusted partners</span></p>
     <div class="vip-inner">
       <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="vip-card">
-        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=booking.com" alt="" loading="lazy"  width="64" height="64"/></div>
+        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=booking.com" alt="" loading="lazy"/></div>
         <div class="vip-text">
           <span class="vip-brand">Booking.com</span>
           <span class="vip-sub" data-i18n="vip_booking">Hotels &amp; stays →</span>
         </div>
       </a>
       <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="vip-card">
-        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=tripadvisor.com" alt="" loading="lazy"  width="64" height="64"/></div>
+        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=tripadvisor.com" alt="" loading="lazy"/></div>
         <div class="vip-text">
           <span class="vip-brand">Tripadvisor</span>
           <span class="vip-sub" data-i18n="vip_tripadvisor">Experiences &amp; reviews →</span>
         </div>
       </a>
       <div class="vip-card klook-city-picker" style="position:relative;">
-        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="" loading="lazy"  width="64" height="64"/></div>
+        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="" loading="lazy"/></div>
         <div class="vip-text">
           <span class="vip-brand">Klook Hotels</span>
           <span class="vip-sub" data-i18n="vip_klook_hotels">Choose your city →</span>
@@ -668,7 +668,7 @@
         <h2><span data-i18n="disc_title1">Let's discover</span><br /><span data-i18n="disc_title2">together.</span></h2>
         <p class="lead" data-i18n="disc_lead">Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.</p>
       </div>
-      <img class="section-head-photo" src="/assets/img/community/discover-together.webp" alt="Two travelers smiling at a train station" loading="lazy" width="1000" height="1000">
+      <img class="section-head-photo" src="/assets/img/community/discover-together.webp" alt="Two travelers smiling at a train station" loading="lazy">
     </div>
 
     <div class="discover-cta">
@@ -760,7 +760,7 @@
       <h2><span data-i18n="reviews_title1">Ratings &amp;</span><br /><span data-i18n="reviews_title2">experiences.</span></h2>
       <p class="lead" data-i18n="reviews_lead">What they really remember isn't the destination — it's the moment the train changed everything.</p>
     </div>
-    <img class="section-head-photo" src="/assets/img/community/voices-of-the-journey.webp" alt="Happy travelers giving a thumbs up" loading="lazy" width="1000" height="1000">
+    <img class="section-head-photo" src="/assets/img/community/voices-of-the-journey.webp" alt="Happy travelers giving a thumbs up" loading="lazy">
   </div>
 
   <div class="wt-reviews-grid">
@@ -895,14 +895,14 @@
     <p class="trust-label" data-i18n="trust_data">Real-time data from official railways</p>
     <div class="trust-ops">
       <span class="op-chip"><b style="color:#E30016">Renfe</b></span>
-      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="" loading="lazy"  width="64" height="64"/>SNCF</span>
-      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="" loading="lazy"  width="64" height="64"/>Deutsche Bahn</span>
-      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="" loading="lazy"  width="64" height="64"/>SBB</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="" loading="lazy"/>SNCF</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="" loading="lazy"/>Deutsche Bahn</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="" loading="lazy"/>SBB</span>
       <span class="op-chip"><b style="color:#E4032E">Trenitalia</b></span>
-      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="" loading="lazy"  width="64" height="64"/>ÖBB</span>
-      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="" loading="lazy"  width="64" height="64"/>NS</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="" loading="lazy"/>ÖBB</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="" loading="lazy"/>NS</span>
       <span class="op-chip"><b style="color:#003DA5">SNCB</b></span>
-      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="" loading="lazy"  width="64" height="64"/>CP</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="" loading="lazy"/>CP</span>
     </div>
     <div class="trust-badges">
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">Official GTFS data</span></span>
@@ -915,25 +915,25 @@
   <!-- Photo carousel -->
   <div class="photo-carousel">
     <div class="carousel-track">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=640&q=80" alt="Bernina Express" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=640&q=80" alt="Glacier Express nieve" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1629653403102-8033bbaff2bc?w=640&q=80" alt="Tren junto al lago" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207195-7b66c5f7f416?w=640&q=80" alt="Tren en viaducto de montaña" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Valle alpino" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207181-5dd20188ec02?w=640&q=80" alt="Vista desde tren Alpes" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Cascada Alpes" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Cumbre montaña" width="640" height="427">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=640&q=80" alt="Bernina Express">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=640&q=80" alt="Glacier Express nieve">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1629653403102-8033bbaff2bc?w=640&q=80" alt="Tren junto al lago">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207195-7b66c5f7f416?w=640&q=80" alt="Tren en viaducto de montaña">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Valle alpino">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207181-5dd20188ec02?w=640&q=80" alt="Vista desde tren Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Cascada Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Cumbre montaña">
       <!-- duplicate for seamless loop -->
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=640&q=80" alt="Bernina Express" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=640&q=80" alt="Glacier Express nieve" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1629653403102-8033bbaff2bc?w=640&q=80" alt="Tren junto al lago" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207195-7b66c5f7f416?w=640&q=80" alt="Tren en viaducto de montaña" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Valle alpino" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207181-5dd20188ec02?w=640&q=80" alt="Vista desde tren Alpes" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Cascada Alpes" width="640" height="427">
-      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Cumbre montaña" width="640" height="427">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=640&q=80" alt="Bernina Express">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=640&q=80" alt="Glacier Express nieve">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1629653403102-8033bbaff2bc?w=640&q=80" alt="Tren junto al lago">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=640&q=80" alt="Cinque Terre">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207195-7b66c5f7f416?w=640&q=80" alt="Tren en viaducto de montaña">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=640&q=80" alt="Valle alpino">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1647531207181-5dd20188ec02?w=640&q=80" alt="Vista desde tren Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=640&q=80" alt="Cascada Alpes">
+      <img class="carousel-photo" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80" alt="Cumbre montaña">
     </div>
   </div>
 
@@ -972,7 +972,7 @@
         <h2><span data-i18n="features_title1">Built for travelers</span><br /><span data-i18n="features_title2">who move fast.</span></h2>
         <p class="lead" data-i18n="features_lead">No subscriptions, no paywalls. Just real-time data and smart tools.</p>
       </div>
-      <img class="section-head-photo" src="/assets/img/community/made-for-travelers.webp" alt="Two travelers walking toward their train" loading="lazy" width="1000" height="1000">
+      <img class="section-head-photo" src="/assets/img/community/made-for-travelers.webp" alt="Two travelers walking toward their train" loading="lazy">
     </div>
 
     <div class="features-grid">
