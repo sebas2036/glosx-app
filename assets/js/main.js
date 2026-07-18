@@ -1508,12 +1508,12 @@
 // ── Onboarding coach-marks del boton "Empezar" (primera vez) ──
 (function () {
   var COACH = {
-    en: { s1: 'Step 1 · Describe', t1: "Type your trip in plain words — e.g. 'London to Rome in 7 days' — and the AI builds the full itinerary.", s2: 'Step 2 · Or pick a route', t2: 'Prefer something ready-made? Tap a country and choose a popular route to book instantly.', ok: 'Got it' },
-    es: { s1: 'Paso 1 · Describí', t1: "Escribí tu viaje en lenguaje normal —ej. 'Londres a Roma en 7 días'— y la IA arma el itinerario completo.", s2: 'Paso 2 · O elegí una ruta', t2: '¿Preferís algo listo? Tocá un país y elegí una ruta popular para reservar al instante.', ok: 'Entendido' },
-    fr: { s1: 'Étape 1 · Décrivez', t1: "Décrivez votre voyage en langage courant — ex. 'Londres à Rome en 7 jours' — et l'IA crée l'itinéraire complet.", s2: 'Étape 2 · Ou choisissez', t2: 'Vous préférez du prêt à l\'emploi ? Touchez un pays et choisissez un trajet populaire à réserver aussitôt.', ok: 'Compris' },
-    de: { s1: 'Schritt 1 · Beschreiben', t1: "Beschreibe deine Reise in normaler Sprache — z.B. 'London nach Rom in 7 Tagen' — und die KI erstellt die komplette Route.", s2: 'Schritt 2 · Oder wählen', t2: 'Lieber etwas Fertiges? Tippe auf ein Land und wähle eine beliebte Route zum sofort Buchen.', ok: 'Verstanden' },
-    it: { s1: 'Passo 1 · Descrivi', t1: "Scrivi il tuo viaggio in parole semplici — es. 'Londra a Roma in 7 giorni' — e l'IA crea l'itinerario completo.", s2: 'Passo 2 · O scegli', t2: 'Preferisci qualcosa di pronto? Tocca un paese e scegli un percorso popolare da prenotare subito.', ok: 'Ho capito' },
-    pt: { s1: 'Passo 1 · Descreva', t1: "Escreva sua viagem em linguagem simples — ex. 'Londres a Roma em 7 dias' — e a IA monta o itinerário completo.", s2: 'Passo 2 · Ou escolha', t2: 'Prefere algo pronto? Toque num país e escolha uma rota popular para reservar na hora.', ok: 'Entendi' }
+    en: { s1: 'Step 1 · Describe', t1: 'Type your trip in plain words and the AI builds the full itinerary.', s2: 'Step 2 · Or pick a route', t2: 'Or tap a country and pick a ready-made route to book instantly.', ok: 'Got it' },
+    es: { s1: 'Paso 1 · Describí', t1: 'Escribí tu viaje en lenguaje normal y la IA arma el itinerario completo.', s2: 'Paso 2 · O elegí una ruta', t2: 'O tocá un país y elegí una ruta lista para reservar al instante.', ok: 'Entendido' },
+    fr: { s1: 'Étape 1 · Décrivez', t1: "Décrivez votre voyage en langage courant et l'IA crée l'itinéraire complet.", s2: 'Étape 2 · Ou choisissez', t2: 'Ou touchez un pays et choisissez un trajet prêt à réserver.', ok: 'Compris' },
+    de: { s1: 'Schritt 1 · Beschreiben', t1: 'Beschreibe deine Reise in normaler Sprache und die KI erstellt die komplette Route.', s2: 'Schritt 2 · Oder wählen', t2: 'Oder tippe auf ein Land und wähle eine fertige Route zum Buchen.', ok: 'Verstanden' },
+    it: { s1: 'Passo 1 · Descrivi', t1: "Scrivi il tuo viaggio in parole semplici e l'IA crea l'itinerario completo.", s2: 'Passo 2 · O scegli', t2: 'Oppure tocca un paese e scegli un percorso pronto da prenotare.', ok: 'Ho capito' },
+    pt: { s1: 'Passo 1 · Descreva', t1: 'Escreva sua viagem em linguagem simples e a IA monta o itinerário completo.', s2: 'Passo 2 · Ou escolha', t2: 'Ou toque num país e escolha uma rota pronta para reservar.', ok: 'Entendi' }
   };
   function dict() { return COACH[document.documentElement.lang] || COACH.en; }
 
@@ -1529,7 +1529,7 @@
     return b;
   }
   function clearCoach() {
-    active.forEach(function (el) { el.classList.remove('wt-coach-target'); });
+    active.forEach(function (el) { el.classList.remove('wt-coach-target'); el.style.zIndex = ''; });
     Array.prototype.slice.call(document.querySelectorAll('.wt-coach')).forEach(function (n) { n.remove(); });
     document.removeEventListener('keydown', onKey, true);
     document.removeEventListener('click', onOutside, true);
@@ -1555,8 +1555,8 @@
     var chips = document.getElementById('countries');
     setTimeout(function () {
       clearCoach();
-      if (inputC) { inputC.classList.add('wt-coach-target'); inputC.appendChild(makeBubble(d.s1, d.t1, d.ok)); active.push(inputC); }
-      if (chips) { chips.classList.add('wt-coach-target'); chips.appendChild(makeBubble(d.s2, d.t2, d.ok)); active.push(chips); }
+      if (inputC) { inputC.classList.add('wt-coach-target'); inputC.style.zIndex = '90'; inputC.appendChild(makeBubble(d.s1, d.t1, d.ok)); active.push(inputC); }
+      if (chips) { chips.classList.add('wt-coach-target'); chips.style.zIndex = '80'; chips.appendChild(makeBubble(d.s2, d.t2, d.ok)); active.push(chips); }
       if (!active.length) return;
       document.addEventListener('keydown', onKey, true);
       setTimeout(function () { document.addEventListener('click', onOutside, true); }, 50);
