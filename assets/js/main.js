@@ -1538,13 +1538,17 @@
   function onKey(e) { if (e.key === 'Escape') clearCoach(); }
   function onOutside(e) { if (!e.target.closest('.wt-coach')) clearCoach(); }
 
+  // Devuelve false la PRIMERA vez (muestra onboarding, no navega);
+  // devuelve true después, dejando que el href="/explore/" navegue al hub de rutas.
   window.wtStartOnboarding = function () {
+    if (localStorage.getItem('wt_onboarded') === '1') {
+      return true; // ya vio el onboarding -> seguir el enlace a /explore/
+    }
+    localStorage.setItem('wt_onboarded', '1');
+
     var input = document.getElementById('aiInput');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTimeout(function () { if (input) try { input.focus({ preventScroll: true }); } catch (e) { input.focus(); } }, 550);
-
-    if (localStorage.getItem('wt_onboarded') === '1') return; // repeticiones: solo scroll + foco
-    localStorage.setItem('wt_onboarded', '1');
 
     var d = dict();
     var inputC = document.querySelector('#aiInputWrapper .ai-input-container');
@@ -1557,6 +1561,7 @@
       document.addEventListener('keydown', onKey, true);
       setTimeout(function () { document.addEventListener('click', onOutside, true); }, 50);
     }, 650);
+    return false; // primera vez: no navegar, mostrar coach-marks
   };
 })();
 
