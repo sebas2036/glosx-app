@@ -130,7 +130,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -154,6 +170,13 @@
       Si es tu primera vez recorriendo Italia de mochilero, hay una ruta que se gana su fama más que ninguna otra: el circuito de las <strong>Ciudades del Arte</strong> — Roma, Florencia y Venecia, conectadas por trenes rápidos, con los monumentos y museos más emblemáticos del país. Es el itinerario con el que arranca cualquier guía de viaje, y por buenas razones.
     </p>
 
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/14836534/pexels-photo-14836534.jpeg?auto=compress&cs=tinysrgb&w=500" alt="El Coliseo de Roma al amanecer, icónico monumento romano." loading="lazy" />
+    <img src="https://images.pexels.com/photos/30789595/pexels-photo-30789595.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Vista panorámica del Duomo de Florencia sobre los tejados de terracota." loading="lazy" />
+    <img src="https://images.pexels.com/photos/20052608/pexels-photo-20052608.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Canal Grande de Venecia al atardecer con góndolas y edificios coloridos." loading="lazy" />
+  </div>
+
+
     <h2>Por qué esta es la ruta para empezar</h2>
     <p>
       Roma, Florencia y Venecia están sobre el mismo corredor ferroviario de alta velocidad, a 1-2 horas una de otra, y cada estación te deja en el centro histórico — sin traslados de aeropuerto, sin auto alquilado, sin viajes largos en bus. Para un mochilero que se mueve con una sola mochila y presupuesto ajustado, ahí está todo el atractivo: armás el bolso, caminás hasta la estación, y ya estás en la próxima ciudad antes del mediodía.
@@ -176,7 +199,17 @@
       Alojate cerca de <strong>Roma Termini</strong>, la estación principal — te deja a un paso de cada tren que sigue después, y cerca de los barrios de San Lorenzo y Esquilino, conocidos por tener hostels económicos y estar a pie del centro. Andá temprano al Coliseo y al Foro para ganarle al calor y a las colas, y reservá los Museos Vaticanos con anticipación online — la fila sin reserva te puede comer medio día.
     </p>
 
-    <h2>Roma → Florencia</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Rome&to=Florence" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_italy_es',route:'rome-florence'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Roma → Florencia en Klook</span>
+      <span class="klook-cta-sub">Frecciarossa · 1h 30m · desde €20</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Roma → Florencia</h2>
     <p>
       Un tren de alta velocidad <strong>Frecciarossa</strong> o <strong>Italo</strong> cubre Roma a Florencia en unas <strong>1h 30m</strong>, llegando a <strong>Firenze Santa Maria Novella</strong> — a 10 minutos a pie del Duomo. Reservá con algunas semanas de anticipación para las tarifas más baratas; los tickets de último momento en esta ruta pueden costar más del doble.
     </p>
@@ -186,7 +219,17 @@
       Florencia premia más caminar despacio que tachar una lista. El Duomo, los Uffizi, el Ponte Vecchio y un atardecer desde Piazzale Michelangelo son lo esencial, pero todo el centro histórico entra en un par de kilómetros — no vas a necesitar transporte dentro de la ciudad, lo que ayuda al presupuesto.
     </p>
 
-    <h2>Florencia → Venecia</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Florence&to=Venice" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_italy_es',route:'florence-venice'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Florencia → Venecia en Klook</span>
+      <span class="klook-cta-sub">Alta velocidad · 2h directo · desde €19</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Florencia → Venecia</h2>
     <p>
       Otro salto en alta velocidad, unas <strong>2 horas</strong> directo en Frecciarossa o Italo, llegando a <strong>Venezia Santa Lucia</strong> — salís y el Gran Canal está ahí mismo. No hay autos en las islas, así que desde la estación seguís a pie o en vaporetto (colectivo acuático).
     </p>
@@ -219,18 +262,13 @@
     <div class="cta">
       <h3>Tu tren. Tu mundo.</h3>
       <p>Planificá tu ruta por Italia, mirá horarios en vivo y reservá con partners verificados.</p>
-      <a href="/" class="cta-btn">Explorá WoW Train →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/blog.html">Blog</a> ·
-      <a href="/about.html">About</a> ·
-      <a href="/privacy.html">Privacy</a> ·
-      <a href="/terms.html">Terms</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

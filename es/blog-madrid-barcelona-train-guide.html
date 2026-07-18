@@ -117,7 +117,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -141,6 +157,13 @@
       Es el corredor de alta velocidad más transitado de España — y uno de los mejores viajes en tren de Europa. Acá tenés todo lo que necesitás para ir en tren de Madrid a Barcelona en 2026: horarios, precios, estaciones y cómo conseguir el asiento más barato.
     </p>
 
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/16984552/pexels-photo-16984552.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Sagrada Familia en Barcelona, icónica arquitectura de Gaudí." loading="lazy" />
+    <img src="https://images.pexels.com/photos/15473331/pexels-photo-15473331.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Paisaje urbano de Madrid al atardecer con skyline moderno." loading="lazy" />
+    <img src="https://images.pexels.com/photos/35727855/pexels-photo-35727855.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Pasajeros junto a un tren AVE de alta velocidad en estación de Barcelona." loading="lazy" />
+  </div>
+
+
     <h2>¿Cuánto dura?</h2>
     <p>
       Los trenes <strong>AVE</strong> más rápidos cubren los 620 km entre Madrid y Barcelona en alrededor de <strong>2 horas 30 minutos</strong>, alcanzando velocidades de hasta 310 km/h. Comparado con volar — con traslados al aeropuerto, controles de seguridad y esperas — el tren suele ser <strong>más rápido de puerta a puerta</strong>, y te deja directo en el centro de la ciudad.
@@ -152,7 +175,17 @@
       <li><strong>Barcelona:</strong> los trenes llegan a <strong>Barcelona Sants</strong>, a un corto viaje en metro del Barrio Gótico y la Sagrada Família.</li>
     </ul>
 
-    <h2>¿Quién opera la ruta? Tres operadores</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_madrid_bcn_es',route:'madrid-barcelona'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Madrid → Barcelona en Klook</span>
+      <span class="klook-cta-sub">AVE · Ouigo · Iryo — comparar todos</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>¿Quién opera la ruta? Tres operadores</h2>
     <p>
       España abrió esta línea a la competencia, lo cual es una gran noticia para los viajeros — más trenes y precios más bajos. Tres compañías la operan hoy:
     </p>
@@ -162,7 +195,17 @@
       <li><strong>Iryo</strong> — un operador más nuevo con sensación premium, asientos cómodos y precios competitivos.</li>
     </ul>
 
-    <h2>¿Cuánto cuesta?</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Barcelona&to=Madrid" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_madrid_bcn_es',route:'barcelona-madrid'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Vuelta: Barcelona → Madrid en Klook</span>
+      <span class="klook-cta-sub">Todos los operadores · desde €14</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>¿Cuánto cuesta?</h2>
     <p>
       Los precios son dinámicos — cuanto antes reservés, más barato. Como guía aproximada para 2026:
     </p>
@@ -190,18 +233,13 @@
     <div class="cta">
       <h3>Tu tren. Tu mundo. 🚄</h3>
       <p>Horarios en vivo de Madrid–Barcelona y mucho más por toda Europa — próximamente.</p>
-      <a href="/?from=Madrid&amp;to=Barcelona" class="cta-btn">Planificar mi viaje con IA →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/es/blog.html">Blog</a> ·
-      <a href="/about.html">Acerca de</a> ·
-      <a href="/privacy.html">Privacidad</a> ·
-      <a href="/terms.html">Términos</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

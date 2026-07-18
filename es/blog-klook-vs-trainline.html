@@ -169,7 +169,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -192,6 +208,13 @@
 <p class="lead">
       Cada botón de "Comprar billete" de este sitio toma una decisión silenciosa antes de que hagas clic: Klook o Trainline. Acá te contamos qué diferencia de verdad a los dos para el tren europeo, y la lógica que usamos para que nunca caigas en una búsqueda vacía.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/6945640/pexels-photo-6945640.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Persona reservando viaje con app en smartphone en una estación de tren." loading="lazy" />
+    <img src="https://images.pexels.com/photos/20218086/pexels-photo-20218086.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Billetes de tren europeos sobre una mesa de madera." loading="lazy" />
+    <img src="https://images.pexels.com/photos/21031431/pexels-photo-21031431.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Viajeros en un andén de estación ferroviaria europea." loading="lazy" />
+  </div>
+
 
     <h2>No compiten realmente por lo mismo</h2>
     <p>
@@ -229,7 +252,25 @@
       </tbody>
     </table>
 
-    <hr/>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Paris&to=London" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_klook_vs_es',route:'paris-london'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Buscá París → Londres en Klook</span>
+      <span class="klook-cta-sub">Comparar todos los operadores y tarifas</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_klook_vs_es',route:'madrid-barcelona'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Buscá Madrid → Barcelona en Klook</span>
+      <span class="klook-cta-sub">AVE · Ouigo · Iryo en una sola búsqueda</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <hr/>
 
     <p>
       En la práctica esto significa que un mismo viaje puede enviarte a dos proveedores distintos según el tramo que estés reservando — París a Barcelona puede ir por Klook mientras que un tramo de conexión a una estación más chica va por Trainline. Es intencional, no una inconsistencia: cada tramo recibe el proveedor que realmente lo tiene cubierto.
@@ -268,18 +309,13 @@
     <div class="cta">
       <h3>Dejá que el planificador se ocupe del ruteo</h3>
       <p>Describí tu viaje y el planificador con IA de WoW Train arma el itinerario — cada tramo enlaza al proveedor que realmente lo tiene cubierto.</p>
-      <a href="/" class="cta-btn">Planificá mi viaje con IA →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/es/blog.html">Blog</a> ·
-      <a href="/about.html">Nosotros</a> ·
-      <a href="/privacy.html">Privacidad</a> ·
-      <a href="/terms.html">Términos</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

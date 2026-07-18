@@ -141,6 +141,22 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
+  
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
 </head>
 <body>
@@ -164,6 +180,13 @@
     <p class="lead">
       La mayoría de los que visitan Marseille nunca se enteran de que existe. El tren de la Côte Bleue sale de Marseille Saint-Charles, sube a viaductos sobre acantilados y bordea el Mediterráneo pasando por calas escondidas hasta llegar a Miramas — una alternativa panorámica y económica al TGV que los locales conocen desde hace más de un siglo.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/28376228/pexels-photo-28376228.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Costa de Marsella con calanques y agua turquesa del Mediterráneo." loading="lazy" />
+    <img src="https://images.pexels.com/photos/35143457/pexels-photo-35143457.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Costa Azul francesa con mar azul y pueblos en los acantilados." loading="lazy" />
+    <img src="https://images.pexels.com/photos/27926192/pexels-photo-27926192.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Pueblo mediterráneo en la costa francesa con barcas coloridas." loading="lazy" />
+  </div>
+
 
     <h2>¿Qué es la línea Côte Bleue?</h2>
     <p>
@@ -189,7 +212,25 @@
       <li><strong>No necesitás reserva</strong> — solo consultá el horario TER en vivo y subite.</li>
     </ul>
 
-    <hr/>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Paris&to=Marseille" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_cote_bleue_es',route:'paris-marseille'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá París → Marsella en Klook</span>
+      <span class="klook-cta-sub">TGV · 3h 20m · desde €19</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Marseille&to=Miramas" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_cote_bleue_es',route:'marseille-miramas'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá ruta escénica Côte Bleue en Klook</span>
+      <span class="klook-cta-sub">Tren regional costero · ~1h</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <hr/>
 
     <h2>Planificá el resto del viaje</h2>
     <p>
@@ -199,18 +240,13 @@
     <div class="cta">
       <h3>Tu tren. Tu mundo.</h3>
       <p>Consultá horarios y tarifas en vivo Marseille → Miramas.</p>
-      <a href="/?from=Marseille&amp;to=Miramas" class="cta-btn">Planificar mi viaje con IA →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/blog.html">Blog</a> ·
-      <a href="/about.html">Nosotros</a> ·
-      <a href="/privacy.html">Privacidad</a> ·
-      <a href="/terms.html">Términos</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

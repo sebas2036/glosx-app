@@ -163,7 +163,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -186,6 +202,13 @@
 <p class="lead">
       Te dormís en una ciudad y te despertás en otra — sin aeropuerto, sin pagar una noche de hotel. Los trenes nocturnos están viviendo un verdadero resurgimiento en Europa en 2026. Acá te contamos cómo funcionan, qué rutas valen la pena, cuánto cuesta realmente una cabina y cómo reservar sin sorpresas.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/30595796/pexels-photo-30595796.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Camarote de tren nocturno europeo con literas y ropa de cama." loading="lazy" />
+    <img src="https://images.pexels.com/photos/1036419/pexels-photo-1036419.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Tren nocturno con desenfoque de movimiento, fotografía de larga exposición." loading="lazy" />
+    <img src="https://images.pexels.com/photos/9641136/pexels-photo-9641136.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Interior de la estación Wien Hauptbahnhof con panel de salidas." loading="lazy" />
+  </div>
+
 
     <h2>Por qué volvieron los trenes nocturnos</h2>
     <p>
@@ -232,7 +255,25 @@
       <li><strong>Revisá el día exacto de la semana.</strong> A diferencia de las líneas diurnas de alta velocidad, la mayoría de los trenes nocturnos corren solo días específicos, no todos los días.</li>
     </ul>
 
-    <hr/>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Vienna&to=Paris" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_night_trains_es',route:'vienna-paris'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Viena → París tren nocturno en Klook</span>
+      <span class="klook-cta-sub">Nightjet · ~14h · desde €49</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Amsterdam&to=Prague" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_night_trains_es',route:'amsterdam-prague'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Amsterdam → Praga tren nocturno</span>
+      <span class="klook-cta-sub">European Sleeper · desde €49</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <hr/>
 
     <p>
       Algunas de las rutas diurnas que cubrimos están sobre corredores que también tienen opción nocturna. Compará el horario en vivo para tus fechas — a veces el tren nocturno es la mejor opción, a veces gana la conexión rápida diurna.
@@ -271,18 +312,13 @@
     <div class="cta">
       <h3>Tu tren. Tu mundo. 🚄</h3>
       <p>Horarios en vivo de servicios diurnos y nocturnos en Europa — próximamente.</p>
-      <a href="/" class="cta-btn">Explorar WoW Train →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/es/blog.html">Blog</a> ·
-      <a href="/about.html">Acerca de</a> ·
-      <a href="/privacy.html">Privacidad</a> ·
-      <a href="/terms.html">Términos</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

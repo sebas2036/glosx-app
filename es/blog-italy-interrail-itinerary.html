@@ -117,7 +117,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -141,6 +157,13 @@
       Italia está hecha para el tren. Las líneas rápidas conectan las grandes ciudades en un par de horas, y un corto trayecto regional te deja en los acantilados de las Cinque Terre. Acá tenés una ruta relajada pero completa de una semana — Roma, Florencia, Venecia y la costa — que podés recorrer enteramente en ferrocarril.
     </p>
 
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/14836534/pexels-photo-14836534.jpeg?auto=compress&cs=tinysrgb&w=500" alt="El Coliseo de Roma, anfiteatro romano icónico del mundo antiguo." loading="lazy" />
+    <img src="https://images.pexels.com/photos/2882759/pexels-photo-2882759.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Casas coloridas de Cinque Terre en los acantilados sobre el mar de Liguria." loading="lazy" />
+    <img src="https://images.pexels.com/photos/20052608/pexels-photo-20052608.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Canal Grande de Venecia con góndolas al atardecer." loading="lazy" />
+  </div>
+
+
     <h2>La ruta de un vistazo</h2>
     <ul>
       <li><strong>Días 1–2:</strong> Roma</li>
@@ -156,7 +179,17 @@
       Empezá por la capital. Dos días alcanzan para lo esencial: el Coliseo y el Foro Romano, el Panteón, Trastevere al atardecer, y una mañana temprano en el Vaticano antes de las multitudes. Alojate cerca de <strong>Roma Termini</strong> — es la estación principal y el centro de todo lo que viene después.
     </p>
 
-    <h2>Día 3 · Roma → Florencia</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Rome&to=Florence" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_italy_interrail_es',route:'rome-florence'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Roma → Florencia en Klook</span>
+      <span class="klook-cta-sub">Frecciarossa · 1h 30m · desde €20</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Día 3 · Roma → Florencia</h2>
     <p>
       Uno de los grandes viajes en tren rápido de Europa. <strong>Frecciarossa</strong> (Trenitalia) e <strong>Italo</strong> cubren ambos Roma–Florencia en alrededor de <strong>1 hora 30 minutos</strong>, a hasta 300 km/h. Los trenes salen de Roma Termini y llegan a <strong>Firenze Santa Maria Novella</strong>, a 10 minutos a pie del Duomo.
     </p>
@@ -177,7 +210,17 @@
       La <strong>Cinque Terre Card</strong> te da viajes ilimitados entre los pueblos durante todo el día, así podés saltar de pueblo en pueblo sin comprar un billete cada vez. Es uno de los trayectos cortos más bonitos de Italia.
     </p>
 
-    <h2>Día 6 · Cinque Terre → Venecia</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Florence&to=Venice" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_italy_interrail_es',route:'florence-venice'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Florencia → Venecia en Klook</span>
+      <span class="klook-cta-sub">Alta velocidad vía Milán · desde €19</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Día 6 · Cinque Terre → Venecia</h2>
     <p>
       El trayecto más largo de la semana — unas <strong>5 horas</strong> con un cambio, normalmente en Milán o volviendo por Florencia para tomar un Frecciarossa. Los trenes llegan a <strong>Venezia Santa Lucia</strong>, y en el momento en que bajás, el Gran Canal está ahí mismo. Sin autos, sin taxis — solo agua.
     </p>
@@ -209,18 +252,13 @@
     <div class="cta">
       <h3>Tu tren. Tu mundo. 🚄</h3>
       <p>Planeá tu ruta por Italia, mirá horarios en vivo y reservá con socios verificados.</p>
-      <a href="/" class="cta-btn">Explorar WoW Train →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/es/blog.html">Blog</a> ·
-      <a href="/about.html">Acerca de</a> ·
-      <a href="/privacy.html">Privacidad</a> ·
-      <a href="/terms.html">Términos</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

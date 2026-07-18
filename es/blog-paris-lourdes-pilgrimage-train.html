@@ -130,6 +130,22 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
+  
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
 </head>
 <body>
@@ -154,6 +170,13 @@
     <p class="lead">
       Cada año, millones de personas viajan hasta una pequeña gruta al pie de los Pirineos, movidas por la misma esperanza silenciosa que atrae a los peregrinos desde 1858. El viaje de París a Lourdes en tren es mucho más que un traslado entre dos ciudades — es el primer paso de una peregrinación, y para muchos, el comienzo de algo que llevan consigo el resto de sus vidas.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/9722212/pexels-photo-9722212.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Santuario y gruta de Lourdes en los Pirineos franceses." loading="lazy" />
+    <img src="https://images.pexels.com/photos/18100810/pexels-photo-18100810.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Paisaje de los Pirineos con verdes valles en el sur de Francia." loading="lazy" />
+    <img src="https://images.pexels.com/photos/346768/pexels-photo-346768.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Viajero en un andén de estación con mochila y billete de tren." loading="lazy" />
+  </div>
+
 
     <h2>Un viaje que se vuelve parte de la oración</h2>
     <p>
@@ -188,7 +211,17 @@
       <li><strong>El alojamiento es más fácil de encontrar a poca distancia a pie de la entrada del Santuario</strong>, para poder volver a la procesión de la noche sin necesitar transporte.</li>
     </ul>
 
-    <hr/>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Paris&to=Lourdes" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_paris_lourdes_es',route:'paris-lourdes'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá París → Lourdes en Klook</span>
+      <span class="klook-cta-sub">TGV directo · ~5h · desde €29</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <hr/>
 
     <p>
       Algunos viajes son sobre el destino. Este es sobre lo que pasa en el camino — las horas en el tren que te permiten llegar a Lourdes no solo de cuerpo, sino preparado. Sea cual sea el destino de tu propia peregrinación, esperamos que el camino te regale la misma calma y la misma esperanza.
@@ -197,18 +230,13 @@
     <div class="cta">
       <h3>Tu tren. Tu mundo.</h3>
       <p>Planificá la ruta París–Toulouse–Lourdes, con horarios de tren y paradas armados para vos.</p>
-      <a href="/?from=Paris&amp;to=Lourdes" class="cta-btn">Planificá tu peregrinación con WoW Train →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/es/blog.html">Blog</a> ·
-      <a href="/about.html">About</a> ·
-      <a href="/privacy.html">Privacy</a> ·
-      <a href="/terms.html">Terms</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

@@ -129,7 +129,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -152,6 +168,13 @@
 <p class="lead">
       Europa está hecha para viajar en tren. Sin colas, sin cargos por equipaje, y con vistas en primera fila de los Alpes, los fiordos y la costa mediterránea. Estos son los siete trayectos en tren más espectaculares del continente — y cómo recorrerlos.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/11845845/pexels-photo-11845845.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Glacier Express panorámico cruzando los Alpes suizos en invierno." loading="lazy" />
+    <img src="https://images.pexels.com/photos/2882759/pexels-photo-2882759.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Ruta ferroviaria costera de Cinque Terre en la Riviera italiana." loading="lazy" />
+    <img src="https://images.pexels.com/photos/10124882/pexels-photo-10124882.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Paisaje de las Tierras Altas de Escocia con nubes dramáticas." loading="lazy" />
+  </div>
+
 
     <h2>1. Glacier Express — Suiza</h2>
     <p class="route-meta">Zermatt → St. Moritz · ~8 horas · Suiza</p>
@@ -189,7 +212,17 @@
       No todas las grandes rutas son lentas. El AVE de alta velocidad español conecta Madrid y Barcelona a hasta 310 km/h, deslizándose junto a olivares, viñedos y las llanuras de Aragón. Es la prueba de que el ferrocarril de alta velocidad europeo puede ser rápido y bonito a la vez — y a menudo más barato que volar una vez que sumás los traslados al aeropuerto.
     </p>
 
-    <h2>7. Frecciarossa: Roma → Florencia — Italia</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Rome&to=Florence" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_scenic_es',route:'rome-florence'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Roma → Florencia en Klook</span>
+      <span class="klook-cta-sub">Frecciarossa · 1h 30m · desde €9</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>7. Frecciarossa: Roma → Florencia — Italia</h2>
     <p class="route-meta">Roma Termini → Florencia · ~1h 30m · Italia</p>
     <p>
       El tren insignia de alta velocidad de Italia une la ciudad eterna con la cuna del Renacimiento en 90 minutos. Colinas toscanas, cipreses y pueblos en lo alto de colinas pasan frente a la ventanilla. Bajás en Firenze Santa Maria Novella y estás a un corto paseo del Duomo.
@@ -208,18 +241,13 @@
     <div class="cta">
       <h3>Tu tren. Tu mundo. 🚄</h3>
       <p>Horarios de tren en vivo por toda Europa — próximamente.</p>
-      <a href="/" class="cta-btn">Explorar WoW Train →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/es/blog.html">Blog</a> ·
-      <a href="/about.html">Acerca de</a> ·
-      <a href="/privacy.html">Privacidad</a> ·
-      <a href="/terms.html">Términos</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

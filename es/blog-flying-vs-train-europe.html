@@ -183,7 +183,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -207,6 +223,13 @@
       El vuelo a Barcelona por €19 parece una ganga — hasta que sumás el bus al aeropuerto (€18), la maleta facturada (€40), la cola de seguridad de 90 minutos y el metro de 40 minutos al llegar. Hicimos los números reales en los pares de ciudades más populares de Europa. Los resultados pueden sorprenderte.
     </p>
 
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/30639286/pexels-photo-30639286.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Tren ICE de alta velocidad en una estación europea." loading="lazy" />
+    <img src="https://images.pexels.com/photos/16737433/pexels-photo-16737433.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Terminal de aeropuerto abarrotada con largas colas en seguridad." loading="lazy" />
+    <img src="https://images.pexels.com/photos/16223386/pexels-photo-16223386.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Vista aérea de una moderna estación de tren europea con techo de vidrio." loading="lazy" />
+  </div>
+
+
     <h2>Los costos ocultos que las aerolíneas no publicitan</h2>
     <p>
       Las aerolíneas de bajo costo construyeron su negocio sobre un único número: la tarifa base. Todo lo demás — equipaje, selección de asiento, traslados, una botella de agua — se cobra aparte y generalmente con márgenes exorbitantes. Antes de comparar tren vs avión en precio, necesitás el <strong>costo real de bolsillo</strong>, no la tarifa titular.
@@ -223,7 +246,17 @@
       El tren gana en tiempo para cualquier ruta europea con menos de <strong>4–5 horas de trayecto en tren</strong>. Por encima de eso, volar empieza a ganar en tiempo — pero la comparativa de costos rara vez lo hace.
     </p>
 
-    <h2>Comparativa ruta por ruta</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_fly_vs_train_es',route:'madrid-barcelona'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Reservá Madrid → Barcelona en Klook</span>
+      <span class="klook-cta-sub">AVE · 2h 30m · desde €14</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Comparativa ruta por ruta</h2>
     <p>Todas las cifras son totales típicos incluyendo traslados, 1 maleta facturada y tarifas medias con anticipo. Precios de tren vía Trainline.</p>
 
     <table class="comparison-table">
@@ -352,19 +385,13 @@
     <div class="cta">
       <h3>¿Listo para dejar el aeropuerto atrás?</h3>
       <p>Buscá horarios y tarifas de tren para tu ruta — todos los operadores, todas las salidas, una sola búsqueda.</p>
-      <a href="/?from=Madrid&amp;to=Barcelona" class="cta-btn">Planificar mi viaje con IA →</a>
+      <a href="/ai-planner/" class="cta-btn">Planificá con IA →</a>
     </div>
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
-    <p style="margin-top:8px;">
-      <a href="/">Inicio</a> ·
-      <a href="/es/blog.html">Blog</a> ·
-      <a href="/about.html">Acerca de</a> ·
-      <a href="/privacy.html">Privacidad</a> ·
-      <a href="/terms.html">Términos</a>
-    </p>
-  </footer>
+  <p><a href="/">WoW Train</a> · <a href="/es/blog.html">Blog</a> · <a href="/rutas/">Todas las rutas</a> · <a href="/about.html">Nosotros</a></p>
+  <p style="margin-top:10px;">© 2026 GLOSX. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
