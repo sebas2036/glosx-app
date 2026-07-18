@@ -129,6 +129,22 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
+  
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
   </style>
 </head>
 <body>
@@ -153,6 +169,13 @@
     <p class="lead">
       Every year, millions travel to a small grotto in the foothills of the Pyrenees, drawn by the same quiet hope that has pulled pilgrims here since 1858. The journey from Paris to Lourdes by train is more than a transfer between two cities — it's the first step of a pilgrimage, and for many, the beginning of something they carry home for the rest of their lives.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/9722212/pexels-photo-9722212.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Lourdes sanctuary basilica and grotto in the French Pyrenees." loading="lazy" />
+    <img src="https://images.pexels.com/photos/18100810/pexels-photo-18100810.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Pyrenees mountain landscape with green valleys in southern France." loading="lazy" />
+    <img src="https://images.pexels.com/photos/346768/pexels-photo-346768.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Traveller at a train station platform with backpack and ticket." loading="lazy" />
+  </div>
+
 
     <h2>A journey that becomes part of the prayer</h2>
     <p>
@@ -187,7 +210,17 @@
       <li><strong>Accommodation is easiest to find within walking distance of the Sanctuary entrance</strong>, so you can return for the evening procession without needing transport.</li>
     </ul>
 
-    <hr/>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Paris&to=Lourdes" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_paris_lourdes',route:'paris-lourdes'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Paris → Lourdes on Klook</span>
+      <span class="klook-cta-sub">Direct TGV · ~5h · from €29</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <hr/>
 
     <p>
       Some journeys are about the destination. This one is about what happens along the way — the hours on the train that let you arrive not just in Lourdes, but ready for it. Wherever your own pilgrimage is headed, we hope the road there gives you the same quiet and the same hope.

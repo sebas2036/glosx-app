@@ -116,7 +116,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -140,6 +156,13 @@
       It's the busiest high-speed corridor in Spain — and one of the best train journeys in Europe. Here's everything you need to take the train from Madrid to Barcelona in 2026: times, prices, stations and how to grab the cheapest seat.
     </p>
 
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/16984552/pexels-photo-16984552.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Sagrada Familia cathedral in Barcelona, iconic Gaudí architecture." loading="lazy" />
+    <img src="https://images.pexels.com/photos/15473331/pexels-photo-15473331.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Madrid cityscape at dusk with modern skyline and Gran Vía." loading="lazy" />
+    <img src="https://images.pexels.com/photos/35727855/pexels-photo-35727855.jpeg?auto=compress&cs=tinysrgb&w=500" alt="AVE high-speed train passengers at a Barcelona station platform." loading="lazy" />
+  </div>
+
+
     <h2>How long does it take?</h2>
     <p>
       The fastest <strong>AVE</strong> trains cover the 620 km between Madrid and Barcelona in about <strong>2 hours 30 minutes</strong>, reaching speeds of up to 310 km/h. Compared to flying — with airport transfers, security and waiting — the train is usually <strong>door-to-door faster</strong>, and drops you right in the city centre.
@@ -151,7 +174,17 @@
       <li><strong>Barcelona:</strong> trains arrive at <strong>Barcelona Sants</strong>, a short metro ride from the Gothic Quarter and Sagrada Família.</li>
     </ul>
 
-    <h2>Who runs the route? Three operators</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_madrid_bcn',route:'madrid-barcelona'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Madrid → Barcelona on Klook</span>
+      <span class="klook-cta-sub">AVE · Ouigo · Iryo — compare all operators</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Who runs the route? Three operators</h2>
     <p>
       Spain opened this line to competition, which is great news for travellers — more trains and lower prices. Three companies now run it:
     </p>
@@ -161,7 +194,17 @@
       <li><strong>Iryo</strong> — a newer premium-feel operator with comfortable seats and competitive prices.</li>
     </ul>
 
-    <h2>How much does it cost?</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Barcelona&to=Madrid" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_madrid_bcn',route:'barcelona-madrid'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Return: Barcelona → Madrid on Klook</span>
+      <span class="klook-cta-sub">All operators · advance fares from €14</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>How much does it cost?</h2>
     <p>
       Prices are dynamic — the earlier you book, the cheaper. As a rough guide for 2026:
     </p>

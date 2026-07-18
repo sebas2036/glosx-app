@@ -128,7 +128,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -151,6 +167,13 @@
 <p class="lead">
       Europe is made for train travel. No queues, no baggage fees, and front-row views of the Alps, the fjords and the Mediterranean coast. These are the seven most spectacular rail journeys on the continent — and how to ride them.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/11845845/pexels-photo-11845845.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Glacier Express panoramic train crossing the Swiss Alps in winter." loading="lazy" />
+    <img src="https://images.pexels.com/photos/2882759/pexels-photo-2882759.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Cinque Terre coastal railway route along the Italian Riviera." loading="lazy" />
+    <img src="https://images.pexels.com/photos/10124882/pexels-photo-10124882.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Scottish Highlands landscape with dramatic clouds and green hills." loading="lazy" />
+  </div>
+
 
     <h2>1. Glacier Express — Switzerland</h2>
     <p class="route-meta">Zermatt → St. Moritz · ~8 hours · Switzerland</p>
@@ -182,13 +205,33 @@
       Lochs, moors and the famous Glenfinnan Viaduct (yes, the Harry Potter bridge). The West Highland Line runs through some of the wildest scenery in Britain, ending at the fishing port of Mallaig with views out to the Isle of Skye.
     </p>
 
-    <h2>6. Madrid → Barcelona on the AVE — Spain</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_scenic',route:'madrid-barcelona'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Madrid → Barcelona on Klook</span>
+      <span class="klook-cta-sub">AVE · 2h 30m · from €14</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>6. Madrid → Barcelona on the AVE — Spain</h2>
     <p class="route-meta">Madrid → Barcelona · ~2h 30m · Spain</p>
     <p>
       Not every great route is slow. Spain's high-speed AVE connects Madrid and Barcelona at up to 310 km/h, gliding past olive groves, vineyards and the plains of Aragón. It's proof that European high-speed rail can be both fast and beautiful — and often cheaper than flying once you add airport transfers.
     </p>
 
-    <h2>7. Frecciarossa: Rome → Florence — Italy</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Rome&to=Florence" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_scenic',route:'rome-florence'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Rome → Florence on Klook</span>
+      <span class="klook-cta-sub">Frecciarossa · 1h 30m · from €9</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>7. Frecciarossa: Rome → Florence — Italy</h2>
     <p class="route-meta">Roma Termini → Firenze · ~1h 30m · Italy</p>
     <p>
       Italy's flagship high-speed train links the eternal city with the cradle of the Renaissance in 90 minutes. Rolling Tuscan hills, cypress trees and hilltop towns flash past the window. Step off at Firenze Santa Maria Novella and you're a short walk from the Duomo.

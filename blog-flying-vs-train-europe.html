@@ -182,7 +182,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -206,6 +222,13 @@
       The €19 flight to Barcelona looks great — until you add the €18 bus to the airport, the €40 checked bag, the 90-minute security queue and the 40-minute metro on the other end. We ran the real numbers on Europe's most popular city pairs. The results might surprise you.
     </p>
 
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/30639286/pexels-photo-30639286.jpeg?auto=compress&cs=tinysrgb&w=500" alt="ICE high-speed train at a European station platform." loading="lazy" />
+    <img src="https://images.pexels.com/photos/16737433/pexels-photo-16737433.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Crowded airport terminal with queues of passengers at security." loading="lazy" />
+    <img src="https://images.pexels.com/photos/16223386/pexels-photo-16223386.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Modern European railway station aerial view with glass roof." loading="lazy" />
+  </div>
+
+
     <h2>The hidden costs airlines don't advertise</h2>
     <p>
       Low-cost carriers built a business around one number: the base fare. Everything else — luggage, seat selection, airport transfers, a bottle of water — is billed separately and often at outrageous margins. Before comparing train vs flight on price, you need the <strong>actual out-of-pocket cost</strong>, not the headline fare.
@@ -222,7 +245,17 @@
       The train wins on time for any European route under roughly <strong>4–5 hours of rail journey</strong>. Above that, flying starts to win — but the cost comparison rarely does.
     </p>
 
-    <h2>Route-by-route comparison</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_fly_vs_train',route:'madrid-barcelona'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Madrid → Barcelona on Klook</span>
+      <span class="klook-cta-sub">AVE · 2h 30m · from €14</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Route-by-route comparison</h2>
 
     <p>All figures are typical totals including transfers, 1 checked bag and average advance fares. Train prices via Trainline.</p>
 
@@ -289,7 +322,17 @@
       </tbody>
     </table>
 
-    <h2>The carbon gap nobody talks about</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Paris&to=London" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_fly_vs_train',route:'paris-london'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Paris → London on Klook</span>
+      <span class="klook-cta-sub">Eurostar · 2h 20m · from €39</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>The carbon gap nobody talks about</h2>
     <p>
       A return flight Paris–Barcelona emits roughly <strong>340 kg of CO2</strong> per passenger (including radiative forcing at altitude). The same journey by high-speed TGV emits approximately <strong>4–6 kg</strong>. That's not a rounding error — it's a factor of 60–80x.
     </p>

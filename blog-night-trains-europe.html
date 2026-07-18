@@ -169,7 +169,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -192,6 +208,13 @@
 <p class="lead">
       Fall asleep in one city, wake up in another — no airport, no hotel night to pay for. Night trains are having a real comeback across Europe in 2026. Here's how they work, which routes are worth it, what a cabin actually costs, and how to book one without surprises.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/30595796/pexels-photo-30595796.jpeg?auto=compress&cs=tinysrgb&w=500" alt="European night train sleeper cabin with bunk beds and linen." loading="lazy" />
+    <img src="https://images.pexels.com/photos/1036419/pexels-photo-1036419.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Train at night with motion blur, long-exposure railway photography." loading="lazy" />
+    <img src="https://images.pexels.com/photos/9641136/pexels-photo-9641136.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Vienna Hauptbahnhof railway station interior with departures board." loading="lazy" />
+  </div>
+
 
     <h2>Why night trains are back</h2>
     <p>
@@ -238,7 +261,25 @@
       <li><strong>Check the exact day of the week.</strong> Unlike daytime high-speed lines, most night trains run only on specific days, not daily.</li>
     </ul>
 
-    <hr/>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Vienna&to=Paris" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_night_trains',route:'vienna-paris'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Vienna → Paris night train on Klook</span>
+      <span class="klook-cta-sub">Nightjet · ~14h · from €49</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Amsterdam&to=Prague" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_night_trains',route:'amsterdam-prague'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Amsterdam → Prague night train</span>
+      <span class="klook-cta-sub">European Sleeper · from €49</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <hr/>
 
     <p>
       Some of the day routes we cover sit along corridors with overnight options too. Compare the live timetable for your dates — sometimes the night train is the better call, sometimes the fast daytime connection wins.

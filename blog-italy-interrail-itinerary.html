@@ -116,7 +116,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -140,6 +156,13 @@
       Italy is made for the train. Fast lines link the great cities in a couple of hours, and a short regional hop drops you into the cliffs of the Cinque Terre. Here's a relaxed but complete one-week route — Rome, Florence, Venice and the coast — that you can ride entirely by rail.
     </p>
 
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/14836534/pexels-photo-14836534.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Colosseum in Rome Italy, iconic ancient Roman amphitheatre." loading="lazy" />
+    <img src="https://images.pexels.com/photos/2882759/pexels-photo-2882759.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Cinque Terre colourful village houses on cliffs above the Ligurian sea." loading="lazy" />
+    <img src="https://images.pexels.com/photos/20052608/pexels-photo-20052608.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Venice Grand Canal with gondolas at sunset." loading="lazy" />
+  </div>
+
+
     <h2>The route at a glance</h2>
     <ul>
       <li><strong>Days 1–2:</strong> Rome</li>
@@ -155,7 +178,17 @@
       Start in the capital. Two days is enough for the essentials: the Colosseum and Roman Forum, the Pantheon, Trastevere at dusk, and an early morning at the Vatican before the crowds. Stay near <strong>Roma Termini</strong> — it's the main station and the hub for everything that comes next.
     </p>
 
-    <h2>Day 3 · Rome → Florence</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Rome&to=Florence" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_italy_interrail',route:'rome-florence'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Rome → Florence on Klook</span>
+      <span class="klook-cta-sub">Frecciarossa · 1h 30m · from €20</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Day 3 · Rome → Florence</h2>
     <p>
       One of Europe's great fast-train rides. <strong>Frecciarossa</strong> (Trenitalia) and <strong>Italo</strong> both run Rome–Florence in about <strong>1 hour 30 minutes</strong>, at up to 300 km/h. Trains leave Roma Termini and arrive at <strong>Firenze Santa Maria Novella</strong>, a 10-minute walk from the Duomo.
     </p>
@@ -176,7 +209,17 @@
       A <strong>Cinque Terre Card</strong> gives you unlimited hops between the villages all day, so you can village-hop without buying a ticket each time. It's one of the most beautiful short rides in Italy.
     </p>
 
-    <h2>Day 6 · Cinque Terre → Venice</h2>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Florence&to=Venice" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_italy_interrail',route:'florence-venice'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Book Florence → Venice on Klook</span>
+      <span class="klook-cta-sub">High-speed via Milan · from €19</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <h2>Day 6 · Cinque Terre → Venice</h2>
     <p>
       The longest leg of the week — roughly <strong>5 hours</strong> with one change, usually in Milan or back through Florence onto a Frecciarossa. Trains arrive at <strong>Venezia Santa Lucia</strong>, and the moment you step out the Grand Canal is right there. No cars, no taxis — just water.
     </p>

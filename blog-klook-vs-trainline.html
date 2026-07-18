@@ -168,7 +168,23 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .blog-hero { height: 64vh; min-height: 380px; } }
-</style>
+
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
+    .photo-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
+    .klook-cta {
+      display: flex; align-items: center; gap: 16px;
+      background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06));
+      border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 28px 0;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-logo { width: 36px; height: 36px; border-radius: 8px; background: #FF6A2B; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; color: #fff; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; font-weight: 700; }
+    @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+  </style>
 </head>
 <body>
   <nav>
@@ -191,6 +207,13 @@
 <p class="lead">
       Every "Buy ticket" button on this site quietly makes a decision before you click it: Klook or Trainline. Here's what actually separates the two for European rail, and the logic we use so you never land on an empty search.
     </p>
+
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/6945640/pexels-photo-6945640.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Person booking travel on a smartphone app at a train station." loading="lazy" />
+    <img src="https://images.pexels.com/photos/20218086/pexels-photo-20218086.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Close-up of European train tickets on a wooden table." loading="lazy" />
+    <img src="https://images.pexels.com/photos/21031431/pexels-photo-21031431.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Commuters on a busy train station platform in Europe." loading="lazy" />
+  </div>
+
 
     <h2>They're not really competing on the same thing</h2>
     <p>
@@ -228,7 +251,25 @@
       </tbody>
     </table>
 
-    <hr/>
+    
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Paris&to=London" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_klook_vs',route:'paris-london'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Search Paris → London on Klook</span>
+      <span class="klook-cta-sub">Compare all operators and fares</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+  <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_klook_vs',route:'madrid-barcelona'});">
+    <span class="klook-logo">K</span>
+    <span class="klook-cta-text">
+      <span class="klook-cta-title">Search Madrid → Barcelona on Klook</span>
+      <span class="klook-cta-sub">AVE · Ouigo · Iryo in one search</span>
+    </span>
+    <span class="klook-cta-arrow">→</span>
+  </a>
+
+  <hr/>
 
     <p>
       In practice this means the same journey can send you to two different providers depending on which leg you're booking — Paris to Barcelona might go through Klook while a connecting leg to a smaller station goes through Trainline. That's intentional, not inconsistent: each leg gets whichever provider actually has it covered.
