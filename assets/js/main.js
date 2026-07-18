@@ -1505,6 +1505,61 @@
   }
 })();
 
+// ── Onboarding coach-marks del boton "Empezar" (primera vez) ──
+(function () {
+  var COACH = {
+    en: { s1: 'Step 1 · Describe', t1: "Type your trip in plain words — e.g. 'London to Rome in 7 days' — and the AI builds the full itinerary.", s2: 'Step 2 · Or pick a route', t2: 'Prefer something ready-made? Tap a country and choose a popular route to book instantly.', ok: 'Got it' },
+    es: { s1: 'Paso 1 · Describí', t1: "Escribí tu viaje en lenguaje normal —ej. 'Londres a Roma en 7 días'— y la IA arma el itinerario completo.", s2: 'Paso 2 · O elegí una ruta', t2: '¿Preferís algo listo? Tocá un país y elegí una ruta popular para reservar al instante.', ok: 'Entendido' },
+    fr: { s1: 'Étape 1 · Décrivez', t1: "Décrivez votre voyage en langage courant — ex. 'Londres à Rome en 7 jours' — et l'IA crée l'itinéraire complet.", s2: 'Étape 2 · Ou choisissez', t2: 'Vous préférez du prêt à l\'emploi ? Touchez un pays et choisissez un trajet populaire à réserver aussitôt.', ok: 'Compris' },
+    de: { s1: 'Schritt 1 · Beschreiben', t1: "Beschreibe deine Reise in normaler Sprache — z.B. 'London nach Rom in 7 Tagen' — und die KI erstellt die komplette Route.", s2: 'Schritt 2 · Oder wählen', t2: 'Lieber etwas Fertiges? Tippe auf ein Land und wähle eine beliebte Route zum sofort Buchen.', ok: 'Verstanden' },
+    it: { s1: 'Passo 1 · Descrivi', t1: "Scrivi il tuo viaggio in parole semplici — es. 'Londra a Roma in 7 giorni' — e l'IA crea l'itinerario completo.", s2: 'Passo 2 · O scegli', t2: 'Preferisci qualcosa di pronto? Tocca un paese e scegli un percorso popolare da prenotare subito.', ok: 'Ho capito' },
+    pt: { s1: 'Passo 1 · Descreva', t1: "Escreva sua viagem em linguagem simples — ex. 'Londres a Roma em 7 dias' — e a IA monta o itinerário completo.", s2: 'Passo 2 · Ou escolha', t2: 'Prefere algo pronto? Toque num país e escolha uma rota popular para reservar na hora.', ok: 'Entendi' }
+  };
+  function dict() { return COACH[document.documentElement.lang] || COACH.en; }
+
+  var active = [];
+  function makeBubble(step, text, ok) {
+    var b = document.createElement('div');
+    b.className = 'wt-coach';
+    var s = document.createElement('div'); s.className = 'wt-coach-step'; s.textContent = step;
+    var t = document.createElement('div'); t.className = 'wt-coach-text'; t.textContent = text;
+    var d = document.createElement('span'); d.className = 'wt-coach-dismiss'; d.textContent = ok;
+    d.addEventListener('click', function (e) { e.stopPropagation(); clearCoach(); });
+    b.appendChild(s); b.appendChild(t); b.appendChild(d);
+    return b;
+  }
+  function clearCoach() {
+    active.forEach(function (el) { el.classList.remove('wt-coach-target'); });
+    Array.prototype.slice.call(document.querySelectorAll('.wt-coach')).forEach(function (n) { n.remove(); });
+    document.removeEventListener('keydown', onKey, true);
+    document.removeEventListener('click', onOutside, true);
+    active = [];
+  }
+  function onKey(e) { if (e.key === 'Escape') clearCoach(); }
+  function onOutside(e) { if (!e.target.closest('.wt-coach')) clearCoach(); }
+
+  window.wtStartOnboarding = function () {
+    var input = document.getElementById('aiInput');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(function () { if (input) try { input.focus({ preventScroll: true }); } catch (e) { input.focus(); } }, 550);
+
+    if (localStorage.getItem('wt_onboarded') === '1') return; // repeticiones: solo scroll + foco
+    localStorage.setItem('wt_onboarded', '1');
+
+    var d = dict();
+    var inputC = document.querySelector('#aiInputWrapper .ai-input-container');
+    var chips = document.getElementById('countries');
+    setTimeout(function () {
+      clearCoach();
+      if (inputC) { inputC.classList.add('wt-coach-target'); inputC.appendChild(makeBubble(d.s1, d.t1, d.ok)); active.push(inputC); }
+      if (chips) { chips.classList.add('wt-coach-target'); chips.appendChild(makeBubble(d.s2, d.t2, d.ok)); active.push(chips); }
+      if (!active.length) return;
+      document.addEventListener('keydown', onKey, true);
+      setTimeout(function () { document.addEventListener('click', onOutside, true); }, 50);
+    }, 650);
+  };
+})();
+
 
 
 (function () {

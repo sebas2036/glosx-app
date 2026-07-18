@@ -89,6 +89,44 @@
     /* Seccion activa (scroll-spy) */
     .nav-links a.nav-active { color: #fff; }
     .nav-links a.nav-active::after { transform: scaleX(1); }
+
+    /* ── Onboarding coach-marks (boton Empezar, primera vez) ── */
+    .wt-coach-target { position: relative; }
+    .wt-coach-target::after {
+      content: ''; position: absolute; inset: -8px; border-radius: 16px;
+      pointer-events: none; z-index: 1;
+      box-shadow: 0 0 0 2px rgba(167,139,250,0.9), 0 0 26px 6px rgba(124,58,237,0.5);
+      animation: wtCoachPulse 1.7s ease-in-out infinite;
+    }
+    @keyframes wtCoachPulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+    .wt-coach {
+      position: absolute; left: 50%; top: calc(100% + 18px);
+      transform: translateX(-50%);
+      width: max-content; max-width: min(320px, 82vw);
+      background: linear-gradient(160deg, #1d1636 0%, #130e22 100%);
+      border: 1px solid rgba(139,92,246,0.6); border-radius: 14px;
+      padding: 13px 16px 14px; z-index: 70; text-align: left;
+      box-shadow: 0 18px 44px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05);
+      animation: wtCoachIn 0.35s cubic-bezier(0.2,0.8,0.2,1) both;
+    }
+    .wt-coach::before {
+      content: ''; position: absolute; left: 50%; top: -7px;
+      transform: translateX(-50%) rotate(45deg);
+      width: 13px; height: 13px; background: #1d1636;
+      border-left: 1px solid rgba(139,92,246,0.6); border-top: 1px solid rgba(139,92,246,0.6);
+    }
+    @keyframes wtCoachIn {
+      from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    .wt-coach-step { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #a78bfa; margin-bottom: 5px; }
+    .wt-coach-text { font-size: 13.5px; line-height: 1.5; color: #E9E3FB; }
+    .wt-coach-dismiss { display: inline-block; margin-top: 11px; font-size: 12.5px; font-weight: 700; color: #c4b5fd; cursor: pointer; user-select: none; }
+    .wt-coach-dismiss:hover { color: #fff; }
+    @media (prefers-reduced-motion: reduce) {
+      .wt-coach-target::after { animation: none; opacity: 0.85; }
+      .wt-coach { animation: none; }
+    }
     /* CTA principal del header */
     .nav-links a.nav-cta {
       background: linear-gradient(135deg, #7c3aed 0%, #9d5cf5 100%);
