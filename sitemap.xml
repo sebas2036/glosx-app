@@ -1636,4 +1636,10 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
   </url>
+  <url>
+    <loc>https://glosx.app/ai-planner/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
