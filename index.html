@@ -27,6 +27,11 @@
   <link rel="icon" type="image/png" href="/logo.png" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#6c3fc5" />
+  <!-- Security headers via meta (GitHub Pages) -->
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
   <!-- Preload LCP hero image -->
   <link rel="preload" as="image" href="/hero-bg.webp" type="image/webp" fetchpriority="high" />
   <link rel="preload" as="image" href="/hero-bg.jpg" fetchpriority="high" />
