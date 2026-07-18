@@ -1528,12 +1528,22 @@
     b.appendChild(s); b.appendChild(t); b.appendChild(d);
     return b;
   }
+  var pairs = [];
+  function reposition() {
+    pairs.forEach(function (p) {
+      var r = p.target.getBoundingClientRect();
+      p.bubble.style.top = (r.bottom + 14) + 'px';
+      p.bubble.style.left = Math.round(r.left + r.width / 2) + 'px';
+    });
+  }
   function clearCoach() {
-    active.forEach(function (el) { el.classList.remove('wt-coach-target'); el.style.zIndex = ''; });
+    active.forEach(function (el) { el.classList.remove('wt-coach-target'); });
     Array.prototype.slice.call(document.querySelectorAll('.wt-coach')).forEach(function (n) { n.remove(); });
     document.removeEventListener('keydown', onKey, true);
     document.removeEventListener('click', onOutside, true);
-    active = [];
+    window.removeEventListener('scroll', reposition, true);
+    window.removeEventListener('resize', reposition);
+    active = []; pairs = [];
   }
   function onKey(e) { if (e.key === 'Escape') clearCoach(); }
   function onOutside(e) { if (!e.target.closest('.wt-coach')) clearCoach(); }
@@ -1555,9 +1565,23 @@
     var chips = document.getElementById('countries');
     setTimeout(function () {
       clearCoach();
-      if (inputC) { inputC.classList.add('wt-coach-target'); inputC.style.zIndex = '90'; inputC.appendChild(makeBubble(d.s1, d.t1, d.ok)); active.push(inputC); }
-      if (chips) { chips.classList.add('wt-coach-target'); chips.style.zIndex = '80'; chips.appendChild(makeBubble(d.s2, d.t2, d.ok)); active.push(chips); }
-      if (!active.length) return;
+      var pool = [];
+      if (inputC) pool.push({ target: inputC, step: d.s1, text: d.t1 });
+      if (chips) pool.push({ target: chips, step: d.s2, text: d.t2 });
+      pool.forEach(function (item) {
+        item.target.classList.add('wt-coach-target'); active.push(item.target);
+        // El cartel va en capa body (position:fixed) para escapar de los contextos
+        // de apilado anidados que antes tapaban el "Got it".
+        var bubble = makeBubble(item.step, item.text, d.ok);
+        bubble.style.position = 'fixed';
+        bubble.style.zIndex = '95';
+        document.body.appendChild(bubble);
+        pairs.push({ bubble: bubble, target: item.target });
+      });
+      if (!pairs.length) return;
+      reposition();
+      window.addEventListener('scroll', reposition, true);
+      window.addEventListener('resize', reposition);
       document.addEventListener('keydown', onKey, true);
       setTimeout(function () { document.addEventListener('click', onOutside, true); }, 50);
     }, 650);
