@@ -540,7 +540,7 @@
     }
     .scenic-feature::before {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(10,8,24,0.05) 0%, rgba(10,8,24,0.45) 55%, rgba(10,8,24,0.88) 100%);
+      background: linear-gradient(180deg, rgba(10,8,24,0.02) 0%, rgba(10,8,24,0.32) 50%, rgba(10,8,24,0.72) 100%);
       pointer-events: none;
     }
     .sf-content { position: relative; z-index: 1; transition: opacity 0.25s ease; }
