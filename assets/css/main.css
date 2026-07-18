@@ -86,6 +86,9 @@
     }
     .nav-links a:not(.nav-cta):hover { color: #fff; }
     .nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
+    /* Seccion activa (scroll-spy) */
+    .nav-links a.nav-active { color: #fff; }
+    .nav-links a.nav-active::after { transform: scaleX(1); }
     /* CTA principal del header */
     .nav-links a.nav-cta {
       background: linear-gradient(135deg, #7c3aed 0%, #9d5cf5 100%);
