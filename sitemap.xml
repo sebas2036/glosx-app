@@ -1651,6 +1651,12 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
   </url>
   <url>
+    <loc>https://glosx.app/blog-florence-siena-day-trip.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://glosx.app/es/blog-cote-bleue-marseille-train.html</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
