@@ -1019,6 +1019,22 @@
     <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/florence-pisa/es/" />
   </url>
   <url>
+    <loc>https://glosx.app/rutas/florence-siena/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-siena/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/florence-siena/es/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/florence-siena/es/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-siena/" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/rutas/florence-siena/es/" />
+  </url>
+  <url>
     <loc>https://glosx.app/rutas/london-paris/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
