@@ -813,7 +813,7 @@
       'Germany': ['Berlin', 'Cologne', 'Dortmund', 'Frankfurt', 'Hamburg', 'Mainz', 'Munich'],
       'Hungary': ['Budapest'],
       'Slovenia': ['Ljubljana'],
-      'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Sorrento', 'Turin', 'Venice'],
+      'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Siena', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],
       'Spain': ['Barcelona', 'Figueres', 'Girona', 'Madrid', 'Malaga', 'Seville', 'Valencia', 'Zaragoza'],
@@ -2188,6 +2188,13 @@
       stars: 3,
       photo: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/a5/fd/ae188e72b48d5360d4999fbd4b9070ec56590963d18a91196daca91fcb95.jpeg',
       url: `${PROXY_BASE}/klook-hotel?city=pisa`,
+    },
+    siena: {
+      name: 'Grand Hotel Continental Siena',
+      loc: 'Siena, Italy',
+      stars: 5,
+      photo: 'https://images.pexels.com/photos/38127108/pexels-photo-38127108.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      url: `${PROXY_BASE}/klook-hotel?city=siena`,
     },
     bern: {
       name: 'Hotel Schweizerhof Bern & Spa',
