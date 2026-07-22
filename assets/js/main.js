@@ -603,7 +603,15 @@
       // 2. URL query param (?lang=es) — links explícitos / SEO
       const param = new URLSearchParams(location.search).get('lang');
       if (param && TRANSLATIONS[param]) return param;
-      // 3. Inglés por defecto SIEMPRE (no auto-detectar idioma del navegador)
+      // 3. Idioma del navegador/dispositivo (ej. "es-AR" -> "es"). No afecta a
+      //    Googlebot, que renderiza con navigator.language = en-US; el canonical
+      //    self-referencing y el hreflang x-default siguen intactos para SEO.
+      const browserLangs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+      for (const bl of browserLangs) {
+        const code = (bl || '').split('-')[0].toLowerCase();
+        if (TRANSLATIONS[code]) return code;
+      }
+      // 4. Inglés por defecto si el idioma del navegador no está soportado
       return 'en';
     }
 
