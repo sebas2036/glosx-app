@@ -2561,6 +2561,9 @@
     ).join('');
   }
 
+  // Escapa comillas para insertar de forma segura dentro de un atributo onclick="gtag(...)"
+  function escAttr(s) { return String(s).replace(/'/g, "\\'").replace(/"/g, '&quot;'); }
+
   window.openTripPlan = function openTripPlan() {
     if (!_currentTripData) return;
     const data = _currentTripData;
@@ -2574,7 +2577,9 @@
       const curated = findCuratedHotel(ciudad);
       if (curated) {
         const budgetUrl = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(ciudad)}`;
-        tlItems.push({ type: 'hotel', html: `<a href="${curated.url}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-row has-photo">
+        const curatedTrack = `gtag('event','klook_click',{source:'trip_plan_modal',type:'hotel_curated',city:'${escAttr(ciudad)}'});`;
+        const budgetTrack = `gtag('event','klook_click',{source:'trip_plan_modal',type:'hotel_budget',city:'${escAttr(ciudad)}'});`;
+        tlItems.push({ type: 'hotel', html: `<a href="${curated.url}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-row has-photo" onclick="${curatedTrack}">
           <img class="trip-hotel-photo" src="${curated.photo}" alt="${curated.name}" loading="lazy" onerror="this.remove()" />
           <div class="trip-hotel-info">
             <span class="trip-hotel-name">${curated.name}</span>
@@ -2583,11 +2588,12 @@
           </div>
           <span class="trip-hotel-cta">${dict.ai_hotel_price || 'See current price →'}</span>
         </a>
-        <a href="${budgetUrl}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-budget-alt">${dict.ai_hotel_budget_alt || 'Budget options also available →'}</a>` });
+        <a href="${budgetUrl}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-budget-alt" onclick="${budgetTrack}">${dict.ai_hotel_budget_alt || 'Budget options also available →'}</a>` });
         return;
       }
       const url = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(ciudad)}`;
-      tlItems.push({ type: 'hotel', html: `<a href="${url}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-row">
+      const hotelTrack = `gtag('event','klook_click',{source:'trip_plan_modal',type:'hotel',city:'${escAttr(ciudad)}'});`;
+      tlItems.push({ type: 'hotel', html: `<a href="${url}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-row" onclick="${hotelTrack}">
         <span class="trip-hotel-city">${ciudad}</span>
         <span class="trip-hotel-cta">${dict.ai_hotel_link || 'Find hotels →'}</span>
       </a>` });
@@ -2606,12 +2612,13 @@
         ? `https://www.google.com/maps/dir/${encodeURIComponent(s.origen)}/${encodeURIComponent(s.destino)}`
         : window.glosxBookTarget(cleanCityForKlook(s.origen) || s.origen, cleanCityForKlook(s.destino) || s.destino);
       const btnLabel = noTrain ? (dict.ai_view_options || 'Ver opciones →') : (dict.ai_buy_ticket || 'Buy ticket →');
+      const trainTrack = `gtag('event','klook_click',{source:'trip_plan_modal',type:'${noTrain ? 'transit_alt' : 'train'}',route:'${escAttr(s.origen)}-${escAttr(s.destino)}'});`;
       tlItems.push({ type: 'train', html: `<div class="trip-segment-row" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
         <div>
           <strong>${s.origen} → ${s.destino}</strong>
           <span>${stations} · ${s.tiempo_trayecto} · ${op}</span>
         </div>
-        <a href="${ticketUrl}" target="_blank" rel="noopener noreferrer" class="trip-ticket-btn">${btnLabel}</a>
+        <a href="${ticketUrl}" target="_blank" rel="noopener noreferrer" class="trip-ticket-btn" onclick="${trainTrack}">${btnLabel}</a>
       </div>` });
     });
 
@@ -2754,7 +2761,7 @@
     const routeStops = getRouteStops(data);
     const stopsContainer = document.getElementById('aiStops');
     stopsContainer.innerHTML = routeStops.map((stop, i) =>
-      `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="#" onclick="event.preventDefault(); openTripPlan();">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_hotel_link || 'Find hotels →'}</a></div>`
+      `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}<a class="ai-stop-hotel" href="#" onclick="event.preventDefault(); gtag('event','trip_plan_open',{source:'ai_stop_hotel_link'}); openTripPlan();">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_hotel_link || 'Find hotels →'}</a></div>`
     ).join('');
 
     const CITY_IMG_API = 'https://glosx-backend-production.up.railway.app/api/city-image/';
