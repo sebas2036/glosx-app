@@ -2497,6 +2497,26 @@
   .ai-results .ai-ess-cta { color: #8b5cf6; }
   .ai-results .ai-reset-btn { color: #16131f; background: #f8f7fc; border-color: rgba(124,58,237,0.18); }
   .ai-results .ai-reset-btn:hover { background: #f0ecfc; border-color: #8b5cf6; }
+  .ai-hotels { max-width: 640px; margin: 20px auto; }
+  .ai-copy-btn {
+    display: block;
+    margin: 8px auto 0;
+    max-width: 640px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border: none;
+    border-radius: 100px;
+    padding: 13px 28px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    box-shadow: 0 6px 20px rgba(124,58,237,0.28);
+    transition: filter 0.2s, transform 0.2s;
+  }
+  .ai-copy-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
   @media (max-width: 768px) {
     .ai-planner { padding: 60px 20px 40px; }
     .ai-planner-header h2 { font-size: 32px; }
