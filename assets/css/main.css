@@ -2367,34 +2367,6 @@
     .ai-segments.cols-3,
     .ai-segments.cols-2x2 { grid-template-columns: 1fr; max-width: 520px; }
   }
-  .ai-route-partners { margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; }
-  .ai-route-partners-label { font-size: 11px; letter-spacing: 0.1em; color: rgba(167,139,250,0.5); text-transform: uppercase; margin-bottom: 14px; text-align: center; }
-  .ai-vip-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
-  .ai-vip-card {
-    display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 12px;
-    border: 1px solid rgba(231,198,107,0.22);
-    background: rgba(255,255,255,0.03);
-    text-decoration: none; transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s, background 0.25s;
-  }
-  .ai-vip-card:hover { border-color: rgba(231,198,107,0.6); background: rgba(255,255,255,0.05); box-shadow: 0 0 16px rgba(231,198,107,0.12); transform: translateY(-1px); }
-  .ai-vip-icon { width: 36px; height: 36px; border-radius: 9px; display:flex; align-items:center; justify-content:center; background: rgba(231,198,107,0.1); color: #e7c66b; flex-shrink:0; }
-  .ai-vip-icon svg { width:18px; height:18px; }
-  .ai-vip-icon img { width:100%; height:100%; object-fit:contain; border-radius:9px; background:#fff; padding:5px; }
-  .ai-vip-name { font-size: 13px; font-weight: 600; color: #fff; }
-  .ai-vip-sub { font-size: 11px; color: rgba(255,255,255,0.45); }
-  .ai-essential-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .ai-ess-item {
-    display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 8px; border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
-    text-decoration: none; transition: border-color 0.2s, background 0.2s;
-  }
-  .ai-ess-item:hover { border-color: rgba(167,139,250,0.4); background: rgba(167,139,250,0.06); }
-  .ai-ess-icon { width: 30px; height: 30px; display:flex; align-items:center; justify-content:center; color: rgba(167,139,250,0.7); }
-  .ai-ess-icon svg { width:16px; height:16px; }
-  .ai-ess-icon img { width:100%; height:100%; object-fit:contain; border-radius:6px; background:#fff; padding:3px; }
-  .ai-ess-name { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); text-align:center; }
-  .ai-ess-cta { font-size: 9px; color: rgba(167,139,250,0.6); text-align:center; }
-  @media (max-width: 600px) { .ai-vip-row { grid-template-columns: 1fr; } }
   .ai-partners {
     display: flex;
     gap: 16px;
@@ -2421,24 +2393,50 @@
     border-color: var(--primary);
     transform: translateY(-2px);
   }
-  .ai-reset-btn {
-    display: block;
-    margin: 32px auto 0;
+  /* Video de cierre del planner (el mismo para todas las rutas) con el CTA
+     "Crear otra ruta" montado encima — reemplaza la vieja fila de partners. */
+  .ai-cta-video {
+    position: relative;
+    margin-top: 28px;
+    height: 220px;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ai-cta-video-el {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ai-cta-video::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,8,20,0.35) 0%, rgba(10,8,20,0.55) 100%);
+  }
+  .ai-reset-btn-video {
+    position: relative;
+    z-index: 2;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    color: var(--text);
-    background: var(--surface);
-    border: 1px solid var(--border);
+    color: #16131f;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: none;
     border-radius: 100px;
-    padding: 16px 32px;
+    padding: 14px 30px;
     cursor: pointer;
-    transition: all 0.2s;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    transition: transform 0.2s, background 0.2s;
   }
-  .ai-reset-btn:hover {
-    background: var(--elevated);
-    border-color: var(--primary);
-  }
+  .ai-reset-btn-video:hover { background: #fff; transform: translateY(-1px); }
+  @media (max-width: 600px) { .ai-cta-video { height: 170px; } }
   /* ── Resultados del AI Planner: tarjeta clara tipo "boarding pass" ──────────
      Mismo lenguaje visual que el modal blanco "Mi plan de viaje" (#16131f /
      #6d28d9 / gradiente #8b5cf6-#7c3aed) para que esta pantalla sea la etapa
@@ -2502,20 +2500,6 @@
   .ai-results .ai-klook-cta:hover { border-color: rgba(255,106,43,0.6); background: linear-gradient(135deg, rgba(255,106,43,0.16), rgba(255,106,43,0.06)); }
   .ai-results .ai-klook-cta-title { color: #16131f; }
   .ai-results .ai-klook-cta-sub { color: #8888a0; }
-  .ai-results .ai-route-partners { border-top-color: rgba(124,58,237,0.12); }
-  .ai-results .ai-route-partners-label { color: rgba(109,40,217,0.6); }
-  .ai-results .ai-vip-card { background: #f8f7fc; border-color: rgba(180,140,40,0.28); }
-  .ai-results .ai-vip-card:hover { background: #f3effc; border-color: rgba(180,140,40,0.55); }
-  .ai-results .ai-vip-icon { background: rgba(180,140,40,0.1); color: #a6791f; }
-  .ai-results .ai-vip-name { color: #16131f; }
-  .ai-results .ai-vip-sub { color: #8888a0; }
-  .ai-results .ai-ess-item { border-color: rgba(124,58,237,0.14); background: #f8f7fc; }
-  .ai-results .ai-ess-item:hover { border-color: rgba(124,58,237,0.35); background: #f3effc; }
-  .ai-results .ai-ess-icon { color: #6d28d9; }
-  .ai-results .ai-ess-name { color: #16131f; }
-  .ai-results .ai-ess-cta { color: #8b5cf6; }
-  .ai-results .ai-reset-btn { color: #16131f; background: #f8f7fc; border-color: rgba(124,58,237,0.18); }
-  .ai-results .ai-reset-btn:hover { background: #f0ecfc; border-color: #8b5cf6; }
   .ai-hotels { max-width: 640px; margin: 20px auto; }
   .ai-copy-btn {
     display: block;

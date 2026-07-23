@@ -343,42 +343,12 @@
       <p class="ai-trust-note" data-i18n="ai_trust_note">ⓘ Secure booking via our official Klook partnership</p>
 
       <button class="ai-copy-btn" onclick="copyTripPlan()" id="tripCopyBtn" data-i18n="modal_copy_btn">Copy itinerary</button>
-      <div class="ai-route-partners">
-        <p class="ai-route-partners-label">Trusted Partners</p>
-        <div class="ai-vip-row">
-          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=booking.com" alt="" loading="lazy"/></div>
-            <div><div class="ai-vip-name">Booking.com</div><div class="ai-vip-sub">Hotels &amp; stays</div></div>
-          </a>
-          <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer nofollow sponsored" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=tripadvisor.com" alt="" loading="lazy"/></div>
-            <div><div class="ai-vip-name">Tripadvisor</div><div class="ai-vip-sub">Experiences &amp; reviews</div></div>
-          </a>
-          <a href="#" id="aiVipKlook" onclick="goPartner('klook',event)" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="" loading="lazy"/></div>
-            <div><div class="ai-vip-name">Klook</div><div class="ai-vip-sub" id="aiVipKlookSub">Trains &amp; activities</div></div>
-          </a>
-          <a href="https://www.thetrainline.com" target="_blank" rel="noopener noreferrer sponsored" class="ai-vip-card">
-            <div class="ai-vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=thetrainline.com" alt="" loading="lazy"/></div>
-            <div><div class="ai-vip-name">Trainline</div><div class="ai-vip-sub">Every train, one search</div></div>
-          </a>
-        </div>
-        <div class="ai-essential-row">
-          <a href="#" onclick="goPartner('kiwitaxi',event)" class="ai-ess-item">
-            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=kiwitaxi.com" alt="" loading="lazy"/></div>
-            <span class="ai-ess-name">KiwiTaxi</span><span class="ai-ess-cta">Transfers</span>
-          </a>
-          <a href="#" onclick="goPartner('yesim',event)" class="ai-ess-item">
-            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=yesim.com" alt="" loading="lazy"/></div>
-            <span class="ai-ess-name">YeSIM</span><span class="ai-ess-cta">eSIM Europe</span>
-          </a>
-          <a href="#" onclick="goPartner('insurance',event)" class="ai-ess-item">
-            <div class="ai-ess-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ektatraveling.com" alt="" loading="lazy"/></div>
-            <span class="ai-ess-name">EKTA</span><span class="ai-ess-cta">Travel Insurance</span>
-          </a>
-        </div>
+      <div class="ai-cta-video">
+        <video class="ai-cta-video-el" autoplay muted loop playsinline preload="metadata" poster="/assets/video/planner-cta-poster.jpg">
+          <source src="/assets/video/planner-cta.mp4" type="video/mp4">
+        </video>
+        <button class="ai-reset-btn-video" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Create another route</button>
       </div>
-      <button class="ai-reset-btn" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Create another route</button>
     </div>
   </section>
 

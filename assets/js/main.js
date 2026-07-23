@@ -2681,17 +2681,6 @@
     document.getElementById('aiRouteMeta').textContent =
       `${metaTpl.replace('{from}', origen).replace('{to}', destino)} · ${operadoresUnicos}`;
 
-    // Klook (Trusted Partners) apunta a los hoteles de la ciudad destino de esta ruta
-    const vipKlook = document.getElementById('aiVipKlook');
-    if (vipKlook && destino) {
-      vipKlook.href = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(cleanCityForKlook(destino) || destino)}`;
-      vipKlook.target = '_blank';
-      vipKlook.rel = 'noopener noreferrer sponsored';
-      vipKlook.removeAttribute('onclick');
-      const sub = document.getElementById('aiVipKlookSub');
-      if (sub) sub.textContent = `Hotels in ${destino}`;
-    }
-
     // Mostrar paradas numeradas (derivadas de los tramos, no de paradas_principales)
     const routeStops = getRouteStops(data);
     const stopsContainer = document.getElementById('aiStops');
