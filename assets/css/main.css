@@ -2435,6 +2435,68 @@
     background: var(--elevated);
     border-color: var(--primary);
   }
+  /* ── Resultados del AI Planner: tarjeta clara tipo "boarding pass" ──────────
+     Mismo lenguaje visual que el modal blanco "Mi plan de viaje" (#16131f /
+     #6d28d9 / gradiente #8b5cf6-#7c3aed) para que esta pantalla sea la etapa
+     final de compra — cada tramo tiene su propio boton de compra, sin pasar
+     por un paso intermedio. */
+  .ai-results { background: #ffffff; border-color: rgba(124,58,237,0.15); box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+  .ai-results .ai-close-btn { color: rgba(22,19,31,0.35); }
+  .ai-results .ai-close-btn:hover { color: #16131f; background: rgba(124,58,237,0.08); }
+  .ai-results .ai-results-header h3 { color: #16131f; }
+  .ai-results .ai-results-header p { color: #6d6d80; }
+  .ai-results .ai-route-meta { color: #6d28d9; }
+  .ai-results .ai-stop { background: #f8f7fc; border-color: rgba(124,58,237,0.14); color: #16131f; }
+  .ai-results .ai-stop-num { color: #6d28d9; }
+  .ai-results .ai-stop-hotel { color: #a6791f; border-top-color: rgba(166,121,31,0.25); }
+  .ai-results .ai-stop-hotel:hover { color: #c9922a; }
+  .ai-results .ai-stop-hotel::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a6791f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8'/%3E%3Cpath d='M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4'/%3E%3Cpath d='M12 4v6'/%3E%3Cpath d='M2 20h20'/%3E%3C/svg%3E");
+  }
+  .ai-results .ai-segment { background: #f8f7fc; border-color: rgba(124,58,237,0.14); }
+  .ai-results .ai-segment-route { color: #16131f; }
+  .ai-results .ai-segment-time { color: #8888a0; }
+  .ai-results .ai-segment-train.train-high { background: rgba(124,58,237,0.12); border-color: rgba(124,58,237,0.35); color: #6d28d9; }
+  .ai-results .ai-segment-train.train-intl { background: rgba(180,140,40,0.14); border-color: rgba(180,140,40,0.4); color: #8a6d1f; }
+  .ai-results .ai-segment-train.train-reg { background: rgba(14,165,233,0.12); border-color: rgba(14,165,233,0.4); color: #0369a1; }
+  .ai-results .ai-segment-stations { color: rgba(109,40,217,0.5); }
+  .ai-results .ai-segment-stations span { color: rgba(109,40,217,0.3); }
+  .ai-results .ai-segment-desc { color: #6d6d80; }
+  .ai-results .ai-segment-buy {
+    display: inline-block;
+    margin-top: 10px;
+    align-self: flex-start;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border-radius: 100px;
+    padding: 8px 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: filter 0.2s, transform 0.2s;
+  }
+  .ai-results .ai-segment-buy:hover { filter: brightness(1.08); transform: translateY(-1px); text-decoration: none; }
+  .ai-results .ai-kiwi-cta { color: #6d28d9; border-color: rgba(124,58,237,0.25); }
+  .ai-results .ai-kiwi-cta:hover { color: #4c1d95; border-color: rgba(124,58,237,0.5); }
+  .ai-results .ai-klook-cta { background: linear-gradient(135deg, rgba(255,106,43,0.1), rgba(255,106,43,0.04)); border-color: rgba(255,106,43,0.35); }
+  .ai-results .ai-klook-cta:hover { border-color: rgba(255,106,43,0.6); background: linear-gradient(135deg, rgba(255,106,43,0.16), rgba(255,106,43,0.06)); }
+  .ai-results .ai-klook-cta-title { color: #16131f; }
+  .ai-results .ai-klook-cta-sub { color: #8888a0; }
+  .ai-results .ai-route-partners { border-top-color: rgba(124,58,237,0.12); }
+  .ai-results .ai-route-partners-label { color: rgba(109,40,217,0.6); }
+  .ai-results .ai-vip-card { background: #f8f7fc; border-color: rgba(180,140,40,0.28); }
+  .ai-results .ai-vip-card:hover { background: #f3effc; border-color: rgba(180,140,40,0.55); }
+  .ai-results .ai-vip-icon { background: rgba(180,140,40,0.1); color: #a6791f; }
+  .ai-results .ai-vip-name { color: #16131f; }
+  .ai-results .ai-vip-sub { color: #8888a0; }
+  .ai-results .ai-ess-item { border-color: rgba(124,58,237,0.14); background: #f8f7fc; }
+  .ai-results .ai-ess-item:hover { border-color: rgba(124,58,237,0.35); background: #f3effc; }
+  .ai-results .ai-ess-icon { color: #6d28d9; }
+  .ai-results .ai-ess-name { color: #16131f; }
+  .ai-results .ai-ess-cta { color: #8b5cf6; }
+  .ai-results .ai-reset-btn { color: #16131f; background: #f8f7fc; border-color: rgba(124,58,237,0.18); }
+  .ai-results .ai-reset-btn:hover { background: #f0ecfc; border-color: #8b5cf6; }
   @media (max-width: 768px) {
     .ai-planner { padding: 60px 20px 40px; }
     .ai-planner-header h2 { font-size: 32px; }
