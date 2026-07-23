@@ -2483,8 +2483,21 @@
   .ai-results .ai-segment-buy:hover { filter: brightness(1.08); transform: translateY(-1px); text-decoration: none; }
   .ai-results .ai-kiwi-cta { color: #6d28d9; background: rgba(124,58,237,0.1); border-color: rgba(124,58,237,0.3); }
   .ai-results .ai-kiwi-cta:hover { color: #fff; background: rgba(124,58,237,0.85); border-color: rgba(124,58,237,0.9); }
-  .ai-results .ai-trust-note { color: #8888a0; }
-  .ai-trust-note { font-size: 11px; color: var(--muted); text-align: center; margin: 10px 0 0; letter-spacing: 0.01em; }
+  .ai-results .ai-trust-note { color: #6d28d9; background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.18); }
+  .ai-trust-note {
+    display: block;
+    width: fit-content;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary2);
+    background: rgba(167,139,250,0.1);
+    border: 1px solid rgba(139,92,246,0.25);
+    border-radius: 100px;
+    padding: 8px 18px;
+    text-align: center;
+    margin: 14px auto 0;
+    letter-spacing: 0.01em;
+  }
   .ai-results .ai-klook-cta { background: linear-gradient(135deg, rgba(255,106,43,0.1), rgba(255,106,43,0.04)); border-color: rgba(255,106,43,0.35); }
   .ai-results .ai-klook-cta:hover { border-color: rgba(255,106,43,0.6); background: linear-gradient(135deg, rgba(255,106,43,0.16), rgba(255,106,43,0.06)); }
   .ai-results .ai-klook-cta-title { color: #16131f; }
@@ -2506,23 +2519,21 @@
   .ai-hotels { max-width: 640px; margin: 20px auto; }
   .ai-copy-btn {
     display: block;
-    margin: 8px auto 0;
-    max-width: 640px;
-    width: 100%;
+    width: fit-content;
+    margin: 16px auto 0;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 12.5px;
     font-weight: 700;
-    color: #fff;
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-    border: none;
+    color: #6d28d9;
+    background: #f8f7fc;
+    border: 1px solid rgba(124,58,237,0.2);
     border-radius: 100px;
-    padding: 13px 28px;
+    padding: 9px 22px;
     cursor: pointer;
-    letter-spacing: 0.03em;
-    box-shadow: 0 6px 20px rgba(124,58,237,0.28);
-    transition: filter 0.2s, transform 0.2s;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, border-color 0.2s;
   }
-  .ai-copy-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  .ai-copy-btn:hover { background: #f0ecfc; border-color: #8b5cf6; }
   @media (max-width: 768px) {
     .ai-planner { padding: 60px 20px 40px; }
     .ai-planner-header h2 { font-size: 32px; }
