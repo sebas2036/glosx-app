@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tren de Zúrich a Lucerna: guía 2026 — WoW Train</title>
-  <meta name="description" content="El tren de Zúrich a Lucerna (SBB) tarda entre 45 y 60 minutos, de Zürich HB a Luzern, dos veces por hora." />
-  <link rel="canonical" href="https://glosx.app/rutas/zurich-lucerne/es/" />
+  <title>Tren Zurich a Lucerne (2026) | Horarios y Billetes Baratos - WoW Train</title>
+  <meta name="description" content="Encuentra las tarifas de tren más baratas, horarios oficiales y comparaciones de operadores para Zurich a Lucerne. Reserva de forma segura en tu moneda." />
+  <link rel="canonical" href="https://glosx.app/rutas/zurich-lucerne/" />
   <link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
   <link rel="alternate" hreflang="es" href="https://glosx.app/rutas/zurich-lucerne/es/" />
   <link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/zurich-lucerne/" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Tren de Zúrich a Lucerna: guía 2026" />
-  <meta property="og:description" content="Zúrich → Lucerna en tren — ruta, horarios y cómo reservar la puerta de entrada al lago de Lucerna." />
-  <meta property="og:url" content="https://glosx.app/rutas/zurich-lucerne/es/" />
+  <meta property="og:title" content="Zurich a Lucerne en Tren: Guía 2026" />
+  <meta property="og:description" content="Zurich → Lucerne en tren — ruta, estaciones, operadores y cómo reservarlo." />
+  <meta property="og:url" content="https://glosx.app/rutas/zurich-lucerne/" />
   <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tren de Zúrich a Lucerna: guía 2026" />
-  <meta name="twitter:description" content="Zúrich → Lucerna en tren — ruta, horarios y cómo reservar la puerta de entrada al lago de Lucerna." />
+  <meta name="twitter:title" content="Zurich a Lucerne en Tren: Guía 2026" />
+  <meta name="twitter:description" content="Zurich → Lucerne en tren — ruta, estaciones, operadores y cómo reservarlo." />
   <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
 
   <link rel="icon" type="image/png" href="/logo.png" />
@@ -33,19 +33,6 @@
       } catch (e) {}
     };
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org", "@type": "Article",
-    "headline": "Tren de Zúrich a Lucerna: guía 2026",
-    "description": "Zúrich → Lucerna en tren — ruta, horarios y cómo reservar la puerta de entrada al lago de Lucerna.",
-    "image": "https://glosx.app/hero-bg.jpg",
-    "author": { "@type": "Organization", "name": "WoW Train" },
-    "publisher": { "@type": "Organization", "name": "GLOSX", "alternateName": "WoW Train" },
-    "datePublished": "2026-07-02",
-    "inLanguage": "es",
-    "mainEntityOfPage": "https://glosx.app/rutas/zurich-lucerne/es/"
-  }
-  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg: #16131f; --surface: #221f30; --border: rgba(255,255,255,0.08); --primary: #7c3aed; --primary2: #a78bfa; --text: #f0f0f5; --muted: #8888aa; }
@@ -55,7 +42,7 @@
     .nav-right { display: flex; align-items: center; gap: 18px; }
     .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
     .nav-back:hover { color: var(--text); }
-    .lang { color: var(--muted); font-size: 13px; font-weight: 600; text-decoration: none; }
+    .lang { color: var(--muted); font-size: 13px; font-weight: 600; text-decoration: none; margin-right: 4px; }
     .lang:hover { color: var(--primary2); }
     main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     .badge { display: inline-block; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); border-radius: 100px; padding: 5px 14px; margin-bottom: 24px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--primary2); text-transform: uppercase; }
@@ -70,11 +57,40 @@
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    
+    /* Train Segment Cards */
+    .train-segment { background: rgba(34,31,48,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; margin: 32px 0; }
+    .train-segment-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .train-segment-title { font-size: 18px; font-weight: 700; color: var(--text); }
+    .train-segment-duration { font-size: 14px; color: var(--muted); }
+    .train-segment-details { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .train-segment-detail { font-size: 14px; color: #b9b9c9; }
+    .train-segment-detail strong { color: var(--primary2); }
+    
+    /* Hotel Cards */
+    .hotel-card { background: rgba(34,31,48,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; margin: 32px 0; }
+    .hotel-card-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .hotel-card-image { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; }
+    .hotel-card-info { flex: 1; }
+    .hotel-card-name { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .hotel-card-location { font-size: 14px; color: var(--muted); }
+    .hotel-card-actions { margin-top: 16px; }
+    
+    /* Buttons */
+    .cta-btn { display: inline-block; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: #fff; font-weight: 700; padding: 12px 24px; border-radius: 100px; box-shadow: 0 6px 20px rgba(124,58,237,0.5); text-decoration: none; transition: all 0.2s; }
+    .cta-btn:hover { text-decoration: none; filter: brightness(1.08); transform: translateY(-1px); }
+    
+    /* Transfer Links */
+    .transfer-link { display: inline-block; color: var(--muted); font-size: 14px; text-decoration: underline; margin-top: 8px; }
+    .transfer-link:hover { color: var(--primary2); }
+    
+    /* Economic Options Link */
+    .economic-link { display: inline-block; color: var(--muted); font-size: 14px; text-decoration: underline; margin-top: 8px; }
+    .economic-link:hover { color: var(--primary2); }
+    
     .cta { background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(109,40,217,0.12)); border: 1px solid rgba(139,92,246,0.35); border-radius: 18px; padding: 28px; margin: 48px 0 8px; text-align: center; }
     .cta h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
     .cta p { color: #c8c8d8; margin-bottom: 18px; }
-    .cta-btn { display: inline-block; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: #fff; font-weight: 700; padding: 12px 28px; border-radius: 100px; box-shadow: 0 6px 20px rgba(124,58,237,0.5); }
-    .cta-btn:hover { text-decoration: none; }
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 12px; color: var(--muted); }
     footer a { color: var(--muted); margin: 0 8px; }
@@ -86,7 +102,7 @@
     .hero-content .meta { margin-bottom: 0; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
     main { padding-top: 40px; }
     @media (max-width: 600px) { .route-hero { height: 64vh; min-height: 380px; } }
-@media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 16px 20px 60px; } h1 { font-size: 32px; } .route-hero { height: 200px; margin-top: 52px; } }
+    @media (max-width: 600px) { nav { padding: 16px 20px; } main { padding: 16px 20px 60px; } h1 { font-size: 32px; } .route-hero { height: 200px; margin-top: 52px; } }
     .related-routes { margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); }
     .related-routes h2 { font-size: 20px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.3px; }
     .related-grid { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -95,126 +111,128 @@
     .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
     .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
     @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
+    .klook-cta { display: flex; align-items: center; gap: 16px; background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06)); border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 0 0 32px; text-decoration: none; transition: border-color 0.2s; }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
+    .klook-cta-logo { width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0; }
+    .klook-cta-text { flex: 1; min-width: 0; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-sub { font-size: 13px; color: var(--muted); }
+    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; flex-shrink: 0; font-weight: 700; }
   </style>
-  <script type="application/ld+json">
-  { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuánto dura el tren de Zúrich a Lucerna?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Los SBB directos tardan entre 45 y 60 minutos de Zürich HB a Luzern, saliendo cerca de dos veces por hora." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuánto cuesta un pasaje de tren de Zúrich a Lucerna?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Las tarifas estándar rondan los 15-25€ por trayecto. Los titulares de Swiss Travel Pass y Eurail viajan gratis." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Hay tren directo de Zúrich a Lucerna?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. SBB opera trenes InterRegio directos y frecuentes entre Zürich HB y Luzern durante todo el día." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Lucerna es una buena excursión de un día desde Zúrich?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí — a menos de una hora con trenes frecuentes, Lucerna es una de las excursiones más fáciles y panorámicas desde Zúrich, con el Monte Pilatus y el lago de Lucerna a la puerta." }
-      }
-    ,
-      {
-        "@type": "Question",
-        "name": "¿Cuál es la duración oficial del tren de Zúrich a Lucerna con SBB en 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El horario oficial 2026 de SBB cubre Zúrich a Lucerna en 45 y 60 minutos. Es el horario vigente — reservá con anticipación para la mejor tarifa."
-        }
-      }
-    ] }
-  </script>
-  <script type="application/ld+json">
-  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"Inicio","item":"https://glosx.app/"},
-      {"@type":"ListItem","position":2,"name":"Rutas de tren","item":"https://glosx.app/es/blog.html"},
-      {"@type":"ListItem","position":3,"name":"Tren de Zúrich a Lucerna: guía 2026","item":"https://glosx.app/rutas/zurich-lucerne/es/"}
-    ] }
-  </script>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo">WoW Train</a>
     <div class="nav-right">
-      <a href="https://glosx.app/rutas/zurich-lucerne/" class="lang">EN</a>
-      <a href="/es/blog.html" class="nav-back">← Todos los artículos</a>
+      <a href="/rutas/zurich-lucerne/" class="lang">EN</a>
+      <a href="/blog.html" class="nav-back">← ← Todos los artículos</a>
     </div>
   </nav>
-  <div class="route-hero" style="background-image:url('https://images.pexels.com/photos/34345854/pexels-photo-34345854.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+  <div class="route-hero" style="background-image:url('https://images.pexels.com/photos/30753262/pexels-photo-30753262.jpeg?auto=compress&cs=tinysrgb&w=1600')">
     <div class="hero-content">
-      <span class="badge">Guía de ruta · Suiza</span>
-      <h1>Tren de Zúrich a Lucerna</h1>
+      <span class="badge">Route guide · Switzerland</span>
+      <h1>Tren de Zurich a Lucerne</h1>
       <p class="meta">Por WoW Train · Actualizado julio 2026 · 4 min de lectura</p>
     </div>
   </div>
   <main>
-<p class="lead">A apenas una hora de Zúrich, Lucerna te abre el lago, el Monte Pilatus y el Rigi, y algunos de los ferrocarriles panorámicos más lindos de Suiza — un salto fácil y gratificante.</p>
-    <h2>El viaje, parada por parada</h2>
-    <p>Desde <strong>Zürich HB</strong> los trenes InterRegio de SBB van hacia el suroeste cruzando la campiña ondulada hasta <strong>Luzern</strong>, una estación terminal justo al borde del lago de Lucerna y el casco antiguo.</p>
-    <h2>¿Cuánto dura?</h2>
-    <p>Los trenes directos tardan entre <strong>45 y 60 minutos</strong>, saliendo cerca de dos veces por hora durante todo el día. <strong>Revisá el horario en vivo para tu fecha</strong>.</p>
+    <p class="lead">SBB conecta Zurich con Lucerne en alrededor de 0h 50m, con servicios cómodos que recorren el campo de Switzerland.</p>
+    
+    <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=zurich&to=lucerne" class="klook-cta" target="_blank" rel="noopener sponsored"
+       onclick="gtag('event','klook_click',{source:'cta_block',route:'zurich-lucerne'});">
+      <img class="klook-cta-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" loading="lazy">
+      <div class="klook-cta-text">
+        <span class="klook-cta-title">Reserva tu billete de tren en Klook</span>
+        <span class="klook-cta-sub">Compara horarios y precios · Confirmación instantánea · Cancelación gratuita en tarifas seleccionadas</span>
+      </div>
+      <span class="klook-cta-arrow">&#8594;</span>
+    </a>
+
+    
+    <div class="train-segment">
+      <div class="train-segment-header">
+        <span class="train-segment-title">Zurich → Lucerne</span>
+        <span class="train-segment-duration">Duración: 0h 50m</span>
+      </div>
+      <div class="train-segment-details">
+        <div class="train-segment-detail"><strong>Operator:</strong> SBB</div>
+        <div class="train-segment-detail"><strong>Station:</strong> Zurich Station</div>
+      </div>
+      <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=zurich&to=lucerne" 
+         class="cta-btn" target="_blank" rel="noopener sponsored"
+         onclick="trackTrainline('route_zurich-lucerne_es')">
+        Ver horarios y reservar billete →
+      </a>
+    </div>
+  
+
+    <h2>¿Cuánto tiempo tarda?</h2>
+    <p>Los trenes más rápidos tardan alrededor de 0h 50m, con varias salidas al día. Consulta el horario en vivo para tu fecha.</p>
+    
     <h2>¿Quién opera la ruta?</h2>
-    <p>La ruta la opera <strong>SBB</strong>, los Ferrocarriles Federales Suizos. Las tarifas son simples y están cubiertas por el Swiss Travel Pass.</p>
-    <h2>Precio del tren Zúrich-Lucerna (2026)</h2>
-    <p>Las tarifas estándar rondan los <strong>15-25€</strong> por trayecto; los titulares de Swiss Travel Pass y Eurail viajan gratis en esta ruta.</p>
+    <p>La ruta es operada por SBB. Comparando las salidas del día en una sola búsqueda encuentras el mejor horario y tarifa.</p>
+    
+    <h2>Precio del tren Zurich a Lucerne (2026)</h2>
+    <p>Las tarifas anticipadas comienzan desde €15-25, aumentando a medida que se acerca la fecha.</p>
+    
+    
     <table style="width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:14px;">
       <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.12);text-align:left;">
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Operador</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Desde</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Duración</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Frecuencia</th>
+        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Operator</th>
+        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">From</th>
+        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Journey time</th>
+        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Frequency</th>
       </tr></thead>
       <tbody>
         <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
-          <td style="padding:8px 12px;">SBB InterRegio</td>
-          <td style="padding:8px 12px;">~18€</td>
-          <td style="padding:8px 12px;">45m</td>
-          <td style="padding:8px 12px;">Dos veces por hora</td>
-        </tr>
-        <tr>
-          <td style="padding:8px 12px;">SBB (con trasbordo)</td>
-          <td style="padding:8px 12px;">~18€</td>
-          <td style="padding:8px 12px;">1h 05m</td>
-          <td style="padding:8px 12px;">Frecuente</td>
+          <td style="padding:8px 12px;">SBB</td>
+          <td style="padding:8px 12px;">€15-25</td>
+          <td style="padding:8px 12px;">0h 50m</td>
+          <td style="padding:8px 12px;">Several daily</td>
         </tr>
       </tbody>
     </table>
-    <p style="font-size:13px;color:#8888aa;margin-bottom:16px;">Los precios son tarifas anticipadas indicativas. Revisá la disponibilidad en vivo para tu fecha exacta.</p>
+    <p style="font-size:13px;color:#8888aa;margin-bottom:16px;">Prices are indicative advance fares. Check live availability for your exact date.</p>
+  
+
     <h2>Cómo conseguir la mejor tarifa</h2>
     <ul>
-      <li><strong>Reservá con antelación.</strong> Las tarifas más baratas se agotan primero — comprar con tiempo puede salir mucho menos que en el día.</li>
-      <li><strong>Viajá fuera de hora pico.</strong> Las salidas de media mañana y entre semana suelen ir más vacías y baratas.</li>
-      <li><strong>Mirá la primera clase</strong> — en muchas rutas la diferencia es chica y el viaje, más cómodo.</li>
-      <li><strong>Compará en un solo lugar</strong> para ver todas las salidas de un vistazo.</li>
+      <strong>Reserva con antelación.</strong> Las tarifas más baratas se agotan primero — reservar con anticipación puede ser mucho más barato que comprar el mismo día.
+      <strong>Viaja fuera de horas punta.</strong> Las salidas de media mañana y mediados de semana tienden a ser más tranquilas y baratas.
+      <strong>Considera primera clase</strong> — en muchas rutas la actualización es modesta y muy cómoda.
+      <strong>Compara en un solo lugar</strong> para ver cada salida de un vistazo.
     </ul>
-    <h2>Puerta de entrada al lago de Lucerna y las montañas</h2><p>Lucerna es un punto clave para algunos de los mejores paisajes de Suiza: paseos en barco por el lago, el ferrocarril de cremallera hasta el Monte Pilatus, y el Rigi. Con trenes cada media hora desde Zúrich, es un agregado fácil a cualquier itinerario suizo.</p>
+    
     <hr/>
-    <p>¿Listo? Mirá horarios y tarifas en vivo de <strong>Zúrich → Lucerna</strong> y reservá tu asiento — pago seguro, billetes en el móvil y todos los operadores en una búsqueda.</p>
+    <p>¿Listo para ir? Consulta los horarios y tarifas en vivo de Zurich → Lucerne y reserva tu asiento — pago seguro, billetes móviles, cada operador en una sola búsqueda.</p>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
-      ¿Preferís comparar todos los operadores? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=zurich&to=lucerne" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_zurich_lucerne_es')">Ver horarios y reservar →</a>
+      ¿Prefieres comparar cada operador ferroviario? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=zurich&to=lucerne" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_zurich-lucerne_es')">Ver horarios y reservar →</a>
     </p>
-    <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#6b6b85;">Se abre en una pestaña nueva — volvé cuando quieras.</p>
-        <div class="photo-grid">
-      <img src="https://images.pexels.com/photos/7929056/pexels-photo-7929056.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="View of the iconic Chapel Bridge and Water Tower in Lucerne, Switzerland on a sunny day." loading="lazy" />
-      <img src="https://images.pexels.com/photos/22728633/pexels-photo-22728633.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="View of the iconic Kapellbrücke and octagonal Water Tower in Lucerne, Switzerland." loading="lazy" />
-      <img src="https://images.pexels.com/photos/18429608/pexels-photo-18429608.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Beautiful view of the Chapel Bridge and Water Tower in Lucerne, reflecting on the Reuss River." loading="lazy" />
+    <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#6b6b85;">Se abre en una nueva pestaña — vuelve aquí cuando quieras.</p>
+    
+    <div class="photo-grid">
+      
+    <img src="https://images.pexels.com/photos/30753243/pexels-photo-30753243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Scenic view of Lucerne" loading="lazy" />
+    <img src="https://images.pexels.com/photos/30753285/pexels-photo-30753285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Charming view of Lucerne" loading="lazy" />
+    <img src="https://images.pexels.com/photos/13393083/pexels-photo-13393083.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Historic buildings in Lucerne" loading="lazy" />
+  
     </div>
 
     <div class="related-routes">
-    <h2>Más rutas de tren en Europa</h2>
-    <div class="related-grid">
-      <a href="/rutas/zurich-milan/" class="related-link">Zúrich a Milán</a>
-      <a href="/rutas/milan-zurich/" class="related-link">Milán a Zúrich</a>
-      <a href="/rutas/montreux-interlaken/" class="related-link">Montreux a Interlaken</a>
-      <a href="/rutas/geneva-zermatt/" class="related-link">Ginebra a Zermatt</a>
+      <h2>Más rutas de tren europeas</h2>
+      <div class="related-grid">
+        
+    <a href="/rutas/amsterdam-berlin/" class="related-link">Amsterdam to Berlin</a>
+  
+    <a href="/rutas/amsterdam-brussels/" class="related-link">Amsterdam to Brussels</a>
+  
+    <a href="/rutas/barcelona-girona/" class="related-link">Barcelona to Girona</a>
+  
+    <a href="/rutas/barcelona-lyon/" class="related-link">Barcelona to Lyon</a>
+  
+      </div>
     </div>
-  </div>
-</main>
+  </main>
   <footer>
     <p>© 2026 GLOSX — WoW Train</p>
     <p style="margin-top:8px;"><a href="/blog.html">Blog</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>

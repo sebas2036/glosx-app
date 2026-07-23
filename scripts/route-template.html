@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{lang}}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tren Milan a Zurich (2026) | Horarios y Billetes Baratos - WoW Train</title>
-  <meta name="description" content="Encuentra las tarifas de tren más baratas, horarios oficiales y comparaciones de operadores para Milan a Zurich. Reserva de forma segura en tu moneda." />
-  <link rel="canonical" href="https://glosx.app/rutas/milan-zurich/" />
-  <link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
-  <link rel="alternate" hreflang="es" href="https://glosx.app/rutas/milan-zurich/es/" />
-  <link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/milan-zurich/" />
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}" />
+  <link rel="canonical" href="https://glosx.app/rutas/{{routeSlug}}/" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/rutas/{{routeSlug}}/" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/rutas/{{routeSlug}}/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/{{routeSlug}}/" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Milan a Zurich en Tren: Guía 2026" />
-  <meta property="og:description" content="Milan → Zurich en tren — ruta, estaciones, operadores y cómo reservarlo." />
-  <meta property="og:url" content="https://glosx.app/rutas/milan-zurich/" />
+  <meta property="og:title" content="{{ogTitle}}" />
+  <meta property="og:description" content="{{ogDescription}}" />
+  <meta property="og:url" content="https://glosx.app/rutas/{{routeSlug}}/" />
   <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Milan a Zurich en Tren: Guía 2026" />
-  <meta name="twitter:description" content="Milan → Zurich en tren — ruta, estaciones, operadores y cómo reservarlo." />
+  <meta name="twitter:title" content="{{twitterTitle}}" />
+  <meta name="twitter:description" content="{{twitterDescription}}" />
   <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
 
   <link rel="icon" type="image/png" href="/logo.png" />
@@ -124,112 +124,63 @@
   <nav>
     <a href="/" class="nav-logo">WoW Train</a>
     <div class="nav-right">
-      <a href="/rutas/milan-zurich/" class="lang">EN</a>
-      <a href="/blog.html" class="nav-back">← ← Todos los artículos</a>
+      {{langSwitch}}
+      <a href="/blog.html" class="nav-back">← {{backText}}</a>
     </div>
   </nav>
-  <div class="route-hero" style="background-image:url('https://images.pexels.com/photos/30753262/pexels-photo-30753262.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+  <div class="route-hero" style="background-image:url('{{heroImage}}')">
     <div class="hero-content">
-      <span class="badge">Route guide · Italy-Switzerland</span>
-      <h1>Tren de Milan a Zurich</h1>
-      <p class="meta">Por WoW Train · Actualizado julio 2026 · 4 min de lectura</p>
+      <span class="badge">{{badge}}</span>
+      <h1>{{mainTitle}}</h1>
+      <p class="meta">{{metaText}}</p>
     </div>
   </div>
   <main>
-    <p class="lead">SBB conecta Milan con Zurich en alrededor de 3h 30m, con servicios cómodos que recorren el campo de Italy-Switzerland.</p>
+    <p class="lead">{{leadText}}</p>
     
-    <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=milan&to=zurich" class="klook-cta" target="_blank" rel="noopener sponsored"
-       onclick="gtag('event','klook_click',{source:'cta_block',route:'milan-zurich'});">
+    <a href="{{klookTrainUrl}}" class="klook-cta" target="_blank" rel="noopener sponsored"
+       onclick="gtag('event','klook_click',{source:'cta_block',route:'{{routeSlug}}'});">
       <img class="klook-cta-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" loading="lazy">
       <div class="klook-cta-text">
-        <span class="klook-cta-title">Reserva tu billete de tren en Klook</span>
-        <span class="klook-cta-sub">Compara horarios y precios · Confirmación instantánea · Cancelación gratuita en tarifas seleccionadas</span>
+        <span class="klook-cta-title">{{klookTitle}}</span>
+        <span class="klook-cta-sub">{{klookSubtitle}}</span>
       </div>
       <span class="klook-cta-arrow">&#8594;</span>
     </a>
 
-    
-    <div class="train-segment">
-      <div class="train-segment-header">
-        <span class="train-segment-title">Milan → Zurich</span>
-        <span class="train-segment-duration">Duración: 3h 30m</span>
-      </div>
-      <div class="train-segment-details">
-        <div class="train-segment-detail"><strong>Operator:</strong> SBB</div>
-        <div class="train-segment-detail"><strong>Station:</strong> Milan Station</div>
-      </div>
-      <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=milan&to=zurich" 
-         class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('route_milan-zurich_es')">
-        Ver horarios y reservar billete →
-      </a>
-    </div>
-  
+    {{trainSegments}}
 
-    <h2>¿Cuánto tiempo tarda?</h2>
-    <p>Los trenes más rápidos tardan alrededor de 3h 30m, con varias salidas al día. Consulta el horario en vivo para tu fecha.</p>
+    <h2>{{howLongTitle}}</h2>
+    <p>{{howLongText}}</p>
     
-    <h2>¿Quién opera la ruta?</h2>
-    <p>La ruta es operada por SBB. Comparando las salidas del día en una sola búsqueda encuentras el mejor horario y tarifa.</p>
+    <h2>{{whoRunsTitle}}</h2>
+    <p>{{whoRunsText}}</p>
     
-    <h2>Precio del tren Milan a Zurich (2026)</h2>
-    <p>Las tarifas anticipadas comienzan desde €35-55, aumentando a medida que se acerca la fecha.</p>
+    <h2>{{priceTitle}}</h2>
+    <p>{{priceText}}</p>
     
-    
-    <table style="width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:14px;">
-      <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.12);text-align:left;">
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Operator</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">From</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Journey time</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Frequency</th>
-      </tr></thead>
-      <tbody>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
-          <td style="padding:8px 12px;">SBB</td>
-          <td style="padding:8px 12px;">€35-55</td>
-          <td style="padding:8px 12px;">3h 30m</td>
-          <td style="padding:8px 12px;">Several daily</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="font-size:13px;color:#8888aa;margin-bottom:16px;">Prices are indicative advance fares. Check live availability for your exact date.</p>
-  
+    {{priceTable}}
 
-    <h2>Cómo conseguir la mejor tarifa</h2>
+    <h2>{{bestFareTitle}}</h2>
     <ul>
-      <strong>Reserva con antelación.</strong> Las tarifas más baratas se agotan primero — reservar con anticipación puede ser mucho más barato que comprar el mismo día.
-      <strong>Viaja fuera de horas punta.</strong> Las salidas de media mañana y mediados de semana tienden a ser más tranquilas y baratas.
-      <strong>Considera primera clase</strong> — en muchas rutas la actualización es modesta y muy cómoda.
-      <strong>Compara en un solo lugar</strong> para ver cada salida de un vistazo.
+      {{bestFareList}}
     </ul>
     
     <hr/>
-    <p>¿Listo para ir? Consulta los horarios y tarifas en vivo de Milan → Zurich y reserva tu asiento — pago seguro, billetes móviles, cada operador en una sola búsqueda.</p>
+    <p>{{readyText}}</p>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">
-      ¿Prefieres comparar cada operador ferroviario? <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=milan&to=zurich" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_milan-zurich_es')">Ver horarios y reservar →</a>
+      {{compareText}} <a href="{{klookTrainUrl}}" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_{{routeSlug}}_{{lang}}')">{{checkSchedulesText}}</a>
     </p>
-    <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#6b6b85;">Se abre en una nueva pestaña — vuelve aquí cuando quieras.</p>
+    <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#6b6b85;">{{opensNewTabText}}</p>
     
     <div class="photo-grid">
-      
-    <img src="https://images.pexels.com/photos/30753243/pexels-photo-30753243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Scenic view of Zurich" loading="lazy" />
-    <img src="https://images.pexels.com/photos/30753285/pexels-photo-30753285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Charming view of Zurich" loading="lazy" />
-    <img src="https://images.pexels.com/photos/13393083/pexels-photo-13393083.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Historic buildings in Zurich" loading="lazy" />
-  
+      {{photos}}
     </div>
 
     <div class="related-routes">
-      <h2>Más rutas de tren europeas</h2>
+      <h2>{{moreRoutesTitle}}</h2>
       <div class="related-grid">
-        
-    <a href="/rutas/amsterdam-berlin/" class="related-link">Amsterdam to Berlin</a>
-  
-    <a href="/rutas/amsterdam-brussels/" class="related-link">Amsterdam to Brussels</a>
-  
-    <a href="/rutas/barcelona-girona/" class="related-link">Barcelona to Girona</a>
-  
-    <a href="/rutas/barcelona-lyon/" class="related-link">Barcelona to Lyon</a>
-  
+        {{relatedRoutes}}
       </div>
     </div>
   </main>

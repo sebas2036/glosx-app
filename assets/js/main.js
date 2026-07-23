@@ -2571,7 +2571,8 @@
           </div>
           <span class="trip-hotel-cta">${dict.ai_hotel_price || 'See current price →'}</span>
         </a>
-        <a href="${budgetUrl}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-budget-alt" onclick="${budgetTrack}">${(dict.ai_hotel_budget_alt || 'See budget options in {city} →').replace('{city}', ciudad)}</a>` });
+        <a href="${budgetUrl}" target="_blank" rel="noopener noreferrer sponsored" class="trip-hotel-budget-alt" onclick="${budgetTrack}">${(dict.ai_hotel_budget_alt || 'See budget options in {city} →').replace('{city}', ciudad)}</a>
+        <a href="#" onclick="goPartner('kiwitaxi',event)" class="trip-hotel-transfer-alt">🚕 ${(dict.ai_kiwi_cta || 'Book a private transfer in')} ${ciudad} →</a>` });
         return;
       }
       const url = `${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(ciudad)}`;
@@ -2738,11 +2739,7 @@
       const stationsHTML = (segment.estacion_salida && segment.estacion_llegada)
         ? `<div class="ai-segment-stations">${segment.estacion_salida}<span>→</span>${segment.estacion_llegada}</div>`
         : '';
-      const kiwiLabel = (TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_kiwi_cta || 'Book a private transfer in';
-      const kiwiIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 17h14M5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM5 17V10l1.5-4.5A2 2 0 0 1 8.4 4h7.2a2 2 0 0 1 1.9 1.5L19 10v7"/><path d="M5 12h14"/></svg>';
-      const kiwiHTML = isLast
-        ? `<a href="#" class="ai-kiwi-cta" onclick="goPartner('kiwitaxi',event)">${kiwiIcon}<span>${kiwiLabel} ${segment.destino} →</span></a>`
-        : '';
+      const kiwiHTML = '';
       // Compra directa del tramo, sin pasar por el modal (misma logica que usa "Mi plan de viaje")
       const segNoTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n/i.test(
         [operador, segment.tipo_tren_sugerido, segment.estacion_salida, segment.estacion_llegada, segment.origen, segment.destino].join(' ')
