@@ -2397,46 +2397,50 @@
      "Crear otra ruta" montado encima — reemplaza la vieja fila de partners. */
   .ai-cta-video {
     position: relative;
-    margin-top: 28px;
-    height: 220px;
-    border-radius: 18px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 24px;
+    height: 150px;
+    border-radius: 16px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .ai-cta-video-el {
     position: absolute;
     inset: 0;
+    display: block;
     width: 100%;
     height: 100%;
+    max-width: 100%;
     object-fit: cover;
   }
   .ai-cta-video::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10,8,20,0.35) 0%, rgba(10,8,20,0.55) 100%);
+    background: linear-gradient(180deg, rgba(10,8,20,0) 45%, rgba(10,8,20,0.8) 100%);
   }
   .ai-reset-btn-video {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
     z-index: 2;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
-    color: #16131f;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    color: #fff;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
     border: none;
     border-radius: 100px;
-    padding: 14px 30px;
+    padding: 10px 22px;
     cursor: pointer;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    transition: transform 0.2s, background 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 6px 18px rgba(124,58,237,0.45);
+    transition: filter 0.2s, transform 0.2s;
   }
-  .ai-reset-btn-video:hover { background: #fff; transform: translateY(-1px); }
-  @media (max-width: 600px) { .ai-cta-video { height: 170px; } }
+  .ai-reset-btn-video:hover { filter: brightness(1.08); transform: translateX(-50%) translateY(-1px); }
+  @media (max-width: 600px) { .ai-cta-video { height: 120px; } }
   /* ── Resultados del AI Planner: tarjeta clara tipo "boarding pass" ──────────
      Mismo lenguaje visual que el modal blanco "Mi plan de viaje" (#16131f /
      #6d28d9 / gradiente #8b5cf6-#7c3aed) para que esta pantalla sea la etapa
