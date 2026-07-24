@@ -92,6 +92,20 @@ const routes = [
   { slug: 'zurich-milan', from: 'Zurich', to: 'Milan', country: 'Switzerland-Italy', duration: '3h 30m', operator: 'SBB', price: '€35-55', badge: 'Route guide · Switzerland-Italy' }
 ];
 
+// Traduccion de nombres de pais para el badge/lead en ES (evita dejar "France-Italy"
+// sin traducir dentro de una frase en espanol). Los pares tipo "France-Italy" se
+// dividen por guion y se traduce cada lado.
+const COUNTRY_ES = {
+  Austria: 'Austria', Belgium: 'Bélgica', Czech: 'Chequia', Denmark: 'Dinamarca',
+  France: 'Francia', Germany: 'Alemania', Hungary: 'Hungría', Italy: 'Italia',
+  Netherlands: 'Países Bajos', Norway: 'Noruega', Portugal: 'Portugal',
+  Slovenia: 'Eslovenia', Spain: 'España', Sweden: 'Suecia', Switzerland: 'Suiza', UK: 'Reino Unido'
+};
+function translateCountry(country, lang) {
+  if (lang !== 'es') return country;
+  return country.split('-').map(c => COUNTRY_ES[c] || c).join('-');
+}
+
 // Language-specific content
 const content = {
   en: {
@@ -102,7 +116,8 @@ const content = {
     twitterTitleTemplate: (from, to) => `${from} to ${to} by Train: 2026 Guide`,
     twitterDescriptionTemplate: (from, to) => `${from} → ${to} by train — route, stations, operators and how to book it.`,
     langSwitch: '<a href="/rutas/{{routeSlug}}/es/" class="lang">ES</a>',
-    backText: '← All articles',
+    backText: 'All routes',
+    badgeLabel: 'Route guide',
     mainTitle: '{{from}} to {{to}} by Train',
     metaText: 'By WoW Train · Updated July 2026 · 4 min read',
     leadText: '{{operator}} links {{from}} to {{to}} in around {{duration}}, with comfortable services running through the {{country}} countryside.',
@@ -116,6 +131,7 @@ const content = {
     whoRunsText: 'The route is run by {{operator}}. Comparing the day\'s departures in one search finds the best time and fare.',
     priceTitle: '{{from}} to {{to}} train price (2026)',
     priceText: 'Advance fares start from around {{price}}, rising as the date approaches.',
+    hotelSectionTitle: 'Where to stay',
     bestFareTitle: 'How to get the best fare',
     bestFareList: [
       '<strong>Book early.</strong> The cheapest saver fares sell out first — booking ahead can be dramatically cheaper than buying on the day.',
@@ -135,7 +151,7 @@ const content = {
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'View current price →',
     economicLink: 'View economic options',
-    transferLink: '🚕 Book private transfer in {{to}} →'
+    transferLink: 'Book private transfer in {{to}} →'
   },
   es: {
     titleTemplate: (from, to) => `Tren ${from} a ${to} (2026) | Horarios y Billetes Baratos - WoW Train`,
@@ -145,7 +161,8 @@ const content = {
     twitterTitleTemplate: (from, to) => `${from} a ${to} en Tren: Guía 2026`,
     twitterDescriptionTemplate: (from, to) => `${from} → ${to} en tren — ruta, estaciones, operadores y cómo reservarlo.`,
     langSwitch: '<a href="/rutas/{{routeSlug}}/" class="lang">EN</a>',
-    backText: '← Todos los artículos',
+    backText: 'Todas las rutas',
+    badgeLabel: 'Guía de ruta',
     mainTitle: 'Tren de {{from}} a {{to}}',
     metaText: 'Por WoW Train · Actualizado julio 2026 · 4 min de lectura',
     leadText: '{{operator}} conecta {{from}} con {{to}} en alrededor de {{duration}}, con servicios cómodos que recorren el campo de {{country}}.',
@@ -159,6 +176,7 @@ const content = {
     whoRunsText: 'La ruta es operada por {{operator}}. Comparando las salidas del día en una sola búsqueda encuentras el mejor horario y tarifa.',
     priceTitle: 'Precio del tren {{from}} a {{to}} (2026)',
     priceText: 'Las tarifas anticipadas comienzan desde {{price}}, aumentando a medida que se acerca la fecha.',
+    hotelSectionTitle: 'Dónde alojarte',
     bestFareTitle: 'Cómo conseguir la mejor tarifa',
     bestFareList: [
       '<strong>Reserva con antelación.</strong> Las tarifas más baratas se agotan primero — reservar con anticipación puede ser mucho más barato que comprar el mismo día.',
@@ -178,7 +196,7 @@ const content = {
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'Ver precio actual →',
     economicLink: 'Ver opciones económicas',
-    transferLink: '🚕 Reservar traslado privado en {{to}} →'
+    transferLink: 'Reservar traslado privado en {{to}} →'
   }
 };
 
@@ -246,7 +264,7 @@ function generateHotelCards(route, lang) {
           ${langContent.economicLink}
         </a>
         <br>
-        <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-transfer?city=${route.to.toLowerCase()}" 
+        <a href="https://voxa-production-dc15.up.railway.app/affiliate/kiwitaxi"
            class="transfer-link" target="_blank" rel="noopener sponsored">
           ${langContent.transferLink.replace('{{to}}', route.to)}
         </a>
@@ -288,10 +306,11 @@ function generatePhotos(route) {
 }
 
 // Generate related routes
-function generateRelatedRoutes(route) {
+function generateRelatedRoutes(route, lang) {
   const related = routes.slice(0, 4).filter(r => r.slug !== route.slug);
+  const suffix = lang === 'es' ? '/es/' : '/';
   return related.map(r => `
-    <a href="/rutas/${r.slug}/" class="related-link">${r.from} to ${r.to}</a>
+    <a href="/rutas/${r.slug}${suffix}" class="related-link">${r.from} &rarr; ${r.to}</a>
   `).join('');
 }
 
@@ -309,15 +328,16 @@ function replaceTemplate(template, route, lang) {
     '{{twitterDescription}}': langContent.twitterDescriptionTemplate(route.from, route.to),
     '{{langSwitch}}': langContent.langSwitch.replace('{{routeSlug}}', route.slug),
     '{{backText}}': langContent.backText,
-    '{{badge}}': route.badge,
+    '{{badge}}': `${langContent.badgeLabel} · ${translateCountry(route.country, lang)}`,
     '{{mainTitle}}': langContent.mainTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{metaText}}': langContent.metaText,
-    '{{leadText}}': langContent.leadText.replace('{{operator}}', route.operator).replace('{{from}}', route.from).replace('{{to}}', route.to).replace('{{duration}}', route.duration).replace('{{country}}', route.country),
+    '{{leadText}}': langContent.leadText.replace('{{operator}}', route.operator).replace('{{from}}', route.from).replace('{{to}}', route.to).replace('{{duration}}', route.duration).replace('{{country}}', translateCountry(route.country, lang)),
     '{{heroImage}}': 'https://images.pexels.com/photos/30753262/pexels-photo-30753262.jpeg?auto=compress&cs=tinysrgb&w=1600',
     '{{klookTitle}}': langContent.klookTitle,
     '{{klookSubtitle}}': langContent.klookSubtitle,
     '{{klookTrainUrl}}': `https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${route.from.toLowerCase()}&to=${route.to.toLowerCase()}`,
     '{{trainSegments}}': generateTrainSegments(route, lang),
+    '{{hotelSectionTitle}}': langContent.hotelSectionTitle,
     '{{hotelCards}}': generateHotelCards(route, lang),
     '{{howLongTitle}}': langContent.howLongTitle,
     '{{howLongText}}': langContent.howLongText.replace('{{duration}}', route.duration),
@@ -327,14 +347,14 @@ function replaceTemplate(template, route, lang) {
     '{{priceText}}': langContent.priceText.replace('{{price}}', route.price),
     '{{priceTable}}': generatePriceTable(route, lang),
     '{{bestFareTitle}}': langContent.bestFareTitle,
-    '{{bestFareList}}': langContent.bestFareList.join('\n      '),
+    '{{bestFareList}}': langContent.bestFareList.map(item => `<li>${item}</li>`).join('\n      '),
     '{{readyText}}': langContent.readyText.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{compareText}}': langContent.compareText,
     '{{checkSchedulesText}}': langContent.checkSchedulesText,
     '{{opensNewTabText}}': langContent.opensNewTabText,
     '{{photos}}': generatePhotos(route),
     '{{moreRoutesTitle}}': langContent.moreRoutesTitle,
-    '{{relatedRoutes}}': generateRelatedRoutes(route)
+    '{{relatedRoutes}}': generateRelatedRoutes(route, lang)
   };
   
   let result = template;
