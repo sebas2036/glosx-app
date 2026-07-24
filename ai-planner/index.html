@@ -302,9 +302,9 @@
 <nav>
   <a href="/" class="nav-logo">WoW Train</a>
   <div class="nav-links">
-    <a href="/explore/">Routes</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/" class="nav-cta">Try the Planner</a>
+    <a href="/explore/" data-i18n="nav_routes">Routes</a>
+    <a href="/blog.html" data-i18n="nav_blog">Blog</a>
+    <a href="/" class="nav-cta" data-i18n="nav_try_planner">Try the Planner</a>
   </div>
 </nav>
 
@@ -312,15 +312,15 @@
 <section class="hero">
   <div class="eyebrow">
     <span class="eyebrow-dot"></span>
-    AI-Powered · Free · Europe-Wide
+    <span data-i18n="ai_eyebrow">AI-Powered · Free · Europe-Wide</span>
   </div>
-  <h1>The <span>AI Travel Planner</span><br>Built for European Trains</h1>
-  <p class="hero-sub">
+  <h1 id="aiHeroH1">The <span>AI Travel Planner</span><br>Built for European Trains</h1>
+  <p class="hero-sub" data-i18n="ai_hero_sub">
     Describe your trip in plain language. Get a complete train itinerary with routes, schedules, operators and booking links — in seconds.
   </p>
   <div class="hero-actions">
-    <a href="/" class="btn-primary">Plan my trip now →</a>
-    <a href="#how-it-works" class="btn-secondary">See how it works</a>
+    <a href="/" class="btn-primary" data-i18n="ai_btn_plan_now">Plan my trip now →</a>
+    <a href="#how-it-works" class="btn-secondary" data-i18n="ai_btn_how">See how it works</a>
   </div>
 
   <!-- Demo mockup -->
@@ -332,15 +332,15 @@
       <div class="demo-url">glosx.app — WoW Train AI Planner</div>
     </div>
     <div class="demo-body">
-      <div class="demo-label">Your trip description</div>
-      <div class="demo-input">"I want to travel from London to Rome in 7 days, stopping in Paris and Milan. Looking for the fastest routes."</div>
+      <div class="demo-label" data-i18n="ai_demo_label">Your trip description</div>
+      <div class="demo-input" data-i18n="ai_demo_input">"I want to travel from London to Rome in 7 days, stopping in Paris and Milan. Looking for the fastest routes."</div>
       <div class="demo-result">
-        <div class="demo-result-title">AI-generated itinerary — 3 legs</div>
+        <div class="demo-result-title" data-i18n="ai_demo_result_title">AI-generated itinerary — 3 legs</div>
         <div class="demo-leg">
           <div class="demo-leg-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="12" rx="3"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="6" y1="19" x2="4" y2="21"/><line x1="18" y1="19" x2="20" y2="21"/></svg></div>
           <div class="demo-leg-text">
             <div class="demo-leg-route">London → Paris</div>
-            <div class="demo-leg-detail">Eurostar · 2h 20m · St Pancras → Gare du Nord</div>
+            <div class="demo-leg-detail" data-i18n="ai_demo_leg1_detail">Eurostar · 2h 20m · St Pancras → Gare du Nord</div>
           </div>
           <div class="demo-leg-price">from €39</div>
         </div>
@@ -348,7 +348,7 @@
           <div class="demo-leg-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="12" rx="3"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="6" y1="19" x2="4" y2="21"/><line x1="18" y1="19" x2="20" y2="21"/></svg></div>
           <div class="demo-leg-text">
             <div class="demo-leg-route">Paris → Milan</div>
-            <div class="demo-leg-detail">TGV Lyria · 3h 55m · Gare de Lyon → Centrale</div>
+            <div class="demo-leg-detail" data-i18n="ai_demo_leg2_detail">TGV Lyria · 3h 55m · Gare de Lyon → Centrale</div>
           </div>
           <div class="demo-leg-price">from €29</div>
         </div>
@@ -356,7 +356,7 @@
           <div class="demo-leg-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="12" rx="3"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="6" y1="19" x2="4" y2="21"/><line x1="18" y1="19" x2="20" y2="21"/></svg></div>
           <div class="demo-leg-text">
             <div class="demo-leg-route">Milan → Rome</div>
-            <div class="demo-leg-detail">Frecciarossa · 2h 55m · Centrale → Termini</div>
+            <div class="demo-leg-detail" data-i18n="ai_demo_leg3_detail">Frecciarossa · 2h 55m · Centrale → Termini</div>
           </div>
           <div class="demo-leg-price">from €19</div>
         </div>
@@ -369,24 +369,24 @@
 
 <!-- How it works -->
 <section id="how-it-works">
-  <div class="section-label">How it works</div>
-  <h2>Three steps to your perfect train trip</h2>
-  <p class="section-sub">No forms, no dropdowns, no juggling multiple booking sites. Just describe what you want.</p>
+  <div class="section-label" data-i18n="ai_how_label">How it works</div>
+  <h2 data-i18n="ai_how_h2">Three steps to your perfect train trip</h2>
+  <p class="section-sub" data-i18n="ai_how_sub">No forms, no dropdowns, no juggling multiple booking sites. Just describe what you want.</p>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
-      <h3>Describe your trip</h3>
-      <p>Type your trip in plain language — cities, dates, how many days, must-see stops. The AI understands natural requests like "I have 10 days and want to see the Alps."</p>
+      <h3 data-i18n="ai_step1_h3">Describe your trip</h3>
+      <p data-i18n="ai_step1_p">Type your trip in plain language — cities, dates, how many days, must-see stops. The AI understands natural requests like "I have 10 days and want to see the Alps."</p>
     </div>
     <div class="step">
       <div class="step-num">2</div>
-      <h3>Get your itinerary</h3>
-      <p>The AI builds a complete route with the best train connections, journey times, operators (TGV, Eurostar, AVE, Frecciarossa) and notes on scenic value and timing.</p>
+      <h3 data-i18n="ai_step2_h3">Get your itinerary</h3>
+      <p data-i18n="ai_step2_p">The AI builds a complete route with the best train connections, journey times, operators (TGV, Eurostar, AVE, Frecciarossa) and notes on scenic value and timing.</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <h3>Book on Klook</h3>
-      <p>Each leg links directly to Klook where you can compare prices and book your tickets. No extra accounts needed — just click and book.</p>
+      <h3 data-i18n="ai_step3_h3">Book on Klook</h3>
+      <p data-i18n="ai_step3_p">Each leg links directly to Klook where you can compare prices and book your tickets. No extra accounts needed — just click and book.</p>
     </div>
   </div>
 </section>
@@ -395,39 +395,39 @@
 
 <!-- Why section -->
 <section>
-  <div class="section-label">Why WoW Train</div>
-  <h2>Better than searching operator by operator</h2>
-  <p class="section-sub">Planning a multi-country Europe trip used to mean juggling SNCF, Renfe, Trenitalia and Deutsche Bahn separately. Not anymore.</p>
+  <div class="section-label" data-i18n="ai_why_label">Why WoW Train</div>
+  <h2 data-i18n="ai_why_h2">Better than searching operator by operator</h2>
+  <p class="section-sub" data-i18n="ai_why_sub">Planning a multi-country Europe trip used to mean juggling SNCF, Renfe, Trenitalia and Deutsche Bahn separately. Not anymore.</p>
   <div class="why-grid">
     <div class="why-card">
       <div class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-      <h3>30+ countries covered</h3>
-      <p>From Portugal to Poland, from Norway to Greece — the AI knows the rail network across all of Europe and the best connections between countries.</p>
+      <h3 data-i18n="ai_why1_h3">30+ countries covered</h3>
+      <p data-i18n="ai_why1_p">From Portugal to Poland, from Norway to Greece — the AI knows the rail network across all of Europe and the best connections between countries.</p>
     </div>
     <div class="why-card">
       <div class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-      <h3>Seconds, not hours</h3>
-      <p>A 7-country itinerary that used to take 2 hours of research is ready in under 10 seconds. Spend the time saved enjoying the trip.</p>
+      <h3 data-i18n="ai_why2_h3">Seconds, not hours</h3>
+      <p data-i18n="ai_why2_p">A 7-country itinerary that used to take 2 hours of research is ready in under 10 seconds. Spend the time saved enjoying the trip.</p>
     </div>
     <div class="why-card">
       <div class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
-      <h3>100% free</h3>
-      <p>No subscription, no sign-up. The AI planner is completely free. You only pay for the train tickets you choose to book.</p>
+      <h3 data-i18n="ai_why3_h3">100% free</h3>
+      <p data-i18n="ai_why3_p">No subscription, no sign-up. The AI planner is completely free. You only pay for the train tickets you choose to book.</p>
     </div>
     <div class="why-card">
       <div class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-      <h3>Built for trains</h3>
-      <p>Unlike general AI tools, WoW Train is built specifically for European rail travel — it knows operators, reservation requirements, scenic routes and travel times.</p>
+      <h3 data-i18n="ai_why4_h3">Built for trains</h3>
+      <p data-i18n="ai_why4_p">Unlike general AI tools, WoW Train is built specifically for European rail travel — it knows operators, reservation requirements, scenic routes and travel times.</p>
     </div>
     <div class="why-card">
       <div class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-      <h3>Direct booking links</h3>
-      <p>Every route in your itinerary links directly to Klook so you can compare prices and book in one click — no more copying station names between tabs.</p>
+      <h3 data-i18n="ai_why5_h3">Direct booking links</h3>
+      <p data-i18n="ai_why5_p">Every route in your itinerary links directly to Klook so you can compare prices and book in one click — no more copying station names between tabs.</p>
     </div>
     <div class="why-card">
       <div class="why-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
-      <h3>Night trains included</h3>
-      <p>The AI recommends night trains (ÖBB Nightjet, European Sleeper) where they save you time and accommodation costs on long-distance legs.</p>
+      <h3 data-i18n="ai_why6_h3">Night trains included</h3>
+      <p data-i18n="ai_why6_p">The AI recommends night trains (ÖBB Nightjet, European Sleeper) where they save you time and accommodation costs on long-distance legs.</p>
     </div>
   </div>
 </section>
@@ -436,9 +436,9 @@
 
 <!-- Popular routes -->
 <section>
-  <div class="section-label">Popular routes</div>
-  <h2>Try the AI on these trips</h2>
-  <p class="section-sub">Start with one of these popular European train routes or describe your own custom trip.</p>
+  <div class="section-label" data-i18n="ai_routes_label">Popular routes</div>
+  <h2 data-i18n="ai_routes_h2">Try the AI on these trips</h2>
+  <p class="section-sub" data-i18n="ai_routes_sub">Start with one of these popular European train routes or describe your own custom trip.</p>
   <div class="routes-grid">
     <a href="/rutas/london-paris/" class="route-pill">
       <span class="route-pill-name">London → Paris</span>
@@ -495,14 +495,14 @@
 
 <!-- Book on Klook -->
 <section style="padding: 60px 24px; max-width: 760px; margin: 0 auto; text-align: center;">
-  <div class="section-label">Book your tickets</div>
-  <h2 style="margin-bottom:12px;">Ready to book?</h2>
-  <p style="font-size:16px; color:var(--muted); margin-bottom:28px; line-height:1.7;">Once the AI builds your itinerary, book each leg on Klook — compare prices across dates and operators in one place.</p>
+  <div class="section-label" data-i18n="ai_book_label">Book your tickets</div>
+  <h2 style="margin-bottom:12px;" data-i18n="ai_book_h2">Ready to book?</h2>
+  <p style="font-size:16px; color:var(--muted); margin-bottom:28px; line-height:1.7;" data-i18n="ai_book_p">Once the AI builds your itinerary, book each leg on Klook — compare prices across dates and operators in one place.</p>
   <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=London&to=Paris" class="klook-strip" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'ai_planner_page',route:'general'});">
     <img src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" />
     <span class="klook-strip-text">
-      <span class="klook-strip-title">Compare European train tickets on Klook</span>
-      <span class="klook-strip-sub">Prices, schedules and booking across all operators</span>
+      <span class="klook-strip-title" data-i18n="ai_klook_title">Compare European train tickets on Klook</span>
+      <span class="klook-strip-sub" data-i18n="ai_klook_sub">Prices, schedules and booking across all operators</span>
     </span>
     <span class="klook-strip-arrow">→</span>
   </a>
@@ -510,21 +510,57 @@
 
 <!-- Final CTA -->
 <div class="cta-section">
-  <div class="section-label">Free · No sign-up required</div>
-  <h2>Describe your trip. We plan the trains.</h2>
-  <p>From a quick weekend getaway to a month-long rail adventure across Europe — the AI handles the routing so you can focus on the journey.</p>
-  <a href="/" class="btn-primary" style="font-size:17px; padding:16px 36px;">Start planning for free →</a>
+  <div class="section-label" data-i18n="ai_final_label">Free · No sign-up required</div>
+  <h2 data-i18n="ai_final_h2">Describe your trip. We plan the trains.</h2>
+  <p data-i18n="ai_final_p">From a quick weekend getaway to a month-long rail adventure across Europe — the AI handles the routing so you can focus on the journey.</p>
+  <a href="/" class="btn-primary" style="font-size:17px; padding:16px 36px;" data-i18n="ai_final_btn">Start planning for free →</a>
 </div>
 
 <footer>
   <p>
-    <a href="/">WoW Train AI Planner</a> ·
-    <a href="/explore/">All Routes</a> ·
-    <a href="/blog.html">Blog</a> ·
-    <a href="/about.html">About</a>
+    <a href="/" data-i18n="ai_footer_home">WoW Train AI Planner</a> ·
+    <a href="/explore/" data-i18n="ai_footer_routes">All Routes</a> ·
+    <a href="/blog.html" data-i18n="nav_blog">Blog</a> ·
+    <a href="/about.html" data-i18n="ai_footer_about">About</a>
   </p>
-  <p style="margin-top:10px;">© 2026 GLOSX. All rights reserved.</p>
+  <p style="margin-top:10px;" data-i18n="ai_footer_copyright">© 2026 GLOSX. All rights reserved.</p>
 </footer>
 
+
+<script>
+  var TRANSLATIONS_AI = {
+    en: { nav_routes: 'Routes', nav_blog: 'Blog', nav_try_planner: 'Try the Planner', ai_eyebrow: 'AI-Powered · Free · Europe-Wide', ai_h1: 'The <span>AI Travel Planner</span><br>Built for European Trains', ai_hero_sub: 'Describe your trip in plain language. Get a complete train itinerary with routes, schedules, operators and booking links — in seconds.', ai_btn_plan_now: 'Plan my trip now →', ai_btn_how: 'See how it works', ai_demo_label: 'Your trip description', ai_demo_input: '"I want to travel from London to Rome in 7 days, stopping in Paris and Milan. Looking for the fastest routes."', ai_demo_result_title: 'AI-generated itinerary — 3 legs', ai_demo_leg1_detail: 'Eurostar · 2h 20m · St Pancras → Gare du Nord', ai_demo_leg2_detail: 'TGV Lyria · 3h 55m · Gare de Lyon → Centrale', ai_demo_leg3_detail: 'Frecciarossa · 2h 55m · Centrale → Termini', ai_how_label: 'How it works', ai_how_h2: 'Three steps to your perfect train trip', ai_how_sub: 'No forms, no dropdowns, no juggling multiple booking sites. Just describe what you want.', ai_step1_h3: 'Describe your trip', ai_step1_p: 'Type your trip in plain language — cities, dates, how many days, must-see stops. The AI understands natural requests like "I have 10 days and want to see the Alps."', ai_step2_h3: 'Get your itinerary', ai_step2_p: 'The AI builds a complete route with the best train connections, journey times, operators (TGV, Eurostar, AVE, Frecciarossa) and notes on scenic value and timing.', ai_step3_h3: 'Book on Klook', ai_step3_p: 'Each leg links directly to Klook where you can compare prices and book your tickets. No extra accounts needed — just click and book.', ai_why_label: 'Why WoW Train', ai_why_h2: 'Better than searching operator by operator', ai_why_sub: 'Planning a multi-country Europe trip used to mean juggling SNCF, Renfe, Trenitalia and Deutsche Bahn separately. Not anymore.', ai_why1_h3: '30+ countries covered', ai_why1_p: 'From Portugal to Poland, from Norway to Greece — the AI knows the rail network across all of Europe and the best connections between countries.', ai_why2_h3: 'Seconds, not hours', ai_why2_p: 'A 7-country itinerary that used to take 2 hours of research is ready in under 10 seconds. Spend the time saved enjoying the trip.', ai_why3_h3: '100% free', ai_why3_p: 'No subscription, no sign-up. The AI planner is completely free. You only pay for the train tickets you choose to book.', ai_why4_h3: 'Built for trains', ai_why4_p: 'Unlike general AI tools, WoW Train is built specifically for European rail travel — it knows operators, reservation requirements, scenic routes and travel times.', ai_why5_h3: 'Direct booking links', ai_why5_p: 'Every route in your itinerary links directly to Klook so you can compare prices and book in one click — no more copying station names between tabs.', ai_why6_h3: 'Night trains included', ai_why6_p: 'The AI recommends night trains (ÖBB Nightjet, European Sleeper) where they save you time and accommodation costs on long-distance legs.', ai_routes_label: 'Popular routes', ai_routes_h2: 'Try the AI on these trips', ai_routes_sub: 'Start with one of these popular European train routes or describe your own custom trip.', ai_book_label: 'Book your tickets', ai_book_h2: 'Ready to book?', ai_book_p: 'Once the AI builds your itinerary, book each leg on Klook — compare prices across dates and operators in one place.', ai_klook_title: 'Compare European train tickets on Klook', ai_klook_sub: 'Prices, schedules and booking across all operators', ai_final_label: 'Free · No sign-up required', ai_final_h2: 'Describe your trip. We plan the trains.', ai_final_p: 'From a quick weekend getaway to a month-long rail adventure across Europe — the AI handles the routing so you can focus on the journey.', ai_final_btn: 'Start planning for free →', ai_footer_home: 'WoW Train AI Planner', ai_footer_routes: 'All Routes', ai_footer_about: 'About', ai_footer_copyright: '© 2026 GLOSX. All rights reserved.' },
+    es: { nav_routes: 'Rutas', nav_blog: 'Blog', nav_try_planner: 'Probar el planificador', ai_eyebrow: 'Con IA · Gratis · En toda Europa', ai_h1: 'El <span>planificador de viajes con IA</span><br>hecho para los trenes de Europa', ai_hero_sub: 'Describí tu viaje en lenguaje normal. Obtené un itinerario de tren completo con rutas, horarios, operadores y links de reserva — en segundos.', ai_btn_plan_now: 'Planificar mi viaje ahora →', ai_btn_how: 'Ver cómo funciona', ai_demo_label: 'La descripción de tu viaje', ai_demo_input: '"Quiero viajar de Londres a Roma en 7 días, parando en París y Milán. Busco las rutas más rápidas."', ai_demo_result_title: 'Itinerario generado por IA — 3 tramos', ai_demo_leg1_detail: 'Eurostar · 2h 20m · St Pancras → Gare du Nord', ai_demo_leg2_detail: 'TGV Lyria · 3h 55m · Gare de Lyon → Centrale', ai_demo_leg3_detail: 'Frecciarossa · 2h 55m · Centrale → Termini', ai_how_label: 'Cómo funciona', ai_how_h2: 'Tres pasos para tu viaje en tren perfecto', ai_how_sub: 'Sin formularios, sin menús desplegables, sin hacer malabares entre varios sitios de reserva. Solo describí lo que querés.', ai_step1_h3: 'Describí tu viaje', ai_step1_p: 'Escribí tu viaje en lenguaje normal — ciudades, fechas, cuántos días, paradas imperdibles. La IA entiende pedidos naturales como "tengo 10 días y quiero ver los Alpes".', ai_step2_h3: 'Recibí tu itinerario', ai_step2_p: 'La IA arma una ruta completa con las mejores conexiones de tren, tiempos de viaje, operadores (TGV, Eurostar, AVE, Frecciarossa) y notas sobre el valor panorámico y los horarios.', ai_step3_h3: 'Reservá en Klook', ai_step3_p: 'Cada tramo enlaza directo a Klook, donde podés comparar precios y reservar tus billetes. No hace falta crear cuentas extra — solo hacé clic y reservá.', ai_why_label: 'Por qué WoW Train', ai_why_h2: 'Mejor que buscar operador por operador', ai_why_sub: 'Planificar un viaje por varios países de Europa solía significar hacer malabares entre SNCF, Renfe, Trenitalia y Deutsche Bahn por separado. Ya no más.', ai_why1_h3: 'Más de 30 países cubiertos', ai_why1_p: 'De Portugal a Polonia, de Noruega a Grecia — la IA conoce la red ferroviaria de toda Europa y las mejores conexiones entre países.', ai_why2_h3: 'Segundos, no horas', ai_why2_p: 'Un itinerario por 7 países que antes llevaba 2 horas de investigación está listo en menos de 10 segundos. Usá el tiempo que ahorrás para disfrutar el viaje.', ai_why3_h3: '100% gratis', ai_why3_p: 'Sin suscripción, sin registro. El planificador de IA es completamente gratis. Solo pagás por los billetes de tren que decidas reservar.', ai_why4_h3: 'Hecho para trenes', ai_why4_p: 'A diferencia de las herramientas de IA generales, WoW Train está hecho específicamente para viajar en tren por Europa — conoce operadores, requisitos de reserva, rutas panorámicas y tiempos de viaje.', ai_why5_h3: 'Links de reserva directos', ai_why5_p: 'Cada ruta de tu itinerario enlaza directo a Klook para que puedas comparar precios y reservar en un clic — se acabó copiar nombres de estaciones entre pestañas.', ai_why6_h3: 'Trenes nocturnos incluidos', ai_why6_p: 'La IA recomienda trenes nocturnos (ÖBB Nightjet, European Sleeper) cuando te ahorran tiempo y costos de alojamiento en tramos de larga distancia.', ai_routes_label: 'Rutas populares', ai_routes_h2: 'Probá la IA con estos viajes', ai_routes_sub: 'Empezá con una de estas rutas de tren populares en Europa o describí tu propio viaje a medida.', ai_book_label: 'Reservá tus billetes', ai_book_h2: '¿Listo para reservar?', ai_book_p: 'Una vez que la IA arma tu itinerario, reservá cada tramo en Klook — comparando precios entre fechas y operadores en un solo lugar.', ai_klook_title: 'Comparar billetes de tren europeos en Klook', ai_klook_sub: 'Precios, horarios y reserva de todos los operadores', ai_final_label: 'Gratis · Sin necesidad de registro', ai_final_h2: 'Describí tu viaje. Nosotros planificamos los trenes.', ai_final_p: 'Desde una escapada rápida de fin de semana hasta una aventura de un mes en tren por Europa — la IA se encarga de la ruta para que vos te enfoques en el viaje.', ai_final_btn: 'Empezá a planificar gratis →', ai_footer_home: 'WoW Train Planificador IA', ai_footer_routes: 'Todas las rutas', ai_footer_about: 'Nosotros', ai_footer_copyright: '© 2026 GLOSX. Todos los derechos reservados.' },
+    fr: { nav_routes: 'Itinéraires', nav_blog: 'Blog', nav_try_planner: 'Essayer le planificateur', ai_eyebrow: 'Propulsé par l\'IA · Gratuit · Dans toute l\'Europe', ai_h1: 'Le <span>planificateur de voyage IA</span><br>conçu pour les trains d\'Europe', ai_hero_sub: 'Décrivez votre voyage en langage courant. Obtenez un itinéraire de train complet avec trajets, horaires, opérateurs et liens de réservation — en quelques secondes.', ai_btn_plan_now: 'Planifier mon voyage →', ai_btn_how: 'Voir comment ça marche', ai_demo_label: 'Description de votre voyage', ai_demo_input: '« Je veux voyager de Londres à Rome en 7 jours, avec des arrêts à Paris et Milan. Je cherche les trajets les plus rapides. »', ai_demo_result_title: 'Itinéraire généré par IA — 3 étapes', ai_demo_leg1_detail: 'Eurostar · 2h20 · St Pancras → Gare du Nord', ai_demo_leg2_detail: 'TGV Lyria · 3h55 · Gare de Lyon → Centrale', ai_demo_leg3_detail: 'Frecciarossa · 2h55 · Centrale → Termini', ai_how_label: 'Comment ça marche', ai_how_h2: 'Trois étapes vers votre voyage en train idéal', ai_how_sub: 'Pas de formulaires, pas de menus déroulants, pas besoin de jongler entre plusieurs sites de réservation. Décrivez simplement ce que vous voulez.', ai_step1_h3: 'Décrivez votre voyage', ai_step1_p: 'Décrivez votre voyage en langage courant — villes, dates, nombre de jours, étapes incontournables. L\'IA comprend des demandes naturelles comme « j\'ai 10 jours et je veux voir les Alpes ».', ai_step2_h3: 'Recevez votre itinéraire', ai_step2_p: 'L\'IA construit un itinéraire complet avec les meilleures correspondances, les temps de trajet, les opérateurs (TGV, Eurostar, AVE, Frecciarossa) et des notes sur l\'intérêt paysager et les horaires.', ai_step3_h3: 'Réservez sur Klook', ai_step3_p: 'Chaque étape est reliée directement à Klook, où vous pouvez comparer les prix et réserver vos billets. Aucun compte supplémentaire nécessaire — cliquez et réservez.', ai_why_label: 'Pourquoi WoW Train', ai_why_h2: 'Mieux que chercher opérateur par opérateur', ai_why_sub: 'Planifier un voyage multi-pays en Europe signifiait jongler séparément entre SNCF, Renfe, Trenitalia et Deutsche Bahn. Plus maintenant.', ai_why1_h3: 'Plus de 30 pays couverts', ai_why1_p: 'Du Portugal à la Pologne, de la Norvège à la Grèce — l\'IA connaît le réseau ferroviaire de toute l\'Europe et les meilleures correspondances entre pays.', ai_why2_h3: 'Des secondes, pas des heures', ai_why2_p: 'Un itinéraire dans 7 pays qui prenait auparavant 2 heures de recherche est prêt en moins de 10 secondes. Profitez du temps gagné pour savourer le voyage.', ai_why3_h3: '100% gratuit', ai_why3_p: 'Sans abonnement, sans inscription. Le planificateur IA est entièrement gratuit. Vous ne payez que les billets de train que vous choisissez de réserver.', ai_why4_h3: 'Conçu pour les trains', ai_why4_p: 'Contrairement aux outils d\'IA généralistes, WoW Train est conçu spécifiquement pour les voyages en train en Europe — il connaît les opérateurs, les exigences de réservation, les trajets panoramiques et les temps de trajet.', ai_why5_h3: 'Liens de réservation directs', ai_why5_p: 'Chaque trajet de votre itinéraire est relié directement à Klook pour comparer les prix et réserver en un clic — fini de copier les noms de gares entre les onglets.', ai_why6_h3: 'Trains de nuit inclus', ai_why6_p: 'L\'IA recommande des trains de nuit (ÖBB Nightjet, European Sleeper) lorsqu\'ils vous font gagner du temps et des frais d\'hébergement sur les longs trajets.', ai_routes_label: 'Itinéraires populaires', ai_routes_h2: 'Essayez l\'IA sur ces voyages', ai_routes_sub: 'Commencez par l\'un de ces trajets en train populaires en Europe ou décrivez votre propre voyage sur mesure.', ai_book_label: 'Réservez vos billets', ai_book_h2: 'Prêt à réserver ?', ai_book_p: 'Une fois que l\'IA a construit votre itinéraire, réservez chaque étape sur Klook — comparez les prix entre dates et opérateurs au même endroit.', ai_klook_title: 'Comparer les billets de train européens sur Klook', ai_klook_sub: 'Prix, horaires et réservation pour tous les opérateurs', ai_final_label: 'Gratuit · Sans inscription', ai_final_h2: 'Décrivez votre voyage. Nous planifions les trains.', ai_final_p: 'D\'une escapade rapide le week-end à une aventure ferroviaire d\'un mois à travers l\'Europe — l\'IA s\'occupe de l\'itinéraire pour que vous puissiez profiter du voyage.', ai_final_btn: 'Commencer à planifier gratuitement →', ai_footer_home: 'WoW Train Planificateur IA', ai_footer_routes: 'Tous les itinéraires', ai_footer_about: 'À propos', ai_footer_copyright: '© 2026 GLOSX. Tous droits réservés.' },
+    de: { nav_routes: 'Strecken', nav_blog: 'Blog', nav_try_planner: 'Planer ausprobieren', ai_eyebrow: 'KI-gestützt · Kostenlos · Europaweit', ai_h1: 'Der <span>KI-Reiseplaner</span><br>für europäische Züge', ai_hero_sub: 'Beschreibe deine Reise in normaler Sprache. Erhalte einen kompletten Zugreiseplan mit Strecken, Fahrplänen, Betreibern und Buchungslinks — in Sekunden.', ai_btn_plan_now: 'Jetzt Reise planen →', ai_btn_how: 'So funktioniert es', ai_demo_label: 'Deine Reisebeschreibung', ai_demo_input: '„Ich möchte in 7 Tagen von London nach Rom reisen, mit Zwischenstopps in Paris und Mailand. Ich suche die schnellsten Strecken."', ai_demo_result_title: 'KI-generierte Route — 3 Etappen', ai_demo_leg1_detail: 'Eurostar · 2 Std. 20 · St Pancras → Gare du Nord', ai_demo_leg2_detail: 'TGV Lyria · 3 Std. 55 · Gare de Lyon → Centrale', ai_demo_leg3_detail: 'Frecciarossa · 2 Std. 55 · Centrale → Termini', ai_how_label: 'So funktioniert es', ai_how_h2: 'Drei Schritte zu deiner perfekten Zugreise', ai_how_sub: 'Keine Formulare, keine Dropdowns, kein Jonglieren mit mehreren Buchungsseiten. Beschreibe einfach, was du willst.', ai_step1_h3: 'Beschreibe deine Reise', ai_step1_p: 'Beschreibe deine Reise in normaler Sprache — Städte, Daten, Anzahl der Tage, unbedingt zu sehende Stopps. Die KI versteht natürliche Anfragen wie „Ich habe 10 Tage und möchte die Alpen sehen".', ai_step2_h3: 'Erhalte deinen Reiseplan', ai_step2_p: 'Die KI erstellt eine komplette Route mit den besten Zugverbindungen, Reisezeiten, Betreibern (TGV, Eurostar, AVE, Frecciarossa) und Hinweisen zu landschaftlichem Wert und Timing.', ai_step3_h3: 'Bei Klook buchen', ai_step3_p: 'Jede Etappe verlinkt direkt zu Klook, wo du Preise vergleichen und deine Tickets buchen kannst. Keine zusätzlichen Konten nötig — einfach klicken und buchen.', ai_why_label: 'Warum WoW Train', ai_why_h2: 'Besser als jeden Betreiber einzeln zu durchsuchen', ai_why_sub: 'Eine Mehrländer-Reise durch Europa zu planen bedeutete früher, SNCF, Renfe, Trenitalia und Deutsche Bahn einzeln zu jonglieren. Nicht mehr.', ai_why1_h3: 'Über 30 Länder abgedeckt', ai_why1_p: 'Von Portugal bis Polen, von Norwegen bis Griechenland — die KI kennt das Schienennetz in ganz Europa und die besten Verbindungen zwischen Ländern.', ai_why2_h3: 'Sekunden, keine Stunden', ai_why2_p: 'Eine Route durch 7 Länder, für die früher 2 Stunden Recherche nötig waren, ist in unter 10 Sekunden fertig. Nutze die gesparte Zeit, um die Reise zu genießen.', ai_why3_h3: '100 % kostenlos', ai_why3_p: 'Kein Abo, keine Anmeldung. Der KI-Planer ist völlig kostenlos. Du zahlst nur für die Zugtickets, die du buchen möchtest.', ai_why4_h3: 'Für Züge gemacht', ai_why4_p: 'Im Gegensatz zu allgemeinen KI-Tools ist WoW Train speziell für Zugreisen in Europa gebaut — es kennt Betreiber, Reservierungspflichten, Panoramastrecken und Reisezeiten.', ai_why5_h3: 'Direkte Buchungslinks', ai_why5_p: 'Jede Strecke in deinem Reiseplan verlinkt direkt zu Klook, damit du Preise vergleichen und mit einem Klick buchen kannst — kein Kopieren von Bahnhofsnamen zwischen Tabs mehr.', ai_why6_h3: 'Nachtzüge inklusive', ai_why6_p: 'Die KI empfiehlt Nachtzüge (ÖBB Nightjet, European Sleeper), wenn sie dir bei langen Strecken Zeit und Übernachtungskosten sparen.', ai_routes_label: 'Beliebte Strecken', ai_routes_h2: 'Probiere die KI mit diesen Reisen', ai_routes_sub: 'Starte mit einer dieser beliebten europäischen Zugstrecken oder beschreibe deine eigene individuelle Reise.', ai_book_label: 'Buche deine Tickets', ai_book_h2: 'Bereit zu buchen?', ai_book_p: 'Sobald die KI deinen Reiseplan erstellt hat, buche jede Etappe bei Klook — vergleiche Preise über Termine und Betreiber hinweg an einem Ort.', ai_klook_title: 'Europäische Zugtickets bei Klook vergleichen', ai_klook_sub: 'Preise, Fahrpläne und Buchung für alle Betreiber', ai_final_label: 'Kostenlos · Keine Anmeldung nötig', ai_final_h2: 'Beschreibe deine Reise. Wir planen die Züge.', ai_final_p: 'Vom kurzen Wochenendtrip bis zum einmonatigen Bahnabenteuer durch Europa — die KI übernimmt die Routenplanung, damit du dich auf die Reise konzentrieren kannst.', ai_final_btn: 'Jetzt kostenlos planen →', ai_footer_home: 'WoW Train KI-Planer', ai_footer_routes: 'Alle Strecken', ai_footer_about: 'Über uns', ai_footer_copyright: '© 2026 GLOSX. Alle Rechte vorbehalten.' },
+    it: { nav_routes: 'Percorsi', nav_blog: 'Blog', nav_try_planner: 'Prova il pianificatore', ai_eyebrow: 'Basato su IA · Gratuito · In tutta Europa', ai_h1: 'Il <span>pianificatore di viaggi IA</span><br>pensato per i treni europei', ai_hero_sub: 'Descrivi il tuo viaggio in linguaggio semplice. Ottieni un itinerario in treno completo con percorsi, orari, operatori e link di prenotazione — in pochi secondi.', ai_btn_plan_now: 'Pianifica il mio viaggio →', ai_btn_how: 'Scopri come funziona', ai_demo_label: 'La descrizione del tuo viaggio', ai_demo_input: '"Voglio viaggiare da Londra a Roma in 7 giorni, con tappe a Parigi e Milano. Cerco i percorsi più veloci."', ai_demo_result_title: 'Itinerario generato dall\'IA — 3 tappe', ai_demo_leg1_detail: 'Eurostar · 2h 20m · St Pancras → Gare du Nord', ai_demo_leg2_detail: 'TGV Lyria · 3h 55m · Gare de Lyon → Centrale', ai_demo_leg3_detail: 'Frecciarossa · 2h 55m · Centrale → Termini', ai_how_label: 'Come funziona', ai_how_h2: 'Tre passaggi per il tuo viaggio in treno perfetto', ai_how_sub: 'Niente moduli, niente menu a tendina, niente destreggiarsi tra più siti di prenotazione. Descrivi semplicemente cosa vuoi.', ai_step1_h3: 'Descrivi il tuo viaggio', ai_step1_p: 'Scrivi il tuo viaggio in linguaggio semplice — città, date, quanti giorni, tappe imperdibili. L\'IA comprende richieste naturali come "ho 10 giorni e voglio vedere le Alpi".', ai_step2_h3: 'Ricevi il tuo itinerario', ai_step2_p: 'L\'IA crea un percorso completo con i migliori collegamenti ferroviari, tempi di viaggio, operatori (TGV, Eurostar, AVE, Frecciarossa) e note sul valore panoramico e sugli orari.', ai_step3_h3: 'Prenota su Klook', ai_step3_p: 'Ogni tappa rimanda direttamente a Klook, dove puoi confrontare i prezzi e prenotare i biglietti. Nessun account aggiuntivo necessario — basta cliccare e prenotare.', ai_why_label: 'Perché WoW Train', ai_why_h2: 'Meglio che cercare operatore per operatore', ai_why_sub: 'Pianificare un viaggio multi-paese in Europa significava destreggiarsi separatamente tra SNCF, Renfe, Trenitalia e Deutsche Bahn. Non più.', ai_why1_h3: 'Oltre 30 paesi coperti', ai_why1_p: 'Dal Portogallo alla Polonia, dalla Norvegia alla Grecia — l\'IA conosce la rete ferroviaria di tutta Europa e i migliori collegamenti tra paesi.', ai_why2_h3: 'Secondi, non ore', ai_why2_p: 'Un itinerario in 7 paesi che prima richiedeva 2 ore di ricerca è pronto in meno di 10 secondi. Usa il tempo risparmiato per goderti il viaggio.', ai_why3_h3: '100% gratuito', ai_why3_p: 'Nessun abbonamento, nessuna registrazione. Il pianificatore IA è completamente gratuito. Paghi solo i biglietti del treno che scegli di prenotare.', ai_why4_h3: 'Pensato per i treni', ai_why4_p: 'A differenza degli strumenti IA generici, WoW Train è pensato specificamente per i viaggi in treno in Europa — conosce operatori, requisiti di prenotazione, percorsi panoramici e tempi di viaggio.', ai_why5_h3: 'Link di prenotazione diretti', ai_why5_p: 'Ogni tratta del tuo itinerario rimanda direttamente a Klook per confrontare i prezzi e prenotare con un clic — basta copiare nomi di stazioni tra le schede.', ai_why6_h3: 'Treni notturni inclusi', ai_why6_p: 'L\'IA consiglia treni notturni (ÖBB Nightjet, European Sleeper) quando ti fanno risparmiare tempo e costi di alloggio sulle tratte a lunga percorrenza.', ai_routes_label: 'Percorsi popolari', ai_routes_h2: 'Prova l\'IA con questi viaggi', ai_routes_sub: 'Inizia con uno di questi percorsi in treno popolari in Europa o descrivi il tuo viaggio personalizzato.', ai_book_label: 'Prenota i tuoi biglietti', ai_book_h2: 'Pronto a prenotare?', ai_book_p: 'Una volta che l\'IA crea il tuo itinerario, prenota ogni tappa su Klook — confrontando prezzi tra date e operatori in un unico posto.', ai_klook_title: 'Confronta i biglietti del treno europei su Klook', ai_klook_sub: 'Prezzi, orari e prenotazione per tutti gli operatori', ai_final_label: 'Gratuito · Nessuna registrazione richiesta', ai_final_h2: 'Descrivi il tuo viaggio. Noi pianifichiamo i treni.', ai_final_p: 'Da una rapida fuga nel weekend a un\'avventura in treno di un mese in tutta Europa — l\'IA si occupa del percorso così puoi concentrarti sul viaggio.', ai_final_btn: 'Inizia a pianificare gratis →', ai_footer_home: 'WoW Train Pianificatore IA', ai_footer_routes: 'Tutti i percorsi', ai_footer_about: 'Chi siamo', ai_footer_copyright: '© 2026 GLOSX. Tutti i diritti riservati.' },
+    pt: { nav_routes: 'Rotas', nav_blog: 'Blog', nav_try_planner: 'Experimentar o planejador', ai_eyebrow: 'Com IA · Grátis · Em toda a Europa', ai_h1: 'O <span>planejador de viagens com IA</span><br>feito para os trens da Europa', ai_hero_sub: 'Descreva sua viagem em linguagem simples. Receba um itinerário de trem completo com rotas, horários, operadoras e links de reserva — em segundos.', ai_btn_plan_now: 'Planejar minha viagem →', ai_btn_how: 'Ver como funciona', ai_demo_label: 'A descrição da sua viagem', ai_demo_input: '"Quero viajar de Londres a Roma em 7 dias, parando em Paris e Milão. Procuro as rotas mais rápidas."', ai_demo_result_title: 'Itinerário gerado por IA — 3 trechos', ai_demo_leg1_detail: 'Eurostar · 2h20 · St Pancras → Gare du Nord', ai_demo_leg2_detail: 'TGV Lyria · 3h55 · Gare de Lyon → Centrale', ai_demo_leg3_detail: 'Frecciarossa · 2h55 · Centrale → Termini', ai_how_label: 'Como funciona', ai_how_h2: 'Três passos para sua viagem de trem perfeita', ai_how_sub: 'Sem formulários, sem menus suspensos, sem fazer malabarismo entre vários sites de reserva. Apenas descreva o que você quer.', ai_step1_h3: 'Descreva sua viagem', ai_step1_p: 'Digite sua viagem em linguagem simples — cidades, datas, quantos dias, paradas imperdíveis. A IA entende pedidos naturais como "tenho 10 dias e quero ver os Alpes".', ai_step2_h3: 'Receba seu itinerário', ai_step2_p: 'A IA monta uma rota completa com as melhores conexões de trem, tempos de viagem, operadoras (TGV, Eurostar, AVE, Frecciarossa) e notas sobre valor panorâmico e horários.', ai_step3_h3: 'Reserve na Klook', ai_step3_p: 'Cada trecho leva direto à Klook, onde você pode comparar preços e reservar suas passagens. Não é preciso criar contas extras — basta clicar e reservar.', ai_why_label: 'Por que WoW Train', ai_why_h2: 'Melhor do que buscar operadora por operadora', ai_why_sub: 'Planejar uma viagem por vários países da Europa costumava significar lidar separadamente com SNCF, Renfe, Trenitalia e Deutsche Bahn. Não mais.', ai_why1_h3: 'Mais de 30 países cobertos', ai_why1_p: 'De Portugal à Polônia, da Noruega à Grécia — a IA conhece a rede ferroviária de toda a Europa e as melhores conexões entre países.', ai_why2_h3: 'Segundos, não horas', ai_why2_p: 'Um itinerário por 7 países que antes levava 2 horas de pesquisa fica pronto em menos de 10 segundos. Use o tempo economizado para aproveitar a viagem.', ai_why3_h3: '100% grátis', ai_why3_p: 'Sem assinatura, sem cadastro. O planejador de IA é totalmente gratuito. Você só paga pelas passagens de trem que escolher reservar.', ai_why4_h3: 'Feito para trens', ai_why4_p: 'Diferente de ferramentas de IA genéricas, o WoW Train é feito especificamente para viagens de trem pela Europa — conhece operadoras, exigências de reserva, rotas panorâmicas e tempos de viagem.', ai_why5_h3: 'Links de reserva diretos', ai_why5_p: 'Cada rota do seu itinerário leva direto à Klook para você comparar preços e reservar em um clique — chega de copiar nomes de estações entre abas.', ai_why6_h3: 'Trens noturnos incluídos', ai_why6_p: 'A IA recomenda trens noturnos (ÖBB Nightjet, European Sleeper) quando eles economizam tempo e custos de hospedagem em trechos de longa distância.', ai_routes_label: 'Rotas populares', ai_routes_h2: 'Experimente a IA nessas viagens', ai_routes_sub: 'Comece com uma dessas rotas de trem populares na Europa ou descreva sua própria viagem personalizada.', ai_book_label: 'Reserve suas passagens', ai_book_h2: 'Pronto para reservar?', ai_book_p: 'Depois que a IA montar seu itinerário, reserve cada trecho na Klook — comparando preços entre datas e operadoras em um só lugar.', ai_klook_title: 'Comparar passagens de trem europeias na Klook', ai_klook_sub: 'Preços, horários e reserva de todas as operadoras', ai_final_label: 'Grátis · Sem necessidade de cadastro', ai_final_h2: 'Descreva sua viagem. Nós planejamos os trens.', ai_final_p: 'De uma escapada rápida de fim de semana a uma aventura de trem de um mês pela Europa — a IA cuida do trajeto para você focar na viagem.', ai_final_btn: 'Comece a planejar de graça →', ai_footer_home: 'WoW Train Planejador IA', ai_footer_routes: 'Todas as rotas', ai_footer_about: 'Sobre', ai_footer_copyright: '© 2026 GLOSX. Todos os direitos reservados.' },
+  };
+  function detectLangAI() {
+    if (localStorage.getItem('glosx_lang_manual') === '1') {
+      var saved = localStorage.getItem('glosx_lang');
+      if (saved && TRANSLATIONS_AI[saved]) return saved;
+    }
+    var param = new URLSearchParams(location.search).get('lang');
+    if (param && TRANSLATIONS_AI[param]) return param;
+    var browserLangs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language];
+    for (var i = 0; i < browserLangs.length; i++) {
+      var code = (browserLangs[i] || '').split('-')[0].toLowerCase();
+      if (TRANSLATIONS_AI[code]) return code;
+    }
+    return 'en';
+  }
+  function applyLangAI(lang) {
+    var dict = TRANSLATIONS_AI[lang] || TRANSLATIONS_AI.en;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    var h1 = document.getElementById('aiHeroH1');
+    if (h1 && dict.ai_h1) h1.innerHTML = dict.ai_h1;
+  }
+  applyLangAI(detectLangAI());
+</script>
 </body>
 </html>
