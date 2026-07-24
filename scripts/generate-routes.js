@@ -92,6 +92,66 @@ const routes = [
   { slug: 'zurich-milan', from: 'Zurich', to: 'Milan', country: 'Switzerland-Italy', duration: '3h 30m', operator: 'SBB', price: '€35-55', badge: 'Route guide · Switzerland-Italy' }
 ];
 
+// Hoteles reales curados por ciudad de destino (mismos criterios que CURATED_HOTELS
+// en assets/js/main.js: hoteles reales existentes, no genericos/ficticios).
+const REAL_HOTELS = {
+  amsterdam: { name: "De L'Europe Amsterdam", loc: "Amsterdam, Netherlands", image: "https://www.deleurope.com/wp-content/uploads/2024/02/homepage-hero-1.webp" },
+  barcelona: { name: "Hotel Casa Fuster", loc: "Barcelona, Spain", image: "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/343/casa-fuster_header-historia_section.jpg" },
+  bergen: { name: "Hotel Norge by Scandic", loc: "Bergen, Norway", image: "https://www.scandichotels.com/globalassets/hotels/norway/bergen/scandic-norge/scandic-norge-exterior.jpg" },
+  berlin: { name: "Hotel Adlon Kempinski", loc: "Berlin, Germany", image: "https://storage.kempinski.com/cdn-cgi/image/w=1920,f=auto,fit=scale-down/ki-cms-prod/images/7/2/3/5/2625327-1-eng-GB/885bd49e79c3-89887320_4K.jpg" },
+  bordeaux: { name: "InterContinental Bordeaux – Le Grand Hôtel", loc: "Bordeaux, France", image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Fa%C3%A7ade_Grand_H%C3%B4tel_de_Bordeaux.jpg" },
+  brno: { name: "Grandhotel Brno", loc: "Brno, Czech Republic", image: "https://grandhotelbrno.cz/wp-content/uploads/bitmap-15.jpg" },
+  bruges: { name: "Hotel Heritage", loc: "Bruges, Belgium", image: "https://www.hotel-heritage.com/wp-content/uploads/elementor/thumbs/289A0021-res7vp7qbz0q15g3rbg8tyy91gvwawbd8f3n5fvlnu.jpg" },
+  brussels: { name: "Hotel Amigo", loc: "Brussels, Belgium", image: "https://www.roccofortehotels.com/media/caro2u4r/3b-rfh-hotel-amigo-blaton-suite-j1113_rfa_230-th-nov-19-lr.jpg" },
+  budapest: { name: "Four Seasons Hotel Gresham Palace", loc: "Budapest, Hungary", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gresham_Palace_-_Stierch_01.jpg/250px-Gresham_Palace_-_Stierch_01.jpg" },
+  cambridge: { name: "The Varsity Hotel & Spa", loc: "Cambridge, United Kingdom", image: "https://www.thevarsityhotel.co.uk/wp-content/uploads/2023/05/Varsity-Hotel-Exterior.jpg" },
+  cologne: { name: "Excelsior Hotel Ernst am Dom", loc: "Cologne, Germany", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/8a/f4/2769ee5759ee0ccbc46ddba428c8aa267f5245551d00699bdde306970fa8.jpeg" },
+  edinburgh: { name: "The Balmoral", loc: "Edinburgh, United Kingdom", image: "https://www.roccofortehotels.com/media/d54dutp2/2-rfh-the-balmoral-facade-0474-jg-sep-18.jpg" },
+  figueres: { name: "Hotel Empordà", loc: "Figueres, Spain", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/19/c1/c1332927fb38208c45a7d20689b523813cf9ee9542530d8559dbc5912cda.jpeg" },
+  florence: { name: "Helvetia & Bristol Firenze", loc: "Florence, Italy", image: "https://x3jh6o6w.cdn.imgeng.in/assets/uploads/Starhotels-Collezione/Helvetia_Bristol/GALLERY/helvetia-bristol-fi-facciata1.jpg?imgeng=/w_1200/h_630/m_cropbox" },
+  girona: { name: "Hotel Peninsular", loc: "Girona, Spain", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/hotelier-images/78/af/d0bb670163cca63359cc85c6da098a5779c27c3547402d3118965311a49b.jpeg" },
+  hamburg: { name: "Hotel Atlantic Kempinski Hamburg", loc: "Hamburg, Germany", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/5c/c5/0722e0bfde503c4d712760adf4ee25a3f20628a73e6660371bdd2feac2be.jpeg" },
+  interlaken: { name: "Grand Hotel Beau-Rivage", loc: "Interlaken, Switzerland", image: "https://i0.wp.com/www.grandbeaurivage.ch/wp-content/uploads/2026/03/terrasse.jpg?resize=1300%2C975&ssl=1" },
+  krems: { name: "Steigenberger Hotel & Spa Krems", loc: "Krems, Austria", image: "https://www.steigenberger.com/-/media/steigenberger/hotels/austria/krems/steigenberger-hotel-spa-krems-exterior.jpg" },
+  lauterbrunnen: { name: "Braunbär Hotel & Spa", loc: "Wengen, Lauterbrunnen valley, Switzerland", image: "https://cdn.prod.website-files.com/65b186476e59e33563a59cdf/65c53f1bae14910723ebbfa5_65bcd2b113e6815013ee49f0_hotel-braunbaer-wengen.webp" },
+  liverpool: { name: "30 James Street", loc: "Liverpool, United Kingdom", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Albion_House%2C_Liverpool_4.jpg/330px-Albion_House%2C_Liverpool_4.jpg" },
+  ljubljana: { name: "Grand Hotel Union", loc: "Ljubljana, Slovenia", image: "https://media.booking-channel.com/api/hotels/2281/images/109.jpeg" },
+  london: { name: "The Savoy", loc: "London, United Kingdom", image: "https://cdn.prod.website-files.com/68f4d1c2a6858f0bfbded01c/6905fd1604f6b402518f81d0_Savoy-SEO-Image.jpg" },
+  lourdes: { name: "Hôtel Roissy", loc: "Lourdes, France", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/1b/35/904b7435487e16addcf95a1bac9ae9d4e512a058735be3628ceddb6f3808.jpeg" },
+  lucerne: { name: "Hotel Schweizerhof Luzern", loc: "Lucerne, Switzerland", image: "https://www.schweizerhof-luzern.ch/bilder/seo/_800xAUTO_crop_center-center_none/socialMediaFallbackImage.jpg" },
+  lyon: { name: "Villa Florentine", loc: "Lyon, France", image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Villa_Florentine_%40_Lyon_%2836389389615%29.jpg" },
+  malaga: { name: "Gran Hotel Miramar", loc: "Malaga, Spain", image: "https://www.granhotelmiramarmalaga.com/wp-content/blogs.dir/1833/files/home/malaga-new.jpg" },
+  manchester: { name: "The Midland Hotel", loc: "Manchester, United Kingdom", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Midland_Hotel_west%2C_Manchester.jpg/330px-Midland_Hotel_west%2C_Manchester.jpg" },
+  milan: { name: "Hotel Principe di Savoia", loc: "Milan, Italy", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/3693MilanoHotelPrincipeSavoia.JPG/330px-3693MilanoHotelPrincipeSavoia.JPG" },
+  miramas: { name: "ibis Styles Miramas - Provence", loc: "Miramas, France", image: "https://www.ahstatic.com/photos/c0d8_ho_00_p_1024x768.jpg" },
+  monaco: { name: "Hôtel de Paris Monte-Carlo", loc: "Monaco", image: "https://asset.montecarlosbm.com/styles/hero_image_desktop/s3/media/orphea/hotel-de-paris-monte-carlo-facade-de-jour-2024-013_1.jpg.jpeg" },
+  munich: { name: "Hotel Bayerischer Hof", loc: "Munich, Germany", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hotel_Bayerischer_Hof_0437.jpg/330px-Hotel_Bayerischer_Hof_0437.jpg" },
+  naples: { name: "Grand Hotel Vesuvio", loc: "Naples, Italy", image: "https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/165/2016/07/01100414/gallery_35-620x700.jpg" },
+  nice: { name: "Hôtel Negresco", loc: "Nice, France", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Nice_H%C3%B4tel_Negresco_Ext%C3%A9rieur_07.jpg/330px-Nice_H%C3%B4tel_Negresco_Ext%C3%A9rieur_07.jpg" },
+  oslo: { name: "The Thief", loc: "Oslo, Norway", image: "https://thethief.com/wp-content/uploads/2023/01/thethief-exterior-01.jpg" },
+  oxford: { name: "Old Bank Hotel", loc: "Oxford, United Kingdom", image: "https://www.oldbankhotel.co.uk/wp-content/uploads/2023/10/0009-2018-Old-Bank-Hotel-Oxford-High-Res-Old-Bank-Hotel-Quod-Facade-Web-Hero.jpg" },
+  paris: { name: "Ritz Paris", loc: "Paris, France", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/H%C3%B4tel_Ritz.jpg/330px-H%C3%B4tel_Ritz.jpg" },
+  pisa: { name: "Hotel Pisa Tower", loc: "Pisa, Italy", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/a5/fd/ae188e72b48d5360d4999fbd4b9070ec56590963d18a91196daca91fcb95.jpeg" },
+  porto: { name: "The Yeatman", loc: "Porto, Portugal", image: "https://www.the-yeatman-hotel.com/wp-content/uploads/2023/03/the-yeatman-exterior.jpg" },
+  prague: { name: "Hotel Paris Prague", loc: "Prague, Czech Republic", image: "https://www.hotel-paris.cz/files-sbbasic/ba_parisprague_cz/hotel-paris-prague-02.jpg?w=1200&h=627" },
+  rome: { name: "Hotel Hassler Roma", loc: "Rome, Italy", image: "https://www.hotelhasslerroma.com/wp-content/uploads/2025/08/fec52ec67f951787b17109931fbf07f7a69f716b.webp" },
+  salerno: { name: "Hotel Plaza", loc: "Salerno, Italy", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/hotelier-images/65/77/702e7322aeb415a8ce6155f06a2c511da6d0bc1a9cd348bf0f9722598cd5.jpeg" },
+  salzburg: { name: "Hotel Goldener Hirsch", loc: "Salzburg, Austria", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Hotel_Goldener_Hirsch_Salzburg.jpg/250px-Hotel_Goldener_Hirsch_Salzburg.jpg" },
+  seville: { name: "Hotel Alfonso XIII", loc: "Seville, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hotel_Alfonso_XIII%2C_Sevilla%2C_Espa%C3%B1a%2C_2015-12-06%2C_DD_80.JPG/330px-Hotel_Alfonso_XIII%2C_Sevilla%2C_Espa%C3%B1a%2C_2015-12-06%2C_DD_80.JPG" },
+  siena: { name: "Grand Hotel Continental Siena", loc: "Siena, Italy", image: "https://images.pexels.com/photos/38127108/pexels-photo-38127108.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  sorrento: { name: "Grand Hotel Excelsior Vittoria", loc: "Sorrento, Italy", image: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Excelsior_Vittoria_hotel%2C_Sorrento.jpg" },
+  stockholm: { name: "Grand Hôtel Stockholm", loc: "Stockholm, Sweden", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Grand_Hotel_June_2018_01.jpg/330px-Grand_Hotel_June_2018_01.jpg" },
+  toulouse: { name: "Hôtel d'Orsay", loc: "Toulouse, France", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/partner-images/5f/e6/0389a4600856b2b9f3d1eb3c02d842aff368c5c17be9d60f8d6c0d77ac02.jpeg" },
+  turin: { name: "Turin Palace Hotel", loc: "Turin, Italy", image: "https://www.turinpalacehotel.com/wp-content/uploads/2025/02/dscf2986-hdr.jpg" },
+  valencia: { name: "Hotel Boutique Balandret", loc: "Valencia, Spain", image: "https://balandret.com/wp-content/uploads/2022/03/Hotel-en-Playa-Valencia.jpg" },
+  venice: { name: "Hotel Danieli", loc: "Venice, Italy", image: "https://www.danielihotelinvenice.com/pub/media/72/lux72ex.123582_md.jpg" },
+  vienna: { name: "Hotel Sacher Wien", loc: "Vienna, Austria", image: "https://www.sacher.com/en/wp-content/uploads/sites/4/fly-images/10561/hotel-sacher-architektur-wien-80-scaled-1920x9999.jpg.webp" },
+  york: { name: "The Grand, York", loc: "York, United Kingdom", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Grand_Hotel_%26_Spa%2C_York.jpg/330px-The_Grand_Hotel_%26_Spa%2C_York.jpg" },
+  zaragoza: { name: "Hotel Reina Petronila", loc: "Zaragoza, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Zaragoza_-_Complejo_Aragonia_-_Hotel_Reina_Petronila_1.jpg" },
+  zermatt: { name: "Mont Cervin Palace", loc: "Zermatt, Switzerland", image: "https://www.montcervinpalace.ch/wp-content/uploads/2023/11/winter_mcp-exterior-6-1.jpg" },
+  zurich: { name: "Baur au Lac", loc: "Zurich, Switzerland", image: "https://www.bauraulac.ch/upload/rm/ba/ll/bal-lakeside-corner-suite-lounge-area-4.jpg" },
+};
+
 // Traduccion de nombres de pais para el badge/lead en ES (evita dejar "France-Italy"
 // sin traducir dentro de una frase en espanol). Los pares tipo "France-Italy" se
 // dividen por guion y se traduce cada lado.
@@ -235,12 +295,15 @@ function generateTrainSegments(route, lang) {
 // Generate hotel cards HTML
 function generateHotelCards(route, lang) {
   const langContent = content[lang];
+  const curated = REAL_HOTELS[route.to.toLowerCase()];
   const hotels = [
-    {
-      name: `${route.to} Grand Hotel`,
-      location: `${route.to}, ${route.country}`,
-      image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=500'
-    }
+    curated
+      ? { name: curated.name, location: curated.loc, image: curated.image }
+      : {
+          name: `${route.to} Grand Hotel`,
+          location: `${route.to}, ${route.country}`,
+          image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=500'
+        }
   ];
   
   return hotels.map(hotel => `
