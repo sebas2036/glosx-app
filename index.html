@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS render-blocking lo mas arriba posible: antes estaba casi al final
+       del head (linea ~202), detras de JSON-LD y varios scripts, retrasando
+       cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
+       conexiones lentas porque el hero no puede pintarse hasta que carga. -->
+  <link rel="stylesheet" href="/assets/css/main.min.css" />
+  <!-- Solo se precarga el webp: el jpg es el fallback para navegadores sin
+       soporte webp (practicamente ninguno hoy), preload duplicado desperdiciaba
+       ancho de banda con fetchpriority=high compitiendo contra el propio CSS. -->
+  <link rel="preload" as="image" href="/hero-bg.webp" type="image/webp" fetchpriority="high" />
   <script>
     (function () {
       var lowEnd = (navigator.deviceMemory && navigator.deviceMemory <= 4) ||
@@ -41,13 +50,8 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-  <!-- Preload LCP hero image -->
-  <link rel="preload" as="image" href="/hero-bg.webp" type="image/webp" fetchpriority="high" />
-  <link rel="preload" as="image" href="/hero-bg.jpg" fetchpriority="high" />
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -198,8 +202,6 @@
     ]
   }
   </script>
-
-  <link rel="stylesheet" href="/assets/css/main.min.css" />
 </head>
 <body>
   <!-- Cookie consent banner — GDPR -->

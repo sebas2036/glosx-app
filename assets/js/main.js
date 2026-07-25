@@ -1207,12 +1207,34 @@
     if (_activeRouteKey) render(_activeRouteKey);
   };
 
+  // jsPDF se carga on-demand (antes se pedia siempre en el <head>, en cada
+  // visita, aunque casi nadie usa "Descargar PDF" -- competia por ancho de
+  // banda con el hero justo cuando mas importa, en el LCP).
+  function loadJsPDF() {
+    if (window.jspdf) return Promise.resolve();
+    if (window._jspdfLoading) return window._jspdfLoading;
+    window._jspdfLoading = new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+      s.onload = resolve;
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+    return window._jspdfLoading;
+  }
+
   // Generar y descargar el itinerario en PDF (marca + mapa + recorrido + link)
   window.downloadItinerary = async function (key) {
     var route = ROUTES[key];
-    if (!route || !window.jspdf) return;
+    if (!route) return;
     var btn = document.querySelector('.wt-pdf-btn');
     if (btn) btn.disabled = true;
+    try {
+      await loadJsPDF();
+    } catch (e) {
+      if (btn) btn.disabled = false;
+      return;
+    }
     try {
       var lang = document.documentElement.lang || 'en';
       var L = route.title[lang] ? lang : 'en';
