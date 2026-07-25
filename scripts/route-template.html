@@ -18,6 +18,7 @@
   <meta name="twitter:title" content="{{twitterTitle}}" />
   <meta name="twitter:description" content="{{twitterDescription}}" />
   <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
+  {{schema}}
 
   <link rel="icon" type="image/png" href="/logo.png" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
@@ -57,6 +58,11 @@
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .faq { margin: 44px 0 0; }
+    .faq-item { border-top: 1px solid rgba(255,255,255,0.08); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq-q { font-size: 17px; font-weight: 700; color: var(--text); margin: 0 0 8px; letter-spacing: -0.2px; }
+    .faq-a { font-size: 15px; color: #b9b9c9; line-height: 1.75; margin: 0; }
     
     /* Train Segment Cards */
     .train-segment { background: rgba(34,31,48,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; margin: 32px 0; }
@@ -168,7 +174,9 @@
     <ul style="padding-left:22px;">
       {{bestFareList}}
     </ul>
-    
+
+    {{faqSection}}
+
     <hr/>
     <p>{{readyText}}</p>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#8888aa;">

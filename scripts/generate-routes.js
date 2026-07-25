@@ -244,9 +244,9 @@ const content = {
     klookSubtitle: 'Compare times & prices · Instant confirmation · Free cancellation on select fares',
     checkSchedulesText: 'Check schedules & book →',
     opensNewTabText: 'Opens in a new tab — come back here anytime.',
-    howLongTitle: 'How long does it take?',
+    howLongTitle: 'How long is the train from {{from}} to {{to}}?',
     howLongText: 'The fastest trains take around {{duration}}, with several departures a day. Check the live schedule for your date.',
-    whoRunsTitle: 'Who runs the route?',
+    whoRunsTitle: 'Which trains run from {{from}} to {{to}}?',
     whoRunsText: 'The route is run by {{operator}}. Comparing the day\'s departures in one search finds the best time and fare.',
     priceTitle: '{{from}} to {{to}} train price (2026)',
     priceText: 'Advance fares start from around {{price}}, rising as the date approaches.',
@@ -270,7 +270,15 @@ const content = {
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'View current price →',
     economicLink: 'View economic options',
-    transferLink: 'Book private transfer in {{to}} →'
+    transferLink: 'Book private transfer in {{to}} →',
+    faqHeading: 'Frequently asked questions',
+    faq: [
+      { q: 'How long is the train from {{from}} to {{to}}?', a: 'The fastest trains from {{from}} to {{to}} take around {{duration}}, with several departures throughout the day.' },
+      { q: 'How much does the {{from}} to {{to}} train cost?', a: 'Advance fares for the {{from}} to {{to}} train start from around {{price}} and rise as the travel date approaches, so booking early usually gets the cheapest ticket.' },
+      { q: 'Which train companies operate the {{from}} to {{to}} route?', a: 'The {{from}} to {{to}} route is operated by {{operator}}. Comparing the day\'s departures in one search finds the best time and fare.' },
+      { q: 'Is there a direct train from {{from}} to {{to}}?', a: '{{operator}} runs services between {{from}} and {{to}} — check the live schedule for your date to see direct trains and any connections.' },
+      { q: 'When is the cheapest time to book {{from}} to {{to}} train tickets?', a: 'The cheapest {{from}} to {{to}} fares are usually released a few weeks to a few months ahead and sell out first, so booking early and travelling mid-week or off-peak gets the best price.' }
+    ]
   },
   es: {
     titleTemplate: (from, to) => `Tren ${from} a ${to} (2026) | Horarios y Billetes Baratos - WoW Train`,
@@ -289,9 +297,9 @@ const content = {
     klookSubtitle: 'Compara horarios y precios · Confirmación instantánea · Cancelación gratuita en tarifas seleccionadas',
     checkSchedulesText: 'Ver horarios y reservar →',
     opensNewTabText: 'Se abre en una nueva pestaña — vuelve aquí cuando quieras.',
-    howLongTitle: '¿Cuánto tiempo tarda?',
+    howLongTitle: '¿Cuánto dura el tren de {{from}} a {{to}}?',
     howLongText: 'Los trenes más rápidos tardan alrededor de {{duration}}, con varias salidas al día. Consulta el horario en vivo para tu fecha.',
-    whoRunsTitle: '¿Quién opera la ruta?',
+    whoRunsTitle: '¿Qué trenes van de {{from}} a {{to}}?',
     whoRunsText: 'La ruta es operada por {{operator}}. Comparando las salidas del día en una sola búsqueda encuentras el mejor horario y tarifa.',
     priceTitle: 'Precio del tren {{from}} a {{to}} (2026)',
     priceText: 'Las tarifas anticipadas comienzan desde {{price}}, aumentando a medida que se acerca la fecha.',
@@ -315,7 +323,15 @@ const content = {
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'Ver precio actual →',
     economicLink: 'Ver opciones económicas',
-    transferLink: 'Reservar traslado privado en {{to}} →'
+    transferLink: 'Reservar traslado privado en {{to}} →',
+    faqHeading: 'Preguntas frecuentes',
+    faq: [
+      { q: '¿Cuánto dura el tren de {{from}} a {{to}}?', a: 'Los trenes más rápidos de {{from}} a {{to}} tardan alrededor de {{duration}}, con varias salidas a lo largo del día.' },
+      { q: '¿Cuánto cuesta el tren de {{from}} a {{to}}?', a: 'Las tarifas anticipadas del tren de {{from}} a {{to}} comienzan desde {{price}} y aumentan a medida que se acerca la fecha, así que reservar con antelación suele conseguir el billete más barato.' },
+      { q: '¿Qué compañías operan la ruta de {{from}} a {{to}}?', a: 'La ruta de {{from}} a {{to}} es operada por {{operator}}. Comparar las salidas del día en una sola búsqueda encuentra el mejor horario y tarifa.' },
+      { q: '¿Hay tren directo de {{from}} a {{to}}?', a: '{{operator}} opera servicios entre {{from}} y {{to}} — consulta el horario en vivo para tu fecha y verás los trenes directos y las conexiones.' },
+      { q: '¿Cuándo es más barato reservar los billetes de tren de {{from}} a {{to}}?', a: 'Las tarifas más baratas de {{from}} a {{to}} suelen salir con semanas o meses de antelación y se agotan primero, así que reservar temprano y viajar entre semana o fuera de horas punta consigue el mejor precio.' }
+    ]
   }
 };
 
@@ -436,6 +452,74 @@ function generateRelatedRoutes(route, lang) {
   `).join('');
 }
 
+// Reemplaza todos los tokens {{...}} de un string con los datos de la ruta.
+// (usa reemplazo global, a diferencia de .replace() que solo cambia el primero)
+function fillTokens(str, route, lang) {
+  return str
+    .replace(/\{\{from\}\}/g, route.from)
+    .replace(/\{\{to\}\}/g, route.to)
+    .replace(/\{\{duration\}\}/g, route.duration)
+    .replace(/\{\{operator\}\}/g, route.operator)
+    .replace(/\{\{price\}\}/g, route.price)
+    .replace(/\{\{country\}\}/g, translateCountry(route.country, lang));
+}
+
+// FAQ visible (h3 pregunta + p respuesta, siempre en el DOM para que Google lo
+// lea; sin JS ni contenido oculto). Apunta a las busquedas de cola larga.
+function generateFAQ(route, lang) {
+  const langContent = content[lang];
+  const items = langContent.faq.map(item => `
+      <div class="faq-item">
+        <h3 class="faq-q">${fillTokens(item.q, route, lang)}</h3>
+        <p class="faq-a">${fillTokens(item.a, route, lang)}</p>
+      </div>`).join('');
+  return `
+    <section class="faq">
+      <h2>${langContent.faqHeading}</h2>${items}
+    </section>`;
+}
+
+// Datos estructurados JSON-LD: BreadcrumbList + FAQPage + Article. Le da a Google
+// las preguntas para rich snippets y ayuda a entender/rankear la pagina.
+function generateSchema(route, lang) {
+  const langContent = content[lang];
+  const url = `https://glosx.app/rutas/${route.slug}${lang === 'es' ? '/es/' : '/'}`;
+  const routesLabel = lang === 'es' ? 'Rutas' : 'Routes';
+  const routeName = fillTokens(langContent.mainTitle, route, lang);
+  const graph = [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: lang === 'es' ? 'Inicio' : 'Home', item: 'https://glosx.app/' },
+        { '@type': 'ListItem', position: 2, name: routesLabel, item: 'https://glosx.app/explore/' },
+        { '@type': 'ListItem', position: 3, name: routeName, item: url }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: langContent.faq.map(item => ({
+        '@type': 'Question',
+        name: fillTokens(item.q, route, lang),
+        acceptedAnswer: { '@type': 'Answer', text: fillTokens(item.a, route, lang) }
+      }))
+    },
+    {
+      '@type': 'Article',
+      headline: langContent.ogTitleTemplate(route.from, route.to),
+      description: langContent.descriptionTemplate(route.from, route.to),
+      image: HERO_PHOTOS[route.to.toLowerCase()] || 'https://glosx.app/hero-bg.jpg',
+      datePublished: '2026-07-01',
+      dateModified: '2026-07-25',
+      author: { '@type': 'Organization', name: 'WoW Train', url: 'https://glosx.app/' },
+      publisher: { '@type': 'Organization', name: 'WoW Train', logo: { '@type': 'ImageObject', url: 'https://glosx.app/logo.png' } },
+      mainEntityOfPage: url,
+      inLanguage: lang
+    }
+  ];
+  const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+  return `<script type="application/ld+json">${json}</script>`;
+}
+
 // Replace template variables
 function replaceTemplate(template, route, lang) {
   const langContent = content[lang];
@@ -461,9 +545,9 @@ function replaceTemplate(template, route, lang) {
     '{{trainSegments}}': generateTrainSegments(route, lang),
     '{{hotelSectionTitle}}': langContent.hotelSectionTitle,
     '{{hotelCards}}': generateHotelCards(route, lang),
-    '{{howLongTitle}}': langContent.howLongTitle,
+    '{{howLongTitle}}': fillTokens(langContent.howLongTitle, route, lang),
     '{{howLongText}}': langContent.howLongText.replace('{{duration}}', route.duration),
-    '{{whoRunsTitle}}': langContent.whoRunsTitle,
+    '{{whoRunsTitle}}': fillTokens(langContent.whoRunsTitle, route, lang),
     '{{whoRunsText}}': langContent.whoRunsText.replace('{{operator}}', route.operator),
     '{{priceTitle}}': langContent.priceTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{priceText}}': langContent.priceText.replace('{{price}}', route.price),
@@ -476,7 +560,9 @@ function replaceTemplate(template, route, lang) {
     '{{opensNewTabText}}': langContent.opensNewTabText,
     '{{photos}}': generatePhotos(route),
     '{{moreRoutesTitle}}': langContent.moreRoutesTitle,
-    '{{relatedRoutes}}': generateRelatedRoutes(route, lang)
+    '{{relatedRoutes}}': generateRelatedRoutes(route, lang),
+    '{{faqSection}}': generateFAQ(route, lang),
+    '{{schema}}': generateSchema(route, lang)
   };
   
   let result = template;
