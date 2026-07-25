@@ -1231,5 +1231,59 @@
       });
     })();
   </script>
+  <!-- Auditor universal de clics: un solo listener (delegacion, fase de captura)
+       registra CADA clic del sitio con qué se toco, en qué seccion y de donde
+       viene el usuario. Cubre todo automaticamente, incluso botones sin tracking
+       propio (barra de partners, menu Klook, etc.). Debug: agregar ?audit=1. -->
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      // ?audit=1 o #audit activa el modo debug (loguea cada clic en consola).
+      // En la home el ?audit se strippea por la limpieza de URL, por eso tambien
+      // se acepta #audit y se persiste en la sesion una vez activado.
+      var DEBUG = params.has('audit') || location.hash.indexOf('audit') > -1;
+      try {
+        if (DEBUG) sessionStorage.setItem('glosx_audit', '1');
+        else if (sessionStorage.getItem('glosx_audit') === '1') DEBUG = true;
+      } catch (e) {}
+      var src;
+      try {
+        src = sessionStorage.getItem('glosx_src');
+        if (!src) {
+          src = params.get('utm_source') || params.get('ref') ||
+            (document.referrer ? (function () { try { return new URL(document.referrer).hostname; } catch (e) { return 'direct'; } })() : 'direct');
+          sessionStorage.setItem('glosx_src', src);
+        }
+      } catch (e) { src = 'unknown'; }
+
+      function sectionOf(el) {
+        var s = el.closest('[data-section]');
+        if (s) return s.getAttribute('data-section');
+        var k = el.closest('nav, footer, .vip-bar, .hero-bgwrap, .ai-planner, .ai-results, .countries, .scenic-grid, .wt-timeline-wrap, .partners-dropdown, section[id], main');
+        if (!k) return 'other';
+        if (k.tagName === 'NAV') return 'nav';
+        if (k.tagName === 'FOOTER') return 'footer';
+        return k.id || (k.className || '').toString().split(' ')[0] || k.tagName.toLowerCase();
+      }
+      function labelOf(el) {
+        return (el.getAttribute('data-track') || el.getAttribute('aria-label') ||
+          (el.textContent || '').trim().replace(/\s+/g, ' ') || el.getAttribute('href') || el.tagName).slice(0, 80);
+      }
+
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest('a[href], button, [onclick], [role="button"]');
+        if (!el) return;
+        var data = {
+          elem_label: labelOf(el),
+          elem_section: sectionOf(el),
+          elem_href: (el.getAttribute('href') || '').slice(0, 120),
+          page_path: location.pathname,
+          visit_source: src
+        };
+        if (DEBUG) console.log('[AUDIT]', data);
+        try { if (typeof gtag === 'function') gtag('event', 'ui_click', data); } catch (_) {}
+      }, true);
+    })();
+  </script>
 </body>
 </html>
