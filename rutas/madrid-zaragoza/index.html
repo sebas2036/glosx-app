@@ -117,13 +117,16 @@
     .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 32px 0; }
     .photo-grid img { width: 100%; height: 140px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); display: block; }
     @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } }
-    .klook-cta { display: flex; align-items: center; gap: 16px; background: linear-gradient(135deg, rgba(255,106,43,0.13), rgba(255,106,43,0.06)); border: 1px solid rgba(255,106,43,0.35); border-radius: 14px; padding: 18px 22px; margin: 0 0 32px; text-decoration: none; transition: border-color 0.2s; }
-    .klook-cta:hover { border-color: rgba(255,106,43,0.65); text-decoration: none; }
-    .klook-cta-logo { width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0; }
+    .klook-cta { display: flex; align-items: center; gap: 16px; background: linear-gradient(135deg, rgba(255,106,43,0.17), rgba(255,106,43,0.05)); border: 1px solid rgba(255,106,43,0.4); border-radius: 16px; padding: 18px 20px; margin: 0 0 32px; text-decoration: none; box-shadow: 0 8px 30px rgba(255,106,43,0.10); transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.75); box-shadow: 0 12px 36px rgba(255,106,43,0.22); transform: translateY(-1px); text-decoration: none; }
+    .klook-cta-logo { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; }
     .klook-cta-text { flex: 1; min-width: 0; }
-    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 2px; }
+    .klook-cta-title { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 3px; line-height: 1.3; }
+    .klook-cta-city { color: #FF6A2B; }
     .klook-cta-sub { font-size: 13px; color: var(--muted); }
-    .klook-cta-arrow { font-size: 20px; color: #FF6A2B; flex-shrink: 0; font-weight: 700; }
+    .klook-cta-btn { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg, #FF7A3D, #FF5A1F); color: #fff; font-weight: 800; font-size: 14px; padding: 11px 22px; border-radius: 100px; box-shadow: 0 4px 14px rgba(255,90,31,0.45); white-space: nowrap; }
+    .klook-cta:hover .klook-cta-btn { filter: brightness(1.07); }
+    @media (max-width: 600px) { .klook-cta { flex-wrap: wrap; } .klook-cta-btn { width: 100%; justify-content: center; margin-top: 6px; } }
   </style>
 </head>
 <body>
@@ -148,10 +151,10 @@
        onclick="gtag('event','klook_click',{source:'cta_block',route:'madrid-zaragoza'});">
       <img class="klook-cta-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" loading="lazy">
       <div class="klook-cta-text">
-        <span class="klook-cta-title">Book your train ticket on Klook</span>
-        <span class="klook-cta-sub">Compare times & prices · Instant confirmation · Free cancellation on select fares</span>
+        <span class="klook-cta-title">Book <span class="klook-cta-city">Madrid</span> &rarr; <span class="klook-cta-city">Zaragoza</span> on Klook</span>
+        <span class="klook-cta-sub">Renfe AVE · 1h 30m · from €15-25 · free cancellation on select fares</span>
       </div>
-      <span class="klook-cta-arrow">&#8594;</span>
+      <span class="klook-cta-btn">Book Ticket &#8599;</span>
     </a>
 
     
