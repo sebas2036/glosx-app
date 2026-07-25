@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v2';
 const CACHE_NAME = `glosx-static-${CACHE_VERSION}`;
 
 const PRECACHE_URLS = [
@@ -49,17 +49,24 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Static assets: cache-first, fall back to network.
+  // Static assets: stale-while-revalidate — sirve la version cacheada al
+  // instante, pero siempre pide una fresca en paralelo y la guarda para la
+  // proxima carga. Con cache-first puro (como estaba antes) un CSS/JS
+  // cacheado una vez quedaba pegado para siempre, sin importar cuantos
+  // deploys nuevos hubiera en el servidor.
   if (/\.(css|js|png|jpg|jpeg|webp|svg|woff2?)$/.test(url.pathname)) {
     event.respondWith(
-      caches.match(request).then((cached) => {
-        if (cached) return cached;
-        return fetch(request).then((response) => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-          return response;
-        });
-      })
+      caches.open(CACHE_NAME).then((cache) =>
+        cache.match(request).then((cached) => {
+          const fetchPromise = fetch(request)
+            .then((response) => {
+              cache.put(request, response.clone());
+              return response;
+            })
+            .catch(() => cached);
+          return cached || fetchPromise;
+        })
+      )
     );
   }
 });
