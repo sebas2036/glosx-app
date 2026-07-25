@@ -1650,11 +1650,17 @@
   }
   .wt-stop {
     position: relative; padding: 0 0 26px 44px;
-    opacity: 0; transform: translateX(-10px);
-    animation: wt-stop-in .45s ease forwards;
+    /* Antes arrancaba en opacity:0 y dependia de una animacion CSS para
+       hacerse visible. Confirmado en produccion: si esa animacion queda
+       "corriendo" pero congelada en su frame inicial (puede pasar si el
+       telefono pausa el compositor un instante justo al tocar el boton),
+       el forwards fill-mode pisa cualquier opacity de base y el contenido
+       queda invisible para siempre -- eso mostraba la lista de paradas "en
+       negro". Se saca la animacion: el contenido aparece de una, sin
+       depender de que ningun timeline de animacion llegue a correr. */
+    opacity: 1;
   }
   .wt-stop:last-child { padding-bottom: 0; }
-  @keyframes wt-stop-in { to { opacity: 1; transform: translateX(0); } }
   .wt-stop-icon {
     position: absolute; left: 0; top: 0;
     width: 32px; height: 32px; border-radius: 50%;
