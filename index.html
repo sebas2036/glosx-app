@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var lowEnd = (navigator.deviceMemory && navigator.deviceMemory <= 4) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (lowEnd) document.documentElement.classList.add('lite-mode');
+    })();
+  </script>
   <meta name="google-site-verification" content="wydgWqGcYChD0ADQ8MZPtBQm1DdwU8a7c1OFLr1BkSM" />
   <meta name="verify-admitad" content="39691b1050" />
   <title>WoW Train — Free AI Train Planner for Europe | glosx.app</title>
