@@ -1166,6 +1166,28 @@
     </p>
   </footer>
 
+  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+    <div class="ios-install-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
+    </div>
+    <div class="ios-install-copy">
+      <p class="ios-install-title" data-i18n="ios_install_title">Install WoW Train</p>
+      <p class="ios-install-text" data-i18n="ios_install_text">Tap the Share icon, then "Add to Home Screen".</p>
+    </div>
+    <button type="button" class="ios-install-close" id="iosInstallClose" data-i18n-aria-label="ios_install_dismiss" aria-label="Dismiss">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <style>
+    .ios-install-banner { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 999; display: flex; align-items: flex-start; gap: 12px; max-width: 420px; margin: 0 auto; padding: 14px 16px; background: rgba(24,22,34,0.97); backdrop-filter: blur(12px); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .ios-install-banner[hidden] { display: none; }
+    .ios-install-icon { flex-shrink: 0; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3); border-radius: 10px; color: #a78bfa; }
+    .ios-install-copy { flex: 1; min-width: 0; }
+    .ios-install-title { font-size: 14px; font-weight: 700; color: #f0f0f5; margin: 0 0 2px; }
+    .ios-install-text { font-size: 13px; color: #b9b9c9; margin: 0; line-height: 1.4; }
+    .ios-install-close { flex-shrink: 0; width: 32px; height: 32px; min-width: 44px; min-height: 44px; margin: -8px -8px 0 0; display: flex; align-items: center; justify-content: center; background: none; border: none; color: #8888aa; cursor: pointer; border-radius: 8px; }
+    .ios-install-close:hover { color: #f0f0f5; background: rgba(255,255,255,0.06); }
+  </style>
   <script src="/assets/js/main.min.js" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
@@ -1173,6 +1195,31 @@
         navigator.serviceWorker.register('/sw.js').catch(function () {});
       });
     }
+  </script>
+  <script>
+    (function () {
+      var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isSafari = /safari/i.test(navigator.userAgent) && !/crios|fxios|edgios|opios/i.test(navigator.userAgent);
+      var isStandalone = window.navigator.standalone === true ||
+        window.matchMedia('(display-mode: standalone)').matches;
+      var dismissed = localStorage.getItem('glosx_ios_install_dismissed') === '1';
+
+      if (!isIOS || !isSafari || isStandalone || dismissed) return;
+
+      var banner = document.getElementById('iosInstallBanner');
+      var closeBtn = document.getElementById('iosInstallClose');
+      if (!banner || !closeBtn) return;
+
+      setTimeout(function () {
+        banner.hidden = false;
+      }, 2500);
+
+      closeBtn.addEventListener('click', function () {
+        banner.hidden = true;
+        localStorage.setItem('glosx_ios_install_dismissed', '1');
+      });
+    })();
   </script>
 </body>
 </html>
