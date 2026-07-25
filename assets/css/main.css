@@ -529,6 +529,35 @@
       transform: translate(-50%, 0) scale(1);
       pointer-events: auto;
     }
+    /* En mobile el popup no cuelga del chip (se corta contra el borde de la
+       pantalla si el chip esta cerca del margen) — pasa a panel fijo y
+       centrado en el viewport, tipo bottom sheet. */
+    @media (max-width: 640px) {
+      /* backdrop-filter en el chip crea un containing block propio para sus
+         hijos position:fixed (igual que transform/filter) — el popup queda
+         atrapado dentro del chip en vez de fijarse contra el viewport. Se
+         saca el blur mientras esta abierto para que el fixed de abajo
+         funcione contra la pantalla real. */
+      .country-chip.show-photo {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      .country-popup {
+        position: fixed;
+        top: auto;
+        left: 50%;
+        bottom: 16px;
+        width: min(320px, calc(100vw - 32px));
+        max-height: 70vh;
+        overflow-y: auto;
+        transform: translate(-50%, 12px) scale(0.98);
+        z-index: 200;
+      }
+      .country-chip.show-photo .country-popup {
+        transform: translate(-50%, 0) scale(1);
+      }
+      .country-routes a { white-space: normal; }
+    }
 
     /* ── Sections ── */
     .section {
