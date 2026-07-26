@@ -310,7 +310,7 @@ const content = {
     mainTitle: 'Tren de {{from}} a {{to}}',
     metaText: 'Por WoW Train · Actualizado julio 2026 · 4 min de lectura',
     leadText: '{{operator}} conecta {{from}} con {{to}} en alrededor de {{duration}}, con servicios cómodos que recorren el campo de {{country}}.',
-    klookTitle: 'Reservá <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> en Klook',
+    klookTitle: 'Reserva <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> en Klook',
     klookSubtitle: '{{operator}} · {{duration}} · desde {{price}} · cancelación gratis en tarifas seleccionadas',
     klookBtnLabel: 'Reservar',
     checkSchedulesText: 'Ver horarios y reservar →',
