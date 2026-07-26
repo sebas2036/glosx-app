@@ -129,6 +129,11 @@ async function main() {
     dateRanges, dimensions: [{ name: 'sessionSource' }, { name: 'sessionMedium' }], metrics: [{ name: 'sessions' }],
     orderBys: [{ metric: { metricName: 'sessions' }, desc: true }], limit: 15
   });
+  // 4) Por país (sesiones + usuarios) — para ver Europa vs Argentina vs resto
+  const byCountry = await runReport(token, propertyId, {
+    dateRanges, dimensions: [{ name: 'country' }], metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }], limit: 40
+  });
 
   const t = (totals.rows && totals.rows[0]) ? totals.rows[0].metricValues.map(m => m.value) : ['0', '0', '0', '0'];
   const snapshot = {
@@ -136,7 +141,8 @@ async function main() {
     propertyId, windowDays: days,
     totals: { sessions: +t[0], totalUsers: +t[1], pageViews: +t[2], eventCount: +t[3] },
     events: rowsToPairs(byEvent),
-    trafficSources: rowsToPairs(bySource)
+    trafficSources: rowsToPairs(bySource),
+    countries: rowsToPairs(byCountry)
   };
 
   console.log('\n===== GA4 glosx.app — últimos ' + days + ' días =====');
@@ -145,6 +151,8 @@ async function main() {
   snapshot.events.forEach(e => console.log(`  ${e.key}: ${e.value}`));
   console.log('\n--- Fuentes de tráfico (source/medium: sesiones) ---');
   snapshot.trafficSources.forEach(s => console.log(`  ${s.key}: ${s.value}`));
+  console.log('\n--- Por país (país: sesiones · usuarios) ---');
+  snapshot.countries.forEach(c => console.log(`  ${c.key}: ${c.value}`));
   console.log('\n--- JSON snapshot (para guardar/comparar) ---');
   console.log(JSON.stringify(snapshot, null, 2));
 }
