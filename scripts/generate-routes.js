@@ -214,16 +214,32 @@ const HERO_PHOTOS = {
 // Traduccion de nombres de pais para el badge/lead en ES (evita dejar "France-Italy"
 // sin traducir dentro de una frase en espanol). Los pares tipo "France-Italy" se
 // dividen por guion y se traduce cada lado.
-const COUNTRY_ES = {
-  Austria: 'Austria', Belgium: 'Bélgica', Czech: 'Chequia', Denmark: 'Dinamarca',
-  France: 'Francia', Germany: 'Alemania', Hungary: 'Hungría', Italy: 'Italia',
-  Netherlands: 'Países Bajos', Norway: 'Noruega', Portugal: 'Portugal',
-  Slovenia: 'Eslovenia', Spain: 'España', Sweden: 'Suecia', Switzerland: 'Suiza', UK: 'Reino Unido'
+const COUNTRY_TR = {
+  es: { Austria: 'Austria', Belgium: 'Bélgica', Czech: 'Chequia', Denmark: 'Dinamarca', France: 'Francia', Germany: 'Alemania', Hungary: 'Hungría', Italy: 'Italia', Netherlands: 'Países Bajos', Norway: 'Noruega', Portugal: 'Portugal', Slovenia: 'Eslovenia', Spain: 'España', Sweden: 'Suecia', Switzerland: 'Suiza', UK: 'Reino Unido' },
+  fr: { Austria: 'Autriche', Belgium: 'Belgique', Czech: 'Tchéquie', Denmark: 'Danemark', France: 'France', Germany: 'Allemagne', Hungary: 'Hongrie', Italy: 'Italie', Netherlands: 'Pays-Bas', Norway: 'Norvège', Portugal: 'Portugal', Slovenia: 'Slovénie', Spain: 'Espagne', Sweden: 'Suède', Switzerland: 'Suisse', UK: 'Royaume-Uni' },
+  it: { Austria: 'Austria', Belgium: 'Belgio', Czech: 'Cechia', Denmark: 'Danimarca', France: 'Francia', Germany: 'Germania', Hungary: 'Ungheria', Italy: 'Italia', Netherlands: 'Paesi Bassi', Norway: 'Norvegia', Portugal: 'Portogallo', Slovenia: 'Slovenia', Spain: 'Spagna', Sweden: 'Svezia', Switzerland: 'Svizzera', UK: 'Regno Unito' }
 };
 function translateCountry(country, lang) {
-  if (lang !== 'es') return country;
-  return country.split('-').map(c => COUNTRY_ES[c] || c).join('-');
+  const dict = COUNTRY_TR[lang];
+  if (!dict) return country;
+  return country.split('-').map(c => dict[c] || c).join('-');
 }
+
+// Sufijo de URL por idioma. EN es la raíz; el resto va en subcarpeta.
+function langSuffix(lang) { return { en: '/', es: '/es/', fr: '/fr/', it: '/it/' }[lang] || '/'; }
+// URL canónica (self-referencing) por idioma — cada página apunta a sí misma.
+function canonicalUrl(slug, lang) { return `https://glosx.app/rutas/${slug}${langSuffix(lang)}`; }
+// Selector de idioma en el nav: links a los OTROS 3 idiomas.
+const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT' };
+function langSwitchLinks(slug, current) {
+  return ['en', 'es', 'fr', 'it'].filter(l => l !== current)
+    .map(l => `<a href="/rutas/${slug}${langSuffix(l)}" class="lang">${LANG_LABELS[l]}</a>`).join(' ');
+}
+// Etiquetas localizadas para el breadcrumb (Home / Rutas).
+const BREADCRUMB = {
+  en: { home: 'Home', routes: 'Routes' }, es: { home: 'Inicio', routes: 'Rutas' },
+  fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' }
+};
 
 // Language-specific content
 const content = {
@@ -333,6 +349,112 @@ const content = {
       { q: '¿Qué compañías operan la ruta de {{from}} a {{to}}?', a: 'La ruta de {{from}} a {{to}} es operada por {{operator}}. Comparar las salidas del día en una sola búsqueda encuentra el mejor horario y tarifa.' },
       { q: '¿Hay tren directo de {{from}} a {{to}}?', a: '{{operator}} opera servicios entre {{from}} y {{to}} — consulta el horario en vivo para tu fecha y verás los trenes directos y las conexiones.' },
       { q: '¿Cuándo es más barato reservar los billetes de tren de {{from}} a {{to}}?', a: 'Las tarifas más baratas de {{from}} a {{to}} suelen salir con semanas o meses de antelación y se agotan primero, así que reservar temprano y viajar entre semana o fuera de horas punta consigue el mejor precio.' }
+    ]
+  },
+  fr: {
+    titleTemplate: (from, to) => `Train de ${from} à ${to} (2026) | Horaires et Billets Pas Chers - WoW Train`,
+    descriptionTemplate: (from, to) => `Trouvez les tarifs de train les moins chers, les horaires officiels et une comparaison des opérateurs pour ${from} → ${to}. Réservation sécurisée dans votre monnaie.`,
+    ogTitleTemplate: (from, to) => `${from} à ${to} en Train : Guide 2026`,
+    ogDescriptionTemplate: (from, to) => `${from} → ${to} en train — itinéraire, gares, opérateurs et comment réserver.`,
+    twitterTitleTemplate: (from, to) => `${from} à ${to} en Train : Guide 2026`,
+    twitterDescriptionTemplate: (from, to) => `${from} → ${to} en train — itinéraire, gares, opérateurs et comment réserver.`,
+    backText: 'Tous les itinéraires',
+    badgeLabel: 'Guide d\'itinéraire',
+    mainTitle: 'Train de {{from}} à {{to}}',
+    metaText: 'Par WoW Train · Mis à jour en juillet 2026 · 4 min de lecture',
+    leadText: '{{operator}} relie {{from}} à {{to}} en environ {{duration}}, avec des services confortables qui traversent la campagne de {{country}}.',
+    klookTitle: 'Réservez <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> sur Klook',
+    klookSubtitle: '{{operator}} · {{duration}} · à partir de {{price}} · annulation gratuite sur tarifs sélectionnés',
+    klookBtnLabel: 'Réserver',
+    checkSchedulesText: 'Voir horaires et réserver →',
+    opensNewTabText: 'S\'ouvre dans un nouvel onglet — revenez ici quand vous voulez.',
+    howLongTitle: 'Combien de temps dure le train de {{from}} à {{to}} ?',
+    howLongText: 'Les trains les plus rapides mettent environ {{duration}}, avec plusieurs départs par jour. Consultez les horaires en direct pour votre date.',
+    whoRunsTitle: 'Quels trains circulent de {{from}} à {{to}} ?',
+    whoRunsText: 'L\'itinéraire est assuré par {{operator}}. Comparer les départs de la journée en une seule recherche vous donne le meilleur horaire et tarif.',
+    priceTitle: 'Prix du train {{from}} à {{to}} (2026)',
+    priceText: 'Les tarifs anticipés commencent autour de {{price}} et augmentent à l\'approche de la date.',
+    hotelSectionTitle: 'Où loger',
+    bestFareTitle: 'Comment obtenir le meilleur tarif',
+    bestFareList: [
+      '<strong>Réservez tôt.</strong> Les tarifs les moins chers partent en premier — réserver à l\'avance peut être bien moins cher que le jour même.',
+      '<strong>Voyagez en heures creuses.</strong> Les départs en milieu de matinée et en milieu de semaine sont souvent plus calmes et moins chers.',
+      '<strong>Pensez à la première classe</strong> — sur de nombreux trajets le surclassement est modeste et très confortable.',
+      '<strong>Comparez au même endroit</strong> pour voir tous les départs d\'un coup d\'œil.'
+    ],
+    readyText: 'Prêt à partir ? Consultez les horaires et tarifs en direct de {{from}} → {{to}} et réservez votre place — paiement sécurisé, billets mobiles, tous les opérateurs en une recherche.',
+    compareText: 'Vous préférez comparer tous les opérateurs ferroviaires ?',
+    moreRoutesTitle: 'Plus d\'itinéraires de train en Europe',
+    trainSegmentTitle: '{{from}} → {{to}}',
+    trainSegmentDuration: 'Durée : {{duration}}',
+    trainSegmentOperator: 'Opérateur : {{operator}}',
+    trainSegmentStation: 'Gare : {{station}}',
+    bookTicketBtn: 'Voir horaires et réserver →',
+    hotelCardName: '{{hotelName}}',
+    hotelCardLocation: '{{hotelLocation}}',
+    hotelCardPrice: 'Voir le prix actuel →',
+    economicLink: 'Voir les options économiques',
+    transferLink: 'Réserver un transfert privé à {{to}} →',
+    faqHeading: 'Questions fréquentes',
+    faq: [
+      { q: 'Combien de temps dure le train de {{from}} à {{to}} ?', a: 'Les trains les plus rapides de {{from}} à {{to}} mettent environ {{duration}}, avec plusieurs départs tout au long de la journée.' },
+      { q: 'Combien coûte le train de {{from}} à {{to}} ?', a: 'Les tarifs anticipés du train {{from}} → {{to}} commencent autour de {{price}} et augmentent à l\'approche de la date, donc réserver tôt permet généralement d\'obtenir le billet le moins cher.' },
+      { q: 'Quelles compagnies exploitent la ligne {{from}} → {{to}} ?', a: 'La ligne {{from}} → {{to}} est exploitée par {{operator}}. Comparer les départs du jour en une seule recherche donne le meilleur horaire et tarif.' },
+      { q: 'Y a-t-il un train direct de {{from}} à {{to}} ?', a: '{{operator}} assure des services entre {{from}} et {{to}} — consultez les horaires en direct pour votre date afin de voir les trains directs et les correspondances.' },
+      { q: 'Quand est-il le moins cher de réserver les billets de train {{from}} → {{to}} ?', a: 'Les tarifs les moins chers de {{from}} → {{to}} sortent généralement quelques semaines à quelques mois à l\'avance et partent en premier, donc réserver tôt et voyager en milieu de semaine ou en heures creuses donne le meilleur prix.' }
+    ]
+  },
+  it: {
+    titleTemplate: (from, to) => `Treno da ${from} a ${to} (2026) | Orari e Biglietti Economici - WoW Train`,
+    descriptionTemplate: (from, to) => `Trova le tariffe ferroviarie più economiche, gli orari ufficiali e il confronto tra operatori per ${from} → ${to}. Prenotazione sicura nella tua valuta.`,
+    ogTitleTemplate: (from, to) => `${from} a ${to} in Treno: Guida 2026`,
+    ogDescriptionTemplate: (from, to) => `${from} → ${to} in treno — percorso, stazioni, operatori e come prenotare.`,
+    twitterTitleTemplate: (from, to) => `${from} a ${to} in Treno: Guida 2026`,
+    twitterDescriptionTemplate: (from, to) => `${from} → ${to} in treno — percorso, stazioni, operatori e come prenotare.`,
+    backText: 'Tutti i percorsi',
+    badgeLabel: 'Guida al percorso',
+    mainTitle: 'Treno da {{from}} a {{to}}',
+    metaText: 'Di WoW Train · Aggiornato a luglio 2026 · 4 min di lettura',
+    leadText: '{{operator}} collega {{from}} a {{to}} in circa {{duration}}, con servizi comodi che attraversano le campagne di {{country}}.',
+    klookTitle: 'Prenota <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> su Klook',
+    klookSubtitle: '{{operator}} · {{duration}} · da {{price}} · cancellazione gratuita su tariffe selezionate',
+    klookBtnLabel: 'Prenota',
+    checkSchedulesText: 'Vedi orari e prenota →',
+    opensNewTabText: 'Si apre in una nuova scheda — torna qui quando vuoi.',
+    howLongTitle: 'Quanto dura il treno da {{from}} a {{to}}?',
+    howLongText: 'I treni più veloci impiegano circa {{duration}}, con diverse partenze al giorno. Controlla gli orari in tempo reale per la tua data.',
+    whoRunsTitle: 'Quali treni collegano {{from}} a {{to}}?',
+    whoRunsText: 'Il percorso è gestito da {{operator}}. Confrontare le partenze del giorno in un\'unica ricerca ti dà l\'orario e la tariffa migliori.',
+    priceTitle: 'Prezzo del treno {{from}} a {{to}} (2026)',
+    priceText: 'Le tariffe anticipate partono da circa {{price}} e aumentano con l\'avvicinarsi della data.',
+    hotelSectionTitle: 'Dove alloggiare',
+    bestFareTitle: 'Come ottenere la tariffa migliore',
+    bestFareList: [
+      '<strong>Prenota in anticipo.</strong> Le tariffe più economiche si esauriscono per prime — prenotare in anticipo può essere molto più conveniente che comprare in giornata.',
+      '<strong>Viaggia in orari non di punta.</strong> Le partenze a metà mattina e a metà settimana tendono a essere più tranquille ed economiche.',
+      '<strong>Valuta la prima classe</strong> — su molti percorsi il supplemento è modesto e molto comodo.',
+      '<strong>Confronta in un unico posto</strong> per vedere ogni partenza a colpo d\'occhio.'
+    ],
+    readyText: 'Pronto a partire? Controlla orari e tariffe in tempo reale di {{from}} → {{to}} e prenota il tuo posto — pagamento sicuro, biglietti su mobile, ogni operatore in un\'unica ricerca.',
+    compareText: 'Preferisci confrontare tutti gli operatori ferroviari?',
+    moreRoutesTitle: 'Altri percorsi ferroviari in Europa',
+    trainSegmentTitle: '{{from}} → {{to}}',
+    trainSegmentDuration: 'Durata: {{duration}}',
+    trainSegmentOperator: 'Operatore: {{operator}}',
+    trainSegmentStation: 'Stazione: {{station}}',
+    bookTicketBtn: 'Vedi orari e prenota biglietto →',
+    hotelCardName: '{{hotelName}}',
+    hotelCardLocation: '{{hotelLocation}}',
+    hotelCardPrice: 'Vedi prezzo attuale →',
+    economicLink: 'Vedi opzioni economiche',
+    transferLink: 'Prenota un transfer privato a {{to}} →',
+    faqHeading: 'Domande frequenti',
+    faq: [
+      { q: 'Quanto dura il treno da {{from}} a {{to}}?', a: 'I treni più veloci da {{from}} a {{to}} impiegano circa {{duration}}, con diverse partenze durante la giornata.' },
+      { q: 'Quanto costa il treno da {{from}} a {{to}}?', a: 'Le tariffe anticipate del treno {{from}} → {{to}} partono da circa {{price}} e aumentano con l\'avvicinarsi della data, quindi prenotare in anticipo di solito permette di avere il biglietto più economico.' },
+      { q: 'Quali compagnie operano la tratta {{from}} → {{to}}?', a: 'La tratta {{from}} → {{to}} è operata da {{operator}}. Confrontare le partenze del giorno in un\'unica ricerca dà l\'orario e la tariffa migliori.' },
+      { q: 'C\'è un treno diretto da {{from}} a {{to}}?', a: '{{operator}} opera servizi tra {{from}} e {{to}} — controlla gli orari in tempo reale per la tua data per vedere i treni diretti e le coincidenze.' },
+      { q: 'Quando conviene di più prenotare i biglietti del treno {{from}} → {{to}}?', a: 'Le tariffe più economiche di {{from}} → {{to}} escono di solito da qualche settimana a qualche mese prima e si esauriscono per prime, quindi prenotare in anticipo e viaggiare a metà settimana o in orari non di punta dà il prezzo migliore.' }
     ]
   }
 };
@@ -448,7 +570,7 @@ function generatePhotos(route) {
 // Generate related routes
 function generateRelatedRoutes(route, lang) {
   const related = routes.slice(0, 4).filter(r => r.slug !== route.slug);
-  const suffix = lang === 'es' ? '/es/' : '/';
+  const suffix = langSuffix(lang);
   return related.map(r => `
     <a href="/rutas/${r.slug}${suffix}" class="related-link">${r.from} &rarr; ${r.to}</a>
   `).join('');
@@ -485,15 +607,15 @@ function generateFAQ(route, lang) {
 // las preguntas para rich snippets y ayuda a entender/rankear la pagina.
 function generateSchema(route, lang) {
   const langContent = content[lang];
-  const url = `https://glosx.app/rutas/${route.slug}${lang === 'es' ? '/es/' : '/'}`;
-  const routesLabel = lang === 'es' ? 'Rutas' : 'Routes';
+  const url = canonicalUrl(route.slug, lang);
+  const bc = BREADCRUMB[lang] || BREADCRUMB.en;
   const routeName = fillTokens(langContent.mainTitle, route, lang);
   const graph = [
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: lang === 'es' ? 'Inicio' : 'Home', item: 'https://glosx.app/' },
-        { '@type': 'ListItem', position: 2, name: routesLabel, item: 'https://glosx.app/explore/' },
+        { '@type': 'ListItem', position: 1, name: bc.home, item: 'https://glosx.app/' },
+        { '@type': 'ListItem', position: 2, name: bc.routes, item: 'https://glosx.app/explore/' },
         { '@type': 'ListItem', position: 3, name: routeName, item: url }
       ]
     },
@@ -528,13 +650,14 @@ function replaceTemplate(template, route, lang) {
   const replacements = {
     '{{lang}}': lang,
     '{{routeSlug}}': route.slug,
+    '{{canonical}}': canonicalUrl(route.slug, lang),
     '{{title}}': langContent.titleTemplate(route.from, route.to),
     '{{description}}': langContent.descriptionTemplate(route.from, route.to),
     '{{ogTitle}}': langContent.ogTitleTemplate(route.from, route.to),
     '{{ogDescription}}': langContent.ogDescriptionTemplate(route.from, route.to),
     '{{twitterTitle}}': langContent.twitterTitleTemplate(route.from, route.to),
     '{{twitterDescription}}': langContent.twitterDescriptionTemplate(route.from, route.to),
-    '{{langSwitch}}': langContent.langSwitch.replace('{{routeSlug}}', route.slug),
+    '{{langSwitch}}': langSwitchLinks(route.slug, lang),
     '{{backText}}': langContent.backText,
     '{{badge}}': `${langContent.badgeLabel} · ${translateCountry(route.country, lang)}`,
     '{{mainTitle}}': langContent.mainTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
@@ -583,28 +706,15 @@ const template = fs.readFileSync(templatePath, 'utf8');
 // Generate routes
 const outputDir = path.join(__dirname, '../rutas');
 
+const LANGS = ['en', 'es', 'fr', 'it'];
 routes.forEach(route => {
-  // Generate English version
-  const enContent = replaceTemplate(template, route, 'en');
-  const enDir = path.join(outputDir, route.slug);
-  const enFile = path.join(enDir, 'index.html');
-  
-  if (!fs.existsSync(enDir)) {
-    fs.mkdirSync(enDir, { recursive: true });
-  }
-  fs.writeFileSync(enFile, enContent);
-  
-  // Generate Spanish version
-  const esContent = replaceTemplate(template, route, 'es');
-  const esDir = path.join(enDir, 'es');
-  const esFile = path.join(esDir, 'index.html');
-  
-  if (!fs.existsSync(esDir)) {
-    fs.mkdirSync(esDir, { recursive: true });
-  }
-  fs.writeFileSync(esFile, esContent);
-  
-  console.log(`Generated ${route.slug} (EN & ES)`);
+  // EN va en la raíz (/rutas/slug/); el resto en subcarpeta (/rutas/slug/{lang}/)
+  LANGS.forEach(lang => {
+    const dir = lang === 'en' ? path.join(outputDir, route.slug) : path.join(outputDir, route.slug, lang);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), replaceTemplate(template, route, lang));
+  });
+  console.log(`Generated ${route.slug} (EN/ES/FR/IT)`);
 });
 
 console.log('All routes generated successfully!');
