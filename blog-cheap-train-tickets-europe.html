@@ -190,6 +190,15 @@
       .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; }
       table { font-size: 12px; } th, td { padding: 8px; }
     }
+  
+    /* klook-cta-v2 */
+    .klook-cta { background: linear-gradient(135deg, rgba(255,106,43,0.17), rgba(255,106,43,0.05)); border: 1px solid rgba(255,106,43,0.4); border-radius: 16px; padding: 18px 20px; box-shadow: 0 8px 30px rgba(255,106,43,0.10); transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.75); box-shadow: 0 12px 36px rgba(255,106,43,0.22); transform: translateY(-1px); }
+    .klook-cta-title { line-height: 1.3; }
+    .klook-cta-city { color: #FF6A2B; }
+    .klook-cta-btn { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg, #FF7A3D, #FF5A1F); color: #fff; font-weight: 800; font-size: 14px; padding: 11px 22px; border-radius: 100px; box-shadow: 0 4px 14px rgba(255,90,31,0.45); white-space: nowrap; }
+    .klook-cta:hover .klook-cta-btn { filter: brightness(1.07); }
+    @media (max-width: 600px) { .klook-cta { flex-wrap: wrap; } .klook-cta-btn { width: 100%; justify-content: center; margin-top: 6px; } }
   </style>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false">(function(){window.addEventListener("load",function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.com/NTM0NTcw.js?t=534570";document.head.appendChild(s);});})();</script>
 </head>
@@ -296,7 +305,7 @@
       <span class="klook-cta-title">Compare train prices on Klook</span>
       <span class="klook-cta-sub">All operators · advance fares · instant booking</span>
     </span>
-    <span class="klook-cta-arrow">→</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <hr />
@@ -341,10 +350,10 @@
   <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=Madrid&to=Barcelona" class="klook-cta" target="_blank" rel="noopener sponsored" onclick="gtag('event','klook_click',{source:'blog_cheap',route:'madrid-barcelona'});">
     <span class="klook-logo">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Madrid → Barcelona on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Madrid</span> → <span class="klook-cta-city">Barcelona</span> on Klook</span>
       <span class="klook-cta-sub">From €13.90 · Ouigo high-speed</span>
     </span>
-    <span class="klook-cta-arrow">→</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <div class="cta">

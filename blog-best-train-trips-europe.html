@@ -199,6 +199,15 @@
       .photo-grid { grid-template-columns: 1fr; }
       .photo-grid img { height: 180px; }
     }
+  
+    /* klook-cta-v2 */
+    .klook-cta { background: linear-gradient(135deg, rgba(255,106,43,0.17), rgba(255,106,43,0.05)); border: 1px solid rgba(255,106,43,0.4); border-radius: 16px; padding: 18px 20px; box-shadow: 0 8px 30px rgba(255,106,43,0.10); transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+    .klook-cta:hover { border-color: rgba(255,106,43,0.75); box-shadow: 0 12px 36px rgba(255,106,43,0.22); transform: translateY(-1px); }
+    .klook-cta-title { line-height: 1.3; }
+    .klook-cta-city { color: #FF6A2B; }
+    .klook-cta-btn { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg, #FF7A3D, #FF5A1F); color: #fff; font-weight: 800; font-size: 14px; padding: 11px 22px; border-radius: 100px; box-shadow: 0 4px 14px rgba(255,90,31,0.45); white-space: nowrap; }
+    .klook-cta:hover .klook-cta-btn { filter: brightness(1.07); }
+    @media (max-width: 600px) { .klook-cta { flex-wrap: wrap; } .klook-cta-btn { width: 100%; justify-content: center; margin-top: 6px; } }
   </style>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false">(function(){window.addEventListener("load",function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.com/NTM0NTcw.js?t=534570";document.head.appendChild(s);});})();</script>
 </head>
@@ -243,10 +252,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'london-paris'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book London → Paris on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">London</span> → <span class="klook-cta-city">Paris</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>2. Madrid to Barcelona — AVE</h2>
@@ -261,10 +270,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'madrid-barcelona'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Madrid → Barcelona on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Madrid</span> → <span class="klook-cta-city">Barcelona</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>3. Paris to Amsterdam — Eurostar</h2>
@@ -276,10 +285,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'paris-amsterdam'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Paris → Amsterdam on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Paris</span> → <span class="klook-cta-city">Amsterdam</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>4. Rome to Florence — Frecciarossa</h2>
@@ -294,10 +303,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'rome-florence'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Rome → Florence on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Rome</span> → <span class="klook-cta-city">Florence</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>5. Paris to Barcelona — TGV + AVE</h2>
@@ -309,10 +318,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'paris-barcelona'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Paris → Barcelona on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Paris</span> → <span class="klook-cta-city">Barcelona</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>6. Munich to Venice — EuroCity</h2>
@@ -324,10 +333,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'munich-venice'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Munich → Venice on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Munich</span> → <span class="klook-cta-city">Venice</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>7. London to Edinburgh — LNER Azuma</h2>
@@ -339,10 +348,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'london-edinburgh'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book London → Edinburgh on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">London</span> → <span class="klook-cta-city">Edinburgh</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>8. Amsterdam to Berlin — IC/ICE</h2>
@@ -354,10 +363,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'amsterdam-berlin'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Amsterdam → Berlin on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Amsterdam</span> → <span class="klook-cta-city">Berlin</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>9. Zurich to Milan — EuroCity</h2>
@@ -369,10 +378,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'zurich-milan'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Zurich → Milan on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Zurich</span> → <span class="klook-cta-city">Milan</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <h2>10. Vienna to Budapest — Railjet</h2>
@@ -384,10 +393,10 @@
      onclick="gtag('event','klook_click',{source:'blog_best_trips',route:'vienna-budapest'});">
     <span class="klook-cta-logo" style="background:#FF6A2B;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-1px;">K</span>
     <span class="klook-cta-text">
-      <span class="klook-cta-title">Book Vienna → Budapest on Klook</span>
+      <span class="klook-cta-title">Book <span class="klook-cta-city">Vienna</span> → <span class="klook-cta-city">Budapest</span> on Klook</span>
       <span class="klook-cta-sub">Compare times &amp; prices · Instant confirmation · Free cancellation on select fares</span>
     </span>
-    <span class="klook-cta-arrow">&#8594;</span>
+    <span class="klook-cta-btn">Book Ticket &#8599;</span>
   </a>
 
   <hr/>
