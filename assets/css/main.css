@@ -1627,9 +1627,9 @@
      de vista y el usuario tenia que scrollear mucho para llegar a ella. */
   .wt-timeline-head {
   position: relative;
-  height: 150px;
+  height: 110px;
   margin: 0;
-  padding: 16px clamp(22px, 4vw, 46px) 6px;
+  padding: 16px clamp(22px, 4vw, 46px) 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1658,7 +1658,7 @@
   .wt-timeline {
   list-style: none;
   margin: 0;
-  padding: 6px clamp(22px, 4vw, 46px) 0;
+  padding: 0 clamp(22px, 4vw, 46px) 0;
   position: relative;
 }
   .wt-timeline::before {
@@ -1679,13 +1679,26 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.35);
   }
   .wt-stop-icon svg { width: 16px; height: 16px; }
-  .wt-stop-station { font-size: 18px; font-weight: 800; margin: 0 0 4px; letter-spacing: -0.3px; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+  .wt-stop-station {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  letter-spacing: -0.3px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.95);
+}
   .wt-stop-train {
     display: inline-block; font-size: 12.5px; font-weight: 600; color: var(--primary2);
     background: rgba(124,58,237,0.12); border: 1px solid rgba(139,92,246,0.25);
     border-radius: 100px; padding: 3px 11px; margin: 0 0 8px;
   }
-  .wt-stop-desc { margin: 0; color: #cdcdda; font-size: 14px; line-height: 1.65; text-shadow: 0 1px 10px rgba(0,0,0,0.7); }
+  .wt-stop-desc {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.65;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.9);
+}
   .wt-stop-buy {
     display: inline-block; margin-top: 10px;
     font-family: inherit; font-size: 13px; font-weight: 700; color: #E9E3FB;
