@@ -1641,7 +1641,7 @@
      Se le da mas alto para que la foto tenga presencia, sin tocar el compacto
      de mobile (que era el objetivo del fix original). */
   @media (min-width: 601px) {
-    .wt-timeline-head { min-height: 260px; padding-top: 32px; padding-bottom: 22px; background-position: center 45%; }
+    .wt-timeline-head { min-height: 46vh; max-height: 460px; padding-top: 32px; padding-bottom: 22px; background-position: center 46%; }
   }
   #wt-timeline, #wt-cta-slot { position: relative; z-index: 1; padding-left: clamp(22px, 4vw, 46px); padding-right: clamp(22px, 4vw, 46px); }
   .wt-close { z-index: 2; }
