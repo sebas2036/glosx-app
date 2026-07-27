@@ -2104,7 +2104,7 @@
     background: rgba(34,29,64,0.88);
     border: 1px solid rgba(139,92,246,0.25);
     border-radius: 24px;
-    padding: 40px 48px;
+    padding: 26px 32px;
     position: relative;
     animation: aiFadeIn 0.5s ease;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
@@ -2133,7 +2133,7 @@
   }
   .ai-results-header {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   .ai-results-header h3 {
     font-size: 24px;
@@ -2147,8 +2147,8 @@
     color: var(--muted);
   }
   .ai-route-line {
-    height: 90px;
-    margin: 12px 0;
+    height: 64px;
+    margin: 6px 0;
     position: relative;
   }
   .route-svg {
@@ -2240,9 +2240,9 @@
   .ai-stop-hotel:hover { color: #e7c66b; }
   .ai-stop:only-child { margin: 0 auto; }
   .ai-segments {
-    margin: 16px auto;
+    margin: 8px auto;
     display: grid;
-    gap: 12px;
+    gap: 8px;
     grid-template-columns: 1fr;
     max-width: 520px;
   }
@@ -2253,7 +2253,7 @@
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(124,58,237,0.18);
     border-radius: 14px;
-    padding: 16px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
   }
@@ -2374,8 +2374,8 @@
     background: #f8f7fc;
     border: 1px solid rgba(124,58,237,0.1);
     border-radius: 12px;
-    padding: 12px 16px;
-    margin-bottom: 8px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
     text-decoration: none;
   }
   .trip-hotel-row:hover { border-color: rgba(124,58,237,0.35); }
@@ -2463,8 +2463,8 @@
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    margin-top: 24px;
-    height: 150px;
+    margin-top: 12px;
+    height: 110px;
     border-radius: 16px;
     overflow: hidden;
   }
@@ -2503,7 +2503,7 @@
     transition: filter 0.2s, transform 0.2s;
   }
   .ai-reset-btn-video:hover { filter: brightness(1.08); transform: translateX(-50%) translateY(-1px); }
-  @media (max-width: 600px) { .ai-cta-video { height: 120px; } }
+  @media (max-width: 600px) { .ai-cta-video { height: 90px; } }
   /* ── Resultados del AI Planner: tarjeta clara tipo "boarding pass" ──────────
      Mismo lenguaje visual que el modal blanco "Mi plan de viaje" (#16131f /
      #6d28d9 / gradiente #8b5cf6-#7c3aed) para que esta pantalla sea la etapa
@@ -2558,20 +2558,20 @@
     background: rgba(167,139,250,0.1);
     border: 1px solid rgba(139,92,246,0.25);
     border-radius: 100px;
-    padding: 8px 18px;
+    padding: 6px 16px;
     text-align: center;
-    margin: 14px auto 0;
+    margin: 8px auto 0;
     letter-spacing: 0.01em;
   }
   .ai-results .ai-klook-cta { background: linear-gradient(135deg, rgba(255,106,43,0.1), rgba(255,106,43,0.04)); border-color: rgba(255,106,43,0.35); }
   .ai-results .ai-klook-cta:hover { border-color: rgba(255,106,43,0.6); background: linear-gradient(135deg, rgba(255,106,43,0.16), rgba(255,106,43,0.06)); }
   .ai-results .ai-klook-cta-title { color: #16131f; }
   .ai-results .ai-klook-cta-sub { color: #8888a0; }
-  .ai-hotels { max-width: 640px; margin: 20px auto; }
+  .ai-hotels { max-width: 640px; margin: 10px auto; }
   .ai-copy-btn {
     display: block;
     width: fit-content;
-    margin: 16px auto 0;
+    margin: 8px auto 0;
     font-family: inherit;
     font-size: 12.5px;
     font-weight: 700;
@@ -2579,7 +2579,7 @@
     background: #f8f7fc;
     border: 1px solid rgba(124,58,237,0.2);
     border-radius: 100px;
-    padding: 9px 22px;
+    padding: 8px 20px;
     cursor: pointer;
     letter-spacing: 0.02em;
     transition: background 0.2s, border-color 0.2s;
@@ -2591,7 +2591,7 @@
     .ai-subtitle { font-size: 16px; }
     .ai-input-container { flex-direction: column; }
     .ai-generate-btn { width: 100%; }
-    .ai-results { padding: 28px 22px; }
+    .ai-results { padding: 18px 16px; }
     .ai-results-header h3 { font-size: 26px; }
     .ai-results-header p { font-size: 15px; }
     .ai-stops { flex-direction: column; }
