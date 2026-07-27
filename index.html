@@ -55,6 +55,14 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    (function () {
+      // #dev marca este navegador como interno (dev testeando) para siempre,
+      // vía localStorage; GA4 excluye estos hits con un Data Filter de trafico interno.
+      try {
+        if (location.hash.indexOf('dev') !== -1) localStorage.setItem('glosx_dev_ga', '1');
+        if (localStorage.getItem('glosx_dev_ga') === '1') gtag('set', 'traffic_type', 'internal');
+      } catch (e) {}
+    })();
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
     // Evento: click saliente hacia Trainline (para medir demanda enviada al partner)
