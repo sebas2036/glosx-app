@@ -1627,9 +1627,9 @@
      de vista y el usuario tenia que scrollear mucho para llegar a ella. */
   .wt-timeline-head {
   position: relative;
-  height: 220px;
-  margin: 0 0 4px;
-  padding: 18px clamp(22px, 4vw, 46px);
+  height: 150px;
+  margin: 0;
+  padding: 16px clamp(22px, 4vw, 46px) 6px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1658,7 +1658,7 @@
   .wt-timeline {
   list-style: none;
   margin: 0;
-  padding: 14px clamp(22px, 4vw, 46px) 0;
+  padding: 6px clamp(22px, 4vw, 46px) 0;
   position: relative;
 }
   .wt-timeline::before {
@@ -1666,17 +1666,10 @@
     background: rgba(124,58,237,0.25);
   }
   .wt-stop {
-    position: relative; padding: 0 0 26px 44px;
-    /* Antes arrancaba en opacity:0 y dependia de una animacion CSS para
-       hacerse visible. Confirmado en produccion: si esa animacion queda
-       "corriendo" pero congelada en su frame inicial (puede pasar si el
-       telefono pausa el compositor un instante justo al tocar el boton),
-       el forwards fill-mode pisa cualquier opacity de base y el contenido
-       queda invisible para siempre -- eso mostraba la lista de paradas "en
-       negro". Se saca la animacion: el contenido aparece de una, sin
-       depender de que ningun timeline de animacion llegue a correr. */
-    opacity: 1;
-  }
+  position: relative;
+  padding: 0 0 18px 44px;
+  opacity: 1;
+}
   .wt-stop:last-child { padding-bottom: 0; }
   .wt-stop-icon {
     position: absolute; left: 0; top: 0;
