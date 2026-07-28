@@ -154,7 +154,34 @@
   </div>
   <main>
     <p class="lead">TGV links Paris to Barcelona in around 6h 30m, with comfortable services running through the France-Spain countryside.</p>
-    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <div id="routeMap" style="height:340px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);margin:0 0 32px;overflow:hidden;background:#1a1824;"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      (function () {
+        var from = [48.8566, 2.3522];   // Paris
+        var to   = [41.3874, 2.1686];   // Barcelona
+        var map = L.map('routeMap', { zoomControl: false, attributionControl: false, scrollWheelZoom: false, dragging: false });
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+          subdomains: 'abcd', maxZoom: 19
+        }).addTo(map);
+        var line = L.polyline([from, to], { color: '#a78bfa', weight: 3, opacity: 0.9 }).addTo(map);
+        var dot = function (latlng, label) {
+          L.circleMarker(latlng, { radius: 7, color: '#fff', weight: 2, fillColor: '#7c3aed', fillOpacity: 1 })
+            .addTo(map)
+            .bindTooltip(label, { permanent: true, direction: 'top', offset: [0, -8], className: 'route-map-label' });
+        };
+        dot(from, 'Paris');
+        dot(to, 'Barcelona');
+        map.fitBounds(line.getBounds(), { padding: [36, 36] });
+      })();
+    </script>
+    <style>
+      .leaflet-tooltip.route-map-label { background: rgba(10,10,15,0.85); color: #fff; border: none; font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 100px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+      .leaflet-tooltip.route-map-label::before { display: none; }
+    </style>
+
     <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=paris&to=barcelona" class="klook-cta" target="_blank" rel="noopener sponsored"
        onclick="gtag('event','klook_click',{source:'cta_block',route:'paris-barcelona'});">
       <img class="klook-cta-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" loading="lazy">
