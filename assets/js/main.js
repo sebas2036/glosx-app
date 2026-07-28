@@ -1172,6 +1172,7 @@
     const lang = document.documentElement.lang || 'en';
     const safeLang = route.title[lang] ? lang : 'en';
     wrapEl.hidden = false;
+    wrapEl.setAttribute('data-route', key);
     titleEl.textContent = route.title[safeLang];
     metaEl.textContent  = route.meta[safeLang];
     timeline.innerHTML = "";
