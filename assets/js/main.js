@@ -665,7 +665,7 @@
       document.getElementById('navToggle').setAttribute('aria-expanded', open ? 'true' : 'false');
     }
     // Cerrar el menú al tocar un enlace de navegación
-    document.querySelectorAll('#navLinks a').forEach(a => {
+    document.querySelectorAll('#navLinks a:not(.nav-partners-btn)').forEach(a => {
       a.addEventListener('click', () => {
         document.getElementById('navLinks').classList.remove('show');
         document.getElementById('navToggle').setAttribute('aria-expanded', 'false');
