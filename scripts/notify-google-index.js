@@ -39,6 +39,7 @@ function httpsPostJson(url, bodyObj, headers) {
       hostname: u.hostname,
       path: u.pathname + u.search,
       method: 'POST',
+      family: 4,
       headers: Object.assign({ 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(data) }, headers || {}),
     }, (res) => {
       let chunks = '';
@@ -82,6 +83,7 @@ async function getAccessToken(key) {
       hostname: u.hostname,
       path: u.pathname,
       method: 'POST',
+      family: 4,
       headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': Buffer.byteLength(params) },
     }, (r) => {
       let chunks = '';
