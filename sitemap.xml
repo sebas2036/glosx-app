@@ -357,6 +357,34 @@
     <priority>0.8</priority>
   </url>
 <url>
+    <loc>https://glosx.app/blog-train-europe-survival-guide.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-train-europe-survival-guide.html" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-train-europe-survival-guide.html" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-train-europe-survival-guide.html" />
+    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="it" href="https://glosx.app/it/blog-train-europe-survival-guide.html" />
+  </url>
+<url>
+    <loc>https://glosx.app/es/blog-train-europe-survival-guide.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://glosx.app/fr/blog-train-europe-survival-guide.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>https://glosx.app/it/blog-train-europe-survival-guide.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
     <loc>https://glosx.app/blog-ai-train-trip-planner-europe.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
