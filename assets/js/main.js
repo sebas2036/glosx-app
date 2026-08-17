@@ -798,7 +798,7 @@
       'Belgium': ['Bruges', 'Brussels'],
       'Czech Republic': ['Brno', 'Prague'],
       'Denmark': ['Copenhagen'],
-      'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Marseille', 'Miramas', 'Nice', 'Paris', 'Tende', 'Toulouse'],
+      'France': ['Bordeaux', 'Lourdes', 'Lyon', 'Marseille', 'Miramas', 'Nice', 'Paris', 'Strasbourg', 'Tende', 'Toulouse'],
       'Germany': ['Berlin', 'Cologne', 'Dortmund', 'Frankfurt', 'Hamburg', 'Mainz', 'Munich'],
       'Hungary': ['Budapest'],
       'Slovenia': ['Ljubljana'],
@@ -807,7 +807,7 @@
       'Netherlands': ['Amsterdam'],
       'Spain': ['Barcelona', 'Figueres', 'Girona', 'Madrid', 'Malaga', 'Seville', 'Valencia', 'Zaragoza'],
       'Sweden': ['Stockholm'],
-      'Switzerland': ['Basel', 'Bern', 'Geneva', 'Interlaken', 'Jungfraujoch', 'Lauterbrunnen', 'Lucerne', 'Montreux', 'Sargans', 'Spiez', 'Zermatt', 'Zurich', 'Zweisimmen'],
+      'Switzerland': ['Basel', 'Bern', 'Geneva', 'Interlaken', 'Jungfraujoch', 'Lauterbrunnen', 'Lucerne', 'Montreux', 'Sargans', 'Spiez', 'St. Moritz', 'Zermatt', 'Zurich', 'Zweisimmen'],
       'United Kingdom': ['Cambridge', 'Edinburgh', 'Liverpool', 'London', 'Manchester', 'Oxford', 'York'],
     };
     (function () {
