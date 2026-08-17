@@ -187,7 +187,7 @@
     <div class="explore-hero-content">
       <span class="badge" data-i18n="exp_badge">Routes</span>
       <h1><span data-i18n="exp_title1">The free guide to</span><br/><span data-i18n="exp_title2">Europe's best train routes.</span></h1>
-      <p class="lead" data-i18n="exp_lead">40 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.</p>
+      <p class="lead" data-i18n="exp_lead">76 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.</p>
     </div>
   </div>
 
@@ -300,6 +300,19 @@
       <li><a href="/rutas/zaragoza-barcelona/">Zaragoza → Barcelona</a> <a class="ri-es" href="/rutas/zaragoza-barcelona/es/" hreflang="es" lang="es">ES</a></li>
       <li><a href="/rutas/zurich-lucerne/">Zurich → Lucerne</a> <a class="ri-es" href="/rutas/zurich-lucerne/es/" hreflang="es" lang="es">ES</a></li>
       <li><a href="/rutas/zurich-milan/">Zurich → Milan</a> <a class="ri-es" href="/rutas/zurich-milan/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/strasbourg-paris/">Strasbourg → Paris</a> <a class="ri-es" href="/rutas/strasbourg-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/munich-paris/">Munich → Paris</a> <a class="ri-es" href="/rutas/munich-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/cologne-brussels/">Cologne → Brussels</a> <a class="ri-es" href="/rutas/cologne-brussels/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/copenhagen-prague/">Copenhagen → Prague</a> <a class="ri-es" href="/rutas/copenhagen-prague/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/amsterdam-bruges/">Amsterdam → Bruges</a> <a class="ri-es" href="/rutas/amsterdam-bruges/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/interlaken-lucerne/">Interlaken → Lucerne</a> <a class="ri-es" href="/rutas/interlaken-lucerne/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/lucerne-zermatt/">Lucerne → Zermatt</a> <a class="ri-es" href="/rutas/lucerne-zermatt/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/innsbruck-vienna/">Innsbruck → Vienna</a> <a class="ri-es" href="/rutas/innsbruck-vienna/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/graz-vienna/">Graz → Vienna</a> <a class="ri-es" href="/rutas/graz-vienna/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/munich-salzburg/">Munich → Salzburg</a> <a class="ri-es" href="/rutas/munich-salzburg/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/bern-paris/">Bern → Paris</a> <a class="ri-es" href="/rutas/bern-paris/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/stmoritz-zermatt/">St. Moritz → Zermatt</a> <a class="ri-es" href="/rutas/stmoritz-zermatt/es/" hreflang="es" lang="es">ES</a></li>
+      <li><a href="/rutas/tende-nice/">Tende → Nice</a> <a class="ri-es" href="/rutas/tende-nice/es/" hreflang="es" lang="es">ES</a></li>
     </ul>
   </section>
 
@@ -374,6 +387,19 @@
       'basel-paris': '/rutas/basel-paris/',
       'london-brussels': '/rutas/london-brussels/',
       'dortmund-munich': '/rutas/dortmund-munich/',
+      'strasbourg-paris': '/rutas/strasbourg-paris/',
+      'munich-paris': '/rutas/munich-paris/',
+      'cologne-brussels': '/rutas/cologne-brussels/',
+      'copenhagen-prague': '/rutas/copenhagen-prague/',
+      'amsterdam-bruges': '/rutas/amsterdam-bruges/',
+      'interlaken-lucerne': '/rutas/interlaken-lucerne/',
+      'lucerne-zermatt': '/rutas/lucerne-zermatt/',
+      'innsbruck-vienna': '/rutas/innsbruck-vienna/',
+      'graz-vienna': '/rutas/graz-vienna/',
+      'munich-salzburg': '/rutas/munich-salzburg/',
+      'bern-paris': '/rutas/bern-paris/',
+      'stmoritz-zermatt': '/rutas/stmoritz-zermatt/',
+      'tende-nice': '/rutas/tende-nice/',
     };
     var ROUTES = [
       ['Paris → Barcelona','France → Spain','paris-barcelona'],
@@ -439,6 +465,19 @@
       ['Basel → Paris','Switzerland → France','basel-paris'],
       ['London → Brussels','UK → Belgium','london-brussels'],
       ['Dortmund → Munich','Germany','dortmund-munich'],
+      ['Strasbourg → Paris','France','strasbourg-paris'],
+      ['Munich → Paris','Germany → France','munich-paris'],
+      ['Cologne → Brussels','Germany → Belgium','cologne-brussels'],
+      ['Copenhagen → Prague','Denmark → Czechia','copenhagen-prague'],
+      ['Amsterdam → Bruges','Netherlands → Belgium','amsterdam-bruges'],
+      ['Interlaken → Lucerne','Switzerland','interlaken-lucerne'],
+      ['Lucerne → Zermatt','Switzerland','lucerne-zermatt'],
+      ['Innsbruck → Vienna','Austria','innsbruck-vienna'],
+      ['Graz → Vienna','Austria','graz-vienna'],
+      ['Munich → Salzburg','Germany → Austria','munich-salzburg'],
+      ['Bern → Paris','Switzerland → France','bern-paris'],
+      ['St. Moritz → Zermatt','Switzerland','stmoritz-zermatt'],
+      ['Tende → Nice','France → Italy','tende-nice'],
     ];
 
     var selected = new Set();
@@ -518,12 +557,12 @@
   <script>
   (function(){
     var T = {
-      en:{exp_badge:'Routes',exp_title1:'The free guide to',exp_title2:"Europe's best train routes.",exp_lead:"40 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.",exp_sub:'Tap the routes you like, then grab your guide below.',exp_quick_cta:'Just want all 40 guides? Get them now →',exp_wa_cta:'Send me the guides on WhatsApp',exp_trust:'Free guides, no spam.',exp_count:'routes selected',exp_all:'All',exp_guide_ready:'Guide ready →',exp_guide_soon:'Guide on the way',exp_home:'← Home'},
-      es:{exp_badge:'Rutas',exp_title1:'La guía gratis de',exp_title2:'las mejores rutas en tren de Europa.',exp_lead:'40 rutas reales — precios, estaciones, paisajes y cuándo reservar. Elegí las que querés y las guías completas llegan directo a tu casilla.',exp_sub:'Tocá las rutas que te gusten y conseguí tu guía abajo.',exp_quick_cta:'¿Querés las 40 guías? Conseguilas ahora →',exp_wa_cta:'Enviarme las guías por WhatsApp',exp_trust:'Guías gratis, sin spam.',exp_count:'rutas seleccionadas',exp_all:'Todas',exp_guide_ready:'Guía lista →',exp_guide_soon:'Guía en camino',exp_home:'← Inicio'},
-      fr:{exp_badge:'Itinéraires',exp_title1:'Le guide gratuit des',exp_title2:"meilleurs itinéraires en train d'Europe.",exp_lead:"40 itinéraires réels — prix, gares, paysages et quand réserver. Choisissez ceux que vous voulez et les guides complets arrivent directement dans votre boîte.",exp_sub:'Touchez les itinéraires qui vous plaisent, puis récupérez votre guide ci-dessous.',exp_quick_cta:'Vous voulez les 40 guides ? Obtenez-les maintenant →',exp_wa_cta:'Envoyer les guides sur WhatsApp',exp_trust:'Guides gratuits, sans spam.',exp_count:'itinéraires sélectionnés',exp_all:'Tous',exp_guide_ready:'Guide prêt →',exp_guide_soon:'Guide à venir',exp_home:'← Accueil'},
-      de:{exp_badge:'Routen',exp_title1:'Der kostenlose Guide zu',exp_title2:'Europas besten Zugrouten.',exp_lead:'40 echte Routen — Preise, Bahnhöfe, Landschaft und wann man bucht. Wähle deine Favoriten und die kompletten Guides landen direkt in deinem Postfach.',exp_sub:'Tippe auf die Routen, die dir gefallen, und hol dir deinen Guide unten.',exp_quick_cta:'Willst du alle 40 Guides? Jetzt holen →',exp_wa_cta:'Guides per WhatsApp senden',exp_trust:'Kostenlose Guides, kein Spam.',exp_count:'Routen ausgewählt',exp_all:'Alle',exp_guide_ready:'Guide bereit →',exp_guide_soon:'Guide folgt',exp_home:'← Startseite'},
-      it:{exp_badge:'Itinerari',exp_title1:'La guida gratuita ai',exp_title2:"migliori itinerari in treno d'Europa.",exp_lead:"40 itinerari reali — prezzi, stazioni, paesaggi e quando prenotare. Scegli quelli che vuoi e le guide complete arrivano direttamente nella tua casella.",exp_sub:'Tocca gli itinerari che ti piacciono, poi prendi la tua guida qui sotto.',exp_quick_cta:'Vuoi tutte le 40 guide? Prendile ora →',exp_wa_cta:'Inviami le guide su WhatsApp',exp_trust:'Guide gratuite, niente spam.',exp_count:'itinerari selezionati',exp_all:'Tutti',exp_guide_ready:'Guida pronta →',exp_guide_soon:'Guida in arrivo',exp_home:'← Home'},
-      pt:{exp_badge:'Rotas',exp_title1:'O guia grátis das',exp_title2:'melhores rotas de trem da Europa.',exp_lead:'40 rotas reais — preços, estações, paisagens e quando reservar. Escolha as que você quer e os guias completos chegam direto na sua caixa.',exp_sub:'Toque nas rotas que você gosta e pegue seu guia abaixo.',exp_quick_cta:'Quer os 40 guias? Pegue agora →',exp_wa_cta:'Enviar as guias pelo WhatsApp',exp_trust:'Guias grátis, sem spam.',exp_count:'rotas selecionadas',exp_all:'Todas',exp_guide_ready:'Guia pronto →',exp_guide_soon:'Guia a caminho',exp_home:'← Início'}
+      en:{exp_badge:'Routes',exp_title1:'The free guide to',exp_title2:"Europe's best train routes.",exp_lead:"76 real routes — prices, stations, scenery and when to book. Pick the ones you want and the full guides land straight in your inbox.",exp_sub:'Tap the routes you like, then grab your guide below.',exp_quick_cta:'Just want all 76 guides? Get them now →',exp_wa_cta:'Send me the guides on WhatsApp',exp_trust:'Free guides, no spam.',exp_count:'routes selected',exp_all:'All',exp_guide_ready:'Guide ready →',exp_guide_soon:'Guide on the way',exp_home:'← Home'},
+      es:{exp_badge:'Rutas',exp_title1:'La guía gratis de',exp_title2:'las mejores rutas en tren de Europa.',exp_lead:'76 rutas reales — precios, estaciones, paisajes y cuándo reservar. Elegí las que querés y las guías completas llegan directo a tu casilla.',exp_sub:'Tocá las rutas que te gusten y conseguí tu guía abajo.',exp_quick_cta:'¿Querés las 76 guías? Conseguilas ahora →',exp_wa_cta:'Enviarme las guías por WhatsApp',exp_trust:'Guías gratis, sin spam.',exp_count:'rutas seleccionadas',exp_all:'Todas',exp_guide_ready:'Guía lista →',exp_guide_soon:'Guía en camino',exp_home:'← Inicio'},
+      fr:{exp_badge:'Itinéraires',exp_title1:'Le guide gratuit des',exp_title2:"meilleurs itinéraires en train d'Europe.",exp_lead:"76 itinéraires réels — prix, gares, paysages et quand réserver. Choisissez ceux que vous voulez et les guides complets arrivent directement dans votre boîte.",exp_sub:'Touchez les itinéraires qui vous plaisent, puis récupérez votre guide ci-dessous.',exp_quick_cta:'Vous voulez les 76 guides ? Obtenez-les maintenant →',exp_wa_cta:'Envoyer les guides sur WhatsApp',exp_trust:'Guides gratuits, sans spam.',exp_count:'itinéraires sélectionnés',exp_all:'Tous',exp_guide_ready:'Guide prêt →',exp_guide_soon:'Guide à venir',exp_home:'← Accueil'},
+      de:{exp_badge:'Routen',exp_title1:'Der kostenlose Guide zu',exp_title2:'Europas besten Zugrouten.',exp_lead:'76 echte Routen — Preise, Bahnhöfe, Landschaft und wann man bucht. Wähle deine Favoriten und die kompletten Guides landen direkt in deinem Postfach.',exp_sub:'Tippe auf die Routen, die dir gefallen, und hol dir deinen Guide unten.',exp_quick_cta:'Willst du alle 76 Guides? Jetzt holen →',exp_wa_cta:'Guides per WhatsApp senden',exp_trust:'Kostenlose Guides, kein Spam.',exp_count:'Routen ausgewählt',exp_all:'Alle',exp_guide_ready:'Guide bereit →',exp_guide_soon:'Guide folgt',exp_home:'← Startseite'},
+      it:{exp_badge:'Itinerari',exp_title1:'La guida gratuita ai',exp_title2:"migliori itinerari in treno d'Europa.",exp_lead:"76 itinerari reali — prezzi, stazioni, paesaggi e quando prenotare. Scegli quelli che vuoi e le guide complete arrivano direttamente nella tua casella.",exp_sub:'Tocca gli itinerari che ti piacciono, poi prendi la tua guida qui sotto.',exp_quick_cta:'Vuoi tutte le 76 guide? Prendile ora →',exp_wa_cta:'Inviami le guide su WhatsApp',exp_trust:'Guide gratuite, niente spam.',exp_count:'itinerari selezionati',exp_all:'Tutti',exp_guide_ready:'Guida pronta →',exp_guide_soon:'Guida in arrivo',exp_home:'← Home'},
+      pt:{exp_badge:'Rotas',exp_title1:'O guia grátis das',exp_title2:'melhores rotas de trem da Europa.',exp_lead:'76 rotas reais — preços, estações, paisagens e quando reservar. Escolha as que você quer e os guias completos chegam direto na sua caixa.',exp_sub:'Toque nas rotas que você gosta e pegue seu guia abaixo.',exp_quick_cta:'Quer os 76 guias? Pegue agora →',exp_wa_cta:'Enviar as guias pelo WhatsApp',exp_trust:'Guias grátis, sem spam.',exp_count:'rotas selecionadas',exp_all:'Todas',exp_guide_ready:'Guia pronto →',exp_guide_soon:'Guia a caminho',exp_home:'← Início'}
     };
     function detect(){
       try { if(localStorage.getItem('glosx_lang_manual')==='1'){ var s=localStorage.getItem('glosx_lang'); if(s&&T[s]) return s; } } catch(e){}
