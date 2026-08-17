@@ -2054,6 +2054,20 @@
   // para que nunca quede un numero viejo congelado en el sitio). Clave = ciudad en minuscula,
   // sin acentos ni sufijo de estacion (ej. "interlaken" matchea "Interlaken Ost").
   const CURATED_HOTELS = {
+    strasbourg: {
+      name: 'Hotel Arok',
+      loc: 'Strasbourg, France',
+      stars: 3,
+      photo: 'https://res.klook.com/klook-hotel/image/upload/fl_lossy.progressive,w_1200,h_630,c_fill,q_85/travelapi/26000000/25790000/25787600/25787598/b1df0245_z.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=strasbourg`,
+    },
+    stmoritz: {
+      name: 'Hotel Laudinella',
+      loc: 'St. Moritz, Switzerland',
+      stars: 4,
+      photo: 'https://i.travelapi.com/lodging/1000000/70000/69000/68976/62abfb11_z.jpg',
+      url: `${PROXY_BASE}/klook-hotel?city=stmoritz`,
+    },
     ljubljana: {
       name: 'Grand Hotel Union',
       loc: 'Ljubljana, Slovenia',
