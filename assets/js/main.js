@@ -600,12 +600,11 @@
     function applyLang(lang) {
       const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
       document.documentElement.lang = lang;
-      // Canonical self-referencing por idioma, alineado con los hreflang de arriba
-      // (antes quedaba fijo en "/" para todas las variantes, contradiciendo el hreflang)
-      const canonicalLink = document.getElementById('canonicalLink');
-      if (canonicalLink) {
-        canonicalLink.href = lang === 'en' ? 'https://glosx.app/' : `https://glosx.app/?lang=${lang}`;
-      }
+      // El canonical NO se toca acá: ya viene correcto desde el servidor
+      // (/, /es/, /fr/, /it/ cada uno con el suyo). Reescribirlo con JS a
+      // "?lang=X" generaba URLs fantasma que Search Console marcaba como
+      // error de redireccion, y pisaba el canonical real en las paginas
+      // /es/ /fr/ /it/ server-rendered.
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (dict[key] !== undefined) el.textContent = dict[key];
