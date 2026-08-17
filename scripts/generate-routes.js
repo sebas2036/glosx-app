@@ -89,7 +89,22 @@ const routes = [
   { slug: 'vienna-salzburg', from: 'Vienna', to: 'Salzburg', country: 'Austria', duration: '2h 30m', operator: 'Railjet', price: '€20-35', badge: 'Route guide · Austria' },
   { slug: 'zaragoza-barcelona', from: 'Zaragoza', to: 'Barcelona', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain' },
   { slug: 'zurich-lucerne', from: 'Zurich', to: 'Lucerne', country: 'Switzerland', duration: '0h 50m', operator: 'SBB', price: '€15-25', badge: 'Route guide · Switzerland' },
-  { slug: 'zurich-milan', from: 'Zurich', to: 'Milan', country: 'Switzerland-Italy', duration: '3h 30m', operator: 'SBB', price: '€35-55', badge: 'Route guide · Switzerland-Italy' }
+  { slug: 'zurich-milan', from: 'Zurich', to: 'Milan', country: 'Switzerland-Italy', duration: '3h 30m', operator: 'SBB', price: '€35-55', badge: 'Route guide · Switzerland-Italy' },
+  // Tanda nueva (17-ago-2026): pares con position_id de Klook ya verificado
+  // (KLOOK_POSITION_PAIRS en backend/affiliate.ts) pero sin página /rutas/ todavía.
+  { slug: 'strasbourg-paris', from: 'Strasbourg', to: 'Paris', country: 'France', duration: '1h 50m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France' },
+  { slug: 'munich-paris', from: 'Munich', to: 'Paris', country: 'Germany-France', duration: '6h 00m', operator: 'TGV/ICE', price: '€60-90', badge: 'Route guide · Germany-France' },
+  { slug: 'cologne-brussels', from: 'Cologne', to: 'Brussels', country: 'Germany-Belgium', duration: '1h 50m', operator: 'ICE/Thalys', price: '€30-50', badge: 'Route guide · Germany-Belgium' },
+  { slug: 'copenhagen-prague', from: 'Copenhagen', to: 'Prague', country: 'Denmark-Czech', duration: '~12h 00m', operator: 'EuroCity/ICE', price: '€60-100', badge: 'Route guide · Denmark-Czech' },
+  { slug: 'amsterdam-bruges', from: 'Amsterdam', to: 'Bruges', country: 'Netherlands-Belgium', duration: '3h 00m', operator: 'NS/SNCB', price: '€30-45', badge: 'Route guide · Netherlands-Belgium' },
+  { slug: 'interlaken-lucerne', from: 'Interlaken', to: 'Lucerne', country: 'Switzerland', duration: '1h 50m', operator: 'SBB', price: '€25-35', badge: 'Route guide · Switzerland' },
+  { slug: 'lucerne-zermatt', from: 'Lucerne', to: 'Zermatt', country: 'Switzerland', duration: '3h 30m', operator: 'SBB/BVZ', price: '€60-80', badge: 'Route guide · Switzerland' },
+  { slug: 'innsbruck-vienna', from: 'Innsbruck', to: 'Vienna', country: 'Austria', duration: '4h 30m', operator: 'Railjet', price: '€40-60', badge: 'Route guide · Austria' },
+  { slug: 'graz-vienna', from: 'Graz', to: 'Vienna', country: 'Austria', duration: '2h 40m', operator: 'Railjet', price: '€20-35', badge: 'Route guide · Austria' },
+  { slug: 'munich-salzburg', from: 'Munich', to: 'Salzburg', country: 'Germany-Austria', duration: '1h 30m', operator: 'DB/ÖBB', price: '€20-35', badge: 'Route guide · Germany-Austria' },
+  { slug: 'bern-paris', from: 'Bern', to: 'Paris', country: 'Switzerland-France', duration: '4h 30m', operator: 'TGV Lyria', price: '€50-75', badge: 'Route guide · Switzerland-France' },
+  { slug: 'stmoritz-zermatt', from: 'St. Moritz', to: 'Zermatt', country: 'Switzerland', duration: '8h 00m', operator: 'Glacier Express', price: '€150-180', badge: 'Route guide · Switzerland' },
+  { slug: 'tende-nice', from: 'Tende', to: 'Nice', country: 'France-Italy', duration: '2h 00m', operator: 'SNCF TER', price: '€10-20', badge: 'Route guide · France-Italy' }
 ];
 
 // Hoteles reales curados por ciudad de destino (mismos criterios que CURATED_HOTELS
@@ -482,7 +497,7 @@ function generateTrainSegments(route, lang) {
         <div class="train-segment-detail"><strong>Operator:</strong> ${seg.operator}</div>
         <div class="train-segment-detail"><strong>Station:</strong> ${seg.station}</div>
       </div>
-      <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${seg.from.toLowerCase()}&to=${seg.to.toLowerCase()}" 
+      <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${encodeURIComponent(seg.from.toLowerCase())}&to=${encodeURIComponent(seg.to.toLowerCase())}"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_${route.slug}_${lang}')">
         ${langContent.bookTicketBtn}
@@ -667,7 +682,7 @@ function replaceTemplate(template, route, lang) {
     '{{klookTitle}}': fillTokens(langContent.klookTitle, route, lang),
     '{{klookSubtitle}}': fillTokens(langContent.klookSubtitle, route, lang),
     '{{klookBtnLabel}}': langContent.klookBtnLabel,
-    '{{klookTrainUrl}}': `https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${route.from.toLowerCase()}&to=${route.to.toLowerCase()}`,
+    '{{klookTrainUrl}}': `https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}`,
     '{{trainSegments}}': generateTrainSegments(route, lang),
     '{{hotelSectionTitle}}': langContent.hotelSectionTitle,
     '{{hotelCards}}': generateHotelCards(route, lang),
