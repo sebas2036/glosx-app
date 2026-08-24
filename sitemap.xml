@@ -103,12 +103,6 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://glosx.app/rutas/</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<url>
     <loc>https://glosx.app/blog-flying-vs-train-europe.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -648,7 +642,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-berlin/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-berlin/" />
@@ -659,7 +653,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-berlin/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-berlin/" />
@@ -670,7 +664,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-berlin/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-berlin/" />
@@ -681,7 +675,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-berlin/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-berlin/" />
@@ -692,7 +686,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-bruges/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-bruges/" />
@@ -703,7 +697,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-bruges/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-bruges/" />
@@ -714,7 +708,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-bruges/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-bruges/" />
@@ -725,7 +719,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-bruges/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-bruges/" />
@@ -736,7 +730,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-brussels/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-brussels/" />
@@ -747,7 +741,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-brussels/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-brussels/" />
@@ -758,7 +752,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-brussels/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-brussels/" />
@@ -769,7 +763,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-brussels/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/amsterdam-brussels/" />
@@ -780,7 +774,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-girona/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-girona/" />
@@ -791,7 +785,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-girona/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-girona/" />
@@ -802,7 +796,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-girona/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-girona/" />
@@ -813,7 +807,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-girona/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-girona/" />
@@ -824,7 +818,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-lyon/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-lyon/" />
@@ -835,7 +829,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-lyon/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-lyon/" />
@@ -846,7 +840,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-lyon/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-lyon/" />
@@ -857,7 +851,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-lyon/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-lyon/" />
@@ -868,7 +862,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-valencia/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-valencia/" />
@@ -879,7 +873,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-valencia/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-valencia/" />
@@ -890,7 +884,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-valencia/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-valencia/" />
@@ -901,7 +895,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/barcelona-valencia/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/barcelona-valencia/" />
@@ -912,7 +906,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-lauterbrunnen/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-lauterbrunnen/" />
@@ -923,7 +917,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-lauterbrunnen/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-lauterbrunnen/" />
@@ -934,7 +928,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-lauterbrunnen/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-lauterbrunnen/" />
@@ -945,7 +939,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-lauterbrunnen/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-lauterbrunnen/" />
@@ -956,7 +950,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-paris/" />
@@ -967,7 +961,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-paris/" />
@@ -978,7 +972,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-paris/" />
@@ -989,7 +983,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/basel-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/basel-paris/" />
@@ -1000,7 +994,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-hamburg/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-hamburg/" />
@@ -1011,7 +1005,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-hamburg/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-hamburg/" />
@@ -1022,7 +1016,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-hamburg/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-hamburg/" />
@@ -1033,7 +1027,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-hamburg/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-hamburg/" />
@@ -1044,7 +1038,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-prague/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-prague/" />
@@ -1055,7 +1049,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-prague/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-prague/" />
@@ -1066,7 +1060,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-prague/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-prague/" />
@@ -1077,7 +1071,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/berlin-prague/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/berlin-prague/" />
@@ -1088,7 +1082,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bern-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bern-paris/" />
@@ -1099,7 +1093,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bern-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bern-paris/" />
@@ -1110,7 +1104,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bern-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bern-paris/" />
@@ -1121,7 +1115,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bern-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bern-paris/" />
@@ -1132,7 +1126,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bordeaux-lourdes/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bordeaux-lourdes/" />
@@ -1143,7 +1137,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bordeaux-lourdes/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bordeaux-lourdes/" />
@@ -1154,7 +1148,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bordeaux-lourdes/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bordeaux-lourdes/" />
@@ -1165,7 +1159,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/bordeaux-lourdes/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/bordeaux-lourdes/" />
@@ -1176,7 +1170,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brno-vienna/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brno-vienna/" />
@@ -1187,7 +1181,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brno-vienna/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brno-vienna/" />
@@ -1198,7 +1192,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brno-vienna/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brno-vienna/" />
@@ -1209,7 +1203,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brno-vienna/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brno-vienna/" />
@@ -1220,7 +1214,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-bruges/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-bruges/" />
@@ -1231,7 +1225,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-bruges/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-bruges/" />
@@ -1242,7 +1236,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-bruges/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-bruges/" />
@@ -1253,7 +1247,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-bruges/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-bruges/" />
@@ -1264,7 +1258,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-paris/" />
@@ -1275,7 +1269,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-paris/" />
@@ -1286,7 +1280,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-paris/" />
@@ -1297,7 +1291,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/brussels-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/brussels-paris/" />
@@ -1308,7 +1302,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/budapest-ljubljana/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/budapest-ljubljana/" />
@@ -1319,7 +1313,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/budapest-ljubljana/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/budapest-ljubljana/" />
@@ -1330,7 +1324,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/budapest-ljubljana/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/budapest-ljubljana/" />
@@ -1341,7 +1335,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/budapest-ljubljana/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/budapest-ljubljana/" />
@@ -1352,7 +1346,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/cologne-brussels/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/cologne-brussels/" />
@@ -1363,7 +1357,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/cologne-brussels/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/cologne-brussels/" />
@@ -1374,7 +1368,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/cologne-brussels/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/cologne-brussels/" />
@@ -1385,7 +1379,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/cologne-brussels/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/cologne-brussels/" />
@@ -1396,7 +1390,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-prague/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-prague/" />
@@ -1407,7 +1401,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-prague/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-prague/" />
@@ -1418,7 +1412,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-prague/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-prague/" />
@@ -1429,7 +1423,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-prague/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-prague/" />
@@ -1440,7 +1434,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-stockholm/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-stockholm/" />
@@ -1451,7 +1445,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-stockholm/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-stockholm/" />
@@ -1462,7 +1456,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-stockholm/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-stockholm/" />
@@ -1473,7 +1467,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/copenhagen-stockholm/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/copenhagen-stockholm/" />
@@ -1484,7 +1478,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/dortmund-munich/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/dortmund-munich/" />
@@ -1495,7 +1489,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/dortmund-munich/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/dortmund-munich/" />
@@ -1506,7 +1500,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/dortmund-munich/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/dortmund-munich/" />
@@ -1517,7 +1511,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/dortmund-munich/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/dortmund-munich/" />
@@ -1528,7 +1522,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-pisa/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-pisa/" />
@@ -1539,7 +1533,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-pisa/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-pisa/" />
@@ -1550,7 +1544,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-pisa/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-pisa/" />
@@ -1561,7 +1555,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-pisa/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-pisa/" />
@@ -1572,7 +1566,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-siena/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-siena/" />
@@ -1583,7 +1577,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-siena/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-siena/" />
@@ -1594,7 +1588,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-siena/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-siena/" />
@@ -1605,7 +1599,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-siena/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-siena/" />
@@ -1616,7 +1610,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-venice/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-venice/" />
@@ -1627,7 +1621,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-venice/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-venice/" />
@@ -1638,7 +1632,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-venice/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-venice/" />
@@ -1649,7 +1643,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/florence-venice/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/florence-venice/" />
@@ -1659,8 +1653,52 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/florence-venice/" />
   </url>
   <url>
+    <loc>https://glosx.app/rutas/frankfurt-berlin/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-berlin/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/frankfurt-berlin/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/frankfurt-berlin/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/frankfurt-berlin/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/frankfurt-berlin/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/frankfurt-berlin/es/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-berlin/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/frankfurt-berlin/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/frankfurt-berlin/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/frankfurt-berlin/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/frankfurt-berlin/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/frankfurt-berlin/fr/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-berlin/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/frankfurt-berlin/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/frankfurt-berlin/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/frankfurt-berlin/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/frankfurt-berlin/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/frankfurt-berlin/it/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-berlin/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/frankfurt-berlin/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/frankfurt-berlin/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/frankfurt-berlin/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/frankfurt-berlin/" />
+  </url>
+  <url>
     <loc>https://glosx.app/rutas/frankfurt-cologne/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-cologne/" />
@@ -1671,7 +1709,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-cologne/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-cologne/" />
@@ -1682,7 +1720,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-cologne/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-cologne/" />
@@ -1693,7 +1731,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-cologne/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-cologne/" />
@@ -1704,7 +1742,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-munich/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-munich/" />
@@ -1715,7 +1753,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-munich/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-munich/" />
@@ -1726,7 +1764,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-munich/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-munich/" />
@@ -1737,7 +1775,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-munich/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-munich/" />
@@ -1748,7 +1786,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-paris/" />
@@ -1759,7 +1797,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-paris/" />
@@ -1770,7 +1808,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-paris/" />
@@ -1781,7 +1819,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/frankfurt-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/frankfurt-paris/" />
@@ -1792,7 +1830,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-paris/" />
@@ -1803,7 +1841,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-paris/" />
@@ -1814,7 +1852,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-paris/" />
@@ -1825,7 +1863,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-paris/" />
@@ -1836,7 +1874,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-zermatt/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-zermatt/" />
@@ -1847,7 +1885,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-zermatt/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-zermatt/" />
@@ -1858,7 +1896,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-zermatt/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-zermatt/" />
@@ -1869,7 +1907,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/geneva-zermatt/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/geneva-zermatt/" />
@@ -1880,7 +1918,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/girona-figueres/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/girona-figueres/" />
@@ -1891,7 +1929,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/girona-figueres/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/girona-figueres/" />
@@ -1902,7 +1940,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/girona-figueres/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/girona-figueres/" />
@@ -1913,7 +1951,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/girona-figueres/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/girona-figueres/" />
@@ -1924,7 +1962,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/graz-vienna/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/graz-vienna/" />
@@ -1935,7 +1973,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/graz-vienna/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/graz-vienna/" />
@@ -1946,7 +1984,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/graz-vienna/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/graz-vienna/" />
@@ -1957,7 +1995,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/graz-vienna/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/graz-vienna/" />
@@ -1968,7 +2006,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/innsbruck-vienna/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/innsbruck-vienna/" />
@@ -1979,7 +2017,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/innsbruck-vienna/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/innsbruck-vienna/" />
@@ -1990,7 +2028,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/innsbruck-vienna/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/innsbruck-vienna/" />
@@ -2001,7 +2039,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/innsbruck-vienna/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/innsbruck-vienna/" />
@@ -2012,7 +2050,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lauterbrunnen/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lauterbrunnen/" />
@@ -2023,7 +2061,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lauterbrunnen/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lauterbrunnen/" />
@@ -2034,7 +2072,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lauterbrunnen/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lauterbrunnen/" />
@@ -2045,7 +2083,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lauterbrunnen/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lauterbrunnen/" />
@@ -2056,7 +2094,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lucerne/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lucerne/" />
@@ -2067,7 +2105,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lucerne/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lucerne/" />
@@ -2078,7 +2116,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lucerne/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lucerne/" />
@@ -2089,7 +2127,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/interlaken-lucerne/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/interlaken-lucerne/" />
@@ -2100,7 +2138,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lisbon-porto/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-porto/" />
@@ -2111,7 +2149,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lisbon-porto/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-porto/" />
@@ -2122,7 +2160,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lisbon-porto/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-porto/" />
@@ -2133,7 +2171,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lisbon-porto/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-porto/" />
@@ -2144,7 +2182,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-amsterdam/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-amsterdam/" />
@@ -2155,7 +2193,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-amsterdam/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-amsterdam/" />
@@ -2166,7 +2204,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-amsterdam/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-amsterdam/" />
@@ -2177,7 +2215,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-amsterdam/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-amsterdam/" />
@@ -2188,7 +2226,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-brussels/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-brussels/" />
@@ -2199,7 +2237,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-brussels/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-brussels/" />
@@ -2210,7 +2248,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-brussels/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-brussels/" />
@@ -2221,7 +2259,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-brussels/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-brussels/" />
@@ -2232,7 +2270,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-cambridge/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-cambridge/" />
@@ -2243,7 +2281,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-cambridge/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-cambridge/" />
@@ -2254,7 +2292,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-cambridge/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-cambridge/" />
@@ -2265,7 +2303,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-cambridge/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-cambridge/" />
@@ -2276,7 +2314,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-edinburgh/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-edinburgh/" />
@@ -2287,7 +2325,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-edinburgh/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-edinburgh/" />
@@ -2298,7 +2336,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-edinburgh/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-edinburgh/" />
@@ -2309,7 +2347,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-edinburgh/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-edinburgh/" />
@@ -2320,7 +2358,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-liverpool/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-liverpool/" />
@@ -2331,7 +2369,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-liverpool/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-liverpool/" />
@@ -2342,7 +2380,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-liverpool/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-liverpool/" />
@@ -2353,7 +2391,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-liverpool/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-liverpool/" />
@@ -2364,7 +2402,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-manchester/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-manchester/" />
@@ -2375,7 +2413,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-manchester/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-manchester/" />
@@ -2386,7 +2424,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-manchester/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-manchester/" />
@@ -2397,7 +2435,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-manchester/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-manchester/" />
@@ -2408,7 +2446,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-oxford/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-oxford/" />
@@ -2419,7 +2457,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-oxford/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-oxford/" />
@@ -2430,7 +2468,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-oxford/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-oxford/" />
@@ -2441,7 +2479,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-oxford/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-oxford/" />
@@ -2452,7 +2490,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-paris/" />
@@ -2463,7 +2501,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-paris/" />
@@ -2474,7 +2512,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-paris/" />
@@ -2485,7 +2523,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-paris/" />
@@ -2496,7 +2534,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-york/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-york/" />
@@ -2507,7 +2545,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-york/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-york/" />
@@ -2518,7 +2556,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-york/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-york/" />
@@ -2529,7 +2567,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-york/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/london-york/" />
@@ -2540,7 +2578,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lucerne-zermatt/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lucerne-zermatt/" />
@@ -2551,7 +2589,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lucerne-zermatt/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lucerne-zermatt/" />
@@ -2562,7 +2600,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lucerne-zermatt/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lucerne-zermatt/" />
@@ -2573,7 +2611,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lucerne-zermatt/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lucerne-zermatt/" />
@@ -2584,7 +2622,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lyon-turin/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
@@ -2595,7 +2633,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lyon-turin/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
@@ -2606,7 +2644,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lyon-turin/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
@@ -2617,7 +2655,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/lyon-turin/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lyon-turin/" />
@@ -2628,7 +2666,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-barcelona/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-barcelona/" />
@@ -2639,7 +2677,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-barcelona/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-barcelona/" />
@@ -2650,7 +2688,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-barcelona/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-barcelona/" />
@@ -2661,7 +2699,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-barcelona/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-barcelona/" />
@@ -2672,7 +2710,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-malaga/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-malaga/" />
@@ -2683,7 +2721,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-malaga/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-malaga/" />
@@ -2694,7 +2732,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-malaga/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-malaga/" />
@@ -2705,7 +2743,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-malaga/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-malaga/" />
@@ -2716,7 +2754,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-seville/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-seville/" />
@@ -2727,7 +2765,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-seville/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-seville/" />
@@ -2738,7 +2776,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-seville/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-seville/" />
@@ -2749,7 +2787,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-seville/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-seville/" />
@@ -2760,7 +2798,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-valencia/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-valencia/" />
@@ -2771,7 +2809,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-valencia/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-valencia/" />
@@ -2782,7 +2820,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-valencia/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-valencia/" />
@@ -2793,7 +2831,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-valencia/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-valencia/" />
@@ -2804,7 +2842,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-zaragoza/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-zaragoza/" />
@@ -2815,7 +2853,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-zaragoza/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-zaragoza/" />
@@ -2826,7 +2864,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-zaragoza/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-zaragoza/" />
@@ -2837,7 +2875,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/madrid-zaragoza/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/madrid-zaragoza/" />
@@ -2848,7 +2886,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/marseille-miramas/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/marseille-miramas/" />
@@ -2859,7 +2897,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/marseille-miramas/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/marseille-miramas/" />
@@ -2870,7 +2908,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/marseille-miramas/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/marseille-miramas/" />
@@ -2881,7 +2919,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/marseille-miramas/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/marseille-miramas/" />
@@ -2892,7 +2930,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-florence/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-florence/" />
@@ -2903,7 +2941,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-florence/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-florence/" />
@@ -2914,7 +2952,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-florence/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-florence/" />
@@ -2925,7 +2963,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-florence/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-florence/" />
@@ -2936,7 +2974,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-rome/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-rome/" />
@@ -2947,7 +2985,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-rome/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-rome/" />
@@ -2958,7 +2996,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-rome/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-rome/" />
@@ -2969,7 +3007,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-rome/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-rome/" />
@@ -2980,7 +3018,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-zurich/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
@@ -2991,7 +3029,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-zurich/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
@@ -3002,7 +3040,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-zurich/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
@@ -3013,7 +3051,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/milan-zurich/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/milan-zurich/" />
@@ -3024,7 +3062,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/montreux-interlaken/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
@@ -3035,7 +3073,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/montreux-interlaken/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
@@ -3046,7 +3084,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/montreux-interlaken/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
@@ -3057,7 +3095,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/montreux-interlaken/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/montreux-interlaken/" />
@@ -3068,7 +3106,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-berlin/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-berlin/" />
@@ -3079,7 +3117,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-berlin/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-berlin/" />
@@ -3090,7 +3128,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-berlin/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-berlin/" />
@@ -3101,7 +3139,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-berlin/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-berlin/" />
@@ -3112,7 +3150,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-paris/" />
@@ -3123,7 +3161,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-paris/" />
@@ -3134,7 +3172,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-paris/" />
@@ -3145,7 +3183,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-paris/" />
@@ -3156,7 +3194,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-prague/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-prague/" />
@@ -3167,7 +3205,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-prague/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-prague/" />
@@ -3178,7 +3216,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-prague/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-prague/" />
@@ -3189,7 +3227,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-prague/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-prague/" />
@@ -3200,7 +3238,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-salzburg/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-salzburg/" />
@@ -3211,7 +3249,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-salzburg/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-salzburg/" />
@@ -3222,7 +3260,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-salzburg/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-salzburg/" />
@@ -3233,7 +3271,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-salzburg/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-salzburg/" />
@@ -3244,7 +3282,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-venice/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
@@ -3255,7 +3293,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-venice/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
@@ -3266,7 +3304,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-venice/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
@@ -3277,7 +3315,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-venice/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-venice/" />
@@ -3288,7 +3326,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-vienna/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
@@ -3299,7 +3337,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-vienna/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
@@ -3310,7 +3348,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-vienna/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
@@ -3321,7 +3359,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/munich-vienna/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/munich-vienna/" />
@@ -3332,7 +3370,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-salerno/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-salerno/" />
@@ -3343,7 +3381,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-salerno/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-salerno/" />
@@ -3354,7 +3392,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-salerno/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-salerno/" />
@@ -3365,7 +3403,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-salerno/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-salerno/" />
@@ -3376,7 +3414,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-sorrento/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-sorrento/" />
@@ -3387,7 +3425,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-sorrento/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-sorrento/" />
@@ -3398,7 +3436,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-sorrento/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-sorrento/" />
@@ -3409,7 +3447,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/naples-sorrento/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-sorrento/" />
@@ -3420,7 +3458,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/nice-monaco/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/nice-monaco/" />
@@ -3431,7 +3469,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/nice-monaco/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/nice-monaco/" />
@@ -3442,7 +3480,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/nice-monaco/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/nice-monaco/" />
@@ -3453,7 +3491,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/nice-monaco/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/nice-monaco/" />
@@ -3464,7 +3502,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/oslo-bergen/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-bergen/" />
@@ -3475,7 +3513,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/oslo-bergen/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-bergen/" />
@@ -3486,7 +3524,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/oslo-bergen/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-bergen/" />
@@ -3497,7 +3535,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/oslo-bergen/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-bergen/" />
@@ -3508,7 +3546,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-amsterdam/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
@@ -3519,7 +3557,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-amsterdam/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
@@ -3530,7 +3568,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-amsterdam/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
@@ -3541,7 +3579,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-amsterdam/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-amsterdam/" />
@@ -3552,7 +3590,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-barcelona/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
@@ -3563,7 +3601,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-barcelona/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
@@ -3574,7 +3612,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-barcelona/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
@@ -3585,7 +3623,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-barcelona/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-barcelona/" />
@@ -3596,7 +3634,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-berlin/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-berlin/" />
@@ -3607,7 +3645,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-berlin/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-berlin/" />
@@ -3618,7 +3656,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-berlin/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-berlin/" />
@@ -3629,7 +3667,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-berlin/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-berlin/" />
@@ -3640,7 +3678,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bordeaux/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
@@ -3651,7 +3689,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bordeaux/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
@@ -3662,7 +3700,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bordeaux/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
@@ -3673,7 +3711,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bordeaux/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bordeaux/" />
@@ -3684,7 +3722,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bruges/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
@@ -3695,7 +3733,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bruges/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
@@ -3706,7 +3744,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bruges/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
@@ -3717,7 +3755,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-bruges/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-bruges/" />
@@ -3728,7 +3766,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-london/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-london/" />
@@ -3739,7 +3777,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-london/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-london/" />
@@ -3750,7 +3788,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-london/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-london/" />
@@ -3761,7 +3799,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-london/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-london/" />
@@ -3772,7 +3810,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lourdes/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lourdes/" />
@@ -3783,7 +3821,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lourdes/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lourdes/" />
@@ -3794,7 +3832,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lourdes/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lourdes/" />
@@ -3805,7 +3843,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lourdes/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lourdes/" />
@@ -3816,7 +3854,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lucerne/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lucerne/" />
@@ -3827,7 +3865,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lucerne/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lucerne/" />
@@ -3838,7 +3876,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lucerne/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lucerne/" />
@@ -3849,7 +3887,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lucerne/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lucerne/" />
@@ -3860,7 +3898,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lyon/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lyon/" />
@@ -3871,7 +3909,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lyon/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lyon/" />
@@ -3882,7 +3920,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lyon/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lyon/" />
@@ -3893,7 +3931,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-lyon/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-lyon/" />
@@ -3904,7 +3942,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-milan/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-milan/" />
@@ -3915,7 +3953,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-milan/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-milan/" />
@@ -3926,7 +3964,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-milan/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-milan/" />
@@ -3937,7 +3975,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-milan/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-milan/" />
@@ -3948,7 +3986,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-nice/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-nice/" />
@@ -3959,7 +3997,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-nice/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-nice/" />
@@ -3970,7 +4008,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-nice/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-nice/" />
@@ -3981,7 +4019,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-nice/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-nice/" />
@@ -3992,7 +4030,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-rome/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-rome/" />
@@ -4003,7 +4041,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-rome/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-rome/" />
@@ -4014,7 +4052,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-rome/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-rome/" />
@@ -4025,7 +4063,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-rome/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-rome/" />
@@ -4036,7 +4074,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-toulouse/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
@@ -4047,7 +4085,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-toulouse/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
@@ -4058,7 +4096,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-toulouse/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
@@ -4069,7 +4107,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-toulouse/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-toulouse/" />
@@ -4080,7 +4118,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-venice/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-venice/" />
@@ -4091,7 +4129,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-venice/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-venice/" />
@@ -4102,7 +4140,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-venice/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-venice/" />
@@ -4113,7 +4151,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-venice/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-venice/" />
@@ -4124,7 +4162,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-zurich/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-zurich/" />
@@ -4135,7 +4173,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-zurich/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-zurich/" />
@@ -4146,7 +4184,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-zurich/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-zurich/" />
@@ -4157,7 +4195,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-zurich/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/paris-zurich/" />
@@ -4168,7 +4206,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-brno/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-brno/" />
@@ -4179,7 +4217,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-brno/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-brno/" />
@@ -4190,7 +4228,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-brno/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-brno/" />
@@ -4201,7 +4239,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-brno/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-brno/" />
@@ -4212,7 +4250,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-budapest/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-budapest/" />
@@ -4223,7 +4261,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-budapest/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-budapest/" />
@@ -4234,7 +4272,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-budapest/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-budapest/" />
@@ -4245,7 +4283,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-budapest/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-budapest/" />
@@ -4256,7 +4294,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-vienna/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
@@ -4267,7 +4305,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-vienna/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
@@ -4278,7 +4316,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-vienna/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
@@ -4289,7 +4327,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/prague-vienna/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/prague-vienna/" />
@@ -4300,7 +4338,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-florence/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-florence/" />
@@ -4311,7 +4349,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-florence/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-florence/" />
@@ -4322,7 +4360,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-florence/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-florence/" />
@@ -4333,7 +4371,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-florence/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-florence/" />
@@ -4344,7 +4382,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-naples/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
@@ -4355,7 +4393,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-naples/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
@@ -4366,7 +4404,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-naples/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
@@ -4377,7 +4415,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-naples/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-naples/" />
@@ -4388,7 +4426,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-venice/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
@@ -4399,7 +4437,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-venice/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
@@ -4410,7 +4448,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-venice/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
@@ -4421,7 +4459,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/rome-venice/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/rome-venice/" />
@@ -4432,7 +4470,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stmoritz-zermatt/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stmoritz-zermatt/" />
@@ -4443,7 +4481,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stmoritz-zermatt/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stmoritz-zermatt/" />
@@ -4454,7 +4492,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stmoritz-zermatt/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stmoritz-zermatt/" />
@@ -4465,7 +4503,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stmoritz-zermatt/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stmoritz-zermatt/" />
@@ -4476,7 +4514,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stockholm-oslo/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stockholm-oslo/" />
@@ -4487,7 +4525,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stockholm-oslo/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stockholm-oslo/" />
@@ -4498,7 +4536,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stockholm-oslo/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stockholm-oslo/" />
@@ -4509,7 +4547,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/stockholm-oslo/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/stockholm-oslo/" />
@@ -4520,7 +4558,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/strasbourg-paris/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/strasbourg-paris/" />
@@ -4531,7 +4569,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/strasbourg-paris/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/strasbourg-paris/" />
@@ -4542,7 +4580,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/strasbourg-paris/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/strasbourg-paris/" />
@@ -4553,7 +4591,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/strasbourg-paris/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/strasbourg-paris/" />
@@ -4564,7 +4602,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/tende-nice/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/tende-nice/" />
@@ -4575,7 +4613,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/tende-nice/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/tende-nice/" />
@@ -4586,7 +4624,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/tende-nice/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/tende-nice/" />
@@ -4597,7 +4635,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/tende-nice/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/tende-nice/" />
@@ -4608,7 +4646,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/toulouse-lourdes/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/toulouse-lourdes/" />
@@ -4619,7 +4657,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/toulouse-lourdes/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/toulouse-lourdes/" />
@@ -4630,7 +4668,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/toulouse-lourdes/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/toulouse-lourdes/" />
@@ -4641,7 +4679,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/toulouse-lourdes/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/toulouse-lourdes/" />
@@ -4652,7 +4690,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/turin-milan/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/turin-milan/" />
@@ -4663,7 +4701,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/turin-milan/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/turin-milan/" />
@@ -4674,7 +4712,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/turin-milan/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/turin-milan/" />
@@ -4685,7 +4723,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/turin-milan/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/turin-milan/" />
@@ -4696,7 +4734,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/venice-milan/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/venice-milan/" />
@@ -4707,7 +4745,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/venice-milan/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/venice-milan/" />
@@ -4718,7 +4756,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/venice-milan/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/venice-milan/" />
@@ -4729,7 +4767,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/venice-milan/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/venice-milan/" />
@@ -4740,7 +4778,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-budapest/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-budapest/" />
@@ -4751,7 +4789,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-budapest/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-budapest/" />
@@ -4762,7 +4800,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-budapest/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-budapest/" />
@@ -4773,7 +4811,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-budapest/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-budapest/" />
@@ -4784,7 +4822,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-krems/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-krems/" />
@@ -4795,7 +4833,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-krems/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-krems/" />
@@ -4806,7 +4844,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-krems/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-krems/" />
@@ -4817,7 +4855,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-krems/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-krems/" />
@@ -4828,7 +4866,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-prague/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
@@ -4839,7 +4877,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-prague/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
@@ -4850,7 +4888,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-prague/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
@@ -4861,7 +4899,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-prague/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-prague/" />
@@ -4872,7 +4910,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-salzburg/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-salzburg/" />
@@ -4883,7 +4921,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-salzburg/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-salzburg/" />
@@ -4894,7 +4932,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-salzburg/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-salzburg/" />
@@ -4905,7 +4943,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/vienna-salzburg/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/vienna-salzburg/" />
@@ -4916,7 +4954,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zaragoza-barcelona/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zaragoza-barcelona/" />
@@ -4927,7 +4965,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zaragoza-barcelona/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zaragoza-barcelona/" />
@@ -4938,7 +4976,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zaragoza-barcelona/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zaragoza-barcelona/" />
@@ -4949,7 +4987,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zaragoza-barcelona/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zaragoza-barcelona/" />
@@ -4960,7 +4998,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-lucerne/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
@@ -4971,7 +5009,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-lucerne/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
@@ -4982,7 +5020,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-lucerne/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
@@ -4993,7 +5031,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-lucerne/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-lucerne/" />
@@ -5004,7 +5042,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-milan/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-milan/" />
@@ -5015,7 +5053,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-milan/es/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-milan/" />
@@ -5026,7 +5064,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-milan/fr/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-milan/" />
@@ -5037,7 +5075,7 @@
   </url>
   <url>
     <loc>https://glosx.app/rutas/zurich-milan/it/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/zurich-milan/" />

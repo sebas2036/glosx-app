@@ -104,7 +104,8 @@ const routes = [
   { slug: 'munich-salzburg', from: 'Munich', to: 'Salzburg', country: 'Germany-Austria', duration: '1h 30m', operator: 'DB/ÖBB', price: '€20-35', badge: 'Route guide · Germany-Austria' },
   { slug: 'bern-paris', from: 'Bern', to: 'Paris', country: 'Switzerland-France', duration: '4h 30m', operator: 'TGV Lyria', price: '€50-75', badge: 'Route guide · Switzerland-France' },
   { slug: 'stmoritz-zermatt', from: 'St. Moritz', to: 'Zermatt', country: 'Switzerland', duration: '8h 00m', operator: 'Glacier Express', price: '€150-180', badge: 'Route guide · Switzerland' },
-  { slug: 'tende-nice', from: 'Tende', to: 'Nice', country: 'France-Italy', duration: '2h 00m', operator: 'SNCF TER', price: '€10-20', badge: 'Route guide · France-Italy' }
+  { slug: 'tende-nice', from: 'Tende', to: 'Nice', country: 'France-Italy', duration: '2h 00m', operator: 'SNCF TER', price: '€10-20', badge: 'Route guide · France-Italy' },
+  { slug: 'frankfurt-berlin', from: 'Frankfurt', to: 'Berlin', country: 'Germany', duration: '4h 00m', operator: 'ICE (DB)', price: '€40-60', badge: 'Route guide · Germany' }
 ];
 
 // Hoteles reales curados por ciudad de destino (mismos criterios que CURATED_HOTELS
