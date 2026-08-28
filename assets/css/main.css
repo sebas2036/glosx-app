@@ -2574,6 +2574,15 @@
     margin: 8px auto 0;
     letter-spacing: 0.01em;
   }
+  .ai-multileg-note {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    max-width: 560px;
+    margin: 4px auto 12px;
+    line-height: 1.5;
+  }
   .ai-results .ai-klook-cta { background: linear-gradient(135deg, rgba(255,106,43,0.1), rgba(255,106,43,0.04)); border-color: rgba(255,106,43,0.35); }
   .ai-results .ai-klook-cta:hover { border-color: rgba(255,106,43,0.6); background: linear-gradient(135deg, rgba(255,106,43,0.16), rgba(255,106,43,0.06)); }
   .ai-results .ai-klook-cta-title { color: #16131f; }
