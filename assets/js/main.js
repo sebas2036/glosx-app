@@ -2753,6 +2753,18 @@
     inputWrapper.style.display = 'none';
     results.style.display = 'block';
 
+    // Cargar el video del CTA recién ahora (evita bajarlo en la carga inicial de la página)
+    const ctaVideo = document.querySelector('.ai-cta-video-el');
+    if (ctaVideo) {
+      const ctaSource = ctaVideo.querySelector('source[data-src]');
+      if (ctaSource) {
+        ctaSource.src = ctaSource.getAttribute('data-src');
+        ctaSource.removeAttribute('data-src');
+        ctaVideo.load();
+        ctaVideo.play().catch(() => {});
+      }
+    }
+
     // Llenar datos
     document.getElementById('aiRouteTitle').textContent = data.resumen.origen_fin_o_concepto;
     document.getElementById('aiRouteDuration').textContent = data.resumen.duracion_estimada_total;
