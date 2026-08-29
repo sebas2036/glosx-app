@@ -887,6 +887,16 @@
       document.querySelectorAll('.pw-panel').forEach(p => p.classList.remove('show'));
       const panel = document.getElementById(panelId);
       if (!panel) return;
+      // Cargar el script del widget recién ahora, no en la carga inicial de la página
+      const widgetSrc = panel.getAttribute('data-widget-src');
+      if (widgetSrc) {
+        const s = document.createElement('script');
+        s.src = widgetSrc;
+        s.async = true;
+        s.charset = 'utf-8';
+        panel.appendChild(s);
+        panel.removeAttribute('data-widget-src');
+      }
       panel.classList.add('show');
       panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
