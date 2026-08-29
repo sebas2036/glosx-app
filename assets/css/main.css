@@ -2574,6 +2574,35 @@
     margin: 8px auto 0;
     letter-spacing: 0.01em;
   }
+  .glosx-tramo-modal {
+    position: fixed; inset: 0; z-index: 9999;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(10,8,20,0.7); backdrop-filter: blur(4px);
+    padding: 20px;
+  }
+  .glosx-tramo-modal-content {
+    background: #1a1730; border: 1px solid rgba(139,92,246,0.35);
+    border-radius: 16px; padding: 28px 26px; max-width: 420px; width: 100%;
+    text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .glosx-tramo-modal-content h3 { font-size: 15px; font-weight: 800; color: var(--primary2); letter-spacing: 0.02em; margin-bottom: 10px; }
+  .glosx-tramo-modal-content p { font-size: 14px; color: #c8c8d8; line-height: 1.5; margin-bottom: 6px; }
+  .glosx-tramo-modal-route { font-size: 18px !important; font-weight: 800; color: #fff !important; margin: 10px 0 18px !important; }
+  .glosx-tramo-modal-btn {
+    display: inline-block; width: 100%; padding: 13px 20px;
+    background: var(--primary); color: #fff; border: none; border-radius: 100px;
+    font-weight: 700; font-size: 14px; cursor: pointer; transition: filter 0.2s, transform 0.2s;
+  }
+  .glosx-tramo-modal-btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  .ai-segment { position: relative; }
+  .ai-segment-check {
+    display: none; position: absolute; top: 12px; right: 12px;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: #22c55e; color: #fff; font-size: 15px; font-weight: 900;
+    align-items: center; justify-content: center;
+  }
+  .ai-segment.ai-segment-done { border: 1px solid rgba(34,197,94,0.45); }
+  .ai-segment.ai-segment-done .ai-segment-check { display: flex; }
   .ai-multileg-note {
     display: block;
     font-size: 13px;
