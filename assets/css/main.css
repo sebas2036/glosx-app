@@ -1579,13 +1579,13 @@
     z-index: 0;
   }
   .wt-route-btn[data-route="classic"]::before {
-    background-image: url('https://images.unsplash.com/photo-1673086636059-0f4abc8b853b?w=640&q=80&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1673086636059-0f4abc8b853b?w=400&q=60&auto=format&fit=crop');
   }
   .wt-route-btn[data-route="alpine"]::before {
-    background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=640&q=80&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=400&q=60&auto=format&fit=crop');
   }
   .wt-route-btn[data-route="imperial"]::before {
-    background-image: url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=640&q=80&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=400&q=60&auto=format&fit=crop');
   }
   .wt-route-btn::after {
     content: '';
@@ -1624,9 +1624,15 @@
   overflow: hidden;
 }
   /* Foto de fondo distinta segun la ruta activa (antes usaban todas la misma foto generica) */
-  .wt-timeline-wrap[data-route="classic"]  { background-image: url('https://images.unsplash.com/photo-1673086636059-0f4abc8b853b?w=1200&q=80&auto=format&fit=crop'); }
-  .wt-timeline-wrap[data-route="alpine"]   { background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=1200&q=80&auto=format&fit=crop'); }
-  .wt-timeline-wrap[data-route="imperial"] { background-image: url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=1200&q=80&auto=format&fit=crop'); }
+  .wt-timeline-wrap[data-route="classic"]  { background-image: url('https://images.unsplash.com/photo-1673086636059-0f4abc8b853b?w=900&q=65&auto=format&fit=crop'); }
+  .wt-timeline-wrap[data-route="alpine"]   { background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=900&q=65&auto=format&fit=crop'); }
+  .wt-timeline-wrap[data-route="imperial"] { background-image: url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=900&q=65&auto=format&fit=crop'); }
+  /* Versión más liviana para mobile — evita bajar 900px de ancho en pantallas chicas */
+  @media (max-width: 600px) {
+    .wt-timeline-wrap[data-route="classic"]  { background-image: url('https://images.unsplash.com/photo-1673086636059-0f4abc8b853b?w=600&q=60&auto=format&fit=crop'); }
+    .wt-timeline-wrap[data-route="alpine"]   { background-image: url('https://images.unsplash.com/photo-1514970746-d4a465d514d0?w=600&q=60&auto=format&fit=crop'); }
+    .wt-timeline-wrap[data-route="imperial"] { background-image: url('https://images.unsplash.com/photo-1700224982244-5164c097b79f?w=600&q=60&auto=format&fit=crop'); }
+  }
   /* La foto ahora es un banner compacto de altura fija en el header, no todo
      el alto de la tarjeta — antes tapaba/empujaba la lista de trenes fuera
      de vista y el usuario tenia que scrollear mucho para llegar a ella. */
