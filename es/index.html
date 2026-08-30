@@ -116,7 +116,10 @@
       });
     })();
     // Limpiar parámetros de tracking de la URL para que no se vean
-    // (conserva from/to, usados por los CTA del blog para precargar el planner AI)
+    // (conserva from/to, usados por los CTA del blog para precargar el planner AI,
+    // y los click-id de ads porque gtag.js es async y corre DESPUES de este script:
+    // si los borramos antes de que gtag los lea, todo el trafico pago de Google/Meta
+    // queda mal atribuido como (direct)/(none) en vez de google/cpc en GA4)
     // Corre INMEDIATO (no en un setTimeout) para minimizar la ventana en la que
     // el navegador puede guardar en el historial/autocompletado una URL con
     // marker/trs de afiliado expuestos.
@@ -127,6 +130,10 @@
         var keep = new URLSearchParams();
         if (from) keep.set('from', from);
         if (to) keep.set('to', to);
+        ['gclid', 'gbraid', 'wbraid', 'dclid', 'msclkid', 'fbclid'].forEach(function (k) {
+          var v = p.get(k);
+          if (v) keep.set(k, v);
+        });
         var qs = keep.toString();
         window.history.replaceState({}, '', window.location.pathname + (qs ? '?' + qs : '') + window.location.hash);
       }
