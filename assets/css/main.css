@@ -2081,6 +2081,34 @@
     text-align: center;
     margin-top: 6px;
   }
+  /* Links rápidos a Klook arriba de la lista de paradas, uno por tramo --
+     en mobile la lista de paradas + tramos puede quedar larga, esto le da
+     al usuario una salida inmediata sin tener que bajar todo el scroll. */
+  .ai-quick-book {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px auto 0;
+  }
+  .ai-quick-book-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 18px;
+    background: rgba(124,58,237,0.14);
+    border: 1px solid rgba(124,58,237,0.4);
+    border-radius: 100px;
+    color: #a78bfa;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .ai-quick-book-link:hover { background: rgba(124,58,237,0.24); border-color: rgba(167,139,250,0.7); }
   .route-dot {
     fill: var(--primary);
     filter: drop-shadow(0 0 10px rgba(124,58,237,0.6));
@@ -2538,7 +2566,12 @@
     .ai-results { padding: 18px 16px; }
     .ai-results-header h3 { font-size: 26px; }
     .ai-results-header p { font-size: 15px; }
-    .ai-stops { flex-direction: column; }
+    /* Antes: flex-direction:column apilaba cada parada full-width, una
+       tarjeta larga por linea -- con 3+ paradas obligaba a scrollear un
+       buen tramo antes de llegar a los links de reserva. Grilla de 3
+       columnas: mismo contenido, una fraccion de la altura. */
+    .ai-stops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .ai-stop { padding: 8px 6px; font-size: 12px; }
     .ai-segment { padding: 20px; }
     .ai-segment-route { font-size: 15px; }
     .ai-segment-desc { font-size: 14px; }

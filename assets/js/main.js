@@ -2634,6 +2634,33 @@
       `<div class="ai-stop"><span class="ai-stop-num">${(TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_stop_label || 'STOP'} ${i + 1}</span>${stop}</div>`
     ).join('');
 
+    // Links rápidos a Klook arriba del todo, uno por cada tramo -- en mobile,
+    // con varias paradas + tramos, el usuario tenía que scrollear bastante
+    // antes de llegar a un link de reserva.
+    const quickBook = document.getElementById('aiQuickBook');
+    if (quickBook && data.tramos.length) {
+      const quickIsMultiLeg = data.tramos.length > 1;
+      const dict = TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en;
+      quickBook.innerHTML = data.tramos.map((seg, i) => {
+        const noTrain = /ferry|autob[uú]s|bus|no aplica|no hay estaci[oó]n/i.test(
+          [seg.operador_tren, seg.tipo_tren_sugerido, seg.estacion_salida, seg.estacion_llegada, seg.origen, seg.destino].join(' ')
+        );
+        const url = noTrain
+          ? `https://www.google.com/maps/dir/${encodeURIComponent(seg.origen)}/${encodeURIComponent(seg.destino)}`
+          : window.glosxBookTarget(cleanCityForKlook(seg.origen) || seg.origen, cleanCityForKlook(seg.destino) || seg.destino);
+        const label = quickIsMultiLeg
+          ? `${seg.origen} → ${seg.destino}`
+          : (dict.ai_buy_ticket || 'View times & book ticket →');
+        const legOnclick = quickIsMultiLeg && !noTrain
+          ? `mostrarModalTramo(${i}, '${escAttr(seg.origen)}', '${escAttr(seg.destino)}')`
+          : '';
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="ai-quick-book-link" onclick="gtag('event','klook_click',{source:'ai_quick_book_top',type:'${noTrain ? 'transit_alt' : 'train'}',route:'${escAttr(seg.origen)}-${escAttr(seg.destino)}'});${legOnclick}">${label}</a>`;
+      }).join('');
+      quickBook.style.display = 'flex';
+    } else if (quickBook) {
+      quickBook.style.display = 'none';
+    }
+
     // Aviso de reserva por tramo cuando el viaje tiene mas de un tramo (Klook no soporta reserva multi-tramo)
     const multiLegNote = document.getElementById('aiMultiLegNote');
     if (data.tramos.length > 1) {
