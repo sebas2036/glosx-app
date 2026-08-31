@@ -1206,6 +1206,19 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
     </button>
   </div>
+  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+    <div class="ios-install-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
+    </div>
+    <div class="ios-install-copy">
+      <p class="ios-install-title" data-i18n="pwa_install_title">Installa WoW Train</p>
+      <p class="ios-install-text" data-i18n="pwa_install_text">Aggiungila alla schermata Home per un accesso rapido, senza passare dallo store.</p>
+      <button type="button" class="pwa-install-btn" id="pwaInstallBtn" data-i18n="pwa_install_cta">Installa</button>
+    </div>
+    <button type="button" class="ios-install-close" id="pwaInstallClose" data-i18n-aria-label="ios_install_dismiss" aria-label="Chiudi">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+  </div>
   <style>
     .ios-install-banner { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 999; display: flex; align-items: flex-start; gap: 12px; max-width: 420px; margin: 0 auto; padding: 14px 16px; background: rgba(24,22,34,0.97); backdrop-filter: blur(12px); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
     .ios-install-banner[hidden] { display: none; }
@@ -1215,7 +1228,9 @@
     .ios-install-text { font-size: 13px; color: #b9b9c9; margin: 0; line-height: 1.4; }
     .ios-install-close { flex-shrink: 0; width: 32px; height: 32px; min-width: 44px; min-height: 44px; margin: -8px -8px 0 0; display: flex; align-items: center; justify-content: center; background: none; border: none; color: #8888aa; cursor: pointer; border-radius: 8px; }
     .ios-install-close:hover { color: #f0f0f5; background: rgba(255,255,255,0.06); }
-  </style>
+    .pwa-install-btn { margin-top: 10px; background: #7c3aed; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .pwa-install-btn:hover { background: #8b5cf6; }
+    </style>
   <script src="/assets/js/main.min.js" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
@@ -1246,6 +1261,43 @@
       closeBtn.addEventListener('click', function () {
         banner.hidden = true;
         localStorage.setItem('glosx_ios_install_dismissed', '1');
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var deferredPrompt = null;
+      var banner = document.getElementById('pwaInstallBanner');
+      var installBtn = document.getElementById('pwaInstallBtn');
+      var closeBtn = document.getElementById('pwaInstallClose');
+      if (!banner || !installBtn || !closeBtn) return;
+
+      var isStandalone = window.navigator.standalone === true ||
+        window.matchMedia('(display-mode: standalone)').matches;
+      var dismissed = localStorage.getItem('glosx_pwa_install_dismissed') === '1';
+
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        if (isStandalone || dismissed) return;
+        deferredPrompt = e;
+        setTimeout(function () { banner.hidden = false; }, 2500);
+      });
+
+      installBtn.addEventListener('click', function () {
+        if (!deferredPrompt) return;
+        banner.hidden = true;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.finally(function () { deferredPrompt = null; });
+      });
+
+      closeBtn.addEventListener('click', function () {
+        banner.hidden = true;
+        localStorage.setItem('glosx_pwa_install_dismissed', '1');
+      });
+
+      window.addEventListener('appinstalled', function () {
+        banner.hidden = true;
+        localStorage.setItem('glosx_pwa_install_dismissed', '1');
       });
     })();
   </script>
