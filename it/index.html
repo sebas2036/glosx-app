@@ -224,11 +224,11 @@
 </head>
 <body>
   <!-- Cookie consent banner — GDPR -->
-  <div id="cookieBanner" style="display:none;position:fixed;bottom:16px;left:16px;right:16px;max-width:560px;margin:0 auto;background:#221f30;border:1px solid rgba(124,58,237,0.5);border-radius:14px;padding:18px 20px;z-index:9999;box-shadow:0 20px 60px rgba(0,0,0,0.6);font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
+  <div id="cookieBanner" class="cookie-banner" style="display:none;position:fixed;bottom:16px;left:16px;right:16px;max-width:560px;margin:0 auto;background:#221f30;border:1px solid rgba(124,58,237,0.5);border-radius:14px;padding:18px 20px;z-index:9999;box-shadow:0 20px 60px rgba(0,0,0,0.6);font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
     <p style="font-size:13px;color:#e0e0e8;line-height:1.5;margin-bottom:12px;" data-i18n="cookie_text">Utilizziamo cookie essenziali e analisi anonime per migliorare la tua esperienza.<a href="/cookies.html" style="color:#a78bfa;text-decoration:underline;">Cookie Policy</a>.</p>
     <div style="display:flex;gap:8px;justify-content:flex-end;">
-      <button onclick="cookieChoice('declined')" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#bbb;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;" data-i18n="cookie_decline">Rifiuta</button>
-      <button onclick="cookieChoice('accepted')" style="background:#7c3aed;border:none;color:#fff;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;" data-i18n="cookie_accept">Accetta</button>
+      <button onclick="cookieChoice('declined')" class="cookie-btn-decline" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#bbb;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;" data-i18n="cookie_decline">Rifiuta</button>
+      <button onclick="cookieChoice('accepted')" class="cookie-btn-accept" style="background:#7c3aed;border:none;color:#fff;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;" data-i18n="cookie_accept">Accetta</button>
     </div>
   </div>
   <script>
