@@ -2648,8 +2648,9 @@
         const url = noTrain
           ? `https://www.google.com/maps/dir/${encodeURIComponent(seg.origen)}/${encodeURIComponent(seg.destino)}`
           : window.glosxBookTarget(cleanCityForKlook(seg.origen) || seg.origen, cleanCityForKlook(seg.destino) || seg.destino);
+        const klookArrow = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A2B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left:2px;flex-shrink:0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
         const label = quickIsMultiLeg
-          ? `${seg.origen} → ${seg.destino}`
+          ? `${seg.origen} → ${seg.destino}${noTrain ? '' : klookArrow}`
           : (dict.ai_buy_ticket || 'View times & book ticket →');
         const legOnclick = quickIsMultiLeg && !noTrain
           ? `mostrarModalTramo(${i}, '${escAttr(seg.origen)}', '${escAttr(seg.destino)}')`
