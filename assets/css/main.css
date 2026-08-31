@@ -12,7 +12,13 @@
       --amber:    #f59e0b;
       --text:     #f0f0f5;
       --muted:    #8888aa;
+      --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
     }
+
+    /* Titulos grandes (h1 del hero, h2 de cada seccion) en Poppins -- mas
+       abierta y redonda que el system font que usa el resto del sitio.
+       El texto de cuerpo se queda como estaba, esto es solo para headlines. */
+    h1, h2 { font-family: var(--font-display); }
 
     html { scroll-behavior: smooth; }
 

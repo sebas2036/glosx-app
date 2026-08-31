@@ -8,6 +8,11 @@
        cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
        conexiones lentas porque el hero no puede pintarse hasta que carga. -->
   <link rel="stylesheet" href="/assets/css/main.min.css" />
+  <!-- Poppins solo para titulos (h1/h2) -- mas abierta y redonda que el
+       system font, look mas editorial en los headlines grandes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   <!-- Solo se precarga el webp: el jpg es el fallback para navegadores sin
        soporte webp (practicamente ninguno hoy), preload duplicado desperdiciaba
        ancho de banda con fetchpriority=high compitiendo contra el propio CSS. -->
