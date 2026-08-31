@@ -1780,6 +1780,10 @@
   .wt-pdf-btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
 
   /* ---- Tarea 3: Valoraciones & experiencias ---- */
+  .reviews-disclaimer {
+    max-width: 1200px; margin: 0 auto 12px; padding: 0 24px;
+    font-size: 12.5px; color: #66667a; font-style: italic;
+  }
   .wt-reviews-grid {
     display: flex; gap: 14px; margin-top: 8px;
     max-width: 1200px; margin-left: auto; margin-right: auto;
