@@ -1519,6 +1519,13 @@
       }
       .hero { padding: 100px 20px 60px; }
 
+      /* ── Home: hueco gigante entre el CTA "Planifica mi viaje con IA"
+         y el input real del planner (108px: 60 del .hero + 36 del wrap
+         del botón + 12 del ai-planner). Achicado a home solamente, sin
+         tocar .hero genérico que usan destinos/ai-planner. ── */
+      .hero-home { padding-bottom: 16px !important; }
+      .hero-cta-wrap { margin-bottom: 12px !important; }
+
       /* ── Essentials bar — 1 columna (móvil) ── */
       .essential-item { flex-basis: 100%; }
       /* ── VIP — 1 columna (móvil) ── */
