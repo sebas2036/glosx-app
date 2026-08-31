@@ -1451,6 +1451,15 @@
   // Devuelve false la PRIMERA vez (muestra onboarding, no navega);
   // devuelve true después, dejando que el href="/explore/" navegue al hub de rutas.
   window.wtStartOnboarding = function () {
+    // Si Chrome/Android ya ofreció el instalador nativo (beforeinstallprompt,
+    // capturado en window.__wtInstallPrompt), el botón "Download" del nav
+    // dispara ESE diálogo real en vez de solo scrollear a /explore/.
+    if (window.__wtInstallPrompt) {
+      var installPrompt = window.__wtInstallPrompt;
+      window.__wtInstallPrompt = null;
+      installPrompt.prompt();
+      return false;
+    }
     if (localStorage.getItem('wt_onboarded') === '1') {
       return true; // ya vio el onboarding -> seguir el enlace a /explore/
     }

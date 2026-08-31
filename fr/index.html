@@ -1121,37 +1121,40 @@
   </script>
   <script>
     (function () {
-      var deferredPrompt = null;
+      window.__wtInstallPrompt = null;
       var banner = document.getElementById('pwaInstallBanner');
       var installBtn = document.getElementById('pwaInstallBtn');
       var closeBtn = document.getElementById('pwaInstallClose');
-      if (!banner || !installBtn || !closeBtn) return;
 
       var isStandalone = window.navigator.standalone === true ||
         window.matchMedia('(display-mode: standalone)').matches;
       var dismissed = localStorage.getItem('glosx_pwa_install_dismissed') === '1';
 
+      // window.__wtInstallPrompt queda disponible global para que el boton
+      // "Download" del nav (wtStartOnboarding en main.js) dispare el
+      // instalador nativo en vez de solo navegar a /explore/.
       window.addEventListener('beforeinstallprompt', function (e) {
         e.preventDefault();
-        if (isStandalone || dismissed) return;
-        deferredPrompt = e;
-        setTimeout(function () { banner.hidden = false; }, 2500);
+        window.__wtInstallPrompt = e;
+        if (banner && !isStandalone && !dismissed) {
+          setTimeout(function () { banner.hidden = false; }, 2500);
+        }
       });
 
-      installBtn.addEventListener('click', function () {
-        if (!deferredPrompt) return;
-        banner.hidden = true;
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.finally(function () { deferredPrompt = null; });
+      if (installBtn) installBtn.addEventListener('click', function () {
+        if (!window.__wtInstallPrompt) return;
+        if (banner) banner.hidden = true;
+        window.__wtInstallPrompt.prompt();
+        window.__wtInstallPrompt.userChoice.finally(function () { window.__wtInstallPrompt = null; });
       });
 
-      closeBtn.addEventListener('click', function () {
-        banner.hidden = true;
+      if (closeBtn) closeBtn.addEventListener('click', function () {
+        if (banner) banner.hidden = true;
         localStorage.setItem('glosx_pwa_install_dismissed', '1');
       });
 
       window.addEventListener('appinstalled', function () {
-        banner.hidden = true;
+        if (banner) banner.hidden = true;
         localStorage.setItem('glosx_pwa_install_dismissed', '1');
       });
     })();
