@@ -1860,6 +1860,10 @@
   // Click en una ruta popular del popup de país: carga la ruta en el planner AI del hero (no navega a /rutas/)
   function planRouteFromChip(e, from, to) {
     e.preventDefault();
+    // Sin esto, el click sigue burbujeando hasta el listener del .country-chip
+    // padre (linea ~141), que lo interpreta como un toque nuevo sobre el chip
+    // y vuelve a abrir el popup justo despues de que esta linea lo cierra.
+    e.stopPropagation();
     document.querySelectorAll('.country-chip.show-photo').forEach(c => c.classList.remove('show-photo'));
     setAISuggestion(from + ' to ' + to);
     document.getElementById('aiInputWrapper').scrollIntoView({ behavior: 'smooth', block: 'center' });
