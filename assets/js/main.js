@@ -2976,7 +2976,21 @@
     try {
       const data = localStorage.getItem('ai_last_route_data');
       if (data) {
-        displayAIRoute(JSON.parse(data));
+        const parsed = JSON.parse(data);
+        // Defensa contra respuestas viejas guardadas antes del fix del backend
+        // que validaba tramos (ver glosx-backend/server.js isValidRouteData) —
+        // sin esto, un dispositivo con una ruta rota guardada localmente la
+        // sigue mostrando para siempre, sin boton de compra, aunque el server
+        // ya este arreglado.
+        if (!Array.isArray(parsed.tramos) || !parsed.tramos.length) {
+          localStorage.removeItem('ai_last_route_data');
+          localStorage.removeItem('ai_last_route_input');
+          localStorage.removeItem('ai_last_route_timestamp');
+          const restoreBtn = document.getElementById('aiRestoreBtn');
+          if (restoreBtn) restoreBtn.style.display = 'none';
+          return;
+        }
+        displayAIRoute(parsed);
       }
     } catch (e) {
       console.error('Error restoring from cache:', e);
