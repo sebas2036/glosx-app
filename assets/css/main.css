@@ -2563,6 +2563,18 @@
     .ai-subtitle { font-size: 16px; }
     .ai-input-container { flex-direction: column; }
     .ai-generate-btn { width: 100%; }
+    /* El input en reposo tenia fondo casi transparente (rgba .18) y borde
+       fino -- sobre el mapa de fondo con estrellas quedaba casi invisible,
+       muy por debajo en jerarquia visual del boton "Generar Itinerario"
+       de abajo. Mas solido + halo aurora tenue siempre visible (no solo
+       al escribir), asi el input se nota como la accion principal. */
+    .ai-input-container input {
+      background: rgba(124,58,237,0.34);
+      border-color: rgba(167,139,250,0.85);
+      box-shadow: 0 4px 28px rgba(124,58,237,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .ai-input-aurora::before { opacity: 0.45; }
+    .ai-input-aurora.active::before { opacity: 0.9; }
     .ai-results { padding: 18px 16px; }
     .ai-results-header h3 { font-size: 26px; }
     .ai-results-header p { font-size: 15px; }
