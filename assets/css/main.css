@@ -2702,17 +2702,31 @@
      -- input + boton -- vive dentro de UNA tarjeta blanca que se despega
      del fondo, en vez de ser dos pildoras sueltas cada una con su sombra. */
   .ai-input-container {
-    background: #fff !important; border-radius: 22px !important; padding: 8px !important;
+    background: #fff !important; border-radius: 100px !important; padding: 8px !important;
     box-shadow: 0 2px 6px rgba(20,21,26,0.06), 0 20px 40px -12px rgba(20,21,26,0.28) !important;
   }
+  /* Sin borde propio -- el input se funde en la misma pildora blanca del
+     contenedor en vez de crear una "pildora dentro de otra pildora". */
   .ai-input-container input {
-    background: transparent !important; border: 1.5px solid var(--rail-line) !important;
+    background: transparent !important; border: none !important;
     color: var(--rail-ink) !important; border-radius: 100px !important;
     backdrop-filter: none !important; box-shadow: none !important;
     font-family: var(--font-rail);
+    padding-left: 46px !important;
   }
   .ai-input-container input::placeholder { color: #9a9ba5 !important; }
-  .ai-input-container input:focus { border-color: var(--rail-red) !important; box-shadow: 0 0 0 3px rgba(193,0,22,0.12) !important; }
+  .ai-input-container input:focus { box-shadow: none !important; }
+  .ai-search-icon {
+    position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+    width: 20px; height: 20px; color: var(--rail-muted); pointer-events: none; z-index: 2;
+  }
+  /* Mas discreto para que no compita con la lupa/boton -- sigue ahi, mas liviano. */
+  .ai-swap-btn {
+    width: 28px !important; height: 28px !important;
+    border-color: var(--rail-line) !important; background: #fff !important;
+    color: var(--rail-muted) !important; font-size: 13px !important;
+  }
+  .ai-swap-btn:hover { background: var(--rail-red) !important; border-color: var(--rail-red) !important; color: #fff !important; }
   .ai-generate-btn {
     background: var(--rail-ink) !important; color: #fff !important; border-radius: 14px !important;
     box-shadow: none !important;
