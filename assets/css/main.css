@@ -2607,10 +2607,23 @@
     background-size: cover; background-position: center;
   }
   .hero-title-card > * { position: relative; z-index: 1; }
-  .hero-title-card .hero-badge, .hero-title-card h1, .hero-title-card p, .hero-title-card .hero-cta-wrap {
+  .hero-title-card .hero-badge, .hero-title-card .hero-title-box, .hero-title-card p, .hero-title-card .hero-cta-wrap {
     max-width: 720px; margin-left: auto; margin-right: auto;
   }
   .hero-title-card h1 { font-size: clamp(34px, 5.5vw, 58px) !important; }
+  /* Caja propia para el titulo, un tono mas oscuro que la banda -- le da
+     profundidad por contraste de color en vez de un drop-shadow pesado
+     (eso quedaba generico/AI-kit, esto es mas prolijo y consistente con
+     el resto del sistema de tarjetas). */
+  .hero-title-box {
+    background: #efdcd4; border-radius: 20px;
+    padding: 18px 28px; margin-bottom: 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 1px 2px rgba(20,21,26,0.05);
+  }
+  .hero-title-box h1 { margin-bottom: 0; }
+  @media (max-width: 640px) {
+    .hero-title-box { padding: 14px 18px; border-radius: 16px; }
+  }
   @media (max-width: 640px) {
     .hero-title-card { padding: 130px 20px 4px; margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); margin-top: -100px; }
   }
