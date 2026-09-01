@@ -2716,9 +2716,15 @@
   }
   .ai-input-container input::placeholder { color: #9a9ba5 !important; }
   .ai-input-container input:focus { box-shadow: none !important; }
+  /* width/height tambien como atributos HTML (no solo CSS) -- un SVG sin
+     tamaño intrinseco puede renderizar gigante si por algun motivo (bfcache,
+     orden de carga) el CSS todavia no aplico en el primer paint. */
   .ai-search-icon {
-    position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
-    width: 20px; height: 20px; color: var(--rail-muted); pointer-events: none; z-index: 2;
+    position: absolute !important; left: 18px !important; top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 20px !important; height: 20px !important;
+    max-width: 20px !important; max-height: 20px !important;
+    color: var(--rail-muted); pointer-events: none; z-index: 2;
   }
   /* Mas discreto para que no compita con la lupa/boton -- sigue ahi, mas liviano. */
   .ai-swap-btn {
