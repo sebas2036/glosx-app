@@ -2580,9 +2580,13 @@
 
   /* Fondo del hero: opaco y claro, tapa el fondo violeta compartido del
      body sin tocar los tokens globales (el resto de las secciones de mas
-     abajo siguen oscuras hasta la proxima etapa). */
+     abajo siguen oscuras hasta la proxima etapa). Degrade diagonal sutil
+     (esquinas calidas -> centro casi blanco donde vive el buscador) en vez
+     de color plano -- sin patron SVG encima, eso ya lo aporta el body. */
   .hero-bgwrap {
-    background: var(--rail-bg);
+    background:
+      radial-gradient(ellipse 85% 65% at 50% 58%, #ffffff 0%, rgba(255,255,255,0) 55%),
+      linear-gradient(135deg, #f6ddc2 0%, #fbf3ea 45%, #fbf3ea 55%, #eed7bd 100%);
   }
 
   /* Lineas de ruta curvas extendidas a TODA la pagina (no solo el hero) --
