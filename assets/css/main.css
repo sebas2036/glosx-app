@@ -2594,7 +2594,8 @@
      titulo), pero con nuestro propio lenguaje (vias, no aviones/barcos). */
   .hero-title-card {
     position: relative; z-index: 1; overflow: hidden;
-    background: #f7ece8;
+    /* se disuelve hacia el fondo de la pagina en vez de cortar en linea recta */
+    background: linear-gradient(to bottom, #f7ece8 0%, #f7ece8 75%, rgba(247,236,232,0) 100%);
     margin-left: -24px; margin-right: -24px; width: calc(100% + 48px);
     /* margen negativo = sube el fondo detras del nav fijo (que ahora es
        transparente), asi el color llega hasta arriba del todo sin corte;
