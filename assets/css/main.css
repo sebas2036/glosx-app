@@ -2602,7 +2602,11 @@
        el padding-top compensa para que el contenido quede en el mismo lugar */
     margin-top: -100px; padding: 140px 24px 4px;
   }
-  .hero-title-card h1 { font-size: clamp(34px, 5.5vw, 58px) !important; }
+  .hero-title-card h1 {
+    font-size: clamp(34px, 5.5vw, 58px) !important;
+    color: #fff !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.5) !important;
+  }
   .hero-title-inner {
     position: relative; z-index: 1;
     max-width: 720px; margin: 0 auto;
@@ -2619,6 +2623,13 @@
     overflow: hidden;
   }
   .hero-title-photo-wrap h1 { position: relative; z-index: 1; }
+  /* Desvanecido en los bordes izq/der, igual que .photo-carousel mas abajo
+     en la pagina -- mismo recurso, mismo color de fondo (blush). */
+  .hero-title-photo-wrap::before, .hero-title-photo-wrap::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
+  }
+  .hero-title-photo-wrap::before { left: 0; background: linear-gradient(to right, #f7ece8, transparent); }
+  .hero-title-photo-wrap::after { right: 0; background: linear-gradient(to left, #f7ece8, transparent); }
   .hero-photo-carousel {
     position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
   }
@@ -2628,6 +2639,7 @@
   }
   .hero-carousel-photo {
     width: 340px; height: 100%; object-fit: cover; flex-shrink: 0; display: block;
+    border-radius: 16px;
   }
   @media (max-width: 640px) {
     .hero-title-card { padding: 130px 20px 4px; margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); margin-top: -100px; }
@@ -2662,10 +2674,12 @@
     color: var(--rail-red) !important; box-shadow: none !important; backdrop-filter: none !important;
   }
   .hero h1 { filter: none !important; color: var(--rail-ink); letter-spacing: -0.8px !important; }
-  /* El rojo se queda solo en el boton/CTA -- el titulo entero en tinta,
-     asi no compite el mismo color en dos lugares pegados uno del otro. */
+  /* El rojo se queda solo en el boton/CTA -- el titulo entero en un solo
+     color, asi no compite el mismo rojo en dos lugares pegados uno del
+     otro. Blanco puro porque el titulo ahora vive sobre el carrusel de
+     fotos a maxima opacidad (sin scrim) -- necesita contraste real. */
   .hero h1 span {
-    background: none !important; -webkit-text-fill-color: var(--rail-ink) !important; color: var(--rail-ink) !important;
+    background: none !important; -webkit-text-fill-color: #fff !important; color: #fff !important;
   }
   .hero p { color: var(--rail-muted) !important; text-shadow: none !important; }
 
