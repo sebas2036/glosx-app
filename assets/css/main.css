@@ -2568,10 +2568,13 @@
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
   }
 
-  /* Esta capa dibujaba un degradado oscuro + glow rojo encima del fondo
-     claro del hero, justo donde estan los chips de sugerencia -- por eso
-     se veian borrosos/con bajo contraste. */
-  .ai-planner::before { display: none !important; }
+  /* Esta capa tenia ademas un degradado OSCURO encima del fondo claro,
+     justo donde estan los chips de sugerencia -- por eso se veian
+     borrosos/con bajo contraste. Se saca esa parte, pero el resplandor
+     rojo ambiental se queda (mas tenue, sin tapar texto). */
+  .ai-planner::before {
+    background: radial-gradient(ellipse 70% 55% at 50% 45%, rgba(193,0,22,0.10) 0%, transparent 70%) !important;
+  }
 
   .hero { font-family: var(--font-rail); }
   .hero-badge {
