@@ -2608,21 +2608,11 @@
      titulo), pero con nuestro propio lenguaje (vias, no aviones/barcos). */
   .hero-title-card {
     position: relative; z-index: 1; overflow: hidden;
-    /* Sin SVG (fallaba por encoding en la URL) -- grilla nativa con dos
-       linear-gradient cruzados (1px, chocolate 0.4 opacidad, mosaico 50px)
-       encima del degrade diagonal 135deg (ocre -> crema 45% -> arcilla).
-       3 capas = 3 valores de background-size explicitos (si se dejan solo
-       2 el tercero cicla y el degrade queda mosaiqueado en vez de cubrir
-       todo). */
-    background-color: #edd0b4;
+    /* Degrade diagonal simple, sin grilla ni patron encima -- solo esto. */
     background-attachment: fixed;
-    background-repeat: repeat, repeat, no-repeat;
-    background-size: 50px 50px, 50px 50px, 100% 100%;
-    background-position: center, center, center;
-    background-image:
-      linear-gradient(to right, rgba(122,78,41,0.4) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(122,78,41,0.4) 1px, transparent 1px),
-      linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%);
     mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
     margin-left: -24px; margin-right: -24px; width: calc(100% + 48px);
