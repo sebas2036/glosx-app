@@ -2605,22 +2605,35 @@
   .hero-ai-cta::before { display: none !important; }
 
   .ai-input-aurora::before { display: none !important; }
+  /* Elevacion real (sombra de papel, no glow de color): el buscador se
+     despega del fondo en vez de vivir en el mismo plano que el resto. */
   .ai-input-container input {
     background: #fff !important; border: 1.5px solid var(--rail-line) !important;
     color: var(--rail-ink) !important; border-radius: 100px !important;
-    backdrop-filter: none !important; box-shadow: none !important; font-family: var(--font-rail);
+    backdrop-filter: none !important;
+    box-shadow: 0 1px 2px rgba(20,21,26,0.04), 0 10px 24px -8px rgba(20,21,26,0.18) !important;
+    font-family: var(--font-rail);
   }
   .ai-input-container input::placeholder { color: #9a9ba5 !important; }
   .ai-input-container input:focus { border-color: var(--rail-red) !important; box-shadow: 0 0 0 3px rgba(193,0,22,0.12) !important; }
   .ai-generate-btn {
     background: var(--rail-ink) !important; color: #fff !important; border-radius: 4px !important;
-    box-shadow: none !important;
+    box-shadow: 0 1px 2px rgba(20,21,26,0.04), 0 10px 24px -8px rgba(20,21,26,0.18) !important;
     font-family: var(--font-rail);
   }
-  .ai-generate-btn:hover { box-shadow: none !important; background: #2a2b33 !important; }
+  .ai-generate-btn:hover { box-shadow: 0 4px 10px -2px rgba(20,21,26,0.28) !important; background: #2a2b33 !important; }
   .ai-suggestion { color: var(--rail-muted) !important; font-family: var(--font-rail); }
   .ai-suggestion:hover { color: var(--rail-red) !important; }
   .ai-suggestions-label { color: var(--rail-muted) !important; }
+
+  /* Vía punteada que conecta el buscador con las rutas populares de abajo --
+     antes eran dos bloques sueltos en el mismo plano; esto les da continuidad,
+     como una linea de tren que atraviesa estaciones. */
+  .route-connector {
+    display: block; max-width: 220px; height: 20px; margin: 2px auto 16px;
+    color: rgba(193,0,22,0.4);
+  }
+  .route-connector svg { width: 100%; height: 100%; display: block; }
 
   .country-chip {
     background: #fff !important; border: 1.5px solid var(--rail-line) !important;
