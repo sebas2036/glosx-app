@@ -2584,9 +2584,7 @@
      (esquinas calidas -> centro casi blanco donde vive el buscador) en vez
      de color plano -- sin patron SVG encima, eso ya lo aporta el body. */
   .hero-bgwrap {
-    background:
-      radial-gradient(ellipse 85% 65% at 50% 58%, #ffffff 0%, rgba(255,255,255,0) 55%),
-      linear-gradient(135deg, #f6ddc2 0%, #fbf3ea 45%, #fbf3ea 55%, #eed7bd 100%);
+    background: linear-gradient(135deg, #f2cc9c 0%, #f8e2c4 22%, #ffffff 50%, #f8e2c4 78%, #f0c99a 100%);
   }
 
   /* Lineas de ruta curvas extendidas a TODA la pagina (no solo el hero) --
