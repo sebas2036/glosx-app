@@ -2578,18 +2578,13 @@
   .nav-toggle { border-color: var(--rail-line) !important; color: var(--rail-ink) !important; }
   .lang-btn { color: var(--rail-ink) !important; }
 
-  /* Fondo del hero: opaco y claro, tapa el fondo violeta compartido del
-     body sin tocar los tokens globales (el resto de las secciones de mas
-     abajo siguen oscuras hasta la proxima etapa). Degrade diagonal sutil
-     (esquinas calidas -> centro casi blanco donde vive el buscador) en vez
-     de color plano -- sin patron SVG encima, eso ya lo aporta el body. */
+  /* Fondo del hero: cubre toda la seccion (nav hasta los chips), mismo
+     degrade diagonal simple que .hero-title-card::before -- asi el efecto
+     se ve en toda la pantalla inicial, no solo en la banda de la tarjeta. */
   .hero-bgwrap {
-    background-color: #d9a06c;
-    background-repeat: no-repeat, repeat;
-    background-size: 100% 100%, 450px 450px;
-    background-image:
-      linear-gradient(135deg, #c9884f 0%, #fffbf7 45%, #a8703f 100%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M-10,50 Q25,20 60,60 T130,30 M0,90 Q40,40 80,110 M20,-10 Q70,30 110,-20' fill='none' stroke='%235c3a1e' stroke-width='1.8' opacity='0.45'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%);
   }
 
   /* Lineas de ruta curvas extendidas a TODA la pagina (no solo el hero) --
