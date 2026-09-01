@@ -675,6 +675,27 @@
     document.addEventListener('click', () => {
       document.getElementById('langDropdown').classList.remove('open');
     });
+    // Cerrar el menú hamburguesa al clickear afuera o con Escape -- antes
+    // solo se cerraba tocando un link o el boton de nuevo; en el rango
+    // tablet/laptop chico (ver media query de nav en main.css) se usa con
+    // mouse/trackpad, donde clickear afuera para cerrar es lo esperado.
+    document.addEventListener('click', (e) => {
+      const links = document.getElementById('navLinks');
+      const toggle = document.getElementById('navToggle');
+      if (links.classList.contains('show') && !links.contains(e.target) && !toggle.contains(e.target)) {
+        links.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const links = document.getElementById('navLinks');
+        if (links.classList.contains('show')) {
+          links.classList.remove('show');
+          document.getElementById('navToggle').setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
 
     // Aplicar idioma inicial
     applyLang(detectLang());
