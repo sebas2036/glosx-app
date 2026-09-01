@@ -2752,9 +2752,19 @@
   }
   .route-connector svg { width: 100%; height: 100%; display: block; }
 
+  /* Version "premium": borde gris fino + sombra de elevacion suave en vez del
+     borde negro grueso, tipografia mas liviana con un poco mas de tracking. */
   .country-chip {
-    background: #fff !important; border: 1.5px solid var(--rail-line) !important;
-    color: var(--rail-ink) !important; box-shadow: none !important; backdrop-filter: none !important;
-    font-family: var(--font-rail);
+    background: #fff !important; border: 1px solid rgba(20,21,26,0.12) !important;
+    color: var(--rail-ink) !important;
+    box-shadow: 0 1px 2px rgba(20,21,26,0.04), 0 4px 12px rgba(20,21,26,0.06) !important;
+    backdrop-filter: none !important;
+    font-family: var(--font-rail); font-weight: 500 !important; letter-spacing: 0.3px !important;
+  }
+  .country-chip:hover {
+    border-color: rgba(193,0,22,0.5) !important;
+    background: #fff !important;
+    color: var(--rail-red) !important;
+    box-shadow: 0 2px 4px rgba(20,21,26,0.05), 0 8px 20px rgba(193,0,22,0.15) !important;
   }
   .hero-bgwrap .section-label { color: var(--rail-red) !important; }
