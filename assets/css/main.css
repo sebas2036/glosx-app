@@ -2653,8 +2653,8 @@
 
   .hero { font-family: var(--font-rail); }
   .hero-badge {
-    background: #fff !important; border: 1.5px solid var(--rail-line) !important;
-    color: var(--rail-ink) !important; box-shadow: none !important; backdrop-filter: none !important;
+    background: rgba(193,0,22,0.08) !important; border: 1.5px solid rgba(193,0,22,0.28) !important;
+    color: var(--rail-red) !important; box-shadow: none !important; backdrop-filter: none !important;
   }
   .hero h1 { filter: none !important; color: var(--rail-ink); letter-spacing: -0.8px !important; }
   /* El rojo se queda solo en el boton/CTA -- el titulo entero en tinta,
