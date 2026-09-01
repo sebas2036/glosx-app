@@ -2602,17 +2602,20 @@
        el padding-top compensa para que el contenido quede en el mismo lugar */
     margin-top: -100px; padding: 140px 24px 4px;
   }
-  .hero-title-card > * { position: relative; z-index: 1; }
-  .hero-title-card .hero-badge, .hero-title-card h1, .hero-title-card p, .hero-title-card .hero-cta-wrap {
-    max-width: 720px; margin-left: auto; margin-right: auto;
-  }
   .hero-title-card h1 { font-size: clamp(34px, 5.5vw, 58px) !important; }
-  /* Carrusel real de fotos (el mismo componente/fotos que .photo-carousel
-     mas abajo en la pagina) corriendo detras del titulo -- reemplaza el
-     patron de lineas abstracto y la caja oscura extra. Scrim claro encima
-     para que el texto siga legible sin tapar del todo las fotos. */
+  /* El carrusel va CONTENIDO al mismo ancho/alto que el bloque de texto
+     (.hero-title-inner), no estirado a todo el ancho de la banda -- por
+     eso .hero-title-inner es el contenedor relativo+acotado, y el carrusel
+     es su primer hijo en position:absolute inset:0 dentro de esa caja. */
+  .hero-title-inner {
+    position: relative; z-index: 1; overflow: hidden;
+    max-width: 720px; margin: 0 auto; border-radius: 20px;
+    padding: 8px 0;
+  }
+  .hero-title-inner > *:not(.hero-photo-carousel) { position: relative; z-index: 1; }
   .hero-photo-carousel {
     position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+    border-radius: inherit;
   }
   .hero-carousel-track {
     display: flex; gap: 12px; width: max-content; height: 100%;
