@@ -1678,7 +1678,7 @@
 
   /* === AI Route Planner === */
   .ai-planner {
-    padding: 40px 24px 24px;
+    padding: 16px 24px 16px;
     background: transparent;
     position: relative;
     overflow: hidden;
@@ -1891,7 +1891,7 @@
   }
   .ai-restore-btn {
     display: block;
-    margin: 24px auto 0;
+    margin: 10px auto 0;
     font-size: 15px;
     color: var(--primary2);
     background: none;
