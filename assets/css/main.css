@@ -2652,6 +2652,14 @@
   @media (max-width: 640px) {
     .hero-title-card { padding: 130px 20px 4px; margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); margin-top: -100px; }
   }
+  /* La regla global "* { max-width:100% }" de mobile (600px) le pisa el
+     ancho fijo de 340px a cada foto del carrusel del hero, colapsandolas
+     al ancho del contenedor -- sin overflow no hay nada que recorrer y
+     la animacion (que si corre) se ve congelada. */
+  @media (max-width: 600px) {
+    .hero-carousel-photo { max-width: none !important; width: 340px !important; }
+    .hero-carousel-track { max-width: none !important; }
+  }
   .hero-bgwrap::after, .hero-bgwrap::before, .hero-city-dots {
     display: none !important;
   }
