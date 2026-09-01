@@ -2747,6 +2747,10 @@
   @media (max-width: 768px) {
     .ai-swap-btn { width: 36px !important; height: 36px !important; right: 6px !important; font-size: 15px !important; }
   }
+  /* El placeholder es una frase larga -- en mobile el input no tiene ancho
+     para mostrarla entera y se corta a mitad de palabra/comilla sin aviso
+     (overflow:clip). Puntos suspensivos en vez de corte seco. */
+  .ai-input-container input { text-overflow: ellipsis !important; }
   .ai-generate-btn {
     background: var(--rail-ink) !important; color: #fff !important; border-radius: 100px !important;
     box-shadow: none !important;
