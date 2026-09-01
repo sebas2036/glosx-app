@@ -2577,7 +2577,7 @@
      el mismo peso visual que un hero fotografico, sin volver a un fondo
      completo. z-index:-1 dentro del stacking context de .hero (relative +
      z-index:20) para quedar detras del texto sin taparlo. */
-  .hero-photo-cluster { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  .hero-photo-cluster { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
   .hp {
     position: absolute; border-radius: 16px; overflow: hidden;
     box-shadow: 0 14px 30px -10px rgba(20,21,26,0.32); border: 3px solid #fff;
@@ -2593,6 +2593,31 @@
   }
   @media (max-width: 900px) {
     .hero-photo-cluster { display: none; }
+  }
+
+  /* El titulo vivia solo, flotando sobre el fondo sin ningun ancla.
+     Ahora es una banda de ancho completo con color suave y las mismas
+     lineas de ruta pero mas protagonistas -- el mismo recurso que usa
+     media industria de viajes (ilustracion + color suave detras del
+     titulo), pero con nuestro propio lenguaje (vias, no aviones/barcos). */
+  .hero-title-card {
+    position: relative; z-index: 1; overflow: hidden;
+    background: #f7ece8;
+    margin-left: -24px; margin-right: -24px; width: calc(100% + 48px);
+    padding: 40px 24px 4px;
+  }
+  .hero-title-card::before {
+    content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 420'><g fill='none' stroke='rgba(193,0,22,0.16)' stroke-width='2'><path d='M -30 160 C 200 60, 340 260, 520 150 S 780 30, 1230 120'/><path d='M -30 280 C 180 350, 340 220, 520 290 S 820 400, 1230 300'/></g><g fill='rgba(193,0,22,0.22)'><circle cx='520' cy='150' r='4'/><circle cx='780' cy='30' r='3'/><circle cx='520' cy='290' r='4'/></g></svg>");
+    background-size: cover; background-position: center;
+  }
+  .hero-title-card > * { position: relative; z-index: 1; }
+  .hero-title-card .hero-badge, .hero-title-card h1, .hero-title-card p, .hero-title-card .hero-cta-wrap {
+    max-width: 720px; margin-left: auto; margin-right: auto;
+  }
+  .hero-title-card h1 { font-size: clamp(34px, 5.5vw, 58px) !important; }
+  @media (max-width: 640px) {
+    .hero-title-card { padding: 30px 20px 4px; margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); }
   }
   .hero-bgwrap::after, .hero-bgwrap::before, .hero-city-dots {
     display: none !important;
@@ -2632,7 +2657,7 @@
   .hero p { color: var(--rail-muted) !important; text-shadow: none !important; }
 
   .hero-ai-cta {
-    background: var(--rail-red) !important; border: none !important; border-radius: 4px !important;
+    background: var(--rail-red) !important; border: none !important; border-radius: 12px !important;
     color: #fff !important; backdrop-filter: none !important; box-shadow: none !important;
   }
   .hero-ai-cta::before { display: none !important; }
