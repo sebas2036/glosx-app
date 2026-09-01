@@ -2578,14 +2578,13 @@
   .nav-toggle { border-color: var(--rail-line) !important; color: var(--rail-ink) !important; }
   .lang-btn { color: var(--rail-ink) !important; }
 
-  /* Fondo del hero: cubre toda la seccion (nav hasta los chips), mismo
-     degrade diagonal simple que .hero-title-card::before -- asi el efecto
-     se ve en toda la pantalla inicial, no solo en la banda de la tarjeta. */
-  .hero-bgwrap {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%);
-  }
+  /* Transparente a proposito: antes tenia su PROPIA copia del degrade,
+     terminando en un tono solido justo en el borde inferior de esta caja
+     -- ahi se armaba una linea de corte visible contra el degrade fixed
+     del body (que sigue de largo, sin cortes, calculado contra toda la
+     pagina). Dejando esta caja transparente se ve el mismo degrade del
+     body a traves, sin costura. */
+  .hero-bgwrap { background: transparent; }
 
   /* Degrade diagonal de arriba hasta abajo de TODA la pagina (no solo el
      hero) -- fixed para que no se corte al hacer scroll, se ve igual en
@@ -2811,7 +2810,7 @@
   /* Version "premium": borde gris fino + sombra de elevacion suave en vez del
      borde negro grueso, tipografia mas liviana con un poco mas de tracking. */
   .country-chip {
-    background: #fff !important; border: 1px solid rgba(20,21,26,0.12) !important;
+    background: #fbf1e6 !important; border: 1px solid rgba(20,21,26,0.12) !important;
     color: var(--rail-ink) !important;
     box-shadow: 0 1px 2px rgba(20,21,26,0.04), 0 4px 12px rgba(20,21,26,0.06) !important;
     backdrop-filter: none !important;
