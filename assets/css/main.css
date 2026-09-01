@@ -2576,7 +2576,7 @@
   /* Outline -- el rojo solido es del hero, este solo acompaña (ver
      .nav-links a.nav-cta arriba, que ya trae el estilo correcto). */
   .nav-toggle { border-color: var(--rail-line) !important; color: var(--rail-ink) !important; }
-  .lang-btn { color: var(--rail-ink) !important; }
+  .lang-btn { color: var(--rail-ink) !important; background: #fbf1e6 !important; border-color: rgba(20,21,26,0.12) !important; }
 
   /* Transparente a proposito: antes tenia su PROPIA copia del degrade,
      terminando en un tono solido justo en el borde inferior de esta caja
