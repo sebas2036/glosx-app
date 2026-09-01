@@ -127,15 +127,17 @@
       .wt-coach { animation: none; }
     }
     /* CTA principal del header */
+    /* Outline, no solido -- el CTA principal (rojo lleno) es el del hero;
+       este acompaña sin competirle el mismo peso visual. */
     .nav-links a.nav-cta {
-      background: linear-gradient(135deg, #C10016 0%, #9d5cf5 100%);
-      color: #fff; font-weight: 700; white-space: nowrap;
-      padding: 9px 22px; border-radius: 100px;
-      border: 1px solid rgba(224,128,138,0.55);
-      box-shadow: 0 4px 16px rgba(193,0,22,0.4), inset 0 1px 0 rgba(255,255,255,0.18);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      background: transparent;
+      color: var(--primary); font-weight: 700; white-space: nowrap;
+      padding: 8px 21px; border-radius: 100px;
+      border: 1.5px solid var(--primary);
+      box-shadow: none;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
     }
-    .nav-links a.nav-cta:hover { color: #fff; transform: translateY(-1px); filter: brightness(1.08); box-shadow: 0 6px 22px rgba(193,0,22,0.55), inset 0 1px 0 rgba(255,255,255,0.22); }
+    .nav-links a.nav-cta:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
     .nav-links a.nav-cta::after { display: none; }
 
     /* ── Botón hamburguesa (solo móvil) ── */
@@ -146,7 +148,7 @@
       border: 1px solid rgba(193,0,22,0.30);
       align-items: center; justify-content: center;
     }
-    .nav-toggle svg { width: 24px; height: 24px; stroke: #fff; }
+    .nav-toggle svg { width: 24px; height: 24px; stroke: var(--text); }
 
     /* ── Language selector ── */
     .lang-wrapper { position: relative; }
@@ -2544,7 +2546,8 @@
   .nav-logo span:last-child { color: var(--rail-ink) !important; }
   .nav-logo svg line { stroke: var(--rail-red) !important; }
   .nav-links a { color: var(--rail-ink) !important; font-family: var(--font-rail); }
-  .nav-cta { background: var(--rail-red) !important; color: #fff !important; border-radius: 4px !important; }
+  /* Outline -- el rojo solido es del hero, este solo acompaña (ver
+     .nav-links a.nav-cta arriba, que ya trae el estilo correcto). */
   .nav-toggle { border-color: var(--rail-line) !important; color: var(--rail-ink) !important; }
   .lang-btn { color: var(--rail-ink) !important; }
 
@@ -2598,15 +2601,17 @@
   .ai-input-aurora::before { display: none !important; }
   .ai-input-container input {
     background: #fff !important; border: 1.5px solid var(--rail-line) !important;
-    color: var(--rail-ink) !important; border-radius: 4px !important;
+    color: var(--rail-ink) !important; border-radius: 100px !important;
     backdrop-filter: none !important; box-shadow: none !important; font-family: var(--font-rail);
   }
   .ai-input-container input::placeholder { color: #9a9ba5 !important; }
   .ai-input-container input:focus { border-color: var(--rail-red) !important; box-shadow: 0 0 0 3px rgba(193,0,22,0.12) !important; }
   .ai-generate-btn {
     background: var(--rail-ink) !important; color: #fff !important; border-radius: 4px !important;
+    box-shadow: none !important;
     font-family: var(--font-rail);
   }
+  .ai-generate-btn:hover { box-shadow: none !important; background: #2a2b33 !important; }
   .ai-suggestion { color: var(--rail-muted) !important; font-family: var(--font-rail); }
   .ai-suggestion:hover { color: var(--rail-red) !important; }
   .ai-suggestions-label { color: var(--rail-muted) !important; }
