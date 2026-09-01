@@ -12,12 +12,15 @@
   <meta property="og:url" content="https://glosx.app/rutas/" />
   <meta property="og:image" content="https://glosx.app/og-image.jpg" />
   <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#0a0a0f; --text:#EDEBF5; --muted:#C9C6D6; --primary2:#a78bfa; }
+    :root { --bg:#fafaf8; --text:#14151a; --muted:#55565f; --primary2:#C10016; }
     * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.5; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.5; }
     .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
-    nav { display:flex; align-items:center; justify-content:space-between; padding:18px 28px; border-bottom:1px solid rgba(139,92,246,0.18); }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:18px 28px; border-bottom:1.5px solid var(--text); }
     nav a { color:var(--text); text-decoration:none; font-weight:600; }
     nav .back { color:var(--muted); font-size:14px; }
     header { text-align:center; padding:56px 24px 24px; }
@@ -28,9 +31,9 @@
     .routes-index-list { list-style:none; padding:0; margin:0; columns:3; column-gap:30px; font-size:14px; }
     .routes-index-list li { break-inside:avoid; margin-bottom:10px; line-height:1.4; }
     .routes-index-list a { color:var(--muted); text-decoration:none; }
-    .routes-index-list a:hover { color:#fff; text-decoration:underline; }
-    .routes-index-list .ri-es { color:#8b7bc0; font-size:11px; font-weight:700; margin-left:5px; letter-spacing:0.5px; }
-    footer { text-align:center; padding:28px; color:var(--muted); font-size:13px; border-top:1px solid rgba(139,92,246,0.15); }
+    .routes-index-list a:hover { color:var(--text); text-decoration:underline; }
+    .routes-index-list .ri-es { color:var(--primary2); font-size:11px; font-weight:700; margin-left:5px; letter-spacing:0.5px; }
+    footer { text-align:center; padding:28px; color:var(--muted); font-size:13px; border-top:1px solid rgba(20,21,26,0.14); }
     footer a { color:var(--muted); }
     @media (max-width:760px) { .routes-index-list { columns:2; } header h1 { font-size:26px; } }
     @media (max-width:460px) { .routes-index-list { columns:1; } }

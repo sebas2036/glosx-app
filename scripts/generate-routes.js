@@ -659,10 +659,10 @@ function generatePriceTable(route, lang) {
   return `
     <table style="width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:14px;">
       <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.12);text-align:left;">
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Operator</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">From</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Journey time</th>
-        <th style="padding:8px 12px;color:#a78bfa;font-weight:700;">Frequency</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">Operator</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">From</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">Journey time</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">Frequency</th>
       </tr></thead>
       <tbody>
         <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
@@ -673,7 +673,7 @@ function generatePriceTable(route, lang) {
         </tr>
       </tbody>
     </table>
-    <p style="font-size:13px;color:#8888aa;margin-bottom:16px;">Prices are indicative advance fares. Check live availability for your exact date.</p>
+    <p style="font-size:13px;color:#55565f;margin-bottom:16px;">Prices are indicative advance fares. Check live availability for your exact date.</p>
   `;
 }
 
