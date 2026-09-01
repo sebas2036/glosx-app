@@ -21,6 +21,9 @@
   <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
 
   <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
   <script>
@@ -88,26 +91,26 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #16131f; --surface: #221f30; --border: rgba(255,255,255,0.08);
-      --primary: #7c3aed; --primary2: #a78bfa; --text: #f0f0f5; --muted: #8888aa;
+      --bg: #fafaf8; --surface: #ffffff; --border: rgba(20,21,26,0.14);
+      --primary: #C10016; --primary2: #C10016; --text: #14151a; --muted: #55565f;
     }
     body {
-      background: radial-gradient(ellipse 90% 60% at 50% 0%, rgba(124,58,237,0.10), transparent 60%), var(--bg);
+      background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       min-height: 100vh;
     }
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 18px 40px;
-      background: rgba(10,10,15,0.85); backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(139,92,246,0.18);
+      background: rgba(250,250,248,0.92); backdrop-filter: blur(20px);
+      border-bottom: 1.5px solid var(--text);
     }
     .nav-logo {
       font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
-      background: linear-gradient(135deg, var(--primary2), #fff);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none;
+      color: var(--text);
+      text-decoration: none;
     }
     .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
     .nav-back:hover { color: var(--text); }
@@ -124,19 +127,20 @@
     @media (max-width: 600px) { .route-hero { height: 64vh; min-height: 380px; } }
 main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     .badge {
-      display: inline-block; background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3);
+      display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35);
       border-radius: 100px; padding: 5px 14px; margin-bottom: 24px;
-      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--primary2); text-transform: uppercase;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #fff; text-transform: uppercase;
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
     }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
-    .lead { font-size: 19px; color: #c8c8d8; line-height: 1.7; margin-bottom: 40px; }
+    .lead { font-size: 19px; color: #55565f; line-height: 1.7; margin-bottom: 40px; }
     h2 { font-size: 26px; font-weight: 700; margin: 48px 0 12px; letter-spacing: -0.5px; }
     h3 { font-size: 19px; font-weight: 700; margin: 28px 0 8px; color: var(--text); }
-    p { font-size: 16px; color: #b9b9c9; line-height: 1.8; }
+    p { font-size: 16px; color: #14151a; line-height: 1.8; }
     p + p { margin-top: 14px; }
     ul, ol { padding-left: 22px; margin-top: 12px; }
-    li { font-size: 16px; color: #b9b9c9; line-height: 1.8; margin-bottom: 8px; }
+    li { font-size: 16px; color: #14151a; line-height: 1.8; margin-bottom: 8px; }
     strong { color: #e3e3ee; }
     a { color: var(--primary2); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -151,7 +155,7 @@ main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     .toc a { color: var(--text); font-size: 15px; }
     .toc a:hover { color: var(--primary2); }
     .tip-box {
-      background: rgba(124,58,237,0.08); border-left: 3px solid var(--primary);
+      background: rgba(193,0,22,0.08); border-left: 3px solid var(--primary);
       border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 24px 0;
     }
     .tip-box strong { color: var(--primary2); }
@@ -160,29 +164,29 @@ main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     }
     .comparison-table th {
       padding: 11px 14px; text-align: left; font-weight: 700;
-      border-bottom: 1px solid rgba(139,92,246,0.4); color: var(--primary2);
+      border-bottom: 1px solid rgba(193,0,22,0.4); color: var(--primary2);
     }
     .comparison-table td {
-      padding: 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #b9b9c9;
+      padding: 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #14151a;
     }
     .comparison-table tr:last-child td { border-bottom: none; }
     .route-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
     .route-pill {
-      display: inline-block; background: rgba(124,58,237,0.10); border: 1px solid rgba(139,92,246,0.3);
-      border-radius: 100px; padding: 7px 16px; font-size: 14px; font-weight: 600; color: #a78bfa;
+      display: inline-block; background: rgba(193,0,22,0.10); border: 1px solid rgba(193,0,22,0.3);
+      border-radius: 100px; padding: 7px 16px; font-size: 14px; font-weight: 600; color: #C10016;
     }
-    .route-pill:hover { background: rgba(124,58,237,0.20); text-decoration: none; border-color: rgba(139,92,246,0.6); }
+    .route-pill:hover { background: rgba(193,0,22,0.20); text-decoration: none; border-color: rgba(193,0,22,0.6); }
     .cta {
-      background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(109,40,217,0.12));
-      border: 1px solid rgba(139,92,246,0.35);
+      background: linear-gradient(135deg, rgba(193,0,22,0.18), rgba(193,0,22,0.12));
+      border: 1px solid rgba(193,0,22,0.35);
       border-radius: 18px; padding: 28px; margin: 48px 0 8px; text-align: center;
     }
     .cta h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
-    .cta p { color: #c8c8d8; margin-bottom: 18px; }
+    .cta p { color: #55565f; margin-bottom: 18px; }
     .cta-btn {
-      display: inline-block; background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      display: inline-block; background: linear-gradient(135deg, #C10016, #C10016);
       color: #fff; font-weight: 700; padding: 12px 28px; border-radius: 100px;
-      box-shadow: 0 6px 20px rgba(124,58,237,0.5);
+      box-shadow: none;
     }
     .cta-btn:hover { text-decoration: none; }
     hr { border: none; border-top: 1px solid var(--border); margin: 44px 0; }
@@ -427,25 +431,25 @@ main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     <h2 id="faq">Preguntas frecuentes</h2>
 
     <div style="margin-top: 12px;">
-      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0;">
+      <div style="border-top: 1px solid rgba(20,21,26,0.14); padding: 20px 0;">
         <div style="font-size:17px;font-weight:700;margin-bottom:8px;">¿Vale la pena un pase de tren para Europa?</div>
-        <div style="font-size:15px;color:#b9b9c9;line-height:1.7;">Depende de cuántos países vayas a cruzar y qué tan flexible sea tu itinerario. Para 5 o más países en 2–3 semanas con planes espontáneos, un pase Interrail o Eurail Global suele convenir. Para un viaje enfocado en 2–3 rutas reservadas con anticipación, los tickets individuales suelen salir más baratos.</div>
+        <div style="font-size:15px;color:#14151a;line-height:1.7;">Depende de cuántos países vayas a cruzar y qué tan flexible sea tu itinerario. Para 5 o más países en 2–3 semanas con planes espontáneos, un pase Interrail o Eurail Global suele convenir. Para un viaje enfocado en 2–3 rutas reservadas con anticipación, los tickets individuales suelen salir más baratos.</div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0;">
+      <div style="border-top: 1px solid rgba(20,21,26,0.14); padding: 20px 0;">
         <div style="font-size:17px;font-weight:700;margin-bottom:8px;">¿Con cuánta anticipación hay que reservar los trenes en Europa?</div>
-        <div style="font-size:15px;color:#b9b9c9;line-height:1.7;">Para rutas de alta velocidad (París–Londres, Madrid–Barcelona, París–Ámsterdam), reservá con 2–3 meses de anticipación para conseguir las tarifas más baratas. Los trenes regionales y los servicios intercity más lentos se pueden reservar con pocos días de antelación sin una penalización de precio significativa.</div>
+        <div style="font-size:15px;color:#14151a;line-height:1.7;">Para rutas de alta velocidad (París–Londres, Madrid–Barcelona, París–Ámsterdam), reservá con 2–3 meses de anticipación para conseguir las tarifas más baratas. Los trenes regionales y los servicios intercity más lentos se pueden reservar con pocos días de antelación sin una penalización de precio significativa.</div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0;">
+      <div style="border-top: 1px solid rgba(20,21,26,0.14); padding: 20px 0;">
         <div style="font-size:17px;font-weight:700;margin-bottom:8px;">¿Se puede recorrer toda Europa en tren?</div>
-        <div style="font-size:15px;color:#b9b9c9;line-height:1.7;">Casi toda. La red ferroviaria europea cubre 44 países. Las excepciones son destinos insulares y algunas zonas remotas del norte que requieren ferry o avión. Pero la gran mayoría de las ciudades europeas están conectadas con servicios directos o con un solo trasbordo.</div>
+        <div style="font-size:15px;color:#14151a;line-height:1.7;">Casi toda. La red ferroviaria europea cubre 44 países. Las excepciones son destinos insulares y algunas zonas remotas del norte que requieren ferry o avión. Pero la gran mayoría de las ciudades europeas están conectadas con servicios directos o con un solo trasbordo.</div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0;">
+      <div style="border-top: 1px solid rgba(20,21,26,0.14); padding: 20px 0;">
         <div style="font-size:17px;font-weight:700;margin-bottom:8px;">¿Cuál es la forma más barata de tomar el tren en Europa?</div>
-        <div style="font-size:15px;color:#b9b9c9;line-height:1.7;">Reservar con anticipación, viajar en horarios de menor demanda y comparar todos los operadores en un mismo buscador. En rutas competitivas como Madrid–Barcelona, operadoras como Ouigo e Iryo venden asientos desde €14. Ser flexible en el horario siempre da las tarifas más bajas.</div>
+        <div style="font-size:15px;color:#14151a;line-height:1.7;">Reservar con anticipación, viajar en horarios de menor demanda y comparar todos los operadores en un mismo buscador. En rutas competitivas como Madrid–Barcelona, operadoras como Ouigo e Iryo venden asientos desde €14. Ser flexible en el horario siempre da las tarifas más bajas.</div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 20px 0;">
+      <div style="border-top: 1px solid rgba(20,21,26,0.14); border-bottom: 1px solid rgba(20,21,26,0.14); padding: 20px 0;">
         <div style="font-size:17px;font-weight:700;margin-bottom:8px;">¿Necesito reservar asiento en los trenes europeos?</div>
-        <div style="font-size:15px;color:#b9b9c9;line-height:1.7;">En los trenes de alta velocidad (TGV, AVE, Eurostar, Frecciarossa, ICE), la reserva de asiento es obligatoria o muy recomendada y generalmente está incluida en el precio del billete. En trenes regionales y servicios intercity más antiguos, la reserva suele ser opcional.</div>
+        <div style="font-size:15px;color:#14151a;line-height:1.7;">En los trenes de alta velocidad (TGV, AVE, Eurostar, Frecciarossa, ICE), la reserva de asiento es obligatoria o muy recomendada y generalmente está incluida en el precio del billete. En trenes regionales y servicios intercity más antiguos, la reserva suele ser opcional.</div>
       </div>
     </div>
 
