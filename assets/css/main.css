@@ -2739,6 +2739,14 @@
     font-family: var(--font-rail);
   }
   .ai-generate-btn:hover { background: #2a2b33 !important; }
+  /* En mobile el contenedor queda apilado en columna (input + boton) --
+     el radio de 100px pensado para una pildora horizontal lo convierte en
+     un ovalo hinchado. Radio de tarjeta + boton un poco mas chico. */
+  @media (max-width: 768px) {
+    .ai-input-container { border-radius: 28px !important; gap: 10px !important; }
+    .ai-input-aurora, .ai-input-container input { border-radius: 20px !important; }
+    .ai-generate-btn { border-radius: 20px !important; padding: 16px 24px !important; }
+  }
   .ai-suggestion { color: var(--rail-muted) !important; font-family: var(--font-rail); }
   .ai-suggestion:hover { color: var(--rail-red) !important; }
   .ai-suggestions-label { color: var(--rail-muted) !important; }
