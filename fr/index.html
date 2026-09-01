@@ -275,7 +275,7 @@
       <a href="/explore/" data-i18n="nav_routes">Itinéraires</a>
       <a href="/explore/" class="nav-cta" data-i18n="nav_download" onclick="return wtStartOnboarding();">Commencer</a>
       <div class="lang-wrapper">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Langue">
           <span id="langCode">EN</span>
           <span style="font-size:10px;opacity:0.6">▾</span>
         </button>
@@ -341,7 +341,7 @@
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="ex. : 'Paris à Rome avec vue' ou '5 jours dans les Alpes suisses'" autocomplete="off" oninput="document.getElementById('aiInputAurora').classList.toggle('active', this.value.trim().length > 0)" />
-          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
+          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Inverser origine et destination" title="Inverser origine et destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Générer l'itinéraire</button>
       </div>
@@ -355,7 +355,7 @@
     </div>
 
     <div class="ai-results" id="aiResults" style="display:none;">
-      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
+      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Fermer">×</button>
       <div class="ai-results-header">
         <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
         <p id="aiRouteDuration"></p>
@@ -549,7 +549,7 @@
     <img class="section-head-photo" src="/assets/img/community/plan-adventure.webp" alt="Travelers planning their route with a map" width="480" height="300" loading="lazy">
   </div>
 
-  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
+  <div class="wt-route-buttons" role="group" aria-label="Choisir un itinéraire">
     <button class="wt-route-btn" data-route="classic" aria-pressed="false">
       <span data-i18n="route_classic">Route Classique (France–Italie)</span>
     </button>
@@ -605,7 +605,7 @@
           <span class="vip-brand">Klook Hotels</span>
           <span class="vip-sub" data-i18n="vip_klook_hotels">Choisissez votre ville →</span>
         </div>
-        <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="Choose a city" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
+        <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="Choisir une ville" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
         <div class="klook-city-menu" id="klookCityMenu"></div>
       </div>
     </div>
@@ -664,7 +664,7 @@
   <div class="partner-widgets">
     <!-- Kiwitaxi · Shuttles Search Form -->
     <div class="pw-panel" id="pw-kiwitaxi" data-widget-src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&language=en&theme=1&powered_by=true&campaign_id=1&promo_id=1486">
-      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
+      <button class="pw-close" onclick="closeWidget()" aria-label="Fermer">×</button>
     </div>
   </div>
   </section>
@@ -1035,7 +1035,7 @@
     <p class="disclaimer" data-i18n="footer_disclaimer">WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées selon les conditions du partenaire concerné ; nous ne sommes pas partie à cette transaction. Nous pouvons percevoir une commission sur les achats qualifiés sans frais supplémentaires pour vous.</p>
   </footer>
 
-  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="Installer l'app" hidden>
     <div class="ios-install-icon" aria-hidden="true">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
     </div>
@@ -1047,7 +1047,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
     </button>
   </div>
-  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="Installer l'app" hidden>
     <div class="ios-install-icon" aria-hidden="true">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
     </div>
