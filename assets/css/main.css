@@ -1678,7 +1678,7 @@
 
   /* === AI Route Planner === */
   .ai-planner {
-    padding: 40px 24px 60px;
+    padding: 40px 24px 24px;
     background: transparent;
     position: relative;
     overflow: hidden;
@@ -2456,7 +2456,7 @@
   }
   .ai-copy-btn:hover { background: #f0ecfc; border-color: #C10016; }
   @media (max-width: 768px) {
-    .ai-planner { padding: 60px 20px 40px; }
+    .ai-planner { padding: 60px 20px 16px; }
     .ai-planner-header h2 { font-size: 32px; }
     .ai-subtitle { font-size: 16px; }
     .ai-input-container { flex-direction: column; }
@@ -2727,7 +2727,7 @@
      antes eran dos bloques sueltos en el mismo plano; esto les da continuidad,
      como una linea de tren que atraviesa estaciones. */
   .route-connector {
-    display: block; max-width: 220px; height: 20px; margin: 2px auto 16px;
+    display: block; max-width: 220px; height: 20px; margin: 0 auto 10px;
     color: rgba(193,0,22,0.4);
   }
   .route-connector svg { width: 100%; height: 100%; display: block; }
