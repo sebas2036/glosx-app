@@ -2741,6 +2741,12 @@
     color: var(--rail-muted) !important; font-size: 13px !important;
   }
   .ai-swap-btn:hover { background: var(--rail-red) !important; border-color: var(--rail-red) !important; color: #fff !important; }
+  /* En mobile es el elemento interactivo mas chico del buscador (28x28,
+     por debajo del target tactil recomendado) -- en pantalla touch-first
+     lo agrandamos un poco sin perder el aspecto discreto de escritorio. */
+  @media (max-width: 768px) {
+    .ai-swap-btn { width: 36px !important; height: 36px !important; right: 6px !important; font-size: 15px !important; }
+  }
   .ai-generate-btn {
     background: var(--rail-ink) !important; color: #fff !important; border-radius: 100px !important;
     box-shadow: none !important;
