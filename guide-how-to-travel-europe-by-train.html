@@ -114,8 +114,8 @@
     .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
     .nav-back:hover { color: var(--text); }
     .nav-right { display: flex; align-items: center; gap: 18px; }
-    .lang { color: var(--muted); font-size: 13px; font-weight: 600; text-decoration: none; }
-    .lang:hover { color: var(--primary2); }
+    .lang { display: inline-flex; align-items: center; background: #fbf1e6; border: 1px solid rgba(193,140,90,0.28); color: var(--muted); font-size: 12px; font-weight: 600; text-decoration: none; padding: 5px 12px; border-radius: 100px; transition: border-color 0.2s, background 0.2s, color 0.2s; }
+    .lang:hover { color: var(--primary2); border-color: var(--primary2); background: #fff; }
     .route-hero { position: relative; width: 100%; height: 78vh; min-height: 520px; background-size: cover; background-position: center 45%; }
     .route-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(22,19,31,0) 0%, rgba(22,19,31,0) 45%, rgba(22,19,31,0.35) 70%, rgba(22,19,31,0.75) 100%); pointer-events: none; }
     .hero-content { position: absolute; left: 0; right: 0; bottom: 0; max-width: 760px; margin: 0 auto; padding: 0 24px 36px; z-index: 2; }
