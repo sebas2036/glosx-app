@@ -2692,7 +2692,7 @@
   .hero p { color: var(--rail-muted) !important; text-shadow: none !important; margin-left: auto !important; margin-right: auto !important; }
 
   .hero-ai-cta {
-    background: var(--rail-red) !important; border: none !important; border-radius: 12px !important;
+    background: var(--rail-red) !important; border: none !important; border-radius: 100px !important;
     color: #fff !important; backdrop-filter: none !important; box-shadow: none !important;
   }
   .hero-ai-cta::before { display: none !important; }
@@ -2734,7 +2734,7 @@
   }
   .ai-swap-btn:hover { background: var(--rail-red) !important; border-color: var(--rail-red) !important; color: #fff !important; }
   .ai-generate-btn {
-    background: var(--rail-ink) !important; color: #fff !important; border-radius: 14px !important;
+    background: var(--rail-ink) !important; color: #fff !important; border-radius: 100px !important;
     box-shadow: none !important;
     font-family: var(--font-rail);
   }
