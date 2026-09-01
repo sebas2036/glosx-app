@@ -150,6 +150,36 @@
     }
     .nav-toggle svg { width: 24px; height: 24px; stroke: var(--text); }
 
+    /* ── Nav en hamburguesa tambien en tablet/laptop chico ──
+       El listado de links (Descubramos juntos...Empezar+idioma) mide
+       ~1090px de ancho fijo -- no encoge con el viewport. El toggle de
+       mobile solo activaba por debajo de 600px, asi que entre 600 y
+       ~1300px los links se salian del viewport sin ningun fallback
+       (inaccesibles: no se veian ni se podian tocar). Mismo breakpoint
+       de mobile para el comportamiento del nav, aparte del resto de
+       reglas de esa media query que son de otras secciones. */
+    @media (max-width: 1300px) {
+      .nav-toggle { display: inline-flex; }
+      .nav-links {
+        display: none;
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: #fff;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        border-bottom: 1.5px solid #14151a;
+        box-shadow: 0 8px 30px rgba(20,21,26,0.15);
+        padding: 6px 20px 16px;
+      }
+      .nav-links.show { display: flex; }
+      .nav-links a {
+        padding: 15px 4px; font-size: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links a:not(.nav-cta)::after { display: none; }
+      .nav-links a.nav-active { background: rgba(193,0,22,0.06); }
+    }
+
     /* ── Language selector ── */
     .lang-wrapper { position: relative; }
     .lang-btn {
@@ -1391,29 +1421,6 @@
           linear-gradient(180deg, rgba(10,10,15,0.25) 0%, transparent 70%);
       }
       nav { padding: 16px 20px; }
-      .nav-toggle { display: inline-flex; }
-      .nav-links {
-        display: none;
-        position: absolute; top: 100%; left: 0; right: 0;
-        flex-direction: column; align-items: stretch; gap: 0;
-        background: #fff;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
-        border-bottom: 1.5px solid #14151a;
-        box-shadow: 0 8px 30px rgba(20,21,26,0.15);
-        padding: 6px 20px 16px;
-      }
-      .nav-links.show { display: flex; }
-      .nav-links a {
-        padding: 15px 4px; font-size: 16px;
-        border-bottom: 1px solid var(--border);
-      }
-      /* El subrayado animado (::after, bottom:-6px) esta pensado para el
-         nav de escritorio en fila -- apilado en el menu mobile, ese offset
-         cae encima del item de abajo. El borde entre filas ya separa los
-         items, no hace falta el subrayado ademas. */
-      .nav-links a:not(.nav-cta)::after { display: none; }
-      .nav-links a.nav-active { background: rgba(193,0,22,0.06); }
       .hero { padding: 100px 20px 60px; }
 
       /* ── Home: hueco gigante entre el CTA "Planifica mi viaje con IA"
