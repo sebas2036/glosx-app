@@ -2608,18 +2608,21 @@
      titulo), pero con nuestro propio lenguaje (vias, no aviones/barcos). */
   .hero-title-card {
     position: relative; z-index: 1; overflow: hidden;
-    /* Especificacion literal: degrade 135deg (ocre edd0b4 -> crema fffbf7 al
-       45% -> arcilla d6ae87) + patron SVG topografico/vias repetible encima,
-       stroke marron chocolate 7a4e29, grosor 1.8, opacidad 0.45, mosaico de
-       450px. background-attachment:fixed incluido tal como se pidio. */
+    /* Sin SVG (fallaba por encoding en la URL) -- grilla nativa con dos
+       linear-gradient cruzados (1px, chocolate 0.4 opacidad, mosaico 50px)
+       encima del degrade diagonal 135deg (ocre -> crema 45% -> arcilla).
+       3 capas = 3 valores de background-size explicitos (si se dejan solo
+       2 el tercero cicla y el degrade queda mosaiqueado en vez de cubrir
+       todo). */
     background-color: #edd0b4;
     background-attachment: fixed;
-    background-repeat: no-repeat, repeat;
-    background-size: 100% 100%, 450px 450px;
-    background-position: center, center top;
+    background-repeat: repeat, repeat, no-repeat;
+    background-size: 50px 50px, 50px 50px, 100% 100%;
+    background-position: center, center, center;
     background-image:
-      linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%),
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><path d='M-10,50 Q25,20 60,60 T130,30 M0,90 Q40,40 80,110 M20,-10 Q70,30 110,-20' fill='none' stroke='rgba(122,78,41,0.45)' stroke-width='1.8'/></svg>");
+      linear-gradient(to right, rgba(122,78,41,0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(122,78,41,0.4) 1px, transparent 1px),
+      linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%);
     mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
     margin-left: -24px; margin-right: -24px; width: calc(100% + 48px);
