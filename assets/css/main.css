@@ -2567,12 +2567,14 @@
     display: none !important;
   }
   .hero-bgwrap::after {
-    /* reemplaza el mapa nocturno por una grilla tenue tipo horario, en vez
-       de un mapa con glow */
+    /* reemplaza el mapa nocturno por lineas de ruta curvas muy tenues, en vez
+       de un mapa con glow -- referencia visual al trazado ferroviario sin
+       gritar (8-14% de opacidad de tinta, no color) */
     content: '';
     display: block !important;
     position: absolute; inset: 0; z-index: 0; pointer-events: none;
-    background-image: repeating-linear-gradient(to bottom, transparent, transparent 47px, rgba(20,21,26,0.05) 47px, rgba(20,21,26,0.06) 48px);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><g fill='none' stroke='rgba(20,21,26,0.09)' stroke-width='1.5'><path d='M -20 120 C 120 40, 220 180, 340 110 S 520 20, 820 90'/><path d='M -20 200 C 100 260, 240 160, 340 210 S 560 300, 820 220'/><path d='M 60 -20 C 110 90, 70 200, 140 300 S 90 460, 160 560'/><path d='M 620 -20 C 560 90, 610 200, 540 300 S 600 460, 520 560'/></g><g fill='rgba(20,21,26,0.16)'><circle cx='340' cy='110' r='3.2'/><circle cx='520' cy='20' r='2.4'/><circle cx='140' cy='300' r='2.4'/><circle cx='540' cy='300' r='2.4'/></g></svg>");
+    background-size: cover; background-position: center top; background-repeat: no-repeat;
     mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
   }
@@ -2605,23 +2607,27 @@
   .hero-ai-cta::before { display: none !important; }
 
   .ai-input-aurora::before { display: none !important; }
-  /* Elevacion real (sombra de papel, no glow de color): el buscador se
-     despega del fondo en vez de vivir en el mismo plano que el resto. */
+  /* Elevacion real (sombra de papel, no glow de color): el buscador entero
+     -- input + boton -- vive dentro de UNA tarjeta blanca que se despega
+     del fondo, en vez de ser dos pildoras sueltas cada una con su sombra. */
+  .ai-input-container {
+    background: #fff !important; border-radius: 22px !important; padding: 8px !important;
+    box-shadow: 0 2px 6px rgba(20,21,26,0.06), 0 20px 40px -12px rgba(20,21,26,0.28) !important;
+  }
   .ai-input-container input {
-    background: #fff !important; border: 1.5px solid var(--rail-line) !important;
+    background: transparent !important; border: 1.5px solid var(--rail-line) !important;
     color: var(--rail-ink) !important; border-radius: 100px !important;
-    backdrop-filter: none !important;
-    box-shadow: 0 2px 5px rgba(20,21,26,0.07), 0 18px 36px -10px rgba(20,21,26,0.34) !important;
+    backdrop-filter: none !important; box-shadow: none !important;
     font-family: var(--font-rail);
   }
   .ai-input-container input::placeholder { color: #9a9ba5 !important; }
   .ai-input-container input:focus { border-color: var(--rail-red) !important; box-shadow: 0 0 0 3px rgba(193,0,22,0.12) !important; }
   .ai-generate-btn {
-    background: var(--rail-ink) !important; color: #fff !important; border-radius: 4px !important;
-    box-shadow: 0 2px 5px rgba(20,21,26,0.07), 0 18px 36px -10px rgba(20,21,26,0.34) !important;
+    background: var(--rail-ink) !important; color: #fff !important; border-radius: 14px !important;
+    box-shadow: none !important;
     font-family: var(--font-rail);
   }
-  .ai-generate-btn:hover { box-shadow: 0 6px 14px -2px rgba(20,21,26,0.4) !important; background: #2a2b33 !important; }
+  .ai-generate-btn:hover { background: #2a2b33 !important; }
   .ai-suggestion { color: var(--rail-muted) !important; font-family: var(--font-rail); }
   .ai-suggestion:hover { color: var(--rail-red) !important; }
   .ai-suggestions-label { color: var(--rail-muted) !important; }
