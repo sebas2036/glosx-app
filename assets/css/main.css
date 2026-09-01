@@ -2655,6 +2655,12 @@
   .hero-carousel-photo {
     width: 340px; height: 100%; object-fit: cover; flex-shrink: 0; display: block;
     border-radius: 16px;
+    /* Mismo brightness(0.85) que .carousel-photo mas abajo en la pagina --
+       no es un tratamiento nuevo, es el que ya existe en el sitio. Ademas
+       de consistencia visual, sube el contraste del titulo blanco contra
+       las fotos mas claras (glacier-express es notablemente mas brillante
+       que el resto -- luminancia promedio 203/255 vs 71-160 de las demas). */
+    filter: brightness(0.85);
   }
   @media (max-width: 640px) {
     .hero-title-card { padding: 130px 20px 4px; margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); margin-top: -100px; }
