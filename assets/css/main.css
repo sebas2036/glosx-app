@@ -2584,7 +2584,12 @@
      (esquinas calidas -> centro casi blanco donde vive el buscador) en vez
      de color plano -- sin patron SVG encima, eso ya lo aporta el body. */
   .hero-bgwrap {
-    background: linear-gradient(135deg, #f2cc9c 0%, #f8e2c4 22%, #ffffff 50%, #f8e2c4 78%, #f0c99a 100%);
+    background-color: #d9a06c;
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%, 450px 450px;
+    background-image:
+      linear-gradient(135deg, #c9884f 0%, #fffbf7 45%, #a8703f 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M-10,50 Q25,20 60,60 T130,30 M0,90 Q40,40 80,110 M20,-10 Q70,30 110,-20' fill='none' stroke='%235c3a1e' stroke-width='1.8' opacity='0.45'/%3E%3C/svg%3E");
   }
 
   /* Lineas de ruta curvas extendidas a TODA la pagina (no solo el hero) --
@@ -2603,15 +2608,21 @@
      titulo), pero con nuestro propio lenguaje (vias, no aviones/barcos). */
   .hero-title-card {
     position: relative; z-index: 1; overflow: hidden;
-    /* se disuelve hacia el fondo de la pagina en vez de cortar en linea recta;
-       las lineas de ruta van encima del degrade para que se vean tambien
-       arriba del todo, detras del badge (antes quedaban tapadas por el
-       fondo solido de la banda) */
-    background:
-      linear-gradient(to bottom, #f7ece8 0%, #f7ece8 75%, rgba(247,236,232,0) 100%),
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300'><g fill='none' stroke='rgba(193,0,22,0.32)' stroke-width='2.6'><path d='M -30 30 C 160 -10, 260 70, 420 30 S 700 -10, 900 40 S 1150 10, 1230 50'/><path d='M -30 105 C 170 140, 300 90, 480 115 S 760 150, 1230 100'/><path d='M -30 175 C 180 220, 320 130, 500 180 S 780 260, 1230 190'/><path d='M -30 250 C 200 280, 350 210, 550 255 S 850 300, 1230 265'/></g><g fill='rgba(193,0,22,0.36)'><circle cx='420' cy='30' r='4'/><circle cx='480' cy='115' r='3.5'/><circle cx='500' cy='180' r='3.5'/></g></svg>");
-    background-size: 100% 100%, 100% 320px; background-position: center, center top;
-    background-repeat: no-repeat, no-repeat;
+    /* No es mas saturacion -- son los CORTES: dos zonas de color solido
+       (calido arriba-izq, calido abajo-der) separadas del centro claro por
+       una linea delicada de 1.5px, en vez de una transicion difuminada. */
+    background-color: #f7e3c8;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-image: linear-gradient(135deg,
+      #f2d9b8 0%, #f2d9b8 calc(38% - 1.5px),
+      rgba(198,148,97,0.4) calc(38% - 1.5px), rgba(198,148,97,0.4) 38%,
+      #fdf7ef 38%, #fdf7ef 62%,
+      rgba(198,148,97,0.4) 62%, rgba(198,148,97,0.4) calc(62% + 1.5px),
+      #ecd2ac calc(62% + 1.5px), #ecd2ac 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
     margin-left: -24px; margin-right: -24px; width: calc(100% + 48px);
     /* margen negativo = sube el fondo detras del nav fijo (que ahora es
        transparente), asi el color llega hasta arriba del todo sin corte;
