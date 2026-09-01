@@ -2608,19 +2608,18 @@
      titulo), pero con nuestro propio lenguaje (vias, no aviones/barcos). */
   .hero-title-card {
     position: relative; z-index: 1; overflow: hidden;
-    /* No es mas saturacion -- son los CORTES: dos zonas de color solido
-       (calido arriba-izq, calido abajo-der) separadas del centro claro por
-       una linea delicada de 1.5px, en vez de una transicion difuminada. */
-    background-color: #f7e3c8;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    background-image: linear-gradient(135deg,
-      #f2d9b8 0%, #f2d9b8 calc(38% - 1.5px),
-      rgba(198,148,97,0.4) calc(38% - 1.5px), rgba(198,148,97,0.4) 38%,
-      #fdf7ef 38%, #fdf7ef 62%,
-      rgba(198,148,97,0.4) 62%, rgba(198,148,97,0.4) calc(62% + 1.5px),
-      #ecd2ac calc(62% + 1.5px), #ecd2ac 100%);
+    /* Especificacion literal: degrade 135deg (ocre edd0b4 -> crema fffbf7 al
+       45% -> arcilla d6ae87) + patron SVG topografico/vias repetible encima,
+       stroke marron chocolate 7a4e29, grosor 1.8, opacidad 0.45, mosaico de
+       450px. background-attachment:fixed incluido tal como se pidio. */
+    background-color: #edd0b4;
+    background-attachment: fixed;
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%, 450px 450px;
+    background-position: center, center top;
+    background-image:
+      linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><path d='M-10,50 Q25,20 60,60 T130,30 M0,90 Q40,40 80,110 M20,-10 Q70,30 110,-20' fill='none' stroke='rgba(122,78,41,0.45)' stroke-width='1.8'/></svg>");
     mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
     margin-left: -24px; margin-right: -24px; width: calc(100% + 48px);
