@@ -2582,11 +2582,10 @@
     color: var(--rail-ink) !important; box-shadow: none !important; backdrop-filter: none !important;
   }
   .hero h1 { filter: none !important; color: var(--rail-ink); letter-spacing: -0.8px !important; }
+  /* El rojo se queda solo en el boton/CTA -- el titulo entero en tinta,
+     asi no compite el mismo color en dos lugares pegados uno del otro. */
   .hero h1 span {
     background: none !important; -webkit-text-fill-color: var(--rail-ink) !important; color: var(--rail-ink) !important;
-  }
-  .hero h1 span:last-child {
-    -webkit-text-fill-color: var(--rail-red) !important; color: var(--rail-red) !important;
   }
   .hero p { color: var(--rail-muted) !important; text-shadow: none !important; }
 

@@ -1343,10 +1343,10 @@
     });
   });
 
-  // Auto-renderizar la primera ruta al cargar para evitar la caja vacía
-  const firstBtn = document.querySelector('.wt-route-btn[data-route="classic"]');
-  if (firstBtn) firstBtn.setAttribute("aria-pressed", "true");
-  render("classic");
+  // Antes se auto-renderizaba "classic" al cargar -- pero render() saca
+  // el atributo hidden del panel (linea ~1229), asi que el timeline con
+  // la foto gigante se abria solo en cada carga de pagina sin que el
+  // usuario tocara nada. Se deja cerrado hasta el primer click real.
 })();
 
 
