@@ -2552,8 +2552,18 @@
     backdrop-filter: blur(14px) !important; -webkit-backdrop-filter: blur(14px) !important;
     box-shadow: 0 1px 0 rgba(20,21,26,0.08) !important;
   }
-  .nav-logo span:first-child { color: var(--rail-red) !important; }
-  .nav-logo span:last-child { color: var(--rail-ink) !important; }
+  /* La regla vieja del logo en gradiente violeta-a-blanco
+     (-webkit-text-fill-color:transparent) segu­ia heredandose a los spans
+     nuevos del wordmark, aunque cada span ya tuviera su propio "color" --
+     color y -webkit-text-fill-color son propiedades distintas, y la
+     segunda gana el render del texto. Sin esto "Train" se desvanecia a
+     invisible en vez de quedar en tinta solida. */
+  .nav-logo {
+    background: none !important;
+    -webkit-background-clip: initial !important; background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+  }
+  .nav-logo span { -webkit-text-fill-color: initial !important; }
   .nav-logo svg line { stroke: var(--rail-red) !important; }
   .nav-links a { color: var(--rail-ink) !important; font-family: var(--font-rail); }
   /* Outline -- el rojo solido es del hero, este solo acompaña (ver
