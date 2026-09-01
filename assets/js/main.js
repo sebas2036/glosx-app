@@ -2897,7 +2897,7 @@
     if (existing) existing.remove();
     const el = document.createElement('p');
     el.id = 'aiPlannerError';
-    el.style.cssText = 'color:#a78bfa;font-size:15px;margin-top:16px;text-align:center;';
+    el.style.cssText = 'color:#C10016;font-size:15px;margin-top:16px;text-align:center;font-weight:600;';
     el.textContent = msg;
     document.getElementById('aiInputWrapper').appendChild(el);
     setTimeout(() => el.remove(), 6000);
