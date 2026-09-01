@@ -2563,6 +2563,37 @@
   .hero-bgwrap {
     background: var(--rail-bg);
   }
+
+  /* Lineas de ruta curvas extendidas a TODA la pagina (no solo el hero) --
+     mismo trazado que el hero pero tileado hacia abajo, muy tenue (5-9%),
+     para que el motivo de "mapa ferroviario" acompañe todo el scroll. */
+  body {
+    background-color: var(--rail-bg) !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 900'><g fill='none' stroke='rgba(20,21,26,0.05)' stroke-width='1.3'><path d='M -20 60 C 150 10, 250 130, 380 70 S 560 0, 820 50'/><path d='M -20 260 C 130 320, 260 220, 380 270 S 600 360, 820 290'/><path d='M -20 520 C 140 470, 260 580, 400 530 S 600 460, 820 500'/><path d='M -20 760 C 160 820, 280 700, 420 760 S 620 850, 820 780'/><path d='M 80 -20 C 130 120, 60 260, 150 400 S 60 600, 140 780'/><path d='M 660 -20 C 600 120, 660 260, 580 400 S 660 600, 590 780'/></g><g fill='rgba(20,21,26,0.09)'><circle cx='380' cy='70' r='3'/><circle cx='380' cy='270' r='3'/><circle cx='400' cy='530' r='3'/><circle cx='420' cy='760' r='3'/></g></svg>") !important;
+    background-repeat: repeat-y !important; background-position: center top !important; background-size: 800px 900px !important;
+  }
+
+  /* Collage de 3 fotos reales alrededor del titulo del hero -- le da al hero
+     el mismo peso visual que un hero fotografico, sin volver a un fondo
+     completo. z-index:-1 dentro del stacking context de .hero (relative +
+     z-index:20) para quedar detras del texto sin taparlo. */
+  .hero-photo-cluster { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  .hp {
+    position: absolute; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 14px 30px -10px rgba(20,21,26,0.32); border: 3px solid #fff;
+  }
+  .hp img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hp-1 { width: 150px; height: 100px; top: 92px; left: 5%; transform: rotate(-6deg); }
+  .hp-2 { width: 128px; height: 86px; bottom: 12%; right: 6%; transform: rotate(5deg); }
+  .hp-3 { width: 84px; height: 84px; top: 78px; right: 13%; border-radius: 50%; }
+  @media (max-width: 1120px) {
+    .hp-3 { display: none; }
+    .hp-1 { width: 120px; height: 80px; }
+    .hp-2 { width: 104px; height: 70px; }
+  }
+  @media (max-width: 900px) {
+    .hero-photo-cluster { display: none; }
+  }
   .hero-bgwrap::after, .hero-bgwrap::before, .hero-city-dots {
     display: none !important;
   }
