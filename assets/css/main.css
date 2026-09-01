@@ -2689,7 +2689,7 @@
   .hero h1 span {
     background: none !important; -webkit-text-fill-color: #fff !important; color: #fff !important;
   }
-  .hero p { color: var(--rail-muted) !important; text-shadow: none !important; margin-left: auto !important; margin-right: auto !important; }
+  .hero p { color: var(--rail-muted) !important; text-shadow: none !important; margin-left: auto !important; margin-right: auto !important; font-family: var(--font-rail) !important; }
 
   .hero-ai-cta {
     background: var(--rail-red) !important; border: none !important; border-radius: 100px !important;
