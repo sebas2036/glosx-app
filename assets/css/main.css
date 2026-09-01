@@ -2684,10 +2684,14 @@
   /* La regla global "* { max-width:100% }" de mobile (600px) le pisa el
      ancho fijo de 340px a cada foto del carrusel del hero, colapsandolas
      al ancho del contenedor -- sin overflow no hay nada que recorrer y
-     la animacion (que si corre) se ve congelada. */
+     la animacion (que si corre) se ve congelada. Mismo bug en el carrusel
+     de mas abajo en la pagina (.carousel-track / .carousel-photo) -- se
+     habia arreglado solo el del hero la primera vez, no este. */
   @media (max-width: 600px) {
     .hero-carousel-photo { max-width: none !important; width: 340px !important; }
     .hero-carousel-track { max-width: none !important; }
+    .carousel-photo { max-width: none !important; width: 320px !important; }
+    .carousel-track { max-width: none !important; }
   }
   .hero-bgwrap::after, .hero-bgwrap::before, .hero-city-dots {
     display: none !important;
