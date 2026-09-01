@@ -2594,8 +2594,14 @@
      titulo), pero con nuestro propio lenguaje (vias, no aviones/barcos). */
   .hero-title-card {
     position: relative; z-index: 1; overflow: hidden;
-    /* se disuelve hacia el fondo de la pagina en vez de cortar en linea recta */
-    background: linear-gradient(to bottom, #f7ece8 0%, #f7ece8 75%, rgba(247,236,232,0) 100%);
+    /* se disuelve hacia el fondo de la pagina en vez de cortar en linea recta;
+       las lineas de ruta van encima del degrade para que se vean tambien
+       arriba del todo, detras del badge (antes quedaban tapadas por el
+       fondo solido de la banda) */
+    background:
+      linear-gradient(to bottom, #f7ece8 0%, #f7ece8 75%, rgba(247,236,232,0) 100%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 420'><g fill='none' stroke='rgba(193,0,22,0.16)' stroke-width='2'><path d='M -30 160 C 200 60, 340 260, 520 150 S 780 30, 1230 120'/><path d='M -30 280 C 180 350, 340 220, 520 290 S 820 400, 1230 300'/></g><g fill='rgba(193,0,22,0.22)'><circle cx='520' cy='150' r='4'/><circle cx='780' cy='30' r='3'/><circle cx='520' cy='290' r='4'/></g></svg>");
+    background-size: 100% 100%, 100% 100%; background-position: center, center;
     margin-left: -24px; margin-right: -24px; width: calc(100% + 48px);
     /* margen negativo = sube el fondo detras del nav fijo (que ahora es
        transparente), asi el color llega hasta arriba del todo sin corte;
@@ -2613,13 +2619,14 @@
   }
   .hero-title-inner > * { position: relative; z-index: 1; }
   /* El carrusel pasa de borde a borde de la pagina (no acotado al texto),
-     pero solo detras del ALTO del titulo -- se rompe del contenedor de
-     720px con el truco left:50%/-50vw, y su altura la define el propio
-     h1 (unico hijo en flujo normal; el carrusel es absolute). Sin scrim:
-     las fotos van a maxima opacidad, sin ningun velo encima. */
+     pero solo detras del ALTO del titulo. Es hijo DIRECTO de .hero-title-card
+     (que ya sangra a todo el ancho con su propio margin negativo) -- por eso
+     acá alcanza con width:100%, sin ningun truco de vw que arrastre a los
+     hermanos de .hero-title-inner (eso fue lo que corria el parrafo antes).
+     Altura: la define el propio h1 (unico hijo en flujo normal; el carrusel
+     es absolute). Sin scrim: las fotos van a maxima opacidad. */
   .hero-title-photo-wrap {
-    position: relative;
-    left: 50%; margin-left: -50vw; width: 100vw;
+    position: relative; width: 100%;
     overflow: hidden;
   }
   .hero-title-photo-wrap h1 { position: relative; z-index: 1; }
@@ -2681,7 +2688,7 @@
   .hero h1 span {
     background: none !important; -webkit-text-fill-color: #fff !important; color: #fff !important;
   }
-  .hero p { color: var(--rail-muted) !important; text-shadow: none !important; }
+  .hero p { color: var(--rail-muted) !important; text-shadow: none !important; margin-left: auto !important; margin-right: auto !important; }
 
   .hero-ai-cta {
     background: var(--rail-red) !important; border: none !important; border-radius: 12px !important;
