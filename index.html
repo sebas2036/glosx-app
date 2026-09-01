@@ -72,6 +72,14 @@
         if (location.hash.indexOf('dev') !== -1) localStorage.setItem('glosx_dev_ga', '1');
         if (localStorage.getItem('glosx_dev_ga') === '1') gtag('set', 'traffic_type', 'internal');
       } catch (e) {}
+      // Trafico de automatizacion (Puppeteer/Selenium/Playwright ponen
+      // navigator.webdriver=true; un usuario real nunca lo tiene en true) --
+      // se detecto un patron de bot en GA4 (Singapur, 100% direct/desktop
+      // Chrome, ~0.2s de duracion, 98% bounce) que la lista de bots conocidos
+      // de GA4 no filtra. Reusa el mismo Data Filter de trafico interno.
+      try {
+        if (navigator.webdriver) gtag('set', 'traffic_type', 'internal');
+      } catch (e) {}
     })();
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');

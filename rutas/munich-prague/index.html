@@ -35,6 +35,9 @@
         if (location.hash.indexOf('dev') !== -1) localStorage.setItem('glosx_dev_ga', '1');
         if (localStorage.getItem('glosx_dev_ga') === '1') gtag('set', 'traffic_type', 'internal');
       } catch (e) {}
+      try {
+        if (navigator.webdriver) gtag('set', 'traffic_type', 'internal');
+      } catch (e) {}
     })();
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
