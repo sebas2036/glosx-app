@@ -38,6 +38,13 @@
       try {
         if (navigator.webdriver) gtag('set', 'traffic_type', 'internal');
       } catch (e) {}
+      // localhost/127.0.0.1 = server local de desarrollo -- nunca debe
+      // contarse como trafico real en GA4 (se detecto el 01-sep-2026,
+      // pageviews de pruebas locales inflando el realtime de produccion
+      // porque el mismo Measurement ID esta hardcodeado en todos lados).
+      try {
+        if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) gtag('set', 'traffic_type', 'internal');
+      } catch (e) {}
     })();
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
