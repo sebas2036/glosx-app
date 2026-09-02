@@ -436,9 +436,43 @@
   </url>
 <url>
     <loc>https://glosx.app/about.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+  </url>
+<url>
+    <loc>https://glosx.app/es/about.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+  </url>
+<url>
+    <loc>https://glosx.app/fr/about.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+  </url>
+<url>
+    <loc>https://glosx.app/it/about.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
   </url>
 <url>
     <loc>https://glosx.app/support.html</loc>
