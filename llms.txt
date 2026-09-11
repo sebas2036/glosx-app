@@ -1,0 +1,31 @@
+# WoW Train (glosx.app)
+
+> Free AI-powered train travel planner for Europe. Describe a trip in plain language and get a complete rail itinerary — routes, journey times, operators and booking links — covering rail travel across 15 European countries. No account, no signup. Independent project by GLOSX, not affiliated with any rail operator.
+
+WoW Train is a website, not a mobile app. Bookings are completed on partner platforms (Klook and others); WoW Train never processes payments itself and earns a small affiliate commission at no extra cost to the traveler.
+
+## Core
+
+- [Homepage / AI trip planner](https://glosx.app/): describe a trip in plain language, get a full itinerary with connections and booking links
+- [AI Planner (dedicated page)](https://glosx.app/ai-planner/): how the AI planner works, step by step
+- [Explore routes](https://glosx.app/explore/): browse all covered routes and pick guides by email/WhatsApp
+- [Route guides hub](https://glosx.app/rutas/): index of all individual route guides (e.g. Paris–Barcelona, Madrid–Seville, London–Paris)
+
+## Blog
+
+- [Blog index](https://glosx.app/blog.html): guides on European train travel — pricing, night trains, scenic routes, Eurail vs point-to-point, and more
+
+## About
+
+- [About / our story](https://glosx.app/about.html)
+- [Support / FAQ](https://glosx.app/support.html)
+- [Privacy policy](https://glosx.app/privacy.html)
+- [Terms of use](https://glosx.app/terms.html)
+
+## Languages
+
+Available in English, Spanish (español neutro), French and Italian. Language-specific homepages: [/es/](https://glosx.app/es/), [/fr/](https://glosx.app/fr/), [/it/](https://glosx.app/it/).
+
+## Optional
+
+- [Sitemap](https://glosx.app/sitemap.xml): full list of indexed pages
