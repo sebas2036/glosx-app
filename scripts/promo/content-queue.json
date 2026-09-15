@@ -56,7 +56,7 @@
       "id": "basel-lauterbrunnen",
       "url": "https://glosx.app/rutas/basel-lauterbrunnen/",
       "label": "Basel → Lauterbrunnen",
-      "lastPromoted": "2026-09-15T02:56:17.551Z",
+      "lastPromoted": "2026-09-15T02:56:13.355Z",
       "timesPromoted": 1,
       "from": "Basel",
       "to": "Lauterbrunnen"
@@ -66,8 +66,8 @@
       "id": "basel-paris",
       "url": "https://glosx.app/rutas/basel-paris/",
       "label": "Basel → Paris",
-      "lastPromoted": null,
-      "timesPromoted": 0,
+      "lastPromoted": "2026-09-15T02:56:13.355Z",
+      "timesPromoted": 1,
       "from": "Basel",
       "to": "Paris"
     },
@@ -76,8 +76,8 @@
       "id": "berlin-hamburg",
       "url": "https://glosx.app/rutas/berlin-hamburg/",
       "label": "Berlin → Hamburg",
-      "lastPromoted": null,
-      "timesPromoted": 0,
+      "lastPromoted": "2026-09-15T02:56:13.355Z",
+      "timesPromoted": 1,
       "from": "Berlin",
       "to": "Hamburg"
     },
@@ -86,8 +86,8 @@
       "id": "berlin-prague",
       "url": "https://glosx.app/rutas/berlin-prague/",
       "label": "Berlin → Prague",
-      "lastPromoted": null,
-      "timesPromoted": 0,
+      "lastPromoted": "2026-09-15T02:56:13.355Z",
+      "timesPromoted": 1,
       "from": "Berlin",
       "to": "Prague"
     },
@@ -96,8 +96,8 @@
       "id": "bordeaux-lourdes",
       "url": "https://glosx.app/rutas/bordeaux-lourdes/",
       "label": "Bordeaux → Lourdes",
-      "lastPromoted": null,
-      "timesPromoted": 0,
+      "lastPromoted": "2026-09-15T02:56:13.355Z",
+      "timesPromoted": 1,
       "from": "Bordeaux",
       "to": "Lourdes"
     },
@@ -106,8 +106,8 @@
       "id": "brno-vienna",
       "url": "https://glosx.app/rutas/brno-vienna/",
       "label": "Brno → Vienna",
-      "lastPromoted": null,
-      "timesPromoted": 0,
+      "lastPromoted": "2026-09-15T02:58:56.049Z",
+      "timesPromoted": 1,
       "from": "Brno",
       "to": "Vienna"
     },
@@ -1194,9 +1194,20 @@
     },
     {
       "campaignId": "2026-09-15-02-56",
-      "at": "2026-09-15T02:56:17.551Z",
+      "at": "2026-09-15T02:56:13.355Z",
       "itemIds": [
-        "basel-lauterbrunnen"
+        "basel-lauterbrunnen",
+        "basel-paris",
+        "berlin-hamburg",
+        "berlin-prague",
+        "bordeaux-lourdes"
+      ]
+    },
+    {
+      "campaignId": "2026-09-15-02-58",
+      "at": "2026-09-15T02:58:56.049Z",
+      "itemIds": [
+        "brno-vienna"
       ]
     }
   ]

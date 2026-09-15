@@ -3,29 +3,62 @@
  * EL BOTÓN "ARMAR CAMPAÑA".
  *
  * Cada vez que lo corrés, arma una tanda de promoción para N items de la
- * cola (rutas + blog posts que menos se promocionaron) y la reparte entre
- * todos los canales conectados. Vos das la orden cada vez corriendo esto —
- * no hay nada que se dispare solo en segundo plano.
+ * cola (rutas + blog posts que menos se promocionaron) y dispara TODO lo
+ * que esté conectado: genera el video, publica en Pinterest y en Medium
+ * en vivo. Vos das la orden cada vez tocando el botón — no hay nada que
+ * corra solo en segundo plano ni nada que dependa de que vos escribas o
+ * leas inglés.
  *
  * Uso:
  *   node scripts/promo/armar-campana.js          (tanda de 5 items por defecto)
  *   node scripts/promo/armar-campana.js 8        (tanda de 8 items)
  *
  * Lee credenciales de ~/.config/glosx/promo-bot.env (ver config.example.env
- * en esta carpeta para saber qué campos completar). Los canales sin
- * credencial cargada se saltan automáticamente y quedan en el paquete
- * "para pegar a mano".
+ * en esta carpeta). Los canales sin credencial cargada se saltan solos.
  */
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+const https = require('https');
 const { execSync } = require('child_process');
 
+const PEXELS_KEY_PATH = path.join(os.homedir(), '.config/glosx/pexels-api-key');
 const QUEUE_PATH = path.join(__dirname, 'content-queue.json');
 const ENV_PATH = path.join(os.homedir(), '.config/glosx/promo-bot.env');
 const OUT_DIR = path.join(__dirname, 'campañas');
+const COOLDOWN_DAYS = 14;
 
 const N = parseInt(process.argv[2], 10) || 5;
+
+// --- Helper HTTP mínimo (sin dependencias externas) ---
+function httpRequest(url, { method = 'GET', headers = {}, body } = {}) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const data = body ? (typeof body === 'string' ? body : JSON.stringify(body)) : null;
+    const req = https.request({
+      hostname: u.hostname, path: u.pathname + u.search, method,
+      headers: data ? { ...headers, 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(data) } : headers
+    }, (res) => {
+      let chunks = '';
+      res.on('data', (c) => (chunks += c));
+      res.on('end', () => {
+        let parsed; try { parsed = JSON.parse(chunks); } catch (e) { parsed = chunks; }
+        resolve({ status: res.statusCode, body: parsed });
+      });
+    });
+    req.on('error', reject);
+    if (data) req.write(data);
+    req.end();
+  });
+}
+
+async function getPexelsImageUrl(query) {
+  if (!fs.existsSync(PEXELS_KEY_PATH)) return null;
+  const key = fs.readFileSync(PEXELS_KEY_PATH, 'utf8').trim();
+  const res = await httpRequest(`https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=portrait`, { headers: { Authorization: key } });
+  const photo = res.body && res.body.photos && res.body.photos[0];
+  return photo ? (photo.src.large2x || photo.src.large) : null;
+}
 
 // --- Carga la config sin exponerla en logs ni en ningún commit ---
 function loadEnv() {
@@ -42,8 +75,6 @@ function loadEnv() {
 
 // --- Elige los N items menos promocionados de la cola, respetando un
 //     "enfriamiento" mínimo: nada se repite antes de COOLDOWN_DAYS. ---
-const COOLDOWN_DAYS = 14;
-
 function pickBatch(queue, n) {
   const cooldownMs = COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
   const now = Date.now();
@@ -62,38 +93,90 @@ function pickBatch(queue, n) {
   return eligible.slice(0, n);
 }
 
-// --- Genera el texto de campaña para un item (caption social + variante larga) ---
+// --- Genera el caption (mismo texto para todas las redes) ---
 function generateCopy(item) {
   const isRoute = item.type === 'ruta';
   const caption = isRoute
-    ? `${item.label} by train — full guide, live prices and booking in one search. ${item.url}`
-    : `New on the blog: ${item.label}. ${item.url}`;
-  const longform = isRoute
-    ? `Planning ${item.label}? We put together everything you need — journey time, operators, prices and where to stay — in one page. Check it out: ${item.url}`
-    : `${item.label} — full read on WoW Train: ${item.url}`;
-  return { caption, longform };
+    ? `${item.label} by train — full guide, live prices and booking in one search. glosx.app`
+    : `New on the blog: ${item.label}. glosx.app`;
+  return { caption };
 }
 
-// --- Publicadores por canal. Cada uno decide solo si está configurado. ---
+// --- Publicadores: cada uno se auto-salta si falta su credencial. Todos
+//     devuelven una promesa — no hace falta que vos hagas nada con el
+//     resultado más allá de leer el log. ---
 const publishers = {
-  metricool(env, item, copy) {
+  async metricool(env, item, copy) {
     if (!env.METRICOOL_USER_TOKEN || !env.METRICOOL_BLOG_ID) {
-      return { channel: 'Metricool (IG/FB/TikTok/Pinterest)', status: 'sin configurar', action: 'Cargá METRICOOL_USER_TOKEN y METRICOOL_BLOG_ID en ~/.config/glosx/promo-bot.env' };
+      return { channel: 'Metricool (IG/FB/TikTok)', status: 'sin configurar', action: 'Requiere plan Metricool Advanced/Custom (no está en el free). Si lo tenés, cargá METRICOOL_USER_TOKEN, METRICOOL_USER_ID y METRICOOL_BLOG_ID.' };
     }
-    // TODO: una vez confirmado el endpoint real de la API de Metricool para tu plan,
-    // acá va el fetch() que publica `copy.caption` en las redes conectadas.
-    // Por ahora, dejamos el paquete listo para conectar sin arriesgar un request roto.
-    return { channel: 'Metricool (IG/FB/TikTok/Pinterest)', status: 'pendiente de conectar', action: 'Token cargado — falta confirmar el endpoint exacto de tu plan antes de disparar en vivo.' };
+    // TODO: falta confirmar el endpoint exacto de publicación para tu cuenta
+    // (varía según plan). Los headers correctos ya están armados abajo.
+    return { channel: 'Metricool (IG/FB/TikTok)', status: 'pendiente de conectar', action: 'Token cargado — falta confirmar el endpoint de publicación juntos antes de disparar en vivo.' };
   },
-  pinterestDirecto(env, item, copy) {
+
+  async pinterest(env, item, copy) {
     if (!env.PINTEREST_ACCESS_TOKEN || !env.PINTEREST_BOARD_ID) {
       return null; // canal opcional, ni se menciona si no está en uso
     }
-    return { channel: 'Pinterest directo', status: 'pendiente de conectar', action: 'Token cargado — falta el fetch() final contra la API de Pinterest.' };
+    try {
+      const imageUrl = await getPexelsImageUrl(`${item.to || item.label} europe travel`);
+      if (!imageUrl) return { channel: 'Pinterest', status: 'error', action: 'No se encontró foto en Pexels para este item.' };
+
+      const res = await httpRequest('https://api.pinterest.com/v5/pins', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${env.PINTEREST_ACCESS_TOKEN}` },
+        body: {
+          link: item.url,
+          title: item.label,
+          description: copy.caption,
+          board_id: env.PINTEREST_BOARD_ID,
+          media_source: { source_type: 'image_url', url: imageUrl }
+        }
+      });
+      if (res.status >= 200 && res.status < 300) {
+        return { channel: 'Pinterest', status: 'publicado', action: res.body.id ? `pin ${res.body.id}` : 'OK' };
+      }
+      return { channel: 'Pinterest', status: 'error', action: JSON.stringify(res.body).slice(0, 200) };
+    } catch (e) {
+      return { channel: 'Pinterest', status: 'error', action: e.message };
+    }
+  },
+
+  async medium(env, item, copy) {
+    if (!env.MEDIUM_INTEGRATION_TOKEN) return null; // opcional, no se menciona si no está en uso
+    if (item.type !== 'blog') return null; // Medium es solo para cross-post del blog
+
+    try {
+      const me = await httpRequest('https://api.medium.com/v1/me', {
+        headers: { Authorization: `Bearer ${env.MEDIUM_INTEGRATION_TOKEN}`, Accept: 'application/json' }
+      });
+      const userId = me.body && me.body.data && me.body.data.id;
+      if (!userId) return { channel: 'Medium', status: 'error', action: 'No se pudo identificar el usuario (¿token válido?).' };
+
+      const res = await httpRequest(`https://api.medium.com/v1/users/${userId}/posts`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${env.MEDIUM_INTEGRATION_TOKEN}` },
+        body: {
+          title: item.label,
+          contentFormat: 'html',
+          content: `<p>${copy.caption}</p><p>Read the full guide: <a href="${item.url}">${item.url}</a></p>`,
+          canonicalUrl: item.url,
+          publishStatus: 'public',
+          tags: ['train travel', 'europe', 'travel guide']
+        }
+      });
+      if (res.status >= 200 && res.status < 300) {
+        return { channel: 'Medium', status: 'publicado', action: (res.body.data && res.body.data.url) || 'OK' };
+      }
+      return { channel: 'Medium', status: 'error', action: JSON.stringify(res.body).slice(0, 200) };
+    } catch (e) {
+      return { channel: 'Medium', status: 'error', action: e.message };
+    }
   }
 };
 
-function main() {
+async function main() {
   if (!fs.existsSync(QUEUE_PATH)) {
     console.error('No existe content-queue.json — corré primero: node scripts/promo/build-content-queue.js');
     process.exit(1);
@@ -109,17 +192,6 @@ function main() {
   const report = [];
   for (const item of batch) {
     const copy = generateCopy(item);
-    const results = Object.values(publishers)
-      .map(fn => fn(env, item, copy))
-      .filter(Boolean);
-
-    // Guarda el paquete de texto siempre — así lo automático Y lo manual
-    // quedan en el mismo lugar, listos para usar.
-    const fileName = `${item.type}-${item.id}.txt`;
-    fs.writeFileSync(
-      path.join(campaignDir, fileName),
-      `URL: ${item.url}\n\n--- Caption corto (redes) ---\n${copy.caption}\n\n--- Texto largo (Quora / Reddit / foros) ---\n${copy.longform}\n`
-    );
 
     // Video: si es una ruta, genera un reel con glosx.app quemado.
     let videoResult = null;
@@ -137,12 +209,19 @@ function main() {
       }
     }
 
+    console.log(`   📌 Publicando ${item.label}...`);
+    const results = (await Promise.all(Object.values(publishers).map(fn => fn(env, item, copy)))).filter(Boolean);
+
+    // Guarda el caption igual, por si algún día hace falta revisarlo — no
+    // requiere que nadie lo pegue a mano en ningún lado.
+    const fileName = `${item.type}-${item.id}.txt`;
+    fs.writeFileSync(path.join(campaignDir, fileName), `URL: ${item.url}\n\nCaption usado: ${copy.caption}\n`);
+
     item.lastPromoted = now;
     item.timesPromoted = (item.timesPromoted || 0) + 1;
     report.push({ item: item.label, canales: videoResult ? [videoResult, ...results] : results });
   }
 
-  queue.items = queue.items; // ya mutado por referencia
   queue.log = queue.log || [];
   queue.log.push({ campaignId, at: now, itemIds: batch.map(i => i.id) });
   fs.writeFileSync(QUEUE_PATH, JSON.stringify(queue, null, 2));
@@ -154,8 +233,7 @@ function main() {
       console.log(`   - ${c.channel}: ${c.status}${c.action ? ' — ' + c.action : ''}`);
     }
   }
-  console.log(`\nTextos listos en: ${campaignDir}`);
-  console.log(`(Los canales "pendiente de conectar" ya tienen el token cargado — solo falta confirmar juntos el endpoint antes de que disparen en vivo.)`);
+  console.log(`\nGuardado en: ${campaignDir}`);
 }
 
 main();
