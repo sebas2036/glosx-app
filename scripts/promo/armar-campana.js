@@ -4,10 +4,11 @@
  *
  * Cada vez que lo corrés, arma una tanda de promoción para N items de la
  * cola (rutas + blog posts que menos se promocionaron) y dispara TODO lo
- * que esté conectado: genera el video, publica en Pinterest y en Medium
- * en vivo. Vos das la orden cada vez tocando el botón — no hay nada que
- * corra solo en segundo plano ni nada que dependa de que vos escribas o
- * leas inglés.
+ * que esté conectado: genera el video, y publica un artículo con
+ * "glosx.app" bien metido en el texto en Pinterest, Medium y Dev.to —
+ * en vivo, sobre las ~120 rutas y posts del sitio. Vos das la orden cada
+ * vez tocando el botón — no hay nada que corra solo en segundo plano ni
+ * nada que dependa de que vos escribas o leas inglés.
  *
  * Uso:
  *   node scripts/promo/armar-campana.js          (tanda de 5 items por defecto)
@@ -93,28 +94,24 @@ function pickBatch(queue, n) {
   return eligible.slice(0, n);
 }
 
-// --- Genera el caption (mismo texto para todas las redes) ---
+// --- Genera el texto de campaña para un item — caption corto (Pinterest)
+//     y un articulito corto en inglés (Medium / Dev.to) con la marca
+//     bien metida adentro del texto, no solo como link al final. ---
 function generateCopy(item) {
   const isRoute = item.type === 'ruta';
   const caption = isRoute
     ? `${item.label} by train — full guide, live prices and booking in one search. glosx.app`
     : `New on the blog: ${item.label}. glosx.app`;
-  return { caption };
+  const article = isRoute
+    ? `<p>Planning to travel <strong>${item.label}</strong> by train? <strong>glosx.app</strong> put together a complete guide with journey times, operators, live prices and where to stay — everything in one page, updated automatically.</p><p>See the full ${item.label} train guide on <strong>glosx.app</strong>: <a href="${item.url}">${item.url}</a></p><p>glosx.app also has an AI trip planner that builds a full multi-city European train itinerary from a single sentence — free, no signup.</p>`
+    : `<p>New on <strong>glosx.app</strong>: <strong>${item.label}</strong>.</p><p>Read the full guide: <a href="${item.url}">${item.url}</a></p>`;
+  return { caption, article };
 }
 
 // --- Publicadores: cada uno se auto-salta si falta su credencial. Todos
 //     devuelven una promesa — no hace falta que vos hagas nada con el
 //     resultado más allá de leer el log. ---
 const publishers = {
-  async metricool(env, item, copy) {
-    if (!env.METRICOOL_USER_TOKEN || !env.METRICOOL_BLOG_ID) {
-      return { channel: 'Metricool (IG/FB/TikTok)', status: 'sin configurar', action: 'Requiere plan Metricool Advanced/Custom (no está en el free). Si lo tenés, cargá METRICOOL_USER_TOKEN, METRICOOL_USER_ID y METRICOOL_BLOG_ID.' };
-    }
-    // TODO: falta confirmar el endpoint exacto de publicación para tu cuenta
-    // (varía según plan). Los headers correctos ya están armados abajo.
-    return { channel: 'Metricool (IG/FB/TikTok)', status: 'pendiente de conectar', action: 'Token cargado — falta confirmar el endpoint de publicación juntos antes de disparar en vivo.' };
-  },
-
   async pinterest(env, item, copy) {
     if (!env.PINTEREST_ACCESS_TOKEN || !env.PINTEREST_BOARD_ID) {
       return null; // canal opcional, ni se menciona si no está en uso
@@ -145,8 +142,6 @@ const publishers = {
 
   async medium(env, item, copy) {
     if (!env.MEDIUM_INTEGRATION_TOKEN) return null; // opcional, no se menciona si no está en uso
-    if (item.type !== 'blog') return null; // Medium es solo para cross-post del blog
-
     try {
       const me = await httpRequest('https://api.medium.com/v1/me', {
         headers: { Authorization: `Bearer ${env.MEDIUM_INTEGRATION_TOKEN}`, Accept: 'application/json' }
@@ -160,7 +155,7 @@ const publishers = {
         body: {
           title: item.label,
           contentFormat: 'html',
-          content: `<p>${copy.caption}</p><p>Read the full guide: <a href="${item.url}">${item.url}</a></p>`,
+          content: copy.article,
           canonicalUrl: item.url,
           publishStatus: 'public',
           tags: ['train travel', 'europe', 'travel guide']
@@ -172,6 +167,31 @@ const publishers = {
       return { channel: 'Medium', status: 'error', action: JSON.stringify(res.body).slice(0, 200) };
     } catch (e) {
       return { channel: 'Medium', status: 'error', action: e.message };
+    }
+  },
+
+  async devto(env, item, copy) {
+    if (!env.DEVTO_API_KEY) return null; // opcional, no se menciona si no está en uso
+    try {
+      const res = await httpRequest('https://dev.to/api/articles', {
+        method: 'POST',
+        headers: { 'api-key': env.DEVTO_API_KEY },
+        body: {
+          article: {
+            title: item.label,
+            body_markdown: copy.article.replace(/<[^>]+>/g, '').trim() + `\n\n[${item.url}](${item.url})`,
+            published: true,
+            canonical_url: item.url,
+            tags: ['travel', 'europe', 'traintravel']
+          }
+        }
+      });
+      if (res.status >= 200 && res.status < 300) {
+        return { channel: 'Dev.to', status: 'publicado', action: res.body.url || 'OK' };
+      }
+      return { channel: 'Dev.to', status: 'error', action: JSON.stringify(res.body).slice(0, 200) };
+    } catch (e) {
+      return { channel: 'Dev.to', status: 'error', action: e.message };
     }
   }
 };
