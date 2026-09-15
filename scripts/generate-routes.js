@@ -4,7 +4,14 @@ const path = require('path');
 // Route data configuration
 const routes = [
   { slug: 'amsterdam-berlin', from: 'Amsterdam', to: 'Berlin', country: 'Netherlands-Germany', duration: '6h 30m', operator: 'DB ICE', price: '€29-45', badge: 'Route guide · Netherlands-Germany',
-    customSEO: { en: { title: 'Amsterdam to Berlin by Train: 6h30 DB ICE, from €29', description: 'Direct DB ICE from Amsterdam to Berlin in 6h30. Compare today\'s schedule and book fares from €29 — no layovers.' } } },
+    customSEO: { en: { title: 'Amsterdam to Berlin by Train: 6h30 DB ICE, from €29', description: 'Direct DB ICE from Amsterdam to Berlin in 6h30. Compare today\'s schedule and book fares from €29 — no layovers.' } },
+    localInsight: {
+      en: 'This was one of the first international ICE services to run seamlessly across two rail networks without changing trains, using dual-system locomotives built to handle both the Dutch and German power and signalling standards — a technical detail most passengers never notice, but the reason the ride is a single unbroken journey.',
+      es: 'Este fue uno de los primeros servicios ICE internacionales en circular sin cambios de tren entre dos redes ferroviarias distintas, gracias a locomotoras de doble sistema preparadas para los estándares de energía y señalización tanto neerlandeses como alemanes — un detalle técnico que casi nadie nota, pero que explica por qué el viaje es un trayecto único sin interrupciones.',
+      fr: 'Ce fut l\'un des premiers services ICE internationaux à circuler sans changement de train entre deux réseaux ferroviaires différents, grâce à des locomotives bi-système conçues pour les normes d\'alimentation et de signalisation néerlandaises et allemandes — un détail technique que presque personne ne remarque, mais qui explique pourquoi le trajet reste ininterrompu.',
+      it: 'Fu uno dei primi servizi ICE internazionali a circolare senza cambio di treno tra due reti ferroviarie diverse, grazie a locomotive bi-sistema costruite per gli standard di alimentazione e segnalamento sia olandesi che tedeschi — un dettaglio tecnico che quasi nessuno nota, ma che spiega perché il viaggio è un tragitto unico e ininterrotto.'
+    }
+  },
   { slug: 'amsterdam-brussels', from: 'Amsterdam', to: 'Brussels', country: 'Netherlands-Belgium', duration: '2h 00m', operator: 'Thalys', price: '€25-35', badge: 'Route guide · Netherlands-Belgium',
     customSEO: { en: { title: 'Amsterdam to Brussels Train: 2h, from €25', description: 'Thalys connection from Amsterdam to Brussels in 2 hours. Check live schedules and book tickets from €25.' } } },
   { slug: 'barcelona-girona', from: 'Barcelona', to: 'Girona', country: 'Spain', duration: '1h 30m', operator: 'Renfe', price: '€10-15', badge: 'Route guide · Spain',
@@ -27,19 +34,47 @@ const routes = [
   { slug: 'berlin-hamburg', from: 'Berlin', to: 'Hamburg', country: 'Germany', duration: '1h 45m', operator: 'DB ICE', price: '€25-40', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Berlin to Hamburg by Train: 1h45 ICE, from €25', description: 'Direct DB ICE from Berlin to Hamburg in under 2 hours. Compare today\'s schedule and book fares from €25.' } } },
   { slug: 'berlin-prague', from: 'Berlin', to: 'Prague', country: 'Germany-Czech', duration: '4h 30m', operator: 'DB ČD', price: '€30-50', badge: 'Route guide · Germany-Czech',
-    customSEO: { en: { title: 'Berlin to Prague Train Guide: 4h30 on DB ČD', description: 'Everything you need for the Berlin to Prague train: 4h30 on DB ČD, fares from €30, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Berlin to Prague Train Guide: 4h30 on DB ČD', description: 'Everything you need for the Berlin to Prague train: 4h30 on DB ČD, fares from €30, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'For much of the journey the train follows the Elbe river valley through the Elbe Sandstone Mountains (Saxon Switzerland), a landscape of dramatic sandstone cliffs on both the German and Czech sides — one of the more scenic stretches on this list, and one most travellers don\'t expect from a fairly ordinary-sounding city-to-city connection.',
+      es: 'Durante buena parte del viaje, el tren sigue el valle del río Elba a través de las montañas de arenisca del Elba (la "Suiza Sajona"), un paisaje de acantilados de arenisca espectaculares tanto del lado alemán como del checo — uno de los tramos más escénicos de esta lista, algo que la mayoría no espera de una conexión entre dos ciudades que suena tan común.',
+      fr: 'Sur une grande partie du trajet, le train longe la vallée de l\'Elbe à travers les montagnes de grès de l\'Elbe (la « Suisse saxonne »), un paysage de falaises de grès spectaculaires des deux côtés, allemand et tchèque — l\'un des tronçons les plus pittoresques de cette liste, une surprise pour une liaison qui semble a priori tout à fait ordinaire.',
+      it: 'Per buona parte del viaggio, il treno segue la valle del fiume Elba attraverso le montagne di arenaria dell\'Elba (la "Svizzera Sassone"), un paesaggio di scogliere di arenaria spettacolari sia sul lato tedesco che su quello ceco — uno dei tratti più panoramici di questa lista, cosa che la maggior parte dei viaggiatori non si aspetta da un collegamento dal nome così ordinario.'
+    }
+  },
   { slug: 'bordeaux-lourdes', from: 'Bordeaux', to: 'Lourdes', country: 'France', duration: '2h 30m', operator: 'SNCF Intercités', price: '€20-35', badge: 'Route guide · France',
     customSEO: { en: { title: 'How to Get from Bordeaux to Lourdes by Train (2h30)', description: 'The Bordeaux to Lourdes train takes 2h30 on SNCF Intercités. See today\'s departures and book tickets from €20.' } } },
   { slug: 'brno-vienna', from: 'Brno', to: 'Vienna', country: 'Czech-Austria', duration: '1h 45m', operator: 'ÖBB', price: '€15-25', badge: 'Route guide · Czech-Austria',
     customSEO: { en: { title: 'Brno to Vienna by Train: 1h45 ÖBB, from €15', description: 'Direct ÖBB from Brno to Vienna in 1h45. Compare today\'s schedule and book fares from €15 — no layovers.' } } },
   { slug: 'brussels-bruges', from: 'Brussels', to: 'Bruges', country: 'Belgium', duration: '0h 50m', operator: 'SNCB', price: '€10-15', badge: 'Route guide · Belgium',
-    customSEO: { en: { title: 'Brussels to Bruges Train: 50 min, from €10', description: 'Direct SNCB train from Brussels to Bruges in under an hour. Check today\'s schedule and book tickets from €10.' } } },
+    customSEO: { en: { title: 'Brussels to Bruges Train: 50 min, from €10', description: 'Direct SNCB train from Brussels to Bruges in under an hour. Check today\'s schedule and book tickets from €10.' } },
+    localInsight: {
+      en: 'Bruges\' entire medieval centre — canals, guild houses and belfry included — is a UNESCO World Heritage Site, and it\'s reachable from a European capital in under an hour by train, which is unusually fast for a city this historically intact. Most visitors do it as a day trip rather than an overnight stay.',
+      es: 'Todo el centro medieval de Brujas — canales, casas gremiales y campanario incluidos — es Patrimonio de la Humanidad de la UNESCO, y se llega desde una capital europea en menos de una hora en tren, algo inusualmente rápido para una ciudad tan intacta históricamente. La mayoría lo hace como excursión de un día, sin quedarse a dormir.',
+      fr: 'Tout le centre médiéval de Bruges — canaux, maisons de corporations et beffroi compris — est classé au patrimoine mondial de l\'UNESCO, et il est accessible depuis une capitale européenne en moins d\'une heure de train, ce qui est inhabituellement rapide pour une ville aussi bien préservée. La plupart des visiteurs y vont pour la journée sans y passer la nuit.',
+      it: 'L\'intero centro medievale di Bruges — canali, case delle corporazioni e campanile inclusi — è Patrimonio dell\'Umanità UNESCO, ed è raggiungibile da una capitale europea in meno di un\'ora di treno, un tempo insolitamente breve per una città così intatta dal punto di vista storico. La maggior parte dei visitatori la fa come gita di un giorno, senza pernottare.'
+    }
+  },
   { slug: 'brussels-paris', from: 'Brussels', to: 'Paris', country: 'Belgium-France', duration: '1h 30m', operator: 'Thalys', price: '€35-55', badge: 'Route guide · Belgium-France',
-    customSEO: { en: { title: 'Brussels to Paris Train: 1h30, from €35', description: 'Thalys connection from Brussels to Paris in 1h30. Check live schedules and book tickets from €35.' } } },
+    customSEO: { en: { title: 'Brussels to Paris Train: 1h30, from €35', description: 'Thalys connection from Brussels to Paris in 1h30. Check live schedules and book tickets from €35.' } },
+    localInsight: {
+      en: 'This was the original flagship route when Thalys launched in 1996, and it remains one of the busiest international rail corridors in Europe. Since the 2024 merger, tickets and branding appear under the Eurostar name, though the fast Brussels–Paris service itself hasn\'t changed.',
+      es: 'Esta fue la ruta insignia original cuando Thalys se lanzó en 1996, y sigue siendo uno de los corredores ferroviarios internacionales más transitados de Europa. Desde la fusión de 2024, los billetes y la marca aparecen bajo el nombre Eurostar, aunque el servicio rápido Bruselas–París en sí no ha cambiado.',
+      fr: 'C\'était la ligne phare d\'origine lors du lancement de Thalys en 1996, et elle reste l\'un des corridors ferroviaires internationaux les plus fréquentés d\'Europe. Depuis la fusion de 2024, billets et marque apparaissent sous le nom Eurostar, même si le service rapide Bruxelles–Paris lui-même n\'a pas changé.',
+      it: 'Questa era la tratta di punta originale al lancio di Thalys nel 1996, e resta uno dei corridoi ferroviari internazionali più trafficati d\'Europa. Dalla fusione del 2024, biglietti e marchio appaiono sotto il nome Eurostar, anche se il servizio rapido Bruxelles–Parigi in sé non è cambiato.'
+    }
+  },
   { slug: 'budapest-ljubljana', from: 'Budapest', to: 'Ljubljana', country: 'Hungary-Slovenia', duration: '6h 00m', operator: 'MÁV', price: '€30-50', badge: 'Route guide · Hungary-Slovenia',
     customSEO: { en: { title: 'Budapest to Ljubljana Train Guide: 6h on MÁV', description: 'Everything you need for the Budapest to Ljubljana train: 6 hours on MÁV, fares from €30, and today\'s live schedule.' } } },
   { slug: 'copenhagen-stockholm', from: 'Copenhagen', to: 'Stockholm', country: 'Denmark-Sweden', duration: '5h 00m', operator: 'SJ', price: '€40-60', badge: 'Route guide · Denmark-Sweden',
-    customSEO: { en: { title: 'How to Get from Copenhagen to Stockholm by Train (5h)', description: 'The Copenhagen to Stockholm train takes 5 hours on SJ. See today\'s departures and book tickets from €40.' } } },
+    customSEO: { en: { title: 'How to Get from Copenhagen to Stockholm by Train (5h)', description: 'The Copenhagen to Stockholm train takes 5 hours on SJ. See today\'s departures and book tickets from €40.' } },
+    localInsight: {
+      en: 'Leaving Copenhagen, the train crosses the Øresund Bridge — an 8km combined bridge-and-tunnel structure opened in 2000 that links Denmark and Sweden via the artificial island of Peberholm. It\'s the only fixed rail link between the two countries, and the crossing itself is one of the more memorable moments of the journey.',
+      es: 'Al salir de Copenhague, el tren cruza el puente de Öresund — una estructura combinada de puente y túnel de 8 km inaugurada en 2000 que conecta Dinamarca y Suecia a través de la isla artificial de Peberholm. Es el único enlace ferroviario fijo entre ambos países, y ese cruce es uno de los momentos más memorables del viaje.',
+      fr: 'En quittant Copenhague, le train traverse le pont de l\'Øresund — un ouvrage combiné pont-tunnel de 8 km ouvert en 2000 qui relie le Danemark et la Suède via l\'île artificielle de Peberholm. C\'est le seul lien ferroviaire fixe entre les deux pays, et cette traversée reste l\'un des moments les plus marquants du trajet.',
+      it: 'Lasciando Copenaghen, il treno attraversa il ponte dell\'Øresund — una struttura combinata ponte-tunnel di 8 km aperta nel 2000 che collega Danimarca e Svezia tramite l\'isola artificiale di Peberholm. È l\'unico collegamento ferroviario fisso tra i due paesi, e l\'attraversamento stesso è uno dei momenti più memorabili del viaggio.'
+    }
+  },
   { slug: 'dortmund-munich', from: 'Dortmund', to: 'Munich', country: 'Germany', duration: '5h 30m', operator: 'DB ICE', price: '€35-55', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Dortmund to Munich by Train: 5h30 DB ICE, from €35', description: 'Direct DB ICE from Dortmund to Munich in 5h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
   { slug: 'florence-pisa', from: 'Florence', to: 'Pisa', country: 'Italy', duration: '1h 00m', operator: 'Trenitalia', price: '€10-15', badge: 'Route guide · Italy',
@@ -71,7 +106,14 @@ const routes = [
   { slug: 'london-cambridge', from: 'London', to: 'Cambridge', country: 'UK', duration: '0h 50m', operator: 'Thameslink', price: '€15-25', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to Cambridge Train Guide: 50 min on Thameslink', description: 'Everything you need for the London to Cambridge train: 50 minutes on Thameslink, fares from €15, and today\'s live schedule.' } } },
   { slug: 'london-edinburgh', from: 'London', to: 'Edinburgh', country: 'UK', duration: '4h 30m', operator: 'LNER', price: '€30-60', badge: 'Route guide · UK',
-    customSEO: { en: { title: 'How to Get from London to Edinburgh by Train (4h30)', description: 'The London to Edinburgh train takes 4h30 on LNER. See today\'s departures and book tickets from €30.' } } },
+    customSEO: { en: { title: 'How to Get from London to Edinburgh by Train (4h30)', description: 'The London to Edinburgh train takes 4h30 on LNER. See today\'s departures and book tickets from €30.' } },
+    localInsight: {
+      en: 'This is the East Coast Main Line, the route the streamlined steam locomotive Mallard used in 1938 to set the world speed record for a steam train — 126 mph (203 km/h), a record that still stands today. Further north the line crosses the Royal Border Bridge at Berwick-upon-Tweed, with open sea views along the Northumberland coast.',
+      es: 'Esta es la East Coast Main Line, la ruta que la locomotora de vapor aerodinámica Mallard usó en 1938 para batir el récord mundial de velocidad de un tren a vapor — 203 km/h, un récord que sigue vigente hoy. Más al norte, la línea cruza el Royal Border Bridge en Berwick-upon-Tweed, con vistas al mar abierto a lo largo de la costa de Northumberland.',
+      fr: 'C\'est la East Coast Main Line, la ligne empruntée en 1938 par la locomotive à vapeur profilée Mallard pour établir le record du monde de vitesse pour un train à vapeur — 203 km/h, un record toujours en vigueur aujourd\'hui. Plus au nord, la ligne traverse le Royal Border Bridge à Berwick-upon-Tweed, avec vue sur la mer le long de la côte du Northumberland.',
+      it: 'Questa è la East Coast Main Line, la linea percorsa nel 1938 dalla locomotiva a vapore aerodinamica Mallard per stabilire il record mondiale di velocità per un treno a vapore — 203 km/h, record tuttora imbattuto. Più a nord, la linea attraversa il Royal Border Bridge a Berwick-upon-Tweed, con vista sul mare aperto lungo la costa del Northumberland.'
+    }
+  },
   { slug: 'london-liverpool', from: 'London', to: 'Liverpool', country: 'UK', duration: '2h 15m', operator: 'Avanti', price: '€20-40', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to Liverpool by Train: 2h15 Avanti, from €20', description: 'Direct Avanti from London to Liverpool in 2h15. Compare today\'s schedule and book fares from €20 — no layovers.' } } },
   { slug: 'london-manchester', from: 'London', to: 'Manchester', country: 'UK', duration: '2h 00m', operator: 'Avanti', price: '€20-40', badge: 'Route guide · UK',
@@ -120,9 +162,23 @@ const routes = [
   { slug: 'milan-florence', from: 'Milan', to: 'Florence', country: 'Italy', duration: '1h 45m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'How to Get from Milan to Florence by Train (1h45)', description: 'The Milan to Florence train takes 1h45 on Trenitalia. See today\'s departures and book tickets from €20.' } } },
   { slug: 'milan-rome', from: 'Milan', to: 'Rome', country: 'Italy', duration: '3h 00m', operator: 'Trenitalia', price: '€30-50', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'Milan to Rome by Train: 3h Trenitalia, from €30', description: 'Direct high-speed Trenitalia from Milan to Rome in 3 hours. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
+    customSEO: { en: { title: 'Milan to Rome by Train: 3h Trenitalia, from €30', description: 'Direct high-speed Trenitalia from Milan to Rome in 3 hours. Compare today\'s schedule and book fares from €30 — no layovers.' } },
+    localInsight: {
+      en: 'This corridor is where Italo (NTV) launched in 2011 as the first open-access competitor to run its own high-speed trains on a state-owned network anywhere in Europe — breaking Trenitalia\'s monopoly years before similar competition arrived in Spain or elsewhere. The two operators still go head to head on this exact line today.',
+      es: 'En este corredor Italo (NTV) se lanzó en 2011 como el primer competidor de acceso abierto en operar sus propios trenes de alta velocidad en una red estatal en toda Europa — rompiendo el monopolio de Trenitalia años antes de que llegara una competencia similar a España o a otros países. Los dos operadores todavía compiten cara a cara en esta misma línea hoy.',
+      fr: 'C\'est sur ce corridor qu\'Italo (NTV) a été lancé en 2011 comme premier concurrent en accès libre à exploiter ses propres trains à grande vitesse sur un réseau public, une première en Europe — mettant fin au monopole de Trenitalia des années avant qu\'une concurrence similaire n\'arrive en Espagne ou ailleurs. Les deux opérateurs s\'affrontent toujours directement sur cette même ligne aujourd\'hui.',
+      it: 'È su questa tratta che Italo (NTV) ha debuttato nel 2011 come primo concorrente ad accesso libero a gestire propri treni ad alta velocità su una rete statale in tutta Europa — rompendo il monopolio di Trenitalia anni prima che una concorrenza simile arrivasse in Spagna o altrove. I due operatori si sfidano ancora oggi direttamente su questa stessa linea.'
+    }
+  },
   { slug: 'milan-zurich', from: 'Milan', to: 'Zurich', country: 'Italy-Switzerland', duration: '3h 30m', operator: 'SBB', price: '€35-55', badge: 'Route guide · Italy-Switzerland',
-    customSEO: { en: { title: 'Milan to Zurich Train: 3h30 scenic SBB, from €35', description: 'Direct SBB train from Milan to Zurich through the Alps in 3.5 hours. Compare today\'s schedule and book fares from €35.' } } },
+    customSEO: { en: { title: 'Milan to Zurich Train: 3h30 scenic SBB, from €35', description: 'Direct SBB train from Milan to Zurich through the Alps in 3.5 hours. Compare today\'s schedule and book fares from €35.' } },
+    localInsight: {
+      en: 'Most of these trains now pass through the Gotthard Base Tunnel, opened in 2016 at 57km the longest railway tunnel in the world, which cut roughly an hour off the old route over the Gotthard Pass. The historic mountain line — with its spiral tunnels climbing the pass — still exists and is used by some regional and scenic services.',
+      es: 'La mayoría de estos trenes pasan hoy por el túnel de base del Gotardo, inaugurado en 2016 y con 57 km el túnel ferroviario más largo del mundo, que recortó cerca de una hora respecto a la antigua ruta por el paso del Gotardo. La histórica línea de montaña — con sus túneles en espiral que suben el paso — sigue existiendo y la usan algunos servicios regionales y panorámicos.',
+      fr: 'La plupart de ces trains passent désormais par le tunnel de base du Saint-Gothard, ouvert en 2016 et long de 57 km, le plus long tunnel ferroviaire du monde, qui a réduit d\'environ une heure l\'ancien trajet par le col du Saint-Gothard. La ligne de montagne historique — avec ses tunnels en spirale qui grimpent le col — existe toujours et est utilisée par certains trains régionaux et panoramiques.',
+      it: 'La maggior parte di questi treni passa ora dal tunnel di base del Gottardo, aperto nel 2016 e lungo 57 km, il tunnel ferroviario più lungo al mondo, che ha tagliato circa un\'ora rispetto al vecchio percorso sul passo del Gottardo. La storica linea di montagna — con le sue gallerie elicoidali che salgono al passo — esiste ancora ed è usata da alcuni servizi regionali e panoramici.'
+    }
+  },
   { slug: 'montreux-interlaken', from: 'Montreux', to: 'Interlaken', country: 'Switzerland', duration: '2h 00m', operator: 'SBB', price: '€25-40', badge: 'Route guide · Switzerland',
     customSEO: { en: { title: 'Montreux to Interlaken by Train: 2h SBB, from €25', description: 'Direct SBB from Montreux to Interlaken in 2 hours. Compare today\'s schedule and book fares from €25 — no layovers.' } } },
   { slug: 'munich-berlin', from: 'Munich', to: 'Berlin', country: 'Germany', duration: '4h 00m', operator: 'DB ICE', price: '€35-55', badge: 'Route guide · Germany',
@@ -191,7 +247,14 @@ const routes = [
   { slug: 'paris-lourdes', from: 'Paris', to: 'Lourdes', country: 'France', duration: '6h 30m', operator: 'SNCF Intercités', price: '€30-50', badge: 'Route guide · France',
     customSEO: { en: { title: 'Paris to Lourdes by Train: 6h30 SNCF Intercités, from €30', description: 'Direct SNCF Intercités from Paris to Lourdes in 6h30. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
   { slug: 'paris-lucerne', from: 'Paris', to: 'Lucerne', country: 'France-Switzerland', duration: '4h 30m', operator: 'TGV Lyria', price: '€50-75', badge: 'Route guide · France-Switzerland',
-    customSEO: { en: { title: 'Paris to Lucerne Train: 4h30, from €50', description: 'TGV Lyria connection from Paris to Lucerne in 4h30. Check live schedules and book tickets from €50.' } } },
+    customSEO: { en: { title: 'Paris to Lucerne Train: 4h30, from €50', description: 'TGV Lyria connection from Paris to Lucerne in 4h30. Check live schedules and book tickets from €50.' } },
+    localInsight: {
+      en: 'TGV Lyria, the operator behind this route, is a joint venture between France\'s SNCF and Switzerland\'s SBB — one of the few European rail services run and branded jointly by two different national operators rather than handed off from one country\'s trains to another\'s at the border.',
+      es: 'TGV Lyria, el operador de esta ruta, es una empresa conjunta entre la SNCF francesa y la SBB suiza — uno de los pocos servicios ferroviarios europeos gestionados y con marca compartida entre dos operadores nacionales distintos, en lugar de traspasarse de los trenes de un país a los de otro en la frontera.',
+      fr: 'TGV Lyria, l\'opérateur de cette ligne, est une coentreprise entre la SNCF française et les CFF suisses — l\'un des rares services ferroviaires européens exploités et gérés conjointement par deux opérateurs nationaux différents, plutôt que d\'être transmis des trains d\'un pays à ceux d\'un autre à la frontière.',
+      it: 'TGV Lyria, l\'operatore di questa tratta, è una joint venture tra la SNCF francese e le FFS svizzere — uno dei pochi servizi ferroviari europei gestiti e con marchio condiviso tra due operatori nazionali diversi, invece di passare dai treni di un paese a quelli di un altro al confine.'
+    }
+  },
   { slug: 'paris-lyon', from: 'Paris', to: 'Lyon', country: 'France', duration: '2h 00m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France',
     customSEO: { en: { title: 'Paris to Lyon Train Guide: 2h on TGV', description: 'Everything you need for the Paris to Lyon train: 2 hours on TGV, fares from €30, and today\'s live schedule.' } } },
   { slug: 'paris-milan', from: 'Paris', to: 'Milan', country: 'France-Italy', duration: '7h 00m', operator: 'TGV', price: '€60-90', badge: 'Route guide · France-Italy',
@@ -209,7 +272,14 @@ const routes = [
   { slug: 'prague-brno', from: 'Prague', to: 'Brno', country: 'Czech', duration: '2h 30m', operator: 'ČD', price: '€15-25', badge: 'Route guide · Czech',
     customSEO: { en: { title: 'Prague to Brno Train: 2h30, from €15', description: 'ČD connection from Prague to Brno in 2h30. Check live schedules and book tickets from €15.' } } },
   { slug: 'prague-budapest', from: 'Prague', to: 'Budapest', country: 'Czech-Hungary', duration: '4h 30m', operator: 'ČD', price: '€25-40', badge: 'Route guide · Czech-Hungary',
-    customSEO: { en: { title: 'Prague to Budapest Train: 4h30, from €25', description: 'Direct ČD train from Prague to Budapest in 4.5 hours, no transfers. Check today\'s schedule and book tickets from €25.' } } },
+    customSEO: { en: { title: 'Prague to Budapest Train: 4h30, from €25', description: 'Direct ČD train from Prague to Budapest in 4.5 hours, no transfers. Check today\'s schedule and book tickets from €25.' } },
+    localInsight: {
+      en: 'This direct service actually links three national capitals in one journey: it passes through Bratislava, Slovakia, on its way from Prague to Budapest, without requiring a change of train — a detail easy to miss but one that makes this one of the few single-train routes in Europe to touch three countries.',
+      es: 'Este servicio directo en realidad conecta tres capitales nacionales en un solo viaje: pasa por Bratislava, en Eslovaquia, de camino de Praga a Budapest, sin necesidad de cambiar de tren — un detalle fácil de pasar por alto, pero que hace de esta una de las pocas rutas de un solo tren en Europa que atraviesa tres países.',
+      fr: 'Ce service direct relie en réalité trois capitales nationales en un seul trajet : il passe par Bratislava, en Slovaquie, sur le chemin entre Prague et Budapest, sans changement de train — un détail facile à manquer, mais qui fait de cette ligne l\'une des rares en Europe à traverser trois pays sans correspondance.',
+      it: 'Questo servizio diretto collega in realtà tre capitali nazionali in un unico viaggio: passa per Bratislava, in Slovacchia, lungo il tragitto da Praga a Budapest, senza bisogno di cambiare treno — un dettaglio facile da non notare, ma che rende questa una delle poche tratte in Europa percorribili con un solo treno attraverso tre paesi.'
+    }
+  },
   { slug: 'prague-vienna', from: 'Prague', to: 'Vienna', country: 'Czech-Austria', duration: '4h 00m', operator: 'Railjet', price: '€25-40', badge: 'Route guide · Czech-Austria',
     customSEO: { en: { title: 'Prague to Vienna by Train: 4h Railjet, from €25', description: 'Direct ÖBB Railjet from Prague to Vienna in 4 hours, no transfers. Compare today\'s schedule and book fares from €25.' } } },
   { slug: 'rome-florence', from: 'Rome', to: 'Florence', country: 'Italy', duration: '1h 30m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
