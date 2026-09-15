@@ -125,7 +125,14 @@ const routes = [
     }
   },
   { slug: 'dortmund-munich', from: 'Dortmund', to: 'Munich', country: 'Germany', duration: '5h 30m', operator: 'DB ICE', price: '€35-55', badge: 'Route guide · Germany',
-    customSEO: { en: { title: 'Dortmund to Munich by Train: 5h30 DB ICE, from €35', description: 'Direct DB ICE from Dortmund to Munich in 5h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
+    customSEO: { en: { title: 'Dortmund to Munich by Train: 5h30 DB ICE, from €35', description: 'Direct DB ICE from Dortmund to Munich in 5h30. Compare today\'s schedule and book fares from €35 — no layovers.' } },
+    localInsight: {
+      en: 'Dortmund sits at the heart of the Ruhr, once Europe\'s largest coal and steel region and the engine of Germany\'s post-war industrial boom. This train ride effectively runs from that post-industrial landscape all the way to Bavaria — two very different pictures of modern Germany connected by a single ICE line.',
+      es: 'Dortmund está en el corazón del Ruhr, que fue la mayor región carbonera y siderúrgica de Europa y el motor del auge industrial alemán de posguerra. Este viaje en tren va, en la práctica, desde ese paisaje postindustrial hasta Baviera — dos imágenes muy distintas de la Alemania moderna conectadas por una sola línea ICE.',
+      fr: 'Dortmund se trouve au cœur de la Ruhr, autrefois la plus grande région charbonnière et sidérurgique d\'Europe et le moteur du boom industriel allemand d\'après-guerre. Ce trajet en train relie en pratique ce paysage postindustriel jusqu\'à la Bavière — deux visages très différents de l\'Allemagne moderne reliés par une seule ligne ICE.',
+      it: 'Dortmund si trova nel cuore della Ruhr, un tempo la più grande regione carbonifera e siderurgica d\'Europa e il motore del boom industriale tedesco del dopoguerra. Questo viaggio in treno va di fatto da quel paesaggio postindustriale fino alla Baviera — due immagini molto diverse della Germania moderna collegate da un\'unica linea ICE.'
+    }
+  },
   { slug: 'florence-pisa', from: 'Florence', to: 'Pisa', country: 'Italy', duration: '1h 00m', operator: 'Trenitalia', price: '€10-15', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Florence to Pisa Train: 1h, from €10', description: 'Trenitalia connection from Florence to Pisa in 1 hour. Check live schedules and book tickets from €10.' } },
     localInsight: {
@@ -214,7 +221,14 @@ const routes = [
     }
   },
   { slug: 'london-brussels', from: 'London', to: 'Brussels', country: 'UK-Belgium', duration: '2h 00m', operator: 'Eurostar', price: '€40-70', badge: 'Route guide · UK-Belgium',
-    customSEO: { en: { title: 'London to Brussels Train: 2h, from €40', description: 'Eurostar connection from London to Brussels in 2 hours. Check live schedules and book tickets from €40.' } } },
+    customSEO: { en: { title: 'London to Brussels Train: 2h, from €40', description: 'Eurostar connection from London to Brussels in 2 hours. Check live schedules and book tickets from €40.' } },
+    localInsight: {
+      en: 'This was one of the two original Eurostar routes when cross-Channel service began in November 1994, alongside London-Paris — Brussels only became a fully independent, non-stop route somewhat later, as early Eurostar timetables sometimes ran Brussels services via Lille rather than direct.',
+      es: 'Esta fue una de las dos rutas originales de Eurostar cuando el servicio a través del Canal comenzó en noviembre de 1994, junto con Londres-París — Bruselas se convirtió en ruta directa e independiente algo más tarde, ya que los primeros horarios de Eurostar a veces hacían pasar los servicios a Bruselas por Lille en vez de ir directos.',
+      fr: 'C\'était l\'une des deux lignes Eurostar d\'origine lorsque le service transmanche a débuté en novembre 1994, aux côtés de Londres-Paris — Bruxelles n\'est devenue une liaison directe et indépendante que plus tard, les premiers horaires Eurostar faisant parfois transiter les services vers Bruxelles par Lille plutôt qu\'en direct.',
+      it: 'Questa fu una delle due linee Eurostar originali quando il servizio attraverso la Manica iniziò nel novembre 1994, insieme a Londra-Parigi — Bruxelles divenne una tratta diretta e indipendente solo più tardi, dato che i primi orari Eurostar a volte facevano passare i servizi per Bruxelles via Lille anziché diretti.'
+    }
+  },
   { slug: 'london-cambridge', from: 'London', to: 'Cambridge', country: 'UK', duration: '0h 50m', operator: 'Thameslink', price: '€15-25', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to Cambridge Train Guide: 50 min on Thameslink', description: 'Everything you need for the London to Cambridge train: 50 minutes on Thameslink, fares from €15, and today\'s live schedule.' } } },
   { slug: 'london-edinburgh', from: 'London', to: 'Edinburgh', country: 'UK', duration: '4h 30m', operator: 'LNER', price: '€30-60', badge: 'Route guide · UK',
@@ -229,7 +243,14 @@ const routes = [
   { slug: 'london-liverpool', from: 'London', to: 'Liverpool', country: 'UK', duration: '2h 15m', operator: 'Avanti', price: '€20-40', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to Liverpool by Train: 2h15 Avanti, from €20', description: 'Direct Avanti from London to Liverpool in 2h15. Compare today\'s schedule and book fares from €20 — no layovers.' } } },
   { slug: 'london-manchester', from: 'London', to: 'Manchester', country: 'UK', duration: '2h 00m', operator: 'Avanti', price: '€20-40', badge: 'Route guide · UK',
-    customSEO: { en: { title: 'London to Manchester Train: 2h, from €20', description: 'Avanti connection from London to Manchester in 2 hours. Check live schedules and book tickets from €20.' } } },
+    customSEO: { en: { title: 'London to Manchester Train: 2h, from €20', description: 'Avanti connection from London to Manchester in 2 hours. Check live schedules and book tickets from €20.' } },
+    localInsight: {
+      en: 'This runs on the West Coast Main Line, one of the busiest mixed-traffic railways in Europe, electrified in stages through the 1960s and 70s — long before most of the continent\'s high-speed lines existed. A dedicated new high-speed line to relieve it (HS2) was originally planned to reach Manchester, but that northern leg was cancelled in 2023.',
+      es: 'Circula por la West Coast Main Line, una de las líneas ferroviarias de tráfico mixto más transitadas de Europa, electrificada por etapas durante los años 60 y 70 — mucho antes de que existieran la mayoría de las líneas de alta velocidad del continente. Se había planeado una nueva línea de alta velocidad dedicada para aliviarla (HS2) que llegaría hasta Manchester, pero ese tramo norte se canceló en 2023.',
+      fr: 'Cette ligne emprunte la West Coast Main Line, l\'une des lignes ferroviaires à trafic mixte les plus fréquentées d\'Europe, électrifiée par étapes dans les années 1960 et 1970 — bien avant l\'existence de la plupart des lignes à grande vitesse du continent. Une nouvelle ligne à grande vitesse dédiée pour la désengorger (HS2) devait initialement atteindre Manchester, mais ce tronçon nord a été annulé en 2023.',
+      it: 'Percorre la West Coast Main Line, una delle linee ferroviarie a traffico misto più trafficate d\'Europa, elettrificata a tappe negli anni \'60 e \'70 — molto prima che esistessero la maggior parte delle linee ad alta velocità del continente. Una nuova linea ad alta velocità dedicata per alleggerirla (HS2) era originariamente prevista fino a Manchester, ma quel tratto settentrionale è stato cancellato nel 2023.'
+    }
+  },
   { slug: 'london-oxford', from: 'London', to: 'Oxford', country: 'UK', duration: '1h 00m', operator: 'GWR', price: '€15-25', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to Oxford Train Guide: 1h on GWR', description: 'Everything you need for the London to Oxford train: 1 hour on GWR, fares from €15, and today\'s live schedule.' } },
     localInsight: {
@@ -240,9 +261,23 @@ const routes = [
     }
   },
   { slug: 'london-paris', from: 'London', to: 'Paris', country: 'UK-France', duration: '2h 30m', operator: 'Eurostar', price: '€50-80', badge: 'Route guide · UK-France',
-    customSEO: { en: { title: 'How to Get from London to Paris by Train (2h30)', description: 'The London to Paris train takes 2h30 on Eurostar. See today\'s departures and book tickets from €50.' } } },
+    customSEO: { en: { title: 'How to Get from London to Paris by Train (2h30)', description: 'The London to Paris train takes 2h30 on Eurostar. See today\'s departures and book tickets from €50.' } },
+    localInsight: {
+      en: 'Eurostar originally departed from London Waterloo, not St Pancras — the move to St Pancras International only happened in 2007, after a major restoration of the station\'s Victorian train shed specifically to host the faster High Speed 1 line into London, which also shaved about 20 minutes off the journey.',
+      es: 'Eurostar salía originalmente de London Waterloo, no de St Pancras — la mudanza a St Pancras International recién ocurrió en 2007, tras una gran restauración de la nave ferroviaria victoriana de la estación pensada específicamente para recibir la línea más rápida High Speed 1 hacia Londres, que además recortó unos 20 minutos al viaje.',
+      fr: 'Eurostar partait à l\'origine de London Waterloo, pas de St Pancras — le déménagement vers St Pancras International n\'a eu lieu qu\'en 2007, après une importante restauration de la halle ferroviaire victorienne de la gare, spécifiquement pour accueillir la ligne plus rapide High Speed 1 vers Londres, qui a aussi réduit le trajet d\'environ 20 minutes.',
+      it: 'Eurostar partiva in origine da London Waterloo, non da St Pancras — il trasferimento a St Pancras International avvenne solo nel 2007, dopo un grande restauro della navata ferroviaria vittoriana della stazione, pensato appositamente per ospitare la linea più veloce High Speed 1 verso Londra, che ha anche ridotto il viaggio di circa 20 minuti.'
+    }
+  },
   { slug: 'london-york', from: 'London', to: 'York', country: 'UK', duration: '2h 00m', operator: 'LNER', price: '€20-40', badge: 'Route guide · UK',
-    customSEO: { en: { title: 'London to York by Train: 2h LNER, from €20', description: 'Direct LNER from London to York in 2 hours. Compare today\'s schedule and book fares from €20 — no layovers.' } } },
+    customSEO: { en: { title: 'London to York by Train: 2h LNER, from €20', description: 'Direct LNER from London to York in 2 hours. Compare today\'s schedule and book fares from €20 — no layovers.' } },
+    localInsight: {
+      en: 'This runs on the same East Coast Main Line as the London-Edinburgh route, and York itself has one of the most significant roles in British railway history — its National Railway Museum, right next to the station, holds one of the largest collections of historic locomotives in the world, including a Japanese bullet train given as a diplomatic gift.',
+      es: 'Circula por la misma East Coast Main Line que la ruta Londres-Edimburgo, y York tiene un papel muy importante en la historia ferroviaria británica — su Museo Nacional del Ferrocarril, justo al lado de la estación, alberga una de las colecciones de locomotoras históricas más grandes del mundo, incluido un tren bala japonés recibido como regalo diplomático.',
+      fr: 'Cette ligne emprunte la même East Coast Main Line que la liaison Londres-Édimbourg, et York occupe une place particulièrement importante dans l\'histoire ferroviaire britannique — son National Railway Museum, juste à côté de la gare, abrite l\'une des plus grandes collections de locomotives historiques au monde, dont un train à grande vitesse japonais offert en cadeau diplomatique.',
+      it: 'Percorre la stessa East Coast Main Line della tratta Londra-Edimburgo, e York ha un ruolo particolarmente importante nella storia ferroviaria britannica — il suo National Railway Museum, proprio accanto alla stazione, ospita una delle più grandi collezioni di locomotive storiche al mondo, incluso uno shinkansen giapponese ricevuto come dono diplomatico.'
+    }
+  },
   { slug: 'lyon-turin', from: 'Lyon', to: 'Turin', country: 'France-Italy', duration: '4h 00m', operator: 'TGV', price: '€35-55', badge: 'Route guide · France-Italy',
     customSEO: { en: { title: 'Lyon to Turin Train: 4h, from €35', description: 'TGV connection from Lyon to Turin in 4 hours. Check live schedules and book tickets from €35.' } },
     localInsight: {
@@ -262,7 +297,14 @@ const routes = [
     }
   },
   { slug: 'madrid-malaga', from: 'Madrid', to: 'Malaga', country: 'Spain', duration: '2h 30m', operator: 'Renfe AVE', price: '€25-45', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'How to Get from Madrid to Malaga by Train (2h30)', description: 'The Madrid to Malaga train takes 2h30 on Renfe AVE. See today\'s departures and book tickets from €25.' } } },
+    customSEO: { en: { title: 'How to Get from Madrid to Malaga by Train (2h30)', description: 'The Madrid to Malaga train takes 2h30 on Renfe AVE. See today\'s departures and book tickets from €25.' } },
+    localInsight: {
+      en: 'This line crosses through the Sierra Morena mountains via a series of tunnels and viaducts built specifically for high-speed running — engineering that let AVE trains reach the Costa del Sol without following the older, much slower conventional route that used to wind through the hills.',
+      es: 'Esta línea atraviesa Sierra Morena por una serie de túneles y viaductos construidos específicamente para la alta velocidad — una ingeniería que permitió a los trenes AVE llegar hasta la Costa del Sol sin seguir la antigua ruta convencional, mucho más lenta, que serpenteaba por las sierras.',
+      fr: 'Cette ligne traverse la Sierra Morena par une série de tunnels et de viaducs construits spécifiquement pour la grande vitesse — une ingénierie qui a permis aux trains AVE d\'atteindre la Costa del Sol sans suivre l\'ancienne ligne classique, bien plus lente, qui serpentait auparavant à travers les collines.',
+      it: 'Questa linea attraversa la Sierra Morena tramite una serie di gallerie e viadotti costruiti appositamente per l\'alta velocità — un\'ingegneria che ha permesso ai treni AVE di raggiungere la Costa del Sol senza seguire il vecchio percorso convenzionale, molto più lento, che un tempo serpeggiava tra le colline.'
+    }
+  },
   { slug: 'madrid-seville', from: 'Madrid', to: 'Seville', country: 'Spain', duration: '2h 30m', operator: 'Renfe AVE', price: '€25-45', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Madrid to Seville by Train: 2h30 Renfe AVE, from €25', description: 'Direct Renfe AVE from Madrid to Seville in 2h30. Compare today\'s schedule and book fares from €25 — no layovers.' } },
     localInsight: {
@@ -324,7 +366,14 @@ const routes = [
     }
   },
   { slug: 'munich-prague', from: 'Munich', to: 'Prague', country: 'Germany-Czech', duration: '4h 00m', operator: 'DB ČD', price: '€30-50', badge: 'Route guide · Germany-Czech',
-    customSEO: { en: { title: 'Munich to Prague Train: 4h, from €30', description: 'DB ČD connection from Munich to Prague in 4 hours. Check live schedules and book tickets from €30.' } } },
+    customSEO: { en: { title: 'Munich to Prague Train: 4h, from €30', description: 'DB ČD connection from Munich to Prague in 4 hours. Check live schedules and book tickets from €30.' } },
+    localInsight: {
+      en: 'Journey times on this route dropped noticeably after track upgrades in the 2010s cut out some of the slower sections through Bavaria and Bohemia — before then, the Munich-Prague trip regularly took close to 6 hours rather than the roughly 4 it takes today.',
+      es: 'Los tiempos de viaje en esta ruta bajaron de forma notable tras mejoras en la vía en la década de 2010 que eliminaron algunos de los tramos más lentos por Baviera y Bohemia — antes, el trayecto Múnich-Praga solía tardar cerca de 6 horas en vez de las 4 que toma hoy.',
+      fr: 'Les temps de trajet sur cette ligne ont nettement baissé après des travaux de modernisation de la voie dans les années 2010, qui ont supprimé certains des tronçons les plus lents à travers la Bavière et la Bohême — auparavant, le trajet Munich-Prague prenait régulièrement près de 6 heures contre environ 4 aujourd\'hui.',
+      it: 'I tempi di viaggio su questa tratta sono diminuiti sensibilmente dopo i lavori di ammodernamento dei binari negli anni 2010, che hanno eliminato alcuni dei tratti più lenti attraverso Baviera e Boemia — prima, il viaggio Monaco-Praga richiedeva regolarmente quasi 6 ore contro le circa 4 di oggi.'
+    }
+  },
   { slug: 'munich-venice', from: 'Munich', to: 'Venice', country: 'Germany-Italy', duration: '6h 00m', operator: 'ÖBB', price: '€40-60', badge: 'Route guide · Germany-Italy',
     customSEO: { en: { title: 'Munich to Venice by Train: 6h scenic route, from €40', description: 'Direct ÖBB train from Munich to Venice through the Alps in 6 hours. Compare today\'s schedule and book fares from €40.' } },
     localInsight: {
@@ -353,7 +402,14 @@ const routes = [
     }
   },
   { slug: 'naples-sorrento', from: 'Naples', to: 'Sorrento', country: 'Italy', duration: '1h 00m', operator: 'Circumvesuviana', price: '€5-10', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'How to Get from Naples to Sorrento by Train (1h)', description: 'The Naples to Sorrento train takes 1 hour on Circumvesuviana. See today\'s departures and book tickets from €5.' } } },
+    customSEO: { en: { title: 'How to Get from Naples to Sorrento by Train (1h)', description: 'The Naples to Sorrento train takes 1 hour on Circumvesuviana. See today\'s departures and book tickets from €5.' } },
+    localInsight: {
+      en: 'The Circumvesuviana line, as its name suggests, circles the base of Mount Vesuvius — meaning this ride also passes close to the ruins of Pompeii and Herculaneum, the ancient towns Vesuvius buried in AD 79, making it possible to combine Pompeii and Sorrento on the same line without a car.',
+      es: 'La línea Circumvesuviana, como indica su nombre, rodea la base del Vesubio — lo que significa que este trayecto también pasa cerca de las ruinas de Pompeya y Herculano, las ciudades antiguas que el Vesubio sepultó en el año 79 d.C., permitiendo combinar Pompeya y Sorrento en la misma línea sin necesidad de auto.',
+      fr: 'La ligne Circumvesuviana, comme son nom l\'indique, fait le tour de la base du Vésuve — ce qui signifie que ce trajet passe aussi près des ruines de Pompéi et d\'Herculanum, les villes antiques ensevelies par le Vésuve en l\'an 79, permettant de combiner Pompéi et Sorrente sur la même ligne sans voiture.',
+      it: 'La linea Circumvesuviana, come suggerisce il nome, gira attorno alla base del Vesuvio — il che significa che questo tragitto passa anche vicino alle rovine di Pompei ed Ercolano, le antiche città sepolte dal Vesuvio nel 79 d.C., permettendo di combinare Pompei e Sorrento sulla stessa linea senza auto.'
+    }
+  },
   { slug: 'nice-monaco', from: 'Nice', to: 'Monaco', country: 'France', duration: '0h 20m', operator: 'SNCF TER', price: '€5-10', badge: 'Route guide · France',
     customSEO: { en: { title: 'Nice to Monaco Train: 20 min, from €5', description: 'Quick SNCF TER connection from Nice to Monaco in about 20 minutes along the coast. Check schedules and book from €5.' } },
     localInsight: {
@@ -484,7 +540,14 @@ const routes = [
     }
   },
   { slug: 'prague-vienna', from: 'Prague', to: 'Vienna', country: 'Czech-Austria', duration: '4h 00m', operator: 'Railjet', price: '€25-40', badge: 'Route guide · Czech-Austria',
-    customSEO: { en: { title: 'Prague to Vienna by Train: 4h Railjet, from €25', description: 'Direct ÖBB Railjet from Prague to Vienna in 4 hours, no transfers. Compare today\'s schedule and book fares from €25.' } } },
+    customSEO: { en: { title: 'Prague to Vienna by Train: 4h Railjet, from €25', description: 'Direct ÖBB Railjet from Prague to Vienna in 4 hours, no transfers. Compare today\'s schedule and book fares from €25.' } },
+    localInsight: {
+      en: 'During the Cold War, crossing this border meant long stops for passport and customs checks between Czechoslovakia and Austria. Both countries joined the EU\'s Schengen open-border area in 2007, and the border checks disappeared entirely — today the train simply rolls through without stopping.',
+      es: 'Durante la Guerra Fría, cruzar esta frontera implicaba largas paradas para el control de pasaportes y aduanas entre Checoslovaquia y Austria. Ambos países se sumaron al espacio Schengen de fronteras abiertas de la UE en 2007, y esos controles desaparecieron por completo — hoy el tren simplemente pasa de largo sin detenerse.',
+      fr: 'Pendant la guerre froide, franchir cette frontière impliquait de longs arrêts pour les contrôles de passeport et de douane entre la Tchécoslovaquie et l\'Autriche. Les deux pays ont rejoint l\'espace Schengen à frontières ouvertes de l\'UE en 2007, et ces contrôles ont totalement disparu — aujourd\'hui, le train traverse simplement sans s\'arrêter.',
+      it: 'Durante la Guerra Fredda, attraversare questo confine significava lunghe soste per i controlli di passaporto e dogana tra Cecoslovacchia e Austria. Entrambi i paesi sono entrati nell\'area Schengen a frontiere aperte dell\'UE nel 2007, e quei controlli sono scomparsi del tutto — oggi il treno passa semplicemente senza fermarsi.'
+    }
+  },
   { slug: 'rome-florence', from: 'Rome', to: 'Florence', country: 'Italy', duration: '1h 30m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Rome to Florence Train Guide: 1h30 on Trenitalia', description: 'Everything you need for the Rome to Florence train: 1h30 on Trenitalia, fares from €20, and today\'s live schedule.' } },
     localInsight: {
@@ -504,7 +567,14 @@ const routes = [
     }
   },
   { slug: 'rome-venice', from: 'Rome', to: 'Venice', country: 'Italy', duration: '4h 00m', operator: 'Trenitalia', price: '€30-50', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'Rome to Venice by Train: 4h high-speed, from €30', description: 'Direct Trenitalia high-speed train from Rome to Venice in 4 hours. See today\'s schedule and book fares from €30 in your currency.' } } },
+    customSEO: { en: { title: 'Rome to Venice by Train: 4h high-speed, from €30', description: 'Direct Trenitalia high-speed train from Rome to Venice in 4 hours. See today\'s schedule and book fares from €30 in your currency.' } },
+    localInsight: {
+      en: 'This is one of the longest fully high-speed corridors in Italy, connecting two of the country\'s biggest tourist draws directly — but it\'s also genuinely used by business travellers, since Bologna and Padua along the way are major economic hubs in their own right, not just stops on a scenic route.',
+      es: 'Es uno de los corredores de alta velocidad completos más largos de Italia, y conecta directamente dos de los mayores destinos turísticos del país — pero también lo usa mucho gente de negocios, ya que Bolonia y Padua, en el camino, son grandes centros económicos por derecho propio, no solo paradas en una ruta turística.',
+      fr: 'C\'est l\'un des plus longs corridors entièrement à grande vitesse d\'Italie, reliant directement deux des plus grandes attractions touristiques du pays — mais il est aussi vraiment utilisé par les voyageurs d\'affaires, car Bologne et Padoue, sur le trajet, sont de véritables pôles économiques à part entière, pas seulement des arrêts sur une ligne touristique.',
+      it: 'È uno dei corridoi interamente ad alta velocità più lunghi d\'Italia, che collega direttamente due delle maggiori attrazioni turistiche del paese — ma è anche molto usato dai viaggiatori d\'affari, dato che Bologna e Padova, lungo il percorso, sono importanti poli economici a pieno titolo, non solo fermate su un percorso panoramico.'
+    }
+  },
   { slug: 'stockholm-oslo', from: 'Stockholm', to: 'Oslo', country: 'Sweden-Norway', duration: '6h 00m', operator: 'SJ', price: '€40-60', badge: 'Route guide · Sweden-Norway',
     customSEO: { en: { title: 'How to Get from Stockholm to Oslo by Train (6h)', description: 'The Stockholm to Oslo train takes 6 hours on SJ. See today\'s departures and book tickets from €40.' } },
     localInsight: {
@@ -571,7 +641,14 @@ const routes = [
     }
   },
   { slug: 'zaragoza-barcelona', from: 'Zaragoza', to: 'Barcelona', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'Zaragoza to Barcelona Train: 1h30 AVE, from €15', description: 'High-speed Renfe AVE from Zaragoza to Barcelona in 1.5 hours. Compare live schedules and book tickets from €15.' } } },
+    customSEO: { en: { title: 'Zaragoza to Barcelona Train: 1h30 AVE, from €15', description: 'High-speed Renfe AVE from Zaragoza to Barcelona in 1.5 hours. Compare live schedules and book tickets from €15.' } },
+    localInsight: {
+      en: 'Zaragoza-Delicias, the station this train departs from, was purpose-built for Expo 2008 and is now one of the largest and busiest interchange stations in Spain — Zaragoza sits almost exactly halfway on the Madrid-Barcelona AVE line, which is why it works so well as a quick, direct hop to either coast.',
+      es: 'Zaragoza-Delicias, la estación desde la que sale este tren, se construyó específicamente para la Expo 2008 y hoy es una de las estaciones de intercambio más grandes y transitadas de España — Zaragoza está casi exactamente a mitad de camino en la línea AVE Madrid-Barcelona, por eso funciona tan bien como salto rápido y directo hacia cualquiera de las dos costas.',
+      fr: 'Zaragoza-Delicias, la gare d\'où part ce train, a été construite spécifiquement pour l\'Exposition universelle de 2008 et est aujourd\'hui l\'une des plus grandes et des plus fréquentées gares de correspondance d\'Espagne — Saragosse se trouve presque exactement à mi-chemin sur la ligne AVE Madrid-Barcelone, ce qui explique pourquoi elle fonctionne si bien comme escale rapide et directe vers l\'une ou l\'autre côte.',
+      it: 'Zaragoza-Delicias, la stazione da cui parte questo treno, fu costruita appositamente per l\'Expo 2008 ed è oggi una delle stazioni di interscambio più grandi e trafficate della Spagna — Saragozza si trova quasi esattamente a metà strada sulla linea AVE Madrid-Barcellona, per questo funziona così bene come tappa rapida e diretta verso l\'una o l\'altra costa.'
+    }
+  },
   { slug: 'zurich-lucerne', from: 'Zurich', to: 'Lucerne', country: 'Switzerland', duration: '0h 50m', operator: 'SBB', price: '€15-25', badge: 'Route guide · Switzerland',
     customSEO: { en: { title: 'Zurich to Lucerne by Train: 50 min, from €15', description: 'Direct SBB train from Zurich to Lucerne in under an hour. Compare today\'s schedule and book fares from €15.' } },
     localInsight: {
