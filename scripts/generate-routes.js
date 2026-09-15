@@ -361,6 +361,18 @@ const BREADCRUMB = {
   fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' }
 };
 
+// Elige una de N variantes de copy de forma determinística según el slug de la ruta,
+// para que el texto de "cuerpo" (lead, FAQ, tips) no sea idéntico en las ~104 páginas
+// (riesgo de scaled content abuse: mismo template, solo cambia la ciudad).
+function hashSlug(slug) {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
+  return h;
+}
+function pickVariant(slug, variants) {
+  return variants[hashSlug(slug) % variants.length];
+}
+
 // Language-specific content
 const content = {
   en: {
@@ -375,25 +387,51 @@ const content = {
     badgeLabel: 'Route guide',
     mainTitle: '{{from}} to {{to}} by Train',
     metaText: 'By WoW Train · Updated July 2026 · 4 min read',
-    leadText: '{{operator}} links {{from}} to {{to}} in around {{duration}}, with comfortable services running through the {{country}} countryside.',
+    leadVariants: [
+      '{{operator}} links {{from}} to {{to}} in around {{duration}}, with comfortable services running through the {{country}} countryside.',
+      'Travelling from {{from}} to {{to}} by rail takes roughly {{duration}} on {{operator}}, a straightforward alternative to flying between the two cities.',
+      '{{operator}} covers the {{from}}–{{to}} run in about {{duration}}. It\'s one of the more relaxed ways to cross {{country}} without a car.'
+    ],
     klookTitle: 'Book <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> on Klook',
     klookSubtitle: '{{operator}} · {{duration}} · from {{price}} · free cancellation on select fares',
     klookBtnLabel: 'Book Ticket',
     checkSchedulesText: 'Check schedules & book →',
     opensNewTabText: 'Opens in a new tab — come back here anytime.',
     howLongTitle: 'How long is the train from {{from}} to {{to}}?',
-    howLongText: 'The fastest trains take around {{duration}}, with several departures a day. Check the live schedule for your date.',
+    howLongVariants: [
+      'The fastest trains take around {{duration}}, with several departures a day. Check the live schedule for your date.',
+      'Journey time is about {{duration}} on the quickest service. Departures run multiple times daily, so there\'s usually a slot that fits your plans.',
+      'Plan for roughly {{duration}} door to door on the fastest train. Slower connections exist too, so always confirm the exact time for your travel date.'
+    ],
     whoRunsTitle: 'Which trains run from {{from}} to {{to}}?',
-    whoRunsText: 'The route is run by {{operator}}. Comparing the day\'s departures in one search finds the best time and fare.',
+    whoRunsVariants: [
+      'The route is run by {{operator}}. Comparing the day\'s departures in one search finds the best time and fare.',
+      '{{operator}} operates this route. A single search across the day\'s trains makes it easy to line up a departure with the fare you want.',
+      'This connection is served by {{operator}}. Checking all of the day\'s trains at once is the fastest way to spot the cheapest seat.'
+    ],
     priceTitle: '{{from}} to {{to}} train price (2026)',
     priceText: 'Advance fares start from around {{price}}, rising as the date approaches.',
     hotelSectionTitle: 'Where to stay',
     bestFareTitle: 'How to get the best fare',
-    bestFareList: [
-      '<strong>Book early.</strong> The cheapest saver fares sell out first — booking ahead can be dramatically cheaper than buying on the day.',
-      '<strong>Travel off-peak.</strong> Mid-morning and mid-week departures tend to be quieter and cheaper.',
-      '<strong>Consider first class</strong> — on many routes the upgrade is modest and very comfortable.',
-      '<strong>Compare in one place</strong> to see every departure at a glance.'
+    bestFareVariants: [
+      [
+        '<strong>Book early.</strong> The cheapest saver fares sell out first — booking ahead can be dramatically cheaper than buying on the day.',
+        '<strong>Travel off-peak.</strong> Mid-morning and mid-week departures tend to be quieter and cheaper.',
+        '<strong>Consider first class</strong> — on many routes the upgrade is modest and very comfortable.',
+        '<strong>Compare in one place</strong> to see every departure at a glance.'
+      ],
+      [
+        '<strong>Lock in a saver fare early.</strong> The lowest price bracket is usually limited and disappears first as the date fills up.',
+        '<strong>Avoid the Friday/Sunday rush.</strong> Weekday and mid-morning trains are typically both quieter and cheaper.',
+        '<strong>Check first class pricing anyway</strong> — it\'s sometimes only a small step up from standard.',
+        '<strong>Run one search across every operator</strong> instead of checking each site separately.'
+      ],
+      [
+        '<strong>Buy ahead of time.</strong> Prices climb as the departure date gets closer, sometimes by a large margin.',
+        '<strong>Shift your departure slightly.</strong> Leaving an hour earlier or later than peak times often drops the fare noticeably.',
+        '<strong>Don\'t rule out first class</strong> on longer routes — the price gap can be smaller than expected.',
+        '<strong>Compare all departures side by side</strong> rather than booking the first result you see.'
+      ]
     ],
     readyText: 'Ready to go? Check live {{from}} → {{to}} times and fares and book your seat — secure checkout, mobile tickets, every operator in one search.',
     compareText: 'Prefer to compare every rail operator?',
@@ -409,12 +447,28 @@ const content = {
     economicLink: 'View economic options',
     transferLink: 'Book private transfer in {{to}} →',
     faqHeading: 'Frequently asked questions',
-    faq: [
-      { q: 'How long is the train from {{from}} to {{to}}?', a: 'The fastest trains from {{from}} to {{to}} take around {{duration}}, with several departures throughout the day.' },
-      { q: 'How much does the {{from}} to {{to}} train cost?', a: 'Advance fares for the {{from}} to {{to}} train start from around {{price}} and rise as the travel date approaches, so booking early usually gets the cheapest ticket.' },
-      { q: 'Which train companies operate the {{from}} to {{to}} route?', a: 'The {{from}} to {{to}} route is operated by {{operator}}. Comparing the day\'s departures in one search finds the best time and fare.' },
-      { q: 'Is there a direct train from {{from}} to {{to}}?', a: '{{operator}} runs services between {{from}} and {{to}} — check the live schedule for your date to see direct trains and any connections.' },
-      { q: 'When is the cheapest time to book {{from}} to {{to}} train tickets?', a: 'The cheapest {{from}} to {{to}} fares are usually released a few weeks to a few months ahead and sell out first, so booking early and travelling mid-week or off-peak gets the best price.' }
+    faqVariants: [
+      [
+        { q: 'How long is the train from {{from}} to {{to}}?', a: 'The fastest trains from {{from}} to {{to}} take around {{duration}}, with several departures throughout the day.' },
+        { q: 'How much does the {{from}} to {{to}} train cost?', a: 'Advance fares for the {{from}} to {{to}} train start from around {{price}} and rise as the travel date approaches, so booking early usually gets the cheapest ticket.' },
+        { q: 'Which train companies operate the {{from}} to {{to}} route?', a: 'The {{from}} to {{to}} route is operated by {{operator}}. Comparing the day\'s departures in one search finds the best time and fare.' },
+        { q: 'Is there a direct train from {{from}} to {{to}}?', a: '{{operator}} runs services between {{from}} and {{to}} — check the live schedule for your date to see direct trains and any connections.' },
+        { q: 'When is the cheapest time to book {{from}} to {{to}} train tickets?', a: 'The cheapest {{from}} to {{to}} fares are usually released a few weeks to a few months ahead and sell out first, so booking early and travelling mid-week or off-peak gets the best price.' }
+      ],
+      [
+        { q: 'What\'s the journey time between {{from}} and {{to}}?', a: 'Expect around {{duration}} on the fastest {{from}}–{{to}} train. Several trains run each day, so check the live timetable to pick your slot.' },
+        { q: 'What\'s a typical fare on the {{from}} to {{to}} train?', a: 'Fares typically start near {{price}} when booked in advance and climb closer to departure, so an early booking is the main way to keep the cost down.' },
+        { q: 'Who operates trains between {{from}} and {{to}}?', a: '{{operator}} runs this route. Looking at the full day\'s departures in one search makes it easier to match a good time with a good price.' },
+        { q: 'Can you go from {{from}} to {{to}} without changing trains?', a: '{{operator}} services connect {{from}} and {{to}} — the live schedule for your specific date will show whether it\'s direct or involves a change.' },
+        { q: 'How far ahead should I book {{from}} to {{to}} tickets?', a: 'The lowest fares tend to appear weeks or months before departure and go quickly, so booking early — and avoiding peak days — usually pays off.' }
+      ],
+      [
+        { q: 'How many hours does {{from}} to {{to}} take by train?', a: 'The quickest {{from}}–{{to}} trains run about {{duration}}. There are multiple departures daily, so it\'s worth checking today\'s schedule for the exact times.' },
+        { q: 'What does a {{from}} to {{to}} train ticket cost?', a: 'Ticket prices for {{from}} to {{to}} start from roughly {{price}} for advance purchase and increase the closer you get to the travel date.' },
+        { q: 'What operator serves the {{from}}–{{to}} line?', a: '{{operator}} handles this connection. Comparing every departure that day in one place is the quickest way to find the best combination of time and price.' },
+        { q: 'Do I need to change trains between {{from}} and {{to}}?', a: 'It depends on the day — {{operator}} runs both direct and connecting services, so check the live schedule for your travel date to confirm.' },
+        { q: 'When should I book {{from}} to {{to}} tickets for the best price?', a: 'Book as early as you can: the cheapest seats are released first and disappear fast, and travelling mid-week instead of weekends usually costs less too.' }
+      ]
     ]
   },
   es: {
@@ -429,25 +483,51 @@ const content = {
     badgeLabel: 'Guía de ruta',
     mainTitle: 'Tren de {{from}} a {{to}}',
     metaText: 'Por WoW Train · Actualizado julio 2026 · 4 min de lectura',
-    leadText: '{{operator}} conecta {{from}} con {{to}} en alrededor de {{duration}}, con servicios cómodos que recorren el campo de {{country}}.',
+    leadVariants: [
+      '{{operator}} conecta {{from}} con {{to}} en alrededor de {{duration}}, con servicios cómodos que recorren el campo de {{country}}.',
+      'Viajar de {{from}} a {{to}} en tren toma cerca de {{duration}} con {{operator}}, una alternativa directa a volar entre las dos ciudades.',
+      '{{operator}} cubre el trayecto {{from}}–{{to}} en unas {{duration}}. Es una de las formas más relajadas de cruzar {{country}} sin auto.'
+    ],
     klookTitle: 'Reserva <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> en Klook',
     klookSubtitle: '{{operator}} · {{duration}} · desde {{price}} · cancelación gratis en tarifas seleccionadas',
     klookBtnLabel: 'Reservar',
     checkSchedulesText: 'Ver horarios y reservar →',
     opensNewTabText: 'Se abre en una nueva pestaña — vuelve aquí cuando quieras.',
     howLongTitle: '¿Cuánto dura el tren de {{from}} a {{to}}?',
-    howLongText: 'Los trenes más rápidos tardan alrededor de {{duration}}, con varias salidas al día. Consulta el horario en vivo para tu fecha.',
+    howLongVariants: [
+      'Los trenes más rápidos tardan alrededor de {{duration}}, con varias salidas al día. Consulta el horario en vivo para tu fecha.',
+      'El trayecto dura unas {{duration}} en el servicio más rápido. Hay salidas varias veces al día, así que suele haber un horario que se ajuste a tu plan.',
+      'Calculá unas {{duration}} de punta a punta en el tren más veloz. También hay conexiones más lentas, así que conviene confirmar el horario exacto para tu fecha.'
+    ],
     whoRunsTitle: '¿Qué trenes van de {{from}} a {{to}}?',
-    whoRunsText: 'La ruta es operada por {{operator}}. Comparando las salidas del día en una sola búsqueda encuentras el mejor horario y tarifa.',
+    whoRunsVariants: [
+      'La ruta es operada por {{operator}}. Comparando las salidas del día en una sola búsqueda encuentras el mejor horario y tarifa.',
+      '{{operator}} opera esta ruta. Una sola búsqueda con todas las salidas del día facilita encontrar el horario con la tarifa que buscas.',
+      'Esta conexión la cubre {{operator}}. Revisar todos los trenes del día juntos es la forma más rápida de encontrar el asiento más barato.'
+    ],
     priceTitle: 'Precio del tren {{from}} a {{to}} (2026)',
     priceText: 'Las tarifas anticipadas comienzan desde {{price}}, aumentando a medida que se acerca la fecha.',
     hotelSectionTitle: 'Dónde alojarte',
     bestFareTitle: 'Cómo conseguir la mejor tarifa',
-    bestFareList: [
-      '<strong>Reserva con antelación.</strong> Las tarifas más baratas se agotan primero — reservar con anticipación puede ser mucho más barato que comprar el mismo día.',
-      '<strong>Viaja fuera de horas punta.</strong> Las salidas de media mañana y mediados de semana tienden a ser más tranquilas y baratas.',
-      '<strong>Considera primera clase</strong> — en muchas rutas la actualización es modesta y muy cómoda.',
-      '<strong>Compara en un solo lugar</strong> para ver cada salida de un vistazo.'
+    bestFareVariants: [
+      [
+        '<strong>Reserva con antelación.</strong> Las tarifas más baratas se agotan primero — reservar con anticipación puede ser mucho más barato que comprar el mismo día.',
+        '<strong>Viaja fuera de horas punta.</strong> Las salidas de media mañana y mediados de semana tienden a ser más tranquilas y baratas.',
+        '<strong>Considera primera clase</strong> — en muchas rutas la actualización es modesta y muy cómoda.',
+        '<strong>Compara en un solo lugar</strong> para ver cada salida de un vistazo.'
+      ],
+      [
+        '<strong>Asegura una tarifa reducida temprano.</strong> El tramo de precio más bajo suele ser limitado y se agota primero a medida que se llena la fecha.',
+        '<strong>Evita el pico de viernes y domingo.</strong> Los trenes de entre semana y media mañana suelen ser más tranquilos y baratos.',
+        '<strong>Fíjate igual en primera clase</strong> — a veces el salto respecto a turista es mínimo.',
+        '<strong>Haz una sola búsqueda que cubra todos los operadores</strong> en vez de revisar cada sitio por separado.'
+      ],
+      [
+        '<strong>Compra con anticipación.</strong> El precio sube a medida que se acerca la fecha de salida, a veces bastante.',
+        '<strong>Corre un poco tu horario.</strong> Salir una hora antes o después del pico suele bajar la tarifa de forma notable.',
+        '<strong>No descartes primera clase</strong> en trayectos largos — la diferencia de precio puede ser menor de lo esperado.',
+        '<strong>Compara todas las salidas juntas</strong> en vez de reservar el primer resultado que veas.'
+      ]
     ],
     readyText: '¿Listo para ir? Consulta los horarios y tarifas en vivo de {{from}} → {{to}} y reserva tu asiento — pago seguro, billetes móviles, cada operador en una sola búsqueda.',
     compareText: '¿Prefieres comparar cada operador ferroviario?',
@@ -463,12 +543,28 @@ const content = {
     economicLink: 'Ver opciones económicas',
     transferLink: 'Reservar traslado privado en {{to}} →',
     faqHeading: 'Preguntas frecuentes',
-    faq: [
-      { q: '¿Cuánto dura el tren de {{from}} a {{to}}?', a: 'Los trenes más rápidos de {{from}} a {{to}} tardan alrededor de {{duration}}, con varias salidas a lo largo del día.' },
-      { q: '¿Cuánto cuesta el tren de {{from}} a {{to}}?', a: 'Las tarifas anticipadas del tren de {{from}} a {{to}} comienzan desde {{price}} y aumentan a medida que se acerca la fecha, así que reservar con antelación suele conseguir el billete más barato.' },
-      { q: '¿Qué compañías operan la ruta de {{from}} a {{to}}?', a: 'La ruta de {{from}} a {{to}} es operada por {{operator}}. Comparar las salidas del día en una sola búsqueda encuentra el mejor horario y tarifa.' },
-      { q: '¿Hay tren directo de {{from}} a {{to}}?', a: '{{operator}} opera servicios entre {{from}} y {{to}} — consulta el horario en vivo para tu fecha y verás los trenes directos y las conexiones.' },
-      { q: '¿Cuándo es más barato reservar los billetes de tren de {{from}} a {{to}}?', a: 'Las tarifas más baratas de {{from}} a {{to}} suelen salir con semanas o meses de antelación y se agotan primero, así que reservar temprano y viajar entre semana o fuera de horas punta consigue el mejor precio.' }
+    faqVariants: [
+      [
+        { q: '¿Cuánto dura el tren de {{from}} a {{to}}?', a: 'Los trenes más rápidos de {{from}} a {{to}} tardan alrededor de {{duration}}, con varias salidas a lo largo del día.' },
+        { q: '¿Cuánto cuesta el tren de {{from}} a {{to}}?', a: 'Las tarifas anticipadas del tren de {{from}} a {{to}} comienzan desde {{price}} y aumentan a medida que se acerca la fecha, así que reservar con antelación suele conseguir el billete más barato.' },
+        { q: '¿Qué compañías operan la ruta de {{from}} a {{to}}?', a: 'La ruta de {{from}} a {{to}} es operada por {{operator}}. Comparar las salidas del día en una sola búsqueda encuentra el mejor horario y tarifa.' },
+        { q: '¿Hay tren directo de {{from}} a {{to}}?', a: '{{operator}} opera servicios entre {{from}} y {{to}} — consulta el horario en vivo para tu fecha y verás los trenes directos y las conexiones.' },
+        { q: '¿Cuándo es más barato reservar los billetes de tren de {{from}} a {{to}}?', a: 'Las tarifas más baratas de {{from}} a {{to}} suelen salir con semanas o meses de antelación y se agotan primero, así que reservar temprano y viajar entre semana o fuera de horas punta consigue el mejor precio.' }
+      ],
+      [
+        { q: '¿Cuánto tiempo se tarda de {{from}} a {{to}} en tren?', a: 'El tren más rápido entre {{from}} y {{to}} tarda alrededor de {{duration}}. Hay varias salidas cada día, así que conviene revisar el horario en vivo para elegir el tuyo.' },
+        { q: '¿Cuál es el precio típico del tren {{from}} a {{to}}?', a: 'Las tarifas suelen empezar cerca de {{price}} al reservar con anticipación y suben a medida que se acerca la fecha, por lo que reservar temprano es la forma principal de pagar menos.' },
+        { q: '¿Quién opera los trenes entre {{from}} y {{to}}?', a: '{{operator}} cubre esta ruta. Mirar todas las salidas del día en una sola búsqueda facilita combinar un buen horario con un buen precio.' },
+        { q: '¿Se puede ir de {{from}} a {{to}} sin hacer trasbordo?', a: '{{operator}} conecta {{from}} y {{to}} — el horario en vivo para tu fecha específica mostrará si es directo o requiere un cambio.' },
+        { q: '¿Con cuánta anticipación conviene reservar de {{from}} a {{to}}?', a: 'Las tarifas más bajas suelen aparecer semanas o meses antes de la salida y se agotan rápido, así que reservar temprano — y evitar los días pico — suele valer la pena.' }
+      ],
+      [
+        { q: '¿Cuántas horas son de {{from}} a {{to}} en tren?', a: 'Los trenes más rápidos entre {{from}} y {{to}} demoran unas {{duration}}. Hay varias salidas diarias, así que conviene revisar el horario de hoy para los horarios exactos.' },
+        { q: '¿Cuánto sale el pasaje de {{from}} a {{to}} en tren?', a: 'El precio del pasaje de {{from}} a {{to}} arranca desde aproximadamente {{price}} en compra anticipada y sube a medida que se acerca la fecha de viaje.' },
+        { q: '¿Qué operador cubre la línea {{from}}–{{to}}?', a: '{{operator}} maneja esta conexión. Comparar todas las salidas de ese día en un mismo lugar es la forma más rápida de encontrar la mejor combinación de horario y precio.' },
+        { q: '¿Hace falta hacer trasbordo entre {{from}} y {{to}}?', a: 'Depende del día — {{operator}} tiene tanto servicios directos como con conexión, así que consulta el horario en vivo para tu fecha para confirmarlo.' },
+        { q: '¿Cuándo conviene reservar los billetes de {{from}} a {{to}} para pagar menos?', a: 'Reserva lo antes posible: los asientos más baratos se liberan primero y desaparecen rápido, y viajar entre semana en vez de fin de semana también suele salir más barato.' }
+      ]
     ]
   },
   fr: {
@@ -482,25 +578,51 @@ const content = {
     badgeLabel: 'Guide d\'itinéraire',
     mainTitle: 'Train de {{from}} à {{to}}',
     metaText: 'Par WoW Train · Mis à jour en juillet 2026 · 4 min de lecture',
-    leadText: '{{operator}} relie {{from}} à {{to}} en environ {{duration}}, avec des services confortables qui traversent la campagne de {{country}}.',
+    leadVariants: [
+      '{{operator}} relie {{from}} à {{to}} en environ {{duration}}, avec des services confortables qui traversent la campagne de {{country}}.',
+      'Voyager de {{from}} à {{to}} en train prend environ {{duration}} avec {{operator}}, une alternative simple à l\'avion entre les deux villes.',
+      '{{operator}} assure le trajet {{from}}–{{to}} en environ {{duration}}. C\'est l\'une des façons les plus tranquilles de traverser {{country}} sans voiture.'
+    ],
     klookTitle: 'Réservez <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> sur Klook',
     klookSubtitle: '{{operator}} · {{duration}} · à partir de {{price}} · annulation gratuite sur tarifs sélectionnés',
     klookBtnLabel: 'Réserver',
     checkSchedulesText: 'Voir horaires et réserver →',
     opensNewTabText: 'S\'ouvre dans un nouvel onglet — revenez ici quand vous voulez.',
     howLongTitle: 'Combien de temps dure le train de {{from}} à {{to}} ?',
-    howLongText: 'Les trains les plus rapides mettent environ {{duration}}, avec plusieurs départs par jour. Consultez les horaires en direct pour votre date.',
+    howLongVariants: [
+      'Les trains les plus rapides mettent environ {{duration}}, avec plusieurs départs par jour. Consultez les horaires en direct pour votre date.',
+      'Le trajet dure environ {{duration}} sur le service le plus rapide. Il y a plusieurs départs chaque jour, il y a donc généralement un horaire qui vous convient.',
+      'Comptez environ {{duration}} de bout en bout sur le train le plus rapide. Des correspondances plus lentes existent aussi, vérifiez donc l\'horaire exact pour votre date.'
+    ],
     whoRunsTitle: 'Quels trains circulent de {{from}} à {{to}} ?',
-    whoRunsText: 'L\'itinéraire est assuré par {{operator}}. Comparer les départs de la journée en une seule recherche vous donne le meilleur horaire et tarif.',
+    whoRunsVariants: [
+      'L\'itinéraire est assuré par {{operator}}. Comparer les départs de la journée en une seule recherche vous donne le meilleur horaire et tarif.',
+      '{{operator}} exploite cette ligne. Une seule recherche regroupant tous les départs du jour facilite la combinaison horaire/tarif idéale.',
+      'Cette liaison est assurée par {{operator}}. Vérifier tous les trains du jour en même temps est le moyen le plus rapide de trouver le siège le moins cher.'
+    ],
     priceTitle: 'Prix du train {{from}} à {{to}} (2026)',
     priceText: 'Les tarifs anticipés commencent autour de {{price}} et augmentent à l\'approche de la date.',
     hotelSectionTitle: 'Où loger',
     bestFareTitle: 'Comment obtenir le meilleur tarif',
-    bestFareList: [
-      '<strong>Réservez tôt.</strong> Les tarifs les moins chers partent en premier — réserver à l\'avance peut être bien moins cher que le jour même.',
-      '<strong>Voyagez en heures creuses.</strong> Les départs en milieu de matinée et en milieu de semaine sont souvent plus calmes et moins chers.',
-      '<strong>Pensez à la première classe</strong> — sur de nombreux trajets le surclassement est modeste et très confortable.',
-      '<strong>Comparez au même endroit</strong> pour voir tous les départs d\'un coup d\'œil.'
+    bestFareVariants: [
+      [
+        '<strong>Réservez tôt.</strong> Les tarifs les moins chers partent en premier — réserver à l\'avance peut être bien moins cher que le jour même.',
+        '<strong>Voyagez en heures creuses.</strong> Les départs en milieu de matinée et en milieu de semaine sont souvent plus calmes et moins chers.',
+        '<strong>Pensez à la première classe</strong> — sur de nombreux trajets le surclassement est modeste et très confortable.',
+        '<strong>Comparez au même endroit</strong> pour voir tous les départs d\'un coup d\'œil.'
+      ],
+      [
+        '<strong>Bloquez un tarif réduit tôt.</strong> La tranche de prix la plus basse est souvent limitée et disparaît en premier.',
+        '<strong>Évitez la ruée du vendredi et du dimanche.</strong> Les trains en semaine et en milieu de matinée sont généralement plus calmes et moins chers.',
+        '<strong>Vérifiez quand même la première classe</strong> — l\'écart avec la deuxième classe est parfois minime.',
+        '<strong>Faites une seule recherche couvrant tous les opérateurs</strong> plutôt que de vérifier chaque site séparément.'
+      ],
+      [
+        '<strong>Achetez à l\'avance.</strong> Le prix grimpe à l\'approche de la date de départ, parfois nettement.',
+        '<strong>Décalez légèrement votre départ.</strong> Partir une heure avant ou après les heures de pointe fait souvent baisser le tarif.',
+        '<strong>N\'excluez pas la première classe</strong> sur les longs trajets — l\'écart de prix peut être plus faible que prévu.',
+        '<strong>Comparez tous les départs côte à côte</strong> plutôt que de réserver le premier résultat venu.'
+      ]
     ],
     readyText: 'Prêt à partir ? Consultez les horaires et tarifs en direct de {{from}} → {{to}} et réservez votre place — paiement sécurisé, billets mobiles, tous les opérateurs en une recherche.',
     compareText: 'Vous préférez comparer tous les opérateurs ferroviaires ?',
@@ -516,12 +638,28 @@ const content = {
     economicLink: 'Voir les options économiques',
     transferLink: 'Réserver un transfert privé à {{to}} →',
     faqHeading: 'Questions fréquentes',
-    faq: [
-      { q: 'Combien de temps dure le train de {{from}} à {{to}} ?', a: 'Les trains les plus rapides de {{from}} à {{to}} mettent environ {{duration}}, avec plusieurs départs tout au long de la journée.' },
-      { q: 'Combien coûte le train de {{from}} à {{to}} ?', a: 'Les tarifs anticipés du train {{from}} → {{to}} commencent autour de {{price}} et augmentent à l\'approche de la date, donc réserver tôt permet généralement d\'obtenir le billet le moins cher.' },
-      { q: 'Quelles compagnies exploitent la ligne {{from}} → {{to}} ?', a: 'La ligne {{from}} → {{to}} est exploitée par {{operator}}. Comparer les départs du jour en une seule recherche donne le meilleur horaire et tarif.' },
-      { q: 'Y a-t-il un train direct de {{from}} à {{to}} ?', a: '{{operator}} assure des services entre {{from}} et {{to}} — consultez les horaires en direct pour votre date afin de voir les trains directs et les correspondances.' },
-      { q: 'Quand est-il le moins cher de réserver les billets de train {{from}} → {{to}} ?', a: 'Les tarifs les moins chers de {{from}} → {{to}} sortent généralement quelques semaines à quelques mois à l\'avance et partent en premier, donc réserver tôt et voyager en milieu de semaine ou en heures creuses donne le meilleur prix.' }
+    faqVariants: [
+      [
+        { q: 'Combien de temps dure le train de {{from}} à {{to}} ?', a: 'Les trains les plus rapides de {{from}} à {{to}} mettent environ {{duration}}, avec plusieurs départs tout au long de la journée.' },
+        { q: 'Combien coûte le train de {{from}} à {{to}} ?', a: 'Les tarifs anticipés du train {{from}} → {{to}} commencent autour de {{price}} et augmentent à l\'approche de la date, donc réserver tôt permet généralement d\'obtenir le billet le moins cher.' },
+        { q: 'Quelles compagnies exploitent la ligne {{from}} → {{to}} ?', a: 'La ligne {{from}} → {{to}} est exploitée par {{operator}}. Comparer les départs du jour en une seule recherche donne le meilleur horaire et tarif.' },
+        { q: 'Y a-t-il un train direct de {{from}} à {{to}} ?', a: '{{operator}} assure des services entre {{from}} et {{to}} — consultez les horaires en direct pour votre date afin de voir les trains directs et les correspondances.' },
+        { q: 'Quand est-il le moins cher de réserver les billets de train {{from}} → {{to}} ?', a: 'Les tarifs les moins chers de {{from}} → {{to}} sortent généralement quelques semaines à quelques mois à l\'avance et partent en premier, donc réserver tôt et voyager en milieu de semaine ou en heures creuses donne le meilleur prix.' }
+      ],
+      [
+        { q: 'Quel est le temps de trajet entre {{from}} et {{to}} ?', a: 'Comptez environ {{duration}} sur le train le plus rapide {{from}}–{{to}}. Plusieurs trains circulent chaque jour, vérifiez donc l\'horaire en direct pour choisir le vôtre.' },
+        { q: 'Quel est le tarif habituel du train {{from}} à {{to}} ?', a: 'Les tarifs démarrent généralement autour de {{price}} en réservation anticipée et augmentent à l\'approche du départ, donc réserver tôt reste le principal moyen de payer moins cher.' },
+        { q: 'Qui opère les trains entre {{from}} et {{to}} ?', a: '{{operator}} assure cette ligne. Regarder tous les départs du jour en une seule recherche facilite la combinaison d\'un bon horaire et d\'un bon prix.' },
+        { q: 'Peut-on aller de {{from}} à {{to}} sans correspondance ?', a: 'Des services {{operator}} relient {{from}} et {{to}} — l\'horaire en direct pour votre date précise indiquera s\'il s\'agit d\'un trajet direct ou avec correspondance.' },
+        { q: 'Combien de temps à l\'avance réserver les billets {{from}} à {{to}} ?', a: 'Les tarifs les plus bas apparaissent en général plusieurs semaines à plusieurs mois avant le départ et partent vite, donc réserver tôt — et éviter les jours de pointe — paie généralement.' }
+      ],
+      [
+        { q: 'Combien d\'heures pour aller de {{from}} à {{to}} en train ?', a: 'Les trains les plus rapides entre {{from}} et {{to}} mettent environ {{duration}}. Il y a plusieurs départs quotidiens, vérifiez donc l\'horaire du jour pour les heures exactes.' },
+        { q: 'Combien coûte un billet de train {{from}} à {{to}} ?', a: 'Le prix du billet {{from}} à {{to}} démarre autour de {{price}} en achat anticipé et augmente à mesure que la date de voyage approche.' },
+        { q: 'Quel opérateur dessert la ligne {{from}}–{{to}} ?', a: '{{operator}} gère cette liaison. Comparer tous les départs de la journée au même endroit est le moyen le plus rapide de trouver la meilleure combinaison horaire/prix.' },
+        { q: 'Faut-il changer de train entre {{from}} et {{to}} ?', a: 'Cela dépend du jour — {{operator}} propose des services directs et avec correspondance, vérifiez donc l\'horaire en direct pour votre date.' },
+        { q: 'Quand réserver les billets {{from}} à {{to}} pour le meilleur prix ?', a: 'Réservez le plus tôt possible : les places les moins chères partent en premier, et voyager en semaine plutôt que le week-end coûte généralement moins cher aussi.' }
+      ]
     ]
   },
   it: {
@@ -535,25 +673,51 @@ const content = {
     badgeLabel: 'Guida al percorso',
     mainTitle: 'Treno da {{from}} a {{to}}',
     metaText: 'Di WoW Train · Aggiornato a luglio 2026 · 4 min di lettura',
-    leadText: '{{operator}} collega {{from}} a {{to}} in circa {{duration}}, con servizi comodi che attraversano le campagne di {{country}}.',
+    leadVariants: [
+      '{{operator}} collega {{from}} a {{to}} in circa {{duration}}, con servizi comodi che attraversano le campagne di {{country}}.',
+      'Viaggiare da {{from}} a {{to}} in treno richiede circa {{duration}} con {{operator}}, un\'alternativa semplice al volo tra le due città.',
+      '{{operator}} copre la tratta {{from}}–{{to}} in circa {{duration}}. È uno dei modi più rilassanti per attraversare {{country}} senza auto.'
+    ],
     klookTitle: 'Prenota <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> su Klook',
     klookSubtitle: '{{operator}} · {{duration}} · da {{price}} · cancellazione gratuita su tariffe selezionate',
     klookBtnLabel: 'Prenota',
     checkSchedulesText: 'Vedi orari e prenota →',
     opensNewTabText: 'Si apre in una nuova scheda — torna qui quando vuoi.',
     howLongTitle: 'Quanto dura il treno da {{from}} a {{to}}?',
-    howLongText: 'I treni più veloci impiegano circa {{duration}}, con diverse partenze al giorno. Controlla gli orari in tempo reale per la tua data.',
+    howLongVariants: [
+      'I treni più veloci impiegano circa {{duration}}, con diverse partenze al giorno. Controlla gli orari in tempo reale per la tua data.',
+      'Il viaggio dura circa {{duration}} sul servizio più veloce. Ci sono più partenze al giorno, quindi di solito c\'è un orario adatto ai tuoi piani.',
+      'Calcola circa {{duration}} da stazione a stazione sul treno più veloce. Esistono anche coincidenze più lente, quindi conferma sempre l\'orario esatto per la tua data.'
+    ],
     whoRunsTitle: 'Quali treni collegano {{from}} a {{to}}?',
-    whoRunsText: 'Il percorso è gestito da {{operator}}. Confrontare le partenze del giorno in un\'unica ricerca ti dà l\'orario e la tariffa migliori.',
+    whoRunsVariants: [
+      'Il percorso è gestito da {{operator}}. Confrontare le partenze del giorno in un\'unica ricerca ti dà l\'orario e la tariffa migliori.',
+      '{{operator}} gestisce questa tratta. Un\'unica ricerca su tutte le partenze del giorno rende più facile trovare orario e tariffa giusti insieme.',
+      'Questo collegamento è servito da {{operator}}. Controllare tutti i treni del giorno insieme è il modo più rapido per trovare il posto più economico.'
+    ],
     priceTitle: 'Prezzo del treno {{from}} a {{to}} (2026)',
     priceText: 'Le tariffe anticipate partono da circa {{price}} e aumentano con l\'avvicinarsi della data.',
     hotelSectionTitle: 'Dove alloggiare',
     bestFareTitle: 'Come ottenere la tariffa migliore',
-    bestFareList: [
-      '<strong>Prenota in anticipo.</strong> Le tariffe più economiche si esauriscono per prime — prenotare in anticipo può essere molto più conveniente che comprare in giornata.',
-      '<strong>Viaggia in orari non di punta.</strong> Le partenze a metà mattina e a metà settimana tendono a essere più tranquille ed economiche.',
-      '<strong>Valuta la prima classe</strong> — su molti percorsi il supplemento è modesto e molto comodo.',
-      '<strong>Confronta in un unico posto</strong> per vedere ogni partenza a colpo d\'occhio.'
+    bestFareVariants: [
+      [
+        '<strong>Prenota in anticipo.</strong> Le tariffe più economiche si esauriscono per prime — prenotare in anticipo può essere molto più conveniente che comprare in giornata.',
+        '<strong>Viaggia in orari non di punta.</strong> Le partenze a metà mattina e a metà settimana tendono a essere più tranquille ed economiche.',
+        '<strong>Valuta la prima classe</strong> — su molti percorsi il supplemento è modesto e molto comodo.',
+        '<strong>Confronta in un unico posto</strong> per vedere ogni partenza a colpo d\'occhio.'
+      ],
+      [
+        '<strong>Blocca una tariffa ridotta presto.</strong> La fascia di prezzo più bassa è spesso limitata e si esaurisce per prima.',
+        '<strong>Evita il picco di venerdì e domenica.</strong> I treni infrasettimanali e di metà mattina sono di solito più tranquilli ed economici.',
+        '<strong>Controlla comunque la prima classe</strong> — a volte il salto rispetto alla seconda è minimo.',
+        '<strong>Fai un\'unica ricerca su tutti gli operatori</strong> invece di controllare ogni sito separatamente.'
+      ],
+      [
+        '<strong>Acquista in anticipo.</strong> Il prezzo sale con l\'avvicinarsi della data di partenza, a volte parecchio.',
+        '<strong>Sposta leggermente l\'orario.</strong> Partire un\'ora prima o dopo l\'orario di punta spesso abbassa la tariffa in modo evidente.',
+        '<strong>Non escludere la prima classe</strong> sui percorsi lunghi — la differenza di prezzo può essere minore del previsto.',
+        '<strong>Confronta tutte le partenze insieme</strong> invece di prenotare il primo risultato che vedi.'
+      ]
     ],
     readyText: 'Pronto a partire? Controlla orari e tariffe in tempo reale di {{from}} → {{to}} e prenota il tuo posto — pagamento sicuro, biglietti su mobile, ogni operatore in un\'unica ricerca.',
     compareText: 'Preferisci confrontare tutti gli operatori ferroviari?',
@@ -569,12 +733,28 @@ const content = {
     economicLink: 'Vedi opzioni economiche',
     transferLink: 'Prenota un transfer privato a {{to}} →',
     faqHeading: 'Domande frequenti',
-    faq: [
-      { q: 'Quanto dura il treno da {{from}} a {{to}}?', a: 'I treni più veloci da {{from}} a {{to}} impiegano circa {{duration}}, con diverse partenze durante la giornata.' },
-      { q: 'Quanto costa il treno da {{from}} a {{to}}?', a: 'Le tariffe anticipate del treno {{from}} → {{to}} partono da circa {{price}} e aumentano con l\'avvicinarsi della data, quindi prenotare in anticipo di solito permette di avere il biglietto più economico.' },
-      { q: 'Quali compagnie operano la tratta {{from}} → {{to}}?', a: 'La tratta {{from}} → {{to}} è operata da {{operator}}. Confrontare le partenze del giorno in un\'unica ricerca dà l\'orario e la tariffa migliori.' },
-      { q: 'C\'è un treno diretto da {{from}} a {{to}}?', a: '{{operator}} opera servizi tra {{from}} e {{to}} — controlla gli orari in tempo reale per la tua data per vedere i treni diretti e le coincidenze.' },
-      { q: 'Quando conviene di più prenotare i biglietti del treno {{from}} → {{to}}?', a: 'Le tariffe più economiche di {{from}} → {{to}} escono di solito da qualche settimana a qualche mese prima e si esauriscono per prime, quindi prenotare in anticipo e viaggiare a metà settimana o in orari non di punta dà il prezzo migliore.' }
+    faqVariants: [
+      [
+        { q: 'Quanto dura il treno da {{from}} a {{to}}?', a: 'I treni più veloci da {{from}} a {{to}} impiegano circa {{duration}}, con diverse partenze durante la giornata.' },
+        { q: 'Quanto costa il treno da {{from}} a {{to}}?', a: 'Le tariffe anticipate del treno {{from}} → {{to}} partono da circa {{price}} e aumentano con l\'avvicinarsi della data, quindi prenotare in anticipo di solito permette di avere il biglietto più economico.' },
+        { q: 'Quali compagnie operano la tratta {{from}} → {{to}}?', a: 'La tratta {{from}} → {{to}} è operata da {{operator}}. Confrontare le partenze del giorno in un\'unica ricerca dà l\'orario e la tariffa migliori.' },
+        { q: 'C\'è un treno diretto da {{from}} a {{to}}?', a: '{{operator}} opera servizi tra {{from}} e {{to}} — controlla gli orari in tempo reale per la tua data per vedere i treni diretti e le coincidenze.' },
+        { q: 'Quando conviene di più prenotare i biglietti del treno {{from}} → {{to}}?', a: 'Le tariffe più economiche di {{from}} → {{to}} escono di solito da qualche settimana a qualche mese prima e si esauriscono per prime, quindi prenotare in anticipo e viaggiare a metà settimana o in orari non di punta dà il prezzo migliore.' }
+      ],
+      [
+        { q: 'Quanto tempo si impiega da {{from}} a {{to}} in treno?', a: 'Il treno più veloce tra {{from}} e {{to}} impiega circa {{duration}}. Ci sono più partenze ogni giorno, quindi controlla l\'orario in tempo reale per scegliere il tuo.' },
+        { q: 'Qual è il prezzo tipico del treno {{from}} a {{to}}?', a: 'Le tariffe di solito partono da circa {{price}} prenotando in anticipo e salgono con l\'avvicinarsi della data, quindi prenotare presto resta il modo principale per spendere meno.' },
+        { q: 'Chi gestisce i treni tra {{from}} e {{to}}?', a: '{{operator}} copre questa tratta. Guardare tutte le partenze del giorno in un\'unica ricerca rende più facile abbinare un buon orario a un buon prezzo.' },
+        { q: 'Si può andare da {{from}} a {{to}} senza cambio?', a: 'I servizi {{operator}} collegano {{from}} e {{to}} — l\'orario in tempo reale per la tua data specifica mostrerà se è diretto o richiede un cambio.' },
+        { q: 'Con quanto anticipo conviene prenotare da {{from}} a {{to}}?', a: 'Le tariffe più basse escono di solito settimane o mesi prima della partenza e si esauriscono in fretta, quindi prenotare presto — evitando i giorni di picco — di solito conviene.' }
+      ],
+      [
+        { q: 'Quante ore ci vogliono da {{from}} a {{to}} in treno?', a: 'I treni più veloci tra {{from}} e {{to}} impiegano circa {{duration}}. Ci sono diverse partenze giornaliere, quindi controlla l\'orario di oggi per gli orari esatti.' },
+        { q: 'Quanto costa il biglietto del treno {{from}} a {{to}}?', a: 'Il prezzo del biglietto {{from}} a {{to}} parte da circa {{price}} con acquisto anticipato e aumenta man mano che si avvicina la data del viaggio.' },
+        { q: 'Quale operatore serve la linea {{from}}–{{to}}?', a: '{{operator}} gestisce questo collegamento. Confrontare tutte le partenze di quel giorno in un unico posto è il modo più rapido per trovare la combinazione migliore tra orario e prezzo.' },
+        { q: 'Serve cambiare treno tra {{from}} e {{to}}?', a: 'Dipende dal giorno — {{operator}} offre sia servizi diretti che con coincidenza, quindi controlla l\'orario in tempo reale per la tua data per confermarlo.' },
+        { q: 'Quando prenotare i biglietti {{from}} a {{to}} per il prezzo migliore?', a: 'Prenota il prima possibile: i posti più economici vengono rilasciati per primi e si esauriscono in fretta, e viaggiare infrasettimana invece che nel weekend di solito costa meno.' }
+      ]
     ]
   }
 };
@@ -687,10 +867,23 @@ function generatePhotos(route) {
   `;
 }
 
-// Generate related routes
+// Rutas relacionadas: prioriza otras rutas que comparten un país/región con la
+// actual (mismo origen, mismo destino, o algun país del par {{country}} en comun),
+// en vez de mostrar siempre las mismas 4 primeras del array para las ~104 paginas.
 function generateRelatedRoutes(route, lang) {
-  const related = routes.slice(0, 4).filter(r => r.slug !== route.slug);
   const suffix = langSuffix(lang);
+  const myCountries = route.country.split('-');
+  const scored = routes
+    .filter(r => r.slug !== route.slug)
+    .map(r => {
+      let score = 0;
+      if (r.from === route.to || r.to === route.from) score += 3; // conecta con la misma ciudad
+      const rCountries = r.country.split('-');
+      if (rCountries.some(c => myCountries.includes(c))) score += 2; // comparte pais
+      return { r, score };
+    })
+    .sort((a, b) => b.score - a.score || hashSlug(a.r.slug + route.slug) - hashSlug(b.r.slug + route.slug));
+  const related = scored.slice(0, 4).map(s => s.r);
   return related.map(r => `
     <a href="/rutas/${r.slug}${suffix}" class="related-link">${r.from} &rarr; ${r.to}</a>
   `).join('');
@@ -712,7 +905,8 @@ function fillTokens(str, route, lang) {
 // lea; sin JS ni contenido oculto). Apunta a las busquedas de cola larga.
 function generateFAQ(route, lang) {
   const langContent = content[lang];
-  const items = langContent.faq.map(item => `
+  const faq = pickVariant(route.slug + 'faq', langContent.faqVariants);
+  const items = faq.map(item => `
       <div class="faq-item">
         <h3 class="faq-q">${fillTokens(item.q, route, lang)}</h3>
         <p class="faq-a">${fillTokens(item.a, route, lang)}</p>
@@ -741,7 +935,7 @@ function generateSchema(route, lang) {
     },
     {
       '@type': 'FAQPage',
-      mainEntity: langContent.faq.map(item => ({
+      mainEntity: pickVariant(route.slug + 'faq', langContent.faqVariants).map(item => ({
         '@type': 'Question',
         name: fillTokens(item.q, route, lang),
         acceptedAnswer: { '@type': 'Answer', text: fillTokens(item.a, route, lang) }
@@ -786,7 +980,7 @@ function replaceTemplate(template, route, lang) {
     '{{badge}}': `${langContent.badgeLabel} · ${translateCountry(route.country, lang)}`,
     '{{mainTitle}}': langContent.mainTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{metaText}}': langContent.metaText,
-    '{{leadText}}': langContent.leadText.replace('{{operator}}', route.operator).replace('{{from}}', route.from).replace('{{to}}', route.to).replace('{{duration}}', route.duration).replace('{{country}}', translateCountry(route.country, lang)),
+    '{{leadText}}': fillTokens(pickVariant(route.slug + 'lead', langContent.leadVariants), route, lang),
     '{{heroImage}}': HERO_PHOTOS[route.to.toLowerCase()] || 'https://images.pexels.com/photos/30753262/pexels-photo-30753262.jpeg?auto=compress&cs=tinysrgb&w=1600',
     '{{klookTitle}}': fillTokens(langContent.klookTitle, route, lang),
     '{{klookSubtitle}}': fillTokens(langContent.klookSubtitle, route, lang),
@@ -796,14 +990,14 @@ function replaceTemplate(template, route, lang) {
     '{{hotelSectionTitle}}': langContent.hotelSectionTitle,
     '{{hotelCards}}': generateHotelCards(route, lang),
     '{{howLongTitle}}': fillTokens(langContent.howLongTitle, route, lang),
-    '{{howLongText}}': langContent.howLongText.replace('{{duration}}', route.duration),
+    '{{howLongText}}': fillTokens(pickVariant(route.slug + 'howlong', langContent.howLongVariants), route, lang),
     '{{whoRunsTitle}}': fillTokens(langContent.whoRunsTitle, route, lang),
-    '{{whoRunsText}}': langContent.whoRunsText.replace('{{operator}}', route.operator),
+    '{{whoRunsText}}': fillTokens(pickVariant(route.slug + 'whoruns', langContent.whoRunsVariants), route, lang),
     '{{priceTitle}}': langContent.priceTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{priceText}}': langContent.priceText.replace('{{price}}', route.price),
     '{{priceTable}}': generatePriceTable(route, lang),
     '{{bestFareTitle}}': langContent.bestFareTitle,
-    '{{bestFareList}}': langContent.bestFareList.map(item => `<li>${item}</li>`).join('\n      '),
+    '{{bestFareList}}': pickVariant(route.slug + 'bestfare', langContent.bestFareVariants).map(item => `<li>${item}</li>`).join('\n      '),
     '{{readyText}}': langContent.readyText.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{compareText}}': langContent.compareText,
     '{{checkSchedulesText}}': langContent.checkSchedulesText,
