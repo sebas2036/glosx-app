@@ -12,7 +12,14 @@ const routes = [
   { slug: 'barcelona-lyon', from: 'Barcelona', to: 'Lyon', country: 'Spain-France', duration: '4h 30m', operator: 'TGV', price: '€35-55', badge: 'Route guide · Spain-France',
     customSEO: { en: { title: 'How to Get from Barcelona to Lyon by Train (4h30)', description: 'The Barcelona to Lyon train takes 4h30 on TGV. See today\'s departures and book tickets from €35.' } } },
   { slug: 'barcelona-valencia', from: 'Barcelona', to: 'Valencia', country: 'Spain', duration: '3h 00m', operator: 'Renfe AVE', price: '€20-35', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'Barcelona to Valencia Train: 3h AVE, from €20', description: 'High-speed Renfe AVE from Barcelona to Valencia in 3 hours. Compare live schedules and book tickets from €20 — no line at the station.' } } },
+    customSEO: { en: { title: 'Barcelona to Valencia Train: 3h AVE, from €20', description: 'High-speed Renfe AVE from Barcelona to Valencia in 3 hours. Compare live schedules and book tickets from €20 — no line at the station.' } },
+    localInsight: {
+      en: 'This is one of the newer additions to Spain\'s high-speed network, and low-cost operator Ouigo also runs the corridor alongside Renfe AVE — worth comparing both, since Ouigo fares are sometimes noticeably cheaper for the same journey time.',
+      es: 'Es una de las incorporaciones más recientes a la red de alta velocidad española, y el operador low-cost Ouigo también cubre el trayecto junto a Renfe AVE — conviene comparar ambos, porque a veces Ouigo sale notablemente más barato para el mismo tiempo de viaje.',
+      fr: 'C\'est l\'une des lignes les plus récentes du réseau à grande vitesse espagnol, et l\'opérateur low-cost Ouigo dessert aussi ce trajet aux côtés de Renfe AVE — cela vaut la peine de comparer les deux, Ouigo étant parfois nettement moins cher pour le même temps de trajet.',
+      it: 'È una delle aggiunte più recenti alla rete ad alta velocità spagnola, e l\'operatore low-cost Ouigo copre la tratta insieme a Renfe AVE — conviene confrontare entrambi, perché Ouigo a volte costa decisamente meno per lo stesso tempo di viaggio.'
+    }
+  },
   { slug: 'basel-lauterbrunnen', from: 'Basel', to: 'Lauterbrunnen', country: 'Switzerland', duration: '2h 30m', operator: 'SBB', price: '€35-50', badge: 'Route guide · Switzerland',
     customSEO: { en: { title: 'Basel to Lauterbrunnen by Train: 2h30 SBB, from €35', description: 'Direct SBB from Basel to Lauterbrunnen in 2h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
   { slug: 'basel-paris', from: 'Basel', to: 'Paris', country: 'Switzerland-France', duration: '3h 00m', operator: 'TGV Lyria', price: '€40-60', badge: 'Route guide · Switzerland-France',
@@ -76,13 +83,34 @@ const routes = [
   { slug: 'london-york', from: 'London', to: 'York', country: 'UK', duration: '2h 00m', operator: 'LNER', price: '€20-40', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to York by Train: 2h LNER, from €20', description: 'Direct LNER from London to York in 2 hours. Compare today\'s schedule and book fares from €20 — no layovers.' } } },
   { slug: 'lyon-turin', from: 'Lyon', to: 'Turin', country: 'France-Italy', duration: '4h 00m', operator: 'TGV', price: '€35-55', badge: 'Route guide · France-Italy',
-    customSEO: { en: { title: 'Lyon to Turin Train: 4h, from €35', description: 'TGV connection from Lyon to Turin in 4 hours. Check live schedules and book tickets from €35.' } } },
+    customSEO: { en: { title: 'Lyon to Turin Train: 4h, from €35', description: 'TGV connection from Lyon to Turin in 4 hours. Check live schedules and book tickets from €35.' } },
+    localInsight: {
+      en: 'This route crosses the Alps through the historic Fréjus rail tunnel, opened in 1871 as one of the first great Alpine tunnels — it still carries every Lyon–Turin train today. A new high-speed base tunnel is under construction nearby and will eventually cut journey times further once it opens.',
+      es: 'Esta ruta cruza los Alpes por el histórico túnel ferroviario de Fréjus, inaugurado en 1871 como uno de los primeros grandes túneles alpinos — todavía hoy pasan por él todos los trenes entre Lyon y Turín. Cerca se está construyendo un nuevo túnel de alta velocidad que en el futuro reducirá aún más los tiempos de viaje.',
+      fr: 'Cet itinéraire traverse les Alpes par le tunnel ferroviaire historique du Fréjus, ouvert en 1871 comme l\'un des premiers grands tunnels alpins — tous les trains Lyon–Turin l\'empruntent encore aujourd\'hui. Un nouveau tunnel de base à grande vitesse est en construction à proximité et réduira encore les temps de trajet une fois ouvert.',
+      it: 'Questo percorso attraversa le Alpi tramite lo storico traforo ferroviario del Fréjus, aperto nel 1871 come uno dei primi grandi trafori alpini — ancora oggi lo percorrono tutti i treni Lione–Torino. Nelle vicinanze è in costruzione un nuovo tunnel di base ad alta velocità che in futuro ridurrà ulteriormente i tempi di viaggio.'
+    }
+  },
   { slug: 'madrid-barcelona', from: 'Madrid', to: 'Barcelona', country: 'Spain', duration: '2h 30m', operator: 'Renfe AVE', price: '€25-45', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'Madrid to Barcelona Train Guide: 2h30 on Renfe AVE', description: 'Everything you need for the Madrid to Barcelona train: 2h30 on Renfe AVE, fares from €25, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Madrid to Barcelona Train Guide: 2h30 on Renfe AVE', description: 'Everything you need for the Madrid to Barcelona train: 2h30 on Renfe AVE, fares from €25, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'This corridor was the first in Spain to see full open-access competition: Renfe AVE now shares the tracks with rivals Ouigo and iryo, so the same journey can carry three very different price points depending on the operator — worth checking all three before booking.',
+      es: 'Este corredor fue el primero en España con competencia real entre operadores: Renfe AVE comparte las vías con Ouigo e iryo, así que el mismo trayecto puede tener tres precios muy distintos según el operador — conviene revisar los tres antes de reservar.',
+      fr: 'Cette ligne a été la première en Espagne à connaître une concurrence complète en accès libre : Renfe AVE partage désormais les voies avec Ouigo et iryo, donc le même trajet peut avoir trois tarifs très différents selon l\'opérateur — mieux vaut comparer les trois avant de réserver.',
+      it: 'Questa tratta è stata la prima in Spagna ad avere piena concorrenza tra operatori: Renfe AVE condivide i binari con i rivali Ouigo e iryo, quindi lo stesso viaggio può avere tre prezzi molto diversi a seconda dell\'operatore — conviene controllare tutti e tre prima di prenotare.'
+    }
+  },
   { slug: 'madrid-malaga', from: 'Madrid', to: 'Malaga', country: 'Spain', duration: '2h 30m', operator: 'Renfe AVE', price: '€25-45', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'How to Get from Madrid to Malaga by Train (2h30)', description: 'The Madrid to Malaga train takes 2h30 on Renfe AVE. See today\'s departures and book tickets from €25.' } } },
   { slug: 'madrid-seville', from: 'Madrid', to: 'Seville', country: 'Spain', duration: '2h 30m', operator: 'Renfe AVE', price: '€25-45', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'Madrid to Seville by Train: 2h30 Renfe AVE, from €25', description: 'Direct Renfe AVE from Madrid to Seville in 2h30. Compare today\'s schedule and book fares from €25 — no layovers.' } } },
+    customSEO: { en: { title: 'Madrid to Seville by Train: 2h30 Renfe AVE, from €25', description: 'Direct Renfe AVE from Madrid to Seville in 2h30. Compare today\'s schedule and book fares from €25 — no layovers.' } },
+    localInsight: {
+      en: 'This is where Spanish high-speed rail began: the line opened in 1992 for Expo Seville, making it Spain\'s first AVE route and one of the earliest true high-speed lines outside France, Germany and Japan.',
+      es: 'Aquí nació la alta velocidad en España: la línea se inauguró en 1992 para la Expo de Sevilla, siendo la primera ruta AVE del país y una de las primeras líneas de alta velocidad del mundo fuera de Francia, Alemania y Japón.',
+      fr: 'C\'est ici qu\'est née la grande vitesse espagnole : la ligne a ouvert en 1992 pour l\'Exposition universelle de Séville, devenant la toute première ligne AVE du pays et l\'une des premières lignes à grande vitesse au monde hors France, Allemagne et Japon.',
+      it: 'È qui che è nata l\'alta velocità spagnola: la linea aprì nel 1992 per l\'Expo di Siviglia, diventando la prima tratta AVE del paese e una delle prime linee ad alta velocità al mondo fuori da Francia, Germania e Giappone.'
+    }
+  },
   { slug: 'madrid-valencia', from: 'Madrid', to: 'Valencia', country: 'Spain', duration: '1h 40m', operator: 'Renfe AVE', price: '€20-35', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Madrid to Valencia Train: 1h40, from €20', description: 'Renfe AVE connection from Madrid to Valencia in 1h40. Check live schedules and book tickets from €20.' } } },
   { slug: 'madrid-zaragoza', from: 'Madrid', to: 'Zaragoza', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain',
@@ -102,7 +130,14 @@ const routes = [
   { slug: 'munich-prague', from: 'Munich', to: 'Prague', country: 'Germany-Czech', duration: '4h 00m', operator: 'DB ČD', price: '€30-50', badge: 'Route guide · Germany-Czech',
     customSEO: { en: { title: 'Munich to Prague Train: 4h, from €30', description: 'DB ČD connection from Munich to Prague in 4 hours. Check live schedules and book tickets from €30.' } } },
   { slug: 'munich-venice', from: 'Munich', to: 'Venice', country: 'Germany-Italy', duration: '6h 00m', operator: 'ÖBB', price: '€40-60', badge: 'Route guide · Germany-Italy',
-    customSEO: { en: { title: 'Munich to Venice by Train: 6h scenic route, from €40', description: 'Direct ÖBB train from Munich to Venice through the Alps in 6 hours. Compare today\'s schedule and book fares from €40.' } } },
+    customSEO: { en: { title: 'Munich to Venice by Train: 6h scenic route, from €40', description: 'Direct ÖBB train from Munich to Venice through the Alps in 6 hours. Compare today\'s schedule and book fares from €40.' } },
+    localInsight: {
+      en: 'The train climbs to the Brenner Pass, at about 1,370m one of the lowest and oldest crossings of the main Alpine chain — used by traders and travellers for centuries before the railway existed. A new Brenner Base Tunnel is being built underneath to shorten this leg in the years ahead.',
+      es: 'El tren sube hasta el paso del Brenner, que a unos 1.370 m es uno de los cruces más bajos y antiguos de la cadena principal de los Alpes — usado por comerciantes y viajeros durante siglos antes de que existiera el ferrocarril. Debajo se está construyendo un nuevo túnel de base del Brenner que en los próximos años acortará este tramo.',
+      fr: 'Le train monte jusqu\'au col du Brenner, qui à environ 1 370 m est l\'un des passages les plus bas et les plus anciens de la chaîne alpine principale — emprunté par les marchands et les voyageurs pendant des siècles avant l\'existence du chemin de fer. Un nouveau tunnel de base du Brenner est en construction en dessous et raccourcira ce trajet dans les années à venir.',
+      it: 'Il treno sale fino al Passo del Brennero, che a circa 1.370 m è uno dei valichi più bassi e antichi della catena alpina principale — usato da mercanti e viaggiatori per secoli prima che esistesse la ferrovia. Sotto è in costruzione un nuovo tunnel di base del Brennero che nei prossimi anni accorcerà questo tratto.'
+    }
+  },
   { slug: 'munich-vienna', from: 'Munich', to: 'Vienna', country: 'Germany-Austria', duration: '4h 30m', operator: 'Railjet', price: '€35-55', badge: 'Route guide · Germany-Austria',
     customSEO: { en: { title: 'Munich to Vienna Train Guide: 4h30 on Railjet', description: 'Everything you need for the Munich to Vienna train: 4h30 on Railjet, fares from €35, and today\'s live schedule.' } } },
   { slug: 'naples-salerno', from: 'Naples', to: 'Salerno', country: 'Italy', duration: '0h 40m', operator: 'Trenitalia', price: '€5-10', badge: 'Route guide · Italy',
@@ -110,13 +145,34 @@ const routes = [
   { slug: 'naples-sorrento', from: 'Naples', to: 'Sorrento', country: 'Italy', duration: '1h 00m', operator: 'Circumvesuviana', price: '€5-10', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'How to Get from Naples to Sorrento by Train (1h)', description: 'The Naples to Sorrento train takes 1 hour on Circumvesuviana. See today\'s departures and book tickets from €5.' } } },
   { slug: 'nice-monaco', from: 'Nice', to: 'Monaco', country: 'France', duration: '0h 20m', operator: 'SNCF TER', price: '€5-10', badge: 'Route guide · France',
-    customSEO: { en: { title: 'Nice to Monaco Train: 20 min, from €5', description: 'Quick SNCF TER connection from Nice to Monaco in about 20 minutes along the coast. Check schedules and book from €5.' } } },
+    customSEO: { en: { title: 'Nice to Monaco Train: 20 min, from €5', description: 'Quick SNCF TER connection from Nice to Monaco in about 20 minutes along the coast. Check schedules and book from €5.' } },
+    localInsight: {
+      en: 'This short hop is part of the coastal line that hugs the Mediterranean between Nice and the Italian border, cutting through several tunnels carved into the cliffs. It\'s used as much by local commuters heading into Monaco for work as by visitors — trains run frequently and it\'s rarely worth timing it around a specific departure.',
+      es: 'Este tramo corto forma parte de la línea costera que bordea el Mediterráneo entre Niza y la frontera con Italia, atravesando varios túneles excavados en los acantilados. Lo usan tanto los que viajan a diario a trabajar a Mónaco como los turistas — los trenes son frecuentes y casi nunca hace falta planificar un horario específico.',
+      fr: 'Ce court trajet fait partie de la ligne côtière qui longe la Méditerranée entre Nice et la frontière italienne, traversant plusieurs tunnels creusés dans la falaise. Il est autant emprunté par les habitants qui se rendent au travail à Monaco que par les visiteurs — les trains sont fréquents et il est rarement utile de viser un horaire précis.',
+      it: 'Questo breve tratto fa parte della linea costiera che costeggia il Mediterraneo tra Nizza e il confine italiano, attraversando diverse gallerie scavate nella scogliera. È usato tanto dai pendolari che vanno a lavorare a Monaco quanto dai visitatori — i treni sono frequenti ed è raro dover pianificare un orario preciso.'
+    }
+  },
   { slug: 'oslo-bergen', from: 'Oslo', to: 'Bergen', country: 'Norway', duration: '7h 00m', operator: 'Vy', price: '€50-80', badge: 'Route guide · Norway',
     customSEO: { en: { title: 'Oslo to Bergen by Train: 7h Vy, from €50', description: 'Direct Vy from Oslo to Bergen in 7 hours. Compare today\'s schedule and book fares from €50 — no layovers.' } } },
   { slug: 'paris-amsterdam', from: 'Paris', to: 'Amsterdam', country: 'France-Netherlands', duration: '3h 30m', operator: 'Thalys', price: '€35-55', badge: 'Route guide · France-Netherlands',
-    customSEO: { en: { title: 'Paris to Amsterdam by Train: 3h30 Thalys direct', description: 'Thalys direct from Paris to Amsterdam in 3.5 hours, fares from €35. Compare today\'s train times and book your seat in minutes.' } } },
+    customSEO: { en: { title: 'Paris to Amsterdam by Train: 3h30 Thalys direct', description: 'Thalys direct from Paris to Amsterdam in 3.5 hours, fares from €35. Compare today\'s train times and book your seat in minutes.' } },
+    localInsight: {
+      en: 'Thalys, the operator long associated with this route, merged into the Eurostar brand in 2024 as part of a wider consolidation of European high-speed rail companies — so tickets and information for this line now appear under the Eurostar name, even though the trains and route are unchanged.',
+      es: 'Thalys, el operador tradicionalmente asociado a esta ruta, se fusionó con la marca Eurostar en 2024 como parte de una consolidación más amplia de las empresas europeas de alta velocidad — así que los billetes e información de esta línea ahora aparecen bajo el nombre Eurostar, aunque los trenes y la ruta siguen siendo los mismos.',
+      fr: 'Thalys, l\'opérateur longtemps associé à cette ligne, a fusionné avec la marque Eurostar en 2024 dans le cadre d\'une consolidation plus large des compagnies européennes à grande vitesse — les billets et informations pour cette ligne apparaissent donc désormais sous le nom Eurostar, même si les trains et l\'itinéraire restent inchangés.',
+      it: 'Thalys, l\'operatore storicamente associato a questa tratta, è confluito nel marchio Eurostar nel 2024 come parte di un più ampio consolidamento delle compagnie europee ad alta velocità — quindi biglietti e informazioni per questa linea ora appaiono sotto il nome Eurostar, anche se treni e percorso restano gli stessi.'
+    }
+  },
   { slug: 'paris-barcelona', from: 'Paris', to: 'Barcelona', country: 'France-Spain', duration: '6h 30m', operator: 'TGV', price: '€50-80', badge: 'Route guide · France-Spain',
-    customSEO: { en: { title: 'Paris to Barcelona Train: 6h30 direct TGV, from €50', description: 'Direct high-speed TGV from Paris to Barcelona in 6.5 hours, no layovers. Compare today\'s schedule and book fares from €50.' } } },
+    customSEO: { en: { title: 'Paris to Barcelona Train: 6h30 direct TGV, from €50', description: 'Direct high-speed TGV from Paris to Barcelona in 6.5 hours, no layovers. Compare today\'s schedule and book fares from €50.' } },
+    localInsight: {
+      en: 'The direct TGV crosses into Spain at Perpignan–Figueres, running on track shared between the French and Spanish high-speed networks — one of the few places in Europe where a single high-speed train physically crosses from one country\'s rail system onto another\'s without stopping.',
+      es: 'El TGV directo cruza a España por Perpignan–Figueres, sobre vías compartidas entre las redes de alta velocidad francesa y española — uno de los pocos puntos de Europa donde un tren de alta velocidad pasa físicamente de la red de un país a la de otro sin detenerse.',
+      fr: 'Le TGV direct entre en Espagne à Perpignan–Figueres, sur des voies partagées entre les réseaux à grande vitesse français et espagnol — l\'un des rares endroits en Europe où un train à grande vitesse passe physiquement du réseau ferroviaire d\'un pays à celui d\'un autre sans s\'arrêter.',
+      it: 'Il TGV diretto entra in Spagna a Perpignano–Figueres, su binari condivisi tra le reti ad alta velocità francese e spagnola — uno dei pochi punti in Europa dove un treno ad alta velocità passa fisicamente dalla rete ferroviaria di un paese a quella di un altro senza fermarsi.'
+    }
+  },
   { slug: 'paris-berlin', from: 'Paris', to: 'Berlin', country: 'France-Germany', duration: '8h 00m', operator: 'TGV', price: '€60-90', badge: 'Route guide · France-Germany',
     customSEO: { en: { title: 'Paris to Berlin Train: 8h, from €60', description: 'TGV connection from Paris to Berlin in 8 hours. Check live schedules and book tickets from €60.' } } },
   { slug: 'paris-bordeaux', from: 'Paris', to: 'Bordeaux', country: 'France', duration: '2h 00m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France',
@@ -124,7 +180,14 @@ const routes = [
   { slug: 'paris-bruges', from: 'Paris', to: 'Bruges', country: 'France-Belgium', duration: '2h 30m', operator: 'TGV', price: '€35-55', badge: 'Route guide · France-Belgium',
     customSEO: { en: { title: 'Paris to Bruges Train Guide: 2h30 on TGV', description: 'Everything you need for the Paris to Bruges train: 2h30 on TGV, fares from €35, and today\'s live schedule.' } } },
   { slug: 'paris-london', from: 'Paris', to: 'London', country: 'France-UK', duration: '2h 30m', operator: 'Eurostar', price: '€50-80', badge: 'Route guide · France-UK',
-    customSEO: { en: { title: 'How to Get from Paris to London by Train (2h30)', description: 'The Paris to London train takes 2h30 on Eurostar. See today\'s departures and book tickets from €50.' } } },
+    customSEO: { en: { title: 'How to Get from Paris to London by Train (2h30)', description: 'The Paris to London train takes 2h30 on Eurostar. See today\'s departures and book tickets from €50.' } },
+    localInsight: {
+      en: 'Around 38km of this journey runs under the sea through the Channel Tunnel, opened in 1994. Because it crosses a border outside the EU\'s open zone, Eurostar passengers clear UK border control before boarding at Gare du Nord — plan to arrive roughly 45–75 minutes early, more like a (much faster) airport process than a normal train departure.',
+      es: 'Unos 38 km de este trayecto van por debajo del mar, a través del Túnel del Canal, inaugurado en 1994. Como cruza una frontera fuera del espacio Schengen, los pasajeros de Eurostar pasan el control fronterizo del Reino Unido antes de embarcar en la Gare du Nord — conviene llegar unos 45-75 minutos antes, algo más parecido a un aeropuerto (pero mucho más rápido) que a una salida de tren normal.',
+      fr: 'Environ 38 km de ce trajet passent sous la mer par le tunnel sous la Manche, ouvert en 1994. Comme il franchit une frontière hors de l\'espace Schengen, les passagers Eurostar passent le contrôle frontalier britannique avant d\'embarquer à la Gare du Nord — prévoyez d\'arriver environ 45 à 75 minutes à l\'avance, un peu comme à l\'aéroport, mais bien plus rapide.',
+      it: 'Circa 38 km di questo viaggio corrono sotto il mare attraverso il Tunnel della Manica, aperto nel 1994. Poiché attraversa un confine fuori dall\'area Schengen, i passeggeri Eurostar passano il controllo di frontiera britannico prima di imbarcarsi alla Gare du Nord — conviene arrivare circa 45-75 minuti prima, un po\' come in aeroporto, ma molto più veloce.'
+    }
+  },
   { slug: 'paris-lourdes', from: 'Paris', to: 'Lourdes', country: 'France', duration: '6h 30m', operator: 'SNCF Intercités', price: '€30-50', badge: 'Route guide · France',
     customSEO: { en: { title: 'Paris to Lourdes by Train: 6h30 SNCF Intercités, from €30', description: 'Direct SNCF Intercités from Paris to Lourdes in 6h30. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
   { slug: 'paris-lucerne', from: 'Paris', to: 'Lucerne', country: 'France-Switzerland', duration: '4h 30m', operator: 'TGV Lyria', price: '€50-75', badge: 'Route guide · France-Switzerland',
@@ -168,7 +231,14 @@ const routes = [
   { slug: 'vienna-krems', from: 'Vienna', to: 'Krems', country: 'Austria', duration: '1h 00m', operator: 'ÖBB', price: '€10-15', badge: 'Route guide · Austria',
     customSEO: { en: { title: 'How to Get from Vienna to Krems by Train (1h)', description: 'The Vienna to Krems train takes 1 hour on ÖBB. See today\'s departures and book tickets from €10.' } } },
   { slug: 'vienna-prague', from: 'Vienna', to: 'Prague', country: 'Austria-Czech', duration: '4h 00m', operator: 'Railjet', price: '€25-40', badge: 'Route guide · Austria-Czech',
-    customSEO: { en: { title: 'Vienna to Prague by Train: 4h Railjet, from €25', description: 'ÖBB Railjet direct from Vienna to Prague in 4 hours, no layovers. Compare schedules and book comfortable tickets from €25.' } } },
+    customSEO: { en: { title: 'Vienna to Prague by Train: 4h Railjet, from €25', description: 'ÖBB Railjet direct from Vienna to Prague in 4 hours, no layovers. Compare schedules and book comfortable tickets from €25.' } },
+    localInsight: {
+      en: 'This is one of ÖBB\'s flagship Railjet routes, running via Brno with panoramic first-class carriages designed for exactly this kind of cross-border corridor. Unlike some neighbouring routes, it has stayed a straightforward direct connection rather than being split up by construction works in recent years.',
+      es: 'Es una de las rutas insignia de Railjet de ÖBB, que pasa por Brno con coches de primera clase panorámicos pensados justamente para este tipo de corredor transfronterizo. A diferencia de otras rutas vecinas, se ha mantenido como una conexión directa sin cortes por obras en los últimos años.',
+      fr: 'C\'est l\'une des lignes phares du Railjet d\'ÖBB, passant par Brno avec des voitures de première classe panoramiques conçues précisément pour ce type de liaison transfrontalière. Contrairement à certaines lignes voisines, elle est restée une liaison directe simple, sans interruption due à des travaux ces dernières années.',
+      it: 'È una delle tratte di punta del Railjet di ÖBB, che passa per Brno con carrozze di prima classe panoramiche pensate proprio per questo tipo di collegamento transfrontaliero. A differenza di alcune tratte vicine, è rimasta un collegamento diretto senza interruzioni per lavori negli ultimi anni.'
+    }
+  },
   { slug: 'vienna-salzburg', from: 'Vienna', to: 'Salzburg', country: 'Austria', duration: '2h 30m', operator: 'Railjet', price: '€20-35', badge: 'Route guide · Austria',
     customSEO: { en: { title: 'Vienna to Salzburg by Train: 2h30 Railjet, from €20', description: 'Direct Railjet from Vienna to Salzburg in 2h30. Compare today\'s schedule and book fares from €20 — no layovers.' } } },
   { slug: 'zaragoza-barcelona', from: 'Zaragoza', to: 'Barcelona', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain',
@@ -412,6 +482,7 @@ const content = {
     priceTitle: '{{from}} to {{to}} train price (2026)',
     priceText: 'Advance fares start from around {{price}}, rising as the date approaches.',
     hotelSectionTitle: 'Where to stay',
+    localInsightHeading: 'Worth knowing',
     bestFareTitle: 'How to get the best fare',
     bestFareVariants: [
       [
@@ -508,6 +579,7 @@ const content = {
     priceTitle: 'Precio del tren {{from}} a {{to}} (2026)',
     priceText: 'Las tarifas anticipadas comienzan desde {{price}}, aumentando a medida que se acerca la fecha.',
     hotelSectionTitle: 'Dónde alojarte',
+    localInsightHeading: 'Dato interesante',
     bestFareTitle: 'Cómo conseguir la mejor tarifa',
     bestFareVariants: [
       [
@@ -603,6 +675,7 @@ const content = {
     priceTitle: 'Prix du train {{from}} à {{to}} (2026)',
     priceText: 'Les tarifs anticipés commencent autour de {{price}} et augmentent à l\'approche de la date.',
     hotelSectionTitle: 'Où loger',
+    localInsightHeading: 'Bon à savoir',
     bestFareTitle: 'Comment obtenir le meilleur tarif',
     bestFareVariants: [
       [
@@ -698,6 +771,7 @@ const content = {
     priceTitle: 'Prezzo del treno {{from}} a {{to}} (2026)',
     priceText: 'Le tariffe anticipate partono da circa {{price}} e aumentano con l\'avvicinarsi della data.',
     hotelSectionTitle: 'Dove alloggiare',
+    localInsightHeading: 'Da sapere',
     bestFareTitle: 'Come ottenere la tariffa migliore',
     bestFareVariants: [
       [
@@ -901,6 +975,18 @@ function fillTokens(str, route, lang) {
     .replace(/\{\{country\}\}/g, translateCountry(route.country, lang));
 }
 
+// Parrafo de contenido unico real (no plantilla) para las rutas de mayor
+// trafico segun GA4 — dato historico/practico verificable, especifico de esa
+// ruta. Devuelve '' para rutas sin localInsight (la mayoria).
+function generateLocalInsight(route, lang) {
+  if (!route.localInsight) return '';
+  const langContent = content[lang];
+  const text = route.localInsight[lang] || route.localInsight.en;
+  return `
+    <h2>${langContent.localInsightHeading}</h2>
+    <p>${text}</p>`;
+}
+
 // FAQ visible (h3 pregunta + p respuesta, siempre en el DOM para que Google lo
 // lea; sin JS ni contenido oculto). Apunta a las busquedas de cola larga.
 function generateFAQ(route, lang) {
@@ -993,6 +1079,7 @@ function replaceTemplate(template, route, lang) {
     '{{howLongText}}': fillTokens(pickVariant(route.slug + 'howlong', langContent.howLongVariants), route, lang),
     '{{whoRunsTitle}}': fillTokens(langContent.whoRunsTitle, route, lang),
     '{{whoRunsText}}': fillTokens(pickVariant(route.slug + 'whoruns', langContent.whoRunsVariants), route, lang),
+    '{{localInsight}}': generateLocalInsight(route, lang),
     '{{priceTitle}}': langContent.priceTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{priceText}}': langContent.priceText.replace('{{price}}', route.price),
     '{{priceTable}}': generatePriceTable(route, lang),
