@@ -218,6 +218,7 @@ const REAL_HOTELS = {
   barcelona: { name: "Hotel Casa Fuster", loc: "Barcelona, Spain", image: "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/343/casa-fuster_header-historia_section.jpg" },
   bergen: { name: "Hotel Norge by Scandic", loc: "Bergen, Norway", image: "https://www.scandichotels.com/globalassets/hotels/norway/bergen/scandic-norge/scandic-norge-exterior.jpg" },
   berlin: { name: "Hotel Adlon Kempinski", loc: "Berlin, Germany", image: "https://storage.kempinski.com/cdn-cgi/image/w=1920,f=auto,fit=scale-down/ki-cms-prod/images/7/2/3/5/2625327-1-eng-GB/885bd49e79c3-89887320_4K.jpg" },
+  bern: { name: "Hotel Bellevue Palace Bern", loc: "Bern, Switzerland", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hotel_Bellevue_Palace.jpg/330px-Hotel_Bellevue_Palace.jpg" },
   bordeaux: { name: "InterContinental Bordeaux – Le Grand Hôtel", loc: "Bordeaux, France", image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Fa%C3%A7ade_Grand_H%C3%B4tel_de_Bordeaux.jpg" },
   brno: { name: "Grandhotel Brno", loc: "Brno, Czech Republic", image: "https://grandhotelbrno.cz/wp-content/uploads/bitmap-15.jpg" },
   bruges: { name: "Hotel Heritage", loc: "Bruges, Belgium", image: "https://www.hotel-heritage.com/wp-content/uploads/elementor/thumbs/289A0021-res7vp7qbz0q15g3rbg8tyy91gvwawbd8f3n5fvlnu.jpg" },
