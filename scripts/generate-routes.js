@@ -71,7 +71,14 @@ const routes = [
     }
   },
   { slug: 'bordeaux-lourdes', from: 'Bordeaux', to: 'Lourdes', country: 'France', duration: '2h 30m', operator: 'SNCF Intercités', price: '€20-35', badge: 'Route guide · France',
-    customSEO: { en: { title: 'How to Get from Bordeaux to Lourdes by Train (2h30)', description: 'The Bordeaux to Lourdes train takes 2h30 on SNCF Intercités. See today\'s departures and book tickets from €20.' } } },
+    customSEO: { en: { title: 'How to Get from Bordeaux to Lourdes by Train (2h30)', description: 'The Bordeaux to Lourdes train takes 2h30 on SNCF Intercités. See today\'s departures and book tickets from €20.' } },
+    localInsight: {
+      en: 'For much of the way, the train runs through the Landes forest, one of the largest planted forests in Europe — millions of pine trees deliberately established in the 19th century to stabilise what used to be shifting sand dunes and marshland along this stretch of the Atlantic coast.',
+      es: 'Durante buena parte del trayecto, el tren atraviesa el bosque de las Landas, uno de los bosques plantados más grandes de Europa — millones de pinos plantados deliberadamente en el siglo XIX para fijar lo que antes eran dunas de arena movediza y marismas a lo largo de esta parte de la costa atlántica.',
+      fr: 'Sur une grande partie du trajet, le train traverse la forêt des Landes, l\'une des plus grandes forêts plantées d\'Europe — des millions de pins installés délibérément au XIXe siècle pour fixer ce qui était autrefois des dunes de sable mouvantes et des marais le long de cette portion de la côte atlantique.',
+      it: 'Per buona parte del percorso, il treno attraversa la foresta delle Landes, una delle più grandi foreste piantumate d\'Europa — milioni di pini piantati deliberatamente nel XIX secolo per fissare quelle che un tempo erano dune di sabbia mobile e paludi lungo questo tratto della costa atlantica.'
+    }
+  },
   { slug: 'brno-vienna', from: 'Brno', to: 'Vienna', country: 'Czech-Austria', duration: '1h 45m', operator: 'ÖBB', price: '€15-25', badge: 'Route guide · Czech-Austria',
     customSEO: { en: { title: 'Brno to Vienna by Train: 1h45 ÖBB, from €15', description: 'Direct ÖBB from Brno to Vienna in 1h45. Compare today\'s schedule and book fares from €15 — no layovers.' } },
     localInsight: {
@@ -100,7 +107,14 @@ const routes = [
     }
   },
   { slug: 'budapest-ljubljana', from: 'Budapest', to: 'Ljubljana', country: 'Hungary-Slovenia', duration: '6h 00m', operator: 'MÁV', price: '€30-50', badge: 'Route guide · Hungary-Slovenia',
-    customSEO: { en: { title: 'Budapest to Ljubljana Train Guide: 6h on MÁV', description: 'Everything you need for the Budapest to Ljubljana train: 6 hours on MÁV, fares from €30, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Budapest to Ljubljana Train Guide: 6h on MÁV', description: 'Everything you need for the Budapest to Ljubljana train: 6 hours on MÁV, fares from €30, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'This is one of relatively few direct rail links from Central Europe toward the Adriatic, following a corridor originally built under the Austro-Hungarian Empire to connect its inland cities with the coast — the modern border crossing into Slovenia dates only to that country\'s independence in 1991.',
+      es: 'Es uno de los pocos enlaces ferroviarios directos entre Europa Central y el Adriático, sobre un corredor construido originalmente bajo el Imperio austrohúngaro para conectar sus ciudades del interior con la costa — el cruce fronterizo moderno hacia Eslovenia data recién de la independencia de ese país en 1991.',
+      fr: 'C\'est l\'une des rares liaisons ferroviaires directes reliant l\'Europe centrale à l\'Adriatique, suivant un corridor construit à l\'origine sous l\'Empire austro-hongrois pour relier ses villes de l\'intérieur à la côte — le passage frontalier moderne vers la Slovénie ne date que de l\'indépendance de ce pays en 1991.',
+      it: 'È uno dei pochi collegamenti ferroviari diretti tra l\'Europa centrale e l\'Adriatico, lungo un corridoio costruito originariamente sotto l\'Impero austro-ungarico per collegare le sue città interne alla costa — il moderno valico di frontiera verso la Slovenia risale solo all\'indipendenza di quel paese nel 1991.'
+    }
+  },
   { slug: 'copenhagen-stockholm', from: 'Copenhagen', to: 'Stockholm', country: 'Denmark-Sweden', duration: '5h 00m', operator: 'SJ', price: '€40-60', badge: 'Route guide · Denmark-Sweden',
     customSEO: { en: { title: 'How to Get from Copenhagen to Stockholm by Train (5h)', description: 'The Copenhagen to Stockholm train takes 5 hours on SJ. See today\'s departures and book tickets from €40.' } },
     localInsight: {
@@ -113,11 +127,25 @@ const routes = [
   { slug: 'dortmund-munich', from: 'Dortmund', to: 'Munich', country: 'Germany', duration: '5h 30m', operator: 'DB ICE', price: '€35-55', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Dortmund to Munich by Train: 5h30 DB ICE, from €35', description: 'Direct DB ICE from Dortmund to Munich in 5h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
   { slug: 'florence-pisa', from: 'Florence', to: 'Pisa', country: 'Italy', duration: '1h 00m', operator: 'Trenitalia', price: '€10-15', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'Florence to Pisa Train: 1h, from €10', description: 'Trenitalia connection from Florence to Pisa in 1 hour. Check live schedules and book tickets from €10.' } } },
+    customSEO: { en: { title: 'Florence to Pisa Train: 1h, from €10', description: 'Trenitalia connection from Florence to Pisa in 1 hour. Check live schedules and book tickets from €10.' } },
+    localInsight: {
+      en: 'Part of this corridor traces back to the Leopolda railway, opened in 1844 between Livorno and Pisa, one of the very first railways built anywhere on the Italian peninsula — nearly two centuries of trains have run through this stretch of Tuscany in some form.',
+      es: 'Parte de este corredor se remonta al ferrocarril Leopolda, inaugurado en 1844 entre Livorno y Pisa, uno de los primerísimos ferrocarriles construidos en la península italiana — casi dos siglos de trenes han circulado en alguna forma por este tramo de la Toscana.',
+      fr: 'Une partie de ce corridor remonte au chemin de fer Leopolda, ouvert en 1844 entre Livourne et Pise, l\'un des tout premiers chemins de fer construits sur la péninsule italienne — près de deux siècles de trains ont circulé sous une forme ou une autre sur ce tronçon de Toscane.',
+      it: 'Parte di questo corridoio risale alla ferrovia Leopolda, aperta nel 1844 tra Livorno e Pisa, una delle primissime ferrovie costruite nella penisola italiana — quasi due secoli di treni hanno percorso in qualche forma questo tratto di Toscana.'
+    }
+  },
   { slug: 'florence-siena', from: 'Florence', to: 'Siena', country: 'Italy', duration: '1h 30m', operator: 'Trenitalia', price: '€10-15', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Florence to Siena Train Guide: 1h30 on Trenitalia', description: 'Everything you need for the Florence to Siena train: 1h30 on Trenitalia, fares from €10, and today\'s live schedule.' } } },
   { slug: 'florence-venice', from: 'Florence', to: 'Venice', country: 'Italy', duration: '2h 00m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'How to Get from Florence to Venice by Train (2h)', description: 'The Florence to Venice train takes 2 hours on Trenitalia. See today\'s departures and book tickets from €20.' } } },
+    customSEO: { en: { title: 'How to Get from Florence to Venice by Train (2h)', description: 'The Florence to Venice train takes 2 hours on Trenitalia. See today\'s departures and book tickets from €20.' } },
+    localInsight: {
+      en: 'Unlike Florence–Rome, this route isn\'t fully on Italy\'s dedicated Alta Velocità track for its whole length — part of it runs on upgraded conventional line through the Apennines and the Po Valley, which is one of the reasons journey time can vary a bit more between different train categories than on the fully high-speed corridors.',
+      es: 'A diferencia de Florencia-Roma, esta ruta no va por completo sobre vía dedicada de Alta Velocità italiana en todo su recorrido — parte va por línea convencional mejorada a través de los Apeninos y el valle del Po, una de las razones por las que el tiempo de viaje varía algo más entre categorías de tren que en los corredores totalmente de alta velocidad.',
+      fr: 'Contrairement à Florence-Rome, cet itinéraire ne circule pas entièrement sur la voie dédiée Alta Velocità italienne sur toute sa longueur — une partie emprunte une ligne classique modernisée à travers les Apennins et la plaine du Pô, ce qui explique en partie pourquoi le temps de trajet varie davantage selon les catégories de train que sur les corridors entièrement à grande vitesse.',
+      it: 'A differenza di Firenze-Roma, questo percorso non corre interamente su binario dedicato Alta Velocità per tutta la sua lunghezza — parte percorre linea convenzionale potenziata attraverso gli Appennini e la Pianura Padana, uno dei motivi per cui il tempo di viaggio varia un po\' di più tra le diverse categorie di treno rispetto ai corridoi interamente ad alta velocità.'
+    }
+  },
   { slug: 'frankfurt-cologne', from: 'Frankfurt', to: 'Cologne', country: 'Germany', duration: '1h 15m', operator: 'DB ICE', price: '€25-40', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Frankfurt to Cologne by Train: 1h15 DB ICE, from €25', description: 'Direct DB ICE from Frankfurt to Cologne in 1h15. Compare today\'s schedule and book fares from €25 — no layovers.' } } },
   { slug: 'frankfurt-munich', from: 'Frankfurt', to: 'Munich', country: 'Germany', duration: '3h 30m', operator: 'DB ICE', price: '€30-50', badge: 'Route guide · Germany',
@@ -139,7 +167,14 @@ const routes = [
     }
   },
   { slug: 'geneva-paris', from: 'Geneva', to: 'Paris', country: 'Switzerland-France', duration: '3h 00m', operator: 'TGV Lyria', price: '€40-60', badge: 'Route guide · Switzerland-France',
-    customSEO: { en: { title: 'Geneva to Paris Train: 3h, from €40', description: 'TGV Lyria connection from Geneva to Paris in 3 hours. Check live schedules and book tickets from €40.' } } },
+    customSEO: { en: { title: 'Geneva to Paris Train: 3h, from €40', description: 'TGV Lyria connection from Geneva to Paris in 3 hours. Check live schedules and book tickets from €40.' } },
+    localInsight: {
+      en: 'Switzerland isn\'t in the EU or its customs union, but it is part of the Schengen open-border area — which is why this international train can run without the kind of full passport checks required on, say, the Eurostar to London, even though it\'s crossing between a non-EU and an EU country.',
+      es: 'Suiza no forma parte de la UE ni de su unión aduanera, pero sí del espacio Schengen de fronteras abiertas — por eso este tren internacional puede circular sin el tipo de control de pasaporte completo que sí exige, por ejemplo, el Eurostar a Londres, aunque cruce entre un país fuera de la UE y otro dentro de ella.',
+      fr: 'La Suisse ne fait partie ni de l\'UE ni de son union douanière, mais elle appartient à l\'espace Schengen à frontières ouvertes — c\'est pourquoi ce train international peut circuler sans le type de contrôle de passeport complet exigé, par exemple, sur l\'Eurostar vers Londres, même s\'il franchit la frontière entre un pays hors UE et un pays de l\'UE.',
+      it: 'La Svizzera non fa parte dell\'UE né della sua unione doganale, ma appartiene all\'area Schengen a frontiere aperte — per questo questo treno internazionale può circolare senza il tipo di controllo passaporti completo richiesto, ad esempio, sull\'Eurostar per Londra, pur attraversando il confine tra un paese extra-UE e uno UE.'
+    }
+  },
   { slug: 'geneva-zermatt', from: 'Geneva', to: 'Zermatt', country: 'Switzerland', duration: '3h 30m', operator: 'SBB', price: '€45-65', badge: 'Route guide · Switzerland',
     customSEO: { en: { title: 'Geneva to Zermatt Train Guide: 3h30 on SBB', description: 'Everything you need for the Geneva to Zermatt train: 3h30 on SBB, fares from €45, and today\'s live schedule.' } },
     localInsight: {
@@ -249,7 +284,14 @@ const routes = [
   { slug: 'madrid-zaragoza', from: 'Madrid', to: 'Zaragoza', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Madrid to Zaragoza Train: 1h30 AVE, from €15', description: 'High-speed Renfe AVE from Madrid to Zaragoza in 1.5 hours. Compare live schedules and book tickets from €15.' } } },
   { slug: 'marseille-miramas', from: 'Marseille', to: 'Miramas', country: 'France', duration: '0h 45m', operator: 'SNCF TER', price: '€10-15', badge: 'Route guide · France',
-    customSEO: { en: { title: 'Marseille to Miramas Train Guide: 45 min on SNCF TER', description: 'Everything you need for the Marseille to Miramas train: 45 minutes on SNCF TER, fares from €10, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Marseille to Miramas Train Guide: 45 min on SNCF TER', description: 'Everything you need for the Marseille to Miramas train: 45 minutes on SNCF TER, fares from €10, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'Part of this ride skirts the Étang de Berre, one of the largest saltwater lagoons in France — a striking contrast of industrial refineries on one shore and quiet fishing villages on the other, all visible from the train within the same short journey.',
+      es: 'Parte de este trayecto bordea el Étang de Berre, una de las lagunas de agua salada más grandes de Francia — un contraste llamativo entre refinerías industriales en una orilla y tranquilos pueblos de pescadores en la otra, todo visible desde el tren en un mismo trayecto corto.',
+      fr: 'Une partie de ce trajet longe l\'étang de Berre, l\'un des plus grands étangs d\'eau salée de France — un contraste saisissant entre les raffineries industrielles d\'une rive et les paisibles villages de pêcheurs de l\'autre, le tout visible depuis le train sur un même court trajet.',
+      it: 'Parte di questo tragitto costeggia l\'Étang de Berre, una delle più grandi lagune di acqua salata della Francia — un contrasto sorprendente tra raffinerie industriali su una sponda e tranquilli villaggi di pescatori sull\'altra, tutto visibile dal treno in un unico breve tragitto.'
+    }
+  },
   { slug: 'milan-florence', from: 'Milan', to: 'Florence', country: 'Italy', duration: '1h 45m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'How to Get from Milan to Florence by Train (1h45)', description: 'The Milan to Florence train takes 1h45 on Trenitalia. See today\'s departures and book tickets from €20.' } } },
   { slug: 'milan-rome', from: 'Milan', to: 'Rome', country: 'Italy', duration: '3h 00m', operator: 'Trenitalia', price: '€30-50', badge: 'Route guide · Italy',
@@ -302,7 +344,14 @@ const routes = [
     }
   },
   { slug: 'naples-salerno', from: 'Naples', to: 'Salerno', country: 'Italy', duration: '0h 40m', operator: 'Trenitalia', price: '€5-10', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'Naples to Salerno Train: 40 min, from €5', description: 'Quick Trenitalia connection from Naples to Salerno in about 40 minutes. Check live times and book tickets from €5.' } } },
+    customSEO: { en: { title: 'Naples to Salerno Train: 40 min, from €5', description: 'Quick Trenitalia connection from Naples to Salerno in about 40 minutes. Check live times and book tickets from €5.' } },
+    localInsight: {
+      en: 'Salerno is often overlooked, but it works as a quieter rail gateway to the Amalfi Coast — buses to Amalfi and Positano leave right from outside the station, with noticeably shorter queues than the equivalent connections from the more crowded Sorrento side.',
+      es: 'Salerno suele pasarse por alto, pero funciona como una puerta de entrada ferroviaria más tranquila a la Costa Amalfitana — los autobuses a Amalfi y Positano salen justo desde fuera de la estación, con colas notablemente más cortas que las conexiones equivalentes desde el lado más abarrotado de Sorrento.',
+      fr: 'Salerne est souvent négligée, mais elle fonctionne comme une porte d\'entrée ferroviaire plus tranquille vers la côte amalfitaine — les bus pour Amalfi et Positano partent juste devant la gare, avec des files d\'attente nettement plus courtes que les liaisons équivalentes depuis le côté plus bondé de Sorrente.',
+      it: 'Salerno è spesso trascurata, ma funziona come una porta d\'accesso ferroviaria più tranquilla alla Costiera Amalfitana — gli autobus per Amalfi e Positano partono proprio davanti alla stazione, con code decisamente più corte rispetto ai collegamenti equivalenti dal lato più affollato di Sorrento.'
+    }
+  },
   { slug: 'naples-sorrento', from: 'Naples', to: 'Sorrento', country: 'Italy', duration: '1h 00m', operator: 'Circumvesuviana', price: '€5-10', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'How to Get from Naples to Sorrento by Train (1h)', description: 'The Naples to Sorrento train takes 1 hour on Circumvesuviana. See today\'s departures and book tickets from €5.' } } },
   { slug: 'nice-monaco', from: 'Nice', to: 'Monaco', country: 'France', duration: '0h 20m', operator: 'SNCF TER', price: '€5-10', badge: 'Route guide · France',
@@ -342,7 +391,14 @@ const routes = [
     }
   },
   { slug: 'paris-berlin', from: 'Paris', to: 'Berlin', country: 'France-Germany', duration: '8h 00m', operator: 'TGV', price: '€60-90', badge: 'Route guide · France-Germany',
-    customSEO: { en: { title: 'Paris to Berlin Train: 8h, from €60', description: 'TGV connection from Paris to Berlin in 8 hours. Check live schedules and book tickets from €60.' } } },
+    customSEO: { en: { title: 'Paris to Berlin Train: 8h, from €60', description: 'TGV connection from Paris to Berlin in 8 hours. Check live schedules and book tickets from €60.' } },
+    localInsight: {
+      en: 'There\'s no single dedicated high-speed line running the whole way between the two capitals, so daytime journeys typically involve a change — commonly around Frankfurt or Mannheim — moving from the French TGV network onto German ICE track partway through. It\'s also why the recently revived Paris–Berlin night train (launched by European Sleeper in 2026) got so much attention: it finally offered a one-seat overnight option.',
+      es: 'No existe una única línea de alta velocidad dedicada que recorra todo el trayecto entre ambas capitales, así que los viajes diurnos suelen incluir un cambio de tren — habitualmente por Fráncfort o Mannheim — pasando de la red TGV francesa a la vía ICE alemana a mitad de camino. Por eso el tren nocturno Paris-Berlín relanzado recientemente (por European Sleeper en 2026) llamó tanto la atención: por fin ofrecía una opción directa sin cambios durante la noche.',
+      fr: 'Il n\'existe pas de ligne à grande vitesse unique et dédiée sur toute la distance entre les deux capitales, si bien que les trajets de jour impliquent généralement un changement — souvent autour de Francfort ou Mannheim — en passant du réseau TGV français à la voie ICE allemande en cours de route. C\'est aussi pourquoi le train de nuit Paris-Berlin récemment relancé (par European Sleeper en 2026) a tant fait parler de lui : il offrait enfin une option de nuit sans changement.',
+      it: 'Non esiste un\'unica linea ad alta velocità dedicata per l\'intera distanza tra le due capitali, quindi i viaggi diurni comportano solitamente un cambio — di solito intorno a Francoforte o Mannheim — passando dalla rete TGV francese ai binari ICE tedeschi a metà percorso. È anche per questo che il treno notturno Parigi-Berlino recentemente rilanciato (da European Sleeper nel 2026) ha attirato tanta attenzione: offriva finalmente un\'opzione notturna senza cambi.'
+    }
+  },
   { slug: 'paris-bordeaux', from: 'Paris', to: 'Bordeaux', country: 'France', duration: '2h 00m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France',
     customSEO: { en: { title: 'Paris to Bordeaux by Train: 2h TGV, from €30', description: 'High-speed TGV direct from Paris to Bordeaux in 2 hours. Compare today\'s schedule and book tickets from €30.' } },
     localInsight: {
@@ -488,7 +544,14 @@ const routes = [
     }
   },
   { slug: 'vienna-krems', from: 'Vienna', to: 'Krems', country: 'Austria', duration: '1h 00m', operator: 'ÖBB', price: '€10-15', badge: 'Route guide · Austria',
-    customSEO: { en: { title: 'How to Get from Vienna to Krems by Train (1h)', description: 'The Vienna to Krems train takes 1 hour on ÖBB. See today\'s departures and book tickets from €10.' } } },
+    customSEO: { en: { title: 'How to Get from Vienna to Krems by Train (1h)', description: 'The Vienna to Krems train takes 1 hour on ÖBB. See today\'s departures and book tickets from €10.' } },
+    localInsight: {
+      en: 'Krems sits at the edge of the Wachau Valley, a UNESCO World Heritage cultural landscape along the Danube known for centuries-old terraced vineyards climbing steep hillsides — recognised specifically because the valley\'s architecture, urban design and agriculture have developed together in harmony over a very long time, not just for the scenery.',
+      es: 'Krems está a la entrada del valle de Wachau, un paisaje cultural Patrimonio de la Humanidad de la UNESCO a orillas del Danubio, conocido por sus viñedos en terrazas centenarios que trepan por laderas empinadas — reconocido específicamente porque la arquitectura, el urbanismo y la agricultura del valle se desarrollaron juntos en armonía durante mucho tiempo, no solo por el paisaje.',
+      fr: 'Krems se trouve à l\'entrée de la vallée de la Wachau, un paysage culturel classé au patrimoine mondial de l\'UNESCO le long du Danube, connu pour ses vignobles en terrasses séculaires escaladant des coteaux abrupts — reconnu précisément parce que l\'architecture, l\'urbanisme et l\'agriculture de la vallée se sont développés ensemble en harmonie sur une très longue période, pas seulement pour le paysage.',
+      it: 'Krems si trova all\'ingresso della valle del Wachau, un paesaggio culturale Patrimonio dell\'Umanità UNESCO lungo il Danubio, noto per i suoi vigneti terrazzati secolari che salgono su pendii ripidi — riconosciuto proprio perché l\'architettura, l\'urbanistica e l\'agricoltura della valle si sono sviluppate insieme in armonia per moltissimo tempo, non solo per il paesaggio.'
+    }
+  },
   { slug: 'vienna-prague', from: 'Vienna', to: 'Prague', country: 'Austria-Czech', duration: '4h 00m', operator: 'Railjet', price: '€25-40', badge: 'Route guide · Austria-Czech',
     customSEO: { en: { title: 'Vienna to Prague by Train: 4h Railjet, from €25', description: 'ÖBB Railjet direct from Vienna to Prague in 4 hours, no layovers. Compare schedules and book comfortable tickets from €25.' } },
     localInsight: {
@@ -532,7 +595,14 @@ const routes = [
   { slug: 'strasbourg-paris', from: 'Strasbourg', to: 'Paris', country: 'France', duration: '1h 50m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France',
     customSEO: { en: { title: 'Strasbourg to Paris Train Guide: 1h50 on TGV', description: 'Everything you need for the Strasbourg to Paris train: 1h50 on TGV, fares from €30, and today\'s live schedule.' } } },
   { slug: 'munich-paris', from: 'Munich', to: 'Paris', country: 'Germany-France', duration: '6h 00m', operator: 'TGV/ICE', price: '€60-90', badge: 'Route guide · Germany-France',
-    customSEO: { en: { title: 'How to Get from Munich to Paris by Train (6h)', description: 'The Munich to Paris train takes 6 hours on TGV/ICE. See today\'s departures and book tickets from €60.' } } },
+    customSEO: { en: { title: 'How to Get from Munich to Paris by Train (6h)', description: 'The Munich to Paris train takes 6 hours on TGV/ICE. See today\'s departures and book tickets from €60.' } },
+    localInsight: {
+      en: 'This connection got significantly faster once the LGV Est high-speed line was fully extended to Strasbourg, completing in stages up to 2016 — before that, journeys routed further south via Basel or Zurich and typically took noticeably longer than the roughly 6 hours possible today.',
+      es: 'Esta conexión se volvió notablemente más rápida cuando la línea de alta velocidad LGV Est se extendió por completo hasta Estrasburgo, completándose por etapas hasta 2016 — antes, los trayectos pasaban más al sur, por Basilea o Zúrich, y solían tardar bastante más que las cerca de 6 horas que se tardan hoy.',
+      fr: 'Cette liaison est devenue nettement plus rapide une fois la LGV Est entièrement prolongée jusqu\'à Strasbourg, achevée par étapes jusqu\'en 2016 — avant cela, les trajets passaient plus au sud, via Bâle ou Zurich, et duraient généralement nettement plus longtemps que les quelque 6 heures possibles aujourd\'hui.',
+      it: 'Questo collegamento è diventato notevolmente più veloce quando la linea ad alta velocità LGV Est è stata completamente estesa fino a Strasburgo, completata a tappe fino al 2016 — prima, i viaggi passavano più a sud, via Basilea o Zurigo, e in genere richiedevano molto più tempo delle circa 6 ore possibili oggi.'
+    }
+  },
   { slug: 'cologne-brussels', from: 'Cologne', to: 'Brussels', country: 'Germany-Belgium', duration: '1h 50m', operator: 'ICE/Thalys', price: '€30-50', badge: 'Route guide · Germany-Belgium',
     customSEO: { en: { title: 'Cologne to Brussels by Train: 1h50 ICE/Thalys, from €30', description: 'Direct ICE/Thalys from Cologne to Brussels in 1h50. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
   { slug: 'copenhagen-prague', from: 'Copenhagen', to: 'Prague', country: 'Denmark-Czech', duration: '~12h 00m', operator: 'EuroCity/ICE', price: '€60-100', badge: 'Route guide · Denmark-Czech',
