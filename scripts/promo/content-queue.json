@@ -56,8 +56,8 @@
       "id": "basel-lauterbrunnen",
       "url": "https://glosx.app/rutas/basel-lauterbrunnen/",
       "label": "Basel → Lauterbrunnen",
-      "lastPromoted": null,
-      "timesPromoted": 0,
+      "lastPromoted": "2026-09-15T02:56:17.551Z",
+      "timesPromoted": 1,
       "from": "Basel",
       "to": "Lauterbrunnen"
     },
@@ -1190,6 +1190,13 @@
       "itemIds": [
         "barcelona-lyon",
         "barcelona-valencia"
+      ]
+    },
+    {
+      "campaignId": "2026-09-15-02-56",
+      "at": "2026-09-15T02:56:17.551Z",
+      "itemIds": [
+        "basel-lauterbrunnen"
       ]
     }
   ]

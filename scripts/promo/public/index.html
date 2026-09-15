@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Panel de promoción — glosx.app</title>
+<style>
+  :root { --bg: #15141a; --surface: #1e1d24; --border: rgba(255,255,255,0.1); --text: #f0eef2; --muted: #9b98a3; --accent: #ff5470; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, 'Segoe UI', sans-serif; margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .panel { max-width: 640px; width: 100%; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 28px; font-size: 14.5px; }
+  .row { display: flex; gap: 10px; align-items: center; margin-bottom: 20px; }
+  input[type=number] { width: 70px; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 10px 12px; border-radius: 10px; font-size: 15px; }
+  button { border: none; border-radius: 100px; font-weight: 800; cursor: pointer; transition: transform 0.1s, opacity 0.2s; }
+  button:active { transform: scale(0.98); }
+  .btn-main { background: linear-gradient(135deg, var(--accent), #c81846); color: #fff; font-size: 17px; padding: 18px 32px; width: 100%; box-shadow: 0 8px 30px rgba(255,84,112,0.3); }
+  .btn-main:disabled { opacity: 0.5; cursor: wait; }
+  .btn-secondary { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: 13px; padding: 10px 16px; }
+  .log { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; margin-top: 20px; font-family: 'SF Mono', Menlo, monospace; font-size: 12.5px; white-space: pre-wrap; max-height: 420px; overflow-y: auto; min-height: 80px; color: #c8c6d0; }
+  .log:empty::before { content: 'El resultado de la campaña aparece acá.'; color: var(--muted); }
+  .status-dot { width: 9px; height: 9px; border-radius: 50%; background: #4ade8a; display: inline-block; margin-right: 6px; animation: pulse 1.4s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <h1>🚂 Panel de promoción — glosx.app</h1>
+    <p class="sub">Tocá el botón, se arma una tanda de contenido nueva (texto + video) y se reparte por los canales conectados. Nada se repite antes de 14 días.</p>
+
+    <div class="row">
+      <label for="n" style="font-size:14px;color:var(--muted);">Cuántas rutas/posts en esta tanda:</label>
+      <input type="number" id="n" value="5" min="1" max="20" />
+      <button class="btn-secondary" id="btnCola">Actualizar cola</button>
+    </div>
+
+    <button class="btn-main" id="btnCampana">ARMAR CAMPAÑA</button>
+
+    <div class="log" id="log"></div>
+  </div>
+
+<script>
+  const btnCampana = document.getElementById('btnCampana');
+  const btnCola = document.getElementById('btnCola');
+  const log = document.getElementById('log');
+  const nInput = document.getElementById('n');
+
+  btnCampana.addEventListener('click', async () => {
+    btnCampana.disabled = true;
+    btnCampana.textContent = 'Armando campaña...';
+    log.textContent = '';
+    try {
+      const res = await fetch('/armar-campana?n=' + encodeURIComponent(nInput.value), { method: 'POST' });
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        log.textContent += decoder.decode(value);
+        log.scrollTop = log.scrollHeight;
+      }
+    } catch (e) {
+      log.textContent += '\nError de conexión: ' + e.message;
+    }
+    btnCampana.disabled = false;
+    btnCampana.textContent = 'ARMAR CAMPAÑA';
+  });
+
+  btnCola.addEventListener('click', async () => {
+    btnCola.disabled = true;
+    btnCola.textContent = 'Actualizando...';
+    const res = await fetch('/actualizar-cola', { method: 'POST' });
+    log.textContent = await res.text();
+    btnCola.disabled = false;
+    btnCola.textContent = 'Actualizar cola';
+  });
+</script>
+</body>
+</html>
