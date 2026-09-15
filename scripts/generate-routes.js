@@ -95,7 +95,14 @@ const routes = [
   { slug: 'frankfurt-munich', from: 'Frankfurt', to: 'Munich', country: 'Germany', duration: '3h 30m', operator: 'DB ICE', price: '€30-50', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Frankfurt to Munich Train: 3h30 ICE, from €30', description: 'Direct DB ICE from Frankfurt to Munich in 3.5 hours, no layovers. Compare fares from €30 and book your seat today.' } } },
   { slug: 'frankfurt-paris', from: 'Frankfurt', to: 'Paris', country: 'Germany-France', duration: '4h 00m', operator: 'TGV', price: '€40-60', badge: 'Route guide · Germany-France',
-    customSEO: { en: { title: 'Frankfurt to Paris by Train: 4h TGV, from €40', description: 'Direct TGV from Frankfurt to Paris in 4 hours, no layovers. Compare fares from €40, check today\'s schedule and book securely.' } } },
+    customSEO: { en: { title: 'Frankfurt to Paris by Train: 4h TGV, from €40', description: 'Direct TGV from Frankfurt to Paris in 4 hours, no layovers. Compare fares from €40, check today\'s schedule and book securely.' } },
+    localInsight: {
+      en: 'Trains on this route are jointly run by SNCF and Deutsche Bahn using rolling stock certified to operate on both the French and German high-speed networks — a technical arrangement that lets the same train run at full speed on both countries\' infrastructure rather than switching operators at the border.',
+      es: 'Los trenes de esta ruta los operan conjuntamente SNCF y Deutsche Bahn, con material rodante certificado para circular tanto en la red de alta velocidad francesa como en la alemana — un acuerdo técnico que permite que el mismo tren vaya a máxima velocidad en la infraestructura de ambos países en vez de cambiar de operador en la frontera.',
+      fr: 'Les trains de cette ligne sont exploités conjointement par la SNCF et la Deutsche Bahn, avec du matériel roulant certifié pour circuler à la fois sur les réseaux à grande vitesse français et allemand — un dispositif technique qui permet au même train de rouler à pleine vitesse sur les infrastructures des deux pays plutôt que de changer d\'opérateur à la frontière.',
+      it: 'I treni su questa tratta sono gestiti congiuntamente da SNCF e Deutsche Bahn, con materiale rotabile certificato per circolare sia sulla rete ad alta velocità francese che su quella tedesca — un accordo tecnico che permette allo stesso treno di viaggiare a piena velocità sulle infrastrutture di entrambi i paesi invece di cambiare operatore al confine.'
+    }
+  },
   { slug: 'geneva-paris', from: 'Geneva', to: 'Paris', country: 'Switzerland-France', duration: '3h 00m', operator: 'TGV Lyria', price: '€40-60', badge: 'Route guide · Switzerland-France',
     customSEO: { en: { title: 'Geneva to Paris Train: 3h, from €40', description: 'TGV Lyria connection from Geneva to Paris in 3 hours. Check live schedules and book tickets from €40.' } } },
   { slug: 'geneva-zermatt', from: 'Geneva', to: 'Zermatt', country: 'Switzerland', duration: '3h 30m', operator: 'SBB', price: '€45-65', badge: 'Route guide · Switzerland',
@@ -110,7 +117,14 @@ const routes = [
   { slug: 'girona-figueres', from: 'Girona', to: 'Figueres', country: 'Spain', duration: '0h 30m', operator: 'Renfe', price: '€5-10', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'How to Get from Girona to Figueres by Train (30 min)', description: 'The Girona to Figueres train takes 30 minutes on Renfe. See today\'s departures and book tickets from €5.' } } },
   { slug: 'interlaken-lauterbrunnen', from: 'Interlaken', to: 'Lauterbrunnen', country: 'Switzerland', duration: '0h 20m', operator: 'BOB', price: '€10-15', badge: 'Route guide · Switzerland',
-    customSEO: { en: { title: 'Interlaken to Lauterbrunnen Train: 20 min, from €10', description: 'Scenic BOB train from Interlaken to Lauterbrunnen in just 20 minutes. Check today\'s schedule and book tickets from €10.' } } },
+    customSEO: { en: { title: 'Interlaken to Lauterbrunnen Train: 20 min, from €10', description: 'Scenic BOB train from Interlaken to Lauterbrunnen in just 20 minutes. Check today\'s schedule and book tickets from €10.' } },
+    localInsight: {
+      en: 'The valley you\'re riding into has around 72 waterfalls dropping from its sheer rock walls, one of the highest concentrations found anywhere in the Alps — the 20-minute ride ends practically at the foot of Staubbach Falls, visible right from the village.',
+      es: 'El valle al que llega este tren tiene unas 72 cascadas que caen desde sus paredes de roca vertical, una de las mayores concentraciones de cascadas de todos los Alpes — el trayecto de 20 minutos termina prácticamente a los pies de la cascada de Staubbach, visible desde el mismo pueblo.',
+      fr: 'La vallée dans laquelle mène ce train compte environ 72 cascades tombant de ses parois rocheuses abruptes, l\'une des plus fortes concentrations de tout les Alpes — le trajet de 20 minutes se termine pratiquement au pied de la cascade de Staubbach, visible depuis le village lui-même.',
+      it: 'La valle in cui porta questo treno conta circa 72 cascate che precipitano dalle sue pareti rocciose a picco, una delle maggiori concentrazioni di tutte le Alpi — il tragitto di 20 minuti termina praticamente ai piedi della cascata di Staubbach, visibile direttamente dal paese.'
+    }
+  },
   { slug: 'lisbon-porto', from: 'Lisbon', to: 'Porto', country: 'Portugal', duration: '2h 30m', operator: 'CP', price: '€15-25', badge: 'Route guide · Portugal',
     customSEO: { en: { title: 'Lisbon to Porto by Train: 2h30 CP, from €15', description: 'Direct CP from Lisbon to Porto in 2h30. Compare today\'s schedule and book fares from €15 — no layovers.' } },
     localInsight: {
@@ -237,7 +251,14 @@ const routes = [
     }
   },
   { slug: 'munich-vienna', from: 'Munich', to: 'Vienna', country: 'Germany-Austria', duration: '4h 30m', operator: 'Railjet', price: '€35-55', badge: 'Route guide · Germany-Austria',
-    customSEO: { en: { title: 'Munich to Vienna Train Guide: 4h30 on Railjet', description: 'Everything you need for the Munich to Vienna train: 4h30 on Railjet, fares from €35, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Munich to Vienna Train Guide: 4h30 on Railjet', description: 'Everything you need for the Munich to Vienna train: 4h30 on Railjet, fares from €35, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'This is one of the busiest daytime international corridors in central Europe, run jointly by ÖBB and Deutsche Bahn with Railjet trains that also continue on to Budapest for some services — meaning the same physical train can connect three national capitals across a single day\'s schedule.',
+      es: 'Es uno de los corredores internacionales diurnos más transitados de Europa central, operado conjuntamente por ÖBB y Deutsche Bahn con trenes Railjet que en algunos servicios continúan hasta Budapest — es decir, el mismo tren físico puede conectar tres capitales nacionales en un solo horario del día.',
+      fr: 'C\'est l\'un des corridors internationaux diurnes les plus fréquentés d\'Europe centrale, exploité conjointement par ÖBB et la Deutsche Bahn avec des trains Railjet qui, pour certains services, continuent jusqu\'à Budapest — le même train physique peut donc relier trois capitales nationales dans une seule grille horaire de la journée.',
+      it: 'È uno dei corridoi internazionali diurni più trafficati dell\'Europa centrale, gestito congiuntamente da ÖBB e Deutsche Bahn con treni Railjet che per alcuni servizi proseguono fino a Budapest — lo stesso treno fisico può quindi collegare tre capitali nazionali in un unico orario giornaliero.'
+    }
+  },
   { slug: 'naples-salerno', from: 'Naples', to: 'Salerno', country: 'Italy', duration: '0h 40m', operator: 'Trenitalia', price: '€5-10', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Naples to Salerno Train: 40 min, from €5', description: 'Quick Trenitalia connection from Naples to Salerno in about 40 minutes. Check live times and book tickets from €5.' } } },
   { slug: 'naples-sorrento', from: 'Naples', to: 'Sorrento', country: 'Italy', duration: '1h 00m', operator: 'Circumvesuviana', price: '€5-10', badge: 'Route guide · Italy',
@@ -274,9 +295,23 @@ const routes = [
   { slug: 'paris-berlin', from: 'Paris', to: 'Berlin', country: 'France-Germany', duration: '8h 00m', operator: 'TGV', price: '€60-90', badge: 'Route guide · France-Germany',
     customSEO: { en: { title: 'Paris to Berlin Train: 8h, from €60', description: 'TGV connection from Paris to Berlin in 8 hours. Check live schedules and book tickets from €60.' } } },
   { slug: 'paris-bordeaux', from: 'Paris', to: 'Bordeaux', country: 'France', duration: '2h 00m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France',
-    customSEO: { en: { title: 'Paris to Bordeaux by Train: 2h TGV, from €30', description: 'High-speed TGV direct from Paris to Bordeaux in 2 hours. Compare today\'s schedule and book tickets from €30.' } } },
+    customSEO: { en: { title: 'Paris to Bordeaux by Train: 2h TGV, from €30', description: 'High-speed TGV direct from Paris to Bordeaux in 2 hours. Compare today\'s schedule and book tickets from €30.' } },
+    localInsight: {
+      en: 'The journey time dropped from well over 3 hours to about 2 when a new high-speed line (LGV Sud Europe Atlantique) opened in 2017 — one of the last major LGV lines built in France, and financed through a public-private partnership rather than by the state alone, an unusual model for a project of this size.',
+      es: 'El tiempo de viaje bajó de más de 3 horas a unas 2 cuando en 2017 se inauguró una nueva línea de alta velocidad (LGV Sud Europe Atlantique) — una de las últimas grandes líneas LGV construidas en Francia, financiada mediante una asociación público-privada en vez de solo por el Estado, un modelo poco habitual para un proyecto de este tamaño.',
+      fr: 'Le temps de trajet est passé de bien plus de 3 heures à environ 2 heures lorsqu\'une nouvelle ligne à grande vitesse (LGV Sud Europe Atlantique) a ouvert en 2017 — l\'une des dernières grandes lignes LGV construites en France, financée par un partenariat public-privé plutôt que par l\'État seul, un modèle inhabituel pour un projet de cette envergure.',
+      it: 'Il tempo di viaggio è sceso da oltre 3 ore a circa 2 quando nel 2017 è stata aperta una nuova linea ad alta velocità (LGV Sud Europe Atlantique) — una delle ultime grandi linee LGV costruite in Francia, finanziata tramite un partenariato pubblico-privato anziché dal solo Stato, un modello insolito per un progetto di queste dimensioni.'
+    }
+  },
   { slug: 'paris-bruges', from: 'Paris', to: 'Bruges', country: 'France-Belgium', duration: '2h 30m', operator: 'TGV', price: '€35-55', badge: 'Route guide · France-Belgium',
-    customSEO: { en: { title: 'Paris to Bruges Train Guide: 2h30 on TGV', description: 'Everything you need for the Paris to Bruges train: 2h30 on TGV, fares from €35, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Paris to Bruges Train Guide: 2h30 on TGV', description: 'Everything you need for the Paris to Bruges train: 2h30 on TGV, fares from €35, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'This route runs through Lille-Europe, one of the busiest rail interchange stations in Europe, where Eurostar, Thalys/Eurostar and domestic TGV lines all cross — built specifically in the 1990s to turn Lille into a hub rather than just a stop between Paris, London and Brussels.',
+      es: 'Esta ruta pasa por Lille-Europa, una de las estaciones de intercambio ferroviario más transitadas de Europa, donde se cruzan las líneas de Eurostar, Thalys/Eurostar y el TGV nacional — construida específicamente en los años 90 para convertir a Lille en un nudo ferroviario y no solo en una parada entre París, Londres y Bruselas.',
+      fr: 'Cet itinéraire passe par Lille-Europe, l\'une des gares de correspondance les plus fréquentées d\'Europe, où se croisent les lignes Eurostar, Thalys/Eurostar et TGV domestique — construite spécifiquement dans les années 1990 pour faire de Lille un véritable hub plutôt qu\'un simple arrêt entre Paris, Londres et Bruxelles.',
+      it: 'Questo percorso passa per Lille-Europe, una delle stazioni di interscambio ferroviario più trafficate d\'Europa, dove si incrociano le linee Eurostar, Thalys/Eurostar e TGV nazionale — costruita appositamente negli anni \'90 per trasformare Lille in un vero hub anziché una semplice fermata tra Parigi, Londra e Bruxelles.'
+    }
+  },
   { slug: 'paris-london', from: 'Paris', to: 'London', country: 'France-UK', duration: '2h 30m', operator: 'Eurostar', price: '€50-80', badge: 'Route guide · France-UK',
     customSEO: { en: { title: 'How to Get from Paris to London by Train (2h30)', description: 'The Paris to London train takes 2h30 on Eurostar. See today\'s departures and book tickets from €50.' } },
     localInsight: {
@@ -302,7 +337,14 @@ const routes = [
   { slug: 'paris-milan', from: 'Paris', to: 'Milan', country: 'France-Italy', duration: '7h 00m', operator: 'TGV', price: '€60-90', badge: 'Route guide · France-Italy',
     customSEO: { en: { title: 'How to Get from Paris to Milan by Train (7h)', description: 'The Paris to Milan train takes 7 hours on TGV. See today\'s departures and book tickets from €60.' } } },
   { slug: 'paris-nice', from: 'Paris', to: 'Nice', country: 'France', duration: '5h 30m', operator: 'TGV', price: '€40-65', badge: 'Route guide · France',
-    customSEO: { en: { title: 'Paris to Nice by Train: 5h30 TGV, from €40', description: 'Direct TGV from Paris to Nice in 5h30. Compare today\'s schedule and book fares from €40 — no layovers.' } } },
+    customSEO: { en: { title: 'Paris to Nice by Train: 5h30 TGV, from €40', description: 'Direct TGV from Paris to Nice in 5h30. Compare today\'s schedule and book fares from €40 — no layovers.' } },
+    localInsight: {
+      en: 'This corridor carried the legendary Train Bleu, a luxury overnight service that ran from the 1920s until the 1990s connecting Paris to the Riviera for wealthy travellers heading to Nice, Cannes and Monaco. Its name lives on at the ornate restaurant inside Gare de Lyon, the same station today\'s TGV to Nice still departs from.',
+      es: 'Este corredor fue la ruta del legendario Train Bleu, un tren nocturno de lujo que circuló desde los años 20 hasta los 90 conectando París con la Riviera para viajeros adinerados que iban a Niza, Cannes o Mónaco. Su nombre sigue vivo en el ornamentado restaurante dentro de la Gare de Lyon, la misma estación de la que hoy sale el TGV a Niza.',
+      fr: 'Ce corridor a porté le légendaire Train Bleu, un service de nuit de luxe qui a circulé des années 1920 jusqu\'aux années 1990, reliant Paris à la Riviera pour des voyageurs fortunés en route vers Nice, Cannes ou Monaco. Son nom subsiste dans le restaurant richement décoré situé à l\'intérieur de la Gare de Lyon, la même gare d\'où part aujourd\'hui le TGV vers Nice.',
+      it: 'Questo corridoio ha ospitato il leggendario Train Bleu, un treno notturno di lusso che ha circolato dagli anni \'20 fino agli anni \'90 collegando Parigi alla Riviera per viaggiatori facoltosi diretti a Nizza, Cannes o Monaco. Il suo nome sopravvive nell\'elegante ristorante all\'interno della Gare de Lyon, la stessa stazione da cui parte oggi il TGV per Nizza.'
+    }
+  },
   { slug: 'paris-rome', from: 'Paris', to: 'Rome', country: 'France-Italy', duration: '11h 00m', operator: 'TGV', price: '€80-120', badge: 'Route guide · France-Italy',
     customSEO: { en: { title: 'Paris to Rome Train: 11h, from €80', description: 'TGV connection from Paris to Rome in 11 hours. Check live schedules and book tickets from €80.' } } },
   { slug: 'paris-toulouse', from: 'Paris', to: 'Toulouse', country: 'France', duration: '4h 20m', operator: 'SNCF TGV', price: '€25-40', badge: 'Route guide · France',
@@ -334,7 +376,14 @@ const routes = [
     }
   },
   { slug: 'rome-naples', from: 'Rome', to: 'Naples', country: 'Italy', duration: '1h 10m', operator: 'Trenitalia', price: '€15-25', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'Rome to Naples Train: 1h10 high-speed, from €15', description: 'Fast Trenitalia connection from Rome to Naples in just over an hour. Check live schedules and book tickets from €15.' } } },
+    customSEO: { en: { title: 'Rome to Naples Train: 1h10 high-speed, from €15', description: 'Fast Trenitalia connection from Rome to Naples in just over an hour. Check live schedules and book tickets from €15.' } },
+    localInsight: {
+      en: 'This was Italy\'s first true 300 km/h high-speed line, opening in December 2005 — years before the Milan–Bologna and Bologna–Florence high-speed sections were completed. It\'s the segment that effectively proved the model for the rest of the country\'s Alta Velocità network.',
+      es: 'Esta fue la primera línea de alta velocidad real a 300 km/h de Italia, inaugurada en diciembre de 2005 — años antes de que se completaran los tramos de alta velocidad Milán-Bolonia y Bolonia-Florencia. Es el tramo que, en la práctica, probó el modelo para el resto de la red Alta Velocità del país.',
+      fr: 'Ce fut la première véritable ligne à grande vitesse de 300 km/h en Italie, ouverte en décembre 2005 — des années avant l\'achèvement des tronçons à grande vitesse Milan-Bologne et Bologne-Florence. C\'est ce segment qui, dans les faits, a validé le modèle pour le reste du réseau Alta Velocità du pays.',
+      it: 'Questa fu la prima vera linea ad alta velocità a 300 km/h in Italia, aperta nel dicembre 2005 — anni prima che fossero completate le tratte ad alta velocità Milano-Bologna e Bologna-Firenze. È il segmento che di fatto ha collaudato il modello per il resto della rete Alta Velocità del paese.'
+    }
+  },
   { slug: 'rome-venice', from: 'Rome', to: 'Venice', country: 'Italy', duration: '4h 00m', operator: 'Trenitalia', price: '€30-50', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Rome to Venice by Train: 4h high-speed, from €30', description: 'Direct Trenitalia high-speed train from Rome to Venice in 4 hours. See today\'s schedule and book fares from €30 in your currency.' } } },
   { slug: 'stockholm-oslo', from: 'Stockholm', to: 'Oslo', country: 'Sweden-Norway', duration: '6h 00m', operator: 'SJ', price: '€40-60', badge: 'Route guide · Sweden-Norway',
@@ -347,7 +396,14 @@ const routes = [
     }
   },
   { slug: 'toulouse-lourdes', from: 'Toulouse', to: 'Lourdes', country: 'France', duration: '2h 00m', operator: 'SNCF Intercités', price: '€15-25', badge: 'Route guide · France',
-    customSEO: { en: { title: 'Toulouse to Lourdes by Train: 2h SNCF Intercités, from €15', description: 'Direct SNCF Intercités from Toulouse to Lourdes in 2 hours. Compare today\'s schedule and book fares from €15 — no layovers.' } } },
+    customSEO: { en: { title: 'Toulouse to Lourdes by Train: 2h SNCF Intercités, from €15', description: 'Direct SNCF Intercités from Toulouse to Lourdes in 2 hours. Compare today\'s schedule and book fares from €15 — no layovers.' } },
+    localInsight: {
+      en: 'Lourdes receives around 6 million visitors a year, making it one of the most-visited Catholic pilgrimage sites in the world despite the town itself having a population of only about 13,000 — the station was built with far more capacity than a town this size would normally need, precisely because of the pilgrimage traffic.',
+      es: 'Lourdes recibe cerca de 6 millones de visitantes al año, lo que la convierte en uno de los sitios de peregrinación católica más visitados del mundo, pese a que la localidad tiene apenas unos 13.000 habitantes — la estación se construyó con mucha más capacidad de la que normalmente necesitaría un pueblo de ese tamaño, justamente por el tráfico de peregrinos.',
+      fr: 'Lourdes accueille environ 6 millions de visiteurs par an, ce qui en fait l\'un des sites de pèlerinage catholique les plus visités au monde, alors que la ville elle-même ne compte qu\'environ 13 000 habitants — la gare a été construite avec une capacité bien supérieure à celle qu\'une ville de cette taille nécessiterait normalement, précisément à cause du flux de pèlerins.',
+      it: 'Lourdes accoglie circa 6 milioni di visitatori all\'anno, il che la rende uno dei siti di pellegrinaggio cattolico più visitati al mondo, nonostante la città stessa conti solo circa 13.000 abitanti — la stazione fu costruita con una capacità ben superiore a quella normalmente necessaria per una città di queste dimensioni, proprio a causa del flusso di pellegrini.'
+    }
+  },
   { slug: 'turin-milan', from: 'Turin', to: 'Milan', country: 'Italy', duration: '1h 30m', operator: 'Trenitalia', price: '€15-25', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Turin to Milan Train: 1h30, from €15', description: 'Trenitalia connection from Turin to Milan in 1h30. Check live schedules and book tickets from €15.' } } },
   { slug: 'venice-milan', from: 'Venice', to: 'Milan', country: 'Italy', duration: '2h 30m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
@@ -384,9 +440,23 @@ const routes = [
   { slug: 'zaragoza-barcelona', from: 'Zaragoza', to: 'Barcelona', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Zaragoza to Barcelona Train: 1h30 AVE, from €15', description: 'High-speed Renfe AVE from Zaragoza to Barcelona in 1.5 hours. Compare live schedules and book tickets from €15.' } } },
   { slug: 'zurich-lucerne', from: 'Zurich', to: 'Lucerne', country: 'Switzerland', duration: '0h 50m', operator: 'SBB', price: '€15-25', badge: 'Route guide · Switzerland',
-    customSEO: { en: { title: 'Zurich to Lucerne by Train: 50 min, from €15', description: 'Direct SBB train from Zurich to Lucerne in under an hour. Compare today\'s schedule and book fares from €15.' } } },
+    customSEO: { en: { title: 'Zurich to Lucerne by Train: 50 min, from €15', description: 'Direct SBB train from Zurich to Lucerne in under an hour. Compare today\'s schedule and book fares from €15.' } },
+    localInsight: {
+      en: 'This is one of the busiest domestic corridors in Switzerland, with trains typically every 15-30 minutes throughout the day — it\'s used at least as much by daily commuters as by visitors heading to Lake Lucerne, so there\'s rarely a reason to plan far ahead around a specific departure.',
+      es: 'Es uno de los corredores domésticos más transitados de Suiza, con trenes cada 15-30 minutos durante todo el día — lo usan al menos tanto los que viajan a diario por trabajo como los visitantes que van al lago de Lucerna, así que casi nunca hace falta planificar con mucha anticipación un horario concreto.',
+      fr: 'C\'est l\'un des corridors nationaux les plus fréquentés de Suisse, avec des trains toutes les 15 à 30 minutes tout au long de la journée — il est utilisé au moins autant par les navetteurs quotidiens que par les visiteurs se rendant au lac des Quatre-Cantons, donc il est rarement nécessaire de planifier longtemps à l\'avance un horaire précis.',
+      it: 'È uno dei corridoi nazionali più trafficati della Svizzera, con treni ogni 15-30 minuti durante tutta la giornata — è usato almeno quanto dai pendolari quotidiani quanto dai visitatori diretti al lago dei Quattro Cantoni, quindi raramente serve pianificare con largo anticipo un orario preciso.'
+    }
+  },
   { slug: 'zurich-milan', from: 'Zurich', to: 'Milan', country: 'Switzerland-Italy', duration: '3h 30m', operator: 'SBB', price: '€35-55', badge: 'Route guide · Switzerland-Italy',
-    customSEO: { en: { title: 'Zurich to Milan Train: 3h30, from €35', description: 'SBB connection from Zurich to Milan in 3h30. Check live schedules and book tickets from €35.' } } },
+    customSEO: { en: { title: 'Zurich to Milan Train: 3h30, from €35', description: 'SBB connection from Zurich to Milan in 3h30. Check live schedules and book tickets from €35.' } },
+    localInsight: {
+      en: 'On the way south, the train stops at Bellinzona, gateway to Ticino — Switzerland\'s only Italian-speaking canton. It\'s a genuine linguistic and cultural border inside the country itself, so the announcements, food on board and general feel of the trip noticeably shift before you\'ve even crossed into Italy.',
+      es: 'Camino al sur, el tren para en Bellinzona, la puerta de entrada al Tesino — el único cantón de habla italiana de Suiza. Es una frontera lingüística y cultural real dentro del propio país, así que los anuncios, la comida a bordo y el ambiente general del viaje cambian de forma notable incluso antes de cruzar a Italia.',
+      fr: 'En route vers le sud, le train s\'arrête à Bellinzone, porte d\'entrée du Tessin — le seul canton italophone de Suisse. C\'est une véritable frontière linguistique et culturelle à l\'intérieur même du pays, si bien que les annonces, la restauration à bord et l\'ambiance générale du voyage changent nettement avant même d\'entrer en Italie.',
+      it: 'Verso sud, il treno si ferma a Bellinzona, porta d\'accesso al Ticino — l\'unico cantone di lingua italiana della Svizzera. È un vero confine linguistico e culturale all\'interno del paese stesso, quindi gli annunci, il cibo a bordo e l\'atmosfera generale del viaggio cambiano in modo evidente ancora prima di entrare in Italia.'
+    }
+  },
   // Tanda nueva (17-ago-2026): pares con position_id de Klook ya verificado
   // (KLOOK_POSITION_PAIRS en backend/affiliate.ts) pero sin página /rutas/ todavía.
   { slug: 'strasbourg-paris', from: 'Strasbourg', to: 'Paris', country: 'France', duration: '1h 50m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France',
