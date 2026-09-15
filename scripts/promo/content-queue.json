@@ -1,0 +1,1196 @@
+{
+  "updatedAt": "2026-09-15T02:54:41.925Z",
+  "items": {
+    "amsterdam-berlin": {
+      "type": "ruta",
+      "id": "amsterdam-berlin",
+      "url": "https://glosx.app/rutas/amsterdam-berlin/",
+      "label": "Amsterdam → Berlin",
+      "lastPromoted": "2026-09-15T02:50:21.844Z",
+      "timesPromoted": 1,
+      "from": "Amsterdam",
+      "to": "Berlin"
+    },
+    "amsterdam-brussels": {
+      "type": "ruta",
+      "id": "amsterdam-brussels",
+      "url": "https://glosx.app/rutas/amsterdam-brussels/",
+      "label": "Amsterdam → Brussels",
+      "lastPromoted": "2026-09-15T02:50:21.844Z",
+      "timesPromoted": 1,
+      "from": "Amsterdam",
+      "to": "Brussels"
+    },
+    "barcelona-girona": {
+      "type": "ruta",
+      "id": "barcelona-girona",
+      "url": "https://glosx.app/rutas/barcelona-girona/",
+      "label": "Barcelona → Girona",
+      "lastPromoted": "2026-09-15T02:50:21.844Z",
+      "timesPromoted": 1,
+      "from": "Barcelona",
+      "to": "Girona"
+    },
+    "barcelona-lyon": {
+      "type": "ruta",
+      "id": "barcelona-lyon",
+      "url": "https://glosx.app/rutas/barcelona-lyon/",
+      "label": "Barcelona → Lyon",
+      "lastPromoted": "2026-09-15T02:54:41.952Z",
+      "timesPromoted": 1,
+      "from": "Barcelona",
+      "to": "Lyon"
+    },
+    "barcelona-valencia": {
+      "type": "ruta",
+      "id": "barcelona-valencia",
+      "url": "https://glosx.app/rutas/barcelona-valencia/",
+      "label": "Barcelona → Valencia",
+      "lastPromoted": "2026-09-15T02:54:41.952Z",
+      "timesPromoted": 1,
+      "from": "Barcelona",
+      "to": "Valencia"
+    },
+    "basel-lauterbrunnen": {
+      "type": "ruta",
+      "id": "basel-lauterbrunnen",
+      "url": "https://glosx.app/rutas/basel-lauterbrunnen/",
+      "label": "Basel → Lauterbrunnen",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Basel",
+      "to": "Lauterbrunnen"
+    },
+    "basel-paris": {
+      "type": "ruta",
+      "id": "basel-paris",
+      "url": "https://glosx.app/rutas/basel-paris/",
+      "label": "Basel → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Basel",
+      "to": "Paris"
+    },
+    "berlin-hamburg": {
+      "type": "ruta",
+      "id": "berlin-hamburg",
+      "url": "https://glosx.app/rutas/berlin-hamburg/",
+      "label": "Berlin → Hamburg",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Berlin",
+      "to": "Hamburg"
+    },
+    "berlin-prague": {
+      "type": "ruta",
+      "id": "berlin-prague",
+      "url": "https://glosx.app/rutas/berlin-prague/",
+      "label": "Berlin → Prague",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Berlin",
+      "to": "Prague"
+    },
+    "bordeaux-lourdes": {
+      "type": "ruta",
+      "id": "bordeaux-lourdes",
+      "url": "https://glosx.app/rutas/bordeaux-lourdes/",
+      "label": "Bordeaux → Lourdes",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Bordeaux",
+      "to": "Lourdes"
+    },
+    "brno-vienna": {
+      "type": "ruta",
+      "id": "brno-vienna",
+      "url": "https://glosx.app/rutas/brno-vienna/",
+      "label": "Brno → Vienna",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Brno",
+      "to": "Vienna"
+    },
+    "brussels-bruges": {
+      "type": "ruta",
+      "id": "brussels-bruges",
+      "url": "https://glosx.app/rutas/brussels-bruges/",
+      "label": "Brussels → Bruges",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Brussels",
+      "to": "Bruges"
+    },
+    "brussels-paris": {
+      "type": "ruta",
+      "id": "brussels-paris",
+      "url": "https://glosx.app/rutas/brussels-paris/",
+      "label": "Brussels → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Brussels",
+      "to": "Paris"
+    },
+    "budapest-ljubljana": {
+      "type": "ruta",
+      "id": "budapest-ljubljana",
+      "url": "https://glosx.app/rutas/budapest-ljubljana/",
+      "label": "Budapest → Ljubljana",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Budapest",
+      "to": "Ljubljana"
+    },
+    "copenhagen-stockholm": {
+      "type": "ruta",
+      "id": "copenhagen-stockholm",
+      "url": "https://glosx.app/rutas/copenhagen-stockholm/",
+      "label": "Copenhagen → Stockholm",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Copenhagen",
+      "to": "Stockholm"
+    },
+    "dortmund-munich": {
+      "type": "ruta",
+      "id": "dortmund-munich",
+      "url": "https://glosx.app/rutas/dortmund-munich/",
+      "label": "Dortmund → Munich",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Dortmund",
+      "to": "Munich"
+    },
+    "florence-pisa": {
+      "type": "ruta",
+      "id": "florence-pisa",
+      "url": "https://glosx.app/rutas/florence-pisa/",
+      "label": "Florence → Pisa",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Florence",
+      "to": "Pisa"
+    },
+    "florence-siena": {
+      "type": "ruta",
+      "id": "florence-siena",
+      "url": "https://glosx.app/rutas/florence-siena/",
+      "label": "Florence → Siena",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Florence",
+      "to": "Siena"
+    },
+    "florence-venice": {
+      "type": "ruta",
+      "id": "florence-venice",
+      "url": "https://glosx.app/rutas/florence-venice/",
+      "label": "Florence → Venice",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Florence",
+      "to": "Venice"
+    },
+    "frankfurt-cologne": {
+      "type": "ruta",
+      "id": "frankfurt-cologne",
+      "url": "https://glosx.app/rutas/frankfurt-cologne/",
+      "label": "Frankfurt → Cologne",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Frankfurt",
+      "to": "Cologne"
+    },
+    "frankfurt-munich": {
+      "type": "ruta",
+      "id": "frankfurt-munich",
+      "url": "https://glosx.app/rutas/frankfurt-munich/",
+      "label": "Frankfurt → Munich",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Frankfurt",
+      "to": "Munich"
+    },
+    "frankfurt-paris": {
+      "type": "ruta",
+      "id": "frankfurt-paris",
+      "url": "https://glosx.app/rutas/frankfurt-paris/",
+      "label": "Frankfurt → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Frankfurt",
+      "to": "Paris"
+    },
+    "geneva-paris": {
+      "type": "ruta",
+      "id": "geneva-paris",
+      "url": "https://glosx.app/rutas/geneva-paris/",
+      "label": "Geneva → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Geneva",
+      "to": "Paris"
+    },
+    "geneva-zermatt": {
+      "type": "ruta",
+      "id": "geneva-zermatt",
+      "url": "https://glosx.app/rutas/geneva-zermatt/",
+      "label": "Geneva → Zermatt",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Geneva",
+      "to": "Zermatt"
+    },
+    "girona-figueres": {
+      "type": "ruta",
+      "id": "girona-figueres",
+      "url": "https://glosx.app/rutas/girona-figueres/",
+      "label": "Girona → Figueres",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Girona",
+      "to": "Figueres"
+    },
+    "interlaken-lauterbrunnen": {
+      "type": "ruta",
+      "id": "interlaken-lauterbrunnen",
+      "url": "https://glosx.app/rutas/interlaken-lauterbrunnen/",
+      "label": "Interlaken → Lauterbrunnen",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Interlaken",
+      "to": "Lauterbrunnen"
+    },
+    "lisbon-porto": {
+      "type": "ruta",
+      "id": "lisbon-porto",
+      "url": "https://glosx.app/rutas/lisbon-porto/",
+      "label": "Lisbon → Porto",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Lisbon",
+      "to": "Porto"
+    },
+    "london-amsterdam": {
+      "type": "ruta",
+      "id": "london-amsterdam",
+      "url": "https://glosx.app/rutas/london-amsterdam/",
+      "label": "London → Amsterdam",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Amsterdam"
+    },
+    "london-brussels": {
+      "type": "ruta",
+      "id": "london-brussels",
+      "url": "https://glosx.app/rutas/london-brussels/",
+      "label": "London → Brussels",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Brussels"
+    },
+    "london-cambridge": {
+      "type": "ruta",
+      "id": "london-cambridge",
+      "url": "https://glosx.app/rutas/london-cambridge/",
+      "label": "London → Cambridge",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Cambridge"
+    },
+    "london-edinburgh": {
+      "type": "ruta",
+      "id": "london-edinburgh",
+      "url": "https://glosx.app/rutas/london-edinburgh/",
+      "label": "London → Edinburgh",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Edinburgh"
+    },
+    "london-liverpool": {
+      "type": "ruta",
+      "id": "london-liverpool",
+      "url": "https://glosx.app/rutas/london-liverpool/",
+      "label": "London → Liverpool",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Liverpool"
+    },
+    "london-manchester": {
+      "type": "ruta",
+      "id": "london-manchester",
+      "url": "https://glosx.app/rutas/london-manchester/",
+      "label": "London → Manchester",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Manchester"
+    },
+    "london-oxford": {
+      "type": "ruta",
+      "id": "london-oxford",
+      "url": "https://glosx.app/rutas/london-oxford/",
+      "label": "London → Oxford",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Oxford"
+    },
+    "london-paris": {
+      "type": "ruta",
+      "id": "london-paris",
+      "url": "https://glosx.app/rutas/london-paris/",
+      "label": "London → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "Paris"
+    },
+    "london-york": {
+      "type": "ruta",
+      "id": "london-york",
+      "url": "https://glosx.app/rutas/london-york/",
+      "label": "London → York",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "London",
+      "to": "York"
+    },
+    "lyon-turin": {
+      "type": "ruta",
+      "id": "lyon-turin",
+      "url": "https://glosx.app/rutas/lyon-turin/",
+      "label": "Lyon → Turin",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Lyon",
+      "to": "Turin"
+    },
+    "madrid-barcelona": {
+      "type": "ruta",
+      "id": "madrid-barcelona",
+      "url": "https://glosx.app/rutas/madrid-barcelona/",
+      "label": "Madrid → Barcelona",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Madrid",
+      "to": "Barcelona"
+    },
+    "madrid-malaga": {
+      "type": "ruta",
+      "id": "madrid-malaga",
+      "url": "https://glosx.app/rutas/madrid-malaga/",
+      "label": "Madrid → Malaga",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Madrid",
+      "to": "Malaga"
+    },
+    "madrid-seville": {
+      "type": "ruta",
+      "id": "madrid-seville",
+      "url": "https://glosx.app/rutas/madrid-seville/",
+      "label": "Madrid → Seville",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Madrid",
+      "to": "Seville"
+    },
+    "madrid-valencia": {
+      "type": "ruta",
+      "id": "madrid-valencia",
+      "url": "https://glosx.app/rutas/madrid-valencia/",
+      "label": "Madrid → Valencia",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Madrid",
+      "to": "Valencia"
+    },
+    "madrid-zaragoza": {
+      "type": "ruta",
+      "id": "madrid-zaragoza",
+      "url": "https://glosx.app/rutas/madrid-zaragoza/",
+      "label": "Madrid → Zaragoza",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Madrid",
+      "to": "Zaragoza"
+    },
+    "marseille-miramas": {
+      "type": "ruta",
+      "id": "marseille-miramas",
+      "url": "https://glosx.app/rutas/marseille-miramas/",
+      "label": "Marseille → Miramas",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Marseille",
+      "to": "Miramas"
+    },
+    "milan-florence": {
+      "type": "ruta",
+      "id": "milan-florence",
+      "url": "https://glosx.app/rutas/milan-florence/",
+      "label": "Milan → Florence",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Milan",
+      "to": "Florence"
+    },
+    "milan-rome": {
+      "type": "ruta",
+      "id": "milan-rome",
+      "url": "https://glosx.app/rutas/milan-rome/",
+      "label": "Milan → Rome",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Milan",
+      "to": "Rome"
+    },
+    "milan-zurich": {
+      "type": "ruta",
+      "id": "milan-zurich",
+      "url": "https://glosx.app/rutas/milan-zurich/",
+      "label": "Milan → Zurich",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Milan",
+      "to": "Zurich"
+    },
+    "montreux-interlaken": {
+      "type": "ruta",
+      "id": "montreux-interlaken",
+      "url": "https://glosx.app/rutas/montreux-interlaken/",
+      "label": "Montreux → Interlaken",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Montreux",
+      "to": "Interlaken"
+    },
+    "munich-berlin": {
+      "type": "ruta",
+      "id": "munich-berlin",
+      "url": "https://glosx.app/rutas/munich-berlin/",
+      "label": "Munich → Berlin",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Munich",
+      "to": "Berlin"
+    },
+    "munich-prague": {
+      "type": "ruta",
+      "id": "munich-prague",
+      "url": "https://glosx.app/rutas/munich-prague/",
+      "label": "Munich → Prague",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Munich",
+      "to": "Prague"
+    },
+    "munich-venice": {
+      "type": "ruta",
+      "id": "munich-venice",
+      "url": "https://glosx.app/rutas/munich-venice/",
+      "label": "Munich → Venice",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Munich",
+      "to": "Venice"
+    },
+    "munich-vienna": {
+      "type": "ruta",
+      "id": "munich-vienna",
+      "url": "https://glosx.app/rutas/munich-vienna/",
+      "label": "Munich → Vienna",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Munich",
+      "to": "Vienna"
+    },
+    "naples-salerno": {
+      "type": "ruta",
+      "id": "naples-salerno",
+      "url": "https://glosx.app/rutas/naples-salerno/",
+      "label": "Naples → Salerno",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Naples",
+      "to": "Salerno"
+    },
+    "naples-sorrento": {
+      "type": "ruta",
+      "id": "naples-sorrento",
+      "url": "https://glosx.app/rutas/naples-sorrento/",
+      "label": "Naples → Sorrento",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Naples",
+      "to": "Sorrento"
+    },
+    "nice-monaco": {
+      "type": "ruta",
+      "id": "nice-monaco",
+      "url": "https://glosx.app/rutas/nice-monaco/",
+      "label": "Nice → Monaco",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Nice",
+      "to": "Monaco"
+    },
+    "oslo-bergen": {
+      "type": "ruta",
+      "id": "oslo-bergen",
+      "url": "https://glosx.app/rutas/oslo-bergen/",
+      "label": "Oslo → Bergen",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Oslo",
+      "to": "Bergen"
+    },
+    "paris-amsterdam": {
+      "type": "ruta",
+      "id": "paris-amsterdam",
+      "url": "https://glosx.app/rutas/paris-amsterdam/",
+      "label": "Paris → Amsterdam",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Amsterdam"
+    },
+    "paris-barcelona": {
+      "type": "ruta",
+      "id": "paris-barcelona",
+      "url": "https://glosx.app/rutas/paris-barcelona/",
+      "label": "Paris → Barcelona",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Barcelona"
+    },
+    "paris-berlin": {
+      "type": "ruta",
+      "id": "paris-berlin",
+      "url": "https://glosx.app/rutas/paris-berlin/",
+      "label": "Paris → Berlin",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Berlin"
+    },
+    "paris-bordeaux": {
+      "type": "ruta",
+      "id": "paris-bordeaux",
+      "url": "https://glosx.app/rutas/paris-bordeaux/",
+      "label": "Paris → Bordeaux",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Bordeaux"
+    },
+    "paris-bruges": {
+      "type": "ruta",
+      "id": "paris-bruges",
+      "url": "https://glosx.app/rutas/paris-bruges/",
+      "label": "Paris → Bruges",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Bruges"
+    },
+    "paris-london": {
+      "type": "ruta",
+      "id": "paris-london",
+      "url": "https://glosx.app/rutas/paris-london/",
+      "label": "Paris → London",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "London"
+    },
+    "paris-lourdes": {
+      "type": "ruta",
+      "id": "paris-lourdes",
+      "url": "https://glosx.app/rutas/paris-lourdes/",
+      "label": "Paris → Lourdes",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Lourdes"
+    },
+    "paris-lucerne": {
+      "type": "ruta",
+      "id": "paris-lucerne",
+      "url": "https://glosx.app/rutas/paris-lucerne/",
+      "label": "Paris → Lucerne",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Lucerne"
+    },
+    "paris-lyon": {
+      "type": "ruta",
+      "id": "paris-lyon",
+      "url": "https://glosx.app/rutas/paris-lyon/",
+      "label": "Paris → Lyon",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Lyon"
+    },
+    "paris-milan": {
+      "type": "ruta",
+      "id": "paris-milan",
+      "url": "https://glosx.app/rutas/paris-milan/",
+      "label": "Paris → Milan",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Milan"
+    },
+    "paris-nice": {
+      "type": "ruta",
+      "id": "paris-nice",
+      "url": "https://glosx.app/rutas/paris-nice/",
+      "label": "Paris → Nice",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Nice"
+    },
+    "paris-rome": {
+      "type": "ruta",
+      "id": "paris-rome",
+      "url": "https://glosx.app/rutas/paris-rome/",
+      "label": "Paris → Rome",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Rome"
+    },
+    "paris-toulouse": {
+      "type": "ruta",
+      "id": "paris-toulouse",
+      "url": "https://glosx.app/rutas/paris-toulouse/",
+      "label": "Paris → Toulouse",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Toulouse"
+    },
+    "paris-venice": {
+      "type": "ruta",
+      "id": "paris-venice",
+      "url": "https://glosx.app/rutas/paris-venice/",
+      "label": "Paris → Venice",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Venice"
+    },
+    "paris-zurich": {
+      "type": "ruta",
+      "id": "paris-zurich",
+      "url": "https://glosx.app/rutas/paris-zurich/",
+      "label": "Paris → Zurich",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Paris",
+      "to": "Zurich"
+    },
+    "prague-brno": {
+      "type": "ruta",
+      "id": "prague-brno",
+      "url": "https://glosx.app/rutas/prague-brno/",
+      "label": "Prague → Brno",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Prague",
+      "to": "Brno"
+    },
+    "prague-budapest": {
+      "type": "ruta",
+      "id": "prague-budapest",
+      "url": "https://glosx.app/rutas/prague-budapest/",
+      "label": "Prague → Budapest",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Prague",
+      "to": "Budapest"
+    },
+    "prague-vienna": {
+      "type": "ruta",
+      "id": "prague-vienna",
+      "url": "https://glosx.app/rutas/prague-vienna/",
+      "label": "Prague → Vienna",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Prague",
+      "to": "Vienna"
+    },
+    "rome-florence": {
+      "type": "ruta",
+      "id": "rome-florence",
+      "url": "https://glosx.app/rutas/rome-florence/",
+      "label": "Rome → Florence",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Rome",
+      "to": "Florence"
+    },
+    "rome-naples": {
+      "type": "ruta",
+      "id": "rome-naples",
+      "url": "https://glosx.app/rutas/rome-naples/",
+      "label": "Rome → Naples",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Rome",
+      "to": "Naples"
+    },
+    "rome-venice": {
+      "type": "ruta",
+      "id": "rome-venice",
+      "url": "https://glosx.app/rutas/rome-venice/",
+      "label": "Rome → Venice",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Rome",
+      "to": "Venice"
+    },
+    "stockholm-oslo": {
+      "type": "ruta",
+      "id": "stockholm-oslo",
+      "url": "https://glosx.app/rutas/stockholm-oslo/",
+      "label": "Stockholm → Oslo",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Stockholm",
+      "to": "Oslo"
+    },
+    "toulouse-lourdes": {
+      "type": "ruta",
+      "id": "toulouse-lourdes",
+      "url": "https://glosx.app/rutas/toulouse-lourdes/",
+      "label": "Toulouse → Lourdes",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Toulouse",
+      "to": "Lourdes"
+    },
+    "turin-milan": {
+      "type": "ruta",
+      "id": "turin-milan",
+      "url": "https://glosx.app/rutas/turin-milan/",
+      "label": "Turin → Milan",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Turin",
+      "to": "Milan"
+    },
+    "venice-milan": {
+      "type": "ruta",
+      "id": "venice-milan",
+      "url": "https://glosx.app/rutas/venice-milan/",
+      "label": "Venice → Milan",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Venice",
+      "to": "Milan"
+    },
+    "vienna-budapest": {
+      "type": "ruta",
+      "id": "vienna-budapest",
+      "url": "https://glosx.app/rutas/vienna-budapest/",
+      "label": "Vienna → Budapest",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Vienna",
+      "to": "Budapest"
+    },
+    "vienna-krems": {
+      "type": "ruta",
+      "id": "vienna-krems",
+      "url": "https://glosx.app/rutas/vienna-krems/",
+      "label": "Vienna → Krems",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Vienna",
+      "to": "Krems"
+    },
+    "vienna-prague": {
+      "type": "ruta",
+      "id": "vienna-prague",
+      "url": "https://glosx.app/rutas/vienna-prague/",
+      "label": "Vienna → Prague",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Vienna",
+      "to": "Prague"
+    },
+    "vienna-salzburg": {
+      "type": "ruta",
+      "id": "vienna-salzburg",
+      "url": "https://glosx.app/rutas/vienna-salzburg/",
+      "label": "Vienna → Salzburg",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Vienna",
+      "to": "Salzburg"
+    },
+    "zaragoza-barcelona": {
+      "type": "ruta",
+      "id": "zaragoza-barcelona",
+      "url": "https://glosx.app/rutas/zaragoza-barcelona/",
+      "label": "Zaragoza → Barcelona",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Zaragoza",
+      "to": "Barcelona"
+    },
+    "zurich-lucerne": {
+      "type": "ruta",
+      "id": "zurich-lucerne",
+      "url": "https://glosx.app/rutas/zurich-lucerne/",
+      "label": "Zurich → Lucerne",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Zurich",
+      "to": "Lucerne"
+    },
+    "zurich-milan": {
+      "type": "ruta",
+      "id": "zurich-milan",
+      "url": "https://glosx.app/rutas/zurich-milan/",
+      "label": "Zurich → Milan",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Zurich",
+      "to": "Milan"
+    },
+    "strasbourg-paris": {
+      "type": "ruta",
+      "id": "strasbourg-paris",
+      "url": "https://glosx.app/rutas/strasbourg-paris/",
+      "label": "Strasbourg → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Strasbourg",
+      "to": "Paris"
+    },
+    "munich-paris": {
+      "type": "ruta",
+      "id": "munich-paris",
+      "url": "https://glosx.app/rutas/munich-paris/",
+      "label": "Munich → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Munich",
+      "to": "Paris"
+    },
+    "cologne-brussels": {
+      "type": "ruta",
+      "id": "cologne-brussels",
+      "url": "https://glosx.app/rutas/cologne-brussels/",
+      "label": "Cologne → Brussels",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Cologne",
+      "to": "Brussels"
+    },
+    "copenhagen-prague": {
+      "type": "ruta",
+      "id": "copenhagen-prague",
+      "url": "https://glosx.app/rutas/copenhagen-prague/",
+      "label": "Copenhagen → Prague",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Copenhagen",
+      "to": "Prague"
+    },
+    "amsterdam-bruges": {
+      "type": "ruta",
+      "id": "amsterdam-bruges",
+      "url": "https://glosx.app/rutas/amsterdam-bruges/",
+      "label": "Amsterdam → Bruges",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Amsterdam",
+      "to": "Bruges"
+    },
+    "interlaken-lucerne": {
+      "type": "ruta",
+      "id": "interlaken-lucerne",
+      "url": "https://glosx.app/rutas/interlaken-lucerne/",
+      "label": "Interlaken → Lucerne",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Interlaken",
+      "to": "Lucerne"
+    },
+    "lucerne-zermatt": {
+      "type": "ruta",
+      "id": "lucerne-zermatt",
+      "url": "https://glosx.app/rutas/lucerne-zermatt/",
+      "label": "Lucerne → Zermatt",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Lucerne",
+      "to": "Zermatt"
+    },
+    "innsbruck-vienna": {
+      "type": "ruta",
+      "id": "innsbruck-vienna",
+      "url": "https://glosx.app/rutas/innsbruck-vienna/",
+      "label": "Innsbruck → Vienna",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Innsbruck",
+      "to": "Vienna"
+    },
+    "graz-vienna": {
+      "type": "ruta",
+      "id": "graz-vienna",
+      "url": "https://glosx.app/rutas/graz-vienna/",
+      "label": "Graz → Vienna",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Graz",
+      "to": "Vienna"
+    },
+    "munich-salzburg": {
+      "type": "ruta",
+      "id": "munich-salzburg",
+      "url": "https://glosx.app/rutas/munich-salzburg/",
+      "label": "Munich → Salzburg",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Munich",
+      "to": "Salzburg"
+    },
+    "bern-paris": {
+      "type": "ruta",
+      "id": "bern-paris",
+      "url": "https://glosx.app/rutas/bern-paris/",
+      "label": "Bern → Paris",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Bern",
+      "to": "Paris"
+    },
+    "stmoritz-zermatt": {
+      "type": "ruta",
+      "id": "stmoritz-zermatt",
+      "url": "https://glosx.app/rutas/stmoritz-zermatt/",
+      "label": "St. Moritz → Zermatt",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "St. Moritz",
+      "to": "Zermatt"
+    },
+    "tende-nice": {
+      "type": "ruta",
+      "id": "tende-nice",
+      "url": "https://glosx.app/rutas/tende-nice/",
+      "label": "Tende → Nice",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Tende",
+      "to": "Nice"
+    },
+    "frankfurt-berlin": {
+      "type": "ruta",
+      "id": "frankfurt-berlin",
+      "url": "https://glosx.app/rutas/frankfurt-berlin/",
+      "label": "Frankfurt → Berlin",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Frankfurt",
+      "to": "Berlin"
+    },
+    "lucerne-bern": {
+      "type": "ruta",
+      "id": "lucerne-bern",
+      "url": "https://glosx.app/rutas/lucerne-bern/",
+      "label": "Lucerne → Bern",
+      "lastPromoted": null,
+      "timesPromoted": 0,
+      "from": "Lucerne",
+      "to": "Bern"
+    },
+    "blog-ai-train-trip-planner-europe": {
+      "type": "blog",
+      "id": "blog-ai-train-trip-planner-europe",
+      "url": "https://glosx.app/blog-ai-train-trip-planner-europe.html",
+      "label": "ai train trip planner europe",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-backpacking-italy": {
+      "type": "blog",
+      "id": "blog-backpacking-italy",
+      "url": "https://glosx.app/blog-backpacking-italy.html",
+      "label": "backpacking italy",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-best-train-trips-europe": {
+      "type": "blog",
+      "id": "blog-best-train-trips-europe",
+      "url": "https://glosx.app/blog-best-train-trips-europe.html",
+      "label": "best train trips europe",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-cheap-train-tickets-europe": {
+      "type": "blog",
+      "id": "blog-cheap-train-tickets-europe",
+      "url": "https://glosx.app/blog-cheap-train-tickets-europe.html",
+      "label": "cheap train tickets europe",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-cote-bleue-marseille-train": {
+      "type": "blog",
+      "id": "blog-cote-bleue-marseille-train",
+      "url": "https://glosx.app/blog-cote-bleue-marseille-train.html",
+      "label": "cote bleue marseille train",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-eurail-pass-vs-point-to-point": {
+      "type": "blog",
+      "id": "blog-eurail-pass-vs-point-to-point",
+      "url": "https://glosx.app/blog-eurail-pass-vs-point-to-point.html",
+      "label": "eurail pass vs point to point",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-europe-train-itinerary": {
+      "type": "blog",
+      "id": "blog-europe-train-itinerary",
+      "url": "https://glosx.app/blog-europe-train-itinerary.html",
+      "label": "europe train itinerary",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-european-sleeper-train-2026": {
+      "type": "blog",
+      "id": "blog-european-sleeper-train-2026",
+      "url": "https://glosx.app/blog-european-sleeper-train-2026.html",
+      "label": "european sleeper train 2026",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-fastest-growing-train-routes-europe-2026": {
+      "type": "blog",
+      "id": "blog-fastest-growing-train-routes-europe-2026",
+      "url": "https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html",
+      "label": "fastest growing train routes europe 2026",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-florence-siena-day-trip": {
+      "type": "blog",
+      "id": "blog-florence-siena-day-trip",
+      "url": "https://glosx.app/blog-florence-siena-day-trip.html",
+      "label": "florence siena day trip",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-flying-vs-train-europe": {
+      "type": "blog",
+      "id": "blog-flying-vs-train-europe",
+      "url": "https://glosx.app/blog-flying-vs-train-europe.html",
+      "label": "flying vs train europe",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-italy-interrail-itinerary": {
+      "type": "blog",
+      "id": "blog-italy-interrail-itinerary",
+      "url": "https://glosx.app/blog-italy-interrail-itinerary.html",
+      "label": "italy interrail itinerary",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-klook-vs-trainline": {
+      "type": "blog",
+      "id": "blog-klook-vs-trainline",
+      "url": "https://glosx.app/blog-klook-vs-trainline.html",
+      "label": "klook vs trainline",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-madrid-barcelona-train-guide": {
+      "type": "blog",
+      "id": "blog-madrid-barcelona-train-guide",
+      "url": "https://glosx.app/blog-madrid-barcelona-train-guide.html",
+      "label": "madrid barcelona train guide",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-night-trains-europe": {
+      "type": "blog",
+      "id": "blog-night-trains-europe",
+      "url": "https://glosx.app/blog-night-trains-europe.html",
+      "label": "night trains europe",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-paris-lourdes-pilgrimage-train": {
+      "type": "blog",
+      "id": "blog-paris-lourdes-pilgrimage-train",
+      "url": "https://glosx.app/blog-paris-lourdes-pilgrimage-train.html",
+      "label": "paris lourdes pilgrimage train",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-scenic-train-routes-europe": {
+      "type": "blog",
+      "id": "blog-scenic-train-routes-europe",
+      "url": "https://glosx.app/blog-scenic-train-routes-europe.html",
+      "label": "scenic train routes europe",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-train-europe-survival-guide": {
+      "type": "blog",
+      "id": "blog-train-europe-survival-guide",
+      "url": "https://glosx.app/blog-train-europe-survival-guide.html",
+      "label": "train europe survival guide",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    },
+    "blog-tren-arraigo-pueblos": {
+      "type": "blog",
+      "id": "blog-tren-arraigo-pueblos",
+      "url": "https://glosx.app/blog-tren-arraigo-pueblos.html",
+      "label": "tren arraigo pueblos",
+      "lastPromoted": null,
+      "timesPromoted": 0
+    }
+  },
+  "log": [
+    {
+      "campaignId": "2026-09-15-02-50",
+      "at": "2026-09-15T02:50:21.844Z",
+      "itemIds": [
+        "amsterdam-berlin",
+        "amsterdam-brussels",
+        "barcelona-girona"
+      ]
+    },
+    {
+      "campaignId": "2026-09-15-02-54",
+      "at": "2026-09-15T02:54:41.952Z",
+      "itemIds": [
+        "barcelona-lyon",
+        "barcelona-valencia"
+      ]
+    }
+  ]
+}

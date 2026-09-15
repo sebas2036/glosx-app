@@ -7,3 +7,7 @@ CLAUDE.md
 # Nunca commitear claves de cuentas de servicio (la real vive fuera del repo, en ~/.config/glosx/)
 *service-account*.json
 indexing-service-account.json
+promo-bot.env
+
+# Salida generada por el orquestador de promoción — descartable, no se versiona
+scripts/promo/campañas/
