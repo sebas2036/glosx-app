@@ -17,7 +17,14 @@ const routes = [
   { slug: 'barcelona-girona', from: 'Barcelona', to: 'Girona', country: 'Spain', duration: '1h 30m', operator: 'Renfe', price: '€10-15', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Barcelona to Girona Train Guide: 1h30 on Renfe', description: 'Everything you need for the Barcelona to Girona train: 1h30 on Renfe, fares from €10, and today\'s live schedule.' } } },
   { slug: 'barcelona-lyon', from: 'Barcelona', to: 'Lyon', country: 'Spain-France', duration: '4h 30m', operator: 'TGV', price: '€35-55', badge: 'Route guide · Spain-France',
-    customSEO: { en: { title: 'How to Get from Barcelona to Lyon by Train (4h30)', description: 'The Barcelona to Lyon train takes 4h30 on TGV. See today\'s departures and book tickets from €35.' } } },
+    customSEO: { en: { title: 'How to Get from Barcelona to Lyon by Train (4h30)', description: 'The Barcelona to Lyon train takes 4h30 on TGV. See today\'s departures and book tickets from €35.' } },
+    localInsight: {
+      en: 'Like the Paris–Barcelona TGV, this train crosses into Spain at Perpignan–Figueres, where the French and Spanish high-speed networks physically connect — one of only a couple of places in Europe where trains run through from one country\'s high-speed line straight onto another\'s without a change.',
+      es: 'Al igual que el TGV Paris–Barcelona, este tren entra en España por Perpignan–Figueres, donde se conectan físicamente las redes de alta velocidad francesa y española — uno de los pocos puntos de Europa donde los trenes pasan directamente de la línea de alta velocidad de un país a la de otro sin cambiar.',
+      fr: 'Comme le TGV Paris–Barcelone, ce train entre en Espagne à Perpignan–Figueres, où les réseaux à grande vitesse français et espagnol se rejoignent physiquement — l\'un des rares endroits en Europe où les trains passent directement de la ligne à grande vitesse d\'un pays à celle d\'un autre sans changement.',
+      it: 'Come il TGV Parigi–Barcellona, questo treno entra in Spagna a Perpignano–Figueres, dove le reti ad alta velocità francese e spagnola si collegano fisicamente — uno dei pochi punti in Europa dove i treni passano direttamente dalla linea ad alta velocità di un paese a quella di un altro senza cambio.'
+    }
+  },
   { slug: 'barcelona-valencia', from: 'Barcelona', to: 'Valencia', country: 'Spain', duration: '3h 00m', operator: 'Renfe AVE', price: '€20-35', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Barcelona to Valencia Train: 3h AVE, from €20', description: 'High-speed Renfe AVE from Barcelona to Valencia in 3 hours. Compare live schedules and book tickets from €20 — no line at the station.' } },
     localInsight: {
@@ -92,15 +99,36 @@ const routes = [
   { slug: 'geneva-paris', from: 'Geneva', to: 'Paris', country: 'Switzerland-France', duration: '3h 00m', operator: 'TGV Lyria', price: '€40-60', badge: 'Route guide · Switzerland-France',
     customSEO: { en: { title: 'Geneva to Paris Train: 3h, from €40', description: 'TGV Lyria connection from Geneva to Paris in 3 hours. Check live schedules and book tickets from €40.' } } },
   { slug: 'geneva-zermatt', from: 'Geneva', to: 'Zermatt', country: 'Switzerland', duration: '3h 30m', operator: 'SBB', price: '€45-65', badge: 'Route guide · Switzerland',
-    customSEO: { en: { title: 'Geneva to Zermatt Train Guide: 3h30 on SBB', description: 'Everything you need for the Geneva to Zermatt train: 3h30 on SBB, fares from €45, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Geneva to Zermatt Train Guide: 3h30 on SBB', description: 'Everything you need for the Geneva to Zermatt train: 3h30 on SBB, fares from €45, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'Zermatt itself is car-free — private cars have been banned in the village for decades, and the only way in is by train (the last stretch on the Matterhorn Gotthard Bahn) or electric taxi from the car park in Täsch. That makes this train ride the actual entrance to the town, not just a way to get near it.',
+      es: 'Zermatt es una localidad sin coches — los vehículos privados están prohibidos en el pueblo desde hace décadas, y la única forma de llegar es en tren (el último tramo por el Matterhorn Gotthard Bahn) o en taxi eléctrico desde el aparcamiento de Täsch. Por eso este tren no es solo una forma de acercarse al pueblo, sino la entrada real al mismo.',
+      fr: 'Zermatt est une commune sans voitures — les véhicules privés y sont interdits depuis des décennies, et le seul moyen d\'y accéder est le train (le dernier tronçon via le Matterhorn Gotthard Bahn) ou un taxi électrique depuis le parking de Täsch. Ce train n\'est donc pas seulement un moyen de s\'approcher du village, c\'est la véritable porte d\'entrée.',
+      it: 'Zermatt è un comune senza auto — i veicoli privati sono vietati nel paese da decenni, e l\'unico modo per arrivarci è in treno (l\'ultimo tratto sulla Matterhorn Gotthard Bahn) o in taxi elettrico dal parcheggio di Täsch. Questo treno non è quindi solo un modo per avvicinarsi al paese, ma il vero e proprio ingresso.'
+    }
+  },
   { slug: 'girona-figueres', from: 'Girona', to: 'Figueres', country: 'Spain', duration: '0h 30m', operator: 'Renfe', price: '€5-10', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'How to Get from Girona to Figueres by Train (30 min)', description: 'The Girona to Figueres train takes 30 minutes on Renfe. See today\'s departures and book tickets from €5.' } } },
   { slug: 'interlaken-lauterbrunnen', from: 'Interlaken', to: 'Lauterbrunnen', country: 'Switzerland', duration: '0h 20m', operator: 'BOB', price: '€10-15', badge: 'Route guide · Switzerland',
     customSEO: { en: { title: 'Interlaken to Lauterbrunnen Train: 20 min, from €10', description: 'Scenic BOB train from Interlaken to Lauterbrunnen in just 20 minutes. Check today\'s schedule and book tickets from €10.' } } },
   { slug: 'lisbon-porto', from: 'Lisbon', to: 'Porto', country: 'Portugal', duration: '2h 30m', operator: 'CP', price: '€15-25', badge: 'Route guide · Portugal',
-    customSEO: { en: { title: 'Lisbon to Porto by Train: 2h30 CP, from €15', description: 'Direct CP from Lisbon to Porto in 2h30. Compare today\'s schedule and book fares from €15 — no layovers.' } } },
+    customSEO: { en: { title: 'Lisbon to Porto by Train: 2h30 CP, from €15', description: 'Direct CP from Lisbon to Porto in 2h30. Compare today\'s schedule and book fares from €15 — no layovers.' } },
+    localInsight: {
+      en: 'The fastest services on this route are CP\'s Alfa Pendular trains, which use tilting technology to take curves at higher speed without passengers feeling it — the same basic principle used by Italy\'s Pendolino trains, and the reason this line can run fast on track that wasn\'t built as a dedicated high-speed line.',
+      es: 'Los servicios más rápidos de esta ruta son los trenes Alfa Pendular de CP, que usan tecnología pendular para tomar las curvas a mayor velocidad sin que se note dentro del tren — el mismo principio que usan los Pendolino italianos, y la razón por la que esta línea puede ser rápida aunque no se construyó como línea de alta velocidad dedicada.',
+      fr: 'Les services les plus rapides de cette ligne sont les trains Alfa Pendular de CP, qui utilisent une technologie pendulaire pour prendre les virages à plus grande vitesse sans que cela se ressente à bord — le même principe que les Pendolino italiens, et la raison pour laquelle cette ligne peut rouler vite sans avoir été construite comme ligne à grande vitesse dédiée.',
+      it: 'I servizi più veloci su questa tratta sono i treni Alfa Pendular di CP, che usano la tecnologia pendolare per affrontare le curve a velocità maggiore senza che si avverta a bordo — lo stesso principio dei Pendolino italiani, ed è per questo che questa linea può essere veloce pur non essendo stata costruita come linea ad alta velocità dedicata.'
+    }
+  },
   { slug: 'london-amsterdam', from: 'London', to: 'Amsterdam', country: 'UK-Netherlands', duration: '4h 00m', operator: 'Eurostar', price: '€50-80', badge: 'Route guide · UK-Netherlands',
-    customSEO: { en: { title: 'London to Amsterdam by Train: 4h Eurostar, from €50', description: 'Direct Eurostar from London to Amsterdam in 4 hours, city centre to city centre. Compare today\'s fares from €50.' } } },
+    customSEO: { en: { title: 'London to Amsterdam by Train: 4h Eurostar, from €50', description: 'Direct Eurostar from London to Amsterdam in 4 hours, city centre to city centre. Compare today\'s fares from €50.' } },
+    localInsight: {
+      en: 'This became a genuinely direct, two-way service only in 2020, once UK border control facilities were completed at Amsterdam Centraal — before that, London-bound passengers had to get off and clear border checks in Brussels partway through the journey, even though the train itself didn\'t change.',
+      es: 'Este servicio se volvió realmente directo y en ambos sentidos recién en 2020, cuando se completaron las instalaciones de control fronterizo británico en Amsterdam Centraal — antes, los pasajeros con destino a Londres tenían que bajar y pasar el control fronterizo en Bruselas a mitad de camino, aunque el tren en sí no cambiara.',
+      fr: 'Ce service n\'est devenu vraiment direct dans les deux sens qu\'en 2020, une fois les installations de contrôle frontalier britannique terminées à Amsterdam Centraal — avant cela, les passagers en direction de Londres devaient descendre et passer le contrôle frontalier à Bruxelles en cours de route, même si le train lui-même ne changeait pas.',
+      it: 'Questo servizio è diventato realmente diretto in entrambe le direzioni solo nel 2020, quando sono state completate le strutture di controllo di frontiera britannico ad Amsterdam Centraal — prima, i passeggeri diretti a Londra dovevano scendere e passare il controllo di frontiera a Bruxelles a metà viaggio, anche se il treno stesso non cambiava.'
+    }
+  },
   { slug: 'london-brussels', from: 'London', to: 'Brussels', country: 'UK-Belgium', duration: '2h 00m', operator: 'Eurostar', price: '€40-70', badge: 'Route guide · UK-Belgium',
     customSEO: { en: { title: 'London to Brussels Train: 2h, from €40', description: 'Eurostar connection from London to Brussels in 2 hours. Check live schedules and book tickets from €40.' } } },
   { slug: 'london-cambridge', from: 'London', to: 'Cambridge', country: 'UK', duration: '0h 50m', operator: 'Thameslink', price: '€15-25', badge: 'Route guide · UK',
@@ -119,7 +147,14 @@ const routes = [
   { slug: 'london-manchester', from: 'London', to: 'Manchester', country: 'UK', duration: '2h 00m', operator: 'Avanti', price: '€20-40', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to Manchester Train: 2h, from €20', description: 'Avanti connection from London to Manchester in 2 hours. Check live schedules and book tickets from €20.' } } },
   { slug: 'london-oxford', from: 'London', to: 'Oxford', country: 'UK', duration: '1h 00m', operator: 'GWR', price: '€15-25', badge: 'Route guide · UK',
-    customSEO: { en: { title: 'London to Oxford Train Guide: 1h on GWR', description: 'Everything you need for the London to Oxford train: 1 hour on GWR, fares from €15, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'London to Oxford Train Guide: 1h on GWR', description: 'Everything you need for the London to Oxford train: 1 hour on GWR, fares from €15, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'Oxford railway station is genuinely close to the city centre — a 15-20 minute walk to most of the historic colleges — unlike many university towns where the station sits well outside the old centre. That makes this one of the rare routes where you can leave from a London terminus and be looking at Christ Church or the Bodleian within about an hour and a quarter, door to door.',
+      es: 'La estación de tren de Oxford está realmente cerca del centro — a 15-20 minutos a pie de la mayoría de los colleges históricos — a diferencia de muchas ciudades universitarias donde la estación queda bastante alejada del centro antiguo. Eso hace que esta sea una de las pocas rutas donde se puede salir de una terminal de Londres y estar frente a Christ Church o la Bodleian Library en poco más de una hora, puerta a puerta.',
+      fr: 'La gare d\'Oxford est vraiment proche du centre-ville — à 15-20 minutes à pied de la plupart des collèges historiques — contrairement à de nombreuses villes universitaires où la gare se trouve bien à l\'écart du vieux centre. C\'est l\'un des rares trajets où l\'on peut quitter une gare terminale de Londres et se retrouver devant Christ Church ou la Bodleian Library en un peu plus d\'une heure, porte à porte.',
+      it: 'La stazione ferroviaria di Oxford è davvero vicina al centro — a 15-20 minuti a piedi dalla maggior parte dei college storici — a differenza di molte città universitarie dove la stazione si trova ben lontana dal centro antico. Questo rende questo uno dei pochi percorsi in cui si può partire da un capolinea londinese e trovarsi davanti a Christ Church o alla Bodleian Library in poco più di un\'ora, porta a porta.'
+    }
+  },
   { slug: 'london-paris', from: 'London', to: 'Paris', country: 'UK-France', duration: '2h 30m', operator: 'Eurostar', price: '€50-80', badge: 'Route guide · UK-France',
     customSEO: { en: { title: 'How to Get from London to Paris by Train (2h30)', description: 'The London to Paris train takes 2h30 on Eurostar. See today\'s departures and book tickets from €50.' } } },
   { slug: 'london-york', from: 'London', to: 'York', country: 'UK', duration: '2h 00m', operator: 'LNER', price: '€20-40', badge: 'Route guide · UK',
@@ -182,7 +217,14 @@ const routes = [
   { slug: 'montreux-interlaken', from: 'Montreux', to: 'Interlaken', country: 'Switzerland', duration: '2h 00m', operator: 'SBB', price: '€25-40', badge: 'Route guide · Switzerland',
     customSEO: { en: { title: 'Montreux to Interlaken by Train: 2h SBB, from €25', description: 'Direct SBB from Montreux to Interlaken in 2 hours. Compare today\'s schedule and book fares from €25 — no layovers.' } } },
   { slug: 'munich-berlin', from: 'Munich', to: 'Berlin', country: 'Germany', duration: '4h 00m', operator: 'DB ICE', price: '€35-55', badge: 'Route guide · Germany',
-    customSEO: { en: { title: 'Munich to Berlin by Train: 4h ICE, from €35', description: 'Direct DB ICE high-speed train from Munich to Berlin in 4 hours. Check today\'s schedule and book tickets from €35.' } } },
+    customSEO: { en: { title: 'Munich to Berlin by Train: 4h ICE, from €35', description: 'Direct DB ICE high-speed train from Munich to Berlin in 4 hours. Check today\'s schedule and book tickets from €35.' } },
+    localInsight: {
+      en: 'The journey time dropped from around 6 hours to roughly 4 in December 2017, when new high-speed sections through Thuringia opened as part of one of Germany\'s largest rail projects — including several long tunnels cut through the hills between Nuremberg and Erfurt that let trains run at up to 300 km/h on a stretch that used to be slow, winding track.',
+      es: 'El tiempo de viaje bajó de unas 6 horas a alrededor de 4 en diciembre de 2017, cuando se inauguraron nuevos tramos de alta velocidad por Turingia como parte de uno de los mayores proyectos ferroviarios de Alemania — con varios túneles largos excavados en las colinas entre Núremberg y Erfurt que permiten a los trenes circular hasta a 300 km/h en un tramo que antes era una vía lenta y sinuosa.',
+      fr: 'Le temps de trajet est passé d\'environ 6 heures à environ 4 heures en décembre 2017, avec l\'ouverture de nouvelles sections à grande vitesse en Thuringe, dans le cadre de l\'un des plus grands projets ferroviaires allemands — avec plusieurs longs tunnels creusés dans les collines entre Nuremberg et Erfurt permettant aux trains de rouler jusqu\'à 300 km/h sur un tronçon autrefois lent et sinueux.',
+      it: 'Il tempo di viaggio è sceso da circa 6 ore a circa 4 nel dicembre 2017, quando sono state aperte nuove tratte ad alta velocità in Turingia come parte di uno dei più grandi progetti ferroviari tedeschi — con diverse lunghe gallerie scavate tra le colline fra Norimberga ed Erfurt che permettono ai treni di viaggiare fino a 300 km/h su un tratto un tempo lento e tortuoso.'
+    }
+  },
   { slug: 'munich-prague', from: 'Munich', to: 'Prague', country: 'Germany-Czech', duration: '4h 00m', operator: 'DB ČD', price: '€30-50', badge: 'Route guide · Germany-Czech',
     customSEO: { en: { title: 'Munich to Prague Train: 4h, from €30', description: 'DB ČD connection from Munich to Prague in 4 hours. Check live schedules and book tickets from €30.' } } },
   { slug: 'munich-venice', from: 'Munich', to: 'Venice', country: 'Germany-Italy', duration: '6h 00m', operator: 'ÖBB', price: '€40-60', badge: 'Route guide · Germany-Italy',
@@ -283,13 +325,27 @@ const routes = [
   { slug: 'prague-vienna', from: 'Prague', to: 'Vienna', country: 'Czech-Austria', duration: '4h 00m', operator: 'Railjet', price: '€25-40', badge: 'Route guide · Czech-Austria',
     customSEO: { en: { title: 'Prague to Vienna by Train: 4h Railjet, from €25', description: 'Direct ÖBB Railjet from Prague to Vienna in 4 hours, no transfers. Compare today\'s schedule and book fares from €25.' } } },
   { slug: 'rome-florence', from: 'Rome', to: 'Florence', country: 'Italy', duration: '1h 30m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'Rome to Florence Train Guide: 1h30 on Trenitalia', description: 'Everything you need for the Rome to Florence train: 1h30 on Trenitalia, fares from €20, and today\'s live schedule.' } } },
+    customSEO: { en: { title: 'Rome to Florence Train Guide: 1h30 on Trenitalia', description: 'Everything you need for the Rome to Florence train: 1h30 on Trenitalia, fares from €20, and today\'s live schedule.' } },
+    localInsight: {
+      en: 'This line, known as the Direttissima, began opening in the late 1970s and was one of the first purpose-built high-speed railways anywhere in Europe — years before Italy\'s modern Alta Velocità network existed. It effectively laid the groundwork for the country\'s current high-speed system.',
+      es: 'Esta línea, conocida como la Direttissima, empezó a inaugurarse a fines de los años 70 y fue una de las primeras líneas ferroviarias de alta velocidad construidas expresamente para eso en toda Europa — años antes de que existiera la red moderna de Alta Velocità italiana. Sentó, en la práctica, las bases del actual sistema de alta velocidad del país.',
+      fr: 'Cette ligne, appelée la Direttissima, a commencé à ouvrir à la fin des années 1970 et fut l\'une des toutes premières lignes ferroviaires construites spécifiquement pour la grande vitesse en Europe — des années avant l\'existence du réseau moderne Alta Velocità italien. Elle a en pratique posé les bases du système à grande vitesse actuel du pays.',
+      it: 'Questa linea, nota come Direttissima, iniziò ad aprire alla fine degli anni \'70 e fu una delle prime ferrovie costruite appositamente per l\'alta velocità in tutta Europa — anni prima che esistesse la moderna rete Alta Velocità italiana. Ha di fatto gettato le basi dell\'attuale sistema ad alta velocità del paese.'
+    }
+  },
   { slug: 'rome-naples', from: 'Rome', to: 'Naples', country: 'Italy', duration: '1h 10m', operator: 'Trenitalia', price: '€15-25', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Rome to Naples Train: 1h10 high-speed, from €15', description: 'Fast Trenitalia connection from Rome to Naples in just over an hour. Check live schedules and book tickets from €15.' } } },
   { slug: 'rome-venice', from: 'Rome', to: 'Venice', country: 'Italy', duration: '4h 00m', operator: 'Trenitalia', price: '€30-50', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Rome to Venice by Train: 4h high-speed, from €30', description: 'Direct Trenitalia high-speed train from Rome to Venice in 4 hours. See today\'s schedule and book fares from €30 in your currency.' } } },
   { slug: 'stockholm-oslo', from: 'Stockholm', to: 'Oslo', country: 'Sweden-Norway', duration: '6h 00m', operator: 'SJ', price: '€40-60', badge: 'Route guide · Sweden-Norway',
-    customSEO: { en: { title: 'How to Get from Stockholm to Oslo by Train (6h)', description: 'The Stockholm to Oslo train takes 6 hours on SJ. See today\'s departures and book tickets from €40.' } } },
+    customSEO: { en: { title: 'How to Get from Stockholm to Oslo by Train (6h)', description: 'The Stockholm to Oslo train takes 6 hours on SJ. See today\'s departures and book tickets from €40.' } },
+    localInsight: {
+      en: 'Unlike the high-speed lines further south in Europe, this route runs almost entirely on conventional track through dense Scandinavian forest, which is the main reason the roughly 415km trip takes about 6 hours rather than 2-3 — there is no dedicated high-speed line between the two capitals, and none currently under construction.',
+      es: 'A diferencia de las líneas de alta velocidad del sur de Europa, esta ruta va casi por completo sobre vía convencional a través de densos bosques escandinavos, lo que explica que el trayecto de unos 415 km tarde cerca de 6 horas en lugar de 2-3 — no existe una línea de alta velocidad dedicada entre ambas capitales, ni ninguna en construcción actualmente.',
+      fr: 'Contrairement aux lignes à grande vitesse plus au sud de l\'Europe, cet itinéraire circule presque entièrement sur voie classique à travers une dense forêt scandinave, ce qui explique que les quelque 415 km prennent environ 6 heures au lieu de 2-3 — il n\'existe aucune ligne à grande vitesse dédiée entre les deux capitales, ni aucune actuellement en construction.',
+      it: 'A differenza delle linee ad alta velocità più a sud in Europa, questo percorso corre quasi interamente su binari convenzionali attraverso una fitta foresta scandinava, il che spiega perché i circa 415 km richiedano circa 6 ore invece di 2-3 — non esiste una linea ad alta velocità dedicata tra le due capitali, né alcuna attualmente in costruzione.'
+    }
+  },
   { slug: 'toulouse-lourdes', from: 'Toulouse', to: 'Lourdes', country: 'France', duration: '2h 00m', operator: 'SNCF Intercités', price: '€15-25', badge: 'Route guide · France',
     customSEO: { en: { title: 'Toulouse to Lourdes by Train: 2h SNCF Intercités, from €15', description: 'Direct SNCF Intercités from Toulouse to Lourdes in 2 hours. Compare today\'s schedule and book fares from €15 — no layovers.' } } },
   { slug: 'turin-milan', from: 'Turin', to: 'Milan', country: 'Italy', duration: '1h 30m', operator: 'Trenitalia', price: '€15-25', badge: 'Route guide · Italy',
@@ -297,7 +353,14 @@ const routes = [
   { slug: 'venice-milan', from: 'Venice', to: 'Milan', country: 'Italy', duration: '2h 30m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Venice to Milan Train Guide: 2h30 on Trenitalia', description: 'Everything you need for the Venice to Milan train: 2h30 on Trenitalia, fares from €20, and today\'s live schedule.' } } },
   { slug: 'vienna-budapest', from: 'Vienna', to: 'Budapest', country: 'Austria-Hungary', duration: '2h 30m', operator: 'Railjet', price: '€20-35', badge: 'Route guide · Austria-Hungary',
-    customSEO: { en: { title: 'Vienna to Budapest Train: 2h30 Railjet, from €20', description: 'Direct ÖBB Railjet from Vienna to Budapest in 2.5 hours, no transfers. Compare today\'s schedule and book fares from €20.' } } },
+    customSEO: { en: { title: 'Vienna to Budapest Train: 2h30 Railjet, from €20', description: 'Direct ÖBB Railjet from Vienna to Budapest in 2.5 hours, no transfers. Compare today\'s schedule and book fares from €20.' } },
+    localInsight: {
+      en: 'These two capitals were once the twin seats of the Austro-Hungarian Empire, and the rail line connecting them dates back to the 19th century — long before either city had a metro system. Today\'s Railjet service is a modern train on a genuinely historic corridor.',
+      es: 'Estas dos capitales fueron en su momento las sedes gemelas del Imperio austrohúngaro, y la línea ferroviaria que las conecta data del siglo XIX — mucho antes de que ninguna de las dos ciudades tuviera metro. El Railjet actual es un tren moderno sobre un corredor genuinamente histórico.',
+      fr: 'Ces deux capitales furent autrefois les sièges jumeaux de l\'Empire austro-hongrois, et la ligne ferroviaire qui les relie remonte au XIXe siècle — bien avant que l\'une ou l\'autre ville n\'ait de métro. Le Railjet actuel est un train moderne sur un corridor authentiquement historique.',
+      it: 'Queste due capitali furono un tempo le sedi gemelle dell\'Impero austro-ungarico, e la linea ferroviaria che le collega risale al XIX secolo — molto prima che una delle due città avesse una metropolitana. Il Railjet di oggi è un treno moderno su un corridoio autenticamente storico.'
+    }
+  },
   { slug: 'vienna-krems', from: 'Vienna', to: 'Krems', country: 'Austria', duration: '1h 00m', operator: 'ÖBB', price: '€10-15', badge: 'Route guide · Austria',
     customSEO: { en: { title: 'How to Get from Vienna to Krems by Train (1h)', description: 'The Vienna to Krems train takes 1 hour on ÖBB. See today\'s departures and book tickets from €10.' } } },
   { slug: 'vienna-prague', from: 'Vienna', to: 'Prague', country: 'Austria-Czech', duration: '4h 00m', operator: 'Railjet', price: '€25-40', badge: 'Route guide · Austria-Czech',
@@ -310,7 +373,14 @@ const routes = [
     }
   },
   { slug: 'vienna-salzburg', from: 'Vienna', to: 'Salzburg', country: 'Austria', duration: '2h 30m', operator: 'Railjet', price: '€20-35', badge: 'Route guide · Austria',
-    customSEO: { en: { title: 'Vienna to Salzburg by Train: 2h30 Railjet, from €20', description: 'Direct Railjet from Vienna to Salzburg in 2h30. Compare today\'s schedule and book fares from €20 — no layovers.' } } },
+    customSEO: { en: { title: 'Vienna to Salzburg by Train: 2h30 Railjet, from €20', description: 'Direct Railjet from Vienna to Salzburg in 2h30. Compare today\'s schedule and book fares from €20 — no layovers.' } },
+    localInsight: {
+      en: 'This historic Westbahn corridor isn\'t served by ÖBB\'s Railjet alone: since 2011 it has also carried WESTbahn, a private open-access operator running its own trains on the same tracks — one of the earlier examples in Europe of real competition on a national flagship rail route, years before similar competition arrived in Spain or Italy\'s main lines.',
+      es: 'Este histórico corredor Westbahn no lo cubre solo el Railjet de ÖBB: desde 2011 también circula WESTbahn, un operador privado de acceso abierto que opera sus propios trenes sobre las mismas vías — uno de los primeros ejemplos en Europa de competencia real en una ruta ferroviaria nacional insignia, años antes de que llegara una competencia similar a las líneas principales de España o Italia.',
+      fr: 'Ce corridor historique de la Westbahn n\'est pas desservi uniquement par le Railjet d\'ÖBB : depuis 2011, WESTbahn, un opérateur privé en accès libre, y fait également circuler ses propres trains sur les mêmes voies — l\'un des premiers exemples en Europe de véritable concurrence sur une ligne ferroviaire nationale phare, des années avant qu\'une concurrence similaire n\'arrive sur les grandes lignes espagnoles ou italiennes.',
+      it: 'Questo storico corridoio della Westbahn non è servito solo dal Railjet di ÖBB: dal 2011 vi circola anche WESTbahn, un operatore privato ad accesso libero che gestisce propri treni sugli stessi binari — uno dei primi esempi in Europa di vera concorrenza su una tratta ferroviaria nazionale di punta, anni prima che una concorrenza simile arrivasse sulle linee principali di Spagna o Italia.'
+    }
+  },
   { slug: 'zaragoza-barcelona', from: 'Zaragoza', to: 'Barcelona', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Zaragoza to Barcelona Train: 1h30 AVE, from €15', description: 'High-speed Renfe AVE from Zaragoza to Barcelona in 1.5 hours. Compare live schedules and book tickets from €15.' } } },
   { slug: 'zurich-lucerne', from: 'Zurich', to: 'Lucerne', country: 'Switzerland', duration: '0h 50m', operator: 'SBB', price: '€15-25', badge: 'Route guide · Switzerland',
