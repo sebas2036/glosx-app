@@ -34,7 +34,7 @@ node scripts/promo/armar-campana.js 10
 Cada corrida, por cada item de la tanda:
 - Genera un reel de video 9:16 con "glosx.app" quemado en la imagen.
 - Genera un artículo corto en inglés con la marca metida en el texto (no solo un link al final).
-- Publica ese artículo en Pinterest, Medium y Dev.to — los canales que tengas conectados.
+- Publica ese artículo en Pinterest y Dev.to — los canales que tengas conectados.
 - Guarda todo en `campañas/<fecha>/`.
 - Actualiza `content-queue.json`: nada se repite antes de 14 días.
 
@@ -43,9 +43,9 @@ Cada corrida, por cada item de la tanda:
 | Canal | Estado |
 |---|---|
 | Reel de video (glosx.app quemado) | **Automático**, no necesita credencial nueva |
+| Dev.to | **Automático — conectado** (18-sep-2026) |
 | Pinterest | **Automático** en vivo — falta cargar el token |
-| Medium (artículo por ruta/post) | **Automático** en vivo — falta cargar el token |
-| Dev.to (artículo por ruta/post) | **Automático** en vivo — falta cargar la key |
+| Medium | **Descartado** — Medium dejó de emitir Integration Tokens nuevos desde 2025, no se puede conseguir uno para una cuenta nueva |
 | Metricool | Sacado del flujo — no se va a usar |
 | Quora / Reddit / Discord | Sacado del flujo — requeriría que el usuario lea/escriba inglés para engancharse en el hilo, y automatizarlo banea la cuenta |
 

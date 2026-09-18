@@ -5,7 +5,7 @@
  * Cada vez que lo corrés, arma una tanda de promoción para N items de la
  * cola (rutas + blog posts que menos se promocionaron) y dispara TODO lo
  * que esté conectado: genera el video, y publica un artículo con
- * "glosx.app" bien metido en el texto en Pinterest, Medium y Dev.to —
+ * "glosx.app" bien metido en el texto en Pinterest y Dev.to (Medium descartado, ver nota abajo) —
  * en vivo, sobre las ~120 rutas y posts del sitio. Vos das la orden cada
  * vez tocando el botón — no hay nada que corra solo en segundo plano ni
  * nada que dependa de que vos escribas o leas inglés.
@@ -95,7 +95,7 @@ function pickBatch(queue, n) {
 }
 
 // --- Genera el texto de campaña para un item — caption corto (Pinterest)
-//     y un articulito corto en inglés (Medium / Dev.to) con la marca
+//     y un articulito corto en inglés (Dev.to) con la marca
 //     bien metida adentro del texto, no solo como link al final. ---
 function generateCopy(item) {
   const isRoute = item.type === 'ruta';
@@ -141,7 +141,11 @@ const publishers = {
   },
 
   async medium(env, item, copy) {
-    if (!env.MEDIUM_INTEGRATION_TOKEN) return null; // opcional, no se menciona si no está en uso
+    // Medium dejó de emitir Integration Tokens nuevos desde 2025 — solo
+    // siguen funcionando los que ya existían de antes. Para una cuenta
+    // nueva no hay forma de conseguir uno, así que este canal queda
+    // apagado salvo que alguna vez aparezca un token viejo cargado.
+    if (!env.MEDIUM_INTEGRATION_TOKEN) return null;
     try {
       const me = await httpRequest('https://api.medium.com/v1/me', {
         headers: { Authorization: `Bearer ${env.MEDIUM_INTEGRATION_TOKEN}`, Accept: 'application/json' }
