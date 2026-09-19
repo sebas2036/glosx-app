@@ -731,9 +731,9 @@
     </div>
 
     <div class="discover-cta">
-      <h3 data-i18n="disc_cta_title">Vous connaissez un lieu que seul le train révèle ?</h3>
-      <p data-i18n="disc_cta_text">Partagez l'itinéraire, le village, l'arrêt caché — et aidez d'autres voyageurs à le découvrir.</p>
-      <a href="https://www.tiktok.com/@wowtrain0" target="_blank" rel="noopener noreferrer nofollow" class="discover-cta-btn" data-i18n="disc_cta_btn">Partagez votre découverte →</a>
+      <h3 data-i18n="disc_cta_title">Un village que seul le train montre ?</h3>
+      <p data-i18n="disc_cta_text">Envoyez-nous le trajet ville à ville. On le publie sur glosx.app.</p>
+      <a href="mailto:contact@glosx.app?subject=Stop%20for%20glosx.app&amp;body=From%3A%20%0ATo%3A%20%0A" id="discoverCtaBtn" class="discover-cta-btn" data-i18n="disc_cta_btn" onclick="try{if(typeof gtag==='function')gtag('event','ui_click',{source:'discover_cta'});}catch(e){}">Proposer une halte →</a>
     </div>
 
     <div class="discover-grid">
@@ -1134,7 +1134,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=12" defer></script>
+  <script src="/assets/js/main.min.js?v=13" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
