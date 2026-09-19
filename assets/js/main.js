@@ -1579,7 +1579,7 @@
   var CITIES = window._GLOSX_CITIES = [
     // España
     { display: 'Madrid',                                slug: 'madrid',          keywords: ['madrid'] },
-    { display: 'Barcelona',                             slug: 'barcelona',       keywords: ['barcelona'] },
+    { display: 'Barcelona',                             slug: 'barcelona',       keywords: ['barcelona','barcelone','barcellona'] },
     { display: 'Sevilla / Seville',                     slug: 'seville',         keywords: ['seville','sevilla'] },
     { display: 'Valencia',                              slug: 'valencia',        keywords: ['valencia'] },
     { display: 'Bilbao',                                slug: 'bilbao',          keywords: ['bilbao'] },
@@ -1591,7 +1591,7 @@
     { display: 'Córdoba / Cordoba',                     slug: 'cordoba',         keywords: ['cordoba','córdoba'] },
     { display: 'Valladolid',                            slug: 'valladolid',      keywords: ['valladolid'] },
     // Francia
-    { display: 'París / Paris',                         slug: 'paris',           keywords: ['paris','parís'] },
+    { display: 'París / Paris',                         slug: 'paris',           keywords: ['paris','parís','parigi'] },
     { display: 'Lyon',                                  slug: 'lyon',            keywords: ['lyon'] },
     { display: 'Marsella / Marseille',                  slug: 'marseille',       keywords: ['marseille','marsella'] },
     { display: 'Niza / Nice',                           slug: 'nice',            keywords: ['nice','niza'] },
@@ -1604,7 +1604,7 @@
     { display: 'Rennes',                                slug: 'rennes',          keywords: ['rennes'] },
     { display: 'Aviñón / Avignon',                      slug: 'avignon',         keywords: ['avignon','aviñon','avignon'] },
     // Reino Unido
-    { display: 'Londres / London',                      slug: 'london',          keywords: ['london','londres'] },
+    { display: 'Londres / London',                      slug: 'london',          keywords: ['london','londres','londra'] },
     { display: 'Edimburgo / Edinburgh',                 slug: 'edinburgh',       keywords: ['edinburgh','edimburgo'] },
     { display: 'Manchester',                            slug: 'manchester',      keywords: ['manchester'] },
     { display: 'Birmingham',                            slug: 'birmingham',      keywords: ['birmingham'] },
@@ -1613,9 +1613,9 @@
     { display: 'Liverpool',                             slug: 'liverpool',       keywords: ['liverpool'] },
     { display: 'York',                                  slug: 'york',            keywords: ['york'] },
     // Italia
-    { display: 'Roma / Rome',                           slug: 'rome',            keywords: ['rome','roma'] },
+    { display: 'Roma / Rome',                           slug: 'rome',            keywords: ['rome','roma','rom'] },
     { display: 'Milán / Milano / Milan',                slug: 'milan',           keywords: ['milan','milán','milano'] },
-    { display: 'Venecia / Venezia / Venice',            slug: 'venice',          keywords: ['venice','venecia','venezia'] },
+    { display: 'Venecia / Venezia / Venice',            slug: 'venice',          keywords: ['venice','venecia','venezia','venise','venedig','veneza'] },
     { display: 'Florencia / Firenze / Florence',        slug: 'florence',        keywords: ['florence','florencia','firenze'] },
     { display: 'Turín / Torino / Turin',                slug: 'turin',           keywords: ['turin','turín','torino'] },
     { display: 'Bolzano / Bozen (Dolomitas)',           slug: 'bolzano',         keywords: ['bolzano','bozen','dolomitas','dolomites','dolomiti'] },
@@ -1631,7 +1631,7 @@
     { display: 'Cinque Terre / La Spezia',              slug: 'la-spezia',       keywords: ['cinque terre','la spezia','spezia'] },
     // Alemania
     { display: 'Berlín / Berlin',                       slug: 'berlin',          keywords: ['berlin','berlín'] },
-    { display: 'Múnich / München / Munich',             slug: 'munich',          keywords: ['munich','múnich','munchen','münchen'] },
+    { display: 'Múnich / München / Munich',             slug: 'munich',          keywords: ['munich','múnich','munchen','münchen','monaco di baviera','munique'] },
     { display: 'Hamburgo / Hamburg',                    slug: 'hamburg',         keywords: ['hamburg','hamburgo'] },
     { display: 'Frankfurt',                             slug: 'frankfurt',       keywords: ['frankfurt'] },
     { display: 'Colonia / Köln / Cologne',              slug: 'cologne',         keywords: ['cologne','colonia','koln','köln'] },
@@ -1949,6 +1949,42 @@
     return null;
   }
 
+  function resolveRouteCitySlug(name) {
+    const cleaned = cleanCityForKlook(name);
+    const n = norm(cleaned);
+    let best = null;
+    let bestLen = 0;
+    CITIES.forEach(function (c) {
+      (c.keywords || []).forEach(function (k) {
+        const nk = norm(k);
+        if (nk && n === nk && nk.length >= bestLen) {
+          best = c.slug;
+          bestLen = nk.length;
+        }
+      });
+    });
+    return best || slugCityName(cleaned);
+  }
+
+  const PAIR_CONN = { en: 'to', es: 'a', fr: 'à', de: 'nach', it: 'a', pt: 'a' };
+  const POPULAR_PAIRS = {
+    mb: { en: ['Madrid', 'Barcelona'], es: ['Madrid', 'Barcelona'], fr: ['Madrid', 'Barcelone'], de: ['Madrid', 'Barcelona'], it: ['Madrid', 'Barcellona'], pt: ['Madrid', 'Barcelona'] },
+    pl: { en: ['Paris', 'London'], es: ['París', 'Londres'], fr: ['Paris', 'Londres'], de: ['Paris', 'London'], it: ['Parigi', 'Londra'], pt: ['Paris', 'Londres'] },
+    pb: { en: ['Paris', 'Barcelona'], es: ['París', 'Barcelona'], fr: ['Paris', 'Barcelone'], de: ['Paris', 'Barcelona'], it: ['Parigi', 'Barcellona'], pt: ['Paris', 'Barcelona'] },
+    mv: { en: ['Munich', 'Venice'], es: ['Múnich', 'Venecia'], fr: ['Munich', 'Venise'], de: ['München', 'Venedig'], it: ['Monaco di Baviera', 'Venezia'], pt: ['Munique', 'Veneza'] },
+    rv: { en: ['Rome', 'Venice'], es: ['Roma', 'Venecia'], fr: ['Rome', 'Venise'], de: ['Rom', 'Venedig'], it: ['Roma', 'Venezia'], pt: ['Roma', 'Veneza'] }
+  };
+
+  function applyPopularPair(key) {
+    const lang = document.documentElement.lang || 'en';
+    const pair = POPULAR_PAIRS[key];
+    if (!pair) return;
+    const cities = pair[lang] || pair.en;
+    const conn = PAIR_CONN[lang] || PAIR_CONN.en;
+    setAISuggestion(cities[0] + ' ' + conn + ' ' + cities[1]);
+    previewFromInput();
+  }
+
   // Solo pares documentados (Klook no vende el viaje entero). El resto de
   // "ciudad a ciudad" conocidos en GLOSX_ROUTE_PAGES son un solo par.
   const KNOWN_MULTI_LEGS = {
@@ -1988,8 +2024,8 @@
     if (!input) return false;
     const parsed = parseOriginDest(input.value);
     if (!parsed) return false;
-    const fromSlug = slugCityName(cleanCityForKlook(parsed.from) || parsed.from);
-    const toSlug = slugCityName(cleanCityForKlook(parsed.to) || parsed.to);
+    const fromSlug = resolveRouteCitySlug(parsed.from);
+    const toSlug = resolveRouteCitySlug(parsed.to);
     if (!fromSlug || !toSlug) return false;
     const key = fromSlug + '-' + toSlug;
     const multi = KNOWN_MULTI_LEGS[key];
@@ -3129,5 +3165,6 @@
   window.invertAIRoute = invertAIRoute;
   window.showDemoRoute = showDemoRoute;
   window.previewFromInput = previewFromInput;
+  window.applyPopularPair = applyPopularPair;
 
 })();

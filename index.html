@@ -381,11 +381,11 @@
       </div>
       <div class="ai-suggestions">
         <span class="ai-suggestions-label" data-i18n="ai_suggest_label">Popular pairs:</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="setAISuggestion('Madrid to Barcelona'); previewFromInput();">Madrid → Barcelona</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="setAISuggestion('Paris to London'); previewFromInput();">Paris → London</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="setAISuggestion('Paris to Barcelona'); previewFromInput();">Paris → Barcelona</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="setAISuggestion('Munich to Venice'); previewFromInput();">Munich → Venice</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="setAISuggestion('Rome to Venice'); previewFromInput();">Rome → Venice</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">Madrid → Barcelona</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">Paris → London</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">Paris → Barcelona</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">Munich → Venice</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">Rome → Venice</span>
       </div>
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">View my last route →</button>
     </div>
