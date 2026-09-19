@@ -1140,6 +1140,11 @@
     .pair-roulette.is-spinning .pair-roulette-to {
       animation: rouletteTick 0.14s ease-in-out infinite alternate;
     }
+    .pair-roulette.is-brake .pair-roulette-from,
+    .pair-roulette.is-brake .pair-roulette-to {
+      animation: rouletteTick 0.42s ease-in-out infinite alternate;
+      color: #ffe8a3;
+    }
     @keyframes rouletteTick {
       from { transform: translateY(-3px); opacity: 0.72; }
       to { transform: translateY(3px); opacity: 1; }
@@ -1157,6 +1162,8 @@
     @media (prefers-reduced-motion: reduce) {
       .pair-roulette.is-spinning .pair-roulette-from,
       .pair-roulette.is-spinning .pair-roulette-to,
+      .pair-roulette.is-brake .pair-roulette-from,
+      .pair-roulette.is-brake .pair-roulette-to,
       .pair-roulette.is-win .pair-roulette-from,
       .pair-roulette.is-win .pair-roulette-to { animation: none; }
     }

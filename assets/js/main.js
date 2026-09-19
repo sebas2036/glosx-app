@@ -3279,7 +3279,7 @@
     const planner = document.querySelector('.ai-planner');
     if (planner) planner.classList.remove('is-roulette-done');
     if (board) {
-      board.classList.remove('is-win');
+      board.classList.remove('is-win', 'is-brake');
       board.classList.add('is-spinning');
     }
     // iOS: el AudioContext hay que desbloquearlo en el click, no 3s después
@@ -3302,7 +3302,7 @@
       fromEl.textContent = cityRouletteLabel(p[0]);
       toEl.textContent = cityRouletteLabel(p[1]);
       if (board) {
-        board.classList.remove('is-spinning');
+        board.classList.remove('is-spinning', 'is-brake');
         board.classList.add('is-win');
       }
       playTrainHorn();
@@ -3337,17 +3337,37 @@
     }
     clearTimeout(_rouletteTimer);
     if (reduce) { lock(pick()); return; }
+    const winner = pick();
     const start = performance.now();
-    let delay = 50;
-    function tick() {
-      const p = pick();
+    const FAST_MS = 2200;
+    const SLOW_MS = 2600;
+    const HOLD_MS = 1000;
+    function showPair(p) {
       fromEl.textContent = cityRouletteLabel(p[0]);
       toEl.textContent = cityRouletteLabel(p[1]);
-      if (performance.now() - start >= 3400) {
-        lock(p);
+    }
+    function tick() {
+      const elapsed = performance.now() - start;
+      if (elapsed >= FAST_MS + SLOW_MS) {
+        let decoy;
+        do { decoy = pick(); }
+        while (pairs.length > 1 && (decoy[0] + '-' + decoy[1]) === (winner[0] + '-' + winner[1]));
+        showPair(decoy);
+        if (board) {
+          board.classList.remove('is-spinning');
+          board.classList.add('is-brake');
+        }
+        _rouletteTimer = setTimeout(function () { lock(winner); }, HOLD_MS);
         return;
       }
-      delay = Math.min(300, delay * 1.13);
+      showPair(pick());
+      let delay;
+      if (elapsed < FAST_MS) {
+        delay = 48;
+      } else {
+        const u = (elapsed - FAST_MS) / SLOW_MS;
+        delay = 70 + u * u * 780;
+      }
       _rouletteTimer = setTimeout(tick, delay);
     }
     tick();
