@@ -198,6 +198,7 @@
         stats_prose: 'From <strong>103 route guides</strong> in <strong>16 countries</strong> to your next trip — free, no signup.', stat_live: 'Browsing now',
         trust_data: 'AI-planned trips across major European rail networks',
         trust_b1: 'AI-generated itineraries', trust_b2: 'Booking via verified partners', trust_b3: 'No sign-up needed', trust_b4: 'Free to use', trust_klook: 'Bookings processed officially by Klook',
+        ai_demo_badge: 'Example · each card is one ticket (city → city)',
         nav_adventure: 'Plan your Adventure',
         adv_label: 'Plan your adventure', adv_title1: 'Build your own', adv_title2: 'adventure.',
         adv_lead: 'Pick a journey archetype and we\'ll trace the logical chain of real trains that carries you city to city — every connection, a scene.',
@@ -268,6 +269,7 @@
         stats_prose: 'De <strong>103 guías de rutas</strong> en <strong>16 países</strong> a tu próximo viaje — gratis, sin registro.', stat_live: 'Navegando ahora',
         trust_data: 'Viajes planificados con IA en las principales redes ferroviarias europeas',
         trust_b1: 'Itinerarios generados con IA', trust_b2: 'Reserva vía partners verificados', trust_b3: 'Sin registro', trust_b4: 'Gratis', trust_klook: 'Reservas procesadas oficialmente por Klook',
+        ai_demo_badge: 'Ejemplo · cada tarjeta es un tramo (ciudad → ciudad)',
         nav_adventure: 'Planifica tu aventura',
         adv_label: 'Arma tu aventura', adv_title1: 'Arma tu propia', adv_title2: 'aventura.',
         adv_lead: 'Elige un arquetipo de viaje y trazamos la cadena lógica de trenes reales que te lleva de ciudad en ciudad — cada conexión, una escena.',
@@ -338,6 +340,7 @@
         stats_prose: 'De <strong>103 guides d\'itinéraires</strong> dans <strong>16 pays</strong> vers votre prochain voyage — gratuit, sans inscription.', stat_live: 'En ligne maintenant',
         trust_data: 'Voyages planifiés par IA sur les principaux réseaux ferroviaires européens',
         trust_b1: 'Itinéraires générés par IA', trust_b2: 'Réservation via partenaires vérifiés', trust_b3: 'Sans inscription', trust_b4: 'Gratuit', trust_klook: 'Réservations traitées officiellement par Klook',
+        ai_demo_badge: 'Exemple · chaque carte est un trajet (ville → ville)',
         nav_adventure: 'Planifiez votre aventure',
         adv_label: 'Planifiez votre aventure', adv_title1: 'Créez votre propre', adv_title2: 'aventure.',
         adv_lead: 'Choisissez un archétype de voyage et nous traçons la chaîne logique de vrais trains qui vous emmènent de ville en ville — chaque correspondance, une scène.',
@@ -408,6 +411,7 @@
         stats_prose: 'Von <strong>103 Routen-Guides</strong> in <strong>16 Ländern</strong> zu deiner nächsten Reise — kostenlos, ohne Anmeldung.', stat_live: 'Jetzt aktiv',
         trust_data: 'KI-geplante Reisen auf den wichtigsten europäischen Bahnnetzen',
         trust_b1: 'KI-generierte Reiserouten', trust_b2: 'Buchung über geprüfte Partner', trust_b3: 'Keine Anmeldung nötig', trust_b4: 'Kostenlos', trust_klook: 'Buchungen offiziell über Klook abgewickelt',
+        ai_demo_badge: 'Beispiel · jede Karte ist eine Etappe (Stadt → Stadt)',
         nav_adventure: 'Dein Abenteuer planen',
         adv_label: 'Plan dein Abenteuer', adv_title1: 'Bau dein eigenes', adv_title2: 'Abenteuer.',
         adv_lead: 'Wähle einen Reisetyp und wir zeichnen die logische Kette echter Züge, die dich von Stadt zu Stadt bringt — jede Verbindung, eine Szene.',
@@ -478,6 +482,7 @@
         stats_prose: 'Da <strong>103 guide di percorso</strong> in <strong>16 paesi</strong> al tuo prossimo viaggio — gratis, senza registrazione.', stat_live: 'Online ora',
         trust_data: 'Viaggi pianificati con IA sulle principali reti ferroviarie europee',
         trust_b1: 'Itinerari generati con IA', trust_b2: 'Prenotazione tramite partner verificati', trust_b3: 'Nessuna registrazione', trust_b4: 'Gratuito', trust_klook: 'Prenotazioni gestite ufficialmente da Klook',
+        ai_demo_badge: 'Esempio · ogni scheda è una tratta (città → città)',
         nav_adventure: 'Pianifica la tua avventura',
         adv_label: 'Pianifica la tua avventura', adv_title1: 'Costruisci la tua', adv_title2: 'avventura.',
         adv_lead: 'Scegli un archetipo di viaggio e tracceremo la catena logica di treni reali che ti porta di città in città — ogni connessione, una scena.',
@@ -548,6 +553,7 @@
         stats_prose: 'De <strong>103 guias de rotas</strong> em <strong>16 países</strong> para a sua próxima viagem — grátis, sem cadastro.', stat_live: 'A navegar agora',
         trust_data: 'Viagens planeadas com IA nas principais redes ferroviárias europeias',
         trust_b1: 'Itinerários gerados com IA', trust_b2: 'Reserva através de parceiros verificados', trust_b3: 'Sem registo', trust_b4: 'Gratuito', trust_klook: 'Reservas processadas oficialmente pela Klook',
+        ai_demo_badge: 'Exemplo · cada cartão é um trecho (cidade → cidade)',
         nav_adventure: 'Planeia a tua aventura',
         adv_label: 'Planeia a tua aventura', adv_title1: 'Constrói a tua', adv_title2: 'aventura.',
         adv_lead: 'Escolhe um arquétipo de viagem e traçamos a cadeia lógica de comboios reais que te leva de cidade em cidade — cada ligação, uma cena.',
@@ -1874,45 +1880,39 @@
   // CONFIGURACIÓN DE API - CAMBIAR ESTA URL CUANDO TENGAS EL BACKEND
   const AI_API_URL = 'https://glosx-backend-production.up.railway.app/api/route-planner';
   
-  // Datos de ejemplo (mock) para demostración
+  // Demo = mismo JSON que sale del planner: un viaje largo se arma como
+  // pares punto a punto (Klook no vende el itinerario entero). Madrid→París
+  // no es un directo: AVE Madrid–Barcelona + TGV Barcelona–París. Misma
+  // lógica que París–Lourdes (París–Toulouse + Toulouse–Lourdes).
   const MOCK_ROUTE_DATA = {
+    "valido": true,
     "resumen": {
-      "origen_fin_o_concepto": "Madrid to Paris scenic route through Spanish and French countryside",
-      "duracion_estimada_total": "10-12 hours total journey time"
+      "origen_fin_o_concepto": "Madrid to Paris",
+      "duracion_estimada_total": "about 9 hours with one change"
     },
-    "paradas_principales": ["Madrid", "Barcelona", "Perpignan", "Lyon", "Paris"],
+    "paradas_principales": ["Madrid", "Barcelona", "Paris"],
     "tramos": [
       {
         "orden": 1,
-        "origen": "Madrid Atocha",
-        "destino": "Barcelona Sants",
+        "origen": "Madrid",
+        "destino": "Barcelona",
+        "estacion_salida": "Madrid Atocha",
+        "estacion_llegada": "Barcelona Sants",
         "tiempo_trayecto": "2h 30m",
+        "operador_tren": "AVE · Renfe",
         "tipo_tren_sugerido": "AVE",
-        "breve_descripcion_conexion": "High-speed AVE train connects Madrid to Barcelona in just 2.5 hours. Comfortable seating with WiFi and power outlets."
+        "descripcion_contextual": "Direct high-speed pair — this card books Madrid to Barcelona only."
       },
       {
         "orden": 2,
-        "origen": "Barcelona Sants",
-        "destino": "Perpignan",
-        "tiempo_trayecto": "1h 45m",
+        "origen": "Barcelona",
+        "destino": "Paris",
+        "estacion_salida": "Barcelona Sants",
+        "estacion_llegada": "Paris Gare de Lyon",
+        "tiempo_trayecto": "6h 30m",
+        "operador_tren": "TGV · SNCF",
         "tipo_tren_sugerido": "TGV",
-        "breve_descripcion_conexion": "Cross-border TGV from Barcelona to France. Scenic route through Pyrenees mountains. Requires seat reservation."
-      },
-      {
-        "orden": 3,
-        "origen": "Perpignan",
-        "destino": "Lyon Part-Dieu",
-        "tiempo_trayecto": "2h 15m",
-        "tipo_tren_sugerido": "TGV",
-        "breve_descripcion_conexion": "TGV continues north through French countryside. Lyon is a major hub with excellent connections."
-      },
-      {
-        "orden": 4,
-        "origen": "Lyon Part-Dieu",
-        "destino": "Paris Gare de Lyon",
-        "tiempo_trayecto": "2h 00m",
-        "tipo_tren_sugerido": "TGV",
-        "breve_descripcion_conexion": "Final high-speed segment to Paris. Arrives at Gare de Lyon in the heart of the city."
+        "descripcion_contextual": "Second pair: Barcelona to Paris. Long routes are several tickets, not one."
       }
     ]
   };
@@ -2661,18 +2661,30 @@
     return 'train-reg';
   }
 
-  function displayAIRoute(data) {
+  function displayAIRoute(data, opts) {
+    const isDemo = !!(opts && opts.isDemo);
     // Ordenar tramos al inicio para que todo lo que sigue use el orden correcto
     data.tramos = sortTramos(data.tramos);
     _currentTripData = data;
     const inputWrapper = document.getElementById('aiInputWrapper');
     const results = document.getElementById('aiResults');
+    const demoBadge = document.getElementById('aiDemoBadge');
 
-    // Ocultar input, mostrar resultados
-    inputWrapper.style.display = 'none';
+    if (!isDemo) {
+      inputWrapper.style.display = 'none';
+    } else {
+      inputWrapper.style.display = 'block';
+    }
     results.style.display = 'block';
+    results.classList.toggle('is-demo', isDemo);
+    if (demoBadge) {
+      const dict = TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en;
+      demoBadge.textContent = dict.ai_demo_badge || 'Example itinerary';
+      demoBadge.style.display = isDemo ? 'inline-block' : 'none';
+    }
 
     // Cargar el video del CTA recién ahora (evita bajarlo en la carga inicial de la página)
+    if (!isDemo) {
     const ctaVideo = document.querySelector('.ai-cta-video-el');
     if (ctaVideo) {
       const ctaSource = ctaVideo.querySelector('source[data-src]');
@@ -2682,6 +2694,7 @@
         ctaVideo.load();
         ctaVideo.play().catch(() => {});
       }
+    }
     }
 
     // Llenar datos
@@ -2895,6 +2908,12 @@
     
     // Mostrar botón de restaurar si hay caché
     checkRouteCache();
+    showDemoRoute();
+  }
+
+  function showDemoRoute() {
+    if (!document.getElementById('aiResults')) return;
+    displayAIRoute(JSON.parse(JSON.stringify(MOCK_ROUTE_DATA)), { isDemo: true });
   }
 
   // Función para guardar ruta en caché
@@ -2954,7 +2973,15 @@
   }
 
   // Inicializar verificación de caché al cargar
-  document.addEventListener('DOMContentLoaded', checkRouteCache);
+  function initPlannerHome() {
+    checkRouteCache();
+    showDemoRoute();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPlannerHome);
+  } else {
+    initPlannerHome();
+  }
 
   function showAIPlannerError(msg) {
     const existing = document.getElementById('aiPlannerError');

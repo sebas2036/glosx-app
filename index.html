@@ -349,6 +349,20 @@
       <p data-i18n="hero_subtitle">
         Tell us where you want to go — our AI builds the full itinerary, connects you to buy tickets, and finds hotels along the way.
       </p>
+      <div class="hero-ops" aria-label="Rail operators">
+        <div class="trust-ops">
+          <span class="op-chip"><b style="color:#E30016">Renfe</b></span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="Deutsche Bahn" loading="lazy"/>Deutsche Bahn</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="SBB" loading="lazy"/>SBB</span>
+          <span class="op-chip"><b style="color:#E4032E">Trenitalia</b></span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="ÖBB" loading="lazy"/>ÖBB</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="NS" loading="lazy"/>NS</span>
+          <span class="op-chip"><b style="color:#003DA5">SNCB</b></span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="CP" loading="lazy"/>CP</span>
+        </div>
+        <p class="hero-ops-klook" data-i18n="trust_klook">Bookings processed officially by Klook</p>
+      </div>
       <div class="hero-cta-wrap" style="display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:8px;margin-bottom:16px;">
         <button class="hero-ai-cta" onclick="focusAIPlanner()" data-i18n="hero_ai_cta">Plan my trip with AI →</button>
       </div>
@@ -380,6 +394,7 @@
     <div class="ai-results" id="aiResults" style="display:none;">
       <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
       <div class="ai-results-header">
+        <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">Example · each card is one ticket (city → city)</span>
         <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
         <p id="aiRouteDuration"></p>
         <p class="ai-route-meta" id="aiRouteMeta"></p>
