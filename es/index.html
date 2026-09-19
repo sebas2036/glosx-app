@@ -731,9 +731,14 @@
     </div>
 
     <div class="discover-cta">
-      <h3 data-i18n="disc_cta_title">¿Un pueblo que solo ves en tren?</h3>
-      <p data-i18n="disc_cta_text">Mandanos el par de ciudades. Lo publicamos en glosx.app.</p>
-      <a href="mailto:contact@glosx.app?subject=Stop%20for%20glosx.app&amp;body=From%3A%20%0ATo%3A%20%0A" id="discoverCtaBtn" class="discover-cta-btn" data-i18n="disc_cta_btn" onclick="try{if(typeof gtag==='function')gtag('event','ui_click',{source:'discover_cta'});}catch(e){}">Proponé una parada →</a>
+      <h3 data-i18n="disc_cta_title">Hoy nos vamos a…</h3>
+      <p data-i18n="disc_cta_text">Girá la ruleta: un par real y el itinerario se arma solo.</p>
+      <div class="pair-roulette" id="pairRoulette" aria-live="polite">
+        <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
+        <span class="pair-roulette-arrow" aria-hidden="true">→</span>
+        <span class="pair-roulette-to" id="rouletteTo">Barcelona</span>
+      </div>
+      <button type="button" class="discover-cta-btn" id="discoverCtaBtn" data-i18n="disc_cta_btn" onclick="spinPairRoulette()">Tirar la ruleta</button>
     </div>
 
     <div class="discover-grid">
@@ -1134,7 +1139,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=13" defer></script>
+  <script src="/assets/js/main.min.js?v=14" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
