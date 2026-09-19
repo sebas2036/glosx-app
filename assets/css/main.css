@@ -1246,6 +1246,20 @@
       border-radius: 16px;
       max-width: min(560px, 92vw);
       box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      overflow: visible;
+    }
+    /* Grid adaptativo: 1 par = caja chica; 2 pares = 2 columnas;
+       3 pares = 3 columnas (la caja crece); 4+ = 2×2. Sin scroll. */
+    .ai-results.is-demo:has(.ai-segments.cols-2) { max-width: min(760px, 94vw); }
+    .ai-results.is-demo:has(.ai-segments.cols-3) { max-width: min(1080px, 96vw); }
+    .ai-results.is-demo:has(.ai-segments.cols-2x2) { max-width: min(760px, 94vw); }
+    .ai-results.is-demo .ai-segments { max-width: 100%; width: 100%; }
+    .ai-results.is-demo .ai-segment { min-width: 0; }
+    .ai-results.is-demo .ai-segment-buy {
+      white-space: normal;
+      align-self: stretch;
+      text-align: center;
+      line-height: 1.25;
     }
     .ai-results.is-demo .ai-results-header h3 { font-size: 18px; margin-bottom: 2px; }
     .ai-results.is-demo .ai-results-header p { font-size: 12px; }
@@ -2127,6 +2141,7 @@
     padding: 12px;
     display: flex;
     flex-direction: column;
+    min-width: 0;
   }
   .ai-segment .ai-segment-body { margin-top: auto; }
   .ai-segment-header {
