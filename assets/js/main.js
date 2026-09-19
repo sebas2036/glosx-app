@@ -662,8 +662,14 @@
       } catch (e) { /* SCENIC_TRAINS aún no definido en primer applyLang */ }
       // Re-renderiza la timeline de rutas abierta en el nuevo idioma
       if (typeof window.wtRefreshTimeline === 'function') window.wtRefreshTimeline();
-      if (typeof window.showDemoRoute === 'function' && document.getElementById('aiResults')?.classList.contains('is-demo')) {
+      if (typeof window.showDemoRoute === 'function' && document.getElementById('aiResults')?.classList.contains('is-seed-demo')) {
         window.showDemoRoute();
+      }
+      const rouletteBtn = document.getElementById('discoverCtaBtn');
+      if (rouletteBtn && document.querySelector('.ai-planner.is-roulette-done') && dict.disc_cta_again) {
+        rouletteBtn.setAttribute('data-i18n', 'disc_cta_again');
+        rouletteBtn.textContent = dict.disc_cta_again;
+        rouletteBtn.classList.add('is-ghost');
       }
     }
 
@@ -2809,6 +2815,7 @@
     if (inputWrapper) inputWrapper.style.display = 'block';
     results.style.display = 'block';
     results.classList.toggle('is-demo', compact);
+    results.classList.toggle('is-seed-demo', isDemo);
     const fromRoulette = !!(opts && opts.fromRoulette);
     results.classList.toggle('from-roulette', fromRoulette);
     results.classList.toggle('is-simple', fromRoulette && data.tramos.length === 1);
@@ -3050,7 +3057,27 @@
     
     // Mostrar botón de restaurar si hay caché
     checkRouteCache();
-    showDemoRoute();
+    resetRouletteChrome();
+  }
+
+  function resetRouletteChrome() {
+    const planner = document.querySelector('.ai-planner');
+    if (planner) planner.classList.remove('is-roulette-done');
+    const results = document.getElementById('aiResults');
+    if (results) {
+      results.classList.remove('from-roulette', 'is-simple', 'is-seed-demo');
+    }
+    const btn = document.getElementById('discoverCtaBtn');
+    const book = document.getElementById('discoverCtaBook');
+    const lang = document.documentElement.lang || 'en';
+    const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+    if (btn) {
+      btn.disabled = false;
+      btn.classList.remove('is-ghost');
+      btn.setAttribute('data-i18n', 'disc_cta_btn');
+      btn.textContent = dict.disc_cta_btn || 'Spin the wheel';
+    }
+    if (book) book.hidden = true;
   }
 
   function showDemoRoute() {
@@ -3128,7 +3155,6 @@
   // Inicializar verificación de caché al cargar
   function initPlannerHome() {
     checkRouteCache();
-    showDemoRoute();
     const input = document.getElementById('aiInput');
     if (!input) return;
     let previewTimer;
