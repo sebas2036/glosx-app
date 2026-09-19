@@ -1937,20 +1937,117 @@
     document.querySelectorAll('.country-chip.show-photo').forEach(c => c.classList.remove('show-photo'));
     setAISuggestion(from + ' to ' + to);
     document.getElementById('aiInputWrapper').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (!previewFromInput()) generateAIRoute();
   }
 
-  // Invierte origen/destino en el input del planner AI ("Madrid to Paris" -> "Paris to Madrid").
-  // El conector varía según idioma (to/a/à/nach), así que se prueban todos.
-  function invertAIRoute() {
-    const value = document.getElementById('aiInput').value;
+  function slugCityName(x) {
+    return (x || '').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function parseOriginDest(text) {
+    const value = (text || '').trim();
+    if (!value) return null;
     const connectors = ['to', 'à', 'nach', 'a'];
     for (const conn of connectors) {
       const match = value.match(new RegExp('^(.+?)\\s' + conn + '\\s(.+)$', 'i'));
-      if (match) {
-        setAISuggestion(match[2].trim() + ' ' + conn + ' ' + match[1].trim());
-        return;
-      }
+      if (match) return { from: match[1].trim(), to: match[2].trim(), conn: conn };
     }
+    return null;
+  }
+
+  // Solo pares documentados (Klook no vende el viaje entero). El resto de
+  // "ciudad a ciudad" conocidos en GLOSX_ROUTE_PAGES son un solo par.
+  const KNOWN_MULTI_LEGS = {
+    'madrid-paris': [['Madrid', 'Barcelona'], ['Barcelona', 'Paris']],
+    'paris-madrid': [['Paris', 'Barcelona'], ['Barcelona', 'Madrid']],
+    'paris-lourdes': [['Paris', 'Toulouse'], ['Toulouse', 'Lourdes']],
+    'lourdes-paris': [['Lourdes', 'Toulouse'], ['Toulouse', 'Paris']],
+    'bruges-amsterdam': [['Bruges', 'Brussels'], ['Brussels', 'Amsterdam']],
+    'amsterdam-bruges': [['Amsterdam', 'Brussels'], ['Brussels', 'Bruges']]
+  };
+
+  function buildPairRoute(fromLabel, toLabel, legs) {
+    const tramos = legs.map((p, i) => ({
+      orden: i + 1,
+      origen: p[0],
+      destino: p[1],
+      estacion_salida: '',
+      estacion_llegada: '',
+      tiempo_trayecto: '',
+      operador_tren: '',
+      tipo_tren_sugerido: '',
+      descripcion_contextual: ''
+    }));
+    return {
+      valido: true,
+      resumen: {
+        origen_fin_o_concepto: fromLabel + ' → ' + toLabel,
+        duracion_estimada_total: legs.length > 1 ? '' : ''
+      },
+      paradas_principales: [legs[0][0]].concat(legs.map(p => p[1])),
+      tramos: tramos
+    };
+  }
+
+  function previewFromInput() {
+    const input = document.getElementById('aiInput');
+    if (!input) return false;
+    const parsed = parseOriginDest(input.value);
+    if (!parsed) return false;
+    const fromSlug = slugCityName(cleanCityForKlook(parsed.from) || parsed.from);
+    const toSlug = slugCityName(cleanCityForKlook(parsed.to) || parsed.to);
+    if (!fromSlug || !toSlug) return false;
+    const key = fromSlug + '-' + toSlug;
+    const multi = KNOWN_MULTI_LEGS[key];
+    if (multi) {
+      displayAIRoute(buildPairRoute(parsed.from, parsed.to, multi), { compact: true });
+      return true;
+    }
+    const pages = window.GLOSX_ROUTE_PAGES;
+    if (pages && pages.has(key)) {
+      displayAIRoute(buildPairRoute(parsed.from, parsed.to, [[parsed.from, parsed.to]]), { compact: true });
+      return true;
+    }
+    return false;
+  }
+
+  function reverseTripData(data) {
+    const tramos = (data.tramos || []).slice().reverse().map((t, i) => ({
+      ...t,
+      orden: i + 1,
+      origen: t.destino,
+      destino: t.origen,
+      estacion_salida: t.estacion_llegada || '',
+      estacion_llegada: t.estacion_salida || ''
+    }));
+    const first = tramos[0] && tramos[0].origen;
+    const last = tramos.length && tramos[tramos.length - 1].destino;
+    return {
+      ...data,
+      resumen: {
+        ...(data.resumen || {}),
+        origen_fin_o_concepto: first && last ? (first + ' → ' + last) : ((data.resumen && data.resumen.origen_fin_o_concepto) || '')
+      },
+      tramos: tramos
+    };
+  }
+
+  function invertAIRoute() {
+    const input = document.getElementById('aiInput');
+    const value = input ? input.value.trim() : '';
+    const parsed = parseOriginDest(value);
+    if (parsed) {
+      setAISuggestion(parsed.to + ' ' + parsed.conn + ' ' + parsed.from);
+    } else if (_currentTripData && _currentTripData.tramos && _currentTripData.tramos.length) {
+      const first = _currentTripData.tramos[0].origen;
+      const last = _currentTripData.tramos[_currentTripData.tramos.length - 1].destino;
+      setAISuggestion(last + ' to ' + first);
+    }
+    if (_currentTripData && _currentTripData.tramos && _currentTripData.tramos.length) {
+      displayAIRoute(reverseTripData(_currentTripData), { compact: true });
+      return;
+    }
+    previewFromInput();
   }
 
   // Función principal para generar ruta
@@ -1973,6 +2070,7 @@
     btn.textContent = 'Generating...';
 
     try {
+      previewFromInput();
       let routeData;
       if (AI_API_URL !== 'YOUR_API_ENDPOINT_HERE') {
         routeData = await callAIAPI(input);
@@ -1986,7 +2084,7 @@
       } else if (routeData.valido === false) {
         showAIPlannerError(routeData.mensajeError || 'Cuéntanos a dónde quieres viajar por Europa.');
       } else {
-        displayAIRoute(routeData);
+        displayAIRoute(routeData, { compact: true });
         saveRouteToCache(input, routeData);
       }
     } catch (error) {
@@ -1995,7 +2093,7 @@
     } finally {
       btn.disabled = false;
       btn.classList.remove('loading');
-      btn.textContent = 'Generate Itinerary';
+      btn.textContent = ((TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en).ai_generate) || 'Generate Itinerary';
     }
   }
 
@@ -2669,6 +2767,7 @@
 
   function displayAIRoute(data, opts) {
     const isDemo = !!(opts && opts.isDemo);
+    const compact = !!(opts && (opts.compact || opts.isDemo));
     // Ordenar tramos al inicio para que todo lo que sigue use el orden correcto
     data.tramos = sortTramos(data.tramos);
     _currentTripData = data;
@@ -2676,13 +2775,9 @@
     const results = document.getElementById('aiResults');
     const demoBadge = document.getElementById('aiDemoBadge');
 
-    if (!isDemo) {
-      inputWrapper.style.display = 'none';
-    } else {
-      inputWrapper.style.display = 'block';
-    }
+    if (inputWrapper) inputWrapper.style.display = 'block';
     results.style.display = 'block';
-    results.classList.toggle('is-demo', isDemo);
+    results.classList.toggle('is-demo', compact);
     if (demoBadge) {
       const dict = TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en;
       demoBadge.textContent = dict.ai_demo_badge || 'Example itinerary';
@@ -2690,7 +2785,7 @@
     }
 
     // Cargar el video del CTA recién ahora (evita bajarlo en la carga inicial de la página)
-    if (!isDemo) {
+    if (!compact) {
     const ctaVideo = document.querySelector('.ai-cta-video-el');
     if (ctaVideo) {
       const ctaSource = ctaVideo.querySelector('source[data-src]');
@@ -2760,7 +2855,7 @@
     }
 
     // Hoteles con foto por parada, directo en la pantalla (sin modal aparte)
-    if (!isDemo) {
+    if (!compact) {
       renderHotelsInline(data);
     } else {
       const hotelsContainer = document.getElementById('aiHotels');
@@ -2805,7 +2900,7 @@
     data.tramos.forEach(async (segment, index) => {
       const operador = translateOperator(segment.operador_tren || segment.tipo_tren_sugerido || '');
       const cls = trainClass(operador);
-      const imgUrl = isDemo ? null : await getCityImage(segment.destino);
+      const imgUrl = compact ? null : await getCityImage(segment.destino);
       const altTag = segment.imagen_alt_tag || segment.destino;
       const isLast = index === data.tramos.length - 1;
       const imgHTML = imgUrl
@@ -2849,7 +2944,7 @@
             ${kiwiHTML}
           </div>`;
         segmentsContainer.innerHTML += segmentHTML;
-      }, isDemo ? 0 : index * 300);
+      }, compact ? 0 : index * 300);
     });
 
     // Dibujar línea SVG con animación de dibujado
@@ -2926,7 +3021,16 @@
     if (!document.getElementById('aiResults')) return;
     const lang = document.documentElement.lang || 'en';
     const data = DEMO_ROUTES[lang] || DEMO_ROUTES.en;
-    displayAIRoute(JSON.parse(JSON.stringify(data)), { isDemo: true });
+    const seedQuery = {
+      en: 'Madrid to Paris',
+      es: 'Madrid a París',
+      fr: 'Madrid à Paris',
+      de: 'Madrid nach Paris',
+      it: 'Madrid a Parigi',
+      pt: 'Madrid a Paris'
+    };
+    setAISuggestion(seedQuery[lang] || seedQuery.en);
+    displayAIRoute(JSON.parse(JSON.stringify(data)), { isDemo: true, compact: true });
   }
 
   // Función para guardar ruta en caché
@@ -2959,7 +3063,7 @@
           if (restoreBtn) restoreBtn.style.display = 'none';
           return;
         }
-        displayAIRoute(parsed);
+        displayAIRoute(parsed, { compact: true });
       }
     } catch (e) {
       console.error('Error restoring from cache:', e);
@@ -2989,6 +3093,21 @@
   function initPlannerHome() {
     checkRouteCache();
     showDemoRoute();
+    const input = document.getElementById('aiInput');
+    if (!input) return;
+    let previewTimer;
+    input.addEventListener('input', function() {
+      const aurora = document.getElementById('aiInputAurora');
+      if (aurora) aurora.classList.toggle('active', this.value.trim().length > 0);
+      clearTimeout(previewTimer);
+      previewTimer = setTimeout(function() { previewFromInput(); }, 450);
+    });
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        generateAIRoute();
+      }
+    });
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPlannerHome);
