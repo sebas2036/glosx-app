@@ -848,9 +848,13 @@ function langSuffix(lang) { return { en: '/', es: '/es/', fr: '/fr/', it: '/it/'
 function canonicalUrl(slug, lang) { return `https://glosx.app/rutas/${slug}${langSuffix(lang)}`; }
 // Selector de idioma en el nav: links a los OTROS 3 idiomas.
 const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT' };
+const LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', it: 'Italiano' };
 function langSwitchLinks(slug, current) {
-  return ['en', 'es', 'fr', 'it'].filter(l => l !== current)
-    .map(l => `<a href="/rutas/${slug}${langSuffix(l)}" class="lang">${LANG_LABELS[l]}</a>`).join(' ');
+  const opts = ['en', 'es', 'fr', 'it'].map(l => {
+    const active = l === current ? ' active' : '';
+    return `<a class="lang-option${active}" href="/rutas/${slug}${langSuffix(l)}">${LANG_NAMES[l]}</a>`;
+  }).join('');
+  return `<div class="lang-wrapper"><button type="button" class="lang-btn" aria-label="Language" onclick="event.stopPropagation();this.nextElementSibling.classList.toggle('open');"><span>${LANG_LABELS[current]}</span><span style="font-size:10px;opacity:0.6">▾</span></button><div class="lang-dropdown">${opts}</div></div>`;
 }
 // Etiquetas localizadas para el breadcrumb (Home / Rutas).
 const BREADCRUMB = {

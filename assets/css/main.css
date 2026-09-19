@@ -203,7 +203,7 @@
       display: flex; align-items: center; gap: 10px;
       padding: 8px 10px; border-radius: 8px;
       font-size: 13px; color: var(--text);
-      cursor: pointer; transition: background 0.15s;
+      cursor: pointer; transition: background 0.15s; text-decoration: none;
     }
     .lang-option:hover { background: rgba(193,0,22,0.15); }
     .lang-option.active { background: rgba(193,0,22,0.25); color: var(--primary2); }

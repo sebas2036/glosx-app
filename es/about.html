@@ -161,20 +161,34 @@
       main { padding: 100px 20px 60px; }
       h1 { font-size: 36px; }
     }
-  </style>
+  
+    .lang-wrapper { position: relative; }
+    .lang-btn { background: #fbf1e6; color: #14151a; border: 1px solid rgba(20,21,26,0.12); border-radius: 100px; padding: 6px 12px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px; }
+    .lang-dropdown { position: absolute; top: calc(100% + 8px); right: 0; background: #fff; border: 1px solid rgba(20,21,26,0.14); border-radius: 12px; padding: 6px; min-width: 160px; z-index: 200; box-shadow: 0 12px 28px rgba(20,21,26,0.12); display: none; }
+    .lang-dropdown.open { display: block; }
+    .lang-option { display: block; padding: 8px 10px; border-radius: 8px; font-size: 13px; color: #14151a; text-decoration: none; cursor: pointer; }
+    .lang-option:hover { background: rgba(193,0,22,0.10); text-decoration: none; }
+    .lang-option.active { background: rgba(193,0,22,0.18); color: #C10016; font-weight: 700; }
+</style>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo">WoW Train</a>
     <div class="nav-right">
-      <select class="lang-selector" id="langSel" onchange="setLang(this.value)">
-        <option value="en">EN</option>
-        <option value="es">ES</option>
-        <option value="fr">FR</option>
-        <option value="de">DE</option>
-        <option value="it">IT</option>
-        <option value="pt">PT</option>
-      </select>
+      <div class="lang-wrapper">
+        <button type="button" class="lang-btn" id="langBtn" onclick="event.stopPropagation();document.getElementById('langDropdown').classList.toggle('open');" aria-label="Language">
+          <span id="langCode">EN</span>
+          <span style="font-size:10px;opacity:0.6">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option" data-lang="en" onclick="setLang('en')"><span>English</span></div>
+          <div class="lang-option" data-lang="es" onclick="setLang('es')"><span>Español</span></div>
+          <div class="lang-option" data-lang="fr" onclick="setLang('fr')"><span>Français</span></div>
+          <div class="lang-option" data-lang="de" onclick="setLang('de')"><span>Deutsch</span></div>
+          <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>Italiano</span></div>
+          <div class="lang-option" data-lang="pt" onclick="setLang('pt')"><span>Português</span></div>
+        </div>
+      </div>
       <a href="/" class="nav-back" data-i18n="nav_back">← Back home</a>
     </div>
   </nav>
@@ -433,7 +447,7 @@
       document.title = d.page_title;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute('content', d.page_desc);
-      document.getElementById('langSel').value = lang;
+      var _lc=document.getElementById('langCode'); if(_lc) _lc.textContent = lang.toUpperCase(); document.querySelectorAll('.lang-option').forEach(function(o){ o.classList.toggle('active', o.dataset.lang===lang); }); var _ld=document.getElementById('langDropdown'); if(_ld) _ld.classList.remove('open');
       localStorage.setItem('wt_lang', lang);
     }
 

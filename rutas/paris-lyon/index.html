@@ -64,8 +64,14 @@
     .nav-right { display: flex; align-items: center; gap: 18px; }
     .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
     .nav-back:hover { color: var(--text); }
-    .lang { color: var(--muted); font-size: 13px; font-weight: 600; text-decoration: none; margin-right: 4px; }
-    .lang:hover { color: var(--primary2); border-color: var(--primary2); background: #fff; }
+
+    .lang-wrapper { position: relative; }
+    .lang-btn { background: #fbf1e6; color: #14151a; border: 1px solid rgba(20,21,26,0.12); border-radius: 100px; padding: 6px 12px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px; }
+    .lang-dropdown { position: absolute; top: calc(100% + 8px); right: 0; background: #fff; border: 1px solid rgba(20,21,26,0.14); border-radius: 12px; padding: 6px; min-width: 160px; z-index: 200; box-shadow: 0 12px 28px rgba(20,21,26,0.12); display: none; }
+    .lang-dropdown.open { display: block; }
+    .lang-option { display: block; padding: 8px 10px; border-radius: 8px; font-size: 13px; color: #14151a; text-decoration: none; cursor: pointer; }
+    .lang-option:hover { background: rgba(193,0,22,0.10); text-decoration: none; }
+    .lang-option.active { background: rgba(193,0,22,0.18); color: #C10016; font-weight: 700; }
     main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     .badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35); border-radius: 100px; padding: 5px 14px; margin-bottom: 24px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #fff; text-transform: uppercase; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
     h1 { font-size: 44px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
@@ -154,7 +160,7 @@
   <nav>
     <a href="/" class="nav-logo" style="font-size:20px;display:inline-flex;align-items:baseline;gap:0;font-weight:800;letter-spacing:-0.3px;"><span style="color:#14151a;">Wo</span><span style="color:#C10016;font-style:italic;font-weight:900;margin:0 -0.04em;">W</span><span style="color:#14151a;margin-left:0.28em;">Train</span></a>
     <div class="nav-right">
-      <a href="/rutas/paris-lyon/es/" class="lang">ES</a> <a href="/rutas/paris-lyon/fr/" class="lang">FR</a> <a href="/rutas/paris-lyon/it/" class="lang">IT</a>
+      <div class="lang-wrapper"><button type="button" class="lang-btn" aria-label="Language" onclick="event.stopPropagation();this.nextElementSibling.classList.toggle('open');"><span>EN</span><span style="font-size:10px;opacity:0.6">▾</span></button><div class="lang-dropdown"><a class="lang-option active" href="/rutas/paris-lyon/">English</a><a class="lang-option" href="/rutas/paris-lyon/es/">Español</a><a class="lang-option" href="/rutas/paris-lyon/fr/">Français</a><a class="lang-option" href="/rutas/paris-lyon/it/">Italiano</a></div></div>
       <a href="/rutas/" class="nav-back">← All routes</a>
     </div>
   </nav>
@@ -372,6 +378,7 @@
         try { if (typeof gtag === 'function') gtag('event', 'ui_click', data); } catch (_) {}
       }, true);
     })();
+    document.addEventListener('click', function(){ document.querySelectorAll('.lang-dropdown.open').forEach(function(d){ d.classList.remove('open'); }); });
   </script>
 </body>
 </html>

@@ -169,16 +169,22 @@
     .klook-cta-btn { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; background: linear-gradient(135deg, #FF7A3D, #FF5A1F); color: #fff; font-weight: 800; font-size: 14px; padding: 11px 22px; border-radius: 100px; box-shadow: 0 4px 14px rgba(255,90,31,0.45); white-space: nowrap; }
     .klook-cta:hover .klook-cta-btn { filter: brightness(1.07); }
     @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } .photo-grid img { height: 180px; } .klook-cta { flex-wrap: wrap; } .klook-cta-btn { width: 100%; justify-content: center; margin-top: 6px; } }
-  </style>
+  
+    .lang-wrapper { position: relative; }
+    .lang-btn { background: #fbf1e6; color: #14151a; border: 1px solid rgba(20,21,26,0.12); border-radius: 100px; padding: 6px 12px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px; }
+    .lang-dropdown { position: absolute; top: calc(100% + 8px); right: 0; background: #fff; border: 1px solid rgba(20,21,26,0.14); border-radius: 12px; padding: 6px; min-width: 160px; z-index: 200; box-shadow: 0 12px 28px rgba(20,21,26,0.12); display: none; }
+    .lang-dropdown.open { display: block; }
+    .lang-option { display: block; padding: 8px 10px; border-radius: 8px; font-size: 13px; color: #14151a; text-decoration: none; cursor: pointer; }
+    .lang-option:hover { background: rgba(193,0,22,0.10); text-decoration: none; }
+    .lang-option.active { background: rgba(193,0,22,0.18); color: #C10016; font-weight: 700; }
+</style>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false">(function(){window.addEventListener("load",function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.com/NTM0NTcw.js?t=534570";document.head.appendChild(s);});})();</script>
 </head>
 <body>
   <nav>
     <a href="/" class="nav-logo">WoW Train</a>
     <div class="nav-right">
-      <a href="/blog-backpacking-italy.html" class="lang">EN</a>
-      <a href="/es/blog-backpacking-italy.html" class="lang">ES</a>
-      <a href="/it/blog-backpacking-italy.html" class="lang">IT</a>
+      <div class="lang-wrapper"><button type="button" class="lang-btn" aria-label="Language" onclick="event.stopPropagation();this.nextElementSibling.classList.toggle('open');"><span>FR</span><span style="font-size:10px;opacity:0.6">▾</span></button><div class="lang-dropdown"><a class="lang-option" href="/blog-backpacking-italy.html">English</a><a class="lang-option" href="/es/blog-backpacking-italy.html">Español</a><a class="lang-option active" href="/fr/blog-backpacking-italy.html">Français</a><a class="lang-option" href="/it/blog-backpacking-italy.html">Italiano</a></div></div>
       <a href="/blog.html" class="nav-back">← Tous les articles</a>
     </div>
   </nav>
@@ -314,5 +320,12 @@
   <p><a href="/">WoW Train</a> · <a href="/blog.html">Blog</a> · <a href="/rutas/">Tous les itinéraires</a> · <a href="/about.html">À propos</a></p>
   <p style="margin-top:10px;">© 2026 GLOSX. Tous droits réservés.</p>
 </footer>
+<script>
+(function(){
+  document.addEventListener('click', function(){
+    document.querySelectorAll('.lang-dropdown.open').forEach(function(d){ d.classList.remove('open'); });
+  });
+})();
+</script>
 </body>
 </html>
