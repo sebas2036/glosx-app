@@ -147,7 +147,7 @@ function buildPage(lang) {
     `<link rel="canonical" href="https://glosx.app/${lang}/" id="canonicalLink" />`
   );
 
-  // hreflang: reemplazar el bloque existente (solo x-default) por el set completo
+  // hreflang: un solo set (si se regenera sobre copias ya localizadas, no duplicar)
   const hreflangBlock = [
     `<link rel="alternate" hreflang="en" href="https://glosx.app/" />`,
     `<link rel="alternate" hreflang="es" href="https://glosx.app/es/" />`,
@@ -156,8 +156,14 @@ function buildPage(lang) {
     `<link rel="alternate" hreflang="x-default" href="https://glosx.app/" />`,
   ].join('\n  ');
   html = html.replace(
-    /<link rel="alternate" hreflang="x-default" href="https:\/\/glosx\.app\/" \/>/,
-    hreflangBlock
+    /(?:\s*<link rel="alternate" hreflang="[^"]+" href="https:\/\/glosx\.app[^"]*" \/>)+/,
+    '\n  ' + hreflangBlock
+  );
+
+  const ogLocale = { es: 'es_ES', fr: 'fr_FR', it: 'it_IT' }[lang];
+  html = html.replace(
+    /<meta property="og:locale" content="en_US" \/>/,
+    `<meta property="og:locale" content="${ogLocale}" />`
   );
 
   // Bloquear el auto-switch de idioma por JS: esta URL ya decidio el idioma.
