@@ -8,17 +8,16 @@
        cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
        conexiones lentas porque el hero no puede pintarse hasta que carga. -->
   <link rel="stylesheet" href="/assets/css/main.min.css" />
-  <!-- Poppins como tipografia de todo el sitio -- mas abierta y redonda
-       que el system font que tenia antes. -->
+  <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
+       3 pesos, display=swap. media=print + onload para no bloquear el primer paint
+       en 3G; el sistema tipográfico pinta el H1 al toque. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <!-- IBM Plex Sans: prueba de direccion B (senaletica ferroviaria) solo para hero+nav -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Solo se precarga el webp: el jpg es el fallback para navegadores sin
-       soporte webp (practicamente ninguno hoy), preload duplicado desperdiciaba
-       ancho de banda con fetchpriority=high compitiendo contra el propio CSS. -->
-  <link rel="preload" as="image" href="/hero-bg.webp" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" /></noscript>
+  <!-- LCP real en mobile: la primera foto del carrusel del título, no el mapa
+       de fondo (hero-bg). Precargar los dos robaba banda al 3G. -->
+  <link rel="preload" as="image" href="/assets/img/carousel/bernina-express.webp" type="image/webp" fetchpriority="high" />
   <script>
     (function () {
       var lowEnd = (navigator.deviceMemory && navigator.deviceMemory <= 4) ||
@@ -840,25 +839,25 @@
   <!-- Photo carousel -->
   <div class="photo-carousel">
     <div class="carousel-track">
-      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express">
-      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve">
-      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago">
-      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre">
-      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña">
-      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino">
-      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes">
-      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes">
-      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña">
+      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
       <!-- duplicate for seamless loop -->
-      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express">
-      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve">
-      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago">
-      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre">
-      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña">
-      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino">
-      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes">
-      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes">
-      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña">
+      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
     </div>
   </div>
 
