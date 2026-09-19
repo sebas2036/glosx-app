@@ -1129,7 +1129,29 @@
       text-shadow: 0 2px 10px rgba(0,0,0,0.9);
     }
     .pair-roulette.is-spinning .pair-roulette-from,
-    .pair-roulette.is-spinning .pair-roulette-to { opacity: 0.85; }
+    .pair-roulette.is-spinning .pair-roulette-to {
+      animation: rouletteTick 0.14s ease-in-out infinite alternate;
+    }
+    @keyframes rouletteTick {
+      from { transform: translateY(-3px); opacity: 0.72; }
+      to { transform: translateY(3px); opacity: 1; }
+    }
+    .pair-roulette.is-win .pair-roulette-from,
+    .pair-roulette.is-win .pair-roulette-to {
+      color: #ffe8a3;
+      animation: rouletteWin 0.75s cubic-bezier(0.2, 1.5, 0.3, 1);
+    }
+    @keyframes rouletteWin {
+      0% { transform: scale(0.82); }
+      55% { transform: scale(1.14); }
+      100% { transform: scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pair-roulette.is-spinning .pair-roulette-from,
+      .pair-roulette.is-spinning .pair-roulette-to,
+      .pair-roulette.is-win .pair-roulette-from,
+      .pair-roulette.is-win .pair-roulette-to { animation: none; }
+    }
     .discover-cta-btn {
       display: inline-block; background: #C10016;
       color: #fff; font-weight: 800; padding: 12px 30px; border-radius: 100px;

@@ -3198,6 +3198,32 @@
 
   let _rouletteTimer = null;
   let _rouletteLast = '';
+  let _rouletteAudio = null;
+  function playTrainHorn() {
+    try {
+      const Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return;
+      if (!_rouletteAudio) _rouletteAudio = new Ctx();
+      const ctx = _rouletteAudio;
+      if (ctx.state === 'suspended') ctx.resume();
+      const now = ctx.currentTime;
+      // Dos tonos tipo bocina de tren (tercera mayor), ~1.2s
+      [329.63, 392].forEach(function (freq) {
+        const osc = ctx.createOscillator();
+        const g = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+        g.gain.setValueAtTime(0.0001, now);
+        g.gain.exponentialRampToValueAtTime(0.16, now + 0.06);
+        g.gain.setValueAtTime(0.16, now + 0.55);
+        g.gain.exponentialRampToValueAtTime(0.0001, now + 1.2);
+        osc.connect(g);
+        g.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 1.25);
+      });
+    } catch (e) {}
+  }
   function spinPairRoulette() {
     const pairs = roulettePairs();
     if (!pairs.length) return;
@@ -3207,7 +3233,18 @@
     const btn = document.getElementById('discoverCtaBtn');
     if (!fromEl || !toEl) return;
     if (btn) btn.disabled = true;
-    if (board) board.classList.add('is-spinning');
+    if (board) {
+      board.classList.remove('is-win');
+      board.classList.add('is-spinning');
+    }
+    // iOS: el AudioContext hay que desbloquearlo en el click, no 3s después
+    try {
+      const Ctx = window.AudioContext || window.webkitAudioContext;
+      if (Ctx) {
+        if (!_rouletteAudio) _rouletteAudio = new Ctx();
+        if (_rouletteAudio.state === 'suspended') _rouletteAudio.resume();
+      }
+    } catch (e) {}
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function pick() {
       let p;
@@ -3219,30 +3256,38 @@
       _rouletteLast = p[0] + '-' + p[1];
       fromEl.textContent = cityRouletteLabel(p[0]);
       toEl.textContent = cityRouletteLabel(p[1]);
-      if (board) board.classList.remove('is-spinning');
+      if (board) {
+        board.classList.remove('is-spinning');
+        board.classList.add('is-win');
+      }
+      playTrainHorn();
       if (btn) btn.disabled = false;
       const lang = document.documentElement.lang || 'en';
       const conn = PAIR_CONN[lang] || PAIR_CONN.en;
       setAISuggestion(cityRouletteLabel(p[0]) + ' ' + conn + ' ' + cityRouletteLabel(p[1]));
       previewFromInput();
-      const wrap = document.getElementById('aiInputWrapper');
-      if (wrap) wrap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
       try { if (typeof gtag === 'function') gtag('event', 'ui_click', { source: 'pair_roulette', route: _rouletteLast }); } catch (e) {}
+      const wrap = document.getElementById('aiInputWrapper');
+      setTimeout(function () {
+        if (wrap) wrap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+      }, reduce ? 0 : 900);
     }
+    clearTimeout(_rouletteTimer);
     if (reduce) { lock(pick()); return; }
-    let i = 0;
-    const ticks = 14;
-    clearInterval(_rouletteTimer);
-    _rouletteTimer = setInterval(function () {
+    const start = performance.now();
+    let delay = 50;
+    function tick() {
       const p = pick();
       fromEl.textContent = cityRouletteLabel(p[0]);
       toEl.textContent = cityRouletteLabel(p[1]);
-      i++;
-      if (i >= ticks) {
-        clearInterval(_rouletteTimer);
+      if (performance.now() - start >= 3400) {
         lock(p);
+        return;
       }
-    }, 70);
+      delay = Math.min(300, delay * 1.13);
+      _rouletteTimer = setTimeout(tick, delay);
+    }
+    tick();
   }
 
   window.applyPopularPair = applyPopularPair;
