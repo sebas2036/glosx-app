@@ -1494,7 +1494,7 @@ function replaceTemplate(template, route, lang) {
     '{{mainTitle}}': langContent.mainTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{metaText}}': langContent.metaText,
     '{{leadText}}': fillTokens(pickVariant(route.slug + 'lead', langContent.leadVariants), route, lang),
-    '{{heroImage}}': HERO_PHOTOS[route.to.toLowerCase()] || 'https://images.pexels.com/photos/30753262/pexels-photo-30753262.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    '{{heroImage}}': HERO_PHOTOS[route.to.toLowerCase()] || '/hero-bg.webp',
     '{{klookTitle}}': fillTokens(langContent.klookTitle, route, lang),
     '{{klookSubtitle}}': fillTokens(langContent.klookSubtitle, route, lang),
     '{{klookBtnLabel}}': langContent.klookBtnLabel,

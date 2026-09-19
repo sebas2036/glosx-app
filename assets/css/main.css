@@ -139,6 +139,9 @@
     }
     .nav-links a.nav-cta:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
     .nav-links a.nav-cta::after { display: none; }
+    @media (min-width: 901px) {
+      .nav-extra { display: none !important; }
+    }
 
     /* ── Botón hamburguesa (solo móvil) ── */
     .nav-toggle {
@@ -158,7 +161,7 @@
        (inaccesibles: no se veian ni se podian tocar). Mismo breakpoint
        de mobile para el comportamiento del nav, aparte del resto de
        reglas de esa media query que son de otras secciones. */
-    @media (max-width: 1300px) {
+    @media (max-width: 900px) {
       .nav-toggle { display: inline-flex; }
       .nav-links {
         display: none;
@@ -2785,11 +2788,11 @@
      (overflow:clip). Puntos suspensivos en vez de corte seco. */
   .ai-input-container input { text-overflow: ellipsis !important; }
   .ai-generate-btn {
-    background: var(--rail-ink) !important; color: #fff !important; border-radius: 100px !important;
+    background: #C10016 !important; color: #fff !important; border-radius: 100px !important;
     box-shadow: none !important;
     font-family: var(--font-rail);
   }
-  .ai-generate-btn:hover { background: #2a2b33 !important; }
+  .ai-generate-btn:hover { background: #a00012 !important; }
   /* En mobile el contenedor queda apilado en columna (input + boton) --
      el radio de 100px pensado para una pildora horizontal lo convierte en
      un ovalo hinchado. Radio de tarjeta + boton un poco mas chico. */
@@ -2827,3 +2830,11 @@
     box-shadow: 0 2px 4px rgba(20,21,26,0.05), 0 8px 20px rgba(193,0,22,0.15) !important;
   }
   .hero-bgwrap .section-label { color: var(--rail-red) !important; }
+
+
+/* compact partners — menos scroll de catálogo */
+#partners { padding-top: 40px; padding-bottom: 40px; }
+#partners .section-head-photo { display: none; }
+#partners .section-head-split { margin-bottom: 16px; }
+.essentials-inner { gap: 6px; }
+.essential-item { flex: 1 1 calc(20% - 6px); min-width: 160px; padding: 10px 14px; gap: 10px; }

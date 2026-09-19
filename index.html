@@ -269,15 +269,17 @@
 
   <!-- Nav -->
   <nav>
-    <a href="/" class="nav-logo" style="font-size:24px;display:inline-flex;align-items:baseline;gap:0;font-weight:800;letter-spacing:-0.3px;"><span style="color:#14151a;">Wo</span><span style="color:#C10016;font-style:italic;font-weight:900;">W</span><span style="color:#14151a;margin-left:0.28em;">Train</span></a>
+    <a href="/" class="nav-logo" style="font-size:24px;display:inline-flex;align-items:baseline;gap:0;font-weight:800;letter-spacing:-0.3px;"><span style="color:#14151a;">Wo</span><span style="color:#C10016;font-style:italic;font-weight:900;margin:0 -0.04em;">W</span><span style="color:#14151a;margin-left:0.06em;">Train</span></a>
     <button class="nav-toggle" id="navToggle" onclick="toggleMenu(event)" aria-label="Menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="#discover" data-i18n="nav_discover">Discover together</a>
-      <a href="#adventure" data-i18n="nav_adventure">Plan your Adventure</a>
-      <a href="#scenic"   data-i18n="nav_scenic">Scenic Trains</a>
-      <div class="partners-wrapper">
+      <a href="#aiPlanner" data-i18n="nav_plan">Plan</a>
+      <a href="/rutas/" data-i18n="nav_routes">Routes</a>
+      <a href="/blog.html" data-i18n="footer_blog">Blog</a>
+      <a href="#discover" class="nav-extra" data-i18n="nav_discover">Discover together</a>
+      <a href="#scenic" class="nav-extra" data-i18n="nav_scenic">Scenic Trains</a>
+      <div class="partners-wrapper nav-extra">
         <a href="#partners" class="nav-partners-btn" onclick="togglePartners(event)" data-i18n="nav_essentials">Travel Essentials <span style="font-size:10px;opacity:0.6">▾</span></a>
         <div class="partners-dropdown" id="partnersDropdown">
           <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub">Hotels by city →</span></a>
@@ -290,11 +292,10 @@
           <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">See all essentials →</a>
         </div>
       </div>
-      <a href="#features" data-i18n="nav_features">Features</a>
-      <a href="/ai-planner/">AI Planner</a>
-      <a href="/blog.html" data-i18n="footer_blog">Blog</a>
-      <a href="/explore/" data-i18n="nav_routes">Routes</a>
-      <a href="/explore/" class="nav-cta" data-i18n="nav_download" onclick="return wtStartOnboarding();">Download</a>
+      <a href="#features" class="nav-extra" data-i18n="nav_features">Features</a>
+      <a href="/ai-planner/" class="nav-extra">AI Planner</a>
+      <a href="/explore/" class="nav-extra" data-i18n="nav_explore">Explore</a>
+      <a href="#aiPlanner" class="nav-cta" data-i18n="nav_download">Get started</a>
       <div class="lang-wrapper">
         <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
           <span id="langCode">EN</span>
@@ -369,9 +370,9 @@
       </div>
       <div class="ai-suggestions">
         <span class="ai-suggestions-label" data-i18n="ai_suggest_label">✦ Inspire yourself:</span>
-        <span class="ai-suggestion" onclick="setAISuggestion('Madrid to Paris'); generateAIRoute();">Madrid to Paris</span>
-        <span class="ai-suggestion" onclick="setAISuggestion('Swiss Alps scenic route'); generateAIRoute();">Swiss Alps</span>
-        <span class="ai-suggestion" onclick="setAISuggestion('5 days Italy'); generateAIRoute();">5 days Italy</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_paris" onclick="setAISuggestion('Madrid to Paris'); generateAIRoute();">Madrid to Paris</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_alps" onclick="setAISuggestion('Swiss Alps scenic route'); generateAIRoute();">Swiss Alps</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_italy" onclick="setAISuggestion('5 days Italy'); generateAIRoute();">5 days Italy</span>
       </div>
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">View my last route →</button>
     </div>
@@ -424,7 +425,7 @@
   <!-- Countries chips -->
   <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ Popular routes · book instantly</p>
   <div class="countries" id="countries" style="padding: 0 24px 0;">
-    <span class="country-chip">Spain<span class="country-popup"><img class="country-photo" src="country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_spain">Spain</span><span class="country-popup"><img class="country-photo" src="country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/madrid-barcelona/" onclick="planRouteFromChip(event,'Madrid','Barcelona')">Madrid → Barcelona</a>
       <a href="/rutas/barcelona-valencia/" onclick="planRouteFromChip(event,'Barcelona','Valencia')">Barcelona → Valencia</a>
       <a href="/rutas/madrid-seville/" onclick="planRouteFromChip(event,'Madrid','Seville')">Madrid → Seville</a>
@@ -435,7 +436,7 @@
       <a href="/rutas/madrid-valencia/" onclick="planRouteFromChip(event,'Madrid','Valencia')">Madrid → Valencia</a>
       <a href="/rutas/zaragoza-barcelona/" onclick="planRouteFromChip(event,'Barcelona','Zaragoza')">Barcelona → Zaragoza</a>
     </span></span></span>
-    <span class="country-chip">Switzerland<span class="country-popup"><img class="country-photo" src="country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_switzerland">Switzerland</span><span class="country-popup"><img class="country-photo" src="country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/zurich-lucerne/" onclick="planRouteFromChip(event,'Zurich','Lucerne')">Zurich → Lucerne</a>
       <a href="/rutas/zurich-milan/" onclick="planRouteFromChip(event,'Zurich','Milan')">Zurich → Milan</a>
       <a href="/rutas/geneva-zermatt/" onclick="planRouteFromChip(event,'Geneva','Zermatt')">Geneva → Zermatt</a>
@@ -450,7 +451,7 @@
       <a href="/rutas/stmoritz-zermatt/" onclick="planRouteFromChip(event,'St. Moritz','Zermatt')">St. Moritz → Zermatt</a>
       <a href="/rutas/lucerne-bern/" onclick="planRouteFromChip(event,'Lucerne','Bern')">Lucerne → Bern</a>
     </span></span></span>
-    <span class="country-chip">France<span class="country-popup"><img class="country-photo" src="country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_france">France</span><span class="country-popup"><img class="country-photo" src="country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-london/" onclick="planRouteFromChip(event,'Paris','London')">Paris → London</a>
       <a href="/rutas/paris-nice/" onclick="planRouteFromChip(event,'Paris','Nice')">Paris → Nice</a>
       <a href="/rutas/nice-monaco/" onclick="planRouteFromChip(event,'Nice','Monaco')">Nice → Monaco</a>
@@ -477,7 +478,7 @@
       <a href="/rutas/munich-paris/" onclick="planRouteFromChip(event,'Munich','Paris')">Munich → Paris</a>
       <a href="/rutas/tende-nice/" onclick="planRouteFromChip(event,'Tende','Nice')">Tende → Nice</a>
     </span></span></span>
-    <span class="country-chip">Germany<span class="country-popup"><img class="country-photo" src="country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_germany">Germany</span><span class="country-popup"><img class="country-photo" src="country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
       <a href="/rutas/berlin-prague/" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlin → Prague</a>
       <a href="/rutas/munich-venice/" onclick="planRouteFromChip(event,'Munich','Venice')">Munich → Venice</a>
@@ -491,7 +492,7 @@
       <a href="/rutas/munich-berlin/" onclick="planRouteFromChip(event,'Berlin','Munich')">Berlin → Munich</a>
       <a href="/rutas/munich-prague/" onclick="planRouteFromChip(event,'Munich','Prague')">Munich → Prague</a>
     </span></span></span>
-    <span class="country-chip">Italy<span class="country-popup"><img class="country-photo" src="country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_italy">Italy</span><span class="country-popup"><img class="country-photo" src="country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/rome-florence/" onclick="planRouteFromChip(event,'Rome','Florence')">Rome → Florence</a>
       <a href="/rutas/florence-venice/" onclick="planRouteFromChip(event,'Florence','Venice')">Florence → Venice</a>
       <a href="/rutas/milan-rome/" onclick="planRouteFromChip(event,'Milan','Rome')">Milan → Rome</a>
@@ -506,20 +507,20 @@
       <a href="/rutas/naples-rome/" onclick="planRouteFromChip(event,'Naples','Rome')">Naples → Rome</a>
       <a href="/rutas/naples-salerno/" onclick="planRouteFromChip(event,'Naples','Salerno')">Naples → Salerno</a>
     </span></span></span>
-    <span class="country-chip">Belgium<span class="country-popup"><img class="country-photo" src="country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_belgium">Belgium</span><span class="country-popup"><img class="country-photo" src="country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-bruges/" onclick="planRouteFromChip(event,'Paris','Bruges')">Paris → Bruges</a>
       <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
       <a href="/rutas/cologne-brussels/" onclick="planRouteFromChip(event,'Brussels','Cologne')">Brussels → Cologne</a>
       <a href="/rutas/brussels-bruges/" onclick="planRouteFromChip(event,'Brussels','Bruges')">Brussels → Bruges</a>
     </span></span></span>
-    <span class="country-chip">Netherlands<span class="country-popup"><img class="country-photo" src="country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_netherlands">Netherlands</span><span class="country-popup"><img class="country-photo" src="country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-amsterdam/" onclick="planRouteFromChip(event,'Paris','Amsterdam')">Paris → Amsterdam</a>
       <a href="/rutas/london-amsterdam/" onclick="planRouteFromChip(event,'London','Amsterdam')">London → Amsterdam</a>
       <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
       <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
       <a href="/rutas/amsterdam-bruges/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Bruges</a>
     </span></span></span>
-    <span class="country-chip">Austria<span class="country-popup"><img class="country-photo" src="country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_austria">Austria</span><span class="country-popup"><img class="country-photo" src="country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/vienna-salzburg/" onclick="planRouteFromChip(event,'Vienna','Salzburg')">Vienna → Salzburg</a>
       <a href="/rutas/vienna-prague/" onclick="planRouteFromChip(event,'Vienna','Prague')">Vienna → Prague</a>
       <a href="/rutas/vienna-budapest/" onclick="planRouteFromChip(event,'Vienna','Budapest')">Vienna → Budapest</a>
@@ -529,7 +530,7 @@
       <a href="/rutas/graz-vienna/" onclick="planRouteFromChip(event,'Graz','Vienna')">Graz → Vienna</a>
       <a href="/rutas/munich-salzburg/" onclick="planRouteFromChip(event,'Munich','Salzburg')">Munich → Salzburg</a>
     </span></span></span>
-    <span class="country-chip">United Kingdom<span class="country-popup"><img class="country-photo" src="country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_uk">United Kingdom</span><span class="country-popup"><img class="country-photo" src="country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/london-paris/" onclick="planRouteFromChip(event,'London','Paris')">London → Paris</a>
       <a href="/rutas/london-manchester/" onclick="planRouteFromChip(event,'London','Manchester')">London → Manchester</a>
       <a href="/rutas/london-liverpool/" onclick="planRouteFromChip(event,'London','Liverpool')">London → Liverpool</a>
@@ -1049,7 +1050,7 @@
       <a href="/rutas/venice-milan/" class="explore-route-pill">Venice → Milan</a>
     </div>
     <div style="display:flex;justify-content:center;width:100%;margin-top:32px;">
-      <button id="exploreRoutesToggle" onclick="var m=document.getElementById('exploreRoutesMore');var expanded=m.style.display==='flex';m.style.display=expanded?'none':'flex';var lang=(typeof detectLang==='function')?detectLang():'en';var dict=(typeof TRANSLATIONS!=='undefined'&&TRANSLATIONS[lang])||{};document.getElementById('exploreRoutesToggleLabel').textContent=expanded?(dict.explore_show_all||'Show all 82 routes'):(dict.explore_show_fewer||'Show fewer routes');document.getElementById('exploreRoutesToggleArrow').style.transform=expanded?'rotate(0deg)':'rotate(180deg)';" style="display:inline-flex;align-items:center;gap:10px;background:#14151a;border:2px solid #14151a;border-radius:4px;padding:14px 32px;font-size:12px;font-weight:800;letter-spacing:3px;color:#fff;cursor:pointer;text-transform:uppercase;"><span id="exploreRoutesToggleLabel" data-i18n="explore_show_all">Show all 82 routes</span><svg id="exploreRoutesToggleArrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" style="transition:transform 0.2s;"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button id="exploreRoutesToggle" onclick="var m=document.getElementById('exploreRoutesMore');var expanded=m.style.display==='flex';m.style.display=expanded?'none':'flex';var lang=(typeof detectLang==='function')?detectLang():'en';var dict=(typeof TRANSLATIONS!=='undefined'&&TRANSLATIONS[lang])||{};document.getElementById('exploreRoutesToggleLabel').textContent=expanded?(dict.explore_show_all||'Show all 82 routes'):(dict.explore_show_fewer||'Show fewer routes');document.getElementById('exploreRoutesToggleArrow').style.transform=expanded?'rotate(0deg)':'rotate(180deg)';" style="display:inline-flex;align-items:center;gap:10px;background:#C10016;border:2px solid #C10016;border-radius:100px;padding:14px 32px;font-size:12px;font-weight:800;letter-spacing:1px;color:#fff;cursor:pointer;text-transform:uppercase;"><span id="exploreRoutesToggleLabel" data-i18n="explore_show_all">Show all 82 routes</span><svg id="exploreRoutesToggleArrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" style="transition:transform 0.2s;"><path d="M6 9l6 6 6-6"/></svg></button>
     </div>
   </section>
   </main>
@@ -1057,6 +1058,10 @@
   <!-- Footer -->
   <footer>
     <div class="footer-links">
+      <a href="/rutas/" data-i18n="nav_routes">Routes</a>
+      <a href="/explore/" data-i18n="nav_explore">Explore</a>
+      <a href="#scenic" data-i18n="nav_scenic">Scenic Trains</a>
+      <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
       <a href="/ai-planner/">AI Planner</a>
       <a href="/blog.html" data-i18n="footer_blog">Blog</a>
       <a href="/about.html"   data-i18n="footer_about">About</a>
