@@ -18,6 +18,11 @@ alwaysApply: true
 - `glosx-backend` es el que va a Railway; si el cambio es de API, commit+push ahí también.
 - No dejes el trabajo solo en local: si no está en `origin/main`, no está en producción.
 
+## Search Console
+- Una sola cuenta de servicio para **todas** las propiedades (glosx.app, lagarlab.com, etc.): `~/.config/glosx/indexing-service-account.json` (`glosx-indexing-bot`).
+- Para avisar sitemap: `node scripts/notify-sitemap-google.js` (PUT webmasters). No usar la Indexing API en páginas normales.
+- Tras un cambio de sitemap, correr ese script (no pedir que lo hagan a mano en la UI).
+
 ## Qué es este repo
 - Sitio marketing de GLOSX / viajes en tren por Europa: HTML, blog, assets, `ai-planner`.
 - La API del planificador está en `glosx-backend`. Páginas legales en `glosx-web`.

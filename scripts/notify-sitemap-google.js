@@ -7,10 +7,12 @@
  * Mismo flujo JWT que scripts/notify-google-index.js y que
  * lagarlab/scripts/notify-sitemap-google.mjs.
  *
- * Uso: node scripts/notify-sitemap-google.js
+ * Uso:
+ *   node scripts/notify-sitemap-google.js
+ *   node scripts/notify-sitemap-google.js --site sc-domain:lagarlab.com --sitemap https://lagarlab.com/sitemap.xml
  *
- * Clave: ~/.config/glosx/indexing-service-account.json
- *        (o GLOSX_INDEXING_KEY)
+ * La misma cuenta de servicio cubre todas las propiedades:
+ *   ~/.config/glosx/indexing-service-account.json  (o GLOSX_INDEXING_KEY)
  */
 const fs = require('fs');
 const os = require('os');
@@ -21,8 +23,12 @@ const https = require('https');
 const KEY_PATH = process.env.GLOSX_INDEXING_KEY || path.join(os.homedir(), '.config/glosx/indexing-service-account.json');
 const SCOPE = 'https://www.googleapis.com/auth/webmasters';
 const TOKEN_URL = 'https://oauth2.googleapis.com/token';
-const SITE_URL = 'https://glosx.app/';
-const SITEMAP_URL = 'https://glosx.app/sitemap.xml';
+function arg(name, fallback) {
+  const i = process.argv.indexOf(name);
+  return i !== -1 && process.argv[i + 1] ? process.argv[i + 1] : fallback;
+}
+const SITE_URL = arg('--site', 'https://glosx.app/');
+const SITEMAP_URL = arg('--sitemap', 'https://glosx.app/sitemap.xml');
 
 function base64url(input) {
   return Buffer.from(input).toString('base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
