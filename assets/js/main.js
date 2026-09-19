@@ -1957,17 +1957,26 @@
 
   function resolveRouteCitySlug(name) {
     const cleaned = cleanCityForKlook(name);
-    const n = norm(cleaned);
+    const n = norm(cleaned).replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
     let best = null;
     let bestLen = 0;
-    CITIES.forEach(function (c) {
-      (c.keywords || []).forEach(function (k) {
-        const nk = norm(k);
-        if (nk && n === nk && nk.length >= bestLen) {
-          best = c.slug;
+    function consider(label, slug) {
+      String(label || '').split(' / ').forEach(function (piece) {
+        const nk = norm(piece).replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
+        if (!nk || nk.length < 4) return;
+        const hit = n === nk || n.indexOf(nk + ' ') === 0 || n.slice(-(nk.length + 1)) === (' ' + nk) || n.indexOf(' ' + nk + ' ') !== -1;
+        if (hit && nk.length >= bestLen) {
+          best = slug;
           bestLen = nk.length;
         }
       });
+    }
+    CITIES.forEach(function (c) {
+      consider(c.display, c.slug);
+      consider(c.slug.replace(/-/g, ' '), c.slug);
+      (c.keywords || []).forEach(function (k) { consider(k, c.slug); });
+      const paren = String(c.display || '').match(/\(([^)]+)\)/);
+      if (paren) consider(paren[1], c.slug);
     });
     return best || slugCityName(cleaned);
   }
@@ -3312,8 +3321,12 @@
         book.href = window.glosxBookTarget(cityRouletteLabel(p[0]), cityRouletteLabel(p[1]));
       }
       const conn = PAIR_CONN[lang] || PAIR_CONN.en;
-      setAISuggestion(cityRouletteLabel(p[0]) + ' ' + conn + ' ' + cityRouletteLabel(p[1]));
-      previewFromInput({ fromRoulette: true });
+      const fromLabel = cityRouletteLabel(p[0]);
+      const toLabel = cityRouletteLabel(p[1]);
+      setAISuggestion(fromLabel + ' ' + conn + ' ' + toLabel);
+      const key = p[0] + '-' + p[1];
+      const multi = KNOWN_MULTI_LEGS[key];
+      displayAIRoute(buildPairRoute(fromLabel, toLabel, multi || [[fromLabel, toLabel]]), { compact: true, fromRoulette: true });
       try { if (typeof gtag === 'function') gtag('event', 'ui_click', { source: 'pair_roulette', route: _rouletteLast }); } catch (e) {}
       const results = document.getElementById('aiResults');
       setTimeout(function () {
