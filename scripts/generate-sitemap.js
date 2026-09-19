@@ -40,11 +40,26 @@ const xml = fs.readFileSync(sitemapPath, 'utf8');
 const urlBlocks = xml.match(/<url>[\s\S]*?<\/url>/g) || [];
 const nonRoute = urlBlocks.filter(b => !b.includes('/rutas/'));
 
+const hub = `  <url>
+    <loc>https://glosx.app/rutas/</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`;
+const withoutHub = nonRoute.filter(b => !b.includes('https://glosx.app/rutas/</loc>'));
+const withFreshHome = withoutHub.map(b => {
+  if (b.includes('<loc>https://glosx.app/</loc>')) {
+    return b.replace(/<lastmod>.*?<\/lastmod>/, `<lastmod>${TODAY}</lastmod>`);
+  }
+  return b;
+});
+const nonRouteFinal = [hub, ...withFreshHome];
+
 // 4. Armar el nuevo sitemap (xhtml declarado una vez en el urlset)
 const header = '<?xml version="1.0" encoding="UTF-8"?>\n' +
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">';
 const routeSection = slugs.map(routeBlocks).join('\n');
-const out = header + '\n' + nonRoute.join('\n') + '\n' + routeSection + '\n</urlset>\n';
+const out = header + '\n' + nonRouteFinal.join('\n') + '\n' + routeSection + '\n</urlset>\n';
 fs.writeFileSync(sitemapPath, out);
 
-console.log(`Sitemap regenerado: ${nonRoute.length} URLs no-ruta + ${slugs.length} rutas × 4 idiomas (${slugs.length * 4}) = ${nonRoute.length + slugs.length * 4} URLs`);
+console.log(`Sitemap regenerado: ${nonRouteFinal.length} URLs no-ruta + ${slugs.length} rutas × 4 idiomas (${slugs.length * 4}) = ${nonRouteFinal.length + slugs.length * 4} URLs`);

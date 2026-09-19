@@ -38,21 +38,21 @@ const TRANSLATIONS = extractTranslations(MAIN_JS);
 
 const LANGS = {
   es: {
-    title: "WoW Train — Planificador de trenes por Europa con IA gratis | glosx.app",
+    title: "WoW Train — Planificador de trenes por Europa con IA gratis",
     description: "Planificador de trenes con IA gratis para Europa. Describe tu viaje y obtene un itinerario completo con conexiones, hoteles y billetes — España, Francia, Italia y más.",
     keywords: "planificador de trenes europa, viajar en tren por europa, itinerario tren ia, comprar billetes de tren europa",
     ogTitle: "WoW Train — Planificador de trenes por Europa con IA",
     ogDesc: "Describe tu viaje y obtene un itinerario ferroviario completo por Europa en segundos — conexiones, hoteles y billetes.",
   },
   fr: {
-    title: "WoW Train — Planificateur de trajets en train en Europe par IA gratuit | glosx.app",
+    title: "WoW Train — Planificateur de trajets en train en Europe par IA gratuit",
     description: "Planificateur de trajets en train gratuit basé sur l'IA pour l'Europe. Décrivez votre voyage et obtenez un itinéraire complet avec correspondances, hôtels et billets — Espagne, France, Italie et plus.",
     keywords: "planificateur train europe, voyager en train en europe, itineraire train ia, billets de train europe",
     ogTitle: "WoW Train — Planificateur de trajets en train en Europe par IA",
     ogDesc: "Décrivez votre voyage et obtenez un itinéraire ferroviaire complet en Europe en quelques secondes — correspondances, hôtels et billets.",
   },
   it: {
-    title: "WoW Train — Pianificatore di viaggi in treno in Europa con IA gratis | glosx.app",
+    title: "WoW Train — Pianificatore di viaggi in treno in Europa con IA gratis",
     description: "Pianificatore di viaggi in treno gratuito con IA per l'Europa. Descrivi il tuo viaggio e ottieni un itinerario completo con coincidenze, hotel e biglietti — Spagna, Francia, Italia e altro.",
     keywords: "pianificatore treni europa, viaggiare in treno in europa, itinerario treno ia, biglietti treno europa",
     ogTitle: "WoW Train — Pianificatore di viaggi in treno in Europa con IA",
@@ -165,6 +165,35 @@ function buildPage(lang) {
   const lockScript = `<script>try{localStorage.setItem('glosx_lang','${lang}');localStorage.setItem('glosx_lang_manual','1');}catch(e){}</script>\n</head>`;
   html = html.replace('</head>', lockScript);
 
+  const t = TRANSLATIONS[lang] || {};
+  const faqKeys = [
+    ['faq1_q', 'faq1_a'],
+    ['faq2_q', 'faq2_a'],
+    ['faq4_q', 'faq4_a'],
+    ['faq5_q', 'faq5_a'],
+  ];
+  const faqEntity = faqKeys
+    .filter(([qk, ak]) => t[qk] && t[ak])
+    .map(([qk, ak]) => {
+      const q = JSON.stringify(t[qk]);
+      const a = JSON.stringify(t[ak]);
+      return `      {\n        "@type": "Question",\n        "name": ${q},\n        "acceptedAnswer": { "@type": "Answer", "text": ${a} }\n      }`;
+    })
+    .join(',\n');
+  html = html.replace(
+    /<script type="application\/ld\+json">\s*\{\s*"@context": "https:\/\/schema.org",\s*"@type": "FAQPage"[\s\S]*?<\/script>/,
+    `<script type="application/ld+json">\n  {\n    "@context": "https://schema.org",\n    "@type": "FAQPage",\n    "mainEntity": [\n${faqEntity}\n    ]\n  }\n  </script>`
+  );
+
+  html = html.replace(
+    /"target": "https:\/\/glosx\.app\/\?q=\{search_term_string\}"/,
+    `"target": "https://glosx.app/${lang}/?q={search_term_string}"`
+  );
+  html = html.replace(
+    /("url": ")https:\/\/glosx\.app\/(")/,
+    `$1https://glosx.app/${lang}/$2`
+  );
+
   return html;
 }
 
@@ -176,18 +205,4 @@ for (const lang of Object.keys(LANGS)) {
   console.log(`OK  ${lang}/index.html generado (${fs.statSync(outPath).size} bytes)`);
 }
 
-// También agregar hreflang completo a la home en inglés (hoy solo tiene x-default)
-let en = SRC_HTML;
-const hreflangBlockEn = [
-  `<link rel="alternate" hreflang="en" href="https://glosx.app/" />`,
-  `<link rel="alternate" hreflang="es" href="https://glosx.app/es/" />`,
-  `<link rel="alternate" hreflang="fr" href="https://glosx.app/fr/" />`,
-  `<link rel="alternate" hreflang="it" href="https://glosx.app/it/" />`,
-  `<link rel="alternate" hreflang="x-default" href="https://glosx.app/" />`,
-].join('\n  ');
-en = en.replace(
-  /<link rel="alternate" hreflang="x-default" href="https:\/\/glosx\.app\/" \/>/,
-  hreflangBlockEn
-);
-fs.writeFileSync(path.join(ROOT, 'index.html'), en);
-console.log('OK  index.html actualizado con hreflang completo');
+console.log('OK  home i18n regenerada (index.html EN no se reescribe)');

@@ -29,16 +29,16 @@
   </script>
   <meta name="google-site-verification" content="wydgWqGcYChD0ADQ8MZPtBQm1DdwU8a7c1OFLr1BkSM" />
   <meta name="verify-admitad" content="39691b1050" />
-  <title>WoW Train — Pianificatore di viaggi in treno in Europa con IA gratis | glosx.app</title>
+  <title>WoW Train — Pianificatore di viaggi in treno in Europa con IA gratis</title>
   <meta name="application-name" content="WoW Train" />
   <meta name="apple-mobile-web-app-title" content="WoW Train" />
-  <meta name="description" content="Pianificatore di viaggi in treno gratuito con IA per l'Europa. Descrivi il viaggio e ottieni un itinerario completo con coincidenze e biglietti." />
+  <meta name="description" content="Pianificatore di viaggi in treno gratuito con IA per l'Europa. Descrivi il tuo viaggio e ottieni un itinerario completo con coincidenze, hotel e biglietti — Spagna, Francia, Italia e altro." />
   <meta name="author" content="WoW Train" />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="it_IT" />
-  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="es_ES" />
   <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="it_IT" />
   <meta property="og:title" content="WoW Train — Pianificatore di viaggi in treno in Europa con IA" />
   <meta property="og:description" content="Descrivi il tuo viaggio e ottieni un itinerario ferroviario completo in Europa in pochi secondi — coincidenze, hotel e biglietti." />
   <meta property="og:url" content="https://glosx.app/it/" />
@@ -51,6 +51,10 @@
   <meta name="twitter:description" content="Descrivi il tuo viaggio e ottieni un itinerario ferroviario completo in Europa in pochi secondi — coincidenze, hotel e biglietti." />
   <meta name="twitter:image" content="https://glosx.app/og-image.jpg" />
   <link rel="canonical" href="https://glosx.app/it/" id="canonicalLink" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/es/" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/it/" />
   <link rel="alternate" hreflang="en" href="https://glosx.app/" />
   <link rel="alternate" hreflang="es" href="https://glosx.app/es/" />
   <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/" />
@@ -76,6 +80,11 @@
         if (location.hash.indexOf('dev') !== -1) localStorage.setItem('glosx_dev_ga', '1');
         if (localStorage.getItem('glosx_dev_ga') === '1') gtag('set', 'traffic_type', 'internal');
       } catch (e) {}
+      // Trafico de automatizacion (Puppeteer/Selenium/Playwright ponen
+      // navigator.webdriver=true; un usuario real nunca lo tiene en true) --
+      // se detecto un patron de bot en GA4 (Singapur, 100% direct/desktop
+      // Chrome, ~0.2s de duracion, 98% bounce) que la lista de bots conocidos
+      // de GA4 no filtra. Reusa el mismo Data Filter de trafico interno.
       try {
         if (navigator.webdriver) gtag('set', 'traffic_type', 'internal');
       } catch (e) {}
@@ -151,6 +160,8 @@
         var keep = new URLSearchParams();
         if (from) keep.set('from', from);
         if (to) keep.set('to', to);
+        var q = p.get('q');
+        if (q) keep.set('q', q);
         ['gclid', 'gbraid', 'wbraid', 'dclid', 'msclkid', 'fbclid'].forEach(function (k) {
           var v = p.get(k);
           if (v) keep.set(k, v);
@@ -171,9 +182,9 @@
     "operatingSystem": "iOS, Android, Web",
     "applicationCategory": "TravelApplication",
     "browserRequirements": "Requires JavaScript",
-    "description": "AI-powered European train route planner. Describe your trip and get a full itinerary with connections across 9 countries — Spain, France, Germany, Italy, Switzerland, Portugal, Austria, Belgium, Netherlands.",
+    "description": "AI-powered European train route planner. Describe your trip and get a full itinerary with connections across 16 countries — Spain, France, Germany, Italy, Switzerland, Portugal, Austria, Belgium, Netherlands, United Kingdom, Czechia, Hungary, Slovenia, Denmark, Sweden and Norway.",
     "featureList": ["AI train route planning", "Real-time schedules", "Scenic train routes", "Hotel suggestions", "Multi-country itineraries"],
-    "url": "https://glosx.app/",
+    "url": "https://glosx.app/it/",
     "publisher": { "@type": "Organization", "name": "WoW Train" }
   }
   </script>
@@ -187,7 +198,7 @@
     "url": "https://glosx.app",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://glosx.app?lang=en#aiInputWrapper",
+      "target": "https://glosx.app/it/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -200,6 +211,7 @@
     "alternateName": "GLOSX",
     "url": "https://glosx.app/",
     "logo": "https://glosx.app/logo.png",
+    "email": "contact@glosx.app",
     "sameAs": [
       "https://www.facebook.com/glosx.app",
       "https://www.instagram.com/glosxapp",
@@ -215,23 +227,23 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is WoW Train?",
-        "acceptedAnswer": { "@type": "Answer", "text": "An independent and free platform to design scenic train itineraries across Europe. No account, no subscription — just explore, plan and book through certified partners." }
+        "name": "Cos'è WoW Train?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Una piattaforma indipendente e gratuita per progettare itinerari ferroviari panoramici in Europa. Nessun account, nessun abbonamento — esplora, pianifica e prenota tramite partner certificati." }
       },
       {
         "@type": "Question",
-        "name": "How do I book a train ticket in Europe?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We connect you directly and transparently to official operators. Search your route, click Check schedules and complete the booking on the partner's secure platform." }
+        "name": "Come prenoto un biglietto?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ti colleghiamo direttamente e in modo trasparente con operatori ufficiali come Trainline. Cerca il tuo percorso, clicca su \"Vedi orari →\" e completa la prenotazione sulla piattaforma del partner." }
       },
       {
         "@type": "Question",
-        "name": "Do you charge any fees?",
-        "acceptedAnswer": { "@type": "Answer", "text": "100% free for the user. WoW Train receives support from official partners without any extra cost to you. Transparent, independent and always on your side." }
+        "name": "Addebitate commissioni?",
+        "acceptedAnswer": { "@type": "Answer", "text": "100% gratuito per l'utente. WoW Train riceve il supporto di partner ufficiali senza alcun costo aggiuntivo per te. Trasparente, indipendente e sempre dalla tua parte." }
       },
       {
         "@type": "Question",
-        "name": "Is my data private?",
-        "acceptedAnswer": { "@type": "Answer", "text": "WoW Train does not collect, store or share personal data on external servers. No accounts, no tracking, no ads. Only anonymous analytics via Google Analytics to improve the experience." }
+        "name": "I miei dati sono privati?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non serve un account. Usiamo Google Analytics anonimo per capire il traffico — vedi l'Informativa sulla privacy. Non vendiamo dati personali." }
       }
     ]
   }
@@ -273,23 +285,23 @@
       <div class="partners-wrapper">
         <a href="#partners" class="nav-partners-btn" onclick="togglePartners(event)" data-i18n="nav_essentials">Essenziali di viaggio<span style="font-size:10px;opacity:0.6">▾</span></a>
         <div class="partners-dropdown" id="partnersDropdown">
-          <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub">Hotel per città →</span></a>
-          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub">Attrazioni</span></a>
-          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub">Trasferimenti</span></a>
+          <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub">Hotels by city →</span></a>
+          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub">Attractions</span></a>
+          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub">Transfers</span></a>
           <a href="#" onclick="goPartner('yesim',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=yesim.com" alt="Yesim" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#A78BFA">Yesim</span><span class="partner-sub">eSIM</span></a>
-          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub">Assicurazione viaggio</span></a>
-          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub">Bagagli</span></a>
-          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub">Hotel</span></a>
+          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub">Insurance</span></a>
+          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub">Luggage</span></a>
+          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub">Hotels</span></a>
           <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">Vedi tutti gli essenziali →</a>
         </div>
       </div>
       <a href="#features" data-i18n="nav_features">Caratteristiche</a>
-      <a href="/it/ai-planner/">AI Planner</a>
+      <a href="/ai-planner/">AI Planner</a>
       <a href="/blog.html" data-i18n="footer_blog">Blog</a>
-      <a href="/it/explore/" data-i18n="nav_routes">Itinerari</a>
-      <a href="/it/explore/" class="nav-cta" data-i18n="nav_download" onclick="return wtStartOnboarding();">Inizia</a>
+      <a href="/explore/" data-i18n="nav_routes">Itinerari</a>
+      <a href="/explore/" class="nav-cta" data-i18n="nav_download" onclick="return wtStartOnboarding();">Inizia</a>
       <div class="lang-wrapper">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Lingua">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
           <span id="langCode">EN</span>
           <span style="font-size:10px;opacity:0.6">▾</span>
         </button>
@@ -306,7 +318,6 @@
   </nav>
 
   <main>
-
   <!-- Fondo del mapa: envuelve hero + chips -->
   <div class="hero-bgwrap">
 
@@ -355,21 +366,21 @@
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="es. 'Parigi a Roma con panorama' o '5 giorni tra le Alpi svizzere'" autocomplete="off" oninput="document.getElementById('aiInputAurora').classList.toggle('active', this.value.trim().length > 0)" />
-          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Inverti origine e destinazione" title="Inverti origine e destinazione">⇄</button>
+          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Genera itinerario</button>
       </div>
       <div class="ai-suggestions">
         <span class="ai-suggestions-label" data-i18n="ai_suggest_label">✦ Lasciati ispirare:</span>
-        <span class="ai-suggestion" onclick="setAISuggestion('Madrid a Parigi'); generateAIRoute();">Madrid a Parigi</span>
-        <span class="ai-suggestion" onclick="setAISuggestion('Itinerario panoramico sulle Alpi svizzere'); generateAIRoute();">Alpi svizzere</span>
-        <span class="ai-suggestion" onclick="setAISuggestion('5 giorni in Italia'); generateAIRoute();">5 giorni in Italia</span>
+        <span class="ai-suggestion" onclick="setAISuggestion('Madrid to Paris'); generateAIRoute();">Madrid to Paris</span>
+        <span class="ai-suggestion" onclick="setAISuggestion('Swiss Alps scenic route'); generateAIRoute();">Swiss Alps</span>
+        <span class="ai-suggestion" onclick="setAISuggestion('5 days Italy'); generateAIRoute();">5 days Italy</span>
       </div>
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">Vedi il mio ultimo percorso →</button>
     </div>
 
     <div class="ai-results" id="aiResults" style="display:none;">
-      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Chiudi">×</button>
+      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
       <div class="ai-results-header">
         <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
         <p id="aiRouteDuration"></p>
@@ -417,116 +428,130 @@
   <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ Percorsi popolari · prenota subito</p>
   <div class="countries" id="countries" style="padding: 0 24px 0;">
     <span class="country-chip">Spain<span class="country-popup"><img class="country-photo" src="country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Madrid','Barcelona')">Madrid → Barcelona</a>
-      <a href="#" onclick="planRouteFromChip(event,'Barcelona','Valencia')">Barcelona → Valencia</a>
-      <a href="#" onclick="planRouteFromChip(event,'Madrid','Seville')">Madrid → Seville</a>
-      <a href="#" onclick="planRouteFromChip(event,'Madrid','Zaragoza')">Madrid → Zaragoza</a>
-      <a href="#" onclick="planRouteFromChip(event,'Barcelona','Girona')">Barcelona → Girona</a>
-      <a href="#" onclick="planRouteFromChip(event,'Girona','Figueres')">Girona → Figueres</a>
-      <a href="#" onclick="planRouteFromChip(event,'Madrid','Malaga')">Madrid → Malaga</a>
-      <a href="#" onclick="planRouteFromChip(event,'Madrid','Valencia')">Madrid → Valencia</a>
-      <a href="#" onclick="planRouteFromChip(event,'Barcelona','Zaragoza')">Barcelona → Zaragoza</a>
+      <a href="/rutas/madrid-barcelona/" onclick="planRouteFromChip(event,'Madrid','Barcelona')">Madrid → Barcelona</a>
+      <a href="/rutas/barcelona-valencia/" onclick="planRouteFromChip(event,'Barcelona','Valencia')">Barcelona → Valencia</a>
+      <a href="/rutas/madrid-seville/" onclick="planRouteFromChip(event,'Madrid','Seville')">Madrid → Seville</a>
+      <a href="/rutas/madrid-zaragoza/" onclick="planRouteFromChip(event,'Madrid','Zaragoza')">Madrid → Zaragoza</a>
+      <a href="/rutas/barcelona-girona/" onclick="planRouteFromChip(event,'Barcelona','Girona')">Barcelona → Girona</a>
+      <a href="/rutas/girona-figueres/" onclick="planRouteFromChip(event,'Girona','Figueres')">Girona → Figueres</a>
+      <a href="/rutas/madrid-malaga/" onclick="planRouteFromChip(event,'Madrid','Malaga')">Madrid → Malaga</a>
+      <a href="/rutas/madrid-valencia/" onclick="planRouteFromChip(event,'Madrid','Valencia')">Madrid → Valencia</a>
+      <a href="/rutas/zaragoza-barcelona/" onclick="planRouteFromChip(event,'Barcelona','Zaragoza')">Barcelona → Zaragoza</a>
     </span></span></span>
     <span class="country-chip">Switzerland<span class="country-popup"><img class="country-photo" src="country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Zurich','Lucerne')">Zurich → Lucerne</a>
-      <a href="#" onclick="planRouteFromChip(event,'Zurich','Milan')">Zurich → Milan</a>
-      <a href="#" onclick="planRouteFromChip(event,'Geneva','Zermatt')">Geneva → Zermatt</a>
-      <a href="#" onclick="planRouteFromChip(event,'Interlaken','Lauterbrunnen')">Interlaken → Lauterbrunnen</a>
+      <a href="/rutas/zurich-lucerne/" onclick="planRouteFromChip(event,'Zurich','Lucerne')">Zurich → Lucerne</a>
+      <a href="/rutas/zurich-milan/" onclick="planRouteFromChip(event,'Zurich','Milan')">Zurich → Milan</a>
+      <a href="/rutas/geneva-zermatt/" onclick="planRouteFromChip(event,'Geneva','Zermatt')">Geneva → Zermatt</a>
+      <a href="/rutas/interlaken-lauterbrunnen/" onclick="planRouteFromChip(event,'Interlaken','Lauterbrunnen')">Interlaken → Lauterbrunnen</a>
       <a href="#" onclick="planRouteFromChip(event,'Bern','Basel')">Bern → Basel</a>
-      <a href="#" onclick="planRouteFromChip(event,'Basel','Paris')">Basel → Paris</a>
-      <a href="#" onclick="planRouteFromChip(event,'Montreux','Interlaken')">Montreux → Interlaken</a>
-      <a href="#" onclick="planRouteFromChip(event,'Basel','Lauterbrunnen')">Basel → Lauterbrunnen</a>
+      <a href="/rutas/basel-paris/" onclick="planRouteFromChip(event,'Basel','Paris')">Basel → Paris</a>
+      <a href="/rutas/montreux-interlaken/" onclick="planRouteFromChip(event,'Montreux','Interlaken')">Montreux → Interlaken</a>
+      <a href="/rutas/basel-lauterbrunnen/" onclick="planRouteFromChip(event,'Basel','Lauterbrunnen')">Basel → Lauterbrunnen</a>
+      <a href="/rutas/interlaken-lucerne/" onclick="planRouteFromChip(event,'Interlaken','Lucerne')">Interlaken → Lucerne</a>
+      <a href="/rutas/lucerne-zermatt/" onclick="planRouteFromChip(event,'Lucerne','Zermatt')">Lucerne → Zermatt</a>
+      <a href="/rutas/bern-paris/" onclick="planRouteFromChip(event,'Bern','Paris')">Bern → Paris</a>
+      <a href="/rutas/stmoritz-zermatt/" onclick="planRouteFromChip(event,'St. Moritz','Zermatt')">St. Moritz → Zermatt</a>
+      <a href="/rutas/lucerne-bern/" onclick="planRouteFromChip(event,'Lucerne','Bern')">Lucerne → Bern</a>
     </span></span></span>
     <span class="country-chip">France<span class="country-popup"><img class="country-photo" src="country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Paris','London')">Paris → London</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Nice')">Paris → Nice</a>
-      <a href="#" onclick="planRouteFromChip(event,'Nice','Monaco')">Nice → Monaco</a>
-      <a href="#" onclick="planRouteFromChip(event,'Lyon','Turin')">Lyon → Turin</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Toulouse')">Paris → Toulouse</a>
-      <a href="#" onclick="planRouteFromChip(event,'Toulouse','Lourdes')">Toulouse → Lourdes</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Bordeaux')">Paris → Bordeaux</a>
-      <a href="#" onclick="planRouteFromChip(event,'Marseille','Miramas')">Marseille → Miramas</a>
-      <a href="#" onclick="planRouteFromChip(event,'Bordeaux','Lourdes')">Bordeaux → Lourdes</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Bern')">Paris → Bern</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Milan')">Paris → Milan</a>
-      <a href="#" onclick="planRouteFromChip(event,'Barcelona','Paris')">Barcelona → Paris</a>
-      <a href="#" onclick="planRouteFromChip(event,'Berlin','Paris')">Berlin → Paris</a>
-      <a href="#" onclick="planRouteFromChip(event,'Brussels','Paris')">Brussels → Paris</a>
-      <a href="#" onclick="planRouteFromChip(event,'Geneva','Paris')">Geneva → Paris</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Lourdes')">Paris → Lourdes</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Lucerne')">Paris → Lucerne</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Lyon')">Paris → Lyon</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Rome')">Paris → Rome</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Zurich')">Paris → Zurich</a>
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Venice')">Paris → Venice</a>
-      <a href="#" onclick="planRouteFromChip(event,'Barcelona','Lyon')">Barcelona → Lyon</a>
+      <a href="/rutas/paris-london/" onclick="planRouteFromChip(event,'Paris','London')">Paris → London</a>
+      <a href="/rutas/paris-nice/" onclick="planRouteFromChip(event,'Paris','Nice')">Paris → Nice</a>
+      <a href="/rutas/nice-monaco/" onclick="planRouteFromChip(event,'Nice','Monaco')">Nice → Monaco</a>
+      <a href="/rutas/lyon-turin/" onclick="planRouteFromChip(event,'Lyon','Turin')">Lyon → Turin</a>
+      <a href="/rutas/paris-toulouse/" onclick="planRouteFromChip(event,'Paris','Toulouse')">Paris → Toulouse</a>
+      <a href="/rutas/toulouse-lourdes/" onclick="planRouteFromChip(event,'Toulouse','Lourdes')">Toulouse → Lourdes</a>
+      <a href="/rutas/paris-bordeaux/" onclick="planRouteFromChip(event,'Paris','Bordeaux')">Paris → Bordeaux</a>
+      <a href="/rutas/marseille-miramas/" onclick="planRouteFromChip(event,'Marseille','Miramas')">Marseille → Miramas</a>
+      <a href="/rutas/bordeaux-lourdes/" onclick="planRouteFromChip(event,'Bordeaux','Lourdes')">Bordeaux → Lourdes</a>
+      <a href="/rutas/bern-paris/" onclick="planRouteFromChip(event,'Paris','Bern')">Paris → Bern</a>
+      <a href="/rutas/paris-milan/" onclick="planRouteFromChip(event,'Paris','Milan')">Paris → Milan</a>
+      <a href="/rutas/paris-barcelona/" onclick="planRouteFromChip(event,'Barcelona','Paris')">Barcelona → Paris</a>
+      <a href="/rutas/paris-berlin/" onclick="planRouteFromChip(event,'Berlin','Paris')">Berlin → Paris</a>
+      <a href="/rutas/brussels-paris/" onclick="planRouteFromChip(event,'Brussels','Paris')">Brussels → Paris</a>
+      <a href="/rutas/geneva-paris/" onclick="planRouteFromChip(event,'Geneva','Paris')">Geneva → Paris</a>
+      <a href="/rutas/paris-lourdes/" onclick="planRouteFromChip(event,'Paris','Lourdes')">Paris → Lourdes</a>
+      <a href="/rutas/paris-lucerne/" onclick="planRouteFromChip(event,'Paris','Lucerne')">Paris → Lucerne</a>
+      <a href="/rutas/paris-lyon/" onclick="planRouteFromChip(event,'Paris','Lyon')">Paris → Lyon</a>
+      <a href="/rutas/paris-rome/" onclick="planRouteFromChip(event,'Paris','Rome')">Paris → Rome</a>
+      <a href="/rutas/paris-zurich/" onclick="planRouteFromChip(event,'Paris','Zurich')">Paris → Zurich</a>
+      <a href="/rutas/paris-venice/" onclick="planRouteFromChip(event,'Paris','Venice')">Paris → Venice</a>
+      <a href="/rutas/barcelona-lyon/" onclick="planRouteFromChip(event,'Barcelona','Lyon')">Barcelona → Lyon</a>
+      <a href="/rutas/strasbourg-paris/" onclick="planRouteFromChip(event,'Strasbourg','Paris')">Strasbourg → Paris</a>
+      <a href="/rutas/munich-paris/" onclick="planRouteFromChip(event,'Munich','Paris')">Munich → Paris</a>
+      <a href="/rutas/tende-nice/" onclick="planRouteFromChip(event,'Tende','Nice')">Tende → Nice</a>
     </span></span></span>
     <span class="country-chip">Germany<span class="country-popup"><img class="country-photo" src="country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
-      <a href="#" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlin → Prague</a>
-      <a href="#" onclick="planRouteFromChip(event,'Munich','Venice')">Munich → Venice</a>
-      <a href="#" onclick="planRouteFromChip(event,'Frankfurt','Paris')">Frankfurt → Paris</a>
-      <a href="#" onclick="planRouteFromChip(event,'Hamburg','Berlin')">Hamburg → Berlin</a>
-      <a href="#" onclick="planRouteFromChip(event,'Dortmund','Munich')">Dortmund → Munich</a>
-      <a href="#" onclick="planRouteFromChip(event,'Frankfurt','Cologne')">Frankfurt → Cologne</a>
-      <a href="#" onclick="planRouteFromChip(event,'Frankfurt','Munich')">Frankfurt → Munich</a>
-      <a href="#" onclick="planRouteFromChip(event,'Munich','Vienna')">Munich → Vienna</a>
-      <a href="#" onclick="planRouteFromChip(event,'Berlin','Munich')">Berlin → Munich</a>
-      <a href="#" onclick="planRouteFromChip(event,'Munich','Prague')">Munich → Prague</a>
+      <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
+      <a href="/rutas/berlin-prague/" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlin → Prague</a>
+      <a href="/rutas/munich-venice/" onclick="planRouteFromChip(event,'Munich','Venice')">Munich → Venice</a>
+      <a href="/rutas/frankfurt-paris/" onclick="planRouteFromChip(event,'Frankfurt','Paris')">Frankfurt → Paris</a>
+      <a href="/rutas/berlin-hamburg/" onclick="planRouteFromChip(event,'Hamburg','Berlin')">Hamburg → Berlin</a>
+      <a href="/rutas/dortmund-munich/" onclick="planRouteFromChip(event,'Dortmund','Munich')">Dortmund → Munich</a>
+      <a href="/rutas/frankfurt-cologne/" onclick="planRouteFromChip(event,'Frankfurt','Cologne')">Frankfurt → Cologne</a>
+      <a href="/rutas/frankfurt-munich/" onclick="planRouteFromChip(event,'Frankfurt','Munich')">Frankfurt → Munich</a>
+      <a href="/rutas/frankfurt-berlin/" onclick="planRouteFromChip(event,'Frankfurt','Berlin')">Frankfurt → Berlin</a>
+      <a href="/rutas/munich-vienna/" onclick="planRouteFromChip(event,'Munich','Vienna')">Munich → Vienna</a>
+      <a href="/rutas/munich-berlin/" onclick="planRouteFromChip(event,'Berlin','Munich')">Berlin → Munich</a>
+      <a href="/rutas/munich-prague/" onclick="planRouteFromChip(event,'Munich','Prague')">Munich → Prague</a>
     </span></span></span>
     <span class="country-chip">Italy<span class="country-popup"><img class="country-photo" src="country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Rome','Florence')">Rome → Florence</a>
-      <a href="#" onclick="planRouteFromChip(event,'Florence','Venice')">Florence → Venice</a>
-      <a href="#" onclick="planRouteFromChip(event,'Milan','Rome')">Milan → Rome</a>
-      <a href="#" onclick="planRouteFromChip(event,'Naples','Sorrento')">Naples → Sorrento</a>
+      <a href="/rutas/rome-florence/" onclick="planRouteFromChip(event,'Rome','Florence')">Rome → Florence</a>
+      <a href="/rutas/florence-venice/" onclick="planRouteFromChip(event,'Florence','Venice')">Florence → Venice</a>
+      <a href="/rutas/milan-rome/" onclick="planRouteFromChip(event,'Milan','Rome')">Milan → Rome</a>
+      <a href="/rutas/naples-sorrento/" onclick="planRouteFromChip(event,'Naples','Sorrento')">Naples → Sorrento</a>
       <a href="#" onclick="planRouteFromChip(event,'Sorrento','Positano')">Sorrento → Positano</a>
-      <a href="#" onclick="planRouteFromChip(event,'Venice','Milan')">Venice → Milan</a>
-      <a href="#" onclick="planRouteFromChip(event,'Florence','Pisa')">Florence → Pisa</a>
-      <a href="#" onclick="planRouteFromChip(event,'Florence','Siena')">Florence → Siena</a>
-      <a href="#" onclick="planRouteFromChip(event,'Rome','Venice')">Rome → Venice</a>
-      <a href="#" onclick="planRouteFromChip(event,'Florence','Milan')">Florence → Milan</a>
-      <a href="#" onclick="planRouteFromChip(event,'Milan','Turin')">Milan → Turin</a>
-      <a href="#" onclick="planRouteFromChip(event,'Naples','Rome')">Naples → Rome</a>
-      <a href="#" onclick="planRouteFromChip(event,'Naples','Salerno')">Naples → Salerno</a>
+      <a href="/rutas/venice-milan/" onclick="planRouteFromChip(event,'Venice','Milan')">Venice → Milan</a>
+      <a href="/rutas/florence-pisa/" onclick="planRouteFromChip(event,'Florence','Pisa')">Florence → Pisa</a>
+      <a href="/rutas/florence-siena/" onclick="planRouteFromChip(event,'Florence','Siena')">Florence → Siena</a>
+      <a href="/rutas/rome-venice/" onclick="planRouteFromChip(event,'Rome','Venice')">Rome → Venice</a>
+      <a href="/rutas/milan-florence/" onclick="planRouteFromChip(event,'Florence','Milan')">Florence → Milan</a>
+      <a href="/rutas/turin-milan/" onclick="planRouteFromChip(event,'Milan','Turin')">Milan → Turin</a>
+      <a href="/rutas/naples-rome/" onclick="planRouteFromChip(event,'Naples','Rome')">Naples → Rome</a>
+      <a href="/rutas/naples-salerno/" onclick="planRouteFromChip(event,'Naples','Salerno')">Naples → Salerno</a>
     </span></span></span>
     <span class="country-chip">Belgium<span class="country-popup"><img class="country-photo" src="country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Bruges')">Paris → Bruges</a>
-      <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
-      <a href="#" onclick="planRouteFromChip(event,'Brussels','Cologne')">Brussels → Cologne</a>
-      <a href="#" onclick="planRouteFromChip(event,'Brussels','Bruges')">Brussels → Bruges</a>
+      <a href="/rutas/paris-bruges/" onclick="planRouteFromChip(event,'Paris','Bruges')">Paris → Bruges</a>
+      <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
+      <a href="/rutas/cologne-brussels/" onclick="planRouteFromChip(event,'Brussels','Cologne')">Brussels → Cologne</a>
+      <a href="/rutas/brussels-bruges/" onclick="planRouteFromChip(event,'Brussels','Bruges')">Brussels → Bruges</a>
     </span></span></span>
     <span class="country-chip">Netherlands<span class="country-popup"><img class="country-photo" src="country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Paris','Amsterdam')">Paris → Amsterdam</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','Amsterdam')">London → Amsterdam</a>
-      <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
-      <a href="#" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
+      <a href="/rutas/paris-amsterdam/" onclick="planRouteFromChip(event,'Paris','Amsterdam')">Paris → Amsterdam</a>
+      <a href="/rutas/london-amsterdam/" onclick="planRouteFromChip(event,'London','Amsterdam')">London → Amsterdam</a>
+      <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
+      <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
+      <a href="/rutas/amsterdam-bruges/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Bruges</a>
     </span></span></span>
     <span class="country-chip">Austria<span class="country-popup"><img class="country-photo" src="country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'Vienna','Salzburg')">Vienna → Salzburg</a>
-      <a href="#" onclick="planRouteFromChip(event,'Vienna','Prague')">Vienna → Prague</a>
-      <a href="#" onclick="planRouteFromChip(event,'Vienna','Budapest')">Vienna → Budapest</a>
+      <a href="/rutas/vienna-salzburg/" onclick="planRouteFromChip(event,'Vienna','Salzburg')">Vienna → Salzburg</a>
+      <a href="/rutas/vienna-prague/" onclick="planRouteFromChip(event,'Vienna','Prague')">Vienna → Prague</a>
+      <a href="/rutas/vienna-budapest/" onclick="planRouteFromChip(event,'Vienna','Budapest')">Vienna → Budapest</a>
       <a href="#" onclick="planRouteFromChip(event,'Innsbruck','Salzburg')">Innsbruck → Salzburg</a>
-      <a href="#" onclick="planRouteFromChip(event,'Vienna','Krems')">Vienna → Krems</a>
+      <a href="/rutas/vienna-krems/" onclick="planRouteFromChip(event,'Vienna','Krems')">Vienna → Krems</a>
+      <a href="/rutas/innsbruck-vienna/" onclick="planRouteFromChip(event,'Innsbruck','Vienna')">Innsbruck → Vienna</a>
+      <a href="/rutas/graz-vienna/" onclick="planRouteFromChip(event,'Graz','Vienna')">Graz → Vienna</a>
+      <a href="/rutas/munich-salzburg/" onclick="planRouteFromChip(event,'Munich','Salzburg')">Munich → Salzburg</a>
     </span></span></span>
     <span class="country-chip">United Kingdom<span class="country-popup"><img class="country-photo" src="country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
-      <a href="#" onclick="planRouteFromChip(event,'London','Paris')">London → Paris</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','Manchester')">London → Manchester</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','Liverpool')">London → Liverpool</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','Edinburgh')">London → Edinburgh</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','Brussels')">London → Brussels</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','Cambridge')">London → Cambridge</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','Oxford')">London → Oxford</a>
-      <a href="#" onclick="planRouteFromChip(event,'London','York')">London → York</a>
+      <a href="/rutas/london-paris/" onclick="planRouteFromChip(event,'London','Paris')">London → Paris</a>
+      <a href="/rutas/london-manchester/" onclick="planRouteFromChip(event,'London','Manchester')">London → Manchester</a>
+      <a href="/rutas/london-liverpool/" onclick="planRouteFromChip(event,'London','Liverpool')">London → Liverpool</a>
+      <a href="/rutas/london-edinburgh/" onclick="planRouteFromChip(event,'London','Edinburgh')">London → Edinburgh</a>
+      <a href="/rutas/london-brussels/" onclick="planRouteFromChip(event,'London','Brussels')">London → Brussels</a>
+      <a href="/rutas/london-cambridge/" onclick="planRouteFromChip(event,'London','Cambridge')">London → Cambridge</a>
+      <a href="/rutas/london-oxford/" onclick="planRouteFromChip(event,'London','Oxford')">London → Oxford</a>
+      <a href="/rutas/london-york/" onclick="planRouteFromChip(event,'London','York')">London → York</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="more_countries">Altri paesi</span><span class="country-popup wide"><span class="country-routes">
       <span class="group-label">Czech Republic</span>
-      <a href="#" onclick="planRouteFromChip(event,'Brno','Prague')">Brno → Prague</a>
-      <a href="#" onclick="planRouteFromChip(event,'Brno','Vienna')">Brno → Vienna</a>
-      <a href="#" onclick="planRouteFromChip(event,'Budapest','Prague')">Budapest → Prague</a>
+      <a href="/rutas/prague-brno/" onclick="planRouteFromChip(event,'Brno','Prague')">Brno → Prague</a>
+      <a href="/rutas/brno-vienna/" onclick="planRouteFromChip(event,'Brno','Vienna')">Brno → Vienna</a>
+      <a href="/rutas/prague-budapest/" onclick="planRouteFromChip(event,'Budapest','Prague')">Budapest → Prague</a>
+      <a href="/rutas/copenhagen-prague/" onclick="planRouteFromChip(event,'Copenhagen','Prague')">Copenhagen → Prague</a>
       <span class="group-label">Denmark</span>
-      <a href="#" onclick="planRouteFromChip(event,'Copenhagen','Stockholm')">Copenhagen → Stockholm</a>
+      <a href="/rutas/copenhagen-stockholm/" onclick="planRouteFromChip(event,'Copenhagen','Stockholm')">Copenhagen → Stockholm</a>
       <span class="group-label">Hungary</span>
-      <a href="#" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Ljubljana</a>
+      <a href="/rutas/budapest-ljubljana/" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Ljubljana</a>
     </span></span></span>
   </div>
 
@@ -563,7 +588,7 @@
     <img class="section-head-photo" src="/assets/img/community/plan-adventure.webp" alt="Travelers planning their route with a map" width="480" height="300" loading="lazy">
   </div>
 
-  <div class="wt-route-buttons" role="group" aria-label="Scegli un percorso">
+  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
     <button class="wt-route-btn" data-route="classic" aria-pressed="false">
       <span data-i18n="route_classic">Percorso Classico (Francia–Italia)</span>
     </button>
@@ -619,7 +644,7 @@
           <span class="vip-brand">Klook Hotels</span>
           <span class="vip-sub" data-i18n="vip_klook_hotels">Scegli la tua città →</span>
         </div>
-        <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="Scegli una città" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
+        <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="Choose a city" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
         <div class="klook-city-menu" id="klookCityMenu"></div>
       </div>
     </div>
@@ -678,7 +703,7 @@
   <div class="partner-widgets">
     <!-- Kiwitaxi · Shuttles Search Form -->
     <div class="pw-panel" id="pw-kiwitaxi" data-widget-src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&language=en&theme=1&powered_by=true&campaign_id=1&promo_id=1486">
-      <button class="pw-close" onclick="closeWidget()" aria-label="Chiudi">×</button>
+      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
     </div>
   </div>
   </section>
@@ -780,7 +805,7 @@
 
   <!-- Trust strip: official railway data sources -->
   <div class="trust-strip">
-    <p class="trust-label" data-i18n="trust_data">Dati in tempo reale dalle ferrovie ufficiali</p>
+    <p class="trust-label" data-i18n="trust_data">Viaggi pianificati con IA sulle principali reti ferroviarie europee</p>
     <div class="trust-ops">
       <span class="op-chip"><b style="color:#E30016">Renfe</b></span>
       <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
@@ -793,10 +818,10 @@
       <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="CP" loading="lazy"/>CP</span>
     </div>
     <div class="trust-badges">
-      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">Dati GTFS ufficiali</span></span>
-      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="trust_b2">In diretta ogni 90 secondi</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">Itinerari generati con IA</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="trust_b2">Prenotazione tramite partner verificati</span></span>
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg><span data-i18n="trust_b3">Nessuna registrazione</span></span>
-      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">Orari e tariffe verificati</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">Gratuito</span></span>
     </div>
     <p class="trust-klook" data-i18n="trust_klook" style="margin-top:14px;font-size:12px;color:#66667a;">Prenotazioni gestite ufficialmente da Klook</p>
   </div>
@@ -829,7 +854,7 @@
   <!-- Stats -->
   <div class="stats">
     <p class="stats-prose" id="statsProse">
-      From <strong>190 real routes</strong> in <strong>16 countries</strong> to your next trip — free, no signup.
+      From <strong>103 route guides</strong> in <strong>16 countries</strong> to your next trip — free, no signup.
     </p>
     <div class="stats-marquee">
       <div class="stats-track">
@@ -918,7 +943,7 @@
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq5_q">I miei dati sono privati?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq5_a">WoW Train non raccoglie, memorizza né condivide dati personali. Nessun account, nessun tracking, nessuna pubblicità.</div>
+        <div class="faq-a" data-i18n="faq5_a">Non serve un account. Usiamo Google Analytics anonimo per capire il traffico — vedi l'Informativa sulla privacy. Non vendiamo dati personali.</div>
       </div>
     </div>
   </section>
@@ -936,7 +961,7 @@
   <!-- Explore Routes -->
   <section style="max-width:1100px;margin:0 auto;padding:64px 24px 0;">
     <h2 style="font-size:28px;font-weight:800;letter-spacing:-0.8px;margin-bottom:8px;" data-i18n="explore_routes_title">Esplora le rotte in treno in Europa</h2>
-    <p style="font-size:15px;color:#8888aa;margin-bottom:28px;" data-i18n="explore_routes_sub">Orari, prezzi e consigli per 100 percorsi in treno popolari in tutta Europa.</p>
+    <p style="font-size:15px;color:#8888aa;margin-bottom:28px;" data-i18n="explore_routes_sub">Orari, prezzi e consigli per 103 percorsi in treno popolari in tutta Europa.</p>
     <div style="display:flex;flex-wrap:wrap;gap:10px;">
       <a href="/rutas/paris-london/" class="explore-route-pill">Paris → London</a>
       <a href="/rutas/paris-amsterdam/" class="explore-route-pill">Paris → Amsterdam</a>
@@ -1035,9 +1060,9 @@
   <!-- Footer -->
   <footer>
     <div class="footer-links">
-      <a href="/it/ai-planner/">AI Planner</a>
+      <a href="/ai-planner/">AI Planner</a>
       <a href="/blog.html" data-i18n="footer_blog">Blog</a>
-      <a href="/it/about.html"   data-i18n="footer_about">Chi siamo</a>
+      <a href="/about.html"   data-i18n="footer_about">Chi siamo</a>
       <a href="/privacy.html" data-i18n="footer_privacy">Informativa privacy</a>
       <a href="/cookies.html" data-i18n="footer_cookies">Politica dei cookie</a>
       <a href="/terms.html"   data-i18n="footer_terms">Termini d'uso</a>
@@ -1049,7 +1074,16 @@
     <p class="disclaimer" data-i18n="footer_disclaimer">WoW Train è una piattaforma di viaggio indipendente. Le prenotazioni vengono elaborate secondo i termini del partner corrispondente; non siamo parte di tale transazione. Potremmo ricevere una commissione sugli acquisti qualificati senza costi aggiuntivi per te.</p>
   </footer>
 
-  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="Installa app" hidden>
+  <div id="glosxTramoModal" class="glosx-tramo-modal" role="dialog" aria-label="Klook tab helper" style="display:none;">
+    <div class="glosx-tramo-modal-content">
+      <h3 id="glosxTramoModalTitle" data-i18n="ai_tramo_modal_title">WoW Train</h3>
+      <p id="glosxTramoModalBody" data-i18n="ai_tramo_modal_body">Stiamo cercando gli orari per questa tappa. Scegli il treno che preferisci nella scheda Klook appena aperta, poi torna qui per passare alla prossima.</p>
+      <p id="glosxTramoModalRoute" class="glosx-tramo-modal-route"></p>
+      <button type="button" id="glosxTramoModalBtn" class="glosx-tramo-modal-btn" onclick="confirmarTramoModal()" data-i18n="ai_tramo_modal_btn">Scelto → tappa successiva</button>
+    </div>
+  </div>
+
+  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
     <div class="ios-install-icon" aria-hidden="true">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
     </div>
@@ -1061,7 +1095,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
     </button>
   </div>
-  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="Installa app" hidden>
+  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
     <div class="ios-install-icon" aria-hidden="true">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
     </div>

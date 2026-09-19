@@ -1,6 +1,6 @@
 # WoW Train (glosx.app)
 
-> Free AI-powered train travel planner for Europe. Describe a trip in plain language and get a complete rail itinerary — routes, journey times, operators and booking links — covering rail travel across 15 European countries. No account, no signup. Independent project by GLOSX, not affiliated with any rail operator.
+> Free AI-powered train travel planner for Europe. Describe a trip in plain language and get a complete rail itinerary — routes, journey times, operators and booking links — covering rail travel across 16 European countries. No account, no signup. Independent project by GLOSX, not affiliated with any rail operator.
 
 WoW Train is a website, not a mobile app. Bookings are completed on partner platforms (Klook and others); WoW Train never processes payments itself and earns a small affiliate commission at no extra cost to the traveler.
 
