@@ -662,6 +662,9 @@
       } catch (e) { /* SCENIC_TRAINS aún no definido en primer applyLang */ }
       // Re-renderiza la timeline de rutas abierta en el nuevo idioma
       if (typeof window.wtRefreshTimeline === 'function') window.wtRefreshTimeline();
+      if (typeof window.showDemoRoute === 'function' && document.getElementById('aiResults')?.classList.contains('is-demo')) {
+        window.showDemoRoute();
+      }
     }
 
     function setLang(lang) {
@@ -1884,38 +1887,41 @@
   // pares punto a punto (Klook no vende el itinerario entero). Madrid→París
   // no es un directo: AVE Madrid–Barcelona + TGV Barcelona–París. Misma
   // lógica que París–Lourdes (París–Toulouse + Toulouse–Lourdes).
-  const MOCK_ROUTE_DATA = {
-    "valido": true,
-    "resumen": {
-      "origen_fin_o_concepto": "Madrid to Paris",
-      "duracion_estimada_total": "about 9 hours with one change"
-    },
-    "paradas_principales": ["Madrid", "Barcelona", "Paris"],
-    "tramos": [
-      {
-        "orden": 1,
-        "origen": "Madrid",
-        "destino": "Barcelona",
-        "estacion_salida": "Madrid Atocha",
-        "estacion_llegada": "Barcelona Sants",
-        "tiempo_trayecto": "2h 30m",
-        "operador_tren": "AVE · Renfe",
-        "tipo_tren_sugerido": "AVE",
-        "descripcion_contextual": "Direct high-speed pair — this card books Madrid to Barcelona only."
-      },
-      {
-        "orden": 2,
-        "origen": "Barcelona",
-        "destino": "Paris",
-        "estacion_salida": "Barcelona Sants",
-        "estacion_llegada": "Paris Gare de Lyon",
-        "tiempo_trayecto": "6h 30m",
-        "operador_tren": "TGV · SNCF",
-        "tipo_tren_sugerido": "TGV",
-        "descripcion_contextual": "Second pair: Barcelona to Paris. Long routes are several tickets, not one."
-      }
-    ]
+  function demoPair(orden, origen, destino, fromSt, toSt, time, operador, tipo) {
+    return {
+      orden, origen, destino,
+      estacion_salida: fromSt, estacion_llegada: toSt,
+      tiempo_trayecto: time, operador_tren: operador, tipo_tren_sugerido: tipo,
+      descripcion_contextual: ''
+    };
+  }
+  const DEMO_ROUTES = {
+    en: { valido: true, resumen: { origen_fin_o_concepto: 'Madrid to Paris', duracion_estimada_total: 'about 9 hours · 1 change' }, paradas_principales: ['Madrid', 'Barcelona', 'Paris'], tramos: [
+      demoPair(1, 'Madrid', 'Barcelona', 'Madrid Atocha', 'Barcelona Sants', '2h 30m', 'AVE · Renfe', 'AVE'),
+      demoPair(2, 'Barcelona', 'Paris', 'Barcelona Sants', 'Paris Gare de Lyon', '6h 30m', 'TGV · SNCF', 'TGV')
+    ]},
+    es: { valido: true, resumen: { origen_fin_o_concepto: 'Madrid a París', duracion_estimada_total: 'unas 9 h · 1 transbordo' }, paradas_principales: ['Madrid', 'Barcelona', 'Paris'], tramos: [
+      demoPair(1, 'Madrid', 'Barcelona', 'Madrid Atocha', 'Barcelona Sants', '2h 30m', 'AVE · Renfe', 'AVE'),
+      demoPair(2, 'Barcelona', 'Paris', 'Barcelona Sants', 'Paris Gare de Lyon', '6h 30m', 'TGV · SNCF', 'TGV')
+    ]},
+    fr: { valido: true, resumen: { origen_fin_o_concepto: 'Madrid à Paris', duracion_estimada_total: 'environ 9 h · 1 correspondance' }, paradas_principales: ['Madrid', 'Barcelona', 'Paris'], tramos: [
+      demoPair(1, 'Madrid', 'Barcelona', 'Madrid Atocha', 'Barcelona Sants', '2h 30m', 'AVE · Renfe', 'AVE'),
+      demoPair(2, 'Barcelona', 'Paris', 'Barcelona Sants', 'Paris Gare de Lyon', '6h 30m', 'TGV · SNCF', 'TGV')
+    ]},
+    de: { valido: true, resumen: { origen_fin_o_concepto: 'Madrid nach Paris', duracion_estimada_total: 'ca. 9 Std. · 1 Umstieg' }, paradas_principales: ['Madrid', 'Barcelona', 'Paris'], tramos: [
+      demoPair(1, 'Madrid', 'Barcelona', 'Madrid Atocha', 'Barcelona Sants', '2h 30m', 'AVE · Renfe', 'AVE'),
+      demoPair(2, 'Barcelona', 'Paris', 'Barcelona Sants', 'Paris Gare de Lyon', '6h 30m', 'TGV · SNCF', 'TGV')
+    ]},
+    it: { valido: true, resumen: { origen_fin_o_concepto: 'Madrid a Parigi', duracion_estimada_total: 'circa 9 ore · 1 cambio' }, paradas_principales: ['Madrid', 'Barcelona', 'Paris'], tramos: [
+      demoPair(1, 'Madrid', 'Barcelona', 'Madrid Atocha', 'Barcelona Sants', '2h 30m', 'AVE · Renfe', 'AVE'),
+      demoPair(2, 'Barcelona', 'Paris', 'Barcelona Sants', 'Paris Gare de Lyon', '6h 30m', 'TGV · SNCF', 'TGV')
+    ]},
+    pt: { valido: true, resumen: { origen_fin_o_concepto: 'Madrid a Paris', duracion_estimada_total: 'cerca de 9 h · 1 transbordo' }, paradas_principales: ['Madrid', 'Barcelona', 'Paris'], tramos: [
+      demoPair(1, 'Madrid', 'Barcelona', 'Madrid Atocha', 'Barcelona Sants', '2h 30m', 'AVE · Renfe', 'AVE'),
+      demoPair(2, 'Barcelona', 'Paris', 'Barcelona Sants', 'Paris Gare de Lyon', '6h 30m', 'TGV · SNCF', 'TGV')
+    ]}
   };
+  const MOCK_ROUTE_DATA = DEMO_ROUTES.en;
 
   // Función para establecer sugerencia
   function setAISuggestion(text) {
@@ -2754,7 +2760,12 @@
     }
 
     // Hoteles con foto por parada, directo en la pantalla (sin modal aparte)
-    renderHotelsInline(data);
+    if (!isDemo) {
+      renderHotelsInline(data);
+    } else {
+      const hotelsContainer = document.getElementById('aiHotels');
+      if (hotelsContainer) hotelsContainer.innerHTML = '';
+    }
 
     const CITY_IMG_API = 'https://glosx-backend-production.up.railway.app/api/city-image/';
     const cityImageCache = {};
@@ -2794,7 +2805,7 @@
     data.tramos.forEach(async (segment, index) => {
       const operador = translateOperator(segment.operador_tren || segment.tipo_tren_sugerido || '');
       const cls = trainClass(operador);
-      const imgUrl = await getCityImage(segment.destino);
+      const imgUrl = isDemo ? null : await getCityImage(segment.destino);
       const altTag = segment.imagen_alt_tag || segment.destino;
       const isLast = index === data.tramos.length - 1;
       const imgHTML = imgUrl
@@ -2838,7 +2849,7 @@
             ${kiwiHTML}
           </div>`;
         segmentsContainer.innerHTML += segmentHTML;
-      }, index * 300);
+      }, isDemo ? 0 : index * 300);
     });
 
     // Dibujar línea SVG con animación de dibujado
@@ -2913,7 +2924,9 @@
 
   function showDemoRoute() {
     if (!document.getElementById('aiResults')) return;
-    displayAIRoute(JSON.parse(JSON.stringify(MOCK_ROUTE_DATA)), { isDemo: true });
+    const lang = document.documentElement.lang || 'en';
+    const data = DEMO_ROUTES[lang] || DEMO_ROUTES.en;
+    displayAIRoute(JSON.parse(JSON.stringify(data)), { isDemo: true });
   }
 
   // Función para guardar ruta en caché
@@ -3001,5 +3014,6 @@
   window.setAISuggestion = setAISuggestion;
   window.planRouteFromChip = planRouteFromChip;
   window.invertAIRoute = invertAIRoute;
+  window.showDemoRoute = showDemoRoute;
 
 })();

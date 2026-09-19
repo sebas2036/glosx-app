@@ -1241,7 +1241,29 @@
       color: #8a0010; background: rgba(193,0,22,0.1); border: 1px solid rgba(193,0,22,0.22);
       border-radius: 100px; padding: 5px 12px;
     }
-    .ai-results.is-demo .ai-cta-video { display: none; }
+    .ai-results.is-demo {
+      padding: 14px 16px 12px;
+      border-radius: 16px;
+      max-width: min(560px, 92vw);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .ai-results.is-demo .ai-results-header h3 { font-size: 18px; margin-bottom: 2px; }
+    .ai-results.is-demo .ai-results-header p { font-size: 12px; }
+    .ai-results.is-demo .ai-close-btn { width: 32px; height: 32px; top: 10px; right: 10px; font-size: 22px; }
+    .ai-results.is-demo .ai-demo-badge { margin-bottom: 6px; font-size: 10px; padding: 3px 10px; }
+    .ai-results.is-demo .ai-route-line,
+    .ai-results.is-demo .ai-hotels,
+    .ai-results.is-demo .ai-copy-btn,
+    .ai-results.is-demo .ai-trust-note,
+    .ai-results.is-demo .ai-cta-video,
+    .ai-results.is-demo .ai-segment-desc,
+    .ai-results.is-demo .ai-segment-img-wrap,
+    .ai-results.is-demo .ai-segment-check { display: none !important; }
+    .ai-results.is-demo .ai-stops { margin: 8px 0 4px; }
+    .ai-results.is-demo .ai-stop { padding: 4px 10px; font-size: 12px; }
+    .ai-results.is-demo .ai-segment { padding: 10px 12px; }
+    .ai-results.is-demo .ai-multileg-note { font-size: 11px; margin: 6px 0 8px; }
+    .ai-results.is-demo .ai-quick-book { margin: 6px 0 4px; }
 
     /* Tamano lg del sistema unificado (ver .pill-lg) -- reemplaza el estilo
        inline repetido ~85 veces por idioma en "Explore European train routes". */
