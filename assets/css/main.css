@@ -139,10 +139,6 @@
     }
     .nav-links a.nav-cta:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
     .nav-links a.nav-cta::after { display: none; }
-    @media (min-width: 901px) {
-      .nav-extra { display: none !important; }
-    }
-
     /* ── Botón hamburguesa (solo móvil) ── */
     .nav-toggle {
       display: none;
@@ -161,7 +157,7 @@
        (inaccesibles: no se veian ni se podian tocar). Mismo breakpoint
        de mobile para el comportamiento del nav, aparte del resto de
        reglas de esa media query que son de otras secciones. */
-    @media (max-width: 900px) {
+    @media (max-width: 1299px) {
       .nav-toggle { display: inline-flex; }
       .nav-links {
         display: none;
