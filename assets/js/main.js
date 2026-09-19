@@ -3267,9 +3267,11 @@
       setAISuggestion(cityRouletteLabel(p[0]) + ' ' + conn + ' ' + cityRouletteLabel(p[1]));
       previewFromInput();
       try { if (typeof gtag === 'function') gtag('event', 'ui_click', { source: 'pair_roulette', route: _rouletteLast }); } catch (e) {}
-      const wrap = document.getElementById('aiInputWrapper');
+      const results = document.getElementById('aiResults');
       setTimeout(function () {
-        if (wrap) wrap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+        if (results && results.style.display !== 'none') {
+          results.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+        }
       }, reduce ? 0 : 900);
     }
     clearTimeout(_rouletteTimer);

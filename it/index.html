@@ -388,6 +388,17 @@
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">Vedi il mio ultimo percorso →</button>
     </div>
 
+    <div class="discover-cta">
+      <h3 data-i18n="disc_cta_title">Oggi partiamo per…</h3>
+      <p data-i18n="disc_cta_text">Gira la ruota: una coppia reale e l'itinerario si monta da solo.</p>
+      <div class="pair-roulette" id="pairRoulette" aria-live="polite">
+        <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
+        <span class="pair-roulette-arrow" aria-hidden="true">→</span>
+        <span class="pair-roulette-to" id="rouletteTo">Barcelona</span>
+      </div>
+      <button type="button" class="discover-cta-btn" id="discoverCtaBtn" data-i18n="disc_cta_btn" onclick="spinPairRoulette()">Gira la ruota</button>
+    </div>
+
     <div class="ai-results" id="aiResults" style="display:none;">
       <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
       <div class="ai-results-header">
@@ -730,16 +741,6 @@
       <img class="section-head-photo" src="/assets/img/community/landwasser-viaduct.webp" alt="Red train crossing the Landwasser Viaduct in Switzerland" width="480" height="300" loading="lazy">
     </div>
 
-    <div class="discover-cta">
-      <h3 data-i18n="disc_cta_title">Oggi partiamo per…</h3>
-      <p data-i18n="disc_cta_text">Gira la ruota: una coppia reale e l'itinerario si monta da solo.</p>
-      <div class="pair-roulette" id="pairRoulette" aria-live="polite">
-        <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
-        <span class="pair-roulette-arrow" aria-hidden="true">→</span>
-        <span class="pair-roulette-to" id="rouletteTo">Barcelona</span>
-      </div>
-      <button type="button" class="discover-cta-btn" id="discoverCtaBtn" data-i18n="disc_cta_btn" onclick="spinPairRoulette()">Gira la ruota</button>
-    </div>
 
     <div class="discover-grid">
       <a href="/destinos/hallstatt/" class="discover-card is-featured" style="background-image:url('/destinos/video/hallstatt-poster.jpg')">
@@ -1139,7 +1140,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=15" defer></script>
+  <script src="/assets/js/main.min.js?v=16" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
