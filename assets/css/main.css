@@ -1169,9 +1169,21 @@
     .discover-cta-btn.is-ghost:hover { background: rgba(255,255,255,0.12); filter: none; }
     .ai-planner .discover-cta {
       max-width: min(680px, 100%);
-      margin: 16px auto 4px;
+      margin: 16px auto 28px;
       padding: 26px 20px 22px;
     }
+    .ai-planner.is-roulette-done .discover-cta {
+      padding: 16px 20px 16px;
+      margin-bottom: 28px;
+    }
+    .ai-planner.is-roulette-done .discover-cta p { display: none; }
+    .ai-planner.is-roulette-done .discover-cta h3 {
+      font-size: 18px; margin-bottom: 8px;
+    }
+    .ai-planner.is-roulette-done .pair-roulette { margin: 0 auto 12px; }
+    .ai-planner.is-roulette-done .pair-roulette-from,
+    .ai-planner.is-roulette-done .pair-roulette-to { font-size: 22px; }
+    .ai-planner.is-roulette-done .pair-roulette-arrow { font-size: 20px; }
 
     /* ── Franja VIP "Trusted partners" (Booking / Tripadvisor) ── */
     .vip-bar { max-width: 1180px; margin: 0 auto 14px; }
@@ -1331,7 +1343,10 @@
     .ai-results.is-demo .ai-stop { padding: 4px 10px; font-size: 12px; }
     .ai-results.is-demo .ai-segment { padding: 10px 12px; }
     .ai-results.is-demo .ai-multileg-note { font-size: 11px; margin: 6px 0 8px; }
-    .ai-results.is-demo .ai-quick-book { margin: 6px 0 4px; }
+    .ai-results.is-demo .ai-quick-book { display: none !important; }
+    .ai-results.is-demo.from-roulette .ai-results-header { display: none; }
+    .ai-results.is-demo.from-roulette.is-simple .ai-stops { display: none; }
+    .ai-planner .ai-results.is-demo { margin-top: 0; }
 
     /* Tamano lg del sistema unificado (ver .pill-lg) -- reemplaza el estilo
        inline repetido ~85 veces por idioma en "Explore European train routes". */

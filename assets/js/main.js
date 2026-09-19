@@ -2019,7 +2019,7 @@
     };
   }
 
-  function previewFromInput() {
+  function previewFromInput(opts) {
     const input = document.getElementById('aiInput');
     if (!input) return false;
     const parsed = parseOriginDest(input.value);
@@ -2029,13 +2029,14 @@
     if (!fromSlug || !toSlug) return false;
     const key = fromSlug + '-' + toSlug;
     const multi = KNOWN_MULTI_LEGS[key];
+    const routeOpts = { compact: true, fromRoulette: !!(opts && opts.fromRoulette) };
     if (multi) {
-      displayAIRoute(buildPairRoute(parsed.from, parsed.to, multi), { compact: true });
+      displayAIRoute(buildPairRoute(parsed.from, parsed.to, multi), routeOpts);
       return true;
     }
     const pages = window.GLOSX_ROUTE_PAGES;
     if (pages && pages.has(key)) {
-      displayAIRoute(buildPairRoute(parsed.from, parsed.to, [[parsed.from, parsed.to]]), { compact: true });
+      displayAIRoute(buildPairRoute(parsed.from, parsed.to, [[parsed.from, parsed.to]]), routeOpts);
       return true;
     }
     return false;
@@ -2808,6 +2809,11 @@
     if (inputWrapper) inputWrapper.style.display = 'block';
     results.style.display = 'block';
     results.classList.toggle('is-demo', compact);
+    const fromRoulette = !!(opts && opts.fromRoulette);
+    results.classList.toggle('from-roulette', fromRoulette);
+    results.classList.toggle('is-simple', fromRoulette && data.tramos.length === 1);
+    const planner = document.querySelector('.ai-planner');
+    if (planner) planner.classList.toggle('is-roulette-done', fromRoulette);
     if (demoBadge) {
       const dict = TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en;
       demoBadge.textContent = dict.ai_demo_badge || 'Example itinerary';
@@ -3235,6 +3241,10 @@
     if (!fromEl || !toEl) return;
     if (btn) btn.disabled = true;
     if (book) book.hidden = true;
+    const planner = document.querySelector('.ai-planner');
+    if (planner) planner.classList.remove('is-roulette-done');
+    const spinningResults = document.getElementById('aiResults');
+    if (spinningResults) spinningResults.style.display = 'none';
     if (board) {
       board.classList.remove('is-win');
       board.classList.add('is-spinning');
@@ -3279,7 +3289,7 @@
       }
       const conn = PAIR_CONN[lang] || PAIR_CONN.en;
       setAISuggestion(cityRouletteLabel(p[0]) + ' ' + conn + ' ' + cityRouletteLabel(p[1]));
-      previewFromInput();
+      previewFromInput({ fromRoulette: true });
       try { if (typeof gtag === 'function') gtag('event', 'ui_click', { source: 'pair_roulette', route: _rouletteLast }); } catch (e) {}
       const results = document.getElementById('aiResults');
       setTimeout(function () {
