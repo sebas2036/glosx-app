@@ -372,7 +372,7 @@
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="es. 'Parigi a Roma con panorama' o '5 giorni tra le Alpi svizzere'" autocomplete="off" />
+          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="Esempio: Zurigo a Milano" autocomplete="off" />
           <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Genera itinerario</button>
@@ -1143,7 +1143,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=21" defer></script>
+  <script src="/assets/js/main.min.js?v=22" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
