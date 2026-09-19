@@ -164,7 +164,7 @@
         partners_label: 'Everything for your trip', partners_title1: 'Travel essentials', partners_title2: 'for Europe.',
         partners_lead: 'Curated services that complement your train journey.',
         vip_label: 'Trusted partners', vip_booking: 'Hotels & stays →', vip_tripadvisor: 'Experiences & reviews →', vip_klook_hotels: 'Choose your city →',
-        disc_label: 'Community', disc_title1: "Let's discover", disc_title2: 'together.', disc_lead: "Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.", disc_cta_title: 'Today we\'re going to…', disc_cta_text: 'Spin a real city pair. The itinerary builds itself.', disc_cta_btn: 'Spin the wheel',
+        disc_label: 'Community', disc_title1: "Let's discover", disc_title2: 'together.', disc_lead: "Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.", disc_cta_title: 'Today we\'re going to…', disc_cta_text: 'Spin a real city pair. The itinerary builds itself.', disc_cta_btn: 'Spin the wheel', disc_cta_again: 'Again', disc_cta_this: 'This one',
         p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
         p_kiwi_title: 'Airport Transfers', p_kiwi_desc: 'Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.', p_kiwi_cta: 'Book transfer →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.', p_yesim_cta: 'Activate eSIM →',
@@ -235,7 +235,7 @@
         partners_label: 'Todo para tu viaje', partners_title1: 'Esenciales de viaje', partners_title2: 'para Europa.',
         partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
         vip_label: 'Partners de confianza', vip_booking: 'Hoteles y alojamiento →', vip_tripadvisor: 'Experiencias y reseñas →', vip_klook_hotels: 'Elige tu ciudad →',
-        disc_label: 'Comunidad', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Pueblos y rincones de Europa que solo encuentras en tren — compartidos por viajeros, para viajeros.', disc_cta_title: 'Hoy nos vamos a…', disc_cta_text: 'Gira la ruleta: un par real y el itinerario se arma solo.', disc_cta_btn: 'Gira la ruleta',
+        disc_label: 'Comunidad', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Pueblos y rincones de Europa que solo encuentras en tren — compartidos por viajeros, para viajeros.', disc_cta_title: 'Hoy nos vamos a…', disc_cta_text: 'Gira la ruleta: un par real y el itinerario se arma solo.', disc_cta_btn: 'Gira la ruleta', disc_cta_again: 'Otra', disc_cta_this: 'Esta es',
         p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
         p_kiwi_title: 'Traslados aeropuerto', p_kiwi_desc: 'Taxi privado desde cualquier aeropuerto europeo hasta tu hotel o estación. Precio fijo, sin sorpresas.', p_kiwi_cta: 'Reservar traslado →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Conéctate en más de 30 países europeos desde €4.90. Activación instantánea en tu teléfono — sin cambiar la SIM.', p_yesim_cta: 'Activar eSIM →',
@@ -306,7 +306,7 @@
         partners_label: 'Tout pour votre voyage', partners_title1: 'Essentiels du voyage', partners_title2: 'pour l\'Europe.',
         partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
         vip_label: 'Partenaires de confiance', vip_booking: 'Hôtels & séjours →', vip_tripadvisor: 'Expériences & avis →', vip_klook_hotels: 'Choisissez votre ville →',
-        disc_label: 'Communauté', disc_title1: 'Découvrons', disc_title2: 'ensemble.', disc_lead: "Des villages et des recoins d'Europe que l'on ne trouve qu'en train — partagés par les voyageurs, pour les voyageurs.", disc_cta_title: 'Aujourd\'hui on part à…', disc_cta_text: 'Lancez la roulette : un trajet réel, l\'itinéraire se construit tout seul.', disc_cta_btn: 'Lancer la roulette',
+        disc_label: 'Communauté', disc_title1: 'Découvrons', disc_title2: 'ensemble.', disc_lead: "Des villages et des recoins d'Europe que l'on ne trouve qu'en train — partagés par les voyageurs, pour les voyageurs.", disc_cta_title: 'Aujourd\'hui on part à…', disc_cta_text: 'Lancez la roulette : un trajet réel, l\'itinéraire se construit tout seul.', disc_cta_btn: 'Lancer la roulette', disc_cta_again: 'Une autre', disc_cta_this: 'C\'est celle-là',
         p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
         p_kiwi_title: 'Transferts aéroport', p_kiwi_desc: 'Taxi privé depuis n\'importe quel grand aéroport européen jusqu\'à votre hôtel ou gare. Prix fixe, aucune surprise.', p_kiwi_cta: 'Réserver transfert →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Restez connecté dans plus de 30 pays européens dès €4.90. Activation instantanée sur votre téléphone — sans changer de SIM.', p_yesim_cta: 'Activer eSIM →',
@@ -377,7 +377,7 @@
         partners_label: 'Alles für Ihre Reise', partners_title1: 'Reiseessentials', partners_title2: 'für Europa.',
         partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
         vip_label: 'Vertrauenspartner', vip_booking: 'Hotels & Unterkünfte →', vip_tripadvisor: 'Erlebnisse & Bewertungen →', vip_klook_hotels: 'Stadt auswählen →',
-        disc_label: 'Community', disc_title1: 'Entdecken wir', disc_title2: 'gemeinsam.', disc_lead: 'Orte und Winkel Europas, die man nur mit dem Zug findet — geteilt von Reisenden, für Reisende.', disc_cta_title: 'Heute fahren wir nach…', disc_cta_text: 'Dreh das Rad: ein echtes Städtepaar, der Plan entsteht von selbst.', disc_cta_btn: 'Rad drehen',
+        disc_label: 'Community', disc_title1: 'Entdecken wir', disc_title2: 'gemeinsam.', disc_lead: 'Orte und Winkel Europas, die man nur mit dem Zug findet — geteilt von Reisenden, für Reisende.', disc_cta_title: 'Heute fahren wir nach…', disc_cta_text: 'Dreh das Rad: ein echtes Städtepaar, der Plan entsteht von selbst.', disc_cta_btn: 'Rad drehen', disc_cta_again: 'Nochmal', disc_cta_this: 'Die hier',
         p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
         p_kiwi_title: 'Flughafentransfer', p_kiwi_desc: 'Privattaxi von jedem großen europäischen Flughafen direkt zu Ihrem Hotel oder Bahnhof. Festpreis, keine Überraschungen.', p_kiwi_cta: 'Transfer buchen →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Bleiben Sie in 30+ europäischen Ländern verbunden ab €4.90. Sofortige Aktivierung auf Ihrem Telefon — kein SIM-Wechsel.', p_yesim_cta: 'eSIM aktivieren →',
@@ -448,7 +448,7 @@
         partners_label: 'Tutto per il tuo viaggio', partners_title1: 'Essenziali di viaggio', partners_title2: 'per l\'Europa.',
         partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
         vip_label: 'Partner di fiducia', vip_booking: 'Hotel e soggiorni →', vip_tripadvisor: 'Esperienze e recensioni →', vip_klook_hotels: 'Scegli la tua città →',
-        disc_label: 'Community', disc_title1: 'Scopriamo', disc_title2: 'insieme.', disc_lead: "Borghi e angoli d'Europa che trovi solo in treno — condivisi dai viaggiatori, per i viaggiatori.", disc_cta_title: 'Oggi partiamo per…', disc_cta_text: 'Gira la ruota: una coppia reale e l\'itinerario si monta da solo.', disc_cta_btn: 'Gira la ruota',
+        disc_label: 'Community', disc_title1: 'Scopriamo', disc_title2: 'insieme.', disc_lead: "Borghi e angoli d'Europa che trovi solo in treno — condivisi dai viaggiatori, per i viaggiatori.", disc_cta_title: 'Oggi partiamo per…', disc_cta_text: 'Gira la ruota: una coppia reale e l\'itinerario si monta da solo.', disc_cta_btn: 'Gira la ruota', disc_cta_again: "Un'altra", disc_cta_this: 'Questa',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Taxi privato da qualsiasi grande aeroporto europeo direttamente al tuo hotel o stazione. Prezzo fisso, nessuna sorpresa.', p_kiwi_cta: 'Prenota transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Resta connesso in 30+ paesi europei da €4.90. Attivazione istantanea sul tuo telefono — nessun cambio SIM.', p_yesim_cta: 'Attiva eSIM →',
@@ -519,7 +519,7 @@
         partners_label: 'Tudo para a sua viagem', partners_title1: 'Essenciais de viagem', partners_title2: 'para a Europa.',
         partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
         vip_label: 'Parceiros de confiança', vip_booking: 'Hotéis e estadias →', vip_tripadvisor: 'Experiências e avaliações →', vip_klook_hotels: 'Escolha sua cidade →',
-        disc_label: 'Comunidade', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Vilas e recantos da Europa que só se encontram de comboio — partilhados por viajantes, para viajantes.', disc_cta_title: 'Hoje vamos para…', disc_cta_text: 'Roda a roleta: um par real e o itinerário monta-se sozinho.', disc_cta_btn: 'Rodar a roleta',
+        disc_label: 'Comunidade', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Vilas e recantos da Europa que só se encontram de comboio — partilhados por viajantes, para viajantes.', disc_cta_title: 'Hoje vamos para…', disc_cta_text: 'Roda a roleta: um par real e o itinerário monta-se sozinho.', disc_cta_btn: 'Rodar a roleta', disc_cta_again: 'Outra', disc_cta_this: 'Esta é',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Táxi privado a partir de qualquer grande aeroporto europeu até ao seu hotel ou estação. Preço fixo, sem surpresas.', p_kiwi_cta: 'Reservar transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Mantenha-se ligado em mais de 30 países europeus desde €4.90. Ativação instantânea no seu telefone — sem trocar de SIM.', p_yesim_cta: 'Ativar eSIM →',
@@ -3231,8 +3231,10 @@
     const toEl = document.getElementById('rouletteTo');
     const board = document.getElementById('pairRoulette');
     const btn = document.getElementById('discoverCtaBtn');
+    const book = document.getElementById('discoverCtaBook');
     if (!fromEl || !toEl) return;
     if (btn) btn.disabled = true;
+    if (book) book.hidden = true;
     if (board) {
       board.classList.remove('is-win');
       board.classList.add('is-spinning');
@@ -3261,8 +3263,20 @@
         board.classList.add('is-win');
       }
       playTrainHorn();
-      if (btn) btn.disabled = false;
       const lang = document.documentElement.lang || 'en';
+      const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+      if (btn) {
+        btn.disabled = false;
+        btn.setAttribute('data-i18n', 'disc_cta_again');
+        btn.textContent = dict.disc_cta_again || 'Again';
+        btn.classList.add('is-ghost');
+      }
+      if (book) {
+        book.hidden = false;
+        book.setAttribute('data-i18n', 'disc_cta_this');
+        book.textContent = dict.disc_cta_this || 'This one';
+        book.href = window.glosxBookTarget(cityRouletteLabel(p[0]), cityRouletteLabel(p[1]));
+      }
       const conn = PAIR_CONN[lang] || PAIR_CONN.en;
       setAISuggestion(cityRouletteLabel(p[0]) + ' ' + conn + ' ' + cityRouletteLabel(p[1]));
       previewFromInput();
