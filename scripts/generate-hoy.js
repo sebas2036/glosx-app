@@ -48,28 +48,28 @@ const planner = plannerMatch[0]
 
 const META = {
   en: {
-    title: 'Today we\'re going to… — European train destination roulette | WoW Train',
+    title: 'Today we\'re going to…? — European train destination roulette | WoW Train',
     description: 'Spin a real European city pair. WoW Train builds the rail itinerary and sends you to Klook for times and tickets. Free, no account.',
     path: '/hoy/',
     home: '/',
     ogLocale: 'en_US',
   },
   es: {
-    title: 'Hoy nos vamos a… — ruleta de destinos en tren por Europa | WoW Train',
+    title: '¿Hoy nos vamos a…? — ruleta de destinos en tren por Europa | WoW Train',
     description: 'Gira un par real de ciudades europeas. WoW Train arma el itinerario de tren y te lleva a Klook para horarios y billetes. Gratis, sin cuenta.',
     path: '/es/hoy/',
     home: '/es/',
     ogLocale: 'es_ES',
   },
   fr: {
-    title: 'Aujourd\'hui on part à… — roulette de destinations en train | WoW Train',
+    title: 'On y va… ? — roulette de destinations en train | WoW Train',
     description: 'Lancez un vrai trajet entre deux villes d\'Europe. WoW Train construit l\'itinéraire et vous envoie sur Klook pour horaires et billets. Gratuit, sans compte.',
     path: '/fr/hoy/',
     home: '/fr/',
     ogLocale: 'fr_FR',
   },
   it: {
-    title: 'Oggi partiamo per… — ruota delle destinazioni in treno | WoW Train',
+    title: 'Oggi partiamo per…? — ruota delle destinazioni in treno | WoW Train',
     description: 'Gira una coppia vera di città europee. WoW Train monta l\'itinerario e ti porta su Klook per orari e biglietti. Gratis, senza account.',
     path: '/it/hoy/',
     home: '/it/',
