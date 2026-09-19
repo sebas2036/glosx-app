@@ -12,7 +12,7 @@ set_key() {
   local var_name="$1"
   local label="$2"
   local current
-  current=$(grep "^${var_name}=" "$ENV_FILE" | cut -d= -f2-)
+  current=$(grep "^${var_name}=" "$ENV_FILE" | cut -d= -f2- | sed 's/^["'\'']//;s/["'\'']$//')
   if [ -n "$current" ]; then
     echo "✅ $label ya está cargado."
     return
