@@ -2079,22 +2079,41 @@
     };
   }
 
+  function syncRouletteBoard(fromLabel, toLabel) {
+    const fromEl = document.getElementById('rouletteFrom');
+    const toEl = document.getElementById('rouletteTo');
+    const book = document.getElementById('discoverCtaBook');
+    if (fromEl) fromEl.textContent = fromLabel;
+    if (toEl) toEl.textContent = toLabel;
+    const fromSlug = resolveRouteCitySlug(fromLabel);
+    const toSlug = resolveRouteCitySlug(toLabel);
+    if (fromSlug && toSlug) _rouletteLast = fromSlug + '-' + toSlug;
+    if (book && !book.hidden && typeof window.glosxBookTarget === 'function') {
+      book.href = window.glosxBookTarget(fromLabel, toLabel);
+    }
+  }
+
   function invertAIRoute() {
     const input = document.getElementById('aiInput');
     const value = input ? input.value.trim() : '';
     const parsed = parseOriginDest(value);
+    const keepRoulette = !!(document.getElementById('discoverCtaBook') && !document.getElementById('discoverCtaBook').hidden);
     if (parsed) {
       setAISuggestion(parsed.to + ' ' + parsed.conn + ' ' + parsed.from);
+      syncRouletteBoard(parsed.to, parsed.from);
     } else if (_currentTripData && _currentTripData.tramos && _currentTripData.tramos.length) {
       const first = _currentTripData.tramos[0].origen;
       const last = _currentTripData.tramos[_currentTripData.tramos.length - 1].destino;
-      setAISuggestion(last + ' to ' + first);
+      const lang = document.documentElement.lang || 'en';
+      const conn = PAIR_CONN[lang] || PAIR_CONN.en;
+      setAISuggestion(last + ' ' + conn + ' ' + first);
+      syncRouletteBoard(last, first);
     }
     if (_currentTripData && _currentTripData.tramos && _currentTripData.tramos.length) {
-      displayAIRoute(reverseTripData(_currentTripData), { compact: true });
+      displayAIRoute(reverseTripData(_currentTripData), { compact: true, fromRoulette: keepRoulette });
       return;
     }
-    previewFromInput();
+    previewFromInput({ fromRoulette: keepRoulette });
   }
 
   // Función principal para generar ruta
