@@ -149,7 +149,7 @@
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
     const TRANSLATIONS = {
       en: {
-        nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started', nav_routes: 'Routes', nav_plan: 'Plan', nav_explore: 'Explore', chip_spain: 'Spain', chip_switzerland: 'Switzerland', chip_france: 'France', chip_germany: 'Germany', chip_italy: 'Italy', chip_belgium: 'Belgium', chip_netherlands: 'Netherlands', chip_austria: 'Austria', chip_uk: 'United Kingdom', ai_suggest_paris: 'Madrid to Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pa: 'Paris → Amsterdam', ai_suggest_mr: 'Milan → Rome', ai_suggest_alps: 'Swiss Alps', ai_suggest_italy: '5 days Italy',
+        nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started', nav_routes: 'Routes', nav_plan: 'Plan', nav_explore: 'Explore', chip_spain: 'Spain', chip_switzerland: 'Switzerland', chip_france: 'France', chip_germany: 'Germany', chip_italy: 'Italy', chip_belgium: 'Belgium', chip_netherlands: 'Netherlands', chip_austria: 'Austria', chip_uk: 'United Kingdom', ai_suggest_paris: 'Madrid to Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'Munich → Venice', ai_suggest_rv: 'Rome → Venice', ai_suggest_alps: 'Swiss Alps', ai_suggest_italy: '5 days Italy',
         partners_see_all: 'See all essentials →',
         hero_badge: 'AI-Powered European Rail Planner',
         hero_h1: 'AI European Train Route Planner',
@@ -220,7 +220,7 @@
         popular_routes_label: '★ Popular routes · book instantly',
       },
       es: {
-        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar', nav_routes: 'Rutas', nav_plan: 'Planificar', nav_explore: 'Explorar', chip_spain: 'España', chip_switzerland: 'Suiza', chip_france: 'Francia', chip_germany: 'Alemania', chip_italy: 'Italia', chip_belgium: 'Bélgica', chip_netherlands: 'Países Bajos', chip_austria: 'Austria', chip_uk: 'Reino Unido', ai_suggest_paris: 'Madrid a París', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'París → Londres', ai_suggest_pa: 'París → Ámsterdam', ai_suggest_mr: 'Milán → Roma', ai_suggest_alps: 'Alpes suizos', ai_suggest_italy: '5 días Italia',
+        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar', nav_routes: 'Rutas', nav_plan: 'Planificar', nav_explore: 'Explorar', chip_spain: 'España', chip_switzerland: 'Suiza', chip_france: 'Francia', chip_germany: 'Alemania', chip_italy: 'Italia', chip_belgium: 'Bélgica', chip_netherlands: 'Países Bajos', chip_austria: 'Austria', chip_uk: 'Reino Unido', ai_suggest_paris: 'Madrid a París', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'París → Londres', ai_suggest_pb: 'París → Barcelona', ai_suggest_mv: 'Múnich → Venecia', ai_suggest_rv: 'Roma → Venecia', ai_suggest_alps: 'Alpes suizos', ai_suggest_italy: '5 días Italia',
         partners_see_all: 'Ver todos los esenciales →',
         hero_badge: 'Planificador IA de trenes europeos',
         hero_h1: 'Planificador IA de trenes por Europa',
@@ -291,7 +291,7 @@
         popular_routes_label: '★ Rutas populares · reserva al instante',
       },
       fr: {
-        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer', nav_routes: 'Itinéraires', nav_plan: 'Planifier', nav_explore: 'Explorer', chip_spain: 'Espagne', chip_switzerland: 'Suisse', chip_france: 'France', chip_germany: 'Allemagne', chip_italy: 'Italie', chip_belgium: 'Belgique', chip_netherlands: 'Pays-Bas', chip_austria: 'Autriche', chip_uk: 'Royaume-Uni', ai_suggest_paris: 'Madrid à Paris', ai_suggest_mb: 'Madrid → Barcelone', ai_suggest_pl: 'Paris → Londres', ai_suggest_pa: 'Paris → Amsterdam', ai_suggest_mr: 'Milan → Rome', ai_suggest_alps: 'Alpes suisses', ai_suggest_italy: '5 jours en Italie',
+        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer', nav_routes: 'Itinéraires', nav_plan: 'Planifier', nav_explore: 'Explorer', chip_spain: 'Espagne', chip_switzerland: 'Suisse', chip_france: 'France', chip_germany: 'Allemagne', chip_italy: 'Italie', chip_belgium: 'Belgique', chip_netherlands: 'Pays-Bas', chip_austria: 'Autriche', chip_uk: 'Royaume-Uni', ai_suggest_paris: 'Madrid à Paris', ai_suggest_mb: 'Madrid → Barcelone', ai_suggest_pl: 'Paris → Londres', ai_suggest_pb: 'Paris → Barcelone', ai_suggest_mv: 'Munich → Venise', ai_suggest_rv: 'Rome → Venise', ai_suggest_alps: 'Alpes suisses', ai_suggest_italy: '5 jours en Italie',
         partners_see_all: 'Voir tous les essentiels →',
         hero_badge: 'Planificateur IA de trains européens',
         hero_h1: 'Planificateur IA de trains en Europe',
@@ -362,7 +362,7 @@
         popular_routes_label: '★ Itinéraires populaires · réservez instantanément',
       },
       de: {
-        nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen', nav_routes: 'Routen', nav_plan: 'Planen', nav_explore: 'Entdecken', chip_spain: 'Spanien', chip_switzerland: 'Schweiz', chip_france: 'Frankreich', chip_germany: 'Deutschland', chip_italy: 'Italien', chip_belgium: 'Belgien', chip_netherlands: 'Niederlande', chip_austria: 'Österreich', chip_uk: 'Vereinigtes Königreich', ai_suggest_paris: 'Madrid nach Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pa: 'Paris → Amsterdam', ai_suggest_mr: 'Mailand → Rom', ai_suggest_alps: 'Schweizer Alpen', ai_suggest_italy: '5 Tage Italien',
+        nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen', nav_routes: 'Routen', nav_plan: 'Planen', nav_explore: 'Entdecken', chip_spain: 'Spanien', chip_switzerland: 'Schweiz', chip_france: 'Frankreich', chip_germany: 'Deutschland', chip_italy: 'Italien', chip_belgium: 'Belgien', chip_netherlands: 'Niederlande', chip_austria: 'Österreich', chip_uk: 'Vereinigtes Königreich', ai_suggest_paris: 'Madrid nach Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'München → Venedig', ai_suggest_rv: 'Rom → Venedig', ai_suggest_alps: 'Schweizer Alpen', ai_suggest_italy: '5 Tage Italien',
         partners_see_all: 'Alle Essentials ansehen →',
         hero_badge: 'KI-gestützter Europazug-Planer',
         hero_h1: 'KI-Reiseplaner für Züge in Europa',
@@ -433,7 +433,7 @@
         popular_routes_label: '★ Beliebte Routen · sofort buchbar',
       },
       it: {
-        nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia', nav_routes: 'Itinerari', nav_plan: 'Pianifica', nav_explore: 'Esplora', chip_spain: 'Spagna', chip_switzerland: 'Svizzera', chip_france: 'Francia', chip_germany: 'Germania', chip_italy: 'Italia', chip_belgium: 'Belgio', chip_netherlands: 'Paesi Bassi', chip_austria: 'Austria', chip_uk: 'Regno Unito', ai_suggest_paris: 'Madrid a Parigi', ai_suggest_mb: 'Madrid → Barcellona', ai_suggest_pl: 'Parigi → Londra', ai_suggest_pa: 'Parigi → Amsterdam', ai_suggest_mr: 'Milano → Roma', ai_suggest_alps: 'Alpi svizzere', ai_suggest_italy: '5 giorni in Italia',
+        nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia', nav_routes: 'Itinerari', nav_plan: 'Pianifica', nav_explore: 'Esplora', chip_spain: 'Spagna', chip_switzerland: 'Svizzera', chip_france: 'Francia', chip_germany: 'Germania', chip_italy: 'Italia', chip_belgium: 'Belgio', chip_netherlands: 'Paesi Bassi', chip_austria: 'Austria', chip_uk: 'Regno Unito', ai_suggest_paris: 'Madrid a Parigi', ai_suggest_mb: 'Madrid → Barcellona', ai_suggest_pl: 'Parigi → Londra', ai_suggest_pb: 'Parigi → Barcellona', ai_suggest_mv: 'Monaco di Baviera → Venezia', ai_suggest_rv: 'Roma → Venezia', ai_suggest_alps: 'Alpi svizzere', ai_suggest_italy: '5 giorni in Italia',
         partners_see_all: 'Vedi tutti gli essenziali →',
         hero_badge: 'Pianificatore IA di treni europei',
         hero_h1: 'Pianificatore IA di treni in Europa',
@@ -504,7 +504,7 @@
         popular_routes_label: '★ Percorsi popolari · prenota subito',
       },
       pt: {
-        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar', nav_routes: 'Rotas', nav_plan: 'Planear', nav_explore: 'Explorar', chip_spain: 'Espanha', chip_switzerland: 'Suíça', chip_france: 'França', chip_germany: 'Alemanha', chip_italy: 'Itália', chip_belgium: 'Bélgica', chip_netherlands: 'Países Baixos', chip_austria: 'Áustria', chip_uk: 'Reino Unido', ai_suggest_paris: 'Madrid a Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → Londres', ai_suggest_pa: 'Paris → Amesterdão', ai_suggest_mr: 'Milão → Roma', ai_suggest_alps: 'Alpes suíços', ai_suggest_italy: '5 dias Itália',
+        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar', nav_routes: 'Rotas', nav_plan: 'Planear', nav_explore: 'Explorar', chip_spain: 'Espanha', chip_switzerland: 'Suíça', chip_france: 'França', chip_germany: 'Alemanha', chip_italy: 'Itália', chip_belgium: 'Bélgica', chip_netherlands: 'Países Baixos', chip_austria: 'Áustria', chip_uk: 'Reino Unido', ai_suggest_paris: 'Madrid a Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → Londres', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'Munique → Veneza', ai_suggest_rv: 'Roma → Veneza', ai_suggest_alps: 'Alpes suíços', ai_suggest_italy: '5 dias Itália',
         partners_see_all: 'Ver todos os essenciais →',
         hero_badge: 'Planificador IA de comboios europeus',
         hero_h1: 'Planejador IA de trens na Europa',
