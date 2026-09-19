@@ -92,6 +92,7 @@ function page(lang) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
+  <meta name="p:domain_verify" content="8a24b802656b2c8765ecc39a37901e99" />
   <title>${esc(meta.title)}</title>
   <meta name="description" content="${esc(meta.description)}" />
   <link rel="canonical" href="https://glosx.app${meta.path}" />
