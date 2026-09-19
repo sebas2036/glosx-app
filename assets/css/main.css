@@ -1169,12 +1169,11 @@
     .discover-cta-btn.is-ghost:hover { background: rgba(255,255,255,0.12); filter: none; }
     .ai-planner .discover-cta {
       max-width: min(680px, 100%);
-      margin: 16px auto 28px;
+      margin: 28px auto 8px;
       padding: 26px 20px 22px;
     }
     .ai-planner.is-roulette-done .discover-cta {
       padding: 16px 20px 16px;
-      margin-bottom: 28px;
     }
     .ai-planner.is-roulette-done .discover-cta p { display: none; }
     .ai-planner.is-roulette-done .discover-cta h3 {
@@ -1344,9 +1343,7 @@
     .ai-results.is-demo .ai-segment { padding: 10px 12px; }
     .ai-results.is-demo .ai-multileg-note { font-size: 11px; margin: 6px 0 8px; }
     .ai-results.is-demo .ai-quick-book { display: none !important; }
-    .ai-results.is-demo.from-roulette .ai-results-header { display: none; }
-    .ai-results.is-demo.from-roulette.is-simple .ai-stops { display: none; }
-    .ai-planner .ai-results.is-demo { margin-top: 0; }
+    .ai-planner .ai-results.is-demo { margin: 8px auto 0; }
 
     /* Tamano lg del sistema unificado (ver .pill-lg) -- reemplaza el estilo
        inline repetido ~85 veces por idioma en "Explore European train routes". */

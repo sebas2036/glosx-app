@@ -1988,6 +1988,7 @@
     const cities = pair[lang] || pair.en;
     const conn = PAIR_CONN[lang] || PAIR_CONN.en;
     setAISuggestion(cities[0] + ' ' + conn + ' ' + cities[1]);
+    resetRouletteChrome();
     previewFromInput();
   }
 
@@ -2815,7 +2816,7 @@
     if (inputWrapper) inputWrapper.style.display = 'block';
     results.style.display = 'block';
     results.classList.toggle('is-demo', compact);
-    results.classList.toggle('is-seed-demo', isDemo);
+    results.classList.toggle('is-seed-demo', !!(isDemo || (opts && opts.seed)));
     const fromRoulette = !!(opts && opts.fromRoulette);
     results.classList.toggle('from-roulette', fromRoulette);
     results.classList.toggle('is-simple', fromRoulette && data.tramos.length === 1);
@@ -3058,6 +3059,7 @@
     // Mostrar botón de restaurar si hay caché
     checkRouteCache();
     resetRouletteChrome();
+    showDemoRoute();
   }
 
   function resetRouletteChrome() {
@@ -3093,7 +3095,7 @@
       pt: 'Madrid a Barcelona'
     };
     setAISuggestion(seedQuery[lang] || seedQuery.en);
-    displayAIRoute(JSON.parse(JSON.stringify(data)), { isDemo: true, compact: true });
+    displayAIRoute(JSON.parse(JSON.stringify(data)), { compact: true, seed: true });
   }
 
   // Función para guardar ruta en caché
@@ -3155,12 +3157,14 @@
   // Inicializar verificación de caché al cargar
   function initPlannerHome() {
     checkRouteCache();
+    showDemoRoute();
     const input = document.getElementById('aiInput');
     if (!input) return;
     let previewTimer;
     input.addEventListener('input', function() {
       const aurora = document.getElementById('aiInputAurora');
       if (aurora) aurora.classList.toggle('active', this.value.trim().length > 0);
+      resetRouletteChrome();
       clearTimeout(previewTimer);
       previewTimer = setTimeout(function() { previewFromInput(); }, 450);
     });
@@ -3269,8 +3273,6 @@
     if (book) book.hidden = true;
     const planner = document.querySelector('.ai-planner');
     if (planner) planner.classList.remove('is-roulette-done');
-    const spinningResults = document.getElementById('aiResults');
-    if (spinningResults) spinningResults.style.display = 'none';
     if (board) {
       board.classList.remove('is-win');
       board.classList.add('is-spinning');
