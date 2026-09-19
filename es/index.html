@@ -227,7 +227,7 @@
       },
       {
         "@type": "Question",
-        "name": "¿Cómo reservo un pasaje?",
+        "name": "¿Cómo reservo un billete?",
         "acceptedAnswer": { "@type": "Answer", "text": "Te conectamos de forma directa y transparente con socios oficiales como Klook. Busca tu ruta, haz clic en \"Ver horarios →\" y completa la reserva en la plataforma segura de Klook." }
       },
       {
@@ -390,13 +390,13 @@
 
     <div class="discover-cta">
       <h3 data-i18n="disc_cta_title">Hoy nos vamos a…</h3>
-      <p data-i18n="disc_cta_text">Girá la ruleta: un par real y el itinerario se arma solo.</p>
+      <p data-i18n="disc_cta_text">Gira la ruleta: un par real y el itinerario se arma solo.</p>
       <div class="pair-roulette" id="pairRoulette" aria-live="polite">
         <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
         <span class="pair-roulette-arrow" aria-hidden="true">→</span>
         <span class="pair-roulette-to" id="rouletteTo">Barcelona</span>
       </div>
-      <button type="button" class="discover-cta-btn" id="discoverCtaBtn" data-i18n="disc_cta_btn" onclick="spinPairRoulette()">Tirar la ruleta</button>
+      <button type="button" class="discover-cta-btn" id="discoverCtaBtn" data-i18n="disc_cta_btn" onclick="spinPairRoulette()">Gira la ruleta</button>
     </div>
 
     <div class="ai-results" id="aiResults" style="display:none;">
@@ -950,7 +950,7 @@
         <div class="faq-a" data-i18n="faq1_a">Una plataforma independiente y gratuita para diseñar itinerarios escénicos en tren por Europa. Sin cuenta, sin suscripción — explora, planifica y reserva a través de socios certificados.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq2_q">¿Cómo reservo un pasaje?</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-q"><span data-i18n="faq2_q">¿Cómo reservo un billete?</span> <span class="faq-arrow">▾</span></div>
         <div class="faq-a" data-i18n="faq2_a">Te conectamos de forma directa y transparente con socios oficiales como Klook. Busca tu ruta, haz clic en "Ver horarios →" y completa la reserva en la plataforma segura de Klook.</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
@@ -1097,7 +1097,7 @@
   <div id="glosxTramoModal" class="glosx-tramo-modal" role="dialog" aria-label="Klook tab helper" style="display:none;">
     <div class="glosx-tramo-modal-content">
       <h3 id="glosxTramoModalTitle" data-i18n="ai_tramo_modal_title">WoW Train</h3>
-      <p id="glosxTramoModalBody" data-i18n="ai_tramo_modal_body">Estamos buscando los horarios de este tramo. Elegí el tren que más te guste en la pestaña de Klook que se acaba de abrir y volvé acá para seguir con el próximo.</p>
+      <p id="glosxTramoModalBody" data-i18n="ai_tramo_modal_body">Estamos buscando los horarios de este tramo. Elige el tren que más te guste en la pestaña de Klook que se acaba de abrir y vuelve aquí para seguir con el próximo.</p>
       <p id="glosxTramoModalRoute" class="glosx-tramo-modal-route"></p>
       <button type="button" id="glosxTramoModalBtn" class="glosx-tramo-modal-btn" onclick="confirmarTramoModal()" data-i18n="ai_tramo_modal_btn">Ya lo elegí → siguiente tramo</button>
     </div>
@@ -1140,7 +1140,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=16" defer></script>
+  <script src="/assets/js/main.min.js?v=17" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
