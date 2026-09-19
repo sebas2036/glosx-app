@@ -2910,7 +2910,7 @@
     const segmentsContainer = document.getElementById('aiSegments');
     segmentsContainer.innerHTML = '';
     const n = data.tramos.length;
-    segmentsContainer.className = 'ai-segments' + (n === 1 ? '' : n === 2 ? ' cols-2' : n === 3 ? ' cols-3' : ' cols-2x2');
+    segmentsContainer.className = 'ai-segments' + (n === 1 ? '' : n === 2 ? ' cols-2' : n === 3 ? ' cols-3' : ' cols-4');
     const SPEED_TERMS = {
       en: { 'Alta Velocidad': 'High Speed', 'Alta velocidad': 'High Speed', 'Larga Distancia': 'Long Distance', 'Regional': 'Regional', 'Internacional': 'International', 'Interurbano': 'Intercity' },
       fr: { 'Alta Velocidad': 'Grande Vitesse', 'Alta velocidad': 'Grande Vitesse', 'Larga Distancia': 'Longue Distance', 'Regional': 'Régional', 'Internacional': 'International', 'Interurbano': 'Intercité' },
