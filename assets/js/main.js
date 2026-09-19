@@ -165,6 +165,7 @@
         partners_lead: 'Curated services that complement your train journey.',
         vip_label: 'Trusted partners', vip_booking: 'Hotels & stays →', vip_tripadvisor: 'Experiences & reviews →', vip_klook_hotels: 'Choose your city →',
         disc_label: 'Community', disc_title1: "Let's discover", disc_title2: 'together.', disc_lead: "Towns and corners of Europe you'd only ever find by train — shared by travelers, for travelers.", disc_cta_title: 'Today we\'re going to…', disc_cta_text: 'Spin a real city pair. The itinerary builds itself.', disc_cta_btn: 'Spin the wheel', disc_cta_again: 'Again', disc_cta_this: 'This one',
+        hoy_seo_cta: 'Destination roulette', hoy_h1: 'Today we\'re going to…', hoy_lead: 'Spin a real European city pair. The train itinerary builds itself — then book that ticket.', hoy_body: 'Every result is a documented WoW Train route, not a random city. Open the pair, see the legs, and continue to Klook for times and tickets. Free, no account.', hoy_faq1_q: 'Is the destination random?', hoy_faq1_a: 'It is random among real city pairs we already publish as train guides. If it cannot be booked as a rail trip, it does not appear.', hoy_faq2_q: 'Do I have to keep the result?', hoy_faq2_a: 'No. Spin again, type a pair in the planner, or open a route guide. The wheel is for when you cannot decide.', hoy_faq3_q: 'Where do I buy the ticket?', hoy_faq3_a: 'On Klook, via our official partner link. WoW Train does not charge you extra.', hoy_more: 'More train routes', hoy_home: 'Back to the planner',
         p_klook_title: 'City Passes', p_klook_desc: 'Madrid, Barcelona, Paris, Rome, London, Berlin — unlimited transit and skip-the-line entry to top attractions.', p_klook_cta: 'Browse passes →',
         p_kiwi_title: 'Airport Transfers', p_kiwi_desc: 'Private taxi from any major European airport straight to your hotel or station. Fixed price, no surprises.', p_kiwi_cta: 'Book transfer →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Stay connected across 30+ European countries from €4.90. Activate instantly on your phone — no SIM swap.', p_yesim_cta: 'Activate eSIM →',
@@ -236,6 +237,7 @@
         partners_lead: 'Servicios seleccionados que complementan tu viaje en tren.',
         vip_label: 'Partners de confianza', vip_booking: 'Hoteles y alojamiento →', vip_tripadvisor: 'Experiencias y reseñas →', vip_klook_hotels: 'Elige tu ciudad →',
         disc_label: 'Comunidad', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Pueblos y rincones de Europa que solo encuentras en tren — compartidos por viajeros, para viajeros.', disc_cta_title: 'Hoy nos vamos a…', disc_cta_text: 'Gira la ruleta: un par real y el itinerario se arma solo.', disc_cta_btn: 'Gira la ruleta', disc_cta_again: 'Otra', disc_cta_this: 'Esta es',
+        hoy_seo_cta: 'Ruleta de destinos', hoy_h1: 'Hoy nos vamos a…', hoy_lead: 'Gira un par real de ciudades europeas. El itinerario de tren se arma solo — y puedes reservar ese billete.', hoy_body: 'Cada resultado es una ruta documentada de WoW Train, no una ciudad al azar. Abre el par, mira los tramos y sigue a Klook para horarios y billetes. Gratis, sin cuenta.', hoy_faq1_q: '¿El destino es al azar?', hoy_faq1_a: 'Al azar entre pares reales que ya publicamos como guías de tren. Si no se puede reservar como viaje en tren, no sale.', hoy_faq2_q: '¿Tengo que quedarme con el resultado?', hoy_faq2_a: 'No. Vuelve a girar, escribe un par en el planificador o abre una guía. La ruleta es para cuando no te decides.', hoy_faq3_q: '¿Dónde compro el billete?', hoy_faq3_a: 'En Klook, con nuestro enlace de socio oficial. WoW Train no te cobra de más.', hoy_more: 'Más rutas de tren', hoy_home: 'Volver al planificador',
         p_klook_title: 'Pases de ciudad', p_klook_desc: 'Madrid, Barcelona, París, Roma, Londres, Berlín — transporte ilimitado y entrada sin filas a las principales atracciones.', p_klook_cta: 'Ver pases →',
         p_kiwi_title: 'Traslados aeropuerto', p_kiwi_desc: 'Taxi privado desde cualquier aeropuerto europeo hasta tu hotel o estación. Precio fijo, sin sorpresas.', p_kiwi_cta: 'Reservar traslado →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Conéctate en más de 30 países europeos desde €4.90. Activación instantánea en tu teléfono — sin cambiar la SIM.', p_yesim_cta: 'Activar eSIM →',
@@ -307,6 +309,7 @@
         partners_lead: 'Services soigneusement choisis qui complètent votre voyage en train.',
         vip_label: 'Partenaires de confiance', vip_booking: 'Hôtels & séjours →', vip_tripadvisor: 'Expériences & avis →', vip_klook_hotels: 'Choisissez votre ville →',
         disc_label: 'Communauté', disc_title1: 'Découvrons', disc_title2: 'ensemble.', disc_lead: "Des villages et des recoins d'Europe que l'on ne trouve qu'en train — partagés par les voyageurs, pour les voyageurs.", disc_cta_title: 'Aujourd\'hui on part à…', disc_cta_text: 'Un trajet réel, l\'itinéraire se monte seul.', disc_cta_btn: 'Lancer', disc_cta_again: 'Une autre', disc_cta_this: 'Celle-là',
+        hoy_seo_cta: 'Roulette des destinations', hoy_h1: 'Aujourd\'hui on part à…', hoy_lead: 'Lancez un vrai trajet entre deux villes d\'Europe. L\'itinéraire ferroviaire se construit — puis réservez ce billet.', hoy_body: 'Chaque résultat est une route WoW Train déjà documentée, pas une ville au hasard. Ouvrez le trajet, voyez les étapes et continuez sur Klook pour les horaires et les billets. Gratuit, sans compte.', hoy_faq1_q: 'La destination est-elle au hasard ?', hoy_faq1_a: 'Au hasard parmi des trajets réels déjà publiés en guides. Si on ne peut pas le réserver en train, il n\'apparaît pas.', hoy_faq2_q: 'Dois-je garder le résultat ?', hoy_faq2_a: 'Non. Relancez, saisissez un trajet dans le planificateur ou ouvrez un guide. La roulette sert quand vous n\'arrivez pas à choisir.', hoy_faq3_q: 'Où acheter le billet ?', hoy_faq3_a: 'Sur Klook, via notre lien partenaire officiel. WoW Train ne vous facture rien en plus.', hoy_more: 'Plus de trajets en train', hoy_home: 'Retour au planificateur',
         p_klook_title: 'Pass ville', p_klook_desc: 'Madrid, Barcelone, Paris, Rome, Londres, Berlin — transport illimité et accès coupe-file aux principales attractions.', p_klook_cta: 'Voir les pass →',
         p_kiwi_title: 'Transferts aéroport', p_kiwi_desc: 'Taxi privé depuis n\'importe quel grand aéroport européen jusqu\'à votre hôtel ou gare. Prix fixe, aucune surprise.', p_kiwi_cta: 'Réserver transfert →',
         p_yesim_title: 'eSIM Europe', p_yesim_desc: 'Restez connecté dans plus de 30 pays européens dès €4.90. Activation instantanée sur votre téléphone — sans changer de SIM.', p_yesim_cta: 'Activer eSIM →',
@@ -378,6 +381,7 @@
         partners_lead: 'Kuratierte Dienste, die Ihre Zugreise ergänzen.',
         vip_label: 'Vertrauenspartner', vip_booking: 'Hotels & Unterkünfte →', vip_tripadvisor: 'Erlebnisse & Bewertungen →', vip_klook_hotels: 'Stadt auswählen →',
         disc_label: 'Community', disc_title1: 'Entdecken wir', disc_title2: 'gemeinsam.', disc_lead: 'Orte und Winkel Europas, die man nur mit dem Zug findet — geteilt von Reisenden, für Reisende.', disc_cta_title: 'Heute fahren wir nach…', disc_cta_text: 'Dreh das Rad: ein echtes Städtepaar, der Plan entsteht von selbst.', disc_cta_btn: 'Rad drehen', disc_cta_again: 'Nochmal', disc_cta_this: 'Die hier',
+        hoy_seo_cta: 'Ziel-Roulette', hoy_h1: 'Heute fahren wir nach…', hoy_lead: 'Dreh ein echtes europäisches Städtepaar. Der Zugplan entsteht von selbst — dann buch das Ticket.', hoy_body: 'Jedes Ergebnis ist eine dokumentierte WoW-Train-Route, keine Zufallsstadt. Öffne das Paar, sieh die Etappen und weiter zu Klook für Zeiten und Tickets. Kostenlos, ohne Konto.', hoy_faq1_q: 'Ist das Ziel zufällig?', hoy_faq1_a: 'Zufällig unter echten Stadtpaaren, die wir schon als Zugführer publizieren. Was sich nicht als Bahnreise buchen lässt, erscheint nicht.', hoy_faq2_q: 'Muss ich das Ergebnis nehmen?', hoy_faq2_a: 'Nein. Nochmal drehen, ein Paar eintippen oder einen Guide öffnen. Das Rad ist fürs Unentschieden.', hoy_faq3_q: 'Wo kaufe ich das Ticket?', hoy_faq3_a: 'Bei Klook über unseren offiziellen Partnerlink. WoW Train berechnet nichts extra.', hoy_more: 'Mehr Zugstrecken', hoy_home: 'Zurück zum Planer',
         p_klook_title: 'City Pässe', p_klook_desc: 'Madrid, Barcelona, Paris, Rom, London, Berlin — unbegrenzter Nahverkehr und Skip-the-Line-Eintritt zu Top-Sehenswürdigkeiten.', p_klook_cta: 'Pässe ansehen →',
         p_kiwi_title: 'Flughafentransfer', p_kiwi_desc: 'Privattaxi von jedem großen europäischen Flughafen direkt zu Ihrem Hotel oder Bahnhof. Festpreis, keine Überraschungen.', p_kiwi_cta: 'Transfer buchen →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Bleiben Sie in 30+ europäischen Ländern verbunden ab €4.90. Sofortige Aktivierung auf Ihrem Telefon — kein SIM-Wechsel.', p_yesim_cta: 'eSIM aktivieren →',
@@ -449,6 +453,7 @@
         partners_lead: 'Servizi selezionati che completano il tuo viaggio in treno.',
         vip_label: 'Partner di fiducia', vip_booking: 'Hotel e soggiorni →', vip_tripadvisor: 'Esperienze e recensioni →', vip_klook_hotels: 'Scegli la tua città →',
         disc_label: 'Community', disc_title1: 'Scopriamo', disc_title2: 'insieme.', disc_lead: "Borghi e angoli d'Europa che trovi solo in treno — condivisi dai viaggiatori, per i viaggiatori.", disc_cta_title: 'Oggi partiamo per…', disc_cta_text: 'Gira la ruota: una coppia reale e l\'itinerario si monta da solo.', disc_cta_btn: 'Gira la ruota', disc_cta_again: "Un'altra", disc_cta_this: 'Questa',
+        hoy_seo_cta: 'Ruota delle destinazioni', hoy_h1: 'Oggi partiamo per…', hoy_lead: 'Gira una coppia vera di città europee. L\'itinerario in treno si monta da solo — poi prenota quel biglietto.', hoy_body: 'Ogni risultato è una tratta WoW Train già documentata, non una città a caso. Apri la coppia, guarda le tappe e vai su Klook per orari e biglietti. Gratis, senza account.', hoy_faq1_q: 'La destinazione è casuale?', hoy_faq1_a: 'Casuale tra coppie reali che pubblichiamo già come guide. Se non si prenota in treno, non esce.', hoy_faq2_q: 'Devo tenere il risultato?', hoy_faq2_a: 'No. Gira di nuovo, scrivi una coppia nel planner o apri una guida. La ruota è per quando non sai decidere.', hoy_faq3_q: 'Dove compro il biglietto?', hoy_faq3_a: 'Su Klook, con il nostro link partner ufficiale. WoW Train non ti fa pagare di più.', hoy_more: 'Altre tratte in treno', hoy_home: 'Torna al planner',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcellona, Parigi, Roma, Londra, Berlino — trasporto illimitato e ingresso prioritario alle principali attrazioni.', p_klook_cta: 'Vedi i pass →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Taxi privato da qualsiasi grande aeroporto europeo direttamente al tuo hotel o stazione. Prezzo fisso, nessuna sorpresa.', p_kiwi_cta: 'Prenota transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Resta connesso in 30+ paesi europei da €4.90. Attivazione istantanea sul tuo telefono — nessun cambio SIM.', p_yesim_cta: 'Attiva eSIM →',
@@ -520,6 +525,7 @@
         partners_lead: 'Serviços selecionados que complementam a sua viagem de comboio.',
         vip_label: 'Parceiros de confiança', vip_booking: 'Hotéis e estadias →', vip_tripadvisor: 'Experiências e avaliações →', vip_klook_hotels: 'Escolha sua cidade →',
         disc_label: 'Comunidade', disc_title1: 'Descubramos', disc_title2: 'juntos.', disc_lead: 'Vilas e recantos da Europa que só se encontram de comboio — partilhados por viajantes, para viajantes.', disc_cta_title: 'Hoje vamos para…', disc_cta_text: 'Roda a roleta: um par real e o itinerário monta-se sozinho.', disc_cta_btn: 'Rodar a roleta', disc_cta_again: 'Outra', disc_cta_this: 'Esta é',
+        hoy_seo_cta: 'Roleta de destinos', hoy_h1: 'Hoje vamos para…', hoy_lead: 'Roda um par real de cidades europeias. O itinerário de comboio monta-se sozinho — e podes reservar esse bilhete.', hoy_body: 'Cada resultado é uma rota WoW Train já documentada, não uma cidade ao acaso. Abre o par, vê os troços e segue para a Klook para horários e bilhetes. Grátis, sem conta.', hoy_faq1_q: 'O destino é ao acaso?', hoy_faq1_a: 'Ao acaso entre pares reais que já publicamos como guias. Se não se reserva de comboio, não aparece.', hoy_faq2_q: 'Tenho de ficar com o resultado?', hoy_faq2_a: 'Não. Roda outra vez, escreve um par no planeador ou abre um guia. A roleta é para quando não te decides.', hoy_faq3_q: 'Onde compro o bilhete?', hoy_faq3_a: 'Na Klook, com o nosso link de parceiro oficial. A WoW Train não te cobra extra.', hoy_more: 'Mais rotas de comboio', hoy_home: 'Voltar ao planeador',
         p_klook_title: 'City Pass', p_klook_desc: 'Madrid, Barcelona, Paris, Roma, Londres, Berlim — transporte ilimitado e entrada prioritária nas principais atrações.', p_klook_cta: 'Ver passes →',
         p_kiwi_title: 'Transfer aeroporto', p_kiwi_desc: 'Táxi privado a partir de qualquer grande aeroporto europeu até ao seu hotel ou estação. Preço fixo, sem surpresas.', p_kiwi_cta: 'Reservar transfer →',
         p_yesim_title: 'eSIM Europa', p_yesim_desc: 'Mantenha-se ligado em mais de 30 países europeus desde €4.90. Ativação instantânea no seu telefone — sem trocar de SIM.', p_yesim_cta: 'Ativar eSIM →',
@@ -594,6 +600,16 @@
     function homePathForLang(lang) {
       if (lang === 'en') return '/';
       if (lang === 'es' || lang === 'fr' || lang === 'it') return '/' + lang + '/';
+      return null;
+    }
+
+    function isHoyPath() {
+      return /(?:^|\/)hoy\/?$/.test(location.pathname || '');
+    }
+
+    function hoyPathForLang(lang) {
+      if (lang === 'en') return '/hoy/';
+      if (lang === 'es' || lang === 'fr' || lang === 'it') return '/' + lang + '/hoy/';
       return null;
     }
 
@@ -676,16 +692,20 @@
     function setLang(lang) {
       localStorage.setItem('glosx_lang', lang);
       localStorage.setItem('glosx_lang_manual', '1');
-      if (isHomePath()) {
+      const here = (location.pathname === '/' || location.pathname === '/index.html')
+        ? '/'
+        : (location.pathname.endsWith('/') ? location.pathname : location.pathname + '/');
+      if (isHoyPath()) {
+        const dest = hoyPathForLang(lang);
+        if (dest && here !== dest) {
+          location.assign(dest + location.search + location.hash);
+          return;
+        }
+      } else if (isHomePath()) {
         const dest = homePathForLang(lang);
-        if (dest) {
-          const here = (location.pathname === '/' || location.pathname === '/index.html')
-            ? '/'
-            : (location.pathname.endsWith('/') ? location.pathname : location.pathname + '/');
-          if (here !== dest) {
-            location.assign(dest + location.search + location.hash);
-            return;
-          }
+        if (dest && here !== dest) {
+          location.assign(dest + location.search + location.hash);
+          return;
         }
       }
       applyLang(lang);
@@ -749,6 +769,10 @@
     (function initLang() {
       const pathLang = localeFromPath();
       const onBareHome = location.pathname === '/' || location.pathname === '/index.html';
+      if (isHoyPath()) {
+        applyLang(pathLang || 'en');
+        return;
+      }
       if (onBareHome && !isSeoCrawler()) {
         const detected = detectLang();
         if (detected && detected !== 'en' && (detected === 'es' || detected === 'fr' || detected === 'it')) {

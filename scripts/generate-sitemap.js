@@ -46,14 +46,31 @@ const hub = `  <url>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>`;
-const withoutHub = nonRoute.filter(b => !b.includes('https://glosx.app/rutas/</loc>'));
+const hoyAlts = `      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />`;
+const hoyBlocks = [
+  ['https://glosx.app/hoy/', '0.6'],
+  ['https://glosx.app/es/hoy/', '0.6'],
+  ['https://glosx.app/fr/hoy/', '0.6'],
+  ['https://glosx.app/it/hoy/', '0.6'],
+].map(([loc, pri]) => `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${pri}</priority>
+${hoyAlts}
+  </url>`).join('\n');
+const withoutHub = nonRoute.filter(b => !b.includes('https://glosx.app/rutas/</loc>') && !b.includes('/hoy/'));
 const withFreshHome = withoutHub.map(b => {
   if (b.includes('<loc>https://glosx.app/</loc>')) {
     return b.replace(/<lastmod>.*?<\/lastmod>/, `<lastmod>${TODAY}</lastmod>`);
   }
   return b;
 });
-const nonRouteFinal = [hub, ...withFreshHome];
+const nonRouteFinal = [hub, hoyBlocks, ...withFreshHome];
 
 // 4. Armar el nuevo sitemap (xhtml declarado una vez en el urlset)
 const header = '<?xml version="1.0" encoding="UTF-8"?>\n' +

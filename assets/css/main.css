@@ -1184,6 +1184,8 @@
       background: transparent; border-color: #fff; box-shadow: none;
     }
     .discover-cta-btn.is-ghost:hover { background: rgba(255,255,255,0.12); filter: none; }
+    .hoy-seo-link { margin: 14px 0 0; }
+    .hoy-seo-link a { color: #fff; font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
     .ai-planner .discover-cta {
       max-width: 680px;
       margin: 28px auto 8px;

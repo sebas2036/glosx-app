@@ -7,6 +7,7 @@ WoW Train is a website, not a mobile app. Bookings are completed on partner plat
 ## Core
 
 - [Homepage / AI trip planner](https://glosx.app/): describe a trip in plain language, get a full itinerary with connections and booking links
+- [Destination roulette](https://glosx.app/hoy/): spin a real European city pair and build the rail itinerary
 - [AI Planner (dedicated page)](https://glosx.app/ai-planner/): how the AI planner works, step by step
 - [Explore routes](https://glosx.app/explore/): browse all covered routes and pick guides by email/WhatsApp
 - [Route guides hub](https://glosx.app/rutas/): index of all individual route guides (e.g. Paris–Barcelona, Madrid–Seville, London–Paris)

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/main.min.css" />
+  <title>Hoy nos vamos a… — ruleta de destinos en tren por Europa | WoW Train</title>
+  <meta name="description" content="Gira un par real de ciudades europeas. WoW Train arma el itinerario de tren y te lleva a Klook para horarios y billetes. Gratis, sin cuenta." />
+  <link rel="canonical" href="https://glosx.app/es/hoy/" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Hoy nos vamos a… — ruleta de destinos en tren por Europa | WoW Train" />
+  <meta property="og:description" content="Gira un par real de ciudades europeas. WoW Train arma el itinerario de tren y te lleva a Klook para horarios y billetes. Gratis, sin cuenta." />
+  <meta property="og:url" content="https://glosx.app/es/hoy/" />
+  <meta property="og:image" content="https://glosx.app/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hoy nos vamos a… — ruleta de destinos en tren por Europa | WoW Train" />
+  <meta name="twitter:description" content="Gira un par real de ciudades europeas. WoW Train arma el itinerario de tren y te lleva a Klook para horarios y billetes. Gratis, sin cuenta." />
+  <meta name="twitter:image" content="https://glosx.app/og-image.jpg" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Hoy nos vamos a…","description":"Gira un par real de ciudades europeas. WoW Train arma el itinerario de tren y te lleva a Klook para horarios y billetes. Gratis, sin cuenta.","url":"https://glosx.app/es/hoy/","isPartOf":{"@type":"WebSite","name":"WoW Train","url":"https://glosx.app/"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿El destino es al azar?","acceptedAnswer":{"@type":"Answer","text":"Al azar entre pares reales que ya publicamos como guías de tren. Si no se puede reservar como viaje en tren, no sale."}},{"@type":"Question","name":"¿Tengo que quedarme con el resultado?","acceptedAnswer":{"@type":"Answer","text":"No. Vuelve a girar, escribe un par en el planificador o abre una guía. La ruleta es para cuando no te decides."}},{"@type":"Question","name":"¿Dónde compro el billete?","acceptedAnswer":{"@type":"Answer","text":"En Klook, con nuestro enlace de socio oficial. WoW Train no te cobra de más."}}]}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    try { if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) gtag('set', 'traffic_type', 'internal'); } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-XPTSM1EJQJ');
+  </script>
+  <script>try{localStorage.setItem('glosx_lang','es');localStorage.setItem('glosx_lang_manual','1');}catch(e){}</script>
+</head>
+<body>
+  <nav>
+    <a href="/es/" class="nav-logo" style="font-size:24px;display:inline-flex;align-items:baseline;gap:0;font-weight:800;letter-spacing:-0.3px;"><span style="color:#14151a;">Wo</span><span style="color:#C10016;font-style:italic;font-weight:900;margin:0 -0.04em;">W</span><span style="color:#14151a;margin-left:0.28em;">Train</span></a>
+    <div class="nav-links" id="navLinks" style="display:flex;gap:18px;align-items:center;">
+      <a href="/es/" data-i18n="hoy_home">Volver al planificador</a>
+      <a href="/rutas/" data-i18n="hoy_more">Más rutas de tren</a>
+      <div class="lang-wrapper">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language"><span id="langCode">ES</span></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option" data-lang="en" onclick="setLang('en')"><span>English</span></div>
+          <div class="lang-option" data-lang="es" onclick="setLang('es')"><span>Español</span></div>
+          <div class="lang-option" data-lang="fr" onclick="setLang('fr')"><span>Français</span></div>
+          <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>Italiano</span></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="section" style="padding:100px 24px 40px;max-width:820px;margin:0 auto;">
+    <h1 data-i18n="hoy_h1">Hoy nos vamos a…</h1>
+    <p data-i18n="hoy_lead" style="font-size:18px;line-height:1.5;margin:12px 0 16px;">Gira un par real de ciudades europeas. El itinerario de tren se arma solo — y puedes reservar ese billete.</p>
+    <p data-i18n="hoy_body" style="color:#55565f;line-height:1.6;margin-bottom:28px;">Cada resultado es una ruta documentada de WoW Train, no una ciudad al azar. Abre el par, mira los tramos y sigue a Klook para horarios y billetes. Gratis, sin cuenta.</p>
+  </main>
+  <section class="ai-planner" id="aiPlanner" style="padding-top:12px;">
+    <div class="ai-planner-header" style="display:none;"></div>
+
+    <div class="ai-input-wrapper" id="aiInputWrapper">
+      <div class="ai-input-container">
+        <div class="ai-input-aurora" id="aiInputAurora"><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="Example: Zurich to Milan" autocomplete="off" />
+          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
+        </div>
+        <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Generar Itinerario</button>
+      </div>
+      <div class="ai-suggestions">
+        <span class="ai-suggestions-label" data-i18n="ai_suggest_label">Pares populares:</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">Madrid → Barcelona</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">París → Londres</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">París → Barcelona</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">Múnich → Venecia</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">Roma → Venecia</span>
+      </div>
+      <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">Ver mi última ruta →</button>
+    </div>
+
+    <div class="ai-results" id="aiResults" style="display:none;">
+      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
+      <div class="ai-results-header">
+        <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">Ejemplo · cada tarjeta es un tramo (ciudad → ciudad)</span>
+        <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
+        <p id="aiRouteDuration"></p>
+        <p class="ai-route-meta" id="aiRouteMeta"></p>
+        <div id="aiQuickBook" class="ai-quick-book" style="display:none"></div>
+      </div>
+      <div class="ai-route-line" id="aiRouteLine">
+        <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="auroraLineGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+              <stop offset="0%" stop-color="#C10016"/>
+              <stop offset="30%" stop-color="#f97066"/>
+              <stop offset="60%" stop-color="#22d3ee"/>
+              <stop offset="85%" stop-color="#C10016"/>
+              <stop offset="100%" stop-color="#C10016"/>
+              <animateTransform attributeName="gradientTransform" type="translate" from="-1000 0" to="1000 0" dur="5s" repeatCount="indefinite"/>
+            </linearGradient>
+          </defs>
+          <path class="route-path" d="" />
+          <circle class="route-dot" cx="50" cy="100" r="8" />
+          <circle class="route-dot" cx="950" cy="100" r="8" />
+        </svg>
+      </div>
+      <div class="ai-stops" id="aiStops"></div>
+      <p class="ai-multileg-note" id="aiMultiLegNote" style="display:none;"></p>
+      <div class="ai-segments" id="aiSegments"></div>
+      <div class="ai-hotels" id="aiHotels"></div>
+      <p class="ai-trust-note" data-i18n="ai_trust_note">Reserva segura a través de nuestra alianza oficial con Klook</p>
+
+      <button class="ai-copy-btn" onclick="copyTripPlan()" id="tripCopyBtn" data-i18n="modal_copy_btn">Copiar itinerario</button>
+      <div class="ai-cta-video">
+        <video class="ai-cta-video-el" autoplay muted loop playsinline preload="none" poster="/assets/video/planner-cta-poster.jpg">
+          <source data-src="/assets/video/planner-cta.mp4" type="video/mp4">
+        </video>
+        <button class="ai-reset-btn-video" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Crear otra ruta</button>
+      </div>
+    </div>
+
+    <div class="discover-cta" id="hoy">
+      <h3 data-i18n="disc_cta_title">Hoy nos vamos a…</h3>
+      <p data-i18n="disc_cta_text">Gira la ruleta: un par real y el itinerario se arma solo.</p>
+      <div class="pair-roulette" id="pairRoulette" aria-live="polite">
+        <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
+        <span class="pair-roulette-arrow" aria-hidden="true">→</span>
+        <span class="pair-roulette-to" id="rouletteTo">Barcelona</span>
+      </div>
+      <div class="discover-cta-actions">
+        <button type="button" class="discover-cta-btn" id="discoverCtaBtn" data-i18n="disc_cta_btn" onclick="spinPairRoulette()">Gira la ruleta</button>
+        <a class="discover-cta-btn" id="discoverCtaBook" data-i18n="disc_cta_this" hidden target="_blank" rel="noopener noreferrer" onclick="try{if(typeof gtag==='function')gtag('event','klook_click',{source:'pair_roulette_this'});}catch(e){}">Esta es</a>
+      </div>
+      
+    </div>
+  </section>
+  <section class="section" style="max-width:820px;margin:0 auto;padding:24px 24px 64px;">
+    <h2 data-i18n="hoy_more">Más rutas de tren</h2>
+    <p style="margin:12px 0 20px;"><a href="/rutas/madrid-barcelona/">Madrid → Barcelona</a> · <a href="/rutas/paris-london/">Paris → London</a> · <a href="/rutas/paris-barcelona/">Paris → Barcelona</a> · <a href="/rutas/munich-venice/">Munich → Venice</a> · <a href="/rutas/rome-venice/">Rome → Venice</a></p>
+    <details style="margin:10px 0;"><summary data-i18n="hoy_faq1_q">¿El destino es al azar?</summary><p data-i18n="hoy_faq1_a" style="margin-top:8px;color:#55565f;">Al azar entre pares reales que ya publicamos como guías de tren. Si no se puede reservar como viaje en tren, no sale.</p></details>
+    <details style="margin:10px 0;"><summary data-i18n="hoy_faq2_q">¿Tengo que quedarme con el resultado?</summary><p data-i18n="hoy_faq2_a" style="margin-top:8px;color:#55565f;">No. Vuelve a girar, escribe un par en el planificador o abre una guía. La ruleta es para cuando no te decides.</p></details>
+    <details style="margin:10px 0;"><summary data-i18n="hoy_faq3_q">¿Dónde compro el billete?</summary><p data-i18n="hoy_faq3_a" style="margin-top:8px;color:#55565f;">En Klook, con nuestro enlace de socio oficial. WoW Train no te cobra de más.</p></details>
+    <p style="margin-top:28px;"><a href="/es/" data-i18n="hoy_home">Volver al planificador</a></p>
+  </section>
+  <script src="/assets/js/main.min.js?v=27" defer></script>
+</body>
+</html>

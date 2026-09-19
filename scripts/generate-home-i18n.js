@@ -200,6 +200,8 @@ function buildPage(lang) {
     `$1https://glosx.app/${lang}/$2`
   );
 
+  html = html.replace(/href="\/hoy\/"/g, `href="/${lang}/hoy/"`);
+
   return html;
 }
 
