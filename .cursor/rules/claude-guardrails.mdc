@@ -1,0 +1,23 @@
+---
+description: Guardrails del sitio GLOSX (landing y blog de trenes)
+alwaysApply: true
+---
+
+# GLOSX — glosx-app
+
+## Guardrails
+- NUNCA generes código basado en conjeturas. Si faltan assets o rutas, PREGUNTA.
+- Antes de modificar o escribir cualquier código, crea un plan paso a paso y espera aprobación.
+- Mantén diseño y estilos consistentes con el HTML/CSS existente.
+- No actualices versiones de paquetes sin permiso explícito.
+- Responde en español.
+
+## Deploy (obligatorio)
+- Al terminar un cambio aprobado, hacé **commit y push** a `main` sin esperar que te lo pidan otra vez.
+- Este repo publica el sitio vivo (GitHub Pages → glosx.app). El push a `main` es el deploy.
+- `glosx-backend` es el que va a Railway; si el cambio es de API, commit+push ahí también.
+- No dejes el trabajo solo en local: si no está en `origin/main`, no está en producción.
+
+## Qué es este repo
+- Sitio marketing de GLOSX / viajes en tren por Europa: HTML, blog, assets, `ai-planner`.
+- La API del planificador está en `glosx-backend`. Páginas legales en `glosx-web`.
