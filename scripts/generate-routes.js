@@ -40,7 +40,32 @@ const routes = [
     }
   },
   { slug: 'barcelona-valencia', from: 'Barcelona', to: 'Valencia', country: 'Spain', duration: '3h 00m', operator: 'Renfe AVE', price: '€20-35', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'Barcelona to Valencia Train: 3h AVE, from €20', description: 'High-speed Renfe AVE from Barcelona to Valencia in 3 hours. Compare live schedules and book tickets from €20 — no line at the station.' } },
+    customSEO: {
+      en: {
+        title: 'Barcelona to Valencia train: 3 hours, from €20',
+        description: 'The Barcelona to Valencia train takes 3 hours on Renfe AVE. Compare today\'s times and book from €20.',
+        mainTitle: 'Barcelona to Valencia train',
+        lead: 'The Barcelona to Valencia train takes about 3 hours on Renfe AVE. Ouigo also runs this corridor — compare both before you book.'
+      },
+      es: {
+        title: 'Tren Barcelona Valencia: 3h AVE, desde 20 €',
+        description: 'El tren Barcelona Valencia tarda 3 horas con Renfe AVE. Compara horarios de hoy y reserva desde 20 €.',
+        mainTitle: 'Tren Barcelona Valencia',
+        lead: 'El tren Barcelona Valencia tarda unas 3 horas con Renfe AVE. Ouigo también cubre el corredor: conviene comparar antes de reservar.'
+      },
+      fr: {
+        title: 'Train Barcelone Valence : 3h AVE, dès 20 €',
+        description: 'Le train Barcelone–Valence met 3 heures avec Renfe AVE. Comparez les horaires du jour et réservez dès 20 €.',
+        mainTitle: 'Train Barcelone Valence',
+        lead: 'Le train Barcelone–Valence met environ 3 heures avec Renfe AVE. Ouigo circule aussi sur ce corridor : comparez avant de réserver.'
+      },
+      it: {
+        title: 'Treno Barcellona Valencia: 3h AVE, da 20 €',
+        description: 'Il treno Barcellona–Valencia impiega 3 ore con Renfe AVE. Confronta gli orari di oggi e prenota da 20 €.',
+        mainTitle: 'Treno Barcellona Valencia',
+        lead: 'Il treno Barcellona–Valencia impiega circa 3 ore con Renfe AVE. Anche Ouigo copre il corridoio: conviene confrontare prima di prenotare.'
+      }
+    },
     localInsight: {
       en: 'This is one of the newer additions to Spain\'s high-speed network, and low-cost operator Ouigo also runs the corridor alongside Renfe AVE — worth comparing both, since Ouigo fares are sometimes noticeably cheaper for the same journey time.',
       es: 'Es una de las incorporaciones más recientes a la red de alta velocidad española, y el operador low-cost Ouigo también cubre el trayecto junto a Renfe AVE — conviene comparar ambos, porque a veces Ouigo sale notablemente más barato para el mismo tiempo de viaje.',
@@ -1495,9 +1520,9 @@ function replaceTemplate(template, route, lang) {
     '{{langSwitch}}': langSwitchLinks(route.slug, lang),
     '{{backText}}': langContent.backText,
     '{{badge}}': `${langContent.badgeLabel} · ${translateCountry(route.country, lang)}`,
-    '{{mainTitle}}': langContent.mainTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
+    '{{mainTitle}}': (seo && seo.mainTitle) ? seo.mainTitle : langContent.mainTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
     '{{metaText}}': langContent.metaText,
-    '{{leadText}}': fillTokens(pickVariant(route.slug + 'lead', langContent.leadVariants), route, lang),
+    '{{leadText}}': (seo && seo.lead) ? seo.lead : fillTokens(pickVariant(route.slug + 'lead', langContent.leadVariants), route, lang),
     '{{heroImage}}': HERO_PHOTOS[route.to.toLowerCase()] || '/hero-bg.webp',
     '{{klookTitle}}': fillTokens(langContent.klookTitle, route, lang),
     '{{klookSubtitle}}': fillTokens(langContent.klookSubtitle, route, lang),
@@ -1543,7 +1568,13 @@ const template = fs.readFileSync(templatePath, 'utf8');
 const outputDir = path.join(__dirname, '../rutas');
 
 const LANGS = ['en', 'es', 'fr', 'it'];
-routes.forEach(route => {
+const onlySlug = process.argv[2];
+const routesToGenerate = onlySlug ? routes.filter((route) => route.slug === onlySlug) : routes;
+if (onlySlug && routesToGenerate.length === 0) {
+  console.error(`Unknown route slug: ${onlySlug}`);
+  process.exit(1);
+}
+routesToGenerate.forEach(route => {
   // EN va en la raíz (/rutas/slug/); el resto en subcarpeta (/rutas/slug/{lang}/)
   LANGS.forEach(lang => {
     const dir = lang === 'en' ? path.join(outputDir, route.slug) : path.join(outputDir, route.slug, lang);
