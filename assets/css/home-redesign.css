@@ -363,3 +363,33 @@ body.home-v2 .scenic-cta {
 body.home-v2 .scenic-desc { display: none !important; }
 @media (max-width: 860px) { body.home-v2 .scenic-grid { grid-template-columns: 1fr 1fr; } body.home-v2 .scenic-feature { min-height: 380px; } }
 @media (max-width: 560px) { body.home-v2 .scenic-grid { grid-template-columns: 1fr; } }
+
+/* ===== Arma tu aventura: encabezado centrado y paneles altos con foto ===== */
+body.home-v2 .wt-adventure .section-head-split { display: block; text-align: center; }
+body.home-v2 .wt-adventure .section-head-text { max-width: 760px; margin: 0 auto; text-align: center; }
+body.home-v2 .wt-adventure .section-head-text .section-label,
+body.home-v2 .wt-adventure .section-head-text h2,
+body.home-v2 .wt-adventure .section-head-text .lead { text-align: center; margin-left: auto; margin-right: auto; }
+body.home-v2 .wt-route-buttons { margin-top: 44px; margin-bottom: 28px; }
+body.home-v2 .wt-route-btn {
+  flex-direction: column; justify-content: flex-end; align-items: flex-start; text-align: left;
+  height: clamp(340px, 52vh, 460px); border-radius: 24px; padding: 26px;
+  box-shadow: 0 10px 34px rgba(60,30,20,.12); transition: transform .2s, box-shadow .2s;
+}
+body.home-v2 .wt-route-btn:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(60,30,20,.24); }
+body.home-v2 .wt-route-btn::before { transition: transform .4s ease; }
+body.home-v2 .wt-route-btn[data-route="classic"]::before { background-image: url('/assets/img/adventure/classic.webp'); }
+body.home-v2 .wt-route-btn[data-route="alpine"]::before { background-image: url('/assets/img/adventure/alpine.webp'); }
+body.home-v2 .wt-route-btn[data-route="imperial"]::before { background-image: url('/assets/img/adventure/imperial.webp'); }
+body.home-v2 .wt-route-btn::after { background: linear-gradient(180deg, rgba(10,12,14,.05) 20%, rgba(10,12,14,.86) 100%); }
+body.home-v2 .wt-route-btn span { padding: 0; }
+body.home-v2 .wt-route-btn > span:first-of-type { font-size: clamp(22px, 2.2vw, 30px); font-weight: 700; line-height: 1.1; letter-spacing: -.01em; }
+body.home-v2 .wt-route-stops { margin-top: 10px; font-size: 14px !important; font-weight: 500 !important; line-height: 1.5; color: #efe9e3 !important; text-shadow: none !important; }
+body.home-v2 .wt-route-go { margin-top: 16px; font-size: 14px !important; font-weight: 700 !important; color: #fff; display: inline-flex !important; align-items: center; gap: 8px; }
+body.home-v2 .wt-route-go::before {
+  content: '\2192'; display: inline-block; width: 28px; height: 28px; line-height: 28px; text-align: center;
+  border-radius: 50%; background: #C10016; color: #fff; font-size: 14px;
+}
+@media (max-width: 760px) {
+  body.home-v2 .wt-route-btn { height: 260px; }
+}

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-loco-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-loco-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=16" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=17" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -632,18 +632,23 @@
       <h2><span data-i18n="adv_title1">Arma tu propia</span><br /><span data-i18n="adv_title2">aventura.</span></h2>
       <p class="lead" data-i18n="adv_lead">Elige un arquetipo de viaje y trazamos la cadena lógica de trenes reales que te lleva de ciudad en ciudad — cada conexión, una escena.</p>
     </div>
-    <img class="section-head-photo" src="/assets/img/community/plan-adventure.webp" alt="Travelers planning their route with a map" width="480" height="300" loading="lazy">
   </div>
 
   <div class="wt-route-buttons" role="group" aria-label="Choose a route">
     <button class="wt-route-btn" data-route="classic" aria-pressed="false">
       <span data-i18n="route_classic">Ruta Clásica (Francia–Italia)</span>
+      <span class="wt-route-stops" data-i18n="route_classic_stops">París → Lyon → Turín → Milán · alta velocidad, ~7–8 h</span>
+      <span class="wt-route-go" data-i18n="route_see">Ver itinerario</span>
     </button>
     <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
       <span data-i18n="route_alpine">Ruta Alpina (Suiza–Austria)</span>
+      <span class="wt-route-stops" data-i18n="route_alpine_stops">Zúrich → Sargans → Innsbruck → Viena · Railjet ÖBB/SBB</span>
+      <span class="wt-route-go" data-i18n="route_see">Ver itinerario</span>
     </button>
     <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
       <span data-i18n="route_imperial">Ruta Imperial (Europa Central)</span>
+      <span class="wt-route-stops" data-i18n="route_imperial_stops">Praga → Brno → Viena → Budapest · Railjet / EuroCity</span>
+      <span class="wt-route-go" data-i18n="route_see">Ver itinerario</span>
     </button>
   </div>
 
@@ -1166,7 +1171,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=35" defer></script>
+  <script src="/assets/js/main.min.js?v=37" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
