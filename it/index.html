@@ -8,7 +8,7 @@
        cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
        conexiones lentas porque el hero no puede pintarse hasta que carga. -->
   <link rel="stylesheet" href="/assets/css/main.min.css" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=7" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=10" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -347,23 +347,6 @@
       
       <h1><span data-i18n="hero_title1">Descrivi il tuo viaggio.</span><br /><span data-i18n="hero_title2">Pensiamo noi ai treni.</span></h1>
     </div>
-    <div class="hero-title-inner">
-      <p data-i18n="hero_subtitle">Dicci dove vuoi andare — la nostra IA costruisce l'itinerario completo, ti collega per acquistare i biglietti e trova hotel ad ogni tappa.</p>
-      <div class="hero-ops" aria-label="Rail operators">
-        <div class="trust-ops">
-          <span class="op-chip"><b style="color:#E30016">Renfe</b></span>
-          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
-          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="Deutsche Bahn" loading="lazy"/>Deutsche Bahn</span>
-          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="SBB" loading="lazy"/>SBB</span>
-          <span class="op-chip"><b style="color:#E4032E">Trenitalia</b></span>
-          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="ÖBB" loading="lazy"/>ÖBB</span>
-          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="NS" loading="lazy"/>NS</span>
-          <span class="op-chip"><b style="color:#003DA5">SNCB</b></span>
-          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="CP" loading="lazy"/>CP</span>
-        </div>
-        <p class="hero-ops-klook" data-i18n="trust_klook">Prenotazioni gestite ufficialmente da Klook</p>
-      </div>
-    </div>
     </div>
   </section>
 
@@ -371,6 +354,14 @@
   <section class="ai-planner" id="aiPlanner" style="padding-top:12px;">
     <div class="ai-planner-header" style="display:none;"></div>
 
+    <div class="search-shell">
+      <div class="search-tabs" role="tablist" aria-label="Search">
+        <button type="button" class="search-tab on" role="tab" aria-selected="true" data-tab="ai" data-i18n="tab_ai">Pianificatore IA</button>
+        <button type="button" class="search-tab" role="tab" aria-selected="false" data-tab="roulette" data-i18n="tab_roulette">Roulette delle destinazioni</button>
+        <button type="button" class="search-tab" role="tab" aria-selected="false" data-tab="countries" data-i18n="tab_countries">Percorsi per paese</button>
+      </div>
+      <div class="search-card">
+        <div class="search-panel on" data-panel="ai" role="tabpanel">
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -389,48 +380,8 @@
       </div>
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">Vedi il mio ultimo percorso →</button>
     </div>
-
-    <div class="ai-results" id="aiResults" style="display:none;">
-      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
-      <div class="ai-results-header">
-        <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">Esempio · ogni scheda è una tratta (città → città)</span>
-        <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
-        <p id="aiRouteDuration"></p>
-        <p class="ai-route-meta" id="aiRouteMeta"></p>
-        <div id="aiQuickBook" class="ai-quick-book" style="display:none"></div>
-      </div>
-      <div class="ai-route-line" id="aiRouteLine">
-        <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="auroraLineGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
-              <stop offset="0%" stop-color="#C10016"/>
-              <stop offset="30%" stop-color="#f97066"/>
-              <stop offset="60%" stop-color="#22d3ee"/>
-              <stop offset="85%" stop-color="#C10016"/>
-              <stop offset="100%" stop-color="#C10016"/>
-              <animateTransform attributeName="gradientTransform" type="translate" from="-1000 0" to="1000 0" dur="5s" repeatCount="indefinite"/>
-            </linearGradient>
-          </defs>
-          <path class="route-path" d="" />
-          <circle class="route-dot" cx="50" cy="100" r="8" />
-          <circle class="route-dot" cx="950" cy="100" r="8" />
-        </svg>
-      </div>
-      <div class="ai-stops" id="aiStops"></div>
-      <p class="ai-multileg-note" id="aiMultiLegNote" style="display:none;"></p>
-      <div class="ai-segments" id="aiSegments"></div>
-      <div class="ai-hotels" id="aiHotels"></div>
-      <p class="ai-trust-note" data-i18n="ai_trust_note">Prenotazione sicura tramite la nostra partnership ufficiale con Klook</p>
-
-      <button class="ai-copy-btn" onclick="copyTripPlan()" id="tripCopyBtn" data-i18n="modal_copy_btn">Copia itinerario</button>
-      <div class="ai-cta-video">
-        <video class="ai-cta-video-el" autoplay muted loop playsinline preload="none" poster="/assets/video/planner-cta-poster.jpg">
-          <source data-src="/assets/video/planner-cta.mp4" type="video/mp4">
-        </video>
-        <button class="ai-reset-btn-video" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Crea un'altra route</button>
-      </div>
-    </div>
-
+        </div>
+        <div class="search-panel" data-panel="roulette" role="tabpanel">
     <div class="discover-cta" id="hoy">
       <h3 data-i18n="disc_cta_title">Oggi partiamo per…?</h3>
       <p data-i18n="disc_cta_text">Gira la ruota: una coppia reale e l'itinerario si monta da solo.</p>
@@ -445,13 +396,8 @@
       </div>
       <p class="hoy-seo-link"><a href="/it/hoy/" data-i18n="hoy_seo_cta">Ruota delle destinazioni</a></p>
     </div>
-  </section>
-
-  <div class="route-connector" aria-hidden="true">
-    <svg viewBox="0 0 220 20" preserveAspectRatio="none"><line x1="10" y1="10" x2="210" y2="10" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1 8" stroke-linecap="round"/></svg>
-  </div>
-
-  <!-- Countries chips -->
+        </div>
+        <div class="search-panel" data-panel="countries" role="tabpanel">
   <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ Percorsi popolari · prenota subito</p>
   <div class="countries" id="countries" style="padding: 0 24px 0;">
     <span class="country-chip"><span data-i18n="chip_spain">Spagna</span><span class="country-popup"><img class="country-photo" src="country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
@@ -580,6 +526,72 @@
       <span class="group-label">Hungary</span>
       <a href="/rutas/budapest-ljubljana/" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Ljubljana</a>
     </span></span></span>
+  </div>
+        </div>
+      </div>
+    <div class="search-extras">
+      <p data-i18n="hero_subtitle">Dicci dove vuoi andare — la nostra IA costruisce l'itinerario completo, ti collega per acquistare i biglietti e trova hotel ad ogni tappa.</p>
+      <div class="hero-ops" aria-label="Rail operators">
+        <div class="trust-ops">
+          <span class="op-chip"><b style="color:#E30016">Renfe</b></span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="Deutsche Bahn" loading="lazy"/>Deutsche Bahn</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="SBB" loading="lazy"/>SBB</span>
+          <span class="op-chip"><b style="color:#E4032E">Trenitalia</b></span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="ÖBB" loading="lazy"/>ÖBB</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="NS" loading="lazy"/>NS</span>
+          <span class="op-chip"><b style="color:#003DA5">SNCB</b></span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="CP" loading="lazy"/>CP</span>
+        </div>
+        <p class="hero-ops-klook" data-i18n="trust_klook">Prenotazioni gestite ufficialmente da Klook</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="ai-results" id="aiResults" style="display:none;">
+      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
+      <div class="ai-results-header">
+        <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">Esempio · ogni scheda è una tratta (città → città)</span>
+        <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
+        <p id="aiRouteDuration"></p>
+        <p class="ai-route-meta" id="aiRouteMeta"></p>
+        <div id="aiQuickBook" class="ai-quick-book" style="display:none"></div>
+      </div>
+      <div class="ai-route-line" id="aiRouteLine">
+        <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="auroraLineGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+              <stop offset="0%" stop-color="#C10016"/>
+              <stop offset="30%" stop-color="#f97066"/>
+              <stop offset="60%" stop-color="#22d3ee"/>
+              <stop offset="85%" stop-color="#C10016"/>
+              <stop offset="100%" stop-color="#C10016"/>
+              <animateTransform attributeName="gradientTransform" type="translate" from="-1000 0" to="1000 0" dur="5s" repeatCount="indefinite"/>
+            </linearGradient>
+          </defs>
+          <path class="route-path" d="" />
+          <circle class="route-dot" cx="50" cy="100" r="8" />
+          <circle class="route-dot" cx="950" cy="100" r="8" />
+        </svg>
+      </div>
+      <div class="ai-stops" id="aiStops"></div>
+      <p class="ai-multileg-note" id="aiMultiLegNote" style="display:none;"></p>
+      <div class="ai-segments" id="aiSegments"></div>
+      <div class="ai-hotels" id="aiHotels"></div>
+      <p class="ai-trust-note" data-i18n="ai_trust_note">Prenotazione sicura tramite la nostra partnership ufficiale con Klook</p>
+
+      <button class="ai-copy-btn" onclick="copyTripPlan()" id="tripCopyBtn" data-i18n="modal_copy_btn">Copia itinerario</button>
+      <div class="ai-cta-video">
+        <video class="ai-cta-video-el" autoplay muted loop playsinline preload="none" poster="/assets/video/planner-cta-poster.jpg">
+          <source data-src="/assets/video/planner-cta.mp4" type="video/mp4">
+        </video>
+        <button class="ai-reset-btn-video" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Crea un'altra route</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="route-connector" aria-hidden="true">
+    <svg viewBox="0 0 220 20" preserveAspectRatio="none"><line x1="10" y1="10" x2="210" y2="10" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1 8" stroke-linecap="round"/></svg>
   </div>
 
   </div><!-- /hero-bgwrap -->
@@ -1146,7 +1158,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=29" defer></script>
+  <script src="/assets/js/main.min.js?v=30" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
@@ -1273,5 +1285,19 @@
       }, true);
     })();
   </script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.search-tab'), panels = document.querySelectorAll('.search-panel');
+  if (!tabs.length) return;
+  function show(name) {
+    tabs.forEach(function (t) { var on = t.dataset.tab === name; t.classList.toggle('on', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); });
+    panels.forEach(function (p) { p.classList.toggle('on', p.dataset.panel === name); });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.tab); }); });
+  function fromHash() { if (location.hash === '#hoy') show('roulette'); else if (location.hash === '#countries') show('countries'); }
+  fromHash(); window.addEventListener('hashchange', fromHash);
+  document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('#countries a')) show('ai'); }, true);
+})();
+</script>
 </body>
 </html>
