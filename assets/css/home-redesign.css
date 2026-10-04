@@ -237,3 +237,19 @@ body.home-v2 .hero.hero-home { z-index: 1; }
 body.home-v2 #aiPlanner { overflow: visible; }
 body.home-v2 .search-card .country-chip:hover,
 body.home-v2 .search-card .country-chip.show-photo { color: #C10016; }
+
+/* ===== ajuste al diseno aprobado: texto y resultado dentro de la tarjeta ===== */
+body.home-v2 .ai-field-label {
+  position: absolute; left: 52px; top: 11px; z-index: 2; pointer-events: none;
+  font-size: 12px; font-weight: 500; color: #7a6f68;
+}
+body.home-v2 .search-card .ai-input-container input { padding-top: 32px !important; padding-bottom: 12px !important; }
+body.home-v2 .search-card .ai-search-icon { top: 58% !important; }
+body.home-v2 .search-note { color: #6a5f58; font-size: 14px; line-height: 1.5; margin: 10px 0 0; text-align: left; }
+body.home-v2 .search-results-slot { margin-top: 18px; }
+body.home-v2 .search-card .ai-results {
+  max-width: none; width: 100%; margin: 0; background: transparent; box-shadow: none; border: 0; padding: 0;
+}
+body.home-v2 .hero-title-card h1 { max-width: none; }
+body.home-v2 .hero-title-card h1 br { display: none; }
+body.home-v2 .hero-title-card h1 span:last-child { margin-left: .28em; }
