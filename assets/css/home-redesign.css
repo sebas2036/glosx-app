@@ -572,3 +572,25 @@ body.home-v2 .wt-pdf-btn:hover { background: #C10016; color: #fff; border-color:
   body.home-v2 .wt-stop { padding-left: 56px; }
   body.home-v2 #wt-cta-slot { padding: 0 18px 20px; }
 }
+
+/* ===== rutas populares: la numeracion continua en las rutas del "Ver todas" ===== */
+body.home-v2 section:has(> .explore-pills) { counter-reset: p; }
+body.home-v2 .explore-pills { counter-reset: none; }
+body.home-v2 #exploreRoutesMore { gap: 12px !important; }
+body.home-v2 #exploreRoutesMore .explore-route-pill {
+  counter-increment: p; display: inline-flex; align-items: center; padding: 0 18px 0 0; overflow: hidden; line-height: 1;
+  border: 1px solid #d9b98c; border-radius: 12px; background: #fff; color: #1d1a18; font-size: 15px; font-weight: 500; text-decoration: none;
+}
+body.home-v2 #exploreRoutesMore .explore-route-pill::before {
+  content: counter(p); display: grid; place-items: center; align-self: stretch; min-width: 42px; padding: 10px 12px; margin-right: 14px;
+  background: #fbf0e0; color: #8a5a14; border-right: 1px solid #d9b98c; font-weight: 500;
+}
+body.home-v2 #exploreRoutesMore .explore-route-pill:hover { border-color: #C10016; background: #fff; }
+body.home-v2 #exploreRoutesMore .explore-route-pill:hover::before { background: #fbe3e6; color: #C10016; border-color: #C10016; }
+
+/* ===== pestanas del buscador en una sola fila en pantallas angostas ===== */
+@media (max-width: 760px) {
+  body.home-v2 .search-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  body.home-v2 .search-tabs::-webkit-scrollbar { display: none; }
+  body.home-v2 .search-tab { flex: 0 0 auto; white-space: nowrap; }
+}
