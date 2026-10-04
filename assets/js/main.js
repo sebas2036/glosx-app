@@ -153,7 +153,7 @@
         partners_see_all: 'See all essentials →',
         hero_badge: 'AI-Powered European Rail Planner',
         hero_h1: 'AI European Train Route Planner',
-        hero_title1: 'Describe your trip.', hero_title2: 'We plan the trains.', tab_ai: 'AI planner', tab_roulette: 'Destination roulette', tab_countries: 'Routes by country', search_label: 'Your trip', ben_klook_t: 'Bookings with Klook', ben_klook_d: 'Secure payment on their official platform.', ben_rt_t: 'Real-time data', ben_rt_d: 'Schedules and delays from official sources.', ben_free_t: 'Free, no account', ben_free_d: 'No subscription or hidden costs.',
+        hero_title1: 'Describe your trip.', hero_title2: 'We plan the trains.', tab_ai: 'AI planner', tab_roulette: 'Destination roulette', tab_countries: 'Routes by country', search_label: 'Your trip', ben_klook_t: 'Bookings with Klook', ben_klook_d: 'Secure payment on their official platform.', ben_rt_t: 'Real-time data', ben_rt_d: 'Schedules and delays from official sources.', ben_free_t: 'Free, no account', ben_free_d: 'No subscription or hidden costs.', scenic_featured: 'Featured route',
         hero_subtitle: 'Tell us where you want to go — our AI builds the full itinerary, connects you to buy tickets, and finds hotels along the way.',
         hero_ai_cta: 'Plan my trip with AI →', hero_search_link: 'Already know your route? Search direct →',
         search_from: 'From', search_to: 'To', search_date: 'Date', search_btn: 'Search Tickets & Schedules →',
@@ -225,7 +225,7 @@
         partners_see_all: 'Ver todos los esenciales →',
         hero_badge: 'Planificador IA de trenes europeos',
         hero_h1: 'Planificador IA de trenes por Europa',
-        hero_title1: 'Describe tu viaje.', hero_title2: 'Nosotros planificamos.', tab_ai: 'Planificador IA', tab_roulette: 'Ruleta de destinos', tab_countries: 'Rutas por país', search_label: 'Tu viaje', ben_klook_t: 'Reservas con Klook', ben_klook_d: 'Pago seguro en su plataforma oficial.', ben_rt_t: 'Datos en tiempo real', ben_rt_d: 'Horarios y retrasos de fuentes oficiales.', ben_free_t: 'Gratis y sin cuenta', ben_free_d: 'Sin suscripción ni costos ocultos.',
+        hero_title1: 'Describe tu viaje.', hero_title2: 'Nosotros planificamos.', tab_ai: 'Planificador IA', tab_roulette: 'Ruleta de destinos', tab_countries: 'Rutas por país', search_label: 'Tu viaje', ben_klook_t: 'Reservas con Klook', ben_klook_d: 'Pago seguro en su plataforma oficial.', ben_rt_t: 'Datos en tiempo real', ben_rt_d: 'Horarios y retrasos de fuentes oficiales.', ben_free_t: 'Gratis y sin cuenta', ben_free_d: 'Sin suscripción ni costos ocultos.', scenic_featured: 'Ruta destacada',
         hero_subtitle: 'Cuéntanos a dónde quieres ir — nuestra IA arma el itinerario completo, te conecta para comprar los billetes vía Klook y encuentra hoteles en cada parada.',
         hero_ai_cta: 'Planifica mi viaje con IA →', hero_search_link: '¿Ya sabes tu ruta? Busca directo →',
         search_from: 'Desde', search_to: 'Hasta', search_date: 'Fecha', search_btn: 'Buscar billetes y horarios →',
@@ -297,7 +297,7 @@
         partners_see_all: 'Voir tous les essentiels →',
         hero_badge: 'Planificateur IA de trains européens',
         hero_h1: 'Planificateur IA de trains en Europe',
-        hero_title1: 'Décris ton voyage.', hero_title2: 'On planifie les trains.', tab_ai: 'Planificateur IA', tab_roulette: 'Roulette des destinations', tab_countries: 'Itinéraires par pays', search_label: 'Ton voyage', ben_klook_t: 'Réservations avec Klook', ben_klook_d: 'Paiement sécurisé sur leur plateforme officielle.', ben_rt_t: 'Données en temps réel', ben_rt_d: 'Horaires et retards issus de sources officielles.', ben_free_t: 'Gratuit, sans compte', ben_free_d: 'Sans abonnement ni frais cachés.',
+        hero_title1: 'Décris ton voyage.', hero_title2: 'On planifie les trains.', tab_ai: 'Planificateur IA', tab_roulette: 'Roulette des destinations', tab_countries: 'Itinéraires par pays', search_label: 'Ton voyage', ben_klook_t: 'Réservations avec Klook', ben_klook_d: 'Paiement sécurisé sur leur plateforme officielle.', ben_rt_t: 'Données en temps réel', ben_rt_d: 'Horaires et retards issus de sources officielles.', ben_free_t: 'Gratuit, sans compte', ben_free_d: 'Sans abonnement ni frais cachés.', scenic_featured: 'Itinéraire à la une',
         hero_subtitle: 'Dis-nous où tu veux aller — notre IA construit l\'itinéraire complet, te connecte pour acheter les billets et trouve des hôtels à chaque étape.',
         hero_ai_cta: 'Planifier mon voyage avec l\'IA →', hero_search_link: 'Tu connais déjà ton trajet ? Cherche directement →',
         search_from: 'Départ', search_to: 'Arrivée', search_date: 'Date', search_btn: 'Billets et horaires →',
@@ -369,7 +369,7 @@
         partners_see_all: 'Alle Essentials ansehen →',
         hero_badge: 'KI-gestützter Europazug-Planer',
         hero_h1: 'KI-Reiseplaner für Züge in Europa',
-        hero_title1: 'Beschreib deine Reise.', hero_title2: 'Wir planen die Züge.', tab_ai: 'KI-Planer', tab_roulette: 'Zielroulette', tab_countries: 'Routen nach Land', search_label: 'Deine Reise', ben_klook_t: 'Buchen mit Klook', ben_klook_d: 'Sichere Zahlung auf der offiziellen Plattform.', ben_rt_t: 'Echtzeitdaten', ben_rt_d: 'Fahrpläne und Verspätungen aus offiziellen Quellen.', ben_free_t: 'Kostenlos, ohne Konto', ben_free_d: 'Kein Abo, keine versteckten Kosten.',
+        hero_title1: 'Beschreib deine Reise.', hero_title2: 'Wir planen die Züge.', tab_ai: 'KI-Planer', tab_roulette: 'Zielroulette', tab_countries: 'Routen nach Land', search_label: 'Deine Reise', ben_klook_t: 'Buchen mit Klook', ben_klook_d: 'Sichere Zahlung auf der offiziellen Plattform.', ben_rt_t: 'Echtzeitdaten', ben_rt_d: 'Fahrpläne und Verspätungen aus offiziellen Quellen.', ben_free_t: 'Kostenlos, ohne Konto', ben_free_d: 'Kein Abo, keine versteckten Kosten.', scenic_featured: 'Empfohlene Strecke',
         hero_subtitle: 'Sag uns, wohin du möchtest — unsere KI erstellt den kompletten Reiseplan, verbindet dich für Tickets und findet Hotels auf dem Weg.',
         hero_ai_cta: 'Reise mit KI planen →', hero_search_link: 'Route bereits bekannt? Direkt suchen →',
         search_from: 'Von', search_to: 'Nach', search_date: 'Datum', search_btn: 'Tickets & Fahrpläne suchen →',
@@ -441,7 +441,7 @@
         partners_see_all: 'Vedi tutti gli essenziali →',
         hero_badge: 'Pianificatore IA di treni europei',
         hero_h1: 'Pianificatore IA di treni in Europa',
-        hero_title1: 'Descrivi il tuo viaggio.', hero_title2: 'Pensiamo noi ai treni.', tab_ai: 'Pianificatore IA', tab_roulette: 'Roulette delle destinazioni', tab_countries: 'Percorsi per paese', search_label: 'Il tuo viaggio', ben_klook_t: 'Prenota con Klook', ben_klook_d: 'Pagamento sicuro sulla loro piattaforma ufficiale.', ben_rt_t: 'Dati in tempo reale', ben_rt_d: 'Orari e ritardi da fonti ufficiali.', ben_free_t: 'Gratis e senza account', ben_free_d: 'Nessun abbonamento né costi nascosti.',
+        hero_title1: 'Descrivi il tuo viaggio.', hero_title2: 'Pensiamo noi ai treni.', tab_ai: 'Pianificatore IA', tab_roulette: 'Roulette delle destinazioni', tab_countries: 'Percorsi per paese', search_label: 'Il tuo viaggio', ben_klook_t: 'Prenota con Klook', ben_klook_d: 'Pagamento sicuro sulla loro piattaforma ufficiale.', ben_rt_t: 'Dati in tempo reale', ben_rt_d: 'Orari e ritardi da fonti ufficiali.', ben_free_t: 'Gratis e senza account', ben_free_d: 'Nessun abbonamento né costi nascosti.', scenic_featured: 'Percorso in evidenza',
         hero_subtitle: 'Dicci dove vuoi andare — la nostra IA costruisce l\'itinerario completo, ti collega per acquistare i biglietti e trova hotel ad ogni tappa.',
         hero_ai_cta: 'Pianifica il mio viaggio con l\'IA →', hero_search_link: 'Conosci già il tuo percorso? Cerca direttamente →',
         search_from: 'Da', search_to: 'A', search_date: 'Data', search_btn: 'Cerca biglietti e orari →',
@@ -513,7 +513,7 @@
         partners_see_all: 'Ver todos os essenciais →',
         hero_badge: 'Planificador IA de comboios europeus',
         hero_h1: 'Planeador IA de trens na Europa',
-        hero_title1: 'Descreve a tua viagem.', hero_title2: 'Nós planeamos os comboios.', tab_ai: 'Planeador IA', tab_roulette: 'Roleta de destinos', tab_countries: 'Rotas por país', search_label: 'A tua viagem', ben_klook_t: 'Reservas com a Klook', ben_klook_d: 'Pagamento seguro na plataforma oficial.', ben_rt_t: 'Dados em tempo real', ben_rt_d: 'Horários e atrasos de fontes oficiais.', ben_free_t: 'Grátis e sem conta', ben_free_d: 'Sem subscrição nem custos ocultos.',
+        hero_title1: 'Descreve a tua viagem.', hero_title2: 'Nós planeamos os comboios.', tab_ai: 'Planeador IA', tab_roulette: 'Roleta de destinos', tab_countries: 'Rotas por país', search_label: 'A tua viagem', ben_klook_t: 'Reservas com a Klook', ben_klook_d: 'Pagamento seguro na plataforma oficial.', ben_rt_t: 'Dados em tempo real', ben_rt_d: 'Horários e atrasos de fontes oficiais.', ben_free_t: 'Grátis e sem conta', ben_free_d: 'Sem subscrição nem custos ocultos.', scenic_featured: 'Rota em destaque',
         hero_subtitle: 'Diz-nos onde queres ir — a nossa IA constrói o itinerário completo, liga-te para comprar os bilhetes e encontra hotéis ao longo do caminho.',
         hero_ai_cta: 'Planear a minha viagem com IA →', hero_search_link: 'Já conheces o teu percurso? Pesquisa direto →',
         search_from: 'De', search_to: 'Para', search_date: 'Data', search_btn: 'Bilhetes e horários →',
@@ -1060,7 +1060,7 @@
         : `linear-gradient(135deg, ${t.g1}, ${t.g2})`;
       fe.innerHTML = `
         <div class="sf-content">
-          <span class="sf-badge">Featured route</span>
+          <span class="sf-badge">${(TRANSLATIONS[lang]||TRANSLATIONS.en).scenic_featured||"Featured route"}</span>
           <div class="sf-name">${t.name}</div>
           <div class="sf-route">${t.route}</div>
           <div class="sf-desc">${desc}</div>
@@ -1081,11 +1081,11 @@
         const desc = (t.desc && t.desc[lang]) || (t.desc && t.desc.en) || '';
         return `
         <div class="scenic-wrapper${i === scenicFeatured ? ' scenic-active' : ''}">
-          <a href="#" class="scenic-card" onclick="featureScenic(${i}); return false;">
-            <div class="scenic-icon" style="background: linear-gradient(135deg, ${t.g1}, ${t.g2});"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/><path d="M7 11h10"/><path d="M12 4v7"/></svg></div>
+          <a href="#" class="scenic-card" onclick="featureScenic(${i}); var f=document.getElementById('scenicFeature'); if(f) f.scrollIntoView({behavior:'smooth',block:'center'}); return false;">
+            <div class="scenic-photo" style="background-image:${t.photo?`url('${t.photo}')`:`linear-gradient(135deg, ${t.g1}, ${t.g2})`}"><span class="scenic-dur">${String(t.route).split(" · ")[1]||""}</span></div>
             <div class="scenic-body">
               <div class="scenic-name">${t.name}</div>
-              <div class="scenic-route">${t.route}</div>
+              <div class="scenic-route">${String(t.route).split(" · ")[0]}</div>
             </div>
             <div class="scenic-cta" onclick="event.stopPropagation(); goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>
           </a>
