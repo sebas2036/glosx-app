@@ -435,3 +435,40 @@ body.home-v2 .explore-pills .explore-route-pill { line-height: 1; align-items: c
 body.home-v2 .explore-pills .explore-route-pill::before { align-self: stretch; }
 body.home-v2 .explore-pills .explore-route-pill:hover { border-color: #C10016; background: #fff; }
 body.home-v2 .explore-pills .explore-route-pill:hover::before { background: #fbe3e6; color: #C10016; border-color: #C10016; }
+
+/* ===== Descubramos juntos: foto arriba, texto debajo sobre blanco ===== */
+body.home-v2 #discover .section-head-split { display: block; text-align: center; }
+body.home-v2 #discover .section-head-text { max-width: 760px; margin: 0 auto; text-align: center; }
+body.home-v2 #discover .section-head-text .section-label,
+body.home-v2 #discover .section-head-text h2,
+body.home-v2 #discover .section-head-text .lead { text-align: center; margin-left: auto; margin-right: auto; }
+body.home-v2 #discover h2 { font-size: clamp(34px, 4.6vw, 60px); line-height: 1.04; letter-spacing: -.02em; }
+
+body.home-v2 .discover-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
+body.home-v2 .discover-grid .discover-card {
+  width: auto; flex: none; min-height: 0; height: auto; padding: 208px 18px 20px; gap: 6px; justify-content: flex-start;
+  background-color: #fff; background-size: 100% 190px; background-repeat: no-repeat; background-position: top center;
+  border: 1px solid rgba(40,28,20,.12); border-radius: 22px; box-shadow: 0 10px 34px rgba(60,30,20,.07);
+}
+body.home-v2 .discover-grid .discover-card.is-featured { box-shadow: 0 10px 34px rgba(60,30,20,.07); }
+body.home-v2 .discover-card::before { display: none; }
+body.home-v2 .discover-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(60,30,20,.16); }
+body.home-v2 .discover-pin { display: none; }
+body.home-v2 .discover-card .discover-country {
+  position: absolute; left: 12px; top: 12px; z-index: 2; background: rgba(255,255,255,.94); color: #1d1a18;
+  border-radius: 99px; padding: 4px 11px; font-size: 11px; font-weight: 600; letter-spacing: .02em; text-transform: none; text-shadow: none;
+}
+body.home-v2 .discover-card .discover-place { font-size: 20px; font-weight: 600; letter-spacing: -.01em; line-height: 1.15; color: #1d1a18; text-shadow: none; margin: 0; }
+body.home-v2 .discover-card .discover-route { font-size: 14px; font-weight: 500; color: #1d1a18; text-shadow: none; margin: 0; }
+body.home-v2 .discover-card .discover-season { font-size: 12.5px; font-weight: 600; color: #C10016; text-shadow: none; margin: 0; }
+body.home-v2 .discover-card .discover-tip {
+  font-size: 14px; line-height: 1.5; color: #6a5f58; text-shadow: none; margin: 2px 0 0;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+body.home-v2 .discover-grid .discover-card .discover-watch {
+  position: absolute; top: 158px; right: 12px; z-index: 2; align-self: auto; margin: 0;
+  background: #C10016; color: #fff; border: 0; font-size: 12px; font-weight: 700; letter-spacing: .02em; text-transform: none;
+  padding: 5px 12px; text-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+@media (max-width: 1100px) { body.home-v2 .discover-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { body.home-v2 .discover-grid { grid-template-columns: 1fr; } }
