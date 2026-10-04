@@ -1461,6 +1461,33 @@ function generateFAQ(route, lang) {
 
 // Datos estructurados JSON-LD: BreadcrumbList + FAQPage + Article. Le da a Google
 // las preguntas para rich snippets y ayuda a entender/rankear la pagina.
+// --- Video de la ruta: solo si existe rutas/video/<slug>.mp4 (lo genera el motor de reels) ---
+const { execFileSync } = require('child_process');
+const VIDEO_DIR = path.join(__dirname, '../rutas/video');
+const VIDEO_COPY = {
+  en: { desc: (f, t) => `Footage of the ${f} to ${t} train journey.`, label: (f, t) => `${f} to ${t} by train: video` },
+  es: { desc: (f, t) => `Imágenes del viaje en tren de ${f} a ${t}.`, label: (f, t) => `${f} a ${t} en tren: video` },
+  fr: { desc: (f, t) => `Images du trajet en train de ${f} à ${t}.`, label: (f, t) => `${f} à ${t} en train : vidéo` },
+  it: { desc: (f, t) => `Immagini del viaggio in treno da ${f} a ${t}.`, label: (f, t) => `${f} → ${t} in treno: video` }
+};
+function routeVideo(route) {
+  const file = path.join(VIDEO_DIR, route.slug + '.mp4');
+  if (!fs.existsSync(file)) return null;
+  const poster = fs.existsSync(path.join(VIDEO_DIR, route.slug + '-poster.jpg')) ? `/rutas/video/${route.slug}-poster.jpg` : null;
+  let seconds = null;
+  try {
+    seconds = Math.round(parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', file], { encoding: 'utf8' })));
+  } catch (e) { /* sin ffprobe: se omite la duracion */ }
+  return { src: `/rutas/video/${route.slug}.mp4`, poster, seconds, uploaded: fs.statSync(file).mtime.toISOString() };
+}
+function generateVideoBlock(route, lang) {
+  const v = routeVideo(route);
+  if (!v) return '';
+  const copy = VIDEO_COPY[lang] || VIDEO_COPY.en;
+  const posterAttr = v.poster ? ` poster="${v.poster}"` : '';
+  return `\n    <div class="route-video"><video src="${v.src}"${posterAttr} controls playsinline preload="metadata" muted loop aria-label="${copy.label(route.from, route.to)}"></video></div>`;
+}
+
 function generateSchema(route, lang) {
   const langContent = content[lang];
   const url = canonicalUrl(route.slug, lang);
@@ -1475,6 +1502,20 @@ function generateSchema(route, lang) {
         { '@type': 'ListItem', position: 3, name: routeName, item: url }
       ]
     },
+    ...(routeVideo(route) ? [(() => {
+      const v = routeVideo(route);
+      const copy = VIDEO_COPY[lang] || VIDEO_COPY.en;
+      const obj = {
+        '@type': 'VideoObject',
+        name: copy.label(route.from, route.to),
+        description: copy.desc(route.from, route.to),
+        thumbnailUrl: v.poster ? 'https://glosx.app' + v.poster : 'https://glosx.app/hero-bg.jpg',
+        contentUrl: 'https://glosx.app' + v.src,
+        uploadDate: v.uploaded
+      };
+      if (v.seconds) obj.duration = 'PT' + v.seconds + 'S';
+      return obj;
+    })()] : []),
     {
       '@type': 'FAQPage',
       mainEntity: pickVariant(route.slug + 'faq', langContent.faqVariants).map(item => ({
@@ -1549,6 +1590,8 @@ function replaceTemplate(template, route, lang) {
     '{{moreRoutesTitle}}': langContent.moreRoutesTitle,
     '{{relatedRoutes}}': generateRelatedRoutes(route, lang),
     '{{faqSection}}': generateFAQ(route, lang),
+    '{{videoBlock}}': generateVideoBlock(route, lang),
+    '{{videoCss}}': routeVideo(route) ? '\n    .route-video { margin: 0 0 28px; border-radius: 20px; overflow: hidden; background: #000; border: 1px solid rgba(193,0,22,0.25); box-shadow: 0 10px 34px rgba(0,0,0,0.25); }\n    .route-video video { display: block; width: 100%; height: auto; }' : '',
     '{{schema}}': generateSchema(route, lang)
   };
   
