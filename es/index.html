@@ -8,7 +8,7 @@
        cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
        conexiones lentas porque el hero no puede pintarse hasta que carga. -->
   <link rel="stylesheet" href="/assets/css/main.min.css" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=13" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=14" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -378,9 +378,9 @@
         <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">Múnich → Venecia</span>
         <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">Roma → Venecia</span>
       </div>
+      <p class="search-note" data-i18n="hero_subtitle">Cuéntanos a dónde quieres ir — nuestra IA arma el itinerario completo, te conecta para comprar los billetes vía Klook y encuentra hoteles en cada parada.</p>
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">Ver mi última ruta →</button>
     </div>
-          <p class="search-note" data-i18n="hero_subtitle">Cuéntanos a dónde quieres ir — nuestra IA arma el itinerario completo, te conecta para comprar los billetes vía Klook y encuentra hoteles en cada parada.</p>
         </div>
         <div class="search-panel" data-panel="roulette" role="tabpanel">
     <div class="discover-cta" id="hoy">

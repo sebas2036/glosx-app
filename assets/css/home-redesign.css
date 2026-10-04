@@ -303,3 +303,10 @@ body.home-v2 .search-benefits b { display: block; font-size: 16px; font-weight: 
 body.home-v2 .search-benefits span { font-size: 13px; color: #6a5f58; }
 @media (max-width: 760px) { body.home-v2 .search-benefits { grid-template-columns: 1fr; } }
 body.home-v2 .search-card .ai-segment-buy { font-size: 15px; font-weight: 700; }
+
+/* ===== "Ver mi ultima ruta" a la izquierda bajo la nota, y llamado a comprar mas grande ===== */
+body.home-v2 .search-card .ai-restore-btn {
+  display: inline-block; margin: 10px 0 0; padding: 0; text-align: left;
+  color: #C10016; font-weight: 600; font-size: 15px; background: none; border: 0;
+}
+body.home-v2 .search-card .ai-segment-buy { font-size: 17px; padding: 17px 36px; }
