@@ -504,3 +504,19 @@ body.home-v2 .feature-card p { font-size: 15px; line-height: 1.55; margin: 0; }
 /* ===== franja de operadores: nombres legibles sobre fondo claro ===== */
 body.home-v2 .trust-strip .op-chip { color: #1d1a18; background: rgba(255,255,255,.88); border-color: rgba(40,28,20,.12); }
 body.home-v2 .stats-marquee .route-chip { color: #9c0014; }
+
+/* ===== movil: el resultado compacto no debe desbordar la tarjeta ===== */
+@media (max-width: 760px) {
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment { grid-template-columns: minmax(0, 1fr); }
+  body.home-v2 .search-card .ai-segment-header,
+  body.home-v2 .search-card .ai-segment-stations,
+  body.home-v2 .search-card .ai-segment-train,
+  body.home-v2 .search-card .ai-segment-body { min-width: 0; max-width: 100%; }
+  body.home-v2 .search-card .ai-segment-buy { white-space: normal; max-width: 100%; box-sizing: border-box; }
+  body.home-v2 .search-card .ai-segment-train { justify-self: start; }
+}
+@media (max-width: 760px) {
+  body.home-v2 .search-card .ai-segment-time:not(:empty)::before { content: none; }
+  body.home-v2 .search-card .ai-segment-header { flex-wrap: wrap; column-gap: 12px; }
+  body.home-v2 .search-benefits > div { width: min(100%, 320px); }
+}

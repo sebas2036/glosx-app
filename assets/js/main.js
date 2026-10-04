@@ -555,7 +555,7 @@
         cookie_text: 'Utilizamos cookies essenciais e análises anónimas para melhorar a sua experiência.', cookie_accept: 'Aceitar', cookie_decline: 'Recusar', explore_show_all: 'Ver todas as rotas', explore_show_fewer: 'Ver menos rotas',
         footer_copy: '© 2026 GLOSX — Todos os direitos reservados.',
         footer_disclaimer: 'WoW Train é uma plataforma de viagens independente. As reservas são processadas segundo os termos do parceiro correspondente; não somos parte dessa transação. Podemos receber uma comissão por compras qualificadas sem custo adicional para si.',
-        scenic_book: 'Reservar en Klook', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
+        scenic_book: 'Reservar na Klook', preview_label: 'Veja em ação', preview_title1: 'Projetada para', preview_title2: 'viajantes a sério.', preview_lead: 'Deteção por GPS, horários em tempo real, rotas cénicas e tradutor integrado — tudo no seu bolso.', ss_home: 'Escolha o seu país', ss_board: 'Painel de partidas', ss_live: 'Partidas ao vivo',
         stats_prose: 'De <strong>103 guias de rotas</strong> em <strong>16 países</strong> para a sua próxima viagem — grátis, sem cadastro.', stat_live: 'A navegar agora',
         trust_data: 'Viagens planeadas com IA nas principais redes ferroviárias europeias',
         trust_b1: 'Itinerários gerados com IA', trust_b2: 'Reserva através de parceiros verificados', trust_b3: 'Sem registo', trust_b4: 'Gratuito', trust_klook: 'Reservas processadas oficialmente pela Klook',
