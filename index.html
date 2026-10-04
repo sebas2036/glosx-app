@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-loco-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-loco-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=21" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=23" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -933,9 +933,12 @@
         <h2><span data-i18n="features_title1">Built for travelers</span><br /><span data-i18n="features_title2">who move fast.</span></h2>
         <p class="lead" data-i18n="features_lead">No subscriptions, no paywalls. Just real-time data and smart tools.</p>
       </div>
-      <img class="section-head-photo" src="/assets/img/community/made-for-travelers.webp" alt="Two travelers walking toward their train" width="480" height="300" loading="lazy">
     </div>
 
+        <div class="features-banner">
+      <img src="/assets/img/community/made-for-travelers.webp" alt="Two travelers walking toward their train" width="1000" height="1000" loading="lazy">
+      <p data-i18n="features_banner">Made for those who travel with a backpack.</p>
+    </div>
     <div class="features-grid">
       <div class="feature-card">
         <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
@@ -1203,7 +1206,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=38" defer></script>
+  <script src="/assets/js/main.min.js?v=39" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
