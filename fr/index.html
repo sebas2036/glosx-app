@@ -8,6 +8,8 @@
        cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
        conexiones lentas porque el hero no puede pintarse hasta que carga. -->
   <link rel="stylesheet" href="/assets/css/main.min.css" />
+  <link rel="preload" as="image" href="/assets/img/hero/home-loco-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/img/hero/home-loco-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
   <link rel="stylesheet" href="/assets/css/home-redesign.css?v=16" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
@@ -18,7 +20,6 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" /></noscript>
   <!-- LCP real en mobile: la primera foto del carrusel del título, no el mapa
        de fondo (hero-bg). Precargar los dos robaba banda al 3G. -->
-  <link rel="preload" as="image" href="/assets/img/carousel/bernina-express.webp" type="image/webp" fetchpriority="high" />
   <script>
     (function () {
       var lowEnd = (navigator.deviceMemory && navigator.deviceMemory <= 4) ||
@@ -1165,7 +1166,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=34" defer></script>
+  <script src="/assets/js/main.min.js?v=35" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
