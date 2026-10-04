@@ -290,3 +290,16 @@ body.home-v2 .search-card .ai-segment-buy {
   body.home-v2 .search-card .ai-segment-body { grid-column: 1; grid-row: auto; }
   body.home-v2 .search-card .ai-segment-buy { grid-column: 1; grid-row: auto; justify-self: stretch; text-align: center; margin-top: 8px; }
 }
+
+/* ===== beneficios debajo de la tarjeta ===== */
+body.home-v2 .search-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 30px 0 0; }
+body.home-v2 .search-benefits > div { display: flex; gap: 14px; align-items: flex-start; }
+body.home-v2 .search-benefits svg {
+  flex: none; width: 44px; height: 44px; padding: 10px; border-radius: 12px; background: #fbe3e6;
+  stroke: #C10016; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+body.home-v2 .search-benefits p { margin: 0; text-align: left; }
+body.home-v2 .search-benefits b { display: block; font-size: 16px; font-weight: 600; color: #1d1a18; }
+body.home-v2 .search-benefits span { font-size: 13px; color: #6a5f58; }
+@media (max-width: 760px) { body.home-v2 .search-benefits { grid-template-columns: 1fr; } }
+body.home-v2 .search-card .ai-segment-buy { font-size: 15px; font-weight: 700; }

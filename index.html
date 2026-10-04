@@ -8,7 +8,7 @@
        cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
        conexiones lentas porque el hero no puede pintarse hasta que carga. -->
   <link rel="stylesheet" href="/assets/css/main.min.css" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=12" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=13" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -573,6 +573,11 @@
     </div>
         </div>
       </div>
+    <div class="search-benefits">
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p><b data-i18n="ben_klook_t">Bookings with Klook</b><span data-i18n="ben_klook_d">Secure payment on their official platform.</span></p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><p><b data-i18n="ben_rt_t">Real-time data</b><span data-i18n="ben_rt_d">Schedules and delays from official sources.</span></p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/></svg><p><b data-i18n="ben_free_t">Free, no account</b><span data-i18n="ben_free_d">No subscription or hidden costs.</span></p></div>
+    </div>
     <div class="search-extras">
       <div class="hero-ops" aria-label="Rail operators">
         <div class="trust-ops">
@@ -1163,7 +1168,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=31" defer></script>
+  <script src="/assets/js/main.min.js?v=32" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
