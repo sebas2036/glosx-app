@@ -310,3 +310,8 @@ body.home-v2 .search-card .ai-restore-btn {
   color: #C10016; font-weight: 600; font-size: 15px; background: none; border: 0;
 }
 body.home-v2 .search-card .ai-segment-buy { font-size: 17px; padding: 17px 36px; }
+
+/* ===== beneficios centrados ===== */
+body.home-v2 .search-benefits { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px clamp(28px, 6vw, 84px); }
+body.home-v2 .search-benefits > div { flex: 0 1 auto; }
+@media (max-width: 760px) { body.home-v2 .search-benefits { flex-direction: column; align-items: center; } }
