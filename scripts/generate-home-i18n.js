@@ -201,6 +201,8 @@ function buildPage(lang) {
   );
 
   html = html.replace(/href="\/hoy\/"/g, `href="/${lang}/hoy/"`);
+  html = html.replace(/href="\/(blog-[a-z0-9-]+\.html)"/g, `href="/${lang}/$1"`);
+  html = html.replace(/(class="guides-btn" href=")\/blog\.html"/, `$1/${lang}/blog.html"`);
 
   return html;
 }
