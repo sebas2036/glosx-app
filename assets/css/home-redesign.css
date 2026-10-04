@@ -1,0 +1,111 @@
+/* Rediseno de la portada (rama rediseno-home). Todo va bajo body.home-v2 para poder
+   apagarlo quitando esa clase. No cambia textos ni data-i18n. */
+
+body.home-v2 .hero-title-card {
+  margin-top: -100px;
+  padding: 150px 6vw 0;
+  min-height: min(82vh, 760px);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  color: #fff;
+}
+body.home-v2 .hero-title-card::before {
+  background-attachment: scroll;
+  background-image:
+    linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.42) 30%, rgba(10,12,14,.12) 55%, rgba(10,12,14,.55) 100%),
+    url('/assets/img/hero/home-loco-2000.webp');
+  background-size: cover;
+  background-position: center 40%;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
+}
+@media (max-width: 760px) {
+  body.home-v2 .hero-title-card::before {
+    background-image:
+      linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.42) 30%, rgba(10,12,14,.12) 55%, rgba(10,12,14,.55) 100%),
+      url('/assets/img/hero/home-loco-1000.webp');
+  }
+}
+
+body.home-v2 .hero-title-inner { max-width: 1180px; margin: 0; text-align: left; width: 100%; }
+body.home-v2 .hero-title-photo-wrap { overflow: visible; }
+body.home-v2 .hero-title-photo-wrap::before,
+body.home-v2 .hero-title-photo-wrap::after { display: none; }
+
+body.home-v2 .hero-badge {
+  background: transparent; border: 0; box-shadow: none; padding: 0;
+  color: #fff; opacity: .92; font-size: 12px; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(0,0,0,.45);
+}
+
+body.home-v2 .hero-title-card h1 {
+  font-size: clamp(36px, 5.4vw, 78px) !important;
+  line-height: 1.02; letter-spacing: -.02em; font-weight: 700;
+  max-width: 15ch; margin: 14px 0 0; text-align: left;
+  text-shadow: 0 2px 24px rgba(0,0,0,.4) !important;
+}
+body.home-v2 .hero-title-card h1 span:last-child { color: #ff7a8a; }
+
+body.home-v2 .hero-title-inner p {
+  color: #f6f1ec; font-size: clamp(15px, 1.5vw, 18px); max-width: 52ch; margin: 18px 0 0;
+  text-shadow: 0 1px 14px rgba(0,0,0,.4); text-align: left;
+}
+body.home-v2 .hero-ops { margin: 22px 0 6px; max-width: 760px; }
+body.home-v2 .trust-ops { justify-content: flex-start; }
+body.home-v2 .hero-ops .op-chip {
+  color: #1d1a18; background: rgba(255,255,255,.92); border-color: rgba(255,255,255,.5);
+}
+body.home-v2 .hero-ops-klook { color: #fff; opacity: .9; text-align: left; margin: 12px 0 26px; text-shadow: 0 1px 10px rgba(0,0,0,.4); }
+
+/* --- menu: blanco sobre la foto, normal al hacer scroll --- */
+body.home-v2 nav:not(.scrolled) .nav-links a:not(.nav-cta) { color: #fff !important; text-shadow: 0 1px 10px rgba(0,0,0,.45); }
+body.home-v2 nav:not(.scrolled) .nav-links a.nav-cta { color: #fff !important; border-color: rgba(255,255,255,.85) !important; background: transparent !important; }
+body.home-v2 nav:not(.scrolled) .nav-logo span:not(:nth-child(2)) { color: #fff !important; }
+body.home-v2 nav:not(.scrolled) .nav-toggle { border-color: rgba(255,255,255,.8) !important; color: #fff !important; }
+
+/* --- textos del hero: ganan a las reglas con !important del sitio --- */
+body.home-v2 .hero .hero-badge {
+  background: transparent !important; border: 0 !important; padding: 0 !important;
+  color: #fff !important; text-shadow: 0 1px 12px rgba(0,0,0,.45) !important;
+}
+body.home-v2 .hero .hero-title-card h1 span { -webkit-text-fill-color: #fff !important; color: #fff !important; }
+body.home-v2 .hero .hero-title-card h1 span:last-child { -webkit-text-fill-color: #ff7a8a !important; color: #ff7a8a !important; }
+body.home-v2 .hero .hero-title-inner p {
+  color: #f6f1ec !important; text-shadow: 0 1px 14px rgba(0,0,0,.45) !important;
+  margin-left: 0 !important; margin-right: 0 !important; margin-top: 18px !important; text-align: left !important;
+}
+body.home-v2 .hero .hero-ops-klook { color: #fff !important; text-shadow: 0 1px 10px rgba(0,0,0,.45) !important; margin-left: 0 !important; }
+body.home-v2 .hero-title-card::before {
+  background-image:
+    linear-gradient(90deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.1) 60%, rgba(10,12,14,0) 100%),
+    linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.38) 30%, rgba(10,12,14,.1) 55%, rgba(10,12,14,.5) 100%),
+    url('/assets/img/hero/home-loco-2000.webp');
+}
+
+/* --- buscador en forma de billete, sube sobre el borde inferior de la foto --- */
+body.home-v2 .hero-title-card { padding-bottom: 80px; min-height: 0; }
+body.home-v2 #aiPlanner { position: relative; z-index: 3; margin-top: -64px; }
+body.home-v2 .ai-input-wrapper { max-width: 860px; margin-left: calc(6vw - 24px); margin-right: auto; }
+body.home-v2 .ai-input-container {
+  border-radius: 18px !important; padding: 0 !important; gap: 0 !important; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(60,30,20,.28) !important;
+}
+body.home-v2 .ai-input-container input { font-size: 20px !important; font-weight: 500 !important; padding-top: 24px !important; padding-bottom: 24px !important; }
+body.home-v2 .ai-generate-btn {
+  align-self: stretch; border-radius: 0 !important; padding: 0 30px !important;
+  border-left: 2px dashed rgba(255,255,255,.6) !important; box-shadow: none !important;
+  background: #C10016 !important; font-size: 16px; letter-spacing: .01em;
+}
+body.home-v2 .ai-generate-btn:hover { transform: none; filter: brightness(1.08); }
+body.home-v2 .ai-suggestions { justify-content: flex-start; gap: 8px; }
+body.home-v2 .ai-suggestions-label { color: #6a5f58; text-shadow: none; }
+body.home-v2 .ai-suggestion {
+  color: #1d1a18; background: #fff; border: 1px solid rgba(40,28,20,.12); border-radius: 99px;
+  padding: 6px 14px; text-shadow: none; font-size: 13px;
+}
+body.home-v2 .ai-suggestion + .ai-suggestion::before { content: none; }
+body.home-v2 .ai-suggestion:hover { color: #C10016; background: #fff; border-color: #C10016; }
+@media (max-width: 768px) {
+  body.home-v2 .ai-generate-btn { border-left: 0 !important; border-top: 2px dashed rgba(255,255,255,.6) !important; padding: 16px 20px !important; }
+  body.home-v2 .ai-input-wrapper { margin-left: 0; }
+}
