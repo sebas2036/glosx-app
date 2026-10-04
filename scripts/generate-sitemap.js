@@ -16,17 +16,22 @@ const LANGS = ['en', 'es', 'fr', 'it'];
 const suffix = l => ({ en: '/', es: '/es/', fr: '/fr/', it: '/it/' }[l]);
 
 // 1. Slugs de ruta existentes (dir con index.html en la raíz del slug)
+// Se saltan las carpetas que son solo una redireccion (noindex / meta refresh): no deben ir al sitemap.
+const isStub = s => /noindex|http-equiv="refresh"/i.test(fs.readFileSync(path.join(rutasDir, s, 'index.html'), 'utf8'));
 const slugs = fs.readdirSync(rutasDir)
-  .filter(s => fs.existsSync(path.join(rutasDir, s, 'index.html')))
+  .filter(s => fs.existsSync(path.join(rutasDir, s, 'index.html')) && !isStub(s))
   .sort();
+// Solo se listan los idiomas cuya pagina existe de verdad (evita URLs 404 en el sitemap).
+const langExists = (slug, l) => fs.existsSync(path.join(rutasDir, slug, l === 'en' ? '' : l, 'index.html'));
 
 // 2. Bloques <url> de una ruta: uno por idioma, cada uno con hreflang de los 4 + x-default
 function routeBlocks(slug) {
-  const alternates = LANGS
+  const present = LANGS.filter(l => langExists(slug, l));
+  const alternates = present
     .map(l => `      <xhtml:link rel="alternate" hreflang="${l}" href="https://glosx.app/rutas/${slug}${suffix(l)}" />`)
     .join('\n') +
     `\n      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/${slug}/" />`;
-  return LANGS.map(l => `  <url>
+  return present.map(l => `  <url>
     <loc>https://glosx.app/rutas/${slug}${suffix(l)}</loc>
     <lastmod>${TODAY}</lastmod>
     <changefreq>monthly</changefreq>

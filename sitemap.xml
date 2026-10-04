@@ -3601,50 +3601,6 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/munich-vienna/" />
   </url>
   <url>
-    <loc>https://glosx.app/rutas/naples-rome/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-rome/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/naples-rome/es/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/naples-rome/fr/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/naples-rome/it/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/naples-rome/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/rutas/naples-rome/es/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-rome/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/naples-rome/es/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/naples-rome/fr/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/naples-rome/it/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/naples-rome/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/rutas/naples-rome/fr/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-rome/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/naples-rome/es/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/naples-rome/fr/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/naples-rome/it/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/naples-rome/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/rutas/naples-rome/it/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/naples-rome/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/naples-rome/es/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/naples-rome/fr/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/naples-rome/it/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/naples-rome/" />
-  </url>
-  <url>
     <loc>https://glosx.app/rutas/naples-salerno/</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>

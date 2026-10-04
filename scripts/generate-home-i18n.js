@@ -204,6 +204,16 @@ function buildPage(lang) {
   html = html.replace(/href="\/(blog-[a-z0-9-]+\.html)"/g, `href="/${lang}/$1"`);
   html = html.replace(/(class="guides-btn" href=")\/blog\.html"/, `$1/${lang}/blog.html"`);
 
+  // Enlaces internos en el idioma de la pagina (para que Google descubra y pondere las versiones es/fr/it):
+  // rutas, destinos y paginas sueltas apuntan a su version traducida solo si ese archivo existe.
+  const has = (rel) => fs.existsSync(path.join(ROOT, rel));
+  html = html.replace(/href="\/rutas\/([a-z0-9-]+)\/"/g, (m, slug) => has(`rutas/${slug}/${lang}/index.html`) ? `href="/rutas/${slug}/${lang}/"` : m);
+  html = html.replace(/href="\/destinos\/([a-z0-9-]+)\/"/g, (m, slug) => has(`destinos/${slug}/${lang}/index.html`) ? `href="/destinos/${slug}/${lang}/"` : m);
+  for (const rel of ['about.html', 'ai-planner/', 'explore/']) {
+    const file = rel.endsWith('/') ? `${lang}/${rel}index.html` : `${lang}/${rel}`;
+    if (has(file)) html = html.split(`href="/${rel}"`).join(`href="/${lang}/${rel}"`);
+  }
+
   return html;
 }
 
