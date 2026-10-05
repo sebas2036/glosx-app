@@ -178,7 +178,44 @@
       if (europeSuggestEl) europeSuggestEl.style.display = '';
       if (japanSuggestEl) japanSuggestEl.style.display = 'none';
     }
+    syncRestoreBtn();
   }
+
+  // "Ver mi última ruta": cada región recuerda la suya. La de Europa la guarda el sitio (ruta del
+  // planificador IA); la de Japón se guarda acá, para no mostrar una ruta de Europa dentro de Japón.
+  var JP_KEY = 'glosx_japan_last_route';
+  function readJapanLast() {
+    try {
+      var o = JSON.parse(localStorage.getItem(JP_KEY) || 'null');
+      if (o && Array.isArray(o.legs) && o.legs.length && Date.now() - o.ts < 24 * 3600 * 1000) return o;
+    } catch (e) {}
+    return null;
+  }
+  function saveJapanLast(legs) {
+    try { localStorage.setItem(JP_KEY, JSON.stringify({ legs: legs, ts: Date.now() })); } catch (e) {}
+    syncRestoreBtn();
+  }
+  function syncRestoreBtn() {
+    var btn = document.getElementById('aiRestoreBtn');
+    if (!btn) return;
+    if (region === 'japan') { btn.style.display = readJapanLast() ? 'block' : 'none'; return; }
+    var show = false;
+    try {
+      var ts = parseInt(localStorage.getItem('ai_last_route_timestamp'), 10);
+      show = !!ts && (Date.now() - ts) / 3600000 < 24;
+    } catch (e) {}
+    btn.style.display = show ? 'block' : 'none';
+  }
+  document.addEventListener('click', function (e) {
+    if (region !== 'japan' || !e.target.closest || !e.target.closest('#aiRestoreBtn')) return;
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    var last = readJapanLast();
+    if (!last || typeof window.glosxShowRoute !== 'function') return;
+    var legs = last.legs.map(function (p) { return [displayBySlug[p[0]], displayBySlug[p[1]]]; });
+    window.glosxShowRoute(legs[0][0], legs[legs.length - 1][1], legs);
+  }, true);
 
   function resetBoard(from, to) {
     var f = document.getElementById('rouletteFrom');
@@ -357,13 +394,14 @@
     if (!segs.length) return;
     var tx = INFO_I18N[lang()] || INFO_I18N.en;
     infoBusy = true;
-    var total = 0, all = true, first = null;
+    var total = 0, all = true, first = null, chain = [];
     Array.prototype.forEach.call(segs, function (seg) {
       var r = seg.querySelector('.ai-segment-route');
       var c = r ? findCities(r.textContent) : [];
       var d = c.length >= 2 ? INFO[c[0] + '-' + c[1]] : null;
       if (!d) { all = false; return; }
       if (!first) first = d;
+      chain.push([c[0], c[1]]);
       total += d.m;
       var tm = seg.querySelector('.ai-segment-time');
       if (tm) tm.textContent = tx.from.replace('{d}', fmtMin(d.m));
@@ -376,6 +414,7 @@
     }
     if (infoObs) infoObs.takeRecords();
     infoBusy = false;
+    if (all && chain.length) saveJapanLast(chain);
   }
   if (segsEl) {
     infoObs = new MutationObserver(paintInfo);
