@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="page_title">Nuestra historia — WoW Train</title>
+  <title data-i18n="page_title">Nuestra historia — WoW Train · glosx.app</title>
   <meta name="description" data-i18n="page_desc" content="WoW Train es una plataforma de viajes independiente que ayuda a los viajeros a encontrar trenes en Europa." />
   <link rel="canonical" href="https://glosx.app/es/about.html" />
   <link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
@@ -45,7 +45,10 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "WoW Train",
-    "alternateName": ["GLOSX", "glosx.app"],
+    "alternateName": [
+      "GLOSX",
+      "glosx.app"
+    ],
     "url": "https://glosx.app/",
     "logo": "https://glosx.app/logo.png",
     "description": "WoW Train is an independent AI-powered platform helping travellers plan and book European train journeys across 9+ countries.",
@@ -60,7 +63,8 @@
       "@type": "ContactPoint",
       "contactType": "customer support",
       "url": "https://glosx.app/support.html"
-    }
+    },
+    "@id": "https://glosx.app/#organization"
   }
   </script>
 
@@ -71,7 +75,12 @@
     "name": "Nuestra historia — WoW Train",
     "url": "https://glosx.app/es/about.html",
     "description": "WoW Train is an independent travel platform helping travelers find trains across Europe.",
-    "publisher": { "@type": "Organization", "name": "WoW Train", "url": "https://glosx.app/" }
+    "publisher": {
+      "@type": "Organization",
+      "name": "WoW Train",
+      "url": "https://glosx.app/",
+      "@id": "https://glosx.app/#organization"
+    }
   }
   </script>
 
@@ -202,6 +211,7 @@
     <p class="lead" data-i18n="lead2">
       That afternoon I decided to build the tool I wished I had.
     </p>
+    <p class="lead" data-i18n="brand_line">WoW Train es el nombre de la app y glosx.app es su sitio web: un solo proyecto con dos nombres.</p>
 
     <section>
       <h2 data-i18n="s1_title">Who built this</h2>
@@ -280,13 +290,14 @@
   <script>
     const T = {
       en: {
-        page_title: 'Our Story — WoW Train',
+        page_title: 'Our Story — WoW Train · glosx.app',
         page_desc: 'WoW Train is an independent travel platform helping travelers find trains across Europe.',
         nav_back: '← Back home',
         badge: 'Our story',
         h1: 'About WoW Train: built by a traveler<br/>who got lost.',
         lead1: 'I was standing at the Colosseum in Rome, trying to get to the Vatican. Simple enough — except I had no idea which bus, which line, or how to buy a ticket. I asked several people. Nobody could really help. I spent more time figuring out the logistics than actually traveling.',
         lead2: 'That afternoon I decided to build the tool I wished I had.',
+        brand_line: 'WoW Train is the name of the app, and glosx.app is its website: one project, two names.',
         s1_title: 'Who built this',
         s1_p1: 'My name is Sebastián Jasinsky. I\'m an independent developer from Mendoza, Argentina. I built WoW Train as a solo project — no VC funding, no team, no corporate backing. Just a genuine frustration with how hard it is for a tourist to navigate European rail, and the conviction that it doesn\'t have to be that way.',
         s1_p2: 'Latin American travelers in particular arrive in Europe with no mental map of the rail network. They don\'t know that you change trains in Milan to get to Florence, or that a regional train in Spain is completely different from an AVE. Nobody explains that. WoW Train does.',
@@ -306,13 +317,14 @@
         footer_copy: '© 2026 GLOSX — WoW Train · Independent travel platform ·',
       },
       es: {
-        page_title: 'Nuestra historia — WoW Train',
+        page_title: 'Nuestra historia — WoW Train · glosx.app',
         page_desc: 'WoW Train es una plataforma de viajes independiente que ayuda a los viajeros a encontrar trenes en Europa.',
         nav_back: '← Volver al inicio',
         badge: 'Nuestra historia',
         h1: 'Sobre WoW Train: creado por un viajero<br/>que se perdió.',
         lead1: 'Estaba parado frente al Coliseo en Roma, intentando llegar al Vaticano. Algo simple — excepto que no tenía idea de qué colectivo tomar, qué línea, ni cómo comprar el ticket. Le pregunté a varias personas. Nadie pudo ayudarme bien. Pasé más tiempo tratando de entender la logística que viajando.',
         lead2: 'Esa tarde decidí construir la herramienta que me hubiera gustado tener.',
+        brand_line: 'WoW Train es el nombre de la app y glosx.app es su sitio web: un solo proyecto con dos nombres.',
         s1_title: 'Quién lo construyó',
         s1_p1: 'Me llamo Sebastián Jasinsky. Soy desarrollador independiente de Mendoza, Argentina. Construí WoW Train como un proyecto en solitario — sin inversores, sin equipo, sin respaldo corporativo. Solo una frustración genuina con lo difícil que es para un turista navegar el sistema ferroviario europeo, y la convicción de que no tiene por qué ser así.',
         s1_p2: 'Los viajeros latinoamericanos en particular llegan a Europa sin mapa mental de la red ferroviaria. No saben que hay que cambiar de tren en Milán para llegar a Florencia, o que un tren regional en España es completamente distinto a un AVE. Nadie lo explica. WoW Train sí.',
@@ -332,13 +344,14 @@
         footer_copy: '© 2026 GLOSX — WoW Train · Plataforma de viajes independiente ·',
       },
       fr: {
-        page_title: 'Notre histoire — WoW Train',
+        page_title: 'Notre histoire — WoW Train · glosx.app',
         page_desc: 'WoW Train est une plateforme de voyage indépendante qui aide les voyageurs à trouver des trains en Europe.',
         nav_back: '← Retour',
         badge: 'Notre histoire',
         h1: 'À propos de WoW Train : créé par un voyageur<br/>qui s\'est perdu.',
         lead1: 'J\'étais devant le Colisée à Rome, essayant de rejoindre le Vatican. Simple en apparence — sauf que je n\'avais aucune idée du bus à prendre, de la ligne, ni comment acheter un ticket. J\'ai demandé à plusieurs personnes. Personne n\'a vraiment pu m\'aider. J\'ai passé plus de temps à comprendre la logistique qu\'à voyager.',
         lead2: 'Cet après-midi-là, j\'ai décidé de créer l\'outil que j\'aurais voulu avoir.',
+        brand_line: 'WoW Train est le nom de l’application et glosx.app son site web : un seul projet, deux noms.',
         s1_title: 'Qui a construit ceci',
         s1_p1: 'Je m\'appelle Sebastián Jasinsky. Je suis développeur indépendant de Mendoza, en Argentine. J\'ai construit WoW Train comme un projet en solo — sans financement, sans équipe, sans soutien corporate. Juste une vraie frustration face à la difficulté pour un touriste de naviguer le rail européen, et la conviction que ça ne devrait pas être si compliqué.',
         s1_p2: 'Les voyageurs latino-américains arrivent en Europe sans carte mentale du réseau ferroviaire. Ils ne savent pas qu\'il faut changer à Milan pour aller à Florence, ou qu\'un train régional en Espagne est très différent d\'un AVE. Personne ne l\'explique. WoW Train, si.',
@@ -358,13 +371,14 @@
         footer_copy: '© 2026 GLOSX — WoW Train · Plateforme de voyage indépendante ·',
       },
       de: {
-        page_title: 'Unsere Geschichte — WoW Train',
+        page_title: 'Unsere Geschichte — WoW Train · glosx.app',
         page_desc: 'WoW Train ist eine unabhängige Reiseplattform, die Reisenden hilft, Züge in Europa zu finden.',
         nav_back: '← Zurück',
         badge: 'Unsere Geschichte',
         h1: 'Über WoW Train: gebaut von einem Reisenden,<br/>der sich verlaufen hat.',
         lead1: 'Ich stand vor dem Kolosseum in Rom und wollte zum Vatikan. Eigentlich einfach — aber ich hatte keine Ahnung, welchen Bus ich nehmen sollte, welche Linie, oder wie man ein Ticket kauft. Ich fragte mehrere Leute. Niemand konnte mir wirklich helfen. Ich verbrachte mehr Zeit damit, die Logistik zu verstehen, als tatsächlich zu reisen.',
         lead2: 'An diesem Nachmittag beschloss ich, das Werkzeug zu bauen, das ich mir gewünscht hätte.',
+        brand_line: 'WoW Train ist der Name der App und glosx.app ihre Website: ein Projekt, zwei Namen.',
         s1_title: 'Wer das gebaut hat',
         s1_p1: 'Mein Name ist Sebastián Jasinsky. Ich bin unabhängiger Entwickler aus Mendoza, Argentinien. Ich habe WoW Train als Einzelprojekt gebaut — ohne Investoren, ohne Team, ohne Unternehmensunterstützung. Nur eine echte Frustration darüber, wie schwierig es für einen Touristen ist, das europäische Schienennetz zu navigieren.',
         s1_p2: 'Lateinamerikanische Reisende kommen besonders oft ohne mentale Karte des Schienennetzes nach Europa. Sie wissen nicht, dass man in Mailand umsteigen muss, um nach Florenz zu gelangen, oder dass ein Regionalzug in Spanien völlig anders ist als ein AVE. Niemand erklärt das. WoW Train schon.',
@@ -384,13 +398,14 @@
         footer_copy: '© 2026 GLOSX — WoW Train · Unabhängige Reiseplattform ·',
       },
       it: {
-        page_title: 'La nostra storia — WoW Train',
+        page_title: 'La nostra storia — WoW Train · glosx.app',
         page_desc: 'WoW Train è una piattaforma di viaggi indipendente che aiuta i viaggiatori a trovare treni in Europa.',
         nav_back: '← Torna alla home',
         badge: 'La nostra storia',
         h1: 'Su WoW Train: creato da un viaggiatore<br/>che si è perso.',
         lead1: 'Ero al Colosseo a Roma, cercando di raggiungere il Vaticano. Semplice, in teoria — ma non avevo idea di quale autobus prendere, quale linea, né come comprare un biglietto. Ho chiesto a diverse persone. Nessuno ha saputo aiutarmi davvero. Ho passato più tempo a capire la logistica che a viaggiare.',
         lead2: 'Quel pomeriggio ho deciso di costruire lo strumento che avrei voluto avere.',
+        brand_line: 'WoW Train è il nome dell’app e glosx.app è il suo sito web: un solo progetto, due nomi.',
         s1_title: 'Chi ha costruito questo',
         s1_p1: 'Mi chiamo Sebastián Jasinsky. Sono uno sviluppatore indipendente di Mendoza, Argentina. Ho costruito WoW Train come progetto individuale — senza investitori, senza team, senza supporto aziendale. Solo una frustrazione genuina per quanto sia difficile per un turista orientarsi nel sistema ferroviario europeo.',
         s1_p2: 'I viaggiatori latinoamericani in particolare arrivano in Europa senza una mappa mentale della rete ferroviaria. Non sanno che bisogna cambiare treno a Milano per andare a Firenze, o che un treno regionale in Spagna è completamente diverso da un AVE. Nessuno lo spiega. WoW Train sì.',
@@ -410,7 +425,7 @@
         footer_copy: '© 2026 GLOSX — WoW Train · Piattaforma di viaggi indipendente ·',
       },
       pt: {
-        page_title: 'Nossa história — WoW Train',
+        page_title: 'Nossa história — WoW Train · glosx.app',
         page_desc: 'WoW Train é uma plataforma de viagens independente que ajuda os viajantes a encontrar comboios na Europa.',
         nav_back: '← Voltar ao início',
         badge: 'A nossa história',

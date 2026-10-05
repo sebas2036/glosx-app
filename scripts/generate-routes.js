@@ -1628,3 +1628,7 @@ routesToGenerate.forEach(route => {
 });
 
 console.log('All routes generated successfully!');
+
+// Marca: une WoW Train con glosx.app en títulos y datos estructurados (idempotente)
+require('./apply-brand-title').run();
+require('./apply-brand-schema').run();

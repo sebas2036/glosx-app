@@ -226,3 +226,7 @@ for (const lang of Object.keys(LANGS)) {
 }
 
 console.log('OK  home i18n regenerada (index.html EN no se reescribe)');
+
+// Marca: une WoW Train con glosx.app en títulos y datos estructurados (idempotente)
+require('./apply-brand-title').run();
+require('./apply-brand-schema').run();

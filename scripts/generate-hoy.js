@@ -174,3 +174,7 @@ for (const lang of Object.keys(META)) {
   fs.writeFileSync(out, page(lang));
   console.log('OK ', path.relative(ROOT, out), fs.statSync(out).size, 'bytes');
 }
+
+// Marca: une WoW Train con glosx.app en títulos y datos estructurados (idempotente)
+require('./apply-brand-title').run();
+require('./apply-brand-schema').run();

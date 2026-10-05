@@ -262,3 +262,7 @@ ${ld}
 }
 
 LANGS.forEach(build);
+
+// Marca: une WoW Train con glosx.app en títulos y datos estructurados (idempotente)
+require('./apply-brand-title').run();
+require('./apply-brand-schema').run();
