@@ -597,7 +597,7 @@ body.home-v2 #exploreRoutesMore .explore-route-pill:hover::before { background: 
 
 /* selector de region Europa / Japon (encima de las pestanas del buscador) */
 body.home-v2 .region-switch {
-  display: inline-flex; gap: 4px; padding: 4px; margin: 0 0 12px;
+  display: inline-flex; gap: 4px; padding: 4px; margin: 0;
   background: rgba(20,22,24,.55); border-radius: 999px;
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
 }
@@ -611,4 +611,11 @@ body.home-v2 .region-btn.on { background: #fff; color: #C10016; }
 body.home-v2 .region-btn:focus-visible { outline: 3px solid #C10016; outline-offset: 2px; }
 @media (max-width: 760px) {
   body.home-v2 .region-btn { padding: 8px 16px; font-size: 13px; }
+}
+
+/* el selector Europa / Japon va dentro de la misma fila que las pestanas */
+body.home-v2 .search-tabs .region-switch { align-self: center; margin: 0 8px 4px; flex: 0 0 auto; }
+@media (max-width: 760px) {
+  body.home-v2 .search-tabs .region-switch { margin: 0 4px 2px; }
+  body.home-v2 .search-tabs .region-btn { padding: 7px 12px; }
 }
