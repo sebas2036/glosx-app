@@ -12,7 +12,7 @@ body.home-v2 .hero-title-card::before {
   background-attachment: scroll;
   background-image:
     linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.42) 30%, rgba(10,12,14,.12) 55%, rgba(10,12,14,.55) 100%),
-    url('/assets/img/hero/home-bala-2000.webp');
+    url('/assets/img/hero/home-tren-2000.webp');
   background-size: cover;
   background-position: center 40%;
   mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
@@ -22,7 +22,7 @@ body.home-v2 .hero-title-card::before {
   body.home-v2 .hero-title-card::before {
     background-image:
       linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.42) 30%, rgba(10,12,14,.12) 55%, rgba(10,12,14,.55) 100%),
-      url('/assets/img/hero/home-bala-1000.webp');
+      url('/assets/img/hero/home-tren-1000.webp');
   }
 }
 
@@ -79,7 +79,7 @@ body.home-v2 .hero-title-card::before {
   background-image:
     linear-gradient(90deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.1) 60%, rgba(10,12,14,0) 100%),
     linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.38) 30%, rgba(10,12,14,.1) 55%, rgba(10,12,14,.5) 100%),
-    url('/assets/img/hero/home-bala-2000.webp');
+    url('/assets/img/hero/home-tren-2000.webp');
 }
 
 /* --- buscador en forma de billete, sube sobre el borde inferior de la foto --- */
@@ -124,14 +124,14 @@ body.home-v2 .hero-title-card::before {
   background-image:
     radial-gradient(ellipse 70% 60% at 50% 42%, rgba(10,12,14,.5) 0%, rgba(10,12,14,0) 100%),
     linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.38) 30%, rgba(10,12,14,.1) 55%, rgba(10,12,14,.5) 100%),
-    url('/assets/img/hero/home-bala-2000.webp');
+    url('/assets/img/hero/home-tren-2000.webp');
 }
 @media (max-width: 760px) {
   body.home-v2 .hero-title-card::before {
     background-image:
       radial-gradient(ellipse 90% 60% at 50% 42%, rgba(10,12,14,.5) 0%, rgba(10,12,14,0) 100%),
       linear-gradient(180deg, rgba(10,12,14,.74) 0%, rgba(10,12,14,.38) 30%, rgba(10,12,14,.1) 55%, rgba(10,12,14,.5) 100%),
-      url('/assets/img/hero/home-bala-1000.webp');
+      url('/assets/img/hero/home-tren-1000.webp');
   }
 }
 
@@ -167,20 +167,21 @@ body.home-v2 .hero-title-card {
 }
 body.home-v2 .hero-title-card::before {
   background-image:
+    radial-gradient(ellipse 48% 30% at 50% 46%, rgba(10,12,14,.5) 0%, rgba(10,12,14,0) 100%),
     linear-gradient(180deg, rgba(10,12,14,.62) 0%, rgba(10,12,14,.22) 55%, rgba(10,12,14,.38) 100%),
-    url('/assets/img/hero/home-bala-2000.webp');
-  /* el tren queda en la parte baja de la foto, debajo del título, para que el texto no se apoye sobre el blanco del tren */
-  background-position: center 0%;
+    url('/assets/img/hero/home-tren-2000.webp');
+  /* foto recortada para que se vea la trompa del tren completa; el velo cuida el contraste del título */
+  background-position: center 62%;
   mask-image: none; -webkit-mask-image: none;
 }
 @media (max-width: 760px) {
   body.home-v2 .hero-title-card { min-height: 0; padding: 120px 5vw 130px; }
   body.home-v2 .hero-title-card::before {
     background-image:
-      radial-gradient(ellipse 120% 36% at 50% 52%, rgba(10,12,14,.8) 0%, rgba(10,12,14,.5) 60%, rgba(10,12,14,0) 100%),
+      radial-gradient(ellipse 110% 34% at 50% 50%, rgba(10,12,14,.62) 0%, rgba(10,12,14,.38) 60%, rgba(10,12,14,0) 100%),
       linear-gradient(180deg, rgba(10,12,14,.62) 0%, rgba(10,12,14,.22) 55%, rgba(10,12,14,.38) 100%),
-      url('/assets/img/hero/home-bala-1000.webp');
-    background-size: auto 128%; background-position: 28% 0%;
+      url('/assets/img/hero/home-tren-1000.webp');
+    background-position: 6% 100%;
   }
 }
 body.home-v2 #aiPlanner { margin-top: -104px; padding-left: 5vw; padding-right: 5vw; }
