@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-loco-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-loco-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=28" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=29" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -356,6 +356,10 @@
     <div class="ai-planner-header" style="display:none;"></div>
 
     <div class="search-shell">
+      <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
+        <button type="button" class="region-btn on" data-region="europe" aria-pressed="true">Europe</button>
+        <button type="button" class="region-btn" data-region="japan" aria-pressed="false">Japan</button>
+      </div>
       <div class="search-tabs" role="tablist" aria-label="Search">
         <button type="button" class="search-tab on" role="tab" aria-selected="true" data-tab="ai" data-i18n="tab_ai">Planificateur IA</button>
         <button type="button" class="search-tab" role="tab" aria-selected="false" data-tab="roulette" data-i18n="tab_roulette">Roulette des destinations</button>
@@ -1204,6 +1208,7 @@
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
   <script src="/assets/js/main.min.js?v=41" defer></script>
+  <script src="/assets/js/japan.js?v=2" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
