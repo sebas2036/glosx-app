@@ -3,7 +3,7 @@
 Estado al 05-oct-2026: el modo Japón del buscador está en vivo (196 pares, enlaces de Klook con marker 734304, duración y tren por par). Lo de SEO se dejó aparte, a propósito.
 
 ## Lote 1 publicado (05-oct-2026, commit 7a1214aa)
-Tokio-Kioto, Tokio-Osaka, Osaka-Kioto, Kioto-Hiroshima y Narita-Tokio, en EN/ES/FR/IT. Generador: `scripts/generate-routes-japan.js` (texto propio por ruta, sin precios). Enlazadas desde /rutas/, en el sitemap y avisadas a la Indexing API (20 URLs OK). Falta: foto de portada propia (hoy solo degradado), recheck en Search Console ~19-oct y decidir lote 2.
+Tokio-Kioto, Tokio-Osaka, Osaka-Kioto, Kioto-Hiroshima y Narita-Tokio, en EN/ES/FR/IT. Generador: `scripts/generate-routes-japan.js` (texto propio por ruta, sin precios). Enlazadas desde /rutas/, en el sitemap y avisadas a la Indexing API (20 URLs OK). Portadas Pexels aplicadas (23345456, 27666787, 31385483, 7204890, 23344538). Falta: recheck en Search Console ~19-oct y decidir lote 2.
 
 ## Regla principal
 No generar 100 páginas de golpe. El 04-oct había 131 URLs sin indexar y las páginas finas lo empeoran. Hacer 10-15 páginas con contenido real y luego medir.

@@ -37,7 +37,7 @@ const UI = {
 
 const ROUTES = [
   {
-    slug: 'tokyo-kyoto', fromKey: 'tokyo', toKey: 'kyoto',
+    slug: 'tokyo-kyoto', photo: 23345456, fromKey: 'tokyo', toKey: 'kyoto',
     from: { en: 'Tokyo', es: 'Tokio', fr: 'Tokyo', it: 'Tokyo' },
     to: { en: 'Kyoto', es: 'Kioto', fr: 'Kyoto', it: 'Kyoto' },
     seo: {
@@ -86,7 +86,7 @@ const ROUTES = [
     }
   },
   {
-    slug: 'tokyo-osaka', fromKey: 'tokyo', toKey: 'osaka',
+    slug: 'tokyo-osaka', photo: 27666787, fromKey: 'tokyo', toKey: 'osaka',
     from: { en: 'Tokyo', es: 'Tokio', fr: 'Tokyo', it: 'Tokyo' },
     to: { en: 'Osaka', es: 'Osaka', fr: 'Osaka', it: 'Osaka' },
     seo: {
@@ -135,7 +135,7 @@ const ROUTES = [
     }
   },
   {
-    slug: 'osaka-kyoto', fromKey: 'osaka', toKey: 'kyoto',
+    slug: 'osaka-kyoto', photo: 31385483, fromKey: 'osaka', toKey: 'kyoto',
     from: { en: 'Osaka', es: 'Osaka', fr: 'Osaka', it: 'Osaka' },
     to: { en: 'Kyoto', es: 'Kioto', fr: 'Kyoto', it: 'Kyoto' },
     seo: {
@@ -184,7 +184,7 @@ const ROUTES = [
     }
   },
   {
-    slug: 'kyoto-hiroshima', fromKey: 'kyoto', toKey: 'hiroshima',
+    slug: 'kyoto-hiroshima', photo: 7204890, fromKey: 'kyoto', toKey: 'hiroshima',
     from: { en: 'Kyoto', es: 'Kioto', fr: 'Kyoto', it: 'Kyoto' },
     to: { en: 'Hiroshima', es: 'Hiroshima', fr: 'Hiroshima', it: 'Hiroshima' },
     seo: {
@@ -233,7 +233,7 @@ const ROUTES = [
     }
   },
   {
-    slug: 'narita-tokyo', fromKey: 'narita', toKey: 'tokyo',
+    slug: 'narita-tokyo', photo: 23344538, fromKey: 'narita', toKey: 'tokyo',
     from: { en: 'Narita Airport', es: 'Aeropuerto de Narita', fr: 'Aéroport de Narita', it: 'Aeroporto di Narita' },
     to: { en: 'Tokyo', es: 'Tokio', fr: 'Tokyo', it: 'Tokyo' },
     seo: {
@@ -381,8 +381,8 @@ function render(r, lang) {
     '{{badge}}': u.badge, '{{mainTitle}}': esc(`${r.from[lang]} → ${r.to[lang]}`), '{{metaText}}': u.meta
   };
   let html = head + mainHtml(r, lang) + tail;
-  // Sin foto de portada propia todavía: el degradado cálido del hero queda solo (no se usa una foto de Europa).
-  html = html.replace(", url('{{heroImage}}')", '');
+  const hero = `https://images.pexels.com/photos/${r.photo}/pexels-photo-${r.photo}.jpeg?auto=compress&cs=tinysrgb&w=1600`;
+  html = html.split('{{heroImage}}').join(hero);
   for (const [k, v] of Object.entries(map)) html = html.split(k).join(v);
   return html;
 }
