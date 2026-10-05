@@ -39,7 +39,7 @@ body.home-v2 .hero-badge {
 }
 
 body.home-v2 .hero-title-card h1 {
-  font-size: clamp(36px, 5.4vw, 78px) !important;
+  font-size: clamp(36px, 4.2vw, 60px) !important;
   line-height: 1.02; letter-spacing: -.02em; font-weight: 700;
   max-width: 15ch; margin: 14px 0 0; text-align: left;
   text-shadow: 0 2px 6px rgba(0,0,0,.55), 0 2px 28px rgba(0,0,0,.6) !important;
