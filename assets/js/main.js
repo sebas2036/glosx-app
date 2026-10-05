@@ -3249,6 +3249,10 @@
   window.invertAIRoute = invertAIRoute;
   window.showDemoRoute = showDemoRoute;
   window.previewFromInput = previewFromInput;
+  // Para modos que arman recorridos de varios tramos sin pasar por el planificador (ej. Japón)
+  window.glosxShowRoute = function (fromLabel, toLabel, legs) {
+    displayAIRoute(buildPairRoute(fromLabel, toLabel, legs), { compact: true, fromRoulette: false });
+  };
 
   function cityRouletteLabel(slug) {
     const lang = document.documentElement.lang || 'en';

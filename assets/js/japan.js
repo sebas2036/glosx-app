@@ -14,12 +14,12 @@
   var ROUTES = [["aomori","hachinohe"],["aomori","hirosaki"],["aomori","shinhakodatehokuto"],["asakusa","kinugawaonsen"],["asakusa","nikko"],["atami","ito"],["atami","mishima"],["atami","shizuoka"],["beppu","kokura"],["beppu","oita"],["beppu","yufuin"],["fukuoka","beppu"],["fukuoka","hita"],["fukuoka","huistenbosch"],["fukuoka","kagoshima"],["fukuoka","kokura"],["fukuoka","kumamoto"],["fukuoka","kurume"],["fukuoka","nakatsu"],["fukuoka","oita"],["fukuoka","saga"],["fukuoka","shinyamaguchi"],["fukuoka","takeoonsen"],["fukuoka","yufuin"],["hakodate","noboribetsu"],["hakodate","sapporo"],["hakodate","shinhakodatehokuto"],["hiroshima","fukuoka"],["hiroshima","fukuyama"],["hiroshima","himeji"],["hiroshima","kokura"],["hiroshima","kumamoto"],["hiroshima","okayama"],["hiroshima","onomichi"],["hiroshima","shinyamaguchi"],["kanazawa","fukui"],["kanazawa","kagaonsen"],["kanazawa","komatsu"],["kanazawa","nagano"],["kanazawa","nanao"],["kanazawa","toyama"],["kanazawa","tsuruga"],["kanazawa","ueda"],["kansaiairport","kyoto"],["kansaiairport","osaka"],["kansaiairport","tennoji"],["kyoto","fukuchiyama"],["kyoto","gifu"],["kyoto","himeji"],["kyoto","hiroshima"],["kyoto","kinosaki"],["kyoto","maibara"],["kyoto","nagoya"],["kyoto","okayama"],["kyoto","tsuruga"],["kyoto","wakayama"],["mishima","shinfuji"],["mishima","shizuoka"],["morioka","akita"],["morioka","aomori"],["morioka","hachinohe"],["morioka","shinhanamaki"],["nagano","karuizawa"],["nagano","matsumoto"],["nagano","toyama"],["nagano","ueda"],["nagoya","gifu"],["nagoya","hamamatsu"],["nagoya","himeji"],["nagoya","hiroshima"],["nagoya","maibara"],["nagoya","matsumoto"],["nagoya","nagano"],["nagoya","okayama"],["nagoya","shizuoka"],["nagoya","takayama"],["nagoya","toyama"],["nagoya","toyohashi"],["naritaairport","shinagawa"],["naritaairport","tokyo"],["naritaairport","yokohama"],["niigata","akita"],["niigata","joetsumyoko"],["niigata","murakami"],["niigata","nagaoka"],["odawara","atami"],["odawara","shizuoka"],["okayama","fukuoka"],["okayama","fukuyama"],["okayama","himeji"],["okayama","kurashiki"],["okayama","matsue"],["okayama","yonago"],["osaka","fukuchiyama"],["osaka","fukuoka"],["osaka","fukuyama"],["osaka","hamamatsu"],["osaka","himeji"],["osaka","hiroshima"],["osaka","kagoshima"],["osaka","kiitanabe"],["osaka","kinosaki"],["osaka","kobe"],["osaka","kokura"],["osaka","kumamoto"],["osaka","kyoto"],["osaka","maibara"],["osaka","nagoya"],["osaka","odawara"],["osaka","okayama"],["osaka","shinfuji"],["osaka","shinyamaguchi"],["osaka","shirahama"],["osaka","shizuoka"],["osaka","toyohashi"],["osaka","toyooka"],["osaka","tsuruga"],["osaka","wakayama"],["sapporo","asahikawa"],["sapporo","chitose"],["sapporo","kushiro"],["sapporo","newchitoseairport"],["sapporo","noboribetsu"],["sapporo","obihiro"],["sapporo","otaru"],["sapporo","shinsapporo"],["sapporo","tomakomai"],["sapporo","wakkanai"],["sendai","akita"],["sendai","aomori"],["sendai","fukushima"],["sendai","hachinohe"],["sendai","ichinoseki"],["sendai","koriyama"],["sendai","morioka"],["shinjuku","hakone"],["shinjuku","kawaguchiko"],["shinjuku","kofu"],["shinjuku","matsumoto"],["shinjuku","naritaairport"],["shinjuku","odawara"],["shinjuku","otsuki"],["shinyokohama","atami"],["shinyokohama","kyoto"],["shinyokohama","mishima"],["shinyokohama","nagoya"],["shinyokohama","odawara"],["shinyokohama","osaka"],["takayama","gero"],["takayama","gifu"],["takayama","hidafurukawa"],["takayama","toyama"],["tokyo","akita"],["tokyo","aomori"],["tokyo","atami"],["tokyo","fukuoka"],["tokyo","fukushima"],["tokyo","fukuyama"],["tokyo","hachinohe"],["tokyo","hamamatsu"],["tokyo","himeji"],["tokyo","hiroshima"],["tokyo","ichinoseki"],["tokyo","ito"],["tokyo","kanazawa"],["tokyo","karuizawa"],["tokyo","kobe"],["tokyo","kokura"],["tokyo","kyoto"],["tokyo","maibara"],["tokyo","matsumoto"],["tokyo","mishima"],["tokyo","mito"],["tokyo","morioka"],["tokyo","nagano"],["tokyo","nagaoka"],["tokyo","nagoya"],["tokyo","niigata"],["tokyo","odawara"],["tokyo","okayama"],["tokyo","osaka"],["tokyo","sendai"],["tokyo","shinfuji"],["tokyo","shinhakodatehokuto"],["tokyo","shinyamaguchi"],["tokyo","shinyokohama"],["tokyo","shizuoka"],["tokyo","takasaki"],["tokyo","toyama"],["tokyo","toyohashi"],["tokyo","ueda"],["tokyo","utsunomiya"],["tokyo","yamagata"],["tokyo","yokohama"],["utsunomiya","fukushima"],["utsunomiya","nasushiobara"]];
 
   var I18N = {
-    en: { europe: 'Europe', japan: 'Japan', aria: 'Region', two: 'Enter two cities: where you start and where you end.', ph: 'Example: Tokyo to Kyoto', nopair: 'Pick one of the popular routes, or try another pair of Japanese cities.' },
-    es: { europe: 'Europa', japan: 'Japón', aria: 'Región', two: 'Escribe dos ciudades: origen y destino.', ph: 'Ejemplo: Tokio a Kioto', nopair: 'Elige una de las rutas populares o prueba otro par de ciudades japonesas.' },
-    fr: { europe: 'Europe', japan: 'Japon', aria: 'Région', two: 'Indiquez deux villes : départ et arrivée.', ph: 'Exemple : Tokyo à Kyoto', nopair: 'Choisissez l’une des routes populaires ou essayez une autre paire de villes japonaises.' },
-    it: { europe: 'Europa', japan: 'Giappone', aria: 'Regione', two: 'Scrivi due città: partenza e arrivo.', ph: 'Esempio: Tokyo a Kyoto', nopair: 'Scegli uno dei percorsi popolari o prova un’altra coppia di città giapponesi.' },
-    de: { europe: 'Europa', japan: 'Japan', aria: 'Region', two: 'Gib zwei Städte ein: Start und Ziel.', ph: 'Beispiel: Tokio nach Kyoto', nopair: 'Wähle eine der beliebten Strecken oder probiere ein anderes Städtepaar in Japan.' },
-    pt: { europe: 'Europa', japan: 'Japão', aria: 'Região', two: 'Digite duas cidades: origem e destino.', ph: 'Exemplo: Tóquio a Quioto', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades japonesas.' }
+    en: { europe: 'Europe', japan: 'Japan', aria: 'Region', leg: 'We have no verified direct train between {a} and {b}. Try another order or pick a popular route.', two: 'Enter two or more cities, in the order you will travel.', ph: 'Example: Tokyo to Kyoto', nopair: 'Pick one of the popular routes, or try another pair of Japanese cities.' },
+    es: { europe: 'Europa', japan: 'Japón', aria: 'Región', leg: 'No tenemos un tren directo verificado entre {a} y {b}. Prueba otro orden o elige una ruta popular.', two: 'Escribe dos o más ciudades, en el orden del viaje.', ph: 'Ejemplo: Tokio a Kioto', nopair: 'Elige una de las rutas populares o prueba otro par de ciudades japonesas.' },
+    fr: { europe: 'Europe', japan: 'Japon', aria: 'Région', leg: 'Nous n’avons pas de train direct vérifié entre {a} et {b}. Essayez un autre ordre ou choisissez une route populaire.', two: 'Indiquez deux villes ou plus, dans l’ordre du voyage.', ph: 'Exemple : Tokyo à Kyoto', nopair: 'Choisissez l’une des routes populaires ou essayez une autre paire de villes japonaises.' },
+    it: { europe: 'Europa', japan: 'Giappone', aria: 'Regione', leg: 'Non abbiamo un treno diretto verificato tra {a} e {b}. Prova un altro ordine o scegli un percorso popolare.', two: 'Scrivi due o più città, nell’ordine del viaggio.', ph: 'Esempio: Tokyo a Kyoto', nopair: 'Scegli uno dei percorsi popolari o prova un’altra coppia di città giapponesi.' },
+    de: { europe: 'Europa', japan: 'Japan', aria: 'Region', leg: 'Zwischen {a} und {b} haben wir keine geprüfte Direktverbindung. Probiere eine andere Reihenfolge oder wähle eine beliebte Strecke.', two: 'Gib zwei oder mehr Städte ein, in der Reihenfolge der Reise.', ph: 'Beispiel: Tokio nach Kyoto', nopair: 'Wähle eine der beliebten Strecken oder probiere ein anderes Städtepaar in Japan.' },
+    pt: { europe: 'Europa', japan: 'Japão', aria: 'Região', leg: 'Não temos um trem direto verificado entre {a} e {b}. Tente outra ordem ou escolha uma rota popular.', two: 'Digite duas ou mais cidades, na ordem da viagem.', ph: 'Exemplo: Tóquio a Quioto', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades japonesas.' }
   };
 
   var GROUPS = [
@@ -266,7 +266,7 @@
     return order;
   }
 
-  function showMsg(key) {
+  function showMsg(key, vars) {
     var wrap = document.getElementById('aiInputWrapper');
     if (!wrap) return;
     var old = document.getElementById('aiPlannerError');
@@ -274,7 +274,9 @@
     var p = document.createElement('p');
     p.id = 'aiPlannerError';
     p.style.cssText = 'color:#C10016;font-size:15px;margin-top:16px;text-align:center;font-weight:600;';
-    p.textContent = t(key);
+    var txt = t(key);
+    if (vars) Object.keys(vars).forEach(function (k) { txt = txt.replace('{' + k + '}', vars[k]); });
+    p.textContent = txt;
     wrap.appendChild(p);
     setTimeout(function () { if (p.parentNode) p.remove(); }, 6000);
   }
@@ -283,8 +285,19 @@
   var originalGenerate = window.generateAIRoute;
   function japanGenerate() {
     if (typeof window.previewFromInput !== 'function') return;
+    var cities = findCities(inputEl.value).slice(0, 5);
+    if (cities.length >= 3 && typeof window.glosxShowRoute === 'function') {
+      var legs = [];
+      for (var i = 0; i < cities.length - 1; i++) {
+        if (!japanPages.has(cities[i] + '-' + cities[i + 1])) {
+          return showMsg('leg', { a: displayBySlug[cities[i]], b: displayBySlug[cities[i + 1]] });
+        }
+        legs.push([displayBySlug[cities[i]], displayBySlug[cities[i + 1]]]);
+      }
+      window.glosxShowRoute(legs[0][0], legs[legs.length - 1][1], legs);
+      return;
+    }
     if (window.previewFromInput()) return; // "A a B" con conector, par verificado
-    var cities = findCities(inputEl.value);
     if (cities.length === 2) {
       inputEl.value = displayBySlug[cities[0]] + ' ' + (CONN[lang()] || 'to') + ' ' + displayBySlug[cities[1]];
       if (window.previewFromInput()) return;
@@ -326,31 +339,47 @@
     var h = Math.floor(m / 60), r = m % 60;
     return h ? (r ? h + ' h ' + r + ' min' : h + ' h') : m + ' min';
   }
-  var titleEl = document.getElementById('aiRouteTitle');
   var durEl = document.getElementById('aiRouteDuration');
   var metaEl = document.getElementById('aiRouteMeta');
+  var segsEl = document.getElementById('aiSegments');
   var infoBusy = false;
   var infoObs = null;
-  function paintInfo() {
-    if (region !== 'japan' || !titleEl || !durEl || !metaEl || infoBusy) return;
-    var c = findCities(titleEl.textContent + ' ' + metaEl.textContent);
-    var d = c.length >= 2 ? INFO[c[0] + '-' + c[1]] : null;
-    if (!d) return;
-    var tx = INFO_I18N[lang()] || INFO_I18N.en;
-    infoBusy = true;
-    durEl.textContent = tx.from.replace('{d}', fmtMin(d.m));
-    var base = metaEl.textContent.split(' · ')[0];
-    var parts = [base];
+  function trainLabel(d, tx) {
+    var parts = [];
     if (d.s) parts.push('Shinkansen');
     if (d.t.length) parts.push(d.t.join(', '));
     parts.push(tx.direct);
-    metaEl.textContent = parts.join(' · ');
-    infoObs.takeRecords();
+    return parts.join(' · ');
+  }
+  function paintInfo() {
+    if (region !== 'japan' || !segsEl || infoBusy) return;
+    var segs = segsEl.querySelectorAll('.ai-segment');
+    if (!segs.length) return;
+    var tx = INFO_I18N[lang()] || INFO_I18N.en;
+    infoBusy = true;
+    var total = 0, all = true, first = null;
+    Array.prototype.forEach.call(segs, function (seg) {
+      var r = seg.querySelector('.ai-segment-route');
+      var c = r ? findCities(r.textContent) : [];
+      var d = c.length >= 2 ? INFO[c[0] + '-' + c[1]] : null;
+      if (!d) { all = false; return; }
+      if (!first) first = d;
+      total += d.m;
+      var tm = seg.querySelector('.ai-segment-time');
+      if (tm) tm.textContent = tx.from.replace('{d}', fmtMin(d.m));
+      var tr = seg.querySelector('.ai-segment-train');
+      if (tr) tr.textContent = trainLabel(d, tx);
+    });
+    if (all && durEl) durEl.textContent = tx.from.replace('{d}', fmtMin(total));
+    if (all && segs.length === 1 && metaEl && first) {
+      metaEl.textContent = metaEl.textContent.split(' · ')[0] + ' · ' + trainLabel(first, tx);
+    }
+    if (infoObs) infoObs.takeRecords();
     infoBusy = false;
   }
-  if (titleEl && durEl && metaEl) {
+  if (segsEl) {
     infoObs = new MutationObserver(paintInfo);
-    [titleEl, durEl, metaEl].forEach(function (el) { infoObs.observe(el, { childList: true, characterData: true, subtree: true }); });
+    infoObs.observe(segsEl, { childList: true, characterData: true, subtree: true });
   }
 
   switchEl.addEventListener('click', function (e) {
