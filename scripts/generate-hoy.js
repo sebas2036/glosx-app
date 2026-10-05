@@ -130,7 +130,7 @@ function page(lang) {
 </head>
 <body>
   <nav>
-    <a href="${meta.home}" class="nav-logo" style="font-size:24px;display:inline-flex;align-items:baseline;gap:0;font-weight:800;letter-spacing:-0.3px;"><span style="color:#14151a;">Wo</span><span style="color:#C10016;font-style:italic;font-weight:900;margin:0 -0.04em;">W</span><span style="color:#14151a;margin-left:0.28em;">Train</span></a>
+    ${require('./apply-logo').MARKUP(meta.home)}
     <div class="nav-links" id="navLinks" style="display:flex;gap:18px;align-items:center;">
       <a href="${meta.home}" data-i18n="hoy_home">${esc(t.hoy_home)}</a>
       <a href="/rutas/" data-i18n="hoy_more">${esc(t.hoy_more)}</a>

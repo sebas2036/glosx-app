@@ -642,3 +642,30 @@ body.home-v2 .search-card .ai-segments:not(:has(> .ai-segment:only-child)) .ai-s
   grid-column: 1; grid-row: auto; justify-self: stretch; width: 100%; box-sizing: border-box;
   white-space: normal; text-align: center; padding: 12px 16px; line-height: 1.25;
 }
+
+/* Logo nuevo (propuesta A): icono de ruta + nombre en una línea */
+.wt-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.wt-logo-icon { flex: 0 0 auto; display: block; }
+.wt-logo-word { font-size: 24px; line-height: 1; letter-spacing: -.04em; color: #14151a; white-space: nowrap; }
+.wt-logo-word b { font-weight: 700; }
+.wt-logo-word i { font-style: normal; font-weight: 300; }
+body.home-v2 nav:not(.scrolled) .wt-logo .wt-logo-word { color: #fff !important; }
+@media (max-width: 760px) { .wt-logo-word { font-size: 21px; } .wt-logo-icon { width: 28px; height: 28px; } }
+
+/* Modo Japón: la portada cambia a un Shinkansen (la foto del tren de Europa queda para Europa) */
+body.home-v2[data-region="japan"] .hero-title-card::before {
+  background-image:
+    radial-gradient(ellipse 48% 30% at 50% 46%, rgba(10,12,14,.55) 0%, rgba(10,12,14,0) 100%),
+    linear-gradient(180deg, rgba(10,12,14,.66) 0%, rgba(10,12,14,.36) 55%, rgba(10,12,14,.5) 100%),
+    url('/assets/img/hero/home-japon-2000.webp');
+  background-position: center 40%;
+}
+@media (max-width: 760px) {
+  body.home-v2[data-region="japan"] .hero-title-card::before {
+    background-image:
+      radial-gradient(ellipse 110% 34% at 50% 50%, rgba(10,12,14,.62) 0%, rgba(10,12,14,.38) 60%, rgba(10,12,14,0) 100%),
+      linear-gradient(180deg, rgba(10,12,14,.66) 0%, rgba(10,12,14,.36) 55%, rgba(10,12,14,.5) 100%),
+      url('/assets/img/hero/home-japon-1000.webp');
+    background-position: 30% 100%;
+  }
+}

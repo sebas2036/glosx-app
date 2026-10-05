@@ -174,7 +174,7 @@ function body(l) {
   const pre = l === 'en' ? '' : `/${l}`;
   return `<body>
   <nav>
-    <a href="/" class="nav-logo">WoW Train</a>
+    ${require('./apply-logo').MARKUP('/')}
     <div class="nav-right">
       ${langSwitch(l)}
       <a href="${pre}/blog.html" class="nav-back">← ${c.back}</a>
