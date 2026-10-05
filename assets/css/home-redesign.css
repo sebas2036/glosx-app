@@ -657,15 +657,15 @@ body.home-v2[data-region="japan"] .hero-title-card::before {
   background-image:
     radial-gradient(ellipse 48% 30% at 50% 46%, rgba(10,12,14,.55) 0%, rgba(10,12,14,0) 100%),
     linear-gradient(180deg, rgba(10,12,14,.66) 0%, rgba(10,12,14,.36) 55%, rgba(10,12,14,.5) 100%),
-    url('/assets/img/hero/home-japon-2000.webp');
-  background-position: center 40%;
+    url('/assets/img/hero/home-japon-lejos-2000.webp');
+  background-position: center 50%;
 }
 @media (max-width: 760px) {
   body.home-v2[data-region="japan"] .hero-title-card::before {
     background-image:
       radial-gradient(ellipse 110% 34% at 50% 50%, rgba(10,12,14,.62) 0%, rgba(10,12,14,.38) 60%, rgba(10,12,14,0) 100%),
       linear-gradient(180deg, rgba(10,12,14,.66) 0%, rgba(10,12,14,.36) 55%, rgba(10,12,14,.5) 100%),
-      url('/assets/img/hero/home-japon-1000.webp');
-    background-position: 30% 100%;
+      url('/assets/img/hero/home-japon-lejos-1000.webp');
+    background-position: 95% 100%;
   }
 }
