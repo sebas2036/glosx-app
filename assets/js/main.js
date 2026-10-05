@@ -3135,6 +3135,8 @@
   }
 
   function showDemoRoute() {
+    // Sin ruta de ejemplo por defecto (decisión del 05-oct-2026): el resultado aparece solo cuando la persona arma su viaje.
+    return;
     if (!document.getElementById('aiResults')) return;
     const lang = document.documentElement.lang || 'en';
     const data = DEMO_ROUTES[lang] || DEMO_ROUTES.en;
