@@ -3,6 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- glosxEarlyLang: el idioma se decide antes de bajar estilos e imágenes. Misma regla que main.js
+       (elección manual > ?lang > idioma del equipo); solo actúa en la portada en inglés (/), y nunca con
+       buscadores, que siguen viendo / en inglés. Evita cargar dos portadas a quien usa es/fr/it. -->
+  <script>
+    (function () {
+      try {
+        var p = location.pathname;
+        if (p !== '/' && p !== '/index.html') return;
+        if (/googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|facebookexternalhit|twitterbot|linkedinbot|applebot|gptbot|chatgpt|claudebot|anthropic|bytespider|ccbot/i.test(navigator.userAgent || '')) return;
+        var known = { en: 1, es: 1, fr: 1, de: 1, it: 1, pt: 1 }, lang = null;
+        if (localStorage.getItem('glosx_lang_manual') === '1') {
+          var saved = localStorage.getItem('glosx_lang');
+          if (saved && known[saved]) lang = saved;
+        }
+        if (!lang) {
+          var q = new URLSearchParams(location.search).get('lang');
+          if (q && known[q]) lang = q;
+        }
+        if (!lang) {
+          var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+          for (var i = 0; i < list.length; i++) {
+            var c = String(list[i] || '').split('-')[0].toLowerCase();
+            if (known[c]) { lang = c; break; }
+          }
+        }
+        if (lang === 'es' || lang === 'fr' || lang === 'it') location.replace('/' + lang + '/' + location.search + location.hash);
+      } catch (e) {}
+    })();
+  </script>
   <!-- CSS render-blocking lo mas arriba posible: antes estaba casi al final
        del head (linea ~202), detras de JSON-LD y varios scripts, retrasando
        cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
