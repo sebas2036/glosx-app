@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=47" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=48" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -1372,5 +1372,21 @@
   document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('#countries a')) show('ai'); }, true);
 })();
 </script>
+  <script>
+    // Portada: marca las secciones bajo el pliegue cuando se acercan a la pantalla, para cargar
+    // sus fotos de fondo recién entonces (ver home-redesign.css, .is-near). Si algo falla, a los
+    // 4 s de la carga se marcan todas igual, así nunca quedan sin foto.
+    (function () {
+      var ids = ['scenic', 'discover', 'adventure', 'download'];
+      var els = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+      function near(el) { el.classList.add('is-near'); }
+      if (!('IntersectionObserver' in window)) { els.forEach(near); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { near(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '300px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+      window.addEventListener('load', function () { setTimeout(function () { els.forEach(near); }, 4000); });
+    })();
+  </script>
 </body>
 </html>

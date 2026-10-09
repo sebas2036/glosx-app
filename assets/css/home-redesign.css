@@ -710,3 +710,10 @@ body.home-v2 #features, body.home-v2 #guides, body.home-v2 #faq, body.home-v2 #d
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
 }
+/* Fotos de fondo bajo el pliegue: se piden recién cuando la sección se acerca a la pantalla
+   (clase .is-near que pone un IntersectionObserver en la portada). */
+body.home-v2 #scenic:not(.is-near) .scenic-photo,
+body.home-v2 #scenic:not(.is-near) .scenic-feature,
+body.home-v2 #discover:not(.is-near) .discover-card,
+body.home-v2 #adventure:not(.is-near) .wt-route-btn::before,
+body.home-v2 #download:not(.is-near) { background-image: none !important; }
