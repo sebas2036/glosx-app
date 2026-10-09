@@ -681,3 +681,24 @@ body.home-v2 .wt-timeline-wrap[data-route="jp-alps"] .wt-timeline-head { backgro
 body.home-v2 .wt-timeline-wrap[data-route="jp-kyushu"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/jp-yufuin.webp'); }
 body.home-v2 .jp-tl { position: relative; z-index: 1; padding: 28px 34px 20px; }
 @media (max-width: 600px) { body.home-v2 .jp-tl { padding: 22px 18px 16px; } }
+
+/* ===== Arreglos de móvil (09-oct-2026) ===== */
+/* Menú hamburguesa abierto: fondo blanco con textos oscuros y legibles (antes heredaban el blanco del hero) */
+@media (max-width: 1299px) {
+  body.home-v2 nav .nav-links.show a:not(.nav-cta) { color: #14151a !important; text-shadow: none !important; }
+  body.home-v2 nav .nav-links.show a.nav-cta { color: #C10016 !important; border-color: #C10016 !important; background: #fff !important; }
+  body.home-v2 nav .nav-links.show .partners-wrapper { width: 100%; border-bottom: 1px solid var(--border); }
+  body.home-v2 nav .nav-links.show .partners-wrapper > a { display: block; border-bottom: 0; }
+  body.home-v2 nav .nav-links.show .lang-btn { color: #14151a !important; }
+}
+/* Icono de la hamburguesa visible sobre la foto */
+body.home-v2 nav:not(.scrolled) .nav-toggle svg { stroke: #fff; }
+@media (max-width: 600px) {
+  /* Logo y hamburguesa dentro de la tarjeta de la portada, no pegados a su borde */
+  body.home-v2 nav:not(.scrolled) { padding-left: 32px; padding-right: 32px; }
+  /* Pestañas del buscador: Europa/Japón en su propia fila y las tres pestañas repartidas, sin cortarse */
+  body.home-v2 .search-tabs { flex-wrap: wrap; overflow: visible; }
+  body.home-v2 .search-tabs .region-switch { order: -1; flex: 0 0 100%; width: 100%; display: flex; margin: 0 0 10px; }
+  body.home-v2 .search-tabs .region-switch .region-btn { flex: 1 1 0; text-align: center; padding: 9px 10px; }
+  body.home-v2 .search-tabs .search-tab { flex: 1 1 0; min-width: 0; white-space: normal; text-align: center; line-height: 1.2; padding: 10px 6px; font-size: 12.5px; }
+}
