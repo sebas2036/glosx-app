@@ -2884,6 +2884,8 @@
     if (!compact) {
     const ctaVideo = document.querySelector('.ai-cta-video-el');
     if (ctaVideo) {
+      // el póster se carga recién al mostrar el video (antes se bajaba en la carga inicial y competía con la foto del hero)
+      if (ctaVideo.dataset.poster) { ctaVideo.poster = ctaVideo.dataset.poster; ctaVideo.removeAttribute('data-poster'); }
       const ctaSource = ctaVideo.querySelector('source[data-src]');
       if (ctaSource) {
         ctaSource.src = ctaSource.getAttribute('data-src');

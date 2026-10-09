@@ -702,3 +702,11 @@ body.home-v2 nav:not(.scrolled) .nav-toggle svg { stroke: #fff; }
   body.home-v2 .search-tabs .region-switch .region-btn { flex: 1 1 0; text-align: center; padding: 9px 10px; }
   body.home-v2 .search-tabs .search-tab { flex: 1 1 0; min-width: 0; white-space: normal; text-align: center; line-height: 1.2; padding: 10px 6px; font-size: 12.5px; }
 }
+
+/* Rendimiento móvil: las secciones bajo el pliegue no se pintan (ni bajan sus fotos de fondo)
+   hasta acercarse a la pantalla, para no competir con la foto del hero en la primera carga. */
+body.home-v2 #scenic, body.home-v2 #adventure, body.home-v2 #partners, body.home-v2 #discover,
+body.home-v2 #features, body.home-v2 #guides, body.home-v2 #faq, body.home-v2 #download {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}

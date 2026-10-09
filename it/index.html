@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=46" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=47" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -589,7 +589,7 @@
 
       <button class="ai-copy-btn" onclick="copyTripPlan()" id="tripCopyBtn" data-i18n="modal_copy_btn">Copia itinerario</button>
       <div class="ai-cta-video">
-        <video class="ai-cta-video-el" autoplay muted loop playsinline preload="none" poster="/assets/video/planner-cta-poster.jpg">
+        <video class="ai-cta-video-el" autoplay muted loop playsinline preload="none" data-poster="/assets/video/planner-cta-poster.jpg">
           <source data-src="/assets/video/planner-cta.mp4" type="video/mp4">
         </video>
         <button class="ai-reset-btn-video" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ Crea un'altra route</button>
@@ -1227,7 +1227,7 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=43" defer></script>
+  <script src="/assets/js/main.min.js?v=44" defer></script>
   <script src="/assets/js/japan.js?v=9" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
