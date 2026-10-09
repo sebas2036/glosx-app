@@ -1495,13 +1495,13 @@
     }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) visible[e.target.id] = true; else delete visible[e.target.id];
+        // la posición la da el propio IntersectionObserver: leer getBoundingClientRect acá forzaba
+        // un recálculo de diseño de toda la página en la carga (~400 ms en móvil según PageSpeed)
+        if (e.isIntersecting) visible[e.target.id] = e.boundingClientRect.top; else delete visible[e.target.id];
       });
       var current = null, minTop = Infinity;
       Object.keys(visible).forEach(function (id) {
-        var el = document.getElementById(id);
-        if (!el) return;
-        var top = el.getBoundingClientRect().top;
+        var top = visible[id];
         if (top < minTop) { minTop = top; current = id; }
       });
       if (current) setActive(current); else setActive('');
