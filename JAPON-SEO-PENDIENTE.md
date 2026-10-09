@@ -5,6 +5,9 @@ Estado al 05-oct-2026: el modo Japón del buscador está en vivo (196 pares, enl
 ## Lote 1 publicado (05-oct-2026, commit 7a1214aa)
 Tokio-Kioto, Tokio-Osaka, Osaka-Kioto, Kioto-Hiroshima y Narita-Tokio, en EN/ES/FR/IT. Generador: `scripts/generate-routes-japan.js` (texto propio por ruta, sin precios). Enlazadas desde /rutas/, en el sitemap y avisadas a la Indexing API (20 URLs OK). Portadas Pexels aplicadas (23345456, 27666787, 31385483, 7204890, 23344538). Falta: recheck en Search Console ~19-oct y decidir lote 2.
 
+## Lote 2 publicado (09-oct-2026, commit 51823bd2)
+Tokio-Nagoya, Tokio-Kanazawa, Aeropuerto de Kansai-Kioto, Tokio-Hiroshima, Tokio-Fukuoka, Nagoya-Takayama, Sapporo-Otaru, Tokio-Sendai, Shinjuku-Hakone y Fukuoka-Yufuin (EN/ES/FR/IT). Datos en `scripts/routes-japan-lote2.js`. Publicado antes del recheck de Search Console por decisión del usuario; 40 URLs + /rutas/ avisadas a la Indexing API y sitemap reenviado. Total: 15 rutas de Japón (60 páginas). Revisar indexación de ambos lotes ~19-oct.
+
 ## Regla principal
 No generar 100 páginas de golpe. El 04-oct había 131 URLs sin indexar y las páginas finas lo empeoran. Hacer 10-15 páginas con contenido real y luego medir.
 
