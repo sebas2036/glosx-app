@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=48" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=49" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -428,17 +428,17 @@
     <div class="ai-planner-header" style="display:none;"></div>
 
     <div class="search-shell">
-      <div class="search-tabs" role="tablist" aria-label="Search">
-        <button type="button" class="search-tab on" role="tab" aria-selected="true" data-tab="ai" data-i18n="tab_ai">Planificateur IA</button>
+      <div class="search-tabs" role="group" aria-label="Search">
+        <button type="button" class="search-tab on" aria-pressed="true" data-tab="ai" data-i18n="tab_ai">Planificateur IA</button>
         <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
           <button type="button" class="region-btn on" data-region="europe" aria-pressed="true">Europe</button>
           <button type="button" class="region-btn" data-region="japan" aria-pressed="false">Japan</button>
         </div>
-        <button type="button" class="search-tab" role="tab" aria-selected="false" data-tab="countries" data-i18n="tab_countries">Itinéraires par pays</button>
-        <button type="button" class="search-tab" role="tab" aria-selected="false" data-tab="roulette" data-i18n="tab_roulette">Roulette des destinations</button>
+        <button type="button" class="search-tab" aria-pressed="false" data-tab="countries" data-i18n="tab_countries">Itinéraires par pays</button>
+        <button type="button" class="search-tab" aria-pressed="false" data-tab="roulette" data-i18n="tab_roulette">Roulette des destinations</button>
       </div>
       <div class="search-card">
-        <div class="search-panel on" data-panel="ai" role="tabpanel">
+        <div class="search-panel on" data-panel="ai">
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">Ton voyage</span><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -459,7 +459,7 @@
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">Voir mon dernier itinéraire →</button>
     </div>
         </div>
-        <div class="search-panel" data-panel="roulette" role="tabpanel">
+        <div class="search-panel" data-panel="roulette">
     <div class="discover-cta" id="hoy">
       <h3 data-i18n="disc_cta_title">On y va… ?</h3>
       <p data-i18n="disc_cta_text">Un trajet réel, l'itinéraire se monte seul.</p>
@@ -475,7 +475,7 @@
       <p class="hoy-seo-link"><a href="/fr/hoy/" data-i18n="hoy_seo_cta">Roulette des destinations</a></p>
     </div>
         </div>
-        <div class="search-panel" data-panel="countries" role="tabpanel">
+        <div class="search-panel" data-panel="countries">
   <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ Itinéraires populaires · réservez instantanément</p>
   <div class="countries" id="countries" style="padding: 0 24px 0;">
     <span class="country-chip"><span data-i18n="chip_spain">Espagne</span><span class="country-popup"><img class="country-photo" src="country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
@@ -1280,7 +1280,7 @@
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
   <script src="/assets/js/main.min.js?v=45" defer></script>
-  <script src="/assets/js/japan.js?v=9" defer></script>
+  <script src="/assets/js/japan.js?v=10" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
@@ -1412,7 +1412,7 @@
   var tabs = document.querySelectorAll('.search-tab'), panels = document.querySelectorAll('.search-panel');
   if (!tabs.length) return;
   function show(name) {
-    tabs.forEach(function (t) { var on = t.dataset.tab === name; t.classList.toggle('on', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); });
+    tabs.forEach(function (t) { var on = t.dataset.tab === name; t.classList.toggle('on', on); t.setAttribute('aria-pressed', on ? 'true' : 'false'); });
     panels.forEach(function (p) { p.classList.toggle('on', p.dataset.panel === name); });
   }
   tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.tab); }); });

@@ -717,3 +717,5 @@ body.home-v2 #scenic:not(.is-near) .scenic-feature,
 body.home-v2 #discover:not(.is-near) .discover-card,
 body.home-v2 #adventure:not(.is-near) .wt-route-btn::before,
 body.home-v2 #download:not(.is-near) { background-image: none !important; }
+/* Accesibilidad: las etiquetas rojas pequeñas sobre el fondo beige más oscuro no llegaban a 4.5:1 */
+body.home-v2 .section-label { color: #a30012; }
