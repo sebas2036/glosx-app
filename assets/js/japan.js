@@ -470,7 +470,8 @@
   };
   var JP_ROUTE_ORDER = ['jp-tokaido', 'jp-alps', 'jp-kyushu'];
 
-  var OPERATORS = ['JR East', 'JR Central', 'JR West', 'JR Kyushu', 'JR Hokkaido', 'Odakyu', 'Tobu'];
+  // Icono de cada operador: favicon de su sitio oficial (con www; sin www el servicio devuelve un globo genérico)
+  var OPERATORS = [['JR East', 'www.jreast.co.jp'], ['JR Central', 'www.jr-central.co.jp'], ['JR West', 'www.westjr.co.jp'], ['JR Kyushu', 'www.jrkyushu.co.jp'], ['JR Hokkaido', 'www.jrhokkaido.co.jp'], ['Odakyu', 'www.odakyu.jp'], ['Tobu', 'www.tobu.co.jp']];
 
   var homeReady = false, jpFeatured = 0, jpRouteKey = null;
   var jpEls = {};
@@ -488,7 +489,7 @@
     jpEls.badge = twin(document.querySelector('[data-i18n="hero_badge"]'));
     jpEls.ops = Array.prototype.map.call(document.querySelectorAll('.trust-ops'), function (o) {
       var el = twin(o, 'div', 'trust-ops');
-      el.innerHTML = OPERATORS.map(function (n) { return '<span class="op-chip"><b>' + n + '</b></span>'; }).join('');
+      el.innerHTML = OPERATORS.map(function (o) { return '<span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=' + o[1] + '" alt="' + o[0] + '" loading="lazy"/>' + o[0] + '</span>'; }).join('');
       return el;
     });
     jpEls.label = twin(document.querySelector('[data-i18n="scenic_label"]'));
