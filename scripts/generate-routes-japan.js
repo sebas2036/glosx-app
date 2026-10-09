@@ -282,6 +282,8 @@ const ROUTES = [
     }
   }
 ];
+// Lote 2 (09-oct-2026)
+ROUTES.push(...require('./routes-japan-lote2'));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const url = (slug, lang) => `https://glosx.app/rutas/${slug}${SUFFIX[lang]}`;
@@ -301,7 +303,7 @@ function schema(r, lang) {
       { '@type': 'ListItem', position: 3, name: `${r.from[lang]} → ${r.to[lang]}`, item: url(r.slug, lang) }] },
     { '@type': 'FAQPage', mainEntity: r.faqs[lang].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     { '@type': 'Article', headline: seo.title, description: seo.description, image: 'https://glosx.app/hero-bg.jpg',
-      datePublished: '2026-10-05', dateModified: '2026-10-05',
+      datePublished: r.published || '2026-10-05', dateModified: r.published || '2026-10-05',
       author: { '@type': 'Organization', name: 'WoW Train', url: 'https://glosx.app/' },
       publisher: { '@type': 'Organization', name: 'WoW Train', logo: { '@type': 'ImageObject', url: 'https://glosx.app/logo.png' } },
       mainEntityOfPage: url(r.slug, lang), inLanguage: lang }
@@ -312,7 +314,10 @@ function schema(r, lang) {
 function mainHtml(r, lang) {
   const u = UI[lang];
   const from = r.from[lang], to = r.to[lang];
-  const related = ROUTES.filter(x => x.slug !== r.slug)
+  // Hasta 6 rutas relacionadas: primero las que comparten ciudad, luego el resto
+  const shares = x => [x.fromKey, x.toKey].some(k => k === r.fromKey || k === r.toKey);
+  const others = ROUTES.filter(x => x.slug !== r.slug);
+  const related = others.filter(shares).concat(others.filter(x => !shares(x))).slice(0, 6)
     .map(x => `<a href="/rutas/${x.slug}${SUFFIX[lang]}" class="related-link">${x.from[lang]} &rarr; ${x.to[lang]}</a>`).join('\n        ');
   const li = a => a.map(t => `<li>${esc(t)}</li>`).join('\n      ');
   const faq = r.faqs[lang].map(([q, a]) => `

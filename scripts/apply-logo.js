@@ -9,8 +9,8 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 const ICON = '<svg class="wt-logo-icon" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="10" fill="#C10016"/><polyline points="8,12 15,29 20,18 25,29 32,12" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="12" r="2.6" fill="#fff"/><circle cx="20" cy="18" r="2.6" fill="#fff"/><circle cx="32" cy="12" r="2.6" fill="#fff"/></svg>';
-const A_STYLE = 'display:inline-flex;align-items:center;gap:10px;text-decoration:none;';
-const W_STYLE = 'font-size:22px;line-height:1;letter-spacing:-.04em;color:#14151a;white-space:nowrap;';
+const A_STYLE = 'display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-right:12px;flex-shrink:0;';
+const W_STYLE = 'font-size:clamp(17px,4.6vw,22px);line-height:1;letter-spacing:-.04em;color:#14151a;white-space:nowrap;';
 const MARKUP = href => `<a href="${href}" class="nav-logo wt-logo" aria-label="WoW Train" style="${A_STYLE}">${ICON}<span class="wt-logo-word" style="${W_STYLE}"><b style="font-weight:700;">WoW</b> <i style="font-style:normal;font-weight:300;">Train</i></span></a>`;
 
 function walk(dir, out) {
