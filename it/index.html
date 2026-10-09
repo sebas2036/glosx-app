@@ -96,7 +96,6 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -124,7 +123,9 @@
       } catch (e) {}
     })();
     gtag('js', new Date());
-    gtag('config', 'G-XPTSM1EJQJ');
+    // page_location con la URL original: gtag.js se carga más tarde (al interactuar) y para entonces
+    // la limpieza de la URL ya quitó los utm_*; así la atribución de campañas no se pierde.
+    gtag('config', 'G-XPTSM1EJQJ', { page_location: location.href });
     // Evento: click saliente hacia Trainline (para medir demanda enviada al partner)
     window.trackTrainline = function (src) {
       try {
@@ -139,8 +140,8 @@
   // Stub para que los eventos antes del load no se pierdan
   window.fbq = function() { (window._fbqQueue = window._fbqQueue || []).push(arguments); };
   window._fbq = window.fbq;
-  window.addEventListener('load', function() {
-    setTimeout(function() {
+  window.__glosxLoadFbq = function() {
+    (function() {
       !function(f,b,e,v,n,t,s)
       {if(f.fbq && f._fbqLoaded)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -154,8 +155,8 @@
       // Replay queued events
       (window._fbqQueue||[]).forEach(function(a){fbq.apply(null,a)});
       fbq('track', 'PageView');
-    }, 2000);
-  });
+    })();
+  };
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1542138090730880&ev=PageView&noscript=1"
@@ -165,12 +166,12 @@
   <!-- Travelpayouts Drive — pixel diferido; URL cleanup corre inmediato -->
   <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
     (function () {
-      window.addEventListener('load', function() {
+      window.__glosxLoadTp = function() {
         var script = document.createElement("script");
         script.async = 1;
         script.src = 'https://emrldtp.com/NTM0NTcw.js?t=534570';
         document.head.appendChild(script);
-      });
+      };
     })();
     // Limpiar parámetros de tracking de la URL para que no se vean
     // (conserva from/to, usados por los CTA del blog para precargar el planner AI,
@@ -198,6 +199,28 @@
       }
     })();
   </script>
+
+  <!-- Analytics, Meta Pixel y Travelpayouts se cargan con la primera interacción (toque, scroll, tecla,
+       mouse) o 5 s después de la carga, lo que pase primero: así no compiten con la carga inicial en
+       móvil (PageSpeed medía ~780 ms de bloqueo solo por estos scripts). Los eventos anteriores quedan
+       en cola (dataLayer / _fbqQueue) y se envían al cargar. -->
+  <script>
+    (function () {
+      var done = false, evs = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'mousemove'];
+      function go() {
+        if (done) return; done = true;
+        evs.forEach(function (e) { window.removeEventListener(e, go, true); });
+        var g = document.createElement('script'); g.async = true;
+        g.src = 'https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ';
+        document.head.appendChild(g);
+        try { if (window.__glosxLoadFbq) window.__glosxLoadFbq(); } catch (e) {}
+        try { if (window.__glosxLoadTp) window.__glosxLoadTp(); } catch (e) {}
+      }
+      evs.forEach(function (e) { window.addEventListener(e, go, { capture: true, passive: true }); });
+      window.addEventListener('load', function () { setTimeout(go, 5000); });
+    })();
+  </script>
+
 
   <!-- Schema.org Mobile App -->
   <script type="application/ld+json">
