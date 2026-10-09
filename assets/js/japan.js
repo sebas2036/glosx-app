@@ -171,6 +171,7 @@
       japanChipsEl.style.display = '';
       if (europeSuggestEl) europeSuggestEl.style.display = 'none';
       if (japanSuggestEl) japanSuggestEl.style.display = '';
+      paintHome();
     } else {
       if (europePlaceholder) inputEl.setAttribute('placeholder', europePlaceholder);
       countriesEl.style.display = '';
@@ -419,6 +420,211 @@
   if (segsEl) {
     infoObs = new MutationObserver(paintInfo);
     infoObs.observe(segsEl, { childList: true, characterData: true, subtree: true });
+  }
+
+
+  // ===== Portada en modo Japón: texto del hero, operadores, trenes panorámicos y recorridos =====
+  // Las piezas de Europa no se tocan: se marcan .eu-only y al lado se agregan sus versiones .jp-only;
+  // el CSS muestra unas u otras según body[data-region]. Así el cambio de idioma de Europa sigue igual.
+  // Todos los trenes y tramos son pares verificados en Klook (duración más rápida, consulta 05-oct-2026).
+  var BOOK_API = 'https://voxa-production-dc15.up.railway.app/affiliate/klook-train';
+  var HOME_I18N = {
+    en: { badge: 'AI rail planner for Japan', label: 'Iconic Japanese routes', lead: 'Japan’s most beautiful train journeys — book directly from here.', featured: 'Featured route', book: 'Book now', buy: 'View times and book', arrival: 'Arrival', from: 'from' },
+    es: { badge: 'Planificador IA de trenes de Japón', label: 'Rutas icónicas de Japón', lead: 'Los viajes en tren más bonitos de Japón, con reserva directa desde aquí.', featured: 'Ruta destacada', book: 'Reservar', buy: 'Ver horarios y reservar', arrival: 'Llegada', from: 'desde' },
+    fr: { badge: 'Planificateur IA de trains au Japon', label: 'Itinéraires emblématiques du Japon', lead: 'Les plus beaux trajets en train du Japon, à réserver directement ici.', featured: 'Itinéraire à la une', book: 'Réserver', buy: 'Voir les horaires et réserver', arrival: 'Arrivée', from: 'dès' },
+    it: { badge: 'Pianificatore IA di treni in Giappone', label: 'Percorsi iconici del Giappone', lead: 'I viaggi in treno più belli del Giappone, da prenotare direttamente qui.', featured: 'Percorso in evidenza', book: 'Prenota', buy: 'Vedi orari e prenota', arrival: 'Arrivo', from: 'da' },
+    de: { badge: 'KI-Zugplaner für Japan', label: 'Ikonische Strecken in Japan', lead: 'Japans schönste Zugreisen – direkt hier buchen.', featured: 'Empfohlene Strecke', book: 'Jetzt buchen', buy: 'Zeiten ansehen und buchen', arrival: 'Ankunft', from: 'ab' },
+    pt: { badge: 'Planejador IA de comboios no Japão', label: 'Rotas icónicas do Japão', lead: 'As viagens de comboio mais bonitas do Japão, reserve diretamente aqui.', featured: 'Rota em destaque', book: 'Reservar', buy: 'Ver horários e reservar', arrival: 'Chegada', from: 'desde' }
+  };
+  function ht(k) { return (HOME_I18N[lang()] || HOME_I18N.en)[k]; }
+  var CITY_LOC = { es: { Tokyo: 'Tokio', Kyoto: 'Kioto' }, pt: { Tokyo: 'Tóquio', Kyoto: 'Quioto' } };
+  function city(n) { var m = CITY_LOC[lang()]; return (m && m[n]) || n; }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function bookUrl(a, b) { return BOOK_API + '?from=' + encodeURIComponent(a) + '&to=' + encodeURIComponent(b); }
+
+  var JP_SCENIC = [
+    { name: 'Yufuin no Mori', from: 'fukuoka', to: 'yufuin', a: 'Fukuoka (Hakata)', b: 'Yufuin', photo: '/scenic/jp-yufuin.webp',
+      desc: { en: 'JR Kyushu’s design train, with wooden interiors, to the hot-spring town of Yufuin.', es: 'El tren de diseño de JR Kyushu, con interiores de madera, hacia el pueblo termal de Yufuin.', fr: 'Le train design de JR Kyushu, aux intérieurs en bois, vers la ville thermale de Yufuin.', it: 'Il treno di design di JR Kyushu, con interni in legno, verso la cittadina termale di Yufuin.', de: 'Der Designzug von JR Kyushu mit Holzinterieur zum Thermalort Yufuin.', pt: 'O comboio de design da JR Kyushu, com interiores em madeira, até a vila termal de Yufuin.' } },
+    { name: 'Saphir Odoriko', from: 'tokyo', to: 'ito', a: 'Tokyo', b: 'Ito (Izu)', photo: '/scenic/jp-izu.webp',
+      desc: { en: 'JR East’s premium train to the Izu Peninsula, with large windows facing the Pacific.', es: 'El tren de lujo de JR East hacia la península de Izu, con grandes ventanales al Pacífico.', fr: 'Le train premium de JR East vers la péninsule d’Izu, avec de grandes baies face au Pacifique.', it: 'Il treno di lusso di JR East verso la penisola di Izu, con grandi finestrini sul Pacifico.', de: 'Der Premiumzug von JR East zur Izu-Halbinsel, mit großen Fenstern zum Pazifik.', pt: 'O comboio de luxo da JR East até à península de Izu, com grandes janelas para o Pacífico.' } },
+    { name: 'Romancecar', from: 'shinjuku', to: 'hakone', a: 'Shinjuku', b: 'Hakone', photo: '/scenic/jp-hakone.webp',
+      desc: { en: 'Odakyu’s express from Shinjuku to Hakone, gateway to hot springs and Mount Fuji views.', es: 'El expreso de Odakyu desde Shinjuku a Hakone, puerta a las aguas termales y a las vistas del Fuji.', fr: 'L’express Odakyu de Shinjuku à Hakone, porte des sources chaudes et des vues sur le Fuji.', it: 'L’espresso Odakyu da Shinjuku a Hakone, porta delle terme e delle viste sul Fuji.', de: 'Der Odakyu-Express von Shinjuku nach Hakone, Tor zu heißen Quellen und Fuji-Blicken.', pt: 'O expresso da Odakyu de Shinjuku a Hakone, porta para as termas e as vistas do Fuji.' } },
+    { name: 'SPACIA X', from: 'asakusa', to: 'nikko', a: 'Asakusa', b: 'Nikko', photo: '/scenic/jp-nikko.webp',
+      desc: { en: 'Tobu’s flagship train from Asakusa to Nikko, its shrines and mountains.', es: 'El tren insignia de Tobu desde Asakusa a Nikko, sus santuarios y montañas.', fr: 'Le train phare de Tobu d’Asakusa à Nikko, ses sanctuaires et ses montagnes.', it: 'Il treno di punta di Tobu da Asakusa a Nikko, i suoi santuari e le sue montagne.', de: 'Tobus Flaggschiffzug von Asakusa nach Nikko, zu Schreinen und Bergen.', pt: 'O comboio de referência da Tobu de Asakusa a Nikko, com os seus santuários e montanhas.' } },
+    { name: 'Hida', from: 'nagoya', to: 'takayama', a: 'Nagoya', b: 'Takayama', photo: '/scenic/jp-takayama.webp',
+      desc: { en: 'Limited express that climbs from Nagoya through the Hida valleys to Takayama.', es: 'Expreso limitado que sube desde Nagoya por los valles de Hida hasta Takayama.', fr: 'Express limité qui monte de Nagoya par les vallées de Hida jusqu’à Takayama.', it: 'Espresso limitato che sale da Nagoya lungo le valli di Hida fino a Takayama.', de: 'Expresszug, der von Nagoya durch die Hida-Täler nach Takayama fährt.', pt: 'Expresso limitado que sobe de Nagoya pelos vales de Hida até Takayama.' } },
+    { name: 'Tokaido Shinkansen', from: 'tokyo', to: 'kyoto', a: 'Tokyo', b: 'Kyoto', photo: '/scenic/jp-tokaido.webp',
+      desc: { en: 'The Nozomi links Tokyo and Kyoto; on clear days you can see Mount Fuji.', es: 'El Nozomi une Tokio y Kioto; en días despejados se ve el monte Fuji.', fr: 'Le Nozomi relie Tokyo et Kyoto ; par temps clair, on aperçoit le mont Fuji.', it: 'Il Nozomi collega Tokyo e Kyoto; nelle giornate limpide si vede il monte Fuji.', de: 'Der Nozomi verbindet Tokio und Kyoto; bei klarem Wetter sieht man den Fuji.', pt: 'O Nozomi liga Tóquio e Quioto; em dias limpos vê-se o monte Fuji.' } }
+  ];
+
+  var JP_ROUTES = {
+    'jp-tokaido': { stops: ['tokyo', 'odawara', 'osaka', 'kyoto'],
+      title: { en: 'Classic Tokaido route', es: 'Ruta clásica Tokaido', fr: 'Route classique du Tokaido', it: 'Percorso classico del Tokaido', de: 'Klassische Tokaido-Route', pt: 'Rota clássica Tokaido' },
+      meta: { en: 'Shinkansen · Hakone from Odawara', es: 'Shinkansen · Hakone desde Odawara', fr: 'Shinkansen · Hakone depuis Odawara', it: 'Shinkansen · Hakone da Odawara', de: 'Shinkansen · Hakone ab Odawara', pt: 'Shinkansen · Hakone a partir de Odawara' } },
+    'jp-alps': { stops: ['nagoya', 'takayama', 'toyama', 'kanazawa', 'nagano'],
+      title: { en: 'Japanese Alps route', es: 'Ruta de los Alpes japoneses', fr: 'Route des Alpes japonaises', it: 'Percorso delle Alpi giapponesi', de: 'Route der Japanischen Alpen', pt: 'Rota dos Alpes japoneses' },
+      meta: { en: 'Hida limited express and Hokuriku Shinkansen', es: 'Expreso Hida y Shinkansen Hokuriku', fr: 'Express Hida et Shinkansen Hokuriku', it: 'Espresso Hida e Shinkansen Hokuriku', de: 'Hida-Express und Hokuriku-Shinkansen', pt: 'Expresso Hida e Shinkansen Hokuriku' } },
+    'jp-kyushu': { stops: ['fukuoka', 'yufuin', 'beppu', 'kokura'],
+      title: { en: 'Essential Kyushu', es: 'Kyushu esencial', fr: 'Kyushu essentiel', it: 'Kyushu essenziale', de: 'Kyushu kompakt', pt: 'Kyushu essencial' },
+      meta: { en: 'Yufu trains, hot springs and Sonic express', es: 'Trenes Yufu, aguas termales y expreso Sonic', fr: 'Trains Yufu, sources chaudes et express Sonic', it: 'Treni Yufu, terme ed espresso Sonic', de: 'Yufu-Züge, heiße Quellen und Sonic-Express', pt: 'Comboios Yufu, termas e expresso Sonic' } }
+  };
+  var JP_ROUTE_ORDER = ['jp-tokaido', 'jp-alps', 'jp-kyushu'];
+
+  var OPERATORS = ['JR East', 'JR Central', 'JR West', 'JR Kyushu', 'JR Hokkaido', 'Odakyu', 'Tobu'];
+
+  var homeReady = false, jpFeatured = 0, jpRouteKey = null;
+  var jpEls = {};
+  function twin(orig, tag, cls) {
+    if (!orig) return null;
+    orig.classList.add('eu-only');
+    var el = document.createElement(tag || orig.tagName.toLowerCase());
+    el.className = (cls != null ? cls : orig.className.replace(/\beu-only\b/, '').trim()) + ' jp-only';
+    orig.parentNode.insertBefore(el, orig.nextSibling);
+    return el;
+  }
+  function setupHome() {
+    if (homeReady) return;
+    homeReady = true;
+    jpEls.badge = twin(document.querySelector('[data-i18n="hero_badge"]'));
+    jpEls.ops = Array.prototype.map.call(document.querySelectorAll('.trust-ops'), function (o) {
+      var el = twin(o, 'div', 'trust-ops');
+      el.innerHTML = OPERATORS.map(function (n) { return '<span class="op-chip"><b>' + n + '</b></span>'; }).join('');
+      return el;
+    });
+    jpEls.label = twin(document.querySelector('[data-i18n="scenic_label"]'));
+    jpEls.lead = twin(document.querySelector('[data-i18n="scenic_lead"]'));
+    jpEls.feature = twin(document.getElementById('scenicFeature'), 'div', 'scenic-feature');
+    jpEls.grid = twin(document.getElementById('scenicGrid'), 'div', 'scenic-grid');
+    var tog = document.getElementById('scenicToggle');
+    if (tog && tog.parentNode) tog.parentNode.classList.add('eu-only');
+    var btns = document.querySelector('.wt-route-buttons');
+    jpEls.buttons = twin(btns, 'div', 'wt-route-buttons');
+    if (jpEls.buttons) jpEls.buttons.setAttribute('role', 'group');
+    var wrap = document.getElementById('wt-wrap');
+    jpEls.wrap = twin(wrap, 'div', 'wt-timeline-wrap');
+    if (jpEls.wrap) {
+      jpEls.wrap.hidden = true;
+      jpEls.wrap.innerHTML = '<button class="wt-close" type="button" aria-label="Close">&times;</button>' +
+        '<div class="wt-timeline-head"><h3></h3><span class="wt-route-meta"></span></div><ol class="wt-timeline jp-tl"></ol>';
+      jpEls.wrap.querySelector('.wt-close').addEventListener('click', function () { jpRouteKey = null; jpEls.wrap.hidden = true; paintRouteButtons(); });
+    }
+    // Europa abierta al pasar a Japón: se cierra para que no quede debajo
+    var euClose = document.getElementById('wt-close');
+    if (euClose && wrap && !wrap.hidden) euClose.click();
+
+    if (jpEls.grid) jpEls.grid.addEventListener('click', function (e) {
+      var cta = e.target.closest('.scenic-cta');
+      var card = e.target.closest('.scenic-wrapper');
+      if (!card) return;
+      e.preventDefault();
+      var i = +card.getAttribute('data-i');
+      if (cta) return openBook(JP_SCENIC[i].from, JP_SCENIC[i].to, 'scenic_jp');
+      featureJp(i);
+      if (jpEls.feature) jpEls.feature.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    if (jpEls.feature) jpEls.feature.addEventListener('click', function (e) {
+      if (!e.target.closest('.sf-btn')) return;
+      var s = JP_SCENIC[jpFeatured];
+      openBook(s.from, s.to, 'scenic_jp_featured');
+    });
+    if (jpEls.buttons) jpEls.buttons.addEventListener('click', function (e) {
+      var b = e.target.closest('.wt-route-btn');
+      if (!b) return;
+      renderJpRoute(b.getAttribute('data-route'));
+      jpEls.wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    if (jpEls.wrap) jpEls.wrap.addEventListener('click', function (e) {
+      var b = e.target.closest('.wt-stop-buy');
+      if (b) openBook(b.getAttribute('data-a'), b.getAttribute('data-b'), 'adventure_jp');
+    });
+    window.addEventListener('resize', positionJpDescs);
+  }
+  function openBook(a, b, src) {
+    try { gtag('event', 'klook_click', { source: src, route: a + '-' + b }); } catch (e) {}
+    window.open(bookUrl(a, b), '_blank', 'noopener');
+  }
+  function legInfo(a, b) { return INFO[a + '-' + b] || null; }
+  function featureJp(i) {
+    var s = JP_SCENIC[i];
+    if (!s || !jpEls.feature) return;
+    jpFeatured = i;
+    var d = legInfo(s.from, s.to);
+    jpEls.feature.style.background = "url('" + s.photo + "') center/cover no-repeat";
+    jpEls.feature.innerHTML = '<div class="sf-content"><span class="sf-badge">' + esc(ht('featured')) + '</span>' +
+      '<div class="sf-name">' + esc(s.name) + '</div>' +
+      '<div class="sf-route">' + esc(city(s.a)) + ' → ' + esc(city(s.b)) + (d ? ' · ' + esc(ht('from')) + ' ' + fmtMin(d.m) : '') + '</div>' +
+      '<div class="sf-desc">' + esc(s.desc[lang()] || s.desc.en) + '</div>' +
+      '<button type="button" class="sf-btn">' + esc(ht('book')) + ' →</button></div>';
+    Array.prototype.forEach.call(jpEls.grid ? jpEls.grid.children : [], function (w, idx) { w.classList.toggle('scenic-active', idx === i); });
+  }
+  function renderJpScenic() {
+    if (!jpEls.grid) return;
+    jpEls.grid.innerHTML = JP_SCENIC.map(function (s, i) {
+      var d = legInfo(s.from, s.to);
+      return '<div class="scenic-wrapper' + (i === jpFeatured ? ' scenic-active' : '') + '" data-i="' + i + '">' +
+        '<a href="#" class="scenic-card"><div class="scenic-photo" style="background-image:url(\'' + s.photo + '\')"><span class="scenic-dur">' + (d ? fmtMin(d.m) : '') + '</span></div>' +
+        '<div class="scenic-body"><div class="scenic-name">' + esc(s.name) + '</div><div class="scenic-route">' + esc(city(s.a)) + ' → ' + esc(city(s.b)) + '</div></div>' +
+        '<div class="scenic-cta">' + esc(ht('book')) + '</div></a>' +
+        '<div class="scenic-desc">' + esc(s.desc[lang()] || s.desc.en) + '</div></div>';
+    }).join('');
+    featureJp(jpFeatured);
+    requestAnimationFrame(positionJpDescs);
+  }
+  function positionJpDescs() {
+    var g = jpEls.grid;
+    if (!g || region !== 'japan') return;
+    var c = g.getBoundingClientRect().left + g.offsetWidth / 2;
+    Array.prototype.forEach.call(g.children, function (w) {
+      w.classList.toggle('desc-left', w.getBoundingClientRect().left + w.offsetWidth / 2 < c);
+    });
+  }
+  function stopsLabel(key) {
+    return JP_ROUTES[key].stops.map(function (s) { return city(displayBySlug[s] || s); }).join(' → ');
+  }
+  function paintRouteButtons() {
+    if (!jpEls.buttons) return;
+    jpEls.buttons.innerHTML = JP_ROUTE_ORDER.map(function (k) {
+      var r = JP_ROUTES[k];
+      return '<button class="wt-route-btn" data-route="' + k + '" aria-pressed="' + (k === jpRouteKey ? 'true' : 'false') + '">' +
+        '<span>' + esc(r.title[lang()] || r.title.en) + '</span>' +
+        '<span class="wt-route-stops">' + esc(stopsLabel(k)) + '</span>' +
+        '<span class="wt-route-go">' + esc({ en: 'View itinerary', es: 'Ver itinerario', fr: 'Voir l’itinéraire', it: 'Vedi itinerario', de: 'Reiseplan ansehen', pt: 'Ver itinerário' }[lang()] || 'View itinerary') + '</span></button>';
+    }).join('');
+  }
+  function renderJpRoute(key) {
+    var r = JP_ROUTES[key];
+    if (!r || !jpEls.wrap) return;
+    jpRouteKey = key;
+    var w = jpEls.wrap;
+    w.hidden = false;
+    w.setAttribute('data-route', key);
+    w.querySelector('h3').textContent = r.title[lang()] || r.title.en;
+    var total = 0;
+    for (var j = 0; j < r.stops.length - 1; j++) { var dd = legInfo(r.stops[j], r.stops[j + 1]); if (dd) total += dd.m; }
+    w.querySelector('.wt-route-meta').textContent = (r.meta[lang()] || r.meta.en) + ' · ' + ht('from') + ' ' + fmtMin(total);
+    var tx = INFO_I18N[lang()] || INFO_I18N.en;
+    w.querySelector('ol').innerHTML = r.stops.map(function (s, i) {
+      var next = r.stops[i + 1];
+      var d = next ? legInfo(s, next) : null;
+      var chip = next ? ((d && d.t.length ? d.t.slice(0, 2).join(', ') : '') + (d ? ' · ' + fmtMin(d.m) : '')) : ht('arrival');
+      return '<li class="wt-stop" style="animation-delay:' + (i * 0.12) + 's">' +
+        '<span class="wt-stop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="M8 19l-2 3"/><path d="M18 22l-2-3"/><circle cx="7.5" cy="14.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="16.5" cy="14.5" r="1.4" fill="currentColor" stroke="none"/></svg></span>' +
+        '<p class="wt-stop-station">' + esc(city(displayBySlug[s] || s)) + '</p>' +
+        '<span class="wt-stop-train">' + (next ? '&#8594; ' : '') + esc(chip) + (d && d.s ? ' · Shinkansen' : '') + (next ? ' · ' + esc(tx.direct) : '') + '</span>' +
+        (next ? '<button type="button" class="wt-stop-buy" data-a="' + s + '" data-b="' + next + '">' + esc(ht('buy')) + ' →</button>' : '') +
+        '</li>';
+    }).join('');
+    paintRouteButtons();
+  }
+  function paintHome() {
+    if (region !== 'japan') return;
+    setupHome();
+    if (jpEls.badge) jpEls.badge.textContent = ht('badge');
+    if (jpEls.label) jpEls.label.textContent = ht('label');
+    if (jpEls.lead) jpEls.lead.textContent = ht('lead');
+    renderJpScenic();
+    paintRouteButtons();
+    if (jpRouteKey) renderJpRoute(jpRouteKey);
   }
 
   switchEl.addEventListener('click', function (e) {

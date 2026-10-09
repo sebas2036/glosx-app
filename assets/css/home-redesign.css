@@ -669,3 +669,15 @@ body.home-v2[data-region="japan"] .hero-title-card::before {
     background-position: 95% 100%;
   }
 }
+
+/* Modo Japón en la portada: piezas de Europa (.eu-only) y sus versiones japonesas (.jp-only) */
+body:not([data-region="japan"]) .jp-only { display: none !important; }
+body[data-region="japan"] .eu-only { display: none !important; }
+body.home-v2 .wt-route-btn[data-route="jp-tokaido"]::before { background-image: url('/scenic/jp-hakone.webp'); }
+body.home-v2 .wt-route-btn[data-route="jp-alps"]::before { background-image: url('/scenic/jp-takayama.webp'); }
+body.home-v2 .wt-route-btn[data-route="jp-kyushu"]::before { background-image: url('/scenic/jp-yufuin.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="jp-tokaido"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/jp-hakone.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="jp-alps"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/jp-takayama.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="jp-kyushu"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/jp-yufuin.webp'); }
+body.home-v2 .jp-tl { position: relative; z-index: 1; padding: 28px 34px 20px; }
+@media (max-width: 600px) { body.home-v2 .jp-tl { padding: 22px 18px 16px; } }
