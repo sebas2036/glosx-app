@@ -638,7 +638,7 @@
     allChip.addEventListener('click', function(){ setFilter('All', allChip); });
     fr.appendChild(allChip);
     Object.keys(countries).sort().forEach(function(c){
-      var chip=document.createElement('span'); chip.className='filter-chip'; chip.textContent=c;
+      var chip=document.createElement('span'); chip.className='filter-chip'; chip.textContent=c; chip.setAttribute('data-country', c);
       chip.addEventListener('click', function(){ setFilter(c, chip); });
       fr.appendChild(chip);
     });
@@ -674,11 +674,18 @@
       return 'en';
     }
     var lang = 'es';
+    var COUNTRY_NAMES = {"Austria": {"es": "Austria", "fr": "Autriche", "it": "Austria", "de": "Österreich", "pt": "Áustria"}, "Belgium": {"es": "Bélgica", "fr": "Belgique", "it": "Belgio", "de": "Belgien", "pt": "Bélgica"}, "Czechia": {"es": "Chequia", "fr": "Tchéquie", "it": "Cechia", "de": "Tschechien", "pt": "Chéquia"}, "Denmark": {"es": "Dinamarca", "fr": "Danemark", "it": "Danimarca", "de": "Dänemark", "pt": "Dinamarca"}, "France": {"es": "Francia", "fr": "France", "it": "Francia", "de": "Frankreich", "pt": "França"}, "Germany": {"es": "Alemania", "fr": "Allemagne", "it": "Germania", "de": "Deutschland", "pt": "Alemanha"}, "Hungary": {"es": "Hungría", "fr": "Hongrie", "it": "Ungheria", "de": "Ungarn", "pt": "Hungria"}, "Italy": {"es": "Italia", "fr": "Italie", "it": "Italia", "de": "Italien", "pt": "Itália"}, "Japan": {"es": "Japón", "fr": "Japon", "it": "Giappone", "de": "Japan", "pt": "Japão"}, "Monaco": {"es": "Mónaco", "fr": "Monaco", "it": "Monaco", "de": "Monaco", "pt": "Mónaco"}, "Netherlands": {"es": "Países Bajos", "fr": "Pays-Bas", "it": "Paesi Bassi", "de": "Niederlande", "pt": "Países Baixos"}, "Norway": {"es": "Noruega", "fr": "Norvège", "it": "Norvegia", "de": "Norwegen", "pt": "Noruega"}, "Portugal": {"es": "Portugal", "fr": "Portugal", "it": "Portogallo", "de": "Portugal", "pt": "Portugal"}, "Slovenia": {"es": "Eslovenia", "fr": "Slovénie", "it": "Slovenia", "de": "Slowenien", "pt": "Eslovénia"}, "Spain": {"es": "España", "fr": "Espagne", "it": "Spagna", "de": "Spanien", "pt": "Espanha"}, "Sweden": {"es": "Suecia", "fr": "Suède", "it": "Svezia", "de": "Schweden", "pt": "Suécia"}, "Switzerland": {"es": "Suiza", "fr": "Suisse", "it": "Svizzera", "de": "Schweiz", "pt": "Suíça"}, "UK": {"es": "Reino Unido", "fr": "Royaume-Uni", "it": "Regno Unito", "de": "Vereinigtes Königreich", "pt": "Reino Unido"}};
     window.applyExploreI18n = function(){
       var d = T[lang] || T.en;
       document.documentElement.lang = lang;
       document.querySelectorAll('[data-i18n]').forEach(function(el){
         var k=el.getAttribute('data-i18n'); if(d[k]!==undefined) el.textContent=d[k];
+      });
+         // filtros de países: el valor sigue en inglés (así filtran las tarjetas), el texto va en el idioma de la página
+      var CN = COUNTRY_NAMES;
+      document.querySelectorAll('.filter-chip[data-country]').forEach(function(ch){
+        var c = ch.getAttribute('data-country'), n = CN[c] && CN[c][lang];
+        ch.textContent = n || c;
       });
     };
     window.applyExploreI18n();
