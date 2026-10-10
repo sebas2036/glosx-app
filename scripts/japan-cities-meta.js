@@ -1,0 +1,41 @@
+/**
+ * Datos por ciudad para las páginas de rutas de Japón generadas con datos (scripts/routes-japan-auto.js).
+ * [región, tipo, sitio conocido o null]. Tipos: onsen, castle, port, city, hub, airport, mountain,
+ * historic, gateway, snow, coast, themepark. Solo hechos conocidos y estables; el "sitio" es un nombre propio.
+ */
+module.exports = {
+  akita: ['Tohoku', 'city', null], aomori: ['Tohoku', 'port', 'the Nebuta festival'], asahikawa: ['Hokkaido', 'city', 'Asahiyama Zoo'],
+  asakusa: ['Kanto', 'historic', 'Sensō-ji'], atami: ['Chubu', 'onsen', null], beppu: ['Kyushu', 'onsen', null],
+  chitose: ['Hokkaido', 'airport', null], fukuchiyama: ['Kansai', 'castle', null], fukui: ['Hokuriku', 'city', 'Eihei-ji'],
+  fukuoka: ['Kyushu', 'city', null], fukushima: ['Tohoku', 'city', null], fukuyama: ['Chugoku', 'castle', null],
+  gero: ['Chubu', 'onsen', null], gifu: ['Chubu', 'castle', null], hachinohe: ['Tohoku', 'port', null],
+  hakodate: ['Hokkaido', 'port', null], hakone: ['Kanto', 'mountain', 'Lake Ashi'], hamamatsu: ['Chubu', 'city', null],
+  hidafurukawa: ['Chubu', 'historic', null], himeji: ['Kansai', 'castle', 'Himeji Castle'], hirosaki: ['Tohoku', 'castle', null],
+  hiroshima: ['Chugoku', 'historic', 'the Peace Memorial Park'], hita: ['Kyushu', 'historic', null], huistenbosch: ['Kyushu', 'themepark', null],
+  ichinoseki: ['Tohoku', 'gateway', null], ito: ['Chubu', 'onsen', null], joetsumyoko: ['Chubu', 'snow', null],
+  kagaonsen: ['Hokuriku', 'onsen', null], kagoshima: ['Kyushu', 'port', 'Sakurajima'], kanazawa: ['Hokuriku', 'historic', 'Kenroku-en'],
+  kansaiairport: ['Kansai', 'airport', null], karuizawa: ['Chubu', 'mountain', null], kawaguchiko: ['Chubu', 'mountain', 'Mount Fuji'],
+  kiitanabe: ['Kansai', 'gateway', 'the Kumano Kodo'], kinosaki: ['Kansai', 'onsen', null], kinugawaonsen: ['Kanto', 'onsen', null],
+  kobe: ['Kansai', 'port', null], kofu: ['Chubu', 'city', null], kokura: ['Kyushu', 'castle', null],
+  komatsu: ['Hokuriku', 'city', null], koriyama: ['Tohoku', 'gateway', null], kumamoto: ['Kyushu', 'castle', 'Kumamoto Castle'],
+  kurashiki: ['Chugoku', 'historic', 'the Bikan district'], kurume: ['Kyushu', 'city', null], kushiro: ['Hokkaido', 'coast', null],
+  kyoto: ['Kansai', 'historic', null], maibara: ['Kansai', 'hub', null], matsue: ['Chugoku', 'castle', 'Matsue Castle'],
+  matsumoto: ['Chubu', 'castle', 'Matsumoto Castle'], mishima: ['Chubu', 'gateway', null], mito: ['Kanto', 'city', 'Kairakuen'],
+  morioka: ['Tohoku', 'city', null], murakami: ['Hokuriku', 'coast', null], nagano: ['Chubu', 'historic', 'Zenkō-ji'],
+  nagaoka: ['Hokuriku', 'city', null], nagoya: ['Chubu', 'castle', 'Nagoya Castle'], nakatsu: ['Kyushu', 'castle', null],
+  nanao: ['Hokuriku', 'coast', null], naritaairport: ['Kanto', 'airport', null], nasushiobara: ['Kanto', 'mountain', null],
+  newchitoseairport: ['Hokkaido', 'airport', null], niigata: ['Hokuriku', 'port', null], nikko: ['Kanto', 'historic', 'Tōshō-gū'],
+  noboribetsu: ['Hokkaido', 'onsen', null], obihiro: ['Hokkaido', 'city', null], odawara: ['Kanto', 'castle', null],
+  oita: ['Kyushu', 'city', null], okayama: ['Chugoku', 'castle', 'Korakuen'], onomichi: ['Chugoku', 'port', null],
+  osaka: ['Kansai', 'city', null], otaru: ['Hokkaido', 'port', null], otsuki: ['Chubu', 'hub', null],
+  saga: ['Kyushu', 'city', null], sapporo: ['Hokkaido', 'city', null], sendai: ['Tohoku', 'city', 'Matsushima Bay'],
+  shinagawa: ['Kanto', 'hub', null], shinfuji: ['Chubu', 'mountain', 'Mount Fuji'], shinhakodatehokuto: ['Hokkaido', 'hub', null],
+  shinhanamaki: ['Tohoku', 'gateway', null], shinjuku: ['Kanto', 'hub', null], shinsapporo: ['Hokkaido', 'city', null],
+  shinyamaguchi: ['Chugoku', 'gateway', null], shinyokohama: ['Kanto', 'hub', null], shirahama: ['Kansai', 'coast', null],
+  shizuoka: ['Chubu', 'city', null], takasaki: ['Kanto', 'hub', null], takayama: ['Chubu', 'historic', null],
+  takeoonsen: ['Kyushu', 'onsen', null], tennoji: ['Kansai', 'city', null], tokyo: ['Kanto', 'city', null],
+  tomakomai: ['Hokkaido', 'port', null], toyama: ['Hokuriku', 'port', null], toyohashi: ['Chubu', 'city', null],
+  toyooka: ['Kansai', 'gateway', null], tsuruga: ['Hokuriku', 'port', null], ueda: ['Chubu', 'castle', null],
+  utsunomiya: ['Kanto', 'city', null], wakayama: ['Kansai', 'castle', 'Wakayama Castle'], wakkanai: ['Hokkaido', 'port', null],
+  yamagata: ['Tohoku', 'city', null], yokohama: ['Kanto', 'port', null], yonago: ['Chugoku', 'gateway', null], yufuin: ['Kyushu', 'onsen', null]
+};

@@ -284,6 +284,8 @@ const ROUTES = [
 ];
 // Lote 2 (09-oct-2026)
 ROUTES.push(...require('./routes-japan-lote2'));
+// Resto de los pares verificados (181), generados con datos reales de Klook y datos por ciudad
+ROUTES.push(...require('./routes-japan-auto'));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const url = (slug, lang) => `https://glosx.app/rutas/${slug}${SUFFIX[lang]}`;
