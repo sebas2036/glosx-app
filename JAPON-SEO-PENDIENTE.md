@@ -8,6 +8,9 @@ Tokio-Kioto, Tokio-Osaka, Osaka-Kioto, Kioto-Hiroshima y Narita-Tokio, en EN/ES/
 ## Lote 2 publicado (09-oct-2026, commit 51823bd2)
 Tokio-Nagoya, Tokio-Kanazawa, Aeropuerto de Kansai-Kioto, Tokio-Hiroshima, Tokio-Fukuoka, Nagoya-Takayama, Sapporo-Otaru, Tokio-Sendai, Shinjuku-Hakone y Fukuoka-Yufuin (EN/ES/FR/IT). Datos en `scripts/routes-japan-lote2.js`. Publicado antes del recheck de Search Console por decisión del usuario; 40 URLs + /rutas/ avisadas a la Indexing API y sitemap reenviado. Total: 15 rutas de Japón (60 páginas). Revisar indexación de ambos lotes ~19-oct.
 
+## Lote 3: los 181 pares restantes (10-oct-2026, commit b6033903)
+Generados con datos reales de Klook (`scripts/japan-pairs-data.json`) y datos por ciudad (`scripts/japan-cities-meta.js`) mediante `scripts/routes-japan-auto.js` (sin texto escrito a mano por ruta, a pedido del usuario: completar todos los pares). Total: 196 rutas, 784 páginas. Listados al día con `node scripts/sync-japan-listings.js` (/rutas/ y las 4 versiones de Explorar). Riesgo conocido: páginas más livianas que las 15 escritas a mano; si Search Console muestra poca indexación, mejorar primero las de más demanda. NO se mandaron a la Indexing API (cuota 200/día): van por sitemap.
+
 ## Regla principal
 No generar 100 páginas de golpe. El 04-oct había 131 URLs sin indexar y las páginas finas lo empeoran. Hacer 10-15 páginas con contenido real y luego medir.
 
