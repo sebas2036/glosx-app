@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title">私たちの話 — WoW Train · glosx.app</title>
+  <meta name="description" data-i18n="page_desc" content="WoW Trainは、ヨーロッパの列車を探すための独立した旅行サイトです。" />
+  <link rel="canonical" href="https://glosx.app/ja/about.html" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="私たちの話 — WoW Train" />
+  <meta property="og:description" content="WoW Trainは、ヨーロッパの列車を探すための独立した旅行サイトです。" />
+  <meta property="og:url" content="https://glosx.app/ja/about.html" />
+  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="私たちの話 — WoW Train" />
+  <meta name="twitter:description" content="WoW Trainは、ヨーロッパの列車を探すための独立した旅行サイトです。" />
+  <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
+
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // localhost/127.0.0.1 = server local de desarrollo -- nunca debe
+    // contarse como trafico real en GA4 (se detecto el 01-sep-2026,
+    // pageviews de pruebas locales inflando el realtime de produccion).
+    try {
+      if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) gtag('set', 'traffic_type', 'internal');
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-XPTSM1EJQJ');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WoW Train",
+    "alternateName": [
+      "GLOSX",
+      "glosx.app"
+    ],
+    "url": "https://glosx.app/",
+    "logo": "https://glosx.app/logo.png",
+    "description": "WoW Trainは、ヨーロッパの列車を探すための独立した旅行サイトです。",
+    "foundingDate": "2025",
+    "sameAs": [
+      "https://www.facebook.com/glosx.app",
+      "https://www.instagram.com/glosxapp",
+      "https://www.tiktok.com/@wowtrain0",
+      "https://www.pinterest.com/glosxapp"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "url": "https://glosx.app/support.html"
+    },
+    "@id": "https://glosx.app/#organization"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "私たちの話 — WoW Train",
+    "url": "https://glosx.app/ja/about.html",
+    "description": "WoW Trainは、ヨーロッパの列車を探すための独立した旅行サイトです。",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WoW Train",
+      "url": "https://glosx.app/",
+      "@id": "https://glosx.app/#organization"
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafaf8; --surface: #ffffff; --border: rgba(20,21,26,0.14);
+      --primary: #C10016; --primary2: #C10016; --text: #14151a; --muted: #55565f;
+    }
+    body {
+      background-color: #edd0b4;
+      background-image: linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--text);
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(250,250,248,0.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      color: var(--text); text-decoration: none;
+    }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-back:hover { color: var(--text); }
+    .lang-selector {
+      background: none; border: 1px solid rgba(20,21,26,0.18);
+      border-radius: 8px; padding: 5px 10px; color: var(--muted);
+      font-size: 13px; cursor: pointer; font-family: inherit;
+    }
+    .lang-selector:hover { border-color: var(--primary2); color: var(--text); }
+    main { max-width: 760px; margin: 0 auto; padding: 120px 24px 80px; }
+    .badge {
+      display: inline-block;
+      background: rgba(193,0,22,0.08); border: 1px solid rgba(193,0,22,0.25);
+      border-radius: 100px; padding: 5px 14px; margin-bottom: 24px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--primary); text-transform: uppercase;
+    }
+    h1 { font-size: 48px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 16px; line-height: 1.1; }
+    .lead { font-size: 18px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; max-width: 600px; }
+    .lead:last-of-type { margin-bottom: 56px; }
+    section { margin-bottom: 48px; }
+    h2 { font-size: 22px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+    p, li { font-size: 15px; color: var(--muted); line-height: 1.8; }
+    p + p { margin-top: 12px; }
+    ul { padding-left: 20px; margin-top: 12px; }
+    li { margin-bottom: 8px; }
+    a { color: var(--primary2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    em { color: var(--text); font-style: italic; }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px; margin-top: 24px;
+    }
+    .stat {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px; text-align: center;
+    }
+    .stat-num {
+      font-size: 32px; font-weight: 800; letter-spacing: -1px;
+      color: var(--primary);
+      display: block; margin-bottom: 4px;
+    }
+    .stat-label { font-size: 12px; color: var(--muted); }
+    .partners { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .partner-pill {
+      background: rgba(193,0,22,0.10); border: 1px solid rgba(193,0,22,0.25);
+      border-radius: 100px; padding: 6px 14px; font-size: 13px; font-weight: 600;
+      color: var(--primary2);
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px; text-align: center;
+      font-size: 12px; color: var(--muted);
+    }
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      main { padding: 100px 20px 60px; }
+      h1 { font-size: 36px; }
+    }
+  
+    .lang-wrapper { position: relative; }
+    .lang-btn { background: #fbf1e6; color: #14151a; border: 1px solid rgba(20,21,26,0.12); border-radius: 100px; padding: 6px 12px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 6px; }
+    .lang-dropdown { position: absolute; top: calc(100% + 8px); right: 0; background: #fff; border: 1px solid rgba(20,21,26,0.14); border-radius: 12px; padding: 6px; min-width: 160px; z-index: 200; box-shadow: 0 12px 28px rgba(20,21,26,0.12); display: none; }
+    .lang-dropdown.open { display: block; }
+    .lang-option { display: block; padding: 8px 10px; border-radius: 8px; font-size: 13px; color: #14151a; text-decoration: none; cursor: pointer; }
+    .lang-option:hover { background: rgba(193,0,22,0.10); text-decoration: none; }
+    .lang-option.active { background: rgba(193,0,22,0.18); color: #C10016; font-weight: 700; }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="/ja/" class="nav-logo wt-logo" aria-label="WoW Train" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-right:12px;flex-shrink:0;"><svg class="wt-logo-icon" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="10" fill="#C10016"/><polyline points="8,12 15,29 20,18 25,29 32,12" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="12" r="2.6" fill="#fff"/><circle cx="20" cy="18" r="2.6" fill="#fff"/><circle cx="32" cy="12" r="2.6" fill="#fff"/></svg><span class="wt-logo-word" style="font-size:clamp(17px,4.6vw,22px);line-height:1;letter-spacing:-.04em;color:#14151a;white-space:nowrap;"><b style="font-weight:700;">WoW</b> <i style="font-style:normal;font-weight:300;">Train</i></span></a>
+    <div class="nav-right">
+      <div class="lang-wrapper">
+        <button type="button" class="lang-btn" id="langBtn" onclick="event.stopPropagation();document.getElementById('langDropdown').classList.toggle('open');" aria-label="Language">
+          <span id="langCode">JA</span>
+          <span style="font-size:10px;opacity:0.6">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option" data-lang="en" onclick="setLang('en')"><span>English</span></div>
+          <div class="lang-option" data-lang="es" onclick="setLang('es')"><span>Español</span></div>
+          <div class="lang-option" data-lang="fr" onclick="setLang('fr')"><span>Français</span></div>
+          <div class="lang-option" data-lang="de" onclick="setLang('de')"><span>Deutsch</span></div>
+          <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>Italiano</span></div>
+          <div class="lang-option" data-lang="pt" onclick="setLang('pt')"><span>Português</span></div>
+          <div class="lang-option" data-lang="ja" onclick="setLang('ja')"><span>日本語</span></div>
+        </div>
+      </div>
+      <a href="/ja/" class="nav-back" data-i18n="nav_back">← ホームへ戻る</a>
+    </div>
+  </nav>
+
+  <main>
+    <span class="badge" data-i18n="badge">私たちの話</span>
+    <h1 data-i18n="h1">WoW Trainについて：道に迷った旅人が<br/>作りました。</h1>
+    <p class="lead" data-i18n="lead1">ローマのコロッセオの前に立って、バチカンへ行こうとしていました。簡単なはずなのに、どのバスか、どの路線か、切符の買い方さえわかりませんでした。何人かに聞きました。きちんと教えてくれる人はいませんでした。旅そのものより、行き方を考える時間のほうが長くなりました。</p>
+    <p class="lead" data-i18n="lead2">その日の午後、ほしかった道具を自分で作ることにしました。</p>
+    <p class="lead" data-i18n="brand_line">WoW Trainはアプリの名前で、glosx.appはそのウェブサイトです。ひとつのプロジェクトに、二つの名前があります。</p>
+
+    <section>
+      <h2 data-i18n="s1_title">誰が作ったか</h2>
+      <p data-i18n="s1_p1">セバスティアン・ヤシンスキーです。アルゼンチン、メンドーサの個人開発者です。WoW Trainはひとりで作りました。投資家も、チームも、会社の後ろ盾もありません。観光客がヨーロッパの鉄道で迷うのがあまりに不便で、そうである必要はないと思ったからです。</p>
+      <p data-i18n="s1_p2">とくにラテンアメリカから来た人は、鉄道の地図が頭にないままヨーロッパに着きます。フィレンツェへ行くにはミラノで乗り換えることや、スペインの普通列車がAVEとはまったく別だということを知りません。誰も説明しません。WoW Trainは説明します。</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="s2_title">WoW Trainが実際にすること</h2>
+      <p data-i18n="s2_p1">予約エンジンではありません。予約の前に来るものです。行き先を話すと、どの列車か、どの運行会社か、各区間の時間、途中で何があるかまで、旅程を組み立てます。それから公式のサイトで切符を買うところへ案内します。</p>
+      <p data-i18n="s2_p2">AIプランナー、言い回しの違いも拾う多言語検索、展望列車のガイド、リアルタイムの発車。すべては、旅人が本当に聞く質問に答えるためです。<em>「で、どうやって行けばいいの？」</em></p>
+    </section>
+
+    <section>
+      <h2 data-i18n="s3_title">カバー範囲</h2>
+      <div class="stats-grid">
+        <div class="stat"><span class="stat-num">16</span><span class="stat-label" data-i18n="stat1">ヨーロッパの国</span></div>
+        <div class="stat"><span class="stat-num">500k+</span><span class="stat-label" data-i18n="stat2">列車の時刻</span></div>
+        <div class="stat"><span class="stat-num">103</span><span class="stat-label" data-i18n="stat3">路線ガイド</span></div>
+        <div class="stat"><span class="stat-num">7</span><span class="stat-label" data-i18n="stat4">言語</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-i18n="s4_title">パートナー</h2>
+      <p data-i18n="s4_p1">WoW Trainは支払いを扱いません。予約はパートナーの公式で安全なサイトで完了します。旅人を正しい場所へつなぎ、取引は運行会社の側に残ります。</p>
+      <div class="partners">
+        <span class="partner-pill">Trainline</span>
+        <span class="partner-pill">Klook</span>
+        <span class="partner-pill">Kiwitaxi</span>
+        <span class="partner-pill">Yesim</span>
+        <span class="partner-pill">Tiqets</span>
+        <span class="partner-pill">Radical Storage</span>
+        <span class="partner-pill">EconomyBookings</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-i18n="s5_title">アフィリエイトの表示</h2>
+      <p data-i18n="s5_p1">WoW Trainはアフィリエイトプログラムに参加しています。パートナーのリンクから予約すると、あなたへの追加料金なしで、わずかな報酬を受け取ることがあります。これでサイトを無料で、独立したままにしています。旅人の役に立つサービスだけを紹介します。</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="s6_title">連絡</h2>
+      <p data-i18n="s6_p1">質問、提携のアイデア、感想は <a href="mailto:contact@glosx.app">contact@glosx.app</a> へ直接どうぞ。メッセージはすべて自分で読みます。</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="s7_title">法的情報</h2>
+      <ul>
+        <li><a href="/privacy.html" data-i18n="legal_privacy">プライバシー</a></li>
+        <li><a href="/terms.html" data-i18n="legal_terms">利用規約</a></li>
+        <li><a href="/support.html" data-i18n="legal_support">サポート</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span data-i18n="footer_copy">© 2026 GLOSX — WoW Train · 独立した旅行サイト ·</span> <a href="mailto:contact@glosx.app">contact@glosx.app</a>
+  </footer>
+
+  <script>
+    const T = {
+      en: {
+        page_title: 'Our Story — WoW Train · glosx.app',
+        page_desc: 'WoW Train is an independent travel platform helping travelers find trains across Europe.',
+        nav_back: '← Back home',
+        badge: 'Our story',
+        h1: 'About WoW Train: built by a traveler<br/>who got lost.',
+        lead1: 'I was standing at the Colosseum in Rome, trying to get to the Vatican. Simple enough — except I had no idea which bus, which line, or how to buy a ticket. I asked several people. Nobody could really help. I spent more time figuring out the logistics than actually traveling.',
+        lead2: 'That afternoon I decided to build the tool I wished I had.',
+        brand_line: 'WoW Train is the name of the app, and glosx.app is its website: one project, two names.',
+        s1_title: 'Who built this',
+        s1_p1: 'My name is Sebastián Jasinsky. I\'m an independent developer from Mendoza, Argentina. I built WoW Train as a solo project — no VC funding, no team, no corporate backing. Just a genuine frustration with how hard it is for a tourist to navigate European rail, and the conviction that it doesn\'t have to be that way.',
+        s1_p2: 'Latin American travelers in particular arrive in Europe with no mental map of the rail network. They don\'t know that you change trains in Milan to get to Florence, or that a regional train in Spain is completely different from an AVE. Nobody explains that. WoW Train does.',
+        s2_title: 'What WoW Train actually does',
+        s2_p1: 'It\'s not a booking engine — it\'s what comes before the booking. A traveler describes where they want to go, and the platform builds the full itinerary: which trains, which operators, how long each leg takes, what to expect on the way. Then it routes them to buy the ticket on the official platform.',
+        s2_p2: 'The AI planner, the multilingual search with synonym mapping, the scenic route guides, the live departures — all of it exists to answer one question a tourist actually asks: <em>"OK, but how do I get there?"</em>',
+        s3_title: 'Coverage',
+        stat1: 'European countries', stat2: 'Train schedules', stat3: 'Route guides', stat4: 'Languages',
+        s4_title: 'Our partners',
+        s4_p1: 'WoW Train never processes payments. Every booking is completed on the partner\'s official, secure platform. We connect travelers to the right place — the transaction stays with the operator.',
+        s5_title: 'Affiliate disclosure',
+        s5_p1: 'WoW Train participates in affiliate programs. When you book through our partner links, we may earn a small commission at no additional cost to you. This is how we keep the platform free and independent. We only recommend services that genuinely help travelers.',
+        s6_title: 'Get in touch',
+        s6_p1: 'Questions, partnership ideas, or feedback — write directly to <a href="mailto:contact@glosx.app">contact@glosx.app</a>. I read every message personally.',
+        s7_title: 'Legal',
+        legal_privacy: 'Privacy Policy', legal_terms: 'Terms of Use', legal_support: 'Support',
+        footer_copy: '© 2026 GLOSX — WoW Train · Independent travel platform ·',
+      },
+      es: {
+        page_title: 'Nuestra historia — WoW Train · glosx.app',
+        page_desc: 'WoW Train es una plataforma de viajes independiente que ayuda a los viajeros a encontrar trenes en Europa.',
+        nav_back: '← Volver al inicio',
+        badge: 'Nuestra historia',
+        h1: 'Sobre WoW Train: creado por un viajero<br/>que se perdió.',
+        lead1: 'Estaba parado frente al Coliseo en Roma, intentando llegar al Vaticano. Algo simple — excepto que no tenía idea de qué colectivo tomar, qué línea, ni cómo comprar el ticket. Le pregunté a varias personas. Nadie pudo ayudarme bien. Pasé más tiempo tratando de entender la logística que viajando.',
+        lead2: 'Esa tarde decidí construir la herramienta que me hubiera gustado tener.',
+        brand_line: 'WoW Train es el nombre de la app y glosx.app es su sitio web: un solo proyecto con dos nombres.',
+        s1_title: 'Quién lo construyó',
+        s1_p1: 'Me llamo Sebastián Jasinsky. Soy desarrollador independiente de Mendoza, Argentina. Construí WoW Train como un proyecto en solitario — sin inversores, sin equipo, sin respaldo corporativo. Solo una frustración genuina con lo difícil que es para un turista navegar el sistema ferroviario europeo, y la convicción de que no tiene por qué ser así.',
+        s1_p2: 'Los viajeros latinoamericanos en particular llegan a Europa sin mapa mental de la red ferroviaria. No saben que hay que cambiar de tren en Milán para llegar a Florencia, o que un tren regional en España es completamente distinto a un AVE. Nadie lo explica. WoW Train sí.',
+        s2_title: 'Qué hace WoW Train realmente',
+        s2_p1: 'No es un motor de reservas — es lo que viene antes de la reserva. El viajero describe a dónde quiere ir, y la plataforma arma el itinerario completo: qué trenes, qué operadores, cuánto dura cada tramo, qué esperar en el camino. Luego lo lleva a comprar el pasaje en la plataforma oficial.',
+        s2_p2: 'El planificador IA, el buscador multilingüe con mapeo de sinónimos, las guías de rutas panorámicas, los horarios en tiempo real — todo existe para responder una pregunta que el turista sí hace: <em>"Bien, ¿pero cómo llego?"</em>',
+        s3_title: 'Cobertura',
+        stat1: 'Países europeos', stat2: 'Horarios de trenes', stat3: 'Guías de rutas', stat4: 'Idiomas',
+        s4_title: 'Nuestros socios',
+        s4_p1: 'WoW Train nunca procesa pagos. Cada reserva se completa en la plataforma oficial y segura del socio. Conectamos a los viajeros con el lugar correcto — la transacción queda con el operador.',
+        s5_title: 'Divulgación de afiliados',
+        s5_p1: 'WoW Train participa en programas de afiliados. Cuando reservas a través de nuestros enlaces, podemos recibir una pequeña comisión sin costo adicional para ti. Así mantenemos la plataforma gratuita e independiente. Solo recomendamos servicios que realmente ayudan al viajero.',
+        s6_title: 'Contacto',
+        s6_p1: 'Preguntas, ideas de colaboración o comentarios — escribe directamente a <a href="mailto:contact@glosx.app">contact@glosx.app</a>. Leo cada mensaje personalmente.',
+        s7_title: 'Legal',
+        legal_privacy: 'Política de privacidad', legal_terms: 'Términos de uso', legal_support: 'Soporte',
+        footer_copy: '© 2026 GLOSX — WoW Train · Plataforma de viajes independiente ·',
+      },
+      fr: {
+        page_title: 'Notre histoire — WoW Train · glosx.app',
+        page_desc: 'WoW Train est une plateforme de voyage indépendante qui aide les voyageurs à trouver des trains en Europe.',
+        nav_back: '← Retour',
+        badge: 'Notre histoire',
+        h1: 'À propos de WoW Train : créé par un voyageur<br/>qui s\'est perdu.',
+        lead1: 'J\'étais devant le Colisée à Rome, essayant de rejoindre le Vatican. Simple en apparence — sauf que je n\'avais aucune idée du bus à prendre, de la ligne, ni comment acheter un ticket. J\'ai demandé à plusieurs personnes. Personne n\'a vraiment pu m\'aider. J\'ai passé plus de temps à comprendre la logistique qu\'à voyager.',
+        lead2: 'Cet après-midi-là, j\'ai décidé de créer l\'outil que j\'aurais voulu avoir.',
+        brand_line: 'WoW Train est le nom de l’application et glosx.app son site web : un seul projet, deux noms.',
+        s1_title: 'Qui a construit ceci',
+        s1_p1: 'Je m\'appelle Sebastián Jasinsky. Je suis développeur indépendant de Mendoza, en Argentine. J\'ai construit WoW Train comme un projet en solo — sans financement, sans équipe, sans soutien corporate. Juste une vraie frustration face à la difficulté pour un touriste de naviguer le rail européen, et la conviction que ça ne devrait pas être si compliqué.',
+        s1_p2: 'Les voyageurs latino-américains arrivent en Europe sans carte mentale du réseau ferroviaire. Ils ne savent pas qu\'il faut changer à Milan pour aller à Florence, ou qu\'un train régional en Espagne est très différent d\'un AVE. Personne ne l\'explique. WoW Train, si.',
+        s2_title: 'Ce que fait vraiment WoW Train',
+        s2_p1: 'Ce n\'est pas un moteur de réservation — c\'est ce qui vient avant. Le voyageur décrit où il veut aller, et la plateforme construit l\'itinéraire complet : quels trains, quels opérateurs, combien de temps dure chaque étape, quoi attendre en chemin. Ensuite, elle l\'oriente pour acheter le billet sur la plateforme officielle.',
+        s2_p2: 'Le planificateur IA, la recherche multilingue avec mapping des synonymes, les guides de routes panoramiques, les horaires en direct — tout cela existe pour répondre à une question qu\'un touriste pose vraiment : <em>"OK, mais comment j\'y vais ?"</em>',
+        s3_title: 'Couverture',
+        stat1: 'Pays européens', stat2: 'Horaires de trains', stat3: 'Guides d\'itinéraires', stat4: 'Langues',
+        s4_title: 'Nos partenaires',
+        s4_p1: 'WoW Train ne traite jamais de paiements. Chaque réservation est finalisée sur la plateforme officielle et sécurisée du partenaire. Nous connectons les voyageurs au bon endroit — la transaction reste avec l\'opérateur.',
+        s5_title: 'Divulgation d\'affiliation',
+        s5_p1: 'WoW Train participe à des programmes d\'affiliation. Lorsque vous réservez via nos liens partenaires, nous pouvons percevoir une petite commission sans frais supplémentaires pour vous. C\'est ainsi que nous maintenons la plateforme gratuite et indépendante.',
+        s6_title: 'Nous contacter',
+        s6_p1: 'Questions, idées de partenariat ou retours — écrivez directement à <a href="mailto:contact@glosx.app">contact@glosx.app</a>. Je lis chaque message personnellement.',
+        s7_title: 'Mentions légales',
+        legal_privacy: 'Politique de confidentialité', legal_terms: 'Conditions d\'utilisation', legal_support: 'Support',
+        footer_copy: '© 2026 GLOSX — WoW Train · Plateforme de voyage indépendante ·',
+      },
+      de: {
+        page_title: 'Unsere Geschichte — WoW Train · glosx.app',
+        page_desc: 'WoW Train ist eine unabhängige Reiseplattform, die Reisenden hilft, Züge in Europa zu finden.',
+        nav_back: '← Zurück',
+        badge: 'Unsere Geschichte',
+        h1: 'Über WoW Train: gebaut von einem Reisenden,<br/>der sich verlaufen hat.',
+        lead1: 'Ich stand vor dem Kolosseum in Rom und wollte zum Vatikan. Eigentlich einfach — aber ich hatte keine Ahnung, welchen Bus ich nehmen sollte, welche Linie, oder wie man ein Ticket kauft. Ich fragte mehrere Leute. Niemand konnte mir wirklich helfen. Ich verbrachte mehr Zeit damit, die Logistik zu verstehen, als tatsächlich zu reisen.',
+        lead2: 'An diesem Nachmittag beschloss ich, das Werkzeug zu bauen, das ich mir gewünscht hätte.',
+        brand_line: 'WoW Train ist der Name der App und glosx.app ihre Website: ein Projekt, zwei Namen.',
+        s1_title: 'Wer das gebaut hat',
+        s1_p1: 'Mein Name ist Sebastián Jasinsky. Ich bin unabhängiger Entwickler aus Mendoza, Argentinien. Ich habe WoW Train als Einzelprojekt gebaut — ohne Investoren, ohne Team, ohne Unternehmensunterstützung. Nur eine echte Frustration darüber, wie schwierig es für einen Touristen ist, das europäische Schienennetz zu navigieren.',
+        s1_p2: 'Lateinamerikanische Reisende kommen besonders oft ohne mentale Karte des Schienennetzes nach Europa. Sie wissen nicht, dass man in Mailand umsteigen muss, um nach Florenz zu gelangen, oder dass ein Regionalzug in Spanien völlig anders ist als ein AVE. Niemand erklärt das. WoW Train schon.',
+        s2_title: 'Was WoW Train wirklich macht',
+        s2_p1: 'Es ist keine Buchungsmaschine — es ist das, was vor der Buchung kommt. Der Reisende beschreibt, wohin er möchte, und die Plattform erstellt die vollständige Route: welche Züge, welche Betreiber, wie lange jeder Abschnitt dauert, was unterwegs zu erwarten ist. Dann leitet sie ihn zum Ticketkauf auf der offiziellen Plattform weiter.',
+        s2_p2: 'Der KI-Planer, die mehrsprachige Suche, die Panoramarouten-Guides, die Live-Abfahrten — alles beantwortet eine Frage, die ein Tourist wirklich stellt: <em>"OK, aber wie komme ich da hin?"</em>',
+        s3_title: 'Abdeckung',
+        stat1: 'Europäische Länder', stat2: 'Zugfahrpläne', stat3: 'Routen-Guides', stat4: 'Sprachen',
+        s4_title: 'Unsere Partner',
+        s4_p1: 'WoW Train verarbeitet keine Zahlungen. Jede Buchung wird auf der offiziellen, sicheren Plattform des Partners abgeschlossen. Wir verbinden Reisende mit dem richtigen Ort — die Transaktion bleibt beim Betreiber.',
+        s5_title: 'Affiliate-Hinweis',
+        s5_p1: 'WoW Train nimmt an Affiliate-Programmen teil. Wenn Sie über unsere Partner-Links buchen, erhalten wir möglicherweise eine kleine Provision ohne zusätzliche Kosten für Sie. So halten wir die Plattform kostenlos und unabhängig.',
+        s6_title: 'Kontakt',
+        s6_p1: 'Fragen, Partnerschaftsideen oder Feedback — schreiben Sie direkt an <a href="mailto:contact@glosx.app">contact@glosx.app</a>. Ich lese jede Nachricht persönlich.',
+        s7_title: 'Rechtliches',
+        legal_privacy: 'Datenschutzerklärung', legal_terms: 'Nutzungsbedingungen', legal_support: 'Support',
+        footer_copy: '© 2026 GLOSX — WoW Train · Unabhängige Reiseplattform ·',
+      },
+      it: {
+        page_title: 'La nostra storia — WoW Train · glosx.app',
+        page_desc: 'WoW Train è una piattaforma di viaggi indipendente che aiuta i viaggiatori a trovare treni in Europa.',
+        nav_back: '← Torna alla home',
+        badge: 'La nostra storia',
+        h1: 'Su WoW Train: creato da un viaggiatore<br/>che si è perso.',
+        lead1: 'Ero al Colosseo a Roma, cercando di raggiungere il Vaticano. Semplice, in teoria — ma non avevo idea di quale autobus prendere, quale linea, né come comprare un biglietto. Ho chiesto a diverse persone. Nessuno ha saputo aiutarmi davvero. Ho passato più tempo a capire la logistica che a viaggiare.',
+        lead2: 'Quel pomeriggio ho deciso di costruire lo strumento che avrei voluto avere.',
+        brand_line: 'WoW Train è il nome dell’app e glosx.app è il suo sito web: un solo progetto, due nomi.',
+        s1_title: 'Chi ha costruito questo',
+        s1_p1: 'Mi chiamo Sebastián Jasinsky. Sono uno sviluppatore indipendente di Mendoza, Argentina. Ho costruito WoW Train come progetto individuale — senza investitori, senza team, senza supporto aziendale. Solo una frustrazione genuina per quanto sia difficile per un turista orientarsi nel sistema ferroviario europeo.',
+        s1_p2: 'I viaggiatori latinoamericani in particolare arrivano in Europa senza una mappa mentale della rete ferroviaria. Non sanno che bisogna cambiare treno a Milano per andare a Firenze, o che un treno regionale in Spagna è completamente diverso da un AVE. Nessuno lo spiega. WoW Train sì.',
+        s2_title: 'Cosa fa davvero WoW Train',
+        s2_p1: 'Non è un motore di prenotazione — è ciò che viene prima. Il viaggiatore descrive dove vuole andare e la piattaforma costruisce l\'itinerario completo: quali treni, quali operatori, quanto dura ogni tratta, cosa aspettarsi lungo il percorso. Poi lo indirizza ad acquistare il biglietto sulla piattaforma ufficiale.',
+        s2_p2: 'Il pianificatore IA, la ricerca multilingue, le guide sui percorsi panoramici, le partenze in tempo reale — tutto esiste per rispondere a una domanda che un turista fa davvero: <em>"Ok, ma come ci arrivo?"</em>',
+        s3_title: 'Copertura',
+        stat1: 'Paesi europei', stat2: 'Orari ferroviari', stat3: 'Guide di percorso', stat4: 'Lingue',
+        s4_title: 'I nostri partner',
+        s4_p1: 'WoW Train non elabora mai pagamenti. Ogni prenotazione viene completata sulla piattaforma ufficiale e sicura del partner. Colleghiamo i viaggiatori al posto giusto — la transazione resta con l\'operatore.',
+        s5_title: 'Informativa sugli affiliati',
+        s5_p1: 'WoW Train partecipa a programmi di affiliazione. Quando prenoti tramite i nostri link partner, potremmo ricevere una piccola commissione senza costi aggiuntivi per te. È così che manteniamo la piattaforma gratuita e indipendente.',
+        s6_title: 'Contatti',
+        s6_p1: 'Domande, idee di collaborazione o feedback — scrivi direttamente a <a href="mailto:contact@glosx.app">contact@glosx.app</a>. Leggo ogni messaggio personalmente.',
+        s7_title: 'Note legali',
+        legal_privacy: 'Informativa sulla privacy', legal_terms: 'Termini di utilizzo', legal_support: 'Supporto',
+        footer_copy: '© 2026 GLOSX — WoW Train · Piattaforma di viaggi indipendente ·',
+      },
+      pt: {
+        page_title: 'Nossa história — WoW Train · glosx.app',
+        page_desc: 'WoW Train é uma plataforma de viagens independente que ajuda os viajantes a encontrar comboios na Europa.',
+        nav_back: '← Voltar ao início',
+        badge: 'A nossa história',
+        h1: 'Sobre a WoW Train: criado por um viajante<br/>que se perdeu.',
+        lead1: 'Estava no Coliseu em Roma, tentando chegar ao Vaticano. Simples, em teoria — mas não tinha ideia de qual autocarro tomar, qual linha, nem como comprar um bilhete. Perguntei a várias pessoas. Ninguém conseguiu ajudar de verdade. Passei mais tempo tentando entender a logística do que viajando.',
+        lead2: 'Naquela tarde decidi construir a ferramenta que gostaria de ter tido.',
+        s1_title: 'Quem construiu isto',
+        s1_p1: 'Chamo-me Sebastián Jasinsky. Sou um desenvolvedor independente de Mendoza, Argentina. Construí o WoW Train como um projeto a solo — sem investidores, sem equipa, sem apoio corporativo. Apenas uma frustração genuína com a dificuldade que um turista tem para navegar o sistema ferroviário europeu.',
+        s1_p2: 'Os viajantes latino-americanos chegam à Europa sem mapa mental da rede ferroviária. Não sabem que é preciso mudar de comboio em Milão para chegar a Florença, ou que um comboio regional em Espanha é completamente diferente de um AVE. Ninguém explica isso. O WoW Train explica.',
+        s2_title: 'O que o WoW Train realmente faz',
+        s2_p1: 'Não é um motor de reservas — é o que vem antes da reserva. O viajante descreve para onde quer ir e a plataforma constrói o itinerário completo: quais comboios, quais operadores, quanto dura cada troço, o que esperar no caminho. Depois direciona-o para comprar o bilhete na plataforma oficial.',
+        s2_p2: 'O planificador IA, a pesquisa multilingue com mapeamento de sinónimos, os guias de rotas panorâmicas, as partidas em tempo real — tudo existe para responder a uma pergunta que um turista faz mesmo: <em>"Ok, mas como é que lá chego?"</em>',
+        s3_title: 'Cobertura',
+        stat1: 'Países europeus', stat2: 'Horários de comboios', stat3: 'Guias de rotas', stat4: 'Idiomas',
+        s4_title: 'Os nossos parceiros',
+        s4_p1: 'O WoW Train nunca processa pagamentos. Cada reserva é concluída na plataforma oficial e segura do parceiro. Ligamos os viajantes ao lugar certo — a transação fica com o operador.',
+        s5_title: 'Divulgação de afiliados',
+        s5_p1: 'O WoW Train participa em programas de afiliados. Quando reserva através dos nossos links parceiros, podemos receber uma pequena comissão sem custos adicionais para si. É assim que mantemos a plataforma gratuita e independente.',
+        s6_title: 'Contacto',
+        s6_p1: 'Questões, ideias de parceria ou feedback — escreva diretamente para <a href="mailto:contact@glosx.app">contact@glosx.app</a>. Leio cada mensagem pessoalmente.',
+        s7_title: 'Legal',
+        legal_privacy: 'Política de privacidade', legal_terms: 'Termos de utilização', legal_support: 'Suporte',
+        footer_copy: '© 2026 GLOSX — WoW Train · Plataforma de viagens independente ·',
+      },
+
+      ja: {
+        page_title: '私たちの話 — WoW Train · glosx.app',
+        page_desc: 'WoW Trainは、ヨーロッパの列車を探すための独立した旅行サイトです。',
+        nav_back: '← ホームへ戻る',
+        badge: '私たちの話',
+        h1: 'WoW Trainについて：道に迷った旅人が<br/>作りました。',
+        lead1: 'ローマのコロッセオの前に立って、バチカンへ行こうとしていました。簡単なはずなのに、どのバスか、どの路線か、切符の買い方さえわかりませんでした。何人かに聞きました。きちんと教えてくれる人はいませんでした。旅そのものより、行き方を考える時間のほうが長くなりました。',
+        lead2: 'その日の午後、ほしかった道具を自分で作ることにしました。',
+        brand_line: 'WoW Trainはアプリの名前で、glosx.appはそのウェブサイトです。ひとつのプロジェクトに、二つの名前があります。',
+        s1_title: '誰が作ったか',
+        s1_p1: 'セバスティアン・ヤシンスキーです。アルゼンチン、メンドーサの個人開発者です。WoW Trainはひとりで作りました。投資家も、チームも、会社の後ろ盾もありません。観光客がヨーロッパの鉄道で迷うのがあまりに不便で、そうである必要はないと思ったからです。',
+        s1_p2: 'とくにラテンアメリカから来た人は、鉄道の地図が頭にないままヨーロッパに着きます。フィレンツェへ行くにはミラノで乗り換えることや、スペインの普通列車がAVEとはまったく別だということを知りません。誰も説明しません。WoW Trainは説明します。',
+        s2_title: 'WoW Trainが実際にすること',
+        s2_p1: '予約エンジンではありません。予約の前に来るものです。行き先を話すと、どの列車か、どの運行会社か、各区間の時間、途中で何があるかまで、旅程を組み立てます。それから公式のサイトで切符を買うところへ案内します。',
+        s2_p2: 'AIプランナー、言い回しの違いも拾う多言語検索、展望列車のガイド、リアルタイムの発車。すべては、旅人が本当に聞く質問に答えるためです。<em>「で、どうやって行けばいいの？」</em>',
+        s3_title: 'カバー範囲',
+        stat1: 'ヨーロッパの国', stat2: '列車の時刻', stat3: '路線ガイド', stat4: '言語',
+        s4_title: 'パートナー',
+        s4_p1: 'WoW Trainは支払いを扱いません。予約はパートナーの公式で安全なサイトで完了します。旅人を正しい場所へつなぎ、取引は運行会社の側に残ります。',
+        s5_title: 'アフィリエイトの表示',
+        s5_p1: 'WoW Trainはアフィリエイトプログラムに参加しています。パートナーのリンクから予約すると、あなたへの追加料金なしで、わずかな報酬を受け取ることがあります。これでサイトを無料で、独立したままにしています。旅人の役に立つサービスだけを紹介します。',
+        s6_title: '連絡',
+        s6_p1: '質問、提携のアイデア、感想は <a href="mailto:contact@glosx.app">contact@glosx.app</a> へ直接どうぞ。メッセージはすべて自分で読みます。',
+        s7_title: '法的情報',
+        legal_privacy: 'プライバシー', legal_terms: '利用規約', legal_support: 'サポート',
+        footer_copy: '© 2026 GLOSX — WoW Train · 独立した旅行サイト ·',
+      },
+    };
+
+    function applyLang(lang) {
+      const d = T[lang] || T.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (d[key] !== undefined) el.innerHTML = d[key];
+      });
+      document.title = d.page_title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', d.page_desc);
+      var _lc=document.getElementById('langCode'); if(_lc) _lc.textContent = lang.toUpperCase(); document.querySelectorAll('.lang-option').forEach(function(o){ o.classList.toggle('active', o.dataset.lang===lang); }); var _ld=document.getElementById('langDropdown'); if(_ld) _ld.classList.remove('open');
+      localStorage.setItem('wt_lang', lang);
+    }
+
+    function setLang(lang) {
+      try { localStorage.setItem('wt_lang', lang); } catch (e) {}
+      var dest = lang === 'en' ? '/about.html' : (lang === 'es' || lang === 'fr' || lang === 'it' || lang === 'ja' ? '/' + lang + '/about.html' : null);
+      var here = location.pathname.replace(/\/$/, '');
+      if (dest && here !== dest) { location.assign(dest); return; }
+      applyLang(lang);
+    }
+
+    applyLang('ja');
+  </script>
+</body>
+</html>
