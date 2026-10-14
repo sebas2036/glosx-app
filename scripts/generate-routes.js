@@ -859,23 +859,52 @@ const HERO_PHOTOS = {
 const COUNTRY_TR = {
   es: { Austria: 'Austria', Belgium: 'Bélgica', Czech: 'Chequia', Denmark: 'Dinamarca', France: 'Francia', Germany: 'Alemania', Hungary: 'Hungría', Italy: 'Italia', Netherlands: 'Países Bajos', Norway: 'Noruega', Portugal: 'Portugal', Slovenia: 'Eslovenia', Spain: 'España', Sweden: 'Suecia', Switzerland: 'Suiza', UK: 'Reino Unido' },
   fr: { Austria: 'Autriche', Belgium: 'Belgique', Czech: 'Tchéquie', Denmark: 'Danemark', France: 'France', Germany: 'Allemagne', Hungary: 'Hongrie', Italy: 'Italie', Netherlands: 'Pays-Bas', Norway: 'Norvège', Portugal: 'Portugal', Slovenia: 'Slovénie', Spain: 'Espagne', Sweden: 'Suède', Switzerland: 'Suisse', UK: 'Royaume-Uni' },
-  it: { Austria: 'Austria', Belgium: 'Belgio', Czech: 'Cechia', Denmark: 'Danimarca', France: 'Francia', Germany: 'Germania', Hungary: 'Ungheria', Italy: 'Italia', Netherlands: 'Paesi Bassi', Norway: 'Norvegia', Portugal: 'Portogallo', Slovenia: 'Slovenia', Spain: 'Spagna', Sweden: 'Svezia', Switzerland: 'Svizzera', UK: 'Regno Unito' }
+  it: { Austria: 'Austria', Belgium: 'Belgio', Czech: 'Cechia', Denmark: 'Danimarca', France: 'Francia', Germany: 'Germania', Hungary: 'Ungheria', Italy: 'Italia', Netherlands: 'Paesi Bassi', Norway: 'Norvegia', Portugal: 'Portogallo', Slovenia: 'Slovenia', Spain: 'Spagna', Sweden: 'Svezia', Switzerland: 'Svizzera', UK: 'Regno Unito' },
+  ja: { Austria: 'オーストリア', Belgium: 'ベルギー', Czech: 'チェコ', Denmark: 'デンマーク', France: 'フランス', Germany: 'ドイツ', Hungary: 'ハンガリー', Italy: 'イタリア', Netherlands: 'オランダ', Norway: 'ノルウェー', Portugal: 'ポルトガル', Slovenia: 'スロベニア', Spain: 'スペイン', Sweden: 'スウェーデン', Switzerland: 'スイス', UK: 'イギリス' }
 };
 function translateCountry(country, lang) {
   const dict = COUNTRY_TR[lang];
   if (!dict) return country;
-  return country.split('-').map(c => dict[c] || c).join('-');
+  const sep = lang === 'ja' ? '・' : '-';
+  return country.split('-').map(c => dict[c] || c).join(sep);
+}
+const CITY_JA = (function () {
+  const src = fs.readFileSync(path.join(__dirname, 'generate-home-i18n.js'), 'utf8');
+  const m = src.match(/const JA_CITY = \{([\s\S]*?)\n\};/);
+  const map = eval('({' + m[1] + '})');
+  map.Lisbon = 'リスボン';
+  map.Porto = 'ポルト';
+  map.Oslo = 'オスロ';
+  map.Bergen = 'ベルゲン';
+  return map;
+})();
+function cityLabel(name, lang) {
+  if (lang !== 'ja') return name;
+  return CITY_JA[name] || name;
+}
+const HOTEL_PLACE_JA = {
+  Netherlands: 'オランダ', Spain: 'スペイン', France: 'フランス', Germany: 'ドイツ', Italy: 'イタリア',
+  Austria: 'オーストリア', Switzerland: 'スイス', Belgium: 'ベルギー', 'Czech Republic': 'チェコ',
+  Portugal: 'ポルトガル', 'United Kingdom': 'イギリス', Sweden: 'スウェーデン', Norway: 'ノルウェー',
+  Hungary: 'ハンガリー', Slovenia: 'スロベニア', Denmark: 'デンマーク', 'Lauterbrunnen valley': 'ラウターブルンネンの谷'
+};
+function placeLabel(text, lang) {
+  if (lang !== 'ja' || !text) return text;
+  return text.split(',').map(part => {
+    const s = part.trim();
+    return CITY_JA[s] || HOTEL_PLACE_JA[s] || s;
+  }).join('、');
 }
 
 // Sufijo de URL por idioma. EN es la raíz; el resto va en subcarpeta.
-function langSuffix(lang) { return { en: '/', es: '/es/', fr: '/fr/', it: '/it/' }[lang] || '/'; }
+function langSuffix(lang) { return { en: '/', es: '/es/', fr: '/fr/', it: '/it/', ja: '/ja/' }[lang] || '/'; }
 // URL canónica (self-referencing) por idioma — cada página apunta a sí misma.
 function canonicalUrl(slug, lang) { return `https://glosx.app/rutas/${slug}${langSuffix(lang)}`; }
 // Selector de idioma en el nav: links a los OTROS 3 idiomas.
-const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT' };
-const LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', it: 'Italiano' };
+const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT', ja: 'JA' };
+const LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', it: 'Italiano', ja: '日本語' };
 function langSwitchLinks(slug, current) {
-  const opts = ['en', 'es', 'fr', 'it'].map(l => {
+  const opts = ['en', 'es', 'fr', 'it', 'ja'].map(l => {
     const active = l === current ? ' active' : '';
     return `<a class="lang-option${active}" href="/rutas/${slug}${langSuffix(l)}">${LANG_NAMES[l]}</a>`;
   }).join('');
@@ -884,7 +913,8 @@ function langSwitchLinks(slug, current) {
 // Etiquetas localizadas para el breadcrumb (Home / Rutas).
 const BREADCRUMB = {
   en: { home: 'Home', routes: 'Routes' }, es: { home: 'Inicio', routes: 'Rutas' },
-  fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' }
+  fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' },
+  ja: { home: 'ホーム', routes: '路線' }
 };
 
 // Elige una de N variantes de copy de forma determinística según el slug de la ruta,
@@ -1288,37 +1318,34 @@ const content = {
     ]
   }
 };
+content.ja = require('./route-content-ja');
+const INSIGHTS_JA = require('./route-insights-ja.json');
 
 // Generate train segments HTML
 function generateTrainSegments(route, lang) {
   const langContent = content[lang];
-  const segments = [
-    {
-      from: route.from,
-      to: route.to,
-      duration: route.duration,
-      operator: route.operator,
-      station: `${route.from} Station`
-    }
-  ];
-  
-  return segments.map(seg => `
+  const from = cityLabel(route.from, lang);
+  const to = cityLabel(route.to, lang);
+  const station = lang === 'ja' ? from + '駅' : route.from + ' Station';
+  const operatorLine = (langContent.trainSegmentOperator || 'Operator: {{operator}}').replace('{{operator}}', route.operator);
+  const stationLine = (langContent.trainSegmentStation || 'Station: {{station}}').replace('{{station}}', station);
+  return `
     <div class="train-segment">
       <div class="train-segment-header">
-        <span class="train-segment-title">${seg.from} → ${seg.to}</span>
-        <span class="train-segment-duration">${langContent.trainSegmentDuration.replace('{{duration}}', seg.duration)}</span>
+        <span class="train-segment-title">${from} → ${to}</span>
+        <span class="train-segment-duration">${langContent.trainSegmentDuration.replace('{{duration}}', route.duration)}</span>
       </div>
       <div class="train-segment-details">
-        <div class="train-segment-detail"><strong>Operator:</strong> ${seg.operator}</div>
-        <div class="train-segment-detail"><strong>Station:</strong> ${seg.station}</div>
+        <div class="train-segment-detail"><strong>${operatorLine}</strong></div>
+        <div class="train-segment-detail"><strong>${stationLine}</strong></div>
       </div>
-      <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${encodeURIComponent(seg.from.toLowerCase())}&to=${encodeURIComponent(seg.to.toLowerCase())}"
+      <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_${route.slug}_${lang}')">
         ${langContent.bookTicketBtn}
       </a>
     </div>
-  `).join('');
+  `;
 }
 
 // Generate hotel cards HTML
@@ -1327,10 +1354,10 @@ function generateHotelCards(route, lang) {
   const curated = REAL_HOTELS[route.to.toLowerCase()];
   const hotels = [
     curated
-      ? { name: curated.name, location: curated.loc, image: curated.image }
+      ? { name: curated.name, location: placeLabel(curated.loc, lang), image: curated.image }
       : {
           name: `${route.to} Grand Hotel`,
-          location: `${route.to}, ${route.country}`,
+          location: placeLabel(`${route.to}, ${route.country}`, lang),
           image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=500'
         }
   ];
@@ -1358,7 +1385,7 @@ function generateHotelCards(route, lang) {
         <br>
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/kiwitaxi"
            class="transfer-link" target="_blank" rel="noopener sponsored">
-          ${langContent.transferLink.replace('{{to}}', route.to)}
+          ${langContent.transferLink.replace('{{to}}', cityLabel(route.to, lang))}
         </a>
       </div>
     </div>
@@ -1367,33 +1394,36 @@ function generateHotelCards(route, lang) {
 
 // Generate price table HTML
 function generatePriceTable(route, lang) {
+  const c = content[lang];
   return `
     <table style="width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:14px;">
       <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.12);text-align:left;">
-        <th style="padding:8px 12px;color:#C10016;font-weight:700;">Operator</th>
-        <th style="padding:8px 12px;color:#C10016;font-weight:700;">From</th>
-        <th style="padding:8px 12px;color:#C10016;font-weight:700;">Journey time</th>
-        <th style="padding:8px 12px;color:#C10016;font-weight:700;">Frequency</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadOperator || 'Operator'}</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadFrom || 'From'}</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadTime || 'Journey time'}</th>
+        <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadFreq || 'Frequency'}</th>
       </tr></thead>
       <tbody>
         <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
           <td style="padding:8px 12px;">${route.operator}</td>
           <td style="padding:8px 12px;">${route.price}</td>
           <td style="padding:8px 12px;">${route.duration}</td>
-          <td style="padding:8px 12px;">Several daily</td>
+          <td style="padding:8px 12px;">${c.priceFreq || 'Several daily'}</td>
         </tr>
       </tbody>
     </table>
-    <p style="font-size:13px;color:#55565f;margin-bottom:16px;">Prices are indicative advance fares. Check live availability for your exact date.</p>
+    <p style="font-size:13px;color:#55565f;margin-bottom:16px;">${c.priceNote || 'Prices are indicative advance fares. Check live availability for your exact date.'}</p>
   `;
 }
 
 // Generate photos HTML
-function generatePhotos(route) {
+function generatePhotos(route, lang) {
+  const to = cityLabel(route.to, lang);
+  const alts = (content[lang].photoAlts || ['Scenic view of {{to}}', 'Charming view of {{to}}', 'Historic buildings in {{to}}']).map(a => a.replace(/\{\{to\}\}/g, to));
   return `
-    <img src="https://images.pexels.com/photos/30753243/pexels-photo-30753243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Scenic view of ${route.to}" loading="lazy" />
-    <img src="https://images.pexels.com/photos/30753285/pexels-photo-30753285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Charming view of ${route.to}" loading="lazy" />
-    <img src="https://images.pexels.com/photos/13393083/pexels-photo-13393083.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="Historic buildings in ${route.to}" loading="lazy" />
+    <img src="https://images.pexels.com/photos/30753243/pexels-photo-30753243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="${alts[0]}" loading="lazy" />
+    <img src="https://images.pexels.com/photos/30753285/pexels-photo-30753285.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="${alts[1]}" loading="lazy" />
+    <img src="https://images.pexels.com/photos/13393083/pexels-photo-13393083.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="${alts[2]}" loading="lazy" />
   `;
 }
 
@@ -1415,7 +1445,7 @@ function generateRelatedRoutes(route, lang) {
     .sort((a, b) => b.score - a.score || hashSlug(a.r.slug + route.slug) - hashSlug(b.r.slug + route.slug));
   const related = scored.slice(0, 4).map(s => s.r);
   return related.map(r => `
-    <a href="/rutas/${r.slug}${suffix}" class="related-link">${r.from} &rarr; ${r.to}</a>
+    <a href="/rutas/${r.slug}${suffix}" class="related-link">${cityLabel(r.from, lang)} &rarr; ${cityLabel(r.to, lang)}</a>
   `).join('');
 }
 
@@ -1423,8 +1453,8 @@ function generateRelatedRoutes(route, lang) {
 // (usa reemplazo global, a diferencia de .replace() que solo cambia el primero)
 function fillTokens(str, route, lang) {
   return str
-    .replace(/\{\{from\}\}/g, route.from)
-    .replace(/\{\{to\}\}/g, route.to)
+    .replace(/\{\{from\}\}/g, cityLabel(route.from, lang))
+    .replace(/\{\{to\}\}/g, cityLabel(route.to, lang))
     .replace(/\{\{duration\}\}/g, route.duration)
     .replace(/\{\{operator\}\}/g, route.operator)
     .replace(/\{\{price\}\}/g, route.price)
@@ -1437,7 +1467,8 @@ function fillTokens(str, route, lang) {
 function generateLocalInsight(route, lang) {
   if (!route.localInsight) return '';
   const langContent = content[lang];
-  const text = route.localInsight[lang] || route.localInsight.en;
+  const text = (route.localInsight && route.localInsight[lang]) || (lang === 'ja' ? INSIGHTS_JA[route.slug] : route.localInsight.en);
+  if (!text) return '';
   return `
     <h2>${langContent.localInsightHeading}</h2>
     <p>${text}</p>`;
@@ -1468,7 +1499,8 @@ const VIDEO_COPY = {
   en: { desc: (f, t) => `Footage of the ${f} to ${t} train journey.`, label: (f, t) => `${f} to ${t} by train: video` },
   es: { desc: (f, t) => `Imágenes del viaje en tren de ${f} a ${t}.`, label: (f, t) => `${f} a ${t} en tren: video` },
   fr: { desc: (f, t) => `Images du trajet en train de ${f} à ${t}.`, label: (f, t) => `${f} à ${t} en train : vidéo` },
-  it: { desc: (f, t) => `Immagini del viaggio in treno da ${f} a ${t}.`, label: (f, t) => `${f} → ${t} in treno: video` }
+  it: { desc: (f, t) => `Immagini del viaggio in treno da ${f} a ${t}.`, label: (f, t) => `${f} → ${t} in treno: video` },
+  ja: { desc: (f, t) => `${f}から${t}への列車の映像。`, label: (f, t) => `${f}から${t}への列車：動画` }
 };
 function routeVideo(route) {
   const file = path.join(VIDEO_DIR, route.slug + '.mp4');
@@ -1485,7 +1517,7 @@ function generateVideoBlock(route, lang) {
   if (!v) return '';
   const copy = VIDEO_COPY[lang] || VIDEO_COPY.en;
   const posterAttr = v.poster ? ` poster="${v.poster}"` : '';
-  return `\n    <div class="route-video"><video src="${v.src}"${posterAttr} controls playsinline preload="metadata" muted loop aria-label="${copy.label(route.from, route.to)}"></video></div>`;
+  return `\n    <div class="route-video"><video src="${v.src}"${posterAttr} controls playsinline preload="metadata" muted loop aria-label="${copy.label(cityLabel(route.from, lang), cityLabel(route.to, lang))}"></video></div>`;
 }
 
 function generateSchema(route, lang) {
@@ -1497,8 +1529,8 @@ function generateSchema(route, lang) {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: bc.home, item: 'https://glosx.app/' },
-        { '@type': 'ListItem', position: 2, name: bc.routes, item: 'https://glosx.app/explore/' },
+        { '@type': 'ListItem', position: 1, name: bc.home, item: lang === 'ja' ? 'https://glosx.app/ja/' : 'https://glosx.app/' },
+        { '@type': 'ListItem', position: 2, name: bc.routes, item: lang === 'ja' ? 'https://glosx.app/ja/explore/' : 'https://glosx.app/explore/' },
         { '@type': 'ListItem', position: 3, name: routeName, item: url }
       ]
     },
@@ -1507,8 +1539,8 @@ function generateSchema(route, lang) {
       const copy = VIDEO_COPY[lang] || VIDEO_COPY.en;
       const obj = {
         '@type': 'VideoObject',
-        name: copy.label(route.from, route.to),
-        description: copy.desc(route.from, route.to),
+        name: copy.label(cityLabel(route.from, lang), cityLabel(route.to, lang)),
+        description: copy.desc(cityLabel(route.from, lang), cityLabel(route.to, lang)),
         thumbnailUrl: v.poster ? 'https://glosx.app' + v.poster : 'https://glosx.app/hero-bg.jpg',
         contentUrl: 'https://glosx.app' + v.src,
         uploadDate: v.uploaded
@@ -1548,20 +1580,27 @@ function replaceTemplate(template, route, lang) {
   // Console — el template generico es identico en las 174 rutas, asi que Google no tiene
   // motivo para destacarlas. Estas pocas rutas usan copy especifico en vez del template.
   const seo = route.customSEO && route.customSEO[lang];
+  const fromName = cityLabel(route.from, lang);
+  const toName = cityLabel(route.to, lang);
   const replacements = {
     '{{lang}}': lang,
     '{{routeSlug}}': route.slug,
     '{{canonical}}': canonicalUrl(route.slug, lang),
-    '{{title}}': seo ? seo.title : langContent.titleTemplate(route.from, route.to),
-    '{{description}}': seo ? seo.description : langContent.descriptionTemplate(route.from, route.to),
-    '{{ogTitle}}': seo ? seo.title : langContent.ogTitleTemplate(route.from, route.to),
-    '{{ogDescription}}': seo ? seo.description : langContent.ogDescriptionTemplate(route.from, route.to),
-    '{{twitterTitle}}': seo ? seo.title : langContent.twitterTitleTemplate(route.from, route.to),
-    '{{twitterDescription}}': seo ? seo.description : langContent.twitterDescriptionTemplate(route.from, route.to),
+    '{{title}}': seo ? seo.title : langContent.titleTemplate(fromName, toName),
+    '{{description}}': seo ? seo.description : langContent.descriptionTemplate(fromName, toName),
+    '{{ogTitle}}': seo ? seo.title : langContent.ogTitleTemplate(fromName, toName),
+    '{{ogDescription}}': seo ? seo.description : langContent.ogDescriptionTemplate(fromName, toName),
+    '{{twitterTitle}}': seo ? seo.title : langContent.twitterTitleTemplate(fromName, toName),
+    '{{twitterDescription}}': seo ? seo.description : langContent.twitterDescriptionTemplate(fromName, toName),
     '{{langSwitch}}': langSwitchLinks(route.slug, lang),
+    '{{homeHref}}': lang === 'ja' ? '/ja/' : '/',
+    '{{routesHref}}': lang === 'ja' ? '/ja/explore/' : '/rutas/',
     '{{backText}}': langContent.backText,
+    '{{footerLinks}}': lang === 'ja'
+      ? '<a href="/blog.html">ブログ</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/privacy.html">プライバシー</a> · <a href="/terms.html">利用規約</a>'
+      : '<a href="/blog.html">Blog</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>',
     '{{badge}}': `${langContent.badgeLabel} · ${translateCountry(route.country, lang)}`,
-    '{{mainTitle}}': (seo && seo.mainTitle) ? seo.mainTitle : langContent.mainTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
+    '{{mainTitle}}': (seo && seo.mainTitle) ? seo.mainTitle : fillTokens(langContent.mainTitle, route, lang),
     '{{metaText}}': langContent.metaText,
     '{{leadText}}': (seo && seo.lead) ? seo.lead : fillTokens(pickVariant(route.slug + 'lead', langContent.leadVariants), route, lang),
     '{{heroImage}}': HERO_PHOTOS[route.to.toLowerCase()] || '/hero-bg.webp',
@@ -1577,16 +1616,16 @@ function replaceTemplate(template, route, lang) {
     '{{whoRunsTitle}}': fillTokens(langContent.whoRunsTitle, route, lang),
     '{{whoRunsText}}': fillTokens(pickVariant(route.slug + 'whoruns', langContent.whoRunsVariants), route, lang),
     '{{localInsight}}': generateLocalInsight(route, lang),
-    '{{priceTitle}}': langContent.priceTitle.replace('{{from}}', route.from).replace('{{to}}', route.to),
+    '{{priceTitle}}': fillTokens(langContent.priceTitle, route, lang),
     '{{priceText}}': langContent.priceText.replace('{{price}}', route.price),
     '{{priceTable}}': generatePriceTable(route, lang),
     '{{bestFareTitle}}': langContent.bestFareTitle,
     '{{bestFareList}}': pickVariant(route.slug + 'bestfare', langContent.bestFareVariants).map(item => `<li>${item}</li>`).join('\n      '),
-    '{{readyText}}': langContent.readyText.replace('{{from}}', route.from).replace('{{to}}', route.to),
+    '{{readyText}}': fillTokens(langContent.readyText, route, lang),
     '{{compareText}}': langContent.compareText,
     '{{checkSchedulesText}}': langContent.checkSchedulesText,
     '{{opensNewTabText}}': langContent.opensNewTabText,
-    '{{photos}}': generatePhotos(route),
+    '{{photos}}': generatePhotos(route, lang),
     '{{moreRoutesTitle}}': langContent.moreRoutesTitle,
     '{{relatedRoutes}}': generateRelatedRoutes(route, lang),
     '{{faqSection}}': generateFAQ(route, lang),
@@ -1610,7 +1649,7 @@ const template = fs.readFileSync(templatePath, 'utf8');
 // Generate routes
 const outputDir = path.join(__dirname, '../rutas');
 
-const LANGS = ['en', 'es', 'fr', 'it'];
+const LANGS = process.env.ONLY_LANG ? [process.env.ONLY_LANG] : ['en', 'es', 'fr', 'it'];
 const onlySlug = process.argv[2];
 const routesToGenerate = onlySlug ? routes.filter((route) => route.slug === onlySlug) : routes;
 if (onlySlug && routesToGenerate.length === 0) {
@@ -1624,11 +1663,13 @@ routesToGenerate.forEach(route => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, 'index.html'), replaceTemplate(template, route, lang));
   });
-  console.log(`Generated ${route.slug} (EN/ES/FR/IT)`);
+  console.log(`Generated ${route.slug} (${LANGS.join('/')})`);
 });
 
 console.log('All routes generated successfully!');
 
 // Marca: une WoW Train con glosx.app en títulos y datos estructurados (idempotente)
-require('./apply-brand-title').run();
-require('./apply-brand-schema').run();
+if (!process.env.ONLY_LANG) {
+  require('./apply-brand-title').run();
+  require('./apply-brand-schema').run();
+}
