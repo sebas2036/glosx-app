@@ -58,6 +58,13 @@ const LANGS = {
     ogTitle: "WoW Train — Pianificatore di viaggi in treno in Europa con IA",
     ogDesc: "Descrivi il tuo viaggio e ottieni un itinerario ferroviario completo in Europa in pochi secondi — coincidenze, hotel e biglietti.",
   },
+  ja: {
+    title: "WoW Train — ヨーロッパ鉄道の無料AIプランナー",
+    description: "ヨーロッパの列車旅を無料のAIで組み立てます。行き先を話すと、乗り継ぎ・ホテル・切符まで含めた旅程が出ます。スペイン、フランス、イタリアなど。",
+    keywords: "ヨーロッパ 列車 プランナー, ヨーロッパ 鉄道 旅行, AI 旅程, 列車 切符",
+    ogTitle: "WoW Train — ヨーロッパ鉄道のAIプランナー",
+    ogDesc: "行き先を話すと、数秒でヨーロッパの鉄道旅程が組まれます。乗り継ぎ、ホテル、切符。",
+  },
 };
 
 function esc(s) {
@@ -153,6 +160,7 @@ function buildPage(lang) {
     `<link rel="alternate" hreflang="es" href="https://glosx.app/es/" />`,
     `<link rel="alternate" hreflang="fr" href="https://glosx.app/fr/" />`,
     `<link rel="alternate" hreflang="it" href="https://glosx.app/it/" />`,
+    `<link rel="alternate" hreflang="ja" href="https://glosx.app/ja/" />`,
     `<link rel="alternate" hreflang="x-default" href="https://glosx.app/" />`,
   ].join('\n  ');
   html = html.replace(
@@ -160,7 +168,7 @@ function buildPage(lang) {
     '\n  ' + hreflangBlock
   );
 
-  const ogLocale = { es: 'es_ES', fr: 'fr_FR', it: 'it_IT' }[lang];
+  const ogLocale = { es: 'es_ES', fr: 'fr_FR', it: 'it_IT', ja: 'ja_JP' }[lang];
   html = html.replace(
     /<meta property="og:locale" content="en_US" \/>/,
     `<meta property="og:locale" content="${ogLocale}" />`
@@ -214,7 +222,46 @@ function buildPage(lang) {
     if (has(file)) html = html.split(`href="/${rel}"`).join(`href="/${lang}/${rel}"`);
   }
 
+  if (lang === 'ja') html = localizeJaRouteChips(html);
   return html;
+}
+
+// Los chips de país dejan el onclick en el nombre que el planificador ya reconoce
+// y traducen solo el texto visible.
+const JA_CITY = {
+  Amsterdam: 'アムステルダム', Barcelona: 'バルセロナ', Basel: 'バーゼル', Berlin: 'ベルリン', Bern: 'ベルン',
+  Bordeaux: 'ボルドー', Brno: 'ブルノ', Bruges: 'ブルージュ', Brussels: 'ブリュッセル', Budapest: 'ブダペスト',
+  Cambridge: 'ケンブリッジ', Cologne: 'ケルン', Copenhagen: 'コペンハーゲン', Dortmund: 'ドルトムント',
+  Edinburgh: 'エディンバラ', Figueres: 'フィゲラス', Florence: 'フィレンツェ', Frankfurt: 'フランクフルト',
+  Geneva: 'ジュネーブ', Girona: 'ジローナ', Graz: 'グラーツ', Hamburg: 'ハンブルク', Innsbruck: 'インスブルック',
+  Interlaken: 'インターラーケン', Krems: 'クレムス', Lauterbrunnen: 'ラウターブルンネン', Liverpool: 'リバプール',
+  Ljubljana: 'リュブリャナ', London: 'ロンドン', Lourdes: 'ルルド', Lucerne: 'ルツェルン', Lyon: 'リヨン',
+  Madrid: 'マドリード', Malaga: 'マラガ', Manchester: 'マンチェスター', Marseille: 'マルセイユ', Milan: 'ミラノ',
+  Miramas: 'ミラマス', Monaco: 'モナコ', Montreux: 'モントルー', Munich: 'ミュンヘン', Naples: 'ナポリ',
+  Nice: 'ニース', Oxford: 'オックスフォード', Paris: 'パリ', Pisa: 'ピサ', Positano: 'ポジターノ',
+  Prague: 'プラハ', Rome: 'ローマ', Salerno: 'サレルノ', Salzburg: 'ザルツブルク', Seville: 'セビリア',
+  Siena: 'シエナ', Sorrento: 'ソレント', 'St. Moritz': 'サンモリッツ', Stockholm: 'ストックホルム',
+  Strasbourg: 'ストラスブール', Tende: 'タンド', Toulouse: 'トゥールーズ', Turin: 'トリノ', Valencia: 'バレンシア',
+  Venice: 'ヴェネツィア', Vienna: 'ウィーン', York: 'ヨーク', Zaragoza: 'サラゴサ', Zermatt: 'ツェルマット', Zurich: 'チューリッヒ'
+};
+
+function localizeJaRouteChips(html) {
+  html = html.replace('id="rouletteFrom">Madrid<', 'id="rouletteFrom">マドリード<');
+  html = html.replace('id="rouletteTo">Barcelona<', 'id="rouletteTo">バルセロナ<');
+  html = html.replace(/class="explore-route-pill">([^<]+)</g, (full, label) => {
+    const parts = label.split(' → ');
+    if (parts.length !== 2) return full;
+    const jaA = JA_CITY[parts[0]];
+    const jaB = JA_CITY[parts[1]];
+    if (!jaA || !jaB) return full;
+    return 'class="explore-route-pill">' + jaA + ' → ' + jaB + '<';
+  });
+  return html.replace(/planRouteFromChip\(event,'([^']+)','([^']+)'\)">([^<]+)</g, (full, a, b, label) => {
+    const jaA = JA_CITY[a];
+    const jaB = JA_CITY[b];
+    if (!jaA || !jaB) return full;
+    return `planRouteFromChip(event,'${a}','${b}')">${jaA} → ${jaB}<`;
+  });
 }
 
 for (const lang of Object.keys(LANGS)) {

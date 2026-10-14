@@ -19,21 +19,22 @@
     fr: { europe: 'Europe', japan: 'Japon', aria: 'Région', leg: 'Nous n’avons pas de train direct vérifié entre {a} et {b}. Essayez un autre ordre ou choisissez une route populaire.', two: 'Indiquez deux villes ou plus, dans l’ordre du voyage.', ph: 'Exemple : Tokyo à Kyoto', nopair: 'Choisissez l’une des routes populaires ou essayez une autre paire de villes japonaises.' },
     it: { europe: 'Europa', japan: 'Giappone', aria: 'Regione', leg: 'Non abbiamo un treno diretto verificato tra {a} e {b}. Prova un altro ordine o scegli un percorso popolare.', two: 'Scrivi due o più città, nell’ordine del viaggio.', ph: 'Esempio: Tokyo a Kyoto', nopair: 'Scegli uno dei percorsi popolari o prova un’altra coppia di città giapponesi.' },
     de: { europe: 'Europa', japan: 'Japan', aria: 'Region', leg: 'Zwischen {a} und {b} haben wir keine geprüfte Direktverbindung. Probiere eine andere Reihenfolge oder wähle eine beliebte Strecke.', two: 'Gib zwei oder mehr Städte ein, in der Reihenfolge der Reise.', ph: 'Beispiel: Tokio nach Kyoto', nopair: 'Wähle eine der beliebten Strecken oder probiere ein anderes Städtepaar in Japan.' },
-    pt: { europe: 'Europa', japan: 'Japão', aria: 'Região', leg: 'Não temos um trem direto verificado entre {a} e {b}. Tente outra ordem ou escolha uma rota popular.', two: 'Digite duas ou mais cidades, na ordem da viagem.', ph: 'Exemplo: Tóquio a Quioto', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades japonesas.' }
+    pt: { europe: 'Europa', japan: 'Japão', aria: 'Região', leg: 'Não temos um trem direto verificado entre {a} e {b}. Tente outra ordem ou escolha uma rota popular.', two: 'Digite duas ou mais cidades, na ordem da viagem.', ph: 'Exemplo: Tóquio a Quioto', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades japonesas.' },
+    ja: { europe: 'ヨーロッパ', japan: '日本', aria: '地域', leg: '{a} と {b} のあいだに、確認済みの直通列車はありません。順番を変えるか、人気の路線を選んでください。', two: '行く順に、2つ以上の都市を入力してください。', ph: '例：東京から京都', nopair: '人気の路線を選ぶか、別の日本の都市の組み合わせを試してください。' }
   };
 
   var GROUPS = [
-    { id: 'shinkansen', names: { en: 'Shinkansen', es: 'Shinkansen', fr: 'Shinkansen', it: 'Shinkansen', de: 'Shinkansen', pt: 'Shinkansen' },
+    { id: 'shinkansen', names: { en: 'Shinkansen', es: 'Shinkansen', fr: 'Shinkansen', it: 'Shinkansen', de: 'Shinkansen', pt: 'Shinkansen', ja: '新幹線' },
       pairs: [['tokyo', 'kyoto'], ['tokyo', 'osaka'], ['tokyo', 'nagoya'], ['nagoya', 'kyoto'], ['osaka', 'hiroshima'], ['tokyo', 'hiroshima'], ['tokyo', 'fukuoka']] },
-    { id: 'kanto', names: { en: 'Tokyo & Kanto', es: 'Tokio y Kanto', fr: 'Tokyo et Kanto', it: 'Tokyo e Kanto', de: 'Tokio & Kanto', pt: 'Tóquio e Kanto' },
+    { id: 'kanto', names: { en: 'Tokyo & Kanto', es: 'Tokio y Kanto', fr: 'Tokyo et Kanto', it: 'Tokyo e Kanto', de: 'Tokio & Kanto', pt: 'Tóquio e Kanto', ja: '東京・関東' },
       pairs: [['naritaairport', 'tokyo'], ['tokyo', 'yokohama'], ['shinjuku', 'hakone'], ['shinjuku', 'kawaguchiko'], ['asakusa', 'nikko'], ['tokyo', 'karuizawa'], ['tokyo', 'odawara']] },
-    { id: 'kansai', names: { en: 'Kansai', es: 'Kansai', fr: 'Kansai', it: 'Kansai', de: 'Kansai', pt: 'Kansai' },
+    { id: 'kansai', names: { en: 'Kansai', es: 'Kansai', fr: 'Kansai', it: 'Kansai', de: 'Kansai', pt: 'Kansai', ja: '関西' },
       pairs: [['osaka', 'kyoto'], ['kansaiairport', 'kyoto'], ['kansaiairport', 'osaka'], ['osaka', 'kobe'], ['kyoto', 'himeji'], ['osaka', 'himeji'], ['kyoto', 'kinosaki']] },
-    { id: 'chubu', names: { en: 'Chubu & Hokuriku', es: 'Chubu y Hokuriku', fr: 'Chubu et Hokuriku', it: 'Chubu e Hokuriku', de: 'Chubu & Hokuriku', pt: 'Chubu e Hokuriku' },
+    { id: 'chubu', names: { en: 'Chubu & Hokuriku', es: 'Chubu y Hokuriku', fr: 'Chubu et Hokuriku', it: 'Chubu e Hokuriku', de: 'Chubu & Hokuriku', pt: 'Chubu e Hokuriku', ja: '中部・北陸' },
       pairs: [['tokyo', 'kanazawa'], ['nagoya', 'takayama'], ['nagoya', 'matsumoto'], ['nagoya', 'nagano'], ['kanazawa', 'toyama'], ['takayama', 'toyama'], ['shinjuku', 'matsumoto']] },
-    { id: 'west', names: { en: 'West Japan & Kyushu', es: 'Oeste de Japón y Kyushu', fr: 'Ouest du Japon et Kyushu', it: 'Giappone occidentale e Kyushu', de: 'Westjapan & Kyushu', pt: 'Oeste do Japão e Kyushu' },
+    { id: 'west', names: { en: 'West Japan & Kyushu', es: 'Oeste de Japón y Kyushu', fr: 'Ouest du Japon et Kyushu', it: 'Giappone occidentale e Kyushu', de: 'Westjapan & Kyushu', pt: 'Oeste do Japão e Kyushu', ja: '西日本・九州' },
       pairs: [['hiroshima', 'okayama'], ['hiroshima', 'fukuoka'], ['fukuoka', 'kumamoto'], ['fukuoka', 'kagoshima'], ['fukuoka', 'yufuin'], ['okayama', 'matsue'], ['osaka', 'kagoshima']] },
-    { id: 'north', names: { en: 'Tohoku & Hokkaido', es: 'Tohoku y Hokkaido', fr: 'Tohoku et Hokkaido', it: 'Tohoku e Hokkaido', de: 'Tohoku & Hokkaido', pt: 'Tohoku e Hokkaido' },
+    { id: 'north', names: { en: 'Tohoku & Hokkaido', es: 'Tohoku y Hokkaido', fr: 'Tohoku et Hokkaido', it: 'Tohoku e Hokkaido', de: 'Tohoku & Hokkaido', pt: 'Tohoku e Hokkaido', ja: '東北・北海道' },
       pairs: [['tokyo', 'sendai'], ['tokyo', 'aomori'], ['sendai', 'morioka'], ['hakodate', 'sapporo'], ['sapporo', 'otaru'], ['sapporo', 'newchitoseairport'], ['tokyo', 'akita']] }
   ];
 
@@ -53,13 +54,16 @@
   CITIES.forEach(function (c) { displayBySlug[c.slug] = c.display; });
   // Nombres en el idioma de la página. VAL_LOC: los que el buscador y el backend reconocen (alias de Klook);
   // LABEL_LOC agrega los aeropuertos, que solo se traducen en lo que se ve (no en los valores de búsqueda).
-  var VAL_LOC = { es: { tokyo: 'Tokio', kyoto: 'Kioto' }, de: { tokyo: 'Tokio' }, pt: { tokyo: 'T\u00f3quio', kyoto: 'Quioto' } };
+  var JA_NAME = { akita:'秋田', aomori:'青森', asahikawa:'旭川', asakusa:'浅草', atami:'熱海', beppu:'別府', chitose:'千歳', fukuchiyama:'福知山', fukui:'福井', fukuoka:'福岡', fukushima:'福島', fukuyama:'福山', gero:'下呂', gifu:'岐阜', hachinohe:'八戸', hakodate:'函館', hakone:'箱根', hamamatsu:'浜松', hidafurukawa:'飛騨古川', himeji:'姫路', hirosaki:'弘前', hiroshima:'広島', hita:'日田', huistenbosch:'ハウステンボス', ichinoseki:'一ノ関', ito:'伊東', joetsumyoko:'上越妙高', kagaonsen:'加賀温泉', kagoshima:'鹿児島', kanazawa:'金沢', kansaiairport:'関西空港', karuizawa:'軽井沢', kawaguchiko:'河口湖', kiitanabe:'紀伊田辺', kinosaki:'城崎', kinugawaonsen:'鬼怒川温泉', kobe:'神戸', kofu:'甲府', kokura:'小倉', komatsu:'小松', koriyama:'郡山', kumamoto:'熊本', kurashiki:'倉敷', kurume:'久留米', kushiro:'釧路', kyoto:'京都', maibara:'米原', matsue:'松江', matsumoto:'松本', mishima:'三島', mito:'水戸', morioka:'盛岡', murakami:'村上', nagano:'長野', nagaoka:'長岡', nagoya:'名古屋', nakatsu:'中津', nanao:'七尾', naritaairport:'成田空港', nasushiobara:'那須塩原', newchitoseairport:'新千歳空港', niigata:'新潟', nikko:'日光', noboribetsu:'登別', obihiro:'帯広', odawara:'小田原', oita:'大分', okayama:'岡山', onomichi:'尾道', osaka:'大阪', otaru:'小樽', otsuki:'大月', saga:'佐賀', sapporo:'札幌', sendai:'仙台', shinagawa:'品川', shinfuji:'新富士', shinhakodatehokuto:'新函館北斗', shinhanamaki:'新花巻', shinjuku:'新宿', shinsapporo:'新札幌', shinyamaguchi:'新山口', shinyokohama:'新横浜', shirahama:'白浜', shizuoka:'静岡', takasaki:'高崎', takayama:'高山', takeoonsen:'武雄温泉', tennoji:'天王寺', tokyo:'東京', tomakomai:'苫小牧', toyama:'富山', toyohashi:'豊橋', toyooka:'豊岡', tsuruga:'敦賀', ueda:'上田', utsunomiya:'宇都宮', wakayama:'和歌山', wakkanai:'稚内', yamagata:'山形', yokohama:'横浜', yonago:'米子', yufuin:'由布院' };
+  CITIES.forEach(function (c) { if (JA_NAME[c.slug] && c.keywords.indexOf(JA_NAME[c.slug]) === -1) c.keywords.push(JA_NAME[c.slug]); });
+  var VAL_LOC = { es: { tokyo: 'Tokio', kyoto: 'Kioto' }, de: { tokyo: 'Tokio' }, pt: { tokyo: 'T\u00f3quio', kyoto: 'Quioto' }, ja: JA_NAME };
   var AIRPORT_LOC = {
     es: { naritaairport: 'Aeropuerto de Narita', kansaiairport: 'Aeropuerto de Kansai', newchitoseairport: 'Aeropuerto de New Chitose' },
     fr: { naritaairport: 'A\u00e9roport de Narita', kansaiairport: 'A\u00e9roport du Kansai', newchitoseairport: 'A\u00e9roport de New Chitose' },
     it: { naritaairport: 'Aeroporto di Narita', kansaiairport: 'Aeroporto del Kansai', newchitoseairport: 'Aeroporto di New Chitose' },
     de: { naritaairport: 'Flughafen Narita', kansaiairport: 'Flughafen Kansai', newchitoseairport: 'Flughafen New Chitose' },
-    pt: { naritaairport: 'Aeroporto de Narita', kansaiairport: 'Aeroporto de Kansai', newchitoseairport: 'Aeroporto de New Chitose' }
+    pt: { naritaairport: 'Aeroporto de Narita', kansaiairport: 'Aeroporto de Kansai', newchitoseairport: 'Aeroporto de New Chitose' },
+    ja: { naritaairport: '成田空港', kansaiairport: '関西空港', newchitoseairport: '新千歳空港' }
   };
   function valueOf(slug) { var m = VAL_LOC[lang()]; return (m && m[slug]) || displayBySlug[slug] || slug; }
   function labelOf(slug) { var m = AIRPORT_LOC[lang()]; return (m && m[slug]) || valueOf(slug); }
@@ -124,7 +128,7 @@
     });
   }
 
-  var CONN = { en: 'to', es: 'a', fr: '\u00e0', it: 'a', de: 'nach', pt: 'a' };
+  var CONN = { en: 'to', es: 'a', fr: '\u00e0', it: 'a', de: 'nach', pt: 'a', ja: 'から' };
   var QUICK = [['tokyo', 'kyoto'], ['tokyo', 'osaka'], ['osaka', 'kyoto'], ['tokyo', 'hiroshima'], ['nagoya', 'kyoto']];
   var europeSuggestEl = document.querySelector('.ai-suggestions');
   var japanSuggestEl = null;
@@ -280,7 +284,10 @@
   // "Tokio - Kioto", "Tokio -> Kioto", "Tokio, Kioto", "Tokio y Kioto"... Busca los nombres
   // de ciudades dentro del texto (el más largo primero, así "Shin Osaka" gana a "Osaka").
   function fold(x) {
-    return String(x || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+    return String(x || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/から/g, ' ')
+      .replace(/[^a-z0-9\u3040-\u30ff\u3400-\u9fff]+/g, ' ')
+      .replace(/\s+/g, ' ').trim();
   }
   var kwIndex = null;
   function getKwIndex() {
@@ -383,7 +390,8 @@
     fr: { from: 'dès {d}', direct: 'Direct' },
     it: { from: 'da {d}', direct: 'Diretto' },
     de: { from: 'ab {d}', direct: 'Direkt' },
-    pt: { from: 'a partir de {d}', direct: 'Direto' }
+    pt: { from: 'a partir de {d}', direct: 'Direto' },
+    ja: { from: '最短 {d}', direct: '直通' }
   };
   function fmtMin(m) {
     var h = Math.floor(m / 60), r = m % 60;
@@ -446,39 +454,40 @@
     fr: { ess: 'pour le Japon.', badge: 'Planificateur IA de trains au Japon', label: 'Itinéraires emblématiques du Japon', lead: 'Les plus beaux trajets en train du Japon, à réserver directement ici.', featured: 'Itinéraire à la une', book: 'R\u00e9server sur Klook', buy: 'Voir les horaires et r\u00e9server sur Klook', arrival: 'Arrivée', from: 'dès' },
     it: { ess: 'per il Giappone.', badge: 'Pianificatore IA di treni in Giappone', label: 'Percorsi iconici del Giappone', lead: 'I viaggi in treno più belli del Giappone, da prenotare direttamente qui.', featured: 'Percorso in evidenza', book: 'Prenota su Klook', buy: 'Vedi orari e prenota su Klook', arrival: 'Arrivo', from: 'da' },
     de: { ess: 'f\u00fcr Japan.', badge: 'KI-Zugplaner für Japan', label: 'Ikonische Strecken in Japan', lead: 'Japans schönste Zugreisen – direkt hier buchen.', featured: 'Empfohlene Strecke', book: 'Bei Klook buchen', buy: 'Zeiten ansehen und bei Klook buchen', arrival: 'Ankunft', from: 'ab' },
-    pt: { ess: 'para o Jap\u00e3o.', badge: 'Planejador IA de comboios no Japão', label: 'Rotas icónicas do Japão', lead: 'As viagens de comboio mais bonitas do Japão, reserve diretamente aqui.', featured: 'Rota em destaque', book: 'Reservar na Klook', buy: 'Ver hor\u00e1rios e reservar na Klook', arrival: 'Chegada', from: 'desde' }
+    pt: { ess: 'para o Jap\u00e3o.', badge: 'Planejador IA de comboios no Japão', label: 'Rotas icónicas do Japão', lead: 'As viagens de comboio mais bonitas do Japão, reserve diretamente aqui.', featured: 'Rota em destaque', book: 'Reservar na Klook', buy: 'Ver hor\u00e1rios e reservar na Klook', arrival: 'Chegada', from: 'desde' },
+    ja: { ess: '日本編。', badge: '日本の列車AIプランナー', label: '日本の名路線', lead: '日本でいちばん景色のいい列車の旅。ここからそのまま予約できます。', featured: '注目の路線', book: 'Klookで予約', buy: '時刻を見てKlookで予約', arrival: '到着', from: '最短' }
   };
   function ht(k) { return (HOME_I18N[lang()] || HOME_I18N.en)[k]; }
-  var CITY_LOC = { es: { Tokyo: 'Tokio', Kyoto: 'Kioto' }, pt: { Tokyo: 'Tóquio', Kyoto: 'Quioto' } };
+  var CITY_LOC = { es: { Tokyo: 'Tokio', Kyoto: 'Kioto' }, pt: { Tokyo: 'Tóquio', Kyoto: 'Quioto' }, ja: { Tokyo: '東京', Kyoto: '京都', 'Fukuoka (Hakata)': '福岡（博多）', Yufuin: '由布院', 'Ito (Izu)': '伊東（伊豆）', Shinjuku: '新宿', Hakone: '箱根', Asakusa: '浅草', Nikko: '日光', Nagoya: '名古屋', Takayama: '高山' } };
   function city(n) { var m = CITY_LOC[lang()]; return (m && m[n]) || n; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
   function bookUrl(a, b) { return BOOK_API + '?from=' + encodeURIComponent(a) + '&to=' + encodeURIComponent(b); }
 
   var JP_SCENIC = [
     { name: 'Yufuin no Mori', from: 'fukuoka', to: 'yufuin', a: 'Fukuoka (Hakata)', b: 'Yufuin', photo: '/scenic/jp-yufuin.webp',
-      desc: { en: 'JR Kyushu’s design train, with wooden interiors, to the hot-spring town of Yufuin.', es: 'El tren de diseño de JR Kyushu, con interiores de madera, hacia el pueblo termal de Yufuin.', fr: 'Le train design de JR Kyushu, aux intérieurs en bois, vers la ville thermale de Yufuin.', it: 'Il treno di design di JR Kyushu, con interni in legno, verso la cittadina termale di Yufuin.', de: 'Der Designzug von JR Kyushu mit Holzinterieur zum Thermalort Yufuin.', pt: 'O comboio de design da JR Kyushu, com interiores em madeira, até a vila termal de Yufuin.' } },
+      desc: { en: 'JR Kyushu’s design train, with wooden interiors, to the hot-spring town of Yufuin.', es: 'El tren de diseño de JR Kyushu, con interiores de madera, hacia el pueblo termal de Yufuin.', fr: 'Le train design de JR Kyushu, aux intérieurs en bois, vers la ville thermale de Yufuin.', it: 'Il treno di design di JR Kyushu, con interni in legno, verso la cittadina termale di Yufuin.', de: 'Der Designzug von JR Kyushu mit Holzinterieur zum Thermalort Yufuin.', pt: 'O comboio de design da JR Kyushu, com interiores em madeira, até a vila termal de Yufuin.', ja: 'JR九州のデザイン列車。木の内装で、温泉の町・由布院へ。' } },
     { name: 'Saphir Odoriko', from: 'tokyo', to: 'ito', a: 'Tokyo', b: 'Ito (Izu)', photo: '/scenic/jp-izu.webp',
-      desc: { en: 'JR East’s premium train to the Izu Peninsula, with large windows facing the Pacific.', es: 'El tren de lujo de JR East hacia la península de Izu, con grandes ventanales al Pacífico.', fr: 'Le train premium de JR East vers la péninsule d’Izu, avec de grandes baies face au Pacifique.', it: 'Il treno di lusso di JR East verso la penisola di Izu, con grandi finestrini sul Pacifico.', de: 'Der Premiumzug von JR East zur Izu-Halbinsel, mit großen Fenstern zum Pazifik.', pt: 'O comboio de luxo da JR East até à península de Izu, com grandes janelas para o Pacífico.' } },
+      desc: { en: 'JR East’s premium train to the Izu Peninsula, with large windows facing the Pacific.', es: 'El tren de lujo de JR East hacia la península de Izu, con grandes ventanales al Pacífico.', fr: 'Le train premium de JR East vers la péninsule d’Izu, avec de grandes baies face au Pacifique.', it: 'Il treno di lusso di JR East verso la penisola di Izu, con grandi finestrini sul Pacifico.', de: 'Der Premiumzug von JR East zur Izu-Halbinsel, mit großen Fenstern zum Pazifik.', pt: 'O comboio de luxo da JR East até à península de Izu, com grandes janelas para o Pacífico.', ja: 'JR東日本の特別列車。大きな窓から太平洋を見ながら伊豆半島へ。' } },
     { name: 'Romancecar', from: 'shinjuku', to: 'hakone', a: 'Shinjuku', b: 'Hakone', photo: '/scenic/jp-hakone.webp',
-      desc: { en: 'Odakyu’s express from Shinjuku to Hakone, gateway to hot springs and Mount Fuji views.', es: 'El expreso de Odakyu desde Shinjuku a Hakone, puerta a las aguas termales y a las vistas del Fuji.', fr: 'L’express Odakyu de Shinjuku à Hakone, porte des sources chaudes et des vues sur le Fuji.', it: 'L’espresso Odakyu da Shinjuku a Hakone, porta delle terme e delle viste sul Fuji.', de: 'Der Odakyu-Express von Shinjuku nach Hakone, Tor zu heißen Quellen und Fuji-Blicken.', pt: 'O expresso da Odakyu de Shinjuku a Hakone, porta para as termas e as vistas do Fuji.' } },
+      desc: { en: 'Odakyu’s express from Shinjuku to Hakone, gateway to hot springs and Mount Fuji views.', es: 'El expreso de Odakyu desde Shinjuku a Hakone, puerta a las aguas termales y a las vistas del Fuji.', fr: 'L’express Odakyu de Shinjuku à Hakone, porte des sources chaudes et des vues sur le Fuji.', it: 'L’espresso Odakyu da Shinjuku a Hakone, porta delle terme e delle viste sul Fuji.', de: 'Der Odakyu-Express von Shinjuku nach Hakone, Tor zu heißen Quellen und Fuji-Blicken.', pt: 'O expresso da Odakyu de Shinjuku a Hakone, porta para as termas e as vistas do Fuji.', ja: '小田急の特急。新宿から箱根へ。温泉と富士山の眺めへの入口です。' } },
     { name: 'SPACIA X', from: 'asakusa', to: 'nikko', a: 'Asakusa', b: 'Nikko', photo: '/scenic/jp-nikko.webp',
-      desc: { en: 'Tobu’s flagship train from Asakusa to Nikko, its shrines and mountains.', es: 'El tren insignia de Tobu desde Asakusa a Nikko, sus santuarios y montañas.', fr: 'Le train phare de Tobu d’Asakusa à Nikko, ses sanctuaires et ses montagnes.', it: 'Il treno di punta di Tobu da Asakusa a Nikko, i suoi santuari e le sue montagne.', de: 'Tobus Flaggschiffzug von Asakusa nach Nikko, zu Schreinen und Bergen.', pt: 'O comboio de referência da Tobu de Asakusa a Nikko, com os seus santuários e montanhas.' } },
+      desc: { en: 'Tobu’s flagship train from Asakusa to Nikko, its shrines and mountains.', es: 'El tren insignia de Tobu desde Asakusa a Nikko, sus santuarios y montañas.', fr: 'Le train phare de Tobu d’Asakusa à Nikko, ses sanctuaires et ses montagnes.', it: 'Il treno di punta di Tobu da Asakusa a Nikko, i suoi santuari e le sue montagne.', de: 'Tobus Flaggschiffzug von Asakusa nach Nikko, zu Schreinen und Bergen.', pt: 'O comboio de referência da Tobu de Asakusa a Nikko, com os seus santuários e montanhas.', ja: '東武の看板列車。浅草から日光の社寺と山へ。' } },
     { name: 'Hida', from: 'nagoya', to: 'takayama', a: 'Nagoya', b: 'Takayama', photo: '/scenic/jp-takayama.webp',
-      desc: { en: 'Limited express that climbs from Nagoya through the Hida valleys to Takayama.', es: 'Expreso limitado que sube desde Nagoya por los valles de Hida hasta Takayama.', fr: 'Express limité qui monte de Nagoya par les vallées de Hida jusqu’à Takayama.', it: 'Espresso limitato che sale da Nagoya lungo le valli di Hida fino a Takayama.', de: 'Expresszug, der von Nagoya durch die Hida-Täler nach Takayama fährt.', pt: 'Expresso limitado que sobe de Nagoya pelos vales de Hida até Takayama.' } },
+      desc: { en: 'Limited express that climbs from Nagoya through the Hida valleys to Takayama.', es: 'Expreso limitado que sube desde Nagoya por los valles de Hida hasta Takayama.', fr: 'Express limité qui monte de Nagoya par les vallées de Hida jusqu’à Takayama.', it: 'Espresso limitato che sale da Nagoya lungo le valli di Hida fino a Takayama.', de: 'Expresszug, der von Nagoya durch die Hida-Täler nach Takayama fährt.', pt: 'Expresso limitado que sobe de Nagoya pelos vales de Hida até Takayama.', ja: '名古屋から飛騨の谷を上り、高山へ行く特急。' } },
     { name: 'Tokaido Shinkansen', from: 'tokyo', to: 'kyoto', a: 'Tokyo', b: 'Kyoto', photo: '/scenic/jp-tokaido.webp',
-      desc: { en: 'The Nozomi links Tokyo and Kyoto; on clear days you can see Mount Fuji.', es: 'El Nozomi une Tokio y Kioto; en días despejados se ve el monte Fuji.', fr: 'Le Nozomi relie Tokyo et Kyoto ; par temps clair, on aperçoit le mont Fuji.', it: 'Il Nozomi collega Tokyo e Kyoto; nelle giornate limpide si vede il monte Fuji.', de: 'Der Nozomi verbindet Tokio und Kyoto; bei klarem Wetter sieht man den Fuji.', pt: 'O Nozomi liga Tóquio e Quioto; em dias limpos vê-se o monte Fuji.' } }
+      desc: { en: 'The Nozomi links Tokyo and Kyoto; on clear days you can see Mount Fuji.', es: 'El Nozomi une Tokio y Kioto; en días despejados se ve el monte Fuji.', fr: 'Le Nozomi relie Tokyo et Kyoto ; par temps clair, on aperçoit le mont Fuji.', it: 'Il Nozomi collega Tokyo e Kyoto; nelle giornate limpide si vede il monte Fuji.', de: 'Der Nozomi verbindet Tokio und Kyoto; bei klarem Wetter sieht man den Fuji.', pt: 'O Nozomi liga Tóquio e Quioto; em dias limpos vê-se o monte Fuji.', ja: 'のぞみが東京と京都をつなぎます。晴れた日には富士山が見えます。' } }
   ];
 
   var JP_ROUTES = {
     'jp-tokaido': { stops: ['tokyo', 'odawara', 'osaka', 'kyoto'],
-      title: { en: 'Classic Tokaido route', es: 'Ruta clásica Tokaido', fr: 'Route classique du Tokaido', it: 'Percorso classico del Tokaido', de: 'Klassische Tokaido-Route', pt: 'Rota clássica Tokaido' },
-      meta: { en: 'Shinkansen · Hakone from Odawara', es: 'Shinkansen · Hakone desde Odawara', fr: 'Shinkansen · Hakone depuis Odawara', it: 'Shinkansen · Hakone da Odawara', de: 'Shinkansen · Hakone ab Odawara', pt: 'Shinkansen · Hakone a partir de Odawara' } },
+      title: { en: 'Classic Tokaido route', es: 'Ruta clásica Tokaido', fr: 'Route classique du Tokaido', it: 'Percorso classico del Tokaido', de: 'Klassische Tokaido-Route', pt: 'Rota clássica Tokaido', ja: '東海道の定番ルート' },
+      meta: { en: 'Shinkansen · Hakone from Odawara', es: 'Shinkansen · Hakone desde Odawara', fr: 'Shinkansen · Hakone depuis Odawara', it: 'Shinkansen · Hakone da Odawara', de: 'Shinkansen · Hakone ab Odawara', pt: 'Shinkansen · Hakone a partir de Odawara', ja: '新幹線 · 小田原から箱根' } },
     'jp-alps': { stops: ['nagoya', 'takayama', 'toyama', 'kanazawa', 'nagano'],
-      title: { en: 'Japanese Alps route', es: 'Ruta de los Alpes japoneses', fr: 'Route des Alpes japonaises', it: 'Percorso delle Alpi giapponesi', de: 'Route der Japanischen Alpen', pt: 'Rota dos Alpes japoneses' },
-      meta: { en: 'Hida limited express and Hokuriku Shinkansen', es: 'Expreso Hida y Shinkansen Hokuriku', fr: 'Express Hida et Shinkansen Hokuriku', it: 'Espresso Hida e Shinkansen Hokuriku', de: 'Hida-Express und Hokuriku-Shinkansen', pt: 'Expresso Hida e Shinkansen Hokuriku' } },
+      title: { en: 'Japanese Alps route', es: 'Ruta de los Alpes japoneses', fr: 'Route des Alpes japonaises', it: 'Percorso delle Alpi giapponesi', de: 'Route der Japanischen Alpen', pt: 'Rota dos Alpes japoneses', ja: '日本アルプスのルート' },
+      meta: { en: 'Hida limited express and Hokuriku Shinkansen', es: 'Expreso Hida y Shinkansen Hokuriku', fr: 'Express Hida et Shinkansen Hokuriku', it: 'Espresso Hida e Shinkansen Hokuriku', de: 'Hida-Express und Hokuriku-Shinkansen', pt: 'Expresso Hida e Shinkansen Hokuriku', ja: '特急ひだと北陸新幹線' } },
     'jp-kyushu': { stops: ['fukuoka', 'yufuin', 'beppu', 'kokura'],
-      title: { en: 'Essential Kyushu', es: 'Kyushu esencial', fr: 'Kyushu essentiel', it: 'Kyushu essenziale', de: 'Kyushu kompakt', pt: 'Kyushu essencial' },
-      meta: { en: 'Yufu trains, hot springs and Sonic express', es: 'Trenes Yufu, aguas termales y expreso Sonic', fr: 'Trains Yufu, sources chaudes et express Sonic', it: 'Treni Yufu, terme ed espresso Sonic', de: 'Yufu-Züge, heiße Quellen und Sonic-Express', pt: 'Comboios Yufu, termas e expresso Sonic' } }
+      title: { en: 'Essential Kyushu', es: 'Kyushu esencial', fr: 'Kyushu essentiel', it: 'Kyushu essenziale', de: 'Kyushu kompakt', pt: 'Kyushu essencial', ja: '九州の要点' },
+      meta: { en: 'Yufu trains, hot springs and Sonic express', es: 'Trenes Yufu, aguas termales y expreso Sonic', fr: 'Trains Yufu, sources chaudes et express Sonic', it: 'Treni Yufu, terme ed espresso Sonic', de: 'Yufu-Züge, heiße Quellen und Sonic-Express', pt: 'Comboios Yufu, termas e expresso Sonic', ja: 'ゆふいんの森、温泉、特急ソニック' } }
   };
   var JP_ROUTE_ORDER = ['jp-tokaido', 'jp-alps', 'jp-kyushu'];
 
@@ -604,7 +613,7 @@
       return '<button class="wt-route-btn" data-route="' + k + '" aria-pressed="' + (k === jpRouteKey ? 'true' : 'false') + '">' +
         '<span>' + esc(r.title[lang()] || r.title.en) + '</span>' +
         '<span class="wt-route-stops">' + esc(stopsLabel(k)) + '</span>' +
-        '<span class="wt-route-go">' + esc({ en: 'View itinerary', es: 'Ver itinerario', fr: 'Voir l’itinéraire', it: 'Vedi itinerario', de: 'Reiseplan ansehen', pt: 'Ver itinerário' }[lang()] || 'View itinerary') + '</span></button>';
+        '<span class="wt-route-go">' + esc({ en: 'View itinerary', es: 'Ver itinerario', fr: 'Voir l’itinéraire', it: 'Vedi itinerario', de: 'Reiseplan ansehen', pt: 'Ver itinerário', ja: '旅程を見る' }[lang()] || 'View itinerary') + '</span></button>';
     }).join('');
   }
   function renderJpRoute(key) {

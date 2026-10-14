@@ -55,12 +55,14 @@ const hoyAlts = `      <xhtml:link rel="alternate" hreflang="en" href="https://g
       <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
       <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
       <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />`;
 const hoyBlocks = [
   ['https://glosx.app/hoy/', '0.6'],
   ['https://glosx.app/es/hoy/', '0.6'],
   ['https://glosx.app/fr/hoy/', '0.6'],
   ['https://glosx.app/it/hoy/', '0.6'],
+  ['https://glosx.app/ja/hoy/', '0.6'],
 ].map(([loc, pri]) => `  <url>
     <loc>${loc}</loc>
     <lastmod>${TODAY}</lastmod>
@@ -69,12 +71,36 @@ const hoyBlocks = [
 ${hoyAlts}
   </url>`).join('\n');
 const withoutHub = nonRoute.filter(b => !b.includes('https://glosx.app/rutas/</loc>') && !b.includes('/hoy/'));
+const HOME_JA = `    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/" />`;
+function withJaHome(b) {
+  const isHome = /<loc>https:\/\/glosx\.app\/(?:es\/|fr\/|it\/|ja\/)?<\/loc>/.test(b);
+  if (!isHome || b.includes('hreflang="ja"')) return b;
+  return b.replace('    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/" />', HOME_JA + '\n    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/" />');
+}
+const jaHomeBlock = `  <url>
+    <loc>https://glosx.app/ja/</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/" />
+  </url>`;
 const withFreshHome = withoutHub.map(b => {
+  b = withJaHome(b);
   if (b.includes('<loc>https://glosx.app/</loc>')) {
     return b.replace(/<lastmod>.*?<\/lastmod>/, `<lastmod>${TODAY}</lastmod>`);
   }
   return b;
 });
+if (!withFreshHome.some(b => b.includes('<loc>https://glosx.app/ja/</loc>'))) {
+  const itIdx = withFreshHome.findIndex(b => b.includes('<loc>https://glosx.app/it/</loc>'));
+  if (itIdx >= 0) withFreshHome.splice(itIdx + 1, 0, jaHomeBlock);
+  else withFreshHome.unshift(jaHomeBlock);
+}
 const nonRouteFinal = [hub, hoyBlocks, ...withFreshHome];
 
 // 4. Armar el nuevo sitemap (xhtml declarado una vez en el urlset)

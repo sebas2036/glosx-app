@@ -12,7 +12,7 @@
         var p = location.pathname;
         if (p !== '/' && p !== '/index.html') return;
         if (/googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|facebookexternalhit|twitterbot|linkedinbot|applebot|gptbot|chatgpt|claudebot|anthropic|bytespider|ccbot/i.test(navigator.userAgent || '')) return;
-        var known = { en: 1, es: 1, fr: 1, de: 1, it: 1, pt: 1 }, lang = null;
+        var known = { en: 1, es: 1, fr: 1, de: 1, it: 1, pt: 1, ja: 1 }, lang = null;
         if (localStorage.getItem('glosx_lang_manual') === '1') {
           var saved = localStorage.getItem('glosx_lang');
           if (saved && known[saved]) lang = saved;
@@ -28,7 +28,7 @@
             if (known[c]) { lang = c; break; }
           }
         }
-        if (lang === 'es' || lang === 'fr' || lang === 'it') location.replace('/' + lang + '/' + location.search + location.hash);
+        if (lang === 'es' || lang === 'fr' || lang === 'it' || lang === 'ja') location.replace('/' + lang + '/' + location.search + location.hash);
       } catch (e) {}
     })();
   </script>
@@ -86,6 +86,7 @@
   <link rel="alternate" hreflang="es" href="https://glosx.app/es/" />
   <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/" />
   <link rel="alternate" hreflang="it" href="https://glosx.app/it/" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/" />
   <link rel="alternate" hreflang="x-default" href="https://glosx.app/" />
   <link rel="icon" type="image/png" href="/logo.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -322,7 +323,7 @@
 <body class="home-v2">
   <!-- Cookie consent banner — GDPR -->
   <div id="cookieBanner" class="cookie-banner" style="display:none;position:fixed;bottom:16px;left:16px;right:16px;max-width:560px;margin:0 auto;background:#ffffff;border:1px solid rgba(20,21,26,0.14);border-radius:14px;padding:18px 20px;z-index:9999;box-shadow:0 12px 40px rgba(20,21,26,0.18);font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
-    <p style="font-size:13px;color:#55565f;line-height:1.5;margin-bottom:12px;" data-i18n="cookie_text">We use essential cookies for site functionality and anonymous analytics to improve your experience. By continuing you accept our <a href="/cookies.html" style="color:#C10016;text-decoration:underline;">Cookie Policy</a>.</p>
+    <p style="font-size:13px;color:#55565f;line-height:1.5;margin-bottom:12px;" data-i18n="cookie_text">We use essential cookies for site functionality and anonymous analytics to improve your experience. By continuing you accept our <a href="/cookies.html" style="color:#C10016;text-decoration:underline;" data-i18n="footer_cookies">Cookie Policy</a>.</p>
     <div style="display:flex;gap:8px;justify-content:flex-end;">
       <button onclick="cookieChoice('declined')" class="cookie-btn-decline" style="background:transparent;border:1px solid rgba(20,21,26,0.2);color:#55565f;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;" data-i18n="cookie_decline">Decline</button>
       <button onclick="cookieChoice('accepted')" class="cookie-btn-accept" style="background:#C10016;border:none;color:#fff;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;" data-i18n="cookie_accept">Accept</button>
@@ -356,22 +357,22 @@
       <div class="partners-wrapper nav-extra">
         <a href="#partners" class="nav-partners-btn" onclick="togglePartners(event)" data-i18n="nav_essentials">Travel Essentials <span style="font-size:10px;opacity:0.6">▾</span></a>
         <div class="partners-dropdown" id="partnersDropdown">
-          <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub">Hotels by city →</span></a>
-          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub">Attractions</span></a>
-          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub">Transfers</span></a>
-          <a href="#" onclick="goPartner('yesim',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=yesim.com" alt="Yesim" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#A78BFA">Yesim</span><span class="partner-sub">eSIM</span></a>
-          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub">Insurance</span></a>
-          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub">Luggage</span></a>
-          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub">Hotels</span></a>
+          <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub" data-i18n="partner_hotels_city">Hotels by city →</span></a>
+          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub" data-i18n="partner_attractions">Attractions</span></a>
+          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub" data-i18n="partner_transfers">Transfers</span></a>
+          <a href="#" onclick="goPartner('yesim',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=yesim.com" alt="Yesim" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#A78BFA">Yesim</span><span class="partner-sub" data-i18n="partner_esim">eSIM</span></a>
+          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub" data-i18n="partner_insurance">Insurance</span></a>
+          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub" data-i18n="partner_luggage">Luggage</span></a>
+          <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer nofollow" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub" data-i18n="partner_hotels">Hotels</span></a>
           <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">See all essentials →</a>
         </div>
       </div>
       <a href="#features" class="nav-extra" data-i18n="nav_features">Features</a>
-      <a href="/ai-planner/" class="nav-extra">AI Planner</a>
+      <a href="/ai-planner/" class="nav-extra" data-i18n="nav_ai">AI Planner</a>
       <a href="/explore/" class="nav-extra" data-i18n="nav_explore">Explore</a>
       <a href="#aiPlanner" class="nav-cta" data-i18n="nav_download">Get started</a>
       <div class="lang-wrapper">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" aria-label="Language">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" data-i18n-aria-label="lang_aria" aria-label="Language">
           <span id="langCode">EN</span>
           <span style="font-size:10px;opacity:0.6">▾</span>
         </button>
@@ -382,6 +383,7 @@
           <div class="lang-option" data-lang="de" onclick="setLang('de')"><span>Deutsch</span></div>
           <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>Italiano</span></div>
           <div class="lang-option" data-lang="pt" onclick="setLang('pt')"><span>Português</span></div>
+          <div class="lang-option" data-lang="ja" onclick="setLang('ja')"><span>日本語</span></div>
         </div>
       </div>
     </div>
@@ -430,8 +432,8 @@
       <div class="search-tabs" role="group" aria-label="Search">
         <button type="button" class="search-tab on" aria-pressed="true" data-tab="ai" data-i18n="tab_ai">AI planner</button>
         <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
-          <button type="button" class="region-btn on" data-region="europe" aria-pressed="true">Europe</button>
-          <button type="button" class="region-btn" data-region="japan" aria-pressed="false">Japan</button>
+          <button type="button" class="region-btn on" data-region="europe" aria-pressed="true" data-i18n="region_europe">Europe</button>
+          <button type="button" class="region-btn" data-region="japan" aria-pressed="false" data-i18n="region_japan">Japan</button>
         </div>
         <button type="button" class="search-tab" aria-pressed="false" data-tab="countries" data-i18n="tab_countries">Routes by country</button>
         <button type="button" class="search-tab" aria-pressed="false" data-tab="roulette" data-i18n="tab_roulette">Destination roulette</button>
@@ -442,7 +444,7 @@
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">Your trip</span><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="Example: Zurich to Milan" autocomplete="off" />
-          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
+          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" data-i18n-aria-label="ai_swap" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Generate Itinerary</button>
       </div>
@@ -595,14 +597,14 @@
       <a href="/rutas/london-york/" onclick="planRouteFromChip(event,'London','York')">London → York</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="more_countries">More countries</span><span class="country-popup wide"><span class="country-routes">
-      <span class="group-label">Czech Republic</span>
+      <span class="group-label" data-i18n="chip_czechia">Czech Republic</span>
       <a href="/rutas/prague-brno/" onclick="planRouteFromChip(event,'Brno','Prague')">Brno → Prague</a>
       <a href="/rutas/brno-vienna/" onclick="planRouteFromChip(event,'Brno','Vienna')">Brno → Vienna</a>
       <a href="/rutas/prague-budapest/" onclick="planRouteFromChip(event,'Budapest','Prague')">Budapest → Prague</a>
       <a href="/rutas/copenhagen-prague/" onclick="planRouteFromChip(event,'Copenhagen','Prague')">Copenhagen → Prague</a>
-      <span class="group-label">Denmark</span>
+      <span class="group-label" data-i18n="chip_denmark">Denmark</span>
       <a href="/rutas/copenhagen-stockholm/" onclick="planRouteFromChip(event,'Copenhagen','Stockholm')">Copenhagen → Stockholm</a>
-      <span class="group-label">Hungary</span>
+      <span class="group-label" data-i18n="chip_hungary">Hungary</span>
       <a href="/rutas/budapest-ljubljana/" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Ljubljana</a>
     </span></span></span>
   </div>
@@ -612,7 +614,7 @@
       <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
       <div class="ai-results-header">
         <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">Example · each card is one ticket (city → city)</span>
-        <h3 id="aiRouteTitle">AI European Train Route Planner</h3>
+        <h3 id="aiRouteTitle" data-i18n="hero_h1">AI European Train Route Planner</h3>
         <p id="aiRouteDuration"></p>
         <p class="ai-route-meta" id="aiRouteMeta"></p>
         <div id="aiQuickBook" class="ai-quick-book" style="display:none"></div>
@@ -732,7 +734,7 @@
   <div class="wt-timeline-wrap" id="wt-wrap" hidden>
     <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
     <div class="wt-timeline-head" id="wt-timeline-head">
-      <h3 id="wt-route-title">Scenic Train Routes in Europe</h3>
+      <h3 id="wt-route-title" data-i18n="scenic_board">Scenic Train Routes in Europe</h3>
       <span class="wt-route-meta" id="wt-route-meta"></span>
     </div>
     <ol class="wt-timeline" id="wt-timeline"></ol>
@@ -853,7 +855,7 @@
       <a href="/destinos/hallstatt/" class="discover-card is-featured" style="background-image:url('/destinos/video/hallstatt-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_1_country">Austria · Hidden gem</div>
-        <div class="discover-place">Hallstatt</div>
+        <div class="discover-place" data-i18n="discover_1_place">Hallstatt</div>
         <div class="discover-route" data-i18n="discover_1_route">Train to Hallstatt + lake ferry</div>
         <div class="discover-season" data-i18n="discover_1_season">Best: May–Sep · ~3h 30 from Salzburg</div>
         <div class="discover-tip" data-i18n="discover_1_tip">A fairytale village on a glassy alpine lake. The train drops you on the far shore and a little ferry glides you across — arriving by car never feels this magical.</div>
@@ -862,7 +864,7 @@
       <a href="/destinos/lake-bled/" class="discover-card is-featured" style="background-image:url('/destinos/video/bled-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_2_country">Slovenia · Hidden gem</div>
-        <div class="discover-place">Lake Bled</div>
+        <div class="discover-place" data-i18n="discover_2_place">Lake Bled</div>
         <div class="discover-route" data-i18n="discover_2_route">Via Ljubljana · Bohinj Railway</div>
         <div class="discover-season" data-i18n="discover_2_season">Best: Jun–Sep · island church &amp; castle</div>
         <div class="discover-tip" data-i18n="discover_2_tip">An island church on an emerald lake under a clifftop castle. Two stations, one secret — pick the right one and the train drops you by the water.</div>
@@ -871,7 +873,7 @@
       <a href="/destinos/lauterbrunnen/" class="discover-card is-featured" style="background-image:url('/destinos/video/lauterbrunnen-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_3_country">Switzerland · Hidden gem</div>
-        <div class="discover-place">Lauterbrunnen</div>
+        <div class="discover-place" data-i18n="discover_3_place">Lauterbrunnen</div>
         <div class="discover-route" data-i18n="discover_3_route">Via Interlaken · Berner Oberland Bahn</div>
         <div class="discover-season" data-i18n="discover_3_season">Best: Jun–Oct · 72 waterfalls flowing</div>
         <div class="discover-tip" data-i18n="discover_3_tip">A valley of 72 waterfalls beneath sheer cliffs. No direct line — change at Interlaken onto a mountain railway that's half the magic.</div>
@@ -880,7 +882,7 @@
       <a href="/destinos/colmar/" class="discover-card is-featured" style="background-image:url('/destinos/video/colmar-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_4_country">France · Hidden gem</div>
-        <div class="discover-place">Colmar</div>
+        <div class="discover-place" data-i18n="discover_4_place">Colmar</div>
         <div class="discover-route" data-i18n="discover_4_route">Direct TGV from Paris (~2h20)</div>
         <div class="discover-season" data-i18n="discover_4_season">Best: Dec markets &amp; spring flowers</div>
         <div class="discover-tip" data-i18n="discover_4_tip">The "Little Venice" of Alsace — half-timbered houses and flower-lined canals, a short walk from a direct TGV station.</div>
@@ -889,7 +891,7 @@
       <a href="/rutas/munich-venice/" class="discover-card is-featured" style="background-image:url('/rutas/video/munich-venice-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_5_country">Germany → Italy</div>
-        <div class="discover-place">Munich → Venice</div>
+        <div class="discover-place" data-i18n="discover_5_place">Munich → Venice</div>
         <div class="discover-route" data-i18n="discover_5_route">EuroCity over the Brenner Pass</div>
         <div class="discover-season" data-i18n="discover_5_season">~7h · Alps, Tyrol &amp; the Adige valley</div>
         <div class="discover-tip" data-i18n="discover_5_tip">One of Europe's most scenic rides — from Bavaria over the Alps, down through vineyards to the edge of the Venetian lagoon.</div>
@@ -898,7 +900,7 @@
       <a href="/rutas/lyon-turin/" class="discover-card is-featured" style="background-image:url('/rutas/video/lyon-turin-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_6_country">France → Italy</div>
-        <div class="discover-place">Lyon → Turin</div>
+        <div class="discover-place" data-i18n="discover_6_place">Lyon → Turin</div>
         <div class="discover-route" data-i18n="discover_6_route">TGV / Frecciarossa · Fréjus tunnel</div>
         <div class="discover-season" data-i18n="discover_6_season">Crossing the Alps · France to Piedmont</div>
         <div class="discover-tip" data-i18n="discover_6_tip">From Lyon's riverside to baroque Turin, threading the Maurienne valley and the historic Alpine tunnel into Italy.</div>
@@ -907,7 +909,7 @@
       <a href="/rutas/paris-barcelona/" class="discover-card is-featured" style="background-image:url('/rutas/video/paris-barcelona-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_7_country">France → Spain</div>
-        <div class="discover-place">Paris → Barcelona</div>
+        <div class="discover-place" data-i18n="discover_7_place">Paris → Barcelona</div>
         <div class="discover-route" data-i18n="discover_7_route">Direct TGV high-speed</div>
         <div class="discover-season" data-i18n="discover_7_season">~6h 30 · city centre to city centre</div>
         <div class="discover-tip" data-i18n="discover_7_tip">One train from Paris through the south of France and the Pyrenees, straight into the heart of Barcelona.</div>
@@ -916,7 +918,7 @@
       <a href="/rutas/paris-amsterdam/" class="discover-card is-featured" style="background-image:url('/rutas/video/paris-amsterdam-card.webp')">
         <span class="discover-pin"></span>
         <div class="discover-country" data-i18n="discover_8_country">France → Netherlands</div>
-        <div class="discover-place">Paris → Amsterdam</div>
+        <div class="discover-place" data-i18n="discover_8_place">Paris → Amsterdam</div>
         <div class="discover-route" data-i18n="discover_8_route">Eurostar direct · via Brussels</div>
         <div class="discover-season" data-i18n="discover_8_season">~3h 20 · several departures a day</div>
         <div class="discover-tip" data-i18n="discover_8_tip">From the cafés of Paris to the canals of Amsterdam in a single high-speed hop — easily beating the plane door to door.</div>
@@ -1220,7 +1222,7 @@
       <a href="/explore/" data-i18n="nav_explore">Explore</a>
       <a href="#scenic" data-i18n="nav_scenic">Scenic Trains</a>
       <a href="#partners" data-i18n="nav_essentials">Travel Essentials</a>
-      <a href="/ai-planner/">AI Planner</a>
+      <a href="/ai-planner/" data-i18n="nav_ai">AI Planner</a>
       <a href="/blog.html" data-i18n="footer_blog">Blog</a>
       <a href="/about.html"   data-i18n="footer_about">About</a>
       <a href="/privacy.html" data-i18n="footer_privacy">Privacy Policy</a>
@@ -1282,8 +1284,8 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=45" defer></script>
-  <script src="/assets/js/japan.js?v=10" defer></script>
+  <script src="/assets/js/main.min.js?v=46" defer></script>
+  <script src="/assets/js/japan.js?v=11" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

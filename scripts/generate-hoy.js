@@ -75,6 +75,13 @@ const META = {
     home: '/it/',
     ogLocale: 'it_IT',
   },
+  ja: {
+    title: '今日はどこへ行く？ — ヨーロッパ列車の行き先ルーレット | WoW Train',
+    description: 'ヨーロッパの実在する都市ペアを回す。WoW Trainが列車の旅程を組み、Klookで時刻と切符へ進みます。無料、アカウント不要。',
+    path: '/ja/hoy/',
+    home: '/ja/',
+    ogLocale: 'ja_JP',
+  },
 };
 
 function page(lang) {
@@ -100,6 +107,7 @@ function page(lang) {
   <link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
   <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
   <link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
   <link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="${meta.ogLocale}" />

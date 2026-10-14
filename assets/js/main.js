@@ -149,8 +149,8 @@
     // ── i18n — Multilenguaje ───────────────────────────────────────────────
     const TRANSLATIONS = {
       en: {
-        nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started', nav_routes: 'Routes', nav_plan: 'Plan', nav_explore: 'Explore', chip_spain: 'Spain', chip_switzerland: 'Switzerland', chip_france: 'France', chip_germany: 'Germany', chip_italy: 'Italy', chip_belgium: 'Belgium', chip_netherlands: 'Netherlands', chip_austria: 'Austria', chip_uk: 'United Kingdom', ai_suggest_paris: 'Madrid to Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'Munich → Venice', ai_suggest_rv: 'Rome → Venice', ai_suggest_alps: 'Swiss Alps', ai_suggest_italy: '5 days Italy',
-        partners_see_all: 'See all essentials →',
+        nav_scenic: 'Scenic Trains', nav_discover: 'Discover together', nav_essentials: 'Travel Essentials', nav_features: 'Features', nav_download: 'Get started', nav_routes: 'Routes', nav_plan: 'Plan', nav_explore: 'Explore', chip_spain: 'Spain', chip_switzerland: 'Switzerland', chip_france: 'France', chip_germany: 'Germany', chip_italy: 'Italy', chip_belgium: 'Belgium', chip_netherlands: 'Netherlands', chip_austria: 'Austria', chip_uk: 'United Kingdom', chip_czechia: 'Czech Republic', chip_denmark: 'Denmark', chip_hungary: 'Hungary', ai_suggest_paris: 'Madrid to Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'Munich → Venice', ai_suggest_rv: 'Rome → Venice', ai_suggest_alps: 'Swiss Alps', ai_suggest_italy: '5 days Italy',
+        partners_see_all: 'See all essentials →', region_europe: 'Europe', region_japan: 'Japan', nav_ai: 'AI Planner', scenic_board: 'Scenic Train Routes in Europe', ai_swap: 'Swap origin and destination', partner_hotels_city: 'Hotels by city →', partner_attractions: 'Attractions', partner_transfers: 'Transfers', partner_esim: 'eSIM', partner_insurance: 'Insurance', partner_luggage: 'Luggage', partner_hotels: 'Hotels',
         hero_badge: 'AI-Powered European Rail Planner',
         hero_h1: 'AI European Train Route Planner',
         hero_title1: 'Describe your trip.', hero_title2: 'We plan the trains.', tab_ai: 'AI planner', tab_roulette: 'Destination roulette', tab_countries: 'Routes by country', search_label: 'Your trip', ben_klook_t: 'Bookings with Klook', ben_klook_d: 'Secure payment on their official platform.', ben_rt_t: 'Real-time data', ben_rt_d: 'Schedules and delays from official sources.', ben_free_t: 'Free, no account', ben_free_d: 'No subscription or hidden costs.', scenic_featured: 'Featured route', route_see: 'View itinerary', guides_label: 'Guides & inspiration', guides_title: 'Everything you need before boarding.', guides_lead: 'Practical advice for traveling Europe by train: mistakes to avoid, cheap tickets and passes.', guides_by: 'WoW Train team', guides_all: 'See all guides', features_banner: 'Made for those who travel with a backpack.', stop_arrival: 'Arrival', g1_tag: 'Travel Guide', g1_title: 'Europe Train Survival Guide: 5 Mistakes That Can Cost You Big', g2_tag: 'Budget Rail', g2_title: 'Cheap Train Tickets Europe 2026: How to Get the Best Deals', g3_tag: 'Rail Travel', g3_title: 'Eurail Pass vs Point-to-Point Tickets 2026: Which Saves You More?', route_classic_stops: 'Paris → Lyon → Turin → Milan · high-speed, ~7–8 h', route_alpine_stops: 'Zurich → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB', route_imperial_stops: 'Prague → Brno → Vienna → Budapest · Railjet / EuroCity',
@@ -221,8 +221,8 @@
         popular_routes_label: '★ Popular routes · book instantly',
       },
       es: {
-        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar', nav_routes: 'Rutas', nav_plan: 'Planificar', nav_explore: 'Explorar', chip_spain: 'España', chip_switzerland: 'Suiza', chip_france: 'Francia', chip_germany: 'Alemania', chip_italy: 'Italia', chip_belgium: 'Bélgica', chip_netherlands: 'Países Bajos', chip_austria: 'Austria', chip_uk: 'Reino Unido', ai_suggest_paris: 'Madrid a París', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'París → Londres', ai_suggest_pb: 'París → Barcelona', ai_suggest_mv: 'Múnich → Venecia', ai_suggest_rv: 'Roma → Venecia', ai_suggest_alps: 'Alpes suizos', ai_suggest_italy: '5 días Italia',
-        partners_see_all: 'Ver todos los esenciales →',
+        nav_scenic: 'Trenes panorámicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Esenciales de viaje', nav_features: 'Características', nav_download: 'Empezar', nav_routes: 'Rutas', nav_plan: 'Planificar', nav_explore: 'Explorar', chip_spain: 'España', chip_switzerland: 'Suiza', chip_france: 'Francia', chip_germany: 'Alemania', chip_italy: 'Italia', chip_belgium: 'Bélgica', chip_netherlands: 'Países Bajos', chip_austria: 'Austria', chip_uk: 'Reino Unido', chip_czechia: 'Chequia', chip_denmark: 'Dinamarca', chip_hungary: 'Hungría', ai_suggest_paris: 'Madrid a París', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'París → Londres', ai_suggest_pb: 'París → Barcelona', ai_suggest_mv: 'Múnich → Venecia', ai_suggest_rv: 'Roma → Venecia', ai_suggest_alps: 'Alpes suizos', ai_suggest_italy: '5 días Italia',
+        partners_see_all: 'Ver todos los esenciales →', region_europe: 'Europa', region_japan: 'Japón', nav_ai: 'Planificador IA', scenic_board: 'Rutas panorámicas en Europa', ai_swap: 'Invertir origen y destino', partner_hotels_city: 'Hoteles por ciudad →', partner_attractions: 'Atracciones', partner_transfers: 'Traslados', partner_esim: 'eSIM', partner_insurance: 'Seguro', partner_luggage: 'Equipaje', partner_hotels: 'Hoteles',
         hero_badge: 'Planificador IA de trenes europeos',
         hero_h1: 'Planificador IA de trenes por Europa',
         hero_title1: 'Describe tu viaje.', hero_title2: 'Nosotros planificamos.', tab_ai: 'Planificador IA', tab_roulette: 'Ruleta de destinos', tab_countries: 'Rutas por país', search_label: 'Tu viaje', ben_klook_t: 'Reservas con Klook', ben_klook_d: 'Pago seguro en su plataforma oficial.', ben_rt_t: 'Datos en tiempo real', ben_rt_d: 'Horarios y retrasos de fuentes oficiales.', ben_free_t: 'Gratis y sin cuenta', ben_free_d: 'Sin suscripción ni costos ocultos.', scenic_featured: 'Ruta destacada', route_see: 'Ver itinerario', guides_label: 'Guías e inspiración', guides_title: 'Todo lo que necesitas antes de subir al tren.', guides_lead: 'Consejos prácticos para viajar en tren por Europa: errores a evitar, billetes baratos y pases.', guides_by: 'Equipo WoW Train', guides_all: 'Ver todas las guías', features_banner: 'Pensado para quien viaja con la mochila al hombro.', stop_arrival: 'Llegada', g1_tag: 'Guía de Viaje', g1_title: 'Guía de supervivencia en tren por Europa: 5 errores que te pueden costar caro', g2_tag: 'Viaje económico', g2_title: 'Billetes de tren baratos en Europa 2026: cómo conseguir las mejores ofertas', g3_tag: 'Viajes en tren', g3_title: 'Pase Eurail vs. billetes punto a punto 2026: ¿qué te ahorra más?', route_classic_stops: 'París → Lyon → Turín → Milán · alta velocidad, ~7–8 h', route_alpine_stops: 'Zúrich → Sargans → Innsbruck → Viena · Railjet ÖBB/SBB', route_imperial_stops: 'Praga → Brno → Viena → Budapest · Railjet / EuroCity',
@@ -293,8 +293,8 @@
         popular_routes_label: '★ Rutas populares · reserva al instante',
       },
       fr: {
-        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer', nav_routes: 'Itinéraires', nav_plan: 'Planifier', nav_explore: 'Explorer', chip_spain: 'Espagne', chip_switzerland: 'Suisse', chip_france: 'France', chip_germany: 'Allemagne', chip_italy: 'Italie', chip_belgium: 'Belgique', chip_netherlands: 'Pays-Bas', chip_austria: 'Autriche', chip_uk: 'Royaume-Uni', ai_suggest_paris: 'Madrid à Paris', ai_suggest_mb: 'Madrid → Barcelone', ai_suggest_pl: 'Paris → Londres', ai_suggest_pb: 'Paris → Barcelone', ai_suggest_mv: 'Munich → Venise', ai_suggest_rv: 'Rome → Venise', ai_suggest_alps: 'Alpes suisses', ai_suggest_italy: '5 jours en Italie',
-        partners_see_all: 'Voir tous les essentiels →',
+        nav_scenic: 'Trains panoramiques', nav_discover: 'Découvrons ensemble', nav_essentials: 'Essentiels du voyage', nav_features: 'Fonctionnalités', nav_download: 'Commencer', nav_routes: 'Itinéraires', nav_plan: 'Planifier', nav_explore: 'Explorer', chip_spain: 'Espagne', chip_switzerland: 'Suisse', chip_france: 'France', chip_germany: 'Allemagne', chip_italy: 'Italie', chip_belgium: 'Belgique', chip_netherlands: 'Pays-Bas', chip_austria: 'Autriche', chip_uk: 'Royaume-Uni', chip_czechia: 'Tchéquie', chip_denmark: 'Danemark', chip_hungary: 'Hongrie', ai_suggest_paris: 'Madrid à Paris', ai_suggest_mb: 'Madrid → Barcelone', ai_suggest_pl: 'Paris → Londres', ai_suggest_pb: 'Paris → Barcelone', ai_suggest_mv: 'Munich → Venise', ai_suggest_rv: 'Rome → Venise', ai_suggest_alps: 'Alpes suisses', ai_suggest_italy: '5 jours en Italie',
+        partners_see_all: 'Voir tous les essentiels →', region_europe: 'Europe', region_japan: 'Japon', nav_ai: 'Planificateur IA', scenic_board: 'Trains panoramiques en Europe', ai_swap: 'Inverser départ et arrivée', partner_hotels_city: 'Hôtels par ville →', partner_attractions: 'Attractions', partner_transfers: 'Transferts', partner_esim: 'eSIM', partner_insurance: 'Assurance', partner_luggage: 'Bagages', partner_hotels: 'Hôtels',
         hero_badge: 'Planificateur IA de trains européens',
         hero_h1: 'Planificateur IA de trains en Europe',
         hero_title1: 'Décris ton voyage.', hero_title2: 'On planifie les trains.', tab_ai: 'Planificateur IA', tab_roulette: 'Roulette des destinations', tab_countries: 'Itinéraires par pays', search_label: 'Ton voyage', ben_klook_t: 'Réservations avec Klook', ben_klook_d: 'Paiement sécurisé sur leur plateforme officielle.', ben_rt_t: 'Données en temps réel', ben_rt_d: 'Horaires et retards issus de sources officielles.', ben_free_t: 'Gratuit, sans compte', ben_free_d: 'Sans abonnement ni frais cachés.', scenic_featured: 'Itinéraire à la une', route_see: 'Voir l\'itinéraire', guides_label: 'Guides et inspiration', guides_title: 'Tout ce qu\'il faut savoir avant de monter dans le train.', guides_lead: 'Conseils pratiques pour voyager en train en Europe : erreurs à éviter, billets pas chers et pass.', guides_by: 'Équipe WoW Train', guides_all: 'Voir tous les guides', features_banner: 'Pensé pour ceux qui voyagent avec leur sac à dos.', stop_arrival: 'Arrivée', g1_tag: 'Guide de voyage', g1_title: 'Guide de survie du train en Europe : 5 erreurs qui peuvent coûter cher', g2_tag: 'Bons plans', g2_title: 'Billets de train pas chers en Europe 2026 : le guide complet des économies', g3_tag: 'Pass vs billets', g3_title: 'Pass Eurail vs billets point à point 2026 : lequel économise le plus ?', route_classic_stops: 'Paris → Lyon → Turin → Milan · grande vitesse, ~7–8 h', route_alpine_stops: 'Zurich → Sargans → Innsbruck → Vienne · Railjet ÖBB/SBB', route_imperial_stops: 'Prague → Brno → Vienne → Budapest · Railjet / EuroCity',
@@ -365,8 +365,8 @@
         popular_routes_label: '★ Itinéraires populaires · réservez instantanément',
       },
       de: {
-        nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen', nav_routes: 'Routen', nav_plan: 'Planen', nav_explore: 'Entdecken', chip_spain: 'Spanien', chip_switzerland: 'Schweiz', chip_france: 'Frankreich', chip_germany: 'Deutschland', chip_italy: 'Italien', chip_belgium: 'Belgien', chip_netherlands: 'Niederlande', chip_austria: 'Österreich', chip_uk: 'Vereinigtes Königreich', ai_suggest_paris: 'Madrid nach Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'München → Venedig', ai_suggest_rv: 'Rom → Venedig', ai_suggest_alps: 'Schweizer Alpen', ai_suggest_italy: '5 Tage Italien',
-        partners_see_all: 'Alle Essentials ansehen →',
+        nav_scenic: 'Panoramazüge', nav_discover: 'Gemeinsam entdecken', nav_essentials: 'Reiseessentials', nav_features: 'Funktionen', nav_download: 'Loslegen', nav_routes: 'Routen', nav_plan: 'Planen', nav_explore: 'Entdecken', chip_spain: 'Spanien', chip_switzerland: 'Schweiz', chip_france: 'Frankreich', chip_germany: 'Deutschland', chip_italy: 'Italien', chip_belgium: 'Belgien', chip_netherlands: 'Niederlande', chip_austria: 'Österreich', chip_uk: 'Vereinigtes Königreich', chip_czechia: 'Tschechien', chip_denmark: 'Dänemark', chip_hungary: 'Ungarn', ai_suggest_paris: 'Madrid nach Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → London', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'München → Venedig', ai_suggest_rv: 'Rom → Venedig', ai_suggest_alps: 'Schweizer Alpen', ai_suggest_italy: '5 Tage Italien',
+        partners_see_all: 'Alle Essentials ansehen →', region_europe: 'Europa', region_japan: 'Japan', nav_ai: 'KI-Planer', scenic_board: 'Panoramazüge in Europa', ai_swap: 'Start und Ziel tauschen', partner_hotels_city: 'Hotels nach Stadt →', partner_attractions: 'Attraktionen', partner_transfers: 'Transfers', partner_esim: 'eSIM', partner_insurance: 'Versicherung', partner_luggage: 'Gepäck', partner_hotels: 'Hotels',
         hero_badge: 'KI-gestützter Europazug-Planer',
         hero_h1: 'KI-Reiseplaner für Züge in Europa',
         hero_title1: 'Beschreib deine Reise.', hero_title2: 'Wir planen die Züge.', tab_ai: 'KI-Planer', tab_roulette: 'Zielroulette', tab_countries: 'Routen nach Land', search_label: 'Deine Reise', ben_klook_t: 'Buchen mit Klook', ben_klook_d: 'Sichere Zahlung auf der offiziellen Plattform.', ben_rt_t: 'Echtzeitdaten', ben_rt_d: 'Fahrpläne und Verspätungen aus offiziellen Quellen.', ben_free_t: 'Kostenlos, ohne Konto', ben_free_d: 'Kein Abo, keine versteckten Kosten.', scenic_featured: 'Empfohlene Strecke', route_see: 'Reiseverlauf ansehen', guides_label: 'Ratgeber & Inspiration', guides_title: 'Alles, was du vor dem Einsteigen wissen musst.', guides_lead: 'Praktische Tipps für Bahnreisen in Europa: Fehler vermeiden, günstige Tickets und Pässe.', guides_by: 'WoW-Train-Team', guides_all: 'Alle Ratgeber ansehen', features_banner: 'Für alle, die mit dem Rucksack unterwegs sind.', stop_arrival: 'Ankunft', g1_tag: 'Travel Guide', g1_title: 'Europe Train Survival Guide: 5 Mistakes That Can Cost You Big', g2_tag: 'Budget Rail', g2_title: 'Cheap Train Tickets Europe 2026: How to Get the Best Deals', g3_tag: 'Rail Travel', g3_title: 'Eurail Pass vs Point-to-Point Tickets 2026: Which Saves You More?', route_classic_stops: 'Paris → Lyon → Turin → Mailand · Hochgeschwindigkeit, ~7–8 Std.', route_alpine_stops: 'Zürich → Sargans → Innsbruck → Wien · Railjet ÖBB/SBB', route_imperial_stops: 'Prag → Brno → Wien → Budapest · Railjet / EuroCity',
@@ -437,8 +437,8 @@
         popular_routes_label: '★ Beliebte Routen · sofort buchbar',
       },
       it: {
-        nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia', nav_routes: 'Itinerari', nav_plan: 'Pianifica', nav_explore: 'Esplora', chip_spain: 'Spagna', chip_switzerland: 'Svizzera', chip_france: 'Francia', chip_germany: 'Germania', chip_italy: 'Italia', chip_belgium: 'Belgio', chip_netherlands: 'Paesi Bassi', chip_austria: 'Austria', chip_uk: 'Regno Unito', ai_suggest_paris: 'Madrid a Parigi', ai_suggest_mb: 'Madrid → Barcellona', ai_suggest_pl: 'Parigi → Londra', ai_suggest_pb: 'Parigi → Barcellona', ai_suggest_mv: 'Monaco di Baviera → Venezia', ai_suggest_rv: 'Roma → Venezia', ai_suggest_alps: 'Alpi svizzere', ai_suggest_italy: '5 giorni in Italia',
-        partners_see_all: 'Vedi tutti gli essenziali →',
+        nav_scenic: 'Treni panoramici', nav_discover: 'Scopriamo insieme', nav_essentials: 'Essenziali di viaggio', nav_features: 'Caratteristiche', nav_download: 'Inizia', nav_routes: 'Itinerari', nav_plan: 'Pianifica', nav_explore: 'Esplora', chip_spain: 'Spagna', chip_switzerland: 'Svizzera', chip_france: 'Francia', chip_germany: 'Germania', chip_italy: 'Italia', chip_belgium: 'Belgio', chip_netherlands: 'Paesi Bassi', chip_austria: 'Austria', chip_uk: 'Regno Unito', chip_czechia: 'Cechia', chip_denmark: 'Danimarca', chip_hungary: 'Ungheria', ai_suggest_paris: 'Madrid a Parigi', ai_suggest_mb: 'Madrid → Barcellona', ai_suggest_pl: 'Parigi → Londra', ai_suggest_pb: 'Parigi → Barcellona', ai_suggest_mv: 'Monaco di Baviera → Venezia', ai_suggest_rv: 'Roma → Venezia', ai_suggest_alps: 'Alpi svizzere', ai_suggest_italy: '5 giorni in Italia',
+        partners_see_all: 'Vedi tutti gli essenziali →', region_europe: 'Europa', region_japan: 'Giappone', nav_ai: 'Pianificatore IA', scenic_board: 'Treni panoramici in Europa', ai_swap: 'Inverti partenza e arrivo', partner_hotels_city: 'Hotel per città →', partner_attractions: 'Attrazioni', partner_transfers: 'Transfer', partner_esim: 'eSIM', partner_insurance: 'Assicurazione', partner_luggage: 'Bagagli', partner_hotels: 'Hotel',
         hero_badge: 'Pianificatore IA di treni europei',
         hero_h1: 'Pianificatore IA di treni in Europa',
         hero_title1: 'Descrivi il tuo viaggio.', hero_title2: 'Pensiamo noi ai treni.', tab_ai: 'Pianificatore IA', tab_roulette: 'Roulette delle destinazioni', tab_countries: 'Percorsi per paese', search_label: 'Il tuo viaggio', ben_klook_t: 'Prenota con Klook', ben_klook_d: 'Pagamento sicuro sulla loro piattaforma ufficiale.', ben_rt_t: 'Dati in tempo reale', ben_rt_d: 'Orari e ritardi da fonti ufficiali.', ben_free_t: 'Gratis e senza account', ben_free_d: 'Nessun abbonamento né costi nascosti.', scenic_featured: 'Percorso in evidenza', route_see: 'Vedi itinerario', guides_label: 'Guide e ispirazione', guides_title: 'Tutto ciò che ti serve prima di salire sul treno.', guides_lead: 'Consigli pratici per viaggiare in treno in Europa: errori da evitare, biglietti economici e pass.', guides_by: 'Team WoW Train', guides_all: 'Vedi tutte le guide', features_banner: 'Pensato per chi viaggia con lo zaino in spalla.', stop_arrival: 'Arrivo', g1_tag: 'Guida di viaggio', g1_title: 'Guida di sopravvivenza in treno in Europa: 5 errori che possono costarti caro', g2_tag: 'Risparmio', g2_title: 'Biglietti del treno economici in Europa 2026: la guida completa al risparmio', g3_tag: 'Pass vs biglietti', g3_title: 'Pass Eurail vs biglietti punto-punto 2026: quale conviene di più?', route_classic_stops: 'Parigi → Lione → Torino → Milano · alta velocità, ~7–8 h', route_alpine_stops: 'Zurigo → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB', route_imperial_stops: 'Praga → Brno → Vienna → Budapest · Railjet / EuroCity',
@@ -509,8 +509,8 @@
         popular_routes_label: '★ Percorsi popolari · prenota subito',
       },
       pt: {
-        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar', nav_routes: 'Rotas', nav_plan: 'Planear', nav_explore: 'Explorar', chip_spain: 'Espanha', chip_switzerland: 'Suíça', chip_france: 'França', chip_germany: 'Alemanha', chip_italy: 'Itália', chip_belgium: 'Bélgica', chip_netherlands: 'Países Baixos', chip_austria: 'Áustria', chip_uk: 'Reino Unido', ai_suggest_paris: 'Madrid a Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → Londres', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'Munique → Veneza', ai_suggest_rv: 'Roma → Veneza', ai_suggest_alps: 'Alpes suíços', ai_suggest_italy: '5 dias Itália',
-        partners_see_all: 'Ver todos os essenciais →',
+        nav_scenic: 'Comboios panorâmicos', nav_discover: 'Descubramos juntos', nav_essentials: 'Essenciais de viagem', nav_features: 'Funcionalidades', nav_download: 'Começar', nav_routes: 'Rotas', nav_plan: 'Planear', nav_explore: 'Explorar', chip_spain: 'Espanha', chip_switzerland: 'Suíça', chip_france: 'França', chip_germany: 'Alemanha', chip_italy: 'Itália', chip_belgium: 'Bélgica', chip_netherlands: 'Países Baixos', chip_austria: 'Áustria', chip_uk: 'Reino Unido', chip_czechia: 'Chéquia', chip_denmark: 'Dinamarca', chip_hungary: 'Hungria', ai_suggest_paris: 'Madrid a Paris', ai_suggest_mb: 'Madrid → Barcelona', ai_suggest_pl: 'Paris → Londres', ai_suggest_pb: 'Paris → Barcelona', ai_suggest_mv: 'Munique → Veneza', ai_suggest_rv: 'Roma → Veneza', ai_suggest_alps: 'Alpes suíços', ai_suggest_italy: '5 dias Itália',
+        partners_see_all: 'Ver todos os essenciais →', region_europe: 'Europa', region_japan: 'Japão', nav_ai: 'Planejador IA', scenic_board: 'Comboios panorâmicos na Europa', ai_swap: 'Inverter origem e destino', partner_hotels_city: 'Hotéis por cidade →', partner_attractions: 'Atrações', partner_transfers: 'Transfers', partner_esim: 'eSIM', partner_insurance: 'Seguro', partner_luggage: 'Bagagem', partner_hotels: 'Hotéis',
         hero_badge: 'Planificador IA de comboios europeus',
         hero_h1: 'Planeador IA de trens na Europa',
         hero_title1: 'Descreve a tua viagem.', hero_title2: 'Nós planeamos os comboios.', tab_ai: 'Planeador IA', tab_roulette: 'Roleta de destinos', tab_countries: 'Rotas por país', search_label: 'A tua viagem', ben_klook_t: 'Reservas com a Klook', ben_klook_d: 'Pagamento seguro na plataforma oficial.', ben_rt_t: 'Dados em tempo real', ben_rt_d: 'Horários e atrasos de fontes oficiais.', ben_free_t: 'Grátis e sem conta', ben_free_d: 'Sem subscrição nem custos ocultos.', scenic_featured: 'Rota em destaque', route_see: 'Ver itinerário', guides_label: 'Guias e inspiração', guides_title: 'Tudo o que precisas antes de entrar no comboio.', guides_lead: 'Conselhos práticos para viajar de comboio pela Europa: erros a evitar, bilhetes baratos e passes.', guides_by: 'Equipa WoW Train', guides_all: 'Ver todos os guias', features_banner: 'Pensado para quem viaja de mochila às costas.', stop_arrival: 'Chegada', g1_tag: 'Travel Guide', g1_title: 'Europe Train Survival Guide: 5 Mistakes That Can Cost You Big', g2_tag: 'Budget Rail', g2_title: 'Cheap Train Tickets Europe 2026: How to Get the Best Deals', g3_tag: 'Rail Travel', g3_title: 'Eurail Pass vs Point-to-Point Tickets 2026: Which Saves You More?', route_classic_stops: 'Paris → Lyon → Turim → Milão · alta velocidade, ~7–8 h', route_alpine_stops: 'Zurique → Sargans → Innsbruck → Viena · Railjet ÖBB/SBB', route_imperial_stops: 'Praga → Brno → Viena → Budapeste · Railjet / EuroCity',
@@ -580,12 +580,325 @@
         ai_plan_hotels: 'Hotel em destaque por parada', ai_hotel_budget_alt: 'Ver opções econômicas em {city} →', ai_plan_copy: 'Copiar itinerário', ai_plan_copied: 'Copiado', ai_hotel_link: 'Ver hotéis →', ai_hotel_price: 'Ver preço atual →', ai_kiwi_cta: 'Reservar traslado privado em', ai_stop_label: 'PARAGEM', ai_budget_label: 'Orçamento estimado da viagem', ai_budget_trains: 'Trens (esta rota)', ai_budget_daily: 'Hostel + comida, por dia', ai_budget_disclaimer: 'Apenas estimativas, baseadas em médias públicas de viagens econômicas — os preços reais variam de acordo com o fornecedor, a temporada e a data de reserva. Confirme sempre o preço final antes de comprar.', ai_high_demand: 'Estamos com muita demanda agora — tente novamente em instantes, ou escolha uma das rotas populares acima.', ai_trust_note: 'Reserva segura através da nossa parceria oficial com a Klook', ai_multileg_note: 'Esta viagem tem {n} trechos — reserve cada um separadamente, como em qualquer viagem de trem por vários países.', ai_tramo_modal_title: 'WoW Train', ai_tramo_modal_body: 'Estamos procurando os horários deste trecho. Escolha o trem que preferir na aba do Klook que acabou de abrir e volte aqui para seguir para o próximo.', ai_tramo_modal_btn: 'Escolhi → próximo trecho', ai_tramo_final_title: '🎉 Itinerário completo!', ai_tramo_final_body: 'Todos os seus trechos estão prontos na outra aba. Confira seu carrinho no Klook e siga para o pagamento seguro para receber seus tickets. Boa viagem!', ai_tramo_final_btn: 'Fechar', discover_1_country: 'Áustria · Joia escondida', discover_1_route: 'Trem até Hallstatt + balsa no lago', discover_1_season: 'Melhor época: mai–set · ~3h30 de Salzburgo', discover_1_tip: 'Uma vila de conto de fadas em um lago alpino cristalino. O trem te deixa na margem oposta e uma pequena balsa faz a travessia — chegar de carro nunca é tão mágico.', discover_2_country: 'Eslovênia · Joia escondida', discover_2_route: 'Via Liubliana · Ferrovia de Bohinj', discover_2_season: 'Melhor época: jun–set · igreja na ilha e castelo', discover_2_tip: 'Uma igreja em uma ilha num lago esmeralda, sob um castelo no penhasco. Duas estações, um segredo: escolha a certa e o trem te deixa à beira da água.', discover_3_country: 'Suíça · Joia escondida', discover_3_route: 'Via Interlaken · Berner Oberland Bahn', discover_3_season: 'Melhor época: jun–out · 72 cachoeiras ativas', discover_3_tip: 'Um vale com 72 cachoeiras sob paredões verticais. Sem linha direta — faça baldeação em Interlaken para um trenzinho de montanha que já é metade da magia.', discover_4_country: 'França · Joia escondida', discover_4_route: 'TGV direto desde Paris (~2h20)', discover_4_season: 'Melhor época: mercados de dezembro e flores de primavera', discover_4_tip: 'A "Pequena Veneza" da Alsácia — casas de enxaimel e canais floridos, a poucos passos de uma estação TGV direta.', discover_5_country: 'Alemanha → Itália', discover_5_route: 'EuroCity pelo passo do Brenner', discover_5_season: '~7h · Alpes, Tirol e vale do Adige', discover_5_tip: 'Um dos trajetos mais panorâmicos da Europa — da Baviera, cruzando os Alpes, descendo entre vinhedos até a beira da lagoa de Veneza.', discover_6_country: 'França → Itália', discover_6_route: 'TGV / Frecciarossa · túnel de Fréjus', discover_6_season: 'Cruzando os Alpes · da França ao Piemonte', discover_6_tip: 'Da beira do rio em Lyon até a barroca Turim, atravessando o vale de Maurienne e o histórico túnel alpino rumo à Itália.', discover_7_country: 'França → Espanha', discover_7_route: 'TGV direto de alta velocidade', discover_7_season: '~6h30 · centro a centro', discover_7_tip: 'Um único trem desde Paris, cruzando o sul da França e os Pirineus, direto ao coração de Barcelona.', discover_8_country: 'França → Países Baixos', discover_8_route: 'Eurostar direto · via Bruxelas', discover_8_season: '~3h20 · várias partidas por dia', discover_8_tip: 'Dos cafés de Paris aos canais de Amsterdã em um único salto de alta velocidade — supera facilmente o avião porta a porta.', discover_watch: '▶ Vídeo + guia', rv4_route: 'La Spezia → Vernazza · Cinque Terre', rv4_body: 'Cinco vilarejos em uma única tarde, entrando e saindo do trenzinho costeiro. De carro teria sido um pesadelo para estacionar.', rv5_route: 'Interlaken → Lauterbrunnen · Alpes', rv5_body: 'O trem seguia rente à montanha e um vale cheio de cachoeiras se abriu logo abaixo. Eu literalmente dei um grito.', rv6_route: 'Madrid → Barcelona · AVE', rv6_body: 'Do centro de Madrid ao coração de Barcelona em 2h30, mais rápido que voar se contar o tempo de aeroporto. Mudou tudo.', rv7_route: 'Viena → Veneza · Trem noturno', rv7_body: 'Adormeci em Viena e acordei com a lagoa de Veneza à vista. Economizei uma noite de hotel e cheguei com o dia todo pela frente.', rv8_route: 'Porto → Pocinho · Vale do Douro', rv8_body: 'A linha segue o rio por entre vinhedos em terraços. Uma das viagens de trem mais bonitas que já fiz, e quase sem turistas.', explore_routes_title: 'Explore rotas de trem pela Europa', explore_routes_sub: 'Horários, preços e dicas para 103 trajetos de trem populares pela Europa.', ios_install_title: 'Instalar o WoW Train', ios_install_text: 'Toque em Compartilhar e depois em "Adicionar à Tela de Início".', ios_install_dismiss: 'Fechar', pwa_install_title: 'Instalar WoW Train', pwa_install_text: 'Adicione à tela de início para acesso rápido, sem passar pela loja de apps.', pwa_install_cta: 'Instalar',
         popular_routes_label: '★ Rotas populares · reserve na hora',
       },
+      ja: {
+        "nav_scenic": "展望列車",
+        "nav_discover": "いっしょに発見",
+        "nav_essentials": "旅の必需品",
+        "nav_features": "機能",
+        "nav_download": "はじめる",
+        "nav_routes": "路線",
+        "nav_plan": "計画",
+        "nav_explore": "探す",
+        "chip_spain": "スペイン",
+        "chip_switzerland": "スイス",
+        "chip_france": "フランス",
+        "chip_germany": "ドイツ",
+        "chip_italy": "イタリア",
+        "chip_belgium": "ベルギー",
+        "chip_netherlands": "オランダ",
+        "chip_austria": "オーストリア",
+        "chip_uk": "イギリス",
+        "chip_czechia": "チェコ",
+        "chip_denmark": "デンマーク",
+        "chip_hungary": "ハンガリー",
+        "ai_suggest_paris": "マドリードからパリ",
+        "ai_suggest_mb": "マドリード → バルセロナ",
+        "ai_suggest_pl": "パリ → ロンドン",
+        "ai_suggest_pb": "パリ → バルセロナ",
+        "ai_suggest_mv": "ミュンヘン → ベネチア",
+        "ai_suggest_rv": "ローマ → ベネチア",
+        "ai_suggest_alps": "スイスアルプス",
+        "ai_suggest_italy": "イタリア5日間",
+        "partners_see_all": "必需品をすべて見る →", "region_europe": "ヨーロッパ", "region_japan": "日本", "nav_ai": "AIプランナー", "scenic_board": "ヨーロッパの展望列車", "ai_swap": "出発地と到着地を入れ替える", "partner_hotels_city": "都市からホテル →", "partner_attractions": "観光", "partner_transfers": "送迎", "partner_esim": "eSIM", "partner_insurance": "保険", "partner_luggage": "荷物", "partner_hotels": "ホテル",
+        "hero_badge": "ヨーロッパ鉄道のAIプランナー",
+        "hero_h1": "ヨーロッパ鉄道ルートのAIプランナー",
+        "hero_title1": "旅を話してください。",
+        "hero_title2": "列車はこちらで組みます。",
+        "tab_ai": "AIプランナー",
+        "tab_roulette": "行き先ルーレット",
+        "tab_countries": "国別の路線",
+        "search_label": "あなたの旅",
+        "ben_klook_t": "Klookで予約",
+        "ben_klook_d": "公式サイトで安全に支払い。",
+        "ben_rt_t": "リアルタイムのデータ",
+        "ben_rt_d": "公式情報の時刻と遅延。",
+        "ben_free_t": "無料、アカウント不要",
+        "ben_free_d": "月額も隠れた費用もありません。",
+        "scenic_featured": "注目の路線",
+        "route_see": "旅程を見る",
+        "guides_label": "ガイドとヒント",
+        "guides_title": "乗車前に必要なこと。",
+        "guides_lead": "ヨーロッパを列車で旅する実務ガイド。失敗しやすい点、安い切符、パスの選び方。",
+        "guides_by": "WoW Train チーム",
+        "guides_all": "ガイドをすべて見る",
+        "features_banner": "リュックひとつで動く人のために。",
+        "stop_arrival": "到着",
+        "g1_tag": "旅のガイド",
+        "g1_title": "ヨーロッパ列車サバイバルガイド：高くつく5つの失敗",
+        "g2_tag": "節約",
+        "g2_title": "2026年ヨーロッパの安い列車切符：うまく買う方法",
+        "g3_tag": "列車の旅",
+        "g3_title": "2026年ユーレイルパスと区間切符、どちらが得か",
+        "route_classic_stops": "パリ → リヨン → トリノ → ミラノ · 高速 · 約7〜8時間",
+        "route_alpine_stops": "チューリッヒ → ザルガンス → インスブルック → ウィーン · Railjet ÖBB/SBB",
+        "route_imperial_stops": "プラハ → ブルノ → ウィーン → ブダペスト · Railjet / EuroCity",
+        "hero_subtitle": "行きたい場所を教えてください。AIが旅程を組み、切符の購入につなぎ、途中のホテルも探します。",
+        "hero_ai_cta": "AIで旅を組む →",
+        "hero_search_link": "区間が決まっている？そのまま検索 →",
+        "search_from": "出発",
+        "search_to": "到着",
+        "search_date": "日付",
+        "search_btn": "切符と時刻を検索 →",
+        "stat_world": "ヨーロッパとその先",
+        "stat_free_val": "無料",
+        "stat_free": "ずっと無料",
+        "stat_realtime_val": "リアルタイム",
+        "stat_realtime": "24時間の発車案内",
+        "stat_noreg_val": "登録不要",
+        "stat_noreg": "開いてすぐ検索",
+        "scenic_label": "ヨーロッパの名路線",
+        "scenic_title1": "景色のいい",
+        "scenic_title2": "列車の旅。",
+        "scenic_lead": "ヨーロッパでいちばん見ごたえのある列車の旅。ここからそのまま予約できます。",
+        "scenic_more": "路線をもっと見る",
+        "scenic_less": "閉じる",
+        "partners_label": "旅に必要なもの",
+        "partners_title1": "旅の必需品",
+        "partners_title2": "ヨーロッパ編。",
+        "partners_lead": "列車の旅を補う、選んだサービスです。",
+        "vip_label": "信頼できるパートナー",
+        "vip_booking": "ホテルと宿泊 →",
+        "vip_tripadvisor": "体験と口コミ →",
+        "vip_klook_hotels": "都市を選ぶ →",
+        "disc_label": "コミュニティ",
+        "disc_title1": "いっしょに",
+        "disc_title2": "見つけよう。",
+        "disc_lead": "列車でしかたどり着けないヨーロッパの町。旅人から旅人へ。",
+        "disc_cta_title": "今日はどこへ行く？",
+        "disc_cta_text": "実在する都市の組み合わせを回すと、旅程がひとりでに組まれます。",
+        "disc_cta_btn": "ルーレットを回す",
+        "disc_cta_again": "もう一度",
+        "disc_cta_this": "これに決める",
+        "hoy_seo_cta": "行き先ルーレット",
+        "hoy_h1": "今日はどこへ行く？",
+        "hoy_lead": "ヨーロッパの実在する都市ペアを回す。列車の旅程が組まれ、その切符を予約できます。",
+        "hoy_body": "出る結果は、公開済みのWoW Trainの路線だけです。区間を開き、Klookで時刻と切符へ進みます。無料、アカウント不要。",
+        "hoy_faq1_q": "行き先はランダムですか？",
+        "hoy_faq1_a": "すでに列車ガイドとして出している都市ペアの中からランダムです。列車で予約できない組み合わせは出ません。",
+        "hoy_faq2_q": "出た結果をそのまま使う必要がありますか？",
+        "hoy_faq2_a": "いいえ。もう一度回すか、プランナーに区間を書くか、路線ガイドを開いてください。決められないときの道具です。",
+        "hoy_faq3_q": "切符はどこで買いますか？",
+        "hoy_faq3_a": "公式パートナーのリンクからKlookで買います。WoW Trainが上乗せすることはありません。",
+        "hoy_more": "ほかの列車路線",
+        "hoy_home": "プランナーに戻る",
+        "p_klook_title": "シティパス",
+        "p_klook_desc": "マドリード、バルセロナ、パリ、ローマ、ロンドン、ベルリン。乗り放題と人気スポットの優先入場。",
+        "p_klook_cta": "パスを見る →",
+        "p_kiwi_title": "空港送迎",
+        "p_kiwi_desc": "ヨーロッパ主要空港からホテルや駅まで、定額の貸切タクシー。",
+        "p_kiwi_cta": "送迎を予約 →",
+        "p_yesim_title": "ヨーロッパeSIM",
+        "p_yesim_desc": "30か国以上でつながるeSIM。€4.90から。SIMを差し替えず、その場で有効化。",
+        "p_yesim_cta": "eSIMを有効化 →",
+        "p_tiqets_title": "観光チケット",
+        "p_tiqets_desc": "サグラダ・ファミリア、コロッセオ、ルーブル、エッフェル塔など、ヨーロッパ6,000以上の施設に優先入場。",
+        "p_tiqets_cta": "チケットを見る →",
+        "p_storage_title": "荷物預かり",
+        "p_storage_desc": "ヨーロッパの都市1,000か所以上。€5から預けて、身軽に歩けます。",
+        "p_storage_cta": "預け場所を探す →",
+        "p_car_title": "レンタカー",
+        "p_car_cta": "車を借りる →",
+        "p_insurance_title": "旅行保険",
+        "p_insurance_cta": "加入する →",
+        "features_label": "WoW Trainを選ぶ理由",
+        "features_title1": "すばやく動く",
+        "features_title2": "旅人のために。",
+        "features_lead": "月額も有料の壁もありません。リアルタイムのデータと道具だけです。",
+        "f1_title": "リアルタイムの発車",
+        "f1_desc": "公式の鉄道データから、遅延、番線変更、運休をお知らせします。",
+        "f2_title": "ヨーロッパをひとつの画面で",
+        "f2_desc": "スペイン、フランス、ドイツ、スイス、イタリア、その先まで。",
+        "f3_title": "区間検索",
+        "f3_desc": "ヨーロッパの駅から駅へ、実際の運賃と時刻で探せます。",
+        "f4_title": "相談料はゼロ",
+        "f4_desc": "複数の国にまたがるルートも無料で組めます。旅行代理店は不要です。",
+        "f5_title": "スマート通知",
+        "f5_desc": "列車が近づいたときや、路線に遅れが出たときに知らせます。",
+        "f6_title": "ひとつにまとめた旅",
+        "f6_desc": "列車、eSIM、旅の必需品。必要なものを同じ場所に。",
+        "dl_title": "いま、旅をはじめよう。",
+        "dl_subtitle": "列車を探し、展望ルートを見て、確認済みのパートナーで予約。ブラウザだけで、アプリは不要です。",
+        "dl_web": "いま列車を探す",
+        "dl_scenic": "展望ルートを見る",
+        "ai_route_meta_train": "✦ {from} から {to} への列車",
+        "faq_label": "よくある質問",
+        "faq_title1": "知っておきたい",
+        "faq_title2": "こと。",
+        "faq1_q": "WoW Trainとは？",
+        "faq1_a": "ヨーロッパの列車の旅を組む、独立した無料のサイトです。アカウントも月額も不要。見て、組んで、認定パートナーから予約します。",
+        "faq2_q": "切符はどう予約しますか？",
+        "faq2_a": "Trainlineなどの公式事業者へ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。",
+        "faq3_q": "体験はどう共有しますか？",
+        "faq3_a": "レビューフォームにWoWの瞬間を書き（140字まで）、星を選んで公開します。確認のあと、クラウドに表示されます。",
+        "faq4_q": "手数料はかかりますか？",
+        "faq4_a": "使う人は100%無料です。WoW Trainは公式パートナーからの報酬を受け取りますが、あなたへの上乗せはありません。",
+        "faq5_q": "データは守られますか？",
+        "faq5_a": "アカウントは不要です。サイトに必要なクッキーと、匿名のGoogleアナリティクスだけを使います。個人データを売ることはありません。",
+        "more_countries": "ほかの国",
+        "footer_blog": "ブログ",
+        "footer_about": "このサイトについて",
+        "footer_privacy": "プライバシー",
+        "footer_cookies": "クッキー",
+        "footer_imprint": "法的表示",
+        "footer_support": "サポート",
+        "footer_terms": "利用規約",
+        "footer_contact": "連絡先",
+        "modal_copy_btn": "旅程をコピー",
+        "cookie_text": "サイトの動作に必要なクッキーと、体験を改善するための匿名の分析を使います。",
+        "cookie_accept": "同意する",
+        "cookie_decline": "拒否する",
+        "explore_show_all": "すべての路線を見る",
+        "explore_show_fewer": "少なく表示",
+        "footer_copy": "© 2026 GLOSX — 無断転載を禁じます。",
+        "footer_disclaimer": "WoW Trainは独立した旅行サイトです。予約はKlookなどの認定パートナーの条件で処理され、その取引の当事者ではありません。対象の購入から報酬を受け取ることがありますが、あなたへの追加料金はありません。",
+        "scenic_book": "いま予約",
+        "preview_label": "動きを見る",
+        "preview_title1": "実際に旅する人の",
+        "preview_title2": "ために。",
+        "preview_lead": "GPS、リアルタイムの時刻、展望ルート、翻訳。ポケットの中に。",
+        "ss_home": "国を選ぶ",
+        "ss_board": "発車案内",
+        "ss_live": "いまの発車",
+        "stats_prose": "<strong>16か国</strong>の<strong>103本のルートガイド</strong>から、次の旅へ。無料、登録不要。",
+        "stat_live": "いま見ています",
+        "trust_data": "ヨーロッパの主要鉄道網で、AIが組んだ旅",
+        "trust_b1": "AIが組む旅程",
+        "trust_b2": "確認済みパートナーで予約",
+        "trust_b3": "登録不要",
+        "trust_b4": "無料で使える",
+        "trust_klook": "予約はKlookが公式に処理します",
+        "ai_demo_badge": "例 · 1枚のカードが1区間（都市 → 都市）",
+        "nav_adventure": "冒険を組む",
+        "adv_label": "自分の冒険を組む",
+        "adv_title1": "自分で組む",
+        "adv_title2": "冒険。",
+        "adv_lead": "旅の型を選ぶと、都市から都市へ続く実際の列車をつなぎます。乗り継ぎのひとつが、ひとつの場面です。",
+        "route_classic": "定番ルート（フランス–イタリア）",
+        "route_alpine": "アルプスルート（スイス–オーストリア）",
+        "route_imperial": "帝国ルート（中央ヨーロッパ）",
+        "tl_empty": "路線をタップすると、時系列が開きます。",
+        "wt_close_aria": "路線を閉じる",
+        "reviews_label": "車両の話",
+        "reviews_title1": "旅の途中の",
+        "reviews_title2": "声。",
+        "reviews_lead": "覚えているのは目的地ではなく、列車がすべてを変えた瞬間です。",
+        "reviews_disclaimer": "下のカードは見本です。本当のWoWの瞬間は下から送れます。確認のあと公開されます。",
+        "wt_momento": "WoWの瞬間：",
+        "rv1_route": "パリ ➔ ミラノ · 定番ルート",
+        "rv1_body": "ただ快適でした。熱いコーヒーと開いたパソコンのままアルプスを越え、ミラノには疲れてではなく休んで着きました。飛行機のあととは違います。",
+        "rv2_route": "チューリッヒ ➔ ウィーン · アルプスルート",
+        "rv2_body": "ストレスゼロ。切符は1枚、乗り継ぎはそのままつながり、終わりのない保安検査もありません。座って、ただ楽しめました。",
+        "rv3_route": "プラハ ➔ ブダペスト · 帝国ルート",
+        "rv3_body": "景色です。日没のカーブでドナウが現れ、車両が静まりました。飛行機の窓ではこうはなりません。",
+        "rv_ph_name": "名前、国",
+        "rv_ph_route": "あなたの列車の区間",
+        "rv_ph_body": "列車でのWoWの瞬間…",
+        "rv_publish": "公開する",
+        "rv_ok": "ありがとうございます。確認待ちです。",
+        "rv_error_empty": "名前とコメントを入力してください。",
+        "rv_chars_label": "残り文字数",
+        "ai_label": "AIルートプランナー",
+        "ai_title1": "夢の旅を",
+        "ai_title2": "話してください。",
+        "ai_subtitle": "都市から都市までも、何日もかける旅も。AIが列車のルートを組みます。",
+        "ai_generate": "旅程を作る",
+        "ai_reset": "↺ 別のルートを作る",
+        "ai_restore": "直前のルートを見る →",
+        "ai_buy_ticket": "時刻を見て切符を予約 →",
+        "ai_view_options": "選択肢を見る →",
+        "ai_input_ph": "例：チューリッヒからミラノ",
+        "ai_suggest_label": "人気の区間：",
+        "ai_plan_hotels": "各停車地のおすすめ宿",
+        "ai_hotel_budget_alt": "{city}の手頃な宿を見る →",
+        "ai_plan_copy": "旅程をコピー",
+        "ai_plan_copied": "コピーしました",
+        "ai_hotel_link": "ホテルを探す →",
+        "ai_hotel_price": "いまの料金を見る →",
+        "ai_kiwi_cta": "貸切送迎を予約：",
+        "ai_stop_label": "停車",
+        "ai_budget_label": "旅費のめやす",
+        "ai_budget_trains": "列車（このルート）",
+        "ai_budget_daily": "ホステルと食事、1日あたり",
+        "ai_budget_disclaimer": "めやすです。公開されている節約旅行の平均に基づき、事業者・季節・予約日で変わります。買う前に最終料金を確認してください。",
+        "ai_high_demand": "いまアクセスが集中しています。少し待ってからもう一度試すか、上の人気ルートを選んでください。",
+        "ai_trust_note": "公式のKlook提携による安全な予約",
+        "ai_multileg_note": "この旅は{n}区間です。国をまたぐ列車と同じく、区間ごとに予約します。",
+        "ai_tramo_modal_title": "WoW Train",
+        "ai_tramo_modal_body": "この区間の時刻を調べています。いま開いたKlookのタブで列車を選び、戻って次へ進んでください。",
+        "ai_tramo_modal_btn": "選びました → 次の区間",
+        "ai_tramo_final_title": "🎉 旅程がそろいました",
+        "ai_tramo_final_body": "すべての区間がもう一つのタブにあります。Klookのカートを確認し、安全な支払いへ進んで切符を受け取ってください。よい旅を。",
+        "ai_tramo_final_btn": "閉じる",
+        "discover_1_place": "ハルシュタット", "discover_2_place": "ブレッド湖", "discover_3_place": "ラウターブルンネン", "discover_4_place": "コルマール", "discover_5_place": "ミュンヘン → ヴェネツィア", "discover_6_place": "リヨン → トリノ", "discover_7_place": "パリ → バルセロナ", "discover_8_place": "パリ → アムステルダム", "lang_aria": "言語", "discover_1_country": "オーストリア · 隠れた名所",
+        "discover_1_route": "ハルシュタット行きの列車と湖のフェリー",
+        "discover_1_season": "ベスト：5〜9月 · ザルツブルクから約3時間30分",
+        "discover_1_tip": "鏡のようなアルプスの湖に浮かぶ、物語の村。列車は対岸に着き、小さなフェリーが湖を渡します。車ではこの感じになりません。",
+        "discover_2_country": "スロベニア · 隠れた名所",
+        "discover_2_route": "リュブリャナ経由 · ボーヒニ鉄道",
+        "discover_2_season": "ベスト：6〜9月 · 島の教会と城",
+        "discover_2_tip": "崖の城の下、エメラルドの湖に浮かぶ島の教会。駅は二つ。正しいほうを選ぶと、列車が水辺に着きます。",
+        "discover_3_country": "スイス · 隠れた名所",
+        "discover_3_route": "インターラーケン経由 · ベルナーオーバーラント鉄道",
+        "discover_3_season": "ベスト：6〜10月 · 72の滝",
+        "discover_3_tip": "切り立った崖の下に、72の滝がある谷。直通はありません。インターラーケンで山岳鉄道に乗り換えます。その列車自体が旅の半分です。",
+        "discover_4_country": "フランス · 隠れた名所",
+        "discover_4_route": "パリからTGV直通（約2時間20分）",
+        "discover_4_season": "ベスト：12月の市と春の花",
+        "discover_4_tip": "アルザスの「小さなベネチア」。木組みの家と花の運河が、TGV直通の駅から歩いてすぐです。",
+        "discover_5_country": "ドイツ → イタリア",
+        "discover_5_route": "ブレンナー峠を越えるEuroCity",
+        "discover_5_season": "約7時間 · アルプス、チロル、アディジェの谷",
+        "discover_5_tip": "ヨーロッパでも景色のよい区間のひとつ。バイエルンからアルプスを越え、ブドウ畑を下ってベネチアの潟のほとりへ。",
+        "discover_6_country": "フランス → イタリア",
+        "discover_6_route": "TGV / フレッチャロッサ · フレジュストンネル",
+        "discover_6_season": "アルプス越え · フランスからピエモンテ",
+        "discover_6_tip": "リヨンの川辺からバロックのトリノへ。モーリエンヌの谷と、歴史あるアルプスのトンネルを抜けてイタリアに入ります。",
+        "discover_7_country": "フランス → スペイン",
+        "discover_7_route": "TGV高速直通",
+        "discover_7_season": "約6時間30分 · 中心部から中心部",
+        "discover_7_tip": "パリから南フランスとピレネーを抜け、バルセロナの中心まで一本の列車です。",
+        "discover_8_country": "フランス → オランダ",
+        "discover_8_route": "ユーロスター直通 · ブリュッセル経由",
+        "discover_8_season": "約3時間20分 · 1日に何度も",
+        "discover_8_tip": "パリのカフェからアムステルダムの運河まで、高速のひと跳び。ドアからドアでは飛行機より楽です。",
+        "discover_watch": "▶ 動画とガイド",
+        "rv4_route": "ラ・スペツィア → ヴェルナッツァ · チンクエテッレ",
+        "rv4_body": "午後のうちに五つの村。海岸の小さな列車を降りたり乗ったり。車なら駐車で終わりでした。",
+        "rv5_route": "インターラーケン → ラウターブルンネン · アルプス",
+        "rv5_body": "列車が山肌に沿い、滝の谷が下に開けました。声が出ました。",
+        "rv6_route": "マドリード → バルセロナ · AVE",
+        "rv6_body": "マドリード中心からバルセロナ中心まで2時間30分。空港の時間を入れると飛行機より速い。旅の感覚が変わりました。",
+        "rv7_route": "ウィーン → ベネチア · 夜行列車",
+        "rv7_body": "ウィーンで眠り、ベネチアの潟で目が覚めました。ホテル1泊を省いて、一日をまるごと使えました。",
+        "rv8_route": "ポルト → ポシーニョ · ドウロ渓谷",
+        "rv8_body": "線路が段々畑のブドウのあいだを川に沿います。乗った列車のなかでもいちばん美しく、観光客はほとんどいませんでした。",
+        "explore_routes_title": "ヨーロッパの列車路線を探す",
+        "explore_routes_sub": "ヨーロッパの人気103路線。時刻、料金、ヒント。",
+        "ios_install_title": "WoW Trainをホーム画面に",
+        "ios_install_text": "共有アイコンをタップし、「ホーム画面に追加」を選んでください。",
+        "ios_install_dismiss": "閉じる",
+        "pwa_install_title": "WoW Trainをインストール",
+        "pwa_install_text": "ホーム画面に追加すると、アプリストアを通さずすぐ開けます。",
+        "pwa_install_cta": "インストール",
+        "popular_routes_label": "★ 人気路線 · すぐ予約"
+      },
     };
 
     const LANG_META = {
       en: { flag: '', code: 'EN' }, es: { flag: '', code: 'ES' },
       fr: { flag: '', code: 'FR' }, de: { flag: '', code: 'DE' },
       it: { flag: '', code: 'IT' }, pt: { flag: '', code: 'PT' },
+      ja: { flag: '', code: 'JA' },
     };
 
     function isSeoCrawler() {
@@ -593,13 +906,13 @@
     }
 
     function localeFromPath() {
-      const m = (location.pathname || '/').match(/^\/(es|fr|it)(?:\/|$)/);
+      const m = (location.pathname || '/').match(/^\/(es|fr|it|ja)(?:\/|$)/);
       return m ? m[1] : null;
     }
 
     function homePathForLang(lang) {
       if (lang === 'en') return '/';
-      if (lang === 'es' || lang === 'fr' || lang === 'it') return '/' + lang + '/';
+      if (lang === 'es' || lang === 'fr' || lang === 'it' || lang === 'ja') return '/' + lang + '/';
       return null;
     }
 
@@ -609,13 +922,13 @@
 
     function hoyPathForLang(lang) {
       if (lang === 'en') return '/hoy/';
-      if (lang === 'es' || lang === 'fr' || lang === 'it') return '/' + lang + '/hoy/';
+      if (lang === 'es' || lang === 'fr' || lang === 'it' || lang === 'ja') return '/' + lang + '/hoy/';
       return null;
     }
 
     function isHomePath() {
       const p = location.pathname || '/';
-      return p === '/' || p === '/index.html' || /^\/(es|fr|it)\/?$/.test(p);
+      return p === '/' || p === '/index.html' || /^\/(es|fr|it|ja)\/?$/.test(p);
     }
 
     function detectLang() {
@@ -775,7 +1088,7 @@
       }
       if (onBareHome && !isSeoCrawler()) {
         const detected = detectLang();
-        if (detected && detected !== 'en' && (detected === 'es' || detected === 'fr' || detected === 'it')) {
+        if (detected && detected !== 'en' && (detected === 'es' || detected === 'fr' || detected === 'it' || detected === 'ja')) {
           location.replace(homePathForLang(detected) + location.search + location.hash);
           return;
         }
@@ -1012,34 +1325,34 @@
 
     // ── Scenic trains data + render ────────────────────────────────────────
     const SCENIC_TRAINS = [
-      { name: 'Glacier Express', from: 'zermatt', to: 'st-moritz', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F101898-glacier-express-panoramic-train-private-day-tour%2F&campaign_id=137', photo: 'https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=1000&q=70&auto=format', route: 'Zermatt → St. Moritz · 7h 45min', origin: 'Zermatt', dest: 'St. Moritz', g1: '#C0392B', g2: '#922B21',
-        desc: { en: '291 bridges and 91 tunnels through glaciers and snow-capped Swiss Alps.', es: '291 puentes y 91 túneles entre glaciares y cumbres nevadas de los Alpes suizos.', fr: '291 ponts et 91 tunnels entre glaciers et cimes enneigées des Alpes suisses.', de: '291 Brücken und 91 Tunnel zwischen Gletschern und schneebedeckten Schweizer Alpen.', it: '291 ponti e 91 gallerie tra ghiacciai e cime innevate delle Alpi svizzere.', pt: '291 pontes e 91 túneis entre glaciares e picos nevados dos Alpes suíços.' } },
-      { name: 'Bernina Express', from: 'chur', to: 'tirano', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F50302-bernina-trenino-svizzera-alpi%2F&campaign_id=137', photo: 'https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1000&q=70&auto=format', route: 'Chur → Tirano · 4h 0min', origin: 'Chur', dest: 'Tirano', g1: '#1A5276', g2: '#154360',
-        desc: { en: 'UNESCO heritage. Europe\'s highest mountain pass by train.', es: 'Patrimonio UNESCO. El paso de montaña más alto de Europa en tren.', fr: 'Patrimoine UNESCO. Le col le plus haut d\'Europe en train.', de: 'UNESCO-Welterbe. Europas höchster Bergpass mit dem Zug.', it: 'Patrimonio UNESCO. Il valico più alto d\'Europa in treno.', pt: 'Patrimônio UNESCO. A passagem de montanha mais alta da Europa de comboio.' } },
-      { name: 'GoldenPass Express', from: 'montreux', to: 'interlaken-ost', photo: '/scenic/goldenpass.webp', route: 'Montreux → Interlaken · 3h 19min', origin: 'Montreux', dest: 'Interlaken Ost', g1: '#B7950B', g2: '#9A7D0A',
-        desc: { en: 'From Lake Geneva to the Bernese Oberland in panoramic cars with extra-wide windows.', es: 'Del Lago Lemán al Oberland bernés en vagones panorámicos con ventanas extra anchas.', fr: 'Du Léman à l\'Oberland bernois en voitures panoramiques aux fenêtres extra larges.', de: 'Vom Genfersee ins Berner Oberland in Panoramawagen mit extra breiten Fenstern.', it: 'Dal Lago Lemano all\'Oberland bernese in carrozze panoramiche con finestre extra larghe.', pt: 'Do Lago Léman ao Oberland bernês em vagões panorâmicos com janelas extra largas.' } },
-      { name: 'TGV Lyria', from: 'paris', to: 'geneva', photo: '/scenic/tgv-lyria.webp', route: 'Paris → Geneva · 3h 5min', origin: 'Paris Gare de Lyon', dest: 'Genève', g1: '#C0392B', g2: '#922B21',
-        desc: { en: 'French-Swiss high-speed with Alpine views before reaching the lake.', es: 'Alta velocidad franco-suiza con vistas de los Alpes antes de llegar al lago.', fr: 'Grande vitesse franco-suisse avec vue sur les Alpes avant le lac.', de: 'Französisch-schweizerischer Hochgeschwindigkeitszug mit Alpenblick.', it: 'Alta velocità franco-svizzera con vista sulle Alpi prima del lago.', pt: 'Alta velocidade franco-suíça com vistas dos Alpes antes do lago.' } },
-      { name: 'Train des Merveilles', from: 'nice', to: 'tende', photo: '/scenic/train-des-merveilles.webp', route: 'Nice → Tende · 2h 10min', origin: 'Nice Ville', dest: 'Tende', g1: '#2471A3', g2: '#1A5276',
-        desc: { en: 'From the Mediterranean to Alpine valleys with 5,000-year-old rock carvings.', es: 'Del Mediterráneo a los valles alpinos con grabados rupestres de 5.000 años.', fr: 'De la Méditerranée aux vallées alpines avec des gravures rupestres de 5 000 ans.', de: 'Vom Mittelmeer zu den Alpentälern mit 5.000 Jahre alten Felsgravuren.', it: 'Dal Mediterraneo alle valli alpine con incisioni rupestri di 5.000 anni.', pt: 'Do Mediterrâneo aos vales alpinos com gravuras rupestres de 5.000 anos.' } },
-      { name: 'Cinque Terre Express', from: 'la-spezia', to: 'levanto', photo: '/scenic/cinque-terre.webp', route: 'La Spezia → Levanto · 30min', origin: 'La Spezia Centrale', dest: 'Levanto', g1: '#1E8449', g2: '#196F3D',
-        desc: { en: 'Five colorful villages clinging to the cliffs. The easiest way to visit them all.', es: 'Cinco aldeas de colores pegadas al acantilado. La forma más cómoda de recorrerlas.', fr: 'Cinq villages colorés accrochés à la falaise. La façon la plus simple de tous les visiter.', de: 'Fünf bunte Dörfer an der Steilküste. Der einfachste Weg, sie alle zu besuchen.', it: 'Cinque borghi colorati a strapiombo sul mare. Il modo più comodo per visitarli.', pt: 'Cinco aldeias coloridas sobre a falésia. A forma mais cómoda de as visitar.' } },
-      { name: 'Frecciarossa', from: 'rome', to: 'venice', photo: '/scenic/frecciarossa.webp', route: 'Rome → Venice · 3h 45min', origin: 'Roma Termini', dest: 'Venezia S. Lucia', g1: '#C0392B', g2: '#7B241C',
-        desc: { en: 'Italy\'s most iconic train. Rome to Venice at 300 km/h.', es: 'El tren más icónico de Italia. Roma a Venecia a 300 km/h.', fr: 'Le train le plus emblématique d\'Italie. Rome-Venise à 300 km/h.', de: 'Italiens berühmtester Zug. Rom nach Venedig mit 300 km/h.', it: 'Il treno più iconico d\'Italia. Roma-Venezia a 300 km/h.', pt: 'O comboio mais icónico de Itália. Roma a Veneza a 300 km/h.' } },
-      { name: 'Rhine Valley', from: 'cologne', to: 'mainz', photo: '/scenic/rhine-valley.webp', route: 'Köln → Mainz · 1h 55min', origin: 'Köln Hbf', dest: 'Mainz Hbf', g1: '#922B21', g2: '#7B241C',
-        desc: { en: 'Medieval castles, terraced vineyards and the legendary Lorelei rock.', es: 'Castillos medievales, viñedos en terrazas y el legendario peñasco de Loreley.', fr: 'Châteaux médiévaux, vignobles en terrasses et le légendaire rocher de la Lorelei.', de: 'Mittelalterliche Burgen, Weinterrassen und der legendäre Loreley-Felsen.', it: 'Castelli medievali, vigneti terrazzati e la leggendaria rupe di Loreley.', pt: 'Castelos medievais, vinhas em terraços e o lendário penhasco de Loreley.' } },
-      { name: 'Bavaria Alps', from: 'munich', to: 'salzburg', photo: '/scenic/bavaria-alps.webp', route: 'München → Salzburg · 1h 30min', origin: 'München Hbf', dest: 'Salzburg Hbf', g1: '#1A5276', g2: '#154360',
-        desc: { en: 'From Bavaria\'s capital to Mozart\'s city along the Alps. Turquoise lakes and snowy peaks.', es: 'De la capital bávara a Mozart bordeando los Alpes. Lagos turquesa y cumbres nevadas.', fr: 'De la capitale bavaroise à Mozart en longeant les Alpes. Lacs turquoise et sommets enneigés.', de: 'Von der bayerischen Hauptstadt nach Mozart entlang der Alpen. Türkisfarbene Seen und schneebedeckte Gipfel.', it: 'Dalla capitale bavarese alla città di Mozart lungo le Alpi. Laghi turchesi e cime innevate.', pt: 'Da capital bávara a Mozart ao longo dos Alpes. Lagos turquesa e picos nevados.' } },
-      { name: 'Arlberg Express', from: 'innsbruck', to: 'bregenz', photo: '/scenic/arlberg-express.webp', route: 'Innsbruck → Bregenz · 2h 15min', origin: 'Innsbruck Hbf', dest: 'Bregenz', g1: '#1E8449', g2: '#196F3D',
-        desc: { en: 'Crosses the Arlberg Pass, one of the most dramatic in the Austrian Alps, from the heart of Tyrol to Lake Constance.', es: 'Atraviesa el paso de Arlberg, uno de los más imponentes de los Alpes austríacos, desde el corazón del Tirol hasta el Lago de Constanza.', fr: 'Traverse le col de l\'Arlberg, l\'un des plus impressionnants des Alpes autrichiennes, du cœur du Tyrol au lac de Constance.', de: 'Durchquert den Arlbergpass, einen der eindrucksvollsten der österreichischen Alpen, vom Herzen Tirols bis zum Bodensee.', it: 'Attraversa il passo dell\'Arlberg, uno dei più imponenti delle Alpi austriache, dal cuore del Tirolo al Lago di Costanza.', pt: 'Atravessa o passo de Arlberg, um dos mais imponentes dos Alpes austríacos, do coração do Tirol até o Lago de Constança.' } },
-      { name: 'Semmering Express', from: 'vienna', to: 'graz', photo: '/scenic/semmering.webp', route: 'Vienna → Graz · 2h 39min', origin: 'Wien Hbf', dest: 'Graz Hbf', g1: '#B7950B', g2: '#9A7D0A',
-        desc: { en: 'The world\'s oldest mountain railway. UNESCO heritage since the 19th century.', es: 'El ferrocarril de montaña más antiguo del mundo. Patrimonio UNESCO desde el siglo XIX.', fr: 'Le plus ancien chemin de fer de montagne au monde. Patrimoine UNESCO depuis le XIXe siècle.', de: 'Die älteste Gebirgsbahn der Welt. UNESCO-Welterbe seit dem 19. Jahrhundert.', it: 'La più antica ferrovia di montagna del mondo. Patrimonio UNESCO dal XIX secolo.', pt: 'A ferrovia de montanha mais antiga do mundo. Patrimônio UNESCO desde o século XIX.' } },
-      { name: 'Douro Valley', from: 'porto', to: 'pocinho', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F113775-douro-valley-small-group-day-tour-lunch%2F&campaign_id=137', photo: '/scenic/douro-valley.webp', route: 'Porto → Pocinho · 3h 30min', origin: 'Porto Campanhã', dest: 'Pocinho', g1: '#784212', g2: '#6E2C00',
-        desc: { en: 'Port wine vineyards on schist terraces. One of the world\'s most beautiful train rides.', es: 'Viñedos del Oporto en terrazas de esquisto. Uno de los trayectos más bellos del mundo.', fr: 'Vignobles de Porto en terrasses de schiste. L\'un des plus beaux trajets au monde.', de: 'Portwein-Weinberge auf Schieferterrassen. Eine der schönsten Bahnstrecken der Welt.', it: 'Vigneti del Porto su terrazze di scisto. Uno dei viaggi in treno più belli del mondo.', pt: 'Vinhas do Porto em socalcos de xisto. Uma das viagens de comboio mais belas do mundo.' } },
-      { name: 'Intercity Direct', from: 'amsterdam', to: 'brussels', photo: '/scenic/intercity-direct.webp', route: 'Amsterdam → Brussels · 1h 51min', origin: 'Amsterdam Centraal', dest: 'Brussel-Zuid', g1: '#E67E22', g2: '#CA6F1E',
-        desc: { en: 'From Amsterdam\'s canals to the Grand Place through polders and Belgian countryside.', es: 'De los canales de Ámsterdam al Grand Place atravesando pólderes y campiña belga.', fr: 'Des canaux d\'Amsterdam à la Grand-Place à travers les polders et la campagne belge.', de: 'Von Amsterdams Grachten zum Grand Place durch Polder und belgische Landschaft.', it: 'Dai canali di Amsterdam alla Grand Place tra polder e campagna belga.', pt: 'Dos canais de Amesterdão à Grand Place atravessando pôlderes e o campo belga.' } },
-      { name: 'Thalys', from: 'brussels', to: 'paris', photo: '/scenic/thalys.webp', route: 'Brussels → Paris · 1h 22min', origin: 'Brussel-Zuid', dest: 'Paris Gare du Nord', g1: '#C0392B', g2: '#7B241C',
-        desc: { en: 'Europe\'s most famous red train. Brussels to Paris in under 90 minutes at 300 km/h.', es: 'El tren rojo más famoso de Europa. Bruselas a París en menos de hora y media a 300 km/h.', fr: 'Le train rouge le plus célèbre d\'Europe. Bruxelles-Paris en moins d\'1h30 à 300 km/h.', de: 'Europas berühmtester roter Zug. Brüssel nach Paris in unter 90 Minuten mit 300 km/h.', it: 'Il treno rosso più famoso d\'Europa. Bruxelles-Parigi in meno di 90 minuti a 300 km/h.', pt: 'O comboio vermelho mais famoso da Europa. Bruxelas a Paris em menos de 90 minutos a 300 km/h.' } },
+      { name: 'Glacier Express', from: 'zermatt', to: 'st-moritz', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F101898-glacier-express-panoramic-train-private-day-tour%2F&campaign_id=137', photo: 'https://images.unsplash.com/photo-1716118069021-2b21d392489b?w=1000&q=70&auto=format', route: 'Zermatt → St. Moritz · 7h 45min', route_ja: 'ツェルマット → サンモリッツ · 7時間45分', origin: 'Zermatt', dest: 'St. Moritz', g1: '#C0392B', g2: '#922B21',
+        desc: { en: '291 bridges and 91 tunnels through glaciers and snow-capped Swiss Alps.', es: '291 puentes y 91 túneles entre glaciares y cumbres nevadas de los Alpes suizos.', fr: '291 ponts et 91 tunnels entre glaciers et cimes enneigées des Alpes suisses.', de: '291 Brücken und 91 Tunnel zwischen Gletschern und schneebedeckten Schweizer Alpen.', it: '291 ponti e 91 gallerie tra ghiacciai e cime innevate delle Alpi svizzere.', pt: '291 pontes e 91 túneis entre glaciares e picos nevados dos Alpes suíços.' , ja: '291の橋と91のトンネル。氷河と雪のスイスアルプスを抜けます。' } },
+      { name: 'Bernina Express', from: 'chur', to: 'tirano', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F50302-bernina-trenino-svizzera-alpi%2F&campaign_id=137', photo: 'https://images.unsplash.com/photo-1553670590-f58a6135f69e?w=1000&q=70&auto=format', route: 'Chur → Tirano · 4h 0min', route_ja: 'クール → ティラーノ · 4時間', origin: 'Chur', dest: 'Tirano', g1: '#1A5276', g2: '#154360',
+        desc: { en: 'UNESCO heritage. Europe\'s highest mountain pass by train.', es: 'Patrimonio UNESCO. El paso de montaña más alto de Europa en tren.', fr: 'Patrimoine UNESCO. Le col le plus haut d\'Europe en train.', de: 'UNESCO-Welterbe. Europas höchster Bergpass mit dem Zug.', it: 'Patrimonio UNESCO. Il valico più alto d\'Europa in treno.', pt: 'Patrimônio UNESCO. A passagem de montanha mais alta da Europa de comboio.' , ja: 'ユネスコ世界遺産。ヨーロッパでいちばん高い峠を列車で越えます。' } },
+      { name: 'GoldenPass Express', from: 'montreux', to: 'interlaken-ost', photo: '/scenic/goldenpass.webp', route: 'Montreux → Interlaken · 3h 19min', route_ja: 'モントルー → インターラーケン · 3時間19分', origin: 'Montreux', dest: 'Interlaken Ost', g1: '#B7950B', g2: '#9A7D0A',
+        desc: { en: 'From Lake Geneva to the Bernese Oberland in panoramic cars with extra-wide windows.', es: 'Del Lago Lemán al Oberland bernés en vagones panorámicos con ventanas extra anchas.', fr: 'Du Léman à l\'Oberland bernois en voitures panoramiques aux fenêtres extra larges.', de: 'Vom Genfersee ins Berner Oberland in Panoramawagen mit extra breiten Fenstern.', it: 'Dal Lago Lemano all\'Oberland bernese in carrozze panoramiche con finestre extra larghe.', pt: 'Do Lago Léman ao Oberland bernês em vagões panorâmicos com janelas extra largas.' , ja: 'レマン湖からベルナー・オーバーラントへ。大きな窓のパノラマ車両です。' } },
+      { name: 'TGV Lyria', from: 'paris', to: 'geneva', photo: '/scenic/tgv-lyria.webp', route: 'Paris → Geneva · 3h 5min', route_ja: 'パリ → ジュネーブ · 3時間5分', origin: 'Paris Gare de Lyon', dest: 'Genève', g1: '#C0392B', g2: '#922B21',
+        desc: { en: 'French-Swiss high-speed with Alpine views before reaching the lake.', es: 'Alta velocidad franco-suiza con vistas de los Alpes antes de llegar al lago.', fr: 'Grande vitesse franco-suisse avec vue sur les Alpes avant le lac.', de: 'Französisch-schweizerischer Hochgeschwindigkeitszug mit Alpenblick.', it: 'Alta velocità franco-svizzera con vista sulle Alpi prima del lago.', pt: 'Alta velocidade franco-suíça com vistas dos Alpes antes do lago.' , ja: 'フランスとスイスを結ぶ高速列車。湖に着く前にアルプスが見えます。' } },
+      { name: 'Train des Merveilles', from: 'nice', to: 'tende', photo: '/scenic/train-des-merveilles.webp', route: 'Nice → Tende · 2h 10min', route_ja: 'ニース → タンド · 2時間10分', origin: 'Nice Ville', dest: 'Tende', g1: '#2471A3', g2: '#1A5276',
+        desc: { en: 'From the Mediterranean to Alpine valleys with 5,000-year-old rock carvings.', es: 'Del Mediterráneo a los valles alpinos con grabados rupestres de 5.000 años.', fr: 'De la Méditerranée aux vallées alpines avec des gravures rupestres de 5 000 ans.', de: 'Vom Mittelmeer zu den Alpentälern mit 5.000 Jahre alten Felsgravuren.', it: 'Dal Mediterraneo alle valli alpine con incisioni rupestri di 5.000 anni.', pt: 'Do Mediterrâneo aos vales alpinos com gravuras rupestres de 5.000 anos.' , ja: '地中海からアルプスの谷へ。5000年前の岩刻画が残る道です。' } },
+      { name: 'Cinque Terre Express', from: 'la-spezia', to: 'levanto', photo: '/scenic/cinque-terre.webp', route: 'La Spezia → Levanto · 30min', route_ja: 'ラ・スペツィア → レヴァント · 30分', origin: 'La Spezia Centrale', dest: 'Levanto', g1: '#1E8449', g2: '#196F3D',
+        desc: { en: 'Five colorful villages clinging to the cliffs. The easiest way to visit them all.', es: 'Cinco aldeas de colores pegadas al acantilado. La forma más cómoda de recorrerlas.', fr: 'Cinq villages colorés accrochés à la falaise. La façon la plus simple de tous les visiter.', de: 'Fünf bunte Dörfer an der Steilküste. Der einfachste Weg, sie alle zu besuchen.', it: 'Cinque borghi colorati a strapiombo sul mare. Il modo più comodo per visitarli.', pt: 'Cinco aldeias coloridas sobre a falésia. A forma mais cómoda de as visitar.' , ja: '断崖にへばりつく五つの色の村。全部を回るいちばん楽な方法です。' } },
+      { name: 'Frecciarossa', from: 'rome', to: 'venice', photo: '/scenic/frecciarossa.webp', route: 'Rome → Venice · 3h 45min', route_ja: 'ローマ → ヴェネツィア · 3時間45分', origin: 'Roma Termini', dest: 'Venezia S. Lucia', g1: '#C0392B', g2: '#7B241C',
+        desc: { en: 'Italy\'s most iconic train. Rome to Venice at 300 km/h.', es: 'El tren más icónico de Italia. Roma a Venecia a 300 km/h.', fr: 'Le train le plus emblématique d\'Italie. Rome-Venise à 300 km/h.', de: 'Italiens berühmtester Zug. Rom nach Venedig mit 300 km/h.', it: 'Il treno più iconico d\'Italia. Roma-Venezia a 300 km/h.', pt: 'O comboio mais icónico de Itália. Roma a Veneza a 300 km/h.' , ja: 'イタリアを代表する列車。ローマからヴェネツィアまで時速300kmです。' } },
+      { name: 'Rhine Valley', from: 'cologne', to: 'mainz', photo: '/scenic/rhine-valley.webp', route: 'Köln → Mainz · 1h 55min', route_ja: 'ケルン → マインツ · 1時間55分', origin: 'Köln Hbf', dest: 'Mainz Hbf', g1: '#922B21', g2: '#7B241C',
+        desc: { en: 'Medieval castles, terraced vineyards and the legendary Lorelei rock.', es: 'Castillos medievales, viñedos en terrazas y el legendario peñasco de Loreley.', fr: 'Châteaux médiévaux, vignobles en terrasses et le légendaire rocher de la Lorelei.', de: 'Mittelalterliche Burgen, Weinterrassen und der legendäre Loreley-Felsen.', it: 'Castelli medievali, vigneti terrazzati e la leggendaria rupe di Loreley.', pt: 'Castelos medievais, vinhas em terraços e o lendário penhasco de Loreley.' , ja: '中世の城、段々畑のブドウ、伝説のローレライの岩。' } },
+      { name: 'Bavaria Alps', from: 'munich', to: 'salzburg', photo: '/scenic/bavaria-alps.webp', route: 'München → Salzburg · 1h 30min', route_ja: 'ミュンヘン → ザルツブルク · 1時間30分', origin: 'München Hbf', dest: 'Salzburg Hbf', g1: '#1A5276', g2: '#154360',
+        desc: { en: 'From Bavaria\'s capital to Mozart\'s city along the Alps. Turquoise lakes and snowy peaks.', es: 'De la capital bávara a Mozart bordeando los Alpes. Lagos turquesa y cumbres nevadas.', fr: 'De la capitale bavaroise à Mozart en longeant les Alpes. Lacs turquoise et sommets enneigés.', de: 'Von der bayerischen Hauptstadt nach Mozart entlang der Alpen. Türkisfarbene Seen und schneebedeckte Gipfel.', it: 'Dalla capitale bavarese alla città di Mozart lungo le Alpi. Laghi turchesi e cime innevate.', pt: 'Da capital bávara a Mozart ao longo dos Alpes. Lagos turquesa e picos nevados.' , ja: 'バイエルンの都からモーツァルトの街へ、アルプス沿いに。青緑の湖と雪の峰。' } },
+      { name: 'Arlberg Express', from: 'innsbruck', to: 'bregenz', photo: '/scenic/arlberg-express.webp', route: 'Innsbruck → Bregenz · 2h 15min', route_ja: 'インスブルック → ブレゲンツ · 2時間15分', origin: 'Innsbruck Hbf', dest: 'Bregenz', g1: '#1E8449', g2: '#196F3D',
+        desc: { en: 'Crosses the Arlberg Pass, one of the most dramatic in the Austrian Alps, from the heart of Tyrol to Lake Constance.', es: 'Atraviesa el paso de Arlberg, uno de los más imponentes de los Alpes austríacos, desde el corazón del Tirol hasta el Lago de Constanza.', fr: 'Traverse le col de l\'Arlberg, l\'un des plus impressionnants des Alpes autrichiennes, du cœur du Tyrol au lac de Constance.', de: 'Durchquert den Arlbergpass, einen der eindrucksvollsten der österreichischen Alpen, vom Herzen Tirols bis zum Bodensee.', it: 'Attraversa il passo dell\'Arlberg, uno dei più imponenti delle Alpi austriache, dal cuore del Tirolo al Lago di Costanza.', pt: 'Atravessa o passo de Arlberg, um dos mais imponentes dos Alpes austríacos, do coração do Tirol até o Lago de Constança.' , ja: 'オーストリアアルプスでもいちばん険しいアールベルク峠を越え、チロルの中心からボーデン湖へ向かいます。' } },
+      { name: 'Semmering Express', from: 'vienna', to: 'graz', photo: '/scenic/semmering.webp', route: 'Vienna → Graz · 2h 39min', route_ja: 'ウィーン → グラーツ · 2時間39分', origin: 'Wien Hbf', dest: 'Graz Hbf', g1: '#B7950B', g2: '#9A7D0A',
+        desc: { en: 'The world\'s oldest mountain railway. UNESCO heritage since the 19th century.', es: 'El ferrocarril de montaña más antiguo del mundo. Patrimonio UNESCO desde el siglo XIX.', fr: 'Le plus ancien chemin de fer de montagne au monde. Patrimoine UNESCO depuis le XIXe siècle.', de: 'Die älteste Gebirgsbahn der Welt. UNESCO-Welterbe seit dem 19. Jahrhundert.', it: 'La più antica ferrovia di montagna del mondo. Patrimonio UNESCO dal XIX secolo.', pt: 'A ferrovia de montanha mais antiga do mundo. Patrimônio UNESCO desde o século XIX.' , ja: '世界最古の山岳鉄道。19世紀からユネスコ世界遺産です。' } },
+      { name: 'Douro Valley', from: 'porto', to: 'pocinho', tourUrl: 'https://tp.media/r?marker=734304&trs=534570&p=4110&u=https%3A%2F%2Fwww.klook.com%2Factivity%2F113775-douro-valley-small-group-day-tour-lunch%2F&campaign_id=137', photo: '/scenic/douro-valley.webp', route: 'Porto → Pocinho · 3h 30min', route_ja: 'ポルト → ポシーニョ · 3時間30分', origin: 'Porto Campanhã', dest: 'Pocinho', g1: '#784212', g2: '#6E2C00',
+        desc: { en: 'Port wine vineyards on schist terraces. One of the world\'s most beautiful train rides.', es: 'Viñedos del Oporto en terrazas de esquisto. Uno de los trayectos más bellos del mundo.', fr: 'Vignobles de Porto en terrasses de schiste. L\'un des plus beaux trajets au monde.', de: 'Portwein-Weinberge auf Schieferterrassen. Eine der schönsten Bahnstrecken der Welt.', it: 'Vigneti del Porto su terrazze di scisto. Uno dei viaggi in treno più belli del mondo.', pt: 'Vinhas do Porto em socalcos de xisto. Uma das viagens de comboio mais belas do mundo.' , ja: '片岩の段々畑に広がるポートワインのブドウ。世界でもいちばん美しい列車の旅のひとつです。' } },
+      { name: 'Intercity Direct', from: 'amsterdam', to: 'brussels', photo: '/scenic/intercity-direct.webp', route: 'Amsterdam → Brussels · 1h 51min', route_ja: 'アムステルダム → ブリュッセル · 1時間51分', origin: 'Amsterdam Centraal', dest: 'Brussel-Zuid', g1: '#E67E22', g2: '#CA6F1E',
+        desc: { en: 'From Amsterdam\'s canals to the Grand Place through polders and Belgian countryside.', es: 'De los canales de Ámsterdam al Grand Place atravesando pólderes y campiña belga.', fr: 'Des canaux d\'Amsterdam à la Grand-Place à travers les polders et la campagne belge.', de: 'Von Amsterdams Grachten zum Grand Place durch Polder und belgische Landschaft.', it: 'Dai canali di Amsterdam alla Grand Place tra polder e campagna belga.', pt: 'Dos canais de Amesterdão à Grand Place atravessando pôlderes e o campo belga.' , ja: '運河の街からグランプラスまで。干拓地とベルギーの田園を抜けます。' } },
+      { name: 'Thalys', from: 'brussels', to: 'paris', photo: '/scenic/thalys.webp', route: 'Brussels → Paris · 1h 22min', route_ja: 'ブリュッセル → パリ · 1時間22分', origin: 'Brussel-Zuid', dest: 'Paris Gare du Nord', g1: '#C0392B', g2: '#7B241C',
+        desc: { en: 'Europe\'s most famous red train. Brussels to Paris in under 90 minutes at 300 km/h.', es: 'El tren rojo más famoso de Europa. Bruselas a París en menos de hora y media a 300 km/h.', fr: 'Le train rouge le plus célèbre d\'Europe. Bruxelles-Paris en moins d\'1h30 à 300 km/h.', de: 'Europas berühmtester roter Zug. Brüssel nach Paris in unter 90 Minuten mit 300 km/h.', it: 'Il treno rosso più famoso d\'Europa. Bruxelles-Parigi in meno di 90 minuti a 300 km/h.', pt: 'O comboio vermelho mais famoso da Europa. Bruxelas a Paris em menos de 90 minutos a 300 km/h.' , ja: 'ヨーロッパでいちばん有名な赤い列車。90分弱、時速300kmです。' } },
     ];
 
     let scenicExpanded = false;
@@ -1052,6 +1365,7 @@
       scenicFeatured = i;
       const lang = document.documentElement.lang || 'en';
       const desc = (t.desc && t.desc[lang]) || (t.desc && t.desc.en) || '';
+      const routeLine = (lang === 'ja' && t.route_ja) || t.route;
       const book = (TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now';
       const fe = document.getElementById('scenicFeature');
       if (!fe) return;
@@ -1062,7 +1376,7 @@
         <div class="sf-content">
           <span class="sf-badge">${(TRANSLATIONS[lang]||TRANSLATIONS.en).scenic_featured||"Featured route"}</span>
           <div class="sf-name">${t.name}</div>
-          <div class="sf-route">${t.route}</div>
+          <div class="sf-route">${routeLine}</div>
           <div class="sf-desc">${desc}</div>
           <button class="sf-btn" onclick="goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})">${book} →</button>
         </div>`;
@@ -1079,13 +1393,14 @@
       const list = scenicExpanded ? SCENIC_TRAINS : SCENIC_TRAINS.slice(0, 6);
       grid.innerHTML = list.map((t, i) => {
         const desc = (t.desc && t.desc[lang]) || (t.desc && t.desc.en) || '';
+      const routeLine = (lang === 'ja' && t.route_ja) || t.route;
         return `
         <div class="scenic-wrapper${i === scenicFeatured ? ' scenic-active' : ''}">
           <a href="#" class="scenic-card" onclick="featureScenic(${i}); var f=document.getElementById('scenicFeature'); if(f) f.scrollIntoView({behavior:'smooth',block:'center'}); return false;">
-            <div class="scenic-photo" style="background-image:${t.photo?`url('${t.photo}')`:`linear-gradient(135deg, ${t.g1}, ${t.g2})`}"><span class="scenic-dur">${String(t.route).split(" · ")[1]||""}</span></div>
+            <div class="scenic-photo" style="background-image:${t.photo?`url('${t.photo}')`:`linear-gradient(135deg, ${t.g1}, ${t.g2})`}"><span class="scenic-dur">${String(routeLine).split(" · ")[1]||""}</span></div>
             <div class="scenic-body">
               <div class="scenic-name">${t.name}</div>
-              <div class="scenic-route">${String(t.route).split(" · ")[0]}</div>
+              <div class="scenic-route">${String(routeLine).split(" · ")[0]}</div>
             </div>
             <div class="scenic-cta" onclick="event.stopPropagation(); goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>
           </a>
@@ -1137,7 +1452,8 @@
         fr: "Route Classique · France–Italie",
         de: "Klassische Route · Frankreich–Italien",
         it: "Percorso Classico · Francia–Italia",
-        pt: "Rota Clássica · França–Itália"
+        pt: "Rota Clássica · França–Itália",
+        ja: "定番ルート · フランス–イタリア"
       },
       meta: {
         en: "Paris → Lyon → Turin → Milan · high-speed, ~7–8 h",
@@ -1145,7 +1461,8 @@
         fr: "Paris → Lyon → Turin → Milan · grande vitesse, ~7–8 h",
         de: "Paris → Lyon → Turin → Mailand · Hochgeschwindigkeit, ~7–8 Std.",
         it: "Parigi → Lione → Torino → Milano · alta velocità, ~7–8 h",
-        pt: "Paris → Lyon → Turim → Milão · alta velocidade, ~7–8 h"
+        pt: "Paris → Lyon → Turim → Milão · alta velocidade, ~7–8 h",
+        ja: "パリ → リヨン → トリノ → ミラノ · 高速 約7–8時間"
       },
       from: "paris", to: "milan",
       stops: [
@@ -1156,7 +1473,8 @@
           desc_fr: "Vous partez sous la voûte de fer de la Gare de Lyon. Le TGV vous propulse vers le sud à 300 km/h tandis que la ville se fond dans les vignes.",
           desc_de: "Sie starten unter dem Eisengewölbe des Gare de Lyon. Der TGV schleudert Sie mit 300 km/h gen Süden, während die Stadt in Weinbergen verblasst.",
           desc_it: "Parti sotto la volta di ferro della Gare de Lyon. Il TGV ti lancia a sud a 300 km/h mentre la città svanisce tra i vigneti.",
-          desc_pt: "Partes sob a abóbada de ferro da Gare de Lyon. O TGV lança-te para sul a 300 km/h enquanto a cidade se dissolve em vinhedos."
+          desc_pt: "Partes sob a abóbada de ferro da Gare de Lyon. O TGV lança-te para sul a 300 km/h enquanto a cidade se dissolve em vinhedos.",
+          desc_ja: "リヨン駅の鉄の天井の下から出発します。TGVが時速300kmで南へ走り、街はブドウ畑に溶けていきます。"
         },
         {
           slug: "lyon", station: "Lyon (Part-Dieu)", train: "TGV → Frecciarossa link",
@@ -1165,7 +1483,8 @@
           desc_fr: "La capitale gastronomique de France. Vous prenez le corridor alpin — devant vous, le tunnel du Fréjus et la frontière italienne.",
           desc_de: "Frankreichs gastronomische Hauptstadt. Sie wechseln auf den Alpenkorridor — vor Ihnen liegen der Fréjus-Tunnel und die italienische Grenze.",
           desc_it: "La capitale gastronomica della Francia. Si prende il corridoio alpino — avanti il tunnel del Fréjus e il confine italiano.",
-          desc_pt: "A capital gastronómica de França. Trocas para o corredor alpino — à frente o túnel do Fréjus e a fronteira italiana."
+          desc_pt: "A capital gastronómica de França. Trocas para o corredor alpino — à frente o túnel do Fréjus e a fronteira italiana.",
+          desc_ja: "フランスの食の都。ここからアルプス回廊に入り、前方はフレジュストンネルとイタリア国境です。"
         },
         {
           slug: "turin", station: "Turin (Porta Susa)", train: "Frecciarossa",
@@ -1174,7 +1493,8 @@
           desc_fr: "Premier souffle italien. Arcades baroques, les Alpes dans votre dos, et le TGV rouge de Trenitalia pour la dernière étape.",
           desc_de: "Erster italienischer Atemzug. Barocke Arkaden, die Alpen im Rücken, und Trenitalia's roter Bullet für den letzten Abschnitt.",
           desc_it: "Primo respiro italiano. Portici barocchi, le Alpi alle spalle, e il Frecciarossa per l'ultima tappa.",
-          desc_pt: "Primeiro fôlego italiano. Arcadas barrocas, os Alpes às costas, e o bala vermelho da Trenitalia para o trecho final."
+          desc_pt: "Primeiro fôlego italiano. Arcadas barrocas, os Alpes às costas, e o bala vermelho da Trenitalia para o trecho final.",
+          desc_ja: "イタリアの最初の息吹。バロックの回廊、背後にアルプス。最後の区間はトレニタリアの赤い列車です。"
         },
         {
           slug: "milan", station: "Milan (Centrale)", train: "Arrival",
@@ -1183,7 +1503,8 @@
           desc_fr: "Vous sortez dans la gare-cathédrale de Milan. Mode, le Dôme et un espresso de victoire : votre Route Classique est accomplie.",
           desc_de: "Sie treten in Mailands Kathedralenbahnhof hinaus. Mode, der Dom und ein Sieges-Espresso: Ihre Klassische Route ist vollbracht.",
           desc_it: "Esci nella stazione-cattedrale di Milano. Moda, il Duomo e un espresso della vittoria: il tuo Percorso Classico è completo.",
-          desc_pt: "Sais para a estação-catedral de Milão. Moda, o Duomo e um espresso da vitória: a tua Rota Clássica está completa."
+          desc_pt: "Sais para a estação-catedral de Milão. Moda, o Duomo e um espresso da vitória: a tua Rota Clássica está completa.",
+          desc_ja: "ミラノの聖堂のような駅に降り立ちます。ファッション、ドゥオーモ、締めのエスプレッソ。定番ルートはここまでです。"
         }
       ]
     },
@@ -1194,7 +1515,8 @@
         fr: "Route Alpine · Suisse–Autriche",
         de: "Alpine Route · Schweiz–Österreich",
         it: "Percorso Alpino · Svizzera–Austria",
-        pt: "Rota Alpina · Suíça–Áustria"
+        pt: "Rota Alpina · Suíça–Áustria",
+        ja: "アルプスルート · スイス–オーストリア"
       },
       meta: {
         en: "Zurich → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB",
@@ -1202,7 +1524,8 @@
         fr: "Zurich → Sargans → Innsbruck → Vienne · Railjet ÖBB/SBB",
         de: "Zürich → Sargans → Innsbruck → Wien · Railjet ÖBB/SBB",
         it: "Zurigo → Sargans → Innsbruck → Vienna · Railjet ÖBB/SBB",
-        pt: "Zurique → Sargans → Innsbruck → Viena · Railjet ÖBB/SBB"
+        pt: "Zurique → Sargans → Innsbruck → Viena · Railjet ÖBB/SBB",
+        ja: "チューリッヒ → ザルガンス → インスブルック → ウィーン · レイルジェット"
       },
       from: "zurich", to: "vienna",
       stops: [
@@ -1213,7 +1536,8 @@
           desc_fr: "La gare la plus ponctuelle du monde vous dit au revoir. Le train longe des lacs de carte postale avant de plonger au cœur des Alpes.",
           desc_de: "Der pünktlichste Bahnhof der Welt verabschiedet Sie. Der Zug umfährt malerische Seen, bevor er ins Herz der Alpen taucht.",
           desc_it: "La stazione più puntuale della terra ti saluta. Il treno costeggia laghi da cartolina prima di inoltrarsi nel cuore delle Alpi.",
-          desc_pt: "A estação mais pontual do mundo despede-se de ti. O comboio contorna lagos de postal antes de mergulhar no coração dos Alpes."
+          desc_pt: "A estação mais pontual do mundo despede-se de ti. O comboio contorna lagos de postal antes de mergulhar no coração dos Alpes.",
+          desc_ja: "世界でもいちばん時刻に正確な駅が見送ります。絵葉書のような湖を回り、アルプスの奥へ入ります。"
         },
         {
           slug: "sargans", station: "Sargans", train: "EuroCity",
@@ -1222,7 +1546,8 @@
           desc_fr: "Porte alpine entre la Suisse et la vallée du Rhin. Des sommets enneigés s'élèvent des deux côtés de la fenêtre, presque à portée de main.",
           desc_de: "Alpentor zwischen der Schweiz und dem Rheintal. Schneebedeckte Gipfel erheben sich auf beiden Seiten des Fensters, fast zum Greifen nah.",
           desc_it: "Porta alpina tra la Svizzera e la valle del Reno. Vette innevate si alzano su entrambi i lati del finestrino, quasi a portata di mano.",
-          desc_pt: "Porta alpina entre a Suíça e o vale do Reno. Picos nevados erguem-se em ambos os lados da janela, quase ao alcance da mão."
+          desc_pt: "Porta alpina entre a Suíça e o vale do Reno. Picos nevados erguem-se em ambos os lados da janela, quase ao alcance da mão.",
+          desc_ja: "スイスとライン渓谷のあいだのアルプスの玄関です。雪の峰が窓の両側に、手の届きそうな近さで立っています。"
         },
         {
           slug: "innsbruck", station: "Innsbruck (Hbf)", train: "Railjet ÖBB",
@@ -1231,7 +1556,8 @@
           desc_fr: "Le Tyrol dans toute sa splendeur — la ville olympique entre les montagnes. Ici, le train impérial autrichien prend le relais vers l'est.",
           desc_de: "Tirol in seiner reinsten Form — die Olympiastadt eingebettet in Berge. Hier übernimmt Österreichs kaiserlicher Zug nach Osten.",
           desc_it: "Il Tirolo nella sua essenza — la città olimpica abbracciata dalle montagne. Qui il treno imperiale austriaco prende il comando verso est.",
-          desc_pt: "O Tirol na sua forma mais pura — a cidade olímpica embalada pelas montanhas. Aqui o comboio imperial austríaco assume o caminho para leste."
+          desc_pt: "O Tirol na sua forma mais pura — a cidade olímpica embalada pelas montanhas. Aqui o comboio imperial austríaco assume o caminho para leste.",
+          desc_ja: "山に抱かれたオリンピックの街、チロルそのものです。ここからオーストリアの列車が東へ引き継ぎます。"
         },
         {
           slug: "vienna", station: "Vienna (Hbf)", train: "Arrival",
@@ -1240,7 +1566,8 @@
           desc_fr: "Vous arrivez à la capitale des valses après avoir traversé l'épine de l'Europe. Un café viennois bien mérité : mission alpine accomplie.",
           desc_de: "Sie erreichen die Walzerstadt nach dem Überqueren von Europas Rückgrat. Ein wohlverdienter Wiener Kaffee: Alpenmission erfüllt.",
           desc_it: "Arrivi alla capitale dei valzer dopo aver attraversato la spina dorsale d'Europa. Un meritato caffè viennese: missione alpina compiuta.",
-          desc_pt: "Chegas à capital das valsas após cruzar a espinha dorsal da Europa. Um bem-merecido café vienense: missão alpina cumprida."
+          desc_pt: "Chegas à capital das valsas após cruzar a espinha dorsal da Europa. Um bem-merecido café vienense: missão alpina cumprida.",
+          desc_ja: "ヨーロッパの背骨を越えて、ワルツの都に着きます。ご褒美のウィンナーコーヒー。アルプスの旅は完了です。"
         }
       ]
     },
@@ -1251,7 +1578,8 @@
         fr: "Route Impériale · Europe Centrale",
         de: "Imperiale Route · Mitteleuropa",
         it: "Percorso Imperiale · Europa Centrale",
-        pt: "Rota Imperial · Europa Central"
+        pt: "Rota Imperial · Europa Central",
+        ja: "帝国ルート · 中央ヨーロッパ"
       },
       meta: {
         en: "Prague → Brno → Vienna → Budapest · Railjet / EuroCity",
@@ -1259,7 +1587,8 @@
         fr: "Prague → Brno → Vienne → Budapest · Railjet / EuroCity",
         de: "Prag → Brno → Wien → Budapest · Railjet / EuroCity",
         it: "Praga → Brno → Vienna → Budapest · Railjet / EuroCity",
-        pt: "Praga → Brno → Viena → Budapeste · Railjet / EuroCity"
+        pt: "Praga → Brno → Viena → Budapeste · Railjet / EuroCity",
+        ja: "プラハ → ブルノ → ウィーン → ブダペスト · レイルジェット"
       },
       from: "prague", to: "budapest",
       stops: [
@@ -1270,7 +1599,8 @@
           desc_fr: "La ville aux cent clochers reste derrière. Le Railjet s'élance en Moravie entre châteaux et champs dorés.",
           desc_de: "Die Stadt der hundert Türme bleibt zurück. Der Railjet fährt durch Mähren an Burgen und goldenen Feldern vorbei.",
           desc_it: "La città delle cento guglie rimane indietro. Il Railjet si lancia in Moravia tra castelli e campi dorati.",
-          desc_pt: "A cidade das cem torres fica para trás. O Railjet avança pela Morávia entre castelos e campos dourados."
+          desc_pt: "A cidade das cem torres fica para trás. O Railjet avança pela Morávia entre castelos e campos dourados.",
+          desc_ja: "百の塔の街が後ろに残ります。レイルジェットは城と黄金色の畑のあいだをモラヴィアへ進みます。"
         },
         {
           slug: "brno", station: "Brno (hl. n.)", train: "EuroCity",
@@ -1279,7 +1609,8 @@
           desc_fr: "Cœur de la Moravie et carrefour ferroviaire historique de l'Empire. Un bref arrêt avant de passer en terres autrichiennes.",
           desc_de: "Mährisches Herz und historischer Eisenbahnknotenpunkt des Reiches. Ein kurzer Halt, bevor es nach Österreich geht.",
           desc_it: "Cuore della Moravia e storico nodo ferroviario dell'Impero. Una breve sosta prima di entrare in terra austriaca.",
-          desc_pt: "Coração da Morávia e histórico nó ferroviário do Império. Uma breve paragem antes de cruzar para terras austríacas."
+          desc_pt: "Coração da Morávia e histórico nó ferroviário do Império. Uma breve paragem antes de cruzar para terras austríacas.",
+          desc_ja: "モラヴィアの中心で、帝国時代からの鉄道の結節点です。オーストリアに入る前の短い停車です。"
         },
         {
           slug: "vienna", station: "Vienna (Hbf)", train: "Railjet ÖBB",
@@ -1288,7 +1619,8 @@
           desc_fr: "L'ancienne capitale des Habsbourg — palais, opéra et quais monumentaux. D'ici, le dernier saut vers le Danube.",
           desc_de: "Die alte Habsburger Hauptstadt — Paläste, Oper und monumentale Bahnsteige. Von hier der letzte Sprung zur Donau.",
           desc_it: "L'antica capitale asburgica — palazzi, opera e banchine monumentali. Da qui, l'ultimo salto verso il Danubio.",
-          desc_pt: "A antiga capital habsburga — palácios, ópera e plataformas monumentais. Daqui, o último salto em direção ao Danúbio."
+          desc_pt: "A antiga capital habsburga — palácios, ópera e plataformas monumentais. Daqui, o último salto em direção ao Danúbio.",
+          desc_ja: "かつてのハプスブルクの都。宮殿、オペラ、大きなホーム。ここからドナウへ最後のひと跳びです。"
         },
         {
           slug: "budapest", station: "Budapest (Keleti)", train: "Arrival",
@@ -1297,7 +1629,8 @@
           desc_fr: "La gare Keleti, joyau du XIXe siècle, vous accueille. Buda et Pest séparées par le fleuve : le final impérial de votre aventure.",
           desc_de: "Der Keleti-Bahnhof, ein Juwel des 19. Jahrhunderts, empfängt Sie. Buda und Pest durch den Fluss getrennt: das imperiale Finale Ihres Abenteuers.",
           desc_it: "La stazione Keleti, gioiello del XIX secolo, ti dà il benvenuto. Buda e Pest separate dal fiume: il finale imperiale della tua avventura.",
-          desc_pt: "A estação Keleti, joia do século XIX, dá-te as boas-vindas. Buda e Pest separadas pelo rio: o final imperial da tua aventura."
+          desc_pt: "A estação Keleti, joia do século XIX, dá-te as boas-vindas. Buda e Pest separadas pelo rio: o final imperial da tua aventura.",
+          desc_ja: "19世紀の宝石、ケレティ駅が迎えます。川を挟んだブダとペスト。帝国ルートの終わりです。"
         }
       ]
     }
@@ -1354,7 +1687,7 @@
       timeline.appendChild(li);
     });
     // CTA: solo descarga del itinerario en PDF — la compra de billetes ahora es por tramo, ver cada parada.
-    var _pdfText = (lang==='es')?'Descargar itinerario (PDF)':(lang==='fr')?"Télécharger l'itinéraire (PDF)":(lang==='de')?'Reiseplan herunterladen (PDF)':(lang==='it')?'Scarica itinerario (PDF)':(lang==='pt')?'Baixar itinerário (PDF)':'Download itinerary (PDF)';
+    var _pdfText = (lang==='ja')?'旅程をダウンロード（PDF）':(lang==='es')?'Descargar itinerario (PDF)':(lang==='fr')?"Télécharger l'itinéraire (PDF)":(lang==='de')?'Reiseplan herunterladen (PDF)':(lang==='it')?'Scarica itinerario (PDF)':(lang==='pt')?'Baixar itinerário (PDF)':'Download itinerary (PDF)';
     var _dlIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
     ctaSlot.innerHTML =
       '<div class="wt-cta-row">' +
@@ -1608,8 +1941,8 @@
 (function () {
   var CITIES = window._GLOSX_CITIES = [
     // España
-    { display: 'Madrid',                                slug: 'madrid',          keywords: ['madrid'] },
-    { display: 'Barcelona',                             slug: 'barcelona',       keywords: ['barcelona','barcelone','barcellona'] },
+    { display: 'Madrid',                                slug: 'madrid',          keywords: ['madrid','マドリード'] },
+    { display: 'Barcelona',                             slug: 'barcelona',       keywords: ['barcelona','barcelone','barcellona','バルセロナ'] },
     { display: 'Sevilla / Seville',                     slug: 'seville',         keywords: ['seville','sevilla'] },
     { display: 'Valencia',                              slug: 'valencia',        keywords: ['valencia'] },
     { display: 'Bilbao',                                slug: 'bilbao',          keywords: ['bilbao'] },
@@ -1621,7 +1954,7 @@
     { display: 'Córdoba / Cordoba',                     slug: 'cordoba',         keywords: ['cordoba','córdoba'] },
     { display: 'Valladolid',                            slug: 'valladolid',      keywords: ['valladolid'] },
     // Francia
-    { display: 'París / Paris',                         slug: 'paris',           keywords: ['paris','parís','parigi'] },
+    { display: 'París / Paris',                         slug: 'paris',           keywords: ['paris','parís','parigi','パリ'] },
     { display: 'Lyon',                                  slug: 'lyon',            keywords: ['lyon'] },
     { display: 'Marsella / Marseille',                  slug: 'marseille',       keywords: ['marseille','marsella'] },
     { display: 'Niza / Nice',                           slug: 'nice',            keywords: ['nice','niza'] },
@@ -1634,7 +1967,7 @@
     { display: 'Rennes',                                slug: 'rennes',          keywords: ['rennes'] },
     { display: 'Aviñón / Avignon',                      slug: 'avignon',         keywords: ['avignon','aviñon','avignon'] },
     // Reino Unido
-    { display: 'Londres / London',                      slug: 'london',          keywords: ['london','londres','londra'] },
+    { display: 'Londres / London',                      slug: 'london',          keywords: ['london','londres','londra','ロンドン'] },
     { display: 'Edimburgo / Edinburgh',                 slug: 'edinburgh',       keywords: ['edinburgh','edimburgo'] },
     { display: 'Manchester',                            slug: 'manchester',      keywords: ['manchester'] },
     { display: 'Birmingham',                            slug: 'birmingham',      keywords: ['birmingham'] },
@@ -1643,9 +1976,9 @@
     { display: 'Liverpool',                             slug: 'liverpool',       keywords: ['liverpool'] },
     { display: 'York',                                  slug: 'york',            keywords: ['york'] },
     // Italia
-    { display: 'Roma / Rome',                           slug: 'rome',            keywords: ['rome','roma','rom'] },
+    { display: 'Roma / Rome',                           slug: 'rome',            keywords: ['rome','roma','rom','ローマ'] },
     { display: 'Milán / Milano / Milan',                slug: 'milan',           keywords: ['milan','milán','milano'] },
-    { display: 'Venecia / Venezia / Venice',            slug: 'venice',          keywords: ['venice','venecia','venezia','venise','venedig','veneza'] },
+    { display: 'Venecia / Venezia / Venice',            slug: 'venice',          keywords: ['venice','venecia','venezia','venise','venedig','veneza','ヴェネツィア','ベネチア'] },
     { display: 'Florencia / Firenze / Florence',        slug: 'florence',        keywords: ['florence','florencia','firenze'] },
     { display: 'Turín / Torino / Turin',                slug: 'turin',           keywords: ['turin','turín','torino'] },
     { display: 'Bolzano / Bozen (Dolomitas)',           slug: 'bolzano',         keywords: ['bolzano','bozen','dolomitas','dolomites','dolomiti'] },
@@ -1661,7 +1994,7 @@
     { display: 'Cinque Terre / La Spezia',              slug: 'la-spezia',       keywords: ['cinque terre','la spezia','spezia'] },
     // Alemania
     { display: 'Berlín / Berlin',                       slug: 'berlin',          keywords: ['berlin','berlín'] },
-    { display: 'Múnich / München / Munich',             slug: 'munich',          keywords: ['munich','múnich','munchen','münchen','monaco di baviera','munique'] },
+    { display: 'Múnich / München / Munich',             slug: 'munich',          keywords: ['munich','múnich','munchen','münchen','monaco di baviera','munique','ミュンヘン'] },
     { display: 'Hamburgo / Hamburg',                    slug: 'hamburg',         keywords: ['hamburg','hamburgo'] },
     { display: 'Frankfurt',                             slug: 'frankfurt',       keywords: ['frankfurt'] },
     { display: 'Colonia / Köln / Cologne',              slug: 'cologne',         keywords: ['cologne','colonia','koln','köln'] },
@@ -1959,7 +2292,9 @@
     e.preventDefault();
     e.stopPropagation();
     document.querySelectorAll('.country-chip.show-photo').forEach(c => c.classList.remove('show-photo'));
-    setAISuggestion(from + ' to ' + to);
+    var langNow = (document.documentElement.lang || 'en').slice(0, 2);
+    var connNow = PAIR_CONN[langNow] || 'to';
+    setAISuggestion(from + ' ' + connNow + ' ' + to);
     document.getElementById('aiInputWrapper').scrollIntoView({ behavior: 'smooth', block: 'center' });
     if (!previewFromInput()) generateAIRoute();
   }
@@ -1971,7 +2306,7 @@
   function parseOriginDest(text) {
     const value = (text || '').trim();
     if (!value) return null;
-    const connectors = ['to', 'à', 'nach', 'a'];
+    const connectors = ['から', 'to', 'à', 'nach', 'a'];
     for (const conn of connectors) {
       const match = value.match(new RegExp('^(.+?)\\s' + conn + '\\s(.+)$', 'i'));
       if (match) return { from: match[1].trim(), to: match[2].trim(), conn: conn };
@@ -1987,7 +2322,8 @@
     function consider(label, slug) {
       String(label || '').split(' / ').forEach(function (piece) {
         const nk = norm(piece).replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
-        if (!nk || nk.length < 4) return;
+        var cjk = /[\u3040-\u30ff\u3400-\u9fff]/.test(nk);
+        if (!nk || (cjk ? nk.length < 1 : nk.length < 4)) return;
         const hit = n === nk || n.indexOf(nk + ' ') === 0 || n.slice(-(nk.length + 1)) === (' ' + nk) || n.indexOf(' ' + nk + ' ') !== -1;
         if (hit && nk.length >= bestLen) {
           best = slug;
@@ -2005,13 +2341,13 @@
     return best || slugCityName(cleaned);
   }
 
-  const PAIR_CONN = { en: 'to', es: 'a', fr: 'à', de: 'nach', it: 'a', pt: 'a' };
+  const PAIR_CONN = { en: 'to', es: 'a', fr: 'à', de: 'nach', it: 'a', pt: 'a', ja: 'から' };
   const POPULAR_PAIRS = {
-    mb: { en: ['Madrid', 'Barcelona'], es: ['Madrid', 'Barcelona'], fr: ['Madrid', 'Barcelone'], de: ['Madrid', 'Barcelona'], it: ['Madrid', 'Barcellona'], pt: ['Madrid', 'Barcelona'] },
-    pl: { en: ['Paris', 'London'], es: ['París', 'Londres'], fr: ['Paris', 'Londres'], de: ['Paris', 'London'], it: ['Parigi', 'Londra'], pt: ['Paris', 'Londres'] },
-    pb: { en: ['Paris', 'Barcelona'], es: ['París', 'Barcelona'], fr: ['Paris', 'Barcelone'], de: ['Paris', 'Barcelona'], it: ['Parigi', 'Barcellona'], pt: ['Paris', 'Barcelona'] },
-    mv: { en: ['Munich', 'Venice'], es: ['Múnich', 'Venecia'], fr: ['Munich', 'Venise'], de: ['München', 'Venedig'], it: ['Monaco di Baviera', 'Venezia'], pt: ['Munique', 'Veneza'] },
-    rv: { en: ['Rome', 'Venice'], es: ['Roma', 'Venecia'], fr: ['Rome', 'Venise'], de: ['Rom', 'Venedig'], it: ['Roma', 'Venezia'], pt: ['Roma', 'Veneza'] }
+    mb: { en: ['Madrid', 'Barcelona'], es: ['Madrid', 'Barcelona'], fr: ['Madrid', 'Barcelone'], de: ['Madrid', 'Barcelona'], it: ['Madrid', 'Barcellona'], pt: ['Madrid', 'Barcelona'], ja: ['マドリード', 'バルセロナ'] },
+    pl: { en: ['Paris', 'London'], es: ['París', 'Londres'], fr: ['Paris', 'Londres'], de: ['Paris', 'London'], it: ['Parigi', 'Londra'], pt: ['Paris', 'Londres'], ja: ['パリ', 'ロンドン'] },
+    pb: { en: ['Paris', 'Barcelona'], es: ['París', 'Barcelona'], fr: ['Paris', 'Barcelone'], de: ['Paris', 'Barcelona'], it: ['Parigi', 'Barcellona'], pt: ['Paris', 'Barcelona'], ja: ['パリ', 'バルセロナ'] },
+    mv: { en: ['Munich', 'Venice'], es: ['Múnich', 'Venecia'], fr: ['Munich', 'Venise'], de: ['München', 'Venedig'], it: ['Monaco di Baviera', 'Venezia'], pt: ['Munique', 'Veneza'], ja: ['ミュンヘン', 'ヴェネツィア'] },
+    rv: { en: ['Rome', 'Venice'], es: ['Roma', 'Venecia'], fr: ['Rome', 'Venise'], de: ['Rom', 'Venedig'], it: ['Roma', 'Venezia'], pt: ['Roma', 'Veneza'], ja: ['ローマ', 'ヴェネツィア'] }
   };
 
   function applyPopularPair(key) {
