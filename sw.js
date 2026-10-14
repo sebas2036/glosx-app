@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v34';
+const CACHE_VERSION = 'v35';
 const CACHE_NAME = `glosx-static-${CACHE_VERSION}`;
 
 const PRECACHE_URLS = [

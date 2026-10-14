@@ -1115,7 +1115,33 @@
     (function() {
       window.GLOSX_ROUTE_PAGES = new Set(["amsterdam-berlin","amsterdam-brussels","barcelona-girona","barcelona-lyon","barcelona-valencia","basel-paris","berlin-hamburg","berlin-prague","bordeaux-lourdes","brno-vienna","brussels-bruges","brussels-paris","copenhagen-stockholm","dortmund-munich","florence-pisa","florence-venice","frankfurt-cologne","frankfurt-munich","frankfurt-paris","geneva-paris","geneva-zermatt","girona-figueres","interlaken-lauterbrunnen","lisbon-porto","london-amsterdam","london-brussels","london-cambridge","london-edinburgh","london-liverpool","london-manchester","london-oxford","london-paris","london-york","lyon-turin","madrid-barcelona","madrid-malaga","madrid-seville","madrid-valencia","madrid-zaragoza","milan-florence","milan-rome","milan-zurich","montreux-interlaken","munich-berlin","munich-prague","munich-venice","munich-vienna","naples-salerno","naples-sorrento","nice-monaco","oslo-bergen","paris-amsterdam","paris-barcelona","paris-berlin","paris-bordeaux","paris-bruges","paris-london","paris-lourdes","paris-lucerne","paris-lyon","paris-milan","paris-nice","paris-rome","paris-toulouse","paris-zurich","prague-brno","prague-budapest","prague-vienna","rome-florence","rome-naples","rome-venice","stockholm-oslo","toulouse-lourdes","turin-milan","venice-milan","vienna-budapest","vienna-krems","vienna-prague","vienna-salzburg","zaragoza-barcelona","zurich-lucerne","zurich-milan"]);
       window.glosxBookTarget = function(a, b) {
-        function sl(x){ return (x||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+        // La pantalla puede decir 東京 o マドリード. Klook solo reconoce el slug
+        // (tokyo, madrid). Si se le manda el kanji, el buscador afiliado queda vacío.
+        function sl(x) {
+          var raw = String(x || '').trim();
+          if (!raw) return '';
+          var folded = raw.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          var cities = window._GLOSX_CITIES || [];
+          var best = '';
+          var bestLen = 0;
+          for (var i = 0; i < cities.length; i++) {
+            var c = cities[i];
+            var names = [c.slug, c.display].concat(c.keywords || []);
+            for (var j = 0; j < names.length; j++) {
+              var n = String(names[j] || '').trim();
+              if (!n) continue;
+              var nf = n.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+              var cjk = /[\u3040-\u30ff\u3400-\u9fff]/.test(n);
+              if (!cjk && n !== c.slug && nf.length < 4) continue;
+              if ((raw === n || folded === nf) && n.length >= bestLen) {
+                best = c.slug;
+                bestLen = n.length;
+              }
+            }
+          }
+          if (best) return best;
+          return folded.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        }
         return 'https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=' + encodeURIComponent(sl(a)) + '&to=' + encodeURIComponent(sl(b));
       };
       // Modal de transicion entre tramos: la pestana de Klook se abre normal (target=_blank,
