@@ -27,21 +27,27 @@
   var CSS = [
     '.omb{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(20,21,26,.42)}',
     '.omb.is-open{display:flex}',
-    '.omb-card{width:min(440px,100%);background:#fafaf8;color:#14151a;border:1px solid rgba(20,21,26,.14);border-radius:14px;padding:26px 24px 20px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}',
+    '.omb-card{width:min(440px,100%);background:linear-gradient(135deg,#F9EBDF 0%,#F1F2F6 100%);color:#14151a;border:1px solid rgba(20,21,26,.14);border-radius:14px;padding:26px 24px 20px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}',
     '.omb-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0 0 14px}',
     '.omb-route svg{width:18px;height:18px;flex:none;stroke:#C10016;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}',
     '.omb-title{font-size:15px;font-weight:600;margin:0 0 4px}',
     '.omb-body{font-size:14px;line-height:1.5;color:#55565f;margin:0 0 14px}',
-    '.omb-bar{height:4px;border-radius:4px;background:rgba(20,21,26,.09);overflow:hidden;margin:0 0 14px}',
-    '.omb-bar i{display:block;height:100%;width:0;background:#C10016;border-radius:4px}',
+    '.omb-track{display:flex;align-items:center;gap:12px;margin:0 0 16px}',
+    '.omb-node{flex:none;width:38px;height:38px;display:flex;align-items:center;justify-content:center}',
+    '.omb-node.is-glosx{background:#C10016;color:#fff;border-radius:10px;font-weight:700;font-size:19px}',
+    '.omb-node.is-omio{background:#fff;border:2px solid #FB6B6C;border-radius:50%;transition:background .4s}',
+    '.omb-node.is-omio img{width:20px;height:20px;border-radius:4px}',
+    '.omb.is-done .omb-node.is-omio{background:#FB6B6C}',
+    '.omb-bar{flex:1;height:5px;border-radius:5px;background:rgba(20,21,26,.1);overflow:hidden}',
+    '.omb-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#C10116,#FB6B6C);border-radius:5px}',
     '.omb.is-open .omb-bar i{animation:ombFill 1.7s cubic-bezier(.3,.6,.3,1) forwards}',
-    '.omb.is-done .omb-bar i{width:100%;animation:none;background:#0a7d3c}',
+    '.omb.is-done .omb-bar i{width:100%;animation:none}',
     '@keyframes ombFill{from{width:6%}to{width:100%}}',
-    '.omb-fid{font-size:13px;line-height:1.5;color:#14151a;background:#f2f1ed;border-radius:8px;padding:10px 12px;margin:0 0 12px}',
+    '.omb-fid{font-size:13px;line-height:1.5;color:#14151a;background:rgba(255,255,255,.7);border-radius:8px;padding:10px 12px;margin:0 0 12px}',
     '.omb-note{font-size:12px;line-height:1.45;color:#55565f;margin:0 0 16px}',
     '.omb-actions{display:flex;gap:10px;flex-wrap:wrap}',
     '.omb-btn{font:inherit;font-size:14px;font-weight:600;border-radius:8px;padding:10px 16px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(20,21,26,.14);background:#fff;color:#14151a}',
-    '.omb-btn.is-primary{background:#C10016;border-color:#C10016;color:#fff}',
+    '.omb-btn.is-primary{background:linear-gradient(100deg,#C10016 0%,#D4323C 80%,#E5484D 100%);border-color:#C10016;color:#fff;box-shadow:0 6px 18px rgba(251,107,108,.32)}',
     '.omb-btn:focus-visible{outline:2px solid #14151a;outline-offset:2px}',
     '@media (prefers-reduced-motion:reduce){.omb.is-open .omb-bar i{animation:none;width:100%}}'
   ].join('');
@@ -56,7 +62,7 @@
   function cityName(slug) {
     var list = window._GLOSX_CITIES || [];
     for (var i = 0; i < list.length; i++) {
-      if (list[i].slug === slug && list[i].display) return list[i].display;
+      if (list[i].slug === slug && list[i].display) return String(list[i].display).split(' / ')[0];
     }
     return String(slug || '').replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
@@ -104,7 +110,11 @@
           '<span>' + esc(to) + '</span></p>' +
         '<p class="omb-title" id="ombTitle" aria-live="polite">' + esc(tx.title) + '</p>' +
         '<p class="omb-body" id="ombBody">' + esc(tx.body) + '</p>' +
-        '<div class="omb-bar" aria-hidden="true"><i></i></div>' +
+        '<div class="omb-track" aria-hidden="true">' +
+          '<span class="omb-node is-glosx">W</span>' +
+          '<div class="omb-bar"><i></i></div>' +
+          '<span class="omb-node is-omio"><img src="https://www.google.com/s2/favicons?sz=64&domain=omio.com" alt="" width="20" height="20"></span>' +
+        '</div>' +
         '<p class="omb-fid">' + esc(tx.fidelity) + '</p>' +
         '<p class="omb-note">' + esc(tx.external) + '</p>' +
         '<div class="omb-actions">' +

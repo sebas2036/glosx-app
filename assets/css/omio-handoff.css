@@ -1,0 +1,55 @@
+/*
+ * Transición glosx → Omio.
+ * Los botones y tarjetas que llevan a Omio (/affiliate/europe-train) pasan del rojo de glosx
+ * (#C10116) hacia el coral de Omio (#FB6B6C), de modo que el salto de una plataforma a la otra
+ * se sienta continuo. Japón (Klook) no se toca: solo se selecciona por href.
+ *
+ * Contraste: el texto blanco queda sobre tonos con ratio >= 4.5:1 (#C10116 6.4, #D4323C 4.9);
+ * el coral más claro aparece como resplandor y en bordes, nunca detrás del texto.
+ */
+:root {
+  --handoff-red: #C10116;
+  --handoff-mid: #D4323C;
+  --handoff-coral: #FB6B6C;
+  --handoff-lavender: #F1F2F6;
+}
+
+/* Botones sólidos */
+.ai-segment-buy[href*="/affiliate/europe-train"],
+.klook-cta[href*="/affiliate/europe-train"] .klook-cta-btn,
+.cta-btn[href*="/affiliate/europe-train"],
+.klook-strip[href*="/affiliate/europe-train"] .klook-cta-btn,
+a.discover-cta-btn[href*="/affiliate/europe-train"] {
+  background-image: linear-gradient(100deg, var(--handoff-red) 0%, var(--handoff-mid) 78%, #E5484D 100%);
+  background-color: var(--handoff-red);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(251, 107, 108, 0.32);
+}
+
+/* Botones de texto en línea y enlaces rápidos */
+.cta-btn-inline[href*="/affiliate/europe-train"],
+.ai-quick-book-link[href*="/affiliate/europe-train"] {
+  background: rgba(251, 107, 108, 0.14);
+  border-color: rgba(251, 107, 108, 0.55);
+  color: #A8000F;
+}
+.cta-btn-inline[href*="/affiliate/europe-train"]:hover,
+.ai-quick-book-link[href*="/affiliate/europe-train"]:hover {
+  background: rgba(251, 107, 108, 0.24);
+}
+
+/* Tarjeta de reserva: del fondo cálido de glosx a un lavanda frío, con borde coral */
+.klook-cta[href*="/affiliate/europe-train"],
+.klook-strip[href*="/affiliate/europe-train"] {
+  background: linear-gradient(135deg, rgba(249, 235, 223, 0.65) 0%, rgba(241, 242, 246, 0.95) 100%);
+  border-color: rgba(251, 107, 108, 0.5);
+}
+.klook-cta[href*="/affiliate/europe-train"]:hover,
+.klook-strip[href*="/affiliate/europe-train"]:hover {
+  border-color: rgba(251, 107, 108, 0.85);
+}
+
+a[href*="/affiliate/europe-train"]:focus-visible {
+  outline: 2px solid #14151a;
+  outline-offset: 2px;
+}
