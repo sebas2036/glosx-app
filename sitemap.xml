@@ -4851,6 +4851,50 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/kyoto-wakayama/" />
   </url>
   <url>
+    <loc>https://glosx.app/rutas/lisbon-faro/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-faro/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/lisbon-faro/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/lisbon-faro/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/lisbon-faro/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/lisbon-faro/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/lisbon-faro/es/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-faro/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/lisbon-faro/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/lisbon-faro/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/lisbon-faro/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/lisbon-faro/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/lisbon-faro/fr/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-faro/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/lisbon-faro/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/lisbon-faro/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/lisbon-faro/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/lisbon-faro/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/lisbon-faro/it/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/lisbon-faro/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/lisbon-faro/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/lisbon-faro/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/lisbon-faro/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/lisbon-faro/" />
+  </url>
+  <url>
     <loc>https://glosx.app/rutas/lisbon-porto/</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -4893,6 +4937,182 @@
       <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/lisbon-porto/fr/" />
       <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/lisbon-porto/it/" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/lisbon-porto/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-graz/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-graz/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-graz/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-graz/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-graz/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-graz/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-graz/es/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-graz/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-graz/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-graz/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-graz/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-graz/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-graz/fr/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-graz/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-graz/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-graz/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-graz/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-graz/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-graz/it/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-graz/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-graz/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-graz/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-graz/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-graz/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-munich/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-munich/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-munich/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-munich/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-munich/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-munich/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-munich/es/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-munich/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-munich/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-munich/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-munich/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-munich/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-munich/fr/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-munich/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-munich/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-munich/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-munich/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-munich/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-munich/it/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-munich/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-munich/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-munich/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-munich/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-munich/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-salzburg/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-salzburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-salzburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-salzburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-salzburg/es/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-salzburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-salzburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-salzburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-salzburg/fr/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-salzburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-salzburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-salzburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-salzburg/it/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-salzburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-salzburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-salzburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-salzburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-vienna/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-vienna/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-vienna/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-vienna/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-vienna/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-vienna/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-vienna/es/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-vienna/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-vienna/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-vienna/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-vienna/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-vienna/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-vienna/fr/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-vienna/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-vienna/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-vienna/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-vienna/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-vienna/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/ljubljana-vienna/it/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/ljubljana-vienna/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/ljubljana-vienna/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/ljubljana-vienna/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/ljubljana-vienna/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/ljubljana-vienna/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/london-amsterdam/</loc>
@@ -9029,6 +9249,94 @@
       <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-bergen/fr/" />
       <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-bergen/it/" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-bergen/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-gothenburg/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-gothenburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-gothenburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-gothenburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-gothenburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-gothenburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-gothenburg/es/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-gothenburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-gothenburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-gothenburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-gothenburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-gothenburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-gothenburg/fr/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-gothenburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-gothenburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-gothenburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-gothenburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-gothenburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-gothenburg/it/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-gothenburg/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-gothenburg/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-gothenburg/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-gothenburg/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-gothenburg/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-trondheim/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-trondheim/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-trondheim/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-trondheim/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-trondheim/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-trondheim/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-trondheim/es/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-trondheim/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-trondheim/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-trondheim/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-trondheim/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-trondheim/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-trondheim/fr/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-trondheim/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-trondheim/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-trondheim/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-trondheim/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-trondheim/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/rutas/oslo-trondheim/it/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/oslo-trondheim/" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/rutas/oslo-trondheim/es/" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/rutas/oslo-trondheim/fr/" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/oslo-trondheim/it/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/oslo-trondheim/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/paris-amsterdam/</loc>

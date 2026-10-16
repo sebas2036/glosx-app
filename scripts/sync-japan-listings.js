@@ -17,7 +17,7 @@ function allRoutes() {
   return hand.concat(require('./routes-japan-lote2'), require('./routes-japan-auto'));
 }
 const routes = allRoutes();
-const EUROPE_GUIDES = 102;
+const EUROPE_GUIDES = 109;
 const total = EUROPE_GUIDES + routes.length;
 const label = r => r.from.en + ' → ' + r.to.en;
 

@@ -730,7 +730,64 @@ const routes = [
   { slug: 'frankfurt-berlin', from: 'Frankfurt', to: 'Berlin', country: 'Germany', duration: '4h 00m', operator: 'ICE (DB)', price: '€40-60', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Frankfurt to Berlin Train Guide: 4h on ICE (DB)', description: 'Everything you need for the Frankfurt to Berlin train: 4 hours on ICE (DB), fares from €40, and today\'s live schedule.' } } },
   { slug: 'lucerne-bern', from: 'Lucerne', to: 'Bern', country: 'Switzerland', duration: '1h 05m', operator: 'InterCity (SBB)', price: '€20-35', badge: 'Route guide · Switzerland',
-    customSEO: { en: { title: 'Lucerne to Bern Train: 1h05, from €20', description: 'InterCity (SBB) connection from Lucerne to Bern in just over an hour. Check live schedules and book tickets from €20.' } } }
+    customSEO: { en: { title: 'Lucerne to Bern Train: 1h05, from €20', description: 'InterCity (SBB) connection from Lucerne to Bern in just over an hour. Check live schedules and book tickets from €20.' } } },
+  // Rutas nuevas (16-oct-2026): datos de Omio (trenes/día, directos, duración, distancia, operador); sin precios inventados.
+  { slug: 'lisbon-faro', from: 'Lisbon', to: 'Faro', country: 'Portugal', duration: '2h 52m', operator: 'CP', price: '€8', badge: 'Route guide · Portugal',
+    localInsight: {
+      en: 'Omio lists CP as the main operator on this 216 km route: about 14 trains a day, 10 of them direct. The fastest journey takes 2 h 52 min and the average is around 3 h 18 min. Omio\'s fare data points to booking about 63 days ahead for the lowest prices. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Omio muestra a CP como operador principal en esta ruta de 216 km: unos 14 trenes al día, 10 de ellos directos. El trayecto más rápido dura 2 h 52 min y la duración media ronda 3 h 18 min. Los datos de tarifas de Omio indican reservar con unos 63 días de antelación para conseguir los precios más bajos. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'Omio indique CP comme opérateur principal sur cette ligne de 216 km : environ 14 trains par jour, dont 10 directs. Le trajet le plus rapide dure 2 h 52 min et la durée moyenne est d’environ 3 h 18 min. Les données tarifaires d’Omio suggèrent de réserver environ 63 jours à l’avance pour obtenir les prix les plus bas. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Omio indica CP come operatore principale su questa tratta di 216 km: circa 14 treni al giorno, 10 dei quali diretti. Il viaggio più veloce dura 2 h 52 min e la durata media è di circa 3 h 18 min. I dati tariffari di Omio suggeriscono di prenotare circa 63 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
+  { slug: 'oslo-trondheim', from: 'Oslo', to: 'Trondheim', country: 'Norway', duration: '5h 57m', operator: 'SJ Nord', price: '€19', badge: 'Route guide · Norway',
+    localInsight: {
+      en: 'Omio lists SJ Nord as the main operator on this 392 km route: about 5 trains a day, all of them direct. The fastest journey takes 5 h 57 min and the average is around 6 h 59 min. Omio\'s fare data points to booking about 77 days ahead for the lowest prices. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Omio muestra a SJ Nord como operador principal en esta ruta de 392 km: unos 5 trenes al día, todos directos. El trayecto más rápido dura 5 h 57 min y la duración media ronda 6 h 59 min. Los datos de tarifas de Omio indican reservar con unos 77 días de antelación para conseguir los precios más bajos. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'Omio indique SJ Nord comme opérateur principal sur cette ligne de 392 km : environ 5 trains par jour, tous directs. Le trajet le plus rapide dure 5 h 57 min et la durée moyenne est d’environ 6 h 59 min. Les données tarifaires d’Omio suggèrent de réserver environ 77 jours à l’avance pour obtenir les prix les plus bas. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Omio indica SJ Nord come operatore principale su questa tratta di 392 km: circa 5 treni al giorno, tutti diretti. Il viaggio più veloce dura 5 h 57 min e la durata media è di circa 6 h 59 min. I dati tariffari di Omio suggeriscono di prenotare circa 77 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
+  { slug: 'oslo-gothenburg', from: 'Oslo', to: 'Gothenburg', country: 'Norway-Sweden', duration: '3h 26m', operator: 'Vy', price: '€18', badge: 'Route guide · Norway-Sweden',
+    localInsight: {
+      en: 'Omio lists Vy as the main operator on this 255 km route: about 4 trains a day, all of them direct. The fastest journey takes 3 h 26 min and the average is around 3 h 35 min. Omio\'s fare data points to booking about 42 days ahead for the lowest prices. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Omio muestra a Vy como operador principal en esta ruta de 255 km: unos 4 trenes al día, todos directos. El trayecto más rápido dura 3 h 26 min y la duración media ronda 3 h 35 min. Los datos de tarifas de Omio indican reservar con unos 42 días de antelación para conseguir los precios más bajos. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'Omio indique Vy comme opérateur principal sur cette ligne de 255 km : environ 4 trains par jour, tous directs. Le trajet le plus rapide dure 3 h 26 min et la durée moyenne est d’environ 3 h 35 min. Les données tarifaires d’Omio suggèrent de réserver environ 42 jours à l’avance pour obtenir les prix les plus bas. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Omio indica Vy come operatore principale su questa tratta di 255 km: circa 4 treni al giorno, tutti diretti. Il viaggio più veloce dura 3 h 26 min e la durata media è di circa 3 h 35 min. I dati tariffari di Omio suggeriscono di prenotare circa 42 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
+  { slug: 'ljubljana-vienna', from: 'Ljubljana', to: 'Vienna', country: 'Slovenia-Austria', duration: '5h 04m', operator: 'ÖBB', price: '€30', badge: 'Route guide · Slovenia-Austria',
+    localInsight: {
+      en: 'Omio lists ÖBB as the main operator on this 278 km route: about 7 trains a day. The fastest journey takes 5 h 04 min and the average is around 6 h 00 min. Omio\'s fare data points to booking about 91 days ahead for the lowest prices. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Omio muestra a ÖBB como operador principal en esta ruta de 278 km: unos 7 trenes al día. El trayecto más rápido dura 5 h 04 min y la duración media ronda 6 h 00 min. Los datos de tarifas de Omio indican reservar con unos 91 días de antelación para conseguir los precios más bajos. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'Omio indique ÖBB comme opérateur principal sur cette ligne de 278 km : environ 7 trains par jour. Le trajet le plus rapide dure 5 h 04 min et la durée moyenne est d’environ 6 h 00 min. Les données tarifaires d’Omio suggèrent de réserver environ 91 jours à l’avance pour obtenir les prix les plus bas. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Omio indica ÖBB come operatore principale su questa tratta di 278 km: circa 7 treni al giorno. Il viaggio più veloce dura 5 h 04 min e la durata media è di circa 6 h 00 min. I dati tariffari di Omio suggeriscono di prenotare circa 91 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
+  { slug: 'ljubljana-graz', from: 'Ljubljana', to: 'Graz', country: 'Slovenia-Austria', duration: '2h 35m', operator: 'ÖBB', price: '€15', badge: 'Route guide · Slovenia-Austria',
+    localInsight: {
+      en: 'Omio lists ÖBB as the main operator on this 134 km route: about 5 trains a day, 1 of them direct. The fastest journey takes 2 h 35 min and the average is around 3 h 17 min. Omio\'s fare data points to booking about 42 days ahead for the lowest prices. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Omio muestra a ÖBB como operador principal en esta ruta de 134 km: unos 5 trenes al día, 1 de ellos directos. El trayecto más rápido dura 2 h 35 min y la duración media ronda 3 h 17 min. Los datos de tarifas de Omio indican reservar con unos 42 días de antelación para conseguir los precios más bajos. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'Omio indique ÖBB comme opérateur principal sur cette ligne de 134 km : environ 5 trains par jour, dont 1 directs. Le trajet le plus rapide dure 2 h 35 min et la durée moyenne est d’environ 3 h 17 min. Les données tarifaires d’Omio suggèrent de réserver environ 42 jours à l’avance pour obtenir les prix les plus bas. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Omio indica ÖBB come operatore principale su questa tratta di 134 km: circa 5 treni al giorno, 1 dei quali diretti. Il viaggio più veloce dura 2 h 35 min e la durata media è di circa 3 h 17 min. I dati tariffari di Omio suggeriscono di prenotare circa 42 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
+  { slug: 'ljubljana-salzburg', from: 'Ljubljana', to: 'Salzburg', country: 'Slovenia-Austria', duration: '3h 55m', operator: 'ÖBB Railjet', price: '€20', badge: 'Route guide · Slovenia-Austria',
+    localInsight: {
+      en: 'Omio lists ÖBB Railjet as the main operator on this 224 km route: about 5 trains a day. The fastest journey takes 3 h 55 min and the average is around 4 h 19 min. Omio\'s fare data points to booking about 63 days ahead for the lowest prices. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Omio muestra a ÖBB Railjet como operador principal en esta ruta de 224 km: unos 5 trenes al día. El trayecto más rápido dura 3 h 55 min y la duración media ronda 4 h 19 min. Los datos de tarifas de Omio indican reservar con unos 63 días de antelación para conseguir los precios más bajos. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'Omio indique ÖBB Railjet comme opérateur principal sur cette ligne de 224 km : environ 5 trains par jour. Le trajet le plus rapide dure 3 h 55 min et la durée moyenne est d’environ 4 h 19 min. Les données tarifaires d’Omio suggèrent de réserver environ 63 jours à l’avance pour obtenir les prix les plus bas. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Omio indica ÖBB Railjet come operatore principale su questa tratta di 224 km: circa 5 treni al giorno. Il viaggio più veloce dura 3 h 55 min e la durata media è di circa 4 h 19 min. I dati tariffari di Omio suggeriscono di prenotare circa 63 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
+  { slug: 'ljubljana-munich', from: 'Ljubljana', to: 'Munich', country: 'Slovenia-Germany', duration: '5h 35m', operator: 'Deutsche Bahn', price: '€28', badge: 'Route guide · Slovenia-Germany',
+    localInsight: {
+      en: 'Omio lists Deutsche Bahn as the main operator on this 321 km route: about 4 trains a day. The fastest journey takes 5 h 35 min and the average is around 6 h 09 min. Omio\'s fare data points to booking about 91 days ahead for the lowest prices. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Omio muestra a Deutsche Bahn como operador principal en esta ruta de 321 km: unos 4 trenes al día. El trayecto más rápido dura 5 h 35 min y la duración media ronda 6 h 09 min. Los datos de tarifas de Omio indican reservar con unos 91 días de antelación para conseguir los precios más bajos. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'Omio indique Deutsche Bahn comme opérateur principal sur cette ligne de 321 km : environ 4 trains par jour. Le trajet le plus rapide dure 5 h 35 min et la durée moyenne est d’environ 6 h 09 min. Les données tarifaires d’Omio suggèrent de réserver environ 91 jours à l’avance pour obtenir les prix les plus bas. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Omio indica Deutsche Bahn come operatore principale su questa tratta di 321 km: circa 4 treni al giorno. Il viaggio più veloce dura 5 h 35 min e la durata media è di circa 6 h 09 min. I dati tariffari di Omio suggeriscono di prenotare circa 91 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
 ];
 
 // Hoteles reales curados por ciudad de destino (mismos criterios que CURATED_HOTELS
@@ -796,6 +853,10 @@ const REAL_HOTELS = {
 
 // Foto hero real por ciudad de destino (Pexels), evita la misma foto generica en las 174 paginas.
 const HERO_PHOTOS = {
+  faro: 'https://images.pexels.com/photos/12704510/pexels-photo-12704510.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  trondheim: 'https://images.pexels.com/photos/17241175/pexels-photo-17241175.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  gothenburg: 'https://images.pexels.com/photos/33820144/pexels-photo-33820144.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  graz: 'https://images.pexels.com/photos/31899496/pexels-photo-31899496.jpeg?auto=compress&cs=tinysrgb&w=1600',
   amsterdam: 'https://images.pexels.com/photos/4237160/pexels-photo-4237160.jpeg?auto=compress&cs=tinysrgb&w=1600',
   barcelona: 'https://images.pexels.com/photos/16984552/pexels-photo-16984552.jpeg?auto=compress&cs=tinysrgb&w=1600',
   bergen: 'https://images.pexels.com/photos/6291547/pexels-photo-6291547.jpeg?auto=compress&cs=tinysrgb&w=1600',
@@ -1609,8 +1670,8 @@ function replaceTemplate(template, route, lang) {
     '{{klookBtnLabel}}': langContent.klookBtnLabel,
     '{{klookTrainUrl}}': `https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}`,
     '{{trainSegments}}': generateTrainSegments(route, lang),
-    '{{hotelSectionTitle}}': langContent.hotelSectionTitle,
-    '{{hotelCards}}': generateHotelCards(route, lang),
+    '{{hotelSectionTitle}}': REAL_HOTELS[route.to.toLowerCase()] ? langContent.hotelSectionTitle : '',
+    '{{hotelCards}}': REAL_HOTELS[route.to.toLowerCase()] ? generateHotelCards(route, lang) : '',
     '{{howLongTitle}}': fillTokens(langContent.howLongTitle, route, lang),
     '{{howLongText}}': fillTokens(pickVariant(route.slug + 'howlong', langContent.howLongVariants), route, lang),
     '{{whoRunsTitle}}': fillTokens(langContent.whoRunsTitle, route, lang),
@@ -1661,7 +1722,8 @@ routesToGenerate.forEach(route => {
   LANGS.forEach(lang => {
     const dir = lang === 'en' ? path.join(outputDir, route.slug) : path.join(outputDir, route.slug, lang);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), replaceTemplate(template, route, lang));
+    // sin hotel curado se omite el bloque entero (no queda un <h2> vacío)
+    fs.writeFileSync(path.join(dir, 'index.html'), replaceTemplate(template, route, lang).replace(/<h2>\s*<\/h2>\s*/g, ''));
   });
   console.log(`Generated ${route.slug} (${LANGS.join('/')})`);
 });
