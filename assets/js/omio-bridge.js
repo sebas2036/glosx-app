@@ -179,8 +179,16 @@
 
   var nativeOpen = window.open;
 
+  // Idioma del visitante para que el backend use el enlace oficial de Omio en su idioma y su moneda.
+  function withLang(url) {
+    if (/[?&]lang=/.test(url)) return url;
+    var l = String(document.documentElement.lang || '').slice(0, 2).toLowerCase();
+    return l ? url + (url.indexOf('?') > -1 ? '&' : '?') + 'lang=' + encodeURIComponent(l) : url;
+  }
+
   // Abre la pestaña de transición dentro del gesto del usuario (sin bloqueo de ventanas emergentes).
   function openWithTransition(url) {
+    url = withLang(url);
     var r = routeOf(url);
     if (!r) return nativeOpen.call(window, url, '_blank');
     var l = lang(), tx = T[l];
