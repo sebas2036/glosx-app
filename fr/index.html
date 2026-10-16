@@ -640,7 +640,7 @@
       <p class="ai-multileg-note" id="aiMultiLegNote" style="display:none;"></p>
       <div class="ai-segments" id="aiSegments"></div>
       <div class="ai-hotels" id="aiHotels"></div>
-      <p class="ai-trust-note" data-i18n="ai_trust_note">Réservation sécurisée via notre partenariat officiel avec Klook</p>
+      <p class="ai-trust-note eu-only" data-i18n="ai_trust_note_omio">Réservation sécurisée via notre partenariat officiel avec Omio</p><p class="ai-trust-note jp-only" data-i18n="ai_trust_note">Réservation sécurisée via notre partenariat officiel avec Klook</p>
 
       <button class="ai-copy-btn" onclick="copyTripPlan()" id="tripCopyBtn" data-i18n="modal_copy_btn">Copier l'itinéraire</button>
       <div class="ai-cta-video">
@@ -653,7 +653,7 @@
         </div>
       </div>
     <div class="search-benefits">
-      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p><b data-i18n="ben_klook_t">Réservations avec Klook</b><span data-i18n="ben_klook_d">Paiement sécurisé sur leur plateforme officielle.</span></p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p><b class="eu-only" data-i18n="ben_omio_t">Réservations avec Omio</b><b class="jp-only" data-i18n="ben_klook_t">Réservations avec Klook</b><span data-i18n="ben_klook_d">Paiement sécurisé sur leur plateforme officielle.</span></p></div>
       <div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><p><b data-i18n="ben_rt_t">Données en temps réel</b><span data-i18n="ben_rt_d">Horaires et retards issus de sources officielles.</span></p></div>
       <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/></svg><p><b data-i18n="ben_free_t">Gratuit, sans compte</b><span data-i18n="ben_free_d">Sans abonnement ni frais cachés.</span></p></div>
     </div>
@@ -670,7 +670,7 @@
           <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=www.belgiantrain.be" alt="SNCB" loading="lazy"/>SNCB</span>
           <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="CP" loading="lazy"/>CP</span>
         </div>
-        <p class="hero-ops-klook" data-i18n="trust_klook">Réservations traitées officiellement par Klook</p>
+        <p class="hero-ops-klook eu-only" data-i18n="trust_omio">Réservations traitées officiellement par Omio</p><p class="hero-ops-klook jp-only" data-i18n="trust_klook">Réservations traitées officiellement par Klook</p>
       </div>
     </div>
     </div>
@@ -948,7 +948,7 @@
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg><span data-i18n="trust_b3">Sans inscription</span></span>
       <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">Gratuit</span></span>
     </div>
-    <p class="trust-klook" data-i18n="trust_klook" style="margin-top:14px;font-size:12px;color:#66667a;">Réservations traitées officiellement par Klook</p>
+    <p class="trust-klook eu-only" data-i18n="trust_omio" style="margin-top:14px;font-size:12px;color:#66667a;">Réservations traitées officiellement par Omio</p><p class="trust-klook jp-only" data-i18n="trust_klook" style="margin-top:14px;font-size:12px;color:#66667a;">Réservations traitées officiellement par Klook</p>
   </div>
 
   <!-- Photo carousel -->
@@ -1236,10 +1236,10 @@
     <p class="disclaimer" data-i18n="footer_disclaimer">WoW Train est une plateforme de voyage indépendante. Les réservations sont traitées selon les conditions du partenaire concerné ; nous ne sommes pas partie à cette transaction. Nous pouvons percevoir une commission sur les achats qualifiés sans frais supplémentaires pour vous.</p>
   </footer>
 
-  <div id="glosxTramoModal" class="glosx-tramo-modal" role="dialog" aria-label="Klook tab helper" style="display:none;">
+  <div id="glosxTramoModal" class="glosx-tramo-modal" role="dialog" aria-label="Booking tab helper" style="display:none;">
     <div class="glosx-tramo-modal-content">
       <h3 id="glosxTramoModalTitle" data-i18n="ai_tramo_modal_title">WoW Train</h3>
-      <p id="glosxTramoModalBody" data-i18n="ai_tramo_modal_body">Nous recherchons les horaires de cette étape. Choisissez votre train dans l'onglet Klook qui vient de s'ouvrir, puis revenez ici pour passer à la suivante.</p>
+      <p id="glosxTramoModalBody" data-i18n="ai_tramo_modal_body">Nous recherchons les horaires de cette étape. Choisissez votre train dans l'onglet Omio qui vient de s'ouvrir, puis revenez ici pour passer à la suivante.</p>
       <p id="glosxTramoModalRoute" class="glosx-tramo-modal-route"></p>
       <button type="button" id="glosxTramoModalBtn" class="glosx-tramo-modal-btn" onclick="confirmarTramoModal()" data-i18n="ai_tramo_modal_btn">Choisi → étape suivante</button>
     </div>
@@ -1282,7 +1282,8 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=47" defer></script>
+  <script src="/assets/js/main.min.js?v=48" defer></script>
+  <script src="/assets/js/omio-bridge.js?v=1" defer></script>
   <script src="/assets/js/japan.js?v=11" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
