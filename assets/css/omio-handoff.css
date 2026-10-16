@@ -1,55 +1,84 @@
 /*
- * Transición glosx → Omio.
- * Los botones y tarjetas que llevan a Omio (/affiliate/europe-train) pasan del rojo de glosx
- * (#C10116) hacia el coral de Omio (#FB6B6C), de modo que el salto de una plataforma a la otra
- * se sienta continuo. Japón (Klook) no se toca: solo se selecciona por href.
+ * Botones y tarjetas que llevan a Omio (/affiliate/europe-train), con el estilo del botón
+ * "Search" de Omio: coral sólido (#FB6B6C) y el ícono de Omio al lado del texto.
+ * Se selecciona por href: Japón (Klook) y los hoteles no se tocan.
  *
- * Contraste: el texto blanco queda sobre tonos con ratio >= 4.5:1 (#C10116 6.4, #D4323C 4.9);
- * el coral más claro aparece como resplandor y en bordes, nunca detrás del texto.
+ * Contraste: el texto va en azul marino oscuro (#0F1B5C) sobre el coral = 5,6:1. El blanco
+ * sobre ese coral solo da 2,8:1, por eso no se usa.
  */
 :root {
-  --handoff-red: #C10116;
-  --handoff-mid: #D4323C;
-  --handoff-coral: #FB6B6C;
-  --handoff-lavender: #F1F2F6;
+  --omio-coral: #FB6B6C;
+  --omio-coral-hover: #F65A5C;
+  --omio-navy: #0F1B5C;
+  --omio-lavender: #F1F2F6;
 }
 
-/* Botones sólidos */
+/* Botones sólidos de reserva */
 .ai-segment-buy[href*="/affiliate/europe-train"],
 .klook-cta[href*="/affiliate/europe-train"] .klook-cta-btn,
 .cta-btn[href*="/affiliate/europe-train"],
 .klook-strip[href*="/affiliate/europe-train"] .klook-cta-btn,
 a.discover-cta-btn[href*="/affiliate/europe-train"] {
-  background-image: linear-gradient(100deg, var(--handoff-red) 0%, var(--handoff-mid) 78%, #E5484D 100%);
-  background-color: var(--handoff-red);
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(251, 107, 108, 0.32);
+  background: var(--omio-coral);
+  background-image: none;
+  color: var(--omio-navy);
+  font-weight: 700;
+  border-color: var(--omio-coral);
+  box-shadow: 0 6px 16px rgba(251, 107, 108, 0.35);
+  transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.ai-segment-buy[href*="/affiliate/europe-train"]:hover,
+.klook-cta[href*="/affiliate/europe-train"]:hover .klook-cta-btn,
+.cta-btn[href*="/affiliate/europe-train"]:hover,
+.klook-strip[href*="/affiliate/europe-train"]:hover .klook-cta-btn,
+a.discover-cta-btn[href*="/affiliate/europe-train"]:hover {
+  background: var(--omio-coral-hover);
+  box-shadow: 0 8px 20px rgba(251, 107, 108, 0.45);
+}
+
+/* Ícono de Omio dentro de los botones que no lo traen ya en su tarjeta */
+.ai-segment-buy[href*="/affiliate/europe-train"]::before,
+.cta-btn[href*="/affiliate/europe-train"]::before,
+a.discover-cta-btn[href*="/affiliate/europe-train"]::before,
+.ai-quick-book-link[href*="/affiliate/europe-train"]::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 6px;
+  background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=omio.com") center / 16px 16px no-repeat;
+  box-shadow: 0 0 0 1px rgba(15, 27, 92, 0.12);
 }
 
 /* Botones de texto en línea y enlaces rápidos */
 .cta-btn-inline[href*="/affiliate/europe-train"],
 .ai-quick-book-link[href*="/affiliate/europe-train"] {
-  background: rgba(251, 107, 108, 0.14);
-  border-color: rgba(251, 107, 108, 0.55);
-  color: #A8000F;
+  background: rgba(251, 107, 108, 0.16);
+  border-color: rgba(251, 107, 108, 0.6);
+  color: var(--omio-navy);
+  font-weight: 600;
 }
 .cta-btn-inline[href*="/affiliate/europe-train"]:hover,
 .ai-quick-book-link[href*="/affiliate/europe-train"]:hover {
-  background: rgba(251, 107, 108, 0.24);
+  background: rgba(251, 107, 108, 0.28);
 }
 
-/* Tarjeta de reserva: del fondo cálido de glosx a un lavanda frío, con borde coral */
+/* Tarjeta de reserva: lavanda de Omio con borde coral */
 .klook-cta[href*="/affiliate/europe-train"],
 .klook-strip[href*="/affiliate/europe-train"] {
-  background: linear-gradient(135deg, rgba(249, 235, 223, 0.65) 0%, rgba(241, 242, 246, 0.95) 100%);
-  border-color: rgba(251, 107, 108, 0.5);
+  background: linear-gradient(135deg, var(--omio-lavender) 0%, #E8F1FC 100%);
+  border-color: rgba(251, 107, 108, 0.55);
 }
 .klook-cta[href*="/affiliate/europe-train"]:hover,
 .klook-strip[href*="/affiliate/europe-train"]:hover {
-  border-color: rgba(251, 107, 108, 0.85);
+  border-color: var(--omio-coral);
 }
+.klook-cta[href*="/affiliate/europe-train"] .klook-cta-title { color: #182C66; }
+.klook-cta[href*="/affiliate/europe-train"] .klook-cta-city { color: #182C66; }
 
 a[href*="/affiliate/europe-train"]:focus-visible {
-  outline: 2px solid #14151a;
+  outline: 2px solid #182C66;
   outline-offset: 2px;
 }
