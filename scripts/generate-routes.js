@@ -948,8 +948,8 @@ const content = {
       'Travelling from {{from}} to {{to}} by rail takes roughly {{duration}} on {{operator}}, a straightforward alternative to flying between the two cities.',
       '{{operator}} covers the {{from}}–{{to}} run in about {{duration}}. It\'s one of the more relaxed ways to cross {{country}} without a car.'
     ],
-    klookTitle: 'Book <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> on Klook',
-    klookSubtitle: '{{operator}} · {{duration}} · from {{price}} · free cancellation on select fares',
+    klookTitle: 'Book <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> on Omio',
+    klookSubtitle: '{{operator}} · {{duration}} · times and fares on Omio',
     klookBtnLabel: 'Book Ticket',
     checkSchedulesText: 'Check schedules & book →',
     opensNewTabText: 'Opens in a new tab — come back here anytime.',
@@ -1045,8 +1045,8 @@ const content = {
       'Viajar de {{from}} a {{to}} en tren toma cerca de {{duration}} con {{operator}}, una alternativa directa a volar entre las dos ciudades.',
       '{{operator}} cubre el trayecto {{from}}–{{to}} en unas {{duration}}. Es una de las formas más relajadas de cruzar {{country}} sin auto.'
     ],
-    klookTitle: 'Reserva <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> en Klook',
-    klookSubtitle: '{{operator}} · {{duration}} · desde {{price}} · cancelación gratis en tarifas seleccionadas',
+    klookTitle: 'Reserva <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> en Omio',
+    klookSubtitle: '{{operator}} · {{duration}} · horarios y tarifas en Omio',
     klookBtnLabel: 'Reservar',
     checkSchedulesText: 'Ver horarios y reservar →',
     opensNewTabText: 'Se abre en una nueva pestaña — vuelve aquí cuando quieras.',
@@ -1141,8 +1141,8 @@ const content = {
       'Voyager de {{from}} à {{to}} en train prend environ {{duration}} avec {{operator}}, une alternative simple à l\'avion entre les deux villes.',
       '{{operator}} assure le trajet {{from}}–{{to}} en environ {{duration}}. C\'est l\'une des façons les plus tranquilles de traverser {{country}} sans voiture.'
     ],
-    klookTitle: 'Réservez <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> sur Klook',
-    klookSubtitle: '{{operator}} · {{duration}} · à partir de {{price}} · annulation gratuite sur tarifs sélectionnés',
+    klookTitle: 'Réservez <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> sur Omio',
+    klookSubtitle: '{{operator}} · {{duration}} · horaires et tarifs sur Omio',
     klookBtnLabel: 'Réserver',
     checkSchedulesText: 'Voir horaires et réserver →',
     opensNewTabText: 'S\'ouvre dans un nouvel onglet — revenez ici quand vous voulez.',
@@ -1237,8 +1237,8 @@ const content = {
       'Viaggiare da {{from}} a {{to}} in treno richiede circa {{duration}} con {{operator}}, un\'alternativa semplice al volo tra le due città.',
       '{{operator}} copre la tratta {{from}}–{{to}} in circa {{duration}}. È uno dei modi più rilassanti per attraversare {{country}} senza auto.'
     ],
-    klookTitle: 'Prenota <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> su Klook',
-    klookSubtitle: '{{operator}} · {{duration}} · da {{price}} · cancellazione gratuita su tariffe selezionate',
+    klookTitle: 'Prenota <span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span> su Omio',
+    klookSubtitle: '{{operator}} · {{duration}} · orari e tariffe su Omio',
     klookBtnLabel: 'Prenota',
     checkSchedulesText: 'Vedi orari e prenota →',
     opensNewTabText: 'Si apre in una nuova scheda — torna qui quando vuoi.',
@@ -1339,7 +1339,7 @@ function generateTrainSegments(route, lang) {
         <div class="train-segment-detail"><strong>${operatorLine}</strong></div>
         <div class="train-segment-detail"><strong>${stationLine}</strong></div>
       </div>
-      <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}"
+      <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}"
          class="cta-btn" target="_blank" rel="noopener sponsored"
          onclick="trackTrainline('route_${route.slug}_${lang}')">
         ${langContent.bookTicketBtn}
@@ -1607,7 +1607,7 @@ function replaceTemplate(template, route, lang) {
     '{{klookTitle}}': fillTokens(langContent.klookTitle, route, lang),
     '{{klookSubtitle}}': fillTokens(langContent.klookSubtitle, route, lang),
     '{{klookBtnLabel}}': langContent.klookBtnLabel,
-    '{{klookTrainUrl}}': `https://voxa-production-dc15.up.railway.app/affiliate/klook-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}`,
+    '{{klookTrainUrl}}': `https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}`,
     '{{trainSegments}}': generateTrainSegments(route, lang),
     '{{hotelSectionTitle}}': langContent.hotelSectionTitle,
     '{{hotelCards}}': generateHotelCards(route, lang),

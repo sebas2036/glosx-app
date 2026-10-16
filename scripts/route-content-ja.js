@@ -15,8 +15,8 @@ module.exports = {
     '{{from}}から{{to}}へ、列車なら{{operator}}でおよそ{{duration}}。飛行機に代わる、わかりやすい行き方です。',
     '{{operator}}の{{from}}–{{to}}は約{{duration}}。車を使わずに{{country}}を越える、いちばん落ち着いた方法のひとつです。'
   ],
-  klookTitle: 'Klookで<span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span>を予約',
-  klookSubtitle: '{{operator}} · {{duration}} · {{price}}から · 対象運賃はキャンセル無料',
+  klookTitle: 'Omioで<span class="klook-cta-city">{{from}}</span> &rarr; <span class="klook-cta-city">{{to}}</span>を予約',
+  klookSubtitle: '{{operator}} · {{duration}} · 時刻と運賃はOmioで',
   klookBtnLabel: '切符を予約',
   checkSchedulesText: '時刻を見て予約 →',
   opensNewTabText: '新しいタブで開きます。このページにはいつでも戻れます。',
