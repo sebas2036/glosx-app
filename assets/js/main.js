@@ -2367,6 +2367,39 @@
     return best || slugCityName(cleaned);
   }
 
+  // Coincidencia EXACTA con una ciudad conocida (nombre, slug o palabra clave completos).
+  // A diferencia de resolveRouteCitySlug, no acepta el nombre dentro de un texto más largo
+  // ("Londres a Roma" no resuelve a Roma) ni inventa un slug: devuelve null si no la conoce.
+  function exactCitySlug(name) {
+    const n = norm(cleanCityForKlook(name)).replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
+    if (!n) return null;
+    let found = null;
+    function consider(label, slug) {
+      String(label || '').split(' / ').forEach(function (piece) {
+        const nk = norm(piece).replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
+        if (nk && nk === n) found = slug;
+      });
+    }
+    CITIES.forEach(function (c) {
+      consider(c.display, c.slug);
+      consider(c.slug.replace(/-/g, ' '), c.slug);
+      (c.keywords || []).forEach(function (k) { consider(k, c.slug); });
+      const paren = String(c.display || '').match(/\(([^)]+)\)/);
+      if (paren) consider(paren[1], c.slug);
+    });
+    return found;
+  }
+
+  // ¿Lo escrito es exactamente "ciudad conocida" + conector + "ciudad conocida"? Solo entonces se
+  // puede saltar la IA: "París a Londres a Roma" no cumple (el segundo tramo no es una ciudad).
+  function inputIsCertainPair() {
+    const el = document.getElementById('aiInput');
+    const parsed = el ? parseOriginDest(el.value) : null;
+    if (!parsed) return false;
+    const f = exactCitySlug(parsed.from), t = exactCitySlug(parsed.to);
+    return !!(f && t && f !== t);
+  }
+
   const PAIR_CONN = { en: 'to', es: 'a', fr: 'à', de: 'nach', it: 'a', pt: 'a', ja: 'から' };
   const POPULAR_PAIRS = {
     mb: { en: ['Madrid', 'Barcelona'], es: ['Madrid', 'Barcelona'], fr: ['Madrid', 'Barcelone'], de: ['Madrid', 'Barcelona'], it: ['Madrid', 'Barcellona'], pt: ['Madrid', 'Barcelona'], ja: ['マドリード', 'バルセロナ'] },
@@ -2438,6 +2471,13 @@
     }
     const pages = window.GLOSX_ROUTE_PAGES;
     if (pages && pages.has(key)) {
+      displayAIRoute(buildPairRoute(parsed.from, parsed.to, [[parsed.from, parsed.to]]), routeOpts);
+      return true;
+    }
+    // Cualquier otro par de dos ciudades conocidas: Omio resuelve la ruta (con conexiones si hace
+    // falta), así que no se consulta a la IA.
+    const fromExact = exactCitySlug(parsed.from), toExact = exactCitySlug(parsed.to);
+    if (fromExact && toExact && fromExact !== toExact) {
       displayAIRoute(buildPairRoute(parsed.from, parsed.to, [[parsed.from, parsed.to]]), routeOpts);
       return true;
     }
@@ -2515,6 +2555,10 @@
 
     if (typeof fbq === 'function') { fbq('track', 'Lead', { content_name: 'ai_itinerary_generated' }); }
     if (typeof gtag === 'function') { gtag('event', 'generate_lead', { source: 'ai_planner' }); }
+
+    // Par conocido: la ruta ya se mostró en la vista previa y la reserva es el enlace de Omio.
+    // No se consulta a la IA (ahorra cupo y evita errores por alta demanda).
+    if (previewFromInput() && inputIsCertainPair()) return;
 
     inputAurora.classList.add('active');
     btn.disabled = true;
