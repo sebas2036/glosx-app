@@ -217,6 +217,69 @@
     return nativeOpen.apply(window, arguments);
   };
 
+  // ---- Ventaja para clientes nuevos de Omio (código NEW10) ----
+  // Fuente: Impact > Omio > Cupones (16-oct-2026): "10% off for new customers. Valid on basket values up
+  // to €80", vigente hasta el 30-nov-2026 (19:59 hora de Argentina = 22:59 UTC). Se oculta sola al vencer.
+  var OFFER_CODE = 'NEW10';
+  var OFFER_END = Date.UTC(2026, 10, 30, 22, 59);
+  var OFFER = {
+    en: { eyebrow: 'For new Omio customers', text: 'Code NEW10: 10% off your first booking, on baskets up to €80.', copy: 'Copy code', copied: 'Code copied', note: 'Omio offer valid until 30 November 2026. Terms and availability are set by Omio, which brings together 800+ European transport companies.' },
+    es: { eyebrow: 'Para clientes nuevos de Omio', text: 'Código NEW10: 10% de descuento en tu primera reserva, en compras de hasta 80 €.', copy: 'Copiar código', copied: 'Código copiado', note: 'Oferta de Omio válida hasta el 30 de noviembre de 2026. Las condiciones y la disponibilidad dependen de Omio, que reúne más de 800 compañías de transporte europeas.' },
+    fr: { eyebrow: 'Pour les nouveaux clients Omio', text: 'Code NEW10 : 10 % de réduction sur votre première réservation, pour un panier jusqu’à 80 €.', copy: 'Copier le code', copied: 'Code copié', note: 'Offre Omio valable jusqu’au 30 novembre 2026. Les conditions et la disponibilité dépendent d’Omio, qui réunit plus de 800 partenaires de transport européens.' },
+    it: { eyebrow: 'Per i nuovi clienti Omio', text: 'Codice NEW10: 10% di sconto sulla prima prenotazione, per acquisti fino a 80 €.', copy: 'Copia il codice', copied: 'Codice copiato', note: 'Offerta Omio valida fino al 30 novembre 2026. Condizioni e disponibilità dipendono da Omio, che riunisce oltre 800 fornitori di trasporto europei.' },
+    ja: { eyebrow: '新規のOmioご利用の方へ', text: 'コードNEW10：初回のご予約が10％オフ（80ユーロまでのご利用）。', copy: 'コードをコピー', copied: 'コピーしました', note: 'Omioの特典で、2026年11月30日まで有効です。条件や利用可否はOmioが定めます。Omioは800社以上のヨーロッパの交通事業者をまとめています。' }
+  };
+
+  function offerCopy(code, done) {
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = code; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); done();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done, fallback);
+    else fallback();
+  }
+
+  function initOffer() {
+    if (Date.now() > OFFER_END || document.querySelector('.omo')) return;
+    var anchor = document.querySelector('a.klook-cta[href*="' + MARK + '"], a.klook-strip[href*="' + MARK + '"]');
+    if (!anchor) return;
+    var t = OFFER[lang()] || OFFER.en;
+    if (!document.getElementById('omo-style')) {
+      var st = document.createElement('style');
+      st.id = 'omo-style';
+      st.textContent = '.omo{margin:12px 0 4px;padding:14px 16px;border:1px solid rgba(251,107,108,.55);border-radius:14px;background:linear-gradient(135deg,#F1F2F6 0%,#E8F1FC 100%);color:#182C66;font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
+        '.omo-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}' +
+        '.omo-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#4A5578;margin:0 0 4px}' +
+        '.omo-text{margin:0;font-size:14px;line-height:1.45;font-weight:600}' +
+        '.omo-code{font-variant-numeric:tabular-nums;letter-spacing:.04em}' +
+        '.omo-btn{font:inherit;font-size:13px;font-weight:700;color:#0F1B5C;background:#fff;border:1px solid rgba(24,44,102,.25);border-radius:999px;padding:8px 16px;cursor:pointer;white-space:nowrap;transition:background-color .2s,border-color .2s}' +
+        '.omo-btn:hover{background:#FFF4EF;border-color:#FB6B6C}' +
+        '.omo-btn:focus-visible{outline:2px solid #182C66;outline-offset:2px}' +
+        '.omo-btn.is-done{background:#FB6B6C;border-color:#FB6B6C}' +
+        '.omo-note{margin:10px 0 0;font-size:12px;line-height:1.5;color:#4A5578}';
+      document.head.appendChild(st);
+    }
+    var box = document.createElement('div');
+    box.className = 'omo';
+    box.innerHTML = '<div class="omo-row"><div><p class="omo-eyebrow">' + esc(t.eyebrow) + '</p>' +
+      '<p class="omo-text">' + esc(t.text) + '</p></div>' +
+      '<button type="button" class="omo-btn" data-code="' + OFFER_CODE + '">' + esc(t.copy) + '</button></div>' +
+      '<p class="omo-note">' + esc(t.note) + '</p>';
+    anchor.parentNode.insertBefore(box, anchor.nextSibling);
+    var btn = box.querySelector('.omo-btn');
+    btn.addEventListener('click', function () {
+      offerCopy(OFFER_CODE, function () {
+        btn.textContent = t.copied; btn.classList.add('is-done');
+        try { if (typeof gtag === 'function') gtag('event', 'omio_code_copy', { code: OFFER_CODE }); } catch (e) {}
+        setTimeout(function () { btn.textContent = t.copy; btn.classList.remove('is-done'); }, 2500);
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initOffer); else initOffer();
+
   // Enlaces <a href=".../affiliate/europe-train...">: se controla la apertura para animarla.
   // Con tecla modificadora o clic central se deja el comportamiento normal del navegador.
   document.addEventListener('click', function (e) {
