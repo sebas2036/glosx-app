@@ -1309,9 +1309,10 @@
         document.querySelectorAll('.klook-city-menu.open').forEach(m => m.classList.remove('open'));
       }
     });
-    function goKlookHotelCity(city) {
+    function goKlookHotelCity(city, checkin, checkout) {
       if (!city) return;
-      window.open(`${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(city)}`, '_blank');
+      const dates = checkin && checkout ? `&checkin=${encodeURIComponent(checkin)}&checkout=${encodeURIComponent(checkout)}` : '';
+      window.open(`${PROXY_BASE}/klook-hotel?city=${encodeURIComponent(city)}${dates}`, '_blank');
       document.getElementById('klookCityMenu')?.classList.remove('open');
     }
 

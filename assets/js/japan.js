@@ -728,13 +728,13 @@
 
   // Panel de hoteles dentro de la propia tarjeta del buscador (sin scroll): reutiliza el menú de ciudades de Klook.
   var HOTEL_UI = {
-    en: { ph: 'City, area or landmark', lab: 'Where to?', pop: 'Popular destinations', go: 'Search hotels', none: 'No matches — try another city' },
-    es: { ph: 'Ciudad o zona', lab: '¿A dónde?', pop: 'Destinos populares', go: 'Buscar hoteles', none: 'Sin resultados: prueba otra ciudad' },
-    fr: { ph: 'Ville ou quartier', lab: 'Où allez-vous ?', pop: 'Destinations populaires', go: 'Rechercher des hôtels', none: 'Aucun résultat : essayez une autre ville' },
-    it: { ph: 'Città o zona', lab: 'Dove vai?', pop: 'Destinazioni popolari', go: 'Cerca hotel', none: 'Nessun risultato: prova un’altra città' },
-    de: { ph: 'Stadt oder Gegend', lab: 'Wohin?', pop: 'Beliebte Reiseziele', go: 'Hotels suchen', none: 'Keine Treffer – andere Stadt versuchen' },
-    pt: { ph: 'Cidade ou região', lab: 'Para onde?', pop: 'Destinos populares', go: 'Buscar hotéis', none: 'Sem resultados: tente outra cidade' },
-    ja: { ph: '都市・エリア', lab: 'どこへ？', pop: '人気の目的地', go: 'ホテルを検索', none: '見つかりません。別の都市をお試しください' }
+    en: { ci: 'Check-in', co: 'Check-out', ph: 'City, area or landmark', lab: 'Where to?', pop: 'Popular destinations', go: 'Search hotels', none: 'No matches — try another city' },
+    es: { ci: 'Entrada', co: 'Salida', ph: 'Ciudad o zona', lab: '¿A dónde?', pop: 'Destinos populares', go: 'Buscar hoteles', none: 'Sin resultados: prueba otra ciudad' },
+    fr: { ci: 'Arrivée', co: 'Départ', ph: 'Ville ou quartier', lab: 'Où allez-vous ?', pop: 'Destinations populaires', go: 'Rechercher des hôtels', none: 'Aucun résultat : essayez une autre ville' },
+    it: { ci: 'Check-in', co: 'Check-out', ph: 'Città o zona', lab: 'Dove vai?', pop: 'Destinazioni popolari', go: 'Cerca hotel', none: 'Nessun risultato: prova un’altra città' },
+    de: { ci: 'Anreise', co: 'Abreise', ph: 'Stadt oder Gegend', lab: 'Wohin?', pop: 'Beliebte Reiseziele', go: 'Hotels suchen', none: 'Keine Treffer – andere Stadt versuchen' },
+    pt: { ci: 'Entrada', co: 'Saída', ph: 'Cidade ou região', lab: 'Para onde?', pop: 'Destinos populares', go: 'Buscar hotéis', none: 'Sem resultados: tente outra cidade' },
+    ja: { ci: 'チェックイン', co: 'チェックアウト', ph: '都市・エリア', lab: 'どこへ？', pop: '人気の目的地', go: 'ホテルを検索', none: '見つかりません。別の都市をお試しください' }
   };
   var HOTEL_POP = ['Paris', 'Rome', 'London', 'Barcelona', 'Amsterdam', 'Vienna', 'Prague', 'Berlin', 'Zurich', 'Venice', 'Madrid', 'Florence', 'Budapest', 'Munich'];
   function hnorm(x) { return String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); }
@@ -750,10 +750,20 @@
     panel = document.createElement('div');
     panel.className = 'search-panel hotels-panel';
     panel.setAttribute('data-panel', 'hotels');
-    panel.innerHTML = '<div class="hotels-bar"><label class="hotels-field"><span class="hotels-lab"></span><input type="text" class="hotels-input" autocomplete="off" /><div class="hotels-list" role="listbox"></div></label><button type="button" class="hotels-go"></button></div><div class="hotels-pop"><span class="hotels-pop-lab"></span><div class="hotels-pop-row"></div></div>';
+    panel.innerHTML = '<div class="hotels-bar"><label class="hotels-field"><span class="hotels-lab"></span><input type="text" class="hotels-input" autocomplete="off" /><div class="hotels-list" role="listbox"></div></label><label class="hotels-field hotels-date"><span class="hotels-lab hotels-ci-lab"></span><input type="date" class="hotels-ci" /></label><label class="hotels-field hotels-date"><span class="hotels-lab hotels-co-lab"></span><input type="date" class="hotels-co" /></label><button type="button" class="hotels-go"></button></div><div class="hotels-pop"><span class="hotels-pop-lab"></span><div class="hotels-pop-row"></div></div>';
     var lab = panel.querySelector('.hotels-lab'), inp = panel.querySelector('.hotels-input'), list = panel.querySelector('.hotels-list'),
         go = panel.querySelector('.hotels-go'), popLab = panel.querySelector('.hotels-pop-lab'), row = panel.querySelector('.hotels-pop-row');
-    lab.textContent = u.lab; inp.placeholder = u.ph; go.textContent = u.go; popLab.textContent = u.pop;
+    lab.textContent = u.lab;
+    var ci = panel.querySelector('.hotels-ci'), co = panel.querySelector('.hotels-co');
+    panel.querySelector('.hotels-ci-lab').textContent = u.ci; panel.querySelector('.hotels-co-lab').textContent = u.co;
+    function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+    function plus(v, n) { var d = new Date(v + 'T00:00:00'); d.setDate(d.getDate() + n); return iso(d); }
+    ci.min = iso(new Date()); co.min = plus(ci.min, 1);
+    ci.addEventListener('change', function () {
+      if (!ci.value) return;
+      co.min = plus(ci.value, 1);
+      if (!co.value || co.value <= ci.value) co.value = plus(ci.value, 1);
+    }); inp.placeholder = u.ph; go.textContent = u.go; popLab.textContent = u.pop;
     var chosen = '';
     function pick(c) { chosen = c; inp.value = c; list.classList.remove('open'); }
     function matches() {
@@ -779,7 +789,7 @@
       var exact = cities.filter(function (c) { return hnorm(c) === hnorm(inp.value); })[0];
       var city = exact || m[0];
       if (!city || !inp.value.trim()) { inp.focus(); paintList(); return; }
-      if (typeof window.goKlookHotelCity === 'function') window.goKlookHotelCity(city);
+      if (typeof window.goKlookHotelCity === 'function') window.goKlookHotelCity(city, ci.value && co.value && co.value > ci.value ? ci.value : '', ci.value && co.value && co.value > ci.value ? co.value : '');
     }
     inp.addEventListener('focus', paintList);
     inp.addEventListener('input', paintList);
