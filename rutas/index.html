@@ -6,6 +6,12 @@
   <title>All European Train Routes &middot; WoW Train · glosx.app</title>
   <meta name="description" content="Complete index of European train route guides on WoW Train — 103 routes with schedules, prices and booking, in English, Spanish, French and Italian." />
   <link rel="canonical" href="https://glosx.app/rutas/" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="All European Train Routes &middot; WoW Train" />
@@ -38,11 +44,12 @@
     @media (max-width:760px) { .routes-index-list { columns:2; } header h1 { font-size:26px; } }
     @media (max-width:460px) { .routes-index-list { columns:1; } }
   </style>
+  <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
 </head>
 <body>
   <nav>
     <a href="/">WoW Train</a>
-    <a href="/" class="back">&larr; Home</a>
+    <div class="nav-right"><div class="lang-wrapper" data-lang-chip><button type="button" class="lang-btn" id="langBtn" aria-label="Language" aria-haspopup="true" aria-expanded="false"><span id="langCode">EN</span><span style="font-size:10px;opacity:0.6">▾</span></button><div class="lang-dropdown" id="langDropdown"><a class="lang-option active" href="/rutas/" hreflang="en" lang="en">English</a><a class="lang-option" href="/es/rutas/" hreflang="es" lang="es">Español</a><a class="lang-option" href="/fr/rutas/" hreflang="fr" lang="fr">Français</a><a class="lang-option" href="/it/rutas/" hreflang="it" lang="it">Italiano</a><a class="lang-option" href="/ja/rutas/" hreflang="ja" lang="ja">日本語</a></div></div><a href="/" class="back">&larr; Home</a></div>
   </nav>
   <header>
     <h1>All European train routes</h1>
@@ -373,5 +380,6 @@
   <footer>
     <p>&copy; 2026 GLOSX &middot; <a href="/">glosx.app</a> &middot; <a href="/explore/">Explore</a> &middot; <a href="/blog.html">Blog</a></p>
   </footer>
+  <script src="/assets/js/lang-chip.js?v=1" defer></script>
 </body>
 </html>
