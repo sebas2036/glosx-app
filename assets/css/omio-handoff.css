@@ -82,3 +82,37 @@ a[href*="/affiliate/europe-train"]:focus-visible {
   outline: 2px solid #182C66;
   outline-offset: 2px;
 }
+
+/* ===== Buscador de la portada con los colores de Omio (modo Europa) =====
+   Índigo en las pestañas, campo lavanda, botón coral y subrayado coral en la pestaña activa.
+   El texto del botón va en azul marino (5,6:1 sobre el coral; el blanco solo da 2,8:1). */
+body.home-v2:not([data-region="japan"]) .search-tab,
+body.home-v2:not([data-region="japan"]) .region-switch { background: rgba(24, 44, 102, .62); }
+body.home-v2:not([data-region="japan"]) .search-tab.on {
+  background: #fff; color: var(--omio-navy); box-shadow: inset 0 -3px 0 var(--omio-coral);
+}
+body.home-v2:not([data-region="japan"]) .region-btn.on { background: #fff; color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-tab:focus-visible,
+body.home-v2:not([data-region="japan"]) .region-btn:focus-visible { outline-color: #182C66; }
+body.home-v2:not([data-region="japan"]) .search-card { box-shadow: 0 24px 60px rgba(24, 44, 102, .22); }
+body.home-v2:not([data-region="japan"]) .search-card .ai-input-aurora { background: var(--omio-lavender); }
+body.home-v2:not([data-region="japan"]) .search-card .ai-input-container input { color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .ai-generate-btn {
+  background: var(--omio-coral) !important; color: var(--omio-navy) !important; font-weight: 700;
+  box-shadow: 0 8px 20px rgba(251, 107, 108, .35) !important;
+}
+body.home-v2:not([data-region="japan"]) .search-card .ai-generate-btn:hover { background: var(--omio-coral-hover) !important; filter: none; }
+body.home-v2:not([data-region="japan"]) .search-card .ai-suggestion { border-color: rgba(24, 44, 102, .2); color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .ai-suggestion:hover { background: #EEF3FB; border-color: rgba(24, 44, 102, .4); }
+body.home-v2:not([data-region="japan"]) .search-card .ai-restore-btn { color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .search-note { color: #4A5578; }
+body.home-v2:not([data-region="japan"]) .search-card .ai-swap-btn { border-color: rgba(24, 44, 102, .35); color: var(--omio-navy); }
+
+/* Modo Japón: el mismo tratamiento con el naranja de Klook */
+body.home-v2[data-region="japan"] .search-tab.on { background: #fff; color: #2A2118; box-shadow: inset 0 -3px 0 #FF5B00; }
+body.home-v2[data-region="japan"] .region-btn.on { background: #fff; color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .ai-generate-btn {
+  background: #FF5B00 !important; color: #2A2118 !important; font-weight: 700; box-shadow: 0 8px 20px rgba(255, 91, 0, .35) !important;
+}
+body.home-v2[data-region="japan"] .search-card .ai-generate-btn:hover { background: #F25200 !important; filter: none; }
+body.home-v2[data-region="japan"] .search-card .ai-restore-btn { color: #2A2118; }
