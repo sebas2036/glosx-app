@@ -415,6 +415,48 @@
     it: 'Vedi orari e prenota su Klook →', de: 'Fahrpläne ansehen & auf Klook buchen →', pt: 'Ver horários e reservar na Klook →',
     ja: '時刻を確認してKlookで予約 →'
   };
+  // Panel "Opciones de viaje" en modo Japón (mismos estilos .pi/.rp-* que Europa). Solo hay dato verificado del
+  // tren (Klook, consulta 05-oct-2026): duración del servicio más rápido y tipo de tren; no se inventa bus ni avión.
+  var PI_JP = {
+    en: { opts: 'Travel options', train: 'Train', note: 'Journey time of the fastest direct service, from Klook data (checked 5 Oct 2026). Seats and fares for your date are shown on Klook.', guide: 'See the full route guide' },
+    es: { opts: 'Opciones de viaje', train: 'Tren', note: 'Duración del servicio directo más rápido, según datos de Klook (consulta del 5 de octubre de 2026). Los asientos y tarifas de tu fecha se muestran en Klook.', guide: 'Ver la guía completa de la ruta' },
+    fr: { opts: 'Options de voyage', train: 'Train', note: 'Durée du service direct le plus rapide, d’après les données de Klook (consultation du 5 octobre 2026). Les places et tarifs de votre date s’affichent sur Klook.', guide: 'Voir le guide complet de la ligne' },
+    it: { opts: 'Come viaggiare', train: 'Treno', note: 'Durata del servizio diretto più veloce, secondo i dati di Klook (consultazione del 5 ottobre 2026). Posti e tariffe per la tua data sono su Klook.', guide: 'Vedi la guida completa del percorso' },
+    de: { opts: 'Reiseoptionen', train: 'Zug', note: 'Fahrzeit der schnellsten Direktverbindung laut Klook-Daten (Stand 5. Oktober 2026). Plätze und Preise für dein Datum siehst du bei Klook.', guide: 'Zur vollständigen Streckenübersicht' },
+    pt: { opts: 'Opções de viagem', train: 'Comboio', note: 'Duração do serviço direto mais rápido, segundo dados da Klook (consulta de 5 de outubro de 2026). Lugares e tarifas para a tua data aparecem na Klook.', guide: 'Ver o guia completo da rota' },
+    ja: { opts: '移動手段', train: '電車', note: 'Klookのデータによる、直通で最も速い列車の所要時間です（2026年10月5日確認）。ご希望日の座席と運賃はKlookでご確認ください。', guide: 'ルートガイドを見る' }
+  };
+  var TRAIN_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg>';
+  // slugs reales de las guías de Japón (rutas/<slug>/) y correcciones de nombre de algunas estaciones
+  var JP_GUIDES = ' aomori-hachinohe aomori-hirosaki aomori-shin-hakodate-hokuto asakusa-kinugawa-onsen asakusa-nikko atami-ito atami-mishima atami-shizuoka beppu-kokura beppu-oita beppu-yufuin fukuoka-beppu fukuoka-hita fukuoka-huis-ten-bosch fukuoka-kagoshima fukuoka-kokura fukuoka-kumamoto fukuoka-kurume fukuoka-nakatsu fukuoka-oita fukuoka-saga fukuoka-shin-yamaguchi fukuoka-takeo-onsen fukuoka-yufuin hakodate-noboribetsu hakodate-sapporo hakodate-shin-hakodate-hokuto hiroshima-fukuoka hiroshima-fukuyama hiroshima-himeji hiroshima-kokura hiroshima-kumamoto hiroshima-okayama hiroshima-onomichi hiroshima-shin-yamaguchi kanazawa-fukui kanazawa-kaga-onsen kanazawa-komatsu kanazawa-nagano kanazawa-nanao kanazawa-toyama kanazawa-tsuruga kanazawa-ueda kansai-airport-kyoto kansai-airport-osaka kansai-airport-tennoji kyoto-fukuchiyama kyoto-gifu kyoto-himeji kyoto-hiroshima kyoto-kinosaki kyoto-maibara kyoto-nagoya kyoto-okayama kyoto-tsuruga kyoto-wakayama mishima-shin-fuji mishima-shizuoka morioka-akita morioka-aomori morioka-hachinohe morioka-shin-hanamaki nagano-karuizawa nagano-matsumoto nagano-toyama nagano-ueda nagoya-gifu nagoya-hamamatsu nagoya-himeji nagoya-hiroshima nagoya-maibara nagoya-matsumoto nagoya-nagano nagoya-okayama nagoya-shizuoka nagoya-takayama nagoya-toyama nagoya-toyohashi narita-airport-shinagawa narita-airport-yokohama narita-tokyo niigata-akita niigata-joetsu-myoko niigata-murakami niigata-nagaoka odawara-atami odawara-shizuoka okayama-fukuoka okayama-fukuyama okayama-himeji okayama-kurashiki okayama-matsue okayama-yonago osaka-fukuchiyama osaka-fukuoka osaka-fukuyama osaka-hamamatsu osaka-himeji osaka-hiroshima osaka-kagoshima osaka-kii-tanabe osaka-kinosaki osaka-kobe osaka-kokura osaka-kumamoto osaka-kyoto osaka-maibara osaka-nagoya osaka-odawara osaka-okayama osaka-shin-fuji osaka-shin-yamaguchi osaka-shirahama osaka-shizuoka osaka-toyohashi osaka-toyooka osaka-tsuruga osaka-wakayama sapporo-asahikawa sapporo-chitose sapporo-kushiro sapporo-new-chitose-airport sapporo-noboribetsu sapporo-obihiro sapporo-otaru sapporo-shin-sapporo sapporo-tomakomai sapporo-wakkanai sendai-akita sendai-aomori sendai-fukushima sendai-hachinohe sendai-ichinoseki sendai-koriyama sendai-morioka shin-yokohama-atami shin-yokohama-kyoto shin-yokohama-mishima shin-yokohama-nagoya shin-yokohama-odawara shin-yokohama-osaka shinjuku-hakone shinjuku-kawaguchiko shinjuku-kofu shinjuku-matsumoto shinjuku-narita-airport shinjuku-odawara shinjuku-otsuki takayama-gero takayama-gifu takayama-hida-furukawa takayama-toyama tokyo-akita tokyo-aomori tokyo-atami tokyo-fukuoka tokyo-fukushima tokyo-fukuyama tokyo-hachinohe tokyo-hamamatsu tokyo-himeji tokyo-hiroshima tokyo-ichinoseki tokyo-ito tokyo-kanazawa tokyo-karuizawa tokyo-kobe tokyo-kokura tokyo-kyoto tokyo-maibara tokyo-matsumoto tokyo-mishima tokyo-mito tokyo-morioka tokyo-nagano tokyo-nagaoka tokyo-nagoya tokyo-niigata tokyo-odawara tokyo-okayama tokyo-osaka tokyo-sendai tokyo-shin-fuji tokyo-shin-hakodate-hokuto tokyo-shin-yamaguchi tokyo-shin-yokohama tokyo-shizuoka tokyo-takasaki tokyo-toyama tokyo-toyohashi tokyo-ueda tokyo-utsunomiya tokyo-yamagata tokyo-yokohama utsunomiya-fukushima utsunomiya-nasu-shiobara ';
+  var SLUG_FIX = { naritaairport: 'narita-airport', kansaiairport: 'kansai-airport', newchitoseairport: 'new-chitose-airport', hidafurukawa: 'hida-furukawa', huistenbosch: 'huis-ten-bosch', joetsumyoko: 'joetsu-myoko', kagaonsen: 'kaga-onsen', kiitanabe: 'kii-tanabe', kinugawaonsen: 'kinugawa-onsen', nasushiobara: 'nasu-shiobara', shinfuji: 'shin-fuji', shinhakodatehokuto: 'shin-hakodate-hokuto', shinhanamaki: 'shin-hanamaki', shinsapporo: 'shin-sapporo', shinyamaguchi: 'shin-yamaguchi', shinyokohama: 'shin-yokohama', takeoonsen: 'takeo-onsen' };
+  function guideHref(a, b) {
+    var l = lang(), suffix = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/' }[l] || '';
+    var fa = SLUG_FIX[a] || a, fb = SLUG_FIX[b] || b;
+    var c = [fa + '-' + fb, fb + '-' + fa, a + '-' + b, b + '-' + a], i;
+    for (i = 0; i < c.length; i++) if (JP_GUIDES.indexOf(' ' + c[i] + ' ') > -1) return '/rutas/' + c[i] + '/' + suffix;
+    return null;
+  }
+  function paintPanel(seg, d, a, b, tx) {
+    var key = a + '|' + b + '|' + lang();
+    if (seg.getAttribute('data-pi-jp') === key) return;
+    var old = seg.querySelector('.pi.pi-jp');
+    if (old) old.remove();
+    var buy = seg.querySelector('a.ai-segment-buy');
+    if (!buy) return;
+    var t = PI_JP[lang()] || PI_JP.en;
+    var g = guideHref(a, b);
+    var box = document.createElement('div');
+    box.className = 'pi pi-jp';
+    box.innerHTML = '<div class="rp-eyebrow pi-eyebrow">' + esc(t.opts) + '</div><div class="rp-modes pi-modes">' +
+      '<div class="rp-row is-train"><span class="rp-ico">' + TRAIN_ICON + '</span>' +
+      '<div><div class="rp-label">' + esc(t.train) + '</div><div class="rp-bar" aria-hidden="true"><i style="width:100%"></i></div></div>' +
+      '<span class="rp-meta"><span class="rp-time">' + esc(tx.from.replace('{d}', fmtMin(d.m))) + '</span><span class="rp-price">' + esc(tx.direct) + '</span></span></div>' +
+      '</div><p class="rp-note pi-note">' + esc(t.note) + '</p>' +
+      (g ? '<a class="pi-guide" href="' + esc(g) + '">' + esc(t.guide) + ' <span aria-hidden="true">→</span></a>' : '');
+    seg.insertBefore(box, buy);
+    seg.setAttribute('data-pi-jp', key);
+  }
   function fmtMin(m) {
     var h = Math.floor(m / 60), r = m % 60;
     return h ? (r ? h + ' h ' + r + ' min' : h + ' h') : m + ' min';
@@ -452,6 +494,7 @@
         buy.setAttribute('data-klook', '1');
         buy.textContent = BUY_KLOOK[lang()] || BUY_KLOOK.en;
       }
+      paintPanel(seg, d, c[0], c[1], tx);
       var tm = seg.querySelector('.ai-segment-time');
       if (tm) tm.textContent = tx.from.replace('{d}', fmtMin(d.m));
       var tr = seg.querySelector('.ai-segment-train');
