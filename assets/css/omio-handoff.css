@@ -577,3 +577,13 @@ body:not([data-region="japan"]) .hotels-bar > .hotels-go-kl, body:not([data-regi
   body.home-v2:not(.hotels-mode) .hero-title-inner { transform: translateY(-18px); }
   body.home-v2:not(.hotels-mode) .hero-title-photo-wrap { transform: translateY(-34px); }
 }
+
+/* Promo de Booking en el panel de Hoteles (solo Europa) */
+.hotels-promo { display: flex; align-items: center; gap: 12px; margin: 12px 0 2px; padding: 10px 14px; border-radius: 14px; background: #eaf2ff; border: 1px solid rgba(0, 87, 184, .28); color: #14151a; text-decoration: none; }
+.hotels-promo[hidden] { display: none; }
+body[data-region="japan"] .hotels-promo { display: none; }
+.hotels-promo-tag { flex: 0 0 auto; padding: 3px 10px; border-radius: 999px; background: #0057b8; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+.hotels-promo-text { flex: 1 1 auto; min-width: 0; font-size: 14px; line-height: 1.35; color: #14151a; }
+.hotels-promo-go { flex: 0 0 auto; font-size: 14px; font-weight: 700; color: #0057b8; white-space: nowrap; }
+.hotels-promo:hover { border-color: rgba(0, 87, 184, .6); }
+@media (max-width: 640px) { .hotels-promo { flex-wrap: wrap; } .hotels-promo-text { flex: 1 1 100%; } }
