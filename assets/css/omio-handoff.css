@@ -257,16 +257,29 @@ body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"]::b
 .hotels-allbox .hotels-group:first-child { margin-top: 0; }
 .hotels-flag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; background: var(--omio-lavender, #EEF3FB); color: var(--omio-navy, #182C66); border: 1.5px solid var(--omio-coral, #FB6B6C); }
 
-/* Franja Omio detrás del planificador (en modo Japón, color Klook) */
+/* Franja Omio detrás del planificador: cielo azul suave con un toque de durazno, como la cabecera de Omio (en modo Japón, durazno Klook) */
 body.home-v2 .search-card { position: relative; z-index: 2; }
 body.home-v2 .trust-band { position: relative; z-index: 1; margin-top: -64px; padding: 96px 16px 30px; }
 body.home-v2 .trust-band::before {
   content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%);
-  background: linear-gradient(180deg, #0F1B5C 0%, #182C66 100%); border-bottom: 5px solid var(--omio-coral, #FB6B6C);
+  background:
+    radial-gradient(ellipse 60% 90% at 88% 100%, rgba(255, 200, 190, .55) 0%, rgba(255, 200, 190, 0) 70%),
+    radial-gradient(ellipse 55% 80% at 12% 0%, rgba(255, 255, 255, .45) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, #7FA3DB 0%, #A9C1E8 55%, #CFDBF2 100%);
+  border-bottom: 4px solid var(--omio-coral, #FB6B6C);
 }
-body.home-v2[data-region="japan"] .trust-band::before { background: linear-gradient(180deg, #2A2118 0%, #3b2d20 100%); border-bottom-color: #FF5B00; }
-body.home-v2 .trust-band .search-benefits b { color: #fff; }
-body.home-v2 .trust-band .search-benefits span { color: rgba(255,255,255,.78); }
-body.home-v2 .trust-band .search-benefits svg { background: rgba(255,255,255,.12); color: #fff; stroke: #fff; }
-body.home-v2 .trust-band .search-extras .hero-ops-klook { color: rgba(255,255,255,.82); }
+body.home-v2[data-region="japan"] .trust-band::before {
+  background:
+    radial-gradient(ellipse 60% 90% at 88% 100%, rgba(255, 170, 120, .45) 0%, rgba(255, 170, 120, 0) 70%),
+    linear-gradient(180deg, #FFC9A3 0%, #FFDCC2 55%, #FFEBDA 100%);
+  border-bottom-color: #FF5B00;
+}
+body.home-v2 .trust-band .search-benefits b { color: #0F1B5C; }
+body.home-v2 .trust-band .search-benefits span { color: #2b3d78; }
+body.home-v2 .trust-band .search-benefits svg { background: rgba(255,255,255,.7); stroke: #0F1B5C; }
+body.home-v2 .trust-band .search-extras .hero-ops-klook { color: #1c2c68; }
+body.home-v2[data-region="japan"] .trust-band .search-benefits b { color: #2A2118; }
+body.home-v2[data-region="japan"] .trust-band .search-benefits span,
+body.home-v2[data-region="japan"] .trust-band .search-extras .hero-ops-klook { color: #5a4636; }
+body.home-v2[data-region="japan"] .trust-band .search-benefits svg { stroke: #E65200; }
 html, body.home-v2 { overflow-x: clip; }
