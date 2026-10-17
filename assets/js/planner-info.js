@@ -1,6 +1,6 @@
 /*
  * Rellena la tarjeta compacta del planificador cuando el par de ciudades es conocido (sin llamar a la IA):
- * duración aproximada por medio de transporte (tren, bus, vuelo, ferry) y acceso a la guía de la ruta.
+ * duración y precio orientativos por medio de transporte (tren, bus, vuelo, ferry) y acceso a la guía de la ruta.
  * Datos: assets/data/pair-data.json (catálogo de productos de Omio; duración aproximada, no la del tren
  * más rápido). Reusa los estilos .rp-* de route-premium.css.
  */
@@ -8,11 +8,11 @@
   'use strict';
 
   var L10N = {
-    en: { opts: 'Travel options', train: 'Train', bus: 'Bus', flight: 'Flight', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Approximate typical journey times based on Omio data. They vary by date and operator.', guide: 'See the full route guide' },
-    es: { opts: 'Opciones de viaje', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones aproximadas según datos de Omio. Varían según la fecha y el operador.', guide: 'Ver la guía completa de la ruta' },
-    fr: { opts: 'Options de voyage', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées approximatives d’après les données d’Omio. Elles varient selon la date et l’opérateur.', guide: 'Voir le guide complet de la ligne' },
-    it: { opts: 'Come viaggiare', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate approssimative secondo i dati di Omio. Variano in base alla data e all’operatore.', guide: 'Vedi la guida completa del percorso' },
-    ja: { opts: '移動手段', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間です。日付や運行会社によって異なります。', guide: 'ルートガイドを見る' }
+    en: { opts: 'Travel options', train: 'Train', bus: 'Bus', flight: 'Flight', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Approximate typical journey times and low-fare prices based on Omio data. Final prices depend on date, operator and how early you book.', guide: 'See the full route guide' },
+    es: { opts: 'Opciones de viaje', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones y precios orientativos según datos de Omio. El precio final depende de la fecha, el operador y la antelación de la compra.', guide: 'Ver la guía completa de la ruta' },
+    fr: { opts: 'Options de voyage', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées et prix indicatifs d’après les données d’Omio. Le prix final dépend de la date, de l’opérateur et de l’avance de réservation.', guide: 'Voir le guide complet de la ligne' },
+    it: { opts: 'Come viaggiare', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate e prezzi indicativi secondo i dati di Omio. Il prezzo finale dipende da data, operatore e anticipo di prenotazione.', guide: 'Vedi la guida completa del percorso' },
+    ja: { opts: '移動手段', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間と料金の目安です。最終料金は日付、運行会社、予約時期によって変わります。', guide: 'ルートガイドを見る' }
   };
   var ICON = {
     train: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg>',
@@ -33,6 +33,9 @@
     if (!h) return '≈ ' + m + t.m;
     if (!m) return '≈ ' + h + t.h.trim();
     return '≈ ' + h + t.h + String(m).padStart(t.m === '分' ? 1 : 2, '0') + t.m;
+  }
+  function fmtPrice(v, l) {
+    return (l === 'en' || l === 'ja') ? '≈ €' + v : '≈ ' + v + ' €';
   }
   function load() {
     if (data) return Promise.resolve(data);
@@ -65,7 +68,9 @@
     seg.setAttribute('data-pi', '1');
     var t = L10N[lang()];
     var o = d && cityId(d, a), de = d && cityId(d, b), raw = o && de && (d.p[o + '_' + de] || d.p[de + '_' + o]);
-    var vals = raw ? raw.split(',').map(Number) : [];
+    var parts = raw ? raw.split('|') : [];
+    var vals = parts[0] ? parts[0].split(',').map(Number) : [];
+    var prices = parts[1] ? parts[1].split(',').map(Number) : [];
     var present = MODES.filter(function (k, i) { return vals[i] > 0; });
     var html = '';
     if (present.length) {
@@ -74,7 +79,8 @@
         var v = vals[MODES.indexOf(k)], pct = Math.max(8, Math.round(v / max * 100));
         return '<div class="rp-row' + (k === 'train' ? ' is-train' : '') + '"><span class="rp-ico">' + ICON[k] + '</span>' +
           '<div><div class="rp-label">' + esc(t[k]) + '</div><div class="rp-bar" aria-hidden="true"><i style="width:' + pct + '%"></i></div></div>' +
-          '<span class="rp-time">' + fmt(v, t) + '</span></div>';
+          '<span class="rp-meta"><span class="rp-time">' + fmt(v, t) + '</span>' +
+          (prices[MODES.indexOf(k)] > 0 ? '<span class="rp-price">' + fmtPrice(prices[MODES.indexOf(k)], lang()) + '</span>' : '') + '</span></div>';
       }).join('') + '</div><p class="rp-note pi-note">' + esc(t.note) + '</p>';
       if (vals[0] > 0 && time) time.textContent = fmt(vals[0], t);
     }

@@ -2,7 +2,8 @@
  * Módulo "Cómo viajar" de las páginas de ruta europeas: mapa con el recorrido y duraciones
  * aproximadas por medio (tren, bus, vuelo, ferry). Datos: assets/data/route-data.json, sacado del
  * catálogo de productos de Omio (coordenadas y duración mínima por medio; ver glosx-omio-europa).
- * Las duraciones se rotulan como aproximadas: el catálogo no es la duración del tren más rápido.
+ * Duraciones y precios se rotulan como orientativos: el catálogo no es el tren más rápido ni la tarifa mínima del día
+ * (precios en euros: libras del catálogo UK × 1,1816, la tasa que usan los propios catálogos de Omio).
  * Leaflet se carga solo cuando el módulo está cerca de la pantalla. Mosaicos de OpenStreetMap (uso ligero, con atribución);
  * CARTO ya exige clave de API.
  */
@@ -13,11 +14,11 @@
   var LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
 
   var L10N = {
-    en: { eyebrow: 'Travel options', title: 'How to get from {a} to {b}', train: 'Train', bus: 'Bus', flight: 'Flight', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Approximate typical journey times based on Omio data. They vary by date and operator.' },
-    es: { eyebrow: 'Opciones de viaje', title: 'Cómo ir de {a} a {b}', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones aproximadas según datos de Omio. Varían según la fecha y el operador.' },
-    fr: { eyebrow: 'Options de voyage', title: 'Comment aller de {a} à {b}', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées approximatives d’après les données d’Omio. Elles varient selon la date et l’opérateur.' },
-    it: { eyebrow: 'Come viaggiare', title: 'Come andare da {a} a {b}', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate approssimative secondo i dati di Omio. Variano in base alla data e all’operatore.' },
-    ja: { eyebrow: '移動手段', title: '{a}から{b}への行き方', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間です。日付や運行会社によって異なります。' }
+    en: { eyebrow: 'Travel options', title: 'How to get from {a} to {b}', train: 'Train', bus: 'Bus', flight: 'Flight', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Approximate typical journey times and low-fare prices based on Omio data. Final prices depend on date, operator and how early you book.' },
+    es: { eyebrow: 'Opciones de viaje', title: 'Cómo ir de {a} a {b}', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones y precios orientativos según datos de Omio. El precio final depende de la fecha, el operador y la antelación de la compra.' },
+    fr: { eyebrow: 'Options de voyage', title: 'Comment aller de {a} à {b}', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées et prix indicatifs d’après les données d’Omio. Le prix final dépend de la date, de l’opérateur et de l’avance de réservation.' },
+    it: { eyebrow: 'Come viaggiare', title: 'Come andare da {a} a {b}', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate e prezzi indicativi secondo i dati di Omio. Il prezzo finale dipende da data, operatore e anticipo di prenotazione.' },
+    ja: { eyebrow: '移動手段', title: '{a}から{b}への行き方', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間と料金の目安です。最終料金は日付、運行会社、予約時期によって変わります。' }
   };
 
   // Íconos de línea (monocromos), sin emojis
@@ -45,6 +46,10 @@
     return '≈ ' + h + t.h + String(m).padStart(t.m === '分' ? 1 : 2, '0') + t.m;
   }
 
+  function fmtPrice(v, l) {
+    return (l === 'en' || l === 'ja') ? '≈ €' + v : '≈ ' + v + ' €';
+  }
+
   function esc(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
@@ -59,7 +64,8 @@
         return '<div class="rp-row' + (k === 'train' ? ' is-train' : '') + '">' +
           '<span class="rp-ico">' + ICON[k] + '</span>' +
           '<div><div class="rp-label">' + esc(t[k]) + '</div><div class="rp-bar" aria-hidden="true"><i style="width:' + pct + '%"></i></div></div>' +
-          '<span class="rp-time">' + fmt(d.m[k], t) + '</span></div>';
+          '<span class="rp-meta"><span class="rp-time">' + fmt(d.m[k], t) + '</span>' +
+          (d.p && d.p[k] ? '<span class="rp-price">' + fmtPrice(d.p[k], lang()) + '</span>' : '') + '</span></div>';
       }).join('') + '</div><p class="rp-note">' + esc(t.note) + '</p>';
     }
     var sec = document.createElement('section');

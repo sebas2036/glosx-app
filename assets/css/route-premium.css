@@ -99,3 +99,7 @@ body.home-v2 .search-card .ai-segment > .pi { grid-column: 1 / -1; grid-row: 3; 
 @media (max-width: 760px) {
   body.home-v2 .search-card .ai-segment > .pi { grid-column: 1; grid-row: auto; }
 }
+
+/* precio orientativo bajo la duración */
+.rp-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.rp-price { font-size: 12px; font-weight: 500; color: var(--muted, #55565f); white-space: nowrap; font-variant-numeric: tabular-nums; }
