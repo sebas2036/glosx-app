@@ -469,3 +469,14 @@ body.home-v2 .search-tab.is-tapped { animation: tabTap .42s ease; }
 body.home-v2[data-region="japan"] .search-tab.is-tapped { animation-name: tabTapJp; }
 @keyframes tabTapJp { 0% { transform: scale(1); } 30% { transform: translateY(1px) scale(.96); box-shadow: 0 0 0 4px rgba(255, 91, 0, .35); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 91, 0, 0); } }
 @media (prefers-reduced-motion: reduce) { body.home-v2 .search-tab.is-tapped { animation: none; } }
+
+/* Modo Japón con la cuadrícula de fotos o en móvil: selector y pestañas más opacos para que se lean sobre fotos cargadas, y dentro del ancho de la pantalla */
+body.home-v2[data-region="japan"].hotels-mode .region-switch,
+body.home-v2[data-region="japan"].hotels-mode .search-tab:not(.on) { background: rgba(255, 240, 227, .93); -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: 0 2px 10px rgba(0, 0, 0, .18); }
+@media (max-width: 760px) {
+  body.home-v2[data-region="japan"] .region-switch,
+  body.home-v2[data-region="japan"] .search-tab:not(.on) { background: rgba(255, 240, 227, .94); -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: 0 2px 10px rgba(0, 0, 0, .18); }
+  body.home-v2 .search-tabs { max-width: 100%; box-sizing: border-box; }
+  body.home-v2 .region-switch { display: flex; width: 100%; max-width: 100%; box-sizing: border-box; }
+  body.home-v2 .region-switch .region-btn { flex: 1 1 0; min-width: 0; padding: 9px 6px; font-size: 13px; text-align: center; white-space: nowrap; }
+}
