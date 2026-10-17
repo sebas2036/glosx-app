@@ -408,3 +408,13 @@ body.home-v2 .country-popup.wide .group-label { break-after: avoid; break-inside
 body.home-v2 .country-popup.wide .group-label:first-child { margin-top: 0; }
 body.home-v2 .country-popup.wide .country-routes a { break-inside: avoid; }
 @media (max-width: 600px) { body.home-v2 .country-popup.wide { width: min(92vw, 360px); } body.home-v2 .country-popup.wide .country-routes { column-count: 1; } }
+
+/* Corrige el recorte de las filas: con altura máxima, los enlaces del flex se encogían y se cortaban */
+body.home-v2 .country-popup .country-routes a,
+body.home-v2 .country-popup .country-routes .group-label { flex: 0 0 auto; }
+body.home-v2 .country-popup.wide .country-routes { display: block; }
+body.home-v2 .country-popup.wide .country-routes a { display: block; margin-bottom: 3px; }
+@media (hover: hover) and (pointer: fine) { body.home-v2 .country-popup .country-routes a:hover { background: rgba(251, 107, 108, .16); color: var(--omio-navy, #0F1B5C); } }
+body.home-v2[data-region="japan"] .country-popup .country-routes a:hover { background: rgba(255, 91, 0, .14); color: #2A2118; }
+body.home-v2 .country-popup .country-routes .group-label { color: #2b3d78; }
+body.home-v2[data-region="japan"] .country-popup .country-routes .group-label { color: #8a4a1a; }
