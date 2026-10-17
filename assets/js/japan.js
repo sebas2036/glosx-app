@@ -727,38 +727,70 @@
   }
 
   // Panel de hoteles dentro de la propia tarjeta del buscador (sin scroll): reutiliza el menú de ciudades de Klook.
-  var HOTEL_PH = { en: 'Search a city', es: 'Busca una ciudad', fr: 'Cherchez une ville', it: 'Cerca una città', de: 'Stadt suchen', pt: 'Procure uma cidade', ja: '都市を検索' };
+  var HOTEL_UI = {
+    en: { ph: 'City, area or landmark', lab: 'Where to?', pop: 'Popular destinations', go: 'Search hotels', none: 'No matches — try another city' },
+    es: { ph: 'Ciudad o zona', lab: '¿A dónde?', pop: 'Destinos populares', go: 'Buscar hoteles', none: 'Sin resultados: prueba otra ciudad' },
+    fr: { ph: 'Ville ou quartier', lab: 'Où allez-vous ?', pop: 'Destinations populaires', go: 'Rechercher des hôtels', none: 'Aucun résultat : essayez une autre ville' },
+    it: { ph: 'Città o zona', lab: 'Dove vai?', pop: 'Destinazioni popolari', go: 'Cerca hotel', none: 'Nessun risultato: prova un’altra città' },
+    de: { ph: 'Stadt oder Gegend', lab: 'Wohin?', pop: 'Beliebte Reiseziele', go: 'Hotels suchen', none: 'Keine Treffer – andere Stadt versuchen' },
+    pt: { ph: 'Cidade ou região', lab: 'Para onde?', pop: 'Destinos populares', go: 'Buscar hotéis', none: 'Sem resultados: tente outra cidade' },
+    ja: { ph: '都市・エリア', lab: 'どこへ？', pop: '人気の目的地', go: 'ホテルを検索', none: '見つかりません。別の都市をお試しください' }
+  };
+  var HOTEL_POP = ['Paris', 'Rome', 'London', 'Barcelona', 'Amsterdam', 'Vienna', 'Prague', 'Berlin', 'Zurich', 'Venice', 'Madrid', 'Florence', 'Budapest', 'Munich'];
+  function hnorm(x) { return String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); }
   function buildHotels() {
     var card = document.querySelector('.search-card'), src = document.getElementById('klookCityMenu');
     if (!card || !src || !src.children.length) return null;
     var panel = card.querySelector('[data-panel="hotels"]');
     if (panel) return panel;
+    var u = HOTEL_UI[lang()] || HOTEL_UI.en;
+    var cities = [];
+    Array.prototype.forEach.call(src.querySelectorAll('.klook-city-item'), function (n) { cities.push(n.textContent.trim()); });
+    var pop = HOTEL_POP.filter(function (c) { return cities.indexOf(c) !== -1; });
     panel = document.createElement('div');
     panel.className = 'search-panel hotels-panel';
     panel.setAttribute('data-panel', 'hotels');
-    var inp = document.createElement('input');
-    inp.type = 'search'; inp.className = 'hotels-filter'; inp.setAttribute('autocomplete', 'off');
-    inp.placeholder = HOTEL_PH[lang()] || HOTEL_PH.en;
-    var grid = document.createElement('div'); grid.className = 'hotels-grid';
-    Array.prototype.forEach.call(src.children, function (n) {
-      var c = n.cloneNode(true);
-      if (c.classList.contains('klook-city-group-label')) c.className = 'hotels-group';
-      else c.className = 'hotels-city';
-      grid.appendChild(c);
+    panel.innerHTML = '<div class="hotels-bar"><label class="hotels-field"><span class="hotels-lab"></span><input type="text" class="hotels-input" autocomplete="off" /><div class="hotels-list" role="listbox"></div></label><button type="button" class="hotels-go"></button></div><div class="hotels-pop"><span class="hotels-pop-lab"></span><div class="hotels-pop-row"></div></div>';
+    var lab = panel.querySelector('.hotels-lab'), inp = panel.querySelector('.hotels-input'), list = panel.querySelector('.hotels-list'),
+        go = panel.querySelector('.hotels-go'), popLab = panel.querySelector('.hotels-pop-lab'), row = panel.querySelector('.hotels-pop-row');
+    lab.textContent = u.lab; inp.placeholder = u.ph; go.textContent = u.go; popLab.textContent = u.pop;
+    var chosen = '';
+    function pick(c) { chosen = c; inp.value = c; list.classList.remove('open'); }
+    function matches() {
+      var q = hnorm(inp.value);
+      if (!q) return pop;
+      var st = cities.filter(function (c) { return hnorm(c).indexOf(q) === 0; });
+      var inn = cities.filter(function (c) { return hnorm(c).indexOf(q) > 0; });
+      return st.concat(inn);
+    }
+    function paintList() {
+      var m = matches().slice(0, 8);
+      list.innerHTML = '';
+      if (!m.length) { var e = document.createElement('div'); e.className = 'hotels-none'; e.textContent = u.none; list.appendChild(e); }
+      m.forEach(function (c) {
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-opt'; b.textContent = c;
+        b.addEventListener('mousedown', function (ev) { ev.preventDefault(); pick(c); });
+        list.appendChild(b);
+      });
+      list.classList.add('open');
+    }
+    function submit() {
+      var m = matches();
+      var exact = cities.filter(function (c) { return hnorm(c) === hnorm(inp.value); })[0];
+      var city = exact || m[0];
+      if (!city || !inp.value.trim()) { inp.focus(); paintList(); return; }
+      if (typeof window.goKlookHotelCity === 'function') window.goKlookHotelCity(city);
+    }
+    inp.addEventListener('focus', paintList);
+    inp.addEventListener('input', paintList);
+    inp.addEventListener('blur', function () { setTimeout(function () { list.classList.remove('open'); }, 120); });
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); var first = list.querySelector('.hotels-opt'); if (list.classList.contains('open') && first && hnorm(inp.value) !== hnorm(first.textContent)) pick(first.textContent); else submit(); } });
+    go.addEventListener('click', submit);
+    pop.forEach(function (c) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = c;
+      b.addEventListener('click', function () { pick(c); submit(); });
+      row.appendChild(b);
     });
-    inp.addEventListener('input', function () {
-      var q = inp.value.trim().toLowerCase(), groupOn = null;
-      var kids = grid.children;
-      for (var i = kids.length - 1; i >= 0; i--) {
-        var k = kids[i];
-        if (k.classList.contains('hotels-city')) {
-          var hit = !q || k.textContent.toLowerCase().indexOf(q) !== -1;
-          k.style.display = hit ? '' : 'none';
-          if (hit) groupOn = true;
-        } else { k.style.display = groupOn || !q ? '' : 'none'; groupOn = null; }
-      }
-    });
-    panel.appendChild(inp); panel.appendChild(grid);
     card.appendChild(panel);
     return panel;
   }
@@ -771,7 +803,7 @@
   function toggleHotels(chip) {
     if (document.body.classList.contains('hotels-mode')) { closeHotels(); return; }
     var hp = buildHotels(); if (!hp) return;
-    var fi = hp.querySelector('.hotels-filter'); if (fi && fi.value) { fi.value = ''; fi.dispatchEvent(new Event('input')); }
+    var fi = hp.querySelector('.hotels-input'); if (fi) fi.value = '';
     document.querySelectorAll('.search-tab').forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
     document.querySelectorAll('.search-panel').forEach(function (x) { x.classList.toggle('on', x === hp); });
     document.body.classList.add('hotels-mode');
