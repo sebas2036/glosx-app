@@ -6,6 +6,7 @@
  */
 const data = require('./japan-pairs-data.json');
 const META = require('./japan-cities-meta.js');
+const JA = require('./japan-ja-data.js');
 
 const LANGS = ['en', 'es', 'fr', 'it'];
 const DISPLAY = {};
@@ -193,6 +194,50 @@ function build(row) {
   faqs.es = [[`¿Cuánto dura el tren de ${from.es} a ${to.es}?`, `El tren directo más rápido tarda ${unas ? unas + ' ' : ''}${lg('es')}${T1 ? ' (' + T1 + ')' : ''}.`], [`¿Hay tren directo de ${from.es} a ${to.es}?`, 'Sí, hay servicios directos, sin cambio de tren.'], [`¿El Japan Rail Pass cubre de ${from.es} a ${to.es}?`, jr.es]];
   faqs.fr = [[`Combien de temps dure le train de ${from.fr} à ${to.fr} ?`, `Le train direct le plus rapide met environ ${lg('fr')}${T1 ? ' (' + T1 + ')' : ''}.`], [`Y a-t-il un train direct de ${from.fr} à ${to.fr} ?`, 'Oui, des services directs circulent, sans changement.'], [`Le Japan Rail Pass couvre-t-il ${from.fr} ${to.fr} ?`, jr.fr]];
   faqs.it = [[`Quanto dura il treno da ${from.it} a ${to.it}?`, `Il treno diretto più veloce impiega circa ${lg('it')}${T1 ? ' (' + T1 + ')' : ''}.`], [`C’è un treno diretto da ${from.it} a ${to.it}?`, 'Sì, ci sono servizi diretti, senza cambi.'], [`Il Japan Rail Pass copre ${from.it} ${to.it}?`, jr.it]];
+
+
+  // ── Japonés nativo (plantilla propia, no traducción de las otras lenguas) ──
+  {
+    const fmtJa = x => x < 60 ? x + '分' : Math.floor(x / 60) + '時間' + (x % 60 ? (x % 60) + '分' : '');
+    const nA = JA.CITY[a], nB = JA.CITY[b];
+    const tj = x => JA.TRAIN[x] || x;
+    const svc = T1 ? (s ? '新幹線「' + tj(T1) + '」' : '「' + tj(T1) + '」') : null;
+    const cityJa = slg => {
+      const [region, tag, sight] = META[slg];
+      const n = JA.CITY[slg], rg = JA.REGION[region], sg = sight && JA.SIGHT[sight];
+      if (tag === 'airport') return n + 'は' + rg + 'にある空港の玄関口です。';
+      return n + 'は' + rg + 'の' + JA.TAG[tag] + (sg ? 'で、' + sg + 'が有名です。' : 'です。');
+    };
+    const stn = (slg, n) => isAirport(slg) ? n : n + '駅';
+    from.ja = nA; to.ja = nB;
+    seo.ja = {
+      title: `${nA}から${nB}へ電車で｜${svc ? svc + 'で' : ''}最短${fmtJa(m)}`,
+      description: `${nA}から${nB}まで${svc ? svc + 'で' : ''}最短約${fmtJa(m)}、乗り換えなしの直通。駅、列車の選び方、Klookでの予約方法をご案内します。`
+    };
+    lead.ja = `${nA}から${nB}までの最速列車は、${svc ? svc + 'で' : ''}約${fmtJa(m)}。乗り換えなしの直通です。${cityJa(b)}`;
+    facts.ja = [
+      `最短所要時間：約${fmtJa(m)}${T1 ? '（' + tj(T1) + '）' : ''}。`,
+      t.length ? `この区間の列車：${t.map(tj).join('、')}。` : '日中は本数の多い列車が運行しています。',
+      `区間：${stn(a, nA)}〜${stn(b, nB)}。`,
+      '乗り換えなしの直通です。'
+    ];
+    if (hasNozomi) choose.ja = `最速は「${tj(T1)}」です。ただしジャパン・レール・パスでは、のぞみ・みずほには乗れません。パスを使う場合は、同じ路線のほかの新幹線を選びましょう（所要時間はやや長くなります）。`;
+    else if (op) choose.ja = `この区間は${JA.OPERATOR[op]}（私鉄）の列車で、ジャパン・レール・パスは使えません。乗り換えなしで快適に移動できます。座席指定のルールは、ご利用日の条件を予約時にご確認ください。`;
+    else if (s) choose.ja = `最短なら${T1 ? '「' + tj(T1) + '」' : '新幹線'}が最適です${t[1] ? '。「' + tj(t[1]) + '」も利用できます' : ''}。新幹線はJRの列車で、ジャパン・レール・パスは基本的に利用できます（のぞみ・みずほを除く）。お持ちのパスの条件をご確認ください。`;
+    else choose.ja = `${T1 ? '「' + tj(T1) + '」が最速の直通列車です' : 'この区間には直通列車があります'}${t[1] ? '。「' + tj(t[1]) + '」も選べます' : ''}。JRの列車なので、ジャパン・レール・パスは基本的に利用できます。お持ちのパスの条件をご確認ください。`;
+    const third = s ? '3辺の合計が160〜250cmのスーツケースは、特大荷物スペースつき座席の予約が必要です。'
+      : airportInvolved ? '着陸前に予約しておくと、フライト後に切符売り場で時間を取られずに済みます。'
+      : 'ゴールデンウィークや夏休み、桜のシーズンなど混み合う時期は、指定席が安心です。';
+    tips.ja = [cityJa(a), third, 'ご利用日の最新の時刻表をご確認ください。出発時刻や運行列車は、曜日や季節によって変わります。'];
+    const jrJa = hasNozomi ? 'のぞみ・みずほを除く、同じ路線のほかの新幹線で利用できます。'
+      : op ? `いいえ。この区間は${JA.OPERATOR[op]}（私鉄）が運行しているため、対象外です。`
+      : '基本的に利用できます。JRの列車で、パスの対象です（のぞみ・みずほを除く）。お持ちのパスの条件をご確認ください。';
+    faqs.ja = [
+      [`${nA}から${nB}まで電車で何分ですか？`, `最速の直通列車で約${fmtJa(m)}です${T1 ? '（' + tj(T1) + '）' : ''}。`],
+      [`${nA}から${nB}まで乗り換えなしで行けますか？`, 'はい。直通列車があり、乗り換えは不要です。'],
+      [`ジャパン・レール・パスで${nA}〜${nB}は乗れますか？`, jrJa]
+    ];
+  }
 
   return { slug, photo: photoFor(slug, a, b, s), fromKey: a, toKey: b, published: '2026-10-10', from, to, seo, lead, facts, choose, tips, faqs };
 }

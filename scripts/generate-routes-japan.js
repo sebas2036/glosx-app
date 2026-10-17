@@ -8,13 +8,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const LANGS = ['en', 'es', 'fr', 'it'];
-const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', it: '/it/' };
-const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT' };
-const LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', it: 'Italiano' };
+const LANGS = ['en', 'es', 'fr', 'it', 'ja'];
+const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', it: '/it/', ja: '/ja/' };
+const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT', ja: 'JA' };
+const LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', it: 'Italiano', ja: '日本語' };
 const BC = {
   en: { home: 'Home', routes: 'Routes' }, es: { home: 'Inicio', routes: 'Rutas' },
-  fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' }
+  fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' }, ja: { home: 'ホーム', routes: 'ルート一覧' }
 };
 const UI = {
   en: { back: 'All routes', badge: 'Route guide · Japan', meta: 'By WoW Train · Updated October 2026 · 4 min read', btn: 'Book Ticket',
@@ -32,7 +32,11 @@ const UI = {
   it: { back: 'Tutti i percorsi', badge: 'Guida al percorso · Giappone', meta: 'Di WoW Train · Aggiornato a ottobre 2026 · 4 min di lettura', btn: 'Prenota',
     cta: (a, b) => `Controlla gli orari e prenota <span class="klook-cta-city">${a}</span> &rarr; <span class="klook-cta-city">${b}</span> su Klook`,
     sub: 'Orari in tempo reale per la tua data · le tariffe cambiano ogni giorno', facts: 'Dati essenziali', choose: 'Quale treno scegliere', tips: 'Consigli prima di partire',
-    faq: 'Domande frequenti', more: 'Altri percorsi in treno in Giappone', ready: 'Pronto a partire? Guarda gli orari e le tariffe di oggi e prenota il tuo posto su Klook.', note: 'Si apre in una nuova scheda', cmp: 'Confronta orari e tariffe:', check: 'Vedi gli orari' }
+    faq: 'Domande frequenti', more: 'Altri percorsi in treno in Giappone', ready: 'Pronto a partire? Guarda gli orari e le tariffe di oggi e prenota il tuo posto su Klook.', note: 'Si apre in una nuova scheda', cmp: 'Confronta orari e tariffe:', check: 'Vedi gli orari' },
+  ja: { back: 'ルート一覧', badge: 'ルートガイド · 日本', meta: 'WoW Train · 2026年10月更新 · 読了目安4分', btn: '予約する',
+    cta: (a, b) => `<span class="klook-cta-city">${a}</span> &rarr; <span class="klook-cta-city">${b}</span> の時刻を確認してKlookで予約`,
+    sub: '出発日の最新時刻を表示 · 運賃は日々変動します', facts: '基本情報', choose: 'どの列車を選ぶ？', tips: '出発前のチェックポイント',
+    faq: 'よくある質問', more: '日本のほかの鉄道ルート', ready: 'さっそく出発しませんか？ 本日の時刻と運賃を確認して、Klookで座席を予約できます。', note: '新しいタブで開きます', cmp: '時刻と運賃を比較：', check: '時刻を確認する' }
 };
 
 const ROUTES = [
@@ -282,10 +286,19 @@ const ROUTES = [
     }
   }
 ];
+// Japonés nativo de las rutas escritas a mano
+const JA_MANUAL = require('./routes-japan-ja-manual');
 // Lote 2 (09-oct-2026)
 ROUTES.push(...require('./routes-japan-lote2'));
 // Resto de los pares verificados (181), generados con datos reales de Klook y datos por ciudad
 ROUTES.push(...require('./routes-japan-auto'));
+ROUTES.forEach(r => {
+  const j = JA_MANUAL[r.slug];
+  if (!j) return;
+  r.from.ja = j.from; r.to.ja = j.to; r.seo.ja = j.seo; r.lead.ja = j.lead; r.facts.ja = j.facts; r.choose.ja = j.choose; r.tips.ja = j.tips; r.faqs.ja = j.faqs;
+});
+const missingJa = ROUTES.filter(r => !r.seo.ja).map(r => r.slug);
+if (missingJa.length) { console.error('Faltan datos en japonés:', missingJa.join(', ')); process.exit(1); }
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const url = (slug, lang) => `https://glosx.app/rutas/${slug}${SUFFIX[lang]}`;
@@ -300,8 +313,8 @@ function schema(r, lang) {
   const seo = r.seo[lang];
   const graph = [
     { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: BC[lang].home, item: 'https://glosx.app/' },
-      { '@type': 'ListItem', position: 2, name: BC[lang].routes, item: 'https://glosx.app/explore/' },
+      { '@type': 'ListItem', position: 1, name: BC[lang].home, item: lang === 'ja' ? 'https://glosx.app/ja/' : 'https://glosx.app/' },
+      { '@type': 'ListItem', position: 2, name: BC[lang].routes, item: lang === 'ja' ? 'https://glosx.app/ja/explore/' : 'https://glosx.app/explore/' },
       { '@type': 'ListItem', position: 3, name: `${r.from[lang]} → ${r.to[lang]}`, item: url(r.slug, lang) }] },
     { '@type': 'FAQPage', mainEntity: r.faqs[lang].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     { '@type': 'Article', headline: seo.title, description: seo.description, image: 'https://glosx.app/hero-bg.jpg',
@@ -385,6 +398,10 @@ function render(r, lang) {
     '{{ogTitle}}': esc(seo.title), '{{ogDescription}}': esc(seo.description),
     '{{twitterTitle}}': esc(seo.title), '{{twitterDescription}}': esc(seo.description),
     '{{videoCss}}': '', '{{schema}}': schema(r, lang), '{{langSwitch}}': langSwitch(r.slug, lang), '{{backText}}': u.back,
+    '{{homeHref}}': lang === 'ja' ? '/ja/' : '/', '{{routesHref}}': lang === 'ja' ? '/ja/explore/' : '/rutas/',
+    '{{footerLinks}}': lang === 'ja'
+      ? '<a href="/blog.html">ブログ</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/privacy.html">プライバシー</a> · <a href="/terms.html">利用規約</a>'
+      : '<a href="/blog.html">Blog</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>',
     '{{badge}}': u.badge, '{{mainTitle}}': esc(`${r.from[lang]} → ${r.to[lang]}`), '{{metaText}}': u.meta
   };
   let html = head + mainHtml(r, lang) + tail;
@@ -399,13 +416,18 @@ const list = only ? ROUTES.filter(r => r.slug === only) : ROUTES;
 if (!list.length) { console.error('Slug desconocido:', only); process.exit(1); }
 list.forEach(r => {
   LANGS.forEach(lang => {
+    if (process.env.ONLY_LANG && process.env.ONLY_LANG !== lang) return;
     const dir = lang === 'en' ? path.join(__dirname, '../rutas', r.slug) : path.join(__dirname, '../rutas', r.slug, lang);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, 'index.html'), render(r, lang));
   });
-  console.log('Generada', r.slug, '(EN/ES/FR/IT)');
+  console.log('Generada', r.slug, '(EN/ES/FR/IT/JA)');
 });
 
 // Marca: une WoW Train con glosx.app en títulos y datos estructurados (idempotente)
 require('./apply-brand-title').run();
 require('./apply-brand-schema').run();
+
+require('./localize-ja').runRoutes();
+require('./localize-ja').runExplore();
+require('./sync-sitemap-ja');

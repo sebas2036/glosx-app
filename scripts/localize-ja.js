@@ -59,3 +59,84 @@ function run() {
 }
 module.exports = { run, localize, JA_CITY, COUNTRY_JA };
 if (require.main === module) console.log('Páginas ja con remates:', run());
+
+// ── Páginas de ruta europeas en japonés: duraciones, precios y operadores ─────────────────────────
+// "2h 30m" -> "2時間30分"; ciudades nuevas que seguían en inglés; y a los operadores europeos se les añade
+// una referencia que un lector japonés entiende al instante (la "versión local" del Shinkansen).
+const EXTRA_CITY = { Gothenburg: 'ヨーテボリ', Trondheim: 'トロンハイム', Faro: 'ファロ', Oslo: 'オスロ', Lisbon: 'リスボン', Porto: 'ポルト', Bergen: 'ベルゲン' };
+const OPERATOR_JA = {
+  'Renfe AVE': 'Renfe AVE（スペインの新幹線にあたる高速列車）', TGV: 'TGV（フランスの新幹線にあたる高速列車）',
+  'TGV Lyria': 'TGVリリア（フランスとスイスを結ぶ高速列車）', 'SNCF TGV': 'SNCF TGV（フランスの高速列車）',
+  'DB ICE': 'ドイツ鉄道ICE（ドイツの高速列車）', ICE: 'ICE（ドイツの高速列車）', Eurostar: 'ユーロスター（英仏海峡トンネルを通る国際高速列車）',
+  Thalys: 'タリス（パリ・ブリュッセル・アムステルダムを結ぶ国際高速列車）', Railjet: 'レイルジェット（オーストリアの高速列車）',
+  'ÖBB Railjet': 'オーストリア鉄道のレイルジェット（高速列車）', ÖBB: 'オーストリア鉄道（ÖBB）', SBB: 'スイス国鉄（SBB）',
+  Trenitalia: 'トレニタリア（イタリア国鉄。高速列車フレッチャロッサなど）', 'SNCF TER': 'SNCF TER（フランスの地域列車）',
+  'SNCF Intercités': 'SNCFアンテルシテ（フランスの都市間列車）', LNER: 'LNER（ロンドンとスコットランドを結ぶ都市間列車）',
+  Avanti: 'アバンティ（ロンドンとマンチェスターなどを結ぶ列車）', Renfe: 'Renfe（スペイン国鉄）', SNCB: 'SNCB（ベルギー国鉄）'
+};
+const dur = (h, m) => (h ? h + '時間' : '') + (m && Number(m) ? Number(m) + '分' : '');
+function jaText(t) {
+  t = t.replace(/(\d+)h\s*(\d{1,2})m\b/g, (_, h, m) => dur(h, m));
+  t = t.replace(/\b(\d+)h\b/g, (_, h) => h + '時間');
+  t = t.replace(/\b(\d{1,3})m\b(?!\w)/g, (_, m) => m + '分');
+  t = t.replace(/\b(Gothenburg|Trondheim|Faro|Oslo|Lisbon|Porto|Bergen)\b/g, (_, n) => EXTRA_CITY[n]);
+  return t;
+}
+function localizeRoute(html) {
+  const tokens = html.split(/(<script\b[\s\S]*?<\/script>|<style\b[\s\S]*?<\/style>|<[^>]+>)/g);
+  let prev = '';
+  return tokens.map((tok) => {
+    if (tok.startsWith('<script') || tok.startsWith('<style')) { prev = tok; return tok; }
+    if (tok.startsWith('<')) {
+      if (/^<meta\b/.test(tok)) tok = tok.replace(/(content=")([^"]*)(")/, (m, a, v, c) => a + jaText(v) + c);
+      prev = tok; return tok;
+    }
+    let out = jaText(tok);
+    // celdas de tabla y "運行会社：X": el operador entero, con su referencia
+    const m = out.match(/^(運行会社：)?\s*([A-Za-zÖČ][A-Za-zÖČ /]*?)\s*$/);
+    if (m && OPERATOR_JA[m[2]] && (m[1] || /^<td\b/.test(prev))) out = (m[1] || '') + OPERATOR_JA[m[2]];
+    return out;
+  }).join('');
+}
+function runRoutes() {
+  const src = fs.readFileSync(path.join(__dirname, 'generate-routes.js'), 'utf8');
+  const slugs = new Set(); const re = /slug: '([a-z-]+)', from: '/g; let m;
+  while ((m = re.exec(src))) slugs.add(m[1]);
+  let changed = 0;
+  for (const s of slugs) {
+    const f = path.join(ROOT, 'rutas', s, 'ja', 'index.html');
+    if (!fs.existsSync(f)) continue;
+    const a = fs.readFileSync(f, 'utf8'), b = localizeRoute(a);
+    if (a !== b) { fs.writeFileSync(f, b); changed++; }
+  }
+  return changed;
+}
+module.exports.runRoutes = runRoutes;
+if (require.main === module) console.log('Rutas europeas ja con remates:', runRoutes());
+
+// ── /ja/explore/: nombres de ruta y países en japonés, y enlaces a las guías en japonés ───────────
+function localizeExplore(html) {
+  const jd = require('./japan-ja-data.js');
+  const pairs = require('./japan-pairs-data.json');
+  const name = Object.assign({}, JA_CITY);
+  pairs.cities.forEach(c => { if (jd.CITY[c.slug]) name[c.display] = jd.CITY[c.slug]; });
+  const country = Object.assign({}, COUNTRY_JA, { Japan: '日本', 'Czech Republic': 'チェコ', Norway: 'ノルウェー', Portugal: 'ポルトガル', Slovenia: 'スロベニア' });
+  const nm = (x) => name[x] || x;
+  html = html.replace(/^(\s*)\['([^'\n]+) → ([^'\n]+)','([^'\n]+)','([a-z0-9-]+)'\],$/gm, (m, ind, a, b, ctry, slug) => {
+    const c = ctry.split(' → ').map(x => country[x] || x).join(' → ');
+    return `${ind}['${nm(a)} → ${nm(b)}','${c}','${slug}'],`;
+  });
+  // enlaces de las tarjetas "ガイドあり" a la versión en japonés
+  html = html.replace(/^(\s*)'([a-z0-9-]+)': '\/rutas\/([a-z0-9-]+)\/',$/gm, (m, ind, k, slug) =>
+    fs.existsSync(path.join(ROOT, 'rutas', slug, 'ja', 'index.html')) ? `${ind}'${k}': '/rutas/${slug}/ja/',` : m);
+  return html;
+}
+function runExplore() {
+  const f = path.join(ROOT, 'ja/explore/index.html');
+  if (!fs.existsSync(f)) return 0;
+  const a = fs.readFileSync(f, 'utf8'), b = localizeExplore(a);
+  if (a !== b) { fs.writeFileSync(f, b); return 1; }
+  return 0;
+}
+module.exports.runExplore = runExplore;
+if (require.main === module) console.log('Explorar ja:', runExplore());
