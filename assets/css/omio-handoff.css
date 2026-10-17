@@ -342,3 +342,12 @@ body.home-v2[data-region="japan"] .scenic-cta { color: #2A2118; background: rgba
 body.home-v2[data-region="japan"] .lang-btn { background: #FFDCC2 !important; color: #2A2118 !important; border-color: rgba(42, 33, 24, .14) !important; }
 body.home-v2[data-region="japan"] .lang-btn:hover { background: #FFCDA8 !important; }
 .lang-option.active { background: rgba(207, 219, 242, .6); color: var(--omio-navy, #0F1B5C); }
+
+/* Vídeo en las tarjetas de destinos de Japón (sobre la foto, que queda de respaldo) */
+.jp-discover-grid .discover-video {
+  position: absolute; left: 0; top: 0; width: 100%; height: 190px; object-fit: cover; z-index: 0;
+  border-radius: 22px 22px 0 0; opacity: 0; transition: opacity .6s ease; pointer-events: none; background: transparent;
+}
+.jp-discover-grid .discover-video.is-on { opacity: 1; }
+body.home-v2[data-region="japan"] .discover-grid .discover-card .discover-watch { background: #FF5B00; color: #2A2118; }
+body.home-v2[data-region="japan"] .discover-card .discover-season { color: #C24A00; }
