@@ -315,3 +315,23 @@ body.home-v2[data-region="japan"] .search-tab:not(.on):hover { background: rgba(
 body.home-v2[data-region="japan"] .region-btn:not(.on) { color: #2A2118; }
 body.home-v2[data-region="japan"] .region-btn:not(.on):hover { background: rgba(255, 255, 255, .45); }
 body.home-v2[data-region="japan"].hotels-mode .region-btn.on:not(.region-hotels) { color: #2A2118 !important; }
+
+/* Reservas de Omio en "Arma tu aventura" y "Trenes panorámicos": coral suave de Omio con texto azul, no el rojo intenso */
+body.home-v2:not([data-region="japan"]) .wt-stop-buy,
+body.home-v2:not([data-region="japan"]) #wt-cta-slot a {
+  background: var(--omio-coral, #FB6B6C); color: var(--omio-navy, #0F1B5C); font-weight: 700; border: 0;
+  box-shadow: 0 6px 16px rgba(251, 107, 108, .35); display: inline-flex; align-items: center; gap: 10px;
+}
+body.home-v2:not([data-region="japan"]) .wt-stop-buy:hover,
+body.home-v2:not([data-region="japan"]) #wt-cta-slot a:hover { background: var(--omio-coral-hover, #F55A5B); }
+body.home-v2:not([data-region="japan"]) .wt-stop-buy::before {
+  content: ""; flex: 0 0 22px; height: 22px; border-radius: 6px;
+  background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=omio.com") center / 16px 16px no-repeat;
+  box-shadow: 0 0 0 1px rgba(15, 27, 92, .12);
+}
+body.home-v2:not([data-region="japan"]) .scenic-cta { color: var(--omio-navy, #0F1B5C); background: rgba(251, 107, 108, .16); border-color: rgba(251, 107, 108, .7); }
+body.home-v2:not([data-region="japan"]) .scenic-cta:hover { background: rgba(251, 107, 108, .3); }
+/* Japón: lo mismo con el naranja de Klook */
+body.home-v2[data-region="japan"] .wt-stop-buy { background: #FF5B00; color: #2A2118; font-weight: 700; box-shadow: 0 6px 16px rgba(255, 91, 0, .35); }
+body.home-v2[data-region="japan"] .wt-stop-buy:hover { background: #E65200; }
+body.home-v2[data-region="japan"] .scenic-cta { color: #2A2118; background: rgba(255, 91, 0, .14); border-color: rgba(255, 91, 0, .7); }

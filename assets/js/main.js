@@ -1489,7 +1489,7 @@
           desc_ja: "リヨン駅の鉄の天井の下から出発します。TGVが時速300kmで南へ走り、街はブドウ畑に溶けていきます。"
         },
         {
-          slug: "lyon", station: "Lyon (Part-Dieu)", train: "TGV → Frecciarossa link",
+          slug: "lyon", station: "Lyon (Part-Dieu)", train: "TGV INOUI",
           desc_en: "France's gastronomic capital. You switch onto the alpine corridor — ahead lie the Fréjus tunnel and the Italian border.",
           desc_es: "La capital gastronómica de Francia. Tomas el corredor alpino — por delante el túnel de Fréjus y la frontera italiana.",
           desc_fr: "La capitale gastronomique de France. Vous prenez le corridor alpin — devant vous, le tunnel du Fréjus et la frontière italienne.",
@@ -1511,7 +1511,7 @@
         {
           slug: "milan", station: "Milan (Centrale)", train: "Arrival",
           desc_en: "You step out into Milan's cathedral-station. Fashion, the Duomo and a victory espresso: your Classic Route is complete.",
-          desc_es: "Salís a la estación-catedral de Milán. Moda, el Duomo y un espresso de victoria: tu Ruta Clásica está completa.",
+          desc_es: "Sales a la estación-catedral de Milán. Moda, el Duomo y un espresso de victoria: tu Ruta Clásica está completa.",
           desc_fr: "Vous sortez dans la gare-cathédrale de Milan. Mode, le Dôme et un espresso de victoire : votre Route Classique est accomplie.",
           desc_de: "Sie treten in Mailands Kathedralenbahnhof hinaus. Mode, der Dom und ein Sieges-Espresso: Ihre Klassische Route ist vollbracht.",
           desc_it: "Esci nella stazione-cattedrale di Milano. Moda, il Duomo e un espresso della vittoria: il tuo Percorso Classico è completo.",
