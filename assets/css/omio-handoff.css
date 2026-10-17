@@ -116,3 +116,30 @@ body.home-v2[data-region="japan"] .search-card .ai-generate-btn {
 }
 body.home-v2[data-region="japan"] .search-card .ai-generate-btn:hover { background: #F25200 !important; filter: none; }
 body.home-v2[data-region="japan"] .search-card .ai-restore-btn { color: #2A2118; }
+
+/* ===== Tarjeta de resultado del planificador (modo Europa) con el estilo de Omio =====
+   Fondo lavanda, borde índigo suave, títulos en azul marino, barras de duración índigo → coral. */
+body.home-v2:not([data-region="japan"]) .search-card .ai-results .ai-segment {
+  background: linear-gradient(135deg, #F7F8FC 0%, #EEF3FB 100%) !important;
+  border: 1px solid rgba(24, 44, 102, .14) !important;
+  box-shadow: 0 10px 28px rgba(24, 44, 102, .08) !important;
+}
+body.home-v2:not([data-region="japan"]) .search-card .ai-segment-route,
+body.home-v2:not([data-region="japan"]) .search-card .ai-segment-time { color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .ai-segment .pi { border-top-color: rgba(24, 44, 102, .14); }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-eyebrow { color: #4A5578; }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-row { border-top-color: rgba(24, 44, 102, .1); }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-label,
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-time { color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-price,
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-note { color: #4A5578; }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-ico { color: #5C6898; }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-row.is-train .rp-ico { color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-bar { background: rgba(24, 44, 102, .1); }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-bar i { background: #9AA6C8; }
+body.home-v2:not([data-region="japan"]) .search-card .pi .rp-row.is-train .rp-bar i { background: linear-gradient(90deg, #5C6898, var(--omio-coral)); }
+body.home-v2:not([data-region="japan"]) .search-card .pi-guide {
+  color: var(--omio-navy); border-bottom-color: var(--omio-coral);
+}
+body.home-v2:not([data-region="japan"]) .search-card .pi-guide:hover { border-bottom-color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .pi-guide:focus-visible { outline-color: var(--omio-navy); }
