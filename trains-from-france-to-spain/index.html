@@ -34,7 +34,7 @@
     } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -282,7 +282,7 @@
       For longer journeys — say, Paris to Madrid — a flight is faster overall, but the overnight or daytime train is a genuine experience in itself.
     </p>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#55565f;">
-      Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=paris&to=barcelona" target="_blank" rel="noopener sponsored" onclick="trackTrainline('hub_france_spain')">Check schedules &amp; book →</a>
+      Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=paris&to=barcelona" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('hub_france_spain')">Check schedules &amp; book →</a>
     </p>
     <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#55565f;">Opens in a new tab — come back here anytime.</p>
     <div class="faq">

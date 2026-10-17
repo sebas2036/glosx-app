@@ -49,7 +49,7 @@
     })();
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -199,7 +199,7 @@
       </div>
       <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=madrid&to=malaga"
          class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('route_madrid-malaga_it')">
+         onclick="trackPartnerClick('route_madrid-malaga_it')">
         Vedi orari e prenota biglietto →
       </a>
     </div>
@@ -218,7 +218,7 @@
       <div class="hotel-card-actions">
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-hotel?city=malaga" 
            class="cta-btn" target="_blank" rel="noopener sponsored"
-           onclick="trackTrainline('hotel_madrid-malaga_it')">
+           onclick="trackPartnerClick('hotel_madrid-malaga_it')">
           Vedi prezzo attuale →
         </a>
         <br>
@@ -304,7 +304,7 @@
     <hr/>
     <p>Pronto a partire? Controlla orari e tariffe in tempo reale di Madrid → Malaga e prenota il tuo posto — pagamento sicuro, biglietti su mobile, ogni operatore in un'unica ricerca.</p>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#55565f;">
-      Preferisci confrontare tutti gli operatori ferroviari? <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=madrid&to=malaga" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_madrid-malaga_it')">Vedi orari e prenota →</a>
+      Preferisci confrontare tutti gli operatori ferroviari? <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=madrid&to=malaga" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('route_madrid-malaga_it')">Vedi orari e prenota →</a>
     </p>
     <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#6b6b85;">Si apre in una nuova scheda — torna qui quando vuoi.</p>
     

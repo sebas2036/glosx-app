@@ -37,7 +37,7 @@
     } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -208,7 +208,7 @@
         </div>
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=paris&to=colmar"
            class="cta-btn-inline" target="_blank" rel="noopener sponsored"
-           onclick="trackTrainline('dest_colmar_en')">Trains to Colmar →</a>
+           onclick="trackPartnerClick('dest_colmar_en')">Trains to Colmar →</a>
       </div>
       <div class="hero-text">
         <p class="lead">
@@ -250,7 +250,7 @@
       <p>Live Paris → Colmar trains for your exact date.</p>
       <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=paris&to=colmar"
          class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('dest_colmar_en')">Trains to Colmar →</a>
+         onclick="trackPartnerClick('dest_colmar_en')">Trains to Colmar →</a>
       <p style="margin-top:12px;font-size:12px;color:#55565f;">Opens in a new tab — come back here anytime.</p>
     </div>
   </main>

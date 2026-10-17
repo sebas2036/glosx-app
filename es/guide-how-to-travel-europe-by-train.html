@@ -37,7 +37,7 @@
     } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -333,7 +333,7 @@ main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
 
     <h3>Dónde reservar</h3>
     <p>
-      Para un viaje dentro de un solo país puedes reservar directamente con la operadora nacional. Para rutas internacionales o cuando quieres comparar varios operadores en el mismo corredor, un buscador único ahorra tiempo y generalmente encuentra el mejor precio. <a href="https://www.thetrainline.com" target="_blank" rel="noopener">Trainline</a> cubre la mayor parte de Europa en un solo lugar.
+      Para un viaje dentro de un solo país puedes reservar directamente con la operadora nacional. Para rutas internacionales o cuando quieres comparar varios operadores en el mismo corredor, un buscador único ahorra tiempo y generalmente encuentra el mejor precio. <a href="https://omio.sjv.io/5kQ50n" target="_blank" rel="noopener sponsored">Omio</a> cubre la mayor parte de Europa en un solo lugar.
     </p>
 
     <div class="tip-box">
@@ -451,9 +451,9 @@ main { max-width: 760px; margin: 0 auto; padding: 24px 24px 80px; }
     <div class="cta">
       <h3>¿Listo para reservar tu viaje en tren por Europa?</h3>
       <p>Busca horarios y tarifas en tiempo real para cada ruta en un solo lugar — billetes en el móvil, todos los operadores, pago seguro.</p>
-      <a href="https://www.thetrainline.com"
+      <a href="https://omio.sjv.io/5kQ50n"
          class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('guide_pillar_es')">Buscar trenes →</a>
+         onclick="trackPartnerClick('guide_pillar_es')">Buscar trenes →</a>
       <p style="margin-top:12px;font-size:12px;color:#6b6b85;">Se abre en una pestaña nueva — vuelve cuando quieras.</p>
     </div>
 

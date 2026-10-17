@@ -37,7 +37,7 @@
     } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -196,7 +196,7 @@
         </div>
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=paris&to=colmar"
            class="cta-btn-inline" target="_blank" rel="noopener sponsored"
-           onclick="trackTrainline('dest_colmar_es')">Trenes a Colmar →</a>
+           onclick="trackPartnerClick('dest_colmar_es')">Trenes a Colmar →</a>
       </div>
       <div class="hero-text">
         <p class="lead">
@@ -230,7 +230,7 @@
     <hr/>
 
     <p>
-      Ya lo viste. Ahora ve. Hay un <strong>TGV directo desde París</strong> — reserva tu asiento y quedas a pasos de la Pequeña Venecia. Trainline reúne a todos los operadores en un pago seguro.
+      Ya lo viste. Ahora ve. Hay un <strong>TGV directo desde París</strong> — reserva tu asiento y quedas a pasos de la Pequeña Venecia. Omio reúne a todos los operadores en un pago seguro.
     </p>
 
     <div class="cta">
@@ -238,7 +238,7 @@
       <p>Trenes París → Colmar en vivo para tu fecha exacta.</p>
       <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=paris&to=colmar"
          class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('dest_colmar_es')">Trenes a Colmar →</a>
+         onclick="trackPartnerClick('dest_colmar_es')">Trenes a Colmar →</a>
       <p style="margin-top:12px;font-size:12px;color:#55565f;">Se abre en una pestaña nueva — vuelve cuando quieras.</p>
     </div>
   </main>

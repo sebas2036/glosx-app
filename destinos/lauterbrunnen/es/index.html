@@ -37,7 +37,7 @@
     } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -196,7 +196,7 @@
         </div>
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=interlaken&to=lauterbrunnen"
            class="cta-btn-inline" target="_blank" rel="noopener sponsored"
-           onclick="trackTrainline('dest_lauterbrunnen_es')">Ver horarios y reservar →</a>
+           onclick="trackPartnerClick('dest_lauterbrunnen_es')">Ver horarios y reservar →</a>
       </div>
       <div class="hero-text">
         <p class="lead">
@@ -230,7 +230,7 @@
     <hr/>
 
     <p>
-      Ya lo viste. Ahora ve. La puerta de entrada es <strong>Interlaken Ost</strong> — reserva tu tren hasta ahí, y después es el tren de montaña corto que entra al valle. Trainline reúne a todos los operadores en un pago seguro.
+      Ya lo viste. Ahora ve. La puerta de entrada es <strong>Interlaken Ost</strong> — reserva tu tren hasta ahí, y después es el tren de montaña corto que entra al valle. Omio reúne a todos los operadores en un pago seguro.
     </p>
 
     <div class="cta">
@@ -238,7 +238,7 @@
       <p>Trenes en vivo a Interlaken Ost — tu puerta de entrada a Lauterbrunnen.</p>
       <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=interlaken&to=lauterbrunnen"
          class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('dest_lauterbrunnen_es')">Reservar tren al mejor precio →</a>
+         onclick="trackPartnerClick('dest_lauterbrunnen_es')">Reservar tren al mejor precio →</a>
       <p style="margin-top:12px;font-size:12px;color:#55565f;">Se abre en una pestaña nueva — vuelve cuando quieras.</p>
     </div>
   </main>

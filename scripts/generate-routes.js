@@ -1402,7 +1402,7 @@ function generateTrainSegments(route, lang) {
       </div>
       <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=${encodeURIComponent(route.from.toLowerCase())}&to=${encodeURIComponent(route.to.toLowerCase())}"
          class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('route_${route.slug}_${lang}')">
+         onclick="trackPartnerClick('route_${route.slug}_${lang}')">
         ${langContent.bookTicketBtn}
       </a>
     </div>
@@ -1435,7 +1435,7 @@ function generateHotelCards(route, lang) {
       <div class="hotel-card-actions">
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-hotel?city=${route.to.toLowerCase()}" 
            class="cta-btn" target="_blank" rel="noopener sponsored"
-           onclick="trackTrainline('hotel_${route.slug}_${lang}')">
+           onclick="trackPartnerClick('hotel_${route.slug}_${lang}')">
           ${langContent.hotelCardPrice}
         </a>
         <br>

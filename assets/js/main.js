@@ -186,7 +186,7 @@
         ai_route_meta_train: '✦ Train from {from} to {to}',
         faq_label: 'Frequently asked questions', faq_title1: 'Everything you', faq_title2: 'need to know.',
         faq1_q: 'What is WoW Train?', faq1_a: 'An independent and free platform to design scenic train itineraries across Europe. No account, no subscription — just explore, plan and book through certified partners.',
-        faq2_q: 'How do I book a ticket?', faq2_a: 'We connect you directly and transparently to official operators like Trainline. Search your route, click "Check schedules →" and complete the booking on the partner\'s secure platform.',
+        faq2_q: 'How do I book a ticket?', faq2_a: 'We connect you directly and transparently to official partners such as Omio. Search your route, click "Check schedules →" and complete the booking on the partner\'s secure platform.',
         faq3_q: 'How do I share my experience?', faq3_a: 'Use the interactive review form: write your WoW moment (max 140 characters), choose a star rating and hit Publish. Your review goes live in the cloud in real time.',
         faq4_q: 'Do you charge any fees?', faq4_a: '100% free for the user. WoW Train receives support from official partners without any extra cost to you. Transparent, independent and always on your side.',
         faq5_q: 'Is my data private?', faq5_a: 'No account is required. We use essential cookies and anonymous Google Analytics to understand traffic — see our Privacy Policy and Cookie Policy. We do not sell personal data.',
@@ -330,7 +330,7 @@
         ai_route_meta_train: '✦ Train de {from} à {to}',
         faq_label: 'Questions fréquentes', faq_title1: 'Tout ce que', faq_title2: 'vous devez savoir.',
         faq1_q: 'Qu\'est-ce que WoW Train ?', faq1_a: 'Une plateforme indépendante et gratuite pour concevoir des itinéraires pittoresques en train à travers l\'Europe. Sans compte, sans abonnement — explorez, planifiez et réservez via des partenaires certifiés.',
-        faq2_q: 'Comment réserver un billet ?', faq2_a: 'Nous vous connectons directement et de manière transparente avec des opérateurs officiels comme Trainline. Cherchez votre trajet, cliquez sur "Voir les horaires →" et finalisez la réservation.',
+        faq2_q: 'Comment réserver un billet ?', faq2_a: 'Nous vous connectons directement et de manière transparente avec des partenaires officiels comme Omio. Cherchez votre trajet, cliquez sur "Voir les horaires →" et finalisez la réservation.',
         faq3_q: 'Comment publier mon expérience ?', faq3_a: 'Utilisez le formulaire interactif : rédigez votre moment WoW (max. 140 caractères), choisissez une note en étoiles et cliquez sur Publier. Votre avis est mis en ligne en temps réel.',
         faq4_q: 'Prélevez-vous des commissions ?', faq4_a: '100% gratuit pour l\'utilisateur. WoW Train reçoit le soutien de partenaires officiels sans frais supplémentaires pour vous. Transparent, indépendant et toujours à vos côtés.',
         faq5_q: 'Mes données sont-elles privées?', faq5_a: 'Aucun compte n\'est requis. Nous utilisons des cookies essentiels et Google Analytics anonyme pour comprendre le trafic — voir la Politique de confidentialité et la Politique de cookies. Nous ne vendons pas de données personnelles.',
@@ -402,7 +402,7 @@
         ai_route_meta_train: '✦ Zug von {from} nach {to}',
         faq_label: 'Häufige Fragen', faq_title1: 'Alles was Sie', faq_title2: 'wissen müssen.',
         faq1_q: 'Was ist WoW Train?', faq1_a: 'Eine unabhängige und kostenlose Plattform zur Gestaltung szenischer Zugreisen in Europa. Kein Konto, kein Abonnement — erkunden, planen und buchen Sie über zertifizierte Partner.',
-        faq2_q: 'Wie buche ich ein Ticket?', faq2_a: 'Wir verbinden Sie direkt und transparent mit offiziellen Betreibern wie Trainline. Suchen Sie Ihre Strecke, klicken Sie auf "Fahrpläne anzeigen →" und schließen Sie die Buchung ab.',
+        faq2_q: 'Wie buche ich ein Ticket?', faq2_a: 'Wir verbinden Sie direkt und transparent mit offiziellen Partnern wie Omio. Suchen Sie Ihre Strecke, klicken Sie auf "Fahrpläne anzeigen →" und schließen Sie die Buchung ab.',
         faq3_q: 'Wie teile ich meine Erfahrung?', faq3_a: 'Nutzen Sie das interaktive Formular: Schreiben Sie Ihren WoW-Moment (max. 140 Zeichen), wählen Sie eine Sternebewertung und klicken Sie auf Veröffentlichen. Ihre Bewertung geht sofort online.',
         faq4_q: 'Erheben Sie Gebühren?', faq4_a: '100% kostenlos für den Nutzer. WoW Train erhält Unterstützung von offiziellen Partnern ohne zusätzliche Kosten für Sie. Transparent, unabhängig und immer auf Ihrer Seite.',
         faq5_q: 'Sind meine Daten privat?', faq5_a: 'Kein Konto nötig. Wir nutzen essenzielle Cookies und anonymes Google Analytics, um den Traffic zu verstehen — siehe Datenschutzerklärung und Cookie-Richtlinie. Wir verkaufen keine personenbezogenen Daten.',
@@ -474,7 +474,7 @@
         ai_route_meta_train: '✦ Treno da {from} a {to}',
         faq_label: 'Domande frequenti', faq_title1: 'Tutto quello che', faq_title2: 'devi sapere.',
         faq1_q: 'Cos\'è WoW Train?', faq1_a: 'Una piattaforma indipendente e gratuita per progettare itinerari ferroviari panoramici in Europa. Nessun account, nessun abbonamento — esplora, pianifica e prenota tramite partner certificati.',
-        faq2_q: 'Come prenoto un biglietto?', faq2_a: 'Ti colleghiamo direttamente e in modo trasparente con operatori ufficiali come Trainline. Cerca il tuo percorso, clicca su "Vedi orari →" e completa la prenotazione sulla piattaforma del partner.',
+        faq2_q: 'Come prenoto un biglietto?', faq2_a: 'Ti colleghiamo direttamente e in modo trasparente con partner ufficiali come Omio. Cerca il tuo percorso, clicca su "Vedi orari →" e completa la prenotazione sulla piattaforma del partner.',
         faq3_q: 'Come pubblico la mia esperienza?', faq3_a: 'Usa il modulo interattivo: scrivi il tuo momento WoW (max 140 caratteri), scegli una valutazione a stelle e premi Pubblica. La tua recensione va in diretta in tempo reale.',
         faq4_q: 'Addebitate commissioni?', faq4_a: '100% gratuito per l\'utente. WoW Train riceve il supporto di partner ufficiali senza alcun costo aggiuntivo per te. Trasparente, indipendente e sempre dalla tua parte.',
         faq5_q: 'I miei dati sono privati?', faq5_a: 'Non serve un account. Usiamo cookie essenziali e Google Analytics anonimo per capire il traffico — vedi l\'Informativa sulla privacy e la Cookie Policy. Non vendiamo dati personali.',
@@ -546,7 +546,7 @@
         ai_route_meta_train: '✦ Comboio de {from} para {to}',
         faq_label: 'Perguntas frequentes', faq_title1: 'Tudo o que', faq_title2: 'precisa de saber.',
         faq1_q: 'O que é o WoW Train?', faq1_a: 'Uma plataforma independente e gratuita para desenhar itinerários ferroviários cénicos pela Europa. Sem conta, sem subscrição — explore, planeie e reserve através de parceiros certificados.',
-        faq2_q: 'Como reservo um bilhete?', faq2_a: 'Ligamo-lo diretamente e de forma transparente a operadores oficiais como a Trainline. Pesquise a sua rota, clique em "Ver horários →" e complete a reserva na plataforma do parceiro.',
+        faq2_q: 'Como reservo um bilhete?', faq2_a: 'Ligamo-lo diretamente e de forma transparente a parceiros oficiais como a Omio. Pesquise a sua rota, clique em "Ver horários →" e complete a reserva na plataforma do parceiro.',
         faq3_q: 'Como partilho a minha experiência?', faq3_a: 'Use o formulário interativo: escreva o seu momento WoW (máx. 140 caracteres), escolha uma classificação por estrelas e clique em Publicar. A sua avaliação fica disponível em tempo real.',
         faq4_q: 'Cobram comissões?', faq4_a: '100% gratuito para o utilizador. O WoW Train recebe apoio de parceiros oficiais sem custos adicionais para si. Transparente, independente e sempre do seu lado.',
         faq5_q: 'Os meus dados são privados?', faq5_a: 'Não é preciso conta. Usamos cookies essenciais e Google Analytics anónimo para perceber o tráfego — ver a Política de privacidade e a Política de cookies. Não vendemos dados pessoais.',
@@ -737,7 +737,7 @@
         "faq1_q": "WoW Trainとは？",
         "faq1_a": "ヨーロッパの列車の旅を組む、独立した無料のサイトです。アカウントも月額も不要。見て、組んで、認定パートナーから予約します。",
         "faq2_q": "切符はどう予約しますか？",
-        "faq2_a": "Trainlineなどの公式事業者へ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。",
+        "faq2_a": "Omioなどの公式パートナーへ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。",
         "faq3_q": "体験はどう共有しますか？",
         "faq3_a": "レビューフォームにWoWの瞬間を書き（140字まで）、星を選んで公開します。確認のあと、クラウドに表示されます。",
         "faq4_q": "手数料はかかりますか？",
@@ -1190,20 +1190,6 @@
           modal.style.display = 'none';
         }
       };
-      function buildSearchUrl(from, to, lang, date) {
-        var tl = {
-          es: ['https://www.thetrainline.com/es/horarios-trenes/', '-a-'],
-          fr: ['https://www.thetrainline.com/fr/horaires-trains/', '-a-'],
-          de: ['https://www.thetrainline.com/de/zugverbindungen/', '-nach-'],
-          it: ['https://www.thetrainline.com/it/orari-treni/',     '-a-'],
-          pt: ['https://www.thetrainline.com/pt/horarios-comboios/','-a-']
-        };
-        var r = tl[lang] || ['https://www.thetrainline.com/train-times/', '-to-'];
-        var url = r[0] + from + r[1] + to;
-        if (date) url += '?outboundDate=' + encodeURIComponent(date);
-        return url;
-      }
-
       window.searchTrains = function(e) {
         e.preventDefault();
         var originEl = document.getElementById('origin');

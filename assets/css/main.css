@@ -1592,7 +1592,7 @@
       .lang-wrapper { margin-top: 12px; }
     }
 
-/* === WoW TRAIN · secciones nuevas (rutas Trainline + testimonios) === */
+/* === WoW TRAIN · secciones nuevas (rutas + testimonios) === */
 /* ===================== WoW TRAIN · secciones nuevas ===================== */
 
   /* ---- Tarea 2: Arma tu propia aventura ---- */
@@ -1783,7 +1783,7 @@
   }
   .wt-close:focus-visible { outline: 2px solid var(--primary2); outline-offset: 2px; }
 
-  /* CTA hacia Trainline al final de cada timeline */
+  /* CTA hacia el partner al final de cada timeline */
   .wt-tl-cta {
     display: inline-flex; align-items: center; gap: 8px; margin-top: 26px;
     font-family: inherit; font-size: 15px; font-weight: 700; color: #E9E3FB;

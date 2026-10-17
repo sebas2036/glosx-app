@@ -360,7 +360,7 @@ function mainHtml(r, lang) {
     <hr/>
     <p>${u.ready}</p>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#55565f;">
-      ${u.cmp} <a href="${bookUrl(r)}" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_${r.slug}_${lang}')">${u.check}</a>
+      ${u.cmp} <a href="${bookUrl(r)}" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('route_${r.slug}_${lang}')">${u.check}</a>
     </p>
     <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#6b6b85;">${u.note}</p>
 

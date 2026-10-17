@@ -49,7 +49,7 @@
     })();
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -199,7 +199,7 @@
       </div>
       <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stockholm&to=oslo"
          class="cta-btn" target="_blank" rel="noopener sponsored"
-         onclick="trackTrainline('route_stockholm-oslo_en')">
+         onclick="trackPartnerClick('route_stockholm-oslo_en')">
         View schedules and book ticket →
       </a>
     </div>
@@ -218,7 +218,7 @@
       <div class="hotel-card-actions">
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-hotel?city=oslo" 
            class="cta-btn" target="_blank" rel="noopener sponsored"
-           onclick="trackTrainline('hotel_stockholm-oslo_en')">
+           onclick="trackPartnerClick('hotel_stockholm-oslo_en')">
           View current price →
         </a>
         <br>
@@ -304,7 +304,7 @@
     <hr/>
     <p>Ready to go? Check live Stockholm → Oslo times and fares and book your seat — secure checkout, mobile tickets, every operator in one search.</p>
     <p class="tl-secondary" style="text-align:center;margin:10px 0 8px;font-size:14px;color:#55565f;">
-      Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stockholm&to=oslo" target="_blank" rel="noopener sponsored" onclick="trackTrainline('route_stockholm-oslo_en')">Check schedules & book →</a>
+      Prefer to compare every rail operator? <a href="https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stockholm&to=oslo" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('route_stockholm-oslo_en')">Check schedules & book →</a>
     </p>
     <p class="tl-note" style="text-align:center;margin:0 0 8px;font-size:12px;color:#6b6b85;">Opens in a new tab — come back here anytime.</p>
     

@@ -128,8 +128,8 @@
     // page_location con la URL original: gtag.js se carga más tarde (al interactuar) y para entonces
     // la limpieza de la URL ya quitó los utm_*; así la atribución de campañas no se pierde.
     gtag('config', 'G-XPTSM1EJQJ', { page_location: location.href });
-    // Evento: click saliente hacia Trainline (para medir demanda enviada al partner)
-    window.trackTrainline = function (src) {
+    // Evento: click saliente hacia el partner (para medir demanda enviada al partner)
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -305,7 +305,7 @@
       {
         "@type": "Question",
         "name": "切符はどう予約しますか？",
-        "acceptedAnswer": { "@type": "Answer", "text": "Trainlineなどの公式事業者へ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。" }
+        "acceptedAnswer": { "@type": "Answer", "text": "Omioなどの公式パートナーへ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。" }
       },
       {
         "@type": "Question",
@@ -1095,7 +1095,7 @@
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq2_q">切符はどう予約しますか？</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq2_a">Trainlineなどの公式事業者へ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。</div>
+        <div class="faq-a" data-i18n="faq2_a">Omioなどの公式パートナーへ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。</div>
       </div>
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-q"><span data-i18n="faq4_q">手数料はかかりますか？</span> <span class="faq-arrow">▾</span></div>

@@ -39,7 +39,7 @@
     } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -310,7 +310,7 @@
 
   <h2>Comparaison ligne par ligne</h2>
 
-    <p>Tous les chiffres sont des totaux typiques incluant les transferts, 1 bagage enregistré et des tarifs anticipés moyens. Prix de train via Trainline.</p>
+    <p>Tous les chiffres sont des totaux typiques incluant les transferts, 1 bagage enregistré et des tarifs anticipés moyens. Prix de train via Omio.</p>
 
     <table class="comparison-table">
       <thead>

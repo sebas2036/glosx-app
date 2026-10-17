@@ -39,7 +39,7 @@
     } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-XPTSM1EJQJ');
-    window.trackTrainline = function (src) {
+    window.trackPartnerClick = function (src) {
       try {
         var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
         gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
@@ -315,7 +315,7 @@
 
   <h2>Route-by-route comparison</h2>
 
-    <p>All figures are typical totals including transfers, 1 checked bag and average advance fares. Train prices via Trainline.</p>
+    <p>All figures are typical totals including transfers, 1 checked bag and average advance fares. Train prices via Omio.</p>
 
     <table class="comparison-table">
       <thead>
