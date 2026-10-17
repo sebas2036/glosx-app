@@ -985,6 +985,26 @@
     rep('[data-i18n="f4_desc"]', F.f4d);
   })();
 
+  // ── Franja de rutas (estadísticas): nombres de ciudad traducidos y versión de Japón ──────────────
+  var JP_STATS = {"en": "From <strong>196 route guides</strong> across Japan to your next trip — free, no signup.", "es": "De <strong>196 guías de rutas</strong> por Japón a tu próximo viaje — gratis, sin registro.", "fr": "De <strong>196 guides d’itinéraires</strong> à travers le Japon à votre prochain voyage — gratuit, sans inscription.", "it": "Da <strong>196 guide di percorso</strong> in tutto il Giappone al tuo prossimo viaggio — gratis, senza registrazione.", "de": "Von <strong>196 Routen-Guides</strong> in ganz Japan zu deiner nächsten Reise — kostenlos, ohne Anmeldung.", "pt": "De <strong>196 guias de rotas</strong> pelo Japão para a sua próxima viagem — grátis, sem cadastro.", "ja": "日本全国の<strong>196路線ガイド</strong>から、次の旅へ。無料、登録不要。"};
+  (function () {
+    var lg = lang();
+    var marq = document.querySelector('.stats-marquee');
+    var prose = document.getElementById('statsProse');
+    if (marq && lg !== 'en') {
+      marq.querySelectorAll('.route-chip').forEach(function (chip) {
+        var parts = chip.textContent.split('→');
+        if (parts.length === 2) chip.textContent = hname(lg, parts[0].trim()) + ' → ' + hname(lg, parts[1].trim());
+      });
+    }
+    if (prose) twinHome(prose, function (c) { c.innerHTML = JP_STATS[lg] || JP_STATS.en; });
+    if (marq) {
+      var nm = function (n) { return n === 'Shinjuku' ? (JP_SHINJUKU[lg] || n) : hname(lg, n); };
+      var chips = JP_PILLS.map(function (p) { return '<span class="route-chip">' + nm(p[1]) + ' → ' + nm(p[2]) + '</span>'; }).join('');
+      twinHome(marq, function (c) { c.innerHTML = '<div class="stats-track">' + chips + chips + '</div>'; });
+    }
+  })();
+
   // Franja de color de la alianza (Omio en Europa, Klook en Japón) detrás de las ventajas y los operadores:
   // sube un poco para quedar por detrás del planificador.
   (function () {
