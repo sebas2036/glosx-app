@@ -143,3 +143,43 @@ body.home-v2:not([data-region="japan"]) .search-card .pi-guide {
 }
 body.home-v2:not([data-region="japan"]) .search-card .pi-guide:hover { border-bottom-color: var(--omio-navy); }
 body.home-v2:not([data-region="japan"]) .search-card .pi-guide:focus-visible { outline-color: var(--omio-navy); }
+
+/* ===== Tarjeta de resultado del planificador (modo Japón) con el estilo de Klook =====
+   Fondo crema-naranja, texto marrón oscuro, barras naranjas y botón naranja con el ícono de Klook. */
+body.home-v2[data-region="japan"] .search-card .ai-results .ai-segment {
+  background: linear-gradient(135deg, #FFFAF6 0%, #FFEFE3 100%) !important;
+  border: 1px solid rgba(255, 91, 0, .22) !important;
+  box-shadow: 0 10px 28px rgba(255, 91, 0, .08) !important;
+}
+body.home-v2[data-region="japan"] .search-card .ai-segment-route,
+body.home-v2[data-region="japan"] .search-card .ai-segment-time { color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .ai-segment-train {
+  background: #FFE3D1; color: #8A3300; border-color: rgba(255, 91, 0, .35);
+}
+body.home-v2[data-region="japan"] .search-card .ai-segment .pi { border-top-color: rgba(255, 91, 0, .22); }
+body.home-v2[data-region="japan"] .search-card .pi .rp-eyebrow,
+body.home-v2[data-region="japan"] .search-card .pi .rp-price,
+body.home-v2[data-region="japan"] .search-card .pi .rp-note { color: #6B5B4D; }
+body.home-v2[data-region="japan"] .search-card .pi .rp-row { border-top-color: rgba(255, 91, 0, .16); }
+body.home-v2[data-region="japan"] .search-card .pi .rp-label,
+body.home-v2[data-region="japan"] .search-card .pi .rp-time { color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .pi .rp-ico { color: #B07A5C; }
+body.home-v2[data-region="japan"] .search-card .pi .rp-row.is-train .rp-ico { color: #FF5B00; }
+body.home-v2[data-region="japan"] .search-card .pi .rp-bar { background: rgba(255, 91, 0, .12); }
+body.home-v2[data-region="japan"] .search-card .pi .rp-bar i { background: #E5B79D; }
+body.home-v2[data-region="japan"] .search-card .pi .rp-row.is-train .rp-bar i { background: linear-gradient(90deg, #FF8A3D, #FF5B00); }
+body.home-v2[data-region="japan"] .search-card .pi-guide { color: #2A2118; border-bottom-color: #FF5B00; }
+body.home-v2[data-region="japan"] .search-card .pi-guide:hover { border-bottom-color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .pi-guide:focus-visible { outline-color: #2A2118; }
+
+/* Botón de reserva en Japón: naranja de Klook con su ícono */
+body.home-v2[data-region="japan"] .ai-segment-buy[data-klook] {
+  background: #FF5B00; background-image: none; color: #2A2118; font-weight: 700; border-color: #FF5B00;
+  box-shadow: 0 6px 16px rgba(255, 91, 0, .35); transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+body.home-v2[data-region="japan"] .ai-segment-buy[data-klook]:hover { background: #F25200; box-shadow: 0 8px 20px rgba(255, 91, 0, .45); }
+body.home-v2[data-region="japan"] .ai-segment-buy[data-klook]::before {
+  content: ""; display: inline-block; width: 22px; height: 22px; margin-right: 10px; vertical-align: middle; border-radius: 6px;
+  background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=klook.com") center / 16px 16px no-repeat;
+  box-shadow: 0 0 0 1px rgba(42, 33, 24, .12);
+}
