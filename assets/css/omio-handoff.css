@@ -375,3 +375,15 @@ body.home-v2[data-region="japan"] .essential-item:hover { border-color: #FF5B00;
 body.home-v2[data-region="japan"] .essential-brand, body.home-v2[data-region="japan"] .essential-item:hover .essential-brand { color: #2A2118; }
 body.home-v2[data-region="japan"] .essential-icon, body.home-v2[data-region="japan"] .essential-item:hover .essential-icon { color: #FF5B00; }
 body.home-v2[data-region="japan"] .essential-cta, body.home-v2[data-region="japan"] .essential-item:hover .essential-cta { color: #8a4a1a; }
+
+/* Títulos de sección: azul Omio medio en vez de negro (en modo Japón, marrón cálido Klook); el de descarga se queda blanco */
+body.home-v2 .section h2,
+body.home-v2 .guides-home h2,
+body.home-v2 #faq h2,
+body.home-v2 #discover h2,
+body.home-v2 section[style*="max-width:1100px"] h2 { color: #1F3A93; }
+body.home-v2[data-region="japan"] .section h2,
+body.home-v2[data-region="japan"] .guides-home h2,
+body.home-v2[data-region="japan"] #faq h2,
+body.home-v2[data-region="japan"] #discover h2,
+body.home-v2[data-region="japan"] section[style*="max-width:1100px"] h2 { color: #8A3A10; }
