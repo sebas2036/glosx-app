@@ -74,6 +74,7 @@ if (require.main === module) console.log('Páginas ja con remates:', run());
 // una referencia que un lector japonés entiende al instante (la "versión local" del Shinkansen).
 const EXTRA_CITY = { Gothenburg: 'ヨーテボリ', Trondheim: 'トロンハイム', Faro: 'ファロ', Oslo: 'オスロ', Lisbon: 'リスボン', Porto: 'ポルト', Bergen: 'ベルゲン' };
 const OPERATOR_JA = {
+  'EuroCity (SBB/DB)': 'ユーロシティ（スイス国鉄とドイツ鉄道の国際都市間列車）',
   'Renfe AVE': 'Renfe AVE（スペインの新幹線にあたる高速列車）', TGV: 'TGV（フランスの新幹線にあたる高速列車）',
   'TGV Lyria': 'TGVリリア（フランスとスイスを結ぶ高速列車）', 'SNCF TGV': 'SNCF TGV（フランスの高速列車）',
   'DB ICE': 'ドイツ鉄道ICE（ドイツの高速列車）', ICE: 'ICE（ドイツの高速列車）', Eurostar: 'ユーロスター（英仏海峡トンネルを通る国際高速列車）',

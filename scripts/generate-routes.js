@@ -788,6 +788,61 @@ const routes = [
       it: 'Omio indica Deutsche Bahn come operatore principale su questa tratta di 321 km: circa 4 treni al giorno. Il viaggio più veloce dura 5 h 35 min e la durata media è di circa 6 h 09 min. I dati tariffari di Omio suggeriscono di prenotare circa 91 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
     }
   },
+  // Rutas nuevas (17-oct-2026): texto propio y orientativo (sin cifras de Omio ni precios inventados).
+  { slug: 'paris-marseille', from: 'Paris', to: 'Marseille', country: 'France', duration: '3h 10m', operator: 'SNCF TGV', price: '€25-90', badge: 'Route guide · France',
+    customSEO: { en: { title: 'Paris to Marseille by Train: about 3h10, from €25', description: 'Fast TGV from Paris Gare de Lyon to Marseille Saint-Charles in about 3 hours. Compare today\'s schedule and book.' } },
+    localInsight: {
+      en: 'The high-speed line that now reaches Marseille, the LGV Méditerranée, opened in 2001 and brought the journey from Paris down to roughly three hours; before it, the same trip took close to four and a half. Most TGVs leave from Paris Gare de Lyon and arrive at Marseille Saint-Charles, whose monumental staircase leads down to the old port. Fares move a lot with the date, so booking early matters. Times and fares are indicative and change by date.',
+      es: 'La línea de alta velocidad que hoy llega a Marsella, la LGV Méditerranée, se inauguró en 2001 y dejó el trayecto desde París en unas tres horas; antes se tardaba casi cuatro horas y media. La mayoría de los TGV salen de la Gare de Lyon de París y llegan a Marsella Saint-Charles, cuya monumental escalinata baja hacia el puerto viejo. Las tarifas cambian mucho según la fecha, así que conviene reservar con tiempo. Horarios y tarifas orientativos; cambian según la fecha.',
+      fr: 'La ligne à grande vitesse qui dessert aujourd’hui Marseille, la LGV Méditerranée, a ouvert en 2001 et a ramené le trajet depuis Paris à environ trois heures ; auparavant, il fallait près de quatre heures et demie. La plupart des TGV partent de la gare de Lyon à Paris et arrivent à Marseille Saint-Charles, dont le grand escalier descend vers le Vieux-Port. Les tarifs varient beaucoup selon la date : réserver tôt compte. Horaires et tarifs indicatifs ; ils changent selon la date.',
+      it: 'La linea ad alta velocità che oggi arriva a Marsiglia, la LGV Méditerranée, è stata inaugurata nel 2001 e ha ridotto il viaggio da Parigi a circa tre ore; prima ne servivano quasi quattro e mezza. La maggior parte dei TGV parte dalla Gare de Lyon di Parigi e arriva a Marseille Saint-Charles, la cui monumentale scalinata scende verso il Vecchio Porto. Le tariffe cambiano molto in base alla data, quindi prenotare in anticipo conviene. Orari e tariffe indicativi; cambiano in base alla data.',
+    }
+  },
+  { slug: 'lyon-marseille', from: 'Lyon', to: 'Marseille', country: 'France', duration: '1h 40m', operator: 'SNCF TGV', price: '€20-55', badge: 'Route guide · France',
+    customSEO: { en: { title: 'Lyon to Marseille by Train: about 1h40, from €20', description: 'TGV from Lyon Part-Dieu to Marseille Saint-Charles in about 1h40. Check live schedules and book tickets.' } },
+    localInsight: {
+      en: 'The journey follows the Rhône valley south, and many services call at Avignon TGV or Valence TGV on the way, so it is worth checking which trains are direct and which stop. It is one of the most frequent connections in southern France, with several departures a day from Lyon Part-Dieu to Marseille Saint-Charles. Times and fares are indicative and change by date.',
+      es: 'El trayecto sigue el valle del Ródano hacia el sur y muchos servicios paran en Avignon TGV o Valence TGV, así que conviene comprobar cuáles son directos y cuáles hacen paradas. Es una de las conexiones más frecuentes del sur de Francia, con varias salidas al día desde Lyon Part-Dieu hasta Marsella Saint-Charles. Horarios y tarifas orientativos; cambian según la fecha.',
+      fr: 'Le trajet remonte la vallée du Rhône vers le sud et de nombreux services s’arrêtent à Avignon TGV ou Valence TGV : mieux vaut vérifier quels trains sont directs et lesquels ont des arrêts. C’est l’une des liaisons les plus fréquentes du sud de la France, avec plusieurs départs par jour de Lyon Part-Dieu à Marseille Saint-Charles. Horaires et tarifs indicatifs ; ils changent selon la date.',
+      it: 'Il percorso segue la valle del Rodano verso sud e molti servizi fermano a Avignon TGV o Valence TGV, quindi conviene controllare quali treni sono diretti e quali fanno fermate. È uno dei collegamenti più frequenti del sud della Francia, con diverse partenze al giorno da Lyon Part-Dieu a Marseille Saint-Charles. Orari e tariffe indicativi; cambiano in base alla data.',
+    }
+  },
+  { slug: 'marseille-nice', from: 'Marseille', to: 'Nice', country: 'France', duration: '2h 30m', operator: 'SNCF TGV', price: '€25-45', badge: 'Route guide · France',
+    customSEO: { en: { title: 'Marseille to Nice by Train: about 2h30, from €25', description: 'Train from Marseille Saint-Charles to Nice-Ville along the Côte d\'Azur in about 2h30. Compare schedules and book.' } },
+    localInsight: {
+      en: 'The line runs along the Mediterranean coast and typically calls at Toulon, Les Arcs-Draguignan, Saint-Raphaël, Cannes and Antibes before reaching Nice-Ville, so it doubles as a way to stop at the Riviera towns. Some services are faster direct TGVs and others are slower regional trains, which is why journey times vary. Times and fares are indicative and change by date.',
+      es: 'La línea recorre la costa mediterránea y suele parar en Toulon, Les Arcs-Draguignan, Saint-Raphaël, Cannes y Antibes antes de llegar a Niza-Ville, así que sirve también para detenerse en los pueblos de la Riviera. Algunos servicios son TGV directos más rápidos y otros son trenes regionales más lentos, por eso los tiempos varían. Horarios y tarifas orientativos; cambian según la fecha.',
+      fr: 'La ligne longe la côte méditerranéenne et s’arrête généralement à Toulon, Les Arcs-Draguignan, Saint-Raphaël, Cannes et Antibes avant d’arriver à Nice-Ville : elle permet donc aussi de faire étape sur la Riviera. Certains services sont des TGV directs plus rapides, d’autres des trains régionaux plus lents, d’où des durées variables. Horaires et tarifs indicatifs ; ils changent selon la date.',
+      it: 'La linea corre lungo la costa mediterranea e di solito ferma a Toulon, Les Arcs-Draguignan, Saint-Raphaël, Cannes e Antibes prima di arrivare a Nice-Ville, quindi permette anche di fare tappa nelle località della Riviera. Alcuni servizi sono TGV diretti più veloci, altri sono treni regionali più lenti, per questo i tempi variano. Orari e tariffe indicativi; cambiano in base alla data.',
+    }
+  },
+  { slug: 'zurich-munich', from: 'Zurich', to: 'Munich', country: 'Switzerland-Germany', duration: '3h 50m', operator: 'EuroCity (SBB/DB)', price: '€30-60', badge: 'Route guide · Switzerland-Germany',
+    customSEO: { en: { title: 'Zurich to Munich by Train: about 3h50, from €30', description: 'EuroCity from Zurich to Munich via Lake Constance in about 3h50. Check schedules and book tickets.' } },
+    localInsight: {
+      en: 'The EuroCity runs east through St. Gallen and along the shore of Lake Constance via Bregenz and Lindau before crossing into Bavaria, so a good part of the journey is scenic. Direct trains run roughly every two hours, and the fastest take a little under four hours. Times and fares are indicative and change by date.',
+      es: 'El EuroCity va hacia el este por St. Gallen y bordea el lago de Constanza por Bregenz y Lindau antes de entrar en Baviera, así que buena parte del trayecto es pintoresca. Los trenes directos salen más o menos cada dos horas y los más rápidos tardan algo menos de cuatro horas. Horarios y tarifas orientativos; cambian según la fecha.',
+      fr: 'L’EuroCity file vers l’est par Saint-Gall et longe le lac de Constance par Bregenz et Lindau avant d’entrer en Bavière : une bonne partie du trajet est pittoresque. Les trains directs circulent environ toutes les deux heures et les plus rapides mettent un peu moins de quatre heures. Horaires et tarifs indicatifs ; ils changent selon la date.',
+      it: 'L’EuroCity va verso est per San Gallo e costeggia il lago di Costanza passando da Bregenz e Lindau prima di entrare in Baviera, quindi buona parte del viaggio è panoramica. I treni diretti viaggiano circa ogni due ore e i più rapidi impiegano poco meno di quattro ore. Orari e tariffe indicativi; cambiano in base alla data.',
+    }
+  },
+  { slug: 'zurich-geneva', from: 'Zurich', to: 'Geneva', country: 'Switzerland', duration: '2h 45m', operator: 'SBB', price: '€40-85', badge: 'Route guide · Switzerland',
+    customSEO: { en: { title: 'Zurich to Geneva by Train: about 2h45, from €40', description: 'SBB InterCity from Zurich to Geneva in about 2h45, every 30 minutes. Compare schedules and book.' } },
+    localInsight: {
+      en: 'The Swiss InterCity links the two cities about every half hour, usually without changing trains. It passes through Bern and Lausanne, and the last stretch runs beside Lake Geneva. Some trains continue to Geneva Airport. Fares in Switzerland are high, so supersaver and advance fares make a real difference. Times and fares are indicative and change by date.',
+      es: 'El InterCity suizo une las dos ciudades más o menos cada media hora, normalmente sin cambiar de tren. Pasa por Berna y Lausana, y el último tramo va junto al lago Lemán. Algunos trenes siguen hasta el aeropuerto de Ginebra. Las tarifas en Suiza son altas, así que las ofertas con antelación marcan una diferencia real. Horarios y tarifas orientativos; cambian según la fecha.',
+      fr: 'L’InterCity suisse relie les deux villes environ toutes les demi-heures, généralement sans changement. Il passe par Berne et Lausanne, et le dernier tronçon longe le lac Léman. Certains trains continuent jusqu’à l’aéroport de Genève. Les tarifs suisses sont élevés : les billets à l’avance font une vraie différence. Horaires et tarifs indicatifs ; ils changent selon la date.',
+      it: 'L’InterCity svizzero collega le due città circa ogni mezz’ora, di solito senza cambi. Passa da Berna e Losanna e l’ultimo tratto costeggia il lago di Ginevra. Alcuni treni proseguono fino all’aeroporto di Ginevra. Le tariffe svizzere sono alte, quindi le offerte con prenotazione anticipata fanno una differenza reale. Orari e tariffe indicativi; cambiano in base alla data.',
+    }
+  },
+  { slug: 'amsterdam-cologne', from: 'Amsterdam', to: 'Cologne', country: 'Netherlands-Germany', duration: '3h 10m', operator: 'DB ICE', price: '€25-55', badge: 'Route guide · Netherlands-Germany',
+    customSEO: { en: { title: 'Amsterdam to Cologne by Train: about 3h10, from €25', description: 'ICE from Amsterdam Centraal to Cologne in about 3h10. Check live schedules and book tickets.' } },
+    localInsight: {
+      en: 'The ICE leaves Amsterdam Centraal, calls at Utrecht and Arnhem, and then crosses into Germany through Oberhausen, Duisburg and Düsseldorf before arriving at Cologne Hbf, right beside the cathedral. Direct trains run about every one to two hours. It is also the usual start of the longer ICE journeys to Frankfurt and beyond. Times and fares are indicative and change by date.',
+      es: 'El ICE sale de Ámsterdam Centraal, para en Utrecht y Arnhem y entra en Alemania por Oberhausen, Duisburgo y Düsseldorf antes de llegar a Colonia Hbf, junto a la catedral. Los trenes directos salen más o menos cada una o dos horas. Es además el inicio habitual de los ICE más largos hacia Fráncfort y más allá. Horarios y tarifas orientativos; cambian según la fecha.',
+      fr: 'L’ICE part d’Amsterdam Centraal, s’arrête à Utrecht et Arnhem, puis entre en Allemagne par Oberhausen, Duisbourg et Düsseldorf avant d’arriver à Cologne Hbf, juste à côté de la cathédrale. Les trains directs circulent environ toutes les une à deux heures. C’est aussi le départ habituel des ICE plus longs vers Francfort et au-delà. Horaires et tarifs indicatifs ; ils changent selon la date.',
+      it: 'L’ICE parte da Amsterdam Centraal, ferma a Utrecht e Arnhem ed entra in Germania passando da Oberhausen, Duisburg e Düsseldorf prima di arrivare a Colonia Hbf, accanto alla cattedrale. I treni diretti viaggiano circa ogni una o due ore. È anche l’inizio abituale degli ICE più lunghi verso Francoforte e oltre. Orari e tariffe indicativi; cambiano in base alla data.',
+    }
+  },
 ];
 
 // Hoteles reales curados por ciudad de destino (mismos criterios que CURATED_HOTELS
@@ -1124,7 +1179,7 @@ const content = {
     howLongVariants: [
       'Los trenes más rápidos tardan alrededor de {{duration}}, con varias salidas al día. Consulta el horario en vivo para tu fecha.',
       'El trayecto dura unas {{duration}} en el servicio más rápido. Hay salidas varias veces al día, así que suele haber un horario que se ajuste a tu plan.',
-      'Calculá unas {{duration}} de punta a punta en el tren más veloz. También hay conexiones más lentas, así que conviene confirmar el horario exacto para tu fecha.'
+      'Calcula unas {{duration}} de punta a punta en el tren más veloz. También hay conexiones más lentas, así que conviene confirmar el horario exacto para tu fecha.'
     ],
     whoRunsTitle: '¿Qué trenes van de {{from}} a {{to}}?',
     whoRunsVariants: [
