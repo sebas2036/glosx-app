@@ -1115,6 +1115,25 @@
     };
   })();
 
+  // ── Pestaña "Planificador IA": reinicia el buscador (limpia el texto, el resultado y el panel de hoteles) y vuelve al estado inicial ──
+  (function () {
+    document.addEventListener('click', function (e) {
+      var tab = e.target.closest ? e.target.closest('.search-tab[data-tab="ai"]') : null;
+      if (!tab) return;
+      var hp = document.querySelector('[data-panel="hotels"]');
+      document.body.classList.remove('hotels-mode');
+      var chip = document.querySelector('.region-hotels'); if (chip) { chip.classList.remove('on'); chip.setAttribute('aria-pressed', 'false'); }
+      if (hp) hp.classList.remove('on');
+      document.querySelectorAll('.search-panel').forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-panel') === 'ai'); });
+      document.querySelectorAll('.search-tab').forEach(function (t) { var on = t === tab; t.classList.toggle('on', on); t.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      var err = document.getElementById('aiPlannerError'); if (err) err.remove();
+      var note = document.querySelector('.ai-incomplete-note'); if (note) note.remove();
+      try { if (typeof window.resetAIPlanner === 'function') window.resetAIPlanner(); } catch (er) {}
+      var inp = document.getElementById('aiInput'); if (inp) inp.value = '';
+      var aur = document.getElementById('aiInputAurora'); if (aur) aur.classList.remove('active');
+    }, true);
+  })();
+
   // Franja de color de la alianza (Omio en Europa, Klook en Japón) detrás de las ventajas y los operadores:
   // sube un poco para quedar por detrás del planificador.
   (function () {
