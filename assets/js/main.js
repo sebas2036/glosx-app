@@ -1280,6 +1280,7 @@
       'Norway': ['Bergen', 'Oslo', 'Trondheim'],
       'Portugal': ['Faro', 'Lisbon', 'Porto'],
       'Slovenia': ['Ljubljana'],
+      'Japan': ['Fukuoka', 'Hakone', 'Hiroshima', 'Kanazawa', 'Kobe', 'Kyoto', 'Nagoya', 'Nara', 'Osaka', 'Sapporo', 'Tokyo', 'Yokohama'],
       'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Siena', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],
