@@ -850,6 +850,15 @@
     }
   });
 
+  // Franja de color de la alianza (Omio en Europa, Klook en Japón) detrás de las ventajas y los operadores:
+  // sube un poco para quedar por detrás del planificador.
+  (function () {
+    var ben = document.querySelector('.search-benefits'), ext = document.querySelector('.search-extras');
+    if (!ben || !ext || ben.parentNode !== ext.parentNode || ben.parentNode.classList.contains('trust-band')) return;
+    var band = document.createElement('div'); band.className = 'trust-band';
+    ben.parentNode.insertBefore(band, ben); band.appendChild(ben); band.appendChild(ext);
+  })();
+
   switchEl.addEventListener('click', function (e) {
     var b = e.target.closest ? e.target.closest('.region-btn') : null;
     if (!b) return;

@@ -256,3 +256,17 @@ body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"]::b
 .hotels-allbox .hotels-group { flex: 0 0 100%; margin: 10px 0 0; text-transform: none; letter-spacing: 0; }
 .hotels-allbox .hotels-group:first-child { margin-top: 0; }
 .hotels-flag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; background: var(--omio-lavender, #EEF3FB); color: var(--omio-navy, #182C66); border: 1.5px solid var(--omio-coral, #FB6B6C); }
+
+/* Franja Omio detrás del planificador (en modo Japón, color Klook) */
+body.home-v2 .search-card { position: relative; z-index: 2; }
+body.home-v2 .trust-band { position: relative; z-index: 1; margin-top: -64px; padding: 96px 16px 30px; }
+body.home-v2 .trust-band::before {
+  content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%);
+  background: linear-gradient(180deg, #0F1B5C 0%, #182C66 100%); border-bottom: 5px solid var(--omio-coral, #FB6B6C);
+}
+body.home-v2[data-region="japan"] .trust-band::before { background: linear-gradient(180deg, #2A2118 0%, #3b2d20 100%); border-bottom-color: #FF5B00; }
+body.home-v2 .trust-band .search-benefits b { color: #fff; }
+body.home-v2 .trust-band .search-benefits span { color: rgba(255,255,255,.78); }
+body.home-v2 .trust-band .search-benefits svg { background: rgba(255,255,255,.12); color: #fff; stroke: #fff; }
+body.home-v2 .trust-band .search-extras .hero-ops-klook { color: rgba(255,255,255,.82); }
+html, body.home-v2 { overflow-x: clip; }
