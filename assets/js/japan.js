@@ -247,6 +247,21 @@
     if (board) board.classList.remove('is-win', 'is-spinning', 'is-brake');
   }
 
+  // Texto de ayuda del buscador (hero_subtitle): en idiomas donde nombra a Omio, en Japón nombra a Klook
+  var subEl = document.querySelector('[data-i18n="hero_subtitle"]');
+  var subBusy = false;
+  function syncSubtitle() {
+    if (!subEl || subBusy) return;
+    subBusy = true;
+    var txt = subEl.textContent;
+    if (region === 'japan' && /Omio/.test(txt)) { subEl.setAttribute('data-eu-text', txt); subEl.textContent = txt.replace(/Omio/g, 'Klook'); }
+    else if (region !== 'japan' && subEl.hasAttribute('data-eu-text')) { subEl.textContent = subEl.getAttribute('data-eu-text'); subEl.removeAttribute('data-eu-text'); }
+    if (subObs) subObs.takeRecords();
+    subBusy = false;
+  }
+  var subObs = subEl ? new MutationObserver(syncSubtitle) : null;
+  if (subObs) subObs.observe(subEl, { childList: true, characterData: true, subtree: true });
+
   function setRegion(r, silent) {
     if (r === region) return;
     if (!europeCities) {
@@ -273,6 +288,7 @@
       if (typeof window.resetAIPlanner === 'function') window.resetAIPlanner();
     }
     paintMode();
+    syncSubtitle();
     if (!silent) {
       track(r);
       // la dirección refleja la región elegida, así el cambio de idioma la conserva
@@ -393,6 +409,12 @@
     pt: { from: 'a partir de {d}', direct: 'Direto' },
     ja: { from: '最短 {d}', direct: '直通' }
   };
+  // El botón de reserva de cada tramo en modo Japón va a Klook (no a Omio): enlace directo y texto con la marca correcta
+  var BUY_KLOOK = {
+    en: 'View times & book on Klook →', es: 'Ver horarios y reservar en Klook →', fr: 'Voir les horaires et réserver sur Klook →',
+    it: 'Vedi orari e prenota su Klook →', de: 'Fahrpläne ansehen & auf Klook buchen →', pt: 'Ver horários e reservar na Klook →',
+    ja: '時刻を確認してKlookで予約 →'
+  };
   function fmtMin(m) {
     var h = Math.floor(m / 60), r = m % 60;
     return h ? (r ? h + ' h ' + r + ' min' : h + ' h') : m + ' min';
@@ -424,6 +446,12 @@
       if (!first) first = d;
       chain.push([c[0], c[1]]);
       total += d.m;
+      var buy = seg.querySelector('a.ai-segment-buy');
+      if (buy) {
+        buy.setAttribute('href', bookUrl(c[0], c[1]));
+        buy.setAttribute('data-klook', '1');
+        buy.textContent = BUY_KLOOK[lang()] || BUY_KLOOK.en;
+      }
       var tm = seg.querySelector('.ai-segment-time');
       if (tm) tm.textContent = tx.from.replace('{d}', fmtMin(d.m));
       var tr = seg.querySelector('.ai-segment-train');
