@@ -80,3 +80,22 @@
   .rp-map { height: 250px; }
 }
 @media (prefers-reduced-motion: reduce) { .rp-bar i { transition: none; } }
+
+/* Tarjeta compacta del planificador (assets/js/planner-info.js) */
+.pi { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border, rgba(20, 21, 26, 0.14)); }
+.pi .rp-modes { padding: 2px 0 0; }
+.pi .rp-row { padding: 10px 0; }
+.pi .rp-note { padding: 6px 0 0; }
+.pi-guide {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;
+  font-size: 14px; font-weight: 600; color: #A8000F; text-decoration: none;
+  border-bottom: 1px solid rgba(168, 0, 15, 0.35);
+}
+.pi-guide:hover { border-bottom-color: #A8000F; }
+.pi-guide:focus-visible { outline: 2px solid #14151a; outline-offset: 3px; }
+
+/* en la tarjeta de un solo tramo de la portada el panel ocupa todo el ancho, bajo el encabezado */
+body.home-v2 .search-card .ai-segment > .pi { grid-column: 1 / -1; grid-row: 3; min-width: 0; }
+@media (max-width: 760px) {
+  body.home-v2 .search-card .ai-segment > .pi { grid-column: 1; grid-row: auto; }
+}
