@@ -230,10 +230,10 @@ body.hotels-mode .hotel-mosaic {
   position: absolute; inset: 0; z-index: 0; padding: 8px; pointer-events: none;
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
 }
-body.hotels-mode .hotel-mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; display: block; }
+body.hotels-mode .hotel-mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; display: block; filter: brightness(1.12) saturate(1.05); }
 body.hotels-mode .hotel-mosaic::after {
   content: ''; position: absolute; inset: 0; border-radius: 0;
-  background: linear-gradient(180deg, rgba(10,12,14,.66) 0%, rgba(10,12,14,.48) 45%, rgba(10,12,14,.2) 100%);
+  background: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.3) 45%, rgba(10,12,14,.08) 100%);
 }
 body.hotels-mode .hero-title-card > *:not(.hotel-mosaic) { position: relative; z-index: 1; }
 @media (max-width: 760px) { body.hotels-mode .hotel-mosaic { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); } }
@@ -288,3 +288,5 @@ html, body.home-v2 { overflow-x: clip; }
 body.home-v2 .trust-band .op-chip { background: transparent; border: 0; box-shadow: none; padding: 6px 10px; color: #0F1B5C; backdrop-filter: none; -webkit-backdrop-filter: none; }
 body.home-v2 .trust-band .op-chip img { border-radius: 8px; background: rgba(255,255,255,.85); padding: 3px; box-sizing: content-box; }
 body.home-v2[data-region="japan"] .trust-band .op-chip { color: #2A2118; }
+
+body.home-v2[data-region="japan"] .hero-title-card::before { filter: brightness(1.12) saturate(1.06); }
