@@ -180,7 +180,8 @@ function langSwitch(cur) {
 
 function body(l) {
   const c = C[l];
-  const blocks = c.blocks.map(b => {
+  // los botones de Klook van arriba (tras la introducción y las fotos), no al final
+  const render = b => {
     if (b[0] === 'h2') return `    <h2>${b[1]}</h2>`;
     if (b[0] === 'p') return `    <p>\n      ${b[1]}\n    </p>`;
     if (b[0] === 'ul') return `    <ul>\n${b[1].map(x => `      <li>${x}</li>`).join('\n')}\n    </ul>`;
@@ -192,7 +193,9 @@ function body(l) {
       </span>
       <span class="klook-cta-arrow">→</span>
     </a>`;
-  }).join('\n\n');
+  };
+  const ctaBlocks = c.blocks.filter(b => b[0] === 'cta').map(render).join('\n\n');
+  const blocks = c.blocks.filter(b => b[0] !== 'cta').map(render).join('\n\n');
   const rel = REL.map(([s, a, b]) => {
     const n = RELNAMES[l];
     return `      <li><a href="/rutas/${s}/${l === 'en' ? '' : l + '/'}">${n[a] || a} → ${n[b] || b}</a></li>`;
@@ -223,6 +226,8 @@ function body(l) {
     <div class="photo-grid">
 ${GRID.map((id, i) => `      <img src="${PHOTO(id, 500)}" alt="${esc(c.alt[i])}" loading="lazy" />`).join('\n')}
     </div>
+
+${ctaBlocks}
 
 ${blocks}
 
