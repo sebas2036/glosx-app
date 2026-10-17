@@ -435,3 +435,12 @@ body.home-v2 .search-card .ai-segment { height: 100%; }
 body.home-v2 .search-card .ai-segment .pi { flex: 1 1 auto; }
 body.home-v2 .search-card .ai-segment > a.ai-segment-buy { margin-top: auto; }
 body.home-v2 .search-card .ai-results > .omo-strip { max-width: 880px; margin: 18px auto 6px; }
+
+/* Botón de Omio en las tarjetas de tramo: con aire respecto a la pastilla del operador, más angosto y en una línea */
+body.home-v2 .search-card .ai-segment > a.ai-segment-buy {
+  margin: 16px auto 0; width: auto; max-width: 100%; align-self: center; padding: 11px 22px; font-size: 14.5px; line-height: 1.2;
+  white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 99px;
+}
+body.home-v2 .search-card .ai-segment .ai-segment-train { margin-bottom: 4px; }
+body.home-v2 .search-card .ai-segment > a.ai-segment-buy::before { flex: 0 0 20px; width: 20px; height: 20px; margin-right: 0; }
+@media (max-width: 420px) { body.home-v2 .search-card .ai-segment > a.ai-segment-buy { white-space: normal; text-align: center; } }
