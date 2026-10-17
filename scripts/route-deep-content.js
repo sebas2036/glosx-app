@@ -315,7 +315,7 @@ const STN = { en: 'Stations', es: 'Estaciones', fr: 'Gares', it: 'Stazioni' };
 function postProcess(slug, lang, html) {
   if (!STATION_LINE[slug] || !STN[lang]) return html;
   if (lang !== 'en' && !(I18N[lang] && I18N[lang].deep[slug])) return html;
-  return html.replace(/<strong>(?:Station|Estación|Gare|Stazione|Stations|Estaciones|Gares|Stazioni): [^<]*<\/strong>/, '<strong>' + STN[lang] + ': ' + STATION_LINE[slug].replace(/&/g, '&amp;') + '</strong>');
+  return html.replace(/<strong>(?:Station|Estación|Gare|Stazione|Stations|Estaciones|Gares|Stazioni) ?: [^<]*<\/strong>/, '<strong>' + STN[lang] + (lang === 'fr' ? ' : ' : ': ') + STATION_LINE[slug].replace(/&/g, '&amp;') + '</strong>');
 }
 
 module.exports = { render, postProcess, DEEP };
