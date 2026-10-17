@@ -283,3 +283,8 @@ body.home-v2[data-region="japan"] .trust-band .search-benefits span,
 body.home-v2[data-region="japan"] .trust-band .search-extras .hero-ops-klook { color: #5a4636; }
 body.home-v2[data-region="japan"] .trust-band .search-benefits svg { stroke: #E65200; }
 html, body.home-v2 { overflow-x: clip; }
+
+/* Operadores sueltos sobre la franja: sin chip, solo logo y nombre */
+body.home-v2 .trust-band .op-chip { background: transparent; border: 0; box-shadow: none; padding: 6px 10px; color: #0F1B5C; backdrop-filter: none; -webkit-backdrop-filter: none; }
+body.home-v2 .trust-band .op-chip img { border-radius: 8px; background: rgba(255,255,255,.85); padding: 3px; box-sizing: content-box; }
+body.home-v2[data-region="japan"] .trust-band .op-chip { color: #2A2118; }
