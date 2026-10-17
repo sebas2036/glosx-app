@@ -804,6 +804,15 @@
     card.appendChild(panel);
     return panel;
   }
+  // Mosaico de fotos de hotel que sustituye a la foto del tren mientras está activo el chip Hoteles.
+  function ensureMosaic() {
+    var card = document.querySelector('.hero-title-card');
+    if (!card || card.querySelector('.hotel-mosaic')) return;
+    var m = document.createElement('div');
+    m.className = 'hotel-mosaic'; m.setAttribute('aria-hidden', 'true');
+    m.innerHTML = '<img src="https://images.pexels.com/photos/2346090/pexels-photo-2346090.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/18328707/pexels-photo-18328707.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/2226091/pexels-photo-2226091.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/7034586/pexels-photo-7034586.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/3755590/pexels-photo-3755590.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/19966784/pexels-photo-19966784.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/34307858/pexels-photo-34307858.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/14464346/pexels-photo-14464346.jpeg?auto=compress&cs=tinysrgb&w=520" alt="" loading="lazy" decoding="async">';
+    card.insertBefore(m, card.firstChild);
+  }
   function closeHotels() {
     document.body.classList.remove('hotels-mode');
     var chip = document.querySelector('.region-hotels'); if (chip) { chip.classList.remove('on'); chip.setAttribute('aria-pressed', 'false'); }
@@ -816,6 +825,7 @@
     var fi = hp.querySelector('.hotels-input'); if (fi) fi.value = '';
     document.querySelectorAll('.search-tab').forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
     document.querySelectorAll('.search-panel').forEach(function (x) { x.classList.toggle('on', x === hp); });
+    ensureMosaic();
     document.body.classList.add('hotels-mode');
     chip.classList.add('on'); chip.setAttribute('aria-pressed', 'true');
   }

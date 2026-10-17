@@ -220,3 +220,20 @@ body.hotels-mode .region-hotels { background: #fff !important; color: #2A2118 !i
 .hotels-date { flex: 0 0 230px; }
 .hotels-date input { border: 0; outline: 0; background: transparent; font: inherit; font-size: 16px; min-width: 0; font-weight: 600; color: #14151a; padding: 0; width: 100%; }
 @media (max-width: 900px) { .hotels-date { flex: 1 1 140px; } .hotels-bar { flex-wrap: wrap; } .hotels-field:not(.hotels-date) { flex: 1 1 100%; } .hotels-go { flex: 1 1 100%; } }
+
+/* Hoteles: cuadrícula de fotos como fondo de la portada */
+.hotel-mosaic { display: none; }
+body.hotels-mode .hero-title-card { position: relative; }
+body.hotels-mode .hero-title-card::before { opacity: 0; }
+body.hotels-mode .hotel-mosaic {
+  display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 8px;
+  position: absolute; inset: 0; z-index: 0; padding: 8px; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0%, #000 82%, transparent 100%);
+}
+body.hotels-mode .hotel-mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; display: block; }
+body.hotels-mode .hotel-mosaic::after {
+  content: ''; position: absolute; inset: 0; border-radius: 0;
+  background: linear-gradient(180deg, rgba(10,12,14,.66) 0%, rgba(10,12,14,.48) 45%, rgba(10,12,14,.2) 100%);
+}
+body.hotels-mode .hero-title-card > *:not(.hotel-mosaic) { position: relative; z-index: 1; }
+@media (max-width: 760px) { body.hotels-mode .hotel-mosaic { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); } }
