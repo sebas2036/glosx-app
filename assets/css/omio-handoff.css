@@ -506,3 +506,19 @@ body.home-v2[data-region="japan"].hotels-mode .search-tab:not(.on) { background:
   background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=omio.com") center / 17px 17px no-repeat;
   box-shadow: 0 1px 6px rgba(15, 27, 92, .22);
 }
+
+/* Hoteles: en Europa dos botones (Klook naranja y Booking azul); en Japón solo Klook */
+.hotels-go .go-jp { display: none; }
+body[data-region="japan"] .hotels-go .go-eu { display: none; }
+body[data-region="japan"] .hotels-go .go-jp { display: inline; }
+body[data-region="japan"] .hotels-go-bk { display: none; }
+.hotels-go-bk { background: #0057b8; padding: 0 26px; }
+@media (max-width: 900px) {
+  .hotels-bar > .hotels-go-kl, .hotels-bar > .hotels-go-bk { flex: 1 1 calc(50% - 5px); padding: 14px 10px; font-size: 15px; }
+  body[data-region="japan"] .hotels-bar > .hotels-go-kl { flex: 1 1 100%; }
+}
+/* Europa (dos botones): la barra se parte en filas si no cabe; la ciudad nunca se queda sin ancho */
+body:not([data-region="japan"]) .hotels-bar { flex-wrap: wrap; }
+body:not([data-region="japan"]) .hotels-bar > .hotels-field:not(.hotels-date) { flex: 2 1 280px; min-width: 240px; }
+body:not([data-region="japan"]) .hotels-bar > .hotels-date { flex: 1 1 150px; }
+body:not([data-region="japan"]) .hotels-bar > .hotels-go-kl, body:not([data-region="japan"]) .hotels-bar > .hotels-go-bk { flex: 1 1 calc(50% - 6px); padding: 15px 18px; }
