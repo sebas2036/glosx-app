@@ -229,6 +229,8 @@ const DEEP = {
 
 const MORE = require('./route-deep-content-2');
 Object.assign(DEEP, MORE.deep);
+const MORE3 = require('./route-deep-content-3');
+Object.assign(DEEP, MORE3.deep);
 
 const BASE_STYLE = 'width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:14px;';
 const TH = 'padding:8px 12px;color:#C10016;font-weight:700;text-align:left;';
@@ -246,7 +248,7 @@ function render(slug, lang, route) {
   if (slug.startsWith('london-')) sibs = '<a href="/trains-from-london/">All trains from London</a> · ' + SIBLINGS_LONDON.filter(([s]) => s !== slug).map(([s, label]) => `<a href="/rutas/${s}/">${label}</a>`).join(' · ');
   else {
     const rel = Object.keys(DEEP).filter(k => k !== slug && k.split('-').some(c => cities.includes(c)));
-    sibs = rel.map(k => `<a href="/rutas/${k}/">${nice(k)}</a>`).join(' · ');
+    sibs = (cities.includes('paris') ? '<a href="/trains-from-paris/">All trains from Paris</a> · ' : '') + rel.map(k => `<a href="/rutas/${k}/">${nice(k)}</a>`).join(' · ');
   }
   return `
     <section class="deep-guide">
@@ -293,7 +295,7 @@ const STATION_LINE = {
   'london-edinburgh': 'London King\'s Cross → Edinburgh Waverley', 'london-amsterdam': 'London St Pancras International → Amsterdam Centraal',
   'london-brussels': 'London St Pancras International → Brussels-Midi'
 };
-Object.assign(STATION_LINE, MORE.stationLines);
+Object.assign(STATION_LINE, MORE.stationLines, MORE3.stationLines);
 function postProcess(slug, lang, html) {
   if (lang !== 'en' || !STATION_LINE[slug]) return html;
   return html.replace(/<strong>Station: [^<]*<\/strong>/, '<strong>Stations: ' + STATION_LINE[slug].replace(/&/g, '&amp;') + '</strong>');
