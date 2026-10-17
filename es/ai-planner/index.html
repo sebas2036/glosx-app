@@ -317,6 +317,7 @@
     }
   </style>
   <link rel="stylesheet" href="/assets/css/omio-handoff.css?v=8">
+  <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
 </head>
 <body>
 
@@ -327,7 +328,7 @@
     <a href="/blog.html" data-i18n="nav_blog">Blog</a>
     <a href="/" class="nav-cta" data-i18n="nav_try_planner">Try the Planner</a>
   </div>
-</nav>
+<div class="lang-wrapper" data-lang-chip><button type="button" class="lang-btn" id="langBtn" aria-label="Language" aria-haspopup="true" aria-expanded="false"><span id="langCode">ES</span><span style="font-size:10px;opacity:0.6">▾</span></button><div class="lang-dropdown" id="langDropdown"><a class="lang-option" href="/ai-planner/" hreflang="en" lang="en">English</a><a class="lang-option active" href="/es/ai-planner/" hreflang="es" lang="es">Español</a><a class="lang-option" href="/fr/ai-planner/" hreflang="fr" lang="fr">Français</a><a class="lang-option" href="/it/ai-planner/" hreflang="it" lang="it">Italiano</a></div></div></nav>
 
 <!-- Hero -->
 <section class="hero">
@@ -585,5 +586,6 @@
 </script>
   <script src="/assets/js/omio-bridge.js?v=9" defer></script>
   <script src="/assets/js/klook-bridge.js?v=1" defer></script>
+  <script src="/assets/js/lang-chip.js?v=1" defer></script>
 </body>
 </html>

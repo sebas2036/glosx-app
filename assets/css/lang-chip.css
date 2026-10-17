@@ -1,0 +1,13 @@
+/* Chip de idioma común a todas las páginas: azul Omio suave */
+.nav-right { display: flex; align-items: center; gap: 18px; }
+.lang-wrapper { position: relative; }
+.lang-btn { display: inline-flex; align-items: center; gap: 6px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 6px 12px; border-radius: 100px;
+  background: #CFDBF2 !important; color: #0F1B5C !important; border: 1px solid rgba(15, 27, 92, .14) !important; transition: background-color .2s ease; }
+.lang-btn:hover { background: #BCCDEB !important; }
+.lang-btn:focus-visible { outline: 3px solid #0F1B5C; outline-offset: 2px; }
+.lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; min-width: 160px; z-index: 300; padding: 6px; background: #fff;
+  border: 1px solid rgba(20, 21, 26, .14); border-radius: 12px; box-shadow: 0 12px 28px rgba(20, 21, 26, .12); }
+.lang-dropdown.open { display: block; }
+.lang-option { display: block; padding: 8px 10px; border-radius: 8px; font-size: 13px; color: #14151a; text-decoration: none; cursor: pointer; }
+.lang-option:hover { background: rgba(207, 219, 242, .45); text-decoration: none; }
+.lang-option.active { background: rgba(207, 219, 242, .75); color: #0F1B5C; font-weight: 700; }
