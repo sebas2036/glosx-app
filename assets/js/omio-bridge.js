@@ -306,6 +306,7 @@
     var buy = seg.querySelector('a.ai-segment-buy');
     if (!buy || !isOmio(buy.getAttribute('href'))) return;
     seg.insertBefore(buildOffer('planner'), buy);
+    seg.classList.add('has-offer');   // con el código visible se compacta la tarjeta: solo la fila de tren
   }
   (function watchPlanner() {
     var segs = document.getElementById('aiSegments');
