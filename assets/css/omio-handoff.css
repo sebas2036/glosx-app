@@ -217,6 +217,6 @@ body.hotels-mode .region-hotels { background: #fff !important; color: #2A2118 !i
 .hotels-city:hover { background: #e4e7f0; }
 @media (max-width: 640px) { .hotels-bar { flex-direction: column; } .hotels-go { padding: 14px; } }
 
-.hotels-date { flex: 0 0 170px; }
-.hotels-date input { border: 0; outline: 0; background: transparent; font: inherit; font-size: 17px; font-weight: 600; color: #14151a; padding: 0; width: 100%; }
+.hotels-date { flex: 0 0 230px; }
+.hotels-date input { border: 0; outline: 0; background: transparent; font: inherit; font-size: 16px; min-width: 0; font-weight: 600; color: #14151a; padding: 0; width: 100%; }
 @media (max-width: 900px) { .hotels-date { flex: 1 1 140px; } .hotels-bar { flex-wrap: wrap; } .hotels-field:not(.hotels-date) { flex: 1 1 100%; } .hotels-go { flex: 1 1 100%; } }

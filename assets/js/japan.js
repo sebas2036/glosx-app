@@ -736,7 +736,7 @@
     pt: { ci: 'Entrada', co: 'Saída', ph: 'Cidade ou região', lab: 'Para onde?', pop: 'Destinos populares', go: 'Buscar hotéis', none: 'Sem resultados: tente outra cidade' },
     ja: { ci: 'チェックイン', co: 'チェックアウト', ph: '都市・エリア', lab: 'どこへ？', pop: '人気の目的地', go: 'ホテルを検索', none: '見つかりません。別の都市をお試しください' }
   };
-  var HOTEL_POP = ['Paris', 'Rome', 'London', 'Barcelona', 'Amsterdam', 'Vienna', 'Prague', 'Berlin', 'Zurich', 'Venice', 'Madrid', 'Florence', 'Budapest', 'Munich'];
+  var HOTEL_POP = ['Paris', 'Rome', 'London', 'Barcelona', 'Amsterdam', 'Vienna', 'Prague', 'Berlin', 'Zurich', 'Venice', 'Madrid', 'Florence', 'Budapest', 'Munich', 'Lisbon', 'Porto', 'Oslo', 'Marseille', 'Nice', 'Geneva'];
   function hnorm(x) { return String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); }
   function buildHotels() {
     var card = document.querySelector('.search-card'), src = document.getElementById('klookCityMenu');
@@ -798,7 +798,7 @@
     go.addEventListener('click', submit);
     pop.forEach(function (c) {
       var b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = c;
-      b.addEventListener('click', function () { pick(c); submit(); });
+      b.addEventListener('click', function () { pick(c); (ci.value ? co : ci).focus(); });
       row.appendChild(b);
     });
     card.appendChild(panel);
