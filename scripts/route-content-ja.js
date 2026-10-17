@@ -1,6 +1,6 @@
 // Textos de las fichas de ruta en japonés. Las ciudades se sustituyen al generar.
 module.exports = {
-  titleTemplate: (from, to) => `${from}から${to}への列車（2026）| 時刻と安い切符 - WoW Train · glosx.app`,
+  titleTemplate: (from, to) => `${from}から${to}への列車（2026）| 時刻と安い切符`,
   descriptionTemplate: (from, to) => `${from}から${to}への列車。いちばん安い運賃、公式の時刻、運行会社の比較。自分の通貨で安全に予約できます。`,
   ogTitleTemplate: (from, to) => `${from}から${to}へ、列車の旅：2026年ガイド`,
   ogDescriptionTemplate: (from, to) => `${from} → ${to}の列車。路線、駅、運行会社、予約のしかた。`,

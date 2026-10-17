@@ -993,7 +993,7 @@ function pickVariant(slug, variants) {
 // Language-specific content
 const content = {
   en: {
-    titleTemplate: (from, to) => `Train from ${from} to ${to} (2026) | Schedules & Cheap Tickets - WoW Train`,
+    titleTemplate: (from, to) => `Train from ${from} to ${to} (2026) | Schedules & Cheap Tickets`,
     descriptionTemplate: (from, to) => `Find the cheapest train fares, official schedules, and operator comparisons for ${from} to ${to}. Book safely in your currency.`,
     ogTitleTemplate: (from, to) => `${from} to ${to} by Train: 2026 Guide`,
     ogDescriptionTemplate: (from, to) => `${from} → ${to} by train — route, stations, operators and how to book it.`,
@@ -1090,7 +1090,7 @@ const content = {
     ]
   },
   es: {
-    titleTemplate: (from, to) => `Tren ${from} a ${to} (2026) | Horarios y Billetes Baratos - WoW Train`,
+    titleTemplate: (from, to) => `Tren ${from} a ${to} (2026) | Horarios y Billetes Baratos`,
     descriptionTemplate: (from, to) => `Encuentra las tarifas de tren más baratas, horarios oficiales y comparaciones de operadores para ${from} a ${to}. Reserva de forma segura en tu moneda.`,
     ogTitleTemplate: (from, to) => `${from} a ${to} en Tren: Guía 2026`,
     ogDescriptionTemplate: (from, to) => `${from} → ${to} en tren — ruta, estaciones, operadores y cómo reservarlo.`,
@@ -1187,7 +1187,7 @@ const content = {
     ]
   },
   fr: {
-    titleTemplate: (from, to) => `Train de ${from} à ${to} (2026) | Horaires et Billets Pas Chers - WoW Train`,
+    titleTemplate: (from, to) => `Train de ${from} à ${to} (2026) | Horaires et Billets Pas Chers`,
     descriptionTemplate: (from, to) => `Trouvez les tarifs de train les moins chers, les horaires officiels et une comparaison des opérateurs pour ${from} → ${to}. Réservation sécurisée dans votre monnaie.`,
     ogTitleTemplate: (from, to) => `${from} à ${to} en Train : Guide 2026`,
     ogDescriptionTemplate: (from, to) => `${from} → ${to} en train — itinéraire, gares, opérateurs et comment réserver.`,
@@ -1283,7 +1283,7 @@ const content = {
     ]
   },
   it: {
-    titleTemplate: (from, to) => `Treno da ${from} a ${to} (2026) | Orari e Biglietti Economici - WoW Train`,
+    titleTemplate: (from, to) => `Treno da ${from} a ${to} (2026) | Orari e Biglietti Economici`,
     descriptionTemplate: (from, to) => `Trova le tariffe ferroviarie più economiche, gli orari ufficiali e il confronto tra operatori per ${from} → ${to}. Prenotazione sicura nella tua valuta.`,
     ogTitleTemplate: (from, to) => `${from} a ${to} in Treno: Guida 2026`,
     ogDescriptionTemplate: (from, to) => `${from} → ${to} in treno — percorso, stazioni, operatori e come prenotare.`,

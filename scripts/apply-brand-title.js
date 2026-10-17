@@ -36,6 +36,7 @@ function run() {
   for (const f of walk(ROOT, [])) {
     const src = fs.readFileSync(f, 'utf8');
     if (/noindex|http-equiv="refresh"/i.test(src)) continue;
+    if (/[\\/]rutas[\\/]/.test(f)) continue;   // plan CTR 17-oct-2026: las rutas van sin sufijo de marca (títulos <= 60 caracteres)
     const out = src.replace(/<title((?:\s[^>]*)?)>([\s\S]*?)<\/title>/, (m, attrs, t) => {
       const nt = brandTitle(t);
       return nt === t.trim() ? m : '<title' + attrs + '>' + nt + '</title>';
