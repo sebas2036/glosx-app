@@ -231,13 +231,15 @@ const MORE = require('./route-deep-content-2');
 Object.assign(DEEP, MORE.deep);
 const MORE3 = require('./route-deep-content-3');
 Object.assign(DEEP, MORE3.deep);
+const MORE4 = require('./route-deep-4');
+Object.assign(DEEP, MORE4.deep);
 
 const BASE_STYLE = 'width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:14px;';
 const TH = 'padding:8px 12px;color:#C10016;font-weight:700;text-align:left;';
 const TD = 'padding:8px 12px;border-top:1px solid rgba(20,21,26,0.08);vertical-align:top;';
 
 const I18N = {};
-for (const l of ['es', 'fr', 'it']) { try { I18N[l] = require('./route-deep-' + l); } catch (e) { /* idioma aún sin traducir */ } }
+for (const l of ['es', 'fr', 'it']) { try { I18N[l] = require('./route-deep-' + l); Object.assign(I18N[l].deep, require('./route-deep-4-' + l).deep); } catch (e) { /* idioma aún sin traducir */ } }
 const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', it: '/it/' };
 
 function render(slug, lang, route) {
@@ -310,7 +312,7 @@ const STATION_LINE = {
   'london-edinburgh': 'London King\'s Cross → Edinburgh Waverley', 'london-amsterdam': 'London St Pancras International → Amsterdam Centraal',
   'london-brussels': 'London St Pancras International → Brussels-Midi'
 };
-Object.assign(STATION_LINE, MORE.stationLines, MORE3.stationLines);
+Object.assign(STATION_LINE, MORE.stationLines, MORE3.stationLines, MORE4.stationLines);
 const STN = { en: 'Stations', es: 'Estaciones', fr: 'Gares', it: 'Stazioni' };
 function postProcess(slug, lang, html) {
   if (!STATION_LINE[slug] || !STN[lang]) return html;
