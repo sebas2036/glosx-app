@@ -1,0 +1,36 @@
+{
+  "en": [
+    {
+      "q": "How do I get from {{from}} to {{to}} by train?",
+      "a": "The usual option is a {{operator}} train, with a journey time of about {{duration}}. Search your date on Omio to compare departures, prices and the exact stations in one place."
+    },
+    {
+      "q": "Can you travel from {{from}} to {{to}} by train?",
+      "a": "Yes. The route is served by {{operator}} and the trip takes about {{duration}}. Some departures can include a change, so check the details of each result before you book."
+    },
+    {
+      "q": "What is the cheapest way to get from {{from}} to {{to}}?",
+      "a": "Train fares usually run {{price}} and are lowest when you book early, because advance tickets sell out on busy days. Compare dates on Omio, and add the time to and from airports or bus stops if you are weighing other options."
+    },
+    {
+      "q": "Which station do I leave from and arrive at?",
+      "a": "It depends on the service. Large cities can have more than one station, so check the departure and arrival stations shown on each result before you book."
+    },
+    {
+      "q": "Is it better to take the train or fly from {{from}} to {{to}}?",
+      "a": "For many city-centre-to-city-centre trips the train is competitive: no airport transfers or check-in time, and about {{duration}} on board. Compare total time and price for your own dates."
+    },
+    {
+      "q": "Should I book the {{from}} to {{to}} train in advance?",
+      "a": "Booking earlier usually gives lower prices ({{price}} is the typical range) and popular departures can sell out."
+    },
+    {
+      "q": "Can I buy {{from}} to {{to}} train tickets online from my phone?",
+      "a": "Yes. On Omio you can compare times and book from your phone. Most tickets are delivered as e-tickets, but check the operator's rules for the service you choose."
+    },
+    {
+      "q": "How early should I get to the station?",
+      "a": "For international or high-speed services, aim for 20 to 30 minutes before departure; for local trains, less. Check the operator's rules for your ticket."
+    }
+  ]
+}
