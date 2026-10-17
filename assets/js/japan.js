@@ -1043,6 +1043,37 @@
     document.querySelectorAll('.partner-row').forEach(function (a) { if (/goPartner\('tiqets'/.test(a.getAttribute('onclick') || '')) a.classList.add('eu-only'); });
   })();
 
+  // ── Resultado del planificador: textos que la IA devuelve en inglés ("2 hours 30 minutes", "A to B via C") ──
+  (function () {
+    var lg = lang(); if (lg === 'en') return;
+    var H = { es: ['h', 'min', 'por'], fr: ['h', 'min', 'via'], it: ['h', 'min', 'via'], de: ['Std.', 'Min.', 'über'], pt: ['h', 'min', 'via'], ja: ['時間', '分', '経由'] }[lg];
+    if (!H) return;
+    var res = document.getElementById('aiResults'); if (!res || !window.MutationObserver) return;
+    var rx = /(\d+)\s*(?:hours?|hrs?|h)\b(?:\s*(?:and\s*)?(\d+)\s*(?:minutes?|mins?|min))?|(\d+)\s*(?:minutes?|mins?)\b/gi;
+    function fix(txt) {
+      var t = txt.replace(rx, function (m, h, mm, only) {
+        if (only) return lg === 'ja' ? only + H[1] : only + ' ' + H[1];
+        if (lg === 'ja') return h + H[0] + (mm ? mm + H[1] : '');
+        return h + ' ' + H[0] + (mm ? ' ' + mm + ' ' + H[1] : '');
+      });
+      t = t.replace(/\s+via\s+/g, ' ' + H[2] + ' ');
+      if (/^[^→]+\sto\s[^→]+$/.test(t) && !/\d/.test(t)) t = t.replace(/\sto\s/, ' → ');
+      return t;
+    }
+    var busy = false;
+    function run() {
+      if (busy) return; busy = true;
+      var w = document.createTreeWalker(res, NodeFilter.SHOW_TEXT, null), n;
+      while ((n = w.nextNode())) {
+        var v = n.nodeValue; if (!v || v.length > 160) continue;
+        if (!/\b(hours?|hrs?|minutes?|mins?)\b|\svia\s|\sto\s/i.test(v)) continue;
+        var nv = fix(v); if (nv !== v) n.nodeValue = nv;
+      }
+      busy = false;
+    }
+    new MutationObserver(function () { setTimeout(run, 0); }).observe(res, { childList: true, subtree: true, characterData: true });
+  })();
+
   // Franja de color de la alianza (Omio en Europa, Klook en Japón) detrás de las ventajas y los operadores:
   // sube un poco para quedar por detrás del planificador.
   (function () {

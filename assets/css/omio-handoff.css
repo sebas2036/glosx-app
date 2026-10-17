@@ -418,3 +418,20 @@ body.home-v2 .country-popup.wide .country-routes a { display: block; margin-bott
 body.home-v2[data-region="japan"] .country-popup .country-routes a:hover { background: rgba(255, 91, 0, .14); color: #2A2118; }
 body.home-v2 .country-popup .country-routes .group-label { color: #2b3d78; }
 body.home-v2[data-region="japan"] .country-popup .country-routes .group-label { color: #8a4a1a; }
+
+/* Resultado del planificador: todo el ancho de la tarjeta, cabecera centrada, tarjetas de tramo iguales y botones alineados */
+body.home-v2 .search-card .ai-results { max-width: none; width: 100%; margin: 6px 0 0; padding: 0; }
+body.home-v2 .search-card .ai-results-header { text-align: center; max-width: 880px; margin: 0 auto 8px; }
+body.home-v2 .search-card .ai-results-header h3 { text-align: center; color: var(--omio-navy, #0F1B5C); }
+body.home-v2 .search-card .ai-results-header p { text-align: center; }
+body.home-v2 .search-card .ai-stops { max-width: 100%; }
+body.home-v2 .search-card .ai-multileg-note { text-align: center; margin: 10px auto 14px; max-width: 760px; }
+body.home-v2 .search-card .ai-segments { width: 100%; max-width: 100%; gap: 16px; align-items: stretch; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body.home-v2 .search-card .ai-segments.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+body.home-v2 .search-card .ai-segments.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+body.home-v2 .search-card .ai-segments.cols-1 { grid-template-columns: minmax(0, 560px); justify-content: center; }
+@media (max-width: 900px) { body.home-v2 .search-card .ai-segments, body.home-v2 .search-card .ai-segments.cols-3, body.home-v2 .search-card .ai-segments.cols-4 { grid-template-columns: minmax(0, 1fr); } }
+body.home-v2 .search-card .ai-segment { height: 100%; }
+body.home-v2 .search-card .ai-segment .pi { flex: 1 1 auto; }
+body.home-v2 .search-card .ai-segment > a.ai-segment-buy { margin-top: auto; }
+body.home-v2 .search-card .ai-results > .omo-strip { max-width: 880px; margin: 18px auto 6px; }

@@ -298,15 +298,20 @@
 
   // Planificador de la portada: cuando hay un código vigente, aparece dentro del resultado (solo Europa, en el primer tramo)
   function plannerOffer() {
-    if (Date.now() > OFFER_END) return;
     var segs = document.getElementById('aiSegments');
     if (!segs) return;
-    var seg = segs.querySelector('.ai-segment');
-    if (!seg || seg.querySelector('.omo')) return;
-    var buy = seg.querySelector('a.ai-segment-buy');
-    if (!buy || !isOmio(buy.getAttribute('href'))) return;
-    seg.insertBefore(buildOffer('planner'), buy);
-    seg.classList.add('has-offer');   // con el código visible se compacta la tarjeta: solo la fila de tren
+    var res = segs.parentNode;
+    var strip = res.querySelector(':scope > .omo');
+    var all = segs.querySelectorAll('.ai-segment');
+    var omioLegs = Array.prototype.filter.call(all, function (sg) { var b = sg.querySelector('a.ai-segment-buy'); return b && isOmio(b.getAttribute('href')); });
+    if (Date.now() > OFFER_END || !omioLegs.length) { if (strip) strip.remove(); return; }
+    // el código se muestra una sola vez, en una franja a todo el ancho debajo de las tarjetas; todas las tarjetas se compactan igual
+    all.forEach(function (sg) { sg.classList.add('has-offer'); });
+    if (!strip) {
+      strip = buildOffer('planner');
+      strip.classList.add('omo-strip');
+      res.insertBefore(strip, segs.nextSibling);
+    }
   }
   (function watchPlanner() {
     var segs = document.getElementById('aiSegments');
