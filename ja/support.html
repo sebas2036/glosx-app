@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>サポート — WoW Train · glosx.app</title>
+  <meta name="description" content="WoW Trainのサポート。AI鉄道プランナー、予約リンク、旅行の準備に関するご質問は、こちらからお問い合わせください。" />
+  <link rel="canonical" href="https://glosx.app/ja/support.html" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/support.html" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/support.html" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/support.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="サポート — WoW Train" />
+  <meta property="og:description" content="WoW Trainのサポート。AI鉄道プランナー、予約リンク、旅行の準備に関するご質問は、こちらからお問い合わせください。" />
+  <meta property="og:url" content="https://glosx.app/ja/support.html" />
+  <meta property="og:image" content="https://glosx.app/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="サポート — WoW Train" />
+  <meta name="twitter:description" content="WoW Trainのサポート。AI鉄道プランナー、予約リンク、旅行の準備に関するご質問は、こちらからお問い合わせください。" />
+  <meta name="twitter:image" content="https://glosx.app/hero-bg.jpg" />
+
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // localhost/127.0.0.1 = server local de desarrollo -- nunca debe
+    // contarse como trafico real en GA4 (se detecto el 01-sep-2026,
+    // pageviews de pruebas locales inflando el realtime de produccion).
+    try {
+      if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) gtag('set', 'traffic_type', 'internal');
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-XPTSM1EJQJ');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I use the WoW Train AI planner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open the homepage at glosx.app, type your trip in plain language (e.g. 'Paris to Rome in 3 days') and the AI will build a complete rail itinerary with connections, journey times and booking links via Omio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is WoW Train free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — WoW Train is completely free. We earn a small commission from our booking partners (Omio) when you complete a purchase, at no extra cost to you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which countries does WoW Train cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WoW Train covers rail travel across 16 European countries. Coverage is expanding regularly — if a route isn't showing yet, try describing it differently or check back soon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book my train tickets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WoW Train doesn't sell tickets directly. Once the AI builds your itinerary, each leg links out to Omio, our booking partner, where you compare prices and complete the purchase securely."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I contact WoW Train for support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email contact@glosx.app. We respond to every message, usually within 24 hours."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://glosx.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Support", "item": "https://glosx.app/support.html" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafaf8; --surface: #ffffff; --border: rgba(20,21,26,0.14);
+      --primary: #C10016; --primary2: #C10016; --text: #14151a; --muted: #55565f;
+    }
+    body {
+      background-color: #edd0b4;
+      background-image: linear-gradient(135deg, #edd0b4 0%, #fffbf7 45%, #d6ae87 100%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--text);
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(250,250,248,0.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.5px;
+      color: var(--text); text-decoration: none;
+    }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nav-back:hover { color: var(--text); }
+    main { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+    .badge {
+      display: inline-block;
+      background: rgba(193,0,22,0.08); border: 1px solid rgba(193,0,22,0.25);
+      border-radius: 100px; padding: 5px 14px; margin-bottom: 24px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--primary); text-transform: uppercase;
+    }
+    h1 { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 12px; }
+    .subtitle { font-size: 18px; color: var(--muted); margin-bottom: 56px; line-height: 1.6; }
+    .contact-card {
+      background: var(--surface); border: 1px solid rgba(193,0,22,0.3);
+      border-radius: 20px; padding: 36px; margin-bottom: 48px; text-align: center;
+    }
+    .contact-card .icon { color: var(--primary); margin-bottom: 16px; display: flex; justify-content: center; }
+    .contact-card h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .contact-card p { font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+    .btn {
+      display: inline-block;
+      background: var(--primary); color: #fff;
+      padding: 14px 28px; border-radius: 100px;
+      font-size: 15px; font-weight: 700; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: none;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    h2.section-title { font-size: 24px; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.5px; }
+    .faq-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px; margin-bottom: 12px;
+    }
+    .faq-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+    .faq-item p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    a { color: var(--primary2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid var(--border); padding: 32px 24px; text-align: center;
+    }
+    footer p { font-size: 13px; color: var(--muted); }
+    @media (max-width: 600px) { nav { padding: 16px 20px; } h1 { font-size: 32px; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/ja/" class="nav-logo wt-logo" aria-label="WoW Train" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-right:12px;flex-shrink:0;"><svg class="wt-logo-icon" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="10" fill="#C10016"/><polyline points="8,12 15,29 20,18 25,29 32,12" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="12" r="2.6" fill="#fff"/><circle cx="20" cy="18" r="2.6" fill="#fff"/><circle cx="32" cy="12" r="2.6" fill="#fff"/></svg><span class="wt-logo-word" style="font-size:clamp(17px,4.6vw,22px);line-height:1;letter-spacing:-.04em;color:#14151a;white-space:nowrap;"><b style="font-weight:700;">WoW</b> <i style="font-style:normal;font-weight:300;">Train</i></span></a>
+    <a href="/ja/" class="nav-back">← ホームへ戻る</a>
+  </nav>
+
+  <main>
+    <div class="badge">サポート</div>
+    <h1>お困りのときは、こちらへ</h1>
+    <p class="subtitle">WoW Trainは少人数のチームで運営しています。いただいたメッセージにはすべてお返事します。通常は24時間以内にご連絡します。</p>
+    <div class="contact-card">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6.5 12 13 21 6.5"/></svg></span>
+      <h2>メールで直接ご連絡ください</h2>
+      <p>不具合の報告、ご要望、そのほかのご用件は、メールでお送りください。不具合の場合は、お使いのブラウザと、表示していたページも添えていただけると助かります。</p>
+      <a href="mailto:contact@glosx.app?subject=WoW%20Train%20Support" class="btn">メッセージを送る</a>
+    </div>
+    <h2 class="section-title">よくある質問</h2>
+    <div class="faq-item">
+      <h3>対応しているのはどの国ですか？</h3>
+      <p>ヨーロッパ16か国の鉄道旅行に対応しており、日本の主要な路線もご案内しています。対応範囲は順次広げています。ルートが表示されない場合は、言い方を変えて入力するか、しばらくしてからもう一度お試しください。</p>
+    </div>
+    <div class="faq-item">
+      <h3>列車の切符はどうやって予約しますか？</h3>
+      <p>WoW Trainが切符を直接販売することはありません。AIが旅程を作成したら、区間ごとに予約パートナーのOmio（ヨーロッパ）やKlook（日本）へのリンクが表示されます。パートナーのサイトで料金を比べて、安全にご購入いただけます。</p>
+    </div>
+    <div class="faq-item">
+      <h3>個人情報は保存されますか？</h3>
+      <p>WoW Trainではアカウント登録は不要です。利用状況を把握するために、標準的なアクセス解析を使用しています。詳しくは<a href="/ja/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+    </div>
+    <div class="faq-item">
+      <h3>不具合を見つけたら、どう報告すればいいですか？</h3>
+      <p><a href="mailto:contact@glosx.app">contact@glosx.app</a>まで、起きたこと、お使いのブラウザ、表示していたページをお知らせください。スクリーンショットがあると、とても助かります。</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 GLOSX · <a href="/ja/">glosx.app</a> · <a href="/ja/support.html">サポート</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a></p>
+  </footer>
+</body>
+</html>

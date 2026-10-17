@@ -561,30 +561,35 @@
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/support.html" />
   </url>
 <url>
     <loc>https://glosx.app/privacy.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/privacy.html" />
   </url>
 <url>
     <loc>https://glosx.app/terms.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/terms.html" />
   </url>
 <url>
     <loc>https://glosx.app/cookies.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/cookies.html" />
   </url>
 <url>
     <loc>https://glosx.app/imprint.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/imprint.html" />
   </url>
 <url>
     <loc>https://glosx.app/guide-how-to-travel-europe-by-train.html</loc>
@@ -19189,5 +19194,59 @@
       <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/rutas/zurich-milan/it/" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/rutas/zurich-milan/ja/" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/zurich-milan/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/cookies.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/cookies.html" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/cookies.html" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/cookies.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/imprint.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/imprint.html" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/imprint.html" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/imprint.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/index.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/index.html" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/index.html" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/index.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/privacy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/privacy.html" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/privacy.html" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/privacy.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/support.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/support.html" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/support.html" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/support.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/terms.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/terms.html" />
+      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/terms.html" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/terms.html" />
   </url>
 </urlset>

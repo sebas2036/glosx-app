@@ -428,6 +428,6 @@ list.forEach(r => {
 require('./apply-brand-title').run();
 require('./apply-brand-schema').run();
 
-require('./localize-ja').runRoutes();
+require('./localize-ja').runRoutes(); require('./localize-ja').runJapanLinks();
 require('./localize-ja').runExplore();
 require('./sync-sitemap-ja');

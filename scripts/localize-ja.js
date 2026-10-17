@@ -36,7 +36,15 @@ const pair = (txt) => {
   return m[1] + JA_CITY[m[2]] + ' ' + m[3] + ' ' + JA_CITY[m[4]] + m[5];
 };
 
+// enlaces a páginas que ya existen en japonés (legales, soporte y, a medida que se traducen, blog y guías)
+function jaLinks(html) {
+  const fsx = require('fs');
+  return html.replace(/href="\/((?:privacy|terms|cookies|imprint|support|blog|guide-[a-z0-9-]+|blog-[a-z0-9-]+)\.html)"/g, (m, f) =>
+    fsx.existsSync(path.join(ROOT, 'ja', f)) ? 'href="/ja/' + f + '"' : m);
+}
+
 function localize(html) {
+  html = jaLinks(html);
   html = html.replace(/(<(?:span|a|li|div)[^>]*class="[^"]*(?:route-chip|explore-route-pill|related-link|ri-route)[^"]*"[^>]*>)([^<]+)(<)/g, (m, a, t, c) => a + pair(t) + c);
   html = html.replace(/(aria-label|title)="([^"]*)"/g, (m, k, v) => ATTR_JA[v] ? k + '="' + ATTR_JA[v] + '"' : m);
   html = html.replace(/(<img[^>]*class="country-photo"[^>]*alt=")([^"]*)(")/g, (m, a, v, c) => a + (COUNTRY_JA[v] || v) + c);
@@ -106,13 +114,24 @@ function runRoutes() {
   for (const s of slugs) {
     const f = path.join(ROOT, 'rutas', s, 'ja', 'index.html');
     if (!fs.existsSync(f)) continue;
-    const a = fs.readFileSync(f, 'utf8'), b = localizeRoute(a);
+    const a = fs.readFileSync(f, 'utf8'), b = jaLinks(localizeRoute(a));
+    if (a !== b) { fs.writeFileSync(f, b); changed++; }
+  }
+  return changed;
+}
+function runJapanLinks() {
+  let changed = 0;
+  for (const d of fs.readdirSync(path.join(ROOT, 'rutas'))) {
+    const f = path.join(ROOT, 'rutas', d, 'ja', 'index.html');
+    if (!fs.existsSync(f)) continue;
+    const a = fs.readFileSync(f, 'utf8'), b = jaLinks(a);
     if (a !== b) { fs.writeFileSync(f, b); changed++; }
   }
   return changed;
 }
 module.exports.runRoutes = runRoutes;
-if (require.main === module) console.log('Rutas europeas ja con remates:', runRoutes());
+module.exports.runJapanLinks = runJapanLinks;
+if (require.main === module) console.log('Rutas europeas ja con remates:', runRoutes(), '| enlaces ja en rutas:', runJapanLinks());
 
 // ── /ja/explore/: nombres de ruta y países en japonés, y enlaces a las guías en japonés ───────────
 function localizeExplore(html) {
