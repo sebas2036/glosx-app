@@ -227,6 +227,9 @@ const DEEP = {
   }
 };
 
+const MORE = require('./route-deep-content-2');
+Object.assign(DEEP, MORE.deep);
+
 const BASE_STYLE = 'width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:14px;';
 const TH = 'padding:8px 12px;color:#C10016;font-weight:700;text-align:left;';
 const TD = 'padding:8px 12px;border-top:1px solid rgba(20,21,26,0.08);vertical-align:top;';
@@ -237,8 +240,14 @@ function render(slug, lang, route) {
   const from = route.from, to = route.to;
   const li = (arr) => arr.map(t => `<li>${t}</li>`).join('\n      ');
   const rows = d.tickets.map(r => `<tr><td style="${TD}"><strong>${r[0]}</strong></td><td style="${TD}">${r[1]}</td><td style="${TD}">${r[2]}</td></tr>`).join('');
-  const sibs = SIBLINGS_LONDON.filter(([s]) => s !== slug && s.startsWith('london-') && slug.startsWith('london-'))
-    .map(([s, label]) => `<a href="/rutas/${s}/">${label}</a>`).join(' · ');
+  const nice = (sl) => sl.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' to ');
+  const cities = slug.split('-');
+  let sibs = '';
+  if (slug.startsWith('london-')) sibs = '<a href="/trains-from-london/">All trains from London</a> · ' + SIBLINGS_LONDON.filter(([s]) => s !== slug).map(([s, label]) => `<a href="/rutas/${s}/">${label}</a>`).join(' · ');
+  else {
+    const rel = Object.keys(DEEP).filter(k => k !== slug && k.split('-').some(c => cities.includes(c)));
+    sibs = rel.map(k => `<a href="/rutas/${k}/">${nice(k)}</a>`).join(' · ');
+  }
   return `
     <section class="deep-guide">
     <h2>Stations: where you leave and where you arrive</h2>
@@ -273,7 +282,7 @@ function render(slug, lang, route) {
     <ul style="padding-left:22px;">
       ${li(d.alt)}
     </ul>
-    ${sibs ? `<p style="margin-top:16px;"><strong>More trains from London:</strong> ${sibs}</p>` : ''}
+    ${sibs ? `<p style="margin-top:16px;"><strong>${slug.startsWith('london-') ? 'More trains from London' : 'Related routes'}:</strong> ${sibs}</p>` : ''}
     </section>`;
 }
 
@@ -284,6 +293,7 @@ const STATION_LINE = {
   'london-edinburgh': 'London King\'s Cross → Edinburgh Waverley', 'london-amsterdam': 'London St Pancras International → Amsterdam Centraal',
   'london-brussels': 'London St Pancras International → Brussels-Midi'
 };
+Object.assign(STATION_LINE, MORE.stationLines);
 function postProcess(slug, lang, html) {
   if (lang !== 'en' || !STATION_LINE[slug]) return html;
   return html.replace(/<strong>Station: [^<]*<\/strong>/, '<strong>Stations: ' + STATION_LINE[slug].replace(/&/g, '&amp;') + '</strong>');

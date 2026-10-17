@@ -669,7 +669,7 @@
   </url>
 <url>
     <loc>https://glosx.app/trains-from-uk-to-europe/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19514,5 +19514,11 @@
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/guide-how-to-travel-europe-by-train.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/trains-from-london/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
