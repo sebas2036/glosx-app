@@ -1265,7 +1265,8 @@
       var c = e.target.closest && e.target.closest('.exp-card'); if (!c) return;
       e.preventDefault();
       var base = typeof PROXY_BASE === 'string' ? PROXY_BASE : 'https://voxa-production-dc15.up.railway.app/affiliate';
-      window.open(base + '/' + c.getAttribute('data-exp'), '_blank');
+      var kind = c.getAttribute('data-exp');
+      window.open(base + '/' + (kind === 'klook' ? 'klook-experiences?lang=' + lang() : kind), '_blank');
       try { if (typeof gtag === 'function') gtag('event', 'ui_click', { source: 'experiences_' + c.getAttribute('data-exp') }); } catch (er) {}
     });
   }
