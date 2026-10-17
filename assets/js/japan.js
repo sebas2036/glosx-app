@@ -1213,6 +1213,62 @@
     new MutationObserver(function () { setTimeout(localize, 0); }).observe(res, { childList: true, subtree: true, characterData: true });
   })();
 
+  // Pestaña "Experiencias" (junto a Ruleta de destinos): Tripadvisor + tours y actividades de Klook, ambos por el proxy de afiliados.
+  var EXP = {
+    en: { tab: 'Experiences', t: 'Experiences and reviews', s: 'Find things to do and read traveler reviews before you book.', kl: 'Klook', kld: 'Tours, tickets and activities with instant confirmation', tr: 'Tripadvisor', trd: 'Traveler reviews and top-rated experiences', go: 'Explore' },
+    es: { tab: 'Experiencias', t: 'Experiencias y reseñas', s: 'Descubre qué hacer y lee opiniones de viajeros antes de reservar.', kl: 'Klook', kld: 'Tours, entradas y actividades con confirmación inmediata', tr: 'Tripadvisor', trd: 'Opiniones de viajeros y experiencias mejor valoradas', go: 'Explorar' },
+    fr: { tab: 'Expériences', t: 'Expériences et avis', s: 'Découvrez quoi faire et lisez les avis de voyageurs avant de réserver.', kl: 'Klook', kld: 'Visites, billets et activités avec confirmation immédiate', tr: 'Tripadvisor', trd: 'Avis de voyageurs et expériences les mieux notées', go: 'Explorer' },
+    it: { tab: 'Esperienze', t: 'Esperienze e recensioni', s: 'Scopri cosa fare e leggi le recensioni dei viaggiatori prima di prenotare.', kl: 'Klook', kld: 'Tour, biglietti e attività con conferma immediata', tr: 'Tripadvisor', trd: 'Recensioni dei viaggiatori ed esperienze più apprezzate', go: 'Esplora' },
+    de: { tab: 'Erlebnisse', t: 'Erlebnisse und Bewertungen', s: 'Entdecke, was du unternehmen kannst, und lies Bewertungen, bevor du buchst.', kl: 'Klook', kld: 'Touren, Tickets und Aktivitäten mit sofortiger Bestätigung', tr: 'Tripadvisor', trd: 'Reisebewertungen und bestbewertete Erlebnisse', go: 'Entdecken' },
+    pt: { tab: 'Experiências', t: 'Experiências e avaliações', s: 'Descubra o que fazer e leia avaliações de viajantes antes de reservar.', kl: 'Klook', kld: 'Passeios, ingressos e atividades com confirmação imediata', tr: 'Tripadvisor', trd: 'Avaliações de viajantes e experiências mais bem avaliadas', go: 'Explorar' },
+    ja: { tab: '体験', t: '体験とクチコミ', s: '予約の前に、やることを探して旅行者のクチコミを確認しましょう。', kl: 'Klook', kld: 'ツアー・チケット・アクティビティを即時確認で', tr: 'Tripadvisor', trd: '旅行者のクチコミと高評価の体験', go: '見る' }
+  };
+  function buildExperiences() {
+    var tabs = document.querySelector('.search-tabs'), card = document.querySelector('.search-card');
+    if (!tabs || !card || tabs.querySelector('[data-tab="experiences"]')) return;
+    var tab = document.createElement('button');
+    tab.type = 'button'; tab.className = 'search-tab'; tab.setAttribute('aria-pressed', 'false'); tab.setAttribute('data-tab', 'experiences');
+    tabs.appendChild(tab);
+    var panel = document.createElement('div');
+    panel.className = 'search-panel exp-panel'; panel.setAttribute('data-panel', 'experiences');
+    panel.innerHTML = '<div class="exp-head"><h3 class="exp-title"></h3><p class="exp-sub"></p></div><div class="exp-grid">' +
+      '<a href="#" class="exp-card exp-klook" data-exp="klook"><img class="exp-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="" width="32" height="32"><span class="exp-name"></span><span class="exp-desc"></span><span class="exp-go"></span></a>' +
+      '<a href="#" class="exp-card exp-tripadvisor" data-exp="tripadvisor"><img class="exp-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tripadvisor.com" alt="" width="32" height="32"><span class="exp-name"></span><span class="exp-desc"></span><span class="exp-go"></span></a></div>';
+    card.appendChild(panel);
+    function paint() {
+      var u = EXP[lang()] || EXP.en;
+      tab.textContent = u.tab;
+      panel.querySelector('.exp-title').textContent = u.t; panel.querySelector('.exp-sub').textContent = u.s;
+      var k = panel.querySelector('.exp-klook'), t = panel.querySelector('.exp-tripadvisor');
+      k.querySelector('.exp-name').textContent = u.kl; k.querySelector('.exp-desc').textContent = u.kld; k.querySelector('.exp-go').textContent = u.go + ' →';
+      t.querySelector('.exp-name').textContent = u.tr; t.querySelector('.exp-desc').textContent = u.trd; t.querySelector('.exp-go').textContent = u.go + ' →';
+    }
+    paint();
+    new MutationObserver(function () { setTimeout(paint, 80); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    function show() {
+      if (document.body.classList.contains('hotels-mode')) {
+        document.body.classList.remove('hotels-mode');
+        var chip = document.querySelector('.region-hotels'); if (chip) { chip.classList.remove('on'); chip.setAttribute('aria-pressed', 'false'); }
+      }
+      document.querySelectorAll('.search-tab').forEach(function (x) { var on = x === tab; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      document.querySelectorAll('.search-panel').forEach(function (x) { x.classList.toggle('on', x === panel); });
+    }
+    tab.addEventListener('click', show);
+    // al elegir otra pestaña, esta se apaga (el script de pestañas de la portada no la conoce)
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest && e.target.closest('.search-tab');
+      if (t && t !== tab) { tab.classList.remove('on'); tab.setAttribute('aria-pressed', 'false'); panel.classList.remove('on'); }
+    });
+    panel.addEventListener('click', function (e) {
+      var c = e.target.closest && e.target.closest('.exp-card'); if (!c) return;
+      e.preventDefault();
+      var base = typeof PROXY_BASE === 'string' ? PROXY_BASE : 'https://voxa-production-dc15.up.railway.app/affiliate';
+      window.open(base + '/' + c.getAttribute('data-exp'), '_blank');
+      try { if (typeof gtag === 'function') gtag('event', 'ui_click', { source: 'experiences_' + c.getAttribute('data-exp') }); } catch (er) {}
+    });
+  }
+  buildExperiences();
+
   paintSwitch();
   // Enlace directo al modo Japón (por ejemplo, desde anuncios): glosx.app/#japan
   if (/^#(japan|japon|giappone|japao)$/i.test(location.hash)) setRegion('japan', true);
