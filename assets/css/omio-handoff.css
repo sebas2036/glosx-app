@@ -251,3 +251,8 @@ body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"]::b
 .hotels-all:hover { background: #f2f3f7; }
 .hotels-allbox { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; max-height: 260px; overflow-y: auto; padding-right: 4px; }
 .hotels-allbox[hidden] { display: none; }
+
+/* País como chip de color Omio, en su propia fila */
+.hotels-allbox .hotels-group { flex: 0 0 100%; margin: 10px 0 0; text-transform: none; letter-spacing: 0; }
+.hotels-allbox .hotels-group:first-child { margin-top: 0; }
+.hotels-flag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; background: var(--omio-lavender, #EEF3FB); color: var(--omio-navy, #182C66); border: 1.5px solid var(--omio-coral, #FB6B6C); }

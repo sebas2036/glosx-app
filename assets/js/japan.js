@@ -806,7 +806,7 @@
     allBtn.textContent = u.all + ' (' + cities.length + ') ▾';
     var allBox = document.createElement('div'); allBox.className = 'hotels-allbox'; allBox.hidden = true;
     Array.prototype.forEach.call(src.children, function (n) {
-      if (n.classList.contains('klook-city-group-label')) { var g = document.createElement('div'); g.className = 'hotels-group'; g.textContent = n.textContent; allBox.appendChild(g); }
+      if (n.classList.contains('klook-city-group-label')) { var g = document.createElement('div'); g.className = 'hotels-group'; var gt = document.createElement('span'); gt.className = 'hotels-flag'; gt.textContent = n.textContent; g.appendChild(gt); allBox.appendChild(g); }
       else { var c = n.textContent.trim(), b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = c;
         b.addEventListener('click', function () { pick(c); allBox.hidden = true; allBtn.textContent = u.all + ' (' + cities.length + ') ▾'; (ci.value ? co : ci).focus(); }); allBox.appendChild(b); }
     });
