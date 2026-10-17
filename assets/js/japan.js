@@ -1074,6 +1074,47 @@
     new MutationObserver(function () { setTimeout(run, 0); }).observe(res, { childList: true, subtree: true, characterData: true });
   })();
 
+  // ── Planificador de IA: mensajes en el idioma de la página, tiempo máximo y aviso de rutas incompletas ──
+  var PL_MSG = {"en": {"gen": "Generating…", "still": "Still working — this can take a few seconds…", "empty": "Type a destination or a trip idea to start.", "conn": "We could not connect. Please try again.", "slow": "This is taking longer than usual. Please try again, or pick one of the popular routes above.", "rate": "You have made several requests in a row. Please wait a minute and try again.", "inc": "We could not include: {x}. Try asking for that part as a separate trip."}, "es": {"gen": "Generando…", "still": "Sigue en marcha: puede tardar unos segundos…", "empty": "Escribe un destino o una idea de viaje para empezar.", "conn": "No pudimos conectar. Inténtalo de nuevo.", "slow": "Está tardando más de lo normal. Inténtalo de nuevo o elige una de las rutas populares de arriba.", "rate": "Has hecho varias consultas seguidas. Espera un minuto e inténtalo de nuevo.", "inc": "No pudimos incluir: {x}. Prueba a pedir esa parte como un viaje aparte."}, "fr": {"gen": "Génération…", "still": "Toujours en cours : cela peut prendre quelques secondes…", "empty": "Saisissez une destination ou une idée de voyage pour commencer.", "conn": "Connexion impossible. Veuillez réessayer.", "slow": "Cela prend plus de temps que d’habitude. Réessayez ou choisissez l’un des itinéraires populaires ci-dessus.", "rate": "Vous avez fait plusieurs demandes d’affilée. Attendez une minute puis réessayez.", "inc": "Nous n’avons pas pu inclure : {x}. Demandez cette partie comme un voyage séparé."}, "it": {"gen": "Generazione…", "still": "Ancora in corso: può richiedere qualche secondo…", "empty": "Scrivi una destinazione o un’idea di viaggio per iniziare.", "conn": "Impossibile connettersi. Riprova.", "slow": "Sta impiegando più del solito. Riprova o scegli uno dei percorsi popolari qui sopra.", "rate": "Hai fatto più richieste di seguito. Attendi un minuto e riprova.", "inc": "Non siamo riusciti a includere: {x}. Prova a chiedere quella parte come viaggio separato."}, "de": {"gen": "Wird erstellt…", "still": "Läuft noch – das kann ein paar Sekunden dauern…", "empty": "Gib ein Ziel oder eine Reiseidee ein, um zu starten.", "conn": "Verbindung nicht möglich. Bitte versuche es erneut.", "slow": "Das dauert länger als üblich. Versuche es erneut oder wähle eine der beliebten Strecken oben.", "rate": "Du hast mehrere Anfragen hintereinander gestellt. Warte eine Minute und versuche es erneut.", "inc": "Nicht enthalten: {x}. Frage diesen Teil als separate Reise an."}, "pt": {"gen": "Gerando…", "still": "Ainda em andamento: pode levar alguns segundos…", "empty": "Digite um destino ou uma ideia de viagem para começar.", "conn": "Não foi possível conectar. Tente novamente.", "slow": "Está demorando mais que o normal. Tente novamente ou escolha uma das rotas populares acima.", "rate": "Você fez várias consultas seguidas. Aguarde um minuto e tente novamente.", "inc": "Não conseguimos incluir: {x}. Peça essa parte como uma viagem separada."}, "ja": {"gen": "作成中…", "still": "処理中です。数秒かかることがあります…", "empty": "目的地や旅のイメージを入力してください。", "conn": "接続できませんでした。もう一度お試しください。", "slow": "通常より時間がかかっています。もう一度お試しいただくか、上の人気ルートをお選びください。", "rate": "続けて何度も検索されました。1分ほど待ってからもう一度お試しください。", "inc": "含められなかった都市：{x}。その部分は別の旅として入力してみてください。"}};
+  window.glosxPlannerMsg = function (k) { var m = PL_MSG[lang()] || PL_MSG.en; return m[k] || PL_MSG.en[k] || ''; };
+  (function () {
+    if (!window.fetch || window.__glosxPlannerFetch) return;
+    window.__glosxPlannerFetch = true;
+    var orig = window.fetch.bind(window);
+    var CITY_LABEL = function (c) { return String(c).replace(/\b\w/g, function (x) { return x.toUpperCase(); }); };
+    window.fetch = function (input, init) {
+      var url = typeof input === 'string' ? input : (input && input.url) || '';
+      if (!/\/api\/route-planner/.test(url)) return orig(input, init);
+      var ctrl = new AbortController(), timedOut = false;
+      var to = setTimeout(function () { timedOut = true; ctrl.abort(); }, 70000);
+      var btn = document.querySelector('.ai-generate-btn'), still = setTimeout(function () { if (btn && btn.classList.contains('loading')) btn.textContent = window.glosxPlannerMsg('still'); }, 9000);
+      var o = Object.assign({}, init || {}, { signal: ctrl.signal });
+      return orig(input, o).then(function (resp) {
+        clearTimeout(to); clearTimeout(still);
+        if (resp.status === 429) {
+          return new Response(JSON.stringify({ valido: false, mensajeError: window.glosxPlannerMsg('rate') }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+        }
+        resp.clone().json().then(function (d) {
+          if (d && d.ciudades_faltantes && d.ciudades_faltantes.length) {
+            var txt = window.glosxPlannerMsg('inc').replace('{x}', d.ciudades_faltantes.map(CITY_LABEL).join(', '));
+            setTimeout(function () {
+              var segs = document.getElementById('aiSegments'), old = document.querySelector('.ai-incomplete-note');
+              if (old) old.remove();
+              if (!segs) return;
+              var p = document.createElement('p'); p.className = 'ai-incomplete-note'; p.textContent = txt;
+              segs.parentNode.insertBefore(p, segs);
+            }, 900);
+          }
+        }).catch(function () {});
+        return resp;
+      }).catch(function (e) {
+        clearTimeout(to); clearTimeout(still);
+        if (timedOut) return new Response(JSON.stringify({ valido: false, mensajeError: window.glosxPlannerMsg('slow') }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+        throw e;
+      });
+    };
+  })();
+
   // Franja de color de la alianza (Omio en Europa, Klook en Japón) detrás de las ventajas y los operadores:
   // sube un poco para quedar por detrás del planificador.
   (function () {

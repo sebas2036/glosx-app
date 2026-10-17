@@ -2535,7 +2535,7 @@
     const inputAurora = document.getElementById('aiInputAurora');
 
     if (!input) {
-      showAIPlannerError('Escribí un destino o idea de viaje para comenzar.');
+      showAIPlannerError((window.glosxPlannerMsg?window.glosxPlannerMsg('empty'):'Escribe un destino o una idea de viaje para empezar.'));
       return;
     }
 
@@ -2549,7 +2549,7 @@
     inputAurora.classList.add('active');
     btn.disabled = true;
     btn.classList.add('loading');
-    btn.textContent = 'Generating...';
+    btn.textContent = (window.glosxPlannerMsg?window.glosxPlannerMsg('gen'):'Generating...');
 
     try {
       previewFromInput();
@@ -2571,7 +2571,7 @@
       }
     } catch (error) {
       console.error('Error generating route:', error);
-      showAIPlannerError('Hubo un problema de conexión. Intentá de nuevo.');
+      showAIPlannerError((window.glosxPlannerMsg?window.glosxPlannerMsg('conn'):'No pudimos conectar. Inténtalo de nuevo.'));
     } finally {
       btn.disabled = false;
       btn.classList.remove('loading');
