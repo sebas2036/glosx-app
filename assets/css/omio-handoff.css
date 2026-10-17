@@ -550,3 +550,11 @@ body:not([data-region="japan"]) .hotels-bar > .hotels-go-kl, body:not([data-regi
 .hotels-go-kl::before { background-image: url("https://www.google.com/s2/favicons?sz=64&domain=klook.com"); }
 .hotels-go-bk::before { background-image: url("https://www.google.com/s2/favicons?sz=64&domain=booking.com"); }
 .exp-klook .exp-name { font-family: "Poppins", "Helvetica Neue", Arial, sans-serif; font-weight: 600; }
+
+/* Pestañas del buscador en 601–760 px (móviles grandes, plegables, horizontal): sin cortes; Europa/Japón/Hoteles en su fila y las cuatro pestañas repartidas */
+@media (min-width: 601px) and (max-width: 760px) {
+  body.home-v2 .search-tabs { flex-wrap: wrap; overflow: visible; }
+  body.home-v2 .search-tabs .region-switch { order: -1; flex: 0 0 100%; width: 100%; display: flex; margin: 0 0 10px; }
+  body.home-v2 .search-tabs .region-switch .region-btn { flex: 1 1 0; text-align: center; padding: 9px 10px; }
+  body.home-v2 .search-tabs .search-tab { flex: 1 1 0; min-width: 0; white-space: normal; text-align: center; line-height: 1.2; padding: 10px 6px; font-size: 13.5px; }
+}
