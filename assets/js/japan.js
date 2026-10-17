@@ -1131,6 +1131,12 @@
       try { if (typeof window.resetAIPlanner === 'function') window.resetAIPlanner(); } catch (er) {}
       var inp = document.getElementById('aiInput'); if (inp) inp.value = '';
       var aur = document.getElementById('aiInputAurora'); if (aur) aur.classList.remove('active');
+      // respuesta visible al toque: pulso breve en la pestaña y el buscador vuelve a quedar a la vista
+      tab.classList.remove('is-tapped'); void tab.offsetWidth; tab.classList.add('is-tapped');
+      setTimeout(function () { tab.classList.remove('is-tapped'); }, 420);
+      var shell = document.querySelector('.search-shell');
+      if (shell) { var r = shell.getBoundingClientRect(); if (r.top < 60 || r.top > window.innerHeight * 0.6) shell.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      if (inp && window.matchMedia && !window.matchMedia('(pointer: coarse)').matches) setTimeout(function () { try { inp.focus({ preventScroll: true }); } catch (er) {} }, 250);
     }, true);
   })();
 
