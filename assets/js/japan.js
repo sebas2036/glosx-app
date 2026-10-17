@@ -737,6 +737,8 @@
     ja: { all: 'すべての都市', ci: 'チェックイン', co: 'チェックアウト', ph: '都市・エリア', lab: 'どこへ？', pop: '人気の目的地', go: 'ホテルを検索', none: '見つかりません。別の都市をお試しください' }
   };
   var HOTEL_POP = ['Paris', 'Rome', 'London', 'Barcelona', 'Amsterdam', 'Vienna', 'Prague', 'Berlin', 'Zurich', 'Venice', 'Madrid', 'Florence', 'Budapest', 'Munich', 'Tokyo', 'Kyoto', 'Osaka', 'Lisbon', 'Porto', 'Oslo', 'Marseille', 'Nice', 'Geneva'];
+  var HOTEL_NAMES = {"es": {"Basel": "Basilea", "Berlin": "Berlín", "Bern": "Berna", "Bruges": "Brujas", "Brussels": "Bruselas", "Cologne": "Colonia", "Copenhagen": "Copenhague", "Edinburgh": "Edimburgo", "Florence": "Florencia", "Geneva": "Ginebra", "Gothenburg": "Gotemburgo", "Hamburg": "Hamburgo", "Lisbon": "Lisboa", "Ljubljana": "Liubliana", "London": "Londres", "Lucerne": "Lucerna", "Malaga": "Málaga", "Marseille": "Marsella", "Milan": "Milán", "Monaco": "Mónaco", "Munich": "Múnich", "Naples": "Nápoles", "Nice": "Niza", "Paris": "París", "Porto": "Oporto", "Prague": "Praga", "Rome": "Roma", "Salzburg": "Salzburgo", "Seville": "Sevilla", "Stockholm": "Estocolmo", "Strasbourg": "Estrasburgo", "Turin": "Turín", "Venice": "Venecia", "Vienna": "Viena", "Zurich": "Zúrich", "Frankfurt": "Fráncfort", "Bordeaux": "Burdeos", "Mainz": "Maguncia", "Tokyo": "Tokio", "Kyoto": "Kioto", "Austria": "Austria", "Belgium": "Bélgica", "Czech Republic": "República Checa", "Denmark": "Dinamarca", "France": "Francia", "Germany": "Alemania", "Hungary": "Hungría", "Norway": "Noruega", "Portugal": "Portugal", "Slovenia": "Eslovenia", "Italy": "Italia", "Netherlands": "Países Bajos", "Spain": "España", "Sweden": "Suecia", "Switzerland": "Suiza", "United Kingdom": "Reino Unido", "Japan": "Japón"}, "fr": {"Barcelona": "Barcelone", "Basel": "Bâle", "Bern": "Berne", "Brussels": "Bruxelles", "Copenhagen": "Copenhague", "Edinburgh": "Édimbourg", "Geneva": "Genève", "Gothenburg": "Göteborg", "Hamburg": "Hambourg", "Lisbon": "Lisbonne", "London": "Londres", "Milan": "Milan", "Naples": "Naples", "Prague": "Prague", "Rome": "Rome", "Salzburg": "Salzbourg", "Seville": "Séville", "Siena": "Sienne", "Valencia": "Valence", "Venice": "Venise", "Vienna": "Vienne", "Zaragoza": "Saragosse", "Girona": "Gérone", "Frankfurt": "Francfort", "Lyon": "Lyon", "Munich": "Munich", "Paris": "Paris", "Mainz": "Mayence", "Monaco": "Monaco", "Austria": "Autriche", "Belgium": "Belgique", "Czech Republic": "République tchèque", "Denmark": "Danemark", "France": "France", "Germany": "Allemagne", "Hungary": "Hongrie", "Norway": "Norvège", "Portugal": "Portugal", "Slovenia": "Slovénie", "Italy": "Italie", "Netherlands": "Pays-Bas", "Spain": "Espagne", "Sweden": "Suède", "Switzerland": "Suisse", "United Kingdom": "Royaume-Uni", "Japan": "Japon"}, "it": {"Barcelona": "Barcellona", "Basel": "Basilea", "Berlin": "Berlino", "Bern": "Berna", "Stockholm": "Stoccolma", "Brussels": "Bruxelles", "Cologne": "Colonia", "Copenhagen": "Copenaghen", "Edinburgh": "Edimburgo", "Florence": "Firenze", "Geneva": "Ginevra", "Gothenburg": "Göteborg", "Hamburg": "Amburgo", "Lisbon": "Lisbona", "Ljubljana": "Lubiana", "London": "Londra", "Lucerne": "Lucerna", "Lyon": "Lione", "Marseille": "Marsiglia", "Milan": "Milano", "Munich": "Monaco di Baviera", "Naples": "Napoli", "Nice": "Nizza", "Paris": "Parigi", "Prague": "Praga", "Rome": "Roma", "Salzburg": "Salisburgo", "Seville": "Siviglia", "Strasbourg": "Strasburgo", "Turin": "Torino", "Venice": "Venezia", "Zurich": "Zurigo", "Zaragoza": "Saragozza", "Frankfurt": "Francoforte", "Bergen": "Bergen", "Mainz": "Magonza", "Austria": "Austria", "Belgium": "Belgio", "Czech Republic": "Repubblica Ceca", "Denmark": "Danimarca", "France": "Francia", "Germany": "Germania", "Hungary": "Ungheria", "Norway": "Norvegia", "Portugal": "Portogallo", "Slovenia": "Slovenia", "Italy": "Italia", "Monaco": "Monaco", "Netherlands": "Paesi Bassi", "Spain": "Spagna", "Sweden": "Svezia", "Switzerland": "Svizzera", "United Kingdom": "Regno Unito", "Japan": "Giappone"}, "ja": {"Amsterdam": "アムステルダム", "Barcelona": "バルセロナ", "Basel": "バーゼル", "Berlin": "ベルリン", "Bern": "ベルン", "Bordeaux": "ボルドー", "Brno": "ブルノ", "Bruges": "ブルージュ", "Brussels": "ブリュッセル", "Budapest": "ブダペスト", "Cambridge": "ケンブリッジ", "Cologne": "ケルン", "Copenhagen": "コペンハーゲン", "Dortmund": "ドルトムント", "Edinburgh": "エディンバラ", "Figueres": "フィゲラス", "Florence": "フィレンツェ", "Frankfurt": "フランクフルト", "Geneva": "ジュネーブ", "Girona": "ジローナ", "Graz": "グラーツ", "Hamburg": "ハンブルク", "Innsbruck": "インスブルック", "Interlaken": "インターラーケン", "Krems": "クレムス", "Lauterbrunnen": "ラウターブルンネン", "Liverpool": "リバプール", "Ljubljana": "リュブリャナ", "London": "ロンドン", "Lourdes": "ルルド", "Lucerne": "ルツェルン", "Lyon": "リヨン", "Madrid": "マドリード", "Malaga": "マラガ", "Manchester": "マンチェスター", "Marseille": "マルセイユ", "Milan": "ミラノ", "Miramas": "ミラマス", "Monaco": "モナコ", "Montreux": "モントルー", "Munich": "ミュンヘン", "Naples": "ナポリ", "Nice": "ニース", "Oxford": "オックスフォード", "Paris": "パリ", "Pisa": "ピサ", "Positano": "ポジターノ", "Prague": "プラハ", "Rome": "ローマ", "Salerno": "サレルノ", "Salzburg": "ザルツブルク", "Seville": "セビリア", "Siena": "シエナ", "Sorrento": "ソレント", "St. Moritz": "サンモリッツ", "Stockholm": "ストックホルム", "Strasbourg": "ストラスブール", "Tende": "タンド", "Toulouse": "トゥールーズ", "Turin": "トリノ", "Valencia": "バレンシア", "Venice": "ヴェネツィア", "Vienna": "ウィーン", "York": "ヨーク", "Zaragoza": "サラゴサ", "Zermatt": "ツェルマット", "Zurich": "チューリッヒ", "Mainz": "マインツ", "Bergen": "ベルゲン", "Oslo": "オスロ", "Trondheim": "トロンハイム", "Faro": "ファロ", "Lisbon": "リスボン", "Porto": "ポルト", "Fukuoka": "福岡", "Hakone": "箱根", "Hiroshima": "広島", "Kanazawa": "金沢", "Kobe": "神戸", "Kyoto": "京都", "Nagoya": "名古屋", "Nara": "奈良", "Osaka": "大阪", "Sapporo": "札幌", "Tokyo": "東京", "Yokohama": "横浜", "Gothenburg": "ヨーテボリ", "Jungfraujoch": "ユングフラウヨッホ", "Sargans": "ザルガンス", "Spiez": "シュピーツ", "Zweisimmen": "ツヴァイジンメン", "Austria": "オーストリア", "Belgium": "ベルギー", "Czech Republic": "チェコ", "Denmark": "デンマーク", "France": "フランス", "Germany": "ドイツ", "Hungary": "ハンガリー", "Norway": "ノルウェー", "Portugal": "ポルトガル", "Slovenia": "スロベニア", "Italy": "イタリア", "Netherlands": "オランダ", "Spain": "スペイン", "Sweden": "スウェーデン", "Switzerland": "スイス", "United Kingdom": "イギリス", "Japan": "日本"}, "de": {"Austria": "Österreich", "Belgium": "Belgien", "Czech Republic": "Tschechien", "Denmark": "Dänemark", "France": "Frankreich", "Germany": "Deutschland", "Hungary": "Ungarn", "Norway": "Norwegen", "Portugal": "Portugal", "Slovenia": "Slowenien", "Italy": "Italien", "Monaco": "Monaco", "Netherlands": "Niederlande", "Spain": "Spanien", "Sweden": "Schweden", "Switzerland": "Schweiz", "United Kingdom": "Vereinigtes Königreich", "Japan": "Japan"}, "pt": {"Austria": "Áustria", "Belgium": "Bélgica", "Czech Republic": "Tchéquia", "Denmark": "Dinamarca", "France": "França", "Germany": "Alemanha", "Hungary": "Hungria", "Norway": "Noruega", "Portugal": "Portugal", "Slovenia": "Eslovênia", "Italy": "Itália", "Monaco": "Mônaco", "Netherlands": "Países Baixos", "Spain": "Espanha", "Sweden": "Suécia", "Switzerland": "Suíça", "United Kingdom": "Reino Unido", "Japan": "Japão"}};
+  function hname(lg, n) { var m = HOTEL_NAMES[lg]; return (m && m[n]) || n; }
   function hnorm(x) { return String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); }
   function buildHotels() {
     var card = document.querySelector('.search-card'), src = document.getElementById('klookCityMenu');
@@ -765,12 +767,13 @@
       if (!co.value || co.value <= ci.value) co.value = plus(ci.value, 1);
     }); inp.placeholder = u.ph; go.textContent = u.go; popLab.textContent = u.pop;
     var chosen = '';
-    function pick(c) { chosen = c; inp.value = c; list.classList.remove('open'); }
+    function pick(c) { chosen = c; inp.value = hname(lang(), c); list.classList.remove('open'); }
     function matches() {
       var q = hnorm(inp.value);
       if (!q) return pop;
-      var st = cities.filter(function (c) { return hnorm(c).indexOf(q) === 0; });
-      var inn = cities.filter(function (c) { return hnorm(c).indexOf(q) > 0; });
+      var nm = function (c) { return hnorm(c) + '|' + hnorm(hname(lang(), c)); };
+      var st = cities.filter(function (c) { return nm(c).split('|').some(function (x) { return x.indexOf(q) === 0; }); });
+      var inn = cities.filter(function (c) { return st.indexOf(c) === -1 && nm(c).indexOf(q) > -1; });
       return st.concat(inn);
     }
     function paintList() {
@@ -778,7 +781,7 @@
       list.innerHTML = '';
       if (!m.length) { var e = document.createElement('div'); e.className = 'hotels-none'; e.textContent = u.none; list.appendChild(e); }
       m.forEach(function (c) {
-        var b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-opt'; b.textContent = c;
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-opt'; b.textContent = hname(lang(), c);
         b.addEventListener('mousedown', function (ev) { ev.preventDefault(); pick(c); });
         list.appendChild(b);
       });
@@ -786,7 +789,7 @@
     }
     function submit() {
       var m = matches();
-      var exact = cities.filter(function (c) { return hnorm(c) === hnorm(inp.value); })[0];
+      var exact = cities.filter(function (c) { return hnorm(c) === hnorm(inp.value) || hnorm(hname(lang(), c)) === hnorm(inp.value); })[0];
       var city = exact || m[0];
       if (!city || !inp.value.trim()) { inp.focus(); paintList(); return; }
       if (typeof window.goKlookHotelCity === 'function') window.goKlookHotelCity(city, ci.value && co.value && co.value > ci.value ? ci.value : '', ci.value && co.value && co.value > ci.value ? co.value : '');
@@ -794,10 +797,10 @@
     inp.addEventListener('focus', paintList);
     inp.addEventListener('input', paintList);
     inp.addEventListener('blur', function () { setTimeout(function () { list.classList.remove('open'); }, 120); });
-    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); var first = list.querySelector('.hotels-opt'); if (list.classList.contains('open') && first && hnorm(inp.value) !== hnorm(first.textContent)) pick(first.textContent); else submit(); } });
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); var first = list.querySelector('.hotels-opt'); if (list.classList.contains('open') && first && hnorm(inp.value) !== hnorm(first.textContent)) { var fc = cities.filter(function (c) { return hname(lang(), c) === first.textContent; })[0]; pick(fc || first.textContent); } else submit(); } });
     go.addEventListener('click', submit);
     pop.forEach(function (c) {
-      var b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = c;
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = hname(lang(), c);
       b.addEventListener('click', function () { pick(c); (ci.value ? co : ci).focus(); });
       row.appendChild(b);
     });
@@ -806,8 +809,8 @@
     allBtn.textContent = u.all + ' (' + cities.length + ') ▾';
     var allBox = document.createElement('div'); allBox.className = 'hotels-allbox'; allBox.hidden = true;
     Array.prototype.forEach.call(src.children, function (n) {
-      if (n.classList.contains('klook-city-group-label')) { var g = document.createElement('div'); g.className = 'hotels-group'; var gt = document.createElement('span'); gt.className = 'hotels-flag'; gt.textContent = n.textContent; g.appendChild(gt); allBox.appendChild(g); }
-      else { var c = n.textContent.trim(), b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = c;
+      if (n.classList.contains('klook-city-group-label')) { var g = document.createElement('div'); g.className = 'hotels-group'; var gt = document.createElement('span'); gt.className = 'hotels-flag'; gt.textContent = hname(lang(), n.textContent.trim()); g.appendChild(gt); allBox.appendChild(g); }
+      else { var c = n.textContent.trim(), b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = hname(lang(), c);
         b.addEventListener('click', function () { pick(c); allBox.hidden = true; allBtn.textContent = u.all + ' (' + cities.length + ') ▾'; (ci.value ? co : ci).focus(); }); allBox.appendChild(b); }
     });
     allBtn.addEventListener('click', function () { allBox.hidden = !allBox.hidden; allBtn.textContent = u.all + ' (' + cities.length + ') ' + (allBox.hidden ? '▾' : '▴'); });

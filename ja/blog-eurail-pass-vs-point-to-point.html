@@ -58,7 +58,7 @@
     :root {
       --bg: #fafaf8; --surface: #ffffff; --border: rgba(20,21,26,0.14);
       --primary: #C10016; --primary2: #C10016; --text: #14151a; --muted: #55565f;
-      --green: #34d399; --orange: #fb923c;
+      --green: #0b7a50; --orange: #b45309;
     }
     body {
       background-color: #edd0b4;
@@ -127,7 +127,7 @@
     }
     .verdict-box.pass .verdict-label { color: var(--primary2); }
     .verdict-box.ticket .verdict-label { color: var(--green); }
-    .verdict-box p { font-size: 15px; color: #c0c0d0; line-height: 1.7; }
+    .verdict-box p { font-size: 15px; color: #2b2c34; line-height: 1.7; }
     .comparison-table {
       width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 14px;
       overflow-x: auto; display: block;
@@ -148,12 +148,12 @@
       background: rgba(193,0,22,0.08); border-left: 3px solid var(--primary);
       border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 20px 0;
     }
-    .tip-box p { font-size: 14px; color: #c0b8d8; }
+    .tip-box p { font-size: 14px; color: #34353f; }
     .warning-box {
       background: rgba(251,146,60,0.08); border-left: 3px solid var(--orange);
       border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 20px 0;
     }
-    .warning-box p { font-size: 14px; color: #e0c0a0; }
+    .warning-box p { font-size: 14px; color: #5c3b1e; }
     hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     .klook-cta {
       display: flex; align-items: center; gap: 16px;
@@ -242,7 +242,11 @@
     .related-routes li a { display: inline-block; background: rgba(193,0,22,0.08); border: 1px solid rgba(193,0,22,0.3); border-radius: 100px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: #C10016; text-decoration: none; }
     .related-routes li a:hover { background: rgba(193,0,22,0.16); }
     .related-routes p a { font-size: 14px; font-weight: 600; color: #C10016; }
-  </style>
+  
+    /* legibilidad: títulos sobre la foto y textos que venían de un fondo oscuro */
+    .hero-content h1 { color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7); }
+    .hero-content .meta { color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9); }
+</style>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false">(function(){window.addEventListener("load",function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.com/NTM0NTcw.js?t=534570";document.head.appendChild(s);});})();</script>
   <link rel="stylesheet" href="/assets/css/omio-handoff.css?v=8">
 </head>
