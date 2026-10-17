@@ -749,6 +749,8 @@
     if (!card || !src || !src.children.length) return null;
     var panel = card.querySelector('[data-panel="hotels"]');
     if (panel) return panel;
+    // Klook usa Poppins en su sitio: se carga solo al abrir Hoteles o Experiencias, para no pesar en la portada
+    if (!document.getElementById('poppinsFont')) { var pl = document.createElement('link'); pl.id = 'poppinsFont'; pl.rel = 'stylesheet'; pl.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap'; document.head.appendChild(pl); }
     var u = HOTEL_UI[lang()] || HOTEL_UI.en;
     var cities = [];
     Array.prototype.forEach.call(src.querySelectorAll('.klook-city-item'), function (n) { cities.push(n.textContent.trim()); });
@@ -1268,6 +1270,7 @@
     });
   }
   buildExperiences();
+  document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('[data-tab="experiences"]') && !document.getElementById('poppinsFont')) { var pl = document.createElement('link'); pl.id = 'poppinsFont'; pl.rel = 'stylesheet'; pl.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap'; document.head.appendChild(pl); } });
 
   paintSwitch();
   // Enlace directo al modo Japón (por ejemplo, desde anuncios): glosx.app/#japan

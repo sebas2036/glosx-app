@@ -538,3 +538,15 @@ body:not([data-region="japan"]) .hotels-bar > .hotels-go-kl, body:not([data-regi
 .exp-klook .exp-go { color: #e04f00; }
 .exp-tripadvisor .exp-go { color: #00875f; }
 @media (max-width: 640px) { .exp-grid { grid-template-columns: 1fr; } .exp-title { font-size: 18px; } }
+
+/* Botones de hoteles con la tipografía y el logo de cada marca: Klook = Poppins; Booking = tipografía del sistema (la de su web) */
+.hotels-go-kl, .hotels-go-bk { display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
+.hotels-go-kl { font-family: "Poppins", "Helvetica Neue", Arial, sans-serif; font-weight: 600; letter-spacing: 0; }
+.hotels-go-bk { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 600; letter-spacing: 0; }
+.hotels-go-kl::before, .hotels-go-bk::before {
+  content: ""; flex: 0 0 auto; width: 26px; height: 26px; border-radius: 8px;
+  background: #fff center / 18px 18px no-repeat;
+}
+.hotels-go-kl::before { background-image: url("https://www.google.com/s2/favicons?sz=64&domain=klook.com"); }
+.hotels-go-bk::before { background-image: url("https://www.google.com/s2/favicons?sz=64&domain=booking.com"); }
+.exp-klook .exp-name { font-family: "Poppins", "Helvetica Neue", Arial, sans-serif; font-weight: 600; }
