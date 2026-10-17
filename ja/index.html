@@ -349,7 +349,7 @@
   <!-- Nav -->
   <nav>
     <a href="/" class="nav-logo wt-logo" aria-label="WoW Train" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-right:12px;flex-shrink:0;"><svg class="wt-logo-icon" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="10" fill="#C10016"/><polyline points="8,12 15,29 20,18 25,29 32,12" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="12" r="2.6" fill="#fff"/><circle cx="20" cy="18" r="2.6" fill="#fff"/><circle cx="32" cy="12" r="2.6" fill="#fff"/></svg><span class="wt-logo-word" style="font-size:clamp(17px,4.6vw,22px);line-height:1;letter-spacing:-.04em;color:#14151a;white-space:nowrap;"><b style="font-weight:700;">WoW</b> <i style="font-style:normal;font-weight:300;">Train</i></span></a>
-    <button class="nav-toggle" id="navToggle" onclick="toggleMenu(event)" aria-label="Menu" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" onclick="toggleMenu(event)" aria-label="メニュー" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <div class="nav-links" id="navLinks">
@@ -433,9 +433,9 @@
     <div class="ai-planner-header" style="display:none;"></div>
 
     <div class="search-shell">
-      <div class="search-tabs" role="group" aria-label="Search">
+      <div class="search-tabs" role="group" aria-label="検索">
         <button type="button" class="search-tab on" aria-pressed="true" data-tab="ai" data-i18n="tab_ai">AIプランナー</button>
-        <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
+        <div class="region-switch" id="regionSwitch" role="group" aria-label="地域">
           <button type="button" class="region-btn on" data-region="europe" aria-pressed="true" data-i18n="region_europe">ヨーロッパ</button>
           <button type="button" class="region-btn" data-region="japan" aria-pressed="false" data-i18n="region_japan">日本</button>
         </div>
@@ -448,7 +448,7 @@
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">あなたの旅</span><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="例：チューリッヒからミラノ" autocomplete="off" />
-          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" data-i18n-aria-label="ai_swap" aria-label="出発地と到着地を入れ替える" title="Swap origin and destination">⇄</button>
+          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" data-i18n-aria-label="ai_swap" aria-label="出発地と到着地を入れ替える" title="出発地と到着地を入れ替える">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">旅程を作る</button>
       </div>
@@ -483,7 +483,7 @@
         <div class="search-panel" data-panel="countries">
   <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ 人気路線 · すぐ予約</p>
   <div class="countries" id="countries" style="padding: 0 24px 0;">
-    <span class="country-chip"><span data-i18n="chip_spain">スペイン</span><span class="country-popup"><img class="country-photo" src="/country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_spain">スペイン</span><span class="country-popup"><img class="country-photo" src="/country-pics/es.webp" alt="スペイン" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/madrid-barcelona/" onclick="planRouteFromChip(event,'Madrid','Barcelona')">マドリード → バルセロナ</a>
       <a href="/rutas/barcelona-valencia/" onclick="planRouteFromChip(event,'Barcelona','Valencia')">バルセロナ → バレンシア</a>
       <a href="/rutas/madrid-seville/" onclick="planRouteFromChip(event,'Madrid','Seville')">マドリード → セビリア</a>
@@ -494,7 +494,7 @@
       <a href="/rutas/madrid-valencia/" onclick="planRouteFromChip(event,'Madrid','Valencia')">マドリード → バレンシア</a>
       <a href="/rutas/zaragoza-barcelona/" onclick="planRouteFromChip(event,'Barcelona','Zaragoza')">バルセロナ → サラゴサ</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_switzerland">スイス</span><span class="country-popup"><img class="country-photo" src="/country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_switzerland">スイス</span><span class="country-popup"><img class="country-photo" src="/country-pics/ch.webp" alt="スイス" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/zurich-lucerne/" onclick="planRouteFromChip(event,'Zurich','Lucerne')">チューリッヒ → ルツェルン</a>
       <a href="/rutas/zurich-milan/" onclick="planRouteFromChip(event,'Zurich','Milan')">チューリッヒ → ミラノ</a>
       <a href="/rutas/geneva-zermatt/" onclick="planRouteFromChip(event,'Geneva','Zermatt')">ジュネーブ → ツェルマット</a>
@@ -509,7 +509,7 @@
       <a href="/rutas/stmoritz-zermatt/" onclick="planRouteFromChip(event,'St. Moritz','Zermatt')">サンモリッツ → ツェルマット</a>
       <a href="/rutas/lucerne-bern/" onclick="planRouteFromChip(event,'Lucerne','Bern')">ルツェルン → ベルン</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_france">フランス</span><span class="country-popup"><img class="country-photo" src="/country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_france">フランス</span><span class="country-popup"><img class="country-photo" src="/country-pics/fr.webp" alt="フランス" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-london/" onclick="planRouteFromChip(event,'Paris','London')">パリ → ロンドン</a>
       <a href="/rutas/paris-nice/" onclick="planRouteFromChip(event,'Paris','Nice')">パリ → ニース</a>
       <a href="/rutas/nice-monaco/" onclick="planRouteFromChip(event,'Nice','Monaco')">ニース → モナコ</a>
@@ -536,7 +536,7 @@
       <a href="/rutas/munich-paris/" onclick="planRouteFromChip(event,'Munich','Paris')">ミュンヘン → パリ</a>
       <a href="/rutas/tende-nice/" onclick="planRouteFromChip(event,'Tende','Nice')">タンド → ニース</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_germany">ドイツ</span><span class="country-popup"><img class="country-photo" src="/country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_germany">ドイツ</span><span class="country-popup"><img class="country-photo" src="/country-pics/de.webp" alt="ドイツ" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">アムステルダム → ベルリン</a>
       <a href="/rutas/berlin-prague/" onclick="planRouteFromChip(event,'Berlin','Prague')">ベルリン → プラハ</a>
       <a href="/rutas/munich-venice/" onclick="planRouteFromChip(event,'Munich','Venice')">ミュンヘン → ヴェネツィア</a>
@@ -550,7 +550,7 @@
       <a href="/rutas/munich-berlin/" onclick="planRouteFromChip(event,'Berlin','Munich')">ベルリン → ミュンヘン</a>
       <a href="/rutas/munich-prague/" onclick="planRouteFromChip(event,'Munich','Prague')">ミュンヘン → プラハ</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_italy">イタリア</span><span class="country-popup"><img class="country-photo" src="/country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_italy">イタリア</span><span class="country-popup"><img class="country-photo" src="/country-pics/it.webp" alt="イタリア" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/rome-florence/" onclick="planRouteFromChip(event,'Rome','Florence')">ローマ → フィレンツェ</a>
       <a href="/rutas/florence-venice/" onclick="planRouteFromChip(event,'Florence','Venice')">フィレンツェ → ヴェネツィア</a>
       <a href="/rutas/milan-rome/" onclick="planRouteFromChip(event,'Milan','Rome')">ミラノ → ローマ</a>
@@ -565,20 +565,20 @@
       <a href="/rutas/naples-rome/" onclick="planRouteFromChip(event,'Naples','Rome')">ナポリ → ローマ</a>
       <a href="/rutas/naples-salerno/" onclick="planRouteFromChip(event,'Naples','Salerno')">ナポリ → サレルノ</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_belgium">ベルギー</span><span class="country-popup"><img class="country-photo" src="/country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_belgium">ベルギー</span><span class="country-popup"><img class="country-photo" src="/country-pics/be.webp" alt="ベルギー" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-bruges/" onclick="planRouteFromChip(event,'Paris','Bruges')">パリ → ブルージュ</a>
       <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">アムステルダム → ブリュッセル</a>
       <a href="/rutas/cologne-brussels/" onclick="planRouteFromChip(event,'Brussels','Cologne')">ブリュッセル → ケルン</a>
       <a href="/rutas/brussels-bruges/" onclick="planRouteFromChip(event,'Brussels','Bruges')">ブリュッセル → ブルージュ</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_netherlands">オランダ</span><span class="country-popup"><img class="country-photo" src="/country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_netherlands">オランダ</span><span class="country-popup"><img class="country-photo" src="/country-pics/nl.webp" alt="オランダ" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-amsterdam/" onclick="planRouteFromChip(event,'Paris','Amsterdam')">パリ → アムステルダム</a>
       <a href="/rutas/london-amsterdam/" onclick="planRouteFromChip(event,'London','Amsterdam')">ロンドン → アムステルダム</a>
       <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">アムステルダム → ベルリン</a>
       <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">アムステルダム → ブリュッセル</a>
       <a href="/rutas/amsterdam-bruges/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">アムステルダム → ブルージュ</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_austria">オーストリア</span><span class="country-popup"><img class="country-photo" src="/country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_austria">オーストリア</span><span class="country-popup"><img class="country-photo" src="/country-pics/at.webp" alt="オーストリア" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/vienna-salzburg/" onclick="planRouteFromChip(event,'Vienna','Salzburg')">ウィーン → ザルツブルク</a>
       <a href="/rutas/vienna-prague/" onclick="planRouteFromChip(event,'Vienna','Prague')">ウィーン → プラハ</a>
       <a href="/rutas/vienna-budapest/" onclick="planRouteFromChip(event,'Vienna','Budapest')">ウィーン → ブダペスト</a>
@@ -588,7 +588,7 @@
       <a href="/rutas/graz-vienna/" onclick="planRouteFromChip(event,'Graz','Vienna')">グラーツ → ウィーン</a>
       <a href="/rutas/munich-salzburg/" onclick="planRouteFromChip(event,'Munich','Salzburg')">ミュンヘン → ザルツブルク</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_uk">イギリス</span><span class="country-popup"><img class="country-photo" src="/country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_uk">イギリス</span><span class="country-popup"><img class="country-photo" src="/country-pics/gb.webp" alt="イギリス" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/london-paris/" onclick="planRouteFromChip(event,'London','Paris')">ロンドン → パリ</a>
       <a href="/rutas/london-manchester/" onclick="planRouteFromChip(event,'London','Manchester')">ロンドン → マンチェスター</a>
       <a href="/rutas/london-liverpool/" onclick="planRouteFromChip(event,'London','Liverpool')">ロンドン → リバプール</a>
@@ -613,7 +613,7 @@
         </div>
         <div class="search-results-slot">
     <div class="ai-results" id="aiResults" style="display:none;">
-      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
+      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="閉じる">×</button>
       <div class="ai-results-header">
         <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">例 · 1枚のカードが1区間（都市 → 都市）</span>
         <h3 id="aiRouteTitle" data-i18n="hero_h1">ヨーロッパ鉄道ルートのAIプランナー</h3>
@@ -660,7 +660,7 @@
       <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/></svg><p><b data-i18n="ben_free_t">無料、アカウント不要</b><span data-i18n="ben_free_d">月額も隠れた費用もありません。</span></p></div>
     </div>
     <div class="search-extras">
-      <div class="hero-ops" aria-label="Rail operators">
+      <div class="hero-ops" aria-label="対応する鉄道会社">
         <div class="trust-ops">
           <span class="op-chip"><img src="/assets/icons/ops/renfe.png" alt="Renfe" loading="lazy"/>Renfe</span>
           <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
@@ -715,7 +715,7 @@
     </div>
   </div>
 
-  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
+  <div class="wt-route-buttons" role="group" aria-label="ルートを選ぶ">
     <button class="wt-route-btn" data-route="classic" aria-pressed="false">
       <span data-i18n="route_classic">定番ルート（フランス–イタリア）</span>
       <span class="wt-route-stops" data-i18n="route_classic_stops">パリ → リヨン → トリノ → ミラノ · 高速 · 約7〜8時間</span>
@@ -777,7 +777,7 @@
           <span class="vip-brand">Klook Hotels</span>
           <span class="vip-sub" data-i18n="vip_klook_hotels">都市を選ぶ →</span>
         </div>
-        <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="Choose a city" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
+        <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="都市を選ぶ" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
         <div class="klook-city-menu" id="klookCityMenu"></div>
       </div>
     </div>
@@ -836,7 +836,7 @@
   <div class="partner-widgets">
     <!-- Kiwitaxi · Shuttles Search Form -->
     <div class="pw-panel" id="pw-kiwitaxi" data-widget-src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&language=en&theme=1&powered_by=true&campaign_id=1&promo_id=1486">
-      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
+      <button class="pw-close" onclick="closeWidget()" aria-label="閉じる">×</button>
     </div>
   </div>
   </section>
@@ -985,22 +985,22 @@
     </p>
     <div class="stats-marquee">
       <div class="stats-track">
-        <span class="route-chip">Madrid → Barcelona</span>
-        <span class="route-chip">Vienna → Prague</span>
-        <span class="route-chip">Nice → Monaco</span>
-        <span class="route-chip">Paris → Amsterdam</span>
-        <span class="route-chip">Zurich → Milan</span>
-        <span class="route-chip">London → Edinburgh</span>
-        <span class="route-chip">Berlin → Prague</span>
-        <span class="route-chip">Lyon → Turin</span>
-        <span class="route-chip">Madrid → Barcelona</span>
-        <span class="route-chip">Vienna → Prague</span>
-        <span class="route-chip">Nice → Monaco</span>
-        <span class="route-chip">Paris → Amsterdam</span>
-        <span class="route-chip">Zurich → Milan</span>
-        <span class="route-chip">London → Edinburgh</span>
-        <span class="route-chip">Berlin → Prague</span>
-        <span class="route-chip">Lyon → Turin</span>
+        <span class="route-chip">マドリード → バルセロナ</span>
+        <span class="route-chip">ウィーン → プラハ</span>
+        <span class="route-chip">ニース → モナコ</span>
+        <span class="route-chip">パリ → アムステルダム</span>
+        <span class="route-chip">チューリッヒ → ミラノ</span>
+        <span class="route-chip">ロンドン → エディンバラ</span>
+        <span class="route-chip">ベルリン → プラハ</span>
+        <span class="route-chip">リヨン → トリノ</span>
+        <span class="route-chip">マドリード → バルセロナ</span>
+        <span class="route-chip">ウィーン → プラハ</span>
+        <span class="route-chip">ニース → モナコ</span>
+        <span class="route-chip">パリ → アムステルダム</span>
+        <span class="route-chip">チューリッヒ → ミラノ</span>
+        <span class="route-chip">ロンドン → エディンバラ</span>
+        <span class="route-chip">ベルリン → プラハ</span>
+        <span class="route-chip">リヨン → トリノ</span>
       </div>
     </div>
   </div>
@@ -1182,20 +1182,20 @@
       <a href="/rutas/frankfurt-cologne/" class="explore-route-pill">フランクフルト → ケルン</a>
       <a href="/rutas/frankfurt-munich/" class="explore-route-pill">フランクフルト → ミュンヘン</a>
       <a href="/rutas/geneva-paris/" class="explore-route-pill">ジュネーブ → パリ</a>
-      <a href="/rutas/lisbon-porto/" class="explore-route-pill">Lisbon → Porto</a>
+      <a href="/rutas/lisbon-porto/" class="explore-route-pill">リスボン → ポルト</a>
       <a href="/rutas/london-brussels/" class="explore-route-pill">ロンドン → ブリュッセル</a>
       <a href="/rutas/london-cambridge/" class="explore-route-pill">ロンドン → ケンブリッジ</a>
       <a href="/rutas/london-oxford/" class="explore-route-pill">ロンドン → オックスフォード</a>
       <a href="/rutas/london-paris/" class="explore-route-pill">ロンドン → パリ</a>
       <a href="/rutas/london-york/" class="explore-route-pill">ロンドン → ヨーク</a>
-      <a href="/rutas/madrid-malaga/" class="explore-route-pill">Madrid → Málaga</a>
+      <a href="/rutas/madrid-malaga/" class="explore-route-pill">マドリード → マラガ</a>
       <a href="/rutas/madrid-valencia/" class="explore-route-pill">マドリード → バレンシア</a>
       <a href="/rutas/milan-florence/" class="explore-route-pill">ミラノ → フィレンツェ</a>
       <a href="/rutas/milan-zurich/" class="explore-route-pill">ミラノ → チューリッヒ</a>
       <a href="/rutas/montreux-interlaken/" class="explore-route-pill">モントルー → インターラーケン</a>
       <a href="/rutas/munich-prague/" class="explore-route-pill">ミュンヘン → プラハ</a>
       <a href="/rutas/munich-vienna/" class="explore-route-pill">ミュンヘン → ウィーン</a>
-      <a href="/rutas/oslo-bergen/" class="explore-route-pill">Oslo → Bergen</a>
+      <a href="/rutas/oslo-bergen/" class="explore-route-pill">オスロ → ベルゲン</a>
       <a href="/rutas/paris-berlin/" class="explore-route-pill">パリ → ベルリン</a>
       <a href="/rutas/paris-lourdes/" class="explore-route-pill">パリ → ルルド</a>
       <a href="/rutas/paris-lucerne/" class="explore-route-pill">パリ → ルツェルン</a>
@@ -1207,7 +1207,7 @@
       <a href="/rutas/prague-vienna/" class="explore-route-pill">プラハ → ウィーン</a>
       <a href="/rutas/rome-naples/" class="explore-route-pill">ローマ → ナポリ</a>
       <a href="/rutas/rome-venice/" class="explore-route-pill">ローマ → ヴェネツィア</a>
-      <a href="/rutas/stockholm-oslo/" class="explore-route-pill">Stockholm → Oslo</a>
+      <a href="/rutas/stockholm-oslo/" class="explore-route-pill">ストックホルム → オスロ</a>
       <a href="/rutas/turin-milan/" class="explore-route-pill">トリノ → ミラノ</a>
       <a href="/rutas/venice-milan/" class="explore-route-pill">ヴェネツィア → ミラノ</a>
     </div>
@@ -1238,7 +1238,7 @@
     <p class="disclaimer" data-i18n="footer_disclaimer">WoW Trainは独立した旅行サイトです。予約はKlookなどの認定パートナーの条件で処理され、その取引の当事者ではありません。対象の購入から報酬を受け取ることがありますが、あなたへの追加料金はありません。</p>
   </footer>
 
-  <div id="glosxTramoModal" class="glosx-tramo-modal" role="dialog" aria-label="Booking tab helper" style="display:none;">
+  <div id="glosxTramoModal" class="glosx-tramo-modal" role="dialog" aria-label="予約タブのガイド" style="display:none;">
     <div class="glosx-tramo-modal-content">
       <h3 id="glosxTramoModalTitle" data-i18n="ai_tramo_modal_title">WoW Train</h3>
       <p id="glosxTramoModalBody" data-i18n="ai_tramo_modal_body">この区間の時刻を調べています。いま開いたOmioのタブで列車を選び、戻って次へ進んでください。</p>
@@ -1247,7 +1247,7 @@
     </div>
   </div>
 
-  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="アプリをインストール" hidden>
     <div class="ios-install-icon" aria-hidden="true">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
     </div>
@@ -1259,7 +1259,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
     </button>
   </div>
-  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="アプリをインストール" hidden>
     <div class="ios-install-icon" aria-hidden="true">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
     </div>
@@ -1444,5 +1444,6 @@
       window.addEventListener('load', function () { setTimeout(function () { els.forEach(near); }, 4000); });
     })();
   </script>
+<script src="/assets/js/ja-labels.js?v=1" defer></script>
 </body>
 </html>
