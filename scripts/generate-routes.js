@@ -266,7 +266,7 @@ const routes = [
     }
   },
   { slug: 'london-liverpool', from: 'London', to: 'Liverpool', country: 'UK', duration: '2h 15m', operator: 'Avanti', price: '€20-40', badge: 'Route guide · UK',
-    customSEO: { en: { title: 'London to Liverpool by Train: 2h15 Avanti, from €20', description: 'Direct Avanti from London to Liverpool in 2h15. Compare today\'s schedule and book fares from €20 — no layovers.' } } },
+    customSEO: { en: { title: 'London to Liverpool Train: Price, Cost & How Long (2h15)', description: 'London to Liverpool by train takes 2h15 on Avanti. See the ticket price and cost (from €20), how long it takes, stations and how to book in 2026.' } } },
   { slug: 'london-manchester', from: 'London', to: 'Manchester', country: 'UK', duration: '2h 00m', operator: 'Avanti', price: '€20-40', badge: 'Route guide · UK',
     customSEO: { en: { title: 'London to Manchester Train: 2h, from €20', description: 'Avanti connection from London to Manchester in 2 hours. Check live schedules and book tickets from €20.' } },
     localInsight: {
@@ -277,7 +277,7 @@ const routes = [
     }
   },
   { slug: 'london-oxford', from: 'London', to: 'Oxford', country: 'UK', duration: '1h 00m', operator: 'GWR', price: '€15-25', badge: 'Route guide · UK',
-    customSEO: { en: { title: 'London to Oxford Train Guide: 1h on GWR', description: 'Everything you need for the London to Oxford train: 1 hour on GWR, fares from €15, and today\'s live schedule.' } },
+    customSEO: { en: { title: 'Trains from London to Oxford: 1h on GWR, from €15', description: 'Trains from London to Oxford take about 1 hour on GWR, from €15. Compare stations, journey time and how to book in 2026.' } },
     localInsight: {
       en: 'Oxford railway station is genuinely close to the city centre — a 15-20 minute walk to most of the historic colleges — unlike many university towns where the station sits well outside the old centre. That makes this one of the rare routes where you can leave from a London terminus and be looking at Christ Church or the Bodleian within about an hour and a quarter, door to door.',
       es: 'La estación de tren de Oxford está realmente cerca del centro — a 15-20 minutos a pie de la mayoría de los colleges históricos — a diferencia de muchas ciudades universitarias donde la estación queda bastante alejada del centro antiguo. Eso hace que esta sea una de las pocas rutas donde se puede salir de una terminal de Londres y estar frente a Christ Church o la Bodleian Library en poco más de una hora, puerta a puerta.',
@@ -730,7 +730,7 @@ const routes = [
   { slug: 'frankfurt-berlin', from: 'Frankfurt', to: 'Berlin', country: 'Germany', duration: '4h 00m', operator: 'ICE (DB)', price: '€40-60', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Frankfurt to Berlin Train Guide: 4h on ICE (DB)', description: 'Everything you need for the Frankfurt to Berlin train: 4 hours on ICE (DB), fares from €40, and today\'s live schedule.' } } },
   { slug: 'lucerne-bern', from: 'Lucerne', to: 'Bern', country: 'Switzerland', duration: '1h 05m', operator: 'InterCity (SBB)', price: '€20-35', badge: 'Route guide · Switzerland',
-    customSEO: { en: { title: 'Lucerne to Bern Train: 1h05, from €20', description: 'InterCity (SBB) connection from Lucerne to Bern in just over an hour. Check live schedules and book tickets from €20.' } } },
+    customSEO: { en: { title: 'Train Lucerne to Bern (Berne): 1h05, from €20', description: 'Train from Lucerne to Bern (Berne) in just over an hour on InterCity (SBB), from €20. Stations, journey time and how to book in 2026.' } } },
   // Rutas nuevas (16-oct-2026): datos de Omio (trenes/día, directos, duración, distancia, operador); sin precios inventados.
   { slug: 'lisbon-faro', from: 'Lisbon', to: 'Faro', country: 'Portugal', duration: '2h 52m', operator: 'CP', price: '€8', badge: 'Route guide · Portugal',
     localInsight: {
