@@ -1409,7 +1409,7 @@
         return `
         <div class="scenic-wrapper${i === scenicFeatured ? ' scenic-active' : ''}">
           <a href="#" class="scenic-card" onclick="featureScenic(${i}); var f=document.getElementById('scenicFeature'); if(f) f.scrollIntoView({behavior:'smooth',block:'center'}); return false;">
-            <div class="scenic-photo" style="background-image:${t.photo?`url('${t.photo}')`:`linear-gradient(135deg, ${t.g1}, ${t.g2})`}"><span class="scenic-dur">${String(routeLine).split(" · ")[1]||""}</span></div>
+            <div class="scenic-photo${t.tourUrl ? '' : ' via-omio'}" style="background-image:${t.photo?`url('${t.photo}')`:`linear-gradient(135deg, ${t.g1}, ${t.g2})`}"><span class="scenic-dur">${String(routeLine).split(" · ")[1]||""}</span></div>
             <div class="scenic-body">
               <div class="scenic-name">${t.name}</div>
               <div class="scenic-route">${String(routeLine).split(" · ")[0]}</div>

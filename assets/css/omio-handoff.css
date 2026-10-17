@@ -496,3 +496,13 @@ body.home-v2[data-region="japan"].hotels-mode .search-tab:not(.on) { background:
 @media (max-width: 900px) {
   .nav-links.show { max-height: calc(100vh - 74px); max-height: calc(100dvh - 74px); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding-bottom: 24px; }
 }
+
+/* Tarjetas de trenes panorámicos que reservan por Omio: marca pequeña en la esquina de la foto */
+.scenic-photo.via-omio { position: relative; }
+.scenic-photo.via-omio::after {
+  content: "";
+  position: absolute; top: 12px; right: 12px;
+  width: 26px; height: 26px; border-radius: 8px;
+  background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=omio.com") center / 17px 17px no-repeat;
+  box-shadow: 0 1px 6px rgba(15, 27, 92, .22);
+}
