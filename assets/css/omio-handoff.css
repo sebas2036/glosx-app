@@ -480,3 +480,11 @@ body.home-v2[data-region="japan"].hotels-mode .search-tab:not(.on) { background:
   body.home-v2 .region-switch { display: flex; width: 100%; max-width: 100%; box-sizing: border-box; }
   body.home-v2 .region-switch .region-btn { flex: 1 1 0; min-width: 0; padding: 9px 6px; font-size: 13px; text-align: center; white-space: nowrap; }
 }
+
+/* Hoteles en móvil: la cuadrícula se simplifica a 2×2 fotos, queda detrás del título (no detrás de las pestañas) y con velo más fuerte para que todo se lea ordenado */
+@media (max-width: 760px) {
+  body.hotels-mode .hotel-mosaic { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 6px; padding: 6px; inset: 0; -webkit-mask-image: none; mask-image: none; }
+  body.hotels-mode .hotel-mosaic img:nth-child(n+5) { display: none; }
+  body.hotels-mode .hotel-mosaic img { border-radius: 14px; }
+  body.hotels-mode .hotel-mosaic::after { background: linear-gradient(180deg, rgba(10, 12, 14, .6) 0%, rgba(10, 12, 14, .55) 55%, rgba(10, 12, 14, .5) 100%); }
+}
