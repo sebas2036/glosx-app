@@ -55,6 +55,7 @@ function localize(html) {
 function files() {
   const out = [];
   for (const f of ['ja/index.html', 'ja/about.html', 'ja/explore/index.html', 'ja/hoy/index.html']) if (fs.existsSync(path.join(ROOT, f))) out.push(f);
+  for (const n of fs.readdirSync(path.join(ROOT, 'ja'))) if (n.endsWith('.html') && !out.includes('ja/' + n)) out.push('ja/' + n);
   return out;
 }
 function run() {
