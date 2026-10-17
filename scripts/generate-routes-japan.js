@@ -419,7 +419,7 @@ list.forEach(r => {
     if (process.env.ONLY_LANG && process.env.ONLY_LANG !== lang) return;
     const dir = lang === 'en' ? path.join(__dirname, '../rutas', r.slug) : path.join(__dirname, '../rutas', r.slug, lang);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), render(r, lang));
+    fs.writeFileSync(path.join(dir, 'index.html'), require('./meta-overrides').apply('rutas/' + r.slug + (lang === 'en' ? '' : '/' + lang), render(r, lang)));
   });
   console.log('Generada', r.slug, '(EN/ES/FR/IT/JA)');
 });
