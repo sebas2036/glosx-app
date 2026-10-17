@@ -31,6 +31,162 @@
     {
       "q": "How early should I get to the station?",
       "a": "For international or high-speed services, aim for 20 to 30 minutes before departure; for local trains, less. Check the operator's rules for your ticket."
+    },
+    {
+      "q": "What time are the trains from {{from}} to {{to}}?",
+      "a": "Departure times vary by day. Search your date on Omio to see every departure and the duration of each service (about {{duration}})."
+    }
+  ],
+  "es": [
+    {
+      "q": "¿Cómo ir de {{from}} a {{to}} en tren?",
+      "a": "La opción habitual es un tren {{operator}}, con un trayecto de unos {{duration}}. Busca tu fecha en Omio para comparar salidas, precios y estaciones exactas en un solo lugar."
+    },
+    {
+      "q": "¿Se puede ir de {{from}} a {{to}} en tren?",
+      "a": "Sí. La ruta la cubre {{operator}} y el viaje dura unos {{duration}}. Algunas salidas pueden incluir un transbordo, así que revisa el detalle de cada resultado antes de reservar."
+    },
+    {
+      "q": "¿Cuál es la forma más barata de ir de {{from}} a {{to}}?",
+      "a": "Las tarifas de tren suelen rondar {{price}} y son más bajas si reservas con antelación, porque los billetes anticipados se agotan en días de mucha demanda. Compara fechas en Omio y suma el tiempo hacia y desde aeropuertos o paradas de autobús si estás valorando otras opciones."
+    },
+    {
+      "q": "¿A qué hora salen los trenes de {{from}} a {{to}}?",
+      "a": "Los horarios cambian según el día. Busca tu fecha en Omio para ver todas las salidas y la duración de cada servicio (unos {{duration}})."
+    },
+    {
+      "q": "¿De qué estación sale y a cuál llega?",
+      "a": "Depende del servicio. Las ciudades grandes pueden tener más de una estación, así que revisa las estaciones de salida y llegada que aparecen en cada resultado antes de reservar."
+    },
+    {
+      "q": "¿Es mejor ir en tren o en avión de {{from}} a {{to}}?",
+      "a": "Para muchos viajes de centro a centro de ciudad el tren es competitivo: sin traslados al aeropuerto ni facturación, y unos {{duration}} a bordo. Compara el tiempo total y el precio para tus fechas."
+    },
+    {
+      "q": "¿Conviene reservar con antelación el tren de {{from}} a {{to}}?",
+      "a": "Reservar con antelación suele dar precios más bajos ({{price}} es el rango habitual) y las salidas más populares pueden agotarse."
+    },
+    {
+      "q": "¿Puedo comprar los billetes de {{from}} a {{to}} por internet desde el móvil?",
+      "a": "Sí. En Omio puedes comparar horarios y reservar desde el móvil. La mayoría de los billetes se entregan como e-ticket, pero revisa las condiciones del operador del servicio que elijas."
+    },
+    {
+      "q": "¿Con cuánta antelación debo llegar a la estación?",
+      "a": "Para servicios internacionales o de alta velocidad, llega entre 20 y 30 minutos antes de la salida; para trenes locales, menos. Revisa las condiciones del operador para tu billete."
+    }
+  ],
+  "fr": [
+    {
+      "q": "Comment aller de {{from}} à {{to}} en train ?",
+      "a": "L'option habituelle est un train {{operator}}, avec un trajet d'environ {{duration}}. Cherchez votre date sur Omio pour comparer les départs, les prix et les gares exactes au même endroit."
+    },
+    {
+      "q": "Peut-on aller de {{from}} à {{to}} en train ?",
+      "a": "Oui. La liaison est assurée par {{operator}} et le trajet dure environ {{duration}}. Certains départs peuvent comporter un changement : vérifiez le détail de chaque résultat avant de réserver."
+    },
+    {
+      "q": "Quel est le moyen le moins cher d'aller de {{from}} à {{to}} ?",
+      "a": "Les tarifs de train tournent généralement autour de {{price}} et sont plus bas si vous réservez tôt, car les billets à l'avance partent vite les jours de forte affluence. Comparez les dates sur Omio et ajoutez le temps de trajet vers les aéroports ou les arrêts de bus si vous hésitez avec d'autres options."
+    },
+    {
+      "q": "Quels sont les horaires des trains de {{from}} à {{to}} ?",
+      "a": "Les horaires changent selon le jour. Cherchez votre date sur Omio pour voir tous les départs et la durée de chaque service (environ {{duration}})."
+    },
+    {
+      "q": "De quelle gare part-on et dans quelle gare arrive-t-on ?",
+      "a": "Cela dépend du service. Les grandes villes peuvent avoir plusieurs gares : vérifiez les gares de départ et d'arrivée indiquées sur chaque résultat avant de réserver."
+    },
+    {
+      "q": "Vaut-il mieux prendre le train ou l'avion de {{from}} à {{to}} ?",
+      "a": "Pour de nombreux trajets de centre-ville à centre-ville, le train est compétitif : pas de transfert aéroport ni d'enregistrement, et environ {{duration}} à bord. Comparez la durée totale et le prix pour vos dates."
+    },
+    {
+      "q": "Faut-il réserver à l'avance le train de {{from}} à {{to}} ?",
+      "a": "Réserver tôt donne généralement des prix plus bas ({{price}} est la fourchette habituelle) et les départs populaires peuvent être complets."
+    },
+    {
+      "q": "Peut-on acheter les billets de {{from}} à {{to}} en ligne depuis son téléphone ?",
+      "a": "Oui. Sur Omio, vous comparez les horaires et réservez depuis votre téléphone. La plupart des billets sont envoyés en e-billet, mais vérifiez les conditions du transporteur pour le service choisi."
+    },
+    {
+      "q": "Combien de temps à l'avance faut-il arriver à la gare ?",
+      "a": "Pour les services internationaux ou à grande vitesse, comptez 20 à 30 minutes avant le départ ; moins pour les trains locaux. Vérifiez les conditions du transporteur pour votre billet."
+    }
+  ],
+  "it": [
+    {
+      "q": "Come andare da {{from}} a {{to}} in treno?",
+      "a": "L'opzione più comune è un treno {{operator}}, con un viaggio di circa {{duration}}. Cerca la tua data su Omio per confrontare partenze, prezzi e stazioni esatte in un unico posto."
+    },
+    {
+      "q": "Si può andare da {{from}} a {{to}} in treno?",
+      "a": "Sì. La tratta è servita da {{operator}} e il viaggio dura circa {{duration}}. Alcune partenze possono prevedere un cambio, quindi controlla i dettagli di ogni risultato prima di prenotare."
+    },
+    {
+      "q": "Qual è il modo più economico per andare da {{from}} a {{to}}?",
+      "a": "Le tariffe del treno sono di solito intorno a {{price}} e sono più basse se prenoti in anticipo, perché i biglietti anticipati si esauriscono nei giorni di maggiore richiesta. Confronta le date su Omio e aggiungi il tempo per raggiungere aeroporti o fermate dei bus se valuti altre opzioni."
+    },
+    {
+      "q": "A che ora sono i treni da {{from}} a {{to}}?",
+      "a": "Gli orari cambiano da un giorno all'altro. Cerca la tua data su Omio per vedere tutte le partenze e la durata di ogni servizio (circa {{duration}})."
+    },
+    {
+      "q": "Da quale stazione si parte e in quale si arriva?",
+      "a": "Dipende dal servizio. Le grandi città possono avere più di una stazione, quindi controlla le stazioni di partenza e arrivo indicate in ogni risultato prima di prenotare."
+    },
+    {
+      "q": "È meglio il treno o l'aereo da {{from}} a {{to}}?",
+      "a": "Per molti viaggi da centro città a centro città il treno è competitivo: niente trasferimenti in aeroporto né check-in, e circa {{duration}} a bordo. Confronta tempo totale e prezzo per le tue date."
+    },
+    {
+      "q": "Conviene prenotare in anticipo il treno da {{from}} a {{to}}?",
+      "a": "Prenotare prima di solito dà prezzi più bassi ({{price}} è la fascia tipica) e le partenze più richieste possono esaurirsi."
+    },
+    {
+      "q": "Posso comprare i biglietti da {{from}} a {{to}} online dal telefono?",
+      "a": "Sì. Su Omio puoi confrontare gli orari e prenotare dal telefono. La maggior parte dei biglietti arriva come e-ticket, ma controlla le regole del vettore per il servizio scelto."
+    },
+    {
+      "q": "Quanto prima devo arrivare in stazione?",
+      "a": "Per i servizi internazionali o ad alta velocità, arriva 20-30 minuti prima della partenza; per i treni locali, meno. Controlla le regole del vettore per il tuo biglietto."
+    }
+  ],
+  "ja": [
+    {
+      "q": "{{from}}から{{to}}まで電車でどう行けばいいですか？",
+      "a": "一般的には{{operator}}の列車で、所要時間は約{{duration}}です。Omioで日付を検索すると、出発便、料金、正確な駅を一か所で比較できます。"
+    },
+    {
+      "q": "{{from}}から{{to}}まで電車で行けますか？",
+      "a": "はい。この区間は{{operator}}が運行しており、所要時間は約{{duration}}です。乗り換えが必要な便もあるため、予約前に各結果の詳細を確認してください。"
+    },
+    {
+      "q": "{{from}}から{{to}}まで一番安く行く方法は？",
+      "a": "鉄道の運賃はおおむね{{price}}で、早めに予約するほど安くなります。混雑する日は早割の切符が売り切れるためです。Omioで日付ごとに比較し、他の手段と比べる場合は空港やバス停までの移動時間も加えてください。"
+    },
+    {
+      "q": "{{from}}から{{to}}の電車は何時にありますか？",
+      "a": "時刻は日によって変わります。Omioで日付を検索すると、すべての出発便と各サービスの所要時間（約{{duration}}）を確認できます。"
+    },
+    {
+      "q": "どの駅から出発し、どの駅に到着しますか？",
+      "a": "利用するサービスによって異なります。大都市には複数の駅がある場合があるため、予約前に各結果に表示される出発駅と到着駅を確認してください。"
+    },
+    {
+      "q": "{{from}}から{{to}}までは電車と飛行機のどちらがいいですか？",
+      "a": "市内中心部から市内中心部への移動では、空港への移動やチェックインがない分、電車は有力な選択肢です。乗車時間は約{{duration}}です。日付ごとに合計時間と料金を比較してください。"
+    },
+    {
+      "q": "{{from}}から{{to}}の電車は事前に予約したほうがいいですか？",
+      "a": "早めに予約すると料金が安くなりやすく（目安は{{price}}）、人気の便は満席になることがあります。"
+    },
+    {
+      "q": "{{from}}から{{to}}のチケットはスマホでオンライン購入できますか？",
+      "a": "はい。Omioなら時刻を比較してスマホから予約できます。多くのチケットは電子チケットで届きますが、選んだサービスの運行会社の規則を確認してください。"
+    },
+    {
+      "q": "駅にはどのくらい前に着けばいいですか？",
+      "a": "国際列車や高速列車は出発の20〜30分前、ローカル列車はそれより短くて構いません。ご自身のチケットについては運行会社の規則を確認してください。"
     }
   ]
 }

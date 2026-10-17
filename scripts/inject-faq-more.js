@@ -12,6 +12,10 @@ const lang = process.argv[2] || 'en';
 const only = process.argv.slice(3);
 const MORE = JSON.parse(fs.readFileSync(path.join(__dirname, 'faq-more.json'), 'utf8'))[lang];
 if (!MORE) { console.error('Sin preguntas para', lang); process.exit(1); }
+// nombres de ciudad por idioma (los mismos diccionarios del panel de hoteles)
+const jsrc = fs.readFileSync(path.join(ROOT, 'assets/js/japan.js'), 'utf8');
+const NAMES = JSON.parse(jsrc.match(/var HOTEL_NAMES = (\{.*?\});\n  function hname/s)[1]);
+const nm = (c) => (NAMES[lang] && NAMES[lang][c]) || c;
 const g = fs.readFileSync(path.join(__dirname, 'generate-routes.js'), 'utf8');
 const re = /slug: '([a-z-]+)', from: '([^']+)', to: '([^']+)', country: '[^']+', duration: '([^']+)', operator: '([^']+)', price: '([^']+)'/g;
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -22,9 +26,9 @@ while ((m = re.exec(g))) {
   const file = path.join(ROOT, 'rutas', slug, lang === 'en' ? '' : lang, 'index.html');
   if (!fs.existsSync(file)) continue;
   let html = fs.readFileSync(file, 'utf8');
-  if (html.includes('data-more="1"')) { skipped++; continue; }
-  const fill = (s) => s.replace(/\{\{from\}\}/g, from).replace(/\{\{to\}\}/g, to).replace(/\{\{duration\}\}/g, duration).replace(/\{\{operator\}\}/g, operator).replace(/\{\{price\}\}/g, price);
-  const items = MORE.map((x) => ({ q: fill(x.q), a: fill(x.a) }));
+    const fill = (s) => s.replace(/\{\{from\}\}/g, nm(from)).replace(/\{\{to\}\}/g, nm(to)).replace(/\{\{duration\}\}/g, duration).replace(/\{\{operator\}\}/g, operator).replace(/\{\{price\}\}/g, price);
+  const items = MORE.map((x) => ({ q: fill(x.q), a: fill(x.a) })).filter((x) => !html.includes(`>${esc(x.q)}<`));
+  if (!items.length) { skipped++; continue; }
   const block = items.map((x) => `
       <div class="faq-item" data-more="1">
         <h3 class="faq-q">${esc(x.q)}</h3>
