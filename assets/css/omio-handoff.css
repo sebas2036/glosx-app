@@ -387,3 +387,24 @@ body.home-v2[data-region="japan"] .guides-home h2,
 body.home-v2[data-region="japan"] #faq h2,
 body.home-v2[data-region="japan"] #discover h2,
 body.home-v2[data-region="japan"] section[style*="max-width:1100px"] h2 { color: #8A3A10; }
+
+/* "Rutas por país": fondo azul Omio suave (durazno Klook en modo Japón), chips blancos con texto azul marino */
+body.home-v2 .search-card:has(.search-panel[data-panel="countries"].on) { background: linear-gradient(180deg, #EAF0FB 0%, #DCE7F8 100%); }
+body.home-v2[data-region="japan"] .search-card:has(.search-panel[data-panel="countries"].on) { background: linear-gradient(180deg, #FFF1E5 0%, #FFE2CC 100%); }
+body.home-v2 .search-panel[data-panel="countries"] .section-label { color: var(--omio-navy, #0F1B5C) !important; }
+body.home-v2[data-region="japan"] .search-panel[data-panel="countries"] .section-label { color: #8A3A10 !important; }
+body.home-v2 .search-panel[data-panel="countries"] .country-chip { background: #fff !important; border: 1px solid rgba(15, 27, 92, .16) !important; color: var(--omio-navy, #0F1B5C) !important; box-shadow: 0 2px 8px rgba(15, 27, 92, .08) !important; font-weight: 600 !important; }
+body.home-v2 .search-panel[data-panel="countries"] .country-chip:hover,
+body.home-v2 .search-panel[data-panel="countries"] .country-chip.show-photo { border-color: var(--omio-coral, #FB6B6C) !important; background: #fff !important; color: var(--omio-navy, #0F1B5C) !important; box-shadow: 0 6px 16px rgba(251, 107, 108, .22) !important; }
+body.home-v2[data-region="japan"] .search-panel[data-panel="countries"] .country-chip { border-color: rgba(255, 91, 0, .3) !important; color: #2A2118 !important; box-shadow: 0 2px 8px rgba(138, 58, 16, .1) !important; }
+body.home-v2[data-region="japan"] .search-panel[data-panel="countries"] .country-chip:hover,
+body.home-v2[data-region="japan"] .search-panel[data-panel="countries"] .country-chip.show-photo { border-color: #FF5B00 !important; color: #2A2118 !important; box-shadow: 0 6px 16px rgba(255, 91, 0, .22) !important; }
+
+/* Ventanas de rutas por país: más rutas ahora, así que la lista se desplaza dentro y "Más países" va en dos columnas */
+body.home-v2 .country-popup .country-routes { max-height: 300px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+body.home-v2 .country-popup.wide { width: 420px; }
+body.home-v2 .country-popup.wide .country-routes { max-height: 340px; column-count: 2; column-gap: 18px; }
+body.home-v2 .country-popup.wide .group-label { break-after: avoid; break-inside: avoid; margin-top: 10px; }
+body.home-v2 .country-popup.wide .group-label:first-child { margin-top: 0; }
+body.home-v2 .country-popup.wide .country-routes a { break-inside: avoid; }
+@media (max-width: 600px) { body.home-v2 .country-popup.wide { width: min(92vw, 360px); } body.home-v2 .country-popup.wide .country-routes { column-count: 1; } }

@@ -321,7 +321,7 @@
   }
   </script>
 <script>try{localStorage.setItem('glosx_lang','es');localStorage.setItem('glosx_lang_manual','1');}catch(e){}</script>
-  <link rel="stylesheet" href="/assets/css/omio-handoff.css?v=32">
+  <link rel="stylesheet" href="/assets/css/omio-handoff.css?v=35">
   <link rel="stylesheet" href="/assets/css/route-premium.css?v=6">
 </head>
 <body class="home-v2">
@@ -494,6 +494,7 @@
       <a href="/rutas/madrid-malaga/es/" onclick="planRouteFromChip(event,'Madrid','Malaga')">Madrid → Málaga</a>
       <a href="/rutas/madrid-valencia/es/" onclick="planRouteFromChip(event,'Madrid','Valencia')">Madrid → Valencia</a>
       <a href="/rutas/zaragoza-barcelona/es/" onclick="planRouteFromChip(event,'Barcelona','Zaragoza')">Barcelona → Zaragoza</a>
+      <a href="/rutas/barcelona-lyon/es/" onclick="planRouteFromChip(event,'Barcelona','Lyon')">Barcelona → Lyon</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_switzerland">Suiza</span><span class="country-popup"><img class="country-photo" src="/country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/zurich-lucerne/es/" onclick="planRouteFromChip(event,'Zurich','Lucerne')">Zúrich → Lucerna</a>
@@ -509,6 +510,10 @@
       <a href="/rutas/bern-paris/es/" onclick="planRouteFromChip(event,'Bern','Paris')">Berna → París</a>
       <a href="/rutas/stmoritz-zermatt/es/" onclick="planRouteFromChip(event,'St. Moritz','Zermatt')">St. Moritz → Zermatt</a>
       <a href="/rutas/lucerne-bern/es/" onclick="planRouteFromChip(event,'Lucerne','Bern')">Lucerna → Berna</a>
+      <a href="/rutas/geneva-paris/es/" onclick="planRouteFromChip(event,'Geneva','Paris')">Ginebra → París</a>
+      <a href="/rutas/paris-lucerne/es/" onclick="planRouteFromChip(event,'Paris','Lucerne')">París → Lucerna</a>
+      <a href="/rutas/paris-zurich/es/" onclick="planRouteFromChip(event,'Paris','Zurich')">París → Zúrich</a>
+      <a href="/rutas/zurich-geneva/es/" onclick="planRouteFromChip(event,'Zurich','Geneva')">Zúrich → Ginebra</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_france">Francia</span><span class="country-popup"><img class="country-photo" src="/country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-london/es/" onclick="planRouteFromChip(event,'Paris','London')">París → Londres</a>
@@ -536,6 +541,11 @@
       <a href="/rutas/strasbourg-paris/es/" onclick="planRouteFromChip(event,'Strasbourg','Paris')">Estrasburgo → París</a>
       <a href="/rutas/munich-paris/es/" onclick="planRouteFromChip(event,'Munich','Paris')">Múnich → París</a>
       <a href="/rutas/tende-nice/es/" onclick="planRouteFromChip(event,'Tende','Nice')">Tende → Niza</a>
+      <a href="/rutas/basel-paris/es/" onclick="planRouteFromChip(event,'Basel','Paris')">Basilea → París</a>
+      <a href="/rutas/frankfurt-paris/es/" onclick="planRouteFromChip(event,'Frankfurt','Paris')">Fráncfort → París</a>
+      <a href="/rutas/paris-marseille/es/" onclick="planRouteFromChip(event,'Paris','Marseille')">París → Marsella</a>
+      <a href="/rutas/lyon-marseille/es/" onclick="planRouteFromChip(event,'Lyon','Marseille')">Lyon → Marsella</a>
+      <a href="/rutas/marseille-nice/es/" onclick="planRouteFromChip(event,'Marseille','Nice')">Marsella → Niza</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_germany">Alemania</span><span class="country-popup"><img class="country-photo" src="/country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/amsterdam-berlin/es/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlín</a>
@@ -550,6 +560,12 @@
       <a href="/rutas/munich-vienna/es/" onclick="planRouteFromChip(event,'Munich','Vienna')">Múnich → Viena</a>
       <a href="/rutas/munich-berlin/es/" onclick="planRouteFromChip(event,'Berlin','Munich')">Berlín → Múnich</a>
       <a href="/rutas/munich-prague/es/" onclick="planRouteFromChip(event,'Munich','Prague')">Múnich → Praga</a>
+      <a href="/rutas/paris-berlin/es/" onclick="planRouteFromChip(event,'Paris','Berlin')">París → Berlín</a>
+      <a href="/rutas/munich-paris/es/" onclick="planRouteFromChip(event,'Munich','Paris')">Múnich → París</a>
+      <a href="/rutas/cologne-brussels/es/" onclick="planRouteFromChip(event,'Cologne','Brussels')">Colonia → Bruselas</a>
+      <a href="/rutas/munich-salzburg/es/" onclick="planRouteFromChip(event,'Munich','Salzburg')">Múnich → Salzburgo</a>
+      <a href="/rutas/amsterdam-cologne/es/" onclick="planRouteFromChip(event,'Amsterdam','Cologne')">Amsterdam → Colonia</a>
+      <a href="/rutas/ljubljana-munich/es/" onclick="planRouteFromChip(event,'Ljubljana','Munich')">Liubliana → Múnich</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_italy">Italia</span><span class="country-popup"><img class="country-photo" src="/country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/rome-florence/es/" onclick="planRouteFromChip(event,'Rome','Florence')">Roma → Florencia</a>
@@ -565,12 +581,23 @@
       <a href="/rutas/turin-milan/es/" onclick="planRouteFromChip(event,'Milan','Turin')">Milán → Turín</a>
       <a href="/rutas/naples-rome/" onclick="planRouteFromChip(event,'Naples','Rome')">Nápoles → Roma</a>
       <a href="/rutas/naples-salerno/es/" onclick="planRouteFromChip(event,'Naples','Salerno')">Nápoles → Salerno</a>
+      <a href="/rutas/lyon-turin/es/" onclick="planRouteFromChip(event,'Lyon','Turin')">Lyon → Turín</a>
+      <a href="/rutas/munich-venice/es/" onclick="planRouteFromChip(event,'Munich','Venice')">Múnich → Venecia</a>
+      <a href="/rutas/paris-milan/es/" onclick="planRouteFromChip(event,'Paris','Milan')">París → Milán</a>
+      <a href="/rutas/paris-rome/es/" onclick="planRouteFromChip(event,'Paris','Rome')">París → Roma</a>
+      <a href="/rutas/paris-venice/es/" onclick="planRouteFromChip(event,'Paris','Venice')">París → Venecia</a>
+      <a href="/rutas/rome-naples/es/" onclick="planRouteFromChip(event,'Rome','Naples')">Roma → Nápoles</a>
+      <a href="/rutas/milan-naples/es/" onclick="planRouteFromChip(event,'Milan','Naples')">Milán → Nápoles</a>
+      <a href="/rutas/tende-nice/es/" onclick="planRouteFromChip(event,'Tende','Nice')">Tende → Niza</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_belgium">Bélgica</span><span class="country-popup"><img class="country-photo" src="/country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-bruges/es/" onclick="planRouteFromChip(event,'Paris','Bruges')">París → Brujas</a>
       <a href="/rutas/amsterdam-brussels/es/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Bruselas</a>
       <a href="/rutas/cologne-brussels/es/" onclick="planRouteFromChip(event,'Brussels','Cologne')">Bruselas → Colonia</a>
       <a href="/rutas/brussels-bruges/es/" onclick="planRouteFromChip(event,'Brussels','Bruges')">Bruselas → Brujas</a>
+      <a href="/rutas/brussels-paris/es/" onclick="planRouteFromChip(event,'Brussels','Paris')">Bruselas → París</a>
+      <a href="/rutas/london-brussels/es/" onclick="planRouteFromChip(event,'London','Brussels')">Londres → Bruselas</a>
+      <a href="/rutas/amsterdam-bruges/es/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Brujas</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_netherlands">Países Bajos</span><span class="country-popup"><img class="country-photo" src="/country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-amsterdam/es/" onclick="planRouteFromChip(event,'Paris','Amsterdam')">París → Amsterdam</a>
@@ -578,6 +605,7 @@
       <a href="/rutas/amsterdam-berlin/es/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlín</a>
       <a href="/rutas/amsterdam-brussels/es/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Bruselas</a>
       <a href="/rutas/amsterdam-bruges/es/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Brujas</a>
+      <a href="/rutas/amsterdam-cologne/es/" onclick="planRouteFromChip(event,'Amsterdam','Cologne')">Amsterdam → Colonia</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_austria">Austria</span><span class="country-popup"><img class="country-photo" src="/country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/vienna-salzburg/es/" onclick="planRouteFromChip(event,'Vienna','Salzburg')">Viena → Salzburgo</a>
@@ -588,6 +616,11 @@
       <a href="/rutas/innsbruck-vienna/es/" onclick="planRouteFromChip(event,'Innsbruck','Vienna')">Innsbruck → Viena</a>
       <a href="/rutas/graz-vienna/es/" onclick="planRouteFromChip(event,'Graz','Vienna')">Graz → Viena</a>
       <a href="/rutas/munich-salzburg/es/" onclick="planRouteFromChip(event,'Munich','Salzburg')">Múnich → Salzburgo</a>
+      <a href="/rutas/brno-vienna/es/" onclick="planRouteFromChip(event,'Brno','Vienna')">Brno → Viena</a>
+      <a href="/rutas/munich-vienna/es/" onclick="planRouteFromChip(event,'Munich','Vienna')">Múnich → Viena</a>
+      <a href="/rutas/ljubljana-vienna/es/" onclick="planRouteFromChip(event,'Ljubljana','Vienna')">Liubliana → Viena</a>
+      <a href="/rutas/ljubljana-graz/es/" onclick="planRouteFromChip(event,'Ljubljana','Graz')">Liubliana → Graz</a>
+      <a href="/rutas/ljubljana-salzburg/es/" onclick="planRouteFromChip(event,'Ljubljana','Salzburg')">Liubliana → Salzburgo</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="chip_uk">Reino Unido</span><span class="country-popup"><img class="country-photo" src="/country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/london-paris/es/" onclick="planRouteFromChip(event,'London','Paris')">Londres → París</a>
@@ -598,6 +631,7 @@
       <a href="/rutas/london-cambridge/es/" onclick="planRouteFromChip(event,'London','Cambridge')">Londres → Cambridge</a>
       <a href="/rutas/london-oxford/es/" onclick="planRouteFromChip(event,'London','Oxford')">Londres → Oxford</a>
       <a href="/rutas/london-york/es/" onclick="planRouteFromChip(event,'London','York')">Londres → York</a>
+      <a href="/rutas/london-amsterdam/es/" onclick="planRouteFromChip(event,'London','Amsterdam')">Londres → Amsterdam</a>
     </span></span></span>
     <span class="country-chip"><span data-i18n="more_countries">Más países</span><span class="country-popup wide"><span class="country-routes">
       <span class="group-label" data-i18n="chip_czechia">Chequia</span>
@@ -605,10 +639,32 @@
       <a href="/rutas/brno-vienna/es/" onclick="planRouteFromChip(event,'Brno','Vienna')">Brno → Viena</a>
       <a href="/rutas/prague-budapest/es/" onclick="planRouteFromChip(event,'Budapest','Prague')">Budapest → Praga</a>
       <a href="/rutas/copenhagen-prague/es/" onclick="planRouteFromChip(event,'Copenhagen','Prague')">Copenhague → Praga</a>
+      <a href="/rutas/munich-prague/es/" onclick="planRouteFromChip(event,'Munich','Prague')">Múnich → Praga</a>
+      <a href="/rutas/berlin-prague/es/" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlín → Praga</a>
+      <a href="/rutas/vienna-prague/es/" onclick="planRouteFromChip(event,'Vienna','Prague')">Viena → Praga</a>
       <span class="group-label" data-i18n="chip_denmark">Dinamarca</span>
       <a href="/rutas/copenhagen-stockholm/es/" onclick="planRouteFromChip(event,'Copenhagen','Stockholm')">Copenhague → Estocolmo</a>
       <span class="group-label" data-i18n="chip_hungary">Hungría</span>
       <a href="/rutas/budapest-ljubljana/es/" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Liubliana</a>
+      <a href="/rutas/vienna-budapest/es/" onclick="planRouteFromChip(event,'Vienna','Budapest')">Viena → Budapest</a>
+      <span class="group-label" data-i18n="chip_norway">Noruega</span>
+      <a href="/rutas/oslo-bergen/es/" onclick="planRouteFromChip(event,'Oslo','Bergen')">Oslo → Bergen</a>
+      <a href="/rutas/oslo-trondheim/es/" onclick="planRouteFromChip(event,'Oslo','Trondheim')">Oslo → Trondheim</a>
+      <a href="/rutas/oslo-gothenburg/es/" onclick="planRouteFromChip(event,'Oslo','Gothenburg')">Oslo → Gotemburgo</a>
+      <a href="/rutas/stockholm-oslo/es/" onclick="planRouteFromChip(event,'Stockholm','Oslo')">Estocolmo → Oslo</a>
+      <span class="group-label" data-i18n="chip_portugal">Portugal</span>
+      <a href="/rutas/lisbon-porto/es/" onclick="planRouteFromChip(event,'Lisbon','Porto')">Lisboa → Oporto</a>
+      <a href="/rutas/lisbon-faro/es/" onclick="planRouteFromChip(event,'Lisbon','Faro')">Lisboa → Faro</a>
+      <span class="group-label" data-i18n="chip_slovenia">Eslovenia</span>
+      <a href="/rutas/budapest-ljubljana/es/" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Liubliana</a>
+      <a href="/rutas/ljubljana-vienna/es/" onclick="planRouteFromChip(event,'Ljubljana','Vienna')">Liubliana → Viena</a>
+      <a href="/rutas/ljubljana-graz/es/" onclick="planRouteFromChip(event,'Ljubljana','Graz')">Liubliana → Graz</a>
+      <a href="/rutas/ljubljana-salzburg/es/" onclick="planRouteFromChip(event,'Ljubljana','Salzburg')">Liubliana → Salzburgo</a>
+      <a href="/rutas/ljubljana-munich/es/" onclick="planRouteFromChip(event,'Ljubljana','Munich')">Liubliana → Múnich</a>
+      <span class="group-label" data-i18n="chip_sweden">Suecia</span>
+      <a href="/rutas/copenhagen-stockholm/es/" onclick="planRouteFromChip(event,'Copenhagen','Stockholm')">Copenhague → Estocolmo</a>
+      <a href="/rutas/stockholm-oslo/es/" onclick="planRouteFromChip(event,'Stockholm','Oslo')">Estocolmo → Oslo</a>
+      <a href="/rutas/oslo-gothenburg/es/" onclick="planRouteFromChip(event,'Oslo','Gothenburg')">Oslo → Gotemburgo</a>
     </span></span></span>
   </div>
         </div>
@@ -1285,11 +1341,11 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=58" defer></script>
+  <script src="/assets/js/main.min.js?v=59" defer></script>
   <script src="/assets/js/omio-bridge.js?v=9" defer></script>
   <script src="/assets/js/klook-bridge.js?v=1" defer></script>
   <script src="/assets/js/planner-info.js?v=3" defer></script>
-  <script src="/assets/js/japan.js?v=35" defer></script>
+  <script src="/assets/js/japan.js?v=37" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
