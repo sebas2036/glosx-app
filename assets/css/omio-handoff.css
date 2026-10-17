@@ -335,3 +335,10 @@ body.home-v2:not([data-region="japan"]) .scenic-cta:hover { background: rgba(251
 body.home-v2[data-region="japan"] .wt-stop-buy { background: #FF5B00; color: #2A2118; font-weight: 700; box-shadow: 0 6px 16px rgba(255, 91, 0, .35); }
 body.home-v2[data-region="japan"] .wt-stop-buy:hover { background: #E65200; }
 body.home-v2[data-region="japan"] .scenic-cta { color: #2A2118; background: rgba(255, 91, 0, .14); border-color: rgba(255, 91, 0, .7); }
+
+/* Chip de idioma: azul Omio suave (en modo Japón, durazno Klook) */
+.lang-btn, body.home-v2 .lang-btn { background: #CFDBF2 !important; color: var(--omio-navy, #0F1B5C) !important; border: 1px solid rgba(15, 27, 92, .14) !important; transition: background-color .2s ease; }
+.lang-btn:hover, body.home-v2 .lang-btn:hover { background: #BCCDEB !important; }
+body.home-v2[data-region="japan"] .lang-btn { background: #FFDCC2 !important; color: #2A2118 !important; border-color: rgba(42, 33, 24, .14) !important; }
+body.home-v2[data-region="japan"] .lang-btn:hover { background: #FFCDA8 !important; }
+.lang-option.active { background: rgba(207, 219, 242, .6); color: var(--omio-navy, #0F1B5C); }
