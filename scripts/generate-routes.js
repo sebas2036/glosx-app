@@ -939,9 +939,18 @@ const CITY_JA = (function () {
   map.Bergen = 'ベルゲン';
   return map;
 })();
-function cityLabel(name, lang) {
-  if (lang !== 'ja') return name;
-  return CITY_JA[name] || name;
+// Nombres de ciudad localizados (es/fr/it) solo para las rutas nuevas del 16-oct-2026; el resto de
+// rutas conserva por ahora los nombres en inglés, así que no se traduce fuera de estas.
+const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich']);
+const CITY_LOCAL = {
+  es: { Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich' },
+  fr: { Lisbon: 'Lisbonne', Gothenburg: 'Göteborg', Vienna: 'Vienne', Salzburg: 'Salzbourg' },
+  it: { Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera' }
+};
+function cityLabel(name, lang, slug) {
+  if (lang === 'ja') return CITY_JA[name] || name;
+  if (slug && NEW_ROUTE_SLUGS.has(slug) && CITY_LOCAL[lang] && CITY_LOCAL[lang][name]) return CITY_LOCAL[lang][name];
+  return name;
 }
 const HOTEL_PLACE_JA = {
   Netherlands: 'オランダ', Spain: 'スペイン', France: 'フランス', Germany: 'ドイツ', Italy: 'イタリア',
@@ -1385,8 +1394,8 @@ const INSIGHTS_JA = require('./route-insights-ja.json');
 // Generate train segments HTML
 function generateTrainSegments(route, lang) {
   const langContent = content[lang];
-  const from = cityLabel(route.from, lang);
-  const to = cityLabel(route.to, lang);
+  const from = cityLabel(route.from, lang, route.slug);
+  const to = cityLabel(route.to, lang, route.slug);
   const station = lang === 'ja' ? from + '駅' : route.from + ' Station';
   const operatorLine = (langContent.trainSegmentOperator || 'Operator: {{operator}}').replace('{{operator}}', route.operator);
   const stationLine = (langContent.trainSegmentStation || 'Station: {{station}}').replace('{{station}}', station);
@@ -1446,7 +1455,7 @@ function generateHotelCards(route, lang) {
         <br>
         <a href="https://voxa-production-dc15.up.railway.app/affiliate/kiwitaxi"
            class="transfer-link" target="_blank" rel="noopener sponsored">
-          ${langContent.transferLink.replace('{{to}}', cityLabel(route.to, lang))}
+          ${langContent.transferLink.replace('{{to}}', cityLabel(route.to, lang, route.slug))}
         </a>
       </div>
     </div>
@@ -1479,7 +1488,7 @@ function generatePriceTable(route, lang) {
 
 // Generate photos HTML
 function generatePhotos(route, lang) {
-  const to = cityLabel(route.to, lang);
+  const to = cityLabel(route.to, lang, route.slug);
   const alts = (content[lang].photoAlts || ['Scenic view of {{to}}', 'Charming view of {{to}}', 'Historic buildings in {{to}}']).map(a => a.replace(/\{\{to\}\}/g, to));
   return `
     <img src="https://images.pexels.com/photos/30753243/pexels-photo-30753243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=500" alt="${alts[0]}" loading="lazy" />
@@ -1514,8 +1523,8 @@ function generateRelatedRoutes(route, lang) {
 // (usa reemplazo global, a diferencia de .replace() que solo cambia el primero)
 function fillTokens(str, route, lang) {
   return str
-    .replace(/\{\{from\}\}/g, cityLabel(route.from, lang))
-    .replace(/\{\{to\}\}/g, cityLabel(route.to, lang))
+    .replace(/\{\{from\}\}/g, cityLabel(route.from, lang, route.slug))
+    .replace(/\{\{to\}\}/g, cityLabel(route.to, lang, route.slug))
     .replace(/\{\{duration\}\}/g, route.duration)
     .replace(/\{\{operator\}\}/g, route.operator)
     .replace(/\{\{price\}\}/g, route.price)
@@ -1578,7 +1587,7 @@ function generateVideoBlock(route, lang) {
   if (!v) return '';
   const copy = VIDEO_COPY[lang] || VIDEO_COPY.en;
   const posterAttr = v.poster ? ` poster="${v.poster}"` : '';
-  return `\n    <div class="route-video"><video src="${v.src}"${posterAttr} controls playsinline preload="metadata" muted loop aria-label="${copy.label(cityLabel(route.from, lang), cityLabel(route.to, lang))}"></video></div>`;
+  return `\n    <div class="route-video"><video src="${v.src}"${posterAttr} controls playsinline preload="metadata" muted loop aria-label="${copy.label(cityLabel(route.from, lang, route.slug), cityLabel(route.to, lang, route.slug))}"></video></div>`;
 }
 
 function generateSchema(route, lang) {
@@ -1600,8 +1609,8 @@ function generateSchema(route, lang) {
       const copy = VIDEO_COPY[lang] || VIDEO_COPY.en;
       const obj = {
         '@type': 'VideoObject',
-        name: copy.label(cityLabel(route.from, lang), cityLabel(route.to, lang)),
-        description: copy.desc(cityLabel(route.from, lang), cityLabel(route.to, lang)),
+        name: copy.label(cityLabel(route.from, lang, route.slug), cityLabel(route.to, lang, route.slug)),
+        description: copy.desc(cityLabel(route.from, lang, route.slug), cityLabel(route.to, lang, route.slug)),
         thumbnailUrl: v.poster ? 'https://glosx.app' + v.poster : 'https://glosx.app/hero-bg.jpg',
         contentUrl: 'https://glosx.app' + v.src,
         uploadDate: v.uploaded
@@ -1641,8 +1650,8 @@ function replaceTemplate(template, route, lang) {
   // Console — el template generico es identico en las 174 rutas, asi que Google no tiene
   // motivo para destacarlas. Estas pocas rutas usan copy especifico en vez del template.
   const seo = route.customSEO && route.customSEO[lang];
-  const fromName = cityLabel(route.from, lang);
-  const toName = cityLabel(route.to, lang);
+  const fromName = cityLabel(route.from, lang, route.slug);
+  const toName = cityLabel(route.to, lang, route.slug);
   const replacements = {
     '{{lang}}': lang,
     '{{routeSlug}}': route.slug,
