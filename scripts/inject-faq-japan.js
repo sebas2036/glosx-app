@@ -13,7 +13,10 @@ const jsrc = fs.readFileSync(path.join(__dirname, 'generate-routes-japan.js'), '
 const hand = eval('[' + jsrc.match(/const ROUTES = \[([\s\S]*?)\n\];\n/)[1] + '\n]');
 const JP = hand.concat(require('./routes-japan-lote2'), require('./routes-japan-auto'));
 const CITY_JA = require('./japan-ja-data.js').CITY;
-const name = (x, key) => lang === 'ja' ? (CITY_JA[key] || x.en) : (x[lang] || x.en);
+const AIRPORT_JA = { narita: '成田空港', naritaairport: '成田空港', kansaiairport: '関西空港', newchitoseairport: '新千歳空港' };
+const name = (x, key) => lang === 'ja' ? (CITY_JA[key] || AIRPORT_JA[key] || x.en) : (x[lang] || x.en);
+// "de Aeropuerto de Narita" -> "del aeropuerto de Narita" (es); "a Aeropuerto" -> "al aeropuerto"
+const esAir = (txt) => txt.replace(/\b([Dd])e Aeropuerto/g, (m, d) => d + 'el aeropuerto').replace(/\b([Aa]) Aeropuerto/g, (m, a) => a + 'l aeropuerto');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 let done = 0, skipped = 0, missing = 0;
 for (const r of JP) {
@@ -21,7 +24,7 @@ for (const r of JP) {
   if (!fs.existsSync(file)) { missing++; continue; }
   let html = fs.readFileSync(file, 'utf8');
   const f = name(r.from, r.fromKey), t = name(r.to, r.toKey);
-  const items = MORE.map((x) => ({ q: x.q.replace(/\{\{from\}\}/g, f).replace(/\{\{to\}\}/g, t), a: x.a })).filter((x) => !html.includes(`>${esc(x.q)}<`));
+  const items = MORE.map((x) => ({ q: (lang === 'es' ? esAir : (z) => z)(x.q.replace(/\{\{from\}\}/g, f).replace(/\{\{to\}\}/g, t)), a: x.a })).filter((x) => !html.includes(`>${esc(x.q)}<`));
   if (!items.length) { skipped++; continue; }
   const i = html.indexOf('<section class="faq">');
   if (i < 0) { missing++; continue; }
