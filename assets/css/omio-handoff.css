@@ -290,3 +290,6 @@ body.home-v2 .trust-band .op-chip img { border-radius: 8px; background: rgba(255
 body.home-v2[data-region="japan"] .trust-band .op-chip { color: #2A2118; }
 
 body.home-v2[data-region="japan"] .hero-title-card::before { filter: brightness(1.12) saturate(1.06); }
+
+/* Modo Japón: una sola guía, centrada */
+body[data-region="japan"] .guides-grid { grid-template-columns: minmax(0, 420px); justify-content: center; }

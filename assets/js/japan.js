@@ -588,8 +588,6 @@
     });
     jpEls.label = twin(document.querySelector('[data-i18n="scenic_label"]'));
     jpEls.essTitle = twin(document.querySelector('[data-i18n="partners_title2"]'));
-    var klookHotels = document.querySelector('.klook-city-picker');
-    if (klookHotels) klookHotels.classList.add('eu-only');
     jpEls.lead = twin(document.querySelector('[data-i18n="scenic_lead"]'));
     jpEls.feature = twin(document.getElementById('scenicFeature'), 'div', 'scenic-feature');
     jpEls.grid = twin(document.getElementById('scenicGrid'), 'div', 'scenic-grid');
@@ -849,6 +847,109 @@
       var chip = document.querySelector('.region-hotels'); if (chip) { chip.classList.remove('on'); chip.setAttribute('aria-pressed', 'false'); }
     }
   });
+
+  // ── Portada en modo Japón (fase 1): las secciones de abajo dejan de hablar de Europa ──────────────
+  // Cada bloque tiene un gemelo .jp-only (el original pasa a .eu-only); el CSS muestra uno u otro según body[data-region].
+  var JPH = {
+    en: { t2: 'for Japan.', gl: 'Practical advice for traveling Japan by train: the Shinkansen, tickets and passes.', gtag: 'Japan Guide', gt: 'How to Travel Japan by Train: A First-Timer\'s Guide to the Shinkansen', gf: '/blog-japan-train-guide.html',
+      f1: 'An independent and free platform to plan train trips in Japan and Europe. No account, no subscription — explore routes, see journey times and book through certified partners.',
+      f2: 'We connect you to official partners. For Japan we use Klook: search your route, press the Klook button and complete the booking on their secure platform.',
+      fq: 'Do I need a JR Pass?', fa: 'Often not. Since the 2023 price increase, the JR Pass only pays off on long itineraries with several long Shinkansen rides. For most trips point-to-point tickets are cheaper; compare both before you decide.',
+      et: 'Explore Japanese train routes', es: 'Schedules, journey times and tips for 196 rail journeys across Japan.' },
+    es: { t2: 'para Japón.', gl: 'Consejos prácticos para viajar por Japón en tren: el Shinkansen, los billetes y los pases.', gtag: 'Guía de Japón', gt: 'Cómo viajar por Japón en tren: guía del Shinkansen para tu primer viaje', gf: '/es/blog-japan-train-guide.html',
+      f1: 'Una plataforma independiente y gratuita para planificar viajes en tren por Japón y Europa. Sin cuenta ni suscripción: explora rutas, mira los tiempos de viaje y reserva con socios certificados.',
+      f2: 'Te conectamos con socios oficiales. Para Japón usamos Klook: busca tu ruta, pulsa el botón de Klook y completa la reserva en su plataforma segura.',
+      fq: '¿Necesito un JR Pass?', fa: 'Muchas veces no. Desde la subida de precio de 2023, el JR Pass solo compensa en itinerarios largos con varios trayectos largos en Shinkansen. En la mayoría de los viajes los billetes sueltos salen más baratos; compara ambas opciones antes de decidir.',
+      et: 'Explora las rutas de tren de Japón', es: 'Horarios, tiempos de viaje y consejos de 196 trayectos en tren por Japón.' },
+    fr: { t2: 'pour le Japon.', gl: 'Conseils pratiques pour voyager au Japon en train : le Shinkansen, les billets et les pass.', gtag: 'Guide du Japon', gt: 'Voyager au Japon en train : guide du Shinkansen pour un premier séjour', gf: '/fr/blog-japan-train-guide.html',
+      f1: 'Une plateforme indépendante et gratuite pour planifier des voyages en train au Japon et en Europe. Sans compte ni abonnement : explorez les itinéraires, consultez les durées et réservez auprès de partenaires certifiés.',
+      f2: 'Nous vous mettons en relation avec des partenaires officiels. Pour le Japon, nous utilisons Klook : cherchez votre trajet, cliquez sur le bouton Klook et finalisez la réservation sur leur plateforme sécurisée.',
+      fq: 'Ai-je besoin d’un JR Pass ?', fa: 'Souvent non. Depuis la hausse des prix de 2023, le JR Pass n’est rentable que sur de longs itinéraires avec plusieurs longs trajets en Shinkansen. Pour la plupart des voyages, les billets à l’unité coûtent moins cher ; comparez les deux avant de décider.',
+      et: 'Explorez les itinéraires en train au Japon', es: 'Horaires, durées et conseils pour 196 trajets en train à travers le Japon.' },
+    it: { t2: 'per il Giappone.', gl: 'Consigli pratici per viaggiare in Giappone in treno: lo Shinkansen, i biglietti e i pass.', gtag: 'Guida Giappone', gt: 'Come viaggiare in Giappone in treno: guida allo Shinkansen per il primo viaggio', gf: '/it/blog-japan-train-guide.html',
+      f1: 'Una piattaforma indipendente e gratuita per pianificare viaggi in treno in Giappone e in Europa. Senza account né abbonamento: esplora i percorsi, guarda i tempi di viaggio e prenota con partner certificati.',
+      f2: 'Ti colleghiamo a partner ufficiali. Per il Giappone usiamo Klook: cerca il tuo percorso, premi il pulsante di Klook e completa la prenotazione sulla loro piattaforma sicura.',
+      fq: 'Mi serve un JR Pass?', fa: 'Spesso no. Dopo l’aumento di prezzo del 2023, il JR Pass conviene solo su itinerari lunghi con più tratte lunghe in Shinkansen. Nella maggior parte dei viaggi i biglietti singoli costano meno; confronta entrambe le opzioni prima di decidere.',
+      et: 'Esplora i percorsi in treno in Giappone', es: 'Orari, tempi di viaggio e consigli per 196 tragitti in treno in tutto il Giappone.' },
+    de: { t2: 'für Japan.', gl: 'Praktische Tipps für Bahnreisen in Japan: Shinkansen, Tickets und Pässe.', gtag: 'Japan-Guide', gt: 'How to Travel Japan by Train: A First-Timer\'s Guide to the Shinkansen', gf: '/blog-japan-train-guide.html',
+      f1: 'Eine unabhängige, kostenlose Plattform zur Planung von Zugreisen in Japan und Europa. Ohne Konto, ohne Abo: Strecken erkunden, Fahrzeiten sehen und bei zertifizierten Partnern buchen.',
+      f2: 'Wir verbinden dich mit offiziellen Partnern. Für Japan nutzen wir Klook: Strecke suchen, den Klook-Button drücken und die Buchung auf der sicheren Plattform abschließen.',
+      fq: 'Brauche ich einen JR Pass?', fa: 'Oft nicht. Seit der Preiserhöhung 2023 lohnt sich der JR Pass nur bei langen Routen mit mehreren langen Shinkansen-Fahrten. Für die meisten Reisen sind Einzeltickets günstiger; vergleiche beides, bevor du dich entscheidest.',
+      et: 'Zugstrecken in Japan entdecken', es: 'Fahrpläne, Fahrzeiten und Tipps für 196 Bahnreisen quer durch Japan.' },
+    pt: { t2: 'para o Japão.', gl: 'Dicas práticas para viajar de trem pelo Japão: o Shinkansen, os bilhetes e os passes.', gtag: 'Guia do Japão', gt: 'How to Travel Japan by Train: A First-Timer\'s Guide to the Shinkansen', gf: '/blog-japan-train-guide.html',
+      f1: 'Uma plataforma independente e gratuita para planejar viagens de trem pelo Japão e pela Europa. Sem conta nem assinatura: explore rotas, veja os tempos de viagem e reserve com parceiros certificados.',
+      f2: 'Conectamos você a parceiros oficiais. Para o Japão usamos a Klook: busque sua rota, clique no botão da Klook e conclua a reserva na plataforma segura deles.',
+      fq: 'Preciso de um JR Pass?', fa: 'Muitas vezes não. Desde o aumento de preço de 2023, o JR Pass só compensa em roteiros longos com vários trechos longos de Shinkansen. Na maioria das viagens, os bilhetes avulsos saem mais baratos; compare as duas opções antes de decidir.',
+      et: 'Explore as rotas de trem do Japão', es: 'Horários, tempos de viagem e dicas de 196 trajetos de trem pelo Japão.' },
+    ja: { t2: '日本の旅に。', gl: '日本を鉄道で旅するための実用ガイド：新幹線、きっぷ、パスのこと。', gtag: '日本ガイド', gt: '新幹線で日本を旅する：はじめての鉄道旅ガイド', gf: '/ja/blog-japan-train-guide.html',
+      f1: '日本とヨーロッパの鉄道旅を計画できる、独立した無料のプラットフォームです。アカウントも登録も不要。路線を調べ、所要時間を確かめて、認定パートナーで予約できます。',
+      f2: '公式パートナーにつなぎます。日本ではKlookを利用します。区間を検索してKlookのボタンを押し、予約はKlookの安全なサイトで完了します。',
+      fq: 'JRパスは必要ですか？', fa: '多くの場合は不要です。2023年の値上げ以降、JRパスが得になるのは、長い新幹線に何度も乗る長期の旅程に限られます。ほとんどの旅では、区間ごとのきっぷのほうが安くなります。決める前に、両方を比べてみてください。',
+      et: '日本の鉄道ルートを探す', es: '日本全国196区間の時刻、所要時間、旅のヒント。' }
+  };
+  var JP_PILLS = [['tokyo-kyoto', 'Tokyo', 'Kyoto'], ['tokyo-osaka', 'Tokyo', 'Osaka'], ['osaka-kyoto', 'Osaka', 'Kyoto'], ['osaka-hiroshima', 'Osaka', 'Hiroshima'], ['tokyo-nagoya', 'Tokyo', 'Nagoya'], ['shinjuku-hakone', 'Shinjuku', 'Hakone'], ['tokyo-kanazawa', 'Tokyo', 'Kanazawa'], ['osaka-fukuoka', 'Osaka', 'Fukuoka']];
+  var JP_SHINJUKU = { ja: '新宿', es: 'Shinjuku', fr: 'Shinjuku', it: 'Shinjuku' };
+  function twinHome(el, edit) {
+    if (!el || el.getAttribute('data-jp-twin')) return null;
+    var c = el.cloneNode(true);
+    c.removeAttribute('id'); c.setAttribute('data-jp-twin', '1');
+    c.querySelectorAll('[data-i18n]').forEach(function (n) { n.removeAttribute('data-i18n'); });
+    c.removeAttribute('data-i18n');
+    el.classList.add('eu-only'); c.classList.add('jp-only');
+    el.parentNode.insertBefore(c, el.nextSibling);
+    if (edit) edit(c);
+    return c;
+  }
+  (function () {
+    var L = JPH[lang()] || JPH.en, lg = lang();
+    // Esenciales: el subtítulo y las tarjetas que no aplican a Japón
+    document.querySelectorAll('.vip-bar a.vip-card').forEach(function (a) {
+      if (/booking\.com|tripadvisor/.test(a.getAttribute('href') || '')) a.classList.add('eu-only');
+    });
+    // Guías: la guía japonesa sustituye a las tres europeas
+    var gl = document.querySelector('[data-i18n="guides_lead"]');
+    twinHome(gl, function (c) { c.textContent = L.gl; });
+    var cards = document.querySelectorAll('#guides .guide-card');
+    if (cards.length) {
+      var first = cards[0], base = first.getAttribute('href').replace(/[^\/]*$/, '');
+      var gc = first.cloneNode(true); gc.setAttribute('data-jp-twin', '1');
+      gc.querySelectorAll('[data-i18n]').forEach(function (n) { n.removeAttribute('data-i18n'); });
+      gc.setAttribute('href', /^\/(es|fr|it|ja)\//.test(L.gf) ? L.gf : base + 'blog-japan-train-guide.html');
+      if (lg === 'es' || lg === 'fr' || lg === 'it' || lg === 'ja') gc.setAttribute('href', L.gf);
+      gc.querySelector('.guide-tag').textContent = L.gtag;
+      gc.querySelector('h3').textContent = L.gt;
+      var im = gc.querySelector('.guide-photo'); if (im) im.setAttribute('src', '/scenic/jp-hakone.webp');
+      gc.classList.add('jp-only');
+      cards.forEach(function (c) { c.classList.add('eu-only'); });
+      first.parentNode.insertBefore(gc, first);
+    }
+    // FAQ: respuestas de Japón y una pregunta nueva sobre el JR Pass
+    var items = document.querySelectorAll('#faq .faq-item');
+    if (items.length >= 2) {
+      twinHome(items[0], function (c) { c.querySelector('.faq-a').textContent = L.f1; });
+      twinHome(items[1], function (c) { c.querySelector('.faq-a').textContent = L.f2; });
+      var jr = items[1].cloneNode(true); jr.removeAttribute('data-jp-twin');
+      jr.querySelectorAll('[data-i18n]').forEach(function (n) { n.removeAttribute('data-i18n'); });
+      jr.querySelector('.faq-q span').textContent = L.fq; jr.querySelector('.faq-a').textContent = L.fa;
+      jr.classList.remove('eu-only'); jr.classList.add('jp-only');
+      var lastTwin = document.querySelectorAll('#faq .faq-item.jp-only'); lastTwin = lastTwin[lastTwin.length - 1];
+      lastTwin.parentNode.insertBefore(jr, lastTwin.nextSibling);
+    }
+    // Explorar rutas: pastillas de rutas japonesas
+    var et = document.querySelector('[data-i18n="explore_routes_title"]');
+    if (et) {
+      var sec = et.parentNode, es = sec.querySelector('[data-i18n="explore_routes_sub"]'), pills = sec.querySelector('.explore-pills');
+      twinHome(et, function (c) { c.textContent = L.et; });
+      twinHome(es, function (c) { c.textContent = L.es; });
+      twinHome(pills, function (c) {
+        var suf = lg === 'en' || lg === 'de' || lg === 'pt' ? '/' : '/' + lg + '/';
+        c.innerHTML = JP_PILLS.map(function (p) {
+          var nm = function (n) { return n === 'Shinjuku' ? (JP_SHINJUKU[lg] || n) : hname(lg, n); };
+          return '<a href="/rutas/' + p[0] + suf + '" class="explore-route-pill">' + nm(p[1]) + ' → ' + nm(p[2]) + '</a>';
+        }).join('');
+      });
+    }
+  })();
 
   // Franja de color de la alianza (Omio en Europa, Klook en Japón) detrás de las ventajas y los operadores:
   // sube un poco para quedar por detrás del planificador.
