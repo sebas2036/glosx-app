@@ -447,3 +447,16 @@ body.home-v2 .search-card .ai-segments[class*="cols-"]:not(.cols-1) .ai-segment 
 @media (max-width: 420px) { body.home-v2 .search-card .ai-segments[class*="cols-"]:not(.cols-1) .ai-segment > a.ai-segment-buy { white-space: normal; text-align: center; } }
 
 .ai-incomplete-note { margin: 10px auto 14px; max-width: 760px; text-align: center; font-size: 13.5px; font-weight: 600; color: #8A3A10; background: #FFF1E5; border: 1px solid rgba(255, 91, 0, .3); border-radius: 12px; padding: 9px 14px; }
+
+/* Hoteles en móvil: ciudad y botón a todo el ancho, entrada y salida lado a lado y compactas (antes medían 230 px de alto) */
+@media (max-width: 640px) {
+  .hotels-bar { flex-direction: row; flex-wrap: wrap; gap: 10px; }
+  .hotels-bar > .hotels-field:not(.hotels-date), .hotels-bar > .hotels-go { flex: 1 1 100%; }
+  .hotels-bar > .hotels-date { flex: 1 1 calc(50% - 5px); min-width: 0; padding: 9px 14px; }
+  .hotels-go { padding: 14px; }
+  .hotels-date input { height: 24px; min-height: 24px; font-size: 15px; line-height: 24px; -webkit-appearance: none; appearance: none; background: transparent; padding: 0; }
+  .hotels-date input::-webkit-date-and-time-value { text-align: left; min-height: 24px; }
+  .hotels-input { font-size: 18px; }
+  .hotels-pop-lab { margin-bottom: 8px; }
+  .hotels-city { font-size: 14px; padding: 8px 14px; }
+}
