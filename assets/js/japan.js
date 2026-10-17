@@ -903,9 +903,7 @@
   (function () {
     var L = JPH[lang()] || JPH.en, lg = lang();
     // Esenciales: el subtítulo y las tarjetas que no aplican a Japón
-    document.querySelectorAll('.vip-bar a.vip-card').forEach(function (a) {
-      if (/booking\.com|tripadvisor/.test(a.getAttribute('href') || '')) a.classList.add('eu-only');
-    });
+    // Booking y Tripadvisor también aplican a Japón: se dejan visibles para que la fila de partners de confianza no quede con una sola tarjeta
     // Guías: la guía japonesa sustituye a las tres europeas
     var gl = document.querySelector('[data-i18n="guides_lead"]');
     twinHome(gl, function (c) { c.textContent = L.gl; });
