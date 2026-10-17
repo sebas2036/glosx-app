@@ -1160,6 +1160,20 @@
   new MutationObserver(function () { setTimeout(paintMode, 80); })
     .observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
+  // Europa: chip "Japón" entre los países (antes de "Más países") que abre el modo Japón
+  (function () {
+    var more = countriesEl.lastElementChild;
+    var jp = document.createElement('span');
+    jp.className = 'country-chip country-chip-japan';
+    jp.setAttribute('role', 'button');
+    jp.tabIndex = 0;
+    jp.textContent = (HOTEL_NAMES[lang()] || {}).Japan || 'Japan';
+    var go = function (e) { e.stopPropagation(); setRegion('japan'); };
+    jp.addEventListener('click', go);
+    jp.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); } });
+    countriesEl.insertBefore(jp, more);
+  })();
+
   paintSwitch();
   // Enlace directo al modo Japón (por ejemplo, desde anuncios): glosx.app/#japan
   if (/^#(japan|japon|giappone|japao)$/i.test(location.hash)) setRegion('japan', true);
