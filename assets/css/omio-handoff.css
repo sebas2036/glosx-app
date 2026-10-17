@@ -558,3 +558,22 @@ body:not([data-region="japan"]) .hotels-bar > .hotels-go-kl, body:not([data-regi
   body.home-v2 .search-tabs .region-switch .region-btn { flex: 1 1 0; text-align: center; padding: 9px 10px; }
   body.home-v2 .search-tabs .search-tab { flex: 1 1 0; min-width: 0; white-space: normal; text-align: center; line-height: 1.2; padding: 10px 6px; font-size: 13.5px; }
 }
+
+/* Portada en móvil: el título ya no se monta sobre la trompa blanca del tren y el borde inferior de la foto se difumina (sin "línea" detrás del selector) */
+@media (max-width: 760px) {
+  body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before {
+    background-image:
+      radial-gradient(ellipse 130% 42% at 50% 50%, rgba(10, 12, 14, .72) 0%, rgba(10, 12, 14, .5) 62%, rgba(10, 12, 14, 0) 100%),
+      linear-gradient(180deg, rgba(10, 12, 14, .62) 0%, rgba(10, 12, 14, .22) 55%, rgba(10, 12, 14, .38) 100%),
+      url('/assets/img/hero/home-tren-1000.webp');
+  }
+  body.home-v2:not(.hotels-mode) .hero-title-card::before {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+  }
+  body.home-v2 .hero-title-card h1 { text-shadow: 0 2px 14px rgba(0, 0, 0, .7), 0 1px 3px rgba(0, 0, 0, .6); }
+}
+@media (max-width: 760px) {
+  body.home-v2:not(.hotels-mode) .hero-title-inner { transform: translateY(-18px); }
+  body.home-v2:not(.hotels-mode) .hero-title-photo-wrap { transform: translateY(-34px); }
+}
