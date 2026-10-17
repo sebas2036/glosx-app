@@ -210,7 +210,16 @@
     return null;
   }
 
-  function isOmio(u) { return typeof u === 'string' && u.indexOf(MARK) > -1; }
+  // Japón se reserva en Klook: aunque el planificador mande el par por /affiliate/europe-train, sin animación de Omio
+  var JP = ' akita aomori asahikawa asakusa atami beppu chitose fukuchiyama fukui fukuoka fukushima fukuyama gero gifu hachinohe hakodate hakone hamamatsu hidafurukawa himeji hirosaki hiroshima hita huistenbosch ichinoseki ito joetsumyoko kagaonsen kagoshima kanazawa kansaiairport karuizawa kawaguchiko kiitanabe kinosaki kinugawaonsen kobe kofu kokura komatsu koriyama kumamoto kurashiki kurume kushiro kyoto maibara matsue matsumoto mishima mito morioka murakami nagano nagaoka nagoya nakatsu nanao naritaairport nasushiobara newchitoseairport niigata nikko noboribetsu obihiro odawara oita okayama onomichi osaka otaru otsuki saga sapporo sendai shinagawa shinfuji shinhakodatehokuto shinhanamaki shinjuku shinsapporo shinyamaguchi shinyokohama shirahama shizuoka takasaki takayama takeoonsen tennoji tokyo tomakomai toyama toyohashi toyooka tsuruga ueda utsunomiya wakayama wakkanai yamagata yokohama yonago yufuin ';
+  function isJapanPair(u) {
+    try {
+      var q = new URL(u, location.href).searchParams;
+      var norm = function (x) { return ' ' + String(x || '').toLowerCase().replace(/[^a-z]/g, '') + ' '; };
+      return JP.indexOf(norm(q.get('from'))) > -1 || JP.indexOf(norm(q.get('to'))) > -1;
+    } catch (e) { return false; }
+  }
+  function isOmio(u) { return typeof u === 'string' && u.indexOf(MARK) > -1 && !isJapanPair(u); }
 
   window.open = function (u) {
     if (isOmio(u)) return openWithTransition(u);
