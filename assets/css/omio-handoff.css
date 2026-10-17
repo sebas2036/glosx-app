@@ -488,3 +488,11 @@ body.home-v2[data-region="japan"].hotels-mode .search-tab:not(.on) { background:
   body.hotels-mode .hotel-mosaic img { border-radius: 14px; }
   body.hotels-mode .hotel-mosaic::after { background: linear-gradient(180deg, rgba(10, 12, 14, .6) 0%, rgba(10, 12, 14, .55) 55%, rgba(10, 12, 14, .5) 100%); }
 }
+
+/* Menú móvil: el selector de idioma se despliega dentro del panel (en línea) para que no quede cortado ni inalcanzable */
+@media (max-width: 900px) {
+  .nav-links .lang-wrapper .lang-dropdown, .nav-right .lang-wrapper .lang-dropdown { position: static !important; margin-top: 8px; min-width: 0 !important; width: 100%; max-width: 260px; box-shadow: none !important; border: 1px solid rgba(15, 27, 92, .15); }
+}
+@media (max-width: 900px) {
+  .nav-links.show { max-height: calc(100vh - 74px); max-height: calc(100dvh - 74px); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; padding-bottom: 24px; }
+}
