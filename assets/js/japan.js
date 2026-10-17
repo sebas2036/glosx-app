@@ -1174,6 +1174,30 @@
     countriesEl.insertBefore(jp, more);
   })();
 
+  // Resultado del planificador: la IA y la biblioteca devuelven las ciudades en inglés ("Rome", "Seville");
+  // se muestran en el idioma de la página. Solo texto visible: los datos y los enlaces siguen en inglés.
+  (function () {
+    var res = document.getElementById('aiResults');
+    if (!res || !window.MutationObserver) return;
+    var busy = false;
+    function localize() {
+      if (busy) return;
+      var names = HOTEL_NAMES[lang()];
+      if (!names) return;
+      var keys = Object.keys(names).filter(function (k) { return names[k] !== k && /^[A-Z]/.test(k); })
+        .sort(function (a, b) { return b.length - a.length; });
+      if (!keys.length) return;
+      var esc = keys.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
+      var re = new RegExp('(?<![\\p{L}])(' + esc.join('|') + ')(?![\\p{L}])', 'gu');
+      busy = true;
+      var w = document.createTreeWalker(res, NodeFilter.SHOW_TEXT, null), n, todo = [];
+      while ((n = w.nextNode())) { if (re.test(n.nodeValue)) todo.push(n); re.lastIndex = 0; }
+      todo.forEach(function (node) { node.nodeValue = node.nodeValue.replace(re, function (m) { return names[m] || m; }); });
+      setTimeout(function () { busy = false; }, 0);
+    }
+    new MutationObserver(function () { setTimeout(localize, 0); }).observe(res, { childList: true, subtree: true, characterData: true });
+  })();
+
   paintSwitch();
   // Enlace directo al modo Japón (por ejemplo, desde anuncios): glosx.app/#japan
   if (/^#(japan|japon|giappone|japao)$/i.test(location.hash)) setRegion('japan', true);
