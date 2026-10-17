@@ -438,6 +438,7 @@
         <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
           <button type="button" class="region-btn on" data-region="europe" aria-pressed="true" data-i18n="region_europe">Europe</button>
           <button type="button" class="region-btn" data-region="japan" aria-pressed="false" data-i18n="region_japan">Japon</button>
+          <button type="button" class="region-btn region-hotels" data-hotels="1" aria-label="Hotels">Hotels</button>
         </div>
         <button type="button" class="search-tab" aria-pressed="false" data-tab="countries" data-i18n="tab_countries">Itinéraires par pays</button>
         <button type="button" class="search-tab" aria-pressed="false" data-tab="roulette" data-i18n="tab_roulette">Roulette des destinations</button>
@@ -774,7 +775,7 @@
       <div class="vip-card klook-city-picker" style="position:relative;">
         <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="Klook" loading="lazy"/></div>
         <div class="vip-text">
-          <span class="vip-brand">Klook Hotels</span>
+          <span class="vip-brand" data-hotels-brand>Hotels</span>
           <span class="vip-sub" data-i18n="vip_klook_hotels">Choisissez votre ville →</span>
         </div>
         <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="Choose a city" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
@@ -1288,7 +1289,7 @@
   <script src="/assets/js/omio-bridge.js?v=9" defer></script>
   <script src="/assets/js/klook-bridge.js?v=1" defer></script>
   <script src="/assets/js/planner-info.js?v=3" defer></script>
-  <script src="/assets/js/japan.js?v=14" defer></script>
+  <script src="/assets/js/japan.js?v=15" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
