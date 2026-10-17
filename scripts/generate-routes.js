@@ -1742,5 +1742,6 @@ console.log('All routes generated successfully!');
 // Marca: une WoW Train con glosx.app en títulos y datos estructurados (idempotente)
 if (!process.env.ONLY_LANG) {
   require('./apply-brand-title').run();
+  require('./localize-cities').run(); require('./localize-cities').runListings();
   require('./apply-brand-schema').run();
 }
