@@ -183,3 +183,7 @@ body.home-v2[data-region="japan"] .ai-segment-buy[data-klook]::before {
   background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=klook.com") center / 16px 16px no-repeat;
   box-shadow: 0 0 0 1px rgba(42, 33, 24, .12);
 }
+
+/* Código de descuento dentro del resultado del planificador */
+body.home-v2 .search-card .ai-segment > .omo { grid-column: 1 / -1; grid-row: 4; min-width: 0; margin: 14px 0 0; }
+@media (max-width: 760px) { body.home-v2 .search-card .ai-segment > .omo { grid-column: 1; grid-row: auto; } }

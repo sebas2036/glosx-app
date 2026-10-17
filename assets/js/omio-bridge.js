@@ -251,42 +251,72 @@
     else fallback();
   }
 
-  function initOffer() {
-    if (Date.now() > OFFER_END || document.querySelector('.omo')) return;
-    var anchor = document.querySelector('a.klook-cta[href*="' + MARK + '"], a.klook-strip[href*="' + MARK + '"]');
-    if (!anchor) return;
+  function offerStyle() {
+    if (document.getElementById('omo-style')) return;
+    var st = document.createElement('style');
+    st.id = 'omo-style';
+    st.textContent = '.omo{margin:12px 0 4px;padding:14px 16px;border:1px solid rgba(251,107,108,.55);border-radius:14px;background:linear-gradient(135deg,#F1F2F6 0%,#E8F1FC 100%);color:#182C66;font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
+      '.omo-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}' +
+      '.omo-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#4A5578;margin:0 0 4px}' +
+      '.omo-text{margin:0;font-size:14px;line-height:1.45;font-weight:600}' +
+      '.omo-code{font-variant-numeric:tabular-nums;letter-spacing:.04em}' +
+      '.omo-btn{font:inherit;font-size:13px;font-weight:700;color:#0F1B5C;background:#fff;border:1px solid rgba(24,44,102,.25);border-radius:999px;padding:8px 16px;cursor:pointer;white-space:nowrap;transition:background-color .2s ease,border-color .2s ease}' +
+      '.omo-btn:hover{background:#FFF4EF;border-color:#FB6B6C}' +
+      '.omo-btn:focus-visible{outline:2px solid #182C66;outline-offset:2px}' +
+      '.omo-btn.is-done{background:#FB6B6C;border-color:#FB6B6C}' +
+      '.omo-note{margin:10px 0 0;font-size:12px;line-height:1.5;color:#4A5578}';
+    document.head.appendChild(st);
+  }
+
+  // Tarjeta con el código: se usa bajo el botón de reserva de las páginas de ruta y dentro del resultado del planificador
+  function buildOffer(src) {
     var t = OFFER[lang()] || OFFER.en;
-    if (!document.getElementById('omo-style')) {
-      var st = document.createElement('style');
-      st.id = 'omo-style';
-      st.textContent = '.omo{margin:12px 0 4px;padding:14px 16px;border:1px solid rgba(251,107,108,.55);border-radius:14px;background:linear-gradient(135deg,#F1F2F6 0%,#E8F1FC 100%);color:#182C66;font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
-        '.omo-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}' +
-        '.omo-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#4A5578;margin:0 0 4px}' +
-        '.omo-text{margin:0;font-size:14px;line-height:1.45;font-weight:600}' +
-        '.omo-code{font-variant-numeric:tabular-nums;letter-spacing:.04em}' +
-        '.omo-btn{font:inherit;font-size:13px;font-weight:700;color:#0F1B5C;background:#fff;border:1px solid rgba(24,44,102,.25);border-radius:999px;padding:8px 16px;cursor:pointer;white-space:nowrap;transition:background-color .2s,border-color .2s}' +
-        '.omo-btn:hover{background:#FFF4EF;border-color:#FB6B6C}' +
-        '.omo-btn:focus-visible{outline:2px solid #182C66;outline-offset:2px}' +
-        '.omo-btn.is-done{background:#FB6B6C;border-color:#FB6B6C}' +
-        '.omo-note{margin:10px 0 0;font-size:12px;line-height:1.5;color:#4A5578}';
-      document.head.appendChild(st);
-    }
+    offerStyle();
     var box = document.createElement('div');
     box.className = 'omo';
     box.innerHTML = '<div class="omo-row"><div><p class="omo-eyebrow">' + esc(t.eyebrow) + '</p>' +
       '<p class="omo-text">' + esc(t.text) + '</p></div>' +
       '<button type="button" class="omo-btn" data-code="' + OFFER_CODE + '">' + esc(t.copy) + '</button></div>' +
       '<p class="omo-note">' + esc(t.note) + '</p>';
-    anchor.parentNode.insertBefore(box, anchor.nextSibling);
     var btn = box.querySelector('.omo-btn');
     btn.addEventListener('click', function () {
       offerCopy(OFFER_CODE, function () {
         btn.textContent = t.copied; btn.classList.add('is-done');
-        try { if (typeof gtag === 'function') gtag('event', 'omio_code_copy', { code: OFFER_CODE }); } catch (e) {}
+        try { if (typeof gtag === 'function') gtag('event', 'omio_code_copy', { code: OFFER_CODE, source: src }); } catch (e) {}
         setTimeout(function () { btn.textContent = t.copy; btn.classList.remove('is-done'); }, 2500);
       });
     });
+    return box;
   }
+
+  function initOffer() {
+    if (Date.now() > OFFER_END || document.querySelector('.omo')) return;
+    var anchor = document.querySelector('a.klook-cta[href*="' + MARK + '"], a.klook-strip[href*="' + MARK + '"]');
+    if (!anchor) return;
+    anchor.parentNode.insertBefore(buildOffer('route_page'), anchor.nextSibling);
+  }
+
+  // Planificador de la portada: cuando hay un código vigente, aparece dentro del resultado (solo Europa, en el primer tramo)
+  function plannerOffer() {
+    if (Date.now() > OFFER_END) return;
+    var segs = document.getElementById('aiSegments');
+    if (!segs) return;
+    var seg = segs.querySelector('.ai-segment');
+    if (!seg || seg.querySelector('.omo')) return;
+    var buy = seg.querySelector('a.ai-segment-buy');
+    if (!buy || !isOmio(buy.getAttribute('href'))) return;
+    seg.insertBefore(buildOffer('planner'), buy);
+  }
+  (function watchPlanner() {
+    var segs = document.getElementById('aiSegments');
+    if (!segs || !window.MutationObserver) return;
+    var busy = false;
+    new MutationObserver(function () {
+      if (busy) return;
+      busy = true;
+      requestAnimationFrame(function () { plannerOffer(); busy = false; });
+    }).observe(segs, { childList: true, subtree: true });
+  })();
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initOffer); else initOffer();
 
   // Enlaces <a href=".../affiliate/europe-train...">: se controla la apertura para animarla.
