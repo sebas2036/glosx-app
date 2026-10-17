@@ -236,55 +236,70 @@ const BASE_STYLE = 'width:100%;border-collapse:collapse;margin:12px 0 8px;font-s
 const TH = 'padding:8px 12px;color:#C10016;font-weight:700;text-align:left;';
 const TD = 'padding:8px 12px;border-top:1px solid rgba(20,21,26,0.08);vertical-align:top;';
 
+const I18N = {};
+for (const l of ['es', 'fr', 'it']) { try { I18N[l] = require('./route-deep-' + l); } catch (e) { /* idioma aún sin traducir */ } }
+const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', it: '/it/' };
+
 function render(slug, lang, route) {
-  const d = DEEP[slug];
-  if (!d || lang !== 'en') return '';
+  const en = lang === 'en';
+  const d = en ? DEEP[slug] : (I18N[lang] && I18N[lang].deep[slug]);
+  if (!d) return '';
+  const ui = en ? {
+    stations: 'Stations: where you leave and where you arrive', times: (f, t) => `${f} to ${t} train times and frequency`,
+    tickets: 'Tickets and fares: what you actually pay', th: ['Ticket', 'What it means', 'Typical level'],
+    note: 'Fares are indicative and change by date, time and how early you book. The live search shows the exact price for your trip.',
+    when: 'Best time to travel', arrival: (t) => `What to do when you arrive in ${t}`, alt: (f, t) => `Other ways to get from ${f} to ${t}`,
+    related: 'Related routes', moreLondon: 'More trains from London'
+  } : I18N[lang].ui;
   const from = route.from, to = route.to;
   const li = (arr) => arr.map(t => `<li>${t}</li>`).join('\n      ');
   const rows = d.tickets.map(r => `<tr><td style="${TD}"><strong>${r[0]}</strong></td><td style="${TD}">${r[1]}</td><td style="${TD}">${r[2]}</td></tr>`).join('');
-  const nice = (sl) => sl.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' to ');
-  const cities = slug.split('-');
-  let sibs = '';
-  if (slug.startsWith('london-')) sibs = '<a href="/trains-from-london/">All trains from London</a> · ' + SIBLINGS_LONDON.filter(([s]) => s !== slug).map(([s, label]) => `<a href="/rutas/${s}/">${label}</a>`).join(' · ');
-  else {
+  const nice = (sl) => sl.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(en ? ' to ' : ' → ');
+  const cities = slug.split('-'), suf = SUFFIX[lang];
+  const link = (k, label) => `<a href="/rutas/${k}${suf}">${label}</a>`;
+  let sibs = '', head = ui.related;
+  if (slug.startsWith('london-')) {
+    head = ui.moreLondon;
+    sibs = (en ? '<a href="/trains-from-london/">All trains from London</a> · ' : '') + SIBLINGS_LONDON.filter(([s]) => s !== slug).map(([s, label]) => link(s, en ? label : label.replace(' to ', ' → '))).join(' · ');
+  } else {
     const rel = Object.keys(DEEP).filter(k => k !== slug && k.split('-').some(c => cities.includes(c)));
-    sibs = (cities.includes('paris') ? '<a href="/trains-from-paris/">All trains from Paris</a> · ' : '') + rel.map(k => `<a href="/rutas/${k}/">${nice(k)}</a>`).join(' · ');
+    sibs = (en && cities.includes('paris') ? '<a href="/trains-from-paris/">All trains from Paris</a> · ' : '') + rel.map(k => link(k, nice(k))).join(' · ');
   }
   return `
     <section class="deep-guide">
-    <h2>Stations: where you leave and where you arrive</h2>
+    <h2>${ui.stations}</h2>
     <ul style="padding-left:22px;">
       ${li(d.stations)}
     </ul>
 
-    <h2>${from} to ${to} train times and frequency</h2>
+    <h2>${ui.times(from, to)}</h2>
     <p>${d.times}</p>
 
-    <h2>Tickets and fares: what you actually pay</h2>
+    <h2>${ui.tickets}</h2>
     <p>${d.ticketsIntro}</p>
     <div style="overflow-x:auto;"><table style="${BASE_STYLE}">
-      <thead><tr><th style="${TH}">Ticket</th><th style="${TH}">What it means</th><th style="${TH}">Typical level</th></tr></thead>
+      <thead><tr><th style="${TH}">${ui.th[0]}</th><th style="${TH}">${ui.th[1]}</th><th style="${TH}">${ui.th[2]}</th></tr></thead>
       <tbody>${rows}</tbody>
     </table></div>
-    <p style="font-size:13px;color:#55565f;">Fares are indicative and change by date, time and how early you book. The live search shows the exact price for your trip.</p>
+    <p style="font-size:13px;color:#55565f;">${ui.note}</p>
     <ul style="padding-left:22px;">
       ${li(d.ticketTips)}
     </ul>
 
-    <h2>Best time to travel</h2>
+    <h2>${ui.when}</h2>
     <p>${d.when}</p>
 
-    <h2>What to do when you arrive in ${to}</h2>
+    <h2>${ui.arrival(to)}</h2>
     <p>${d.arrivalIntro}</p>
     <ul style="padding-left:22px;">
       ${li(d.arrival)}
     </ul>
 
-    <h2>Other ways to get from ${from} to ${to}</h2>
+    <h2>${ui.alt(from, to)}</h2>
     <ul style="padding-left:22px;">
       ${li(d.alt)}
     </ul>
-    ${sibs ? `<p style="margin-top:16px;"><strong>${slug.startsWith('london-') ? 'More trains from London' : 'Related routes'}:</strong> ${sibs}</p>` : ''}
+    ${sibs ? `<p style="margin-top:16px;"><strong>${head}:</strong> ${sibs}</p>` : ''}
     </section>`;
 }
 
@@ -296,9 +311,11 @@ const STATION_LINE = {
   'london-brussels': 'London St Pancras International → Brussels-Midi'
 };
 Object.assign(STATION_LINE, MORE.stationLines, MORE3.stationLines);
+const STN = { en: 'Stations', es: 'Estaciones', fr: 'Gares', it: 'Stazioni' };
 function postProcess(slug, lang, html) {
-  if (lang !== 'en' || !STATION_LINE[slug]) return html;
-  return html.replace(/<strong>Station: [^<]*<\/strong>/, '<strong>Stations: ' + STATION_LINE[slug].replace(/&/g, '&amp;') + '</strong>');
+  if (!STATION_LINE[slug] || !STN[lang]) return html;
+  if (lang !== 'en' && !(I18N[lang] && I18N[lang].deep[slug])) return html;
+  return html.replace(/<strong>(?:Station|Estación|Gare|Stazione|Stations|Estaciones|Gares|Stazioni): [^<]*<\/strong>/, '<strong>' + STN[lang] + ': ' + STATION_LINE[slug].replace(/&/g, '&amp;') + '</strong>');
 }
 
 module.exports = { render, postProcess, DEEP };

@@ -40,7 +40,7 @@ const CITY_LOCAL = {
   }
 };
 // no traducir cuando el nombre forma parte de un nombre oficial de estación o similar
-const AFTER = '(?!\\s+(?:Sants|Hbf|HB|SBB|Centrale|Central|Termini|Santa|Atocha|Chamartín|Midi|Cornavin|Gare|Nord|Est|Stazione|Station|Hauptbahnhof|Flughafen|Airport|Porta|Principe|Garibaldi|Lingotto|Bercy|Montparnasse|Austerlitz|Saint|St\\.?)\\b)(?!-(?:Midi|Central|Nord|Zuid|Sud))';
+const AFTER = '(?!\\s+(?:Sants|Hbf|HB|SBB|Centrale|Central|Termini|Santa|Atocha|Chamartín|Midi|Cornavin|Gare|Nord|Est|Stazione|Station|Hauptbahnhof|Flughafen|Airport|Porta|Principe|Garibaldi|Lingotto|Bercy|Montparnasse|Austerlitz|Saint|St\\.?)\\b)(?!-(?:Midi|Central|Nord|Zuid|Sud|Ville))';
 const BEFORE = '(?<!Gare de )(?<!Gare du )(?<!Gare d\')(?<!Stazione di )(?<!Estación de )(?<!Estación )';
 
 function europeSlugs() {
