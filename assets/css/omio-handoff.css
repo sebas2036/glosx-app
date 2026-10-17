@@ -302,3 +302,15 @@ body[data-region="japan"] .guides-grid { grid-template-columns: minmax(0, 420px)
 /* Franja de rutas: bordes que se desvanecen sobre el fondo cálido (sin degradado blanco) */
 .stats-marquee::before, .stats-marquee::after { display: none !important; }
 .stats-marquee { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%); }
+
+/* Modo Japón: pestañas y selector de región en durazno Klook suave (sin el fondo negro) */
+body.home-v2[data-region="japan"] .search-tab:not(.on),
+body.home-v2[data-region="japan"] .region-switch {
+  background: rgba(255, 186, 140, .9);
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+body.home-v2[data-region="japan"] .search-tab:not(.on) { color: #2A2118; }
+body.home-v2[data-region="japan"] .search-tab:not(.on):hover { background: rgba(255, 170, 115, .96); }
+body.home-v2[data-region="japan"] .region-btn:not(.on) { color: #2A2118; }
+body.home-v2[data-region="japan"] .region-btn:not(.on):hover { background: rgba(255, 255, 255, .45); }
+body.home-v2[data-region="japan"].hotels-mode .region-btn.on:not(.region-hotels) { color: #2A2118 !important; }
