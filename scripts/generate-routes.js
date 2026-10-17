@@ -1744,6 +1744,7 @@ console.log('All routes generated successfully!');
 if (!process.env.ONLY_LANG) {
   require('./apply-brand-title').run();
   require('./localize-cities').run(); require('./localize-cities').runListings();
+  require('./extend-related').run(); require('./localize-cities').run();
   require('./localize-ja').runRoutes(); require('./localize-ja').runJapanLinks(); require('./localize-ja').runExplore(); require('./sync-sitemap-ja');
   require('./apply-brand-schema').run();
 }
