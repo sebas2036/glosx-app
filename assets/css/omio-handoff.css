@@ -237,3 +237,12 @@ body.hotels-mode .hotel-mosaic::after {
 }
 body.hotels-mode .hero-title-card > *:not(.hotel-mosaic) { position: relative; z-index: 1; }
 @media (max-width: 760px) { body.hotels-mode .hotel-mosaic { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); } }
+
+/* Ruleta en modo Japón: el botón "Me quedo" reserva en Klook, así que lleva su color e ícono (no los de Omio) */
+body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"] {
+  background: #FF5B00; border-color: #FF5B00; color: #fff; box-shadow: 0 6px 16px rgba(255, 91, 0, .35);
+}
+body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"]:hover { background: #E65200; box-shadow: 0 8px 20px rgba(255, 91, 0, .45); }
+body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"]::before {
+  background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=klook.com") center / 16px 16px no-repeat;
+}
