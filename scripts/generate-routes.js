@@ -1686,6 +1686,7 @@ function replaceTemplate(template, route, lang) {
     '{{whoRunsTitle}}': fillTokens(langContent.whoRunsTitle, route, lang),
     '{{whoRunsText}}': fillTokens(pickVariant(route.slug + 'whoruns', langContent.whoRunsVariants), route, lang),
     '{{localInsight}}': generateLocalInsight(route, lang),
+    '{{deepContent}}': require('./route-deep-content').render(route.slug, lang, route),
     '{{priceTitle}}': fillTokens(langContent.priceTitle, route, lang),
     '{{priceText}}': langContent.priceText.replace('{{price}}', route.price),
     '{{priceTable}}': generatePriceTable(route, lang),
@@ -1732,7 +1733,7 @@ routesToGenerate.forEach(route => {
     const dir = lang === 'en' ? path.join(outputDir, route.slug) : path.join(outputDir, route.slug, lang);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     // sin hotel curado se omite el bloque entero (no queda un <h2> vacío)
-    fs.writeFileSync(path.join(dir, 'index.html'), replaceTemplate(template, route, lang).replace(/<h2>\s*<\/h2>\s*/g, ''));
+    fs.writeFileSync(path.join(dir, 'index.html'), require('./route-deep-content').postProcess(route.slug, lang, replaceTemplate(template, route, lang).replace(/<h2>\s*<\/h2>\s*/g, '')));
   });
   console.log(`Generated ${route.slug} (${LANGS.join('/')})`);
 });
