@@ -246,3 +246,8 @@ body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"]:ho
 body[data-region="japan"] a.discover-cta-btn[href*="/affiliate/europe-train"]::before {
   background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=klook.com") center / 16px 16px no-repeat;
 }
+
+.hotels-all { appearance: none; cursor: pointer; font: inherit; font-size: 15px; font-weight: 600; padding: 9px 16px; border-radius: 999px; background: transparent; border: 1px dashed rgba(20,21,26,.35); color: #14151a; margin-top: 10px; }
+.hotels-all:hover { background: #f2f3f7; }
+.hotels-allbox { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; max-height: 260px; overflow-y: auto; padding-right: 4px; }
+.hotels-allbox[hidden] { display: none; }

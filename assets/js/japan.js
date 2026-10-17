@@ -728,13 +728,13 @@
 
   // Panel de hoteles dentro de la propia tarjeta del buscador (sin scroll): reutiliza el menú de ciudades de Klook.
   var HOTEL_UI = {
-    en: { ci: 'Check-in', co: 'Check-out', ph: 'City, area or landmark', lab: 'Where to?', pop: 'Popular destinations', go: 'Search hotels', none: 'No matches — try another city' },
-    es: { ci: 'Entrada', co: 'Salida', ph: 'Ciudad o zona', lab: '¿A dónde?', pop: 'Destinos populares', go: 'Buscar hoteles', none: 'Sin resultados: prueba otra ciudad' },
-    fr: { ci: 'Arrivée', co: 'Départ', ph: 'Ville ou quartier', lab: 'Où allez-vous ?', pop: 'Destinations populaires', go: 'Rechercher des hôtels', none: 'Aucun résultat : essayez une autre ville' },
-    it: { ci: 'Check-in', co: 'Check-out', ph: 'Città o zona', lab: 'Dove vai?', pop: 'Destinazioni popolari', go: 'Cerca hotel', none: 'Nessun risultato: prova un’altra città' },
-    de: { ci: 'Anreise', co: 'Abreise', ph: 'Stadt oder Gegend', lab: 'Wohin?', pop: 'Beliebte Reiseziele', go: 'Hotels suchen', none: 'Keine Treffer – andere Stadt versuchen' },
-    pt: { ci: 'Entrada', co: 'Saída', ph: 'Cidade ou região', lab: 'Para onde?', pop: 'Destinos populares', go: 'Buscar hotéis', none: 'Sem resultados: tente outra cidade' },
-    ja: { ci: 'チェックイン', co: 'チェックアウト', ph: '都市・エリア', lab: 'どこへ？', pop: '人気の目的地', go: 'ホテルを検索', none: '見つかりません。別の都市をお試しください' }
+    en: { all: 'All cities', ci: 'Check-in', co: 'Check-out', ph: 'City, area or landmark', lab: 'Where to?', pop: 'Popular destinations', go: 'Search hotels', none: 'No matches — try another city' },
+    es: { all: 'Todas las ciudades', ci: 'Entrada', co: 'Salida', ph: 'Ciudad o zona', lab: '¿A dónde?', pop: 'Destinos populares', go: 'Buscar hoteles', none: 'Sin resultados: prueba otra ciudad' },
+    fr: { all: 'Toutes les villes', ci: 'Arrivée', co: 'Départ', ph: 'Ville ou quartier', lab: 'Où allez-vous ?', pop: 'Destinations populaires', go: 'Rechercher des hôtels', none: 'Aucun résultat : essayez une autre ville' },
+    it: { all: 'Tutte le città', ci: 'Check-in', co: 'Check-out', ph: 'Città o zona', lab: 'Dove vai?', pop: 'Destinazioni popolari', go: 'Cerca hotel', none: 'Nessun risultato: prova un’altra città' },
+    de: { all: 'Alle Städte', ci: 'Anreise', co: 'Abreise', ph: 'Stadt oder Gegend', lab: 'Wohin?', pop: 'Beliebte Reiseziele', go: 'Hotels suchen', none: 'Keine Treffer – andere Stadt versuchen' },
+    pt: { all: 'Todas as cidades', ci: 'Entrada', co: 'Saída', ph: 'Cidade ou região', lab: 'Para onde?', pop: 'Destinos populares', go: 'Buscar hotéis', none: 'Sem resultados: tente outra cidade' },
+    ja: { all: 'すべての都市', ci: 'チェックイン', co: 'チェックアウト', ph: '都市・エリア', lab: 'どこへ？', pop: '人気の目的地', go: 'ホテルを検索', none: '見つかりません。別の都市をお試しください' }
   };
   var HOTEL_POP = ['Paris', 'Rome', 'London', 'Barcelona', 'Amsterdam', 'Vienna', 'Prague', 'Berlin', 'Zurich', 'Venice', 'Madrid', 'Florence', 'Budapest', 'Munich', 'Lisbon', 'Porto', 'Oslo', 'Marseille', 'Nice', 'Geneva'];
   function hnorm(x) { return String(x).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); }
@@ -801,6 +801,17 @@
       b.addEventListener('click', function () { pick(c); (ci.value ? co : ci).focus(); });
       row.appendChild(b);
     });
+    // "Todas las ciudades": lista completa agrupada por país, desplegable dentro del propio panel
+    var allBtn = document.createElement('button'); allBtn.type = 'button'; allBtn.className = 'hotels-all';
+    allBtn.textContent = u.all + ' (' + cities.length + ') ▾';
+    var allBox = document.createElement('div'); allBox.className = 'hotels-allbox'; allBox.hidden = true;
+    Array.prototype.forEach.call(src.children, function (n) {
+      if (n.classList.contains('klook-city-group-label')) { var g = document.createElement('div'); g.className = 'hotels-group'; g.textContent = n.textContent; allBox.appendChild(g); }
+      else { var c = n.textContent.trim(), b = document.createElement('button'); b.type = 'button'; b.className = 'hotels-city'; b.textContent = c;
+        b.addEventListener('click', function () { pick(c); allBox.hidden = true; allBtn.textContent = u.all + ' (' + cities.length + ') ▾'; (ci.value ? co : ci).focus(); }); allBox.appendChild(b); }
+    });
+    allBtn.addEventListener('click', function () { allBox.hidden = !allBox.hidden; allBtn.textContent = u.all + ' (' + cities.length + ') ' + (allBox.hidden ? '▾' : '▴'); });
+    panel.querySelector('.hotels-pop').appendChild(allBtn); panel.querySelector('.hotels-pop').appendChild(allBox);
     card.appendChild(panel);
     return panel;
   }
