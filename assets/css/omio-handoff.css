@@ -351,3 +351,27 @@ body.home-v2[data-region="japan"] .lang-btn:hover { background: #FFCDA8 !importa
 .jp-discover-grid .discover-video.is-on { opacity: 1; }
 body.home-v2[data-region="japan"] .discover-grid .discover-card .discover-watch { background: #FF5B00; color: #2A2118; }
 body.home-v2[data-region="japan"] .discover-card .discover-season { color: #C24A00; }
+
+/* Esenciales de viaje: línea Omio suave (azul marino, coral y lavanda); en modo Japón, naranja Klook */
+body.home-v2 #partners .section-label { color: var(--omio-navy, #0F1B5C); }
+body.home-v2 #partners .vip-label { color: #2b3d78; }
+body.home-v2 .vip-card { border-color: rgba(15, 27, 92, .16); }
+body.home-v2 .vip-card:hover { border-color: var(--omio-coral, #FB6B6C); box-shadow: 0 10px 26px rgba(251, 107, 108, .18); }
+body.home-v2 .vip-sub { color: #2b3d78; }
+body.home-v2 .essentials-bar { border-color: rgba(15, 27, 92, .14); }
+body.home-v2 .essential-item { background: var(--omio-lavender, #F1F2F6); border-color: rgba(15, 27, 92, .12); }
+body.home-v2 .essential-item:hover { border-color: var(--omio-coral, #FB6B6C); background: #fff; }
+body.home-v2 .essential-brand, body.home-v2 .essential-item:hover .essential-brand { color: var(--omio-navy, #0F1B5C); }
+body.home-v2 .essential-icon, body.home-v2 .essential-item:hover .essential-icon { color: #E4575A; }
+body.home-v2 .essential-cta, body.home-v2 .essential-item:hover .essential-cta { color: #2b3d78; }
+body.home-v2[data-region="japan"] #partners .section-label { color: #C24A00; }
+body.home-v2[data-region="japan"] #partners .vip-label { color: #8a4a1a; }
+body.home-v2[data-region="japan"] .vip-card { border-color: rgba(255, 91, 0, .3); }
+body.home-v2[data-region="japan"] .vip-card:hover { border-color: #FF5B00; box-shadow: 0 10px 26px rgba(255, 91, 0, .18); }
+body.home-v2[data-region="japan"] .vip-sub { color: #8a4a1a; }
+body.home-v2[data-region="japan"] .essentials-bar { border-color: rgba(255, 91, 0, .22); }
+body.home-v2[data-region="japan"] .essential-item { background: #FFF3EA; border-color: rgba(255, 91, 0, .22); }
+body.home-v2[data-region="japan"] .essential-item:hover { border-color: #FF5B00; background: #fff; }
+body.home-v2[data-region="japan"] .essential-brand, body.home-v2[data-region="japan"] .essential-item:hover .essential-brand { color: #2A2118; }
+body.home-v2[data-region="japan"] .essential-icon, body.home-v2[data-region="japan"] .essential-item:hover .essential-icon { color: #FF5B00; }
+body.home-v2[data-region="japan"] .essential-cta, body.home-v2[data-region="japan"] .essential-item:hover .essential-cta { color: #8a4a1a; }

@@ -1024,6 +1024,27 @@
     }
   })();
 
+  // ── Esenciales en modo Japón: eSIM de Japón y Klook (tours) en lugar de Tiqets, que es de atracciones europeas ──
+  var JP_ESS = {"en": ["eSIM Japan", "Tours & activities", "See activities →"], "es": ["eSIM Japón", "Tours y actividades", "Ver actividades →"], "fr": ["eSIM Japon", "Visites et activités", "Voir les activités →"], "it": ["eSIM Giappone", "Tour e attività", "Vedi le attività →"], "de": ["eSIM Japan", "Touren & Aktivitäten", "Aktivitäten ansehen →"], "pt": ["eSIM Japão", "Passeios e atividades", "Ver atividades →"], "ja": ["日本のeSIM", "ツアーとアクティビティ", "アクティビティを見る →"]};
+  (function () {
+    var E = JP_ESS[lang()] || JP_ESS.en;
+    var yt = document.querySelector('.essentials-bar [data-i18n="p_yesim_title"]');
+    twinHome(yt, function (c) { c.textContent = E[0]; });
+    var tq = null;
+    document.querySelectorAll('.essentials-bar .essential-item').forEach(function (a) { if (/goPartner\('tiqets'/.test(a.getAttribute('onclick') || '')) tq = a; });
+    if (tq) {
+      var k = tq.cloneNode(true); k.setAttribute('data-jp-twin', '1');
+      k.setAttribute('onclick', "goPartner('klook', event)");
+      k.querySelectorAll('[data-i18n]').forEach(function (n) { n.removeAttribute('data-i18n'); });
+      k.querySelector('.essential-brand').textContent = 'Klook';
+      k.querySelector('.essential-title').textContent = E[1];
+      k.querySelector('.essential-cta').textContent = E[2];
+      tq.classList.add('eu-only'); k.classList.add('jp-only');
+      tq.parentNode.insertBefore(k, tq.nextSibling);
+    }
+    document.querySelectorAll('.partner-row').forEach(function (a) { if (/goPartner\('tiqets'/.test(a.getAttribute('onclick') || '')) a.classList.add('eu-only'); });
+  })();
+
   // Franja de color de la alianza (Omio en Europa, Klook en Japón) detrás de las ventajas y los operadores:
   // sube un poco para quedar por detrás del planificador.
   (function () {
