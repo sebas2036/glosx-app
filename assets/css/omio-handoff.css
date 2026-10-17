@@ -192,3 +192,13 @@ body.home-v2 .search-card .ai-segment > .omo { grid-column: 1 / -1; grid-row: 4;
 body.home-v2 .search-card .ai-segment.has-offer .pi .rp-row:not(.is-train) { display: none; }
 body.home-v2 .search-card .ai-segment.has-offer .pi .rp-modes { padding-bottom: 0; }
 body.home-v2 .search-card .ai-segment.has-offer .pi .rp-note { padding-bottom: 0; }
+
+/* Hoteles: panel dentro de la tarjeta del buscador */
+body.hotels-mode .region-btn.on:not(.region-hotels) { background: transparent !important; color: #fff !important; }
+body.hotels-mode .region-hotels { background: #fff !important; color: #2A2118 !important; }
+.hotels-panel { padding: 8px 4px 4px; }
+.hotels-filter { width: 100%; max-width: 420px; box-sizing: border-box; padding: 12px 16px; border: 1px solid rgba(20,21,26,.16); border-radius: 12px; font: inherit; font-size: 16px; background: #f2f3f7; color: #14151a; margin-bottom: 14px; }
+.hotels-grid { display: flex; flex-wrap: wrap; gap: 8px; max-height: 280px; overflow-y: auto; align-items: center; }
+.hotels-group { flex: 0 0 100%; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #6b6c75; margin-top: 6px; }
+.hotels-city { appearance: none; cursor: pointer; font: inherit; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid rgba(20,21,26,.18); color: #14151a; }
+.hotels-city:hover { border-color: #14151a; }

@@ -726,16 +726,69 @@
     if (jpRouteKey) renderJpRoute(jpRouteKey);
   }
 
+  // Panel de hoteles dentro de la propia tarjeta del buscador (sin scroll): reutiliza el menú de ciudades de Klook.
+  var HOTEL_PH = { en: 'Search a city', es: 'Busca una ciudad', fr: 'Cherchez une ville', it: 'Cerca una città', de: 'Stadt suchen', pt: 'Procure uma cidade', ja: '都市を検索' };
+  function buildHotels() {
+    var card = document.querySelector('.search-card'), src = document.getElementById('klookCityMenu');
+    if (!card || !src || !src.children.length) return null;
+    var panel = card.querySelector('[data-panel="hotels"]');
+    if (panel) return panel;
+    panel = document.createElement('div');
+    panel.className = 'search-panel hotels-panel';
+    panel.setAttribute('data-panel', 'hotels');
+    var inp = document.createElement('input');
+    inp.type = 'search'; inp.className = 'hotels-filter'; inp.setAttribute('autocomplete', 'off');
+    inp.placeholder = HOTEL_PH[lang()] || HOTEL_PH.en;
+    var grid = document.createElement('div'); grid.className = 'hotels-grid';
+    Array.prototype.forEach.call(src.children, function (n) {
+      var c = n.cloneNode(true);
+      if (c.classList.contains('klook-city-group-label')) c.className = 'hotels-group';
+      else c.className = 'hotels-city';
+      grid.appendChild(c);
+    });
+    inp.addEventListener('input', function () {
+      var q = inp.value.trim().toLowerCase(), groupOn = null;
+      var kids = grid.children;
+      for (var i = kids.length - 1; i >= 0; i--) {
+        var k = kids[i];
+        if (k.classList.contains('hotels-city')) {
+          var hit = !q || k.textContent.toLowerCase().indexOf(q) !== -1;
+          k.style.display = hit ? '' : 'none';
+          if (hit) groupOn = true;
+        } else { k.style.display = groupOn || !q ? '' : 'none'; groupOn = null; }
+      }
+    });
+    panel.appendChild(inp); panel.appendChild(grid);
+    card.appendChild(panel);
+    return panel;
+  }
+  function closeHotels() {
+    document.body.classList.remove('hotels-mode');
+    var chip = document.querySelector('.region-hotels'); if (chip) { chip.classList.remove('on'); chip.setAttribute('aria-pressed', 'false'); }
+    var hp = document.querySelector('[data-panel="hotels"]'); if (hp) hp.classList.remove('on');
+    var ai = document.querySelector('.search-tab[data-tab="ai"]'); if (ai) ai.click();
+  }
+  function toggleHotels(chip) {
+    if (document.body.classList.contains('hotels-mode')) { closeHotels(); return; }
+    var hp = buildHotels(); if (!hp) return;
+    var fi = hp.querySelector('.hotels-filter'); if (fi && fi.value) { fi.value = ''; fi.dispatchEvent(new Event('input')); }
+    document.querySelectorAll('.search-tab').forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
+    document.querySelectorAll('.search-panel').forEach(function (x) { x.classList.toggle('on', x === hp); });
+    document.body.classList.add('hotels-mode');
+    chip.classList.add('on'); chip.setAttribute('aria-pressed', 'true');
+  }
+  document.addEventListener('click', function (e) {
+    if (document.body.classList.contains('hotels-mode') && e.target.closest && e.target.closest('.search-tab')) {
+      document.body.classList.remove('hotels-mode');
+      var chip = document.querySelector('.region-hotels'); if (chip) { chip.classList.remove('on'); chip.setAttribute('aria-pressed', 'false'); }
+    }
+  });
+
   switchEl.addEventListener('click', function (e) {
     var b = e.target.closest ? e.target.closest('.region-btn') : null;
     if (!b) return;
-    if (b.hasAttribute('data-hotels')) {
-      var card = document.querySelector('.klook-city-picker'), menu = document.getElementById('klookCityMenu');
-      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      if (menu) setTimeout(function () { menu.classList.add('open'); }, 350);
-      e.stopPropagation();
-      return;
-    }
+    if (b.hasAttribute('data-hotels')) { toggleHotels(b); return; }
+    if (document.body.classList.contains('hotels-mode')) closeHotels();
     setRegion(b.getAttribute('data-region'));
   });
 
