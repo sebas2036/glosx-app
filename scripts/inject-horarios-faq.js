@@ -12,7 +12,7 @@ const ROOT = path.join(__dirname, '..');
 // Archivo completo (incluye lo derivado de SNCF, ODbL) fuera del repo; si no existe, el público del repo.
 const FULL = path.join(require('os').homedir(), 'proyectos/glosx-horarios-datos/horarios-rutas-completo.json');
 const DATA = JSON.parse(fs.readFileSync(fs.existsSync(FULL) ? FULL : path.join(ROOT, 'assets/data/horarios-rutas.json'), 'utf8'));
-const PRIORITY = ['eurostar', 'db', 'renfe_ld', 'sncf'];
+const PRIORITY = ['eurostar', 'db', 'renfe_ld', 'sncf', 'sbb'];
 const jsrc = fs.readFileSync(path.join(ROOT, 'assets/js/japan.js'), 'utf8');
 const NAMES = JSON.parse(jsrc.match(/var HOTEL_NAMES = (\{.*?\});\n  function hname/s)[1]);
 const nm = (lang, c) => (NAMES[lang] && NAMES[lang][c]) || c;
@@ -24,6 +24,10 @@ const LANGS = ['en', 'es', 'fr', 'it', 'ja'];
 
 // fuente por feed
 const SRC = {
+  sbb: { op: { en: 'Swiss long-distance and Regio Express', es: 'larga distancia y Regio Express de Suiza', fr: 'grandes lignes et RegioExpress suisses', it: 'lunga percorrenza e RegioExpress svizzeri', ja: 'スイスの長距離・レギオエクスプレス' },
+    train: { en: 'Swiss long-distance or Regio Express train', es: 'tren de larga distancia o Regio Express del horario suizo', fr: 'train grandes lignes ou RegioExpress de l\'horaire suisse', it: 'treno a lunga percorrenza o RegioExpress dell\'orario svizzero', ja: 'スイスの長距離列車またはレギオエクスプレス' },
+    of: { fr: 'des grandes lignes et RegioExpress suisses', it: 'della lunga percorrenza e dei RegioExpress svizzeri' },
+    credit: { en: 'open timetable from opentransportdata.swiss (SBB)', es: 'horario abierto de opentransportdata.swiss (SBB)', fr: 'horaire ouvert de opentransportdata.swiss (SBB)', it: 'orario aperto di opentransportdata.swiss (SBB)', ja: 'opentransportdata.swiss（SBB）のオープン時刻表' } },
   sncf: { op: { en: 'SNCF Voyageurs (TGV, Intercités and TER)', es: 'SNCF Voyageurs (TGV, Intercités y TER)', fr: 'SNCF Voyageurs (TGV, Intercités et TER)', it: 'SNCF Voyageurs (TGV, Intercités e TER)', ja: 'SNCF Voyageurs（TGV・Intercités・TER）' },
     train: { en: 'SNCF Voyageurs train (TGV, Intercités or TER)', es: 'tren de SNCF Voyageurs (TGV, Intercités o TER)', fr: 'train SNCF Voyageurs (TGV, Intercités ou TER)', it: 'treno SNCF Voyageurs (TGV, Intercités o TER)', ja: 'SNCF Voyageursの列車（TGV・Intercités・TER）' },
     of: { fr: 'de SNCF Voyageurs (TGV, Intercités et TER)', it: 'di SNCF Voyageurs (TGV, Intercités e TER)' },
@@ -47,44 +51,44 @@ const tm = (lang, t) => { // "03:31 (+1)" -> texto localizado; salidas antes de 
 };
 const T = {
   en: {
-    q1: (a, b) => `What time is the first train from ${a} to ${b}?`,
-    a1: (o) => `On weekdays, the first ${o.train} from ${o.a} to ${o.b} leaves at ${o.wf}; in the other direction, the first from ${o.b} to ${o.a} leaves at ${o.rf}. Source: ${o.credit}, ${o.date}. Timetables change by season, so check your date before you book.`,
-    q2: (a, b) => `What time is the last train from ${a} to ${b}?`,
-    a2: (o) => `On weekdays, the last ${o.train} from ${o.a} to ${o.b} leaves at ${o.wl}; from ${o.b} to ${o.a}, at ${o.rl}. Source: ${o.credit}, ${o.date}.`,
-    q3: (a, b) => `How many trains a day run from ${a} to ${b}?`,
-    a3: (o) => `In the ${o.op} timetable there are ${o.wn} trains a day from ${o.a} to ${o.b} on weekdays, ${o.sn} on Saturdays and ${o.un} on Sundays. From ${o.b} to ${o.a}: ${o.rwn}, ${o.rsn} and ${o.run}. Source: ${o.credit}, ${o.date}.`
+    q1: (a, b) => `What time is the first direct train from ${a} to ${b}?`,
+    a1: (o) => `On weekdays, the first direct ${o.train} from ${o.a} to ${o.b} leaves at ${o.wf}; in the other direction, the first from ${o.b} to ${o.a} leaves at ${o.rf}. Source: ${o.credit}, ${o.date}. Timetables change by season, so check your date before you book.`,
+    q2: (a, b) => `What time is the last direct train from ${a} to ${b}?`,
+    a2: (o) => `On weekdays, the last direct ${o.train} from ${o.a} to ${o.b} leaves at ${o.wl}; from ${o.b} to ${o.a}, at ${o.rl}. Source: ${o.credit}, ${o.date}.`,
+    q3: (a, b) => `How many direct trains a day run from ${a} to ${b}?`,
+    a3: (o) => `In the ${o.op} timetable there are ${o.wn} direct trains a day from ${o.a} to ${o.b} on weekdays, ${o.sn} on Saturdays and ${o.un} on Sundays. From ${o.b} to ${o.a}: ${o.rwn}, ${o.rsn} and ${o.run}. Source: ${o.credit}, ${o.date}.`
   },
   es: {
-    q1: (a, b) => `¿A qué hora sale el primer tren de ${a} a ${b}?`,
-    a1: (o) => `De lunes a viernes, el primer ${o.train} de ${o.a} a ${o.b} sale a las ${o.wf}; en sentido contrario, el primero de ${o.b} a ${o.a} sale a las ${o.rf}. Fuente: ${o.credit}, consultado el ${o.date}. Los horarios cambian por temporada, así que confirma tu fecha antes de reservar.`,
-    q2: (a, b) => `¿A qué hora sale el último tren de ${a} a ${b}?`,
-    a2: (o) => `De lunes a viernes, el último ${o.train} de ${o.a} a ${o.b} sale a las ${o.wl}; de ${o.b} a ${o.a}, a las ${o.rl}. Fuente: ${o.credit}, consultado el ${o.date}.`,
-    q3: (a, b) => `¿Cuántos trenes al día hay de ${a} a ${b}?`,
-    a3: (o) => `En el horario de ${o.op} hay ${o.wn} trenes al día de ${o.a} a ${o.b} de lunes a viernes, ${o.sn} los sábados y ${o.un} los domingos. De ${o.b} a ${o.a}: ${o.rwn}, ${o.rsn} y ${o.run}. Fuente: ${o.credit}, consultado el ${o.date}.`
+    q1: (a, b) => `¿A qué hora sale el primer tren directo de ${a} a ${b}?`,
+    a1: (o) => `De lunes a viernes, el primer tren directo ${o.trainRest} de ${o.a} a ${o.b} sale a las ${o.wf}; en sentido contrario, el primero de ${o.b} a ${o.a} sale a las ${o.rf}. Fuente: ${o.credit}, consultado el ${o.date}. Los horarios cambian por temporada, así que confirma tu fecha antes de reservar.`,
+    q2: (a, b) => `¿A qué hora sale el último tren directo de ${a} a ${b}?`,
+    a2: (o) => `De lunes a viernes, el último tren directo ${o.trainRest} de ${o.a} a ${o.b} sale a las ${o.wl}; de ${o.b} a ${o.a}, a las ${o.rl}. Fuente: ${o.credit}, consultado el ${o.date}.`,
+    q3: (a, b) => `¿Cuántos trenes directos al día hay de ${a} a ${b}?`,
+    a3: (o) => `En el horario de ${o.op} hay ${o.wn} trenes directos al día de ${o.a} a ${o.b} de lunes a viernes, ${o.sn} los sábados y ${o.un} los domingos. De ${o.b} a ${o.a}: ${o.rwn}, ${o.rsn} y ${o.run}. Fuente: ${o.credit}, consultado el ${o.date}.`
   },
   fr: {
-    q1: (a, b) => `À quelle heure part le premier train de ${a} à ${b} ?`,
-    a1: (o) => `En semaine, le premier ${o.train} de ${o.a} à ${o.b} part à ${o.wf} ; dans l'autre sens, le premier de ${o.b} à ${o.a} part à ${o.rf}. Source : ${o.credit}, consulté le ${o.date}. Les horaires changent selon la saison : vérifiez votre date avant de réserver.`,
-    q2: (a, b) => `À quelle heure part le dernier train de ${a} à ${b} ?`,
-    a2: (o) => `En semaine, le dernier ${o.train} de ${o.a} à ${o.b} part à ${o.wl} ; de ${o.b} à ${o.a}, à ${o.rl}. Source : ${o.credit}, consulté le ${o.date}.`,
-    q3: (a, b) => `Combien de trains y a-t-il par jour de ${a} à ${b} ?`,
-    a3: (o) => `Dans l'horaire ${o.of}, il y a ${o.wn} trains par jour de ${o.a} à ${o.b} en semaine, ${o.sn} le samedi et ${o.un} le dimanche. De ${o.b} à ${o.a} : ${o.rwn}, ${o.rsn} et ${o.run}. Source : ${o.credit}, consulté le ${o.date}.`
+    q1: (a, b) => `À quelle heure part le premier train direct de ${a} à ${b} ?`,
+    a1: (o) => `En semaine, le premier train direct ${o.trainRest} de ${o.a} à ${o.b} part à ${o.wf} ; dans l'autre sens, le premier de ${o.b} à ${o.a} part à ${o.rf}. Source : ${o.credit}, consulté le ${o.date}. Les horaires changent selon la saison : vérifiez votre date avant de réserver.`,
+    q2: (a, b) => `À quelle heure part le dernier train direct de ${a} à ${b} ?`,
+    a2: (o) => `En semaine, le dernier train direct ${o.trainRest} de ${o.a} à ${o.b} part à ${o.wl} ; de ${o.b} à ${o.a}, à ${o.rl}. Source : ${o.credit}, consulté le ${o.date}.`,
+    q3: (a, b) => `Combien de trains directs y a-t-il par jour de ${a} à ${b} ?`,
+    a3: (o) => `Dans l'horaire ${o.of}, il y a ${o.wn} trains directs par jour de ${o.a} à ${o.b} en semaine, ${o.sn} le samedi et ${o.un} le dimanche. De ${o.b} à ${o.a} : ${o.rwn}, ${o.rsn} et ${o.run}. Source : ${o.credit}, consulté le ${o.date}.`
   },
   it: {
-    q1: (a, b) => `A che ora parte il primo treno da ${a} a ${b}?`,
-    a1: (o) => `Nei giorni feriali, il primo ${o.train} da ${o.a} a ${o.b} parte alle ${o.wf}; nel senso opposto, il primo da ${o.b} a ${o.a} parte alle ${o.rf}. Fonte: ${o.credit}, consultato il ${o.date}. Gli orari cambiano con la stagione, quindi controlla la tua data prima di prenotare.`,
-    q2: (a, b) => `A che ora parte l'ultimo treno da ${a} a ${b}?`,
-    a2: (o) => `Nei giorni feriali, l'ultimo ${o.train} da ${o.a} a ${o.b} parte alle ${o.wl}; da ${o.b} a ${o.a}, alle ${o.rl}. Fonte: ${o.credit}, consultato il ${o.date}.`,
-    q3: (a, b) => `Quanti treni al giorno ci sono da ${a} a ${b}?`,
-    a3: (o) => `Nell'orario ${o.of} ci sono ${o.wn} treni al giorno da ${o.a} a ${o.b} nei feriali, ${o.sn} il sabato e ${o.un} la domenica. Da ${o.b} a ${o.a}: ${o.rwn}, ${o.rsn} e ${o.run}. Fonte: ${o.credit}, consultato il ${o.date}.`
+    q1: (a, b) => `A che ora parte il primo treno diretto da ${a} a ${b}?`,
+    a1: (o) => `Nei giorni feriali, il primo treno diretto ${o.trainRest} da ${o.a} a ${o.b} parte alle ${o.wf}; nel senso opposto, il primo da ${o.b} a ${o.a} parte alle ${o.rf}. Fonte: ${o.credit}, consultato il ${o.date}. Gli orari cambiano con la stagione, quindi controlla la tua data prima di prenotare.`,
+    q2: (a, b) => `A che ora parte l'ultimo treno diretto da ${a} a ${b}?`,
+    a2: (o) => `Nei giorni feriali, l'ultimo treno diretto ${o.trainRest} da ${o.a} a ${o.b} parte alle ${o.wl}; da ${o.b} a ${o.a}, alle ${o.rl}. Fonte: ${o.credit}, consultato il ${o.date}.`,
+    q3: (a, b) => `Quanti treni diretti al giorno ci sono da ${a} a ${b}?`,
+    a3: (o) => `Nell'orario ${o.of} ci sono ${o.wn} treni diretti al giorno da ${o.a} a ${o.b} nei feriali, ${o.sn} il sabato e ${o.un} la domenica. Da ${o.b} a ${o.a}: ${o.rwn}, ${o.rsn} e ${o.run}. Fonte: ${o.credit}, consultato il ${o.date}.`
   },
   ja: {
-    q1: (a, b) => `${a}から${b}への始発は何時ですか？`,
-    a1: (o) => `平日、${o.a}から${o.b}への${o.train}の始発は${o.wf}発で、逆方向の${o.b}から${o.a}への始発は${o.rf}発です。出典：${o.credit}、${o.date}に確認。時刻は季節によって変わるため、予約前にご自分の日付を確認してください。`,
-    q2: (a, b) => `${a}から${b}への終電は何時ですか？`,
-    a2: (o) => `平日、${o.a}から${o.b}への${o.train}の最終便は${o.wl}発で、${o.b}から${o.a}へは${o.rl}発です。出典：${o.credit}、${o.date}に確認。`,
-    q3: (a, b) => `${a}から${b}まで1日に何本ありますか？`,
-    a3: (o) => `${o.op}の時刻表では、${o.a}から${o.b}まで平日は1日${o.wn}本、土曜は${o.sn}本、日曜は${o.un}本です。${o.b}から${o.a}へは${o.rwn}本、${o.rsn}本、${o.run}本です。出典：${o.credit}、${o.date}に確認。`
+    q1: (a, b) => `${a}から${b}への直通列車の始発は何時ですか？`,
+    a1: (o) => `平日、${o.a}から${o.b}への直通の${o.train}の始発は${o.wf}発で、逆方向の${o.b}から${o.a}への始発は${o.rf}発です。出典：${o.credit}、${o.date}に確認。時刻は季節によって変わるため、予約前にご自分の日付を確認してください。`,
+    q2: (a, b) => `${a}から${b}への直通列車の終電は何時ですか？`,
+    a2: (o) => `平日、${o.a}から${o.b}への直通の${o.train}の最終便は${o.wl}発で、${o.b}から${o.a}へは${o.rl}発です。出典：${o.credit}、${o.date}に確認。`,
+    q3: (a, b) => `${a}から${b}まで直通列車は1日に何本ありますか？`,
+    a3: (o) => `${o.op}の時刻表では、${o.a}から${o.b}まで直通列車は平日1日${o.wn}本、土曜は${o.sn}本、日曜は${o.un}本です。${o.b}から${o.a}へは${o.rwn}本、${o.rsn}本、${o.run}本です。出典：${o.credit}、${o.date}に確認。`
   }
 };
 const stat = { done: 0, had: 0 };
@@ -100,12 +104,19 @@ for (const [slug, r] of Object.entries(DATA.routes)) {
     let html = fs.readFileSync(file, 'utf8');
     const a = nm(lang, R.from), b = nm(lang, R.to);
     const o = {
-      a, b, train: SRC[src].train[lang], op: SRC[src].op[lang], of: (SRC[src].of || {})[lang] || SRC[src].op[lang], credit: SRC[src].credit[lang], date: DATE[lang],
+      a, b, train: SRC[src].train[lang], trainRest: SRC[src].train[lang].replace(/^(tren|train|treno) /, ''), op: SRC[src].op[lang], of: (SRC[src].of || {})[lang] || SRC[src].op[lang], credit: SRC[src].credit[lang], date: DATE[lang],
       wf: tm(lang, one(dirA, 'weekday').first), wl: tm(lang, one(dirA, 'weekday').last), rf: tm(lang, one(dirB, 'weekday').first), rl: tm(lang, one(dirB, 'weekday').last),
       wn: one(dirA, 'weekday').n, sn: one(dirA, 'saturday').n, un: one(dirA, 'sunday').n, rwn: one(dirB, 'weekday').n, rsn: one(dirB, 'saturday').n, run: one(dirB, 'sunday').n
     };
     const t = T[lang];
-    const items = [{ q: t.q1(a, b), a: t.a1(o) }, { q: t.q2(a, b), a: t.a2(o) }, { q: t.q3(a, b), a: t.a3(o) }].filter((x) => !html.includes(`>${esc(x.q)}<`));
+    // regenerar: se retira lo inyectado antes (bloques data-more="2" y sus preguntas del marcado, que son las que citan la fecha de consulta)
+    html = html.replace(/\n      <div class="faq-item" data-more="2">[\s\S]*?<\/div>/g, '');
+    html = html.replace(/<script type="application\/ld\+json">(.*?)<\/script>/s, (all, body) => {
+      try { const d = JSON.parse(body); const fp = d['@graph'].find((n) => n['@type'] === 'FAQPage'); if (!fp) return all;
+        fp.mainEntity = fp.mainEntity.filter((q) => !(q.acceptedAnswer && q.acceptedAnswer.text.includes(DATE[lang])));
+        return '<script type="application/ld+json">' + JSON.stringify(d) + '</script>'; } catch (e) { return all; }
+    });
+    const items = [{ q: t.q1(a, b), a: t.a1(o) }, { q: t.q2(a, b), a: t.a2(o) }, { q: t.q3(a, b), a: t.a3(o) }];
     if (!items.length) { stat.had++; continue; }
     const i = html.indexOf('<section class="faq">'); if (i < 0) continue;
     const end = html.indexOf('</section>', i);

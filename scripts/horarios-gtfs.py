@@ -17,6 +17,7 @@ SOURCES = {
     'db': {'zip': 'db/fv_free.zip', 'name': 'DELFI e.V. / GTFS.de', 'license': 'CC BY 4.0', 'url': 'https://gtfs.de'},
     'eurostar': {'zip': 'eurostar/eurostar_gtfs.zip', 'name': 'Eurostar International Ltd', 'license': 'Licence Ouverte 2.0', 'url': 'https://transport.data.gouv.fr/datasets/eurostar-gtfs-plan-de-transport-et-temps-reel'},
     'sncf': {'zip': 'sncf/sncf_gtfs.zip', 'name': 'SNCF Voyageurs', 'license': 'ODbL 1.0', 'url': 'https://transport.data.gouv.fr/datasets/horaires-sncf', 'private': True},
+    'sbb': {'zip': 'sbb/sbb_gtfs.zip', 'name': 'SBB / opentransportdata.swiss', 'license': 'datos abiertos de opentransportdata.swiss', 'url': 'https://opentransportdata.swiss', 'descs': {'IC', 'IR', 'RE', 'EC', 'ICE', 'TGV', 'RJX', 'RJ', 'NJ', 'EN', 'PE', 'GEX'}},
     'renfe_ld': {'zip': 'renfe_ld/renfe_av_ld.zip', 'name': 'Renfe', 'license': 'CC BY 4.0', 'url': 'https://data.renfe.com/dataset/horarios-de-alta-velocidad-larga-distancia-y-media-distancia', 'short_names': {'AVE', 'AVLO', 'ALVIA', 'EUROMED', 'INTERCITY'}},
     'renfe': {'zip': 'renfe/renfe_ave_int.zip', 'name': 'Renfe Viajeros', 'license': 'Licence Ouverte 2.0', 'url': 'https://transport.data.gouv.fr/datasets/horaires-ave-espagne-france'},
 }
@@ -32,6 +33,7 @@ ALIAS = {
     'Rotterdam': ['rotterdam'], 'Antwerp': ['antwerpen'], 'Lille': ['lille'], 'Avignon': ['avignon'], 'Montpellier': ['montpellier'],
     'Warsaw': ['warszawa'], 'Seville': ['sevilla'], 'Valencia': ['valencia'], 'Malaga': ['malaga'], 'Cordoba': ['cordoba'], 'Alicante': ['alicante'], 'Bilbao': ['bilbao'], 'Granada': ['granada'], 'Bern': ['bern '], 'Geneva': ['geneve', 'geneva'], 'Mainz': ['mainz'], 'Aachen': ['aachen'],
 }
+SWISS = {'Zurich', 'Geneva', 'Basel', 'Bern', 'Lucerne', 'Interlaken', 'Zermatt', 'Montreux', 'St. Moritz', 'Lausanne', 'Lugano', 'Lauterbrunnen', 'Chur'}
 GERMAN = {'Berlin','Hamburg','Munich','Frankfurt','Cologne','Dortmund','Stuttgart','Nuremberg','Dresden','Leipzig','Hannover','Mainz','Aachen'}
 # Solo se publica lo que es completo para el operador citado: Eurostar (todos sus pares) y larga distancia dentro de Alemania (DB/DELFI).
 # Renfe (solo trenes internacionales) y los pares de Austria/Chequia/Hungría del feed alemán NO se publican: darían recuentos falsos.
@@ -39,8 +41,14 @@ def allowed(key, a, b):
     if key == 'eurostar': return True
     if key == 'db': return a in GERMAN and b in GERMAN
     if key == 'sncf': return True
+    if key == 'sbb': return a in SWISS and b in SWISS   # los trenes internacionales vienen partidos en tramos en este feed: solo pares dentro de Suiza
     if key == 'renfe_ld': return {a, b} not in ({'Barcelona', 'Girona'}, {'Girona', 'Figueres'})   # ahí dominan los regionales (Rodalies), que este archivo no incluye
     return False
+SBB_STATIONS = {
+    'zurich hb': 'Zurich', 'geneve': 'Geneva', 'basel sbb': 'Basel', 'bern': 'Bern', 'luzern': 'Lucerne', 'interlaken ost': 'Interlaken', 'zermatt': 'Zermatt',
+    'montreux': 'Montreux', 'st. moritz': 'St. Moritz', 'lausanne': 'Lausanne', 'lugano': 'Lugano', 'lauterbrunnen': 'Lauterbrunnen', 'chur': 'Chur',
+    'milano centrale': 'Milan', 'paris gare de lyon': 'Paris', 'munchen hbf': 'Munich', 'wien hbf': 'Vienna', 'frankfurt (main) hbf': 'Frankfurt', 'stuttgart hbf': 'Stuttgart', 'venezia s. lucia': 'Venice',
+}
 SNCF_STATIONS = {  # nombre normalizado de la estación -> ciudad (evita falsos como "Orleans Avenue de Paris")
     'paris est': 'Paris', 'paris gare de lyon hall 1 - 2': 'Paris', 'paris gare du nord': 'Paris', 'paris montparnasse hall 1 - 2': 'Paris', 'paris austerlitz': 'Paris',
     'lyon part dieu': 'Lyon', 'lyon perrache': 'Lyon', 'marseille saint-charles': 'Marseille', 'nice-ville': 'Nice', 'bordeaux saint-jean': 'Bordeaux',
@@ -78,16 +86,27 @@ meta = {}
 for key, src in SOURCES.items():
     z = zipfile.ZipFile(f"{DATA}/{src['zip']}")
     stops_rows = rd(z, 'stops.txt')
-    stops = {s['stop_id']: (SNCF_STATIONS.get(norm(s['stop_name'])) if key == 'sncf' else city_of(s['stop_name'])) for s in stops_rows}
+    stops = {s['stop_id']: (SNCF_STATIONS.get(norm(s['stop_name'])) if key == 'sncf' else SBB_STATIONS.get(norm(s['stop_name'])) if key == 'sbb' else city_of(s['stop_name'])) for s in stops_rows}
     shift = {s['stop_id']: (-3600 if (key == 'eurostar' and s.get('stop_timezone') == 'Europe/London') else 0) for s in stops_rows}
     cal = {r['service_id']: r for r in rd(z, 'calendar.txt')}
+    refset = {d.strftime('%Y%m%d') for d in REF.values()}
     cd = collections.defaultdict(dict)
-    for r in rd(z, 'calendar_dates.txt'): cd[r['service_id']][r['date']] = r['exception_type']
-    trips = {t['trip_id']: t['service_id'] for t in rd(z, 'trips.txt')}
+    with z.open('calendar_dates.txt') as f:   # solo los días de referencia (el archivo suizo pesa cientos de MB)
+        rdr = csv.reader(io.TextIOWrapper(f, encoding='utf-8-sig'))
+        h = [x.strip() for x in next(rdr)]; i_s, i_d, i_e = h.index('service_id'), h.index('date'), h.index('exception_type')
+        for row in rdr:
+            if row[i_d].strip() in refset: cd[row[i_s].strip()][row[i_d].strip()] = row[i_e].strip()
+    ok_routes = None
     if 'short_names' in src:
-        rn = {r['route_id']: r.get('route_short_name', '').upper() for r in rd(z, 'routes.txt')}
-        keep = {t['trip_id'] for t in rd(z, 'trips.txt') if rn.get(t['route_id']) in src['short_names']}
-        trips = {k: v for k, v in trips.items() if k in keep}
+        ok_routes = {r['route_id'] for r in rd(z, 'routes.txt') if r.get('route_short_name', '').upper() in src['short_names']}
+    if 'descs' in src:
+        ok_routes = {r['route_id'] for r in rd(z, 'routes.txt') if r.get('route_desc', '').upper() in src['descs']}
+    trips = {}
+    with z.open('trips.txt') as f:
+        rdr = csv.reader(io.TextIOWrapper(f, encoding='utf-8-sig'))
+        h = [x.strip() for x in next(rdr)]; i_r, i_s, i_t = h.index('route_id'), h.index('service_id'), h.index('trip_id')
+        for row in rdr:
+            if ok_routes is None or row[i_r].strip() in ok_routes: trips[row[i_t].strip()] = row[i_s].strip()
     def active(service, day):
         d = day.strftime('%Y%m%d')
         e = cd.get(service, {}).get(d)
@@ -100,12 +119,16 @@ for key, src in SOURCES.items():
     # paradas por viaje, solo las que son de una ciudad conocida
     per_trip = collections.defaultdict(list)
     with z.open('stop_times.txt') as f:
-        for r in csv.DictReader(io.TextIOWrapper(f, encoding='utf-8-sig')):
-            r = {(k or '').strip(): (v or '').strip() for k, v in r.items()}
-            c = stops.get(r['stop_id'])
-            if c and r['trip_id'] in trips:
-                try: per_trip[r['trip_id']].append((int(r['stop_sequence']), c, secs(r['arrival_time'] or r['departure_time']), secs(r['departure_time'] or r['arrival_time']), shift.get(r['stop_id'], 0)))
-                except ValueError: pass
+        rdr = csv.reader(io.TextIOWrapper(f, encoding='utf-8-sig'))
+        h = [x.strip() for x in next(rdr)]
+        i_t, i_s, i_q, i_a, i_d = h.index('trip_id'), h.index('stop_id'), h.index('stop_sequence'), h.index('arrival_time'), h.index('departure_time')
+        for row in rdr:
+            tid = row[i_t].strip()
+            if tid not in trips: continue
+            sid = row[i_s].strip(); c = stops.get(sid)
+            if not c: continue
+            try: per_trip[tid].append((int(row[i_q]), c, secs((row[i_a] or row[i_d]).strip()), secs((row[i_d] or row[i_a]).strip()), shift.get(sid, 0)))
+            except ValueError: pass
     vf = vt = None
     ds = [r['start_date'] for r in cal.values()] + [d for v in cd.values() for d in v]
     de = [r['end_date'] for r in cal.values()] + [d for v in cd.values() for d in v]
@@ -135,7 +158,7 @@ for key, src in SOURCES.items():
             durs = [v[2] // 60 for v in tr.values()]
             fmt = lambda s: f"{(s // 3600) % 24:02d}:{(s % 3600) // 60:02d}" + (" (+1)" if s >= 86400 else "")
             slot.setdefault(kind, {})[key] = {'n': len(deps), 'first': fmt(deps[0]), 'last': fmt(deps[-1]), 'median_min': int(statistics.median(durs))}
-out = {'reference_week': {k: v.isoformat() for k, v in REF.items()}, 'feeds': {k: {**{kk: vv for kk, vv in SOURCES[k].items() if kk != 'short_names'}, **meta[k]} for k in SOURCES}, 'routes': {}}
+out = {'reference_week': {k: v.isoformat() for k, v in REF.items()}, 'feeds': {k: {**{kk: vv for kk, vv in SOURCES[k].items() if kk not in ('short_names', 'descs')}, **meta[k]} for k in SOURCES}, 'routes': {}}
 for slug, r in sorted(result.items()):
     out['routes'][slug] = {'sources': sorted(r['sources']), 'dirs': {k: {kk: vv for kk, vv in v.items() if kk != 'by'} for k, v in r['dirs'].items()}}
 # Los datos derivados de SNCF (ODbL, "compartir igual") NO van al archivo público del repositorio: solo al archivo completo, fuera del repo.
