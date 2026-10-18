@@ -1,0 +1,802 @@
+{
+ "reference_week": {
+  "weekday": "2026-10-20",
+  "saturday": "2026-10-24",
+  "sunday": "2026-10-25"
+ },
+ "feeds": {
+  "db": {
+   "zip": "db/fv_free.zip",
+   "name": "DELFI e.V. / GTFS.de",
+   "license": "CC BY 4.0",
+   "url": "https://gtfs.de",
+   "valid_from": "20261017",
+   "valid_to": "20261116"
+  },
+  "eurostar": {
+   "zip": "eurostar/eurostar_gtfs.zip",
+   "name": "Eurostar International Ltd",
+   "license": "Licence Ouverte 2.0",
+   "url": "https://transport.data.gouv.fr/datasets/eurostar-gtfs-plan-de-transport-et-temps-reel",
+   "valid_from": "20261016",
+   "valid_to": "20270113"
+  },
+  "renfe": {
+   "zip": "renfe/renfe_ave_int.zip",
+   "name": "Renfe Viajeros",
+   "license": "Licence Ouverte 2.0",
+   "url": "https://transport.data.gouv.fr/datasets/horaires-ave-espagne-france",
+   "valid_from": "20261017",
+   "valid_to": "20270124"
+  }
+ },
+ "routes": {
+  "amsterdam-brussels": {
+   "sources": [
+    "eurostar"
+   ],
+   "dirs": {
+    "Brussels>Amsterdam": {
+     "weekday": {
+      "eurostar": {
+       "n": 21,
+       "first": "05:53",
+       "last": "21:22",
+       "median_min": 117
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 13,
+       "first": "06:53",
+       "last": "20:53",
+       "median_min": 117
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 20,
+       "first": "08:22",
+       "last": "21:53",
+       "median_min": 117
+      }
+     }
+    },
+    "Amsterdam>Brussels": {
+     "weekday": {
+      "eurostar": {
+       "n": 20,
+       "first": "06:10",
+       "last": "21:10",
+       "median_min": 116
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 12,
+       "first": "06:10",
+       "last": "18:10",
+       "median_min": 116
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 20,
+       "first": "07:10",
+       "last": "21:10",
+       "median_min": 116
+      }
+     }
+    }
+   }
+  },
+  "berlin-hamburg": {
+   "sources": [
+    "db"
+   ],
+   "dirs": {
+    "Berlin>Hamburg": {
+     "weekday": {
+      "db": {
+       "n": 22,
+       "first": "05:19",
+       "last": "22:20",
+       "median_min": 114
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 21,
+       "first": "05:19",
+       "last": "22:20",
+       "median_min": 115
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 20,
+       "first": "05:19",
+       "last": "22:20",
+       "median_min": 114
+      }
+     }
+    },
+    "Hamburg>Berlin": {
+     "weekday": {
+      "db": {
+       "n": 22,
+       "first": "05:51",
+       "last": "21:51",
+       "median_min": 119
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 21,
+       "first": "05:51",
+       "last": "11:50 (+1)",
+       "median_min": 120
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 21,
+       "first": "05:51",
+       "last": "21:51",
+       "median_min": 119
+      }
+     }
+    }
+   }
+  },
+  "brussels-paris": {
+   "sources": [
+    "eurostar"
+   ],
+   "dirs": {
+    "Brussels>Paris": {
+     "weekday": {
+      "eurostar": {
+       "n": 34,
+       "first": "06:11",
+       "last": "21:16",
+       "median_min": 90
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 27,
+       "first": "07:02",
+       "last": "20:16",
+       "median_min": 92
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 33,
+       "first": "08:02",
+       "last": "22:13",
+       "median_min": 91
+      }
+     }
+    },
+    "Paris>Brussels": {
+     "weekday": {
+      "eurostar": {
+       "n": 35,
+       "first": "06:15",
+       "last": "21:22",
+       "median_min": 89
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 27,
+       "first": "07:08",
+       "last": "20:51",
+       "median_min": 94
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 32,
+       "first": "07:55",
+       "last": "21:40",
+       "median_min": 93
+      }
+     }
+    }
+   }
+  },
+  "cologne-brussels": {
+   "sources": [
+    "eurostar"
+   ],
+   "dirs": {
+    "Brussels>Cologne": {
+     "weekday": {
+      "eurostar": {
+       "n": 5,
+       "first": "09:25",
+       "last": "19:25",
+       "median_min": 110
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 6,
+       "first": "09:25",
+       "last": "19:25",
+       "median_min": 110
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 6,
+       "first": "11:25",
+       "last": "21:25",
+       "median_min": 110
+      }
+     }
+    },
+    "Cologne>Brussels": {
+     "weekday": {
+      "eurostar": {
+       "n": 5,
+       "first": "06:39",
+       "last": "18:44",
+       "median_min": 116
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 6,
+       "first": "06:39",
+       "last": "16:43",
+       "median_min": 116
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 7,
+       "first": "06:39",
+       "last": "18:44",
+       "median_min": 116
+      }
+     }
+    }
+   }
+  },
+  "dortmund-munich": {
+   "sources": [
+    "db"
+   ],
+   "dirs": {
+    "Munich>Dortmund": {
+     "weekday": {
+      "db": {
+       "n": 17,
+       "first": "03:39",
+       "last": "17:46",
+       "median_min": 355
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 17,
+       "first": "04:01",
+       "last": "23:56",
+       "median_min": 357
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 15,
+       "first": "05:41",
+       "last": "17:46",
+       "median_min": 353
+      }
+     }
+    },
+    "Dortmund>Munich": {
+     "weekday": {
+      "db": {
+       "n": 17,
+       "first": "04:54",
+       "last": "22:35",
+       "median_min": 353
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 17,
+       "first": "03:28",
+       "last": "18:36",
+       "median_min": 353
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 18,
+       "first": "04:06",
+       "last": "22:35",
+       "median_min": 353
+      }
+     }
+    }
+   }
+  },
+  "frankfurt-berlin": {
+   "sources": [
+    "db"
+   ],
+   "dirs": {
+    "Frankfurt>Berlin": {
+     "weekday": {
+      "db": {
+       "n": 19,
+       "first": "06:15",
+       "last": "03:31 (+1)",
+       "median_min": 267
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 18,
+       "first": "06:06",
+       "last": "03:31 (+1)",
+       "median_min": 270
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 19,
+       "first": "06:06",
+       "last": "03:31 (+1)",
+       "median_min": 270
+      }
+     }
+    },
+    "Berlin>Frankfurt": {
+     "weekday": {
+      "db": {
+       "n": 19,
+       "first": "00:15",
+       "last": "21:35",
+       "median_min": 249
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 18,
+       "first": "00:15",
+       "last": "21:35",
+       "median_min": 254
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 18,
+       "first": "00:15",
+       "last": "21:35",
+       "median_min": 254
+      }
+     }
+    }
+   }
+  },
+  "frankfurt-cologne": {
+   "sources": [
+    "db"
+   ],
+   "dirs": {
+    "Cologne>Frankfurt": {
+     "weekday": {
+      "db": {
+       "n": 36,
+       "first": "03:21",
+       "last": "03:49 (+1)",
+       "median_min": 80
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 15,
+       "first": "03:21",
+       "last": "03:49 (+1)",
+       "median_min": 139
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 16,
+       "first": "03:21",
+       "last": "03:49 (+1)",
+       "median_min": 139
+      }
+     }
+    },
+    "Frankfurt>Cologne": {
+     "weekday": {
+      "db": {
+       "n": 37,
+       "first": "04:46",
+       "last": "23:22",
+       "median_min": 82
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 12,
+       "first": "06:34",
+       "last": "20:15",
+       "median_min": 142
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 13,
+       "first": "06:34",
+       "last": "22:12",
+       "median_min": 142
+      }
+     }
+    }
+   }
+  },
+  "frankfurt-munich": {
+   "sources": [
+    "db"
+   ],
+   "dirs": {
+    "Frankfurt>Munich": {
+     "weekday": {
+      "db": {
+       "n": 31,
+       "first": "04:54",
+       "last": "02:25 (+1)",
+       "median_min": 202
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 25,
+       "first": "04:54",
+       "last": "02:45 (+1)",
+       "median_min": 203
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 25,
+       "first": "04:54",
+       "last": "02:28 (+1)",
+       "median_min": 202
+      }
+     }
+    },
+    "Munich>Frankfurt": {
+     "weekday": {
+      "db": {
+       "n": 31,
+       "first": "04:41",
+       "last": "22:55",
+       "median_min": 197
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 24,
+       "first": "04:41",
+       "last": "22:48",
+       "median_min": 192
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 24,
+       "first": "05:44",
+       "last": "22:55",
+       "median_min": 192
+      }
+     }
+    }
+   }
+  },
+  "london-amsterdam": {
+   "sources": [
+    "eurostar"
+   ],
+   "dirs": {
+    "London>Amsterdam": {
+     "weekday": {
+      "eurostar": {
+       "n": 5,
+       "first": "06:16",
+       "last": "18:04",
+       "median_min": 256
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 2,
+       "first": "11:04",
+       "last": "15:04",
+       "median_min": 256
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 4,
+       "first": "08:16",
+       "last": "18:04",
+       "median_min": 256
+      }
+     }
+    },
+    "Amsterdam>London": {
+     "weekday": {
+      "eurostar": {
+       "n": 5,
+       "first": "06:40",
+       "last": "18:40",
+       "median_min": 257
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 1,
+       "first": "08:40",
+       "last": "08:40",
+       "median_min": 287
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 4,
+       "first": "08:40",
+       "last": "18:40",
+       "median_min": 287
+      }
+     }
+    }
+   }
+  },
+  "london-brussels": {
+   "sources": [
+    "eurostar"
+   ],
+   "dirs": {
+    "London>Brussels": {
+     "weekday": {
+      "eurostar": {
+       "n": 10,
+       "first": "06:16",
+       "last": "19:34",
+       "median_min": 121
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 10,
+       "first": "07:04",
+       "last": "19:34",
+       "median_min": 121
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 9,
+       "first": "08:16",
+       "last": "19:34",
+       "median_min": 121
+      }
+     }
+    },
+    "Brussels>London": {
+     "weekday": {
+      "eurostar": {
+       "n": 10,
+       "first": "07:56",
+       "last": "20:56",
+       "median_min": 123
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 9,
+       "first": "07:56",
+       "last": "20:26",
+       "median_min": 121
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 10,
+       "first": "08:52",
+       "last": "21:21",
+       "median_min": 123
+      }
+     }
+    }
+   }
+  },
+  "munich-berlin": {
+   "sources": [
+    "db"
+   ],
+   "dirs": {
+    "Munich>Berlin": {
+     "weekday": {
+      "db": {
+       "n": 32,
+       "first": "05:17",
+       "last": "23:21",
+       "median_min": 291
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 30,
+       "first": "05:17",
+       "last": "22:48",
+       "median_min": 293
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 29,
+       "first": "04:47",
+       "last": "23:21",
+       "median_min": 296
+      }
+     }
+    },
+    "Berlin>Munich": {
+     "weekday": {
+      "db": {
+       "n": 32,
+       "first": "05:35",
+       "last": "23:36",
+       "median_min": 273
+      }
+     },
+     "saturday": {
+      "db": {
+       "n": 30,
+       "first": "05:35",
+       "last": "21:35",
+       "median_min": 273
+      }
+     },
+     "sunday": {
+      "db": {
+       "n": 29,
+       "first": "05:35",
+       "last": "23:36",
+       "median_min": 274
+      }
+     }
+    }
+   }
+  },
+  "paris-amsterdam": {
+   "sources": [
+    "eurostar"
+   ],
+   "dirs": {
+    "Paris>Amsterdam": {
+     "weekday": {
+      "eurostar": {
+       "n": 15,
+       "first": "06:15",
+       "last": "19:20",
+       "median_min": 215
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 9,
+       "first": "07:08",
+       "last": "19:10",
+       "median_min": 220
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 13,
+       "first": "07:55",
+       "last": "20:12",
+       "median_min": 218
+      }
+     }
+    },
+    "Amsterdam>Paris": {
+     "weekday": {
+      "eurostar": {
+       "n": 14,
+       "first": "06:10",
+       "last": "19:10",
+       "median_min": 214
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 10,
+       "first": "06:10",
+       "last": "18:10",
+       "median_min": 215
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 13,
+       "first": "08:10",
+       "last": "20:10",
+       "median_min": 215
+      }
+     }
+    }
+   }
+  },
+  "paris-london": {
+   "sources": [
+    "eurostar"
+   ],
+   "dirs": {
+    "London>Paris": {
+     "weekday": {
+      "eurostar": {
+       "n": 16,
+       "first": "06:01",
+       "last": "20:01",
+       "median_min": 148
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 15,
+       "first": "06:31",
+       "last": "20:01",
+       "median_min": 148
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 17,
+       "first": "08:01",
+       "last": "20:31",
+       "median_min": 148
+      }
+     }
+    },
+    "Paris>London": {
+     "weekday": {
+      "eurostar": {
+       "n": 17,
+       "first": "07:02",
+       "last": "21:02",
+       "median_min": 148
+      }
+     },
+     "saturday": {
+      "eurostar": {
+       "n": 14,
+       "first": "07:02",
+       "last": "19:58",
+       "median_min": 148
+      }
+     },
+     "sunday": {
+      "eurostar": {
+       "n": 18,
+       "first": "08:02",
+       "last": "20:58",
+       "median_min": 149
+      }
+     }
+    }
+   }
+  }
+ }
+}
