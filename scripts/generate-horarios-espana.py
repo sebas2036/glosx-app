@@ -36,8 +36,8 @@ rows.sort(key=lambda t: (t[0], t[1]))
 
 with open(os.path.join(ROOT, 'assets/data/horarios-espana.csv'), 'w', encoding='utf8', newline='') as f:
     wr = csv.writer(f)
-    wr.writerow(['ruta', 'origen', 'destino', 'dia', 'primer_tren', 'ultimo_tren', 'trenes_directos', 'duracion_mediana_min'])
-    wr.writerows(csv_rows)
+    wr.writerow(['ruta', 'origen', 'destino', 'dia', 'primer_tren', 'ultimo_tren', 'trenes_directos', 'duracion_mediana_min', 'fuente', 'licencia', 'url'])
+    wr.writerows([r + ['Renfe (horarios abiertos), procesado por glosx.app', 'CC BY 4.0', 'https://glosx.app/horarios-trenes-espana/'] for r in csv_rows])
 
 tr = ''
 for a, b, slug, w, s, u in rows:
@@ -49,7 +49,7 @@ head = tpl[:tpl.index('<nav>')]
 nav = '<nav>\n    <a href="/es/">WoW Train</a>\n    <div class="nav-right"><a href="/es/rutas/" style="font-weight:600;text-decoration:none;color:inherit">&larr; Todas las rutas</a></div>\n  </nav>'
 foot = tpl[tpl.index('<footer>'):tpl.index('</footer>') + 9]
 TITLE = 'Horarios de trenes en España con datos abiertos de Renfe · glosx.app'
-DESC = ('Primer tren, último tren y trenes directos al día de %d trayectos de alta velocidad y larga distancia de Renfe, '
+DESC = ('glosx.app: primer tren, último tren y trenes directos al día de %d trayectos de alta velocidad y larga distancia de Renfe, '
         'con datos abiertos (CC BY 4.0). Tabla y CSV descargables.' % len(rows))
 URL = 'https://glosx.app/horarios-trenes-espana/'
 head = re.sub(r'<title>.*?</title>', '<title>%s</title>' % TITLE, head)
@@ -62,9 +62,9 @@ head = re.sub(r'<meta property="og:url"[^>]*>', '<meta property="og:url" content
 head = re.sub(r'<meta name="twitter:title"[^>]*>', '<meta name="twitter:title" content="%s" />' % TITLE, head)
 head = re.sub(r'<meta name="twitter:description"[^>]*>', '<meta name="twitter:description" content="%s" />' % DESC, head)
 ld = {
-    '@context': 'https://schema.org', '@type': 'Dataset', 'name': 'Horarios de trenes de alta velocidad y larga distancia en España (primer tren, último tren y frecuencia)',
+    '@context': 'https://schema.org', '@type': 'Dataset', 'name': 'glosx.app · Horarios de trenes de alta velocidad y larga distancia en España (primer tren, último tren y frecuencia)',
     'description': DESC, 'url': URL, 'inLanguage': 'es', 'license': 'https://creativecommons.org/licenses/by/4.0/',
-    'isBasedOn': FEED['url'], 'creator': {'@type': 'Organization', 'name': 'glosx.app', 'url': 'https://glosx.app/'},
+    'isBasedOn': FEED['url'], 'creator': {'@type': 'Organization', 'name': 'glosx.app', 'url': 'https://glosx.app/'}, 'publisher': {'@type': 'Organization', 'name': 'glosx.app', 'url': 'https://glosx.app/'}, 'citation': 'Renfe (horarios abiertos, CC BY 4.0), procesados por glosx.app',
     'temporalCoverage': '2026-10-20/2026-10-25', 'spatialCoverage': {'@type': 'Country', 'name': 'España'},
     'distribution': [{'@type': 'DataDownload', 'encodingFormat': 'text/csv', 'contentUrl': 'https://glosx.app/assets/data/horarios-espana.csv'}],
 }
@@ -75,8 +75,8 @@ head = head.replace('</head>', '<script type="application/ld+json">%s</script>\n
     '.hx td:nth-child(n+3){font-variant-numeric:tabular-nums}.hx tr:last-child td{border-bottom:0}.hx a{color:#C10016}.hx .cita{background:#faf8f5;border-radius:12px;padding:14px 16px;font-size:14px}\n'
     '</style>\n</head>' % json.dumps(ld, ensure_ascii=False))
 body = '''<header>
-    <h1>Horarios de trenes en España con datos abiertos</h1>
-    <p>Primer tren, último tren y trenes directos al día de %d trayectos de alta velocidad y larga distancia de Renfe, calculados a partir de su horario abierto.</p>
+    <h1>Horarios de trenes en España con datos abiertos <span style="color:#C10016">· glosx.app</span></h1>
+    <p>Primer tren, último tren y trenes directos al día de %d trayectos de alta velocidad y larga distancia de Renfe, calculados por glosx.app a partir de su horario abierto.</p>
   </header>
   <main class="hx">
     <div class="tw"><table>
@@ -84,17 +84,18 @@ body = '''<header>
       <tbody>
 %s      </tbody>
     </table></div>
-    <p><a href="/assets/data/horarios-espana.csv" download>Descargar los datos en CSV</a> (una fila por trayecto, sentido y tipo de día).</p>
+    <p style="font-size:13px;color:#6b6c75;margin-top:8px">Fuente: glosx.app a partir de los horarios abiertos de Renfe (CC BY 4.0).</p>
+    <p><a href="/assets/data/horarios-espana.csv" download>Descargar los datos en CSV de glosx.app</a> (una fila por trayecto, sentido y tipo de día; cada fila indica su fuente).</p>
     <h2>Cómo se han calculado</h2>
     <ul>
-      <li><strong>Fuente:</strong> <a href="%s" rel="noopener">horarios abiertos de Renfe (alta velocidad, larga distancia y media distancia)</a>, publicados bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="noopener">CC BY 4.0</a>. El archivo es válido del %s al %s.</li>
+      <li><strong>Fuente y tratamiento:</strong> glosx.app procesa el horario abierto de Renfe: <a href="%s" rel="noopener">alta velocidad, larga distancia y media distancia</a>, publicados bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="noopener">CC BY 4.0</a>. El archivo es válido del %s al %s.</li>
       <li><strong>Semana de referencia:</strong> del 20 al 25 de octubre de 2026 (laborable = martes 20, sábado 24, domingo 25). Consultado el 17 de octubre de 2026.</li>
       <li><strong>Qué cuenta:</strong> trenes directos que paran en las dos ciudades en ese sentido: AVE, AVLO, Alvia, Avant e Intercity. Sin Cercanías ni media distancia lenta.</li>
       <li><strong>Qué no incluye:</strong> otros operadores (Ouigo, Iryo), por eso hay más salidas en el mercado que las de esta tabla. Los horarios cambian por temporada: confirma tu fecha antes de reservar.</li>
       <li><strong>Duración típica:</strong> mediana de los trenes del día laborable.</li>
     </ul>
     <h2>Cómo citar estos datos</h2>
-    <p class="cita">Datos de horarios: Renfe (horarios abiertos, CC BY 4.0), procesados por glosx.app, <a href="%s">%s</a>.</p>
+    <p class="cita">Datos de horarios: Renfe (horarios abiertos, CC BY 4.0), procesados por <strong>glosx.app</strong>, <a href="%s">%s</a>.</p>
     <p>Cada trayecto tiene su guía con mapa, horarios y reserva en <a href="/es/rutas/">todas las rutas</a>.</p>
   </main>
   ''' % (len(rows), tr, FEED['url'], fecha(FEED['valid_from']), fecha(FEED['valid_to']), URL, URL)
