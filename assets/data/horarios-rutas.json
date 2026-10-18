@@ -1462,6 +1462,656 @@
      }
     }
    }
+  },
+  "alicante-madrid": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Madrid>Alicante": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 16,
+       "first": "06:15",
+       "last": "20:00",
+       "median_min": 150,
+       "min_min": 143
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 17,
+       "first": "06:15",
+       "last": "20:00",
+       "median_min": 148,
+       "min_min": 140
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 17,
+       "first": "06:15",
+       "last": "20:00",
+       "median_min": 148,
+       "min_min": 137
+      }
+     }
+    },
+    "Alicante>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 15,
+       "first": "05:50",
+       "last": "21:05",
+       "median_min": 152,
+       "min_min": 148
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 13,
+       "first": "07:24",
+       "last": "21:05",
+       "median_min": 152,
+       "min_min": 143
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 17,
+       "first": "07:24",
+       "last": "21:05",
+       "median_min": 150,
+       "min_min": 138
+      }
+     }
+    }
+   }
+  },
+  "barcelona-seville": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Barcelona>Seville": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 2,
+       "first": "08:30",
+       "last": "15:41",
+       "median_min": 382,
+       "min_min": 377
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 2,
+       "first": "08:30",
+       "last": "15:41",
+       "median_min": 382,
+       "min_min": 377
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 2,
+       "first": "08:30",
+       "last": "15:41",
+       "median_min": 382,
+       "min_min": 377
+      }
+     }
+    },
+    "Seville>Barcelona": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 2,
+       "first": "08:37",
+       "last": "16:17",
+       "median_min": 389,
+       "min_min": 377
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 2,
+       "first": "08:37",
+       "last": "16:17",
+       "median_min": 389,
+       "min_min": 377
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 2,
+       "first": "08:37",
+       "last": "16:17",
+       "median_min": 389,
+       "min_min": 377
+      }
+     }
+    }
+   }
+  },
+  "madrid-cordoba": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Cordoba>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 36,
+       "first": "06:47",
+       "last": "21:58",
+       "median_min": 115,
+       "min_min": 105
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 32,
+       "first": "06:47",
+       "last": "21:58",
+       "median_min": 115,
+       "min_min": 105
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 38,
+       "first": "06:47",
+       "last": "21:58",
+       "median_min": 116,
+       "min_min": 105
+      }
+     }
+    },
+    "Madrid>Cordoba": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 35,
+       "first": "07:00",
+       "last": "20:35",
+       "median_min": 105,
+       "min_min": 104
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 33,
+       "first": "07:00",
+       "last": "21:05",
+       "median_min": 106,
+       "min_min": 104
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 35,
+       "first": "07:05",
+       "last": "21:05",
+       "median_min": 105,
+       "min_min": 104
+      }
+     }
+    }
+   }
+  },
+  "madrid-granada": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Granada>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 5,
+       "first": "06:09",
+       "last": "18:05",
+       "median_min": 214,
+       "min_min": 207
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 5,
+       "first": "06:50",
+       "last": "18:05",
+       "median_min": 216,
+       "min_min": 214
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 5,
+       "first": "06:50",
+       "last": "18:05",
+       "median_min": 216,
+       "min_min": 214
+      }
+     }
+    },
+    "Madrid>Granada": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 5,
+       "first": "07:20",
+       "last": "19:50",
+       "median_min": 214,
+       "min_min": 203
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 5,
+       "first": "07:20",
+       "last": "19:50",
+       "median_min": 214,
+       "min_min": 203
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 5,
+       "first": "07:20",
+       "last": "19:50",
+       "median_min": 214,
+       "min_min": 203
+      }
+     }
+    }
+   }
+  },
+  "madrid-salamanca": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Salamanca>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 4,
+       "first": "06:25",
+       "last": "18:35",
+       "median_min": 100,
+       "min_min": 97
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 3,
+       "first": "08:25",
+       "last": "18:35",
+       "median_min": 101,
+       "min_min": 100
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 3,
+       "first": "08:25",
+       "last": "18:35",
+       "median_min": 101,
+       "min_min": 100
+      }
+     }
+    },
+    "Madrid>Salamanca": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 4,
+       "first": "08:50",
+       "last": "21:11",
+       "median_min": 100,
+       "min_min": 97
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 3,
+       "first": "10:30",
+       "last": "21:11",
+       "median_min": 101,
+       "min_min": 100
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 3,
+       "first": "10:30",
+       "last": "21:11",
+       "median_min": 101,
+       "min_min": 100
+      }
+     }
+    }
+   }
+  },
+  "madrid-segovia": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Segovia>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 38,
+       "first": "06:50",
+       "last": "21:58",
+       "median_min": 28,
+       "min_min": 25
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 26,
+       "first": "08:32",
+       "last": "21:58",
+       "median_min": 28,
+       "min_min": 26
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 28,
+       "first": "08:32",
+       "last": "21:58",
+       "median_min": 28,
+       "min_min": 25
+      }
+     }
+    },
+    "Madrid>Segovia": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 38,
+       "first": "06:30",
+       "last": "21:30",
+       "median_min": 27,
+       "min_min": 25
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 24,
+       "first": "06:30",
+       "last": "21:30",
+       "median_min": 27,
+       "min_min": 25
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 26,
+       "first": "06:55",
+       "last": "21:30",
+       "median_min": 27,
+       "min_min": 25
+      }
+     }
+    }
+   }
+  },
+  "madrid-toledo": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Madrid>Toledo": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 19,
+       "first": "06:45",
+       "last": "20:45",
+       "median_min": 34,
+       "min_min": 34
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 14,
+       "first": "08:15",
+       "last": "20:45",
+       "median_min": 34,
+       "min_min": 34
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 12,
+       "first": "08:15",
+       "last": "20:45",
+       "median_min": 34,
+       "min_min": 34
+      }
+     }
+    },
+    "Toledo>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 19,
+       "first": "06:25",
+       "last": "21:37",
+       "median_min": 34,
+       "min_min": 34
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 12,
+       "first": "09:25",
+       "last": "21:37",
+       "median_min": 34,
+       "min_min": 34
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 14,
+       "first": "09:25",
+       "last": "21:37",
+       "median_min": 34,
+       "min_min": 34
+      }
+     }
+    }
+   }
+  },
+  "malaga-barcelona": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Barcelona>Malaga": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 1,
+       "first": "08:30",
+       "last": "08:30",
+       "median_min": 401,
+       "min_min": 401
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 1,
+       "first": "08:30",
+       "last": "08:30",
+       "median_min": 401,
+       "min_min": 401
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 1,
+       "first": "08:30",
+       "last": "08:30",
+       "median_min": 401,
+       "min_min": 401
+      }
+     }
+    },
+    "Malaga>Barcelona": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 1,
+       "first": "15:50",
+       "last": "15:50",
+       "median_min": 429,
+       "min_min": 429
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 1,
+       "first": "15:50",
+       "last": "15:50",
+       "median_min": 429,
+       "min_min": 429
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 1,
+       "first": "15:50",
+       "last": "15:50",
+       "median_min": 429,
+       "min_min": 429
+      }
+     }
+    }
+   }
+  },
+  "santiago-madrid": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Santiago de Compostela>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 9,
+       "first": "05:47",
+       "last": "20:05",
+       "median_min": 182,
+       "min_min": 177
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 6,
+       "first": "05:47",
+       "last": "16:26",
+       "median_min": 182,
+       "min_min": 177
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 5,
+       "first": "10:49",
+       "last": "20:05",
+       "median_min": 182,
+       "min_min": 180
+      }
+     }
+    },
+    "Madrid>Santiago de Compostela": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 8,
+       "first": "06:30",
+       "last": "20:23",
+       "median_min": 187,
+       "min_min": 182
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 4,
+       "first": "06:30",
+       "last": "18:06",
+       "median_min": 192,
+       "min_min": 182
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 7,
+       "first": "10:04",
+       "last": "20:23",
+       "median_min": 182,
+       "min_min": 182
+      }
+     }
+    }
+   }
+  },
+  "seville-cordoba": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Seville>Cordoba": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 32,
+       "first": "06:05",
+       "last": "21:36",
+       "median_min": 42,
+       "min_min": 40
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 27,
+       "first": "06:05",
+       "last": "20:52",
+       "median_min": 43,
+       "min_min": 40
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 29,
+       "first": "06:05",
+       "last": "20:52",
+       "median_min": 42,
+       "min_min": 40
+      }
+     }
+    },
+    "Cordoba>Seville": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 31,
+       "first": "06:20",
+       "last": "21:52",
+       "median_min": 53,
+       "min_min": 52
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 27,
+       "first": "08:13",
+       "last": "23:03",
+       "median_min": 53,
+       "min_min": 52
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 28,
+       "first": "08:13",
+       "last": "23:03",
+       "median_min": 53,
+       "min_min": 52
+      }
+     }
+    }
+   }
   }
  }
 }

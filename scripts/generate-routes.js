@@ -348,6 +348,96 @@ const routes = [
       it: 'La maggior parte di questa linea attraversa le pianure de La Mancha, il che significa pochissime curve e lunghi tratti in cui il treno può mantenere quasi la sua velocità massima — uno dei motivi per cui copre i circa 300 km in ben meno di due ore, una delle velocità medie più alte dell\'intera rete AVE spagnola.'
     }
   },
+  { slug: 'alicante-madrid', from: 'Alicante', to: 'Madrid', country: 'Spain', duration: '2h 30m', operator: 'Renfe AVE', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Alicante to Madrid by Train: 2h30 on Renfe AVE", description: "Direct Renfe AVE, AVLO and Alvia trains from Alicante to Madrid in about 2h30. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "The open Renfe timetable lists 15 to 17 direct trains a day in each direction on this corridor, mixing AVE, AVLO and Alvia services, which makes it a frequent high-speed link between Madrid and the Mediterranean coast.",
+      es: "El horario abierto de Renfe recoge entre 15 y 17 trenes directos al día en cada sentido en este corredor, entre servicios AVE, AVLO y Alvia, lo que lo convierte en un enlace de alta velocidad frecuente entre Madrid y el Mediterráneo.",
+      fr: "L'horaire ouvert de Renfe recense de 15 à 17 trains directs par jour dans chaque sens sur ce corridor, entre services AVE, AVLO et Alvia, ce qui en fait une liaison à grande vitesse fréquente entre Madrid et la Méditerranée.",
+      it: "L'orario aperto di Renfe riporta da 15 a 17 treni diretti al giorno per senso di marcia su questo corridoio, tra servizi AVE, AVLO e Alvia: è un collegamento ad alta velocità frequente tra Madrid e il Mediterraneo."
+    }
+  },
+  { slug: 'madrid-segovia', from: 'Madrid', to: 'Segovia', country: 'Spain', duration: '27 min', operator: 'Renfe AVE / Avant', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Madrid to Segovia by Train: 27 Minutes by High-Speed", description: "Renfe high-speed and Avant trains from Madrid to Segovia in about 27 minutes. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "Trains from Madrid arrive at Segovia-Guiomar, a modern station a few kilometres outside the old town, so allow time for the connecting bus into the centre. The open Renfe timetable shows around 38 direct trains a day in each direction on weekdays.",
+      es: "Los trenes desde Madrid llegan a Segovia-Guiomar, una estación moderna a unos kilómetros del casco antiguo, así que conviene dejar tiempo para el autobús que enlaza con el centro. El horario abierto de Renfe muestra unos 38 trenes directos al día en cada sentido entre semana.",
+      fr: "Les trains depuis Madrid arrivent à Segovia-Guiomar, une gare moderne à quelques kilomètres de la vieille ville : prévoyez le temps du bus vers le centre. L'horaire ouvert de Renfe indique environ 38 trains directs par jour et par sens en semaine.",
+      it: "I treni da Madrid arrivano a Segovia-Guiomar, una stazione moderna a qualche chilometro dal centro storico, quindi conviene prevedere il tempo dell'autobus verso il centro. L'orario aperto di Renfe indica circa 38 treni diretti al giorno per senso nei giorni feriali."
+    }
+  },
+  { slug: 'barcelona-seville', from: 'Barcelona', to: 'Seville', country: 'Spain', duration: '6h 20m', operator: 'Renfe AVE', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Barcelona to Seville by Train: Direct AVE in About 6h20", description: "Direct Renfe AVE from Barcelona to Seville in about 6h20, with two departures a day. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "This is a long journey with few options: the open Renfe timetable lists only two direct trains a day in each direction, taking about 6h20, so the departure time matters more here than on busier Spanish corridors.",
+      es: "Es un trayecto largo con pocas opciones: el horario abierto de Renfe recoge solo dos trenes directos al día en cada sentido, de unas 6h20, así que aquí la hora de salida pesa más que en otros corredores españoles con más frecuencia.",
+      fr: "C'est un long trajet avec peu de choix : l'horaire ouvert de Renfe ne recense que deux trains directs par jour et par sens, d'environ 6h20, si bien que l'heure de départ compte plus que sur les corridors espagnols plus fréquentés.",
+      it: "È un viaggio lungo con poche opzioni: l'orario aperto di Renfe riporta solo due treni diretti al giorno per senso, di circa 6h20, quindi l'orario di partenza conta più che sui corridoi spagnoli più frequentati."
+    }
+  },
+  { slug: 'madrid-toledo', from: 'Madrid', to: 'Toledo', country: 'Spain', duration: '34 min', operator: 'Renfe Avant', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Madrid to Toledo by Train: 34 Minutes on Renfe Avant", description: "Renfe Avant trains from Madrid to Toledo in about 34 minutes. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "Toledo railway station, opened in 1919, is a neo-Mudéjar building that is worth a look in itself. The open Renfe timetable shows about 19 Avant and long-distance trains a day in each direction on weekdays, each taking around half an hour.",
+      es: "La estación de Toledo, inaugurada en 1919, es un edificio neomudéjar que merece una mirada por sí mismo. El horario abierto de Renfe muestra unos 19 trenes Avant y de larga distancia al día en cada sentido entre semana, de aproximadamente media hora.",
+      fr: "La gare de Tolède, ouverte en 1919, est un édifice néo-mudéjar qui mérite le coup d'œil. L'horaire ouvert de Renfe indique environ 19 trains Avant et grandes lignes par jour et par sens en semaine, d'environ une demi-heure.",
+      it: "La stazione di Toledo, inaugurata nel 1919, è un edificio neomudéjar che merita uno sguardo. L'orario aperto di Renfe mostra circa 19 treni Avant e di lunga percorrenza al giorno per senso nei giorni feriali, di circa mezz'ora."
+    }
+  },
+  { slug: 'santiago-madrid', from: 'Santiago de Compostela', to: 'Madrid', country: 'Spain', duration: '3h 00m', operator: 'Renfe AVE / AVLO', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Santiago de Compostela to Madrid by Train: About 3 Hours", description: "Direct Renfe AVE and AVLO trains from Santiago de Compostela to Madrid in about 3 hours. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "The open Renfe timetable lists 8 to 9 direct trains a day between Santiago de Compostela and Madrid on weekdays, at about three hours, which puts the Galician capital within a morning or afternoon of the Spanish capital.",
+      es: "El horario abierto de Renfe recoge entre 8 y 9 trenes directos al día entre Santiago de Compostela y Madrid en días laborables, de unas tres horas, lo que deja a la capital gallega a una mañana o una tarde de la capital de España.",
+      fr: "L'horaire ouvert de Renfe recense 8 à 9 trains directs par jour entre Saint-Jacques-de-Compostelle et Madrid en semaine, d'environ trois heures, ce qui place la capitale galicienne à une matinée ou une après-midi de la capitale espagnole.",
+      it: "L'orario aperto di Renfe riporta da 8 a 9 treni diretti al giorno tra Santiago di Compostela e Madrid nei giorni feriali, di circa tre ore: la capitale galiziana dista una mattinata o un pomeriggio dalla capitale spagnola."
+    }
+  },
+  { slug: 'madrid-cordoba', from: 'Madrid', to: 'Cordoba', country: 'Spain', duration: '1h 45m', operator: 'Renfe AVE / AVLO', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Madrid to Córdoba by Train: 1h45 on Renfe AVE", description: "Renfe AVE and AVLO trains from Madrid to Córdoba in about 1h45. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "Córdoba sits on the original Madrid–Seville high-speed line, and the open Renfe timetable lists 35 to 36 direct trains a day in each direction on weekdays, a very frequent service.",
+      es: "Córdoba está en la línea original de alta velocidad Madrid–Sevilla, y el horario abierto de Renfe recoge entre 35 y 36 trenes directos al día en cada sentido en días laborables, un servicio muy frecuente.",
+      fr: "Cordoue se trouve sur la ligne à grande vitesse historique Madrid–Séville, et l'horaire ouvert de Renfe recense 35 à 36 trains directs par jour et par sens en semaine, un service très fréquent.",
+      it: "Cordova si trova sulla storica linea ad alta velocità Madrid–Siviglia, e l'orario aperto di Renfe riporta da 35 a 36 treni diretti al giorno per senso nei giorni feriali, un servizio molto frequente."
+    }
+  },
+  { slug: 'madrid-granada', from: 'Madrid', to: 'Granada', country: 'Spain', duration: '3h 30m', operator: 'Renfe AVE / Alvia', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Madrid to Granada by Train: Direct in About 3h30", description: "Direct Renfe AVE and Alvia trains from Madrid to Granada in about 3h30. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "Granada has fewer direct trains than the other Andalusian cities on the high-speed network: the open Renfe timetable lists five a day in each direction, taking about 3h25 to 3h35, so it is worth checking departure times before planning the day.",
+      es: "Granada tiene menos trenes directos que otras ciudades andaluzas de la red de alta velocidad: el horario abierto de Renfe recoge cinco al día en cada sentido, de unas 3h25 a 3h35, así que conviene mirar los horarios antes de planificar el día.",
+      fr: "Grenade compte moins de trains directs que d'autres villes andalouses du réseau à grande vitesse : l'horaire ouvert de Renfe en recense cinq par jour et par sens, d'environ 3h25 à 3h35, il vaut donc mieux vérifier les horaires avant de planifier la journée.",
+      it: "Granada ha meno treni diretti di altre città andaluse della rete ad alta velocità: l'orario aperto di Renfe ne riporta cinque al giorno per senso, di circa 3h25-3h35, quindi conviene controllare gli orari prima di organizzare la giornata."
+    }
+  },
+  { slug: 'malaga-barcelona', from: 'Malaga', to: 'Barcelona', country: 'Spain', duration: '6h 40m', operator: 'Renfe AVE', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Malaga to Barcelona by Train: Direct AVE in About 7 Hours", description: "Direct Renfe AVE from Malaga to Barcelona in about 7 hours, one departure a day. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "This is one of the longest direct high-speed journeys in Spain: the open Renfe timetable lists a single direct train a day in each direction, taking about 6h40 to 7h10, so check the departure time before you plan around it.",
+      es: "Es uno de los trayectos directos de alta velocidad más largos de España: el horario abierto de Renfe recoge un único tren directo al día en cada sentido, de unas 6h40 a 7h10, así que conviene comprobar la hora de salida antes de organizarse.",
+      fr: "C'est l'un des plus longs trajets directs à grande vitesse d'Espagne : l'horaire ouvert de Renfe ne recense qu'un seul train direct par jour et par sens, d'environ 6h40 à 7h10, il faut donc vérifier l'heure de départ avant de s'organiser.",
+      it: "È uno dei più lunghi viaggi diretti ad alta velocità della Spagna: l'orario aperto di Renfe riporta un solo treno diretto al giorno per senso, di circa 6h40-7h10, quindi conviene verificare l'orario di partenza prima di organizzarsi."
+    }
+  },
+  { slug: 'seville-cordoba', from: 'Seville', to: 'Cordoba', country: 'Spain', duration: '45 min', operator: 'Renfe AVE / Avant', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Seville to Córdoba by Train: 45 Minutes on Renfe AVE", description: "Renfe AVE and Avant trains from Seville to Córdoba in about 45 minutes. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "With around 30 direct trains a day in each direction on weekdays in the open Renfe timetable and a journey of 40 to 55 minutes, this is one of the easiest day trips on the Andalusian high-speed line.",
+      es: "Con unos 30 trenes directos al día en cada sentido en días laborables en el horario abierto de Renfe y un trayecto de 40 a 55 minutos, es una de las excursiones de un día más cómodas de la línea de alta velocidad andaluza.",
+      fr: "Avec une trentaine de trains directs par jour et par sens en semaine dans l'horaire ouvert de Renfe et un trajet de 40 à 55 minutes, c'est l'une des excursions à la journée les plus faciles de la ligne à grande vitesse andalouse.",
+      it: "Con una trentina di treni diretti al giorno per senso nei giorni feriali nell'orario aperto di Renfe e un viaggio di 40-55 minuti, è una delle gite in giornata più comode della linea ad alta velocità andalusa."
+    }
+  },
+  { slug: 'madrid-salamanca', from: 'Madrid', to: 'Salamanca', country: 'Spain', duration: '1h 40m', operator: 'Renfe Alvia', price: '', badge: 'Route guide · Spain',
+    customSEO: { en: { title: "Madrid to Salamanca by Train: About 1h40 on Renfe Alvia", description: "Direct Renfe Alvia trains from Madrid to Salamanca in about 1h40. Check the schedule and book on Omio." } },
+    localInsight: {
+      en: "Salamanca's old town is a UNESCO World Heritage Site, and the open Renfe timetable lists four direct Alvia trains a day in each direction on weekdays, taking about 1h40.",
+      es: "El casco antiguo de Salamanca es Patrimonio de la Humanidad de la UNESCO, y el horario abierto de Renfe recoge cuatro trenes Alvia directos al día en cada sentido en días laborables, de aproximadamente 1h40.",
+      fr: "La vieille ville de Salamanque est inscrite au patrimoine mondial de l'UNESCO, et l'horaire ouvert de Renfe recense quatre trains Alvia directs par jour et par sens en semaine, d'environ 1h40.",
+      it: "Il centro storico di Salamanca è Patrimonio dell'Umanità UNESCO, e l'orario aperto di Renfe riporta quattro treni Alvia diretti al giorno per senso nei giorni feriali, di circa 1h40."
+    }
+  },
   { slug: 'madrid-zaragoza', from: 'Madrid', to: 'Zaragoza', country: 'Spain', duration: '1h 30m', operator: 'Renfe AVE', price: '€15-25', badge: 'Route guide · Spain',
     customSEO: { en: { title: 'Madrid to Zaragoza Train: 1h30 AVE, from €15', description: 'High-speed Renfe AVE from Madrid to Zaragoza in 1.5 hours. Compare live schedules and book tickets from €15.' } } },
   { slug: 'marseille-miramas', from: 'Marseille', to: 'Miramas', country: 'France', duration: '0h 45m', operator: 'SNCF TER', price: '€10-15', badge: 'Route guide · France',
@@ -992,15 +1082,24 @@ const CITY_JA = (function () {
   map.Porto = 'ポルト';
   map.Oslo = 'オスロ';
   map.Bergen = 'ベルゲン';
+  if (!map['Segovia']) map['Segovia'] = 'セゴビア';
+  if (!map['Toledo']) map['Toledo'] = 'トレド';
+  if (!map['Granada']) map['Granada'] = 'グラナダ';
+  if (!map['Salamanca']) map['Salamanca'] = 'サラマンカ';
+  if (!map['Alicante']) map['Alicante'] = 'アリカンテ';
+  if (!map['Cordoba']) map['Cordoba'] = 'コルドバ';
+  if (!map['Seville']) map['Seville'] = 'セビリア';
+  if (!map['Malaga']) map['Malaga'] = 'マラガ';
+  if (!map['Santiago de Compostela']) map['Santiago de Compostela'] = 'サンティアゴ・デ・コンポステーラ';
   return map;
 })();
 // Nombres de ciudad localizados (es/fr/it) solo para las rutas nuevas del 16-oct-2026; el resto de
 // rutas conserva por ahora los nombres en inglés, así que no se traduce fuera de estas.
-const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich']);
+const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich', 'alicante-madrid', 'madrid-segovia', 'barcelona-seville', 'madrid-toledo', 'santiago-madrid', 'madrid-cordoba', 'madrid-granada', 'malaga-barcelona', 'seville-cordoba', 'madrid-salamanca']);
 const CITY_LOCAL = {
-  es: { Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich' },
-  fr: { Lisbon: 'Lisbonne', Gothenburg: 'Göteborg', Vienna: 'Vienne', Salzburg: 'Salzbourg' },
-  it: { Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera' }
+  es: { Seville: 'Sevilla', Cordoba: 'Córdoba', Malaga: 'Málaga', Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich' },
+  fr: { Seville: 'Séville', Cordoba: 'Cordoue', Barcelona: 'Barcelone', Segovia: 'Ségovie', Toledo: 'Tolède', Granada: 'Grenade', Salamanca: 'Salamanque', 'Santiago de Compostela': 'Saint-Jacques-de-Compostelle', Lisbon: 'Lisbonne', Gothenburg: 'Göteborg', Vienna: 'Vienne', Salzburg: 'Salzbourg' },
+  it: { Seville: 'Siviglia', Cordoba: 'Cordova', Barcelona: 'Barcellona', 'Santiago de Compostela': 'Santiago di Compostela', Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera' }
 };
 function cityLabel(name, lang, slug) {
   if (lang === 'ja') return CITY_JA[name] || name;
@@ -1524,20 +1623,20 @@ function generatePriceTable(route, lang) {
     <table style="width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:14px;">
       <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.12);text-align:left;">
         <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadOperator || 'Operator'}</th>
-        <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadFrom || 'From'}</th>
+        ${route.price ? `<th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadFrom || 'From'}</th>` : ''}
         <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadTime || 'Journey time'}</th>
         <th style="padding:8px 12px;color:#C10016;font-weight:700;">${c.priceHeadFreq || 'Frequency'}</th>
       </tr></thead>
       <tbody>
         <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
           <td style="padding:8px 12px;">${route.operator}</td>
-          <td style="padding:8px 12px;">${route.price}</td>
+          ${route.price ? `<td style="padding:8px 12px;">${route.price}</td>` : ''}
           <td style="padding:8px 12px;">${route.duration}</td>
           <td style="padding:8px 12px;">${c.priceFreq || 'Several daily'}</td>
         </tr>
       </tbody>
     </table>
-    <p style="font-size:13px;color:#55565f;margin-bottom:16px;">${c.priceNote || 'Prices are indicative advance fares. Check live availability for your exact date.'}</p>
+    ${route.price ? `<p style="font-size:13px;color:#55565f;margin-bottom:16px;">${c.priceNote || 'Prices are indicative advance fares. Check live availability for your exact date.'}</p>` : ''}
   `;
 }
 
@@ -1603,7 +1702,7 @@ function generateLocalInsight(route, lang) {
 // lea; sin JS ni contenido oculto). Apunta a las busquedas de cola larga.
 function generateFAQ(route, lang) {
   const langContent = content[lang];
-  const faq = pickVariant(route.slug + 'faq', langContent.faqVariants);
+  const faq = pickVariant(route.slug + 'faq', langContent.faqVariants).filter(item => route.price || !/\{\{price\}\}/.test(item.q + item.a));
   const items = faq.map(item => `
       <div class="faq-item">
         <h3 class="faq-q">${fillTokens(item.q, route, lang)}</h3>
@@ -1675,7 +1774,7 @@ function generateSchema(route, lang) {
     })()] : []),
     {
       '@type': 'FAQPage',
-      mainEntity: pickVariant(route.slug + 'faq', langContent.faqVariants).map(item => ({
+      mainEntity: pickVariant(route.slug + 'faq', langContent.faqVariants).filter(item => route.price || !/\{\{price\}\}/.test(item.q + item.a)).map(item => ({
         '@type': 'Question',
         name: fillTokens(item.q, route, lang),
         acceptedAnswer: { '@type': 'Answer', text: fillTokens(item.a, route, lang) }
@@ -1743,7 +1842,7 @@ function replaceTemplate(template, route, lang) {
     '{{localInsight}}': generateLocalInsight(route, lang),
     '{{deepContent}}': require('./route-deep-content').render(route.slug, lang, route),
     '{{priceTitle}}': fillTokens(langContent.priceTitle, route, lang),
-    '{{priceText}}': langContent.priceText.replace('{{price}}', route.price),
+    '{{priceText}}': route.price ? langContent.priceText.replace('{{price}}', route.price) : '',
     '{{priceTable}}': generatePriceTable(route, lang),
     '{{bestFareTitle}}': langContent.bestFareTitle,
     '{{bestFareList}}': pickVariant(route.slug + 'bestfare', langContent.bestFareVariants).map(item => `<li>${item}</li>`).join('\n      '),
