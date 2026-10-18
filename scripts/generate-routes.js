@@ -1237,7 +1237,7 @@ const content = {
     hotelCardName: '{{hotelName}}',
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'View current price →',
-    economicLink: 'View economic options',
+    economicLink: 'Compare on Booking.com →',
     transferLink: 'Book private transfer in {{to}} →',
     faqHeading: 'Frequently asked questions',
     faqVariants: [
@@ -1334,7 +1334,7 @@ const content = {
     hotelCardName: '{{hotelName}}',
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'Ver precio actual →',
-    economicLink: 'Ver opciones económicas',
+    economicLink: 'Comparar en Booking.com →',
     transferLink: 'Reservar traslado privado en {{to}} →',
     faqHeading: 'Preguntas frecuentes',
     faqVariants: [
@@ -1430,7 +1430,7 @@ const content = {
     hotelCardName: '{{hotelName}}',
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'Voir le prix actuel →',
-    economicLink: 'Voir les options économiques',
+    economicLink: 'Comparer sur Booking.com →',
     transferLink: 'Réserver un transfert privé à {{to}} →',
     faqHeading: 'Questions fréquentes',
     faqVariants: [
@@ -1526,7 +1526,7 @@ const content = {
     hotelCardName: '{{hotelName}}',
     hotelCardLocation: '{{hotelLocation}}',
     hotelCardPrice: 'Vedi prezzo attuale →',
-    economicLink: 'Vedi opzioni economiche',
+    economicLink: 'Confronta su Booking.com →',
     transferLink: 'Prenota un transfer privato a {{to}} →',
     faqHeading: 'Domande frequenti',
     faqVariants: [
@@ -1614,8 +1614,9 @@ function generateHotelCards(route, lang) {
           ${langContent.hotelCardPrice}
         </a>
         <br>
-        <a href="https://voxa-production-dc15.up.railway.app/affiliate/klook-hotel?city=${route.to.toLowerCase()}" 
-           class="economic-link" target="_blank" rel="noopener sponsored">
+        <a href="https://voxa-production-dc15.up.railway.app/affiliate/booking-hotel?city=${route.to.toLowerCase()}" 
+           class="economic-link" target="_blank" rel="noopener sponsored"
+           onclick="trackPartnerClick('hotel_booking_${route.slug}_${lang}')">
           ${langContent.economicLink}
         </a>
         <br>
