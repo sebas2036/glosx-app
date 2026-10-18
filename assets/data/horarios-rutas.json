@@ -21,6 +21,14 @@
    "valid_from": "20261016",
    "valid_to": "20270113"
   },
+  "renfe_ld": {
+   "zip": "renfe_ld/renfe_av_ld.zip",
+   "name": "Renfe",
+   "license": "CC BY 4.0",
+   "url": "https://data.renfe.com/dataset/horarios-de-alta-velocidad-larga-distancia-y-media-distancia",
+   "valid_from": "20261017",
+   "valid_to": "20270929"
+  },
   "renfe": {
    "zip": "renfe/renfe_ave_int.zip",
    "name": "Renfe Viajeros",
@@ -85,6 +93,65 @@
        "first": "07:10",
        "last": "21:10",
        "median_min": 116
+      }
+     }
+    }
+   }
+  },
+  "barcelona-valencia": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Valencia>Barcelona": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 9,
+       "first": "06:30",
+       "last": "18:42",
+       "median_min": 202
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 7,
+       "first": "06:30",
+       "last": "18:42",
+       "median_min": 205
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 10,
+       "first": "09:06",
+       "last": "19:47",
+       "median_min": 203
+      }
+     }
+    },
+    "Barcelona>Valencia": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 10,
+       "first": "07:15",
+       "last": "20:15",
+       "median_min": 181
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 7,
+       "first": "07:40",
+       "last": "18:15",
+       "median_min": 178
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 8,
+       "first": "07:40",
+       "last": "20:15",
+       "median_min": 178
       }
      }
     }
@@ -621,6 +688,301 @@
     }
    }
   },
+  "madrid-barcelona": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Barcelona>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 30,
+       "first": "05:40",
+       "last": "20:00",
+       "median_min": 197
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 18,
+       "first": "05:50",
+       "last": "20:00",
+       "median_min": 220
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 19,
+       "first": "06:35",
+       "last": "20:00",
+       "median_min": 217
+      }
+     }
+    },
+    "Madrid>Barcelona": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 31,
+       "first": "06:16",
+       "last": "20:30",
+       "median_min": 197
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 15,
+       "first": "06:27",
+       "last": "19:34",
+       "median_min": 217
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 24,
+       "first": "06:27",
+       "last": "20:30",
+       "median_min": 202
+      }
+     }
+    }
+   }
+  },
+  "madrid-malaga": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Malaga>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 12,
+       "first": "05:47",
+       "last": "20:00",
+       "median_min": 174
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 9,
+       "first": "07:25",
+       "last": "20:00",
+       "median_min": 181
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 13,
+       "first": "07:25",
+       "last": "21:00",
+       "median_min": 181
+      }
+     }
+    },
+    "Madrid>Malaga": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 11,
+       "first": "07:20",
+       "last": "20:35",
+       "median_min": 175
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 10,
+       "first": "07:20",
+       "last": "20:35",
+       "median_min": 181
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 12,
+       "first": "07:20",
+       "last": "20:35",
+       "median_min": 174
+      }
+     }
+    }
+   }
+  },
+  "madrid-seville": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Seville>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 19,
+       "first": "06:05",
+       "last": "20:52",
+       "median_min": 160
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 16,
+       "first": "06:05",
+       "last": "20:52",
+       "median_min": 164
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 20,
+       "first": "06:05",
+       "last": "20:52",
+       "median_min": 160
+      }
+     }
+    },
+    "Madrid>Seville": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 17,
+       "first": "07:00",
+       "last": "20:05",
+       "median_min": 160
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 16,
+       "first": "07:00",
+       "last": "21:05",
+       "median_min": 164
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 19,
+       "first": "07:05",
+       "last": "21:05",
+       "median_min": 161
+      }
+     }
+    }
+   }
+  },
+  "madrid-valencia": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Valencia>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 15,
+       "first": "06:32",
+       "last": "21:12",
+       "median_min": 126
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 12,
+       "first": "06:55",
+       "last": "21:12",
+       "median_min": 126
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 14,
+       "first": "06:55",
+       "last": "21:12",
+       "median_min": 126
+      }
+     }
+    },
+    "Madrid>Valencia": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 16,
+       "first": "06:30",
+       "last": "21:00",
+       "median_min": 120
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 12,
+       "first": "06:30",
+       "last": "21:00",
+       "median_min": 122
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 14,
+       "first": "06:30",
+       "last": "21:00",
+       "median_min": 120
+      }
+     }
+    }
+   }
+  },
+  "madrid-zaragoza": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Zaragoza>Madrid": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 22,
+       "first": "07:09",
+       "last": "21:49",
+       "median_min": 115
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 20,
+       "first": "07:39",
+       "last": "21:49",
+       "median_min": 115
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 18,
+       "first": "08:04",
+       "last": "21:49",
+       "median_min": 115
+      }
+     }
+    },
+    "Madrid>Zaragoza": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 24,
+       "first": "06:27",
+       "last": "20:30",
+       "median_min": 100
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 17,
+       "first": "06:27",
+       "last": "19:34",
+       "median_min": 100
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 21,
+       "first": "06:27",
+       "last": "20:30",
+       "median_min": 100
+      }
+     }
+    }
+   }
+  },
   "munich-berlin": {
    "sources": [
     "db"
@@ -793,6 +1155,65 @@
        "first": "08:02",
        "last": "20:58",
        "median_min": 149
+      }
+     }
+    }
+   }
+  },
+  "zaragoza-barcelona": {
+   "sources": [
+    "renfe_ld"
+   ],
+   "dirs": {
+    "Zaragoza>Barcelona": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 33,
+       "first": "08:11",
+       "last": "22:07",
+       "median_min": 121
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 26,
+       "first": "08:11",
+       "last": "21:22",
+       "median_min": 122
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 32,
+       "first": "08:11",
+       "last": "22:07",
+       "median_min": 121
+      }
+     }
+    },
+    "Barcelona>Zaragoza": {
+     "weekday": {
+      "renfe_ld": {
+       "n": 34,
+       "first": "05:40",
+       "last": "20:00",
+       "median_min": 106
+      }
+     },
+     "saturday": {
+      "renfe_ld": {
+       "n": 31,
+       "first": "05:50",
+       "last": "20:00",
+       "median_min": 106
+      }
+     },
+     "sunday": {
+      "renfe_ld": {
+       "n": 28,
+       "first": "06:35",
+       "last": "20:00",
+       "median_min": 106
       }
      }
     }

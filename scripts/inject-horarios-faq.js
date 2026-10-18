@@ -21,9 +21,12 @@ const LANGS = ['en', 'es', 'fr', 'it', 'ja'];
 
 // fuente por feed
 const SRC = {
-  eurostar: { op: { en: 'Eurostar', es: 'Eurostar', fr: 'Eurostar', it: 'Eurostar', ja: 'ユーロスター' }, train: { en: 'Eurostar train', es: 'tren de Eurostar', fr: 'train Eurostar', it: 'treno Eurostar', ja: 'ユーロスターの列車' },
+  renfe_ld: { op: { en: 'Renfe high-speed and long-distance', es: 'alta velocidad y larga distancia de Renfe', fr: 'grande vitesse et grandes lignes de Renfe', it: 'alta velocità e lunga percorrenza di Renfe', ja: 'レンフェの高速・長距離' }, train: { en: 'Renfe high-speed or long-distance train', es: 'tren de alta velocidad o larga distancia de Renfe', fr: 'train à grande vitesse ou grandes lignes de Renfe', it: 'treno ad alta velocità o a lunga percorrenza di Renfe', ja: 'レンフェの高速・長距離列車' },
+    of: { fr: 'de Renfe (grande vitesse et grandes lignes)', it: 'di Renfe (alta velocità e lunga percorrenza)' },
+    credit: { en: 'Renfe open timetable (CC BY 4.0)', es: 'horario abierto de Renfe (CC BY 4.0)', fr: 'horaire ouvert de Renfe (CC BY 4.0)', it: 'orario aperto di Renfe (CC BY 4.0)', ja: 'Renfeのオープン時刻表（CC BY 4.0）' } },
+  eurostar: { of: { fr: "d'Eurostar", it: 'di Eurostar' }, op: { en: 'Eurostar', es: 'Eurostar', fr: 'Eurostar', it: 'Eurostar', ja: 'ユーロスター' }, train: { en: 'Eurostar train', es: 'tren de Eurostar', fr: 'train Eurostar', it: 'treno Eurostar', ja: 'ユーロスターの列車' },
     credit: { en: 'Eurostar International Ltd open timetable (Licence Ouverte 2.0)', es: 'horario abierto de Eurostar International Ltd (Licence Ouverte 2.0)', fr: 'horaire ouvert d\'Eurostar International Ltd (Licence Ouverte 2.0)', it: 'orario aperto di Eurostar International Ltd (Licence Ouverte 2.0)', ja: 'Eurostar International Ltdのオープン時刻表（Licence Ouverte 2.0）' } },
-  db: { op: { en: 'Deutsche Bahn long-distance', es: 'larga distancia de Deutsche Bahn', fr: 'grandes lignes de la Deutsche Bahn', it: 'lunga percorrenza di Deutsche Bahn', ja: 'ドイツ鉄道の長距離' }, train: { en: 'Deutsche Bahn long-distance train', es: 'tren de larga distancia de Deutsche Bahn', fr: 'train grandes lignes de la Deutsche Bahn', it: 'treno a lunga percorrenza di Deutsche Bahn', ja: 'ドイツ鉄道の長距離列車' },
+  db: { of: { fr: 'des grandes lignes de la Deutsche Bahn', it: 'della lunga percorrenza di Deutsche Bahn' }, op: { en: 'Deutsche Bahn long-distance', es: 'larga distancia de Deutsche Bahn', fr: 'grandes lignes de la Deutsche Bahn', it: 'lunga percorrenza di Deutsche Bahn', ja: 'ドイツ鉄道の長距離' }, train: { en: 'Deutsche Bahn long-distance train', es: 'tren de larga distancia de Deutsche Bahn', fr: 'train grandes lignes de la Deutsche Bahn', it: 'treno a lunga percorrenza di Deutsche Bahn', ja: 'ドイツ鉄道の長距離列車' },
     credit: { en: 'DELFI e.V. / GTFS.de open timetable data (CC BY 4.0)', es: 'datos abiertos de horarios de DELFI e.V. / GTFS.de (CC BY 4.0)', fr: 'données horaires ouvertes de DELFI e.V. / GTFS.de (CC BY 4.0)', it: 'dati orari aperti di DELFI e.V. / GTFS.de (CC BY 4.0)', ja: 'DELFI e.V. / GTFS.deのオープン時刻表データ（CC BY 4.0）' } }
 };
 const DATE = { en: '17 October 2026 (week of 20 to 25 October)', es: '17 de octubre de 2026 (semana del 20 al 25 de octubre)', fr: '17 octobre 2026 (semaine du 20 au 25 octobre)', it: '17 ottobre 2026 (settimana dal 20 al 25 ottobre)', ja: '2026年10月17日（10月20日〜25日の週）' };
@@ -58,7 +61,7 @@ const T = {
     q2: (a, b) => `À quelle heure part le dernier train de ${a} à ${b} ?`,
     a2: (o) => `En semaine, le dernier ${o.train} de ${o.a} à ${o.b} part à ${o.wl} ; de ${o.b} à ${o.a}, à ${o.rl}. Source : ${o.credit}, consulté le ${o.date}.`,
     q3: (a, b) => `Combien de trains y a-t-il par jour de ${a} à ${b} ?`,
-    a3: (o) => `Dans l'horaire ${o.op === 'Eurostar' ? "d'Eurostar" : 'des ' + o.op}, il y a ${o.wn} trains par jour de ${o.a} à ${o.b} en semaine, ${o.sn} le samedi et ${o.un} le dimanche. De ${o.b} à ${o.a} : ${o.rwn}, ${o.rsn} et ${o.run}. Source : ${o.credit}, consulté le ${o.date}.`
+    a3: (o) => `Dans l'horaire ${o.of}, il y a ${o.wn} trains par jour de ${o.a} à ${o.b} en semaine, ${o.sn} le samedi et ${o.un} le dimanche. De ${o.b} à ${o.a} : ${o.rwn}, ${o.rsn} et ${o.run}. Source : ${o.credit}, consulté le ${o.date}.`
   },
   it: {
     q1: (a, b) => `A che ora parte il primo treno da ${a} a ${b}?`,
@@ -66,7 +69,7 @@ const T = {
     q2: (a, b) => `A che ora parte l'ultimo treno da ${a} a ${b}?`,
     a2: (o) => `Nei giorni feriali, l'ultimo ${o.train} da ${o.a} a ${o.b} parte alle ${o.wl}; da ${o.b} a ${o.a}, alle ${o.rl}. Fonte: ${o.credit}, consultato il ${o.date}.`,
     q3: (a, b) => `Quanti treni al giorno ci sono da ${a} a ${b}?`,
-    a3: (o) => `Nell'orario ${o.op === 'Eurostar' ? 'di Eurostar' : 'della ' + o.op} ci sono ${o.wn} treni al giorno da ${o.a} a ${o.b} nei feriali, ${o.sn} il sabato e ${o.un} la domenica. Da ${o.b} a ${o.a}: ${o.rwn}, ${o.rsn} e ${o.run}. Fonte: ${o.credit}, consultato il ${o.date}.`
+    a3: (o) => `Nell'orario ${o.of} ci sono ${o.wn} treni al giorno da ${o.a} a ${o.b} nei feriali, ${o.sn} il sabato e ${o.un} la domenica. Da ${o.b} a ${o.a}: ${o.rwn}, ${o.rsn} e ${o.run}. Fonte: ${o.credit}, consultato il ${o.date}.`
   },
   ja: {
     q1: (a, b) => `${a}から${b}への始発は何時ですか？`,
@@ -90,7 +93,7 @@ for (const [slug, r] of Object.entries(DATA.routes)) {
     let html = fs.readFileSync(file, 'utf8');
     const a = nm(lang, R.from), b = nm(lang, R.to);
     const o = {
-      a, b, train: SRC[src].train[lang], op: SRC[src].op[lang], credit: SRC[src].credit[lang], date: DATE[lang],
+      a, b, train: SRC[src].train[lang], op: SRC[src].op[lang], of: (SRC[src].of || {})[lang] || SRC[src].op[lang], credit: SRC[src].credit[lang], date: DATE[lang],
       wf: tm(lang, one(dirA, 'weekday').first), wl: tm(lang, one(dirA, 'weekday').last), rf: tm(lang, one(dirB, 'weekday').first), rl: tm(lang, one(dirB, 'weekday').last),
       wn: one(dirA, 'weekday').n, sn: one(dirA, 'saturday').n, un: one(dirA, 'sunday').n, rwn: one(dirB, 'weekday').n, rsn: one(dirB, 'saturday').n, run: one(dirB, 'sunday').n
     };

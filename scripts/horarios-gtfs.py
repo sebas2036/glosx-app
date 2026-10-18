@@ -16,6 +16,7 @@ REF = {'weekday': datetime.date(2026, 10, 20), 'saturday': datetime.date(2026, 1
 SOURCES = {
     'db': {'zip': 'db/fv_free.zip', 'name': 'DELFI e.V. / GTFS.de', 'license': 'CC BY 4.0', 'url': 'https://gtfs.de'},
     'eurostar': {'zip': 'eurostar/eurostar_gtfs.zip', 'name': 'Eurostar International Ltd', 'license': 'Licence Ouverte 2.0', 'url': 'https://transport.data.gouv.fr/datasets/eurostar-gtfs-plan-de-transport-et-temps-reel'},
+    'renfe_ld': {'zip': 'renfe_ld/renfe_av_ld.zip', 'name': 'Renfe', 'license': 'CC BY 4.0', 'url': 'https://data.renfe.com/dataset/horarios-de-alta-velocidad-larga-distancia-y-media-distancia', 'short_names': {'AVE', 'AVLO', 'ALVIA', 'EUROMED', 'INTERCITY'}},
     'renfe': {'zip': 'renfe/renfe_ave_int.zip', 'name': 'Renfe Viajeros', 'license': 'Licence Ouverte 2.0', 'url': 'https://transport.data.gouv.fr/datasets/horaires-ave-espagne-france'},
 }
 norm = lambda s: ''.join(c for c in unicodedata.normalize('NFD', s.lower()) if unicodedata.category(c) != 'Mn')
@@ -28,7 +29,7 @@ ALIAS = {
     'Zurich': ['zurich'], 'Figueres': ['figueres'], 'Zaragoza': ['zaragoza'], 'Salzburg': ['salzburg'], 'Innsbruck': ['innsbruck'],
     'Stuttgart': ['stuttgart'], 'Nuremberg': ['nurnberg'], 'Dresden': ['dresden'], 'Leipzig': ['leipzig'], 'Hannover': ['hannover'],
     'Rotterdam': ['rotterdam'], 'Antwerp': ['antwerpen'], 'Lille': ['lille'], 'Avignon': ['avignon'], 'Montpellier': ['montpellier'],
-    'Warsaw': ['warszawa'], 'Bern': ['bern '], 'Geneva': ['geneve', 'geneva'], 'Mainz': ['mainz'], 'Aachen': ['aachen'],
+    'Warsaw': ['warszawa'], 'Seville': ['sevilla'], 'Valencia': ['valencia'], 'Malaga': ['malaga'], 'Cordoba': ['cordoba'], 'Alicante': ['alicante'], 'Bilbao': ['bilbao'], 'Granada': ['granada'], 'Bern': ['bern '], 'Geneva': ['geneve', 'geneva'], 'Mainz': ['mainz'], 'Aachen': ['aachen'],
 }
 GERMAN = {'Berlin','Hamburg','Munich','Frankfurt','Cologne','Dortmund','Stuttgart','Nuremberg','Dresden','Leipzig','Hannover','Mainz','Aachen'}
 # Solo se publica lo que es completo para el operador citado: Eurostar (todos sus pares) y larga distancia dentro de Alemania (DB/DELFI).
@@ -36,6 +37,7 @@ GERMAN = {'Berlin','Hamburg','Munich','Frankfurt','Cologne','Dortmund','Stuttgar
 def allowed(key, a, b):
     if key == 'eurostar': return True
     if key == 'db': return a in GERMAN and b in GERMAN
+    if key == 'renfe_ld': return {a, b} not in ({'Barcelona', 'Girona'}, {'Girona', 'Figueres'})   # ahí dominan los regionales (Rodalies), que este archivo no incluye
     return False
 EXCL = ('flughafen', 'airport', 'schiphol', 'zaventem', '(oder)', 'bf ehrenfeld', 'gl.')
 def city_of(stop_name):
@@ -73,6 +75,10 @@ for key, src in SOURCES.items():
     cd = collections.defaultdict(dict)
     for r in rd(z, 'calendar_dates.txt'): cd[r['service_id']][r['date']] = r['exception_type']
     trips = {t['trip_id']: t['service_id'] for t in rd(z, 'trips.txt')}
+    if 'short_names' in src:
+        rn = {r['route_id']: r.get('route_short_name', '').upper() for r in rd(z, 'routes.txt')}
+        keep = {t['trip_id'] for t in rd(z, 'trips.txt') if rn.get(t['route_id']) in src['short_names']}
+        trips = {k: v for k, v in trips.items() if k in keep}
     def active(service, day):
         d = day.strftime('%Y%m%d')
         e = cd.get(service, {}).get(d)
@@ -120,7 +126,7 @@ for key, src in SOURCES.items():
             durs = [v[2] // 60 for v in tr.values()]
             fmt = lambda s: f"{(s // 3600) % 24:02d}:{(s % 3600) // 60:02d}" + (" (+1)" if s >= 86400 else "")
             slot.setdefault(kind, {})[key] = {'n': len(deps), 'first': fmt(deps[0]), 'last': fmt(deps[-1]), 'median_min': int(statistics.median(durs))}
-out = {'reference_week': {k: v.isoformat() for k, v in REF.items()}, 'feeds': {k: {**SOURCES[k], **meta[k]} for k in SOURCES}, 'routes': {}}
+out = {'reference_week': {k: v.isoformat() for k, v in REF.items()}, 'feeds': {k: {**{kk: vv for kk, vv in SOURCES[k].items() if kk != 'short_names'}, **meta[k]} for k in SOURCES}, 'routes': {}}
 for slug, r in sorted(result.items()):
     out['routes'][slug] = {'sources': sorted(r['sources']), 'dirs': {k: {kk: vv for kk, vv in v.items() if kk != 'by'} for k, v in r['dirs'].items()}}
 json.dump(out, open(OUT, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
