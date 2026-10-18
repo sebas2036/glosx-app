@@ -598,3 +598,8 @@ body[data-region="japan"] .hotels-promo { display: none; }
   body.hotels-mode .hotel-mosaic img { border-radius: 0; filter: brightness(1.05) saturate(1.05); }
   body.hotels-mode .hotel-mosaic::after { background: rgba(10, 12, 14, .6); }
 }
+
+/* Chips de países: si un país tiene muchas rutas (España), el panel de escritorio se desplaza en vez de salirse de la pantalla */
+@media (hover: hover) and (pointer: fine) {
+  .country-popup { max-height: min(560px, 72vh); overflow-y: auto; overscroll-behavior: contain; }
+}
