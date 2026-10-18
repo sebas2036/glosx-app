@@ -769,7 +769,7 @@
         "ss_home": "国を選ぶ",
         "ss_board": "発車案内",
         "ss_live": "いまの発車",
-        "stats_prose": "<strong>ヨーロッパ16か国と日本</strong>の<strong>300本以上のルートガイド</strong>から、次の旅へ。無料、登録不要。",
+        "stats_prose": "<strong>ヨーロッパ全域</strong>の列車を、<strong>どの区間でも</strong>Omioで予約。無料、登録不要。",
         "stat_live": "いま見ています",
         "trust_data": "ヨーロッパの主要鉄道網で、AIが組んだ旅",
         "trust_b1": "AIが組む旅程",
