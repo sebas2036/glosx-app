@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horarios de trenes en España con datos abiertos de Renfe · glosx.app</title>
+  <meta name="description" content="Primer tren, último tren y trenes directos al día de 34 trayectos de alta velocidad y larga distancia de Renfe, con datos abiertos (CC BY 4.0). Tabla y CSV descargables." />
+  <link rel="canonical" href="https://glosx.app/horarios-trenes-espana/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Horarios de trenes en España con datos abiertos de Renfe · glosx.app" />
+  <meta property="og:url" content="https://glosx.app/horarios-trenes-espana/" />
+  <meta property="og:image" content="https://glosx.app/og-image.jpg" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#fafaf8; --text:#14151a; --muted:#55565f; --primary2:#C10016; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.5; }
+    .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:18px 28px; border-bottom:1.5px solid var(--text); }
+    nav a { color:var(--text); text-decoration:none; font-weight:600; }
+    nav .back { color:var(--muted); font-size:14px; }
+    header { text-align:center; padding:56px 24px 24px; }
+    header h1 { font-size:34px; margin:0 0 12px; letter-spacing:-0.5px; }
+    header p { color:var(--muted); max-width:620px; margin:0 auto; }
+    .routes-index { max-width:1100px; margin:24px auto 60px; padding:0 24px; }
+    .routes-index h2 { font-size:14px; text-transform:uppercase; letter-spacing:1px; color:var(--primary2); margin-bottom:18px; text-align:center; font-weight:700; }
+    .routes-index-list { list-style:none; padding:0; margin:0; columns:3; column-gap:30px; font-size:14px; }
+    .routes-index-list li { break-inside:avoid; margin-bottom:10px; line-height:1.4; }
+    .routes-index-list a { color:var(--muted); text-decoration:none; }
+    .routes-index-list a:hover { color:var(--text); text-decoration:underline; }
+    .routes-index-list .ri-es { color:var(--primary2); font-size:11px; font-weight:700; margin-left:5px; letter-spacing:0.5px; }
+    footer { text-align:center; padding:28px; color:var(--muted); font-size:13px; border-top:1px solid rgba(20,21,26,0.14); }
+    footer a { color:var(--muted); }
+    @media (max-width:760px) { .routes-index-list { columns:2; } header h1 { font-size:26px; } }
+    @media (max-width:460px) { .routes-index-list { columns:1; } }
+  </style>
+  <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Horarios de trenes de alta velocidad y larga distancia en España (primer tren, último tren y frecuencia)", "description": "Primer tren, último tren y trenes directos al día de 34 trayectos de alta velocidad y larga distancia de Renfe, con datos abiertos (CC BY 4.0). Tabla y CSV descargables.", "url": "https://glosx.app/horarios-trenes-espana/", "inLanguage": "es", "license": "https://creativecommons.org/licenses/by/4.0/", "isBasedOn": "https://data.renfe.com/dataset/horarios-de-alta-velocidad-larga-distancia-y-media-distancia", "creator": {"@type": "Organization", "name": "glosx.app", "url": "https://glosx.app/"}, "temporalCoverage": "2026-10-20/2026-10-25", "spatialCoverage": {"@type": "Country", "name": "España"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://glosx.app/assets/data/horarios-espana.csv"}]}</script>
+<style>
+.hx{max-width:1100px;margin:0 auto;padding:8px 24px 56px}.hx h2{font-size:20px;margin:34px 0 10px}.hx p,.hx li{line-height:1.6;font-size:15px}
+.hx .tw{overflow-x:auto;border:1px solid rgba(20,21,26,.14);border-radius:12px;background:#fff}.hx table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+.hx th,.hx td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(20,21,26,.08);white-space:nowrap}.hx th{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:#6b6c75;background:#faf8f5}
+.hx td:nth-child(n+3){font-variant-numeric:tabular-nums}.hx tr:last-child td{border-bottom:0}.hx a{color:#C10016}.hx .cita{background:#faf8f5;border-radius:12px;padding:14px 16px;font-size:14px}
+</style>
+</head>
+<body>
+  <nav>
+    <a href="/es/">WoW Train</a>
+    <div class="nav-right"><a href="/es/rutas/" style="font-weight:600;text-decoration:none;color:inherit">&larr; Todas las rutas</a></div>
+  </nav>
+  <header>
+    <h1>Horarios de trenes en España con datos abiertos</h1>
+    <p>Primer tren, último tren y trenes directos al día de 34 trayectos de alta velocidad y larga distancia de Renfe, calculados a partir de su horario abierto.</p>
+  </header>
+  <main class="hx">
+    <div class="tw"><table>
+      <thead><tr><th>Trayecto</th><th>Primer tren</th><th>Último tren</th><th>Trenes laborable</th><th>Sábado</th><th>Domingo</th><th>Duración típica</th></tr></thead>
+      <tbody>
+<tr><td><a href="/rutas/alicante-madrid/es/">Alicante &rarr; Madrid</a></td><td>05:50</td><td>21:05</td><td>15</td><td>13</td><td>17</td><td>2 h 32 min</td></tr>
+<tr><td><a href="/rutas/madrid-barcelona/es/">Barcelona &rarr; Madrid</a></td><td>05:40</td><td>20:00</td><td>30</td><td>18</td><td>19</td><td>3 h 17 min</td></tr>
+<tr><td><a href="/rutas/malaga-barcelona/es/">Barcelona &rarr; Málaga</a></td><td>08:30</td><td>08:30</td><td>1</td><td>1</td><td>1</td><td>6 h 41 min</td></tr>
+<tr><td><a href="/rutas/barcelona-seville/es/">Barcelona &rarr; Sevilla</a></td><td>08:30</td><td>15:41</td><td>2</td><td>2</td><td>2</td><td>6 h 22 min</td></tr>
+<tr><td><a href="/rutas/barcelona-valencia/es/">Barcelona &rarr; Valencia</a></td><td>07:15</td><td>20:15</td><td>10</td><td>7</td><td>8</td><td>3 h 01 min</td></tr>
+<tr><td><a href="/rutas/zaragoza-barcelona/es/">Barcelona &rarr; Zaragoza</a></td><td>05:40</td><td>20:00</td><td>34</td><td>31</td><td>28</td><td>1 h 46 min</td></tr>
+<tr><td><a href="/rutas/madrid-cordoba/es/">Córdoba &rarr; Madrid</a></td><td>06:47</td><td>21:58</td><td>36</td><td>32</td><td>38</td><td>1 h 55 min</td></tr>
+<tr><td><a href="/rutas/seville-cordoba/es/">Córdoba &rarr; Sevilla</a></td><td>06:20</td><td>21:52</td><td>31</td><td>27</td><td>28</td><td>53 min</td></tr>
+<tr><td><a href="/rutas/madrid-granada/es/">Granada &rarr; Madrid</a></td><td>06:09</td><td>18:05</td><td>5</td><td>5</td><td>5</td><td>3 h 34 min</td></tr>
+<tr><td><a href="/rutas/alicante-madrid/es/">Madrid &rarr; Alicante</a></td><td>06:15</td><td>20:00</td><td>16</td><td>17</td><td>17</td><td>2 h 30 min</td></tr>
+<tr><td><a href="/rutas/madrid-barcelona/es/">Madrid &rarr; Barcelona</a></td><td>06:16</td><td>20:30</td><td>31</td><td>15</td><td>24</td><td>3 h 17 min</td></tr>
+<tr><td><a href="/rutas/madrid-cordoba/es/">Madrid &rarr; Córdoba</a></td><td>07:00</td><td>20:35</td><td>35</td><td>33</td><td>35</td><td>1 h 45 min</td></tr>
+<tr><td><a href="/rutas/madrid-granada/es/">Madrid &rarr; Granada</a></td><td>07:20</td><td>19:50</td><td>5</td><td>5</td><td>5</td><td>3 h 34 min</td></tr>
+<tr><td><a href="/rutas/madrid-malaga/es/">Madrid &rarr; Málaga</a></td><td>07:20</td><td>20:35</td><td>11</td><td>10</td><td>12</td><td>2 h 55 min</td></tr>
+<tr><td><a href="/rutas/madrid-salamanca/es/">Madrid &rarr; Salamanca</a></td><td>08:50</td><td>21:11</td><td>4</td><td>3</td><td>3</td><td>1 h 40 min</td></tr>
+<tr><td><a href="/rutas/santiago-madrid/es/">Madrid &rarr; Santiago de Compostela</a></td><td>06:30</td><td>20:23</td><td>8</td><td>4</td><td>7</td><td>3 h 07 min</td></tr>
+<tr><td><a href="/rutas/madrid-segovia/es/">Madrid &rarr; Segovia</a></td><td>06:30</td><td>21:30</td><td>38</td><td>24</td><td>26</td><td>27 min</td></tr>
+<tr><td><a href="/rutas/madrid-seville/es/">Madrid &rarr; Sevilla</a></td><td>07:00</td><td>20:05</td><td>17</td><td>16</td><td>19</td><td>2 h 40 min</td></tr>
+<tr><td><a href="/rutas/madrid-toledo/es/">Madrid &rarr; Toledo</a></td><td>06:45</td><td>20:45</td><td>19</td><td>14</td><td>12</td><td>34 min</td></tr>
+<tr><td><a href="/rutas/madrid-valencia/es/">Madrid &rarr; Valencia</a></td><td>06:30</td><td>21:00</td><td>16</td><td>12</td><td>14</td><td>2 h 00 min</td></tr>
+<tr><td><a href="/rutas/madrid-zaragoza/es/">Madrid &rarr; Zaragoza</a></td><td>06:27</td><td>20:30</td><td>24</td><td>17</td><td>21</td><td>1 h 40 min</td></tr>
+<tr><td><a href="/rutas/malaga-barcelona/es/">Málaga &rarr; Barcelona</a></td><td>15:50</td><td>15:50</td><td>1</td><td>1</td><td>1</td><td>7 h 09 min</td></tr>
+<tr><td><a href="/rutas/madrid-malaga/es/">Málaga &rarr; Madrid</a></td><td>05:47</td><td>20:00</td><td>12</td><td>9</td><td>13</td><td>2 h 54 min</td></tr>
+<tr><td><a href="/rutas/madrid-salamanca/es/">Salamanca &rarr; Madrid</a></td><td>06:25</td><td>18:35</td><td>4</td><td>3</td><td>3</td><td>1 h 40 min</td></tr>
+<tr><td><a href="/rutas/santiago-madrid/es/">Santiago de Compostela &rarr; Madrid</a></td><td>05:47</td><td>20:05</td><td>9</td><td>6</td><td>5</td><td>3 h 02 min</td></tr>
+<tr><td><a href="/rutas/madrid-segovia/es/">Segovia &rarr; Madrid</a></td><td>06:50</td><td>21:58</td><td>38</td><td>26</td><td>28</td><td>28 min</td></tr>
+<tr><td><a href="/rutas/barcelona-seville/es/">Sevilla &rarr; Barcelona</a></td><td>08:37</td><td>16:17</td><td>2</td><td>2</td><td>2</td><td>6 h 29 min</td></tr>
+<tr><td><a href="/rutas/seville-cordoba/es/">Sevilla &rarr; Córdoba</a></td><td>06:05</td><td>21:36</td><td>32</td><td>27</td><td>29</td><td>42 min</td></tr>
+<tr><td><a href="/rutas/madrid-seville/es/">Sevilla &rarr; Madrid</a></td><td>06:05</td><td>20:52</td><td>19</td><td>16</td><td>20</td><td>2 h 40 min</td></tr>
+<tr><td><a href="/rutas/madrid-toledo/es/">Toledo &rarr; Madrid</a></td><td>06:25</td><td>21:37</td><td>19</td><td>12</td><td>14</td><td>34 min</td></tr>
+<tr><td><a href="/rutas/barcelona-valencia/es/">Valencia &rarr; Barcelona</a></td><td>06:30</td><td>18:42</td><td>9</td><td>7</td><td>10</td><td>3 h 22 min</td></tr>
+<tr><td><a href="/rutas/madrid-valencia/es/">Valencia &rarr; Madrid</a></td><td>06:32</td><td>21:12</td><td>15</td><td>12</td><td>14</td><td>2 h 06 min</td></tr>
+<tr><td><a href="/rutas/zaragoza-barcelona/es/">Zaragoza &rarr; Barcelona</a></td><td>08:11</td><td>22:07</td><td>33</td><td>26</td><td>32</td><td>2 h 01 min</td></tr>
+<tr><td><a href="/rutas/madrid-zaragoza/es/">Zaragoza &rarr; Madrid</a></td><td>07:09</td><td>21:49</td><td>22</td><td>20</td><td>18</td><td>1 h 55 min</td></tr>
+      </tbody>
+    </table></div>
+    <p><a href="/assets/data/horarios-espana.csv" download>Descargar los datos en CSV</a> (una fila por trayecto, sentido y tipo de día).</p>
+    <h2>Cómo se han calculado</h2>
+    <ul>
+      <li><strong>Fuente:</strong> <a href="https://data.renfe.com/dataset/horarios-de-alta-velocidad-larga-distancia-y-media-distancia" rel="noopener">horarios abiertos de Renfe (alta velocidad, larga distancia y media distancia)</a>, publicados bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="noopener">CC BY 4.0</a>. El archivo es válido del 17/10/2026 al 29/09/2027.</li>
+      <li><strong>Semana de referencia:</strong> del 20 al 25 de octubre de 2026 (laborable = martes 20, sábado 24, domingo 25). Consultado el 17 de octubre de 2026.</li>
+      <li><strong>Qué cuenta:</strong> trenes directos que paran en las dos ciudades en ese sentido: AVE, AVLO, Alvia, Avant e Intercity. Sin Cercanías ni media distancia lenta.</li>
+      <li><strong>Qué no incluye:</strong> otros operadores (Ouigo, Iryo), por eso hay más salidas en el mercado que las de esta tabla. Los horarios cambian por temporada: confirma tu fecha antes de reservar.</li>
+      <li><strong>Duración típica:</strong> mediana de los trenes del día laborable.</li>
+    </ul>
+    <h2>Cómo citar estos datos</h2>
+    <p class="cita">Datos de horarios: Renfe (horarios abiertos, CC BY 4.0), procesados por glosx.app, <a href="https://glosx.app/horarios-trenes-espana/">https://glosx.app/horarios-trenes-espana/</a>.</p>
+    <p>Cada trayecto tiene su guía con mapa, horarios y reserva en <a href="/es/rutas/">todas las rutas</a>.</p>
+  </main>
+  <footer>
+    <p>&copy; 2026 GLOSX &middot; <a href="/es/">glosx.app</a> &middot; <a href="/es/explore/">Explorar</a> &middot; <a href="/es/blog.html">Blog</a></p>
+  </footer>
+</body>
+</html>
