@@ -587,3 +587,14 @@ body[data-region="japan"] .hotels-promo { display: none; }
 .hotels-promo-go { flex: 0 0 auto; font-size: 14px; font-weight: 700; color: #0057b8; white-space: nowrap; }
 .hotels-promo:hover { border-color: rgba(0, 87, 184, .6); }
 @media (max-width: 640px) { .hotels-promo { flex-wrap: wrap; } .hotels-promo-text { flex: 1 1 100%; } }
+
+/* Modo Hoteles en móvil: el collage de fotos termina justo antes del selector Europa/Japón/Hoteles (no pasa por detrás de él ni de las pestañas),
+   con separaciones finas, sin bordes redondeados internos y un velo uniforme para que el título se lea sin cortes */
+@media (max-width: 760px) {
+  body.hotels-mode .hotel-mosaic {
+    inset: 0 0 auto 0; height: 342px; gap: 2px; padding: 0; overflow: hidden;
+    border-radius: 0 0 24px 24px; -webkit-mask-image: none; mask-image: none;
+  }
+  body.hotels-mode .hotel-mosaic img { border-radius: 0; filter: brightness(1.05) saturate(1.05); }
+  body.hotels-mode .hotel-mosaic::after { background: rgba(10, 12, 14, .6); }
+}
