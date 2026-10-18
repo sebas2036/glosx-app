@@ -982,6 +982,12 @@ const REAL_HOTELS = {
   salerno: { name: "Hotel Plaza", loc: "Salerno, Italy", image: "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/hotelier-images/65/77/702e7322aeb415a8ce6155f06a2c511da6d0bc1a9cd348bf0f9722598cd5.jpeg" },
   salzburg: { name: "Hotel Goldener Hirsch", loc: "Salzburg, Austria", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Hotel_Goldener_Hirsch_Salzburg.jpg/250px-Hotel_Goldener_Hirsch_Salzburg.jpg" },
   seville: { name: "Hotel Alfonso XIII", loc: "Seville, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hotel_Alfonso_XIII%2C_Sevilla%2C_Espa%C3%B1a%2C_2015-12-06%2C_DD_80.JPG/330px-Hotel_Alfonso_XIII%2C_Sevilla%2C_Espa%C3%B1a%2C_2015-12-06%2C_DD_80.JPG" },
+  madrid: { name: "Mandarin Oriental Ritz, Madrid", loc: "Madrid, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Hotel_Ritz_%28Madrid%29_03.jpg/330px-Hotel_Ritz_%28Madrid%29_03.jpg" },
+  segovia: { name: "Parador de Segovia", loc: "Segovia, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Parador_de_Segovia_1.jpg/330px-Parador_de_Segovia_1.jpg" },
+  toledo: { name: "Parador de Toledo", loc: "Toledo, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Parador_de_Toledo_y_vista_de_Toledo.jpg/330px-Parador_de_Toledo_y_vista_de_Toledo.jpg" },
+  cordoba: { name: "Parador de Córdoba", loc: "Cordoba, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Parador_de_C%C3%B3rdoba_1.jpg/330px-Parador_de_C%C3%B3rdoba_1.jpg" },
+  granada: { name: "Parador de Granada", loc: "Granada, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Parador_de_Granada-Alhambra_%281%29.jpg/330px-Parador_de_Granada-Alhambra_%281%29.jpg" },
+  salamanca: { name: "Parador de Salamanca", loc: "Salamanca, Spain", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Parador_de_Salamanca_1.jpg/330px-Parador_de_Salamanca_1.jpg" },
   siena: { name: "Grand Hotel Continental Siena", loc: "Siena, Italy", image: "https://images.pexels.com/photos/38127108/pexels-photo-38127108.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   sorrento: { name: "Grand Hotel Excelsior Vittoria", loc: "Sorrento, Italy", image: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Excelsior_Vittoria_hotel%2C_Sorrento.jpg" },
   stockholm: { name: "Grand Hôtel Stockholm", loc: "Stockholm, Sweden", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Grand_Hotel_June_2018_01.jpg/330px-Grand_Hotel_June_2018_01.jpg" },
@@ -998,6 +1004,12 @@ const REAL_HOTELS = {
 
 // Foto hero real por ciudad de destino (Pexels), evita la misma foto generica en las 174 paginas.
 const HERO_PHOTOS = {
+  madrid: 'https://images.pexels.com/photos/36482790/pexels-photo-36482790.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  segovia: 'https://images.pexels.com/photos/15583525/pexels-photo-15583525.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  toledo: 'https://images.pexels.com/photos/20300744/pexels-photo-20300744.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  cordoba: 'https://images.pexels.com/photos/31779458/pexels-photo-31779458.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  granada: 'https://images.pexels.com/photos/19916757/pexels-photo-19916757.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  salamanca: 'https://images.pexels.com/photos/28435486/pexels-photo-28435486.jpeg?auto=compress&cs=tinysrgb&w=1600',
   faro: 'https://images.pexels.com/photos/12704510/pexels-photo-12704510.jpeg?auto=compress&cs=tinysrgb&w=1600',
   trondheim: 'https://images.pexels.com/photos/17241175/pexels-photo-17241175.jpeg?auto=compress&cs=tinysrgb&w=1600',
   gothenburg: 'https://images.pexels.com/photos/33820144/pexels-photo-33820144.jpeg?auto=compress&cs=tinysrgb&w=1600',
