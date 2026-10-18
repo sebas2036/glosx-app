@@ -112,7 +112,7 @@ ${t.sections.map(([h, b]) => `    <h2>${h}</h2>\n    ${b}`).join('\n\n')}
   </main>
 
   <footer>
-    <p>© 2026 GLOSX — WoW Train</p>
+    <p>© 2026 GLOSX — WoW Train · <a href="/">glosx.app</a></p>
     <p style="margin-top:8px;">
       <a href="/blog.html">Blog</a> ·
       <a href="/about.html">${l.about}</a> ·
