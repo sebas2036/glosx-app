@@ -9,7 +9,10 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
-const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, 'assets/data/horarios-rutas.json'), 'utf8'));
+// Archivo completo (incluye lo derivado de SNCF, ODbL) fuera del repo; si no existe, el público del repo.
+const FULL = path.join(require('os').homedir(), 'proyectos/glosx-horarios-datos/horarios-rutas-completo.json');
+const DATA = JSON.parse(fs.readFileSync(fs.existsSync(FULL) ? FULL : path.join(ROOT, 'assets/data/horarios-rutas.json'), 'utf8'));
+const PRIORITY = ['eurostar', 'db', 'renfe_ld', 'sncf'];
 const jsrc = fs.readFileSync(path.join(ROOT, 'assets/js/japan.js'), 'utf8');
 const NAMES = JSON.parse(jsrc.match(/var HOTEL_NAMES = (\{.*?\});\n  function hname/s)[1]);
 const nm = (lang, c) => (NAMES[lang] && NAMES[lang][c]) || c;
@@ -21,6 +24,10 @@ const LANGS = ['en', 'es', 'fr', 'it', 'ja'];
 
 // fuente por feed
 const SRC = {
+  sncf: { op: { en: 'SNCF Voyageurs (TGV, Intercités and TER)', es: 'SNCF Voyageurs (TGV, Intercités y TER)', fr: 'SNCF Voyageurs (TGV, Intercités et TER)', it: 'SNCF Voyageurs (TGV, Intercités e TER)', ja: 'SNCF Voyageurs（TGV・Intercités・TER）' },
+    train: { en: 'SNCF Voyageurs train (TGV, Intercités or TER)', es: 'tren de SNCF Voyageurs (TGV, Intercités o TER)', fr: 'train SNCF Voyageurs (TGV, Intercités ou TER)', it: 'treno SNCF Voyageurs (TGV, Intercités o TER)', ja: 'SNCF Voyageursの列車（TGV・Intercités・TER）' },
+    of: { fr: 'de SNCF Voyageurs (TGV, Intercités et TER)', it: 'di SNCF Voyageurs (TGV, Intercités e TER)' },
+    credit: { en: 'SNCF Voyageurs open timetable via transport.data.gouv.fr (ODbL 1.0)', es: 'horario abierto de SNCF Voyageurs vía transport.data.gouv.fr (ODbL 1.0)', fr: 'horaire ouvert de SNCF Voyageurs via transport.data.gouv.fr (ODbL 1.0)', it: 'orario aperto di SNCF Voyageurs tramite transport.data.gouv.fr (ODbL 1.0)', ja: 'SNCF Voyageursのオープン時刻表（transport.data.gouv.fr経由、ODbL 1.0）' } },
   renfe_ld: { op: { en: 'Renfe high-speed and long-distance', es: 'alta velocidad y larga distancia de Renfe', fr: 'grande vitesse et grandes lignes de Renfe', it: 'alta velocità e lunga percorrenza di Renfe', ja: 'レンフェの高速・長距離' }, train: { en: 'Renfe high-speed or long-distance train', es: 'tren de alta velocidad o larga distancia de Renfe', fr: 'train à grande vitesse ou grandes lignes de Renfe', it: 'treno ad alta velocità o a lunga percorrenza di Renfe', ja: 'レンフェの高速・長距離列車' },
     of: { fr: 'de Renfe (grande vitesse et grandes lignes)', it: 'di Renfe (alta velocità e lunga percorrenza)' },
     credit: { en: 'Renfe open timetable (CC BY 4.0)', es: 'horario abierto de Renfe (CC BY 4.0)', fr: 'horaire ouvert de Renfe (CC BY 4.0)', it: 'orario aperto di Renfe (CC BY 4.0)', ja: 'Renfeのオープン時刻表（CC BY 4.0）' } },
@@ -83,10 +90,10 @@ const T = {
 const stat = { done: 0, had: 0 };
 for (const [slug, r] of Object.entries(DATA.routes)) {
   const R = ROUTE[slug]; if (!R) continue;
-  const src = r.sources[0];
+  const src = PRIORITY.find((x) => r.sources.includes(x));
   const dirA = r.dirs[`${R.from}>${R.to}`], dirB = r.dirs[`${R.to}>${R.from}`];
   if (!dirA || !dirB) continue;
-  const one = (d, k) => Object.values(d[k] || {})[0] || { n: 0, first: '', last: '' };
+  const one = (d, k) => (d[k] || {})[src] || { n: 0, first: '', last: '' };
   for (const lang of LANGS) {
     const file = path.join(ROOT, 'rutas', slug, lang === 'en' ? '' : lang, 'index.html');
     if (!fs.existsSync(file)) continue;

@@ -16,6 +16,7 @@ REF = {'weekday': datetime.date(2026, 10, 20), 'saturday': datetime.date(2026, 1
 SOURCES = {
     'db': {'zip': 'db/fv_free.zip', 'name': 'DELFI e.V. / GTFS.de', 'license': 'CC BY 4.0', 'url': 'https://gtfs.de'},
     'eurostar': {'zip': 'eurostar/eurostar_gtfs.zip', 'name': 'Eurostar International Ltd', 'license': 'Licence Ouverte 2.0', 'url': 'https://transport.data.gouv.fr/datasets/eurostar-gtfs-plan-de-transport-et-temps-reel'},
+    'sncf': {'zip': 'sncf/sncf_gtfs.zip', 'name': 'SNCF Voyageurs', 'license': 'ODbL 1.0', 'url': 'https://transport.data.gouv.fr/datasets/horaires-sncf', 'private': True},
     'renfe_ld': {'zip': 'renfe_ld/renfe_av_ld.zip', 'name': 'Renfe', 'license': 'CC BY 4.0', 'url': 'https://data.renfe.com/dataset/horarios-de-alta-velocidad-larga-distancia-y-media-distancia', 'short_names': {'AVE', 'AVLO', 'ALVIA', 'EUROMED', 'INTERCITY'}},
     'renfe': {'zip': 'renfe/renfe_ave_int.zip', 'name': 'Renfe Viajeros', 'license': 'Licence Ouverte 2.0', 'url': 'https://transport.data.gouv.fr/datasets/horaires-ave-espagne-france'},
 }
@@ -37,8 +38,16 @@ GERMAN = {'Berlin','Hamburg','Munich','Frankfurt','Cologne','Dortmund','Stuttgar
 def allowed(key, a, b):
     if key == 'eurostar': return True
     if key == 'db': return a in GERMAN and b in GERMAN
+    if key == 'sncf': return True
     if key == 'renfe_ld': return {a, b} not in ({'Barcelona', 'Girona'}, {'Girona', 'Figueres'})   # ahí dominan los regionales (Rodalies), que este archivo no incluye
     return False
+SNCF_STATIONS = {  # nombre normalizado de la estación -> ciudad (evita falsos como "Orleans Avenue de Paris")
+    'paris est': 'Paris', 'paris gare de lyon hall 1 - 2': 'Paris', 'paris gare du nord': 'Paris', 'paris montparnasse hall 1 - 2': 'Paris', 'paris austerlitz': 'Paris',
+    'lyon part dieu': 'Lyon', 'lyon perrache': 'Lyon', 'marseille saint-charles': 'Marseille', 'nice-ville': 'Nice', 'bordeaux saint-jean': 'Bordeaux',
+    'toulouse matabiau': 'Toulouse', 'lille europe': 'Lille', 'lille flandres': 'Lille', 'strasbourg': 'Strasbourg', 'lourdes': 'Lourdes', 'avignon tgv': 'Avignon',
+    'montpellier saint-roch': 'Montpellier', 'miramas': 'Miramas', 'basel sbb': 'Basel', 'geneve cornavin': 'Geneva', 'bruxelles midi': 'Brussels', 'colmar': 'Colmar',
+    'milano porta garibaldi': 'Milan', 'dijon': 'Dijon', 'nantes': 'Nantes', 'rennes': 'Rennes', 'tours': 'Tours', 'angouleme': 'Angouleme', 'poitiers': 'Poitiers', 'mulhouse': 'Mulhouse',
+}
 EXCL = ('flughafen', 'airport', 'schiphol', 'zaventem', '(oder)', 'bf ehrenfeld', 'gl.')
 def city_of(stop_name):
     n = norm(stop_name)
@@ -69,7 +78,7 @@ meta = {}
 for key, src in SOURCES.items():
     z = zipfile.ZipFile(f"{DATA}/{src['zip']}")
     stops_rows = rd(z, 'stops.txt')
-    stops = {s['stop_id']: city_of(s['stop_name']) for s in stops_rows}
+    stops = {s['stop_id']: (SNCF_STATIONS.get(norm(s['stop_name'])) if key == 'sncf' else city_of(s['stop_name'])) for s in stops_rows}
     shift = {s['stop_id']: (-3600 if (key == 'eurostar' and s.get('stop_timezone') == 'Europe/London') else 0) for s in stops_rows}
     cal = {r['service_id']: r for r in rd(z, 'calendar.txt')}
     cd = collections.defaultdict(dict)
@@ -129,6 +138,15 @@ for key, src in SOURCES.items():
 out = {'reference_week': {k: v.isoformat() for k, v in REF.items()}, 'feeds': {k: {**{kk: vv for kk, vv in SOURCES[k].items() if kk != 'short_names'}, **meta[k]} for k in SOURCES}, 'routes': {}}
 for slug, r in sorted(result.items()):
     out['routes'][slug] = {'sources': sorted(r['sources']), 'dirs': {k: {kk: vv for kk, vv in v.items() if kk != 'by'} for k, v in r['dirs'].items()}}
-json.dump(out, open(OUT, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
+# Los datos derivados de SNCF (ODbL, "compartir igual") NO van al archivo público del repositorio: solo al archivo completo, fuera del repo.
+PRIVATE = {k for k, v in SOURCES.items() if v.get('private')}
+public = {'reference_week': out['reference_week'], 'feeds': {k: v for k, v in out['feeds'].items() if k not in PRIVATE}, 'routes': {}}
+for slug, r in out['routes'].items():
+    src = [x for x in r['sources'] if x not in PRIVATE]
+    if not src: continue
+    public['routes'][slug] = {'sources': src, 'dirs': {k: {kk: {sk: sv for sk, sv in vv.items() if sk not in PRIVATE} for kk, vv in v.items()} for k, v in r['dirs'].items()}}
+json.dump(public, open(OUT, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
+FULL = sys.argv[3] if len(sys.argv) > 3 else None
+if FULL: json.dump(out, open(FULL, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
 print('rutas con datos reales:', len(out['routes']), 'de', len(ROUTES))
 print(', '.join(sorted(out['routes'])))
