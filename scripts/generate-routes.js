@@ -1004,7 +1004,7 @@ const REAL_HOTELS = {
 
 // Foto hero real por ciudad de destino (Pexels), evita la misma foto generica en las 174 paginas.
 const HERO_PHOTOS = {
-  geneva: 'https://images.pexels.com/photos/34007139/pexels-photo-34007139.jpeg?auto=compress&cs=tinysrgb&w=1600',
+  geneva: 'https://glosx.app/assets/img/hero/zurich.jpg',
   bern: 'https://images.pexels.com/photos/18429608/pexels-photo-18429608.jpeg?auto=compress&cs=tinysrgb&w=1600',
   madrid: 'https://images.pexels.com/photos/36482790/pexels-photo-36482790.jpeg?auto=compress&cs=tinysrgb&w=1600',
   segovia: 'https://images.pexels.com/photos/15583525/pexels-photo-15583525.jpeg?auto=compress&cs=tinysrgb&w=1600',
