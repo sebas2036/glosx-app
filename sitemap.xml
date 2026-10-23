@@ -21137,4 +21137,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://glosx.app/swiss-trains/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/trenes-suiza/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
+  </url>
 </urlset>

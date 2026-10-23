@@ -1,0 +1,6152 @@
+{
+ "source": {
+  "name": "SBB / opentransportdata.swiss",
+  "url": "https://data.opentransportdata.swiss/dataset/timetable-2026-gtfs2020",
+  "file": "sbb_gtfs.zip"
+ },
+ "reference_week": {
+  "weekday": "2026-12-01",
+  "saturday": "2026-12-05",
+  "sunday": "2026-12-06"
+ },
+ "pairs": [
+  {
+   "from": "Basel SBB",
+   "to": "Bellinzona",
+   "weekday": {
+    "n": 17,
+    "first": "05:04",
+    "last": "21:04",
+    "fastest_min": 158,
+    "median_min": 158
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:04",
+    "last": "21:04",
+    "fastest_min": 158,
+    "median_min": 158
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:04",
+    "last": "21:04",
+    "fastest_min": 158,
+    "median_min": 158
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Bern",
+   "weekday": {
+    "n": 35,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 56,
+    "median_min": 58
+   },
+   "saturday": {
+    "n": 35,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 56,
+    "median_min": 58
+   },
+   "sunday": {
+    "n": 35,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 56,
+    "median_min": 58
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Brig",
+   "weekday": {
+    "n": 10,
+    "first": "06:30",
+    "last": "22:28",
+    "fastest_min": 130,
+    "median_min": 131
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:30",
+    "last": "22:28",
+    "fastest_min": 130,
+    "median_min": 131
+   },
+   "sunday": {
+    "n": 9,
+    "first": "06:30",
+    "last": "20:30",
+    "fastest_min": 130,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Chur",
+   "weekday": {
+    "n": 19,
+    "first": "06:07",
+    "last": "20:33",
+    "fastest_min": 135,
+    "median_min": 135
+   },
+   "saturday": {
+    "n": 17,
+    "first": "06:07",
+    "last": "20:33",
+    "fastest_min": 135,
+    "median_min": 135
+   },
+   "sunday": {
+    "n": 17,
+    "first": "06:07",
+    "last": "20:33",
+    "fastest_min": 135,
+    "median_min": 135
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 15,
+    "first": "06:32",
+    "last": "20:32",
+    "fastest_min": 144,
+    "median_min": 144
+   },
+   "saturday": {
+    "n": 16,
+    "first": "06:32",
+    "last": "21:32",
+    "fastest_min": 144,
+    "median_min": 144
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:32",
+    "last": "20:32",
+    "fastest_min": 144,
+    "median_min": 144
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Locarno",
+   "weekday": {
+    "n": 6,
+    "first": "06:04",
+    "last": "16:04",
+    "fastest_min": 263,
+    "median_min": 263
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:04",
+    "last": "16:04",
+    "fastest_min": 263,
+    "median_min": 263
+   },
+   "sunday": {
+    "n": 6,
+    "first": "06:04",
+    "last": "16:04",
+    "fastest_min": 263,
+    "median_min": 263
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Lugano",
+   "weekday": {
+    "n": 10,
+    "first": "05:04",
+    "last": "21:04",
+    "fastest_min": 174,
+    "median_min": 174
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:04",
+    "last": "21:04",
+    "fastest_min": 174,
+    "median_min": 174
+   },
+   "sunday": {
+    "n": 10,
+    "first": "05:04",
+    "last": "21:04",
+    "fastest_min": 174,
+    "median_min": 174
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Luzern",
+   "weekday": {
+    "n": 35,
+    "first": "05:04",
+    "last": "22:58",
+    "fastest_min": 61,
+    "median_min": 61
+   },
+   "saturday": {
+    "n": 36,
+    "first": "05:04",
+    "last": "01:00",
+    "fastest_min": 63,
+    "median_min": 66
+   },
+   "sunday": {
+    "n": 36,
+    "first": "05:04",
+    "last": "00:04",
+    "fastest_min": 63,
+    "median_min": 66
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 15,
+    "first": "06:32",
+    "last": "20:32",
+    "fastest_min": 95,
+    "median_min": 95
+   },
+   "saturday": {
+    "n": 16,
+    "first": "06:32",
+    "last": "21:32",
+    "fastest_min": 95,
+    "median_min": 95
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:32",
+    "last": "20:32",
+    "fastest_min": 95,
+    "median_min": 95
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Spiez",
+   "weekday": {
+    "n": 34,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 93,
+    "median_min": 96
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 93,
+    "median_min": 93
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 93,
+    "median_min": 93
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Thun",
+   "weekday": {
+    "n": 34,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 83,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 83,
+    "median_min": 83
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:24",
+    "last": "22:28",
+    "fastest_min": 83,
+    "median_min": 83
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Visp",
+   "weekday": {
+    "n": 10,
+    "first": "06:30",
+    "last": "22:28",
+    "fastest_min": 121,
+    "median_min": 121
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:30",
+    "last": "22:28",
+    "fastest_min": 121,
+    "median_min": 121
+   },
+   "sunday": {
+    "n": 8,
+    "first": "06:30",
+    "last": "19:30",
+    "fastest_min": 121,
+    "median_min": 121
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 16,
+    "first": "04:36",
+    "last": "19:36",
+    "fastest_min": 88,
+    "median_min": 88
+   },
+   "saturday": {
+    "n": 16,
+    "first": "04:36",
+    "last": "19:36",
+    "fastest_min": 88,
+    "median_min": 88
+   },
+   "sunday": {
+    "n": 16,
+    "first": "04:36",
+    "last": "19:36",
+    "fastest_min": 88,
+    "median_min": 88
+   }
+  },
+  {
+   "from": "Basel SBB",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 88,
+    "first": "04:36",
+    "last": "00:07",
+    "fastest_min": 53,
+    "median_min": 69
+   },
+   "saturday": {
+    "n": 91,
+    "first": "04:36",
+    "last": "00:07",
+    "fastest_min": 53,
+    "median_min": 69
+   },
+   "sunday": {
+    "n": 90,
+    "first": "04:36",
+    "last": "00:07",
+    "fastest_min": 53,
+    "median_min": 69
+   }
+  },
+  {
+   "from": "Bellinzona",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 18,
+    "first": "05:59",
+    "last": "22:17",
+    "fastest_min": 158,
+    "median_min": 164
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:59",
+    "last": "22:17",
+    "fastest_min": 158,
+    "median_min": 164
+   },
+   "sunday": {
+    "n": 18,
+    "first": "05:59",
+    "last": "22:17",
+    "fastest_min": 158,
+    "median_min": 164
+   }
+  },
+  {
+   "from": "Bellinzona",
+   "to": "Locarno",
+   "weekday": {
+    "n": 50,
+    "first": "04:49",
+    "last": "22:19",
+    "fastest_min": 23,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 57,
+    "first": "03:32",
+    "last": "00:59",
+    "fastest_min": 19,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 51,
+    "first": "03:32",
+    "last": "22:19",
+    "fastest_min": 23,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Bellinzona",
+   "to": "Lugano",
+   "weekday": {
+    "n": 77,
+    "first": "04:33",
+    "last": "00:53",
+    "fastest_min": 14,
+    "median_min": 19
+   },
+   "saturday": {
+    "n": 78,
+    "first": "03:33",
+    "last": "01:06",
+    "fastest_min": 14,
+    "median_min": 19
+   },
+   "sunday": {
+    "n": 75,
+    "first": "03:33",
+    "last": "23:46",
+    "fastest_min": 14,
+    "median_min": 19
+   }
+  },
+  {
+   "from": "Bellinzona",
+   "to": "Luzern",
+   "weekday": {
+    "n": 17,
+    "first": "05:59",
+    "last": "22:17",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:59",
+    "last": "22:17",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "sunday": {
+    "n": 18,
+    "first": "05:59",
+    "last": "22:17",
+    "fastest_min": 78,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Bellinzona",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 33,
+    "first": "05:07",
+    "last": "21:47",
+    "fastest_min": 98,
+    "median_min": 100
+   },
+   "saturday": {
+    "n": 32,
+    "first": "05:07",
+    "last": "21:47",
+    "fastest_min": 98,
+    "median_min": 100
+   },
+   "sunday": {
+    "n": 31,
+    "first": "06:59",
+    "last": "21:47",
+    "fastest_min": 98,
+    "median_min": 100
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 34,
+    "first": "06:04",
+    "last": "23:36",
+    "fastest_min": 56,
+    "median_min": 56
+   },
+   "saturday": {
+    "n": 34,
+    "first": "06:04",
+    "last": "23:36",
+    "fastest_min": 53,
+    "median_min": 56
+   },
+   "sunday": {
+    "n": 34,
+    "first": "06:04",
+    "last": "23:36",
+    "fastest_min": 53,
+    "median_min": 56
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Brig",
+   "weekday": {
+    "n": 26,
+    "first": "06:07",
+    "last": "23:40",
+    "fastest_min": 66,
+    "median_min": 66
+   },
+   "saturday": {
+    "n": 28,
+    "first": "06:07",
+    "last": "23:37",
+    "fastest_min": 66,
+    "median_min": 66
+   },
+   "sunday": {
+    "n": 26,
+    "first": "06:07",
+    "last": "22:34",
+    "fastest_min": 66,
+    "median_min": 66
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Chur",
+   "weekday": {
+    "n": 15,
+    "first": "04:38",
+    "last": "19:38",
+    "fastest_min": 190,
+    "median_min": 190
+   },
+   "saturday": {
+    "n": 20,
+    "first": "04:36",
+    "last": "19:38",
+    "fastest_min": 141,
+    "median_min": 190
+   },
+   "sunday": {
+    "n": 20,
+    "first": "04:36",
+    "last": "19:38",
+    "fastest_min": 141,
+    "median_min": 190
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 86,
+    "first": "05:04",
+    "last": "00:09",
+    "fastest_min": 22,
+    "median_min": 23
+   },
+   "saturday": {
+    "n": 92,
+    "first": "05:04",
+    "last": "00:25",
+    "fastest_min": 22,
+    "median_min": 23
+   },
+   "sunday": {
+    "n": 92,
+    "first": "05:04",
+    "last": "00:25",
+    "fastest_min": 22,
+    "median_min": 23
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Genève",
+   "weekday": {
+    "n": 30,
+    "first": "05:04",
+    "last": "19:34",
+    "fastest_min": 111,
+    "median_min": 116
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:34",
+    "last": "21:34",
+    "fastest_min": 120,
+    "median_min": 121
+   },
+   "sunday": {
+    "n": 15,
+    "first": "05:34",
+    "last": "19:34",
+    "fastest_min": 121,
+    "median_min": 121
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 30,
+    "first": "05:04",
+    "last": "19:34",
+    "fastest_min": 123,
+    "median_min": 127
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:34",
+    "last": "21:34",
+    "fastest_min": 130,
+    "median_min": 130
+   },
+   "sunday": {
+    "n": 15,
+    "first": "05:34",
+    "last": "19:34",
+    "fastest_min": 130,
+    "median_min": 130
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 36,
+    "first": "05:04",
+    "last": "23:08",
+    "fastest_min": 69,
+    "median_min": 75
+   },
+   "saturday": {
+    "n": 37,
+    "first": "05:04",
+    "last": "00:09",
+    "fastest_min": 69,
+    "median_min": 76
+   },
+   "sunday": {
+    "n": 37,
+    "first": "05:04",
+    "last": "00:09",
+    "fastest_min": 69,
+    "median_min": 76
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Luzern",
+   "weekday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 61,
+    "median_min": 61
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 61,
+    "median_min": 61
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 61,
+    "median_min": 61
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 20,
+    "first": "05:04",
+    "last": "22:53",
+    "fastest_min": 35,
+    "median_min": 35
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:53",
+    "last": "20:53",
+    "fastest_min": 35,
+    "median_min": 35
+   },
+   "sunday": {
+    "n": 19,
+    "first": "05:53",
+    "last": "22:53",
+    "fastest_min": 35,
+    "median_min": 35
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Spiez",
+   "weekday": {
+    "n": 66,
+    "first": "06:04",
+    "last": "00:08",
+    "fastest_min": 29,
+    "median_min": 30
+   },
+   "saturday": {
+    "n": 69,
+    "first": "06:04",
+    "last": "01:09",
+    "fastest_min": 29,
+    "median_min": 30
+   },
+   "sunday": {
+    "n": 67,
+    "first": "06:04",
+    "last": "00:08",
+    "fastest_min": 29,
+    "median_min": 30
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 17,
+    "first": "05:29",
+    "last": "21:31",
+    "fastest_min": 141,
+    "median_min": 141
+   },
+   "saturday": {
+    "n": 12,
+    "first": "05:29",
+    "last": "21:31",
+    "fastest_min": 141,
+    "median_min": 141
+   },
+   "sunday": {
+    "n": 12,
+    "first": "05:29",
+    "last": "21:31",
+    "fastest_min": 141,
+    "median_min": 141
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Thun",
+   "weekday": {
+    "n": 140,
+    "first": "05:02",
+    "last": "00:16",
+    "fastest_min": 19,
+    "median_min": 30
+   },
+   "saturday": {
+    "n": 110,
+    "first": "05:02",
+    "last": "01:09",
+    "fastest_min": 19,
+    "median_min": 23
+   },
+   "sunday": {
+    "n": 106,
+    "first": "05:02",
+    "last": "00:16",
+    "fastest_min": 19,
+    "median_min": 22
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Visp",
+   "weekday": {
+    "n": 26,
+    "first": "06:07",
+    "last": "23:40",
+    "fastest_min": 56,
+    "median_min": 57
+   },
+   "saturday": {
+    "n": 28,
+    "first": "06:07",
+    "last": "23:37",
+    "fastest_min": 56,
+    "median_min": 57
+   },
+   "sunday": {
+    "n": 24,
+    "first": "06:07",
+    "last": "20:34",
+    "fastest_min": 56,
+    "median_min": 57
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 33,
+    "first": "05:29",
+    "last": "22:02",
+    "fastest_min": 85,
+    "median_min": 95
+   },
+   "saturday": {
+    "n": 29,
+    "first": "03:00",
+    "last": "22:02",
+    "fastest_min": 87,
+    "median_min": 87
+   },
+   "sunday": {
+    "n": 29,
+    "first": "03:00",
+    "last": "22:02",
+    "fastest_min": 87,
+    "median_min": 87
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 34,
+    "first": "04:18",
+    "last": "22:02",
+    "fastest_min": 71,
+    "median_min": 78
+   },
+   "saturday": {
+    "n": 30,
+    "first": "03:00",
+    "last": "22:02",
+    "fastest_min": 72,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 30,
+    "first": "03:00",
+    "last": "22:02",
+    "fastest_min": 72,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Bern",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 72,
+    "first": "04:18",
+    "last": "00:02",
+    "fastest_min": 56,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 72,
+    "first": "03:00",
+    "last": "01:06",
+    "fastest_min": 56,
+    "median_min": 61
+   },
+   "sunday": {
+    "n": 70,
+    "first": "03:00",
+    "last": "00:04",
+    "fastest_min": 56,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 9,
+    "first": "05:16",
+    "last": "20:18",
+    "fastest_min": 131,
+    "median_min": 131
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:16",
+    "last": "20:18",
+    "fastest_min": 130,
+    "median_min": 131
+   },
+   "sunday": {
+    "n": 9,
+    "first": "05:16",
+    "last": "20:20",
+    "fastest_min": 130,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Bern",
+   "weekday": {
+    "n": 26,
+    "first": "05:16",
+    "last": "22:18",
+    "fastest_min": 67,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 27,
+    "first": "05:16",
+    "last": "22:18",
+    "fastest_min": 67,
+    "median_min": 68
+   },
+   "sunday": {
+    "n": 28,
+    "first": "05:16",
+    "last": "22:25",
+    "fastest_min": 67,
+    "median_min": 68
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Genève",
+   "weekday": {
+    "n": 36,
+    "first": "04:18",
+    "last": "21:52",
+    "fastest_min": 131,
+    "median_min": 157
+   },
+   "saturday": {
+    "n": 24,
+    "first": "04:18",
+    "last": "21:26",
+    "fastest_min": 131,
+    "median_min": 159
+   },
+   "sunday": {
+    "n": 23,
+    "first": "04:18",
+    "last": "21:52",
+    "fastest_min": 131,
+    "median_min": 159
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 31,
+    "first": "04:18",
+    "last": "20:57",
+    "fastest_min": 159,
+    "median_min": 168
+   },
+   "saturday": {
+    "n": 20,
+    "first": "04:18",
+    "last": "21:26",
+    "fastest_min": 168,
+    "median_min": 168
+   },
+   "sunday": {
+    "n": 18,
+    "first": "04:18",
+    "last": "20:57",
+    "fastest_min": 168,
+    "median_min": 168
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 38,
+    "first": "04:18",
+    "last": "21:52",
+    "fastest_min": 88,
+    "median_min": 106
+   },
+   "saturday": {
+    "n": 40,
+    "first": "04:18",
+    "last": "22:26",
+    "fastest_min": 88,
+    "median_min": 106
+   },
+   "sunday": {
+    "n": 38,
+    "first": "04:18",
+    "last": "21:52",
+    "fastest_min": 88,
+    "median_min": 106
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Montreux",
+   "weekday": {
+    "n": 35,
+    "first": "04:18",
+    "last": "21:52",
+    "fastest_min": 67,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 36,
+    "first": "04:18",
+    "last": "22:26",
+    "fastest_min": 67,
+    "median_min": 82
+   },
+   "sunday": {
+    "n": 35,
+    "first": "04:18",
+    "last": "21:52",
+    "fastest_min": 67,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Sion",
+   "weekday": {
+    "n": 75,
+    "first": "04:18",
+    "last": "00:40",
+    "fastest_min": 29,
+    "median_min": 41
+   },
+   "saturday": {
+    "n": 76,
+    "first": "04:18",
+    "last": "00:26",
+    "fastest_min": 29,
+    "median_min": 41
+   },
+   "sunday": {
+    "n": 60,
+    "first": "04:18",
+    "last": "00:40",
+    "fastest_min": 29,
+    "median_min": 40
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Spiez",
+   "weekday": {
+    "n": 43,
+    "first": "05:11",
+    "last": "22:18",
+    "fastest_min": 35,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 44,
+    "first": "05:11",
+    "last": "22:18",
+    "fastest_min": 35,
+    "median_min": 36
+   },
+   "sunday": {
+    "n": 46,
+    "first": "05:11",
+    "last": "22:25",
+    "fastest_min": 35,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Thun",
+   "weekday": {
+    "n": 26,
+    "first": "05:16",
+    "last": "22:18",
+    "fastest_min": 45,
+    "median_min": 46
+   },
+   "saturday": {
+    "n": 27,
+    "first": "05:16",
+    "last": "22:18",
+    "fastest_min": 45,
+    "median_min": 46
+   },
+   "sunday": {
+    "n": 29,
+    "first": "05:16",
+    "last": "22:25",
+    "fastest_min": 45,
+    "median_min": 46
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Visp",
+   "weekday": {
+    "n": 99,
+    "first": "04:18",
+    "last": "00:40",
+    "fastest_min": 6,
+    "median_min": 7
+   },
+   "saturday": {
+    "n": 99,
+    "first": "04:18",
+    "last": "00:26",
+    "fastest_min": 6,
+    "median_min": 7
+   },
+   "sunday": {
+    "n": 85,
+    "first": "04:18",
+    "last": "00:40",
+    "fastest_min": 6,
+    "median_min": 7
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 14,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 164,
+    "median_min": 164
+   },
+   "saturday": {
+    "n": 14,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 164,
+    "median_min": 164
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 164,
+    "median_min": 164
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 14,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 148,
+    "median_min": 149
+   },
+   "saturday": {
+    "n": 14,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 149,
+    "median_min": 149
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 149,
+    "median_min": 149
+   }
+  },
+  {
+   "from": "Brig",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 15,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 133,
+    "median_min": 133
+   },
+   "saturday": {
+    "n": 15,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 133,
+    "median_min": 133
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:42",
+    "last": "19:45",
+    "fastest_min": 133,
+    "median_min": 133
+   }
+  },
+  {
+   "from": "Chur",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 18,
+    "first": "05:08",
+    "last": "19:08",
+    "fastest_min": 134,
+    "median_min": 136
+   },
+   "saturday": {
+    "n": 15,
+    "first": "05:08",
+    "last": "19:08",
+    "fastest_min": 134,
+    "median_min": 134
+   },
+   "sunday": {
+    "n": 14,
+    "first": "07:08",
+    "last": "19:08",
+    "fastest_min": 134,
+    "median_min": 134
+   }
+  },
+  {
+   "from": "Chur",
+   "to": "Bern",
+   "weekday": {
+    "n": 14,
+    "first": "05:11",
+    "last": "18:11",
+    "fastest_min": 190,
+    "median_min": 190
+   },
+   "saturday": {
+    "n": 19,
+    "first": "05:11",
+    "last": "18:11",
+    "fastest_min": 140,
+    "median_min": 190
+   },
+   "sunday": {
+    "n": 20,
+    "first": "04:11",
+    "last": "19:11",
+    "fastest_min": 140,
+    "median_min": 190
+   }
+  },
+  {
+   "from": "Chur",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 16,
+    "first": "05:42",
+    "last": "20:42",
+    "fastest_min": 82,
+    "median_min": 82
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:42",
+    "last": "20:42",
+    "fastest_min": 82,
+    "median_min": 82
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:42",
+    "last": "20:42",
+    "fastest_min": 82,
+    "median_min": 82
+   }
+  },
+  {
+   "from": "Chur",
+   "to": "St. Moritz",
+   "weekday": {
+    "n": 16,
+    "first": "05:08",
+    "last": "20:55",
+    "fastest_min": 117,
+    "median_min": 117
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:08",
+    "last": "20:55",
+    "fastest_min": 117,
+    "median_min": 117
+   },
+   "sunday": {
+    "n": 16,
+    "first": "06:58",
+    "last": "20:55",
+    "fastest_min": 117,
+    "median_min": 117
+   }
+  },
+  {
+   "from": "Chur",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 50,
+    "first": "04:11",
+    "last": "23:11",
+    "fastest_min": 74,
+    "median_min": 75
+   },
+   "saturday": {
+    "n": 49,
+    "first": "04:11",
+    "last": "23:11",
+    "fastest_min": 74,
+    "median_min": 75
+   },
+   "sunday": {
+    "n": 49,
+    "first": "04:11",
+    "last": "23:11",
+    "fastest_min": 74,
+    "median_min": 75
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Bern",
+   "weekday": {
+    "n": 86,
+    "first": "05:09",
+    "last": "00:34",
+    "fastest_min": 23,
+    "median_min": 25
+   },
+   "saturday": {
+    "n": 92,
+    "first": "04:59",
+    "last": "00:34",
+    "fastest_min": 23,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 92,
+    "first": "04:59",
+    "last": "00:34",
+    "fastest_min": 23,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Genève",
+   "weekday": {
+    "n": 30,
+    "first": "05:27",
+    "last": "19:57",
+    "fastest_min": 88,
+    "median_min": 93
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:57",
+    "last": "21:57",
+    "fastest_min": 97,
+    "median_min": 98
+   },
+   "sunday": {
+    "n": 15,
+    "first": "05:57",
+    "last": "19:57",
+    "fastest_min": 98,
+    "median_min": 98
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 30,
+    "first": "05:27",
+    "last": "19:57",
+    "fastest_min": 100,
+    "median_min": 104
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:57",
+    "last": "21:57",
+    "fastest_min": 107,
+    "median_min": 107
+   },
+   "sunday": {
+    "n": 15,
+    "first": "05:57",
+    "last": "19:57",
+    "fastest_min": 107,
+    "median_min": 107
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 69,
+    "first": "05:27",
+    "last": "23:31",
+    "fastest_min": 46,
+    "median_min": 53
+   },
+   "saturday": {
+    "n": 76,
+    "first": "02:26",
+    "last": "00:36",
+    "fastest_min": 44,
+    "median_min": 53
+   },
+   "sunday": {
+    "n": 74,
+    "first": "02:26",
+    "last": "00:36",
+    "fastest_min": 44,
+    "median_min": 53
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Luzern",
+   "weekday": {
+    "n": 18,
+    "first": "05:33",
+    "last": "22:33",
+    "fastest_min": 88,
+    "median_min": 88
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:33",
+    "last": "22:33",
+    "fastest_min": 88,
+    "median_min": 88
+   },
+   "sunday": {
+    "n": 18,
+    "first": "05:33",
+    "last": "22:33",
+    "fastest_min": 88,
+    "median_min": 88
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 38,
+    "first": "04:28",
+    "last": "23:47",
+    "fastest_min": 55,
+    "median_min": 55
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:17",
+    "last": "23:47",
+    "fastest_min": 55,
+    "median_min": 55
+   },
+   "sunday": {
+    "n": 38,
+    "first": "05:17",
+    "last": "23:47",
+    "fastest_min": 55,
+    "median_min": 55
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 16,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 169,
+    "median_min": 169
+   },
+   "saturday": {
+    "n": 11,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 169,
+    "median_min": 169
+   },
+   "sunday": {
+    "n": 11,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 169,
+    "median_min": 169
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Thun",
+   "weekday": {
+    "n": 34,
+    "first": "05:09",
+    "last": "21:42",
+    "fastest_min": 64,
+    "median_min": 65
+   },
+   "saturday": {
+    "n": 2,
+    "first": "04:59",
+    "last": "23:42",
+    "fastest_min": 64,
+    "median_min": 71
+   },
+   "sunday": {
+    "n": 2,
+    "first": "04:59",
+    "last": "23:42",
+    "fastest_min": 64,
+    "median_min": 71
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 16,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 123,
+    "median_min": 123
+   },
+   "saturday": {
+    "n": 11,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 123,
+    "median_min": 123
+   },
+   "sunday": {
+    "n": 11,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 123,
+    "median_min": 123
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 16,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 106,
+    "median_min": 106
+   },
+   "saturday": {
+    "n": 11,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 106,
+    "median_min": 106
+   },
+   "sunday": {
+    "n": 11,
+    "first": "06:03",
+    "last": "21:03",
+    "fastest_min": 106,
+    "median_min": 106
+   }
+  },
+  {
+   "from": "Fribourg",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 18,
+    "first": "06:03",
+    "last": "23:03",
+    "fastest_min": 85,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:03",
+    "last": "23:03",
+    "fastest_min": 85,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:03",
+    "last": "23:03",
+    "fastest_min": 85,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Bern",
+   "weekday": {
+    "n": 31,
+    "first": "05:33",
+    "last": "20:35",
+    "fastest_min": 111,
+    "median_min": 115
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:24",
+    "last": "20:24",
+    "fastest_min": 122,
+    "median_min": 122
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:24",
+    "last": "20:24",
+    "fastest_min": 122,
+    "median_min": 122
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Brig",
+   "weekday": {
+    "n": 38,
+    "first": "04:46",
+    "last": "22:19",
+    "fastest_min": 131,
+    "median_min": 152
+   },
+   "saturday": {
+    "n": 24,
+    "first": "04:46",
+    "last": "23:05",
+    "fastest_min": 131,
+    "median_min": 159
+   },
+   "sunday": {
+    "n": 22,
+    "first": "04:46",
+    "last": "22:19",
+    "fastest_min": 131,
+    "median_min": 159
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 31,
+    "first": "05:33",
+    "last": "20:35",
+    "fastest_min": 87,
+    "median_min": 91
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:24",
+    "last": "20:24",
+    "fastest_min": 98,
+    "median_min": 98
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:24",
+    "last": "20:24",
+    "fastest_min": 98,
+    "median_min": 98
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 81,
+    "first": "04:46",
+    "last": "00:34",
+    "fastest_min": 6,
+    "median_min": 7
+   },
+   "saturday": {
+    "n": 79,
+    "first": "04:17",
+    "last": "00:25",
+    "fastest_min": 6,
+    "median_min": 7
+   },
+   "sunday": {
+    "n": 75,
+    "first": "04:45",
+    "last": "00:34",
+    "fastest_min": 6,
+    "median_min": 7
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 111,
+    "first": "04:08",
+    "last": "00:27",
+    "fastest_min": 39,
+    "median_min": 46
+   },
+   "saturday": {
+    "n": 79,
+    "first": "04:08",
+    "last": "23:21",
+    "fastest_min": 39,
+    "median_min": 50
+   },
+   "sunday": {
+    "n": 79,
+    "first": "04:08",
+    "last": "00:27",
+    "fastest_min": 39,
+    "median_min": 50
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Luzern",
+   "weekday": {
+    "n": 15,
+    "first": "05:54",
+    "last": "19:54",
+    "fastest_min": 187,
+    "median_min": 187
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Montreux",
+   "weekday": {
+    "n": 70,
+    "first": "04:46",
+    "last": "23:15",
+    "fastest_min": 63,
+    "median_min": 72
+   },
+   "saturday": {
+    "n": 60,
+    "first": "04:46",
+    "last": "23:21",
+    "fastest_min": 62,
+    "median_min": 73
+   },
+   "sunday": {
+    "n": 53,
+    "first": "04:46",
+    "last": "23:15",
+    "fastest_min": 62,
+    "median_min": 73
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 6,
+    "first": "06:15",
+    "last": "19:15",
+    "fastest_min": 87,
+    "median_min": 87
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Sion",
+   "weekday": {
+    "n": 39,
+    "first": "04:46",
+    "last": "22:19",
+    "fastest_min": 100,
+    "median_min": 115
+   },
+   "saturday": {
+    "n": 25,
+    "first": "04:46",
+    "last": "23:21",
+    "fastest_min": 100,
+    "median_min": 123
+   },
+   "sunday": {
+    "n": 22,
+    "first": "04:46",
+    "last": "22:19",
+    "fastest_min": 100,
+    "median_min": 123
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 15,
+    "first": "05:33",
+    "last": "19:35",
+    "fastest_min": 257,
+    "median_min": 257
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:24",
+    "last": "19:24",
+    "fastest_min": 268,
+    "median_min": 268
+   },
+   "sunday": {
+    "n": 10,
+    "first": "06:24",
+    "last": "19:24",
+    "fastest_min": 268,
+    "median_min": 268
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Visp",
+   "weekday": {
+    "n": 34,
+    "first": "04:46",
+    "last": "22:19",
+    "fastest_min": 138,
+    "median_min": 146
+   },
+   "saturday": {
+    "n": 20,
+    "first": "04:46",
+    "last": "23:05",
+    "fastest_min": 141,
+    "median_min": 150
+   },
+   "sunday": {
+    "n": 18,
+    "first": "04:46",
+    "last": "22:19",
+    "fastest_min": 148,
+    "median_min": 150
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 15,
+    "first": "05:33",
+    "last": "19:35",
+    "fastest_min": 211,
+    "median_min": 211
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:24",
+    "last": "19:24",
+    "fastest_min": 222,
+    "median_min": 222
+   },
+   "sunday": {
+    "n": 10,
+    "first": "06:24",
+    "last": "19:24",
+    "fastest_min": 222,
+    "median_min": 222
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 15,
+    "first": "05:33",
+    "last": "19:35",
+    "fastest_min": 194,
+    "median_min": 194
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:24",
+    "last": "19:24",
+    "fastest_min": 205,
+    "median_min": 205
+   },
+   "sunday": {
+    "n": 10,
+    "first": "06:24",
+    "last": "19:24",
+    "fastest_min": 205,
+    "median_min": 205
+   }
+  },
+  {
+   "from": "Genève",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 16,
+    "first": "05:33",
+    "last": "20:35",
+    "fastest_min": 173,
+    "median_min": 173
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:24",
+    "last": "20:24",
+    "fastest_min": 184,
+    "median_min": 184
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:24",
+    "last": "20:24",
+    "fastest_min": 184,
+    "median_min": 184
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Bern",
+   "weekday": {
+    "n": 31,
+    "first": "05:25",
+    "last": "20:25",
+    "fastest_min": 121,
+    "median_min": 125
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:14",
+    "last": "20:14",
+    "fastest_min": 132,
+    "median_min": 132
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:14",
+    "last": "20:14",
+    "fastest_min": 132,
+    "median_min": 132
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Brig",
+   "weekday": {
+    "n": 32,
+    "first": "05:14",
+    "last": "22:09",
+    "fastest_min": 157,
+    "median_min": 168
+   },
+   "saturday": {
+    "n": 19,
+    "first": "05:45",
+    "last": "22:55",
+    "fastest_min": 160,
+    "median_min": 167
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:45",
+    "last": "22:09",
+    "fastest_min": 167,
+    "median_min": 167
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 31,
+    "first": "05:25",
+    "last": "20:25",
+    "fastest_min": 97,
+    "median_min": 101
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:14",
+    "last": "20:14",
+    "fastest_min": 108,
+    "median_min": 108
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:14",
+    "last": "20:14",
+    "fastest_min": 108,
+    "median_min": 108
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Genève",
+   "weekday": {
+    "n": 79,
+    "first": "04:58",
+    "last": "00:19",
+    "fastest_min": 5,
+    "median_min": 7
+   },
+   "saturday": {
+    "n": 76,
+    "first": "05:14",
+    "last": "01:00",
+    "fastest_min": 5,
+    "median_min": 7
+   },
+   "sunday": {
+    "n": 73,
+    "first": "05:14",
+    "last": "00:19",
+    "fastest_min": 5,
+    "median_min": 7
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 72,
+    "first": "04:58",
+    "last": "00:19",
+    "fastest_min": 49,
+    "median_min": 52
+   },
+   "saturday": {
+    "n": 72,
+    "first": "05:14",
+    "last": "23:11",
+    "fastest_min": 49,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 72,
+    "first": "05:14",
+    "last": "00:19",
+    "fastest_min": 58,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Luzern",
+   "weekday": {
+    "n": 15,
+    "first": "05:45",
+    "last": "19:45",
+    "fastest_min": 196,
+    "median_min": 196
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Montreux",
+   "weekday": {
+    "n": 35,
+    "first": "04:58",
+    "last": "23:06",
+    "fastest_min": 74,
+    "median_min": 82
+   },
+   "saturday": {
+    "n": 54,
+    "first": "05:30",
+    "last": "23:11",
+    "fastest_min": 74,
+    "median_min": 81
+   },
+   "sunday": {
+    "n": 47,
+    "first": "05:30",
+    "last": "23:06",
+    "fastest_min": 80,
+    "median_min": 81
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 6,
+    "first": "06:06",
+    "last": "19:06",
+    "fastest_min": 96,
+    "median_min": 96
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Sion",
+   "weekday": {
+    "n": 32,
+    "first": "05:14",
+    "last": "22:09",
+    "fastest_min": 121,
+    "median_min": 125
+   },
+   "saturday": {
+    "n": 20,
+    "first": "05:45",
+    "last": "23:11",
+    "fastest_min": 121,
+    "median_min": 131
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:45",
+    "last": "22:09",
+    "fastest_min": 129,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 15,
+    "first": "05:25",
+    "last": "19:25",
+    "fastest_min": 267,
+    "median_min": 267
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:14",
+    "last": "19:14",
+    "fastest_min": 278,
+    "median_min": 278
+   },
+   "sunday": {
+    "n": 10,
+    "first": "06:14",
+    "last": "19:14",
+    "fastest_min": 278,
+    "median_min": 278
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Visp",
+   "weekday": {
+    "n": 32,
+    "first": "05:14",
+    "last": "22:09",
+    "fastest_min": 148,
+    "median_min": 156
+   },
+   "saturday": {
+    "n": 19,
+    "first": "05:45",
+    "last": "22:55",
+    "fastest_min": 151,
+    "median_min": 158
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:45",
+    "last": "22:09",
+    "fastest_min": 158,
+    "median_min": 158
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 15,
+    "first": "05:25",
+    "last": "19:25",
+    "fastest_min": 221,
+    "median_min": 221
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:14",
+    "last": "19:14",
+    "fastest_min": 232,
+    "median_min": 232
+   },
+   "sunday": {
+    "n": 10,
+    "first": "06:14",
+    "last": "19:14",
+    "fastest_min": 232,
+    "median_min": 232
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 15,
+    "first": "05:25",
+    "last": "19:25",
+    "fastest_min": 204,
+    "median_min": 204
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:14",
+    "last": "19:14",
+    "fastest_min": 215,
+    "median_min": 215
+   },
+   "sunday": {
+    "n": 10,
+    "first": "06:14",
+    "last": "19:14",
+    "fastest_min": 215,
+    "median_min": 215
+   }
+  },
+  {
+   "from": "Genève-Aéroport",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 16,
+    "first": "05:25",
+    "last": "20:25",
+    "fastest_min": 183,
+    "median_min": 183
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:14",
+    "last": "20:14",
+    "fastest_min": 194,
+    "median_min": 194
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:14",
+    "last": "20:14",
+    "fastest_min": 194,
+    "median_min": 194
+   }
+  },
+  {
+   "from": "Grindelwald",
+   "to": "Interlaken Ost",
+   "weekday": {
+    "n": 32,
+    "first": "05:15",
+    "last": "21:17",
+    "fastest_min": 36,
+    "median_min": 37
+   },
+   "saturday": {
+    "n": 32,
+    "first": "05:15",
+    "last": "21:17",
+    "fastest_min": 36,
+    "median_min": 37
+   },
+   "sunday": {
+    "n": 32,
+    "first": "05:15",
+    "last": "21:17",
+    "fastest_min": 36,
+    "median_min": 37
+   }
+  },
+  {
+   "from": "Interlaken Ost",
+   "to": "Grindelwald",
+   "weekday": {
+    "n": 32,
+    "first": "06:02",
+    "last": "22:05",
+    "fastest_min": 35,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 32,
+    "first": "06:02",
+    "last": "22:05",
+    "fastest_min": 35,
+    "median_min": 36
+   },
+   "sunday": {
+    "n": 32,
+    "first": "06:02",
+    "last": "22:05",
+    "fastest_min": 35,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Interlaken Ost",
+   "to": "Lauterbrunnen",
+   "weekday": {
+    "n": 32,
+    "first": "06:02",
+    "last": "22:05",
+    "fastest_min": 22,
+    "median_min": 22
+   },
+   "saturday": {
+    "n": 32,
+    "first": "06:02",
+    "last": "22:05",
+    "fastest_min": 22,
+    "median_min": 22
+   },
+   "sunday": {
+    "n": 32,
+    "first": "06:02",
+    "last": "22:05",
+    "fastest_min": 22,
+    "median_min": 22
+   }
+  },
+  {
+   "from": "Interlaken Ost",
+   "to": "Luzern",
+   "weekday": {
+    "n": 14,
+    "first": "07:04",
+    "last": "20:09",
+    "fastest_min": 106,
+    "median_min": 111
+   },
+   "saturday": {
+    "n": 14,
+    "first": "07:04",
+    "last": "20:09",
+    "fastest_min": 106,
+    "median_min": 111
+   },
+   "sunday": {
+    "n": 14,
+    "first": "07:04",
+    "last": "20:09",
+    "fastest_min": 106,
+    "median_min": 111
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 14,
+    "first": "06:04",
+    "last": "19:04",
+    "fastest_min": 142,
+    "median_min": 142
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:04",
+    "last": "20:04",
+    "fastest_min": 142,
+    "median_min": 142
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:04",
+    "last": "19:04",
+    "fastest_min": 142,
+    "median_min": 142
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Bern",
+   "weekday": {
+    "n": 36,
+    "first": "05:40",
+    "last": "23:44",
+    "fastest_min": 69,
+    "median_min": 76
+   },
+   "saturday": {
+    "n": 36,
+    "first": "05:40",
+    "last": "23:44",
+    "fastest_min": 69,
+    "median_min": 76
+   },
+   "sunday": {
+    "n": 36,
+    "first": "05:40",
+    "last": "23:44",
+    "fastest_min": 69,
+    "median_min": 76
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Brig",
+   "weekday": {
+    "n": 41,
+    "first": "05:04",
+    "last": "23:14",
+    "fastest_min": 88,
+    "median_min": 108
+   },
+   "saturday": {
+    "n": 42,
+    "first": "05:04",
+    "last": "23:48",
+    "fastest_min": 87,
+    "median_min": 107
+   },
+   "sunday": {
+    "n": 41,
+    "first": "05:04",
+    "last": "23:15",
+    "fastest_min": 87,
+    "median_min": 108
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 69,
+    "first": "04:44",
+    "last": "23:44",
+    "fastest_min": 45,
+    "median_min": 52
+   },
+   "saturday": {
+    "n": 78,
+    "first": "01:21",
+    "last": "00:42",
+    "fastest_min": 45,
+    "median_min": 61
+   },
+   "sunday": {
+    "n": 74,
+    "first": "01:21",
+    "last": "23:44",
+    "fastest_min": 45,
+    "median_min": 56
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Genève",
+   "weekday": {
+    "n": 110,
+    "first": "03:45",
+    "last": "00:30",
+    "fastest_min": 39,
+    "median_min": 46
+   },
+   "saturday": {
+    "n": 80,
+    "first": "03:24",
+    "last": "23:30",
+    "fastest_min": 39,
+    "median_min": 51
+   },
+   "sunday": {
+    "n": 79,
+    "first": "03:50",
+    "last": "00:30",
+    "fastest_min": 39,
+    "median_min": 51
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 72,
+    "first": "03:45",
+    "last": "23:30",
+    "fastest_min": 49,
+    "median_min": 52
+   },
+   "saturday": {
+    "n": 76,
+    "first": "03:24",
+    "last": "23:30",
+    "fastest_min": 56,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 72,
+    "first": "03:50",
+    "last": "23:30",
+    "fastest_min": 56,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Luzern",
+   "weekday": {
+    "n": 17,
+    "first": "05:40",
+    "last": "21:40",
+    "fastest_min": 141,
+    "median_min": 141
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:40",
+    "last": "21:40",
+    "fastest_min": 141,
+    "median_min": 141
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:40",
+    "last": "21:40",
+    "fastest_min": 141,
+    "median_min": 141
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Montreux",
+   "weekday": {
+    "n": 114,
+    "first": "04:55",
+    "last": "00:24",
+    "fastest_min": 19,
+    "median_min": 22
+   },
+   "saturday": {
+    "n": 121,
+    "first": "01:35",
+    "last": "01:01",
+    "fastest_min": 18,
+    "median_min": 22
+   },
+   "sunday": {
+    "n": 115,
+    "first": "01:35",
+    "last": "00:24",
+    "fastest_min": 18,
+    "median_min": 22
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 37,
+    "first": "05:34",
+    "last": "00:04",
+    "fastest_min": 47,
+    "median_min": 47
+   },
+   "saturday": {
+    "n": 38,
+    "first": "01:07",
+    "last": "00:04",
+    "fastest_min": 44,
+    "median_min": 47
+   },
+   "sunday": {
+    "n": 38,
+    "first": "01:07",
+    "last": "00:04",
+    "fastest_min": 44,
+    "median_min": 47
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Sion",
+   "weekday": {
+    "n": 42,
+    "first": "05:04",
+    "last": "23:14",
+    "fastest_min": 57,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 44,
+    "first": "05:04",
+    "last": "01:01",
+    "fastest_min": 56,
+    "median_min": 67
+   },
+   "sunday": {
+    "n": 41,
+    "first": "05:04",
+    "last": "23:15",
+    "fastest_min": 56,
+    "median_min": 68
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 28,
+    "first": "05:34",
+    "last": "20:17",
+    "fastest_min": 208,
+    "median_min": 215
+   },
+   "saturday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "20:16",
+    "fastest_min": 208,
+    "median_min": 208
+   },
+   "sunday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "20:16",
+    "fastest_min": 208,
+    "median_min": 208
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Visp",
+   "weekday": {
+    "n": 37,
+    "first": "05:04",
+    "last": "23:14",
+    "fastest_min": 95,
+    "median_min": 96
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:04",
+    "last": "23:48",
+    "fastest_min": 96,
+    "median_min": 96
+   },
+   "sunday": {
+    "n": 37,
+    "first": "05:04",
+    "last": "23:15",
+    "fastest_min": 96,
+    "median_min": 96
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 28,
+    "first": "05:34",
+    "last": "20:17",
+    "fastest_min": 169,
+    "median_min": 169
+   },
+   "saturday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "20:16",
+    "fastest_min": 170,
+    "median_min": 173
+   },
+   "sunday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "20:16",
+    "fastest_min": 170,
+    "median_min": 173
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 28,
+    "first": "05:34",
+    "last": "20:17",
+    "fastest_min": 152,
+    "median_min": 152
+   },
+   "saturday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "20:16",
+    "fastest_min": 153,
+    "median_min": 157
+   },
+   "sunday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "20:16",
+    "fastest_min": 153,
+    "median_min": 157
+   }
+  },
+  {
+   "from": "Lausanne",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 35,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 131,
+    "median_min": 142
+   },
+   "saturday": {
+    "n": 35,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 132,
+    "median_min": 142
+   },
+   "sunday": {
+    "n": 35,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 132,
+    "median_min": 142
+   }
+  },
+  {
+   "from": "Lauterbrunnen",
+   "to": "Interlaken Ost",
+   "weekday": {
+    "n": 32,
+    "first": "05:29",
+    "last": "21:31",
+    "fastest_min": 22,
+    "median_min": 23
+   },
+   "saturday": {
+    "n": 32,
+    "first": "05:29",
+    "last": "21:31",
+    "fastest_min": 22,
+    "median_min": 23
+   },
+   "sunday": {
+    "n": 32,
+    "first": "05:29",
+    "last": "21:31",
+    "fastest_min": 22,
+    "median_min": 23
+   }
+  },
+  {
+   "from": "Locarno",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 7,
+    "first": "07:33",
+    "last": "19:33",
+    "fastest_min": 262,
+    "median_min": 262
+   },
+   "saturday": {
+    "n": 7,
+    "first": "07:33",
+    "last": "19:33",
+    "fastest_min": 262,
+    "median_min": 262
+   },
+   "sunday": {
+    "n": 7,
+    "first": "07:33",
+    "last": "19:33",
+    "fastest_min": 262,
+    "median_min": 262
+   }
+  },
+  {
+   "from": "Locarno",
+   "to": "Bellinzona",
+   "weekday": {
+    "n": 51,
+    "first": "04:35",
+    "last": "22:45",
+    "fastest_min": 22,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 57,
+    "first": "03:05",
+    "last": "01:45",
+    "fastest_min": 22,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 53,
+    "first": "03:05",
+    "last": "22:45",
+    "fastest_min": 20,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Locarno",
+   "to": "Lugano",
+   "weekday": {
+    "n": 35,
+    "first": "05:52",
+    "last": "22:52",
+    "fastest_min": 32,
+    "median_min": 32
+   },
+   "saturday": {
+    "n": 37,
+    "first": "05:52",
+    "last": "00:22",
+    "fastest_min": 32,
+    "median_min": 32
+   },
+   "sunday": {
+    "n": 35,
+    "first": "05:52",
+    "last": "22:52",
+    "fastest_min": 32,
+    "median_min": 32
+   }
+  },
+  {
+   "from": "Locarno",
+   "to": "Luzern",
+   "weekday": {
+    "n": 7,
+    "first": "07:33",
+    "last": "19:33",
+    "fastest_min": 188,
+    "median_min": 188
+   },
+   "saturday": {
+    "n": 7,
+    "first": "07:33",
+    "last": "19:33",
+    "fastest_min": 188,
+    "median_min": 188
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:33",
+    "last": "19:33",
+    "fastest_min": 99,
+    "median_min": 188
+   }
+  },
+  {
+   "from": "Locarno",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 7,
+    "first": "08:33",
+    "last": "20:33",
+    "fastest_min": 202,
+    "median_min": 202
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:33",
+    "last": "20:33",
+    "fastest_min": 202,
+    "median_min": 202
+   },
+   "sunday": {
+    "n": 7,
+    "first": "08:33",
+    "last": "20:33",
+    "fastest_min": 202,
+    "median_min": 202
+   }
+  },
+  {
+   "from": "Lugano",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 10,
+    "first": "06:00",
+    "last": "22:02",
+    "fastest_min": 173,
+    "median_min": 173
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:00",
+    "last": "22:02",
+    "fastest_min": 173,
+    "median_min": 173
+   },
+   "sunday": {
+    "n": 10,
+    "first": "06:00",
+    "last": "22:02",
+    "fastest_min": 173,
+    "median_min": 173
+   }
+  },
+  {
+   "from": "Lugano",
+   "to": "Bellinzona",
+   "weekday": {
+    "n": 79,
+    "first": "00:55",
+    "last": "00:25",
+    "fastest_min": 14,
+    "median_min": 18
+   },
+   "saturday": {
+    "n": 77,
+    "first": "00:55",
+    "last": "00:25",
+    "fastest_min": 14,
+    "median_min": 18
+   },
+   "sunday": {
+    "n": 77,
+    "first": "00:55",
+    "last": "00:27",
+    "fastest_min": 14,
+    "median_min": 18
+   }
+  },
+  {
+   "from": "Lugano",
+   "to": "Locarno",
+   "weekday": {
+    "n": 33,
+    "first": "06:05",
+    "last": "22:05",
+    "fastest_min": 32,
+    "median_min": 33
+   },
+   "saturday": {
+    "n": 38,
+    "first": "06:05",
+    "last": "01:05",
+    "fastest_min": 32,
+    "median_min": 33
+   },
+   "sunday": {
+    "n": 33,
+    "first": "06:05",
+    "last": "22:05",
+    "fastest_min": 32,
+    "median_min": 33
+   }
+  },
+  {
+   "from": "Lugano",
+   "to": "Luzern",
+   "weekday": {
+    "n": 9,
+    "first": "06:00",
+    "last": "22:02",
+    "fastest_min": 99,
+    "median_min": 99
+   },
+   "saturday": {
+    "n": 9,
+    "first": "06:00",
+    "last": "22:02",
+    "fastest_min": 99,
+    "median_min": 99
+   },
+   "sunday": {
+    "n": 9,
+    "first": "06:00",
+    "last": "22:02",
+    "fastest_min": 99,
+    "median_min": 99
+   }
+  },
+  {
+   "from": "Lugano",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 24,
+    "first": "06:30",
+    "last": "21:30",
+    "fastest_min": 113,
+    "median_min": 117
+   },
+   "saturday": {
+    "n": 23,
+    "first": "07:02",
+    "last": "21:30",
+    "fastest_min": 113,
+    "median_min": 117
+   },
+   "sunday": {
+    "n": 23,
+    "first": "07:02",
+    "last": "21:30",
+    "fastest_min": 113,
+    "median_min": 117
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 36,
+    "first": "04:54",
+    "last": "23:54",
+    "fastest_min": 61,
+    "median_min": 65
+   },
+   "saturday": {
+    "n": 36,
+    "first": "04:54",
+    "last": "23:54",
+    "fastest_min": 61,
+    "median_min": 65
+   },
+   "sunday": {
+    "n": 35,
+    "first": "04:54",
+    "last": "23:54",
+    "fastest_min": 61,
+    "median_min": 65
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Bellinzona",
+   "weekday": {
+    "n": 16,
+    "first": "06:18",
+    "last": "22:18",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 17,
+    "first": "06:18",
+    "last": "22:18",
+    "fastest_min": 76,
+    "median_min": 84
+   },
+   "sunday": {
+    "n": 16,
+    "first": "06:18",
+    "last": "22:18",
+    "fastest_min": 84,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Bern",
+   "weekday": {
+    "n": 21,
+    "first": "04:50",
+    "last": "23:00",
+    "fastest_min": 60,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 20,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 60,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 20,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 60,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 86,
+    "median_min": 86
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 86,
+    "median_min": 86
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 86,
+    "median_min": 86
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Genève",
+   "weekday": {
+    "n": 13,
+    "first": "06:00",
+    "last": "18:00",
+    "fastest_min": 185,
+    "median_min": 185
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 13,
+    "first": "06:00",
+    "last": "18:00",
+    "fastest_min": 195,
+    "median_min": 195
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Interlaken Ost",
+   "weekday": {
+    "n": 13,
+    "first": "06:06",
+    "last": "18:06",
+    "fastest_min": 108,
+    "median_min": 108
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:06",
+    "last": "18:06",
+    "fastest_min": 108,
+    "median_min": 108
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:06",
+    "last": "18:06",
+    "fastest_min": 108,
+    "median_min": 108
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 17,
+    "first": "06:00",
+    "last": "22:00",
+    "fastest_min": 140,
+    "median_min": 140
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 140,
+    "median_min": 140
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:00",
+    "last": "23:00",
+    "fastest_min": 140,
+    "median_min": 140
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Locarno",
+   "weekday": {
+    "n": 6,
+    "first": "07:18",
+    "last": "17:18",
+    "fastest_min": 189,
+    "median_min": 189
+   },
+   "saturday": {
+    "n": 7,
+    "first": "07:18",
+    "last": "17:18",
+    "fastest_min": 97,
+    "median_min": 189
+   },
+   "sunday": {
+    "n": 6,
+    "first": "07:18",
+    "last": "17:18",
+    "fastest_min": 189,
+    "median_min": 189
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Lugano",
+   "weekday": {
+    "n": 9,
+    "first": "06:18",
+    "last": "22:18",
+    "fastest_min": 100,
+    "median_min": 100
+   },
+   "saturday": {
+    "n": 9,
+    "first": "06:18",
+    "last": "22:18",
+    "fastest_min": 100,
+    "median_min": 100
+   },
+   "sunday": {
+    "n": 9,
+    "first": "06:18",
+    "last": "22:18",
+    "fastest_min": 100,
+    "median_min": 100
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 13,
+    "first": "07:39",
+    "last": "19:39",
+    "fastest_min": 136,
+    "median_min": 136
+   },
+   "saturday": {
+    "n": 13,
+    "first": "07:39",
+    "last": "19:39",
+    "fastest_min": 136,
+    "median_min": 136
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:39",
+    "last": "19:39",
+    "fastest_min": 136,
+    "median_min": 136
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 11,
+    "first": "05:35",
+    "last": "19:35",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 14,
+    "first": "05:35",
+    "last": "19:35",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:35",
+    "last": "19:35",
+    "fastest_min": 84,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 11,
+    "first": "05:35",
+    "last": "19:35",
+    "fastest_min": 69,
+    "median_min": 69
+   },
+   "saturday": {
+    "n": 14,
+    "first": "05:35",
+    "last": "19:35",
+    "fastest_min": 69,
+    "median_min": 69
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:35",
+    "last": "19:35",
+    "fastest_min": 69,
+    "median_min": 69
+   }
+  },
+  {
+   "from": "Luzern",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 40,
+    "first": "04:52",
+    "last": "23:35",
+    "fastest_min": 42,
+    "median_min": 50
+   },
+   "saturday": {
+    "n": 42,
+    "first": "00:35",
+    "last": "23:35",
+    "fastest_min": 42,
+    "median_min": 50
+   },
+   "sunday": {
+    "n": 42,
+    "first": "00:35",
+    "last": "23:35",
+    "fastest_min": 42,
+    "median_min": 50
+   }
+  },
+  {
+   "from": "Montreux",
+   "to": "Brig",
+   "weekday": {
+    "n": 41,
+    "first": "05:26",
+    "last": "23:36",
+    "fastest_min": 67,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 42,
+    "first": "05:26",
+    "last": "00:10",
+    "fastest_min": 67,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 41,
+    "first": "05:26",
+    "last": "23:36",
+    "fastest_min": 67,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Montreux",
+   "to": "Genève",
+   "weekday": {
+    "n": 66,
+    "first": "05:23",
+    "last": "23:25",
+    "fastest_min": 63,
+    "median_min": 73
+   },
+   "saturday": {
+    "n": 58,
+    "first": "05:49",
+    "last": "23:08",
+    "fastest_min": 63,
+    "median_min": 73
+   },
+   "sunday": {
+    "n": 53,
+    "first": "05:49",
+    "last": "23:25",
+    "fastest_min": 63,
+    "median_min": 73
+   }
+  },
+  {
+   "from": "Montreux",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 34,
+    "first": "05:23",
+    "last": "22:23",
+    "fastest_min": 76,
+    "median_min": 82
+   },
+   "saturday": {
+    "n": 54,
+    "first": "05:49",
+    "last": "23:08",
+    "fastest_min": 81,
+    "median_min": 82
+   },
+   "sunday": {
+    "n": 48,
+    "first": "05:49",
+    "last": "22:23",
+    "fastest_min": 81,
+    "median_min": 82
+   }
+  },
+  {
+   "from": "Montreux",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 109,
+    "first": "05:04",
+    "last": "00:56",
+    "fastest_min": 20,
+    "median_min": 23
+   },
+   "saturday": {
+    "n": 115,
+    "first": "01:00",
+    "last": "00:35",
+    "fastest_min": 20,
+    "median_min": 23
+   },
+   "sunday": {
+    "n": 111,
+    "first": "01:00",
+    "last": "00:56",
+    "fastest_min": 20,
+    "median_min": 23
+   }
+  },
+  {
+   "from": "Montreux",
+   "to": "Sion",
+   "weekday": {
+    "n": 42,
+    "first": "05:26",
+    "last": "23:36",
+    "fastest_min": 36,
+    "median_min": 46
+   },
+   "saturday": {
+    "n": 44,
+    "first": "05:26",
+    "last": "01:20",
+    "fastest_min": 36,
+    "median_min": 45
+   },
+   "sunday": {
+    "n": 41,
+    "first": "05:26",
+    "last": "23:36",
+    "fastest_min": 36,
+    "median_min": 46
+   }
+  },
+  {
+   "from": "Montreux",
+   "to": "Visp",
+   "weekday": {
+    "n": 37,
+    "first": "05:26",
+    "last": "23:36",
+    "fastest_min": 73,
+    "median_min": 73
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:26",
+    "last": "00:10",
+    "fastest_min": 73,
+    "median_min": 73
+   },
+   "sunday": {
+    "n": 37,
+    "first": "05:26",
+    "last": "23:36",
+    "fastest_min": 73,
+    "median_min": 73
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 14,
+    "first": "06:53",
+    "last": "19:53",
+    "fastest_min": 93,
+    "median_min": 93
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:53",
+    "last": "20:53",
+    "fastest_min": 93,
+    "median_min": 93
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:53",
+    "last": "19:53",
+    "fastest_min": 93,
+    "median_min": 93
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Bern",
+   "weekday": {
+    "n": 20,
+    "first": "05:32",
+    "last": "23:32",
+    "fastest_min": 34,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 15,
+    "first": "05:32",
+    "last": "19:32",
+    "fastest_min": 36,
+    "median_min": 36
+   },
+   "sunday": {
+    "n": 20,
+    "first": "05:32",
+    "last": "23:32",
+    "fastest_min": 34,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 38,
+    "first": "04:46",
+    "last": "23:46",
+    "fastest_min": 56,
+    "median_min": 56
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:17",
+    "last": "23:46",
+    "fastest_min": 56,
+    "median_min": 56
+   },
+   "sunday": {
+    "n": 38,
+    "first": "05:17",
+    "last": "23:46",
+    "fastest_min": 56,
+    "median_min": 56
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Genève",
+   "weekday": {
+    "n": 6,
+    "first": "05:18",
+    "last": "18:18",
+    "fastest_min": 85,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 6,
+    "first": "05:18",
+    "last": "18:18",
+    "fastest_min": 98,
+    "median_min": 98
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 37,
+    "first": "05:39",
+    "last": "23:39",
+    "fastest_min": 47,
+    "median_min": 47
+   },
+   "saturday": {
+    "n": 39,
+    "first": "02:43",
+    "last": "00:44",
+    "fastest_min": 45,
+    "median_min": 47
+   },
+   "sunday": {
+    "n": 38,
+    "first": "02:43",
+    "last": "23:39",
+    "fastest_min": 47,
+    "median_min": 47
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 160,
+    "median_min": 160
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 160,
+    "median_min": 160
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 160,
+    "median_min": 160
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 125,
+    "median_min": 125
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 125,
+    "median_min": 125
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 125,
+    "median_min": 125
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 109,
+    "median_min": 109
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 109,
+    "median_min": 109
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "18:22",
+    "fastest_min": 109,
+    "median_min": 109
+   }
+  },
+  {
+   "from": "Neuchâtel",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 18,
+    "first": "06:22",
+    "last": "23:22",
+    "fastest_min": 94,
+    "median_min": 94
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:22",
+    "last": "23:22",
+    "fastest_min": 94,
+    "median_min": 94
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:22",
+    "last": "23:22",
+    "fastest_min": 94,
+    "median_min": 94
+   }
+  },
+  {
+   "from": "Sion",
+   "to": "Brig",
+   "weekday": {
+    "n": 79,
+    "first": "04:46",
+    "last": "00:27",
+    "fastest_min": 29,
+    "median_min": 42
+   },
+   "saturday": {
+    "n": 79,
+    "first": "04:40",
+    "last": "00:57",
+    "fastest_min": 29,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 62,
+    "first": "04:46",
+    "last": "00:27",
+    "fastest_min": 29,
+    "median_min": 42
+   }
+  },
+  {
+   "from": "Sion",
+   "to": "Genève",
+   "weekday": {
+    "n": 39,
+    "first": "04:33",
+    "last": "22:33",
+    "fastest_min": 100,
+    "median_min": 116
+   },
+   "saturday": {
+    "n": 24,
+    "first": "04:58",
+    "last": "22:02",
+    "fastest_min": 100,
+    "median_min": 123
+   },
+   "sunday": {
+    "n": 23,
+    "first": "04:58",
+    "last": "22:33",
+    "fastest_min": 100,
+    "median_min": 123
+   }
+  },
+  {
+   "from": "Sion",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 33,
+    "first": "04:33",
+    "last": "21:36",
+    "fastest_min": 123,
+    "median_min": 126
+   },
+   "saturday": {
+    "n": 20,
+    "first": "04:58",
+    "last": "22:02",
+    "fastest_min": 126,
+    "median_min": 132
+   },
+   "sunday": {
+    "n": 18,
+    "first": "04:58",
+    "last": "21:36",
+    "fastest_min": 126,
+    "median_min": 132
+   }
+  },
+  {
+   "from": "Sion",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 41,
+    "first": "04:33",
+    "last": "22:33",
+    "fastest_min": 57,
+    "median_min": 70
+   },
+   "saturday": {
+    "n": 43,
+    "first": "02:09",
+    "last": "23:02",
+    "fastest_min": 57,
+    "median_min": 67
+   },
+   "sunday": {
+    "n": 41,
+    "first": "02:09",
+    "last": "22:33",
+    "fastest_min": 57,
+    "median_min": 70
+   }
+  },
+  {
+   "from": "Sion",
+   "to": "Montreux",
+   "weekday": {
+    "n": 38,
+    "first": "04:33",
+    "last": "22:33",
+    "fastest_min": 36,
+    "median_min": 46
+   },
+   "saturday": {
+    "n": 39,
+    "first": "02:09",
+    "last": "23:02",
+    "fastest_min": 36,
+    "median_min": 46
+   },
+   "sunday": {
+    "n": 38,
+    "first": "02:09",
+    "last": "22:33",
+    "fastest_min": 36,
+    "median_min": 46
+   }
+  },
+  {
+   "from": "Sion",
+   "to": "Visp",
+   "weekday": {
+    "n": 75,
+    "first": "04:46",
+    "last": "00:27",
+    "fastest_min": 26,
+    "median_min": 30
+   },
+   "saturday": {
+    "n": 75,
+    "first": "04:40",
+    "last": "00:57",
+    "fastest_min": 26,
+    "median_min": 30
+   },
+   "sunday": {
+    "n": 58,
+    "first": "04:46",
+    "last": "00:27",
+    "fastest_min": 26,
+    "median_min": 30
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 32,
+    "first": "05:18",
+    "last": "20:54",
+    "fastest_min": 95,
+    "median_min": 95
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:18",
+    "last": "20:54",
+    "fastest_min": 94,
+    "median_min": 95
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:18",
+    "last": "20:56",
+    "fastest_min": 94,
+    "median_min": 95
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Bern",
+   "weekday": {
+    "n": 66,
+    "first": "05:18",
+    "last": "23:22",
+    "fastest_min": 28,
+    "median_min": 31
+   },
+   "saturday": {
+    "n": 68,
+    "first": "05:18",
+    "last": "23:54",
+    "fastest_min": 31,
+    "median_min": 31
+   },
+   "sunday": {
+    "n": 68,
+    "first": "05:18",
+    "last": "23:24",
+    "fastest_min": 31,
+    "median_min": 31
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Brig",
+   "weekday": {
+    "n": 44,
+    "first": "06:12",
+    "last": "00:17",
+    "fastest_min": 35,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 47,
+    "first": "06:12",
+    "last": "00:17",
+    "fastest_min": 34,
+    "median_min": 36
+   },
+   "sunday": {
+    "n": 44,
+    "first": "06:12",
+    "last": "00:17",
+    "fastest_min": 35,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Thun",
+   "weekday": {
+    "n": 66,
+    "first": "05:18",
+    "last": "23:22",
+    "fastest_min": 8,
+    "median_min": 9
+   },
+   "saturday": {
+    "n": 68,
+    "first": "05:18",
+    "last": "23:54",
+    "fastest_min": 8,
+    "median_min": 9
+   },
+   "sunday": {
+    "n": 69,
+    "first": "05:18",
+    "last": "23:24",
+    "fastest_min": 8,
+    "median_min": 9
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Visp",
+   "weekday": {
+    "n": 26,
+    "first": "06:38",
+    "last": "00:14",
+    "fastest_min": 25,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 29,
+    "first": "06:38",
+    "last": "00:08",
+    "fastest_min": 25,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 24,
+    "first": "06:38",
+    "last": "21:05",
+    "fastest_min": 25,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 14,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 127,
+    "median_min": 127
+   },
+   "saturday": {
+    "n": 14,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 127,
+    "median_min": 127
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 127,
+    "median_min": 127
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 14,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 111,
+    "median_min": 112
+   },
+   "saturday": {
+    "n": 14,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 112,
+    "median_min": 112
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 112,
+    "median_min": 112
+   }
+  },
+  {
+   "from": "Spiez",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 15,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 96,
+    "median_min": 96
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 96,
+    "median_min": 96
+   },
+   "sunday": {
+    "n": 16,
+    "first": "06:22",
+    "last": "20:22",
+    "fastest_min": 96,
+    "median_min": 96
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Bern",
+   "weekday": {
+    "n": 17,
+    "first": "05:07",
+    "last": "21:07",
+    "fastest_min": 141,
+    "median_min": 141
+   },
+   "saturday": {
+    "n": 12,
+    "first": "05:07",
+    "last": "21:07",
+    "fastest_min": 141,
+    "median_min": 141
+   },
+   "sunday": {
+    "n": 12,
+    "first": "05:07",
+    "last": "21:07",
+    "fastest_min": 141,
+    "median_min": 141
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Chur",
+   "weekday": {
+    "n": 16,
+    "first": "05:55",
+    "last": "20:55",
+    "fastest_min": 83,
+    "median_min": 83
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:55",
+    "last": "20:55",
+    "fastest_min": 83,
+    "median_min": 83
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:55",
+    "last": "20:55",
+    "fastest_min": 83,
+    "median_min": 83
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 16,
+    "first": "05:07",
+    "last": "20:07",
+    "fastest_min": 169,
+    "median_min": 169
+   },
+   "saturday": {
+    "n": 11,
+    "first": "05:07",
+    "last": "20:07",
+    "fastest_min": 169,
+    "median_min": 169
+   },
+   "sunday": {
+    "n": 11,
+    "first": "05:07",
+    "last": "20:07",
+    "fastest_min": 169,
+    "median_min": 169
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Genève",
+   "weekday": {
+    "n": 13,
+    "first": "05:07",
+    "last": "17:07",
+    "fastest_min": 258,
+    "median_min": 258
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:07",
+    "last": "19:07",
+    "fastest_min": 267,
+    "median_min": 268
+   },
+   "sunday": {
+    "n": 9,
+    "first": "05:07",
+    "last": "17:07",
+    "fastest_min": 268,
+    "median_min": 268
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 13,
+    "first": "05:07",
+    "last": "17:07",
+    "fastest_min": 270,
+    "median_min": 270
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:07",
+    "last": "19:07",
+    "fastest_min": 277,
+    "median_min": 277
+   },
+   "sunday": {
+    "n": 9,
+    "first": "05:07",
+    "last": "17:07",
+    "fastest_min": 277,
+    "median_min": 277
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 30,
+    "first": "05:07",
+    "last": "19:58",
+    "fastest_min": 208,
+    "median_min": 212
+   },
+   "saturday": {
+    "n": 25,
+    "first": "05:07",
+    "last": "19:58",
+    "fastest_min": 208,
+    "median_min": 208
+   },
+   "sunday": {
+    "n": 25,
+    "first": "05:07",
+    "last": "19:58",
+    "fastest_min": 208,
+    "median_min": 208
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Luzern",
+   "weekday": {
+    "n": 13,
+    "first": "07:05",
+    "last": "19:05",
+    "fastest_min": 136,
+    "median_min": 136
+   },
+   "saturday": {
+    "n": 13,
+    "first": "07:05",
+    "last": "19:05",
+    "fastest_min": 136,
+    "median_min": 136
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:05",
+    "last": "19:05",
+    "fastest_min": 136,
+    "median_min": 136
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 15,
+    "first": "05:58",
+    "last": "19:58",
+    "fastest_min": 159,
+    "median_min": 159
+   },
+   "saturday": {
+    "n": 15,
+    "first": "05:58",
+    "last": "19:58",
+    "fastest_min": 159,
+    "median_min": 159
+   },
+   "sunday": {
+    "n": 15,
+    "first": "05:58",
+    "last": "19:58",
+    "fastest_min": 159,
+    "median_min": 159
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 69,
+    "first": "04:37",
+    "last": "23:37",
+    "fastest_min": 32,
+    "median_min": 45
+   },
+   "saturday": {
+    "n": 66,
+    "first": "01:02",
+    "last": "23:37",
+    "fastest_min": 32,
+    "median_min": 45
+   },
+   "sunday": {
+    "n": 69,
+    "first": "01:02",
+    "last": "23:37",
+    "fastest_min": 32,
+    "median_min": 45
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 68,
+    "first": "04:37",
+    "last": "23:37",
+    "fastest_min": 48,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 61,
+    "first": "04:37",
+    "last": "23:37",
+    "fastest_min": 48,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 63,
+    "first": "04:37",
+    "last": "23:37",
+    "fastest_min": 48,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "St. Gallen",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 68,
+    "first": "04:37",
+    "last": "23:37",
+    "fastest_min": 59,
+    "median_min": 75
+   },
+   "saturday": {
+    "n": 61,
+    "first": "04:37",
+    "last": "23:37",
+    "fastest_min": 59,
+    "median_min": 75
+   },
+   "sunday": {
+    "n": 63,
+    "first": "04:37",
+    "last": "23:37",
+    "fastest_min": 59,
+    "median_min": 75
+   }
+  },
+  {
+   "from": "St. Moritz",
+   "to": "Chur",
+   "weekday": {
+    "n": 15,
+    "first": "05:39",
+    "last": "20:05",
+    "fastest_min": 117,
+    "median_min": 117
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:39",
+    "last": "21:02",
+    "fastest_min": 117,
+    "median_min": 117
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:59",
+    "last": "20:05",
+    "fastest_min": 117,
+    "median_min": 117
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 32,
+    "first": "05:29",
+    "last": "21:04",
+    "fastest_min": 84,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:29",
+    "last": "21:04",
+    "fastest_min": 83,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:29",
+    "last": "21:07",
+    "fastest_min": 83,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Bern",
+   "weekday": {
+    "n": 142,
+    "first": "05:02",
+    "last": "00:10",
+    "fastest_min": 17,
+    "median_min": 31
+   },
+   "saturday": {
+    "n": 109,
+    "first": "05:02",
+    "last": "00:10",
+    "fastest_min": 20,
+    "median_min": 25
+   },
+   "sunday": {
+    "n": 106,
+    "first": "05:02",
+    "last": "00:10",
+    "fastest_min": 20,
+    "median_min": 23
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Brig",
+   "weekday": {
+    "n": 26,
+    "first": "06:27",
+    "last": "00:03",
+    "fastest_min": 46,
+    "median_min": 46
+   },
+   "saturday": {
+    "n": 29,
+    "first": "06:27",
+    "last": "23:57",
+    "fastest_min": 45,
+    "median_min": 46
+   },
+   "sunday": {
+    "n": 26,
+    "first": "06:27",
+    "last": "22:54",
+    "fastest_min": 46,
+    "median_min": 46
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 33,
+    "first": "05:12",
+    "last": "21:12",
+    "fastest_min": 66,
+    "median_min": 66
+   },
+   "saturday": {
+    "n": 2,
+    "first": "05:12",
+    "last": "23:42",
+    "fastest_min": 66,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 2,
+    "first": "05:12",
+    "last": "23:42",
+    "fastest_min": 66,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Spiez",
+   "weekday": {
+    "n": 66,
+    "first": "06:24",
+    "last": "00:36",
+    "fastest_min": 9,
+    "median_min": 10
+   },
+   "saturday": {
+    "n": 70,
+    "first": "06:24",
+    "last": "01:39",
+    "fastest_min": 9,
+    "median_min": 10
+   },
+   "sunday": {
+    "n": 67,
+    "first": "06:24",
+    "last": "00:38",
+    "fastest_min": 9,
+    "median_min": 10
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Visp",
+   "weekday": {
+    "n": 26,
+    "first": "06:27",
+    "last": "00:03",
+    "fastest_min": 36,
+    "median_min": 37
+   },
+   "saturday": {
+    "n": 29,
+    "first": "06:27",
+    "last": "23:57",
+    "fastest_min": 36,
+    "median_min": 37
+   },
+   "sunday": {
+    "n": 24,
+    "first": "06:27",
+    "last": "20:54",
+    "fastest_min": 36,
+    "median_min": 37
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 14,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 116,
+    "median_min": 116
+   },
+   "saturday": {
+    "n": 14,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 116,
+    "median_min": 116
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 116,
+    "median_min": 116
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 14,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 100,
+    "median_min": 101
+   },
+   "saturday": {
+    "n": 14,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 101,
+    "median_min": 101
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 101,
+    "median_min": 101
+   }
+  },
+  {
+   "from": "Thun",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 15,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 85,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 85,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 16,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 85,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 9,
+    "first": "05:25",
+    "last": "20:27",
+    "fastest_min": 122,
+    "median_min": 122
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:25",
+    "last": "20:27",
+    "fastest_min": 121,
+    "median_min": 122
+   },
+   "sunday": {
+    "n": 9,
+    "first": "05:25",
+    "last": "20:29",
+    "fastest_min": 121,
+    "median_min": 122
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Bern",
+   "weekday": {
+    "n": 26,
+    "first": "05:25",
+    "last": "22:27",
+    "fastest_min": 58,
+    "median_min": 59
+   },
+   "saturday": {
+    "n": 27,
+    "first": "05:25",
+    "last": "22:27",
+    "fastest_min": 58,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 27,
+    "first": "05:25",
+    "last": "21:27",
+    "fastest_min": 58,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Brig",
+   "weekday": {
+    "n": 101,
+    "first": "05:19",
+    "last": "00:58",
+    "fastest_min": 7,
+    "median_min": 8
+   },
+   "saturday": {
+    "n": 104,
+    "first": "05:16",
+    "last": "01:27",
+    "fastest_min": 7,
+    "median_min": 8
+   },
+   "sunday": {
+    "n": 82,
+    "first": "05:19",
+    "last": "00:58",
+    "fastest_min": 7,
+    "median_min": 8
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Genève",
+   "weekday": {
+    "n": 33,
+    "first": "04:27",
+    "last": "22:03",
+    "fastest_min": 139,
+    "median_min": 146
+   },
+   "saturday": {
+    "n": 20,
+    "first": "04:27",
+    "last": "21:36",
+    "fastest_min": 146,
+    "median_min": 149
+   },
+   "sunday": {
+    "n": 20,
+    "first": "04:27",
+    "last": "22:03",
+    "fastest_min": 146,
+    "median_min": 149
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 31,
+    "first": "04:27",
+    "last": "21:07",
+    "fastest_min": 149,
+    "median_min": 156
+   },
+   "saturday": {
+    "n": 20,
+    "first": "04:27",
+    "last": "21:36",
+    "fastest_min": 156,
+    "median_min": 158
+   },
+   "sunday": {
+    "n": 18,
+    "first": "04:27",
+    "last": "21:07",
+    "fastest_min": 156,
+    "median_min": 158
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 35,
+    "first": "04:27",
+    "last": "22:03",
+    "fastest_min": 93,
+    "median_min": 97
+   },
+   "saturday": {
+    "n": 36,
+    "first": "04:27",
+    "last": "22:36",
+    "fastest_min": 93,
+    "median_min": 96
+   },
+   "sunday": {
+    "n": 35,
+    "first": "04:27",
+    "last": "22:03",
+    "fastest_min": 93,
+    "median_min": 97
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Montreux",
+   "weekday": {
+    "n": 32,
+    "first": "04:27",
+    "last": "22:03",
+    "fastest_min": 72,
+    "median_min": 73
+   },
+   "saturday": {
+    "n": 32,
+    "first": "04:27",
+    "last": "22:36",
+    "fastest_min": 72,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 32,
+    "first": "04:27",
+    "last": "22:03",
+    "fastest_min": 72,
+    "median_min": 73
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Sion",
+   "weekday": {
+    "n": 72,
+    "first": "04:27",
+    "last": "00:48",
+    "fastest_min": 25,
+    "median_min": 31
+   },
+   "saturday": {
+    "n": 72,
+    "first": "04:27",
+    "last": "00:37",
+    "fastest_min": 25,
+    "median_min": 32
+   },
+   "sunday": {
+    "n": 57,
+    "first": "04:27",
+    "last": "00:48",
+    "fastest_min": 25,
+    "median_min": 29
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Spiez",
+   "weekday": {
+    "n": 26,
+    "first": "05:25",
+    "last": "22:27",
+    "fastest_min": 26,
+    "median_min": 27
+   },
+   "saturday": {
+    "n": 27,
+    "first": "05:25",
+    "last": "22:27",
+    "fastest_min": 26,
+    "median_min": 27
+   },
+   "sunday": {
+    "n": 28,
+    "first": "05:25",
+    "last": "21:27",
+    "fastest_min": 26,
+    "median_min": 27
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Thun",
+   "weekday": {
+    "n": 26,
+    "first": "05:25",
+    "last": "22:27",
+    "fastest_min": 36,
+    "median_min": 37
+   },
+   "saturday": {
+    "n": 27,
+    "first": "05:25",
+    "last": "22:27",
+    "fastest_min": 36,
+    "median_min": 37
+   },
+   "sunday": {
+    "n": 28,
+    "first": "05:25",
+    "last": "21:27",
+    "fastest_min": 36,
+    "median_min": 37
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 14,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 155,
+    "median_min": 155
+   },
+   "saturday": {
+    "n": 14,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 155,
+    "median_min": 155
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 155,
+    "median_min": 155
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Zermatt",
+   "weekday": {
+    "n": 31,
+    "first": "05:30",
+    "last": "22:37",
+    "fastest_min": 63,
+    "median_min": 66
+   },
+   "saturday": {
+    "n": 31,
+    "first": "05:30",
+    "last": "22:37",
+    "fastest_min": 63,
+    "median_min": 66
+   },
+   "sunday": {
+    "n": 31,
+    "first": "05:30",
+    "last": "23:20",
+    "fastest_min": 54,
+    "median_min": 66
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 14,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 139,
+    "median_min": 140
+   },
+   "saturday": {
+    "n": 14,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 140,
+    "median_min": 140
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 140,
+    "median_min": 140
+   }
+  },
+  {
+   "from": "Visp",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 15,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 124,
+    "median_min": 124
+   },
+   "saturday": {
+    "n": 15,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 124,
+    "median_min": 124
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:51",
+    "last": "19:54",
+    "fastest_min": 124,
+    "median_min": 124
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Bern",
+   "weekday": {
+    "n": 34,
+    "first": "05:54",
+    "last": "22:31",
+    "fastest_min": 87,
+    "median_min": 92
+   },
+   "saturday": {
+    "n": 30,
+    "first": "01:40",
+    "last": "22:31",
+    "fastest_min": 84,
+    "median_min": 87
+   },
+   "sunday": {
+    "n": 30,
+    "first": "01:40",
+    "last": "22:31",
+    "fastest_min": 84,
+    "median_min": 87
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Brig",
+   "weekday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 162,
+    "median_min": 162
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 162,
+    "median_min": 162
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 162,
+    "median_min": 162
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 16,
+    "first": "05:54",
+    "last": "20:54",
+    "fastest_min": 122,
+    "median_min": 122
+   },
+   "saturday": {
+    "n": 11,
+    "first": "05:54",
+    "last": "20:54",
+    "fastest_min": 122,
+    "median_min": 122
+   },
+   "sunday": {
+    "n": 11,
+    "first": "05:54",
+    "last": "20:54",
+    "fastest_min": 122,
+    "median_min": 122
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Genève",
+   "weekday": {
+    "n": 13,
+    "first": "05:54",
+    "last": "17:54",
+    "fastest_min": 211,
+    "median_min": 211
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:54",
+    "last": "19:54",
+    "fastest_min": 220,
+    "median_min": 221
+   },
+   "sunday": {
+    "n": 9,
+    "first": "05:54",
+    "last": "17:54",
+    "fastest_min": 221,
+    "median_min": 221
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 13,
+    "first": "05:54",
+    "last": "17:54",
+    "fastest_min": 223,
+    "median_min": 223
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:54",
+    "last": "19:54",
+    "fastest_min": 230,
+    "median_min": 230
+   },
+   "sunday": {
+    "n": 9,
+    "first": "05:54",
+    "last": "17:54",
+    "fastest_min": 230,
+    "median_min": 230
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 30,
+    "first": "05:54",
+    "last": "20:33",
+    "fastest_min": 169,
+    "median_min": 171
+   },
+   "saturday": {
+    "n": 25,
+    "first": "05:54",
+    "last": "20:33",
+    "fastest_min": 169,
+    "median_min": 173
+   },
+   "sunday": {
+    "n": 25,
+    "first": "05:54",
+    "last": "20:33",
+    "fastest_min": 169,
+    "median_min": 173
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Luzern",
+   "weekday": {
+    "n": 11,
+    "first": "06:01",
+    "last": "20:01",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 14,
+    "first": "06:01",
+    "last": "20:01",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:01",
+    "last": "20:01",
+    "fastest_min": 84,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 15,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 124,
+    "median_min": 124
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 124,
+    "median_min": 124
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 124,
+    "median_min": 124
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Spiez",
+   "weekday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 126,
+    "median_min": 126
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 126,
+    "median_min": 126
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 126,
+    "median_min": 126
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 68,
+    "first": "05:58",
+    "last": "00:45",
+    "fastest_min": 32,
+    "median_min": 44
+   },
+   "saturday": {
+    "n": 66,
+    "first": "00:35",
+    "last": "00:45",
+    "fastest_min": 32,
+    "median_min": 44
+   },
+   "sunday": {
+    "n": 68,
+    "first": "00:35",
+    "last": "00:45",
+    "fastest_min": 32,
+    "median_min": 44
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Thun",
+   "weekday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 115,
+    "median_min": 115
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 115,
+    "median_min": 115
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 115,
+    "median_min": 115
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Visp",
+   "weekday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 152,
+    "median_min": 153
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 153,
+    "median_min": 153
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:31",
+    "last": "18:31",
+    "fastest_min": 152,
+    "median_min": 153
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 139,
+    "first": "04:30",
+    "last": "00:28",
+    "fastest_min": 12,
+    "median_min": 14
+   },
+   "saturday": {
+    "n": 131,
+    "first": "04:42",
+    "last": "00:28",
+    "fastest_min": 12,
+    "median_min": 14
+   },
+   "sunday": {
+    "n": 133,
+    "first": "04:42",
+    "last": "00:28",
+    "fastest_min": 12,
+    "median_min": 14
+   }
+  },
+  {
+   "from": "Winterthur",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 285,
+    "first": "04:42",
+    "last": "00:28",
+    "fastest_min": 19,
+    "median_min": 25
+   },
+   "saturday": {
+    "n": 292,
+    "first": "00:35",
+    "last": "00:28",
+    "fastest_min": 19,
+    "median_min": 25
+   },
+   "sunday": {
+    "n": 294,
+    "first": "00:35",
+    "last": "00:28",
+    "fastest_min": 19,
+    "median_min": 25
+   }
+  },
+  {
+   "from": "Zermatt",
+   "to": "Visp",
+   "weekday": {
+    "n": 32,
+    "first": "05:37",
+    "last": "22:06",
+    "fastest_min": 70,
+    "median_min": 72
+   },
+   "saturday": {
+    "n": 32,
+    "first": "05:37",
+    "last": "22:06",
+    "fastest_min": 70,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 32,
+    "first": "05:37",
+    "last": "22:06",
+    "fastest_min": 70,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 16,
+    "first": "05:56",
+    "last": "20:56",
+    "fastest_min": 87,
+    "median_min": 87
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:56",
+    "last": "20:56",
+    "fastest_min": 87,
+    "median_min": 87
+   },
+   "sunday": {
+    "n": 16,
+    "first": "05:56",
+    "last": "20:56",
+    "fastest_min": 87,
+    "median_min": 87
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Bern",
+   "weekday": {
+    "n": 34,
+    "first": "06:09",
+    "last": "22:46",
+    "fastest_min": 72,
+    "median_min": 77
+   },
+   "saturday": {
+    "n": 29,
+    "first": "06:09",
+    "last": "22:46",
+    "fastest_min": 72,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 29,
+    "first": "06:09",
+    "last": "22:46",
+    "fastest_min": 72,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Brig",
+   "weekday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 147,
+    "median_min": 147
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 147,
+    "median_min": 147
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 147,
+    "median_min": 147
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 16,
+    "first": "06:09",
+    "last": "21:09",
+    "fastest_min": 107,
+    "median_min": 107
+   },
+   "saturday": {
+    "n": 11,
+    "first": "06:09",
+    "last": "21:09",
+    "fastest_min": 107,
+    "median_min": 107
+   },
+   "sunday": {
+    "n": 11,
+    "first": "06:09",
+    "last": "21:09",
+    "fastest_min": 107,
+    "median_min": 107
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Genève",
+   "weekday": {
+    "n": 13,
+    "first": "06:09",
+    "last": "18:09",
+    "fastest_min": 196,
+    "median_min": 196
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:09",
+    "last": "20:09",
+    "fastest_min": 205,
+    "median_min": 206
+   },
+   "sunday": {
+    "n": 9,
+    "first": "06:09",
+    "last": "18:09",
+    "fastest_min": 206,
+    "median_min": 206
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 13,
+    "first": "06:09",
+    "last": "18:09",
+    "fastest_min": 208,
+    "median_min": 208
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:09",
+    "last": "20:09",
+    "fastest_min": 215,
+    "median_min": 215
+   },
+   "sunday": {
+    "n": 9,
+    "first": "06:09",
+    "last": "18:09",
+    "fastest_min": 215,
+    "median_min": 215
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 30,
+    "first": "06:09",
+    "last": "20:49",
+    "fastest_min": 154,
+    "median_min": 155
+   },
+   "saturday": {
+    "n": 25,
+    "first": "06:09",
+    "last": "20:49",
+    "fastest_min": 154,
+    "median_min": 157
+   },
+   "sunday": {
+    "n": 25,
+    "first": "06:09",
+    "last": "20:49",
+    "fastest_min": 154,
+    "median_min": 157
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Luzern",
+   "weekday": {
+    "n": 11,
+    "first": "06:15",
+    "last": "20:15",
+    "fastest_min": 70,
+    "median_min": 70
+   },
+   "saturday": {
+    "n": 14,
+    "first": "06:15",
+    "last": "20:15",
+    "fastest_min": 70,
+    "median_min": 70
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:15",
+    "last": "20:15",
+    "fastest_min": 70,
+    "median_min": 70
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 15,
+    "first": "06:49",
+    "last": "20:49",
+    "fastest_min": 108,
+    "median_min": 108
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:49",
+    "last": "20:49",
+    "fastest_min": 108,
+    "median_min": 108
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:49",
+    "last": "20:49",
+    "fastest_min": 108,
+    "median_min": 108
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Spiez",
+   "weekday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 111,
+    "median_min": 111
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 111,
+    "median_min": 111
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 111,
+    "median_min": 111
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 66,
+    "first": "05:51",
+    "last": "00:30",
+    "fastest_min": 47,
+    "median_min": 59
+   },
+   "saturday": {
+    "n": 59,
+    "first": "05:51",
+    "last": "00:30",
+    "fastest_min": 47,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 62,
+    "first": "05:51",
+    "last": "00:30",
+    "fastest_min": 47,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Thun",
+   "weekday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 100,
+    "median_min": 100
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 100,
+    "median_min": 100
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 100,
+    "median_min": 100
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Visp",
+   "weekday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 137,
+    "median_min": 138
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 138,
+    "median_min": 138
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:46",
+    "last": "18:46",
+    "fastest_min": 137,
+    "median_min": 138
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 135,
+    "first": "05:15",
+    "last": "00:30",
+    "fastest_min": 13,
+    "median_min": 14
+   },
+   "saturday": {
+    "n": 129,
+    "first": "04:18",
+    "last": "00:30",
+    "fastest_min": 13,
+    "median_min": 14
+   },
+   "sunday": {
+    "n": 132,
+    "first": "04:18",
+    "last": "00:30",
+    "fastest_min": 13,
+    "median_min": 14
+   }
+  },
+  {
+   "from": "Zurich Airport",
+   "to": "Zurich HB",
+   "weekday": {
+    "n": 234,
+    "first": "05:00",
+    "last": "00:42",
+    "fastest_min": 9,
+    "median_min": 11
+   },
+   "saturday": {
+    "n": 227,
+    "first": "05:00",
+    "last": "00:42",
+    "fastest_min": 9,
+    "median_min": 12
+   },
+   "sunday": {
+    "n": 229,
+    "first": "05:00",
+    "last": "00:42",
+    "fastest_min": 9,
+    "median_min": 11
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Basel SBB",
+   "weekday": {
+    "n": 88,
+    "first": "05:08",
+    "last": "00:08",
+    "fastest_min": 52,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 92,
+    "first": "05:08",
+    "last": "01:08",
+    "fastest_min": 52,
+    "median_min": 68
+   },
+   "sunday": {
+    "n": 90,
+    "first": "05:08",
+    "last": "00:08",
+    "fastest_min": 52,
+    "median_min": 68
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Bellinzona",
+   "weekday": {
+    "n": 31,
+    "first": "06:05",
+    "last": "23:05",
+    "fastest_min": 97,
+    "median_min": 99
+   },
+   "saturday": {
+    "n": 31,
+    "first": "06:05",
+    "last": "23:05",
+    "fastest_min": 97,
+    "median_min": 99
+   },
+   "sunday": {
+    "n": 30,
+    "first": "06:05",
+    "last": "20:33",
+    "fastest_min": 97,
+    "median_min": 99
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Bern",
+   "weekday": {
+    "n": 72,
+    "first": "05:19",
+    "last": "00:02",
+    "fastest_min": 56,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 72,
+    "first": "02:02",
+    "last": "01:02",
+    "fastest_min": 56,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 70,
+    "first": "02:02",
+    "last": "23:32",
+    "fastest_min": 56,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Brig",
+   "weekday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 131,
+    "median_min": 131
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 120,
+    "median_min": 131
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 131,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Chur",
+   "weekday": {
+    "n": 50,
+    "first": "05:12",
+    "last": "23:12",
+    "fastest_min": 74,
+    "median_min": 75
+   },
+   "saturday": {
+    "n": 50,
+    "first": "06:07",
+    "last": "00:23",
+    "fastest_min": 74,
+    "median_min": 75
+   },
+   "sunday": {
+    "n": 49,
+    "first": "06:07",
+    "last": "23:12",
+    "fastest_min": 74,
+    "median_min": 75
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Fribourg",
+   "weekday": {
+    "n": 17,
+    "first": "05:19",
+    "last": "21:32",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:19",
+    "last": "21:32",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:19",
+    "last": "21:32",
+    "fastest_min": 84,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Genève",
+   "weekday": {
+    "n": 14,
+    "first": "05:19",
+    "last": "18:32",
+    "fastest_min": 173,
+    "median_min": 173
+   },
+   "saturday": {
+    "n": 15,
+    "first": "05:19",
+    "last": "20:32",
+    "fastest_min": 182,
+    "median_min": 183
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:19",
+    "last": "18:32",
+    "fastest_min": 183,
+    "median_min": 183
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Genève-Aéroport",
+   "weekday": {
+    "n": 14,
+    "first": "05:19",
+    "last": "18:32",
+    "fastest_min": 185,
+    "median_min": 185
+   },
+   "saturday": {
+    "n": 15,
+    "first": "05:19",
+    "last": "20:32",
+    "fastest_min": 192,
+    "median_min": 192
+   },
+   "sunday": {
+    "n": 14,
+    "first": "05:19",
+    "last": "18:32",
+    "fastest_min": 192,
+    "median_min": 192
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Lausanne",
+   "weekday": {
+    "n": 33,
+    "first": "05:19",
+    "last": "22:04",
+    "fastest_min": 131,
+    "median_min": 142
+   },
+   "saturday": {
+    "n": 34,
+    "first": "05:19",
+    "last": "23:04",
+    "fastest_min": 131,
+    "median_min": 142
+   },
+   "sunday": {
+    "n": 33,
+    "first": "05:19",
+    "last": "22:04",
+    "fastest_min": 131,
+    "median_min": 142
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Locarno",
+   "weekday": {
+    "n": 6,
+    "first": "06:05",
+    "last": "16:05",
+    "fastest_min": 202,
+    "median_min": 202
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:05",
+    "last": "16:05",
+    "fastest_min": 202,
+    "median_min": 202
+   },
+   "sunday": {
+    "n": 6,
+    "first": "06:05",
+    "last": "16:05",
+    "fastest_min": 202,
+    "median_min": 202
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Lugano",
+   "weekday": {
+    "n": 22,
+    "first": "06:33",
+    "last": "21:05",
+    "fastest_min": 113,
+    "median_min": 115
+   },
+   "saturday": {
+    "n": 23,
+    "first": "06:33",
+    "last": "23:05",
+    "fastest_min": 113,
+    "median_min": 115
+   },
+   "sunday": {
+    "n": 22,
+    "first": "06:33",
+    "last": "20:33",
+    "fastest_min": 113,
+    "median_min": 115
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Luzern",
+   "weekday": {
+    "n": 40,
+    "first": "05:35",
+    "last": "00:08",
+    "fastest_min": 41,
+    "median_min": 50
+   },
+   "saturday": {
+    "n": 42,
+    "first": "00:35",
+    "last": "00:10",
+    "fastest_min": 41,
+    "median_min": 48
+   },
+   "sunday": {
+    "n": 42,
+    "first": "00:35",
+    "last": "00:08",
+    "fastest_min": 41,
+    "median_min": 48
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Neuchâtel",
+   "weekday": {
+    "n": 17,
+    "first": "06:04",
+    "last": "22:04",
+    "fastest_min": 93,
+    "median_min": 93
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:04",
+    "last": "23:04",
+    "fastest_min": 93,
+    "median_min": 93
+   },
+   "sunday": {
+    "n": 17,
+    "first": "06:04",
+    "last": "22:04",
+    "fastest_min": 93,
+    "median_min": 93
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Spiez",
+   "weekday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 95,
+    "median_min": 95
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 81,
+    "median_min": 95
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 95,
+    "median_min": 95
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "St. Gallen",
+   "weekday": {
+    "n": 67,
+    "first": "05:35",
+    "last": "00:17",
+    "fastest_min": 55,
+    "median_min": 74
+   },
+   "saturday": {
+    "n": 60,
+    "first": "05:35",
+    "last": "00:17",
+    "fastest_min": 55,
+    "median_min": 74
+   },
+   "sunday": {
+    "n": 62,
+    "first": "05:37",
+    "last": "00:17",
+    "fastest_min": 58,
+    "median_min": 74
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Thun",
+   "weekday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 71,
+    "median_min": 84
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 84,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Visp",
+   "weekday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 121,
+    "median_min": 122
+   },
+   "saturday": {
+    "n": 15,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 111,
+    "median_min": 122
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:02",
+    "last": "19:02",
+    "fastest_min": 121,
+    "median_min": 122
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Winterthur",
+   "weekday": {
+    "n": 281,
+    "first": "05:02",
+    "last": "00:25",
+    "fastest_min": 20,
+    "median_min": 25
+   },
+   "saturday": {
+    "n": 288,
+    "first": "01:05",
+    "last": "00:25",
+    "fastest_min": 20,
+    "median_min": 25
+   },
+   "sunday": {
+    "n": 290,
+    "first": "01:05",
+    "last": "00:25",
+    "fastest_min": 20,
+    "median_min": 25
+   }
+  },
+  {
+   "from": "Zurich HB",
+   "to": "Zurich Airport",
+   "weekday": {
+    "n": 234,
+    "first": "04:33",
+    "last": "00:17",
+    "fastest_min": 9,
+    "median_min": 12
+   },
+   "saturday": {
+    "n": 228,
+    "first": "04:05",
+    "last": "00:17",
+    "fastest_min": 9,
+    "median_min": 12
+   },
+   "sunday": {
+    "n": 231,
+    "first": "04:05",
+    "last": "00:17",
+    "fastest_min": 9,
+    "median_min": 12
+   }
+  }
+ ]
+}

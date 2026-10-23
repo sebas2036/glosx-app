@@ -1,0 +1,735 @@
+from,to,day,first_train,last_train,direct_trains,fastest_min,median_min,source,url
+Basel SBB,Bellinzona,weekday,05:04,21:04,17,158,158,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Bellinzona,saturday,05:04,21:04,17,158,158,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Bellinzona,sunday,05:04,21:04,17,158,158,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Bern,weekday,05:24,22:28,35,56,58,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Bern,saturday,05:24,22:28,35,56,58,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Bern,sunday,05:24,22:28,35,56,58,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Brig,weekday,06:30,22:28,10,130,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Brig,saturday,06:30,22:28,10,130,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Brig,sunday,06:30,20:30,9,130,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Chur,weekday,06:07,20:33,19,135,135,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Chur,saturday,06:07,20:33,17,135,135,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Chur,sunday,06:07,20:33,17,135,135,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Lausanne,weekday,06:32,20:32,15,144,144,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Lausanne,saturday,06:32,21:32,16,144,144,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Lausanne,sunday,06:32,20:32,15,144,144,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Locarno,weekday,06:04,16:04,6,263,263,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Locarno,saturday,06:04,16:04,6,263,263,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Locarno,sunday,06:04,16:04,6,263,263,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Lugano,weekday,05:04,21:04,10,174,174,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Lugano,saturday,05:04,21:04,10,174,174,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Lugano,sunday,05:04,21:04,10,174,174,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Luzern,weekday,05:04,22:58,35,61,61,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Luzern,saturday,05:04,01:00,36,63,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Luzern,sunday,05:04,00:04,36,63,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Neuchâtel,weekday,06:32,20:32,15,95,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Neuchâtel,saturday,06:32,21:32,16,95,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Neuchâtel,sunday,06:32,20:32,15,95,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Spiez,weekday,05:24,22:28,34,93,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Spiez,saturday,05:24,22:28,17,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Spiez,sunday,05:24,22:28,17,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Thun,weekday,05:24,22:28,34,83,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Thun,saturday,05:24,22:28,17,83,83,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Thun,sunday,05:24,22:28,17,83,83,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Visp,weekday,06:30,22:28,10,121,121,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Visp,saturday,06:30,22:28,10,121,121,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Visp,sunday,06:30,19:30,8,121,121,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Zurich Airport,weekday,04:36,19:36,16,88,88,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Zurich Airport,saturday,04:36,19:36,16,88,88,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Zurich Airport,sunday,04:36,19:36,16,88,88,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Zurich HB,weekday,04:36,00:07,88,53,69,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Zurich HB,saturday,04:36,00:07,91,53,69,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Basel SBB,Zurich HB,sunday,04:36,00:07,90,53,69,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Basel SBB,weekday,05:59,22:17,18,158,164,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Basel SBB,saturday,05:59,22:17,18,158,164,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Basel SBB,sunday,05:59,22:17,18,158,164,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Locarno,weekday,04:49,22:19,50,23,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Locarno,saturday,03:32,00:59,57,19,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Locarno,sunday,03:32,22:19,51,23,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Lugano,weekday,04:33,00:53,77,14,19,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Lugano,saturday,03:33,01:06,78,14,19,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Lugano,sunday,03:33,23:46,75,14,19,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Luzern,weekday,05:59,22:17,17,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Luzern,saturday,05:59,22:17,17,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Luzern,sunday,05:59,22:17,18,78,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Zurich HB,weekday,05:07,21:47,33,98,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Zurich HB,saturday,05:07,21:47,32,98,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bellinzona,Zurich HB,sunday,06:59,21:47,31,98,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Basel SBB,weekday,06:04,23:36,34,56,56,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Basel SBB,saturday,06:04,23:36,34,53,56,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Basel SBB,sunday,06:04,23:36,34,53,56,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Brig,weekday,06:07,23:40,26,66,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Brig,saturday,06:07,23:37,28,66,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Brig,sunday,06:07,22:34,26,66,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Chur,weekday,04:38,19:38,15,190,190,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Chur,saturday,04:36,19:38,20,141,190,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Chur,sunday,04:36,19:38,20,141,190,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Fribourg,weekday,05:04,00:09,86,22,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Fribourg,saturday,05:04,00:25,92,22,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Fribourg,sunday,05:04,00:25,92,22,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Genève,weekday,05:04,19:34,30,111,116,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Genève,saturday,05:34,21:34,16,120,121,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Genève,sunday,05:34,19:34,15,121,121,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Genève-Aéroport,weekday,05:04,19:34,30,123,127,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Genève-Aéroport,saturday,05:34,21:34,16,130,130,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Genève-Aéroport,sunday,05:34,19:34,15,130,130,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Lausanne,weekday,05:04,23:08,36,69,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Lausanne,saturday,05:04,00:09,37,69,76,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Lausanne,sunday,05:04,00:09,37,69,76,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Luzern,weekday,06:00,23:00,18,61,61,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Luzern,saturday,06:00,23:00,18,61,61,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Luzern,sunday,06:00,23:00,18,61,61,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Neuchâtel,weekday,05:04,22:53,20,35,35,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Neuchâtel,saturday,05:53,20:53,17,35,35,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Neuchâtel,sunday,05:53,22:53,19,35,35,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Spiez,weekday,06:04,00:08,66,29,30,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Spiez,saturday,06:04,01:09,69,29,30,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Spiez,sunday,06:04,00:08,67,29,30,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,St. Gallen,weekday,05:29,21:31,17,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,St. Gallen,saturday,05:29,21:31,12,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,St. Gallen,sunday,05:29,21:31,12,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Thun,weekday,05:02,00:16,140,19,30,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Thun,saturday,05:02,01:09,110,19,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Thun,sunday,05:02,00:16,106,19,22,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Visp,weekday,06:07,23:40,26,56,57,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Visp,saturday,06:07,23:37,28,56,57,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Visp,sunday,06:07,20:34,24,56,57,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Winterthur,weekday,05:29,22:02,33,85,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Winterthur,saturday,03:00,22:02,29,87,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Winterthur,sunday,03:00,22:02,29,87,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Zurich Airport,weekday,04:18,22:02,34,71,78,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Zurich Airport,saturday,03:00,22:02,30,72,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Zurich Airport,sunday,03:00,22:02,30,72,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Zurich HB,weekday,04:18,00:02,72,56,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Zurich HB,saturday,03:00,01:06,72,56,61,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Bern,Zurich HB,sunday,03:00,00:04,70,56,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Basel SBB,weekday,05:16,20:18,9,131,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Basel SBB,saturday,05:16,20:18,9,130,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Basel SBB,sunday,05:16,20:20,9,130,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Bern,weekday,05:16,22:18,26,67,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Bern,saturday,05:16,22:18,27,67,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Bern,sunday,05:16,22:25,28,67,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Genève,weekday,04:18,21:52,36,131,157,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Genève,saturday,04:18,21:26,24,131,159,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Genève,sunday,04:18,21:52,23,131,159,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Genève-Aéroport,weekday,04:18,20:57,31,159,168,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Genève-Aéroport,saturday,04:18,21:26,20,168,168,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Genève-Aéroport,sunday,04:18,20:57,18,168,168,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Lausanne,weekday,04:18,21:52,38,88,106,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Lausanne,saturday,04:18,22:26,40,88,106,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Lausanne,sunday,04:18,21:52,38,88,106,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Montreux,weekday,04:18,21:52,35,67,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Montreux,saturday,04:18,22:26,36,67,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Montreux,sunday,04:18,21:52,35,67,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Sion,weekday,04:18,00:40,75,29,41,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Sion,saturday,04:18,00:26,76,29,41,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Sion,sunday,04:18,00:40,60,29,40,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Spiez,weekday,05:11,22:18,43,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Spiez,saturday,05:11,22:18,44,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Spiez,sunday,05:11,22:25,46,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Thun,weekday,05:16,22:18,26,45,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Thun,saturday,05:16,22:18,27,45,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Thun,sunday,05:16,22:25,29,45,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Visp,weekday,04:18,00:40,99,6,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Visp,saturday,04:18,00:26,99,6,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Visp,sunday,04:18,00:40,85,6,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Winterthur,weekday,05:42,19:45,14,164,164,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Winterthur,saturday,05:42,19:45,14,164,164,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Winterthur,sunday,05:42,19:45,14,164,164,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Zurich Airport,weekday,05:42,19:45,14,148,149,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Zurich Airport,saturday,05:42,19:45,14,149,149,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Zurich Airport,sunday,05:42,19:45,14,149,149,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Zurich HB,weekday,05:42,19:45,15,133,133,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Zurich HB,saturday,05:42,19:45,15,133,133,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Brig,Zurich HB,sunday,05:42,19:45,16,133,133,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Basel SBB,weekday,05:08,19:08,18,134,136,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Basel SBB,saturday,05:08,19:08,15,134,134,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Basel SBB,sunday,07:08,19:08,14,134,134,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Bern,weekday,05:11,18:11,14,190,190,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Bern,saturday,05:11,18:11,19,140,190,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Bern,sunday,04:11,19:11,20,140,190,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,St. Gallen,weekday,05:42,20:42,16,82,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,St. Gallen,saturday,05:42,20:42,16,82,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,St. Gallen,sunday,05:42,20:42,16,82,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,St. Moritz,weekday,05:08,20:55,16,117,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,St. Moritz,saturday,05:08,20:55,17,117,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,St. Moritz,sunday,06:58,20:55,16,117,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Zurich HB,weekday,04:11,23:11,50,74,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Zurich HB,saturday,04:11,23:11,49,74,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Chur,Zurich HB,sunday,04:11,23:11,49,74,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Bern,weekday,05:09,00:34,86,23,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Bern,saturday,04:59,00:34,92,23,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Bern,sunday,04:59,00:34,92,23,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Genève,weekday,05:27,19:57,30,88,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Genève,saturday,05:57,21:57,16,97,98,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Genève,sunday,05:57,19:57,15,98,98,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Genève-Aéroport,weekday,05:27,19:57,30,100,104,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Genève-Aéroport,saturday,05:57,21:57,16,107,107,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Genève-Aéroport,sunday,05:57,19:57,15,107,107,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Lausanne,weekday,05:27,23:31,69,46,53,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Lausanne,saturday,02:26,00:36,76,44,53,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Lausanne,sunday,02:26,00:36,74,44,53,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Luzern,weekday,05:33,22:33,18,88,88,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Luzern,saturday,05:33,22:33,18,88,88,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Luzern,sunday,05:33,22:33,18,88,88,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Neuchâtel,weekday,04:28,23:47,38,55,55,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Neuchâtel,saturday,05:17,23:47,38,55,55,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Neuchâtel,sunday,05:17,23:47,38,55,55,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,St. Gallen,weekday,06:03,21:03,16,169,169,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,St. Gallen,saturday,06:03,21:03,11,169,169,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,St. Gallen,sunday,06:03,21:03,11,169,169,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Thun,weekday,05:09,21:42,34,64,65,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Thun,saturday,04:59,23:42,2,64,71,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Thun,sunday,04:59,23:42,2,64,71,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Winterthur,weekday,06:03,21:03,16,123,123,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Winterthur,saturday,06:03,21:03,11,123,123,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Winterthur,sunday,06:03,21:03,11,123,123,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Zurich Airport,weekday,06:03,21:03,16,106,106,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Zurich Airport,saturday,06:03,21:03,11,106,106,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Zurich Airport,sunday,06:03,21:03,11,106,106,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Zurich HB,weekday,06:03,23:03,18,85,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Zurich HB,saturday,06:03,23:03,18,85,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Fribourg,Zurich HB,sunday,06:03,23:03,18,85,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Bern,weekday,05:33,20:35,31,111,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Bern,saturday,05:24,20:24,16,122,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Bern,sunday,05:24,20:24,16,122,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Brig,weekday,04:46,22:19,38,131,152,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Brig,saturday,04:46,23:05,24,131,159,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Brig,sunday,04:46,22:19,22,131,159,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Fribourg,weekday,05:33,20:35,31,87,91,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Fribourg,saturday,05:24,20:24,16,98,98,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Fribourg,sunday,05:24,20:24,16,98,98,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Genève-Aéroport,weekday,04:46,00:34,81,6,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Genève-Aéroport,saturday,04:17,00:25,79,6,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Genève-Aéroport,sunday,04:45,00:34,75,6,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Lausanne,weekday,04:08,00:27,111,39,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Lausanne,saturday,04:08,23:21,79,39,50,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Lausanne,sunday,04:08,00:27,79,39,50,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Luzern,weekday,05:54,19:54,15,187,187,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Montreux,weekday,04:46,23:15,70,63,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Montreux,saturday,04:46,23:21,60,62,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Montreux,sunday,04:46,23:15,53,62,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Neuchâtel,weekday,06:15,19:15,6,87,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Sion,weekday,04:46,22:19,39,100,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Sion,saturday,04:46,23:21,25,100,123,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Sion,sunday,04:46,22:19,22,100,123,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,St. Gallen,weekday,05:33,19:35,15,257,257,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,St. Gallen,saturday,06:24,19:24,10,268,268,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,St. Gallen,sunday,06:24,19:24,10,268,268,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Visp,weekday,04:46,22:19,34,138,146,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Visp,saturday,04:46,23:05,20,141,150,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Visp,sunday,04:46,22:19,18,148,150,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Winterthur,weekday,05:33,19:35,15,211,211,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Winterthur,saturday,06:24,19:24,10,222,222,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Winterthur,sunday,06:24,19:24,10,222,222,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Zurich Airport,weekday,05:33,19:35,15,194,194,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Zurich Airport,saturday,06:24,19:24,10,205,205,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Zurich Airport,sunday,06:24,19:24,10,205,205,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Zurich HB,weekday,05:33,20:35,16,173,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Zurich HB,saturday,05:24,20:24,16,184,184,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève,Zurich HB,sunday,05:24,20:24,16,184,184,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Bern,weekday,05:25,20:25,31,121,125,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Bern,saturday,05:14,20:14,16,132,132,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Bern,sunday,05:14,20:14,16,132,132,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Brig,weekday,05:14,22:09,32,157,168,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Brig,saturday,05:45,22:55,19,160,167,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Brig,sunday,05:45,22:09,17,167,167,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Fribourg,weekday,05:25,20:25,31,97,101,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Fribourg,saturday,05:14,20:14,16,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Fribourg,sunday,05:14,20:14,16,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Genève,weekday,04:58,00:19,79,5,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Genève,saturday,05:14,01:00,76,5,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Genève,sunday,05:14,00:19,73,5,7,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Lausanne,weekday,04:58,00:19,72,49,52,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Lausanne,saturday,05:14,23:11,72,49,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Lausanne,sunday,05:14,00:19,72,58,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Luzern,weekday,05:45,19:45,15,196,196,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Montreux,weekday,04:58,23:06,35,74,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Montreux,saturday,05:30,23:11,54,74,81,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Montreux,sunday,05:30,23:06,47,80,81,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Neuchâtel,weekday,06:06,19:06,6,96,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Sion,weekday,05:14,22:09,32,121,125,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Sion,saturday,05:45,23:11,20,121,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Sion,sunday,05:45,22:09,17,129,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,St. Gallen,weekday,05:25,19:25,15,267,267,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,St. Gallen,saturday,06:14,19:14,10,278,278,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,St. Gallen,sunday,06:14,19:14,10,278,278,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Visp,weekday,05:14,22:09,32,148,156,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Visp,saturday,05:45,22:55,19,151,158,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Visp,sunday,05:45,22:09,17,158,158,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Winterthur,weekday,05:25,19:25,15,221,221,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Winterthur,saturday,06:14,19:14,10,232,232,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Winterthur,sunday,06:14,19:14,10,232,232,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Zurich Airport,weekday,05:25,19:25,15,204,204,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Zurich Airport,saturday,06:14,19:14,10,215,215,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Zurich Airport,sunday,06:14,19:14,10,215,215,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Zurich HB,weekday,05:25,20:25,16,183,183,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Zurich HB,saturday,05:14,20:14,16,194,194,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Genève-Aéroport,Zurich HB,sunday,05:14,20:14,16,194,194,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Grindelwald,Interlaken Ost,weekday,05:15,21:17,32,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Grindelwald,Interlaken Ost,saturday,05:15,21:17,32,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Grindelwald,Interlaken Ost,sunday,05:15,21:17,32,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Grindelwald,weekday,06:02,22:05,32,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Grindelwald,saturday,06:02,22:05,32,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Grindelwald,sunday,06:02,22:05,32,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Lauterbrunnen,weekday,06:02,22:05,32,22,22,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Lauterbrunnen,saturday,06:02,22:05,32,22,22,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Lauterbrunnen,sunday,06:02,22:05,32,22,22,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Luzern,weekday,07:04,20:09,14,106,111,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Luzern,saturday,07:04,20:09,14,106,111,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Interlaken Ost,Luzern,sunday,07:04,20:09,14,106,111,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Basel SBB,weekday,06:04,19:04,14,142,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Basel SBB,saturday,06:04,20:04,15,142,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Basel SBB,sunday,06:04,19:04,14,142,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Bern,weekday,05:40,23:44,36,69,76,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Bern,saturday,05:40,23:44,36,69,76,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Bern,sunday,05:40,23:44,36,69,76,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Brig,weekday,05:04,23:14,41,88,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Brig,saturday,05:04,23:48,42,87,107,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Brig,sunday,05:04,23:15,41,87,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Fribourg,weekday,04:44,23:44,69,45,52,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Fribourg,saturday,01:21,00:42,78,45,61,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Fribourg,sunday,01:21,23:44,74,45,56,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Genève,weekday,03:45,00:30,110,39,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Genève,saturday,03:24,23:30,80,39,51,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Genève,sunday,03:50,00:30,79,39,51,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Genève-Aéroport,weekday,03:45,23:30,72,49,52,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Genève-Aéroport,saturday,03:24,23:30,76,56,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Genève-Aéroport,sunday,03:50,23:30,72,56,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Luzern,weekday,05:40,21:40,17,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Luzern,saturday,05:40,21:40,17,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Luzern,sunday,05:40,21:40,17,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Montreux,weekday,04:55,00:24,114,19,22,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Montreux,saturday,01:35,01:01,121,18,22,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Montreux,sunday,01:35,00:24,115,18,22,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Neuchâtel,weekday,05:34,00:04,37,47,47,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Neuchâtel,saturday,01:07,00:04,38,44,47,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Neuchâtel,sunday,01:07,00:04,38,44,47,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Sion,weekday,05:04,23:14,42,57,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Sion,saturday,05:04,01:01,44,56,67,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Sion,sunday,05:04,23:15,41,56,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,St. Gallen,weekday,05:34,20:17,28,208,215,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,St. Gallen,saturday,05:34,20:16,23,208,208,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,St. Gallen,sunday,05:34,20:16,23,208,208,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Visp,weekday,05:04,23:14,37,95,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Visp,saturday,05:04,23:48,38,96,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Visp,sunday,05:04,23:15,37,96,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Winterthur,weekday,05:34,20:17,28,169,169,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Winterthur,saturday,05:34,20:16,23,170,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Winterthur,sunday,05:34,20:16,23,170,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Zurich Airport,weekday,05:34,20:17,28,152,152,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Zurich Airport,saturday,05:34,20:16,23,153,157,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Zurich Airport,sunday,05:34,20:16,23,153,157,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Zurich HB,weekday,05:34,22:34,35,131,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Zurich HB,saturday,05:34,22:34,35,132,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lausanne,Zurich HB,sunday,05:34,22:34,35,132,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lauterbrunnen,Interlaken Ost,weekday,05:29,21:31,32,22,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lauterbrunnen,Interlaken Ost,saturday,05:29,21:31,32,22,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lauterbrunnen,Interlaken Ost,sunday,05:29,21:31,32,22,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Basel SBB,weekday,07:33,19:33,7,262,262,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Basel SBB,saturday,07:33,19:33,7,262,262,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Basel SBB,sunday,07:33,19:33,7,262,262,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Bellinzona,weekday,04:35,22:45,51,22,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Bellinzona,saturday,03:05,01:45,57,22,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Bellinzona,sunday,03:05,22:45,53,20,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Lugano,weekday,05:52,22:52,35,32,32,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Lugano,saturday,05:52,00:22,37,32,32,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Lugano,sunday,05:52,22:52,35,32,32,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Luzern,weekday,07:33,19:33,7,188,188,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Luzern,saturday,07:33,19:33,7,188,188,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Luzern,sunday,07:33,19:33,8,99,188,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Zurich HB,weekday,08:33,20:33,7,202,202,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Zurich HB,saturday,08:33,20:33,7,202,202,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Locarno,Zurich HB,sunday,08:33,20:33,7,202,202,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Basel SBB,weekday,06:00,22:02,10,173,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Basel SBB,saturday,06:00,22:02,10,173,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Basel SBB,sunday,06:00,22:02,10,173,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Bellinzona,weekday,00:55,00:25,79,14,18,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Bellinzona,saturday,00:55,00:25,77,14,18,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Bellinzona,sunday,00:55,00:27,77,14,18,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Locarno,weekday,06:05,22:05,33,32,33,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Locarno,saturday,06:05,01:05,38,32,33,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Locarno,sunday,06:05,22:05,33,32,33,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Luzern,weekday,06:00,22:02,9,99,99,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Luzern,saturday,06:00,22:02,9,99,99,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Luzern,sunday,06:00,22:02,9,99,99,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Zurich HB,weekday,06:30,21:30,24,113,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Zurich HB,saturday,07:02,21:30,23,113,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Lugano,Zurich HB,sunday,07:02,21:30,23,113,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Basel SBB,weekday,04:54,23:54,36,61,65,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Basel SBB,saturday,04:54,23:54,36,61,65,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Basel SBB,sunday,04:54,23:54,35,61,65,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Bellinzona,weekday,06:18,22:18,16,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Bellinzona,saturday,06:18,22:18,17,76,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Bellinzona,sunday,06:18,22:18,16,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Bern,weekday,04:50,23:00,21,60,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Bern,saturday,06:00,23:00,20,60,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Bern,sunday,06:00,23:00,20,60,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Fribourg,weekday,06:00,23:00,18,86,86,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Fribourg,saturday,06:00,23:00,18,86,86,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Fribourg,sunday,06:00,23:00,18,86,86,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Genève,weekday,06:00,18:00,13,185,185,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Genève-Aéroport,weekday,06:00,18:00,13,195,195,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Interlaken Ost,weekday,06:06,18:06,13,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Interlaken Ost,saturday,06:06,18:06,13,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Interlaken Ost,sunday,06:06,18:06,13,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Lausanne,weekday,06:00,22:00,17,140,140,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Lausanne,saturday,06:00,23:00,18,140,140,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Lausanne,sunday,06:00,23:00,18,140,140,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Locarno,weekday,07:18,17:18,6,189,189,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Locarno,saturday,07:18,17:18,7,97,189,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Locarno,sunday,07:18,17:18,6,189,189,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Lugano,weekday,06:18,22:18,9,100,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Lugano,saturday,06:18,22:18,9,100,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Lugano,sunday,06:18,22:18,9,100,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,St. Gallen,weekday,07:39,19:39,13,136,136,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,St. Gallen,saturday,07:39,19:39,13,136,136,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,St. Gallen,sunday,07:39,19:39,13,136,136,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Winterthur,weekday,05:35,19:35,11,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Winterthur,saturday,05:35,19:35,14,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Winterthur,sunday,05:35,19:35,14,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Zurich Airport,weekday,05:35,19:35,11,69,69,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Zurich Airport,saturday,05:35,19:35,14,69,69,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Zurich Airport,sunday,05:35,19:35,14,69,69,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Zurich HB,weekday,04:52,23:35,40,42,50,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Zurich HB,saturday,00:35,23:35,42,42,50,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Luzern,Zurich HB,sunday,00:35,23:35,42,42,50,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Brig,weekday,05:26,23:36,41,67,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Brig,saturday,05:26,00:10,42,67,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Brig,sunday,05:26,23:36,41,67,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Genève,weekday,05:23,23:25,66,63,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Genève,saturday,05:49,23:08,58,63,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Genève,sunday,05:49,23:25,53,63,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Genève-Aéroport,weekday,05:23,22:23,34,76,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Genève-Aéroport,saturday,05:49,23:08,54,81,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Genève-Aéroport,sunday,05:49,22:23,48,81,82,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Lausanne,weekday,05:04,00:56,109,20,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Lausanne,saturday,01:00,00:35,115,20,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Lausanne,sunday,01:00,00:56,111,20,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Sion,weekday,05:26,23:36,42,36,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Sion,saturday,05:26,01:20,44,36,45,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Sion,sunday,05:26,23:36,41,36,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Visp,weekday,05:26,23:36,37,73,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Visp,saturday,05:26,00:10,38,73,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Montreux,Visp,sunday,05:26,23:36,37,73,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Basel SBB,weekday,06:53,19:53,14,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Basel SBB,saturday,06:53,20:53,15,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Basel SBB,sunday,06:53,19:53,14,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Bern,weekday,05:32,23:32,20,34,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Bern,saturday,05:32,19:32,15,36,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Bern,sunday,05:32,23:32,20,34,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Fribourg,weekday,04:46,23:46,38,56,56,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Fribourg,saturday,05:17,23:46,38,56,56,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Fribourg,sunday,05:17,23:46,38,56,56,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Genève,weekday,05:18,18:18,6,85,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Genève-Aéroport,weekday,05:18,18:18,6,98,98,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Lausanne,weekday,05:39,23:39,37,47,47,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Lausanne,saturday,02:43,00:44,39,45,47,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Lausanne,sunday,02:43,23:39,38,47,47,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,St. Gallen,weekday,06:22,18:22,13,160,160,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,St. Gallen,saturday,06:22,18:22,13,160,160,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,St. Gallen,sunday,06:22,18:22,13,160,160,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Winterthur,weekday,06:22,18:22,13,125,125,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Winterthur,saturday,06:22,18:22,13,125,125,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Winterthur,sunday,06:22,18:22,13,125,125,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Zurich Airport,weekday,06:22,18:22,13,109,109,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Zurich Airport,saturday,06:22,18:22,13,109,109,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Zurich Airport,sunday,06:22,18:22,13,109,109,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Zurich HB,weekday,06:22,23:22,18,94,94,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Zurich HB,saturday,06:22,23:22,18,94,94,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Neuchâtel,Zurich HB,sunday,06:22,23:22,18,94,94,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Brig,weekday,04:46,00:27,79,29,42,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Brig,saturday,04:40,00:57,79,29,42,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Brig,sunday,04:46,00:27,62,29,42,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Genève,weekday,04:33,22:33,39,100,116,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Genève,saturday,04:58,22:02,24,100,123,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Genève,sunday,04:58,22:33,23,100,123,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Genève-Aéroport,weekday,04:33,21:36,33,123,126,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Genève-Aéroport,saturday,04:58,22:02,20,126,132,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Genève-Aéroport,sunday,04:58,21:36,18,126,132,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Lausanne,weekday,04:33,22:33,41,57,70,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Lausanne,saturday,02:09,23:02,43,57,67,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Lausanne,sunday,02:09,22:33,41,57,70,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Montreux,weekday,04:33,22:33,38,36,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Montreux,saturday,02:09,23:02,39,36,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Montreux,sunday,02:09,22:33,38,36,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Visp,weekday,04:46,00:27,75,26,30,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Visp,saturday,04:40,00:57,75,26,30,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Sion,Visp,sunday,04:46,00:27,58,26,30,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Basel SBB,weekday,05:18,20:54,32,95,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Basel SBB,saturday,05:18,20:54,17,94,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Basel SBB,sunday,05:18,20:56,17,94,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Bern,weekday,05:18,23:22,66,28,31,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Bern,saturday,05:18,23:54,68,31,31,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Bern,sunday,05:18,23:24,68,31,31,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Brig,weekday,06:12,00:17,44,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Brig,saturday,06:12,00:17,47,34,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Brig,sunday,06:12,00:17,44,35,36,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Thun,weekday,05:18,23:22,66,8,9,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Thun,saturday,05:18,23:54,68,8,9,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Thun,sunday,05:18,23:24,69,8,9,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Visp,weekday,06:38,00:14,26,25,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Visp,saturday,06:38,00:08,29,25,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Visp,sunday,06:38,21:05,24,25,26,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Winterthur,weekday,06:22,20:22,14,127,127,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Winterthur,saturday,06:22,20:22,14,127,127,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Winterthur,sunday,06:22,20:22,14,127,127,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Zurich Airport,weekday,06:22,20:22,14,111,112,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Zurich Airport,saturday,06:22,20:22,14,112,112,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Zurich Airport,sunday,06:22,20:22,14,112,112,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Zurich HB,weekday,06:22,20:22,15,96,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Zurich HB,saturday,06:22,20:22,15,96,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Spiez,Zurich HB,sunday,06:22,20:22,16,96,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Bern,weekday,05:07,21:07,17,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Bern,saturday,05:07,21:07,12,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Bern,sunday,05:07,21:07,12,141,141,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Chur,weekday,05:55,20:55,16,83,83,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Chur,saturday,05:55,20:55,16,83,83,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Chur,sunday,05:55,20:55,16,83,83,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Fribourg,weekday,05:07,20:07,16,169,169,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Fribourg,saturday,05:07,20:07,11,169,169,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Fribourg,sunday,05:07,20:07,11,169,169,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Genève,weekday,05:07,17:07,13,258,258,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Genève,saturday,05:07,19:07,10,267,268,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Genève,sunday,05:07,17:07,9,268,268,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Genève-Aéroport,weekday,05:07,17:07,13,270,270,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Genève-Aéroport,saturday,05:07,19:07,10,277,277,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Genève-Aéroport,sunday,05:07,17:07,9,277,277,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Lausanne,weekday,05:07,19:58,30,208,212,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Lausanne,saturday,05:07,19:58,25,208,208,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Lausanne,sunday,05:07,19:58,25,208,208,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Luzern,weekday,07:05,19:05,13,136,136,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Luzern,saturday,07:05,19:05,13,136,136,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Luzern,sunday,07:05,19:05,13,136,136,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Neuchâtel,weekday,05:58,19:58,15,159,159,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Neuchâtel,saturday,05:58,19:58,15,159,159,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Neuchâtel,sunday,05:58,19:58,15,159,159,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Winterthur,weekday,04:37,23:37,69,32,45,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Winterthur,saturday,01:02,23:37,66,32,45,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Winterthur,sunday,01:02,23:37,69,32,45,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Zurich Airport,weekday,04:37,23:37,68,48,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Zurich Airport,saturday,04:37,23:37,61,48,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Zurich Airport,sunday,04:37,23:37,63,48,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Zurich HB,weekday,04:37,23:37,68,59,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Zurich HB,saturday,04:37,23:37,61,59,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Gallen,Zurich HB,sunday,04:37,23:37,63,59,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Moritz,Chur,weekday,05:39,20:05,15,117,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Moritz,Chur,saturday,05:39,21:02,17,117,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+St. Moritz,Chur,sunday,05:59,20:05,16,117,117,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Basel SBB,weekday,05:29,21:04,32,84,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Basel SBB,saturday,05:29,21:04,17,83,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Basel SBB,sunday,05:29,21:07,17,83,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Bern,weekday,05:02,00:10,142,17,31,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Bern,saturday,05:02,00:10,109,20,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Bern,sunday,05:02,00:10,106,20,23,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Brig,weekday,06:27,00:03,26,46,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Brig,saturday,06:27,23:57,29,45,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Brig,sunday,06:27,22:54,26,46,46,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Fribourg,weekday,05:12,21:12,33,66,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Fribourg,saturday,05:12,23:42,2,66,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Fribourg,sunday,05:12,23:42,2,66,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Spiez,weekday,06:24,00:36,66,9,10,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Spiez,saturday,06:24,01:39,70,9,10,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Spiez,sunday,06:24,00:38,67,9,10,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Visp,weekday,06:27,00:03,26,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Visp,saturday,06:27,23:57,29,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Visp,sunday,06:27,20:54,24,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Winterthur,weekday,06:33,20:33,14,116,116,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Winterthur,saturday,06:33,20:33,14,116,116,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Winterthur,sunday,06:33,20:33,14,116,116,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Zurich Airport,weekday,06:33,20:33,14,100,101,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Zurich Airport,saturday,06:33,20:33,14,101,101,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Zurich Airport,sunday,06:33,20:33,14,101,101,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Zurich HB,weekday,06:33,20:33,15,85,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Zurich HB,saturday,06:33,20:33,15,85,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Thun,Zurich HB,sunday,06:33,20:33,16,85,85,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Basel SBB,weekday,05:25,20:27,9,122,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Basel SBB,saturday,05:25,20:27,9,121,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Basel SBB,sunday,05:25,20:29,9,121,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Bern,weekday,05:25,22:27,26,58,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Bern,saturday,05:25,22:27,27,58,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Bern,sunday,05:25,21:27,27,58,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Brig,weekday,05:19,00:58,101,7,8,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Brig,saturday,05:16,01:27,104,7,8,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Brig,sunday,05:19,00:58,82,7,8,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Genève,weekday,04:27,22:03,33,139,146,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Genève,saturday,04:27,21:36,20,146,149,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Genève,sunday,04:27,22:03,20,146,149,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Genève-Aéroport,weekday,04:27,21:07,31,149,156,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Genève-Aéroport,saturday,04:27,21:36,20,156,158,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Genève-Aéroport,sunday,04:27,21:07,18,156,158,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Lausanne,weekday,04:27,22:03,35,93,97,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Lausanne,saturday,04:27,22:36,36,93,96,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Lausanne,sunday,04:27,22:03,35,93,97,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Montreux,weekday,04:27,22:03,32,72,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Montreux,saturday,04:27,22:36,32,72,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Montreux,sunday,04:27,22:03,32,72,73,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Sion,weekday,04:27,00:48,72,25,31,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Sion,saturday,04:27,00:37,72,25,32,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Sion,sunday,04:27,00:48,57,25,29,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Spiez,weekday,05:25,22:27,26,26,27,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Spiez,saturday,05:25,22:27,27,26,27,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Spiez,sunday,05:25,21:27,28,26,27,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Thun,weekday,05:25,22:27,26,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Thun,saturday,05:25,22:27,27,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Thun,sunday,05:25,21:27,28,36,37,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Winterthur,weekday,05:51,19:54,14,155,155,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Winterthur,saturday,05:51,19:54,14,155,155,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Winterthur,sunday,05:51,19:54,14,155,155,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zermatt,weekday,05:30,22:37,31,63,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zermatt,saturday,05:30,22:37,31,63,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zermatt,sunday,05:30,23:20,31,54,66,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zurich Airport,weekday,05:51,19:54,14,139,140,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zurich Airport,saturday,05:51,19:54,14,140,140,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zurich Airport,sunday,05:51,19:54,14,140,140,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zurich HB,weekday,05:51,19:54,15,124,124,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zurich HB,saturday,05:51,19:54,15,124,124,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Visp,Zurich HB,sunday,05:51,19:54,16,124,124,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Bern,weekday,05:54,22:31,34,87,92,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Bern,saturday,01:40,22:31,30,84,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Bern,sunday,01:40,22:31,30,84,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Brig,weekday,06:31,18:31,13,162,162,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Brig,saturday,06:31,18:31,13,162,162,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Brig,sunday,06:31,18:31,13,162,162,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Fribourg,weekday,05:54,20:54,16,122,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Fribourg,saturday,05:54,20:54,11,122,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Fribourg,sunday,05:54,20:54,11,122,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Genève,weekday,05:54,17:54,13,211,211,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Genève,saturday,05:54,19:54,10,220,221,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Genève,sunday,05:54,17:54,9,221,221,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Genève-Aéroport,weekday,05:54,17:54,13,223,223,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Genève-Aéroport,saturday,05:54,19:54,10,230,230,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Genève-Aéroport,sunday,05:54,17:54,9,230,230,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Lausanne,weekday,05:54,20:33,30,169,171,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Lausanne,saturday,05:54,20:33,25,169,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Lausanne,sunday,05:54,20:33,25,169,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Luzern,weekday,06:01,20:01,11,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Luzern,saturday,06:01,20:01,14,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Luzern,sunday,06:01,20:01,14,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Neuchâtel,weekday,06:33,20:33,15,124,124,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Neuchâtel,saturday,06:33,20:33,15,124,124,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Neuchâtel,sunday,06:33,20:33,15,124,124,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Spiez,weekday,06:31,18:31,13,126,126,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Spiez,saturday,06:31,18:31,13,126,126,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Spiez,sunday,06:31,18:31,13,126,126,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,St. Gallen,weekday,05:58,00:45,68,32,44,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,St. Gallen,saturday,00:35,00:45,66,32,44,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,St. Gallen,sunday,00:35,00:45,68,32,44,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Thun,weekday,06:31,18:31,13,115,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Thun,saturday,06:31,18:31,13,115,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Thun,sunday,06:31,18:31,13,115,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Visp,weekday,06:31,18:31,13,152,153,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Visp,saturday,06:31,18:31,13,153,153,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Visp,sunday,06:31,18:31,13,152,153,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Zurich Airport,weekday,04:30,00:28,139,12,14,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Zurich Airport,saturday,04:42,00:28,131,12,14,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Zurich Airport,sunday,04:42,00:28,133,12,14,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Zurich HB,weekday,04:42,00:28,285,19,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Zurich HB,saturday,00:35,00:28,292,19,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Winterthur,Zurich HB,sunday,00:35,00:28,294,19,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zermatt,Visp,weekday,05:37,22:06,32,70,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zermatt,Visp,saturday,05:37,22:06,32,70,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zermatt,Visp,sunday,05:37,22:06,32,70,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Basel SBB,weekday,05:56,20:56,16,87,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Basel SBB,saturday,05:56,20:56,16,87,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Basel SBB,sunday,05:56,20:56,16,87,87,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Bern,weekday,06:09,22:46,34,72,77,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Bern,saturday,06:09,22:46,29,72,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Bern,sunday,06:09,22:46,29,72,72,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Brig,weekday,06:46,18:46,13,147,147,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Brig,saturday,06:46,18:46,13,147,147,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Brig,sunday,06:46,18:46,13,147,147,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Fribourg,weekday,06:09,21:09,16,107,107,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Fribourg,saturday,06:09,21:09,11,107,107,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Fribourg,sunday,06:09,21:09,11,107,107,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Genève,weekday,06:09,18:09,13,196,196,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Genève,saturday,06:09,20:09,10,205,206,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Genève,sunday,06:09,18:09,9,206,206,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Genève-Aéroport,weekday,06:09,18:09,13,208,208,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Genève-Aéroport,saturday,06:09,20:09,10,215,215,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Genève-Aéroport,sunday,06:09,18:09,9,215,215,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Lausanne,weekday,06:09,20:49,30,154,155,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Lausanne,saturday,06:09,20:49,25,154,157,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Lausanne,sunday,06:09,20:49,25,154,157,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Luzern,weekday,06:15,20:15,11,70,70,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Luzern,saturday,06:15,20:15,14,70,70,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Luzern,sunday,06:15,20:15,14,70,70,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Neuchâtel,weekday,06:49,20:49,15,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Neuchâtel,saturday,06:49,20:49,15,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Neuchâtel,sunday,06:49,20:49,15,108,108,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Spiez,weekday,06:46,18:46,13,111,111,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Spiez,saturday,06:46,18:46,13,111,111,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Spiez,sunday,06:46,18:46,13,111,111,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,St. Gallen,weekday,05:51,00:30,66,47,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,St. Gallen,saturday,05:51,00:30,59,47,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,St. Gallen,sunday,05:51,00:30,62,47,59,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Thun,weekday,06:46,18:46,13,100,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Thun,saturday,06:46,18:46,13,100,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Thun,sunday,06:46,18:46,13,100,100,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Visp,weekday,06:46,18:46,13,137,138,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Visp,saturday,06:46,18:46,13,138,138,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Visp,sunday,06:46,18:46,13,137,138,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Winterthur,weekday,05:15,00:30,135,13,14,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Winterthur,saturday,04:18,00:30,129,13,14,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Winterthur,sunday,04:18,00:30,132,13,14,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Zurich HB,weekday,05:00,00:42,234,9,11,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Zurich HB,saturday,05:00,00:42,227,9,12,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich Airport,Zurich HB,sunday,05:00,00:42,229,9,11,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Basel SBB,weekday,05:08,00:08,88,52,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Basel SBB,saturday,05:08,01:08,92,52,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Basel SBB,sunday,05:08,00:08,90,52,68,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Bellinzona,weekday,06:05,23:05,31,97,99,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Bellinzona,saturday,06:05,23:05,31,97,99,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Bellinzona,sunday,06:05,20:33,30,97,99,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Bern,weekday,05:19,00:02,72,56,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Bern,saturday,02:02,01:02,72,56,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Bern,sunday,02:02,23:32,70,56,60,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Brig,weekday,06:02,19:02,14,131,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Brig,saturday,06:02,19:02,15,120,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Brig,sunday,06:02,19:02,14,131,131,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Chur,weekday,05:12,23:12,50,74,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Chur,saturday,06:07,00:23,50,74,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Chur,sunday,06:07,23:12,49,74,75,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Fribourg,weekday,05:19,21:32,17,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Fribourg,saturday,05:19,21:32,17,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Fribourg,sunday,05:19,21:32,17,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Genève,weekday,05:19,18:32,14,173,173,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Genève,saturday,05:19,20:32,15,182,183,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Genève,sunday,05:19,18:32,14,183,183,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Genève-Aéroport,weekday,05:19,18:32,14,185,185,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Genève-Aéroport,saturday,05:19,20:32,15,192,192,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Genève-Aéroport,sunday,05:19,18:32,14,192,192,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Lausanne,weekday,05:19,22:04,33,131,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Lausanne,saturday,05:19,23:04,34,131,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Lausanne,sunday,05:19,22:04,33,131,142,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Locarno,weekday,06:05,16:05,6,202,202,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Locarno,saturday,06:05,16:05,6,202,202,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Locarno,sunday,06:05,16:05,6,202,202,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Lugano,weekday,06:33,21:05,22,113,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Lugano,saturday,06:33,23:05,23,113,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Lugano,sunday,06:33,20:33,22,113,115,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Luzern,weekday,05:35,00:08,40,41,50,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Luzern,saturday,00:35,00:10,42,41,48,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Luzern,sunday,00:35,00:08,42,41,48,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Neuchâtel,weekday,06:04,22:04,17,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Neuchâtel,saturday,06:04,23:04,18,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Neuchâtel,sunday,06:04,22:04,17,93,93,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Spiez,weekday,06:02,19:02,14,95,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Spiez,saturday,06:02,19:02,15,81,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Spiez,sunday,06:02,19:02,14,95,95,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,St. Gallen,weekday,05:35,00:17,67,55,74,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,St. Gallen,saturday,05:35,00:17,60,55,74,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,St. Gallen,sunday,05:37,00:17,62,58,74,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Thun,weekday,06:02,19:02,14,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Thun,saturday,06:02,19:02,15,71,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Thun,sunday,06:02,19:02,14,84,84,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Visp,weekday,06:02,19:02,14,121,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Visp,saturday,06:02,19:02,15,111,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Visp,sunday,06:02,19:02,14,121,122,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Winterthur,weekday,05:02,00:25,281,20,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Winterthur,saturday,01:05,00:25,288,20,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Winterthur,sunday,01:05,00:25,290,20,25,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Zurich Airport,weekday,04:33,00:17,234,9,12,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Zurich Airport,saturday,04:05,00:17,228,9,12,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
+Zurich HB,Zurich Airport,sunday,04:05,00:17,231,9,12,"opentransportdata.swiss (SBB), processed by glosx.app",https://glosx.app/swiss-trains/
