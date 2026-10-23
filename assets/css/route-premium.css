@@ -94,6 +94,29 @@
 .pi-guide:hover { border-bottom-color: #A8000F; }
 .pi-guide:focus-visible { outline: 2px solid #14151a; outline-offset: 3px; }
 
+/* Tarjeta "Guía de la ruta" (window.glosxGuideCard en planner-info.js) */
+.pi-gcard {
+  display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 16px;
+  margin-top: 14px; padding: 12px 18px 12px 12px; border: 1px solid rgba(20, 21, 26, 0.14); border-radius: 14px;
+  background: #fff; color: #14151a; text-decoration: none; transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.pi-gcard:hover { border-color: rgba(168, 0, 15, 0.45); box-shadow: 0 6px 18px rgba(20, 21, 26, 0.08); transform: translateY(-1px); }
+.pi-gcard:focus-visible { outline: 2px solid #14151a; outline-offset: 3px; }
+.pi-gcard-img { width: 96px; height: 72px; border-radius: 10px; overflow: hidden; background: #eceae6; }
+.pi-gcard-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pi-gcard-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.pi-gcard-eye { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #6b6c75; }
+.pi-gcard-title { font-size: 16px; font-weight: 700; line-height: 1.3; }
+.pi-gcard-meta { font-size: 13px; color: #4a4b55; font-variant-numeric: tabular-nums; }
+.pi-gcard-arrow { font-size: 22px; font-weight: 700; color: #A8000F; transition: transform .15s; }
+.pi-gcard:hover .pi-gcard-arrow { transform: translateX(3px); }
+@media (max-width: 560px) {
+  .pi-gcard { grid-template-columns: 72px 1fr auto; gap: 12px; padding: 10px 12px 10px 10px; }
+  .pi-gcard-img { width: 72px; height: 60px; }
+  .pi-gcard-title { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .pi-gcard, .pi-gcard-arrow { transition: none; } .pi-gcard:hover { transform: none; } }
+
 /* en la tarjeta de un solo tramo de la portada el panel ocupa todo el ancho, bajo el encabezado */
 body.home-v2 .search-card .ai-segment > .pi { grid-column: 1 / -1; grid-row: 3; min-width: 0; }
 @media (max-width: 760px) {

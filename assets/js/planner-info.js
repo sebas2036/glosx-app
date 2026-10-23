@@ -45,6 +45,46 @@
   function norm(slug) { return String(slug || '').toLowerCase().replace(/-(hbf|central|station|centrale|termini|ost|west)$/, ''); }
   function cityId(d, slug) { return d.c[slug] || d.c[norm(slug)]; }
 
+
+  // Tarjeta "Guía de la ruta": foto de portada + qué trae la guía + primer tren y trenes directos al día cuando hay datos.
+  // Datos: assets/data/route-cards.json (i = foto 400 px; f/r = [primer tren, trenes directos laborable] en el sentido del slug o al revés).
+  var GC = {
+    en: { eye: 'Route guide', sub: '{r}: timetable, stations, hotel and tips', meta: 'First train {f} · {n} direct trains a day' },
+    es: { eye: 'Guía de la ruta', sub: '{r}: horarios, estaciones, hotel y consejos', meta: 'Primer tren {f} · {n} trenes directos al día' },
+    fr: { eye: 'Guide du trajet', sub: '{r} : horaires, gares, hôtel et conseils', meta: 'Premier train {f} · {n} trains directs par jour' },
+    it: { eye: 'Guida al percorso', sub: '{r}: orari, stazioni, hotel e consigli', meta: 'Primo treno {f} · {n} treni diretti al giorno' },
+    ja: { eye: 'ルートガイド', sub: '{r}：時刻表・駅・ホテル・旅のコツ', meta: '始発 {f}・直通 1日{n}本' }
+  };
+  var cards = null;
+  function loadCards() {
+    if (!cards) cards = fetch('/assets/data/route-cards.json').then(function (r) { return r.json(); }).catch(function () { return {}; });
+    return cards;
+  }
+  window.glosxGuideCard = function (href, route, fromSlug) {
+    var l = lang(), t = GC[l] || GC.en;
+    var m = String(href).match(/\/rutas\/([^\/]+)\//), slug = m ? m[1] : '';
+    var a = document.createElement('a');
+    a.className = 'pi-gcard';
+    a.href = href;
+    a.innerHTML = '<span class="pi-gcard-img" aria-hidden="true"></span><span class="pi-gcard-body"><span class="pi-gcard-eye">' + esc(t.eye) + '</span>' +
+      '<span class="pi-gcard-title">' + esc(t.sub.replace('{r}', route)) + '</span><span class="pi-gcard-meta" hidden></span></span>' +
+      '<span class="pi-gcard-arrow" aria-hidden="true">→</span>';
+    a.addEventListener('click', function () { try { if (window.gtag) gtag('event', 'route_guide_card', { route: slug, lang: l }); } catch (e) {} });
+    loadCards().then(function (d) {
+      var c = d && d[slug];
+      if (!c) return;
+      if (c.i) {
+        var img = new Image();
+        img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.src = c.i;
+        a.querySelector('.pi-gcard-img').appendChild(img);
+      }
+      var fwd = !fromSlug || slug.indexOf(String(fromSlug).toLowerCase().replace(/[^a-z]/g, '').slice(0, 4)) === 0;
+      var h = fwd ? c.f : c.r;
+      if (h) { var me = a.querySelector('.pi-gcard-meta'); me.textContent = t.meta.replace('{f}', h[0]).replace('{n}', h[1]); me.hidden = false; }
+    });
+    return a;
+  };
+
   function guideUrl(a, b) {
     var pages = window.GLOSX_ROUTE_PAGES;
     if (!pages) return null;
@@ -85,11 +125,14 @@
       if (vals[0] > 0 && time) time.textContent = fmt(vals[0], t);
     }
     var g = guideUrl(a, b);
-    if (g) html += '<a class="pi-guide" href="' + esc(g) + '">' + esc(t.guide) + ' <span aria-hidden="true">→</span></a>';
-    if (!html) return;
+    if (!html && !g) return;
     var box = document.createElement('div');
     box.className = 'pi';
     box.innerHTML = html;
+    if (g) {
+      var rt = seg.querySelector('.ai-segment-route');
+      box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
+    }
     seg.insertBefore(box, buy);   // bloque propio del grid (el cuerpo de la tarjeta compacta está oculto por el tema)
   }
 

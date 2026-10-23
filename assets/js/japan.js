@@ -454,8 +454,12 @@
       '<div class="rp-row is-train"><span class="rp-ico">' + TRAIN_ICON + '</span>' +
       '<div><div class="rp-label">' + esc(t.train) + '</div><div class="rp-bar" aria-hidden="true"><i style="width:100%"></i></div></div>' +
       '<span class="rp-meta"><span class="rp-time">' + esc(tx.from.replace('{d}', fmtMin(d.m))) + '</span><span class="rp-price">' + esc(tx.direct) + '</span></span></div>' +
-      '</div><p class="rp-note pi-note">' + esc(t.note) + '</p>' +
-      (g ? '<a class="pi-guide" href="' + esc(g) + '">' + esc(t.guide) + ' <span aria-hidden="true">→</span></a>' : '');
+      '</div><p class="rp-note pi-note">' + esc(t.note) + '</p>';
+    if (g) {
+      var rt = seg.querySelector('.ai-segment-route');
+      if (window.glosxGuideCard) box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
+      else box.insertAdjacentHTML('beforeend', '<a class="pi-guide" href="' + esc(g) + '">' + esc(t.guide) + ' <span aria-hidden="true">→</span></a>');
+    }
     seg.insertBefore(box, buy);
     seg.setAttribute('data-pi-jp', key);
   }

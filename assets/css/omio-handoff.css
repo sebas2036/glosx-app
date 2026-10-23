@@ -143,6 +143,9 @@ body.home-v2:not([data-region="japan"]) .search-card .pi-guide {
 }
 body.home-v2:not([data-region="japan"]) .search-card .pi-guide:hover { border-bottom-color: var(--omio-navy); }
 body.home-v2:not([data-region="japan"]) .search-card .pi-guide:focus-visible { outline-color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .pi-gcard-title { color: var(--omio-navy); }
+body.home-v2:not([data-region="japan"]) .search-card .pi-gcard-arrow { color: var(--omio-coral); }
+body.home-v2:not([data-region="japan"]) .search-card .pi-gcard:hover { border-color: var(--omio-coral); }
 
 /* ===== Tarjeta de resultado del planificador (modo Japón) con el estilo de Klook =====
    Fondo crema-naranja, texto marrón oscuro, barras naranjas y botón naranja con el ícono de Klook. */
@@ -171,6 +174,9 @@ body.home-v2[data-region="japan"] .search-card .pi .rp-row.is-train .rp-bar i { 
 body.home-v2[data-region="japan"] .search-card .pi-guide { color: #2A2118; border-bottom-color: #FF5B00; }
 body.home-v2[data-region="japan"] .search-card .pi-guide:hover { border-bottom-color: #2A2118; }
 body.home-v2[data-region="japan"] .search-card .pi-guide:focus-visible { outline-color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .pi-gcard-title { color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .pi-gcard-arrow { color: #FF5B00; }
+body.home-v2[data-region="japan"] .search-card .pi-gcard:hover { border-color: #FF5B00; }
 
 /* Botón de reserva en Japón: naranja de Klook con su ícono */
 body.home-v2[data-region="japan"] .ai-segment-buy[data-klook] {
