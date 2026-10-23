@@ -104,8 +104,8 @@ const routes = [
       it: 'Per buona parte del percorso, il treno attraversa la foresta delle Landes, una delle più grandi foreste piantumate d\'Europa — milioni di pini piantati deliberatamente nel XIX secolo per fissare quelle che un tempo erano dune di sabbia mobile e paludi lungo questo tratto della costa atlantica.'
     }
   },
-  { slug: 'brno-vienna', from: 'Brno', to: 'Vienna', country: 'Czech-Austria', duration: '1h 45m', operator: 'ÖBB', price: '€15-25', badge: 'Route guide · Czech-Austria',
-    customSEO: { en: { title: 'Brno to Vienna by Train: 1h45 ÖBB', description: 'Direct ÖBB from Brno to Vienna in 1h45. Compare today\'s schedule and book fares from €15 — no layovers.' } },
+  { slug: 'brno-vienna', from: 'Brno', to: 'Vienna', country: 'Czech-Austria', duration: '1h 30m', operator: 'ÖBB', price: '€15-25', badge: 'Route guide · Czech-Austria',
+    customSEO: { en: { title: 'Brno to Vienna by Train: 1h30 ÖBB', description: 'Direct ÖBB from Brno to Vienna in 1h30. Compare today\'s schedule and book fares from €15 — no layovers.' } },
     localInsight: {
       en: 'The short distance and frequent service on this route have turned it into a genuine cross-border commuter corridor in recent years, with a growing number of people living in Brno and working in Vienna (or the reverse) — something that would have been unthinkable before both countries joined the EU\'s open Schengen border area.',
       es: 'La corta distancia y la alta frecuencia de esta ruta la han convertido en los últimos años en un auténtico corredor de commuters transfronterizos, con cada vez más gente que vive en Brno y trabaja en Viena (o al revés) — algo impensable antes de que ambos países entraran en el espacio Schengen de fronteras abiertas de la UE.',
