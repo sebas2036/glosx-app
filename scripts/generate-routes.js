@@ -915,6 +915,15 @@ const routes = [
       it: 'Omio indica SBB come operatore principale su questa tratta di 224 km: circa 38 treni al giorno, 8 dei quali diretti. Il viaggio più veloce dura 2 h 34 min e la durata media è di circa 3 h 16 min. I dati tariffari di Omio suggeriscono di prenotare circa 77 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
     }
   },
+  { slug: 'zurich-munich', from: 'Zurich', to: 'Munich', country: 'Switzerland-Germany', duration: '3h 45m', operator: 'SBB / DB / ÖBB EuroCity', price: '', badge: 'Route guide · Switzerland-Germany',
+    customSEO: { en: { title: 'Zurich to Munich by Train: about 3h45, schedules and tickets', description: 'Zurich to Munich by train in about 3h45. Compare times with bus and flight, check today\'s schedule and book on Omio.' } },
+    localInsight: {
+      en: 'Omio data puts the typical train journey between Zurich and Munich at about 3 h 45 min, against roughly 3 h 20 min by bus and 55 min of flight time before adding airport transfers and security. The train runs city centre to city centre, so door to door it is usually competitive with flying. Figures from Omio, October 2026; schedules and fares change by date.',
+      es: 'Según los datos de Omio, el trayecto típico en tren entre Zúrich y Múnich dura unas 3 h 45 min, frente a unas 3 h 20 min en autobús y 55 min de vuelo antes de sumar traslados y controles en el aeropuerto. El tren va de centro a centro, así que puerta a puerta suele competir con el avión. Cifras de Omio de octubre de 2026; los horarios y las tarifas cambian según la fecha.',
+      fr: 'D’après les données d’Omio, le trajet typique en train entre Zurich et Munich dure environ 3 h 45 min, contre environ 3 h 20 min en bus et 55 min de vol avant d’ajouter les transferts et les contrôles à l’aéroport. Le train relie les deux centres-villes : de porte à porte, il rivalise souvent avec l’avion. Chiffres Omio d’octobre 2026 ; les horaires et les tarifs varient selon la date.',
+      it: 'Secondo i dati di Omio, il viaggio tipico in treno tra Zurigo e Monaco di Baviera dura circa 3 h 45 min, contro circa 3 h 20 min in autobus e 55 min di volo prima di aggiungere trasferimenti e controlli in aeroporto. Il treno collega i due centri città, quindi porta a porta è spesso competitivo con l’aereo. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
+    }
+  },
   { slug: 'amsterdam-cologne', from: 'Amsterdam', to: 'Cologne', country: 'Netherlands-Germany', duration: '2h 28m', operator: 'DB ICE', price: '€20', badge: 'Route guide · Netherlands-Germany',
     customSEO: { en: { title: 'Amsterdam to Cologne by Train: 2h28 on DB ICE, from €20', description: 'DB ICE from Amsterdam Centraal to Cologne Hbf in about 2h28. Check live schedules and book from €20.' } },
     localInsight: {
@@ -1109,11 +1118,11 @@ const CITY_JA = (function () {
 })();
 // Nombres de ciudad localizados (es/fr/it) solo para las rutas nuevas del 16-oct-2026; el resto de
 // rutas conserva por ahora los nombres en inglés, así que no se traduce fuera de estas.
-const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich', 'alicante-madrid', 'madrid-segovia', 'barcelona-seville', 'madrid-toledo', 'santiago-madrid', 'madrid-cordoba', 'madrid-granada', 'malaga-barcelona', 'seville-cordoba', 'madrid-salamanca']);
+const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich', 'alicante-madrid', 'madrid-segovia', 'barcelona-seville', 'madrid-toledo', 'santiago-madrid', 'madrid-cordoba', 'madrid-granada', 'malaga-barcelona', 'seville-cordoba', 'madrid-salamanca', 'zurich-munich']);
 const CITY_LOCAL = {
-  es: { Seville: 'Sevilla', Cordoba: 'Córdoba', Malaga: 'Málaga', Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich' },
+  es: { Seville: 'Sevilla', Cordoba: 'Córdoba', Malaga: 'Málaga', Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich', Zurich: 'Zúrich' },
   fr: { Seville: 'Séville', Cordoba: 'Cordoue', Barcelona: 'Barcelone', Segovia: 'Ségovie', Toledo: 'Tolède', Granada: 'Grenade', Salamanca: 'Salamanque', 'Santiago de Compostela': 'Saint-Jacques-de-Compostelle', Lisbon: 'Lisbonne', Gothenburg: 'Göteborg', Vienna: 'Vienne', Salzburg: 'Salzbourg' },
-  it: { Seville: 'Siviglia', Cordoba: 'Cordova', Barcelona: 'Barcellona', 'Santiago de Compostela': 'Santiago di Compostela', Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera' }
+  it: { Seville: 'Siviglia', Cordoba: 'Cordova', Barcelona: 'Barcellona', 'Santiago de Compostela': 'Santiago di Compostela', Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera', Zurich: 'Zurigo' }
 };
 function cityLabel(name, lang, slug) {
   if (lang === 'ja') return CITY_JA[name] || name;
