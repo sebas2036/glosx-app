@@ -12,12 +12,12 @@ const routes = [
       it: 'Fu uno dei primi servizi ICE internazionali a circolare senza cambio di treno tra due reti ferroviarie diverse, grazie a locomotive bi-sistema costruite per gli standard di alimentazione e segnalamento sia olandesi che tedeschi — un dettaglio tecnico che quasi nessuno nota, ma che spiega perché il viaggio è un tragitto unico e ininterrotto.'
     }
   },
-  { slug: 'amsterdam-brussels', from: 'Amsterdam', to: 'Brussels', country: 'Netherlands-Belgium', duration: '2h 00m', operator: 'Thalys', price: '€25-35', badge: 'Route guide · Netherlands-Belgium',
-    customSEO: { en: { title: 'Amsterdam to Brussels Train: 2h, from €25', description: 'Thalys connection from Amsterdam to Brussels in 2 hours. Check live schedules and book tickets from €25.' } },
+  { slug: 'amsterdam-brussels', from: 'Amsterdam', to: 'Brussels', country: 'Netherlands-Belgium', duration: '2h 00m', operator: 'Eurostar', price: '€25-35', badge: 'Route guide · Netherlands-Belgium',
+    customSEO: { en: { title: 'Amsterdam to Brussels Train: 2h, from €25', description: 'Eurostar connection from Amsterdam to Brussels in 2 hours. Check live schedules and book tickets from €25.' } },
     localInsight: {
       en: 'This was actually the last leg of the original Thalys network to get its own dedicated high-speed track: HSL 4 in the Netherlands didn\'t open until 2009, more than a decade after Thalys launched, meaning trains ran on upgraded conventional lines for years before reaching full high-speed capability on this stretch.',
       es: 'Este fue en realidad el último tramo de la red original de Thalys en conseguir su propia vía de alta velocidad dedicada: la HSL 4 en los Países Bajos no se inauguró hasta 2009, más de una década después del lanzamiento de Thalys, así que los trenes circularon durante años por vías convencionales mejoradas antes de alcanzar la alta velocidad completa en este tramo.',
-      fr: 'Ce fut en réalité le dernier tronçon du réseau Thalys d\'origine à disposer de sa propre voie à grande vitesse dédiée : la HSL 4 aux Pays-Bas n\'a ouvert qu\'en 2009, plus de dix ans après le lancement de Thalys, si bien que les trains ont circulé pendant des années sur des lignes classiques améliorées avant d\'atteindre la pleine vitesse sur ce tronçon.',
+      fr: 'Ce fut en réalité le dernier tronçon du réseau Eurostar d\'origine à disposer de sa propre voie à grande vitesse dédiée : la HSL 4 aux Pays-Bas n\'a ouvert qu\'en 2009, plus de dix ans après le lancement de Eurostar, si bien que les trains ont circulé pendant des années sur des lignes classiques améliorées avant d\'atteindre la pleine vitesse sur ce tronçon.',
       it: 'Questo fu in realtà l\'ultimo tratto della rete Thalys originale a ottenere un proprio binario ad alta velocità dedicato: la HSL 4 nei Paesi Bassi ha aperto solo nel 2009, oltre un decennio dopo il lancio di Thalys, quindi i treni hanno circolato per anni su linee convenzionali potenziate prima di raggiungere la piena velocità su questo tratto.'
     }
   },
@@ -74,7 +74,7 @@ const routes = [
     }
   },
   { slug: 'basel-lauterbrunnen', from: 'Basel', to: 'Lauterbrunnen', country: 'Switzerland', duration: '2h 30m', operator: 'SBB', price: '€35-50', badge: 'Route guide · Switzerland',
-    customSEO: { en: { title: 'Basel to Lauterbrunnen by Train: 2h30 SBB, from €35', description: 'Direct SBB from Basel to Lauterbrunnen in 2h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
+    customSEO: { en: { title: 'Basel to Lauterbrunnen by Train: 2h30 SBB', description: 'Direct SBB from Basel to Lauterbrunnen in 2h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
   { slug: 'basel-paris', from: 'Basel', to: 'Paris', country: 'Switzerland-France', duration: '3h 00m', operator: 'TGV Lyria', price: '€40-60', badge: 'Route guide · Switzerland-France',
     customSEO: { en: { title: 'Basel to Paris Train: 3h, from €40', description: 'TGV Lyria connection from Basel to Paris in 3 hours. Check live schedules and book tickets from €40.' } } },
   { slug: 'berlin-hamburg', from: 'Berlin', to: 'Hamburg', country: 'Germany', duration: '1h 45m', operator: 'DB ICE', price: '€25-40', badge: 'Route guide · Germany',
@@ -114,7 +114,7 @@ const routes = [
     }
   },
   { slug: 'brussels-bruges', from: 'Brussels', to: 'Bruges', country: 'Belgium', duration: '0h 50m', operator: 'SNCB', price: '€10-15', badge: 'Route guide · Belgium',
-    customSEO: { en: { title: 'Brussels to Bruges Train: 50 min, from €10', description: 'Direct SNCB train from Brussels to Bruges in under an hour. Check today\'s schedule and book tickets from €10.' } },
+    customSEO: { en: { title: 'Brussels to Bruges Train: 50 min', description: 'Direct SNCB train from Brussels to Bruges in under an hour. Check today\'s schedule and book tickets from €10.' } },
     localInsight: {
       en: 'Bruges\' entire medieval centre — canals, guild houses and belfry included — is a UNESCO World Heritage Site, and it\'s reachable from a European capital in under an hour by train, which is unusually fast for a city this historically intact. Most visitors do it as a day trip rather than an overnight stay.',
       es: 'Todo el centro medieval de Brujas — canales, casas gremiales y campanario incluidos — es Patrimonio de la Humanidad de la UNESCO, y se llega desde una capital europea en menos de una hora en tren, algo inusualmente rápido para una ciudad tan intacta históricamente. La mayoría lo hace como excursión de un día, sin quedarse a dormir.',
@@ -122,8 +122,8 @@ const routes = [
       it: 'L\'intero centro medievale di Bruges — canali, case delle corporazioni e campanile inclusi — è Patrimonio dell\'Umanità UNESCO, ed è raggiungibile da una capitale europea in meno di un\'ora di treno, un tempo insolitamente breve per una città così intatta dal punto di vista storico. La maggior parte dei visitatori la fa come gita di un giorno, senza pernottare.'
     }
   },
-  { slug: 'brussels-paris', from: 'Brussels', to: 'Paris', country: 'Belgium-France', duration: '1h 30m', operator: 'Thalys', price: '€35-55', badge: 'Route guide · Belgium-France',
-    customSEO: { en: { title: 'Brussels to Paris Train: 1h30, from €35', description: 'Thalys connection from Brussels to Paris in 1h30. Check live schedules and book tickets from €35.' } },
+  { slug: 'brussels-paris', from: 'Brussels', to: 'Paris', country: 'Belgium-France', duration: '1h 30m', operator: 'Eurostar', price: '€35-55', badge: 'Route guide · Belgium-France',
+    customSEO: { en: { title: 'Brussels to Paris Train: 1h30, from €35', description: 'Eurostar connection from Brussels to Paris in 1h30. Check live schedules and book tickets from €35.' } },
     localInsight: {
       en: 'This was the original flagship route when Thalys launched in 1996, and it remains one of the busiest international rail corridors in Europe. Since the 2024 merger, tickets and branding appear under the Eurostar name, though the fast Brussels–Paris service itself hasn\'t changed.',
       es: 'Esta fue la ruta insignia original cuando Thalys se lanzó en 1996, y sigue siendo uno de los corredores ferroviarios internacionales más transitados de Europa. Desde la fusión de 2024, los billetes y la marca aparecen bajo el nombre Eurostar, aunque el servicio rápido Bruselas–París en sí no ha cambiado.',
@@ -190,7 +190,7 @@ const routes = [
     }
   },
   { slug: 'frankfurt-paris', from: 'Frankfurt', to: 'Paris', country: 'Germany-France', duration: '4h 00m', operator: 'TGV', price: '€40-60', badge: 'Route guide · Germany-France',
-    customSEO: { en: { title: 'Frankfurt to Paris by Train: 4h TGV, from €40', description: 'Direct TGV from Frankfurt to Paris in 4 hours, no layovers. Compare fares from €40, check today\'s schedule and book securely.' } },
+    customSEO: { en: { title: 'Frankfurt to Paris by Train: 4h TGV', description: 'Direct TGV from Frankfurt to Paris in 4 hours, no layovers. Compare fares from €40, check today\'s schedule and book securely.' } },
     localInsight: {
       en: 'Trains on this route are jointly run by SNCF and Deutsche Bahn using rolling stock certified to operate on both the French and German high-speed networks — a technical arrangement that lets the same train run at full speed on both countries\' infrastructure rather than switching operators at the border.',
       es: 'Los trenes de esta ruta los operan conjuntamente SNCF y Deutsche Bahn, con material rodante certificado para circular tanto en la red de alta velocidad francesa como en la alemana — un acuerdo técnico que permite que el mismo tren vaya a máxima velocidad en la infraestructura de ambos países en vez de cambiar de operador en la frontera.',
@@ -304,7 +304,7 @@ const routes = [
     }
   },
   { slug: 'lyon-turin', from: 'Lyon', to: 'Turin', country: 'France-Italy', duration: '4h 00m', operator: 'TGV', price: '€35-55', badge: 'Route guide · France-Italy',
-    customSEO: { en: { title: 'Lyon to Turin Train: 4h, from €35', description: 'TGV connection from Lyon to Turin in 4 hours. Check live schedules and book tickets from €35.' } },
+    customSEO: { en: { title: 'Lyon to Turin Train: 4h', description: 'TGV connection from Lyon to Turin in 4 hours. Check live schedules and book tickets from €35.' } },
     localInsight: {
       en: 'This route crosses the Alps through the historic Fréjus rail tunnel, opened in 1871 as one of the first great Alpine tunnels — it still carries every Lyon–Turin train today. A new high-speed base tunnel is under construction nearby and will eventually cut journey times further once it opens.',
       es: 'Esta ruta cruza los Alpes por el histórico túnel ferroviario de Fréjus, inaugurado en 1871 como uno de los primeros grandes túneles alpinos — todavía hoy pasan por él todos los trenes entre Lyon y Turín. Cerca se está construyendo un nuevo túnel de alta velocidad que en el futuro reducirá aún más los tiempos de viaje.',
@@ -340,7 +340,7 @@ const routes = [
     }
   },
   { slug: 'madrid-valencia', from: 'Madrid', to: 'Valencia', country: 'Spain', duration: '1h 40m', operator: 'Renfe AVE', price: '€20-35', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'Madrid to Valencia Train: 1h40, from €20', description: 'Renfe AVE connection from Madrid to Valencia in 1h40. Check live schedules and book tickets from €20.' } },
+    customSEO: { en: { title: 'Madrid to Valencia Train: 1h40', description: 'Renfe AVE connection from Madrid to Valencia in 1h40. Check live schedules and book tickets from €20.' } },
     localInsight: {
       en: 'Most of this line crosses the flat plains of La Mancha, which means very few curves and long stretches where the train can hold close to its top speed — one of the reasons it covers the roughly 300km gap in well under two hours, among the fastest average speeds on the Spanish AVE network.',
       es: 'La mayor parte de esta línea cruza las llanuras de La Mancha, lo que se traduce en muy pocas curvas y largos tramos donde el tren puede mantener casi su velocidad máxima — una de las razones por las que cubre los cerca de 300 km en bastante menos de dos horas, una de las velocidades medias más altas de toda la red AVE española.',
@@ -461,7 +461,7 @@ const routes = [
     }
   },
   { slug: 'milan-zurich', from: 'Milan', to: 'Zurich', country: 'Italy-Switzerland', duration: '3h 30m', operator: 'SBB', price: '€35-55', badge: 'Route guide · Italy-Switzerland',
-    customSEO: { en: { title: 'Milan to Zurich Train: 3h30 scenic SBB, from €35', description: 'Direct SBB train from Milan to Zurich through the Alps in 3.5 hours. Compare today\'s schedule and book fares from €35.' } },
+    customSEO: { en: { title: 'Milan to Zurich Train: 3h30 scenic SBB', description: 'Direct SBB train from Milan to Zurich through the Alps in 3.5 hours. Compare today\'s schedule and book fares from €35.' } },
     localInsight: {
       en: 'Most of these trains now pass through the Gotthard Base Tunnel, opened in 2016 at 57km the longest railway tunnel in the world, which cut roughly an hour off the old route over the Gotthard Pass. The historic mountain line — with its spiral tunnels climbing the pass — still exists and is used by some regional and scenic services.',
       es: 'La mayoría de estos trenes pasan hoy por el túnel de base del Gotardo, inaugurado en 2016 y con 57 km el túnel ferroviario más largo del mundo, que recortó cerca de una hora respecto a la antigua ruta por el paso del Gotardo. La histórica línea de montaña — con sus túneles en espiral que suben el paso — sigue existiendo y la usan algunos servicios regionales y panorámicos.',
@@ -490,7 +490,7 @@ const routes = [
     }
   },
   { slug: 'munich-venice', from: 'Munich', to: 'Venice', country: 'Germany-Italy', duration: '6h 00m', operator: 'ÖBB', price: '€40-60', badge: 'Route guide · Germany-Italy',
-    customSEO: { en: { title: 'Munich to Venice by Train: 6h scenic route, from €40', description: 'Direct ÖBB train from Munich to Venice through the Alps in 6 hours. Compare today\'s schedule and book fares from €40.' } },
+    customSEO: { en: { title: 'Munich to Venice by Train: 6h scenic route', description: 'Direct ÖBB train from Munich to Venice through the Alps in 6 hours. Compare today\'s schedule and book fares from €40.' } },
     localInsight: {
       en: 'The train climbs to the Brenner Pass, at about 1,370m one of the lowest and oldest crossings of the main Alpine chain — used by traders and travellers for centuries before the railway existed. A new Brenner Base Tunnel is being built underneath to shorten this leg in the years ahead.',
       es: 'El tren sube hasta el paso del Brenner, que a unos 1.370 m es uno de los cruces más bajos y antiguos de la cadena principal de los Alpes — usado por comerciantes y viajeros durante siglos antes de que existiera el ferrocarril. Debajo se está construyendo un nuevo túnel de base del Brenner que en los próximos años acortará este tramo.',
@@ -543,17 +543,17 @@ const routes = [
       it: 'Questa è la Bergensbanen, regolarmente considerata una delle linee ferroviarie più spettacolari al mondo. Attraversa l\'altopiano montano di Hardangervidda fino a circa 1.222 m di altitudine, passando per la stazione di Finse — la stazione di linea principale più alta del Nord Europa, spesso innevata fino a piena estate.'
     }
   },
-  { slug: 'paris-amsterdam', from: 'Paris', to: 'Amsterdam', country: 'France-Netherlands', duration: '3h 30m', operator: 'Thalys', price: '€35-55', badge: 'Route guide · France-Netherlands',
-    customSEO: { en: { title: 'Paris to Amsterdam by Train: 3h30 Thalys direct', description: 'Thalys direct from Paris to Amsterdam in 3.5 hours, fares from €35. Compare today\'s train times and book your seat in minutes.' } },
+  { slug: 'paris-amsterdam', from: 'Paris', to: 'Amsterdam', country: 'France-Netherlands', duration: '3h 30m', operator: 'Eurostar', price: '€35-55', badge: 'Route guide · France-Netherlands',
+    customSEO: { en: { title: 'Paris to Amsterdam by Train: 3h30 Eurostar direct', description: 'Eurostar direct from Paris to Amsterdam in 3.5 hours, fares from €35. Compare today\'s train times and book your seat in minutes.' } },
     localInsight: {
-      en: 'Thalys, the operator long associated with this route, merged into the Eurostar brand in 2024 as part of a wider consolidation of European high-speed rail companies — so tickets and information for this line now appear under the Eurostar name, even though the trains and route are unchanged.',
-      es: 'Thalys, el operador tradicionalmente asociado a esta ruta, se fusionó con la marca Eurostar en 2024 como parte de una consolidación más amplia de las empresas europeas de alta velocidad — así que los billetes e información de esta línea ahora aparecen bajo el nombre Eurostar, aunque los trenes y la ruta siguen siendo los mismos.',
-      fr: 'Thalys, l\'opérateur longtemps associé à cette ligne, a fusionné avec la marque Eurostar en 2024 dans le cadre d\'une consolidation plus large des compagnies européennes à grande vitesse — les billets et informations pour cette ligne apparaissent donc désormais sous le nom Eurostar, même si les trains et l\'itinéraire restent inchangés.',
-      it: 'Thalys, l\'operatore storicamente associato a questa tratta, è confluito nel marchio Eurostar nel 2024 come parte di un più ampio consolidamento delle compagnie europee ad alta velocità — quindi biglietti e informazioni per questa linea ora appaiono sotto il nome Eurostar, anche se treni e percorso restano gli stessi.'
+      en: 'Thalys, the operator long associated with this route, merged into the Eurostar brand in 2023 as part of a wider consolidation of European high-speed rail companies — so tickets and information for this line now appear under the Eurostar name, even though the trains and route are unchanged.',
+      es: 'Thalys, el operador tradicionalmente asociado a esta ruta, se fusionó con la marca Eurostar en 2023 como parte de una consolidación más amplia de las empresas europeas de alta velocidad — así que los billetes e información de esta línea ahora aparecen bajo el nombre Eurostar, aunque los trenes y la ruta siguen siendo los mismos.',
+      fr: 'Eurostar, l\'opérateur longtemps associé à cette ligne, a fusionné avec la marque Eurostar en 2023 dans le cadre d\'une consolidation plus large des compagnies européennes à grande vitesse — les billets et informations pour cette ligne apparaissent donc désormais sous le nom Eurostar, même si les trains et l\'itinéraire restent inchangés.',
+      it: 'Eurostar, l\'operatore storicamente associato a questa tratta, è confluito nel marchio Eurostar nel 2023 come parte di un più ampio consolidamento delle compagnie europee ad alta velocità — quindi biglietti e informazioni per questa linea ora appaiono sotto il nome Eurostar, anche se treni e percorso restano gli stessi.'
     }
   },
   { slug: 'paris-barcelona', from: 'Paris', to: 'Barcelona', country: 'France-Spain', duration: '6h 30m', operator: 'TGV', price: '€50-80', badge: 'Route guide · France-Spain',
-    customSEO: { en: { title: 'Paris to Barcelona Train: 6h30 direct TGV, from €50', description: 'Direct high-speed TGV from Paris to Barcelona in 6.5 hours, no layovers. Compare today\'s schedule and book fares from €50.' } },
+    customSEO: { en: { title: 'Paris to Barcelona Train: 6h30 direct TGV', description: 'Direct high-speed TGV from Paris to Barcelona in 6.5 hours, no layovers. Compare today\'s schedule and book fares from €50.' } },
     localInsight: {
       en: 'The direct TGV crosses into Spain at Perpignan–Figueres, running on track shared between the French and Spanish high-speed networks — one of the few places in Europe where a single high-speed train physically crosses from one country\'s rail system onto another\'s without stopping.',
       es: 'El TGV directo cruza a España por Perpignan–Figueres, sobre vías compartidas entre las redes de alta velocidad francesa y española — uno de los pocos puntos de Europa donde un tren de alta velocidad pasa físicamente de la red de un país a la de otro sin detenerse.',
@@ -582,10 +582,10 @@ const routes = [
   { slug: 'paris-bruges', from: 'Paris', to: 'Bruges', country: 'France-Belgium', duration: '2h 30m', operator: 'TGV', price: '€35-55', badge: 'Route guide · France-Belgium',
     customSEO: { en: { title: 'Paris to Bruges Train Guide: 2h30 on TGV', description: 'Everything you need for the Paris to Bruges train: 2h30 on TGV, fares from €35, and today\'s live schedule.' } },
     localInsight: {
-      en: 'This route runs through Lille-Europe, one of the busiest rail interchange stations in Europe, where Eurostar, Thalys/Eurostar and domestic TGV lines all cross — built specifically in the 1990s to turn Lille into a hub rather than just a stop between Paris, London and Brussels.',
-      es: 'Esta ruta pasa por Lille-Europa, una de las estaciones de intercambio ferroviario más transitadas de Europa, donde se cruzan las líneas de Eurostar, Thalys/Eurostar y el TGV nacional — construida específicamente en los años 90 para convertir a Lille en un nudo ferroviario y no solo en una parada entre París, Londres y Bruselas.',
-      fr: 'Cet itinéraire passe par Lille-Europe, l\'une des gares de correspondance les plus fréquentées d\'Europe, où se croisent les lignes Eurostar, Thalys/Eurostar et TGV domestique — construite spécifiquement dans les années 1990 pour faire de Lille un véritable hub plutôt qu\'un simple arrêt entre Paris, Londres et Bruxelles.',
-      it: 'Questo percorso passa per Lille-Europe, una delle stazioni di interscambio ferroviario più trafficate d\'Europa, dove si incrociano le linee Eurostar, Thalys/Eurostar e TGV nazionale — costruita appositamente negli anni \'90 per trasformare Lille in un vero hub anziché una semplice fermata tra Parigi, Londra e Bruxelles.'
+      en: 'This route runs through Lille-Europe, one of the busiest rail interchange stations in Europe, where Eurostar, Eurostar/Eurostar and domestic TGV lines all cross — built specifically in the 1990s to turn Lille into a hub rather than just a stop between Paris, London and Brussels.',
+      es: 'Esta ruta pasa por Lille-Europa, una de las estaciones de intercambio ferroviario más transitadas de Europa, donde se cruzan las líneas de Eurostar, Eurostar/Eurostar y el TGV nacional — construida específicamente en los años 90 para convertir a Lille en un nudo ferroviario y no solo en una parada entre París, Londres y Bruselas.',
+      fr: 'Cet itinéraire passe par Lille-Europe, l\'une des gares de correspondance les plus fréquentées d\'Europe, où se croisent les lignes Eurostar, Eurostar/Eurostar et TGV domestique — construite spécifiquement dans les années 1990 pour faire de Lille un véritable hub plutôt qu\'un simple arrêt entre Paris, Londres et Bruxelles.',
+      it: 'Questo percorso passa per Lille-Europe, una delle stazioni di interscambio ferroviario più trafficate d\'Europa, dove si incrociano le linee Eurostar, Eurostar/Eurostar e TGV nazionale — costruita appositamente negli anni \'90 per trasformare Lille in un vero hub anziché una semplice fermata tra Parigi, Londra e Bruxelles.'
     }
   },
   { slug: 'paris-london', from: 'Paris', to: 'London', country: 'France-UK', duration: '2h 30m', operator: 'Eurostar', price: '€50-80', badge: 'Route guide · France-UK',
@@ -646,7 +646,7 @@ const routes = [
     }
   },
   { slug: 'prague-budapest', from: 'Prague', to: 'Budapest', country: 'Czech-Hungary', duration: '4h 30m', operator: 'ČD', price: '€25-40', badge: 'Route guide · Czech-Hungary',
-    customSEO: { en: { title: 'Prague to Budapest Train: 4h30, from €25', description: 'Direct ČD train from Prague to Budapest in 4.5 hours, no transfers. Check today\'s schedule and book tickets from €25.' } },
+    customSEO: { en: { title: 'Prague to Budapest Train: 4h30', description: 'Direct ČD train from Prague to Budapest in 4.5 hours, no transfers. Check today\'s schedule and book tickets from €25.' } },
     localInsight: {
       en: 'This direct service actually links three national capitals in one journey: it passes through Bratislava, Slovakia, on its way from Prague to Budapest, without requiring a change of train — a detail easy to miss but one that makes this one of the few single-train routes in Europe to touch three countries.',
       es: 'Este servicio directo en realidad conecta tres capitales nacionales en un solo viaje: pasa por Bratislava, en Eslovaquia, de camino de Praga a Budapest, sin necesidad de cambiar de tren — un detalle fácil de pasar por alto, pero que hace de esta una de las pocas rutas de un solo tren en Europa que atraviesa tres países.',
@@ -738,7 +738,7 @@ const routes = [
     }
   },
   { slug: 'vienna-prague', from: 'Vienna', to: 'Prague', country: 'Austria-Czech', duration: '4h 00m', operator: 'Railjet', price: '€25-40', badge: 'Route guide · Austria-Czech',
-    customSEO: { en: { title: 'Vienna to Prague by Train: 4h Railjet, from €25', description: 'ÖBB Railjet direct from Vienna to Prague in 4 hours, no layovers. Compare schedules and book comfortable tickets from €25.' } },
+    customSEO: { en: { title: 'Vienna to Prague by Train: 4h Railjet', description: 'ÖBB Railjet direct from Vienna to Prague in 4 hours, no layovers. Compare schedules and book comfortable tickets from €25.' } },
     localInsight: {
       en: 'This is one of ÖBB\'s flagship Railjet routes, running via Brno with panoramic first-class carriages designed for exactly this kind of cross-border corridor. Unlike some neighbouring routes, it has stayed a straightforward direct connection rather than being split up by construction works in recent years.',
       es: 'Es una de las rutas insignia de Railjet de ÖBB, que pasa por Brno con coches de primera clase panorámicos pensados justamente para este tipo de corredor transfronterizo. A diferencia de otras rutas vecinas, se ha mantenido como una conexión directa sin cortes por obras en los últimos años.',
@@ -795,8 +795,8 @@ const routes = [
       it: 'Questo collegamento è diventato notevolmente più veloce quando la linea ad alta velocità LGV Est è stata completamente estesa fino a Strasburgo, completata a tappe fino al 2016 — prima, i viaggi passavano più a sud, via Basilea o Zurigo, e in genere richiedevano molto più tempo delle circa 6 ore possibili oggi.'
     }
   },
-  { slug: 'cologne-brussels', from: 'Cologne', to: 'Brussels', country: 'Germany-Belgium', duration: '1h 50m', operator: 'ICE/Thalys', price: '€30-50', badge: 'Route guide · Germany-Belgium',
-    customSEO: { en: { title: 'Cologne to Brussels by Train: 1h50 ICE/Thalys, from €30', description: 'Direct ICE/Thalys from Cologne to Brussels in 1h50. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
+  { slug: 'cologne-brussels', from: 'Cologne', to: 'Brussels', country: 'Germany-Belgium', duration: '1h 50m', operator: 'ICE/Eurostar', price: '€30-50', badge: 'Route guide · Germany-Belgium',
+    customSEO: { en: { title: 'Cologne to Brussels by Train: 1h50 ICE/Eurostar, from €30', description: 'Direct ICE/Eurostar from Cologne to Brussels in 1h50. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
   { slug: 'copenhagen-prague', from: 'Copenhagen', to: 'Prague', country: 'Denmark-Czech', duration: '~12h 00m', operator: 'EuroCity/ICE', price: '€60-100', badge: 'Route guide · Denmark-Czech',
     customSEO: { en: { title: 'Copenhagen to Prague by Train: ~12h, from €60', description: 'Overnight EuroCity/ICE connection from Copenhagen to Prague in about 12 hours. Check today\'s schedule and book fares from €60.' } } },
   { slug: 'amsterdam-bruges', from: 'Amsterdam', to: 'Bruges', country: 'Netherlands-Belgium', duration: '3h 00m', operator: 'NS/SNCB', price: '€30-45', badge: 'Route guide · Netherlands-Belgium',
