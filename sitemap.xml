@@ -71,44 +71,48 @@
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/" />
   </url>
   <url>
     <loc>https://glosx.app/fr/rutas/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/" />
   </url>
   <url>
     <loc>https://glosx.app/it/rutas/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/" />
   </url>
   <url>
     <loc>https://glosx.app/ja/rutas/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/" />
   </url>
   <url>
     <loc>https://glosx.app/hoy/</loc>
@@ -179,28 +183,44 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-fastest-growing-train-routes-europe-2026.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-fastest-growing-train-routes-europe-2026.html" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-fastest-growing-train-routes-europe-2026.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-fastest-growing-train-routes-europe-2026.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-fastest-growing-train-routes-europe-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-fastest-growing-train-routes-europe-2026.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-fastest-growing-train-routes-europe-2026.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-fastest-growing-train-routes-europe-2026.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-fastest-growing-train-routes-europe-2026.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-fastest-growing-train-routes-europe-2026.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-fastest-growing-train-routes-europe-2026.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-fastest-growing-train-routes-europe-2026.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
   </url>
 <url>
     <loc>https://glosx.app/</loc>
@@ -267,28 +287,48 @@
     <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog.html" />
   </url>
 <url>
     <loc>https://glosx.app/explore/</loc>
@@ -300,6 +340,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
   </url>
 <url>
     <loc>https://glosx.app/es/explore/</loc>
@@ -311,6 +352,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
   </url>
 <url>
     <loc>https://glosx.app/fr/explore/</loc>
@@ -322,6 +364,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
   </url>
 <url>
     <loc>https://glosx.app/it/explore/</loc>
@@ -333,6 +376,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
   </url>
 <url>
     <loc>https://glosx.app/ja/explore/</loc>
@@ -344,97 +388,163 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
   </url>
 <url>
     <loc>https://glosx.app/blog-flying-vs-train-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-flying-vs-train-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-flying-vs-train-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-flying-vs-train-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-flying-vs-train-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-flying-vs-train-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-flying-vs-train-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-flying-vs-train-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-flying-vs-train-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-flying-vs-train-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-flying-vs-train-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-flying-vs-train-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-flying-vs-train-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-paris-lourdes-pilgrimage-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-paris-lourdes-pilgrimage-train.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-paris-lourdes-pilgrimage-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-paris-lourdes-pilgrimage-train.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-paris-lourdes-pilgrimage-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-paris-lourdes-pilgrimage-train.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-paris-lourdes-pilgrimage-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-paris-lourdes-pilgrimage-train.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-paris-lourdes-pilgrimage-train.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-night-trains-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-night-trains-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-night-trains-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-night-trains-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-night-trains-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-night-trains-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-night-trains-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-night-trains-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-night-trains-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-night-trains-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-night-trains-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-night-trains-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-night-trains-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-scenic-train-routes-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-scenic-train-routes-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-descuentos-tren-europa.html</loc>
@@ -453,197 +563,300 @@
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-tren-arraigo-pueblos.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-tren-arraigo-pueblos.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-tren-arraigo-pueblos.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-tren-arraigo-pueblos.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-tren-arraigo-pueblos.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-tren-arraigo-pueblos.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-tren-arraigo-pueblos.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tren-arraigo-pueblos.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-scenic-train-routes-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-scenic-train-routes-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-scenic-train-routes-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-scenic-train-routes-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-scenic-train-routes-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-scenic-train-routes-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-scenic-train-routes-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-madrid-barcelona-train-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-madrid-barcelona-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-madrid-barcelona-train-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-madrid-barcelona-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-madrid-barcelona-train-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-madrid-barcelona-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-madrid-barcelona-train-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-madrid-barcelona-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-madrid-barcelona-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-italy-interrail-itinerary.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-italy-interrail-itinerary.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-italy-interrail-itinerary.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-italy-interrail-itinerary.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-italy-interrail-itinerary.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-italy-interrail-itinerary.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-italy-interrail-itinerary.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-italy-interrail-itinerary.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-italy-interrail-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-backpacking-italy.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-backpacking-italy.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-backpacking-italy.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-backpacking-italy.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-backpacking-italy.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-backpacking-italy.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-backpacking-italy.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-backpacking-italy.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-backpacking-italy.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-backpacking-italy.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-backpacking-italy.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-backpacking-italy.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-backpacking-italy.html" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/hallstatt/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/hallstatt/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/hallstatt/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/hallstatt/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/hallstatt/es/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/hallstatt/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/hallstatt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/hallstatt/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/hallstatt/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/lake-bled/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lake-bled/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/lake-bled/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/lake-bled/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/lake-bled/es/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lake-bled/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/lake-bled/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/lake-bled/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/lake-bled/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/lauterbrunnen/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lauterbrunnen/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/lauterbrunnen/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/lauterbrunnen/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/lauterbrunnen/es/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lauterbrunnen/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/lauterbrunnen/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/lauterbrunnen/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/lauterbrunnen/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/colmar/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/colmar/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/colmar/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/colmar/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/colmar/es/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/colmar/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/colmar/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/colmar/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/colmar/" />
   </url>
 <url>
     <loc>https://glosx.app/about.html</loc>
@@ -655,6 +868,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/about.html</loc>
@@ -666,6 +880,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/about.html</loc>
@@ -677,6 +892,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/about.html</loc>
@@ -688,6 +904,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
   </url>
 <url>
     <loc>https://glosx.app/ja/about.html</loc>
@@ -699,59 +916,72 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
   </url>
 <url>
     <loc>https://glosx.app/support.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/support.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/support.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/support.html" />
   </url>
 <url>
     <loc>https://glosx.app/privacy.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/privacy.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/privacy.html" />
   </url>
 <url>
     <loc>https://glosx.app/terms.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/terms.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/terms.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/terms.html" />
   </url>
 <url>
     <loc>https://glosx.app/cookies.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/cookies.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/cookies.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/cookies.html" />
   </url>
 <url>
     <loc>https://glosx.app/imprint.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/imprint.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/imprint.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/imprint.html" />
   </url>
 <url>
     <loc>https://glosx.app/guide-how-to-travel-europe-by-train.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/guide-how-to-travel-europe-by-train.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/guide-how-to-travel-europe-by-train.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/trains-from-france-to-spain/</loc>
@@ -782,126 +1012,192 @@
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-train-europe-survival-guide.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-train-europe-survival-guide.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-train-europe-survival-guide.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="it" href="https://glosx.app/it/blog-train-europe-survival-guide.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-train-europe-survival-guide.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-train-europe-survival-guide.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-train-europe-survival-guide.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-train-europe-survival-guide.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-train-europe-survival-guide.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-train-europe-survival-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-train-europe-survival-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-train-europe-survival-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-train-europe-survival-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-train-europe-survival-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-train-europe-survival-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-train-europe-survival-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-train-europe-survival-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-train-europe-survival-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-train-europe-survival-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-train-europe-survival-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-train-europe-survival-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-ai-train-trip-planner-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-ai-train-trip-planner-europe.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-ai-train-trip-planner-europe.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-ai-train-trip-planner-europe.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-ai-train-trip-planner-europe.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-ai-train-trip-planner-europe.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-ai-train-trip-planner-europe.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-ai-train-trip-planner-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-ai-train-trip-planner-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-ai-train-trip-planner-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-ai-train-trip-planner-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-ai-train-trip-planner-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-ai-train-trip-planner-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-ai-train-trip-planner-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-cote-bleue-marseille-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-florence-siena-day-trip.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-florence-siena-day-trip.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-florence-siena-day-trip.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-florence-siena-day-trip.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-florence-siena-day-trip.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-florence-siena-day-trip.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-florence-siena-day-trip.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-florence-siena-day-trip.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-florence-siena-day-trip.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-florence-siena-day-trip.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-florence-siena-day-trip.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-florence-siena-day-trip.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-florence-siena-day-trip.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-florence-siena-day-trip.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-florence-siena-day-trip.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-florence-siena-day-trip.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-cote-bleue-marseille-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cote-bleue-marseille-train.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-cote-bleue-marseille-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cote-bleue-marseille-train.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-cote-bleue-marseille-train.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cote-bleue-marseille-train.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cote-bleue-marseille-train.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
   </url>
 <url>
     <loc>https://glosx.app/ai-planner/</loc>
@@ -912,6 +1208,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
   </url>
 <url>
     <loc>https://glosx.app/es/ai-planner/</loc>
@@ -922,6 +1219,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
   </url>
 <url>
     <loc>https://glosx.app/fr/ai-planner/</loc>
@@ -932,6 +1230,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
   </url>
 <url>
     <loc>https://glosx.app/it/ai-planner/</loc>
@@ -942,139 +1241,235 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
   </url>
 <url>
     <loc>https://glosx.app/blog-best-train-trips-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-best-train-trips-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-best-train-trips-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-best-train-trips-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-best-train-trips-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-best-train-trips-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-best-train-trips-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-best-train-trips-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-best-train-trips-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-best-train-trips-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-cheap-train-tickets-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cheap-train-tickets-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-cheap-train-tickets-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cheap-train-tickets-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-cheap-train-tickets-europe.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cheap-train-tickets-europe.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cheap-train-tickets-europe.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-eurail-pass-vs-point-to-point.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-eurail-pass-vs-point-to-point.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-eurail-pass-vs-point-to-point.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-eurail-pass-vs-point-to-point.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-eurail-pass-vs-point-to-point.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-eurail-pass-vs-point-to-point.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-eurail-pass-vs-point-to-point.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-europe-train-itinerary.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-europe-train-itinerary.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-europe-train-itinerary.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-europe-train-itinerary.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-europe-train-itinerary.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-europe-train-itinerary.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-europe-train-itinerary.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-europe-train-itinerary.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-europe-train-itinerary.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-europe-train-itinerary.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-european-sleeper-train-2026.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-european-sleeper-train-2026.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-european-sleeper-train-2026.html</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-european-sleeper-train-2026.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-european-sleeper-train-2026.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-european-sleeper-train-2026.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-european-sleeper-train-2026.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
   </url>
 <url>
     <loc>https://glosx.app/blog-japan-train-guide.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-japan-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-japan-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/es/blog-japan-train-guide.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-japan-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-japan-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/fr/blog-japan-train-guide.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-japan-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-japan-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/it/blog-japan-train-guide.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-japan-train-guide.html" />
         <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-japan-train-guide.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-japan-train-guide.html" />
   </url>
 <url>
     <loc>https://glosx.app/ja/cookies.html</loc>
@@ -1127,6 +1522,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-ai-train-trip-planner-europe.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-ai-train-trip-planner-europe.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-ai-train-trip-planner-europe.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-ai-train-trip-planner-europe.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
   </url>
@@ -1136,6 +1534,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-backpacking-italy.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-backpacking-italy.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-backpacking-italy.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-backpacking-italy.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-backpacking-italy.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-backpacking-italy.html" />
   </url>
@@ -1145,7 +1546,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-best-train-trips-europe.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-best-train-trips-europe.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-best-train-trips-europe.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-best-train-trips-europe.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-best-train-trips-europe.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-best-train-trips-europe.html" />
   </url>
 <url>
@@ -1154,7 +1558,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cheap-train-tickets-europe.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cheap-train-tickets-europe.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cheap-train-tickets-europe.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cheap-train-tickets-europe.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cheap-train-tickets-europe.html" />
   </url>
 <url>
@@ -1163,6 +1570,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-cote-bleue-marseille-train.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-cote-bleue-marseille-train.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-cote-bleue-marseille-train.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-cote-bleue-marseille-train.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-cote-bleue-marseille-train.html" />
   </url>
@@ -1172,7 +1582,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-eurail-pass-vs-point-to-point.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-eurail-pass-vs-point-to-point.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-eurail-pass-vs-point-to-point.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-eurail-pass-vs-point-to-point.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-eurail-pass-vs-point-to-point.html" />
   </url>
 <url>
@@ -1181,7 +1594,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-europe-train-itinerary.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-europe-train-itinerary.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-europe-train-itinerary.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-europe-train-itinerary.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-europe-train-itinerary.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-europe-train-itinerary.html" />
   </url>
 <url>
@@ -1190,7 +1606,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-european-sleeper-train-2026.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-european-sleeper-train-2026.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-european-sleeper-train-2026.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-european-sleeper-train-2026.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-european-sleeper-train-2026.html" />
   </url>
 <url>
@@ -1199,6 +1618,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-fastest-growing-train-routes-europe-2026.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-fastest-growing-train-routes-europe-2026.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-fastest-growing-train-routes-europe-2026.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-fastest-growing-train-routes-europe-2026.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html" />
   </url>
@@ -1208,6 +1630,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-florence-siena-day-trip.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-florence-siena-day-trip.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-florence-siena-day-trip.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-florence-siena-day-trip.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-florence-siena-day-trip.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-florence-siena-day-trip.html" />
   </url>
@@ -1217,6 +1642,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-flying-vs-train-europe.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-flying-vs-train-europe.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-flying-vs-train-europe.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-flying-vs-train-europe.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-flying-vs-train-europe.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-flying-vs-train-europe.html" />
   </url>
@@ -1226,6 +1654,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-italy-interrail-itinerary.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-italy-interrail-itinerary.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-italy-interrail-itinerary.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-italy-interrail-itinerary.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-italy-interrail-itinerary.html" />
   </url>
@@ -1235,6 +1666,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-japan-train-guide.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-japan-train-guide.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-japan-train-guide.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-japan-train-guide.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-japan-train-guide.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-japan-train-guide.html" />
   </url>
@@ -1244,6 +1678,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-madrid-barcelona-train-guide.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-madrid-barcelona-train-guide.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-madrid-barcelona-train-guide.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-madrid-barcelona-train-guide.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-madrid-barcelona-train-guide.html" />
   </url>
@@ -1253,6 +1690,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-night-trains-europe.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-night-trains-europe.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-night-trains-europe.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-night-trains-europe.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-night-trains-europe.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-night-trains-europe.html" />
   </url>
@@ -1262,6 +1702,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-paris-lourdes-pilgrimage-train.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-paris-lourdes-pilgrimage-train.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-paris-lourdes-pilgrimage-train.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-paris-lourdes-pilgrimage-train.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-paris-lourdes-pilgrimage-train.html" />
   </url>
@@ -1271,6 +1714,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-scenic-train-routes-europe.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-scenic-train-routes-europe.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-scenic-train-routes-europe.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-scenic-train-routes-europe.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-scenic-train-routes-europe.html" />
   </url>
@@ -1280,6 +1726,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-train-europe-survival-guide.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-train-europe-survival-guide.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-train-europe-survival-guide.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-train-europe-survival-guide.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-train-europe-survival-guide.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-train-europe-survival-guide.html" />
   </url>
@@ -1289,6 +1738,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog-tren-arraigo-pueblos.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog-tren-arraigo-pueblos.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog-tren-arraigo-pueblos.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tren-arraigo-pueblos.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tren-arraigo-pueblos.html" />
   </url>
@@ -1298,7 +1750,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/blog.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog.html" />
+      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/blog.html" />
+      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/blog.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog.html" />
   </url>
 <url>
@@ -1307,6 +1762,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
+      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/guide-how-to-travel-europe-by-train.html" />
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/guide-how-to-travel-europe-by-train.html" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/guide-how-to-travel-europe-by-train.html" />
   </url>
@@ -1327,64 +1783,72 @@
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/bruges/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/bruges/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/bruges/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/bruges/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/bruges/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/bruges/es/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/bruges/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/bruges/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/bruges/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/bruges/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/bruges/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/salzburg/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/salzburg/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/salzburg/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/salzburg/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/salzburg/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/salzburg/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/salzburg/es/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/salzburg/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/salzburg/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/salzburg/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/salzburg/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/salzburg/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/zermatt/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/zermatt/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/zermatt/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/zermatt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/zermatt/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/zermatt/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/zermatt/es/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/zermatt/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/zermatt/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/zermatt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/zermatt/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/zermatt/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/lucerne/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lucerne/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lucerne/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/lucerne/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/lucerne/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/lucerne/" />
   </url>
 <url>
     <loc>https://glosx.app/destinos/lucerne/es/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="en" href="https://glosx.app/destinos/lucerne/" />
-    <xhtml:link xmlns:xhtml="http://www.w3.org/1999/xhtml" rel="alternate" hreflang="es" href="https://glosx.app/destinos/lucerne/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/destinos/lucerne/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/lucerne/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/lucerne/" />
   </url>
   <url>
     <loc>https://glosx.app/rutas/amsterdam-berlin/</loc>
