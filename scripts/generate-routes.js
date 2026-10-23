@@ -21,8 +21,8 @@ const routes = [
       it: 'Questo fu in realtà l\'ultimo tratto della rete Thalys originale a ottenere un proprio binario ad alta velocità dedicato: la HSL 4 nei Paesi Bassi ha aperto solo nel 2009, oltre un decennio dopo il lancio di Thalys, quindi i treni hanno circolato per anni su linee convenzionali potenziate prima di raggiungere la piena velocità su questo tratto.'
     }
   },
-  { slug: 'barcelona-girona', from: 'Barcelona', to: 'Girona', country: 'Spain', duration: '1h 30m', operator: 'Renfe', price: '€10-15', badge: 'Route guide · Spain',
-    customSEO: { en: { title: 'Barcelona to Girona Train Guide: 1h30 on Renfe', description: 'Everything you need for the Barcelona to Girona train: 1h30 on Renfe, fares from €10, and today\'s live schedule.' } },
+  { slug: 'barcelona-girona', from: 'Barcelona', to: 'Girona', country: 'Spain', duration: '0h 40m', operator: 'Renfe', price: '€10-15', badge: 'Route guide · Spain',
+    customSEO: { en: { title: 'Barcelona to Girona Train Guide: 40 min on Renfe', description: 'Everything you need for the Barcelona to Girona train: 40 min on Renfe, fares from €10, and today\'s live schedule.' } },
     localInsight: {
       en: 'This is the domestic start of the same high-speed line that continues on to Figueres, crosses into France at Perpignan and eventually reaches Paris — so a Barcelona-Girona ticket runs on exactly the same infrastructure as the long-distance Paris-Barcelona TGV, just for a much shorter distance.',
       es: 'Este es el tramo doméstico inicial de la misma línea de alta velocidad que continúa hasta Figueres, cruza a Francia por Perpignan y llega finalmente a París — así que un billete Barcelona-Girona circula por exactamente la misma infraestructura que el TGV de larga distancia Paris-Barcelona, solo que en un trayecto mucho más corto.',
@@ -480,13 +480,13 @@ const routes = [
       it: 'Il tempo di viaggio è sceso da circa 6 ore a circa 4 nel dicembre 2017, quando sono state aperte nuove tratte ad alta velocità in Turingia come parte di uno dei più grandi progetti ferroviari tedeschi — con diverse lunghe gallerie scavate tra le colline fra Norimberga ed Erfurt che permettono ai treni di viaggiare fino a 300 km/h su un tratto un tempo lento e tortuoso.'
     }
   },
-  { slug: 'munich-prague', from: 'Munich', to: 'Prague', country: 'Germany-Czech', duration: '4h 00m', operator: 'DB ČD', price: '€30-50', badge: 'Route guide · Germany-Czech',
-    customSEO: { en: { title: 'Munich to Prague Train: 4h', description: 'DB ČD connection from Munich to Prague in 4 hours. Check live schedules and book tickets from €30.' } },
+  { slug: 'munich-prague', from: 'Munich', to: 'Prague', country: 'Germany-Czech', duration: '5h 35m', operator: 'DB ČD', price: '€30-50', badge: 'Route guide · Germany-Czech',
+    customSEO: { en: { title: 'Munich to Prague Train: 5h35', description: 'DB ČD connection from Munich to Prague in about 5h35. Check live schedules and book tickets from €30.' } },
     localInsight: {
-      en: 'Journey times on this route dropped noticeably after track upgrades in the 2010s cut out some of the slower sections through Bavaria and Bohemia — before then, the Munich-Prague trip regularly took close to 6 hours rather than the roughly 4 it takes today.',
-      es: 'Los tiempos de viaje en esta ruta bajaron de forma notable tras mejoras en la vía en la década de 2010 que eliminaron algunos de los tramos más lentos por Baviera y Bohemia — antes, el trayecto Múnich-Praga solía tardar cerca de 6 horas en vez de las 4 que toma hoy.',
-      fr: 'Les temps de trajet sur cette ligne ont nettement baissé après des travaux de modernisation de la voie dans les années 2010, qui ont supprimé certains des tronçons les plus lents à travers la Bavière et la Bohême — auparavant, le trajet Munich-Prague prenait régulièrement près de 6 heures contre environ 4 aujourd\'hui.',
-      it: 'I tempi di viaggio su questa tratta sono diminuiti sensibilmente dopo i lavori di ammodernamento dei binari negli anni 2010, che hanno eliminato alcuni dei tratti più lenti attraverso Baviera e Boemia — prima, il viaggio Monaco-Praga richiedeva regolarmente quasi 6 ore contro le circa 4 di oggi.'
+      en: 'Direct trains between Munich and Prague take about 5h 30m–5h 45m and run roughly every two hours via Regensburg, Schwandorf and Plzeň. Die Länderbahn (alex) runs the German section and České dráhy the Czech one; the route is not electrified throughout, which is why it is slower than its distance suggests. From 15 October to 19 November 2026, track work replaces part of the trip with buses, so check your date.',
+      es: 'Los trenes directos entre Múnich y Praga tardan entre 5 h 30 min y 5 h 45 min y salen más o menos cada dos horas por Regensburg, Schwandorf y Pilsen. Die Länderbahn (alex) opera el tramo alemán y České dráhy el checo; la línea no está electrificada en todo su recorrido, por eso es más lenta de lo que sugiere la distancia. Del 15 de octubre al 19 de noviembre de 2026, unas obras sustituyen parte del trayecto por autobuses, así que revisa tu fecha.',
+      fr: 'Les trains directs entre Munich et Prague mettent environ 5 h 30 à 5 h 45 et circulent à peu près toutes les deux heures via Ratisbonne, Schwandorf et Plzeň. Die Länderbahn (alex) assure la partie allemande et České dráhy la partie tchèque ; la ligne n\'est pas électrifiée sur tout le parcours, d\'où une durée plus longue que la distance ne le laisse penser. Du 15 octobre au 19 novembre 2026, des travaux remplacent une partie du trajet par des bus : vérifiez votre date.',
+      it: 'I treni diretti tra Monaco di Baviera e Praga impiegano circa 5 h 30–5 h 45 e partono all\'incirca ogni due ore via Ratisbona, Schwandorf e Plzeň. Die Länderbahn (alex) gestisce il tratto tedesco e České dráhy quello ceco; la linea non è elettrificata su tutto il percorso, per questo è più lenta di quanto suggerisca la distanza. Dal 15 ottobre al 19 novembre 2026 alcuni lavori sostituiscono parte del viaggio con autobus: controlla la tua data.',
     }
   },
   { slug: 'munich-venice', from: 'Munich', to: 'Venice', country: 'Germany-Italy', duration: '6h 50m', operator: 'ÖBB', price: '€40-60', badge: 'Route guide · Germany-Italy',
@@ -597,8 +597,8 @@ const routes = [
       it: 'Circa 38 km di questo viaggio corrono sotto il mare attraverso il Tunnel della Manica, aperto nel 1994. Poiché attraversa un confine fuori dall\'area Schengen, i passeggeri Eurostar passano il controllo di frontiera britannico prima di imbarcarsi alla Gare du Nord — conviene arrivare circa 45-75 minuti prima, un po\' come in aeroporto, ma molto più veloce.'
     }
   },
-  { slug: 'paris-lourdes', from: 'Paris', to: 'Lourdes', country: 'France', duration: '6h 30m', operator: 'SNCF Intercités', price: '€30-50', badge: 'Route guide · France',
-    customSEO: { en: { title: 'Paris to Lourdes by Train: 6h30 SNCF Intercités', description: 'Direct SNCF Intercités from Paris to Lourdes in 6h30. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
+  { slug: 'paris-lourdes', from: 'Paris', to: 'Lourdes', country: 'France', duration: '4h 45m', operator: 'SNCF TGV INOUI', price: '€30-50', badge: 'Route guide · France',
+    customSEO: { en: { title: 'Paris to Lourdes by Train: 4h45 SNCF TGV INOUI', description: 'Direct SNCF TGV INOUI from Paris to Lourdes in 4h45. Compare today\'s schedule and book fares from €30 — no layovers.' } } },
   { slug: 'paris-lucerne', from: 'Paris', to: 'Lucerne', country: 'France-Switzerland', duration: '4h 30m', operator: 'TGV Lyria', price: '€50-75', badge: 'Route guide · France-Switzerland',
     customSEO: { en: { title: 'Paris to Lucerne Train: 4h30', description: 'TGV Lyria connection from Paris to Lucerne in 4h30. Check live schedules and book tickets from €50.' } },
     localInsight: {
@@ -708,8 +708,8 @@ const routes = [
       it: 'Lourdes accoglie circa 6 milioni di visitatori all\'anno, il che la rende uno dei siti di pellegrinaggio cattolico più visitati al mondo, nonostante la città stessa conti solo circa 13.000 abitanti — la stazione fu costruita con una capacità ben superiore a quella normalmente necessaria per una città di queste dimensioni, proprio a causa del flusso di pellegrini.'
     }
   },
-  { slug: 'turin-milan', from: 'Turin', to: 'Milan', country: 'Italy', duration: '1h 30m', operator: 'Trenitalia', price: '€15-25', badge: 'Route guide · Italy',
-    customSEO: { en: { title: 'Turin to Milan Train: 1h30', description: 'Trenitalia connection from Turin to Milan in 1h30. Check live schedules and book tickets from €15.' } } },
+  { slug: 'turin-milan', from: 'Turin', to: 'Milan', country: 'Italy', duration: '0h 50m', operator: 'Trenitalia', price: '€15-25', badge: 'Route guide · Italy',
+    customSEO: { en: { title: 'Turin to Milan Train: 50 min', description: 'Trenitalia connection from Turin to Milan in 50 min. Check live schedules and book tickets from €15.' } } },
   { slug: 'venice-milan', from: 'Venice', to: 'Milan', country: 'Italy', duration: '2h 30m', operator: 'Trenitalia', price: '€20-35', badge: 'Route guide · Italy',
     customSEO: { en: { title: 'Venice to Milan Train Guide: 2h30 on Trenitalia', description: 'Everything you need for the Venice to Milan train: 2h30 on Trenitalia, fares from €20, and today\'s live schedule.' } },
     localInsight: {
