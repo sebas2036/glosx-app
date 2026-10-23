@@ -489,8 +489,8 @@ const routes = [
       it: 'I tempi di viaggio su questa tratta sono diminuiti sensibilmente dopo i lavori di ammodernamento dei binari negli anni 2010, che hanno eliminato alcuni dei tratti più lenti attraverso Baviera e Boemia — prima, il viaggio Monaco-Praga richiedeva regolarmente quasi 6 ore contro le circa 4 di oggi.'
     }
   },
-  { slug: 'munich-venice', from: 'Munich', to: 'Venice', country: 'Germany-Italy', duration: '6h 00m', operator: 'ÖBB', price: '€40-60', badge: 'Route guide · Germany-Italy',
-    customSEO: { en: { title: 'Munich to Venice by Train: 6h scenic route', description: 'Direct ÖBB train from Munich to Venice through the Alps in 6 hours. Compare today\'s schedule and book fares from €40.' } },
+  { slug: 'munich-venice', from: 'Munich', to: 'Venice', country: 'Germany-Italy', duration: '6h 50m', operator: 'ÖBB', price: '€40-60', badge: 'Route guide · Germany-Italy',
+    customSEO: { en: { title: 'Munich to Venice by Train: 6h50 scenic route', description: 'Direct ÖBB train from Munich to Venice through the Alps in about 7 hours. Compare today\'s schedule and book fares from €40.' } },
     localInsight: {
       en: 'The train climbs to the Brenner Pass, at about 1,370m one of the lowest and oldest crossings of the main Alpine chain — used by traders and travellers for centuries before the railway existed. A new Brenner Base Tunnel is being built underneath to shorten this leg in the years ahead.',
       es: 'El tren sube hasta el paso del Brenner, que a unos 1.370 m es uno de los cruces más bajos y antiguos de la cadena principal de los Alpes — usado por comerciantes y viajeros durante siglos antes de que existiera el ferrocarril. Debajo se está construyendo un nuevo túnel de base del Brenner que en los próximos años acortará este tramo.',
@@ -645,8 +645,8 @@ const routes = [
       it: 'La Repubblica Ceca non dispone ancora di una linea ad alta velocità dedicata, quindi questo collegamento tra le due maggiori città del paese corre ancora in gran parte su binari convenzionali potenziati — una vera linea ad alta velocità tra Praga e Brno è in pianificazione da anni, ma non è ancora stata costruita.'
     }
   },
-  { slug: 'prague-budapest', from: 'Prague', to: 'Budapest', country: 'Czech-Hungary', duration: '4h 30m', operator: 'ČD', price: '€25-40', badge: 'Route guide · Czech-Hungary',
-    customSEO: { en: { title: 'Prague to Budapest Train: 4h30', description: 'Direct ČD train from Prague to Budapest in 4.5 hours, no transfers. Check today\'s schedule and book tickets from €25.' } },
+  { slug: 'prague-budapest', from: 'Prague', to: 'Budapest', country: 'Czech-Hungary', duration: '6h 50m', operator: 'ČD', price: '€25-40', badge: 'Route guide · Czech-Hungary',
+    customSEO: { en: { title: 'Prague to Budapest Train: 6h50', description: 'Direct ČD train from Prague to Budapest in about 7 hours, no transfers. Check today\'s schedule and book tickets from €25.' } },
     localInsight: {
       en: 'This direct service actually links three national capitals in one journey: it passes through Bratislava, Slovakia, on its way from Prague to Budapest, without requiring a change of train — a detail easy to miss but one that makes this one of the few single-train routes in Europe to touch three countries.',
       es: 'Este servicio directo en realidad conecta tres capitales nacionales en un solo viaje: pasa por Bratislava, en Eslovaquia, de camino de Praga a Budapest, sin necesidad de cambiar de tren — un detalle fácil de pasar por alto, pero que hace de esta una de las pocas rutas de un solo tren en Europa que atraviesa tres países.',
