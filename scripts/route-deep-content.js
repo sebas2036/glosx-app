@@ -241,7 +241,7 @@ const TH = 'padding:8px 12px;color:#C10016;font-weight:700;text-align:left;';
 const TD = 'padding:8px 12px;border-top:1px solid rgba(20,21,26,0.08);vertical-align:top;';
 
 const I18N = {};
-for (const l of ['es', 'fr', 'it']) { try { I18N[l] = require('./route-deep-' + l); Object.assign(I18N[l].deep, require('./route-deep-4-' + l).deep); } catch (e) { /* idioma aún sin traducir */ } }
+for (const l of ['es', 'fr', 'it']) { try { I18N[l] = require('./route-deep-' + l); Object.assign(I18N[l].deep, require('./route-deep-4-' + l).deep); Object.assign(I18N[l].deep, require('./route-deep-5-' + l).deep); } catch (e) { /* idioma aún sin traducir */ } }
 const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', it: '/it/' };
 
 function render(slug, lang, route) {
