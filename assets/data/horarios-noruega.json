@@ -1,0 +1,5268 @@
+{
+ "source": {
+  "name": "Entur",
+  "url": "https://developer.entur.org/",
+  "license": "NLOD",
+  "file": "entur_gtfs.zip"
+ },
+ "reference_week": {
+  "weekday": "2026-12-01",
+  "saturday": "2026-12-05",
+  "sunday": "2026-12-06"
+ },
+ "pairs": [
+  {
+   "from": "Bergen",
+   "to": "Drammen",
+   "weekday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 373,
+    "median_min": 399
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:08",
+    "last": "15:38",
+    "fastest_min": 373,
+    "median_min": 379
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 373,
+    "median_min": 399
+   }
+  },
+  {
+   "from": "Bergen",
+   "to": "Finse",
+   "weekday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 141,
+    "median_min": 149
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:08",
+    "last": "15:38",
+    "fastest_min": 141,
+    "median_min": 146
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 141,
+    "median_min": 149
+   }
+  },
+  {
+   "from": "Bergen",
+   "to": "Geilo",
+   "weekday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 179,
+    "median_min": 191
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:08",
+    "last": "15:38",
+    "fastest_min": 179,
+    "median_min": 187
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 179,
+    "median_min": 191
+   }
+  },
+  {
+   "from": "Bergen",
+   "to": "Myrdal",
+   "weekday": {
+    "n": 9,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 112,
+    "median_min": 131
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:08",
+    "last": "16:19",
+    "fastest_min": 112,
+    "median_min": 134
+   },
+   "sunday": {
+    "n": 9,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 112,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Bergen",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 409,
+    "median_min": 436
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:08",
+    "last": "15:38",
+    "fastest_min": 409,
+    "median_min": 417
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:08",
+    "last": "23:01",
+    "fastest_min": 409,
+    "median_min": 436
+   }
+  },
+  {
+   "from": "Bergen",
+   "to": "Voss",
+   "weekday": {
+    "n": 23,
+    "first": "05:45",
+    "last": "00:37",
+    "fastest_min": 69,
+    "median_min": 79
+   },
+   "saturday": {
+    "n": 15,
+    "first": "07:04",
+    "last": "00:37",
+    "fastest_min": 69,
+    "median_min": 78
+   },
+   "sunday": {
+    "n": 17,
+    "first": "07:04",
+    "last": "00:37",
+    "fastest_min": 69,
+    "median_min": 77
+   }
+  },
+  {
+   "from": "Bodø",
+   "to": "Fauske",
+   "weekday": {
+    "n": 9,
+    "first": "07:36",
+    "last": "23:15",
+    "fastest_min": 41,
+    "median_min": 42
+   },
+   "saturday": {
+    "n": 3,
+    "first": "12:27",
+    "last": "00:55",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 3,
+    "first": "12:27",
+    "last": "23:15",
+    "fastest_min": 42,
+    "median_min": 43
+   }
+  },
+  {
+   "from": "Bodø",
+   "to": "Mo i Rana",
+   "weekday": {
+    "n": 3,
+    "first": "07:36",
+    "last": "17:46",
+    "fastest_min": 168,
+    "median_min": 169
+   },
+   "saturday": {
+    "n": 2,
+    "first": "12:27",
+    "last": "17:46",
+    "fastest_min": 169,
+    "median_min": 182
+   },
+   "sunday": {
+    "n": 2,
+    "first": "12:27",
+    "last": "17:46",
+    "fastest_min": 169,
+    "median_min": 182
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Hamar",
+   "weekday": {
+    "n": 7,
+    "first": "05:23",
+    "last": "02:18",
+    "fastest_min": 157,
+    "median_min": 164
+   },
+   "saturday": {
+    "n": 1,
+    "first": "05:23",
+    "last": "05:23",
+    "fastest_min": 166,
+    "median_min": 166
+   },
+   "sunday": {
+    "n": 1,
+    "first": "02:18",
+    "last": "02:18",
+    "fastest_min": 194,
+    "median_min": 194
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 7,
+    "first": "05:23",
+    "last": "02:18",
+    "fastest_min": 109,
+    "median_min": 117
+   },
+   "saturday": {
+    "n": 1,
+    "first": "05:23",
+    "last": "05:23",
+    "fastest_min": 109,
+    "median_min": 109
+   },
+   "sunday": {
+    "n": 1,
+    "first": "02:18",
+    "last": "02:18",
+    "fastest_min": 139,
+    "median_min": 139
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 7,
+    "first": "05:23",
+    "last": "02:18",
+    "fastest_min": 216,
+    "median_min": 228
+   },
+   "sunday": {
+    "n": 1,
+    "first": "02:18",
+    "last": "02:18",
+    "fastest_min": 257,
+    "median_min": 257
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 7,
+    "first": "05:23",
+    "last": "02:18",
+    "fastest_min": 200,
+    "median_min": 210
+   },
+   "sunday": {
+    "n": 1,
+    "first": "02:18",
+    "last": "02:18",
+    "fastest_min": 239,
+    "median_min": 239
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 7,
+    "first": "05:23",
+    "last": "02:18",
+    "fastest_min": 230,
+    "median_min": 241
+   },
+   "sunday": {
+    "n": 1,
+    "first": "02:18",
+    "last": "02:18",
+    "fastest_min": 271,
+    "median_min": 271
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Otta",
+   "weekday": {
+    "n": 7,
+    "first": "05:23",
+    "last": "02:18",
+    "fastest_min": 28,
+    "median_min": 29
+   },
+   "saturday": {
+    "n": 1,
+    "first": "05:23",
+    "last": "05:23",
+    "fastest_min": 31,
+    "median_min": 31
+   },
+   "sunday": {
+    "n": 1,
+    "first": "02:18",
+    "last": "02:18",
+    "fastest_min": 36,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 6,
+    "first": "12:02",
+    "last": "03:36",
+    "fastest_min": 157,
+    "median_min": 161
+   },
+   "sunday": {
+    "n": 2,
+    "first": "21:58",
+    "last": "03:36",
+    "fastest_min": 162,
+    "median_min": 173
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Åndalsnes",
+   "weekday": {
+    "n": 4,
+    "first": "12:08",
+    "last": "20:15",
+    "fastest_min": 82,
+    "median_min": 82
+   },
+   "saturday": {
+    "n": 2,
+    "first": "12:08",
+    "last": "18:24",
+    "fastest_min": 82,
+    "median_min": 82
+   },
+   "sunday": {
+    "n": 3,
+    "first": "12:08",
+    "last": "20:15",
+    "fastest_min": 82,
+    "median_min": 82
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Bergen",
+   "weekday": {
+    "n": 5,
+    "first": "07:00",
+    "last": "23:38",
+    "fastest_min": 360,
+    "median_min": 378
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:00",
+    "last": "17:00",
+    "fastest_min": 360,
+    "median_min": 375
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "23:38",
+    "fastest_min": 360,
+    "median_min": 384
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Egersund",
+   "weekday": {
+    "n": 6,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 363,
+    "median_min": 370
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:00",
+    "last": "16:00",
+    "fastest_min": 363,
+    "median_min": 367
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 363,
+    "median_min": 368
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Finse",
+   "weekday": {
+    "n": 5,
+    "first": "07:00",
+    "last": "23:38",
+    "fastest_min": 214,
+    "median_min": 227
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:00",
+    "last": "17:00",
+    "fastest_min": 214,
+    "median_min": 226
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "23:38",
+    "fastest_min": 214,
+    "median_min": 230
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Geilo",
+   "weekday": {
+    "n": 5,
+    "first": "07:00",
+    "last": "23:38",
+    "fastest_min": 173,
+    "median_min": 186
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:00",
+    "last": "17:00",
+    "fastest_min": 173,
+    "median_min": 181
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "23:38",
+    "fastest_min": 173,
+    "median_min": 186
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Hamar",
+   "weekday": {
+    "n": 19,
+    "first": "05:57",
+    "last": "23:47",
+    "fastest_min": 106,
+    "median_min": 107
+   },
+   "sunday": {
+    "n": 7,
+    "first": "17:57",
+    "last": "00:17",
+    "fastest_min": 106,
+    "median_min": 107
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 29,
+    "first": "04:54",
+    "last": "00:43",
+    "fastest_min": 34,
+    "median_min": 42
+   },
+   "saturday": {
+    "n": 23,
+    "first": "07:43",
+    "last": "00:43",
+    "fastest_min": 34,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 25,
+    "first": "07:43",
+    "last": "00:43",
+    "fastest_min": 34,
+    "median_min": 42
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Kristiansand",
+   "weekday": {
+    "n": 7,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 231,
+    "median_min": 233
+   },
+   "saturday": {
+    "n": 5,
+    "first": "08:00",
+    "last": "18:00",
+    "fastest_min": 231,
+    "median_min": 233
+   },
+   "sunday": {
+    "n": 7,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 231,
+    "median_min": 233
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Larvik",
+   "weekday": {
+    "n": 22,
+    "first": "06:14",
+    "last": "00:14",
+    "fastest_min": 70,
+    "median_min": 77
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 19,
+    "first": "05:57",
+    "last": "23:47",
+    "fastest_min": 153,
+    "median_min": 164
+   },
+   "sunday": {
+    "n": 6,
+    "first": "17:57",
+    "last": "22:57",
+    "fastest_min": 153,
+    "median_min": 156
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 155,
+    "first": "04:02",
+    "last": "00:05",
+    "fastest_min": 47,
+    "median_min": 48
+   },
+   "saturday": {
+    "n": 148,
+    "first": "04:02",
+    "last": "00:12",
+    "fastest_min": 47,
+    "median_min": 48
+   },
+   "sunday": {
+    "n": 147,
+    "first": "04:02",
+    "last": "00:17",
+    "fastest_min": 47,
+    "median_min": 48
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Myrdal",
+   "weekday": {
+    "n": 5,
+    "first": "07:00",
+    "last": "23:38",
+    "fastest_min": 244,
+    "median_min": 255
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:00",
+    "last": "17:00",
+    "fastest_min": 244,
+    "median_min": 255
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "23:38",
+    "fastest_min": 244,
+    "median_min": 259
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 118,
+    "first": "04:02",
+    "last": "23:47",
+    "fastest_min": 58,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 112,
+    "first": "04:02",
+    "last": "00:12",
+    "fastest_min": 60,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 112,
+    "first": "04:02",
+    "last": "00:17",
+    "fastest_min": 60,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 169,
+    "first": "04:02",
+    "last": "00:05",
+    "fastest_min": 31,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 156,
+    "first": "04:02",
+    "last": "00:12",
+    "fastest_min": 32,
+    "median_min": 36
+   },
+   "sunday": {
+    "n": 157,
+    "first": "04:02",
+    "last": "00:17",
+    "fastest_min": 31,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 23,
+    "first": "04:28",
+    "last": "00:14",
+    "fastest_min": 57,
+    "median_min": 62
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Sandnes",
+   "weekday": {
+    "n": 6,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 420,
+    "median_min": 421
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:00",
+    "last": "16:00",
+    "fastest_min": 420,
+    "median_min": 421
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 420,
+    "median_min": 421
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Skien",
+   "weekday": {
+    "n": 22,
+    "first": "06:14",
+    "last": "00:14",
+    "fastest_min": 91,
+    "median_min": 99
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Stavanger",
+   "weekday": {
+    "n": 6,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 434,
+    "median_min": 438
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:00",
+    "last": "16:00",
+    "fastest_min": 434,
+    "median_min": 436
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:00",
+    "last": "23:00",
+    "fastest_min": 434,
+    "median_min": 438
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 23,
+    "first": "04:28",
+    "last": "00:14",
+    "fastest_min": 35,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Voss",
+   "weekday": {
+    "n": 5,
+    "first": "07:00",
+    "last": "23:38",
+    "fastest_min": 288,
+    "median_min": 303
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:00",
+    "last": "17:00",
+    "fastest_min": 288,
+    "median_min": 302
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "23:38",
+    "fastest_min": 288,
+    "median_min": 307
+   }
+  },
+  {
+   "from": "Egersund",
+   "to": "Drammen",
+   "weekday": {
+    "n": 6,
+    "first": "07:41",
+    "last": "23:18",
+    "fastest_min": 367,
+    "median_min": 381
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:41",
+    "last": "13:40",
+    "fastest_min": 367,
+    "median_min": 369
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:43",
+    "last": "23:18",
+    "fastest_min": 367,
+    "median_min": 394
+   }
+  },
+  {
+   "from": "Egersund",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 6,
+    "first": "07:41",
+    "last": "23:18",
+    "fastest_min": 331,
+    "median_min": 346
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:41",
+    "last": "13:40",
+    "fastest_min": 331,
+    "median_min": 334
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:43",
+    "last": "23:18",
+    "fastest_min": 331,
+    "median_min": 358
+   }
+  },
+  {
+   "from": "Egersund",
+   "to": "Kristiansand",
+   "weekday": {
+    "n": 8,
+    "first": "05:31",
+    "last": "23:18",
+    "fastest_min": 120,
+    "median_min": 128
+   },
+   "saturday": {
+    "n": 5,
+    "first": "07:41",
+    "last": "17:17",
+    "fastest_min": 120,
+    "median_min": 125
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:43",
+    "last": "23:18",
+    "fastest_min": 120,
+    "median_min": 134
+   }
+  },
+  {
+   "from": "Egersund",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 6,
+    "first": "07:41",
+    "last": "23:18",
+    "fastest_min": 402,
+    "median_min": 416
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:41",
+    "last": "13:40",
+    "fastest_min": 402,
+    "median_min": 404
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:43",
+    "last": "23:18",
+    "fastest_min": 402,
+    "median_min": 427
+   }
+  },
+  {
+   "from": "Egersund",
+   "to": "Sandnes",
+   "weekday": {
+    "n": 32,
+    "first": "04:39",
+    "last": "23:19",
+    "fastest_min": 43,
+    "median_min": 54
+   },
+   "saturday": {
+    "n": 25,
+    "first": "06:15",
+    "last": "01:19",
+    "fastest_min": 43,
+    "median_min": 54
+   },
+   "sunday": {
+    "n": 20,
+    "first": "09:16",
+    "last": "23:19",
+    "fastest_min": 43,
+    "median_min": 54
+   }
+  },
+  {
+   "from": "Egersund",
+   "to": "Stavanger",
+   "weekday": {
+    "n": 32,
+    "first": "04:39",
+    "last": "23:19",
+    "fastest_min": 58,
+    "median_min": 71
+   },
+   "saturday": {
+    "n": 25,
+    "first": "06:15",
+    "last": "01:19",
+    "fastest_min": 58,
+    "median_min": 71
+   },
+   "sunday": {
+    "n": 20,
+    "first": "09:16",
+    "last": "23:19",
+    "fastest_min": 58,
+    "median_min": 71
+   }
+  },
+  {
+   "from": "Fauske",
+   "to": "Bodø",
+   "weekday": {
+    "n": 10,
+    "first": "05:55",
+    "last": "21:15",
+    "fastest_min": 39,
+    "median_min": 41
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:09",
+    "last": "02:25",
+    "fastest_min": 40,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 2,
+    "first": "16:53",
+    "last": "20:22",
+    "fastest_min": 39,
+    "median_min": 42
+   }
+  },
+  {
+   "from": "Fauske",
+   "to": "Mo i Rana",
+   "weekday": {
+    "n": 3,
+    "first": "08:21",
+    "last": "18:28",
+    "fastest_min": 123,
+    "median_min": 127
+   },
+   "saturday": {
+    "n": 2,
+    "first": "13:16",
+    "last": "18:28",
+    "fastest_min": 127,
+    "median_min": 136
+   },
+   "sunday": {
+    "n": 2,
+    "first": "13:16",
+    "last": "18:28",
+    "fastest_min": 127,
+    "median_min": 136
+   }
+  },
+  {
+   "from": "Finse",
+   "to": "Bergen",
+   "weekday": {
+    "n": 5,
+    "first": "10:50",
+    "last": "03:49",
+    "fastest_min": 142,
+    "median_min": 149
+   },
+   "saturday": {
+    "n": 4,
+    "first": "10:50",
+    "last": "20:49",
+    "fastest_min": 142,
+    "median_min": 146
+   },
+   "sunday": {
+    "n": 5,
+    "first": "12:37",
+    "last": "03:49",
+    "fastest_min": 143,
+    "median_min": 153
+   }
+  },
+  {
+   "from": "Finse",
+   "to": "Drammen",
+   "weekday": {
+    "n": 5,
+    "first": "10:31",
+    "last": "02:00",
+    "fastest_min": 225,
+    "median_min": 236
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:31",
+    "last": "18:06",
+    "fastest_min": 225,
+    "median_min": 236
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:31",
+    "last": "02:00",
+    "fastest_min": 225,
+    "median_min": 236
+   }
+  },
+  {
+   "from": "Finse",
+   "to": "Geilo",
+   "weekday": {
+    "n": 5,
+    "first": "10:31",
+    "last": "02:00",
+    "fastest_min": 36,
+    "median_min": 40
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:31",
+    "last": "18:06",
+    "fastest_min": 36,
+    "median_min": 39
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:31",
+    "last": "02:00",
+    "fastest_min": 36,
+    "median_min": 40
+   }
+  },
+  {
+   "from": "Finse",
+   "to": "Myrdal",
+   "weekday": {
+    "n": 5,
+    "first": "10:50",
+    "last": "03:49",
+    "fastest_min": 25,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 4,
+    "first": "10:50",
+    "last": "20:49",
+    "fastest_min": 25,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 5,
+    "first": "12:37",
+    "last": "03:49",
+    "fastest_min": 25,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Finse",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 5,
+    "first": "10:31",
+    "last": "02:00",
+    "fastest_min": 261,
+    "median_min": 274
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:31",
+    "last": "18:06",
+    "fastest_min": 261,
+    "median_min": 274
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:31",
+    "last": "02:00",
+    "fastest_min": 261,
+    "median_min": 274
+   }
+  },
+  {
+   "from": "Finse",
+   "to": "Voss",
+   "weekday": {
+    "n": 5,
+    "first": "10:50",
+    "last": "03:49",
+    "fastest_min": 71,
+    "median_min": 73
+   },
+   "saturday": {
+    "n": 4,
+    "first": "10:50",
+    "last": "20:49",
+    "fastest_min": 71,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 5,
+    "first": "12:37",
+    "last": "03:49",
+    "fastest_min": 71,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Flåm",
+   "to": "Myrdal",
+   "weekday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "16:50",
+    "fastest_min": 40,
+    "median_min": 43
+   },
+   "saturday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "16:50",
+    "fastest_min": 40,
+    "median_min": 43
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:00",
+    "last": "16:50",
+    "fastest_min": 40,
+    "median_min": 43
+   }
+  },
+  {
+   "from": "Fredrikstad",
+   "to": "Göteborg C",
+   "weekday": {
+    "n": 7,
+    "first": "07:09",
+    "last": "19:14",
+    "fastest_min": 146,
+    "median_min": 151
+   },
+   "saturday": {
+    "n": 6,
+    "first": "09:14",
+    "last": "19:14",
+    "fastest_min": 146,
+    "median_min": 151
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:14",
+    "last": "19:14",
+    "fastest_min": 146,
+    "median_min": 151
+   }
+  },
+  {
+   "from": "Fredrikstad",
+   "to": "Halden",
+   "weekday": {
+    "n": 22,
+    "first": "07:09",
+    "last": "01:30",
+    "fastest_min": 31,
+    "median_min": 33
+   },
+   "saturday": {
+    "n": 18,
+    "first": "08:17",
+    "last": "01:30",
+    "fastest_min": 31,
+    "median_min": 32
+   },
+   "sunday": {
+    "n": 17,
+    "first": "09:14",
+    "last": "01:30",
+    "fastest_min": 31,
+    "median_min": 32
+   }
+  },
+  {
+   "from": "Fredrikstad",
+   "to": "Moss",
+   "weekday": {
+    "n": 23,
+    "first": "04:40",
+    "last": "22:46",
+    "fastest_min": 22,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 19,
+    "first": "05:40",
+    "last": "22:46",
+    "fastest_min": 25,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:37",
+    "last": "22:46",
+    "fastest_min": 22,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Fredrikstad",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 24,
+    "first": "04:40",
+    "last": "22:46",
+    "fastest_min": 56,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 20,
+    "first": "05:40",
+    "last": "22:46",
+    "fastest_min": 59,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 19,
+    "first": "06:37",
+    "last": "22:46",
+    "fastest_min": 56,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Geilo",
+   "to": "Bergen",
+   "weekday": {
+    "n": 5,
+    "first": "09:59",
+    "last": "03:07",
+    "fastest_min": 184,
+    "median_min": 193
+   },
+   "saturday": {
+    "n": 4,
+    "first": "09:59",
+    "last": "20:11",
+    "fastest_min": 184,
+    "median_min": 190
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:56",
+    "last": "03:07",
+    "fastest_min": 184,
+    "median_min": 196
+   }
+  },
+  {
+   "from": "Geilo",
+   "to": "Drammen",
+   "weekday": {
+    "n": 5,
+    "first": "11:12",
+    "last": "02:42",
+    "fastest_min": 183,
+    "median_min": 194
+   },
+   "saturday": {
+    "n": 3,
+    "first": "11:12",
+    "last": "18:48",
+    "fastest_min": 183,
+    "median_min": 195
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:12",
+    "last": "02:42",
+    "fastest_min": 183,
+    "median_min": 194
+   }
+  },
+  {
+   "from": "Geilo",
+   "to": "Finse",
+   "weekday": {
+    "n": 5,
+    "first": "09:59",
+    "last": "03:07",
+    "fastest_min": 36,
+    "median_min": 40
+   },
+   "saturday": {
+    "n": 4,
+    "first": "09:59",
+    "last": "20:11",
+    "fastest_min": 36,
+    "median_min": 40
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:56",
+    "last": "03:07",
+    "fastest_min": 36,
+    "median_min": 40
+   }
+  },
+  {
+   "from": "Geilo",
+   "to": "Myrdal",
+   "weekday": {
+    "n": 5,
+    "first": "09:59",
+    "last": "03:07",
+    "fastest_min": 64,
+    "median_min": 72
+   },
+   "saturday": {
+    "n": 4,
+    "first": "09:59",
+    "last": "20:11",
+    "fastest_min": 64,
+    "median_min": 70
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:56",
+    "last": "03:07",
+    "fastest_min": 64,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Geilo",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 5,
+    "first": "11:12",
+    "last": "02:42",
+    "fastest_min": 219,
+    "median_min": 232
+   },
+   "saturday": {
+    "n": 3,
+    "first": "11:12",
+    "last": "18:48",
+    "fastest_min": 219,
+    "median_min": 233
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:12",
+    "last": "02:42",
+    "fastest_min": 219,
+    "median_min": 232
+   }
+  },
+  {
+   "from": "Geilo",
+   "to": "Voss",
+   "weekday": {
+    "n": 5,
+    "first": "09:59",
+    "last": "03:07",
+    "fastest_min": 110,
+    "median_min": 118
+   },
+   "saturday": {
+    "n": 4,
+    "first": "09:59",
+    "last": "20:11",
+    "fastest_min": 110,
+    "median_min": 117
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:56",
+    "last": "03:07",
+    "fastest_min": 110,
+    "median_min": 118
+   }
+  },
+  {
+   "from": "Gjøvik",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 18,
+    "first": "04:34",
+    "last": "21:34",
+    "fastest_min": 118,
+    "median_min": 118
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:34",
+    "last": "21:34",
+    "fastest_min": 131,
+    "median_min": 131
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:34",
+    "last": "21:34",
+    "fastest_min": 131,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Göteborg C",
+   "to": "Fredrikstad",
+   "weekday": {
+    "n": 8,
+    "first": "06:14",
+    "last": "20:10",
+    "fastest_min": 147,
+    "median_min": 151
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:10",
+    "last": "20:10",
+    "fastest_min": 146,
+    "median_min": 152
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:14",
+    "last": "20:10",
+    "fastest_min": 147,
+    "median_min": 151
+   }
+  },
+  {
+   "from": "Göteborg C",
+   "to": "Halden",
+   "weekday": {
+    "n": 8,
+    "first": "06:14",
+    "last": "20:10",
+    "fastest_min": 115,
+    "median_min": 117
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:10",
+    "last": "20:10",
+    "fastest_min": 114,
+    "median_min": 119
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:14",
+    "last": "20:10",
+    "fastest_min": 115,
+    "median_min": 117
+   }
+  },
+  {
+   "from": "Göteborg C",
+   "to": "Moss",
+   "weekday": {
+    "n": 8,
+    "first": "06:14",
+    "last": "20:10",
+    "fastest_min": 174,
+    "median_min": 180
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:10",
+    "last": "20:10",
+    "fastest_min": 173,
+    "median_min": 181
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:14",
+    "last": "20:10",
+    "fastest_min": 174,
+    "median_min": 180
+   }
+  },
+  {
+   "from": "Göteborg C",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 8,
+    "first": "06:14",
+    "last": "20:10",
+    "fastest_min": 210,
+    "median_min": 213
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:10",
+    "last": "20:10",
+    "fastest_min": 209,
+    "median_min": 214
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:14",
+    "last": "20:10",
+    "fastest_min": 210,
+    "median_min": 213
+   }
+  },
+  {
+   "from": "Halden",
+   "to": "Fredrikstad",
+   "weekday": {
+    "n": 22,
+    "first": "04:05",
+    "last": "22:12",
+    "fastest_min": 30,
+    "median_min": 33
+   },
+   "saturday": {
+    "n": 19,
+    "first": "05:05",
+    "last": "22:12",
+    "fastest_min": 30,
+    "median_min": 33
+   },
+   "sunday": {
+    "n": 17,
+    "first": "06:02",
+    "last": "22:12",
+    "fastest_min": 30,
+    "median_min": 33
+   }
+  },
+  {
+   "from": "Halden",
+   "to": "Göteborg C",
+   "weekday": {
+    "n": 7,
+    "first": "07:47",
+    "last": "19:47",
+    "fastest_min": 113,
+    "median_min": 118
+   },
+   "saturday": {
+    "n": 6,
+    "first": "09:47",
+    "last": "19:47",
+    "fastest_min": 113,
+    "median_min": 118
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:47",
+    "last": "19:47",
+    "fastest_min": 113,
+    "median_min": 118
+   }
+  },
+  {
+   "from": "Halden",
+   "to": "Moss",
+   "weekday": {
+    "n": 22,
+    "first": "04:05",
+    "last": "22:12",
+    "fastest_min": 57,
+    "median_min": 61
+   },
+   "saturday": {
+    "n": 19,
+    "first": "05:05",
+    "last": "22:12",
+    "fastest_min": 57,
+    "median_min": 61
+   },
+   "sunday": {
+    "n": 17,
+    "first": "06:02",
+    "last": "22:12",
+    "fastest_min": 57,
+    "median_min": 61
+   }
+  },
+  {
+   "from": "Halden",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 22,
+    "first": "04:05",
+    "last": "22:12",
+    "fastest_min": 92,
+    "median_min": 95
+   },
+   "saturday": {
+    "n": 19,
+    "first": "05:05",
+    "last": "22:12",
+    "fastest_min": 92,
+    "median_min": 95
+   },
+   "sunday": {
+    "n": 17,
+    "first": "06:02",
+    "last": "22:12",
+    "fastest_min": 92,
+    "median_min": 94
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Dombås",
+   "weekday": {
+    "n": 7,
+    "first": "09:12",
+    "last": "00:25",
+    "fastest_min": 162,
+    "median_min": 173
+   },
+   "sunday": {
+    "n": 3,
+    "first": "19:13",
+    "last": "00:25",
+    "fastest_min": 162,
+    "median_min": 162
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Drammen",
+   "weekday": {
+    "n": 19,
+    "first": "04:24",
+    "last": "22:11",
+    "fastest_min": 104,
+    "median_min": 111
+   },
+   "sunday": {
+    "n": 4,
+    "first": "19:09",
+    "last": "22:11",
+    "fastest_min": 111,
+    "median_min": 111
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 26,
+    "first": "06:52",
+    "last": "01:39",
+    "fastest_min": 45,
+    "median_min": 49
+   },
+   "saturday": {
+    "n": 17,
+    "first": "08:52",
+    "last": "00:45",
+    "fastest_min": 45,
+    "median_min": 49
+   },
+   "sunday": {
+    "n": 19,
+    "first": "08:52",
+    "last": "00:45",
+    "fastest_min": 45,
+    "median_min": 49
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 26,
+    "first": "04:24",
+    "last": "22:11",
+    "fastest_min": 51,
+    "median_min": 64
+   },
+   "sunday": {
+    "n": 4,
+    "first": "19:09",
+    "last": "22:11",
+    "fastest_min": 64,
+    "median_min": 64
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 26,
+    "first": "04:24",
+    "last": "22:11",
+    "fastest_min": 37,
+    "median_min": 50
+   },
+   "sunday": {
+    "n": 4,
+    "first": "19:09",
+    "last": "22:11",
+    "fastest_min": 50,
+    "median_min": 50
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 26,
+    "first": "04:24",
+    "last": "22:11",
+    "fastest_min": 64,
+    "median_min": 75
+   },
+   "sunday": {
+    "n": 4,
+    "first": "19:09",
+    "last": "22:11",
+    "fastest_min": 75,
+    "median_min": 75
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Otta",
+   "weekday": {
+    "n": 7,
+    "first": "09:12",
+    "last": "00:25",
+    "fastest_min": 130,
+    "median_min": 142
+   },
+   "sunday": {
+    "n": 3,
+    "first": "19:13",
+    "last": "00:25",
+    "fastest_min": 130,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Røros",
+   "weekday": {
+    "n": 6,
+    "first": "08:11",
+    "last": "20:11",
+    "fastest_min": 206,
+    "median_min": 208
+   },
+   "saturday": {
+    "n": 2,
+    "first": "10:11",
+    "last": "16:08",
+    "fastest_min": 211,
+    "median_min": 211
+   },
+   "sunday": {
+    "n": 4,
+    "first": "12:11",
+    "last": "20:11",
+    "fastest_min": 206,
+    "median_min": 208
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 8,
+    "first": "09:12",
+    "last": "00:25",
+    "fastest_min": 327,
+    "median_min": 343
+   },
+   "saturday": {
+    "n": 1,
+    "first": "16:08",
+    "last": "16:08",
+    "fastest_min": 378,
+    "median_min": 378
+   },
+   "sunday": {
+    "n": 4,
+    "first": "12:11",
+    "last": "00:25",
+    "fastest_min": 327,
+    "median_min": 376
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Drammen",
+   "weekday": {
+    "n": 29,
+    "first": "03:34",
+    "last": "23:17",
+    "fastest_min": 33,
+    "median_min": 41
+   },
+   "saturday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 33,
+    "median_min": 41
+   },
+   "sunday": {
+    "n": 24,
+    "first": "05:34",
+    "last": "23:17",
+    "fastest_min": 33,
+    "median_min": 41
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Egersund",
+   "weekday": {
+    "n": 6,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 327,
+    "median_min": 334
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:36",
+    "last": "16:36",
+    "fastest_min": 327,
+    "median_min": 331
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 327,
+    "median_min": 332
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Kristiansand",
+   "weekday": {
+    "n": 7,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 195,
+    "median_min": 197
+   },
+   "saturday": {
+    "n": 5,
+    "first": "08:36",
+    "last": "18:48",
+    "fastest_min": 195,
+    "median_min": 197
+   },
+   "sunday": {
+    "n": 7,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 195,
+    "median_min": 197
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 22,
+    "first": "03:34",
+    "last": "22:34",
+    "fastest_min": 89,
+    "median_min": 90
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 89,
+    "median_min": 90
+   },
+   "sunday": {
+    "n": 18,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 89,
+    "median_min": 90
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 20,
+    "first": "03:34",
+    "last": "22:34",
+    "fastest_min": 102,
+    "median_min": 103
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 102,
+    "median_min": 103
+   },
+   "sunday": {
+    "n": 18,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 102,
+    "median_min": 103
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 29,
+    "first": "03:34",
+    "last": "23:17",
+    "fastest_min": 67,
+    "median_min": 77
+   },
+   "saturday": {
+    "n": 23,
+    "first": "05:34",
+    "last": "22:34",
+    "fastest_min": 67,
+    "median_min": 77
+   },
+   "sunday": {
+    "n": 24,
+    "first": "05:34",
+    "last": "23:17",
+    "fastest_min": 67,
+    "median_min": 77
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Sandnes",
+   "weekday": {
+    "n": 6,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 384,
+    "median_min": 385
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:36",
+    "last": "16:36",
+    "fastest_min": 384,
+    "median_min": 385
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 384,
+    "median_min": 385
+   }
+  },
+  {
+   "from": "Kongsberg",
+   "to": "Stavanger",
+   "weekday": {
+    "n": 6,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 398,
+    "median_min": 402
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:36",
+    "last": "16:36",
+    "fastest_min": 398,
+    "median_min": 400
+   },
+   "sunday": {
+    "n": 5,
+    "first": "08:36",
+    "last": "23:43",
+    "fastest_min": 398,
+    "median_min": 402
+   }
+  },
+  {
+   "from": "Kristiansand",
+   "to": "Drammen",
+   "weekday": {
+    "n": 6,
+    "first": "09:54",
+    "last": "02:17",
+    "fastest_min": 234,
+    "median_min": 238
+   },
+   "saturday": {
+    "n": 5,
+    "first": "07:54",
+    "last": "15:56",
+    "fastest_min": 234,
+    "median_min": 236
+   },
+   "sunday": {
+    "n": 7,
+    "first": "09:54",
+    "last": "02:17",
+    "fastest_min": 234,
+    "median_min": 240
+   }
+  },
+  {
+   "from": "Kristiansand",
+   "to": "Egersund",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "03:45",
+    "fastest_min": 121,
+    "median_min": 126
+   },
+   "saturday": {
+    "n": 5,
+    "first": "09:05",
+    "last": "19:59",
+    "fastest_min": 121,
+    "median_min": 126
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:05",
+    "last": "03:45",
+    "fastest_min": 121,
+    "median_min": 126
+   }
+  },
+  {
+   "from": "Kristiansand",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 6,
+    "first": "09:54",
+    "last": "02:17",
+    "fastest_min": 199,
+    "median_min": 202
+   },
+   "saturday": {
+    "n": 5,
+    "first": "07:54",
+    "last": "15:56",
+    "fastest_min": 199,
+    "median_min": 200
+   },
+   "sunday": {
+    "n": 7,
+    "first": "09:54",
+    "last": "02:17",
+    "fastest_min": 199,
+    "median_min": 203
+   }
+  },
+  {
+   "from": "Kristiansand",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 6,
+    "first": "09:54",
+    "last": "02:17",
+    "fastest_min": 269,
+    "median_min": 272
+   },
+   "saturday": {
+    "n": 5,
+    "first": "07:54",
+    "last": "15:56",
+    "fastest_min": 269,
+    "median_min": 271
+   },
+   "sunday": {
+    "n": 7,
+    "first": "09:54",
+    "last": "02:17",
+    "fastest_min": 269,
+    "median_min": 273
+   }
+  },
+  {
+   "from": "Kristiansand",
+   "to": "Sandnes",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "03:45",
+    "fastest_min": 165,
+    "median_min": 181
+   },
+   "saturday": {
+    "n": 5,
+    "first": "09:05",
+    "last": "19:59",
+    "fastest_min": 165,
+    "median_min": 181
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:05",
+    "last": "03:45",
+    "fastest_min": 165,
+    "median_min": 180
+   }
+  },
+  {
+   "from": "Kristiansand",
+   "to": "Stavanger",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "03:45",
+    "fastest_min": 180,
+    "median_min": 196
+   },
+   "saturday": {
+    "n": 5,
+    "first": "09:05",
+    "last": "19:59",
+    "fastest_min": 180,
+    "median_min": 195
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:05",
+    "last": "03:45",
+    "fastest_min": 180,
+    "median_min": 194
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Drammen",
+   "weekday": {
+    "n": 23,
+    "first": "04:31",
+    "last": "23:32",
+    "fastest_min": 73,
+    "median_min": 73
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 20,
+    "first": "04:31",
+    "last": "22:32",
+    "fastest_min": 122,
+    "median_min": 122
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 20,
+    "first": "04:31",
+    "last": "22:32",
+    "fastest_min": 135,
+    "median_min": 135
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 24,
+    "first": "04:31",
+    "last": "22:32",
+    "fastest_min": 106,
+    "median_min": 109
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 25,
+    "first": "04:31",
+    "last": "23:32",
+    "fastest_min": 12,
+    "median_min": 13
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:32",
+    "last": "23:02",
+    "fastest_min": 12,
+    "median_min": 13
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:29",
+    "last": "00:02",
+    "fastest_min": 12,
+    "median_min": 13
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Skien",
+   "weekday": {
+    "n": 25,
+    "first": "07:16",
+    "last": "01:25",
+    "fastest_min": 19,
+    "median_min": 20
+   },
+   "saturday": {
+    "n": 19,
+    "first": "08:03",
+    "last": "01:55",
+    "fastest_min": 19,
+    "median_min": 20
+   },
+   "sunday": {
+    "n": 17,
+    "first": "10:03",
+    "last": "01:55",
+    "fastest_min": 19,
+    "median_min": 20
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 25,
+    "first": "04:31",
+    "last": "23:32",
+    "fastest_min": 34,
+    "median_min": 35
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Dombås",
+   "weekday": {
+    "n": 7,
+    "first": "10:01",
+    "last": "01:19",
+    "fastest_min": 109,
+    "median_min": 119
+   },
+   "sunday": {
+    "n": 3,
+    "first": "20:03",
+    "last": "01:19",
+    "fastest_min": 109,
+    "median_min": 112
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Drammen",
+   "weekday": {
+    "n": 19,
+    "first": "03:36",
+    "last": "21:15",
+    "fastest_min": 151,
+    "median_min": 167
+   },
+   "sunday": {
+    "n": 4,
+    "first": "18:15",
+    "last": "21:15",
+    "fastest_min": 167,
+    "median_min": 167
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Hamar",
+   "weekday": {
+    "n": 24,
+    "first": "03:36",
+    "last": "21:15",
+    "fastest_min": 44,
+    "median_min": 50
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:31",
+    "last": "21:15",
+    "fastest_min": 45,
+    "median_min": 50
+   },
+   "sunday": {
+    "n": 17,
+    "first": "05:31",
+    "last": "21:15",
+    "fastest_min": 45,
+    "median_min": 50
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 24,
+    "first": "03:36",
+    "last": "21:15",
+    "fastest_min": 103,
+    "median_min": 120
+   },
+   "sunday": {
+    "n": 4,
+    "first": "18:15",
+    "last": "21:15",
+    "fastest_min": 120,
+    "median_min": 120
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 24,
+    "first": "03:36",
+    "last": "21:15",
+    "fastest_min": 87,
+    "median_min": 106
+   },
+   "sunday": {
+    "n": 4,
+    "first": "18:15",
+    "last": "21:15",
+    "fastest_min": 106,
+    "median_min": 106
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 24,
+    "first": "03:36",
+    "last": "21:15",
+    "fastest_min": 115,
+    "median_min": 131
+   },
+   "sunday": {
+    "n": 4,
+    "first": "18:15",
+    "last": "21:15",
+    "fastest_min": 131,
+    "median_min": 131
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Otta",
+   "weekday": {
+    "n": 7,
+    "first": "10:01",
+    "last": "01:19",
+    "fastest_min": 77,
+    "median_min": 88
+   },
+   "sunday": {
+    "n": 3,
+    "first": "20:03",
+    "last": "01:19",
+    "fastest_min": 77,
+    "median_min": 81
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 6,
+    "first": "10:01",
+    "last": "01:19",
+    "fastest_min": 277,
+    "median_min": 286
+   },
+   "sunday": {
+    "n": 2,
+    "first": "20:03",
+    "last": "01:19",
+    "fastest_min": 277,
+    "median_min": 299
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Dombås",
+   "weekday": {
+    "n": 7,
+    "first": "08:13",
+    "last": "23:20",
+    "fastest_min": 222,
+    "median_min": 231
+   },
+   "sunday": {
+    "n": 3,
+    "first": "18:13",
+    "last": "23:20",
+    "fastest_min": 222,
+    "median_min": 229
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Drammen",
+   "weekday": {
+    "n": 154,
+    "first": "05:26",
+    "last": "01:04",
+    "fastest_min": 45,
+    "median_min": 46
+   },
+   "saturday": {
+    "n": 149,
+    "first": "05:42",
+    "last": "01:04",
+    "fastest_min": 45,
+    "median_min": 46
+   },
+   "sunday": {
+    "n": 147,
+    "first": "05:42",
+    "last": "01:04",
+    "fastest_min": 45,
+    "median_min": 46
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Hamar",
+   "weekday": {
+    "n": 27,
+    "first": "06:45",
+    "last": "00:35",
+    "fastest_min": 56,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 9,
+    "first": "18:13",
+    "last": "01:05",
+    "fastest_min": 56,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 21,
+    "first": "05:56",
+    "last": "23:56",
+    "fastest_min": 89,
+    "median_min": 91
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:56",
+    "last": "23:56",
+    "fastest_min": 89,
+    "median_min": 90
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:56",
+    "last": "23:56",
+    "fastest_min": 89,
+    "median_min": 90
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Larvik",
+   "weekday": {
+    "n": 19,
+    "first": "05:26",
+    "last": "23:26",
+    "fastest_min": 118,
+    "median_min": 125
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 25,
+    "first": "06:45",
+    "last": "00:35",
+    "fastest_min": 105,
+    "median_min": 116
+   },
+   "sunday": {
+    "n": 8,
+    "first": "18:13",
+    "last": "23:45",
+    "fastest_min": 105,
+    "median_min": 109
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 125,
+    "first": "04:50",
+    "last": "00:35",
+    "fastest_min": 12,
+    "median_min": 12
+   },
+   "saturday": {
+    "n": 112,
+    "first": "04:50",
+    "last": "01:06",
+    "fastest_min": 12,
+    "median_min": 12
+   },
+   "sunday": {
+    "n": 114,
+    "first": "04:50",
+    "last": "01:06",
+    "fastest_min": 12,
+    "median_min": 12
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 258,
+    "first": "05:10",
+    "last": "01:04",
+    "fastest_min": 9,
+    "median_min": 10
+   },
+   "saturday": {
+    "n": 206,
+    "first": "05:40",
+    "last": "01:04",
+    "fastest_min": 10,
+    "median_min": 10
+   },
+   "sunday": {
+    "n": 202,
+    "first": "05:42",
+    "last": "01:04",
+    "fastest_min": 10,
+    "median_min": 10
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Otta",
+   "weekday": {
+    "n": 7,
+    "first": "08:13",
+    "last": "23:20",
+    "fastest_min": 191,
+    "median_min": 200
+   },
+   "sunday": {
+    "n": 3,
+    "first": "18:13",
+    "last": "23:20",
+    "fastest_min": 191,
+    "median_min": 197
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 19,
+    "first": "05:26",
+    "last": "23:26",
+    "fastest_min": 105,
+    "median_min": 110
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Skien",
+   "weekday": {
+    "n": 19,
+    "first": "05:26",
+    "last": "23:26",
+    "fastest_min": 139,
+    "median_min": 147
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 6,
+    "first": "08:13",
+    "last": "23:20",
+    "fastest_min": 387,
+    "median_min": 397
+   },
+   "sunday": {
+    "n": 2,
+    "first": "18:13",
+    "last": "23:20",
+    "fastest_min": 387,
+    "median_min": 413
+   }
+  },
+  {
+   "from": "Lillestrøm",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 19,
+    "first": "05:26",
+    "last": "23:26",
+    "fastest_min": 84,
+    "median_min": 84
+   }
+  },
+  {
+   "from": "Mo i Rana",
+   "to": "Bodø",
+   "weekday": {
+    "n": 3,
+    "first": "07:56",
+    "last": "18:06",
+    "fastest_min": 175,
+    "median_min": 175
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:56",
+    "last": "14:31",
+    "fastest_min": 175,
+    "median_min": 181
+   },
+   "sunday": {
+    "n": 2,
+    "first": "14:31",
+    "last": "18:06",
+    "fastest_min": 175,
+    "median_min": 181
+   }
+  },
+  {
+   "from": "Mo i Rana",
+   "to": "Fauske",
+   "weekday": {
+    "n": 3,
+    "first": "07:56",
+    "last": "18:06",
+    "fastest_min": 131,
+    "median_min": 134
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:56",
+    "last": "14:31",
+    "fastest_min": 131,
+    "median_min": 132
+   },
+   "sunday": {
+    "n": 2,
+    "first": "14:31",
+    "last": "18:06",
+    "fastest_min": 134,
+    "median_min": 135
+   }
+  },
+  {
+   "from": "Mo i Rana",
+   "to": "Steinkjer",
+   "weekday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 260,
+    "median_min": 268
+   },
+   "saturday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 260,
+    "median_min": 268
+   },
+   "sunday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 260,
+    "median_min": 268
+   }
+  },
+  {
+   "from": "Mo i Rana",
+   "to": "Trondheim Airport",
+   "weekday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 333,
+    "median_min": 347
+   },
+   "saturday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 333,
+    "median_min": 347
+   },
+   "sunday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 333,
+    "median_min": 347
+   }
+  },
+  {
+   "from": "Mo i Rana",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 362,
+    "median_min": 375
+   },
+   "saturday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 362,
+    "median_min": 375
+   },
+   "sunday": {
+    "n": 2,
+    "first": "08:11",
+    "last": "15:45",
+    "fastest_min": 362,
+    "median_min": 375
+   }
+  },
+  {
+   "from": "Moss",
+   "to": "Fredrikstad",
+   "weekday": {
+    "n": 23,
+    "first": "06:43",
+    "last": "01:03",
+    "fastest_min": 23,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 18,
+    "first": "07:50",
+    "last": "01:03",
+    "fastest_min": 25,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 18,
+    "first": "08:46",
+    "last": "01:03",
+    "fastest_min": 23,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Moss",
+   "to": "Göteborg C",
+   "weekday": {
+    "n": 7,
+    "first": "06:43",
+    "last": "18:44",
+    "fastest_min": 173,
+    "median_min": 179
+   },
+   "saturday": {
+    "n": 6,
+    "first": "08:46",
+    "last": "18:44",
+    "fastest_min": 173,
+    "median_min": 179
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:46",
+    "last": "18:44",
+    "fastest_min": 173,
+    "median_min": 179
+   }
+  },
+  {
+   "from": "Moss",
+   "to": "Halden",
+   "weekday": {
+    "n": 22,
+    "first": "06:43",
+    "last": "01:03",
+    "fastest_min": 57,
+    "median_min": 61
+   },
+   "saturday": {
+    "n": 18,
+    "first": "07:50",
+    "last": "01:03",
+    "fastest_min": 58,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 17,
+    "first": "08:46",
+    "last": "01:03",
+    "fastest_min": 58,
+    "median_min": 61
+   }
+  },
+  {
+   "from": "Moss",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 63,
+    "first": "04:54",
+    "last": "23:24",
+    "fastest_min": 32,
+    "median_min": 40
+   },
+   "saturday": {
+    "n": 56,
+    "first": "05:24",
+    "last": "23:24",
+    "fastest_min": 32,
+    "median_min": 40
+   },
+   "sunday": {
+    "n": 53,
+    "first": "06:23",
+    "last": "23:24",
+    "fastest_min": 32,
+    "median_min": 40
+   }
+  },
+  {
+   "from": "Myrdal",
+   "to": "Bergen",
+   "weekday": {
+    "n": 8,
+    "first": "11:21",
+    "last": "21:19",
+    "fastest_min": 111,
+    "median_min": 127
+   },
+   "saturday": {
+    "n": 8,
+    "first": "11:21",
+    "last": "21:19",
+    "fastest_min": 111,
+    "median_min": 127
+   },
+   "sunday": {
+    "n": 8,
+    "first": "11:53",
+    "last": "21:19",
+    "fastest_min": 114,
+    "median_min": 136
+   }
+  },
+  {
+   "from": "Myrdal",
+   "to": "Drammen",
+   "weekday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 251,
+    "median_min": 271
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:02",
+    "last": "17:40",
+    "fastest_min": 251,
+    "median_min": 265
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 251,
+    "median_min": 271
+   }
+  },
+  {
+   "from": "Myrdal",
+   "to": "Finse",
+   "weekday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 24,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:02",
+    "last": "17:40",
+    "fastest_min": 24,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 24,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Myrdal",
+   "to": "Flåm",
+   "weekday": {
+    "n": 4,
+    "first": "10:15",
+    "last": "18:05",
+    "fastest_min": 46,
+    "median_min": 50
+   },
+   "saturday": {
+    "n": 4,
+    "first": "10:15",
+    "last": "18:05",
+    "fastest_min": 46,
+    "median_min": 50
+   },
+   "sunday": {
+    "n": 4,
+    "first": "10:15",
+    "last": "18:05",
+    "fastest_min": 46,
+    "median_min": 50
+   }
+  },
+  {
+   "from": "Myrdal",
+   "to": "Geilo",
+   "weekday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 65,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:02",
+    "last": "17:40",
+    "fastest_min": 65,
+    "median_min": 65
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 65,
+    "median_min": 68
+   }
+  },
+  {
+   "from": "Myrdal",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 287,
+    "median_min": 307
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:02",
+    "last": "17:40",
+    "fastest_min": 287,
+    "median_min": 303
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:02",
+    "last": "01:20",
+    "fastest_min": 287,
+    "median_min": 307
+   }
+  },
+  {
+   "from": "Myrdal",
+   "to": "Voss",
+   "weekday": {
+    "n": 8,
+    "first": "11:21",
+    "last": "21:19",
+    "fastest_min": 42,
+    "median_min": 48
+   },
+   "saturday": {
+    "n": 8,
+    "first": "11:21",
+    "last": "21:19",
+    "fastest_min": 42,
+    "median_min": 48
+   },
+   "sunday": {
+    "n": 8,
+    "first": "11:53",
+    "last": "21:19",
+    "fastest_min": 42,
+    "median_min": 48
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Dombås",
+   "weekday": {
+    "n": 7,
+    "first": "08:29",
+    "last": "23:38",
+    "fastest_min": 207,
+    "median_min": 216
+   },
+   "sunday": {
+    "n": 3,
+    "first": "18:28",
+    "last": "23:38",
+    "fastest_min": 207,
+    "median_min": 215
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Drammen",
+   "weekday": {
+    "n": 115,
+    "first": "05:13",
+    "last": "00:50",
+    "fastest_min": 58,
+    "median_min": 58
+   },
+   "saturday": {
+    "n": 112,
+    "first": "05:30",
+    "last": "00:50",
+    "fastest_min": 58,
+    "median_min": 58
+   },
+   "sunday": {
+    "n": 111,
+    "first": "05:30",
+    "last": "00:50",
+    "fastest_min": 58,
+    "median_min": 58
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Hamar",
+   "weekday": {
+    "n": 27,
+    "first": "06:59",
+    "last": "00:49",
+    "fastest_min": 41,
+    "median_min": 45
+   },
+   "sunday": {
+    "n": 9,
+    "first": "18:28",
+    "last": "01:19",
+    "fastest_min": 41,
+    "median_min": 45
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 19,
+    "first": "05:43",
+    "last": "23:43",
+    "fastest_min": 102,
+    "median_min": 103
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:43",
+    "last": "23:43",
+    "fastest_min": 102,
+    "median_min": 103
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:43",
+    "last": "23:43",
+    "fastest_min": 102,
+    "median_min": 103
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Larvik",
+   "weekday": {
+    "n": 19,
+    "first": "05:13",
+    "last": "23:13",
+    "fastest_min": 131,
+    "median_min": 138
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 25,
+    "first": "06:59",
+    "last": "00:49",
+    "fastest_min": 90,
+    "median_min": 99
+   },
+   "sunday": {
+    "n": 8,
+    "first": "18:28",
+    "last": "23:59",
+    "fastest_min": 91,
+    "median_min": 94
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 122,
+    "first": "05:13",
+    "last": "00:50",
+    "fastest_min": 12,
+    "median_min": 12
+   },
+   "saturday": {
+    "n": 112,
+    "first": "05:30",
+    "last": "00:50",
+    "fastest_min": 12,
+    "median_min": 12
+   },
+   "sunday": {
+    "n": 111,
+    "first": "05:30",
+    "last": "00:50",
+    "fastest_min": 12,
+    "median_min": 12
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 172,
+    "first": "05:13",
+    "last": "00:50",
+    "fastest_min": 19,
+    "median_min": 22
+   },
+   "saturday": {
+    "n": 112,
+    "first": "05:30",
+    "last": "00:50",
+    "fastest_min": 22,
+    "median_min": 22
+   },
+   "sunday": {
+    "n": 147,
+    "first": "05:30",
+    "last": "00:50",
+    "fastest_min": 19,
+    "median_min": 22
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Otta",
+   "weekday": {
+    "n": 7,
+    "first": "08:29",
+    "last": "23:38",
+    "fastest_min": 176,
+    "median_min": 185
+   },
+   "sunday": {
+    "n": 3,
+    "first": "18:28",
+    "last": "23:38",
+    "fastest_min": 176,
+    "median_min": 183
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 19,
+    "first": "05:13",
+    "last": "23:13",
+    "fastest_min": 118,
+    "median_min": 123
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Skien",
+   "weekday": {
+    "n": 19,
+    "first": "05:13",
+    "last": "23:13",
+    "fastest_min": 152,
+    "median_min": 160
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 6,
+    "first": "08:29",
+    "last": "23:38",
+    "fastest_min": 371,
+    "median_min": 382
+   },
+   "sunday": {
+    "n": 2,
+    "first": "18:28",
+    "last": "23:38",
+    "fastest_min": 372,
+    "median_min": 397
+   }
+  },
+  {
+   "from": "Oslo Airport",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 19,
+    "first": "05:13",
+    "last": "23:13",
+    "fastest_min": 97,
+    "median_min": 97
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Bergen",
+   "weekday": {
+    "n": 5,
+    "first": "06:25",
+    "last": "23:03",
+    "fastest_min": 395,
+    "median_min": 415
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:25",
+    "last": "16:23",
+    "fastest_min": 395,
+    "median_min": 411
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:25",
+    "last": "23:03",
+    "fastest_min": 395,
+    "median_min": 420
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Dombås",
+   "weekday": {
+    "n": 7,
+    "first": "08:02",
+    "last": "22:50",
+    "fastest_min": 233,
+    "median_min": 241
+   },
+   "sunday": {
+    "n": 3,
+    "first": "18:02",
+    "last": "22:50",
+    "fastest_min": 233,
+    "median_min": 240
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Drammen",
+   "weekday": {
+    "n": 170,
+    "first": "04:19",
+    "last": "01:20",
+    "fastest_min": 32,
+    "median_min": 35
+   },
+   "saturday": {
+    "n": 158,
+    "first": "05:52",
+    "last": "01:20",
+    "fastest_min": 32,
+    "median_min": 35
+   },
+   "sunday": {
+    "n": 158,
+    "first": "05:52",
+    "last": "01:20",
+    "fastest_min": 32,
+    "median_min": 35
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Egersund",
+   "weekday": {
+    "n": 6,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 398,
+    "median_min": 406
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:25",
+    "last": "15:23",
+    "fastest_min": 398,
+    "median_min": 403
+   },
+   "sunday": {
+    "n": 5,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 398,
+    "median_min": 405
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Finse",
+   "weekday": {
+    "n": 5,
+    "first": "06:25",
+    "last": "23:03",
+    "fastest_min": 249,
+    "median_min": 264
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:25",
+    "last": "16:23",
+    "fastest_min": 249,
+    "median_min": 262
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:25",
+    "last": "23:03",
+    "fastest_min": 249,
+    "median_min": 266
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Fredrikstad",
+   "weekday": {
+    "n": 24,
+    "first": "06:11",
+    "last": "00:22",
+    "fastest_min": 56,
+    "median_min": 59
+   },
+   "saturday": {
+    "n": 19,
+    "first": "07:14",
+    "last": "00:22",
+    "fastest_min": 56,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 19,
+    "first": "08:14",
+    "last": "00:22",
+    "fastest_min": 56,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Geilo",
+   "weekday": {
+    "n": 5,
+    "first": "06:25",
+    "last": "23:03",
+    "fastest_min": 208,
+    "median_min": 221
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:25",
+    "last": "16:23",
+    "fastest_min": 208,
+    "median_min": 216
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:25",
+    "last": "23:03",
+    "fastest_min": 208,
+    "median_min": 222
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Gjøvik",
+   "weekday": {
+    "n": 18,
+    "first": "06:04",
+    "last": "00:04",
+    "fastest_min": 123,
+    "median_min": 123
+   },
+   "saturday": {
+    "n": 17,
+    "first": "07:04",
+    "last": "00:04",
+    "fastest_min": 123,
+    "median_min": 123
+   },
+   "sunday": {
+    "n": 17,
+    "first": "07:04",
+    "last": "00:04",
+    "fastest_min": 123,
+    "median_min": 123
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Göteborg C",
+   "weekday": {
+    "n": 7,
+    "first": "06:11",
+    "last": "18:10",
+    "fastest_min": 206,
+    "median_min": 211
+   },
+   "saturday": {
+    "n": 6,
+    "first": "08:14",
+    "last": "18:10",
+    "fastest_min": 206,
+    "median_min": 211
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:14",
+    "last": "18:10",
+    "fastest_min": 206,
+    "median_min": 211
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Halden",
+   "weekday": {
+    "n": 22,
+    "first": "06:11",
+    "last": "00:22",
+    "fastest_min": 91,
+    "median_min": 94
+   },
+   "saturday": {
+    "n": 18,
+    "first": "07:14",
+    "last": "00:22",
+    "fastest_min": 91,
+    "median_min": 94
+   },
+   "sunday": {
+    "n": 17,
+    "first": "08:14",
+    "last": "00:22",
+    "fastest_min": 91,
+    "median_min": 94
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Hamar",
+   "weekday": {
+    "n": 27,
+    "first": "06:34",
+    "last": "00:24",
+    "fastest_min": 66,
+    "median_min": 70
+   },
+   "sunday": {
+    "n": 9,
+    "first": "18:02",
+    "last": "00:54",
+    "fastest_min": 67,
+    "median_min": 70
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 29,
+    "first": "04:19",
+    "last": "00:09",
+    "fastest_min": 69,
+    "median_min": 76
+   },
+   "saturday": {
+    "n": 23,
+    "first": "07:09",
+    "last": "00:09",
+    "fastest_min": 69,
+    "median_min": 76
+   },
+   "sunday": {
+    "n": 25,
+    "first": "07:09",
+    "last": "00:09",
+    "fastest_min": 69,
+    "median_min": 76
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Kristiansand",
+   "weekday": {
+    "n": 7,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 266,
+    "median_min": 268
+   },
+   "saturday": {
+    "n": 5,
+    "first": "07:25",
+    "last": "17:25",
+    "fastest_min": 266,
+    "median_min": 268
+   },
+   "sunday": {
+    "n": 7,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 266,
+    "median_min": 268
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Larvik",
+   "weekday": {
+    "n": 24,
+    "first": "05:39",
+    "last": "23:39",
+    "fastest_min": 105,
+    "median_min": 112
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 25,
+    "first": "06:34",
+    "last": "00:24",
+    "fastest_min": 116,
+    "median_min": 127
+   },
+   "sunday": {
+    "n": 8,
+    "first": "18:02",
+    "last": "23:34",
+    "fastest_min": 116,
+    "median_min": 120
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 261,
+    "first": "04:40",
+    "last": "01:11",
+    "fastest_min": 9,
+    "median_min": 10
+   },
+   "saturday": {
+    "n": 206,
+    "first": "04:40",
+    "last": "01:11",
+    "fastest_min": 10,
+    "median_min": 10
+   },
+   "sunday": {
+    "n": 205,
+    "first": "04:40",
+    "last": "01:11",
+    "fastest_min": 10,
+    "median_min": 10
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Moss",
+   "weekday": {
+    "n": 62,
+    "first": "05:52",
+    "last": "00:52",
+    "fastest_min": 29,
+    "median_min": 40
+   },
+   "saturday": {
+    "n": 55,
+    "first": "06:22",
+    "last": "00:52",
+    "fastest_min": 29,
+    "median_min": 40
+   },
+   "sunday": {
+    "n": 52,
+    "first": "07:52",
+    "last": "00:52",
+    "fastest_min": 29,
+    "median_min": 40
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Myrdal",
+   "weekday": {
+    "n": 5,
+    "first": "06:25",
+    "last": "23:03",
+    "fastest_min": 279,
+    "median_min": 292
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:25",
+    "last": "16:23",
+    "fastest_min": 279,
+    "median_min": 291
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:25",
+    "last": "23:03",
+    "fastest_min": 279,
+    "median_min": 295
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 176,
+    "first": "04:40",
+    "last": "00:24",
+    "fastest_min": 19,
+    "median_min": 22
+   },
+   "saturday": {
+    "n": 112,
+    "first": "04:40",
+    "last": "00:49",
+    "fastest_min": 22,
+    "median_min": 22
+   },
+   "sunday": {
+    "n": 150,
+    "first": "04:40",
+    "last": "00:54",
+    "fastest_min": 19,
+    "median_min": 22
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Otta",
+   "weekday": {
+    "n": 7,
+    "first": "08:02",
+    "last": "22:50",
+    "fastest_min": 202,
+    "median_min": 210
+   },
+   "sunday": {
+    "n": 3,
+    "first": "18:02",
+    "last": "22:50",
+    "fastest_min": 202,
+    "median_min": 208
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 24,
+    "first": "05:39",
+    "last": "23:39",
+    "fastest_min": 91,
+    "median_min": 97
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Sandnes",
+   "weekday": {
+    "n": 6,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 456,
+    "median_min": 457
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:25",
+    "last": "15:23",
+    "fastest_min": 456,
+    "median_min": 456
+   },
+   "sunday": {
+    "n": 5,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 456,
+    "median_min": 457
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Skien",
+   "weekday": {
+    "n": 24,
+    "first": "05:39",
+    "last": "23:39",
+    "fastest_min": 126,
+    "median_min": 134
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Stavanger",
+   "weekday": {
+    "n": 6,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 470,
+    "median_min": 473
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:25",
+    "last": "15:23",
+    "fastest_min": 470,
+    "median_min": 472
+   },
+   "sunday": {
+    "n": 5,
+    "first": "07:25",
+    "last": "22:25",
+    "fastest_min": 470,
+    "median_min": 473
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Stockholm C",
+   "weekday": {
+    "n": 5,
+    "first": "05:47",
+    "last": "16:52",
+    "fastest_min": 330,
+    "median_min": 332
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:16",
+    "last": "16:52",
+    "fastest_min": 330,
+    "median_min": 348
+   },
+   "sunday": {
+    "n": 6,
+    "first": "07:16",
+    "last": "16:52",
+    "fastest_min": 330,
+    "median_min": 356
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 6,
+    "first": "08:02",
+    "last": "22:50",
+    "fastest_min": 398,
+    "median_min": 408
+   },
+   "sunday": {
+    "n": 2,
+    "first": "18:02",
+    "last": "22:50",
+    "fastest_min": 398,
+    "median_min": 434
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 24,
+    "first": "05:39",
+    "last": "23:39",
+    "fastest_min": 67,
+    "median_min": 71
+   }
+  },
+  {
+   "from": "Oslo S",
+   "to": "Voss",
+   "weekday": {
+    "n": 5,
+    "first": "06:25",
+    "last": "23:03",
+    "fastest_min": 323,
+    "median_min": 338
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:25",
+    "last": "16:23",
+    "fastest_min": 323,
+    "median_min": 338
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:25",
+    "last": "23:03",
+    "fastest_min": 323,
+    "median_min": 343
+   }
+  },
+  {
+   "from": "Otta",
+   "to": "Dombås",
+   "weekday": {
+    "n": 7,
+    "first": "11:29",
+    "last": "02:57",
+    "fastest_min": 29,
+    "median_min": 29
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:26",
+    "last": "02:57",
+    "fastest_min": 29,
+    "median_min": 31
+   }
+  },
+  {
+   "from": "Otta",
+   "to": "Hamar",
+   "weekday": {
+    "n": 7,
+    "first": "05:54",
+    "last": "03:11",
+    "fastest_min": 127,
+    "median_min": 133
+   },
+   "saturday": {
+    "n": 1,
+    "first": "05:54",
+    "last": "05:54",
+    "fastest_min": 135,
+    "median_min": 135
+   },
+   "sunday": {
+    "n": 1,
+    "first": "03:11",
+    "last": "03:11",
+    "fastest_min": 141,
+    "median_min": 141
+   }
+  },
+  {
+   "from": "Otta",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 7,
+    "first": "05:54",
+    "last": "03:11",
+    "fastest_min": 78,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 1,
+    "first": "05:54",
+    "last": "05:54",
+    "fastest_min": 78,
+    "median_min": 78
+   },
+   "sunday": {
+    "n": 1,
+    "first": "03:11",
+    "last": "03:11",
+    "fastest_min": 86,
+    "median_min": 86
+   }
+  },
+  {
+   "from": "Otta",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 7,
+    "first": "05:54",
+    "last": "03:11",
+    "fastest_min": 186,
+    "median_min": 197
+   },
+   "sunday": {
+    "n": 1,
+    "first": "03:11",
+    "last": "03:11",
+    "fastest_min": 204,
+    "median_min": 204
+   }
+  },
+  {
+   "from": "Otta",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 7,
+    "first": "05:54",
+    "last": "03:11",
+    "fastest_min": 170,
+    "median_min": 179
+   },
+   "sunday": {
+    "n": 1,
+    "first": "03:11",
+    "last": "03:11",
+    "fastest_min": 186,
+    "median_min": 186
+   }
+  },
+  {
+   "from": "Otta",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 7,
+    "first": "05:54",
+    "last": "03:11",
+    "fastest_min": 200,
+    "median_min": 210
+   },
+   "sunday": {
+    "n": 1,
+    "first": "03:11",
+    "last": "03:11",
+    "fastest_min": 218,
+    "median_min": 218
+   }
+  },
+  {
+   "from": "Otta",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 6,
+    "first": "11:29",
+    "last": "02:57",
+    "fastest_min": 188,
+    "median_min": 196
+   },
+   "sunday": {
+    "n": 2,
+    "first": "21:26",
+    "last": "02:57",
+    "fastest_min": 194,
+    "median_min": 208
+   }
+  },
+  {
+   "from": "Røros",
+   "to": "Hamar",
+   "weekday": {
+    "n": 6,
+    "first": "04:18",
+    "last": "16:23",
+    "fastest_min": 205,
+    "median_min": 209
+   },
+   "saturday": {
+    "n": 3,
+    "first": "06:18",
+    "last": "16:23",
+    "fastest_min": 207,
+    "median_min": 210
+   },
+   "sunday": {
+    "n": 3,
+    "first": "12:21",
+    "last": "16:23",
+    "fastest_min": 209,
+    "median_min": 210
+   }
+  },
+  {
+   "from": "Røros",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 3,
+    "first": "05:00",
+    "last": "19:45",
+    "fastest_min": 161,
+    "median_min": 161
+   },
+   "saturday": {
+    "n": 3,
+    "first": "07:00",
+    "last": "19:45",
+    "fastest_min": 148,
+    "median_min": 154
+   },
+   "sunday": {
+    "n": 2,
+    "first": "16:10",
+    "last": "19:45",
+    "fastest_min": 150,
+    "median_min": 155
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Drammen",
+   "weekday": {
+    "n": 23,
+    "first": "04:46",
+    "last": "23:47",
+    "fastest_min": 58,
+    "median_min": 58
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Larvik",
+   "weekday": {
+    "n": 25,
+    "first": "07:03",
+    "last": "01:12",
+    "fastest_min": 12,
+    "median_min": 13
+   },
+   "saturday": {
+    "n": 19,
+    "first": "07:45",
+    "last": "01:42",
+    "fastest_min": 12,
+    "median_min": 13
+   },
+   "sunday": {
+    "n": 17,
+    "first": "09:48",
+    "last": "01:42",
+    "fastest_min": 12,
+    "median_min": 13
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 20,
+    "first": "04:46",
+    "last": "22:47",
+    "fastest_min": 107,
+    "median_min": 107
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 20,
+    "first": "04:46",
+    "last": "22:47",
+    "fastest_min": 120,
+    "median_min": 120
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 24,
+    "first": "04:46",
+    "last": "22:47",
+    "fastest_min": 92,
+    "median_min": 94
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Skien",
+   "weekday": {
+    "n": 25,
+    "first": "07:03",
+    "last": "01:12",
+    "fastest_min": 33,
+    "median_min": 35
+   },
+   "saturday": {
+    "n": 19,
+    "first": "07:45",
+    "last": "01:42",
+    "fastest_min": 33,
+    "median_min": 35
+   },
+   "sunday": {
+    "n": 17,
+    "first": "09:48",
+    "last": "01:42",
+    "fastest_min": 33,
+    "median_min": 35
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 26,
+    "first": "04:46",
+    "last": "23:47",
+    "fastest_min": 19,
+    "median_min": 20
+   }
+  },
+  {
+   "from": "Sandnes",
+   "to": "Drammen",
+   "weekday": {
+    "n": 6,
+    "first": "06:46",
+    "last": "22:31",
+    "fastest_min": 409,
+    "median_min": 432
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:46",
+    "last": "12:48",
+    "fastest_min": 409,
+    "median_min": 423
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:01",
+    "last": "22:31",
+    "fastest_min": 409,
+    "median_min": 447
+   }
+  },
+  {
+   "from": "Sandnes",
+   "to": "Egersund",
+   "weekday": {
+    "n": 33,
+    "first": "04:34",
+    "last": "00:10",
+    "fastest_min": 41,
+    "median_min": 54
+   },
+   "saturday": {
+    "n": 26,
+    "first": "06:04",
+    "last": "02:10",
+    "fastest_min": 41,
+    "median_min": 55
+   },
+   "sunday": {
+    "n": 22,
+    "first": "09:01",
+    "last": "00:10",
+    "fastest_min": 41,
+    "median_min": 54
+   }
+  },
+  {
+   "from": "Sandnes",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 6,
+    "first": "06:46",
+    "last": "22:31",
+    "fastest_min": 373,
+    "median_min": 397
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:46",
+    "last": "12:48",
+    "fastest_min": 373,
+    "median_min": 388
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:01",
+    "last": "22:31",
+    "fastest_min": 373,
+    "median_min": 411
+   }
+  },
+  {
+   "from": "Sandnes",
+   "to": "Kristiansand",
+   "weekday": {
+    "n": 8,
+    "first": "04:34",
+    "last": "22:31",
+    "fastest_min": 162,
+    "median_min": 178
+   },
+   "saturday": {
+    "n": 5,
+    "first": "06:46",
+    "last": "16:18",
+    "fastest_min": 162,
+    "median_min": 177
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:01",
+    "last": "22:31",
+    "fastest_min": 162,
+    "median_min": 182
+   }
+  },
+  {
+   "from": "Sandnes",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 6,
+    "first": "06:46",
+    "last": "22:31",
+    "fastest_min": 444,
+    "median_min": 466
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:46",
+    "last": "12:48",
+    "fastest_min": 444,
+    "median_min": 458
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:01",
+    "last": "22:31",
+    "fastest_min": 444,
+    "median_min": 480
+   }
+  },
+  {
+   "from": "Sandnes",
+   "to": "Stavanger",
+   "weekday": {
+    "n": 77,
+    "first": "05:07",
+    "last": "00:14",
+    "fastest_min": 13,
+    "median_min": 16
+   },
+   "saturday": {
+    "n": 37,
+    "first": "07:14",
+    "last": "02:14",
+    "fastest_min": 13,
+    "median_min": 16
+   },
+   "sunday": {
+    "n": 32,
+    "first": "10:14",
+    "last": "00:14",
+    "fastest_min": 13,
+    "median_min": 16
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Drammen",
+   "weekday": {
+    "n": 23,
+    "first": "04:10",
+    "last": "23:09",
+    "fastest_min": 94,
+    "median_min": 96
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Larvik",
+   "weekday": {
+    "n": 25,
+    "first": "04:10",
+    "last": "23:09",
+    "fastest_min": 20,
+    "median_min": 20
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:11",
+    "last": "22:39",
+    "fastest_min": 20,
+    "median_min": 20
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:07",
+    "last": "23:39",
+    "fastest_min": 20,
+    "median_min": 20
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 20,
+    "first": "04:10",
+    "last": "22:09",
+    "fastest_min": 143,
+    "median_min": 145
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 20,
+    "first": "04:10",
+    "last": "22:09",
+    "fastest_min": 156,
+    "median_min": 158
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 24,
+    "first": "04:10",
+    "last": "22:09",
+    "fastest_min": 129,
+    "median_min": 132
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 25,
+    "first": "04:10",
+    "last": "23:09",
+    "fastest_min": 34,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:11",
+    "last": "22:39",
+    "fastest_min": 34,
+    "median_min": 36
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:07",
+    "last": "23:39",
+    "fastest_min": 35,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 25,
+    "first": "04:10",
+    "last": "23:09",
+    "fastest_min": 55,
+    "median_min": 58
+   }
+  },
+  {
+   "from": "Stavanger",
+   "to": "Drammen",
+   "weekday": {
+    "n": 6,
+    "first": "06:32",
+    "last": "22:15",
+    "fastest_min": 423,
+    "median_min": 446
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:32",
+    "last": "12:34",
+    "fastest_min": 423,
+    "median_min": 437
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:47",
+    "last": "22:15",
+    "fastest_min": 423,
+    "median_min": 461
+   }
+  },
+  {
+   "from": "Stavanger",
+   "to": "Egersund",
+   "weekday": {
+    "n": 33,
+    "first": "04:20",
+    "last": "23:53",
+    "fastest_min": 55,
+    "median_min": 71
+   },
+   "saturday": {
+    "n": 26,
+    "first": "05:47",
+    "last": "01:53",
+    "fastest_min": 55,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 22,
+    "first": "08:47",
+    "last": "23:53",
+    "fastest_min": 55,
+    "median_min": 71
+   }
+  },
+  {
+   "from": "Stavanger",
+   "to": "Kongsberg",
+   "weekday": {
+    "n": 6,
+    "first": "06:32",
+    "last": "22:15",
+    "fastest_min": 387,
+    "median_min": 411
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:32",
+    "last": "12:34",
+    "fastest_min": 387,
+    "median_min": 402
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:47",
+    "last": "22:15",
+    "fastest_min": 387,
+    "median_min": 425
+   }
+  },
+  {
+   "from": "Stavanger",
+   "to": "Kristiansand",
+   "weekday": {
+    "n": 8,
+    "first": "04:20",
+    "last": "22:15",
+    "fastest_min": 176,
+    "median_min": 193
+   },
+   "saturday": {
+    "n": 5,
+    "first": "06:32",
+    "last": "16:04",
+    "fastest_min": 176,
+    "median_min": 191
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:47",
+    "last": "22:15",
+    "fastest_min": 176,
+    "median_min": 197
+   }
+  },
+  {
+   "from": "Stavanger",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 6,
+    "first": "06:32",
+    "last": "22:15",
+    "fastest_min": 458,
+    "median_min": 481
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:32",
+    "last": "12:34",
+    "fastest_min": 458,
+    "median_min": 472
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:47",
+    "last": "22:15",
+    "fastest_min": 458,
+    "median_min": 495
+   }
+  },
+  {
+   "from": "Stavanger",
+   "to": "Sandnes",
+   "weekday": {
+    "n": 77,
+    "first": "04:20",
+    "last": "23:53",
+    "fastest_min": 13,
+    "median_min": 15
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:47",
+    "last": "01:53",
+    "fastest_min": 13,
+    "median_min": 16
+   },
+   "sunday": {
+    "n": 34,
+    "first": "08:47",
+    "last": "23:53",
+    "fastest_min": 13,
+    "median_min": 16
+   }
+  },
+  {
+   "from": "Steinkjer",
+   "to": "Mo i Rana",
+   "weekday": {
+    "n": 2,
+    "first": "09:51",
+    "last": "18:07",
+    "fastest_min": 277,
+    "median_min": 279
+   },
+   "saturday": {
+    "n": 1,
+    "first": "09:51",
+    "last": "09:51",
+    "fastest_min": 277,
+    "median_min": 277
+   },
+   "sunday": {
+    "n": 2,
+    "first": "09:51",
+    "last": "18:07",
+    "fastest_min": 277,
+    "median_min": 279
+   }
+  },
+  {
+   "from": "Steinkjer",
+   "to": "Trondheim Airport",
+   "weekday": {
+    "n": 22,
+    "first": "04:32",
+    "last": "21:34",
+    "fastest_min": 73,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 14,
+    "first": "07:34",
+    "last": "21:34",
+    "fastest_min": 73,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 15,
+    "first": "07:34",
+    "last": "21:34",
+    "fastest_min": 73,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Steinkjer",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 22,
+    "first": "04:32",
+    "last": "21:34",
+    "fastest_min": 102,
+    "median_min": 124
+   },
+   "saturday": {
+    "n": 14,
+    "first": "07:34",
+    "last": "21:34",
+    "fastest_min": 102,
+    "median_min": 124
+   },
+   "sunday": {
+    "n": 15,
+    "first": "07:34",
+    "last": "21:34",
+    "fastest_min": 102,
+    "median_min": 124
+   }
+  },
+  {
+   "from": "Stockholm C",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 5,
+    "first": "05:38",
+    "last": "18:15",
+    "fastest_min": 337,
+    "median_min": 356
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:23",
+    "last": "15:23",
+    "fastest_min": 351,
+    "median_min": 358
+   },
+   "sunday": {
+    "n": 5,
+    "first": "07:23",
+    "last": "18:15",
+    "fastest_min": 351,
+    "median_min": 359
+   }
+  },
+  {
+   "from": "Trondheim Airport",
+   "to": "Mo i Rana",
+   "weekday": {
+    "n": 2,
+    "first": "08:24",
+    "last": "16:36",
+    "fastest_min": 364,
+    "median_min": 368
+   },
+   "saturday": {
+    "n": 1,
+    "first": "08:24",
+    "last": "08:24",
+    "fastest_min": 364,
+    "median_min": 364
+   },
+   "sunday": {
+    "n": 2,
+    "first": "08:24",
+    "last": "16:36",
+    "fastest_min": 364,
+    "median_min": 368
+   }
+  },
+  {
+   "from": "Trondheim Airport",
+   "to": "Steinkjer",
+   "weekday": {
+    "n": 23,
+    "first": "05:45",
+    "last": "23:53",
+    "fastest_min": 84,
+    "median_min": 92
+   },
+   "saturday": {
+    "n": 13,
+    "first": "07:53",
+    "last": "21:53",
+    "fastest_min": 85,
+    "median_min": 92
+   },
+   "sunday": {
+    "n": 15,
+    "first": "08:24",
+    "last": "23:53",
+    "fastest_min": 84,
+    "median_min": 92
+   }
+  },
+  {
+   "from": "Trondheim Airport",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 24,
+    "first": "05:54",
+    "last": "23:03",
+    "fastest_min": 25,
+    "median_min": 38
+   },
+   "saturday": {
+    "n": 14,
+    "first": "09:03",
+    "last": "23:03",
+    "fastest_min": 25,
+    "median_min": 38
+   },
+   "sunday": {
+    "n": 15,
+    "first": "09:03",
+    "last": "23:03",
+    "fastest_min": 25,
+    "median_min": 38
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Dombås",
+   "weekday": {
+    "n": 6,
+    "first": "05:55",
+    "last": "23:17",
+    "fastest_min": 154,
+    "median_min": 163
+   },
+   "sunday": {
+    "n": 1,
+    "first": "23:17",
+    "last": "23:17",
+    "fastest_min": 177,
+    "median_min": 177
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Hamar",
+   "weekday": {
+    "n": 8,
+    "first": "05:37",
+    "last": "23:17",
+    "fastest_min": 319,
+    "median_min": 336
+   },
+   "saturday": {
+    "n": 1,
+    "first": "09:34",
+    "last": "09:34",
+    "fastest_min": 379,
+    "median_min": 379
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:34",
+    "last": "23:17",
+    "fastest_min": 375,
+    "median_min": 379
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 6,
+    "first": "05:55",
+    "last": "23:17",
+    "fastest_min": 271,
+    "median_min": 285
+   },
+   "sunday": {
+    "n": 1,
+    "first": "23:17",
+    "last": "23:17",
+    "fastest_min": 320,
+    "median_min": 320
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 6,
+    "first": "05:55",
+    "last": "23:17",
+    "fastest_min": 378,
+    "median_min": 395
+   },
+   "sunday": {
+    "n": 1,
+    "first": "23:17",
+    "last": "23:17",
+    "fastest_min": 438,
+    "median_min": 438
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Mo i Rana",
+   "weekday": {
+    "n": 2,
+    "first": "07:49",
+    "last": "16:00",
+    "fastest_min": 399,
+    "median_min": 403
+   },
+   "saturday": {
+    "n": 1,
+    "first": "07:49",
+    "last": "07:49",
+    "fastest_min": 399,
+    "median_min": 399
+   },
+   "sunday": {
+    "n": 2,
+    "first": "07:49",
+    "last": "16:00",
+    "fastest_min": 399,
+    "median_min": 403
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 6,
+    "first": "05:55",
+    "last": "23:17",
+    "fastest_min": 364,
+    "median_min": 379
+   },
+   "sunday": {
+    "n": 1,
+    "first": "23:17",
+    "last": "23:17",
+    "fastest_min": 420,
+    "median_min": 420
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 6,
+    "first": "05:55",
+    "last": "23:17",
+    "fastest_min": 391,
+    "median_min": 407
+   },
+   "sunday": {
+    "n": 1,
+    "first": "23:17",
+    "last": "23:17",
+    "fastest_min": 452,
+    "median_min": 452
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Otta",
+   "weekday": {
+    "n": 6,
+    "first": "05:55",
+    "last": "23:17",
+    "fastest_min": 185,
+    "median_min": 198
+   },
+   "sunday": {
+    "n": 1,
+    "first": "23:17",
+    "last": "23:17",
+    "fastest_min": 217,
+    "median_min": 217
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Røros",
+   "weekday": {
+    "n": 3,
+    "first": "05:37",
+    "last": "16:21",
+    "fastest_min": 154,
+    "median_min": 160
+   },
+   "saturday": {
+    "n": 1,
+    "first": "09:34",
+    "last": "09:34",
+    "fastest_min": 154,
+    "median_min": 154
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:34",
+    "last": "20:20",
+    "fastest_min": 154,
+    "median_min": 157
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Steinkjer",
+   "weekday": {
+    "n": 23,
+    "first": "05:09",
+    "last": "23:16",
+    "fastest_min": 120,
+    "median_min": 129
+   },
+   "saturday": {
+    "n": 13,
+    "first": "07:14",
+    "last": "21:17",
+    "fastest_min": 120,
+    "median_min": 129
+   },
+   "sunday": {
+    "n": 15,
+    "first": "07:49",
+    "last": "23:16",
+    "fastest_min": 120,
+    "median_min": 129
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Trondheim Airport",
+   "weekday": {
+    "n": 23,
+    "first": "05:09",
+    "last": "23:16",
+    "fastest_min": 34,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 13,
+    "first": "07:14",
+    "last": "21:17",
+    "fastest_min": 34,
+    "median_min": 36
+   },
+   "sunday": {
+    "n": 15,
+    "first": "07:49",
+    "last": "23:16",
+    "fastest_min": 34,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Drammen",
+   "weekday": {
+    "n": 23,
+    "first": "05:09",
+    "last": "00:08",
+    "fastest_min": 36,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Larvik",
+   "weekday": {
+    "n": 25,
+    "first": "06:25",
+    "last": "00:52",
+    "fastest_min": 32,
+    "median_min": 39
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Lillestrøm",
+   "weekday": {
+    "n": 20,
+    "first": "05:09",
+    "last": "23:09",
+    "fastest_min": 84,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Oslo Airport",
+   "weekday": {
+    "n": 20,
+    "first": "05:09",
+    "last": "23:09",
+    "fastest_min": 98,
+    "median_min": 98
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 24,
+    "first": "05:09",
+    "last": "23:09",
+    "fastest_min": 68,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 26,
+    "first": "05:06",
+    "last": "00:52",
+    "fastest_min": 17,
+    "median_min": 24
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Skien",
+   "weekday": {
+    "n": 25,
+    "first": "06:25",
+    "last": "00:52",
+    "fastest_min": 53,
+    "median_min": 61
+   }
+  },
+  {
+   "from": "Voss",
+   "to": "Bergen",
+   "weekday": {
+    "n": 22,
+    "first": "04:49",
+    "last": "23:03",
+    "fastest_min": 67,
+    "median_min": 80
+   },
+   "saturday": {
+    "n": 17,
+    "first": "04:49",
+    "last": "23:03",
+    "fastest_min": 67,
+    "median_min": 78
+   },
+   "sunday": {
+    "n": 15,
+    "first": "05:52",
+    "last": "23:03",
+    "fastest_min": 68,
+    "median_min": 80
+   }
+  },
+  {
+   "from": "Voss",
+   "to": "Drammen",
+   "weekday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 295,
+    "median_min": 321
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:20",
+    "last": "16:56",
+    "fastest_min": 295,
+    "median_min": 307
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 295,
+    "median_min": 321
+   }
+  },
+  {
+   "from": "Voss",
+   "to": "Finse",
+   "weekday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 68,
+    "median_min": 75
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:20",
+    "last": "16:56",
+    "fastest_min": 68,
+    "median_min": 69
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 68,
+    "median_min": 75
+   }
+  },
+  {
+   "from": "Voss",
+   "to": "Geilo",
+   "weekday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 107,
+    "median_min": 117
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:20",
+    "last": "16:56",
+    "fastest_min": 107,
+    "median_min": 109
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 107,
+    "median_min": 117
+   }
+  },
+  {
+   "from": "Voss",
+   "to": "Myrdal",
+   "weekday": {
+    "n": 9,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 40,
+    "median_min": 47
+   },
+   "saturday": {
+    "n": 7,
+    "first": "09:20",
+    "last": "17:52",
+    "fastest_min": 40,
+    "median_min": 49
+   },
+   "sunday": {
+    "n": 9,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 40,
+    "median_min": 47
+   }
+  },
+  {
+   "from": "Voss",
+   "to": "Oslo S",
+   "weekday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 331,
+    "median_min": 359
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:20",
+    "last": "16:56",
+    "fastest_min": 331,
+    "median_min": 345
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "00:28",
+    "fastest_min": 331,
+    "median_min": 359
+   }
+  },
+  {
+   "from": "Åndalsnes",
+   "to": "Dombås",
+   "weekday": {
+    "n": 4,
+    "first": "07:18",
+    "last": "16:29",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 2,
+    "first": "09:24",
+    "last": "16:29",
+    "fastest_min": 84,
+    "median_min": 84
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:24",
+    "last": "16:29",
+    "fastest_min": 84,
+    "median_min": 84
+   }
+  }
+ ]
+}

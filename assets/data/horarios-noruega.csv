@@ -1,0 +1,612 @@
+from,to,day,first_train,last_train,direct_trains,fastest_min,median_min,source,url
+Bergen,Drammen,weekday,08:08,23:01,5,373,399,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Drammen,saturday,08:08,15:38,3,373,379,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Drammen,sunday,08:08,23:01,5,373,399,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Finse,weekday,08:08,23:01,5,141,149,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Finse,saturday,08:08,15:38,3,141,146,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Finse,sunday,08:08,23:01,5,141,149,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Geilo,weekday,08:08,23:01,5,179,191,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Geilo,saturday,08:08,15:38,3,179,187,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Geilo,sunday,08:08,23:01,5,179,191,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Myrdal,weekday,08:08,23:01,9,112,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Myrdal,saturday,08:08,16:19,7,112,134,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Myrdal,sunday,08:08,23:01,9,112,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Oslo S,weekday,08:08,23:01,5,409,436,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Oslo S,saturday,08:08,15:38,3,409,417,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Oslo S,sunday,08:08,23:01,5,409,436,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Voss,weekday,05:45,00:37,23,69,79,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Voss,saturday,07:04,00:37,15,69,78,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bergen,Voss,sunday,07:04,00:37,17,69,77,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Fauske,weekday,07:36,23:15,9,41,42,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Fauske,saturday,12:27,00:55,3,42,42,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Fauske,sunday,12:27,23:15,3,42,43,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Mo i Rana,weekday,07:36,17:46,3,168,169,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Mo i Rana,saturday,12:27,17:46,2,169,182,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Mo i Rana,sunday,12:27,17:46,2,169,182,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Hamar,weekday,05:23,02:18,7,157,164,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Hamar,saturday,05:23,05:23,1,166,166,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Hamar,sunday,02:18,02:18,1,194,194,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Lillehammer,weekday,05:23,02:18,7,109,117,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Lillehammer,saturday,05:23,05:23,1,109,109,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Lillehammer,sunday,02:18,02:18,1,139,139,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Lillestrøm,weekday,05:23,02:18,7,216,228,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Lillestrøm,sunday,02:18,02:18,1,257,257,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Oslo Airport,weekday,05:23,02:18,7,200,210,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Oslo Airport,sunday,02:18,02:18,1,239,239,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Oslo S,weekday,05:23,02:18,7,230,241,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Oslo S,sunday,02:18,02:18,1,271,271,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Otta,weekday,05:23,02:18,7,28,29,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Otta,saturday,05:23,05:23,1,31,31,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Otta,sunday,02:18,02:18,1,36,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Trondheim S,weekday,12:02,03:36,6,157,161,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Trondheim S,sunday,21:58,03:36,2,162,173,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Åndalsnes,weekday,12:08,20:15,4,82,82,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Åndalsnes,saturday,12:08,18:24,2,82,82,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Åndalsnes,sunday,12:08,20:15,3,82,82,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Bergen,weekday,07:00,23:38,5,360,378,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Bergen,saturday,07:00,17:00,4,360,375,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Bergen,sunday,09:00,23:38,4,360,384,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Egersund,weekday,08:00,23:00,6,363,370,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Egersund,saturday,08:00,16:00,4,363,367,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Egersund,sunday,08:00,23:00,5,363,368,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Finse,weekday,07:00,23:38,5,214,227,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Finse,saturday,07:00,17:00,4,214,226,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Finse,sunday,09:00,23:38,4,214,230,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Geilo,weekday,07:00,23:38,5,173,186,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Geilo,saturday,07:00,17:00,4,173,181,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Geilo,sunday,09:00,23:38,4,173,186,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Hamar,weekday,05:57,23:47,19,106,107,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Hamar,sunday,17:57,00:17,7,106,107,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Kongsberg,weekday,04:54,00:43,29,34,42,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Kongsberg,saturday,07:43,00:43,23,34,42,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Kongsberg,sunday,07:43,00:43,25,34,42,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Kristiansand,weekday,08:00,23:00,7,231,233,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Kristiansand,saturday,08:00,18:00,5,231,233,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Kristiansand,sunday,08:00,23:00,7,231,233,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Larvik,weekday,06:14,00:14,22,70,77,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Lillehammer,weekday,05:57,23:47,19,153,164,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Lillehammer,sunday,17:57,22:57,6,153,156,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Lillestrøm,weekday,04:02,00:05,155,47,48,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Lillestrøm,saturday,04:02,00:12,148,47,48,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Lillestrøm,sunday,04:02,00:17,147,47,48,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Myrdal,weekday,07:00,23:38,5,244,255,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Myrdal,saturday,07:00,17:00,4,244,255,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Myrdal,sunday,09:00,23:38,4,244,259,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Oslo Airport,weekday,04:02,23:47,118,58,60,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Oslo Airport,saturday,04:02,00:12,112,60,60,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Oslo Airport,sunday,04:02,00:17,112,60,60,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Oslo S,weekday,04:02,00:05,169,31,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Oslo S,saturday,04:02,00:12,156,32,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Oslo S,sunday,04:02,00:17,157,31,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Sandefjord,weekday,04:28,00:14,23,57,62,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Sandnes,weekday,08:00,23:00,6,420,421,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Sandnes,saturday,08:00,16:00,4,420,421,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Sandnes,sunday,08:00,23:00,5,420,421,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Skien,weekday,06:14,00:14,22,91,99,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Stavanger,weekday,08:00,23:00,6,434,438,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Stavanger,saturday,08:00,16:00,4,434,436,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Stavanger,sunday,08:00,23:00,5,434,438,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Tønsberg,weekday,04:28,00:14,23,35,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Voss,weekday,07:00,23:38,5,288,303,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Voss,saturday,07:00,17:00,4,288,302,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Voss,sunday,09:00,23:38,4,288,307,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Drammen,weekday,07:41,23:18,6,367,381,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Drammen,saturday,07:41,13:40,4,367,369,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Drammen,sunday,09:43,23:18,6,367,394,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Kongsberg,weekday,07:41,23:18,6,331,346,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Kongsberg,saturday,07:41,13:40,4,331,334,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Kongsberg,sunday,09:43,23:18,6,331,358,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Kristiansand,weekday,05:31,23:18,8,120,128,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Kristiansand,saturday,07:41,17:17,5,120,125,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Kristiansand,sunday,09:43,23:18,6,120,134,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Oslo S,weekday,07:41,23:18,6,402,416,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Oslo S,saturday,07:41,13:40,4,402,404,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Oslo S,sunday,09:43,23:18,6,402,427,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Sandnes,weekday,04:39,23:19,32,43,54,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Sandnes,saturday,06:15,01:19,25,43,54,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Sandnes,sunday,09:16,23:19,20,43,54,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Stavanger,weekday,04:39,23:19,32,58,71,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Stavanger,saturday,06:15,01:19,25,58,71,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Egersund,Stavanger,sunday,09:16,23:19,20,58,71,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Bodø,weekday,05:55,21:15,10,39,41,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Bodø,saturday,10:09,02:25,3,40,42,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Bodø,sunday,16:53,20:22,2,39,42,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Mo i Rana,weekday,08:21,18:28,3,123,127,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Mo i Rana,saturday,13:16,18:28,2,127,136,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Mo i Rana,sunday,13:16,18:28,2,127,136,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Bergen,weekday,10:50,03:49,5,142,149,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Bergen,saturday,10:50,20:49,4,142,146,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Bergen,sunday,12:37,03:49,5,143,153,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Drammen,weekday,10:31,02:00,5,225,236,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Drammen,saturday,10:31,18:06,3,225,236,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Drammen,sunday,10:31,02:00,5,225,236,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Geilo,weekday,10:31,02:00,5,36,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Geilo,saturday,10:31,18:06,3,36,39,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Geilo,sunday,10:31,02:00,5,36,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Myrdal,weekday,10:50,03:49,5,25,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Myrdal,saturday,10:50,20:49,4,25,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Myrdal,sunday,12:37,03:49,5,25,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Oslo S,weekday,10:31,02:00,5,261,274,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Oslo S,saturday,10:31,18:06,3,261,274,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Oslo S,sunday,10:31,02:00,5,261,274,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Voss,weekday,10:50,03:49,5,71,73,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Voss,saturday,10:50,20:49,4,71,72,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Finse,Voss,sunday,12:37,03:49,5,71,72,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Flåm,Myrdal,weekday,09:00,16:50,4,40,43,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Flåm,Myrdal,saturday,09:00,16:50,4,40,43,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Flåm,Myrdal,sunday,09:00,16:50,4,40,43,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Göteborg C,weekday,07:09,19:14,7,146,151,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Göteborg C,saturday,09:14,19:14,6,146,151,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Göteborg C,sunday,09:14,19:14,6,146,151,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Halden,weekday,07:09,01:30,22,31,33,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Halden,saturday,08:17,01:30,18,31,32,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Halden,sunday,09:14,01:30,17,31,32,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Moss,weekday,04:40,22:46,23,22,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Moss,saturday,05:40,22:46,19,25,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Moss,sunday,06:37,22:46,18,22,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Oslo S,weekday,04:40,22:46,24,56,60,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Oslo S,saturday,05:40,22:46,20,59,60,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fredrikstad,Oslo S,sunday,06:37,22:46,19,56,60,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Bergen,weekday,09:59,03:07,5,184,193,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Bergen,saturday,09:59,20:11,4,184,190,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Bergen,sunday,11:56,03:07,5,184,196,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Drammen,weekday,11:12,02:42,5,183,194,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Drammen,saturday,11:12,18:48,3,183,195,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Drammen,sunday,11:12,02:42,5,183,194,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Finse,weekday,09:59,03:07,5,36,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Finse,saturday,09:59,20:11,4,36,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Finse,sunday,11:56,03:07,5,36,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Myrdal,weekday,09:59,03:07,5,64,72,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Myrdal,saturday,09:59,20:11,4,64,70,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Myrdal,sunday,11:56,03:07,5,64,72,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Oslo S,weekday,11:12,02:42,5,219,232,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Oslo S,saturday,11:12,18:48,3,219,233,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Oslo S,sunday,11:12,02:42,5,219,232,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Voss,weekday,09:59,03:07,5,110,118,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Voss,saturday,09:59,20:11,4,110,117,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Geilo,Voss,sunday,11:56,03:07,5,110,118,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Gjøvik,Oslo S,weekday,04:34,21:34,18,118,118,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Gjøvik,Oslo S,saturday,05:34,21:34,17,131,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Gjøvik,Oslo S,sunday,05:34,21:34,17,131,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Fredrikstad,weekday,06:14,20:10,8,147,151,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Fredrikstad,saturday,08:10,20:10,7,146,152,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Fredrikstad,sunday,10:14,20:10,6,147,151,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Halden,weekday,06:14,20:10,8,115,117,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Halden,saturday,08:10,20:10,7,114,119,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Halden,sunday,10:14,20:10,6,115,117,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Moss,weekday,06:14,20:10,8,174,180,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Moss,saturday,08:10,20:10,7,173,181,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Moss,sunday,10:14,20:10,6,174,180,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Oslo S,weekday,06:14,20:10,8,210,213,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Oslo S,saturday,08:10,20:10,7,209,214,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Göteborg C,Oslo S,sunday,10:14,20:10,6,210,213,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Fredrikstad,weekday,04:05,22:12,22,30,33,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Fredrikstad,saturday,05:05,22:12,19,30,33,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Fredrikstad,sunday,06:02,22:12,17,30,33,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Göteborg C,weekday,07:47,19:47,7,113,118,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Göteborg C,saturday,09:47,19:47,6,113,118,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Göteborg C,sunday,09:47,19:47,6,113,118,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Moss,weekday,04:05,22:12,22,57,61,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Moss,saturday,05:05,22:12,19,57,61,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Moss,sunday,06:02,22:12,17,57,61,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Oslo S,weekday,04:05,22:12,22,92,95,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Oslo S,saturday,05:05,22:12,19,92,95,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Halden,Oslo S,sunday,06:02,22:12,17,92,94,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Dombås,weekday,09:12,00:25,7,162,173,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Dombås,sunday,19:13,00:25,3,162,162,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Drammen,weekday,04:24,22:11,19,104,111,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Drammen,sunday,19:09,22:11,4,111,111,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Lillehammer,weekday,06:52,01:39,26,45,49,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Lillehammer,saturday,08:52,00:45,17,45,49,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Lillehammer,sunday,08:52,00:45,19,45,49,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Lillestrøm,weekday,04:24,22:11,26,51,64,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Lillestrøm,sunday,19:09,22:11,4,64,64,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Oslo Airport,weekday,04:24,22:11,26,37,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Oslo Airport,sunday,19:09,22:11,4,50,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Oslo S,weekday,04:24,22:11,26,64,75,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Oslo S,sunday,19:09,22:11,4,75,75,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Otta,weekday,09:12,00:25,7,130,142,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Otta,sunday,19:13,00:25,3,130,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Røros,weekday,08:11,20:11,6,206,208,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Røros,saturday,10:11,16:08,2,211,211,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Røros,sunday,12:11,20:11,4,206,208,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Trondheim S,weekday,09:12,00:25,8,327,343,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Trondheim S,saturday,16:08,16:08,1,378,378,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Trondheim S,sunday,12:11,00:25,4,327,376,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Drammen,weekday,03:34,23:17,29,33,41,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Drammen,saturday,05:34,22:34,23,33,41,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Drammen,sunday,05:34,23:17,24,33,41,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Egersund,weekday,08:36,23:43,6,327,334,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Egersund,saturday,08:36,16:36,4,327,331,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Egersund,sunday,08:36,23:43,5,327,332,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Kristiansand,weekday,08:36,23:43,7,195,197,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Kristiansand,saturday,08:36,18:48,5,195,197,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Kristiansand,sunday,08:36,23:43,7,195,197,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Lillestrøm,weekday,03:34,22:34,22,89,90,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Lillestrøm,saturday,05:34,22:34,18,89,90,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Lillestrøm,sunday,05:34,22:34,18,89,90,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Oslo Airport,weekday,03:34,22:34,20,102,103,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Oslo Airport,saturday,05:34,22:34,18,102,103,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Oslo Airport,sunday,05:34,22:34,18,102,103,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Oslo S,weekday,03:34,23:17,29,67,77,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Oslo S,saturday,05:34,22:34,23,67,77,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Oslo S,sunday,05:34,23:17,24,67,77,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Sandnes,weekday,08:36,23:43,6,384,385,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Sandnes,saturday,08:36,16:36,4,384,385,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Sandnes,sunday,08:36,23:43,5,384,385,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Stavanger,weekday,08:36,23:43,6,398,402,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Stavanger,saturday,08:36,16:36,4,398,400,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kongsberg,Stavanger,sunday,08:36,23:43,5,398,402,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Drammen,weekday,09:54,02:17,6,234,238,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Drammen,saturday,07:54,15:56,5,234,236,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Drammen,sunday,09:54,02:17,7,234,240,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Egersund,weekday,05:02,03:45,8,121,126,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Egersund,saturday,09:05,19:59,5,121,126,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Egersund,sunday,09:05,03:45,6,121,126,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Kongsberg,weekday,09:54,02:17,6,199,202,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Kongsberg,saturday,07:54,15:56,5,199,200,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Kongsberg,sunday,09:54,02:17,7,199,203,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Oslo S,weekday,09:54,02:17,6,269,272,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Oslo S,saturday,07:54,15:56,5,269,271,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Oslo S,sunday,09:54,02:17,7,269,273,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Sandnes,weekday,05:02,03:45,8,165,181,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Sandnes,saturday,09:05,19:59,5,165,181,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Sandnes,sunday,09:05,03:45,6,165,180,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Stavanger,weekday,05:02,03:45,8,180,196,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Stavanger,saturday,09:05,19:59,5,180,195,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Kristiansand,Stavanger,sunday,09:05,03:45,6,180,194,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Drammen,weekday,04:31,23:32,23,73,73,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Lillestrøm,weekday,04:31,22:32,20,122,122,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Oslo Airport,weekday,04:31,22:32,20,135,135,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Oslo S,weekday,04:31,22:32,24,106,109,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Sandefjord,weekday,04:31,23:32,25,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Sandefjord,saturday,05:32,23:02,18,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Sandefjord,sunday,06:29,00:02,18,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Skien,weekday,07:16,01:25,25,19,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Skien,saturday,08:03,01:55,19,19,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Skien,sunday,10:03,01:55,17,19,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Tønsberg,weekday,04:31,23:32,25,34,35,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Dombås,weekday,10:01,01:19,7,109,119,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Dombås,sunday,20:03,01:19,3,109,112,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Drammen,weekday,03:36,21:15,19,151,167,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Drammen,sunday,18:15,21:15,4,167,167,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Hamar,weekday,03:36,21:15,24,44,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Hamar,saturday,05:31,21:15,17,45,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Hamar,sunday,05:31,21:15,17,45,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Lillestrøm,weekday,03:36,21:15,24,103,120,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Lillestrøm,sunday,18:15,21:15,4,120,120,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Oslo Airport,weekday,03:36,21:15,24,87,106,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Oslo Airport,sunday,18:15,21:15,4,106,106,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Oslo S,weekday,03:36,21:15,24,115,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Oslo S,sunday,18:15,21:15,4,131,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Otta,weekday,10:01,01:19,7,77,88,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Otta,sunday,20:03,01:19,3,77,81,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Trondheim S,weekday,10:01,01:19,6,277,286,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Trondheim S,sunday,20:03,01:19,2,277,299,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Dombås,weekday,08:13,23:20,7,222,231,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Dombås,sunday,18:13,23:20,3,222,229,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Drammen,weekday,05:26,01:04,154,45,46,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Drammen,saturday,05:42,01:04,149,45,46,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Drammen,sunday,05:42,01:04,147,45,46,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Hamar,weekday,06:45,00:35,27,56,59,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Hamar,sunday,18:13,01:05,9,56,59,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Kongsberg,weekday,05:56,23:56,21,89,91,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Kongsberg,saturday,06:56,23:56,18,89,90,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Kongsberg,sunday,06:56,23:56,18,89,90,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Larvik,weekday,05:26,23:26,19,118,125,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Lillehammer,weekday,06:45,00:35,25,105,116,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Lillehammer,sunday,18:13,23:45,8,105,109,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Oslo Airport,weekday,04:50,00:35,125,12,12,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Oslo Airport,saturday,04:50,01:06,112,12,12,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Oslo Airport,sunday,04:50,01:06,114,12,12,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Oslo S,weekday,05:10,01:04,258,9,10,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Oslo S,saturday,05:40,01:04,206,10,10,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Oslo S,sunday,05:42,01:04,202,10,10,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Otta,weekday,08:13,23:20,7,191,200,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Otta,sunday,18:13,23:20,3,191,197,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Sandefjord,weekday,05:26,23:26,19,105,110,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Skien,weekday,05:26,23:26,19,139,147,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Trondheim S,weekday,08:13,23:20,6,387,397,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Trondheim S,sunday,18:13,23:20,2,387,413,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillestrøm,Tønsberg,weekday,05:26,23:26,19,84,84,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Bodø,weekday,07:56,18:06,3,175,175,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Bodø,saturday,07:56,14:31,2,175,181,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Bodø,sunday,14:31,18:06,2,175,181,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Fauske,weekday,07:56,18:06,3,131,134,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Fauske,saturday,07:56,14:31,2,131,132,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Fauske,sunday,14:31,18:06,2,134,135,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Steinkjer,weekday,08:11,15:45,2,260,268,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Steinkjer,saturday,08:11,15:45,2,260,268,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Steinkjer,sunday,08:11,15:45,2,260,268,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Trondheim Airport,weekday,08:11,15:45,2,333,347,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Trondheim Airport,saturday,08:11,15:45,2,333,347,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Trondheim Airport,sunday,08:11,15:45,2,333,347,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Trondheim S,weekday,08:11,15:45,2,362,375,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Trondheim S,saturday,08:11,15:45,2,362,375,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Mo i Rana,Trondheim S,sunday,08:11,15:45,2,362,375,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Fredrikstad,weekday,06:43,01:03,23,23,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Fredrikstad,saturday,07:50,01:03,18,25,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Fredrikstad,sunday,08:46,01:03,18,23,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Göteborg C,weekday,06:43,18:44,7,173,179,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Göteborg C,saturday,08:46,18:44,6,173,179,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Göteborg C,sunday,08:46,18:44,6,173,179,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Halden,weekday,06:43,01:03,22,57,61,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Halden,saturday,07:50,01:03,18,58,60,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Halden,sunday,08:46,01:03,17,58,61,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Oslo S,weekday,04:54,23:24,63,32,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Oslo S,saturday,05:24,23:24,56,32,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Moss,Oslo S,sunday,06:23,23:24,53,32,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Bergen,weekday,11:21,21:19,8,111,127,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Bergen,saturday,11:21,21:19,8,111,127,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Bergen,sunday,11:53,21:19,8,114,136,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Drammen,weekday,10:02,01:20,5,251,271,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Drammen,saturday,10:02,17:40,3,251,265,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Drammen,sunday,10:02,01:20,5,251,271,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Finse,weekday,10:02,01:20,5,24,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Finse,saturday,10:02,17:40,3,24,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Finse,sunday,10:02,01:20,5,24,26,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Flåm,weekday,10:15,18:05,4,46,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Flåm,saturday,10:15,18:05,4,46,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Flåm,sunday,10:15,18:05,4,46,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Geilo,weekday,10:02,01:20,5,65,68,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Geilo,saturday,10:02,17:40,3,65,65,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Geilo,sunday,10:02,01:20,5,65,68,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Oslo S,weekday,10:02,01:20,5,287,307,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Oslo S,saturday,10:02,17:40,3,287,303,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Oslo S,sunday,10:02,01:20,5,287,307,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Voss,weekday,11:21,21:19,8,42,48,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Voss,saturday,11:21,21:19,8,42,48,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Myrdal,Voss,sunday,11:53,21:19,8,42,48,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Dombås,weekday,08:29,23:38,7,207,216,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Dombås,sunday,18:28,23:38,3,207,215,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Drammen,weekday,05:13,00:50,115,58,58,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Drammen,saturday,05:30,00:50,112,58,58,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Drammen,sunday,05:30,00:50,111,58,58,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Hamar,weekday,06:59,00:49,27,41,45,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Hamar,sunday,18:28,01:19,9,41,45,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Kongsberg,weekday,05:43,23:43,19,102,103,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Kongsberg,saturday,06:43,23:43,18,102,103,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Kongsberg,sunday,06:43,23:43,18,102,103,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Larvik,weekday,05:13,23:13,19,131,138,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Lillehammer,weekday,06:59,00:49,25,90,99,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Lillehammer,sunday,18:28,23:59,8,91,94,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Lillestrøm,weekday,05:13,00:50,122,12,12,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Lillestrøm,saturday,05:30,00:50,112,12,12,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Lillestrøm,sunday,05:30,00:50,111,12,12,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Oslo S,weekday,05:13,00:50,172,19,22,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Oslo S,saturday,05:30,00:50,112,22,22,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Oslo S,sunday,05:30,00:50,147,19,22,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Otta,weekday,08:29,23:38,7,176,185,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Otta,sunday,18:28,23:38,3,176,183,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Sandefjord,weekday,05:13,23:13,19,118,123,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Skien,weekday,05:13,23:13,19,152,160,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Trondheim S,weekday,08:29,23:38,6,371,382,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Trondheim S,sunday,18:28,23:38,2,372,397,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo Airport,Tønsberg,weekday,05:13,23:13,19,97,97,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Bergen,weekday,06:25,23:03,5,395,415,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Bergen,saturday,06:25,16:23,4,395,411,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Bergen,sunday,08:25,23:03,4,395,420,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Dombås,weekday,08:02,22:50,7,233,241,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Dombås,sunday,18:02,22:50,3,233,240,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Drammen,weekday,04:19,01:20,170,32,35,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Drammen,saturday,05:52,01:20,158,32,35,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Drammen,sunday,05:52,01:20,158,32,35,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Egersund,weekday,07:25,22:25,6,398,406,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Egersund,saturday,07:25,15:23,4,398,403,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Egersund,sunday,07:25,22:25,5,398,405,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Finse,weekday,06:25,23:03,5,249,264,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Finse,saturday,06:25,16:23,4,249,262,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Finse,sunday,08:25,23:03,4,249,266,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Fredrikstad,weekday,06:11,00:22,24,56,59,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Fredrikstad,saturday,07:14,00:22,19,56,59,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Fredrikstad,sunday,08:14,00:22,19,56,59,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Geilo,weekday,06:25,23:03,5,208,221,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Geilo,saturday,06:25,16:23,4,208,216,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Geilo,sunday,08:25,23:03,4,208,222,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Gjøvik,weekday,06:04,00:04,18,123,123,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Gjøvik,saturday,07:04,00:04,17,123,123,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Gjøvik,sunday,07:04,00:04,17,123,123,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Göteborg C,weekday,06:11,18:10,7,206,211,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Göteborg C,saturday,08:14,18:10,6,206,211,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Göteborg C,sunday,08:14,18:10,6,206,211,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Halden,weekday,06:11,00:22,22,91,94,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Halden,saturday,07:14,00:22,18,91,94,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Halden,sunday,08:14,00:22,17,91,94,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Hamar,weekday,06:34,00:24,27,66,70,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Hamar,sunday,18:02,00:54,9,67,70,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Kongsberg,weekday,04:19,00:09,29,69,76,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Kongsberg,saturday,07:09,00:09,23,69,76,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Kongsberg,sunday,07:09,00:09,25,69,76,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Kristiansand,weekday,07:25,22:25,7,266,268,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Kristiansand,saturday,07:25,17:25,5,266,268,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Kristiansand,sunday,07:25,22:25,7,266,268,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Larvik,weekday,05:39,23:39,24,105,112,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Lillehammer,weekday,06:34,00:24,25,116,127,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Lillehammer,sunday,18:02,23:34,8,116,120,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Lillestrøm,weekday,04:40,01:11,261,9,10,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Lillestrøm,saturday,04:40,01:11,206,10,10,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Lillestrøm,sunday,04:40,01:11,205,10,10,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Moss,weekday,05:52,00:52,62,29,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Moss,saturday,06:22,00:52,55,29,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Moss,sunday,07:52,00:52,52,29,40,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Myrdal,weekday,06:25,23:03,5,279,292,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Myrdal,saturday,06:25,16:23,4,279,291,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Myrdal,sunday,08:25,23:03,4,279,295,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Oslo Airport,weekday,04:40,00:24,176,19,22,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Oslo Airport,saturday,04:40,00:49,112,22,22,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Oslo Airport,sunday,04:40,00:54,150,19,22,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Otta,weekday,08:02,22:50,7,202,210,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Otta,sunday,18:02,22:50,3,202,208,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Sandefjord,weekday,05:39,23:39,24,91,97,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Sandnes,weekday,07:25,22:25,6,456,457,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Sandnes,saturday,07:25,15:23,4,456,456,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Sandnes,sunday,07:25,22:25,5,456,457,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Skien,weekday,05:39,23:39,24,126,134,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Stavanger,weekday,07:25,22:25,6,470,473,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Stavanger,saturday,07:25,15:23,4,470,472,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Stavanger,sunday,07:25,22:25,5,470,473,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Stockholm C,weekday,05:47,16:52,5,330,332,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Stockholm C,saturday,07:16,16:52,4,330,348,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Stockholm C,sunday,07:16,16:52,6,330,356,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Trondheim S,weekday,08:02,22:50,6,398,408,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Trondheim S,sunday,18:02,22:50,2,398,434,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Tønsberg,weekday,05:39,23:39,24,67,71,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Voss,weekday,06:25,23:03,5,323,338,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Voss,saturday,06:25,16:23,4,323,338,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Oslo S,Voss,sunday,08:25,23:03,4,323,343,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Dombås,weekday,11:29,02:57,7,29,29,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Dombås,sunday,21:26,02:57,3,29,31,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Hamar,weekday,05:54,03:11,7,127,133,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Hamar,saturday,05:54,05:54,1,135,135,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Hamar,sunday,03:11,03:11,1,141,141,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Lillehammer,weekday,05:54,03:11,7,78,85,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Lillehammer,saturday,05:54,05:54,1,78,78,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Lillehammer,sunday,03:11,03:11,1,86,86,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Lillestrøm,weekday,05:54,03:11,7,186,197,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Lillestrøm,sunday,03:11,03:11,1,204,204,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Oslo Airport,weekday,05:54,03:11,7,170,179,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Oslo Airport,sunday,03:11,03:11,1,186,186,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Oslo S,weekday,05:54,03:11,7,200,210,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Oslo S,sunday,03:11,03:11,1,218,218,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Trondheim S,weekday,11:29,02:57,6,188,196,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Trondheim S,sunday,21:26,02:57,2,194,208,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Røros,Hamar,weekday,04:18,16:23,6,205,209,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Røros,Hamar,saturday,06:18,16:23,3,207,210,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Røros,Hamar,sunday,12:21,16:23,3,209,210,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Røros,Trondheim S,weekday,05:00,19:45,3,161,161,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Røros,Trondheim S,saturday,07:00,19:45,3,148,154,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Røros,Trondheim S,sunday,16:10,19:45,2,150,155,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Drammen,weekday,04:46,23:47,23,58,58,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Larvik,weekday,07:03,01:12,25,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Larvik,saturday,07:45,01:42,19,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Larvik,sunday,09:48,01:42,17,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Lillestrøm,weekday,04:46,22:47,20,107,107,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Oslo Airport,weekday,04:46,22:47,20,120,120,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Oslo S,weekday,04:46,22:47,24,92,94,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Skien,weekday,07:03,01:12,25,33,35,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Skien,saturday,07:45,01:42,19,33,35,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Skien,sunday,09:48,01:42,17,33,35,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Tønsberg,weekday,04:46,23:47,26,19,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Drammen,weekday,06:46,22:31,6,409,432,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Drammen,saturday,06:46,12:48,4,409,423,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Drammen,sunday,09:01,22:31,6,409,447,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Egersund,weekday,04:34,00:10,33,41,54,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Egersund,saturday,06:04,02:10,26,41,55,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Egersund,sunday,09:01,00:10,22,41,54,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Kongsberg,weekday,06:46,22:31,6,373,397,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Kongsberg,saturday,06:46,12:48,4,373,388,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Kongsberg,sunday,09:01,22:31,6,373,411,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Kristiansand,weekday,04:34,22:31,8,162,178,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Kristiansand,saturday,06:46,16:18,5,162,177,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Kristiansand,sunday,09:01,22:31,6,162,182,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Oslo S,weekday,06:46,22:31,6,444,466,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Oslo S,saturday,06:46,12:48,4,444,458,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Oslo S,sunday,09:01,22:31,6,444,480,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Stavanger,weekday,05:07,00:14,77,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Stavanger,saturday,07:14,02:14,37,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandnes,Stavanger,sunday,10:14,00:14,32,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Drammen,weekday,04:10,23:09,23,94,96,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Larvik,weekday,04:10,23:09,25,20,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Larvik,saturday,05:11,22:39,18,20,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Larvik,sunday,06:07,23:39,18,20,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Lillestrøm,weekday,04:10,22:09,20,143,145,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Oslo Airport,weekday,04:10,22:09,20,156,158,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Oslo S,weekday,04:10,22:09,24,129,132,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Sandefjord,weekday,04:10,23:09,25,34,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Sandefjord,saturday,05:11,22:39,18,34,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Sandefjord,sunday,06:07,23:39,18,35,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Tønsberg,weekday,04:10,23:09,25,55,58,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Drammen,weekday,06:32,22:15,6,423,446,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Drammen,saturday,06:32,12:34,4,423,437,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Drammen,sunday,08:47,22:15,6,423,461,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Egersund,weekday,04:20,23:53,33,55,71,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Egersund,saturday,05:47,01:53,26,55,72,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Egersund,sunday,08:47,23:53,22,55,71,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Kongsberg,weekday,06:32,22:15,6,387,411,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Kongsberg,saturday,06:32,12:34,4,387,402,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Kongsberg,sunday,08:47,22:15,6,387,425,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Kristiansand,weekday,04:20,22:15,8,176,193,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Kristiansand,saturday,06:32,16:04,5,176,191,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Kristiansand,sunday,08:47,22:15,6,176,197,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Oslo S,weekday,06:32,22:15,6,458,481,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Oslo S,saturday,06:32,12:34,4,458,472,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Oslo S,sunday,08:47,22:15,6,458,495,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Sandnes,weekday,04:20,23:53,77,13,15,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Sandnes,saturday,05:47,01:53,38,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stavanger,Sandnes,sunday,08:47,23:53,34,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Mo i Rana,weekday,09:51,18:07,2,277,279,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Mo i Rana,saturday,09:51,09:51,1,277,277,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Mo i Rana,sunday,09:51,18:07,2,277,279,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Trondheim Airport,weekday,04:32,21:34,22,73,85,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Trondheim Airport,saturday,07:34,21:34,14,73,85,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Trondheim Airport,sunday,07:34,21:34,15,73,85,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Trondheim S,weekday,04:32,21:34,22,102,124,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Trondheim S,saturday,07:34,21:34,14,102,124,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Trondheim S,sunday,07:34,21:34,15,102,124,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stockholm C,Oslo S,weekday,05:38,18:15,5,337,356,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stockholm C,Oslo S,saturday,07:23,15:23,4,351,358,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Stockholm C,Oslo S,sunday,07:23,18:15,5,351,359,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Mo i Rana,weekday,08:24,16:36,2,364,368,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Mo i Rana,saturday,08:24,08:24,1,364,364,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Mo i Rana,sunday,08:24,16:36,2,364,368,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Steinkjer,weekday,05:45,23:53,23,84,92,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Steinkjer,saturday,07:53,21:53,13,85,92,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Steinkjer,sunday,08:24,23:53,15,84,92,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Trondheim S,weekday,05:54,23:03,24,25,38,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Trondheim S,saturday,09:03,23:03,14,25,38,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Trondheim S,sunday,09:03,23:03,15,25,38,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Dombås,weekday,05:55,23:17,6,154,163,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Dombås,sunday,23:17,23:17,1,177,177,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Hamar,weekday,05:37,23:17,8,319,336,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Hamar,saturday,09:34,09:34,1,379,379,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Hamar,sunday,09:34,23:17,3,375,379,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Lillehammer,weekday,05:55,23:17,6,271,285,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Lillehammer,sunday,23:17,23:17,1,320,320,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Lillestrøm,weekday,05:55,23:17,6,378,395,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Lillestrøm,sunday,23:17,23:17,1,438,438,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Mo i Rana,weekday,07:49,16:00,2,399,403,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Mo i Rana,saturday,07:49,07:49,1,399,399,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Mo i Rana,sunday,07:49,16:00,2,399,403,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Oslo Airport,weekday,05:55,23:17,6,364,379,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Oslo Airport,sunday,23:17,23:17,1,420,420,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Oslo S,weekday,05:55,23:17,6,391,407,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Oslo S,sunday,23:17,23:17,1,452,452,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Otta,weekday,05:55,23:17,6,185,198,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Otta,sunday,23:17,23:17,1,217,217,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Røros,weekday,05:37,16:21,3,154,160,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Røros,saturday,09:34,09:34,1,154,154,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Røros,sunday,09:34,20:20,3,154,157,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Steinkjer,weekday,05:09,23:16,23,120,129,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Steinkjer,saturday,07:14,21:17,13,120,129,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Steinkjer,sunday,07:49,23:16,15,120,129,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Trondheim Airport,weekday,05:09,23:16,23,34,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Trondheim Airport,saturday,07:14,21:17,13,34,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Trondheim Airport,sunday,07:49,23:16,15,34,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Drammen,weekday,05:09,00:08,23,36,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Larvik,weekday,06:25,00:52,25,32,39,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Lillestrøm,weekday,05:09,23:09,20,84,85,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Oslo Airport,weekday,05:09,23:09,20,98,98,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Oslo S,weekday,05:09,23:09,24,68,72,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Sandefjord,weekday,05:06,00:52,26,17,24,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Skien,weekday,06:25,00:52,25,53,61,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Bergen,weekday,04:49,23:03,22,67,80,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Bergen,saturday,04:49,23:03,17,67,78,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Bergen,sunday,05:52,23:03,15,68,80,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Drammen,weekday,09:20,00:28,5,295,321,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Drammen,saturday,09:20,16:56,3,295,307,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Drammen,sunday,09:20,00:28,5,295,321,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Finse,weekday,09:20,00:28,5,68,75,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Finse,saturday,09:20,16:56,3,68,69,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Finse,sunday,09:20,00:28,5,68,75,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Geilo,weekday,09:20,00:28,5,107,117,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Geilo,saturday,09:20,16:56,3,107,109,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Geilo,sunday,09:20,00:28,5,107,117,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Myrdal,weekday,09:20,00:28,9,40,47,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Myrdal,saturday,09:20,17:52,7,40,49,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Myrdal,sunday,09:20,00:28,9,40,47,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Oslo S,weekday,09:20,00:28,5,331,359,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Oslo S,saturday,09:20,16:56,3,331,345,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Voss,Oslo S,sunday,09:20,00:28,5,331,359,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Åndalsnes,Dombås,weekday,07:18,16:29,4,84,84,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Åndalsnes,Dombås,saturday,09:24,16:29,2,84,84,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Åndalsnes,Dombås,sunday,09:24,16:29,3,84,84,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
