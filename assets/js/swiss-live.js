@@ -23,7 +23,10 @@
     try { return new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Zurich' }).format(new Date(iso)); } catch (e) { return ''; }
   }
   function dur(min) { var h = Math.floor(min / 60), r = min % 60; return h ? h + ' h ' + String(r).padStart(2, '0') : r + ' min'; }
-  var book = API + '/affiliate/europe-train?from=' + from + '&to=' + to + '&src=swiss_live&lang=' + lang;
+  // Omio solo tiene páginas oficiales de catálogo en es/fr/it/de/pt: en inglés y japonés se usa la página oficial en alemán
+  var omioLang = { es: 'es', fr: 'fr', it: 'it' }[lang] || 'de';
+  var omioCity = function (c) { return c === 'stmoritz' ? 'st-moritz' : c; };
+  var book = API + '/affiliate/europe-train?from=' + omioCity(from) + '&to=' + omioCity(to) + '&src=swiss_live&lang=' + omioLang;
 
   var css = document.createElement('style');
   css.textContent =
