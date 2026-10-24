@@ -21123,15 +21123,6 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/zurich-munich/" />
   </url>
   <url>
-    <loc>https://glosx.app/ja/index.html</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/index.html" />
-      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/index.html" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/index.html" />
-  </url>
-  <url>
     <loc>https://glosx.app/horarios-trenes-espana/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
