@@ -1,0 +1,9416 @@
+{
+ "source": {
+  "name": "Digitraffic / Fintraffic",
+  "url": "https://www.digitraffic.fi/en/railway-traffic/",
+  "license": "CC BY 4.0",
+  "file": "fi_gtfs.zip"
+ },
+ "reference_week": {
+  "weekday": "2026-12-01",
+  "saturday": "2026-12-05",
+  "sunday": "2026-12-06"
+ },
+ "pairs": [
+  {
+   "from": "Hanko",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 2,
+    "first": "05:57",
+    "last": "10:40",
+    "fastest_min": 118,
+    "median_min": 119
+   },
+   "saturday": {
+    "n": 2,
+    "first": "10:50",
+    "last": "21:18",
+    "fastest_min": 110,
+    "median_min": 118
+   },
+   "sunday": {
+    "n": 1,
+    "first": "21:18",
+    "last": "21:18",
+    "fastest_min": 127,
+    "median_min": 127
+   }
+  },
+  {
+   "from": "Hanko",
+   "to": "Pasila",
+   "weekday": {
+    "n": 2,
+    "first": "05:57",
+    "last": "10:40",
+    "fastest_min": 112,
+    "median_min": 113
+   },
+   "saturday": {
+    "n": 2,
+    "first": "10:50",
+    "last": "21:18",
+    "fastest_min": 104,
+    "median_min": 112
+   },
+   "sunday": {
+    "n": 1,
+    "first": "21:18",
+    "last": "21:18",
+    "fastest_min": 121,
+    "median_min": 121
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Hanko",
+   "weekday": {
+    "n": 2,
+    "first": "10:07",
+    "last": "17:23",
+    "fastest_min": 119,
+    "median_min": 119
+   },
+   "saturday": {
+    "n": 1,
+    "first": "20:52",
+    "last": "20:52",
+    "fastest_min": 119,
+    "median_min": 119
+   },
+   "sunday": {
+    "n": 2,
+    "first": "18:23",
+    "last": "20:52",
+    "fastest_min": 118,
+    "median_min": 118
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Helsinki Airport",
+   "weekday": {
+    "n": 219,
+    "first": "00:18",
+    "last": "23:48",
+    "fastest_min": 27,
+    "median_min": 33
+   },
+   "saturday": {
+    "n": 192,
+    "first": "00:06",
+    "last": "23:48",
+    "fastest_min": 27,
+    "median_min": 33
+   },
+   "sunday": {
+    "n": 188,
+    "first": "00:06",
+    "last": "23:48",
+    "fastest_min": 27,
+    "median_min": 33
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 29,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 63,
+    "median_min": 69
+   },
+   "saturday": {
+    "n": 29,
+    "first": "00:40",
+    "last": "23:22",
+    "fastest_min": 66,
+    "median_min": 70
+   },
+   "sunday": {
+    "n": 30,
+    "first": "00:40",
+    "last": "23:13",
+    "fastest_min": 69,
+    "median_min": 69
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 4,
+    "first": "08:14",
+    "last": "19:14",
+    "fastest_min": 318,
+    "median_min": 324
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:14",
+    "last": "14:14",
+    "fastest_min": 323,
+    "median_min": 325
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:14",
+    "last": "19:14",
+    "fastest_min": 318,
+    "median_min": 324
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Imatra",
+   "weekday": {
+    "n": 8,
+    "first": "06:54",
+    "last": "21:14",
+    "fastest_min": 149,
+    "median_min": 158
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:54",
+    "last": "21:14",
+    "fastest_min": 156,
+    "median_min": 158
+   },
+   "sunday": {
+    "n": 9,
+    "first": "06:54",
+    "last": "21:14",
+    "fastest_min": 149,
+    "median_min": 158
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Joensuu",
+   "weekday": {
+    "n": 6,
+    "first": "06:54",
+    "last": "18:29",
+    "fastest_min": 255,
+    "median_min": 279
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:54",
+    "last": "18:29",
+    "fastest_min": 277,
+    "median_min": 282
+   },
+   "sunday": {
+    "n": 7,
+    "first": "06:54",
+    "last": "18:29",
+    "fastest_min": 255,
+    "median_min": 282
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 9,
+    "first": "07:00",
+    "last": "19:00",
+    "fastest_min": 213,
+    "median_min": 219
+   },
+   "saturday": {
+    "n": 7,
+    "first": "07:00",
+    "last": "19:00",
+    "fastest_min": 216,
+    "median_min": 220
+   },
+   "sunday": {
+    "n": 11,
+    "first": "07:00",
+    "last": "19:00",
+    "fastest_min": 213,
+    "median_min": 220
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 4,
+    "first": "08:14",
+    "last": "19:14",
+    "fastest_min": 373,
+    "median_min": 379
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:14",
+    "last": "14:14",
+    "fastest_min": 378,
+    "median_min": 380
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:14",
+    "last": "19:14",
+    "fastest_min": 373,
+    "median_min": 379
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Kemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 403,
+    "median_min": 465
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 430,
+    "median_min": 619
+   },
+   "sunday": {
+    "n": 7,
+    "first": "06:20",
+    "last": "23:13",
+    "fastest_min": 403,
+    "median_min": 430
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "19:29",
+    "last": "19:29",
+    "fastest_min": 801,
+    "median_min": 801
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:29",
+    "last": "19:29",
+    "fastest_min": 801,
+    "median_min": 801
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:29",
+    "last": "19:29",
+    "fastest_min": 801,
+    "median_min": 801
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Kerava",
+   "weekday": {
+    "n": 171,
+    "first": "00:10",
+    "last": "23:51",
+    "fastest_min": 22,
+    "median_min": 34
+   },
+   "saturday": {
+    "n": 157,
+    "first": "00:10",
+    "last": "23:51",
+    "fastest_min": 22,
+    "median_min": 34
+   },
+   "sunday": {
+    "n": 154,
+    "first": "00:10",
+    "last": "23:51",
+    "fastest_min": 22,
+    "median_min": 34
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 13,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 229,
+    "median_min": 250
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 229,
+    "median_min": 267
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:20",
+    "last": "23:13",
+    "fastest_min": 229,
+    "median_min": 250
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 16,
+    "first": "00:10",
+    "last": "21:14",
+    "fastest_min": 82,
+    "median_min": 84
+   },
+   "saturday": {
+    "n": 16,
+    "first": "00:10",
+    "last": "21:14",
+    "fastest_min": 82,
+    "median_min": 83
+   },
+   "sunday": {
+    "n": 16,
+    "first": "00:10",
+    "last": "21:14",
+    "fastest_min": 82,
+    "median_min": 83
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 6,
+    "first": "05:54",
+    "last": "19:14",
+    "fastest_min": 249,
+    "median_min": 257
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:54",
+    "last": "19:14",
+    "fastest_min": 249,
+    "median_min": 259
+   },
+   "sunday": {
+    "n": 8,
+    "first": "08:14",
+    "last": "19:14",
+    "fastest_min": 249,
+    "median_min": 263
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Lahti",
+   "weekday": {
+    "n": 31,
+    "first": "00:10",
+    "last": "23:10",
+    "fastest_min": 51,
+    "median_min": 65
+   },
+   "saturday": {
+    "n": 34,
+    "first": "00:10",
+    "last": "23:10",
+    "fastest_min": 51,
+    "median_min": 65
+   },
+   "sunday": {
+    "n": 34,
+    "first": "00:10",
+    "last": "23:10",
+    "fastest_min": 51,
+    "median_min": 65
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Lappeenranta",
+   "weekday": {
+    "n": 8,
+    "first": "06:54",
+    "last": "21:14",
+    "fastest_min": 127,
+    "median_min": 128
+   },
+   "saturday": {
+    "n": 9,
+    "first": "06:54",
+    "last": "21:14",
+    "fastest_min": 127,
+    "median_min": 128
+   },
+   "sunday": {
+    "n": 9,
+    "first": "06:54",
+    "last": "21:14",
+    "fastest_min": 127,
+    "median_min": 127
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 5,
+    "first": "05:54",
+    "last": "19:14",
+    "fastest_min": 154,
+    "median_min": 160
+   },
+   "saturday": {
+    "n": 6,
+    "first": "05:54",
+    "last": "19:14",
+    "fastest_min": 154,
+    "median_min": 163
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:14",
+    "last": "19:14",
+    "fastest_min": 154,
+    "median_min": 161
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Oulu",
+   "weekday": {
+    "n": 15,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 325,
+    "median_min": 362
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 325,
+    "median_min": 455
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:20",
+    "last": "23:13",
+    "fastest_min": 325,
+    "median_min": 362
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Pasila",
+   "weekday": {
+    "n": 619,
+    "first": "00:03",
+    "last": "23:51",
+    "fastest_min": 3,
+    "median_min": 4
+   },
+   "saturday": {
+    "n": 553,
+    "first": "00:03",
+    "last": "23:51",
+    "fastest_min": 3,
+    "median_min": 4
+   },
+   "sunday": {
+    "n": 521,
+    "first": "00:03",
+    "last": "23:51",
+    "fastest_min": 3,
+    "median_min": 4
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Pori",
+   "weekday": {
+    "n": 1,
+    "first": "08:00",
+    "last": "08:00",
+    "fastest_min": 228,
+    "median_min": 228
+   },
+   "saturday": {
+    "n": 1,
+    "first": "14:00",
+    "last": "14:00",
+    "fastest_min": 224,
+    "median_min": 224
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 59,
+    "first": "04:20",
+    "last": "23:40",
+    "fastest_min": 43,
+    "median_min": 55
+   },
+   "saturday": {
+    "n": 57,
+    "first": "00:40",
+    "last": "23:40",
+    "fastest_min": 47,
+    "median_min": 55
+   },
+   "sunday": {
+    "n": 56,
+    "first": "00:40",
+    "last": "23:40",
+    "fastest_min": 47,
+    "median_min": 55
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 483,
+    "median_min": 542
+   },
+   "saturday": {
+    "n": 4,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 506,
+    "median_min": 642
+   },
+   "sunday": {
+    "n": 7,
+    "first": "06:20",
+    "last": "23:13",
+    "fastest_min": 483,
+    "median_min": 506
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Salo",
+   "weekday": {
+    "n": 14,
+    "first": "05:26",
+    "last": "21:05",
+    "fastest_min": 90,
+    "median_min": 91
+   },
+   "saturday": {
+    "n": 11,
+    "first": "05:26",
+    "last": "22:52",
+    "fastest_min": 90,
+    "median_min": 91
+   },
+   "sunday": {
+    "n": 11,
+    "first": "05:26",
+    "last": "22:52",
+    "fastest_min": 90,
+    "median_min": 91
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 19,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 165,
+    "median_min": 176
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 165,
+    "median_min": 177
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:20",
+    "last": "23:13",
+    "fastest_min": 165,
+    "median_min": 176
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Tampere",
+   "weekday": {
+    "n": 42,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 98,
+    "median_min": 113
+   },
+   "saturday": {
+    "n": 40,
+    "first": "05:03",
+    "last": "23:22",
+    "fastest_min": 98,
+    "median_min": 113
+   },
+   "sunday": {
+    "n": 42,
+    "first": "06:20",
+    "last": "23:13",
+    "fastest_min": 98,
+    "median_min": 113
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 434,
+    "first": "00:10",
+    "last": "23:51",
+    "fastest_min": 13,
+    "median_min": 19
+   },
+   "saturday": {
+    "n": 394,
+    "first": "00:06",
+    "last": "23:51",
+    "fastest_min": 13,
+    "median_min": 19
+   },
+   "sunday": {
+    "n": 389,
+    "first": "00:06",
+    "last": "23:51",
+    "fastest_min": 13,
+    "median_min": 19
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Turku",
+   "weekday": {
+    "n": 14,
+    "first": "05:26",
+    "last": "21:05",
+    "fastest_min": 123,
+    "median_min": 124
+   },
+   "saturday": {
+    "n": 11,
+    "first": "05:26",
+    "last": "22:52",
+    "fastest_min": 123,
+    "median_min": 124
+   },
+   "sunday": {
+    "n": 11,
+    "first": "05:26",
+    "last": "22:52",
+    "fastest_min": 123,
+    "median_min": 124
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Turku satama",
+   "weekday": {
+    "n": 3,
+    "first": "05:26",
+    "last": "17:35",
+    "fastest_min": 133,
+    "median_min": 134
+   },
+   "saturday": {
+    "n": 3,
+    "first": "05:26",
+    "last": "17:35",
+    "fastest_min": 133,
+    "median_min": 134
+   },
+   "sunday": {
+    "n": 3,
+    "first": "05:26",
+    "last": "17:35",
+    "fastest_min": 133,
+    "median_min": 134
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 6,
+    "first": "07:20",
+    "last": "20:20",
+    "fastest_min": 219,
+    "median_min": 228
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:20",
+    "last": "20:00",
+    "fastest_min": 222,
+    "median_min": 234
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:20",
+    "last": "20:20",
+    "fastest_min": 219,
+    "median_min": 230
+   }
+  },
+  {
+   "from": "Helsinki",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 12,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 267,
+    "median_min": 287
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:03",
+    "last": "23:13",
+    "fastest_min": 267,
+    "median_min": 308
+   },
+   "sunday": {
+    "n": 12,
+    "first": "06:20",
+    "last": "23:13",
+    "fastest_min": 267,
+    "median_min": 287
+   }
+  },
+  {
+   "from": "Helsinki Airport",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 219,
+    "first": "00:52",
+    "last": "00:22",
+    "fastest_min": 29,
+    "median_min": 29
+   },
+   "saturday": {
+    "n": 192,
+    "first": "00:34",
+    "last": "00:22",
+    "fastest_min": 29,
+    "median_min": 29
+   },
+   "sunday": {
+    "n": 188,
+    "first": "00:34",
+    "last": "00:22",
+    "fastest_min": 29,
+    "median_min": 29
+   }
+  },
+  {
+   "from": "Helsinki Airport",
+   "to": "Pasila",
+   "weekday": {
+    "n": 219,
+    "first": "00:52",
+    "last": "00:22",
+    "fastest_min": 24,
+    "median_min": 24
+   },
+   "saturday": {
+    "n": 192,
+    "first": "00:34",
+    "last": "00:22",
+    "fastest_min": 24,
+    "median_min": 24
+   },
+   "sunday": {
+    "n": 188,
+    "first": "00:34",
+    "last": "00:22",
+    "fastest_min": 24,
+    "median_min": 24
+   }
+  },
+  {
+   "from": "Helsinki Airport",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 111,
+    "first": "00:52",
+    "last": "00:22",
+    "fastest_min": 8,
+    "median_min": 8
+   },
+   "saturday": {
+    "n": 97,
+    "first": "00:52",
+    "last": "00:22",
+    "fastest_min": 8,
+    "median_min": 8
+   },
+   "sunday": {
+    "n": 95,
+    "first": "00:52",
+    "last": "00:22",
+    "fastest_min": 8,
+    "median_min": 8
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 24,
+    "first": "05:47",
+    "last": "23:22",
+    "fastest_min": 67,
+    "median_min": 72
+   },
+   "saturday": {
+    "n": 22,
+    "first": "06:28",
+    "last": "23:43",
+    "fastest_min": 67,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 21,
+    "first": "07:47",
+    "last": "23:22",
+    "fastest_min": 70,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 9,
+    "first": "08:11",
+    "last": "20:11",
+    "fastest_min": 142,
+    "median_min": 148
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:11",
+    "last": "20:11",
+    "fastest_min": 145,
+    "median_min": 148
+   },
+   "sunday": {
+    "n": 11,
+    "first": "08:11",
+    "last": "20:11",
+    "fastest_min": 142,
+    "median_min": 148
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Kemi",
+   "weekday": {
+    "n": 3,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 432,
+    "median_min": 498
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 432,
+    "median_min": 502
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:40",
+    "last": "01:06",
+    "fastest_min": 498,
+    "median_min": 506
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "21:40",
+    "last": "21:40",
+    "fastest_min": 670,
+    "median_min": 670
+   },
+   "saturday": {
+    "n": 1,
+    "first": "21:40",
+    "last": "21:40",
+    "fastest_min": 670,
+    "median_min": 670
+   },
+   "sunday": {
+    "n": 1,
+    "first": "21:40",
+    "last": "21:40",
+    "fastest_min": 670,
+    "median_min": 670
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Kerava",
+   "weekday": {
+    "n": 11,
+    "first": "06:15",
+    "last": "23:22",
+    "fastest_min": 51,
+    "median_min": 63
+   },
+   "saturday": {
+    "n": 9,
+    "first": "07:22",
+    "last": "23:22",
+    "fastest_min": 63,
+    "median_min": 63
+   },
+   "sunday": {
+    "n": 8,
+    "first": "09:22",
+    "last": "23:22",
+    "fastest_min": 63,
+    "median_min": 63
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 4,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 192,
+    "median_min": 250
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 215,
+    "median_min": 286
+   },
+   "sunday": {
+    "n": 4,
+    "first": "17:45",
+    "last": "01:06",
+    "fastest_min": 192,
+    "median_min": 286
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 1,
+    "first": "17:11",
+    "last": "17:11",
+    "fastest_min": 264,
+    "median_min": 264
+   },
+   "saturday": {
+    "n": 2,
+    "first": "13:11",
+    "last": "17:11",
+    "fastest_min": 264,
+    "median_min": 274
+   },
+   "sunday": {
+    "n": 2,
+    "first": "13:11",
+    "last": "17:11",
+    "fastest_min": 264,
+    "median_min": 274
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Oulu",
+   "weekday": {
+    "n": 3,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 331,
+    "median_min": 422
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 331,
+    "median_min": 423
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:40",
+    "last": "01:06",
+    "fastest_min": 422,
+    "median_min": 424
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Pasila",
+   "weekday": {
+    "n": 24,
+    "first": "05:47",
+    "last": "23:22",
+    "fastest_min": 61,
+    "median_min": 65
+   },
+   "saturday": {
+    "n": 22,
+    "first": "06:28",
+    "last": "23:43",
+    "fastest_min": 61,
+    "median_min": 65
+   },
+   "sunday": {
+    "n": 21,
+    "first": "07:47",
+    "last": "23:22",
+    "fastest_min": 63,
+    "median_min": 65
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Pori",
+   "weekday": {
+    "n": 1,
+    "first": "09:11",
+    "last": "09:11",
+    "fastest_min": 157,
+    "median_min": 157
+   },
+   "saturday": {
+    "n": 1,
+    "first": "15:11",
+    "last": "15:11",
+    "fastest_min": 153,
+    "median_min": 153
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 27,
+    "first": "05:47",
+    "last": "00:22",
+    "fastest_min": 17,
+    "median_min": 23
+   },
+   "saturday": {
+    "n": 25,
+    "first": "01:19",
+    "last": "00:22",
+    "fastest_min": 17,
+    "median_min": 17
+   },
+   "sunday": {
+    "n": 23,
+    "first": "02:09",
+    "last": "00:22",
+    "fastest_min": 17,
+    "median_min": 17
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 3,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 510,
+    "median_min": 580
+   },
+   "saturday": {
+    "n": 3,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 510,
+    "median_min": 580
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:40",
+    "last": "01:06",
+    "fastest_min": 580,
+    "median_min": 593
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 5,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 108,
+    "median_min": 136
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 116,
+    "median_min": 160
+   },
+   "sunday": {
+    "n": 5,
+    "first": "12:11",
+    "last": "01:06",
+    "fastest_min": 108,
+    "median_min": 185
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Tampere",
+   "weekday": {
+    "n": 30,
+    "first": "05:44",
+    "last": "01:06",
+    "fastest_min": 36,
+    "median_min": 42
+   },
+   "saturday": {
+    "n": 28,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 29,
+    "first": "08:11",
+    "last": "01:06",
+    "fastest_min": 36,
+    "median_min": 42
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 24,
+    "first": "05:47",
+    "last": "23:22",
+    "fastest_min": 52,
+    "median_min": 55
+   },
+   "saturday": {
+    "n": 22,
+    "first": "06:28",
+    "last": "23:43",
+    "fastest_min": 52,
+    "median_min": 55
+   },
+   "sunday": {
+    "n": 21,
+    "first": "07:47",
+    "last": "23:22",
+    "fastest_min": 53,
+    "median_min": 55
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 1,
+    "first": "12:11",
+    "last": "12:11",
+    "fastest_min": 186,
+    "median_min": 186
+   },
+   "saturday": {
+    "n": 2,
+    "first": "12:11",
+    "last": "21:11",
+    "fastest_min": 168,
+    "median_min": 177
+   },
+   "sunday": {
+    "n": 1,
+    "first": "12:11",
+    "last": "12:11",
+    "fastest_min": 186,
+    "median_min": 186
+   }
+  },
+  {
+   "from": "Hämeenlinna",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 3,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 257,
+    "median_min": 338
+   },
+   "saturday": {
+    "n": 4,
+    "first": "06:11",
+    "last": "01:06",
+    "fastest_min": 257,
+    "median_min": 340
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:40",
+    "last": "01:06",
+    "fastest_min": 338,
+    "median_min": 343
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 316,
+    "median_min": 334
+   },
+   "saturday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 316,
+    "median_min": 334
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:10",
+    "last": "15:34",
+    "fastest_min": 334,
+    "median_min": 338
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 6,
+    "first": "08:22",
+    "last": "00:34",
+    "fastest_min": 53,
+    "median_min": 53
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:22",
+    "last": "19:39",
+    "fastest_min": 53,
+    "median_min": 53
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:22",
+    "last": "00:34",
+    "fastest_min": 53,
+    "median_min": 53
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 223,
+    "median_min": 233
+   },
+   "saturday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 223,
+    "median_min": 233
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:10",
+    "last": "15:34",
+    "fastest_min": 233,
+    "median_min": 243
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 6,
+    "first": "04:28",
+    "last": "21:28",
+    "fastest_min": 60,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 6,
+    "first": "04:28",
+    "last": "21:28",
+    "fastest_min": 60,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 4,
+    "first": "10:10",
+    "last": "21:28",
+    "fastest_min": 60,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Lahti",
+   "weekday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 259,
+    "median_min": 277
+   },
+   "saturday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 259,
+    "median_min": 277
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:10",
+    "last": "15:34",
+    "fastest_min": 277,
+    "median_min": 281
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 157,
+    "median_min": 160
+   },
+   "saturday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 157,
+    "median_min": 160
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:10",
+    "last": "15:34",
+    "fastest_min": 160,
+    "median_min": 167
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Oulu",
+   "weekday": {
+    "n": 4,
+    "first": "08:22",
+    "last": "19:39",
+    "fastest_min": 183,
+    "median_min": 183
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:22",
+    "last": "16:41",
+    "fastest_min": 183,
+    "median_min": 183
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:22",
+    "last": "19:39",
+    "fastest_min": 183,
+    "median_min": 183
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Pasila",
+   "weekday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 309,
+    "median_min": 327
+   },
+   "saturday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 309,
+    "median_min": 327
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:10",
+    "last": "15:34",
+    "fastest_min": 327,
+    "median_min": 331
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 299,
+    "median_min": 317
+   },
+   "saturday": {
+    "n": 5,
+    "first": "04:28",
+    "last": "15:34",
+    "fastest_min": 299,
+    "median_min": 317
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:10",
+    "last": "15:34",
+    "fastest_min": 317,
+    "median_min": 321
+   }
+  },
+  {
+   "from": "Iisalmi",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 2,
+    "first": "08:30",
+    "last": "16:45",
+    "fastest_min": 99,
+    "median_min": 101
+   },
+   "saturday": {
+    "n": 2,
+    "first": "08:30",
+    "last": "16:45",
+    "fastest_min": 99,
+    "median_min": 101
+   },
+   "sunday": {
+    "n": 1,
+    "first": "16:45",
+    "last": "16:45",
+    "fastest_min": 99,
+    "median_min": 99
+   }
+  },
+  {
+   "from": "Imatra",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 147,
+    "median_min": 157
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 147,
+    "median_min": 156
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "20:18",
+    "fastest_min": 147,
+    "median_min": 155
+   }
+  },
+  {
+   "from": "Imatra",
+   "to": "Joensuu",
+   "weekday": {
+    "n": 6,
+    "first": "09:35",
+    "last": "21:14",
+    "fastest_min": 104,
+    "median_min": 118
+   },
+   "saturday": {
+    "n": 6,
+    "first": "09:35",
+    "last": "21:14",
+    "fastest_min": 117,
+    "median_min": 120
+   },
+   "sunday": {
+    "n": 7,
+    "first": "09:35",
+    "last": "21:14",
+    "fastest_min": 104,
+    "median_min": 120
+   }
+  },
+  {
+   "from": "Imatra",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 63,
+    "median_min": 70
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 63,
+    "median_min": 70
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "20:18",
+    "fastest_min": 63,
+    "median_min": 69
+   }
+  },
+  {
+   "from": "Imatra",
+   "to": "Lahti",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 95,
+    "median_min": 104
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 95,
+    "median_min": 104
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "20:18",
+    "fastest_min": 95,
+    "median_min": 103
+   }
+  },
+  {
+   "from": "Imatra",
+   "to": "Lappeenranta",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 20,
+    "median_min": 26
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 20,
+    "median_min": 26
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "20:18",
+    "fastest_min": 20,
+    "median_min": 26
+   }
+  },
+  {
+   "from": "Imatra",
+   "to": "Pasila",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 141,
+    "median_min": 150
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 141,
+    "median_min": 150
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "20:18",
+    "fastest_min": 141,
+    "median_min": 149
+   }
+  },
+  {
+   "from": "Imatra",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 8,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 132,
+    "median_min": 141
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:02",
+    "last": "20:18",
+    "fastest_min": 132,
+    "median_min": 141
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "20:18",
+    "fastest_min": 132,
+    "median_min": 140
+   }
+  },
+  {
+   "from": "Joensuu",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 6,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 274,
+    "median_min": 277
+   },
+   "saturday": {
+    "n": 7,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 270,
+    "median_min": 275
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:00",
+    "last": "18:10",
+    "fastest_min": 270,
+    "median_min": 275
+   }
+  },
+  {
+   "from": "Joensuu",
+   "to": "Imatra",
+   "weekday": {
+    "n": 6,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 115,
+    "median_min": 117
+   },
+   "saturday": {
+    "n": 7,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 114,
+    "median_min": 117
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:00",
+    "last": "18:10",
+    "fastest_min": 114,
+    "median_min": 118
+   }
+  },
+  {
+   "from": "Joensuu",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 6,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 185,
+    "median_min": 192
+   },
+   "saturday": {
+    "n": 7,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 185,
+    "median_min": 192
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:00",
+    "last": "18:10",
+    "fastest_min": 185,
+    "median_min": 191
+   }
+  },
+  {
+   "from": "Joensuu",
+   "to": "Lahti",
+   "weekday": {
+    "n": 6,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 217,
+    "median_min": 225
+   },
+   "saturday": {
+    "n": 7,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 217,
+    "median_min": 223
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:00",
+    "last": "18:10",
+    "fastest_min": 217,
+    "median_min": 223
+   }
+  },
+  {
+   "from": "Joensuu",
+   "to": "Lappeenranta",
+   "weekday": {
+    "n": 6,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 144,
+    "median_min": 148
+   },
+   "saturday": {
+    "n": 7,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 144,
+    "median_min": 148
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:00",
+    "last": "18:10",
+    "fastest_min": 144,
+    "median_min": 148
+   }
+  },
+  {
+   "from": "Joensuu",
+   "to": "Pasila",
+   "weekday": {
+    "n": 6,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 267,
+    "median_min": 271
+   },
+   "saturday": {
+    "n": 7,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 264,
+    "median_min": 269
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:00",
+    "last": "18:10",
+    "fastest_min": 264,
+    "median_min": 269
+   }
+  },
+  {
+   "from": "Joensuu",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 6,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 257,
+    "median_min": 262
+   },
+   "saturday": {
+    "n": 7,
+    "first": "04:00",
+    "last": "18:10",
+    "fastest_min": 255,
+    "median_min": 260
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:00",
+    "last": "18:10",
+    "fastest_min": 255,
+    "median_min": 260
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 9,
+    "first": "05:20",
+    "last": "18:10",
+    "fastest_min": 200,
+    "median_min": 222
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:17",
+    "last": "16:12",
+    "fastest_min": 200,
+    "median_min": 223
+   },
+   "sunday": {
+    "n": 9,
+    "first": "09:19",
+    "last": "19:15",
+    "fastest_min": 220,
+    "median_min": 224
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 8,
+    "first": "05:20",
+    "last": "18:10",
+    "fastest_min": 145,
+    "median_min": 149
+   },
+   "saturday": {
+    "n": 7,
+    "first": "06:17",
+    "last": "16:12",
+    "fastest_min": 146,
+    "median_min": 150
+   },
+   "sunday": {
+    "n": 9,
+    "first": "09:19",
+    "last": "19:15",
+    "fastest_min": 146,
+    "median_min": 152
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 113,
+    "median_min": 113
+   },
+   "saturday": {
+    "n": 2,
+    "first": "15:50",
+    "last": "19:42",
+    "fastest_min": 113,
+    "median_min": 119
+   },
+   "sunday": {
+    "n": 2,
+    "first": "15:50",
+    "last": "19:42",
+    "fastest_min": 113,
+    "median_min": 119
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Pasila",
+   "weekday": {
+    "n": 9,
+    "first": "05:20",
+    "last": "18:10",
+    "fastest_min": 193,
+    "median_min": 215
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:17",
+    "last": "16:12",
+    "fastest_min": 193,
+    "median_min": 216
+   },
+   "sunday": {
+    "n": 9,
+    "first": "09:19",
+    "last": "19:15",
+    "fastest_min": 213,
+    "median_min": 217
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 8,
+    "first": "05:20",
+    "last": "18:10",
+    "fastest_min": 164,
+    "median_min": 168
+   },
+   "saturday": {
+    "n": 7,
+    "first": "06:17",
+    "last": "16:12",
+    "fastest_min": 165,
+    "median_min": 169
+   },
+   "sunday": {
+    "n": 9,
+    "first": "09:19",
+    "last": "19:15",
+    "fastest_min": 165,
+    "median_min": 171
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 2,
+    "first": "12:28",
+    "last": "19:47",
+    "fastest_min": 157,
+    "median_min": 158
+   },
+   "saturday": {
+    "n": 2,
+    "first": "12:28",
+    "last": "19:47",
+    "fastest_min": 157,
+    "median_min": 158
+   },
+   "sunday": {
+    "n": 2,
+    "first": "12:28",
+    "last": "19:47",
+    "fastest_min": 157,
+    "median_min": 158
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Tampere",
+   "weekday": {
+    "n": 11,
+    "first": "05:05",
+    "last": "19:15",
+    "fastest_min": 90,
+    "median_min": 95
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:05",
+    "last": "19:15",
+    "fastest_min": 90,
+    "median_min": 95
+   },
+   "sunday": {
+    "n": 11,
+    "first": "08:00",
+    "last": "21:12",
+    "fastest_min": 90,
+    "median_min": 97
+   }
+  },
+  {
+   "from": "Jyväskylä",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 9,
+    "first": "05:20",
+    "last": "18:10",
+    "fastest_min": 183,
+    "median_min": 205
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:17",
+    "last": "16:12",
+    "fastest_min": 183,
+    "median_min": 206
+   },
+   "sunday": {
+    "n": 9,
+    "first": "09:19",
+    "last": "19:15",
+    "fastest_min": 203,
+    "median_min": 207
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 371,
+    "median_min": 389
+   },
+   "saturday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 371,
+    "median_min": 389
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:15",
+    "last": "14:35",
+    "fastest_min": 389,
+    "median_min": 393
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 6,
+    "first": "03:33",
+    "last": "20:32",
+    "fastest_min": 53,
+    "median_min": 53
+   },
+   "saturday": {
+    "n": 6,
+    "first": "03:33",
+    "last": "20:32",
+    "fastest_min": 53,
+    "median_min": 53
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:15",
+    "last": "20:32",
+    "fastest_min": 53,
+    "median_min": 53
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 278,
+    "median_min": 288
+   },
+   "saturday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 278,
+    "median_min": 288
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:15",
+    "last": "14:35",
+    "fastest_min": 288,
+    "median_min": 298
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 6,
+    "first": "03:33",
+    "last": "20:32",
+    "fastest_min": 115,
+    "median_min": 115
+   },
+   "saturday": {
+    "n": 6,
+    "first": "03:33",
+    "last": "20:32",
+    "fastest_min": 115,
+    "median_min": 115
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:15",
+    "last": "20:32",
+    "fastest_min": 115,
+    "median_min": 115
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Lahti",
+   "weekday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 314,
+    "median_min": 332
+   },
+   "saturday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 314,
+    "median_min": 332
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:15",
+    "last": "14:35",
+    "fastest_min": 332,
+    "median_min": 336
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 212,
+    "median_min": 215
+   },
+   "saturday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 212,
+    "median_min": 215
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:15",
+    "last": "14:35",
+    "fastest_min": 215,
+    "median_min": 222
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Oulu",
+   "weekday": {
+    "n": 4,
+    "first": "09:17",
+    "last": "21:02",
+    "fastest_min": 128,
+    "median_min": 128
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:17",
+    "last": "17:37",
+    "fastest_min": 128,
+    "median_min": 128
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:17",
+    "last": "21:02",
+    "fastest_min": 128,
+    "median_min": 128
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Pasila",
+   "weekday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 364,
+    "median_min": 382
+   },
+   "saturday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 364,
+    "median_min": 382
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:15",
+    "last": "14:35",
+    "fastest_min": 382,
+    "median_min": 386
+   }
+  },
+  {
+   "from": "Kajaani",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 354,
+    "median_min": 372
+   },
+   "saturday": {
+    "n": 5,
+    "first": "03:33",
+    "last": "14:35",
+    "fastest_min": 354,
+    "median_min": 372
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:15",
+    "last": "14:35",
+    "fastest_min": 372,
+    "median_min": 376
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 7,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 399,
+    "median_min": 435
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 419,
+    "median_min": 654
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:40",
+    "last": "22:50",
+    "fastest_min": 399,
+    "median_min": 444
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 3,
+    "first": "19:24",
+    "last": "22:50",
+    "fastest_min": 516,
+    "median_min": 552
+   },
+   "saturday": {
+    "n": 4,
+    "first": "18:39",
+    "last": "22:50",
+    "fastest_min": 516,
+    "median_min": 563
+   },
+   "sunday": {
+    "n": 3,
+    "first": "19:24",
+    "last": "22:50",
+    "fastest_min": 516,
+    "median_min": 552
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 7,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 158,
+    "median_min": 173
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 158,
+    "median_min": 188
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:40",
+    "last": "22:50",
+    "fastest_min": 158,
+    "median_min": 183
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Oulu",
+   "weekday": {
+    "n": 9,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 58,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 58,
+    "median_min": 61
+   },
+   "sunday": {
+    "n": 9,
+    "first": "10:32",
+    "last": "22:50",
+    "fastest_min": 58,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Pasila",
+   "weekday": {
+    "n": 7,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 392,
+    "median_min": 428
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 412,
+    "median_min": 646
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:40",
+    "last": "22:50",
+    "fastest_min": 392,
+    "median_min": 437
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 3,
+    "first": "19:24",
+    "last": "22:50",
+    "fastest_min": 540,
+    "median_min": 576
+   },
+   "saturday": {
+    "n": 4,
+    "first": "18:39",
+    "last": "22:50",
+    "fastest_min": 540,
+    "median_min": 591
+   },
+   "sunday": {
+    "n": 3,
+    "first": "19:24",
+    "last": "22:50",
+    "fastest_min": 540,
+    "median_min": 576
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 4,
+    "first": "13:26",
+    "last": "21:26",
+    "fastest_min": 74,
+    "median_min": 76
+   },
+   "saturday": {
+    "n": 4,
+    "first": "13:26",
+    "last": "21:26",
+    "fastest_min": 74,
+    "median_min": 76
+   },
+   "sunday": {
+    "n": 4,
+    "first": "13:26",
+    "last": "21:26",
+    "fastest_min": 74,
+    "median_min": 76
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 7,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 221,
+    "median_min": 240
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 233,
+    "median_min": 324
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:40",
+    "last": "22:50",
+    "fastest_min": 221,
+    "median_min": 249
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Tampere",
+   "weekday": {
+    "n": 7,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 291,
+    "median_min": 330
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 311,
+    "median_min": 435
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:40",
+    "last": "22:50",
+    "fastest_min": 291,
+    "median_min": 336
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 7,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 382,
+    "median_min": 418
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 402,
+    "median_min": 608
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:40",
+    "last": "22:50",
+    "fastest_min": 382,
+    "median_min": 427
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Tornio",
+   "weekday": {
+    "n": 2,
+    "first": "06:10",
+    "last": "20:55",
+    "fastest_min": 25,
+    "median_min": 25
+   },
+   "saturday": {
+    "n": 2,
+    "first": "06:10",
+    "last": "20:55",
+    "fastest_min": 25,
+    "median_min": 25
+   },
+   "sunday": {
+    "n": 2,
+    "first": "08:10",
+    "last": "20:55",
+    "fastest_min": 25,
+    "median_min": 25
+   }
+  },
+  {
+   "from": "Kemi",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 7,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 122,
+    "median_min": 132
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:38",
+    "last": "22:50",
+    "fastest_min": 122,
+    "median_min": 144
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:40",
+    "last": "22:50",
+    "fastest_min": 122,
+    "median_min": 144
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 855,
+    "median_min": 855
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 855,
+    "median_min": 855
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 855,
+    "median_min": 855
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 726,
+    "median_min": 726
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 726,
+    "median_min": 726
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 726,
+    "median_min": 726
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Kemi",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 207,
+    "median_min": 207
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 207,
+    "median_min": 207
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 207,
+    "median_min": 207
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 414,
+    "median_min": 414
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 414,
+    "median_min": 414
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 414,
+    "median_min": 414
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Oulu",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 280,
+    "median_min": 280
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 280,
+    "median_min": 280
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 280,
+    "median_min": 280
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Pasila",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 847,
+    "median_min": 847
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 847,
+    "median_min": 847
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 847,
+    "median_min": 847
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 750,
+    "median_min": 750
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 750,
+    "median_min": 750
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 750,
+    "median_min": 750
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 70,
+    "median_min": 70
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 70,
+    "median_min": 70
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 70,
+    "median_min": 70
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 525,
+    "median_min": 525
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 525,
+    "median_min": 525
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 525,
+    "median_min": 525
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Tampere",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 635,
+    "median_min": 635
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 635,
+    "median_min": 635
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 635,
+    "median_min": 635
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 809,
+    "median_min": 809
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 809,
+    "median_min": 809
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 809,
+    "median_min": 809
+   }
+  },
+  {
+   "from": "Kemijärvi",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 367,
+    "median_min": 367
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 367,
+    "median_min": 367
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:00",
+    "last": "19:00",
+    "fastest_min": 367,
+    "median_min": 367
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 174,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 23,
+    "median_min": 34
+   },
+   "saturday": {
+    "n": 156,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 23,
+    "median_min": 34
+   },
+   "sunday": {
+    "n": 155,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 23,
+    "median_min": 34
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 11,
+    "first": "05:33",
+    "last": "23:03",
+    "fastest_min": 52,
+    "median_min": 64
+   },
+   "saturday": {
+    "n": 11,
+    "first": "01:03",
+    "last": "23:03",
+    "fastest_min": 57,
+    "median_min": 64
+   },
+   "sunday": {
+    "n": 10,
+    "first": "01:03",
+    "last": "23:03",
+    "fastest_min": 57,
+    "median_min": 64
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 3,
+    "first": "00:33",
+    "last": "16:58",
+    "fastest_min": 85,
+    "median_min": 95
+   },
+   "saturday": {
+    "n": 1,
+    "first": "00:33",
+    "last": "00:33",
+    "fastest_min": 85,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 1,
+    "first": "00:33",
+    "last": "00:33",
+    "fastest_min": 85,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Lahti",
+   "weekday": {
+    "n": 18,
+    "first": "00:33",
+    "last": "23:33",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "saturday": {
+    "n": 19,
+    "first": "00:33",
+    "last": "23:33",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 19,
+    "first": "00:33",
+    "last": "23:33",
+    "fastest_min": 42,
+    "median_min": 42
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Pasila",
+   "weekday": {
+    "n": 174,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 17,
+    "median_min": 29
+   },
+   "saturday": {
+    "n": 156,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 17,
+    "median_min": 29
+   },
+   "sunday": {
+    "n": 155,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 17,
+    "median_min": 29
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 41,
+    "first": "04:43",
+    "last": "00:03",
+    "fastest_min": 27,
+    "median_min": 32
+   },
+   "saturday": {
+    "n": 39,
+    "first": "01:03",
+    "last": "00:03",
+    "fastest_min": 32,
+    "median_min": 32
+   },
+   "sunday": {
+    "n": 36,
+    "first": "01:03",
+    "last": "00:03",
+    "fastest_min": 32,
+    "median_min": 32
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Tampere",
+   "weekday": {
+    "n": 10,
+    "first": "05:33",
+    "last": "23:03",
+    "fastest_min": 112,
+    "median_min": 112
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:33",
+    "last": "23:03",
+    "fastest_min": 112,
+    "median_min": 112
+   },
+   "sunday": {
+    "n": 9,
+    "first": "07:33",
+    "last": "23:03",
+    "fastest_min": 112,
+    "median_min": 112
+   }
+  },
+  {
+   "from": "Kerava",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 174,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 8,
+    "median_min": 13
+   },
+   "saturday": {
+    "n": 156,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 8,
+    "median_min": 13
+   },
+   "sunday": {
+    "n": 155,
+    "first": "00:05",
+    "last": "00:26",
+    "fastest_min": 8,
+    "median_min": 13
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 13,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 236,
+    "median_min": 261
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 236,
+    "median_min": 261
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:27",
+    "last": "03:35",
+    "fastest_min": 238,
+    "median_min": 261
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 3,
+    "first": "23:31",
+    "last": "03:35",
+    "fastest_min": 290,
+    "median_min": 305
+   },
+   "saturday": {
+    "n": 4,
+    "first": "23:21",
+    "last": "03:35",
+    "fastest_min": 290,
+    "median_min": 307
+   },
+   "sunday": {
+    "n": 3,
+    "first": "23:31",
+    "last": "03:35",
+    "fastest_min": 290,
+    "median_min": 305
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Kemi",
+   "weekday": {
+    "n": 5,
+    "first": "09:49",
+    "last": "02:38",
+    "fastest_min": 169,
+    "median_min": 181
+   },
+   "saturday": {
+    "n": 6,
+    "first": "09:49",
+    "last": "03:34",
+    "fastest_min": 169,
+    "median_min": 190
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:35",
+    "last": "02:38",
+    "fastest_min": 168,
+    "median_min": 174
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "02:38",
+    "last": "02:38",
+    "fastest_min": 372,
+    "median_min": 372
+   },
+   "saturday": {
+    "n": 1,
+    "first": "02:38",
+    "last": "02:38",
+    "fastest_min": 372,
+    "median_min": 372
+   },
+   "sunday": {
+    "n": 1,
+    "first": "02:38",
+    "last": "02:38",
+    "fastest_min": 372,
+    "median_min": 372
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Oulu",
+   "weekday": {
+    "n": 11,
+    "first": "09:49",
+    "last": "02:38",
+    "fastest_min": 93,
+    "median_min": 104
+   },
+   "saturday": {
+    "n": 11,
+    "first": "09:49",
+    "last": "03:34",
+    "fastest_min": 93,
+    "median_min": 111
+   },
+   "sunday": {
+    "n": 11,
+    "first": "10:35",
+    "last": "02:38",
+    "fastest_min": 93,
+    "median_min": 104
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Pasila",
+   "weekday": {
+    "n": 13,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 229,
+    "median_min": 254
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 229,
+    "median_min": 254
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:27",
+    "last": "03:35",
+    "fastest_min": 231,
+    "median_min": 254
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 3,
+    "first": "23:31",
+    "last": "03:35",
+    "fastest_min": 322,
+    "median_min": 329
+   },
+   "saturday": {
+    "n": 4,
+    "first": "23:21",
+    "last": "03:35",
+    "fastest_min": 322,
+    "median_min": 331
+   },
+   "sunday": {
+    "n": 3,
+    "first": "23:31",
+    "last": "03:35",
+    "fastest_min": 322,
+    "median_min": 329
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 5,
+    "first": "09:49",
+    "last": "02:38",
+    "fastest_min": 249,
+    "median_min": 257
+   },
+   "saturday": {
+    "n": 5,
+    "first": "09:49",
+    "last": "02:38",
+    "fastest_min": 249,
+    "median_min": 257
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:35",
+    "last": "02:38",
+    "fastest_min": 246,
+    "median_min": 257
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 14,
+    "first": "05:15",
+    "last": "03:35",
+    "fastest_min": 58,
+    "median_min": 67
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 58,
+    "median_min": 67
+   },
+   "sunday": {
+    "n": 14,
+    "first": "07:27",
+    "last": "03:35",
+    "fastest_min": 58,
+    "median_min": 69
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Tampere",
+   "weekday": {
+    "n": 13,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 130,
+    "median_min": 153
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 135,
+    "median_min": 153
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:27",
+    "last": "03:35",
+    "fastest_min": 130,
+    "median_min": 154
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 13,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 218,
+    "median_min": 244
+   },
+   "saturday": {
+    "n": 10,
+    "first": "06:09",
+    "last": "03:35",
+    "fastest_min": 218,
+    "median_min": 244
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:27",
+    "last": "03:35",
+    "fastest_min": 221,
+    "median_min": 244
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 1,
+    "first": "05:15",
+    "last": "05:15",
+    "fastest_min": 158,
+    "median_min": 158
+   }
+  },
+  {
+   "from": "Kokkola",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 11,
+    "first": "09:49",
+    "last": "02:38",
+    "fastest_min": 35,
+    "median_min": 36
+   },
+   "saturday": {
+    "n": 11,
+    "first": "09:49",
+    "last": "03:34",
+    "fastest_min": 35,
+    "median_min": 38
+   },
+   "sunday": {
+    "n": 11,
+    "first": "10:35",
+    "last": "02:38",
+    "fastest_min": 35,
+    "median_min": 36
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 892,
+    "median_min": 892
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 892,
+    "median_min": 892
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 892,
+    "median_min": 892
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 763,
+    "median_min": 763
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 763,
+    "median_min": 763
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 763,
+    "median_min": 763
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Kemi",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 184,
+    "median_min": 184
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 184,
+    "median_min": 184
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 184,
+    "median_min": 184
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 459,
+    "median_min": 459
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 459,
+    "median_min": 459
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 459,
+    "median_min": 459
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Oulu",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 264,
+    "median_min": 264
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 264,
+    "median_min": 264
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 264,
+    "median_min": 264
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Pasila",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 884,
+    "median_min": 884
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 884,
+    "median_min": 884
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 884,
+    "median_min": 884
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 795,
+    "median_min": 795
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 795,
+    "median_min": 795
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 795,
+    "median_min": 795
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 567,
+    "median_min": 567
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 567,
+    "median_min": 567
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 567,
+    "median_min": 567
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Tampere",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 691,
+    "median_min": 691
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 691,
+    "median_min": 691
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 691,
+    "median_min": 691
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 850,
+    "median_min": 850
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 850,
+    "median_min": 850
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 850,
+    "median_min": 850
+   }
+  },
+  {
+   "from": "Kolari",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 408,
+    "median_min": 408
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 408,
+    "median_min": 408
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:42",
+    "last": "19:42",
+    "fastest_min": 408,
+    "median_min": 408
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 17,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 79,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 17,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 79,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 15,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 79,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 5,
+    "first": "09:47",
+    "last": "20:47",
+    "fastest_min": 216,
+    "median_min": 225
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:47",
+    "last": "15:47",
+    "fastest_min": 216,
+    "median_min": 230
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:47",
+    "last": "20:47",
+    "fastest_min": 216,
+    "median_min": 225
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Imatra",
+   "weekday": {
+    "n": 8,
+    "first": "08:23",
+    "last": "22:40",
+    "fastest_min": 63,
+    "median_min": 69
+   },
+   "saturday": {
+    "n": 8,
+    "first": "08:23",
+    "last": "22:40",
+    "fastest_min": 66,
+    "median_min": 69
+   },
+   "sunday": {
+    "n": 9,
+    "first": "08:23",
+    "last": "22:40",
+    "fastest_min": 63,
+    "median_min": 69
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Joensuu",
+   "weekday": {
+    "n": 6,
+    "first": "08:23",
+    "last": "20:00",
+    "fastest_min": 169,
+    "median_min": 189
+   },
+   "saturday": {
+    "n": 6,
+    "first": "08:23",
+    "last": "20:00",
+    "fastest_min": 186,
+    "median_min": 193
+   },
+   "sunday": {
+    "n": 7,
+    "first": "08:23",
+    "last": "20:00",
+    "fastest_min": 169,
+    "median_min": 191
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 5,
+    "first": "09:47",
+    "last": "20:47",
+    "fastest_min": 271,
+    "median_min": 280
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:47",
+    "last": "15:47",
+    "fastest_min": 271,
+    "median_min": 285
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:47",
+    "last": "20:47",
+    "fastest_min": 271,
+    "median_min": 280
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Kerava",
+   "weekday": {
+    "n": 3,
+    "first": "04:48",
+    "last": "06:27",
+    "fastest_min": 80,
+    "median_min": 93
+   },
+   "saturday": {
+    "n": 1,
+    "first": "04:48",
+    "last": "04:48",
+    "fastest_min": 80,
+    "median_min": 80
+   },
+   "sunday": {
+    "n": 1,
+    "first": "04:48",
+    "last": "04:48",
+    "fastest_min": 80,
+    "median_min": 80
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 6,
+    "first": "07:31",
+    "last": "20:47",
+    "fastest_min": 152,
+    "median_min": 158
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:31",
+    "last": "20:47",
+    "fastest_min": 152,
+    "median_min": 161
+   },
+   "sunday": {
+    "n": 7,
+    "first": "09:47",
+    "last": "20:47",
+    "fastest_min": 152,
+    "median_min": 161
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Lahti",
+   "weekday": {
+    "n": 22,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 27,
+    "median_min": 28
+   },
+   "saturday": {
+    "n": 21,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 27,
+    "median_min": 28
+   },
+   "sunday": {
+    "n": 18,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 27,
+    "median_min": 28
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Lappeenranta",
+   "weekday": {
+    "n": 8,
+    "first": "08:23",
+    "last": "22:40",
+    "fastest_min": 36,
+    "median_min": 40
+   },
+   "saturday": {
+    "n": 9,
+    "first": "08:23",
+    "last": "22:40",
+    "fastest_min": 36,
+    "median_min": 40
+   },
+   "sunday": {
+    "n": 9,
+    "first": "08:23",
+    "last": "22:40",
+    "fastest_min": 36,
+    "median_min": 41
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 6,
+    "first": "07:31",
+    "last": "20:47",
+    "fastest_min": 61,
+    "median_min": 61
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:31",
+    "last": "20:47",
+    "fastest_min": 61,
+    "median_min": 64
+   },
+   "sunday": {
+    "n": 7,
+    "first": "09:47",
+    "last": "20:47",
+    "fastest_min": 61,
+    "median_min": 61
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Oulu",
+   "weekday": {
+    "n": 3,
+    "first": "09:47",
+    "last": "15:47",
+    "fastest_min": 402,
+    "median_min": 418
+   },
+   "saturday": {
+    "n": 2,
+    "first": "09:47",
+    "last": "13:03",
+    "fastest_min": 402,
+    "median_min": 410
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:47",
+    "last": "15:47",
+    "fastest_min": 402,
+    "median_min": 418
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Pasila",
+   "weekday": {
+    "n": 17,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 73,
+    "median_min": 78
+   },
+   "saturday": {
+    "n": 17,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 73,
+    "median_min": 78
+   },
+   "sunday": {
+    "n": 15,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 73,
+    "median_min": 78
+   }
+  },
+  {
+   "from": "Kouvola",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 17,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 64,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 17,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 64,
+    "median_min": 68
+   },
+   "sunday": {
+    "n": 15,
+    "first": "04:48",
+    "last": "21:26",
+    "fastest_min": 64,
+    "median_min": 68
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 7,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 252,
+    "median_min": 272
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 252,
+    "median_min": 271
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:28",
+    "last": "17:00",
+    "fastest_min": 258,
+    "median_min": 272
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 1,
+    "first": "07:28",
+    "last": "07:28",
+    "fastest_min": 257,
+    "median_min": 257
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:28",
+    "last": "10:06",
+    "fastest_min": 257,
+    "median_min": 268
+   },
+   "sunday": {
+    "n": 2,
+    "first": "07:28",
+    "last": "10:06",
+    "fastest_min": 257,
+    "median_min": 268
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 6,
+    "first": "07:15",
+    "last": "23:28",
+    "fastest_min": 59,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:15",
+    "last": "18:38",
+    "fastest_min": 59,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 6,
+    "first": "07:15",
+    "last": "23:28",
+    "fastest_min": 59,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 1,
+    "first": "07:28",
+    "last": "07:28",
+    "fastest_min": 105,
+    "median_min": 105
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:28",
+    "last": "10:06",
+    "fastest_min": 105,
+    "median_min": 109
+   },
+   "sunday": {
+    "n": 3,
+    "first": "07:28",
+    "last": "19:02",
+    "fastest_min": 105,
+    "median_min": 114
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 6,
+    "first": "07:15",
+    "last": "23:28",
+    "fastest_min": 114,
+    "median_min": 115
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:15",
+    "last": "18:38",
+    "fastest_min": 114,
+    "median_min": 115
+   },
+   "sunday": {
+    "n": 6,
+    "first": "07:15",
+    "last": "23:28",
+    "fastest_min": 114,
+    "median_min": 115
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 6,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 159,
+    "median_min": 170
+   },
+   "saturday": {
+    "n": 6,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 159,
+    "median_min": 166
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:26",
+    "last": "17:00",
+    "fastest_min": 163,
+    "median_min": 170
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Lahti",
+   "weekday": {
+    "n": 6,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 195,
+    "median_min": 213
+   },
+   "saturday": {
+    "n": 6,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 195,
+    "median_min": 210
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:26",
+    "last": "17:00",
+    "fastest_min": 201,
+    "median_min": 213
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 6,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 91,
+    "median_min": 98
+   },
+   "saturday": {
+    "n": 6,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 91,
+    "median_min": 95
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:26",
+    "last": "17:00",
+    "fastest_min": 91,
+    "median_min": 98
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Oulu",
+   "weekday": {
+    "n": 4,
+    "first": "07:15",
+    "last": "18:38",
+    "fastest_min": 246,
+    "median_min": 248
+   },
+   "saturday": {
+    "n": 3,
+    "first": "07:15",
+    "last": "15:39",
+    "fastest_min": 246,
+    "median_min": 246
+   },
+   "sunday": {
+    "n": 4,
+    "first": "07:15",
+    "last": "18:38",
+    "fastest_min": 246,
+    "median_min": 248
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Pasila",
+   "weekday": {
+    "n": 7,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 245,
+    "median_min": 265
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 245,
+    "median_min": 264
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:28",
+    "last": "17:00",
+    "fastest_min": 251,
+    "median_min": 265
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 1,
+    "first": "07:28",
+    "last": "07:28",
+    "fastest_min": 276,
+    "median_min": 276
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:28",
+    "last": "10:06",
+    "fastest_min": 276,
+    "median_min": 287
+   },
+   "sunday": {
+    "n": 2,
+    "first": "07:28",
+    "last": "10:06",
+    "fastest_min": 276,
+    "median_min": 287
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Tampere",
+   "weekday": {
+    "n": 1,
+    "first": "07:28",
+    "last": "07:28",
+    "fastest_min": 201,
+    "median_min": 201
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:28",
+    "last": "10:06",
+    "fastest_min": 201,
+    "median_min": 209
+   },
+   "sunday": {
+    "n": 3,
+    "first": "07:28",
+    "last": "19:02",
+    "fastest_min": 201,
+    "median_min": 217
+   }
+  },
+  {
+   "from": "Kuopio",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 7,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 235,
+    "median_min": 255
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:32",
+    "last": "17:00",
+    "fastest_min": 235,
+    "median_min": 254
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:28",
+    "last": "17:00",
+    "fastest_min": 241,
+    "median_min": 255
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 34,
+    "first": "04:22",
+    "last": "23:14",
+    "fastest_min": 49,
+    "median_min": 65
+   },
+   "saturday": {
+    "n": 36,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 49,
+    "median_min": 65
+   },
+   "sunday": {
+    "n": 34,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 49,
+    "median_min": 65
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 4,
+    "first": "09:08",
+    "last": "20:08",
+    "fastest_min": 264,
+    "median_min": 267
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:08",
+    "last": "15:08",
+    "fastest_min": 266,
+    "median_min": 269
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:08",
+    "last": "20:08",
+    "fastest_min": 264,
+    "median_min": 267
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Imatra",
+   "weekday": {
+    "n": 8,
+    "first": "07:51",
+    "last": "22:08",
+    "fastest_min": 95,
+    "median_min": 104
+   },
+   "saturday": {
+    "n": 8,
+    "first": "07:51",
+    "last": "22:08",
+    "fastest_min": 101,
+    "median_min": 104
+   },
+   "sunday": {
+    "n": 9,
+    "first": "07:51",
+    "last": "22:08",
+    "fastest_min": 95,
+    "median_min": 104
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Joensuu",
+   "weekday": {
+    "n": 6,
+    "first": "07:51",
+    "last": "19:22",
+    "fastest_min": 201,
+    "median_min": 224
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:51",
+    "last": "19:22",
+    "fastest_min": 223,
+    "median_min": 226
+   },
+   "sunday": {
+    "n": 7,
+    "first": "07:51",
+    "last": "19:22",
+    "fastest_min": 201,
+    "median_min": 225
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 4,
+    "first": "09:08",
+    "last": "20:08",
+    "fastest_min": 319,
+    "median_min": 322
+   },
+   "saturday": {
+    "n": 3,
+    "first": "09:08",
+    "last": "15:08",
+    "fastest_min": 321,
+    "median_min": 324
+   },
+   "sunday": {
+    "n": 4,
+    "first": "09:08",
+    "last": "20:08",
+    "fastest_min": 319,
+    "median_min": 322
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Kerava",
+   "weekday": {
+    "n": 20,
+    "first": "04:22",
+    "last": "23:14",
+    "fastest_min": 41,
+    "median_min": 41
+   },
+   "saturday": {
+    "n": 20,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 41,
+    "median_min": 41
+   },
+   "sunday": {
+    "n": 20,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 41,
+    "median_min": 41
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 21,
+    "first": "01:17",
+    "last": "22:08",
+    "fastest_min": 28,
+    "median_min": 29
+   },
+   "saturday": {
+    "n": 20,
+    "first": "01:17",
+    "last": "22:08",
+    "fastest_min": 28,
+    "median_min": 29
+   },
+   "sunday": {
+    "n": 19,
+    "first": "01:17",
+    "last": "22:08",
+    "fastest_min": 28,
+    "median_min": 29
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 5,
+    "first": "06:51",
+    "last": "20:08",
+    "fastest_min": 195,
+    "median_min": 201
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:51",
+    "last": "20:08",
+    "fastest_min": 195,
+    "median_min": 201
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:08",
+    "last": "20:08",
+    "fastest_min": 195,
+    "median_min": 202
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Lappeenranta",
+   "weekday": {
+    "n": 8,
+    "first": "07:51",
+    "last": "22:08",
+    "fastest_min": 73,
+    "median_min": 73
+   },
+   "saturday": {
+    "n": 9,
+    "first": "07:51",
+    "last": "22:08",
+    "fastest_min": 68,
+    "median_min": 73
+   },
+   "sunday": {
+    "n": 9,
+    "first": "07:51",
+    "last": "22:08",
+    "fastest_min": 73,
+    "median_min": 73
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 5,
+    "first": "06:51",
+    "last": "20:08",
+    "fastest_min": 100,
+    "median_min": 106
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:51",
+    "last": "20:08",
+    "fastest_min": 100,
+    "median_min": 107
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:08",
+    "last": "20:08",
+    "fastest_min": 100,
+    "median_min": 105
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Oulu",
+   "weekday": {
+    "n": 3,
+    "first": "09:08",
+    "last": "15:08",
+    "fastest_min": 452,
+    "median_min": 457
+   },
+   "saturday": {
+    "n": 2,
+    "first": "09:08",
+    "last": "12:13",
+    "fastest_min": 452,
+    "median_min": 454
+   },
+   "sunday": {
+    "n": 3,
+    "first": "09:08",
+    "last": "15:08",
+    "fastest_min": 452,
+    "median_min": 457
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Pasila",
+   "weekday": {
+    "n": 34,
+    "first": "04:22",
+    "last": "23:14",
+    "fastest_min": 43,
+    "median_min": 59
+   },
+   "saturday": {
+    "n": 36,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 43,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 34,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 43,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 16,
+    "first": "05:35",
+    "last": "22:04",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "saturday": {
+    "n": 16,
+    "first": "05:35",
+    "last": "22:04",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 14,
+    "first": "08:04",
+    "last": "22:04",
+    "fastest_min": 42,
+    "median_min": 42
+   }
+  },
+  {
+   "from": "Lahti",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 34,
+    "first": "04:22",
+    "last": "23:14",
+    "fastest_min": 34,
+    "median_min": 50
+   },
+   "saturday": {
+    "n": 36,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 34,
+    "median_min": 50
+   },
+   "sunday": {
+    "n": 34,
+    "first": "00:24",
+    "last": "23:14",
+    "fastest_min": 34,
+    "median_min": 50
+   }
+  },
+  {
+   "from": "Lappeenranta",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 8,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 122,
+    "median_min": 128
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 122,
+    "median_min": 128
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:25",
+    "last": "20:43",
+    "fastest_min": 122,
+    "median_min": 126
+   }
+  },
+  {
+   "from": "Lappeenranta",
+   "to": "Imatra",
+   "weekday": {
+    "n": 8,
+    "first": "09:06",
+    "last": "23:23",
+    "fastest_min": 20,
+    "median_min": 28
+   },
+   "saturday": {
+    "n": 8,
+    "first": "09:06",
+    "last": "23:23",
+    "fastest_min": 26,
+    "median_min": 28
+   },
+   "sunday": {
+    "n": 9,
+    "first": "09:06",
+    "last": "23:23",
+    "fastest_min": 20,
+    "median_min": 28
+   }
+  },
+  {
+   "from": "Lappeenranta",
+   "to": "Joensuu",
+   "weekday": {
+    "n": 6,
+    "first": "09:06",
+    "last": "20:41",
+    "fastest_min": 126,
+    "median_min": 148
+   },
+   "saturday": {
+    "n": 6,
+    "first": "09:06",
+    "last": "20:41",
+    "fastest_min": 148,
+    "median_min": 151
+   },
+   "sunday": {
+    "n": 7,
+    "first": "09:06",
+    "last": "20:41",
+    "fastest_min": 126,
+    "median_min": 148
+   }
+  },
+  {
+   "from": "Lappeenranta",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 8,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 39,
+    "median_min": 40
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 39,
+    "median_min": 40
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:25",
+    "last": "20:43",
+    "fastest_min": 39,
+    "median_min": 40
+   }
+  },
+  {
+   "from": "Lappeenranta",
+   "to": "Lahti",
+   "weekday": {
+    "n": 8,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 70,
+    "median_min": 74
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 70,
+    "median_min": 74
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:25",
+    "last": "20:43",
+    "fastest_min": 70,
+    "median_min": 72
+   }
+  },
+  {
+   "from": "Lappeenranta",
+   "to": "Pasila",
+   "weekday": {
+    "n": 8,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 116,
+    "median_min": 121
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 116,
+    "median_min": 121
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:25",
+    "last": "20:43",
+    "fastest_min": 116,
+    "median_min": 119
+   }
+  },
+  {
+   "from": "Lappeenranta",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 8,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 107,
+    "median_min": 112
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:31",
+    "last": "20:43",
+    "fastest_min": 107,
+    "median_min": 112
+   },
+   "sunday": {
+    "n": 8,
+    "first": "07:25",
+    "last": "20:43",
+    "fastest_min": 107,
+    "median_min": 110
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 155,
+    "median_min": 167
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 155,
+    "median_min": 166
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:03",
+    "last": "18:51",
+    "fastest_min": 161,
+    "median_min": 167
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 5,
+    "first": "10:57",
+    "last": "21:52",
+    "fastest_min": 153,
+    "median_min": 160
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:57",
+    "last": "16:52",
+    "fastest_min": 153,
+    "median_min": 163
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:57",
+    "last": "21:52",
+    "fastest_min": 153,
+    "median_min": 160
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 5,
+    "first": "10:57",
+    "last": "21:52",
+    "fastest_min": 208,
+    "median_min": 215
+   },
+   "saturday": {
+    "n": 3,
+    "first": "10:57",
+    "last": "16:52",
+    "fastest_min": 208,
+    "median_min": 218
+   },
+   "sunday": {
+    "n": 5,
+    "first": "10:57",
+    "last": "21:52",
+    "fastest_min": 208,
+    "median_min": 215
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 61,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 61,
+    "median_min": 65
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:03",
+    "last": "18:51",
+    "fastest_min": 61,
+    "median_min": 68
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 6,
+    "first": "08:43",
+    "last": "21:52",
+    "fastest_min": 89,
+    "median_min": 91
+   },
+   "saturday": {
+    "n": 6,
+    "first": "08:43",
+    "last": "21:52",
+    "fastest_min": 89,
+    "median_min": 91
+   },
+   "sunday": {
+    "n": 7,
+    "first": "10:57",
+    "last": "21:52",
+    "fastest_min": 89,
+    "median_min": 91
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Lahti",
+   "weekday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 98,
+    "median_min": 110
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 98,
+    "median_min": 109
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:03",
+    "last": "18:51",
+    "fastest_min": 104,
+    "median_min": 110
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Oulu",
+   "weekday": {
+    "n": 3,
+    "first": "10:57",
+    "last": "16:52",
+    "fastest_min": 339,
+    "median_min": 348
+   },
+   "saturday": {
+    "n": 2,
+    "first": "10:57",
+    "last": "14:06",
+    "fastest_min": 339,
+    "median_min": 343
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:57",
+    "last": "16:52",
+    "fastest_min": 339,
+    "median_min": 348
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Pasila",
+   "weekday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 148,
+    "median_min": 160
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 148,
+    "median_min": 159
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:03",
+    "last": "18:51",
+    "fastest_min": 154,
+    "median_min": 160
+   }
+  },
+  {
+   "from": "Mikkeli",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 138,
+    "median_min": 150
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:09",
+    "last": "18:51",
+    "fastest_min": 138,
+    "median_min": 149
+   },
+   "sunday": {
+    "n": 6,
+    "first": "10:03",
+    "last": "18:51",
+    "fastest_min": 144,
+    "median_min": 150
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 16,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 331,
+    "median_min": 380
+   },
+   "saturday": {
+    "n": 12,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 333,
+    "median_min": 519
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:27",
+    "last": "00:57",
+    "fastest_min": 331,
+    "median_min": 382
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 3,
+    "first": "20:55",
+    "last": "00:57",
+    "fastest_min": 433,
+    "median_min": 448
+   },
+   "saturday": {
+    "n": 4,
+    "first": "20:14",
+    "last": "00:57",
+    "fastest_min": 433,
+    "median_min": 454
+   },
+   "sunday": {
+    "n": 3,
+    "first": "20:55",
+    "last": "00:57",
+    "fastest_min": 433,
+    "median_min": 448
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 4,
+    "first": "07:07",
+    "last": "18:22",
+    "fastest_min": 181,
+    "median_min": 181
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:07",
+    "last": "18:22",
+    "fastest_min": 181,
+    "median_min": 181
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:03",
+    "last": "18:22",
+    "fastest_min": 181,
+    "median_min": 181
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 4,
+    "first": "07:07",
+    "last": "18:22",
+    "fastest_min": 124,
+    "median_min": 124
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:07",
+    "last": "18:22",
+    "fastest_min": 124,
+    "median_min": 124
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:03",
+    "last": "18:22",
+    "fastest_min": 124,
+    "median_min": 125
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Kemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:08",
+    "last": "20:24",
+    "fastest_min": 58,
+    "median_min": 63
+   },
+   "saturday": {
+    "n": 6,
+    "first": "05:08",
+    "last": "20:24",
+    "fastest_min": 58,
+    "median_min": 63
+   },
+   "sunday": {
+    "n": 6,
+    "first": "06:50",
+    "last": "20:24",
+    "fastest_min": 58,
+    "median_min": 63
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 13,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 90,
+    "median_min": 108
+   },
+   "saturday": {
+    "n": 13,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 90,
+    "median_min": 112
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:27",
+    "last": "00:57",
+    "fastest_min": 90,
+    "median_min": 112
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 3,
+    "first": "07:07",
+    "last": "12:27",
+    "fastest_min": 416,
+    "median_min": 426
+   },
+   "saturday": {
+    "n": 3,
+    "first": "07:07",
+    "last": "12:27",
+    "fastest_min": 416,
+    "median_min": 426
+   },
+   "sunday": {
+    "n": 2,
+    "first": "10:03",
+    "last": "12:27",
+    "fastest_min": 426,
+    "median_min": 435
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 4,
+    "first": "07:07",
+    "last": "18:22",
+    "fastest_min": 243,
+    "median_min": 244
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:07",
+    "last": "18:22",
+    "fastest_min": 243,
+    "median_min": 244
+   },
+   "sunday": {
+    "n": 3,
+    "first": "10:03",
+    "last": "18:22",
+    "fastest_min": 243,
+    "median_min": 246
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Lahti",
+   "weekday": {
+    "n": 3,
+    "first": "07:07",
+    "last": "12:27",
+    "fastest_min": 460,
+    "median_min": 464
+   },
+   "saturday": {
+    "n": 3,
+    "first": "07:07",
+    "last": "12:27",
+    "fastest_min": 460,
+    "median_min": 464
+   },
+   "sunday": {
+    "n": 2,
+    "first": "10:03",
+    "last": "12:27",
+    "fastest_min": 464,
+    "median_min": 480
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 3,
+    "first": "07:07",
+    "last": "12:27",
+    "fastest_min": 343,
+    "median_min": 350
+   },
+   "saturday": {
+    "n": 3,
+    "first": "07:07",
+    "last": "12:27",
+    "fastest_min": 343,
+    "median_min": 350
+   },
+   "sunday": {
+    "n": 2,
+    "first": "10:03",
+    "last": "12:27",
+    "fastest_min": 350,
+    "median_min": 365
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Pasila",
+   "weekday": {
+    "n": 16,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 324,
+    "median_min": 373
+   },
+   "saturday": {
+    "n": 12,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 326,
+    "median_min": 512
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:27",
+    "last": "00:57",
+    "fastest_min": 324,
+    "median_min": 375
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 3,
+    "first": "20:55",
+    "last": "00:57",
+    "fastest_min": 457,
+    "median_min": 480
+   },
+   "saturday": {
+    "n": 4,
+    "first": "20:14",
+    "last": "00:57",
+    "fastest_min": 457,
+    "median_min": 482
+   },
+   "sunday": {
+    "n": 3,
+    "first": "20:55",
+    "last": "00:57",
+    "fastest_min": 457,
+    "median_min": 480
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 4,
+    "first": "12:20",
+    "last": "20:24",
+    "fastest_min": 139,
+    "median_min": 141
+   },
+   "saturday": {
+    "n": 4,
+    "first": "12:20",
+    "last": "20:24",
+    "fastest_min": 139,
+    "median_min": 141
+   },
+   "sunday": {
+    "n": 4,
+    "first": "12:20",
+    "last": "20:24",
+    "fastest_min": 139,
+    "median_min": 141
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 13,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 153,
+    "median_min": 175
+   },
+   "saturday": {
+    "n": 9,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 156,
+    "median_min": 191
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:27",
+    "last": "00:57",
+    "fastest_min": 153,
+    "median_min": 190
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Tampere",
+   "weekday": {
+    "n": 13,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 223,
+    "median_min": 264
+   },
+   "saturday": {
+    "n": 9,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 232,
+    "median_min": 275
+   },
+   "sunday": {
+    "n": 12,
+    "first": "06:27",
+    "last": "00:57",
+    "fastest_min": 223,
+    "median_min": 269
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 16,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 314,
+    "median_min": 363
+   },
+   "saturday": {
+    "n": 12,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 315,
+    "median_min": 502
+   },
+   "sunday": {
+    "n": 14,
+    "first": "06:27",
+    "last": "00:57",
+    "fastest_min": 314,
+    "median_min": 365
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Tornio",
+   "weekday": {
+    "n": 2,
+    "first": "05:08",
+    "last": "19:50",
+    "fastest_min": 87,
+    "median_min": 88
+   },
+   "saturday": {
+    "n": 2,
+    "first": "05:08",
+    "last": "19:50",
+    "fastest_min": 87,
+    "median_min": 88
+   },
+   "sunday": {
+    "n": 2,
+    "first": "06:50",
+    "last": "19:50",
+    "fastest_min": 90,
+    "median_min": 97
+   }
+  },
+  {
+   "from": "Oulu",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 13,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 54,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 13,
+    "first": "04:32",
+    "last": "00:57",
+    "fastest_min": 54,
+    "median_min": 71
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:27",
+    "last": "00:57",
+    "fastest_min": 54,
+    "median_min": 71
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Hanko",
+   "weekday": {
+    "n": 2,
+    "first": "10:11",
+    "last": "17:27",
+    "fastest_min": 114,
+    "median_min": 114
+   },
+   "saturday": {
+    "n": 1,
+    "first": "20:56",
+    "last": "20:56",
+    "fastest_min": 114,
+    "median_min": 114
+   },
+   "sunday": {
+    "n": 2,
+    "first": "18:27",
+    "last": "20:56",
+    "fastest_min": 113,
+    "median_min": 113
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 624,
+    "first": "00:34",
+    "last": "00:46",
+    "fastest_min": 4,
+    "median_min": 5
+   },
+   "saturday": {
+    "n": 553,
+    "first": "00:34",
+    "last": "00:49",
+    "fastest_min": 4,
+    "median_min": 5
+   },
+   "sunday": {
+    "n": 516,
+    "first": "00:34",
+    "last": "00:46",
+    "fastest_min": 4,
+    "median_min": 5
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Helsinki Airport",
+   "weekday": {
+    "n": 219,
+    "first": "00:22",
+    "last": "23:52",
+    "fastest_min": 23,
+    "median_min": 28
+   },
+   "saturday": {
+    "n": 192,
+    "first": "00:10",
+    "last": "23:52",
+    "fastest_min": 23,
+    "median_min": 28
+   },
+   "sunday": {
+    "n": 188,
+    "first": "00:10",
+    "last": "23:52",
+    "fastest_min": 23,
+    "median_min": 28
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 29,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 57,
+    "median_min": 63
+   },
+   "saturday": {
+    "n": 29,
+    "first": "00:45",
+    "last": "23:30",
+    "fastest_min": 60,
+    "median_min": 64
+   },
+   "sunday": {
+    "n": 30,
+    "first": "00:45",
+    "last": "23:20",
+    "fastest_min": 63,
+    "median_min": 63
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 4,
+    "first": "08:20",
+    "last": "19:20",
+    "fastest_min": 312,
+    "median_min": 318
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:20",
+    "last": "14:20",
+    "fastest_min": 317,
+    "median_min": 319
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:20",
+    "last": "19:20",
+    "fastest_min": 312,
+    "median_min": 318
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Imatra",
+   "weekday": {
+    "n": 8,
+    "first": "07:00",
+    "last": "21:20",
+    "fastest_min": 143,
+    "median_min": 152
+   },
+   "saturday": {
+    "n": 8,
+    "first": "07:00",
+    "last": "21:20",
+    "fastest_min": 150,
+    "median_min": 152
+   },
+   "sunday": {
+    "n": 9,
+    "first": "07:00",
+    "last": "21:20",
+    "fastest_min": 143,
+    "median_min": 152
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Joensuu",
+   "weekday": {
+    "n": 6,
+    "first": "07:00",
+    "last": "18:35",
+    "fastest_min": 249,
+    "median_min": 273
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:00",
+    "last": "18:35",
+    "fastest_min": 271,
+    "median_min": 276
+   },
+   "sunday": {
+    "n": 7,
+    "first": "07:00",
+    "last": "18:35",
+    "fastest_min": 249,
+    "median_min": 276
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 9,
+    "first": "07:06",
+    "last": "19:06",
+    "fastest_min": 207,
+    "median_min": 213
+   },
+   "saturday": {
+    "n": 7,
+    "first": "07:06",
+    "last": "19:06",
+    "fastest_min": 210,
+    "median_min": 214
+   },
+   "sunday": {
+    "n": 11,
+    "first": "07:06",
+    "last": "19:06",
+    "fastest_min": 207,
+    "median_min": 214
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 4,
+    "first": "08:20",
+    "last": "19:20",
+    "fastest_min": 367,
+    "median_min": 373
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:20",
+    "last": "14:20",
+    "fastest_min": 372,
+    "median_min": 374
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:20",
+    "last": "19:20",
+    "fastest_min": 367,
+    "median_min": 373
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Kemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 397,
+    "median_min": 459
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 424,
+    "median_min": 612
+   },
+   "sunday": {
+    "n": 7,
+    "first": "06:26",
+    "last": "23:20",
+    "fastest_min": 397,
+    "median_min": 424
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "19:37",
+    "last": "19:37",
+    "fastest_min": 793,
+    "median_min": 793
+   },
+   "saturday": {
+    "n": 1,
+    "first": "19:37",
+    "last": "19:37",
+    "fastest_min": 793,
+    "median_min": 793
+   },
+   "sunday": {
+    "n": 1,
+    "first": "19:37",
+    "last": "19:37",
+    "fastest_min": 793,
+    "median_min": 793
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Kerava",
+   "weekday": {
+    "n": 171,
+    "first": "00:15",
+    "last": "23:55",
+    "fastest_min": 17,
+    "median_min": 29
+   },
+   "saturday": {
+    "n": 157,
+    "first": "00:15",
+    "last": "23:55",
+    "fastest_min": 17,
+    "median_min": 29
+   },
+   "sunday": {
+    "n": 154,
+    "first": "00:15",
+    "last": "23:55",
+    "fastest_min": 17,
+    "median_min": 29
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 13,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 223,
+    "median_min": 244
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 223,
+    "median_min": 261
+   },
+   "sunday": {
+    "n": 13,
+    "first": "06:26",
+    "last": "23:20",
+    "fastest_min": 223,
+    "median_min": 244
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 16,
+    "first": "00:15",
+    "last": "21:20",
+    "fastest_min": 76,
+    "median_min": 78
+   },
+   "saturday": {
+    "n": 16,
+    "first": "00:15",
+    "last": "21:20",
+    "fastest_min": 76,
+    "median_min": 77
+   },
+   "sunday": {
+    "n": 16,
+    "first": "00:15",
+    "last": "21:20",
+    "fastest_min": 76,
+    "median_min": 77
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 6,
+    "first": "06:00",
+    "last": "19:20",
+    "fastest_min": 243,
+    "median_min": 251
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:00",
+    "last": "19:20",
+    "fastest_min": 243,
+    "median_min": 253
+   },
+   "sunday": {
+    "n": 8,
+    "first": "08:20",
+    "last": "19:20",
+    "fastest_min": 243,
+    "median_min": 257
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Lahti",
+   "weekday": {
+    "n": 31,
+    "first": "00:15",
+    "last": "23:15",
+    "fastest_min": 45,
+    "median_min": 60
+   },
+   "saturday": {
+    "n": 34,
+    "first": "00:15",
+    "last": "23:15",
+    "fastest_min": 45,
+    "median_min": 60
+   },
+   "sunday": {
+    "n": 34,
+    "first": "00:15",
+    "last": "23:15",
+    "fastest_min": 45,
+    "median_min": 60
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Lappeenranta",
+   "weekday": {
+    "n": 8,
+    "first": "07:00",
+    "last": "21:20",
+    "fastest_min": 121,
+    "median_min": 122
+   },
+   "saturday": {
+    "n": 9,
+    "first": "07:00",
+    "last": "21:20",
+    "fastest_min": 121,
+    "median_min": 122
+   },
+   "sunday": {
+    "n": 9,
+    "first": "07:00",
+    "last": "21:20",
+    "fastest_min": 121,
+    "median_min": 121
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 5,
+    "first": "06:00",
+    "last": "19:20",
+    "fastest_min": 148,
+    "median_min": 154
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:00",
+    "last": "19:20",
+    "fastest_min": 148,
+    "median_min": 157
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:20",
+    "last": "19:20",
+    "fastest_min": 148,
+    "median_min": 155
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Oulu",
+   "weekday": {
+    "n": 15,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 319,
+    "median_min": 356
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 319,
+    "median_min": 449
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:26",
+    "last": "23:20",
+    "fastest_min": 319,
+    "median_min": 356
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Pori",
+   "weekday": {
+    "n": 1,
+    "first": "08:06",
+    "last": "08:06",
+    "fastest_min": 222,
+    "median_min": 222
+   },
+   "saturday": {
+    "n": 1,
+    "first": "14:06",
+    "last": "14:06",
+    "fastest_min": 218,
+    "median_min": 218
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 59,
+    "first": "04:25",
+    "last": "23:45",
+    "fastest_min": 37,
+    "median_min": 50
+   },
+   "saturday": {
+    "n": 57,
+    "first": "00:45",
+    "last": "23:45",
+    "fastest_min": 41,
+    "median_min": 50
+   },
+   "sunday": {
+    "n": 56,
+    "first": "00:45",
+    "last": "23:45",
+    "fastest_min": 41,
+    "median_min": 50
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 477,
+    "median_min": 536
+   },
+   "saturday": {
+    "n": 4,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 500,
+    "median_min": 635
+   },
+   "sunday": {
+    "n": 7,
+    "first": "06:26",
+    "last": "23:20",
+    "fastest_min": 477,
+    "median_min": 500
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Salo",
+   "weekday": {
+    "n": 14,
+    "first": "05:32",
+    "last": "21:11",
+    "fastest_min": 84,
+    "median_min": 85
+   },
+   "saturday": {
+    "n": 11,
+    "first": "05:32",
+    "last": "22:58",
+    "fastest_min": 84,
+    "median_min": 85
+   },
+   "sunday": {
+    "n": 11,
+    "first": "05:32",
+    "last": "22:58",
+    "fastest_min": 84,
+    "median_min": 85
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 19,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 159,
+    "median_min": 170
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 159,
+    "median_min": 171
+   },
+   "sunday": {
+    "n": 18,
+    "first": "06:26",
+    "last": "23:20",
+    "fastest_min": 159,
+    "median_min": 170
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Tampere",
+   "weekday": {
+    "n": 42,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 92,
+    "median_min": 107
+   },
+   "saturday": {
+    "n": 40,
+    "first": "05:09",
+    "last": "23:30",
+    "fastest_min": 92,
+    "median_min": 107
+   },
+   "sunday": {
+    "n": 42,
+    "first": "06:26",
+    "last": "23:20",
+    "fastest_min": 92,
+    "median_min": 107
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 434,
+    "first": "00:15",
+    "last": "23:55",
+    "fastest_min": 8,
+    "median_min": 15
+   },
+   "saturday": {
+    "n": 394,
+    "first": "00:10",
+    "last": "23:55",
+    "fastest_min": 8,
+    "median_min": 15
+   },
+   "sunday": {
+    "n": 389,
+    "first": "00:10",
+    "last": "23:55",
+    "fastest_min": 8,
+    "median_min": 15
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Turku",
+   "weekday": {
+    "n": 14,
+    "first": "05:32",
+    "last": "21:11",
+    "fastest_min": 117,
+    "median_min": 118
+   },
+   "saturday": {
+    "n": 11,
+    "first": "05:32",
+    "last": "22:58",
+    "fastest_min": 117,
+    "median_min": 118
+   },
+   "sunday": {
+    "n": 11,
+    "first": "05:32",
+    "last": "22:58",
+    "fastest_min": 117,
+    "median_min": 118
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Turku satama",
+   "weekday": {
+    "n": 3,
+    "first": "05:32",
+    "last": "17:41",
+    "fastest_min": 127,
+    "median_min": 128
+   },
+   "saturday": {
+    "n": 3,
+    "first": "05:32",
+    "last": "17:41",
+    "fastest_min": 127,
+    "median_min": 128
+   },
+   "sunday": {
+    "n": 3,
+    "first": "05:32",
+    "last": "17:41",
+    "fastest_min": 127,
+    "median_min": 128
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 6,
+    "first": "07:26",
+    "last": "20:26",
+    "fastest_min": 213,
+    "median_min": 222
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:26",
+    "last": "20:06",
+    "fastest_min": 216,
+    "median_min": 228
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:26",
+    "last": "20:26",
+    "fastest_min": 213,
+    "median_min": 224
+   }
+  },
+  {
+   "from": "Pasila",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 12,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 261,
+    "median_min": 281
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:09",
+    "last": "23:20",
+    "fastest_min": 261,
+    "median_min": 302
+   },
+   "sunday": {
+    "n": 12,
+    "first": "06:26",
+    "last": "23:20",
+    "fastest_min": 261,
+    "median_min": 281
+   }
+  },
+  {
+   "from": "Pori",
+   "to": "Tampere",
+   "weekday": {
+    "n": 9,
+    "first": "05:17",
+    "last": "18:12",
+    "fastest_min": 93,
+    "median_min": 93
+   },
+   "saturday": {
+    "n": 7,
+    "first": "05:17",
+    "last": "18:12",
+    "fastest_min": 93,
+    "median_min": 93
+   },
+   "sunday": {
+    "n": 5,
+    "first": "07:17",
+    "last": "18:12",
+    "fastest_min": 93,
+    "median_min": 93
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 56,
+    "first": "03:55",
+    "last": "23:53",
+    "fastest_min": 48,
+    "median_min": 54
+   },
+   "saturday": {
+    "n": 51,
+    "first": "00:55",
+    "last": "00:02",
+    "fastest_min": 48,
+    "median_min": 54
+   },
+   "sunday": {
+    "n": 51,
+    "first": "00:55",
+    "last": "23:53",
+    "fastest_min": 51,
+    "median_min": 54
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 32,
+    "first": "05:20",
+    "last": "00:44",
+    "fastest_min": 17,
+    "median_min": 19
+   },
+   "saturday": {
+    "n": 29,
+    "first": "01:37",
+    "last": "00:44",
+    "fastest_min": 17,
+    "median_min": 18
+   },
+   "sunday": {
+    "n": 30,
+    "first": "01:37",
+    "last": "00:44",
+    "fastest_min": 17,
+    "median_min": 18
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 9,
+    "first": "07:52",
+    "last": "19:52",
+    "fastest_min": 161,
+    "median_min": 167
+   },
+   "saturday": {
+    "n": 7,
+    "first": "07:52",
+    "last": "19:52",
+    "fastest_min": 164,
+    "median_min": 167
+   },
+   "sunday": {
+    "n": 11,
+    "first": "07:52",
+    "last": "19:52",
+    "fastest_min": 161,
+    "median_min": 167
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Kemi",
+   "weekday": {
+    "n": 3,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 451,
+    "median_min": 522
+   },
+   "saturday": {
+    "n": 4,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 451,
+    "median_min": 525
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:16",
+    "last": "00:44",
+    "fastest_min": 522,
+    "median_min": 528
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "21:16",
+    "last": "21:16",
+    "fastest_min": 694,
+    "median_min": 694
+   },
+   "saturday": {
+    "n": 1,
+    "first": "21:16",
+    "last": "21:16",
+    "fastest_min": 694,
+    "median_min": 694
+   },
+   "sunday": {
+    "n": 1,
+    "first": "21:16",
+    "last": "21:16",
+    "fastest_min": 694,
+    "median_min": 694
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Kerava",
+   "weekday": {
+    "n": 43,
+    "first": "03:55",
+    "last": "23:53",
+    "fastest_min": 26,
+    "median_min": 30
+   },
+   "saturday": {
+    "n": 38,
+    "first": "00:55",
+    "last": "23:53",
+    "fastest_min": 30,
+    "median_min": 30
+   },
+   "sunday": {
+    "n": 38,
+    "first": "00:55",
+    "last": "23:53",
+    "fastest_min": 30,
+    "median_min": 30
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 4,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 212,
+    "median_min": 271
+   },
+   "saturday": {
+    "n": 4,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 234,
+    "median_min": 309
+   },
+   "sunday": {
+    "n": 4,
+    "first": "17:25",
+    "last": "00:44",
+    "fastest_min": 212,
+    "median_min": 309
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 1,
+    "first": "16:52",
+    "last": "16:52",
+    "fastest_min": 283,
+    "median_min": 283
+   },
+   "saturday": {
+    "n": 2,
+    "first": "12:52",
+    "last": "16:52",
+    "fastest_min": 283,
+    "median_min": 293
+   },
+   "sunday": {
+    "n": 2,
+    "first": "12:52",
+    "last": "16:52",
+    "fastest_min": 283,
+    "median_min": 293
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Lahti",
+   "weekday": {
+    "n": 18,
+    "first": "04:39",
+    "last": "22:13",
+    "fastest_min": 43,
+    "median_min": 43
+   },
+   "saturday": {
+    "n": 17,
+    "first": "05:13",
+    "last": "22:13",
+    "fastest_min": 43,
+    "median_min": 43
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:13",
+    "last": "22:13",
+    "fastest_min": 43,
+    "median_min": 43
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Oulu",
+   "weekday": {
+    "n": 3,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 350,
+    "median_min": 444
+   },
+   "saturday": {
+    "n": 4,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 350,
+    "median_min": 446
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:16",
+    "last": "00:44",
+    "fastest_min": 444,
+    "median_min": 448
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Pasila",
+   "weekday": {
+    "n": 56,
+    "first": "03:55",
+    "last": "23:53",
+    "fastest_min": 42,
+    "median_min": 48
+   },
+   "saturday": {
+    "n": 51,
+    "first": "00:55",
+    "last": "00:02",
+    "fastest_min": 42,
+    "median_min": 48
+   },
+   "sunday": {
+    "n": 51,
+    "first": "00:55",
+    "last": "23:53",
+    "fastest_min": 44,
+    "median_min": 48
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Pori",
+   "weekday": {
+    "n": 1,
+    "first": "08:52",
+    "last": "08:52",
+    "fastest_min": 176,
+    "median_min": 176
+   },
+   "saturday": {
+    "n": 1,
+    "first": "14:52",
+    "last": "14:52",
+    "fastest_min": 172,
+    "median_min": 172
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 3,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 529,
+    "median_min": 604
+   },
+   "saturday": {
+    "n": 3,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 529,
+    "median_min": 604
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:16",
+    "last": "00:44",
+    "fastest_min": 604,
+    "median_min": 615
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 5,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 128,
+    "median_min": 155
+   },
+   "saturday": {
+    "n": 6,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 135,
+    "median_min": 181
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:52",
+    "last": "00:44",
+    "fastest_min": 128,
+    "median_min": 207
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Tampere",
+   "weekday": {
+    "n": 30,
+    "first": "05:20",
+    "last": "00:44",
+    "fastest_min": 56,
+    "median_min": 61
+   },
+   "saturday": {
+    "n": 28,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 61,
+    "median_min": 61
+   },
+   "sunday": {
+    "n": 29,
+    "first": "07:52",
+    "last": "00:44",
+    "fastest_min": 56,
+    "median_min": 61
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 56,
+    "first": "03:55",
+    "last": "23:53",
+    "fastest_min": 33,
+    "median_min": 39
+   },
+   "saturday": {
+    "n": 51,
+    "first": "00:55",
+    "last": "00:02",
+    "fastest_min": 33,
+    "median_min": 39
+   },
+   "sunday": {
+    "n": 51,
+    "first": "00:55",
+    "last": "23:53",
+    "fastest_min": 34,
+    "median_min": 39
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 1,
+    "first": "11:52",
+    "last": "11:52",
+    "fastest_min": 205,
+    "median_min": 205
+   },
+   "saturday": {
+    "n": 2,
+    "first": "11:52",
+    "last": "20:52",
+    "fastest_min": 187,
+    "median_min": 196
+   },
+   "sunday": {
+    "n": 1,
+    "first": "11:52",
+    "last": "11:52",
+    "fastest_min": 205,
+    "median_min": 205
+   }
+  },
+  {
+   "from": "Riihimäki",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 3,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 276,
+    "median_min": 360
+   },
+   "saturday": {
+    "n": 4,
+    "first": "05:52",
+    "last": "00:44",
+    "fastest_min": 276,
+    "median_min": 363
+   },
+   "sunday": {
+    "n": 3,
+    "first": "21:16",
+    "last": "00:44",
+    "fastest_min": 360,
+    "median_min": 367
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 484,
+    "median_min": 510
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 497,
+    "median_min": 735
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 484,
+    "median_min": 518
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 2,
+    "first": "17:52",
+    "last": "21:00",
+    "fastest_min": 606,
+    "median_min": 625
+   },
+   "saturday": {
+    "n": 3,
+    "first": "16:46",
+    "last": "21:00",
+    "fastest_min": 606,
+    "median_min": 644
+   },
+   "sunday": {
+    "n": 2,
+    "first": "17:52",
+    "last": "21:00",
+    "fastest_min": 606,
+    "median_min": 625
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Kemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 76,
+    "median_min": 81
+   },
+   "saturday": {
+    "n": 7,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 76,
+    "median_min": 82
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 72,
+    "median_min": 80
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 243,
+    "median_min": 250
+   },
+   "saturday": {
+    "n": 7,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 243,
+    "median_min": 251
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 243,
+    "median_min": 254
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Oulu",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 138,
+    "median_min": 144
+   },
+   "saturday": {
+    "n": 7,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 138,
+    "median_min": 147
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 138,
+    "median_min": 144
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Pasila",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 477,
+    "median_min": 503
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 490,
+    "median_min": 727
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 477,
+    "median_min": 511
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 2,
+    "first": "17:52",
+    "last": "21:00",
+    "fastest_min": 630,
+    "median_min": 649
+   },
+   "saturday": {
+    "n": 3,
+    "first": "16:46",
+    "last": "21:00",
+    "fastest_min": 630,
+    "median_min": 668
+   },
+   "sunday": {
+    "n": 2,
+    "first": "17:52",
+    "last": "21:00",
+    "fastest_min": 630,
+    "median_min": 649
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 306,
+    "median_min": 319
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 312,
+    "median_min": 405
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 306,
+    "median_min": 323
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Tampere",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 376,
+    "median_min": 404
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 389,
+    "median_min": 515
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 376,
+    "median_min": 411
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 467,
+    "median_min": 493
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 480,
+    "median_min": 689
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 467,
+    "median_min": 501
+   }
+  },
+  {
+   "from": "Rovaniemi",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 6,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 207,
+    "median_min": 210
+   },
+   "saturday": {
+    "n": 7,
+    "first": "05:15",
+    "last": "21:00",
+    "fastest_min": 207,
+    "median_min": 211
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "21:00",
+    "fastest_min": 207,
+    "median_min": 214
+   }
+  },
+  {
+   "from": "Salo",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 14,
+    "first": "05:54",
+    "last": "21:36",
+    "fastest_min": 88,
+    "median_min": 94
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:56",
+    "last": "21:36",
+    "fastest_min": 88,
+    "median_min": 94
+   },
+   "sunday": {
+    "n": 11,
+    "first": "09:06",
+    "last": "21:36",
+    "fastest_min": 94,
+    "median_min": 94
+   }
+  },
+  {
+   "from": "Salo",
+   "to": "Pasila",
+   "weekday": {
+    "n": 14,
+    "first": "05:54",
+    "last": "21:36",
+    "fastest_min": 82,
+    "median_min": 88
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:56",
+    "last": "21:36",
+    "fastest_min": 82,
+    "median_min": 88
+   },
+   "sunday": {
+    "n": 11,
+    "first": "09:06",
+    "last": "21:36",
+    "fastest_min": 88,
+    "median_min": 88
+   }
+  },
+  {
+   "from": "Salo",
+   "to": "Turku",
+   "weekday": {
+    "n": 14,
+    "first": "06:57",
+    "last": "22:37",
+    "fastest_min": 30,
+    "median_min": 32
+   },
+   "saturday": {
+    "n": 11,
+    "first": "06:57",
+    "last": "00:27",
+    "fastest_min": 32,
+    "median_min": 32
+   },
+   "sunday": {
+    "n": 11,
+    "first": "06:57",
+    "last": "00:27",
+    "fastest_min": 32,
+    "median_min": 32
+   }
+  },
+  {
+   "from": "Salo",
+   "to": "Turku satama",
+   "weekday": {
+    "n": 3,
+    "first": "06:57",
+    "last": "19:07",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "saturday": {
+    "n": 3,
+    "first": "06:57",
+    "last": "19:07",
+    "fastest_min": 42,
+    "median_min": 42
+   },
+   "sunday": {
+    "n": 3,
+    "first": "06:57",
+    "last": "19:07",
+    "fastest_min": 42,
+    "median_min": 42
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 19,
+    "first": "05:37",
+    "last": "03:56",
+    "fastest_min": 174,
+    "median_min": 188
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:37",
+    "last": "03:56",
+    "fastest_min": 174,
+    "median_min": 189
+   },
+   "sunday": {
+    "n": 17,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 174,
+    "median_min": 191
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 3,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 128,
+    "median_min": 190
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 128,
+    "median_min": 195
+   },
+   "sunday": {
+    "n": 3,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 128,
+    "median_min": 190
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 2,
+    "first": "09:30",
+    "last": "16:52",
+    "fastest_min": 158,
+    "median_min": 159
+   },
+   "saturday": {
+    "n": 2,
+    "first": "09:30",
+    "last": "16:52",
+    "fastest_min": 158,
+    "median_min": 159
+   },
+   "sunday": {
+    "n": 2,
+    "first": "09:30",
+    "last": "16:52",
+    "fastest_min": 158,
+    "median_min": 159
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Kemi",
+   "weekday": {
+    "n": 5,
+    "first": "08:34",
+    "last": "01:07",
+    "fastest_min": 230,
+    "median_min": 261
+   },
+   "saturday": {
+    "n": 4,
+    "first": "08:34",
+    "last": "01:55",
+    "fastest_min": 261,
+    "median_min": 290
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "02:44",
+    "fastest_min": 230,
+    "median_min": 251
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "01:07",
+    "last": "01:07",
+    "fastest_min": 463,
+    "median_min": 463
+   },
+   "saturday": {
+    "n": 1,
+    "first": "01:07",
+    "last": "01:07",
+    "fastest_min": 463,
+    "median_min": 463
+   },
+   "sunday": {
+    "n": 1,
+    "first": "01:07",
+    "last": "01:07",
+    "fastest_min": 463,
+    "median_min": 463
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 12,
+    "first": "08:34",
+    "last": "01:07",
+    "fastest_min": 58,
+    "median_min": 67
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:34",
+    "last": "01:55",
+    "fastest_min": 60,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 13,
+    "first": "09:22",
+    "last": "02:44",
+    "fastest_min": 58,
+    "median_min": 67
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Oulu",
+   "weekday": {
+    "n": 11,
+    "first": "08:34",
+    "last": "01:07",
+    "fastest_min": 155,
+    "median_min": 169
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:34",
+    "last": "01:55",
+    "fastest_min": 156,
+    "median_min": 188
+   },
+   "sunday": {
+    "n": 12,
+    "first": "09:22",
+    "last": "02:44",
+    "fastest_min": 155,
+    "median_min": 177
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Pasila",
+   "weekday": {
+    "n": 19,
+    "first": "05:37",
+    "last": "03:56",
+    "fastest_min": 167,
+    "median_min": 181
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:37",
+    "last": "03:56",
+    "fastest_min": 167,
+    "median_min": 182
+   },
+   "sunday": {
+    "n": 17,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 167,
+    "median_min": 184
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 3,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 147,
+    "median_min": 214
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 147,
+    "median_min": 219
+   },
+   "sunday": {
+    "n": 3,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 147,
+    "median_min": 214
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 5,
+    "first": "08:34",
+    "last": "01:07",
+    "fastest_min": 310,
+    "median_min": 337
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:34",
+    "last": "01:07",
+    "fastest_min": 337,
+    "median_min": 367
+   },
+   "sunday": {
+    "n": 6,
+    "first": "09:22",
+    "last": "02:44",
+    "fastest_min": 310,
+    "median_min": 329
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Tampere",
+   "weekday": {
+    "n": 19,
+    "first": "05:37",
+    "last": "03:56",
+    "fastest_min": 67,
+    "median_min": 77
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:37",
+    "last": "03:56",
+    "fastest_min": 67,
+    "median_min": 80
+   },
+   "sunday": {
+    "n": 17,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 67,
+    "median_min": 81
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 19,
+    "first": "05:37",
+    "last": "03:56",
+    "fastest_min": 156,
+    "median_min": 171
+   },
+   "saturday": {
+    "n": 18,
+    "first": "06:37",
+    "last": "03:56",
+    "fastest_min": 156,
+    "median_min": 172
+   },
+   "sunday": {
+    "n": 17,
+    "first": "07:37",
+    "last": "03:56",
+    "fastest_min": 157,
+    "median_min": 174
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 10,
+    "first": "06:50",
+    "last": "23:10",
+    "fastest_min": 49,
+    "median_min": 55
+   },
+   "saturday": {
+    "n": 7,
+    "first": "10:11",
+    "last": "23:10",
+    "fastest_min": 49,
+    "median_min": 56
+   },
+   "sunday": {
+    "n": 8,
+    "first": "09:29",
+    "last": "23:10",
+    "fastest_min": 49,
+    "median_min": 52
+   }
+  },
+  {
+   "from": "Seinäjoki",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 11,
+    "first": "08:34",
+    "last": "01:07",
+    "fastest_min": 97,
+    "median_min": 104
+   },
+   "saturday": {
+    "n": 7,
+    "first": "08:34",
+    "last": "01:55",
+    "fastest_min": 98,
+    "median_min": 114
+   },
+   "sunday": {
+    "n": 12,
+    "first": "09:22",
+    "last": "02:44",
+    "fastest_min": 97,
+    "median_min": 106
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 40,
+    "first": "05:04",
+    "last": "03:45",
+    "fastest_min": 95,
+    "median_min": 115
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:45",
+    "last": "03:45",
+    "fastest_min": 97,
+    "median_min": 115
+   },
+   "sunday": {
+    "n": 36,
+    "first": "07:04",
+    "last": "03:45",
+    "fastest_min": 99,
+    "median_min": 115
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 26,
+    "first": "05:04",
+    "last": "03:45",
+    "fastest_min": 36,
+    "median_min": 44
+   },
+   "saturday": {
+    "n": 25,
+    "first": "00:25",
+    "last": "03:45",
+    "fastest_min": 41,
+    "median_min": 43
+   },
+   "sunday": {
+    "n": 23,
+    "first": "07:04",
+    "last": "03:45",
+    "fastest_min": 41,
+    "median_min": 43
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 11,
+    "first": "07:06",
+    "last": "22:06",
+    "fastest_min": 87,
+    "median_min": 93
+   },
+   "saturday": {
+    "n": 8,
+    "first": "09:06",
+    "last": "22:06",
+    "fastest_min": 90,
+    "median_min": 95
+   },
+   "sunday": {
+    "n": 12,
+    "first": "09:06",
+    "last": "22:06",
+    "fastest_min": 87,
+    "median_min": 94
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Kemi",
+   "weekday": {
+    "n": 6,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 301,
+    "median_min": 354
+   },
+   "saturday": {
+    "n": 5,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 328,
+    "median_min": 409
+   },
+   "sunday": {
+    "n": 7,
+    "first": "08:02",
+    "last": "02:37",
+    "fastest_min": 301,
+    "median_min": 328
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "23:09",
+    "last": "23:09",
+    "fastest_min": 581,
+    "median_min": 581
+   },
+   "saturday": {
+    "n": 1,
+    "first": "23:09",
+    "last": "23:09",
+    "fastest_min": 581,
+    "median_min": 581
+   },
+   "sunday": {
+    "n": 1,
+    "first": "23:09",
+    "last": "23:09",
+    "fastest_min": 581,
+    "median_min": 581
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Kerava",
+   "weekday": {
+    "n": 9,
+    "first": "06:35",
+    "last": "22:35",
+    "fastest_min": 110,
+    "median_min": 110
+   },
+   "saturday": {
+    "n": 9,
+    "first": "06:35",
+    "last": "22:35",
+    "fastest_min": 110,
+    "median_min": 110
+   },
+   "sunday": {
+    "n": 8,
+    "first": "08:35",
+    "last": "22:35",
+    "fastest_min": 110,
+    "median_min": 110
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 13,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 127,
+    "median_min": 148
+   },
+   "saturday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 127,
+    "median_min": 157
+   },
+   "sunday": {
+    "n": 14,
+    "first": "08:02",
+    "last": "02:37",
+    "fastest_min": 127,
+    "median_min": 149
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 1,
+    "first": "18:06",
+    "last": "18:06",
+    "fastest_min": 209,
+    "median_min": 209
+   },
+   "saturday": {
+    "n": 2,
+    "first": "14:06",
+    "last": "18:06",
+    "fastest_min": 209,
+    "median_min": 219
+   },
+   "sunday": {
+    "n": 2,
+    "first": "14:06",
+    "last": "18:06",
+    "fastest_min": 209,
+    "median_min": 219
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Oulu",
+   "weekday": {
+    "n": 12,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 223,
+    "median_min": 253
+   },
+   "saturday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 223,
+    "median_min": 270
+   },
+   "sunday": {
+    "n": 13,
+    "first": "08:02",
+    "last": "02:37",
+    "fastest_min": 223,
+    "median_min": 254
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Pasila",
+   "weekday": {
+    "n": 40,
+    "first": "05:04",
+    "last": "03:45",
+    "fastest_min": 88,
+    "median_min": 108
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:45",
+    "last": "03:45",
+    "fastest_min": 90,
+    "median_min": 108
+   },
+   "sunday": {
+    "n": 36,
+    "first": "07:04",
+    "last": "03:45",
+    "fastest_min": 92,
+    "median_min": 108
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Pori",
+   "weekday": {
+    "n": 9,
+    "first": "06:00",
+    "last": "22:15",
+    "fastest_min": 92,
+    "median_min": 93
+   },
+   "saturday": {
+    "n": 6,
+    "first": "08:08",
+    "last": "22:15",
+    "fastest_min": 92,
+    "median_min": 93
+   },
+   "sunday": {
+    "n": 6,
+    "first": "12:11",
+    "last": "22:15",
+    "fastest_min": 93,
+    "median_min": 93
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 26,
+    "first": "05:04",
+    "last": "03:45",
+    "fastest_min": 56,
+    "median_min": 66
+   },
+   "saturday": {
+    "n": 25,
+    "first": "00:25",
+    "last": "03:45",
+    "fastest_min": 60,
+    "median_min": 62
+   },
+   "sunday": {
+    "n": 23,
+    "first": "07:04",
+    "last": "03:45",
+    "fastest_min": 60,
+    "median_min": 62
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 6,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 381,
+    "median_min": 431
+   },
+   "saturday": {
+    "n": 4,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 404,
+    "median_min": 475
+   },
+   "sunday": {
+    "n": 7,
+    "first": "08:02",
+    "last": "02:37",
+    "fastest_min": 381,
+    "median_min": 404
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 19,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 63,
+    "median_min": 68
+   },
+   "saturday": {
+    "n": 18,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 63,
+    "median_min": 72
+   },
+   "sunday": {
+    "n": 19,
+    "first": "08:02",
+    "last": "02:37",
+    "fastest_min": 63,
+    "median_min": 70
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 40,
+    "first": "05:04",
+    "last": "03:45",
+    "fastest_min": 79,
+    "median_min": 98
+   },
+   "saturday": {
+    "n": 38,
+    "first": "05:45",
+    "last": "03:45",
+    "fastest_min": 79,
+    "median_min": 98
+   },
+   "sunday": {
+    "n": 36,
+    "first": "07:04",
+    "last": "03:45",
+    "fastest_min": 82,
+    "median_min": 98
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Turku",
+   "weekday": {
+    "n": 7,
+    "first": "05:50",
+    "last": "21:12",
+    "fastest_min": 100,
+    "median_min": 100
+   },
+   "saturday": {
+    "n": 7,
+    "first": "05:50",
+    "last": "18:10",
+    "fastest_min": 100,
+    "median_min": 102
+   },
+   "sunday": {
+    "n": 8,
+    "first": "05:50",
+    "last": "21:12",
+    "fastest_min": 100,
+    "median_min": 100
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Turku satama",
+   "weekday": {
+    "n": 3,
+    "first": "05:50",
+    "last": "18:10",
+    "fastest_min": 115,
+    "median_min": 121
+   },
+   "saturday": {
+    "n": 3,
+    "first": "05:50",
+    "last": "18:10",
+    "fastest_min": 115,
+    "median_min": 121
+   },
+   "sunday": {
+    "n": 3,
+    "first": "05:50",
+    "last": "18:10",
+    "fastest_min": 115,
+    "median_min": 121
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 6,
+    "first": "09:02",
+    "last": "22:02",
+    "fastest_min": 117,
+    "median_min": 126
+   },
+   "saturday": {
+    "n": 6,
+    "first": "09:02",
+    "last": "22:02",
+    "fastest_min": 117,
+    "median_min": 126
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:02",
+    "last": "22:02",
+    "fastest_min": 117,
+    "median_min": 128
+   }
+  },
+  {
+   "from": "Tampere",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 12,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 165,
+    "median_min": 185
+   },
+   "saturday": {
+    "n": 8,
+    "first": "07:02",
+    "last": "02:37",
+    "fastest_min": 165,
+    "median_min": 197
+   },
+   "sunday": {
+    "n": 13,
+    "first": "08:02",
+    "last": "02:37",
+    "fastest_min": 165,
+    "median_min": 186
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 437,
+    "first": "00:19",
+    "last": "00:35",
+    "fastest_min": 14,
+    "median_min": 20
+   },
+   "saturday": {
+    "n": 392,
+    "first": "00:19",
+    "last": "00:39",
+    "fastest_min": 14,
+    "median_min": 20
+   },
+   "sunday": {
+    "n": 384,
+    "first": "00:19",
+    "last": "00:35",
+    "fastest_min": 14,
+    "median_min": 20
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Helsinki Airport",
+   "weekday": {
+    "n": 108,
+    "first": "04:56",
+    "last": "23:56",
+    "fastest_min": 7,
+    "median_min": 7
+   },
+   "saturday": {
+    "n": 95,
+    "first": "00:26",
+    "last": "23:56",
+    "fastest_min": 7,
+    "median_min": 7
+   },
+   "sunday": {
+    "n": 93,
+    "first": "00:26",
+    "last": "23:56",
+    "fastest_min": 7,
+    "median_min": 7
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 28,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 50,
+    "median_min": 53
+   },
+   "saturday": {
+    "n": 29,
+    "first": "00:54",
+    "last": "23:59",
+    "fastest_min": 50,
+    "median_min": 54
+   },
+   "sunday": {
+    "n": 29,
+    "first": "00:54",
+    "last": "23:59",
+    "fastest_min": 53,
+    "median_min": 53
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 4,
+    "first": "08:31",
+    "last": "19:31",
+    "fastest_min": 301,
+    "median_min": 307
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:31",
+    "last": "14:31",
+    "fastest_min": 306,
+    "median_min": 308
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:31",
+    "last": "19:31",
+    "fastest_min": 301,
+    "median_min": 307
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Imatra",
+   "weekday": {
+    "n": 8,
+    "first": "07:11",
+    "last": "21:31",
+    "fastest_min": 132,
+    "median_min": 141
+   },
+   "saturday": {
+    "n": 8,
+    "first": "07:11",
+    "last": "21:31",
+    "fastest_min": 139,
+    "median_min": 141
+   },
+   "sunday": {
+    "n": 9,
+    "first": "07:11",
+    "last": "21:31",
+    "fastest_min": 132,
+    "median_min": 141
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Joensuu",
+   "weekday": {
+    "n": 6,
+    "first": "07:11",
+    "last": "18:45",
+    "fastest_min": 238,
+    "median_min": 262
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:11",
+    "last": "18:45",
+    "fastest_min": 260,
+    "median_min": 265
+   },
+   "sunday": {
+    "n": 7,
+    "first": "07:11",
+    "last": "18:45",
+    "fastest_min": 238,
+    "median_min": 265
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Jyväskylä",
+   "weekday": {
+    "n": 9,
+    "first": "07:16",
+    "last": "19:16",
+    "fastest_min": 197,
+    "median_min": 203
+   },
+   "saturday": {
+    "n": 7,
+    "first": "07:16",
+    "last": "19:16",
+    "fastest_min": 200,
+    "median_min": 204
+   },
+   "sunday": {
+    "n": 11,
+    "first": "07:16",
+    "last": "19:16",
+    "fastest_min": 197,
+    "median_min": 204
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Kajaani",
+   "weekday": {
+    "n": 4,
+    "first": "08:31",
+    "last": "19:31",
+    "fastest_min": 356,
+    "median_min": 362
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:31",
+    "last": "14:31",
+    "fastest_min": 361,
+    "median_min": 363
+   },
+   "sunday": {
+    "n": 4,
+    "first": "08:31",
+    "last": "19:31",
+    "fastest_min": 356,
+    "median_min": 362
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Kemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 387,
+    "median_min": 449
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 414,
+    "median_min": 568
+   },
+   "sunday": {
+    "n": 7,
+    "first": "06:36",
+    "last": "23:59",
+    "fastest_min": 387,
+    "median_min": 414
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "20:30",
+    "last": "20:30",
+    "fastest_min": 740,
+    "median_min": 740
+   },
+   "saturday": {
+    "n": 1,
+    "first": "20:30",
+    "last": "20:30",
+    "fastest_min": 740,
+    "median_min": 740
+   },
+   "sunday": {
+    "n": 1,
+    "first": "20:30",
+    "last": "20:30",
+    "fastest_min": 740,
+    "median_min": 740
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Kerava",
+   "weekday": {
+    "n": 171,
+    "first": "00:24",
+    "last": "00:11",
+    "fastest_min": 8,
+    "median_min": 14
+   },
+   "saturday": {
+    "n": 157,
+    "first": "00:24",
+    "last": "00:11",
+    "fastest_min": 8,
+    "median_min": 14
+   },
+   "sunday": {
+    "n": 154,
+    "first": "00:24",
+    "last": "00:11",
+    "fastest_min": 8,
+    "median_min": 14
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 12,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 213,
+    "median_min": 232
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 213,
+    "median_min": 251
+   },
+   "sunday": {
+    "n": 12,
+    "first": "06:36",
+    "last": "23:59",
+    "fastest_min": 213,
+    "median_min": 232
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Kouvola",
+   "weekday": {
+    "n": 16,
+    "first": "00:24",
+    "last": "21:31",
+    "fastest_min": 66,
+    "median_min": 67
+   },
+   "saturday": {
+    "n": 16,
+    "first": "00:24",
+    "last": "21:31",
+    "fastest_min": 65,
+    "median_min": 66
+   },
+   "sunday": {
+    "n": 16,
+    "first": "00:24",
+    "last": "21:31",
+    "fastest_min": 65,
+    "median_min": 66
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Kuopio",
+   "weekday": {
+    "n": 6,
+    "first": "06:11",
+    "last": "19:31",
+    "fastest_min": 232,
+    "median_min": 240
+   },
+   "saturday": {
+    "n": 8,
+    "first": "06:11",
+    "last": "19:31",
+    "fastest_min": 232,
+    "median_min": 242
+   },
+   "sunday": {
+    "n": 8,
+    "first": "08:31",
+    "last": "19:31",
+    "fastest_min": 232,
+    "median_min": 246
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Lahti",
+   "weekday": {
+    "n": 31,
+    "first": "00:24",
+    "last": "23:24",
+    "fastest_min": 35,
+    "median_min": 51
+   },
+   "saturday": {
+    "n": 34,
+    "first": "00:24",
+    "last": "23:24",
+    "fastest_min": 35,
+    "median_min": 51
+   },
+   "sunday": {
+    "n": 34,
+    "first": "00:24",
+    "last": "23:24",
+    "fastest_min": 35,
+    "median_min": 51
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Lappeenranta",
+   "weekday": {
+    "n": 8,
+    "first": "07:11",
+    "last": "21:31",
+    "fastest_min": 110,
+    "median_min": 111
+   },
+   "saturday": {
+    "n": 9,
+    "first": "07:11",
+    "last": "21:31",
+    "fastest_min": 110,
+    "median_min": 111
+   },
+   "sunday": {
+    "n": 9,
+    "first": "07:11",
+    "last": "21:31",
+    "fastest_min": 110,
+    "median_min": 110
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Mikkeli",
+   "weekday": {
+    "n": 5,
+    "first": "06:11",
+    "last": "19:31",
+    "fastest_min": 137,
+    "median_min": 143
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:11",
+    "last": "19:31",
+    "fastest_min": 137,
+    "median_min": 146
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:31",
+    "last": "19:31",
+    "fastest_min": 137,
+    "median_min": 144
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Oulu",
+   "weekday": {
+    "n": 15,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 309,
+    "median_min": 346
+   },
+   "saturday": {
+    "n": 10,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 309,
+    "median_min": 436
+   },
+   "sunday": {
+    "n": 15,
+    "first": "06:36",
+    "last": "23:59",
+    "fastest_min": 309,
+    "median_min": 346
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Pasila",
+   "weekday": {
+    "n": 437,
+    "first": "00:19",
+    "last": "00:35",
+    "fastest_min": 8,
+    "median_min": 15
+   },
+   "saturday": {
+    "n": 392,
+    "first": "00:19",
+    "last": "00:39",
+    "fastest_min": 8,
+    "median_min": 15
+   },
+   "sunday": {
+    "n": 384,
+    "first": "00:19",
+    "last": "00:35",
+    "fastest_min": 8,
+    "median_min": 15
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Pori",
+   "weekday": {
+    "n": 1,
+    "first": "08:16",
+    "last": "08:16",
+    "fastest_min": 212,
+    "median_min": 212
+   },
+   "saturday": {
+    "n": 1,
+    "first": "14:16",
+    "last": "14:16",
+    "fastest_min": 208,
+    "median_min": 208
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 58,
+    "first": "04:34",
+    "last": "23:59",
+    "fastest_min": 31,
+    "median_min": 41
+   },
+   "saturday": {
+    "n": 57,
+    "first": "00:54",
+    "last": "23:59",
+    "fastest_min": 31,
+    "median_min": 41
+   },
+   "sunday": {
+    "n": 55,
+    "first": "00:54",
+    "last": "23:59",
+    "fastest_min": 33,
+    "median_min": 41
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 6,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 467,
+    "median_min": 526
+   },
+   "saturday": {
+    "n": 4,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 490,
+    "median_min": 606
+   },
+   "sunday": {
+    "n": 7,
+    "first": "06:36",
+    "last": "23:59",
+    "fastest_min": 467,
+    "median_min": 490
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 18,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 149,
+    "median_min": 160
+   },
+   "saturday": {
+    "n": 18,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 149,
+    "median_min": 161
+   },
+   "sunday": {
+    "n": 17,
+    "first": "06:36",
+    "last": "23:59",
+    "fastest_min": 149,
+    "median_min": 160
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Tampere",
+   "weekday": {
+    "n": 41,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 82,
+    "median_min": 97
+   },
+   "saturday": {
+    "n": 40,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 82,
+    "median_min": 97
+   },
+   "sunday": {
+    "n": 41,
+    "first": "06:36",
+    "last": "23:59",
+    "fastest_min": 82,
+    "median_min": 97
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Vaasa",
+   "weekday": {
+    "n": 6,
+    "first": "07:36",
+    "last": "20:36",
+    "fastest_min": 203,
+    "median_min": 212
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:36",
+    "last": "20:16",
+    "fastest_min": 206,
+    "median_min": 218
+   },
+   "sunday": {
+    "n": 5,
+    "first": "09:36",
+    "last": "20:36",
+    "fastest_min": 203,
+    "median_min": 214
+   }
+  },
+  {
+   "from": "Tikkurila",
+   "to": "Ylivieska",
+   "weekday": {
+    "n": 12,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 251,
+    "median_min": 271
+   },
+   "saturday": {
+    "n": 8,
+    "first": "05:19",
+    "last": "23:59",
+    "fastest_min": 251,
+    "median_min": 292
+   },
+   "sunday": {
+    "n": 12,
+    "first": "06:36",
+    "last": "23:59",
+    "fastest_min": 251,
+    "median_min": 271
+   }
+  },
+  {
+   "from": "Tornio",
+   "to": "Kemi",
+   "weekday": {
+    "n": 2,
+    "first": "07:30",
+    "last": "21:55",
+    "fastest_min": 25,
+    "median_min": 25
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:30",
+    "last": "21:55",
+    "fastest_min": 25,
+    "median_min": 25
+   },
+   "sunday": {
+    "n": 2,
+    "first": "10:04",
+    "last": "21:55",
+    "fastest_min": 25,
+    "median_min": 25
+   }
+  },
+  {
+   "from": "Tornio",
+   "to": "Oulu",
+   "weekday": {
+    "n": 2,
+    "first": "07:30",
+    "last": "21:55",
+    "fastest_min": 85,
+    "median_min": 87
+   },
+   "saturday": {
+    "n": 2,
+    "first": "07:30",
+    "last": "21:55",
+    "fastest_min": 85,
+    "median_min": 87
+   },
+   "sunday": {
+    "n": 2,
+    "first": "10:04",
+    "last": "21:55",
+    "fastest_min": 85,
+    "median_min": 86
+   }
+  },
+  {
+   "from": "Turku",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 14,
+    "first": "05:22",
+    "last": "20:57",
+    "fastest_min": 122,
+    "median_min": 126
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "20:57",
+    "fastest_min": 122,
+    "median_min": 126
+   },
+   "sunday": {
+    "n": 11,
+    "first": "08:34",
+    "last": "20:57",
+    "fastest_min": 126,
+    "median_min": 126
+   }
+  },
+  {
+   "from": "Turku",
+   "to": "Pasila",
+   "weekday": {
+    "n": 14,
+    "first": "05:22",
+    "last": "20:57",
+    "fastest_min": 116,
+    "median_min": 120
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "20:57",
+    "fastest_min": 116,
+    "median_min": 120
+   },
+   "sunday": {
+    "n": 11,
+    "first": "08:34",
+    "last": "20:57",
+    "fastest_min": 120,
+    "median_min": 120
+   }
+  },
+  {
+   "from": "Turku",
+   "to": "Salo",
+   "weekday": {
+    "n": 14,
+    "first": "05:22",
+    "last": "20:57",
+    "fastest_min": 30,
+    "median_min": 30
+   },
+   "saturday": {
+    "n": 13,
+    "first": "06:22",
+    "last": "20:57",
+    "fastest_min": 30,
+    "median_min": 30
+   },
+   "sunday": {
+    "n": 11,
+    "first": "08:34",
+    "last": "20:57",
+    "fastest_min": 30,
+    "median_min": 30
+   }
+  },
+  {
+   "from": "Turku",
+   "to": "Tampere",
+   "weekday": {
+    "n": 7,
+    "first": "06:54",
+    "last": "21:08",
+    "fastest_min": 101,
+    "median_min": 102
+   },
+   "saturday": {
+    "n": 6,
+    "first": "06:54",
+    "last": "21:08",
+    "fastest_min": 102,
+    "median_min": 105
+   },
+   "sunday": {
+    "n": 8,
+    "first": "09:05",
+    "last": "21:08",
+    "fastest_min": 97,
+    "median_min": 102
+   }
+  },
+  {
+   "from": "Turku",
+   "to": "Turku satama",
+   "weekday": {
+    "n": 6,
+    "first": "07:32",
+    "last": "19:58",
+    "fastest_min": 7,
+    "median_min": 7
+   },
+   "saturday": {
+    "n": 6,
+    "first": "07:32",
+    "last": "19:58",
+    "fastest_min": 7,
+    "median_min": 7
+   },
+   "sunday": {
+    "n": 6,
+    "first": "07:32",
+    "last": "19:58",
+    "fastest_min": 7,
+    "median_min": 7
+   }
+  },
+  {
+   "from": "Turku satama",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 2,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 155,
+    "median_min": 157
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 150,
+    "median_min": 155
+   },
+   "sunday": {
+    "n": 3,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 150,
+    "median_min": 155
+   }
+  },
+  {
+   "from": "Turku satama",
+   "to": "Pasila",
+   "weekday": {
+    "n": 2,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 149,
+    "median_min": 151
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 144,
+    "median_min": 149
+   },
+   "sunday": {
+    "n": 3,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 144,
+    "median_min": 149
+   }
+  },
+  {
+   "from": "Turku satama",
+   "to": "Salo",
+   "weekday": {
+    "n": 2,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 59,
+    "median_min": 61
+   },
+   "saturday": {
+    "n": 3,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 54,
+    "median_min": 59
+   },
+   "sunday": {
+    "n": 3,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 54,
+    "median_min": 59
+   }
+  },
+  {
+   "from": "Turku satama",
+   "to": "Tampere",
+   "weekday": {
+    "n": 3,
+    "first": "08:10",
+    "last": "20:20",
+    "fastest_min": 116,
+    "median_min": 157
+   },
+   "saturday": {
+    "n": 2,
+    "first": "08:10",
+    "last": "20:20",
+    "fastest_min": 157,
+    "median_min": 157
+   },
+   "sunday": {
+    "n": 3,
+    "first": "08:10",
+    "last": "20:20",
+    "fastest_min": 116,
+    "median_min": 157
+   }
+  },
+  {
+   "from": "Turku satama",
+   "to": "Turku",
+   "weekday": {
+    "n": 5,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 7,
+    "median_min": 7
+   },
+   "saturday": {
+    "n": 5,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 7,
+    "median_min": 7
+   },
+   "sunday": {
+    "n": 6,
+    "first": "08:05",
+    "last": "20:30",
+    "fastest_min": 7,
+    "median_min": 7
+   }
+  },
+  {
+   "from": "Vaasa",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 7,
+    "first": "04:44",
+    "last": "16:25",
+    "fastest_min": 231,
+    "median_min": 235
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:44",
+    "last": "16:25",
+    "fastest_min": 234,
+    "median_min": 244
+   },
+   "sunday": {
+    "n": 5,
+    "first": "06:44",
+    "last": "16:25",
+    "fastest_min": 234,
+    "median_min": 244
+   }
+  },
+  {
+   "from": "Vaasa",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 1,
+    "first": "06:44",
+    "last": "06:44",
+    "fastest_min": 181,
+    "median_min": 181
+   },
+   "saturday": {
+    "n": 1,
+    "first": "06:44",
+    "last": "06:44",
+    "fastest_min": 181,
+    "median_min": 181
+   },
+   "sunday": {
+    "n": 1,
+    "first": "06:44",
+    "last": "06:44",
+    "fastest_min": 181,
+    "median_min": 181
+   }
+  },
+  {
+   "from": "Vaasa",
+   "to": "Pasila",
+   "weekday": {
+    "n": 7,
+    "first": "04:44",
+    "last": "16:25",
+    "fastest_min": 224,
+    "median_min": 228
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:44",
+    "last": "16:25",
+    "fastest_min": 227,
+    "median_min": 237
+   },
+   "sunday": {
+    "n": 5,
+    "first": "06:44",
+    "last": "16:25",
+    "fastest_min": 227,
+    "median_min": 237
+   }
+  },
+  {
+   "from": "Vaasa",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 1,
+    "first": "06:44",
+    "last": "06:44",
+    "fastest_min": 200,
+    "median_min": 200
+   },
+   "saturday": {
+    "n": 1,
+    "first": "06:44",
+    "last": "06:44",
+    "fastest_min": 200,
+    "median_min": 200
+   },
+   "sunday": {
+    "n": 1,
+    "first": "06:44",
+    "last": "06:44",
+    "fastest_min": 200,
+    "median_min": 200
+   }
+  },
+  {
+   "from": "Vaasa",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 10,
+    "first": "04:44",
+    "last": "18:07",
+    "fastest_min": 49,
+    "median_min": 49
+   },
+   "saturday": {
+    "n": 7,
+    "first": "05:44",
+    "last": "18:07",
+    "fastest_min": 48,
+    "median_min": 49
+   },
+   "sunday": {
+    "n": 8,
+    "first": "06:44",
+    "last": "20:31",
+    "fastest_min": 49,
+    "median_min": 49
+   }
+  },
+  {
+   "from": "Vaasa",
+   "to": "Tampere",
+   "weekday": {
+    "n": 7,
+    "first": "04:44",
+    "last": "16:25",
+    "fastest_min": 125,
+    "median_min": 129
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:44",
+    "last": "16:25",
+    "fastest_min": 125,
+    "median_min": 127
+   },
+   "sunday": {
+    "n": 5,
+    "first": "06:44",
+    "last": "16:25",
+    "fastest_min": 126,
+    "median_min": 129
+   }
+  },
+  {
+   "from": "Vaasa",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 7,
+    "first": "04:44",
+    "last": "16:25",
+    "fastest_min": 215,
+    "median_min": 218
+   },
+   "saturday": {
+    "n": 5,
+    "first": "05:44",
+    "last": "16:25",
+    "fastest_min": 217,
+    "median_min": 227
+   },
+   "sunday": {
+    "n": 5,
+    "first": "06:44",
+    "last": "16:25",
+    "fastest_min": 217,
+    "median_min": 227
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Helsinki",
+   "weekday": {
+    "n": 13,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 275,
+    "median_min": 302
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 275,
+    "median_min": 309
+   },
+   "sunday": {
+    "n": 12,
+    "first": "07:37",
+    "last": "02:33",
+    "fastest_min": 275,
+    "median_min": 303
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Hämeenlinna",
+   "weekday": {
+    "n": 3,
+    "first": "22:31",
+    "last": "02:33",
+    "fastest_min": 352,
+    "median_min": 357
+   },
+   "saturday": {
+    "n": 4,
+    "first": "22:19",
+    "last": "02:33",
+    "fastest_min": 352,
+    "median_min": 361
+   },
+   "sunday": {
+    "n": 3,
+    "first": "22:31",
+    "last": "02:33",
+    "fastest_min": 352,
+    "median_min": 357
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Iisalmi",
+   "weekday": {
+    "n": 2,
+    "first": "13:37",
+    "last": "19:12",
+    "fastest_min": 101,
+    "median_min": 102
+   },
+   "saturday": {
+    "n": 1,
+    "first": "13:37",
+    "last": "13:37",
+    "fastest_min": 101,
+    "median_min": 101
+   },
+   "sunday": {
+    "n": 2,
+    "first": "13:37",
+    "last": "19:12",
+    "fastest_min": 101,
+    "median_min": 102
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Kemi",
+   "weekday": {
+    "n": 5,
+    "first": "10:30",
+    "last": "03:26",
+    "fastest_min": 131,
+    "median_min": 140
+   },
+   "saturday": {
+    "n": 5,
+    "first": "10:30",
+    "last": "03:26",
+    "fastest_min": 131,
+    "median_min": 140
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:13",
+    "last": "03:26",
+    "fastest_min": 130,
+    "median_min": 137
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Kemijärvi",
+   "weekday": {
+    "n": 1,
+    "first": "03:26",
+    "last": "03:26",
+    "fastest_min": 324,
+    "median_min": 324
+   },
+   "saturday": {
+    "n": 1,
+    "first": "03:26",
+    "last": "03:26",
+    "fastest_min": 324,
+    "median_min": 324
+   },
+   "sunday": {
+    "n": 1,
+    "first": "03:26",
+    "last": "03:26",
+    "fastest_min": 324,
+    "median_min": 324
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Kokkola",
+   "weekday": {
+    "n": 13,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 34,
+    "median_min": 38
+   },
+   "saturday": {
+    "n": 13,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 34,
+    "median_min": 39
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:37",
+    "last": "02:33",
+    "fastest_min": 34,
+    "median_min": 39
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Oulu",
+   "weekday": {
+    "n": 11,
+    "first": "10:30",
+    "last": "03:26",
+    "fastest_min": 56,
+    "median_min": 67
+   },
+   "saturday": {
+    "n": 10,
+    "first": "10:30",
+    "last": "03:26",
+    "fastest_min": 56,
+    "median_min": 69
+   },
+   "sunday": {
+    "n": 11,
+    "first": "11:13",
+    "last": "03:26",
+    "fastest_min": 56,
+    "median_min": 67
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Pasila",
+   "weekday": {
+    "n": 13,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 268,
+    "median_min": 295
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 268,
+    "median_min": 302
+   },
+   "sunday": {
+    "n": 12,
+    "first": "07:37",
+    "last": "02:33",
+    "fastest_min": 268,
+    "median_min": 296
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Riihimäki",
+   "weekday": {
+    "n": 3,
+    "first": "22:31",
+    "last": "02:33",
+    "fastest_min": 381,
+    "median_min": 384
+   },
+   "saturday": {
+    "n": 4,
+    "first": "22:19",
+    "last": "02:33",
+    "fastest_min": 381,
+    "median_min": 386
+   },
+   "sunday": {
+    "n": 3,
+    "first": "22:31",
+    "last": "02:33",
+    "fastest_min": 381,
+    "median_min": 384
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Rovaniemi",
+   "weekday": {
+    "n": 5,
+    "first": "10:30",
+    "last": "03:26",
+    "fastest_min": 211,
+    "median_min": 220
+   },
+   "saturday": {
+    "n": 5,
+    "first": "10:30",
+    "last": "03:26",
+    "fastest_min": 211,
+    "median_min": 220
+   },
+   "sunday": {
+    "n": 5,
+    "first": "11:13",
+    "last": "03:26",
+    "fastest_min": 208,
+    "median_min": 216
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Seinäjoki",
+   "weekday": {
+    "n": 13,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 97,
+    "median_min": 108
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 98,
+    "median_min": 117
+   },
+   "sunday": {
+    "n": 13,
+    "first": "07:37",
+    "last": "02:33",
+    "fastest_min": 97,
+    "median_min": 110
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Tampere",
+   "weekday": {
+    "n": 13,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 167,
+    "median_min": 194
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 174,
+    "median_min": 201
+   },
+   "sunday": {
+    "n": 12,
+    "first": "07:37",
+    "last": "02:33",
+    "fastest_min": 167,
+    "median_min": 199
+   }
+  },
+  {
+   "from": "Ylivieska",
+   "to": "Tikkurila",
+   "weekday": {
+    "n": 13,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 257,
+    "median_min": 285
+   },
+   "saturday": {
+    "n": 9,
+    "first": "05:30",
+    "last": "02:33",
+    "fastest_min": 257,
+    "median_min": 292
+   },
+   "sunday": {
+    "n": 12,
+    "first": "07:37",
+    "last": "02:33",
+    "fastest_min": 258,
+    "median_min": 286
+   }
+  }
+ ]
+}
