@@ -136,7 +136,17 @@
     .lang-option { display: block; padding: 8px 10px; border-radius: 8px; font-size: 13px; color: #14151a; text-decoration: none; cursor: pointer; }
     .lang-option:hover { background: rgba(193,0,22,0.10); text-decoration: none; }
     .lang-option.active { background: rgba(193,0,22,0.18); color: #C10016; font-weight: 700; }
-</style>
+    /* blog-grid */
+    main.blog-grid { max-width: 1180px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+    main.blog-grid .post { display: flex; flex-direction: column; padding: 0; overflow: hidden; margin: 0; }
+    main.blog-grid .post-img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: #e9e4dc; }
+    main.blog-grid .post-body { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 20px; }
+    main.blog-grid .post-title { font-size: 19px; line-height: 1.3; margin: 8px 0 8px; }
+    main.blog-grid .post-desc { font-size: 14px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    main.blog-grid .post-meta { margin-top: auto; padding-top: 12px; }
+    @media (max-width: 980px) { main.blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) { main.blog-grid { grid-template-columns: 1fr; gap: 18px; } }
+  </style>
   <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
 </head>
 <body>
@@ -158,173 +168,245 @@
     </div>
   </div>
 
-  <main>
+  <main class="blog-grid">
     <a href="/es/blog-ahorrar-tren-varios-paises-europa.html" class="post">
-      <span class="post-tag">Ahorro</span>
-      <div class="post-title">Cómo recorrer varios países de Europa en tren gastando menos</div>
-      <div class="post-desc">Arma un viaje en tren por varios países de Europa con poco presupuesto: ordena las ciudades por las líneas principales, divide los billetes en la frontera, compra tarifas de ahorro pronto y usa trenes nocturnos. Con duraciones reales.</div>
-      <div class="post-meta">Octubre 2026 · 7 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/4901982/pexels-photo-4901982.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Cómo recorrer varios países de Europa en tren gastando menos" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Ahorro</span>
+        <div class="post-title">Cómo recorrer varios países de Europa en tren gastando menos</div>
+        <div class="post-desc">Arma un viaje en tren por varios países de Europa con poco presupuesto: ordena las ciudades por las líneas principales, divide los billetes en la frontera, compra tarifas de ahorro pronto y usa trenes nocturnos. Con duraciones reales.</div>
+        <div class="post-meta">Octubre 2026 · 7 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-sagano-romantic-train.html" class="post">
-      <span class="post-tag">Japón</span>
-      <div class="post-title">Sagano Romantic Train en Kioto: duración, precios y la mejor época para subir</div>
-      <div class="post-desc">El Sagano Romantic Train recorre el desfiladero del río Hozu cerca de Kioto en unos 25 minutos. Estaciones, precios, cómo reservar asiento y la mejor época del año.</div>
-      <div class="post-meta">Octubre 2026 · 5 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/31206699/pexels-photo-31206699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Sagano Romantic Train en Kioto: duración, precios y la mejor época para subir" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Japón</span>
+        <div class="post-title">Sagano Romantic Train en Kioto: duración, precios y la mejor época para subir</div>
+        <div class="post-desc">El Sagano Romantic Train recorre el desfiladero del río Hozu cerca de Kioto en unos 25 minutos. Estaciones, precios, cómo reservar asiento y la mejor época del año.</div>
+        <div class="post-meta">Octubre 2026 · 5 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-japan-train-guide.html" class="post">
-      <span class="post-tag">Japón</span>
-      <div class="post-title">Cómo viajar por Japón en tren: guía del Shinkansen para tu primer viaje</div>
-      <div class="post-desc">¿Nozomi, Hikari o Kodama? Tiempos reales entre Tokio, Kioto, Osaka y Hiroshima, el Japan Rail Pass, reglas de equipaje y una ruta de 10 días en tren.</div>
-      <div class="post-meta">Octubre 2026 · 7 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/15275312/pexels-photo-15275312.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Cómo viajar por Japón en tren: guía del Shinkansen para tu primer viaje" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Japón</span>
+        <div class="post-title">Cómo viajar por Japón en tren: guía del Shinkansen para tu primer viaje</div>
+        <div class="post-desc">¿Nozomi, Hikari o Kodama? Tiempos reales entre Tokio, Kioto, Osaka y Hiroshima, el Japan Rail Pass, reglas de equipaje y una ruta de 10 días en tren.</div>
+        <div class="post-meta">Octubre 2026 · 7 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-descuentos-tren-europa.html" class="post">
-      <span class="post-tag">Descuentos</span>
-      <div class="post-title">Descuentos de tren en Europa: joven, senior, familia y discapacidad</div>
-      <div class="post-desc">Tarjeta Dorada, Carte Avantage Senior, descuentos Eurail/Interrail, familia numerosa y pase de acompañante — los programas reales de cada operador, por perfil.</div>
-      <div class="post-meta">Septiembre 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/16794919/pexels-photo-16794919.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Descuentos de tren en Europa: joven, senior, familia y discapacidad" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Descuentos</span>
+        <div class="post-title">Descuentos de tren en Europa: joven, senior, familia y discapacidad</div>
+        <div class="post-desc">Tarjeta Dorada, Carte Avantage Senior, descuentos Eurail/Interrail, familia numerosa y pase de acompañante — los programas reales de cada operador, por perfil.</div>
+        <div class="post-meta">Septiembre 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-precio-tren-europa.html" class="post">
-      <span class="post-tag">Precios</span>
-      <div class="post-title">¿Cuánto cuesta viajar en tren por Europa? Precios reales 2026</div>
-      <div class="post-desc">Precios reales por tipo de trayecto — regionales, intercity, internacionales y nocturnos — con 19 rutas de ejemplo y qué hace subir o bajar el precio.</div>
-      <div class="post-meta">Septiembre 2026 · 7 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/38169158/pexels-photo-38169158.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="¿Cuánto cuesta viajar en tren por Europa? Precios reales 2026" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Precios</span>
+        <div class="post-title">¿Cuánto cuesta viajar en tren por Europa? Precios reales 2026</div>
+        <div class="post-desc">Precios reales por tipo de trayecto — regionales, intercity, internacionales y nocturnos — con 19 rutas de ejemplo y qué hace subir o bajar el precio.</div>
+        <div class="post-meta">Septiembre 2026 · 7 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-tren-arraigo-pueblos.html" class="post">
-      <span class="post-tag">Opinión</span>
-      <div class="post-title">El motor del arraigo: por qué el tren es el alma de los pueblos</div>
-      <div class="post-desc">Cómo el ferrocarril frena la despoblación, mueve la economía local y reduce emisiones — con dos casos reales en España: Madrid-Cercedilla y Barcelona-Sant Sadurní d'Anoia.</div>
-      <div class="post-meta">Septiembre 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/1640556/pexels-photo-1640556.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="El motor del arraigo: por qué el tren es el alma de los pueblos" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Opinión</span>
+        <div class="post-title">El motor del arraigo: por qué el tren es el alma de los pueblos</div>
+        <div class="post-desc">Cómo el ferrocarril frena la despoblación, mueve la economía local y reduce emisiones — con dos casos reales en España: Madrid-Cercedilla y Barcelona-Sant Sadurní d'Anoia.</div>
+        <div class="post-meta">Septiembre 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-fastest-growing-train-routes-europe-2026.html" class="post">
-      <span class="post-tag">Tendencias</span>
-      <div class="post-title">Las rutas de tren que más crecen en Europa en 2026</div>
-      <div class="post-desc">Budapest-Praga +50% en reservas, Ámsterdam-Bruselas +45%, y nuevos trenes nocturnos lanzándose en todo el continente — lo que realmente está en tendencia en trenes por Europa.</div>
-      <div class="post-meta">Agosto 2026 · 7 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/30113635/pexels-photo-30113635.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Las rutas de tren que más crecen en Europa en 2026" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Tendencias</span>
+        <div class="post-title">Las rutas de tren que más crecen en Europa en 2026</div>
+        <div class="post-desc">Budapest-Praga +50% en reservas, Ámsterdam-Bruselas +45%, y nuevos trenes nocturnos lanzándose en todo el continente — lo que realmente está en tendencia en trenes por Europa.</div>
+        <div class="post-meta">Agosto 2026 · 7 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-train-europe-survival-guide.html" class="post">
-      <span class="post-tag">Guía de Viaje</span>
-      <div class="post-title">Guía de supervivencia en tren por Europa: 5 errores que te pueden costar caro</div>
-      <div class="post-desc">Estaciones con varios terminales, billetes sin validar, conexiones de 5 minutos y robos en paradas intermedias — las 5 precauciones que evitan multas y malos ratos.</div>
-      <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/9764978/pexels-photo-9764978.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Guía de supervivencia en tren por Europa: 5 errores que te pueden costar caro" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía de Viaje</span>
+        <div class="post-title">Guía de supervivencia en tren por Europa: 5 errores que te pueden costar caro</div>
+        <div class="post-desc">Estaciones con varios terminales, billetes sin validar, conexiones de 5 minutos y robos en paradas intermedias — las 5 precauciones que evitan multas y malos ratos.</div>
+        <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-ai-train-trip-planner-europe.html" class="post">
-      <span class="post-tag">Planificación con IA</span>
-      <div class="post-title">Cómo planificar un viaje en tren por Europa con IA (Guía 2026)</div>
-      <div class="post-desc">Olvídate de las 15 pestañas abiertas. Cómo un planificador de IA arma rutas, conexiones y paradas de hotel a partir de una frase, y cómo escribir un pedido que dé un itinerario realmente útil.</div>
-      <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/29300384/pexels-photo-29300384.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Cómo planificar un viaje en tren por Europa con IA (Guía 2026)" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Planificación con IA</span>
+        <div class="post-title">Cómo planificar un viaje en tren por Europa con IA (Guía 2026)</div>
+        <div class="post-desc">Olvídate de las 15 pestañas abiertas. Cómo un planificador de IA arma rutas, conexiones y paradas de hotel a partir de una frase, y cómo escribir un pedido que dé un itinerario realmente útil.</div>
+        <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-florence-siena-day-trip.html" class="post">
-      <span class="post-tag">Excursiones</span>
-      <div class="post-title">Florencia a Siena en tren: la excursión perfecta por la Toscana</div>
-      <div class="post-desc">La excursión clásica de la Toscana, en tren: el regional de 1h30 desde Florencia, cómo subir de la estación de Siena al centro, y un plan para la Piazza del Campo, el Duomo y la Torre del Mangia.</div>
-      <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/15319055/pexels-photo-15319055.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Florencia a Siena en tren: la excursión perfecta por la Toscana" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Excursiones</span>
+        <div class="post-title">Florencia a Siena en tren: la excursión perfecta por la Toscana</div>
+        <div class="post-desc">La excursión clásica de la Toscana, en tren: el regional de 1h30 desde Florencia, cómo subir de la estación de Siena al centro, y un plan para la Piazza del Campo, el Duomo y la Torre del Mangia.</div>
+        <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-cote-bleue-marseille-train.html" class="post">
-      <span class="post-tag">Rutas panorámicas</span>
-      <div class="post-title">El tren de la Côte Bleue: el ferrocarril costero secreto de Marseille</div>
-      <div class="post-desc">Viaductos sobre calas escondidas en la costa sur de Francia — una alternativa espectacular y económica al TGV desde Marseille.</div>
-      <div class="post-meta">Julio 2026 · 5 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/35599457/pexels-photo-35599457.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="El tren de la Côte Bleue: el ferrocarril costero secreto de Marseille" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Rutas panorámicas</span>
+        <div class="post-title">El tren de la Côte Bleue: el ferrocarril costero secreto de Marseille</div>
+        <div class="post-desc">Viaductos sobre calas escondidas en la costa sur de Francia — una alternativa espectacular y económica al TGV desde Marseille.</div>
+        <div class="post-meta">Julio 2026 · 5 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-backpacking-italy.html" class="post">
-      <span class="post-tag">Mochilero</span>
-      <div class="post-title">Mochilero en Italia: la Ruta clásica Roma–Florencia–Venecia</div>
-      <div class="post-desc">El circuito imprescindible de las Ciudades del Arte para conocer Italia por primera vez — Roma, Florencia y Venecia en tren, de 7 a 10 días, con tips de presupuesto.</div>
-      <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/2225442/pexels-photo-2225442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Mochilero en Italia: la Ruta clásica Roma–Florencia–Venecia" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Mochilero</span>
+        <div class="post-title">Mochilero en Italia: la Ruta clásica Roma–Florencia–Venecia</div>
+        <div class="post-desc">El circuito imprescindible de las Ciudades del Arte para conocer Italia por primera vez — Roma, Florencia y Venecia en tren, de 7 a 10 días, con tips de presupuesto.</div>
+        <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-paris-lourdes-pilgrimage-train.html" class="post">
-      <span class="post-tag">Peregrinación</span>
-      <div class="post-title">De París a Lourdes en tren: una peregrinación de fe y esperanza (2026)</div>
-      <div class="post-desc">Cómo viajar de París a Lourdes en tren vía Toulouse, y por qué este viaje al Santuario de Nuestra Señora de Lourdes es una de las peregrinaciones más conmovedoras de Europa.</div>
-      <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://upload.wikimedia.org/wikipedia/commons/8/84/France-002018_-_Grotto_Service_%2815153278134%29.jpg" alt="De París a Lourdes en tren: una peregrinación de fe y esperanza (2026)" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Peregrinación</span>
+        <div class="post-title">De París a Lourdes en tren: una peregrinación de fe y esperanza (2026)</div>
+        <div class="post-desc">Cómo viajar de París a Lourdes en tren vía Toulouse, y por qué este viaje al Santuario de Nuestra Señora de Lourdes es una de las peregrinaciones más conmovedoras de Europa.</div>
+        <div class="post-meta">Julio 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/guide-how-to-travel-europe-by-train.html" class="post">
-      <span class="post-tag">Guía completa</span>
-      <div class="post-title">Cómo viajar por Europa en tren: la guía completa (2026)</div>
-      <div class="post-desc">Pase vs tickets individuales, cuándo reservar, tipos de trenes, nocturnos, equipaje y las mejores rutas — todo en un solo lugar.</div>
-      <div class="post-meta">Julio 2026 · 12 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/38169158/pexels-photo-38169158.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Cómo viajar por Europa en tren: la guía completa (2026)" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía completa</span>
+        <div class="post-title">Cómo viajar por Europa en tren: la guía completa (2026)</div>
+        <div class="post-desc">Pase vs tickets individuales, cuándo reservar, tipos de trenes, nocturnos, equipaje y las mejores rutas — todo en un solo lugar.</div>
+        <div class="post-meta">Julio 2026 · 12 min de lectura</div>
+      </div>
     </a>
 
     <a href="/rutas/lyon-turin/es/" class="post">
-      <span class="post-tag">Guía de ruta · Francia → Italia</span>
-      <div class="post-title">Lyon a Turín en tren: cruzando los Alpes</div>
-      <div class="post-desc">Del río de Lyon a la Turín barroca — por el valle de Maurienne y el túnel de Fréjus hacia Italia. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
-      <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/33040847/pexels-photo-33040847.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Lyon a Turín en tren: cruzando los Alpes" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía de ruta · Francia → Italia</span>
+        <div class="post-title">Lyon a Turín en tren: cruzando los Alpes</div>
+        <div class="post-desc">Del río de Lyon a la Turín barroca — por el valle de Maurienne y el túnel de Fréjus hacia Italia. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
+        <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      </div>
     </a>
 
     <a href="/rutas/paris-barcelona/es/" class="post">
-      <span class="post-tag">Guía de ruta · Francia → España</span>
-      <div class="post-title">París a Barcelona en tren: el TGV directo</div>
-      <div class="post-desc">Un solo tren de París al corazón de Barcelona, por el sur de Francia y los Pirineos. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
-      <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/16984552/pexels-photo-16984552.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="París a Barcelona en tren: el TGV directo" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía de ruta · Francia → España</span>
+        <div class="post-title">París a Barcelona en tren: el TGV directo</div>
+        <div class="post-desc">Un solo tren de París al corazón de Barcelona, por el sur de Francia y los Pirineos. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
+        <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      </div>
     </a>
 
     <a href="/rutas/vienna-prague/es/" class="post">
-      <span class="post-tag">Guía de ruta · Austria → Chequia</span>
-      <div class="post-title">Viena a Praga en tren: dos capitales imperiales</div>
-      <div class="post-desc">Un trayecto directo y cómodo por Moravia y Bohemia entre dos de las ciudades más bellas de Europa Central. Estaciones, operadores y cómo encontrar el mejor precio. <em>Also in English.</em></div>
-      <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/16922421/pexels-photo-16922421.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Viena a Praga en tren: dos capitales imperiales" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía de ruta · Austria → Chequia</span>
+        <div class="post-title">Viena a Praga en tren: dos capitales imperiales</div>
+        <div class="post-desc">Un trayecto directo y cómodo por Moravia y Bohemia entre dos de las ciudades más bellas de Europa Central. Estaciones, operadores y cómo encontrar el mejor precio. <em>Also in English.</em></div>
+        <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      </div>
     </a>
 
     <a href="/rutas/paris-amsterdam/es/" class="post">
-      <span class="post-tag">Guía de ruta · Francia → Países Bajos</span>
-      <div class="post-title">París a Ámsterdam en tren: el directo rápido</div>
-      <div class="post-desc">De los cafés de París a los canales de Ámsterdam en unas 3h20, vía Bruselas. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
-      <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/4237160/pexels-photo-4237160.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="París a Ámsterdam en tren: el directo rápido" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía de ruta · Francia → Países Bajos</span>
+        <div class="post-title">París a Ámsterdam en tren: el directo rápido</div>
+        <div class="post-desc">De los cafés de París a los canales de Ámsterdam en unas 3h20, vía Bruselas. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
+        <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      </div>
     </a>
 
     <a href="/rutas/munich-venice/es/" class="post">
-      <span class="post-tag">Guía de ruta · Alemania → Italia</span>
-      <div class="post-title">Múnich a Venecia en tren: sobre el paso del Brennero</div>
-      <div class="post-desc">Uno de los trayectos más escénicos de Europa — de Baviera, sobre los Alpes, hasta la laguna de Venecia. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
-      <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/29487687/pexels-photo-29487687.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Múnich a Venecia en tren: sobre el paso del Brennero" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía de ruta · Alemania → Italia</span>
+        <div class="post-title">Múnich a Venecia en tren: sobre el paso del Brennero</div>
+        <div class="post-desc">Uno de los trayectos más escénicos de Europa — de Baviera, sobre los Alpes, hasta la laguna de Venecia. Estaciones, operadores, paisaje y cómo encontrar el mejor precio. <em>Also in English.</em></div>
+        <div class="post-meta">Junio 2026 · 4 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-flying-vs-train-europe.html" class="post">
-      <span class="post-tag">Tren vs Avión</span>
-      <div class="post-title">Avión vs Tren en Europa: El Costo Real (2026)</div>
-      <div class="post-desc">Hicimos los números reales — tiempo puerta a puerta, costo total, equipaje, traslados y carbono. En la mayoría de las rutas de menos de 700 km, el tren gana en todo.</div>
-      <div class="post-meta">Junio 2026 · 7 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/36023564/pexels-photo-36023564.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Avión vs Tren en Europa: El Costo Real (2026)" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Tren vs Avión</span>
+        <div class="post-title">Avión vs Tren en Europa: El Costo Real (2026)</div>
+        <div class="post-desc">Hicimos los números reales — tiempo puerta a puerta, costo total, equipaje, traslados y carbono. En la mayoría de las rutas de menos de 700 km, el tren gana en todo.</div>
+        <div class="post-meta">Junio 2026 · 7 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-night-trains-europe.html" class="post">
-      <span class="post-tag">Trenes nocturnos</span>
-      <div class="post-title">Trenes nocturnos en Europa: la guía completa 2026</div>
-      <div class="post-desc">Cómo funcionan los trenes nocturnos en Europa, los principales operadores (Nightjet, European Sleeper, Trenhotel), clases de cabina, precios y consejos para reservar.</div>
-      <div class="post-meta">Junio 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/30595796/pexels-photo-30595796.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Trenes nocturnos en Europa: la guía completa 2026" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Trenes nocturnos</span>
+        <div class="post-title">Trenes nocturnos en Europa: la guía completa 2026</div>
+        <div class="post-desc">Cómo funcionan los trenes nocturnos en Europa, los principales operadores (Nightjet, European Sleeper, Trenhotel), clases de cabina, precios y consejos para reservar.</div>
+        <div class="post-meta">Junio 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-scenic-train-routes-europe.html" class="post">
-      <span class="post-tag">Rutas escénicas</span>
-      <div class="post-title">Las 7 rutas en tren más bonitas de Europa (Guía 2026)</div>
-      <div class="post-desc">Del Glacier Express en los Alpes suizos al ferrocarril de Flåm en Noruega — los siete trayectos en tren más espectaculares del continente, y cómo recorrerlos.</div>
-      <div class="post-meta">Junio 2026 · 6 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/20485985/pexels-photo-20485985.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Las 7 rutas en tren más bonitas de Europa (Guía 2026)" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Rutas escénicas</span>
+        <div class="post-title">Las 7 rutas en tren más bonitas de Europa (Guía 2026)</div>
+        <div class="post-desc">Del Glacier Express en los Alpes suizos al ferrocarril de Flåm en Noruega — los siete trayectos en tren más espectaculares del continente, y cómo recorrerlos.</div>
+        <div class="post-meta">Junio 2026 · 6 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-madrid-barcelona-train-guide.html" class="post">
-      <span class="post-tag">Guía de ruta</span>
-      <div class="post-title">Madrid a Barcelona en tren: la guía completa del AVE (2026)</div>
-      <div class="post-desc">Horarios, precios, estaciones y los tres operadores (Renfe, Ouigo, Iryo) en la ruta de alta velocidad más transitada de España — y cómo conseguir el asiento más barato.</div>
-      <div class="post-meta">Junio 2026 · 5 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/35727855/pexels-photo-35727855.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Madrid a Barcelona en tren: la guía completa del AVE (2026)" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Guía de ruta</span>
+        <div class="post-title">Madrid a Barcelona en tren: la guía completa del AVE (2026)</div>
+        <div class="post-desc">Horarios, precios, estaciones y los tres operadores (Renfe, Ouigo, Iryo) en la ruta de alta velocidad más transitada de España — y cómo conseguir el asiento más barato.</div>
+        <div class="post-meta">Junio 2026 · 5 min de lectura</div>
+      </div>
     </a>
 
     <a href="/es/blog-italy-interrail-itinerary.html" class="post">
-      <span class="post-tag">Itinerario</span>
-      <div class="post-title">7 días recorriendo Italia en tren: el itinerario perfecto</div>
-      <div class="post-desc">Roma, Florencia, Venecia y las Cinque Terre — todo en tren. Una ruta relajada de una semana con trayectos de alta velocidad, el escénico Cinque Terre Express, horarios y costos.</div>
-      <div class="post-meta">Junio 2026 · 7 min de lectura</div>
+      <img class="post-img" src="https://images.pexels.com/photos/27541217/pexels-photo-27541217.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="7 días recorriendo Italia en tren: el itinerario perfecto" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">Itinerario</span>
+        <div class="post-title">7 días recorriendo Italia en tren: el itinerario perfecto</div>
+        <div class="post-desc">Roma, Florencia, Venecia y las Cinque Terre — todo en tren. Una ruta relajada de una semana con trayectos de alta velocidad, el escénico Cinque Terre Express, horarios y costos.</div>
+        <div class="post-meta">Junio 2026 · 7 min de lectura</div>
+      </div>
     </a>
   </main>
 

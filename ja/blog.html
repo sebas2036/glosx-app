@@ -146,7 +146,17 @@
     .lang-option { display: block; padding: 8px 10px; border-radius: 8px; font-size: 13px; color: #14151a; text-decoration: none; cursor: pointer; }
     .lang-option:hover { background: rgba(193,0,22,0.10); text-decoration: none; }
     .lang-option.active { background: rgba(193,0,22,0.18); color: #C10016; font-weight: 700; }
-</style>
+    /* blog-grid */
+    main.blog-grid { max-width: 1180px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+    main.blog-grid .post { display: flex; flex-direction: column; padding: 0; overflow: hidden; margin: 0; }
+    main.blog-grid .post-img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: #e9e4dc; }
+    main.blog-grid .post-body { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 20px; }
+    main.blog-grid .post-title { font-size: 19px; line-height: 1.3; margin: 8px 0 8px; }
+    main.blog-grid .post-desc { font-size: 14px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    main.blog-grid .post-meta { margin-top: auto; padding-top: 12px; }
+    @media (max-width: 980px) { main.blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) { main.blog-grid { grid-template-columns: 1fr; gap: 18px; } }
+  </style>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false">(function(){window.addEventListener("load",function(){var s=document.createElement("script");s.async=1;s.src="https://emrldtp.com/NTM0NTcw.js?t=534570";document.head.appendChild(s);});})();</script>
   <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
 </head>
@@ -167,195 +177,276 @@
     </div>
   </div>
 
-  <main>
+  <main class="blog-grid">
     <a href="/ja/blog-ahorrar-tren-varios-paises-europa.html" class="post">
-      <span class="post-tag">節約</span>
-      <div class="post-title">ヨーロッパの複数の国を列車で安く旅する方法</div>
-      <div class="post-desc">ヨーロッパ周遊の鉄道旅を予算内で計画する方法。幹線に沿って都市を並べ、国境で切符を分け、割引運賃を早めに買い、夜行列車を使う。実際の所要時間つき。</div>
-      <div class="post-meta">2026年10月 · 7分で読めます</div>
+      <img class="post-img" src="https://images.pexels.com/photos/4901982/pexels-photo-4901982.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパの複数の国を列車で安く旅する方法" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">節約</span>
+        <div class="post-title">ヨーロッパの複数の国を列車で安く旅する方法</div>
+        <div class="post-desc">ヨーロッパ周遊の鉄道旅を予算内で計画する方法。幹線に沿って都市を並べ、国境で切符を分け、割引運賃を早めに買い、夜行列車を使う。実際の所要時間つき。</div>
+        <div class="post-meta">2026年10月 · 7分で読めます</div>
+      </div>
     </a>
 
     <a href="/ja/blog-sagano-romantic-train.html" class="post">
-      <span class="post-tag">日本</span>
-      <div class="post-title">京都の嵯峨野トロッコ列車：所要時間・料金・乗るのにいちばんいい季節</div>
-      <div class="post-desc">嵯峨野トロッコ列車は京都近郊の保津川渓谷を約25分で走ります。駅、料金、座席の予約方法、いちばんいい季節をまとめました。</div>
-      <div class="post-meta">2026年10月 · 読了5分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/31206699/pexels-photo-31206699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="京都の嵯峨野トロッコ列車：所要時間・料金・乗るのにいちばんいい季節" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">日本</span>
+        <div class="post-title">京都の嵯峨野トロッコ列車：所要時間・料金・乗るのにいちばんいい季節</div>
+        <div class="post-desc">嵯峨野トロッコ列車は京都近郊の保津川渓谷を約25分で走ります。駅、料金、座席の予約方法、いちばんいい季節をまとめました。</div>
+        <div class="post-meta">2026年10月 · 読了5分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-japan-train-guide.html" class="post">
-      <span class="post-tag">日本</span>
-      <div class="post-title">新幹線で日本を旅する：はじめての鉄道旅ガイド</div>
-      <div class="post-desc">のぞみ、ひかり、こだまの違いは？ 東京・京都・大阪・広島間の実際の所要時間、ジャパン・レール・パスの考え方、荷物のルール、列車で巡る10日間のルート。</div>
-      <div class="post-meta">2026年10月 · 読了目安7分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/15275312/pexels-photo-15275312.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="新幹線で日本を旅する：はじめての鉄道旅ガイド" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">日本</span>
+        <div class="post-title">新幹線で日本を旅する：はじめての鉄道旅ガイド</div>
+        <div class="post-desc">のぞみ、ひかり、こだまの違いは？ 東京・京都・大阪・広島間の実際の所要時間、ジャパン・レール・パスの考え方、荷物のルール、列車で巡る10日間のルート。</div>
+        <div class="post-meta">2026年10月 · 読了目安7分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-european-sleeper-train-2026.html" class="post">
-      <span class="post-tag">夜行列車</span>
-      <div class="post-title">ヨーロッパの寝台列車2026：夜行列車の完全ガイド</div>
-      <div class="post-desc">新しいパリ〜ベルリン、ブリュッセル〜ミラノの夜行路線を追加して更新。ヨーロッパ最高の寝台列車の体験のための、運行会社、寝台の種類、料金、予約のコツ。</div>
-      <div class="post-meta">2026年9月更新 · 読了目安9分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/30595796/pexels-photo-30595796.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパの寝台列車2026：夜行列車の完全ガイド" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">夜行列車</span>
+        <div class="post-title">ヨーロッパの寝台列車2026：夜行列車の完全ガイド</div>
+        <div class="post-desc">新しいパリ〜ベルリン、ブリュッセル〜ミラノの夜行路線を追加して更新。ヨーロッパ最高の寝台列車の体験のための、運行会社、寝台の種類、料金、予約のコツ。</div>
+        <div class="post-meta">2026年9月更新 · 読了目安9分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-tren-arraigo-pueblos.html" class="post">
-      <span class="post-tag">オピニオン</span>
-      <div class="post-title">「ふるさと」を動かすエンジン：なぜ列車は小さな町の魂なのか</div>
-      <div class="post-desc">鉄道は、どのように地方の人口減少を食い止め、地域経済を活気づけ、排出量を減らすのか。マドリード〜セルセディーリャとバルセロナ〜サン・サドゥルニ・ダノヤという、スペインの2つの実例とともに。</div>
-      <div class="post-meta">2026年9月 · 読了目安6分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/1640556/pexels-photo-1640556.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="「ふるさと」を動かすエンジン：なぜ列車は小さな町の魂なのか" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">オピニオン</span>
+        <div class="post-title">「ふるさと」を動かすエンジン：なぜ列車は小さな町の魂なのか</div>
+        <div class="post-desc">鉄道は、どのように地方の人口減少を食い止め、地域経済を活気づけ、排出量を減らすのか。マドリード〜セルセディーリャとバルセロナ〜サン・サドゥルニ・ダノヤという、スペインの2つの実例とともに。</div>
+        <div class="post-meta">2026年9月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-fastest-growing-train-routes-europe-2026.html" class="post">
-      <span class="post-tag">トレンド</span>
-      <div class="post-title">2026年、利用が急増しているヨーロッパの鉄道ルート</div>
-      <div class="post-desc">ブダペスト〜プラハの予約は50%増、アムステルダム〜ブリュッセルは45%増。大陸各地で新しい夜行列車も登場。いまヨーロッパの鉄道で本当に流行っているものは？</div>
-      <div class="post-meta">2026年8月 · 読了目安7分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/30113635/pexels-photo-30113635.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="2026年、利用が急増しているヨーロッパの鉄道ルート" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">トレンド</span>
+        <div class="post-title">2026年、利用が急増しているヨーロッパの鉄道ルート</div>
+        <div class="post-desc">ブダペスト〜プラハの予約は50%増、アムステルダム〜ブリュッセルは45%増。大陸各地で新しい夜行列車も登場。いまヨーロッパの鉄道で本当に流行っているものは？</div>
+        <div class="post-meta">2026年8月 · 読了目安7分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-train-europe-survival-guide.html" class="post">
-      <span class="post-tag">旅行ガイド</span>
-      <div class="post-title">ヨーロッパ鉄道の注意点ガイド：大損につながる5つの失敗</div>
-      <div class="post-desc">ターミナルが複数ある「落とし穴」の駅、刻印していない切符、5分の乗り換え、途中駅での盗難。ヨーロッパの鉄道旅行者が知っておきたい、5つの注意点。</div>
-      <div class="post-meta">2026年7月 · 読了目安6分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/9764978/pexels-photo-9764978.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパ鉄道の注意点ガイド：大損につながる5つの失敗" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">旅行ガイド</span>
+        <div class="post-title">ヨーロッパ鉄道の注意点ガイド：大損につながる5つの失敗</div>
+        <div class="post-desc">ターミナルが複数ある「落とし穴」の駅、刻印していない切符、5分の乗り換え、途中駅での盗難。ヨーロッパの鉄道旅行者が知っておきたい、5つの注意点。</div>
+        <div class="post-meta">2026年7月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-ai-train-trip-planner-europe.html" class="post">
-      <span class="post-tag">AIで計画</span>
-      <div class="post-title">AIでヨーロッパ鉄道旅の計画を立てる方法（2026年版ガイド）</div>
-      <div class="post-desc">開いたタブ15個とはもうお別れ。AIの旅程プランナーが、一文からルート、乗り換え、ホテルの立ち寄り先をどう組み立てるか、そして本当に使える旅程を引き出す指示の書き方。</div>
-      <div class="post-meta">2026年7月 · 読了目安6分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/29300384/pexels-photo-29300384.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="AIでヨーロッパ鉄道旅の計画を立てる方法（2026年版ガイド）" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">AIで計画</span>
+        <div class="post-title">AIでヨーロッパ鉄道旅の計画を立てる方法（2026年版ガイド）</div>
+        <div class="post-desc">開いたタブ15個とはもうお別れ。AIの旅程プランナーが、一文からルート、乗り換え、ホテルの立ち寄り先をどう組み立てるか、そして本当に使える旅程を引き出す指示の書き方。</div>
+        <div class="post-meta">2026年7月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-florence-siena-day-trip.html" class="post">
-      <span class="post-tag">日帰り旅</span>
-      <div class="post-title">フィレンツェからシエナへ日帰り電車旅：2026年版 完全ガイド</div>
-      <div class="post-desc">鉄道で行く、トスカーナ定番の日帰り旅。フィレンツェから1時間30分の地域列車、シエナ駅から中心部への上がり方、カンポ広場、ドゥオーモ、マンジャの塔を巡るプラン。</div>
-      <div class="post-meta">2026年7月 · 読了目安6分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/15319055/pexels-photo-15319055.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="フィレンツェからシエナへ日帰り電車旅：2026年版 完全ガイド" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">日帰り旅</span>
+        <div class="post-title">フィレンツェからシエナへ日帰り電車旅：2026年版 完全ガイド</div>
+        <div class="post-desc">鉄道で行く、トスカーナ定番の日帰り旅。フィレンツェから1時間30分の地域列車、シエナ駅から中心部への上がり方、カンポ広場、ドゥオーモ、マンジャの塔を巡るプラン。</div>
+        <div class="post-meta">2026年7月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-cheap-train-tickets-europe.html" class="post">
-      <span class="post-tag">格安鉄道旅</span>
-      <div class="post-title">ヨーロッパの鉄道を安く乗る方法（2026）：お得な切符の買い方</div>
-      <div class="post-desc">本当に効く8つの戦略。早割の予約時期、格安の運行会社、区間の分割購入、そしていま、ヨーロッパでいちばん安いルート。</div>
-      <div class="post-meta">2026年7月 · 読了目安8分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/8554850/pexels-photo-8554850.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパの鉄道を安く乗る方法（2026）：お得な切符の買い方" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">格安鉄道旅</span>
+        <div class="post-title">ヨーロッパの鉄道を安く乗る方法（2026）：お得な切符の買い方</div>
+        <div class="post-desc">本当に効く8つの戦略。早割の予約時期、格安の運行会社、区間の分割購入、そしていま、ヨーロッパでいちばん安いルート。</div>
+        <div class="post-meta">2026年7月 · 読了目安8分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-europe-train-itinerary.html" class="post">
-      <span class="post-tag">鉄道旅行</span>
-      <div class="post-title">ヨーロッパ鉄道旅の旅程（2026）：2週間の理想のルート</div>
-      <div class="post-desc">8か国、12都市、14日間。すべて電車で。ヨーロッパ鉄道旅の定番の旅程を、2026年の最新の運行会社、所要時間、区間ごとの予約戦略で磨き上げました。</div>
-      <div class="post-meta">2026年7月 · 読了目安10分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/38169158/pexels-photo-38169158.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパ鉄道旅の旅程（2026）：2週間の理想のルート" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">鉄道旅行</span>
+        <div class="post-title">ヨーロッパ鉄道旅の旅程（2026）：2週間の理想のルート</div>
+        <div class="post-desc">8か国、12都市、14日間。すべて電車で。ヨーロッパ鉄道旅の定番の旅程を、2026年の最新の運行会社、所要時間、区間ごとの予約戦略で磨き上げました。</div>
+        <div class="post-meta">2026年7月 · 読了目安10分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-eurail-pass-vs-point-to-point.html" class="post">
-      <span class="post-tag">鉄道旅行</span>
-      <div class="post-title">ユーレイルパス vs 区間ごとの切符（2026）：どちらが得か</div>
-      <div class="post-desc">実際のヨーロッパの旅程5つで計算しました。その答えは、多くの旅行ブログが言うものとは違います。隠れた座席予約料が、すべてを変えます。</div>
-      <div class="post-meta">2026年7月 · 読了目安9分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/30639286/pexels-photo-30639286.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ユーレイルパス vs 区間ごとの切符（2026）：どちらが得か" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">鉄道旅行</span>
+        <div class="post-title">ユーレイルパス vs 区間ごとの切符（2026）：どちらが得か</div>
+        <div class="post-desc">実際のヨーロッパの旅程5つで計算しました。その答えは、多くの旅行ブログが言うものとは違います。隠れた座席予約料が、すべてを変えます。</div>
+        <div class="post-meta">2026年7月 · 読了目安9分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-best-train-trips-europe.html" class="post">
-      <span class="post-tag">鉄道旅行</span>
-      <div class="post-title">ヨーロッパのベスト鉄道旅（2026）：見逃せない10ルート</div>
-      <div class="post-desc">英仏海峡の下を行くユーロスターから、スペインを横断するAVEまで。ヨーロッパのベスト鉄道旅10選を、所要時間、料金、予約のコツとともにランキング。</div>
-      <div class="post-meta">2026年7月 · 読了目安8分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/7938364/pexels-photo-7938364.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパのベスト鉄道旅（2026）：見逃せない10ルート" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">鉄道旅行</span>
+        <div class="post-title">ヨーロッパのベスト鉄道旅（2026）：見逃せない10ルート</div>
+        <div class="post-desc">英仏海峡の下を行くユーロスターから、スペインを横断するAVEまで。ヨーロッパのベスト鉄道旅10選を、所要時間、料金、予約のコツとともにランキング。</div>
+        <div class="post-meta">2026年7月 · 読了目安8分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-cote-bleue-marseille-train.html" class="post">
-      <span class="post-tag">絶景ルート</span>
-      <div class="post-title">コート・ブルー線：マルセイユの知られざる海岸鉄道</div>
-      <div class="post-desc">南仏の海岸に隠れた入り江（カランク）の上に架かる高架橋。マルセイユを出るTGVに代わる、圧巻の景色で手頃な選択肢です。</div>
-      <div class="post-meta">2026年7月 · 読了目安5分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/35599457/pexels-photo-35599457.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="コート・ブルー線：マルセイユの知られざる海岸鉄道" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">絶景ルート</span>
+        <div class="post-title">コート・ブルー線：マルセイユの知られざる海岸鉄道</div>
+        <div class="post-desc">南仏の海岸に隠れた入り江（カランク）の上に架かる高架橋。マルセイユを出るTGVに代わる、圧巻の景色で手頃な選択肢です。</div>
+        <div class="post-meta">2026年7月 · 読了目安5分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-backpacking-italy.html" class="post">
-      <span class="post-tag">バックパック旅</span>
-      <div class="post-title">イタリア・バックパック旅：ローマ・フィレンツェ・ヴェネツィアの定番ルート</div>
-      <div class="post-desc">はじめてのイタリア旅行の定番、芸術都市をめぐる周遊。ローマ、フィレンツェ、ヴェネツィアを電車で7〜10日、ホステルと予算のコツも。</div>
-      <div class="post-meta">2026年7月 · 読了目安6分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/2225442/pexels-photo-2225442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="イタリア・バックパック旅：ローマ・フィレンツェ・ヴェネツィアの定番ルート" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">バックパック旅</span>
+        <div class="post-title">イタリア・バックパック旅：ローマ・フィレンツェ・ヴェネツィアの定番ルート</div>
+        <div class="post-desc">はじめてのイタリア旅行の定番、芸術都市をめぐる周遊。ローマ、フィレンツェ、ヴェネツィアを電車で7〜10日、ホステルと予算のコツも。</div>
+        <div class="post-meta">2026年7月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-paris-lourdes-pilgrimage-train.html" class="post">
-      <span class="post-tag">巡礼</span>
-      <div class="post-title">パリからルルドへ電車で：祈りと希望の巡礼（2026）</div>
-      <div class="post-desc">トゥールーズ経由でパリからルルドへ電車で行く方法と、ルルドの聖母の聖域への旅が、ヨーロッパでもっとも心に響く巡礼のひとつである理由。</div>
-      <div class="post-meta">2026年7月 · 読了目安6分</div>
+      <img class="post-img" src="https://upload.wikimedia.org/wikipedia/commons/8/84/France-002018_-_Grotto_Service_%2815153278134%29.jpg" alt="パリからルルドへ電車で：祈りと希望の巡礼（2026）" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">巡礼</span>
+        <div class="post-title">パリからルルドへ電車で：祈りと希望の巡礼（2026）</div>
+        <div class="post-desc">トゥールーズ経由でパリからルルドへ電車で行く方法と、ルルドの聖母の聖域への旅が、ヨーロッパでもっとも心に響く巡礼のひとつである理由。</div>
+        <div class="post-meta">2026年7月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/guide-how-to-travel-europe-by-train.html" class="post">
-      <span class="post-tag">完全ガイド</span>
-      <div class="post-title">ヨーロッパを電車で旅する方法：完全ガイド（2026）</div>
-      <div class="post-desc">鉄道パスと区間ごとの切符、予約のタイミング、列車の種類、夜行列車、荷物のコツ、おすすめルート。必要なことが、すべてここに。</div>
-      <div class="post-meta">2026年7月 · 読了目安12分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/38169158/pexels-photo-38169158.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパを電車で旅する方法：完全ガイド（2026）" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">完全ガイド</span>
+        <div class="post-title">ヨーロッパを電車で旅する方法：完全ガイド（2026）</div>
+        <div class="post-desc">鉄道パスと区間ごとの切符、予約のタイミング、列車の種類、夜行列車、荷物のコツ、おすすめルート。必要なことが、すべてここに。</div>
+        <div class="post-meta">2026年7月 · 読了目安12分</div>
+      </div>
     </a>
 
     <a href="/rutas/lyon-turin/ja/" class="post">
-      <span class="post-tag">ルートガイド · フランス → イタリア</span>
-      <div class="post-title">リヨンからトリノへ電車で：アルプス越え</div>
-      <div class="post-desc">リヨンの川辺から、バロックの街トリノへ。モーリエンヌ渓谷とフレジュス・トンネルを越えてイタリアへ。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
-      <div class="post-meta">2026年6月 · 読了目安4分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/33040847/pexels-photo-33040847.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="リヨンからトリノへ電車で：アルプス越え" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">ルートガイド · フランス → イタリア</span>
+        <div class="post-title">リヨンからトリノへ電車で：アルプス越え</div>
+        <div class="post-desc">リヨンの川辺から、バロックの街トリノへ。モーリエンヌ渓谷とフレジュス・トンネルを越えてイタリアへ。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
+        <div class="post-meta">2026年6月 · 読了目安4分</div>
+      </div>
     </a>
 
     <a href="/rutas/paris-barcelona/ja/" class="post">
-      <span class="post-tag">ルートガイド · フランス → スペイン</span>
-      <div class="post-title">パリからバルセロナへ電車で：直通TGV</div>
-      <div class="post-desc">パリからバルセロナの中心へ、1本の列車で。南フランスとピレネー山脈を越えて。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
-      <div class="post-meta">2026年6月 · 読了目安4分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/16984552/pexels-photo-16984552.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="パリからバルセロナへ電車で：直通TGV" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">ルートガイド · フランス → スペイン</span>
+        <div class="post-title">パリからバルセロナへ電車で：直通TGV</div>
+        <div class="post-desc">パリからバルセロナの中心へ、1本の列車で。南フランスとピレネー山脈を越えて。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
+        <div class="post-meta">2026年6月 · 読了目安4分</div>
+      </div>
     </a>
 
     <a href="/rutas/vienna-prague/ja/" class="post">
-      <span class="post-tag">ルートガイド · オーストリア → チェコ</span>
-      <div class="post-title">ウィーンからプラハへ電車で：2つの帝都</div>
-      <div class="post-desc">モラヴィアとボヘミアを抜ける、直通で快適な旅。中央ヨーロッパでもとりわけ美しい2つの都市の間で。駅、運行会社、いちばん安い運賃の探し方。</div>
-      <div class="post-meta">2026年6月 · 読了目安4分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/16922421/pexels-photo-16922421.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ウィーンからプラハへ電車で：2つの帝都" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">ルートガイド · オーストリア → チェコ</span>
+        <div class="post-title">ウィーンからプラハへ電車で：2つの帝都</div>
+        <div class="post-desc">モラヴィアとボヘミアを抜ける、直通で快適な旅。中央ヨーロッパでもとりわけ美しい2つの都市の間で。駅、運行会社、いちばん安い運賃の探し方。</div>
+        <div class="post-meta">2026年6月 · 読了目安4分</div>
+      </div>
     </a>
 
     <a href="/rutas/paris-amsterdam/ja/" class="post">
-      <span class="post-tag">ルートガイド · フランス → オランダ</span>
-      <div class="post-title">パリからアムステルダムへ電車で：速い直通列車</div>
-      <div class="post-desc">パリのカフェからアムステルダムの運河へ、ブリュッセル経由で約3時間20分。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
-      <div class="post-meta">2026年6月 · 読了目安4分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/4237160/pexels-photo-4237160.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="パリからアムステルダムへ電車で：速い直通列車" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">ルートガイド · フランス → オランダ</span>
+        <div class="post-title">パリからアムステルダムへ電車で：速い直通列車</div>
+        <div class="post-desc">パリのカフェからアムステルダムの運河へ、ブリュッセル経由で約3時間20分。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
+        <div class="post-meta">2026年6月 · 読了目安4分</div>
+      </div>
     </a>
 
     <a href="/rutas/munich-venice/ja/" class="post">
-      <span class="post-tag">ルートガイド · ドイツ → イタリア</span>
-      <div class="post-title">ミュンヘンからヴェネツィアへ電車で：ブレンナー峠越え</div>
-      <div class="post-desc">ヨーロッパでもとりわけ景色のよい路線のひとつ。バイエルンからアルプスを越えて、ヴェネツィアのラグーンへ。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
-      <div class="post-meta">2026年6月 · 読了目安4分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/29487687/pexels-photo-29487687.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ミュンヘンからヴェネツィアへ電車で：ブレンナー峠越え" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">ルートガイド · ドイツ → イタリア</span>
+        <div class="post-title">ミュンヘンからヴェネツィアへ電車で：ブレンナー峠越え</div>
+        <div class="post-desc">ヨーロッパでもとりわけ景色のよい路線のひとつ。バイエルンからアルプスを越えて、ヴェネツィアのラグーンへ。駅、運行会社、景色、いちばん安い運賃の探し方。</div>
+        <div class="post-meta">2026年6月 · 読了目安4分</div>
+      </div>
     </a>
 
 
     <a href="/ja/blog-flying-vs-train-europe.html" class="post">
-      <span class="post-tag">電車と飛行機</span>
-      <div class="post-title">ヨーロッパの飛行機と電車：本当の費用を比べる（2026）</div>
-      <div class="post-desc">実際の数字で比べました。ドア・ツー・ドアの時間、総費用、荷物料金、移動、CO2。700km未満のほとんどの路線で、電車はあらゆる指標で勝ります。</div>
-      <div class="post-meta">2026年6月 · 読了目安7分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/36023564/pexels-photo-36023564.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパの飛行機と電車：本当の費用を比べる（2026）" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">電車と飛行機</span>
+        <div class="post-title">ヨーロッパの飛行機と電車：本当の費用を比べる（2026）</div>
+        <div class="post-desc">実際の数字で比べました。ドア・ツー・ドアの時間、総費用、荷物料金、移動、CO2。700km未満のほとんどの路線で、電車はあらゆる指標で勝ります。</div>
+        <div class="post-meta">2026年6月 · 読了目安7分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-night-trains-europe.html" class="post">
-      <span class="post-tag">夜行列車</span>
-      <div class="post-title">ヨーロッパの夜行列車：2026年版 完全ガイド</div>
-      <div class="post-desc">ヨーロッパの夜行列車のしくみ、おすすめの運行会社（ナイトジェット、ヨーロピアン・スリーパー、トレンオテル）、寝台のクラス、料金、予約のコツ。</div>
-      <div class="post-meta">2026年6月 · 読了目安6分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/30595796/pexels-photo-30595796.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパの夜行列車：2026年版 完全ガイド" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">夜行列車</span>
+        <div class="post-title">ヨーロッパの夜行列車：2026年版 完全ガイド</div>
+        <div class="post-desc">ヨーロッパの夜行列車のしくみ、おすすめの運行会社（ナイトジェット、ヨーロピアン・スリーパー、トレンオテル）、寝台のクラス、料金、予約のコツ。</div>
+        <div class="post-meta">2026年6月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-scenic-train-routes-europe.html" class="post">
-      <span class="post-tag">絶景ルート</span>
-      <div class="post-title">ヨーロッパで景色がいちばん美しい鉄道路線7選（2026年版ガイド）</div>
-      <div class="post-desc">スイス・アルプスのグレッシャー・エクスプレスから、ノルウェーのフロム鉄道まで。大陸でもっとも壮観な7つの鉄道の旅と、その乗り方。</div>
-      <div class="post-meta">2026年6月 · 読了目安6分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/20485985/pexels-photo-20485985.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="ヨーロッパで景色がいちばん美しい鉄道路線7選（2026年版ガイド）" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">絶景ルート</span>
+        <div class="post-title">ヨーロッパで景色がいちばん美しい鉄道路線7選（2026年版ガイド）</div>
+        <div class="post-desc">スイス・アルプスのグレッシャー・エクスプレスから、ノルウェーのフロム鉄道まで。大陸でもっとも壮観な7つの鉄道の旅と、その乗り方。</div>
+        <div class="post-meta">2026年6月 · 読了目安6分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-madrid-barcelona-train-guide.html" class="post">
-      <span class="post-tag">ルートガイド</span>
-      <div class="post-title">マドリードからバルセロナへ電車で：AVE完全ガイド（2026）</div>
-      <div class="post-desc">スペインでもっとも利用者の多い高速路線の、所要時間、料金、駅、3つの運行会社（Renfe、Ouigo、Iryo）。そして、いちばん安い席の取り方。</div>
-      <div class="post-meta">2026年6月 · 読了目安5分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/35727855/pexels-photo-35727855.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="マドリードからバルセロナへ電車で：AVE完全ガイド（2026）" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">ルートガイド</span>
+        <div class="post-title">マドリードからバルセロナへ電車で：AVE完全ガイド（2026）</div>
+        <div class="post-desc">スペインでもっとも利用者の多い高速路線の、所要時間、料金、駅、3つの運行会社（Renfe、Ouigo、Iryo）。そして、いちばん安い席の取り方。</div>
+        <div class="post-meta">2026年6月 · 読了目安5分</div>
+      </div>
     </a>
 
     <a href="/ja/blog-italy-interrail-itinerary.html" class="post">
-      <span class="post-tag">旅程プラン</span>
-      <div class="post-title">イタリアを電車で7日間：理想の旅程</div>
-      <div class="post-desc">ローマ、フィレンツェ、ヴェネツィア、チンクエ・テッレをすべて電車で。高速列車の区間と、絶景のチンクエ・テッレ・エクスプレスを含む、ゆとりのある1週間のルート。所要時間と費用つき。</div>
-      <div class="post-meta">2026年6月 · 読了目安7分</div>
+      <img class="post-img" src="https://images.pexels.com/photos/27541217/pexels-photo-27541217.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="イタリアを電車で7日間：理想の旅程" loading="lazy" width="640" height="400" />
+      <div class="post-body">
+        <span class="post-tag">旅程プラン</span>
+        <div class="post-title">イタリアを電車で7日間：理想の旅程</div>
+        <div class="post-desc">ローマ、フィレンツェ、ヴェネツィア、チンクエ・テッレをすべて電車で。高速列車の区間と、絶景のチンクエ・テッレ・エクスプレスを含む、ゆとりのある1週間のルート。所要時間と費用つき。</div>
+        <div class="post-meta">2026年6月 · 読了目安7分</div>
+      </div>
     </a>
   </main>
 
