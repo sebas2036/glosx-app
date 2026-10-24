@@ -19,6 +19,13 @@ NAMES = {'es': {'zurich': 'Zúrich', 'geneva': 'Ginebra', 'basel': 'Basilea', 'l
          'fr': {'geneva': 'Genève', 'basel': 'Bâle', 'bern': 'Berne', 'stmoritz': 'Saint-Moritz'},
          'it': {'zurich': 'Zurigo', 'geneva': 'Ginevra', 'basel': 'Basilea', 'lucerne': 'Lucerna', 'bern': 'Berna', 'stmoritz': 'St. Moritz'},
          'ja': {'zurich': 'チューリッヒ', 'geneva': 'ジュネーブ', 'basel': 'バーゼル', 'lucerne': 'ルツェルン', 'bern': 'ベルン', 'interlaken': 'インターラーケン', 'lauterbrunnen': 'ラウターブルンネン', 'zermatt': 'ツェルマット', 'montreux': 'モントルー', 'stmoritz': 'サンモリッツ'}}
+OMIO_SLUG = {'Zurich HB': 'zurich', 'Genève': 'geneva', 'Basel SBB': 'basel', 'Luzern': 'lucerne', 'Interlaken Ost': 'interlaken',
+             'St. Gallen': 'st-gallen', 'Zurich Airport': 'zurich-airport', 'Genève-Aéroport': 'geneva-airport', 'Fribourg': 'fribourg',
+             'Neuchâtel': 'neuchatel', 'St. Moritz': 'st-moritz'}
+def omio(a, b, lang):
+    sl = lambda x: OMIO_SLUG.get(x, x.lower().replace(' ', '-'))
+    return 'https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=%s&to=%s&src=swiss_table&lang=%s' % (sl(a), sl(b), lang)
+BOOK = {'en': ('Book', 'Book on Omio'), 'es': ('Reservar', 'Reservar en Omio'), 'fr': ('Réserver', 'Réserver sur Omio'), 'it': ('Prenota', 'Prenota su Omio'), 'ja': ('予約', 'Omioで予約')}
 SHOWCASE = 'https://data.opentransportdata.swiss/en/showcase/wow-train'
 SRC = D['source']['url']
 
@@ -144,7 +151,8 @@ for lang, t in T.items():
         '.hx{max-width:1100px;margin:0 auto;padding:8px 24px 56px}.hx h2{font-size:20px;margin:34px 0 10px}.hx p,.hx li{line-height:1.6;font-size:15px}\n'
         '.hx .tw{overflow-x:auto;border:1px solid rgba(20,21,26,.14);border-radius:12px;background:#fff}.hx table{border-collapse:collapse;width:100%%;min-width:760px;font-size:14px}\n'
         '.hx th,.hx td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(20,21,26,.08);white-space:nowrap}.hx th{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:#6b6c75;background:#faf8f5;position:sticky;top:0}\n'
-        '.hx td:nth-child(n+2){font-variant-numeric:tabular-nums}.hx tr:last-child td{border-bottom:0}.hx a{color:#C10016}.hx .cita{background:#faf8f5;border-radius:12px;padding:14px 16px;font-size:14px}\n'
+        '.hx td:nth-child(n+3){font-variant-numeric:tabular-nums}.hx tr:last-child td{border-bottom:0}.hx a{color:#C10016}.hx .cita{background:#faf8f5;border-radius:12px;padding:14px 16px;font-size:14px}\n'
+        '.hx a.bk{display:inline-block;background:#C10016;color:#fff;font-weight:700;font-size:13px;padding:7px 12px;border-radius:999px;text-decoration:none}.hx a.bk:hover{background:#A8000F}\n'
         '.hx .gl{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}.hx .gl a{display:inline-block;padding:8px 14px;border:1px solid rgba(20,21,26,.14);border-radius:999px;text-decoration:none;color:#14151a;font-size:14px}.hx .gl a:hover{border-color:#C10016}\n'
         '</style>\n</head>' % json.dumps(ld, ensure_ascii=False))
     nav = '<nav>\n    <a href="%s">WoW Train</a>\n    <div class="nav-right"><a href="%s" style="font-weight:600;text-decoration:none;color:inherit">%s</a></div>\n  </nav>' % (t['home'], t['all_routes'], t['back'])
@@ -155,7 +163,7 @@ for lang, t in T.items():
         g = guide(p['from'], p['to'])
         name = '%s &rarr; %s' % (html.escape(p['from']), html.escape(p['to']))
         if g: name = '<a href="/rutas/%s/%s">%s</a>' % (g, t['suffix'], name)
-        tr += '<tr><td>%s</td><td>%s</td><td>%s</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (name, w['first'], w['last'], w['n'], s.get('n', '–'), u.get('n', '–'), dur(w['fastest_min']))
+        tr += '<tr><td>%s</td><td><a class="bk" href="%s" target="_blank" rel="noopener sponsored" aria-label="%s: %s" onclick="try{gtag(\'event\',\'omio_click\',{source:\'swiss_table\'})}catch(e){}">%s &rarr;</a></td><td>%s</td><td>%s</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (name, html.escape(omio(p['from'], p['to'], lang)), BOOK[lang][1], html.escape(p['from'] + ' – ' + p['to']), BOOK[lang][0], w['first'], w['last'], w['n'], s.get('n', '–'), u.get('n', '–'), dur(w['fastest_min']))
     li = ''.join('<li>%s</li>' % x.format(src=SRC, file=html.escape(D['source']['file']), wd=fdate(REF['weekday'], lang), sa=fdate(REF['saturday'], lang), su=fdate(REF['sunday'], lang)) for x in t['li'])
     body = '''<header>
     <h1>%s <span style="color:#C10016">· glosx.app</span></h1>
@@ -178,7 +186,7 @@ for lang, t in T.items():
     <p class="cita">%s</p>
     <p>%s</p>
   </main>
-  ''' % (t['h1'], t['sub'].format(n=len(rows)), t['guides'], gl, t['dl'], ''.join('<th>%s</th>' % c for c in t['cols']), tr, t['src'],
+  ''' % (t['h1'], t['sub'].format(n=len(rows)), t['guides'], gl, t['dl'], ''.join('<th>%s</th>' % c for c in t['cols'][:1] + [''] + t['cols'][1:]), tr, t['src'],
          t['csv'], t['csvnote'], t['how'], li, t['cite'], t['citetxt'].format(url=url), t['showcase'].format(sc=SHOWCASE))
     out = head + nav + '\n  ' + body + foot + '\n</body>\n</html>\n'
     os.makedirs(os.path.join(ROOT, t['dir']), exist_ok=True)
