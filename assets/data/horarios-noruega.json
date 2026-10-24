@@ -212,6 +212,92 @@
    }
   },
   {
+   "from": "Bodø",
+   "to": "Steinkjer",
+   "weekday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 474,
+    "median_min": 474
+   },
+   "saturday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 474,
+    "median_min": 474
+   },
+   "sunday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 474,
+    "median_min": 474
+   }
+  },
+  {
+   "from": "Bodø",
+   "to": "Trondheim Airport",
+   "weekday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 560,
+    "median_min": 560
+   },
+   "saturday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 560,
+    "median_min": 560
+   },
+   "sunday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 560,
+    "median_min": 560
+   }
+  },
+  {
+   "from": "Bodø",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 586,
+    "median_min": 586
+   },
+   "saturday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 586,
+    "median_min": 586
+   },
+   "sunday": {
+    "n": 1,
+    "first": "12:27",
+    "last": "12:27",
+    "fastest_min": 586,
+    "median_min": 586
+   }
+  },
+  {
+   "from": "Dombås",
+   "to": "Drammen",
+   "weekday": {
+    "n": 1,
+    "first": "05:23",
+    "last": "05:23",
+    "fastest_min": 279,
+    "median_min": 279
+   }
+  },
+  {
    "from": "Dombås",
    "to": "Hamar",
    "weekday": {
@@ -406,6 +492,24 @@
     "last": "23:38",
     "fastest_min": 360,
     "median_min": 384
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Dombås",
+   "weekday": {
+    "n": 1,
+    "first": "17:57",
+    "last": "17:57",
+    "fastest_min": 277,
+    "median_min": 277
+   },
+   "sunday": {
+    "n": 1,
+    "first": "17:57",
+    "last": "17:57",
+    "fastest_min": 277,
+    "median_min": 277
    }
   },
   {
@@ -678,6 +782,24 @@
     "last": "00:17",
     "fastest_min": 31,
     "median_min": 36
+   }
+  },
+  {
+   "from": "Drammen",
+   "to": "Otta",
+   "weekday": {
+    "n": 1,
+    "first": "17:57",
+    "last": "17:57",
+    "fastest_min": 245,
+    "median_min": 245
+   },
+   "sunday": {
+    "n": 1,
+    "first": "17:57",
+    "last": "17:57",
+    "fastest_min": 245,
+    "median_min": 245
    }
   },
   {
@@ -986,6 +1108,81 @@
     "last": "18:28",
     "fastest_min": 127,
     "median_min": 136
+   }
+  },
+  {
+   "from": "Fauske",
+   "to": "Steinkjer",
+   "weekday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 425,
+    "median_min": 425
+   },
+   "saturday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 425,
+    "median_min": 425
+   },
+   "sunday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 425,
+    "median_min": 425
+   }
+  },
+  {
+   "from": "Fauske",
+   "to": "Trondheim Airport",
+   "weekday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 511,
+    "median_min": 511
+   },
+   "saturday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 511,
+    "median_min": 511
+   },
+   "sunday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 511,
+    "median_min": 511
+   }
+  },
+  {
+   "from": "Fauske",
+   "to": "Trondheim S",
+   "weekday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 537,
+    "median_min": 537
+   },
+   "saturday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 537,
+    "median_min": 537
+   },
+   "sunday": {
+    "n": 1,
+    "first": "13:16",
+    "last": "13:16",
+    "fastest_min": 537,
+    "median_min": 537
    }
   },
   {
@@ -1676,6 +1873,17 @@
   },
   {
    "from": "Hamar",
+   "to": "Larvik",
+   "weekday": {
+    "n": 1,
+    "first": "04:24",
+    "last": "04:24",
+    "fastest_min": 201,
+    "median_min": 201
+   }
+  },
+  {
+   "from": "Hamar",
    "to": "Lillehammer",
    "weekday": {
     "n": 26,
@@ -1798,6 +2006,28 @@
   },
   {
    "from": "Hamar",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 1,
+    "first": "04:24",
+    "last": "04:24",
+    "fastest_min": 180,
+    "median_min": 180
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Skien",
+   "weekday": {
+    "n": 1,
+    "first": "04:24",
+    "last": "04:24",
+    "fastest_min": 223,
+    "median_min": 223
+   }
+  },
+  {
+   "from": "Hamar",
    "to": "Trondheim S",
    "weekday": {
     "n": 8,
@@ -1819,6 +2049,17 @@
     "last": "00:25",
     "fastest_min": 327,
     "median_min": 376
+   }
+  },
+  {
+   "from": "Hamar",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 1,
+    "first": "04:24",
+    "last": "04:24",
+    "fastest_min": 153,
+    "median_min": 153
    }
   },
   {
@@ -2184,6 +2425,28 @@
   },
   {
    "from": "Larvik",
+   "to": "Hamar",
+   "weekday": {
+    "n": 1,
+    "first": "22:32",
+    "last": "22:32",
+    "fastest_min": 185,
+    "median_min": 185
+   }
+  },
+  {
+   "from": "Larvik",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 1,
+    "first": "22:32",
+    "last": "22:32",
+    "fastest_min": 232,
+    "median_min": 232
+   }
+  },
+  {
+   "from": "Larvik",
    "to": "Lillestrøm",
    "weekday": {
     "n": 20,
@@ -2339,6 +2602,17 @@
   },
   {
    "from": "Lillehammer",
+   "to": "Larvik",
+   "weekday": {
+    "n": 1,
+    "first": "03:36",
+    "last": "03:36",
+    "fastest_min": 249,
+    "median_min": 249
+   }
+  },
+  {
+   "from": "Lillehammer",
    "to": "Lillestrøm",
    "weekday": {
     "n": 24,
@@ -2411,6 +2685,28 @@
   },
   {
    "from": "Lillehammer",
+   "to": "Sandefjord",
+   "weekday": {
+    "n": 1,
+    "first": "03:36",
+    "last": "03:36",
+    "fastest_min": 228,
+    "median_min": 228
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Skien",
+   "weekday": {
+    "n": 1,
+    "first": "03:36",
+    "last": "03:36",
+    "fastest_min": 271,
+    "median_min": 271
+   }
+  },
+  {
+   "from": "Lillehammer",
    "to": "Trondheim S",
    "weekday": {
     "n": 6,
@@ -2425,6 +2721,17 @@
     "last": "01:19",
     "fastest_min": 277,
     "median_min": 299
+   }
+  },
+  {
+   "from": "Lillehammer",
+   "to": "Tønsberg",
+   "weekday": {
+    "n": 1,
+    "first": "03:36",
+    "last": "03:36",
+    "fastest_min": 201,
+    "median_min": 201
    }
   },
   {
@@ -3924,6 +4231,17 @@
   },
   {
    "from": "Otta",
+   "to": "Drammen",
+   "weekday": {
+    "n": 1,
+    "first": "05:54",
+    "last": "05:54",
+    "fastest_min": 248,
+    "median_min": 248
+   }
+  },
+  {
+   "from": "Otta",
    "to": "Hamar",
    "weekday": {
     "n": 7,
@@ -4107,6 +4425,17 @@
   },
   {
    "from": "Sandefjord",
+   "to": "Hamar",
+   "weekday": {
+    "n": 1,
+    "first": "22:47",
+    "last": "22:47",
+    "fastest_min": 170,
+    "median_min": 170
+   }
+  },
+  {
+   "from": "Sandefjord",
    "to": "Larvik",
    "weekday": {
     "n": 25,
@@ -4128,6 +4457,17 @@
     "last": "01:42",
     "fastest_min": 12,
     "median_min": 13
+   }
+  },
+  {
+   "from": "Sandefjord",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 1,
+    "first": "22:47",
+    "last": "22:47",
+    "fastest_min": 217,
+    "median_min": 217
    }
   },
   {
@@ -4362,6 +4702,17 @@
   },
   {
    "from": "Skien",
+   "to": "Hamar",
+   "weekday": {
+    "n": 1,
+    "first": "22:09",
+    "last": "22:09",
+    "fastest_min": 208,
+    "median_min": 208
+   }
+  },
+  {
+   "from": "Skien",
    "to": "Larvik",
    "weekday": {
     "n": 25,
@@ -4383,6 +4734,17 @@
     "last": "23:39",
     "fastest_min": 20,
     "median_min": 20
+   }
+  },
+  {
+   "from": "Skien",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 1,
+    "first": "22:09",
+    "last": "22:09",
+    "fastest_min": 255,
+    "median_min": 255
    }
   },
   {
@@ -4606,6 +4968,56 @@
   },
   {
    "from": "Steinkjer",
+   "to": "Bodø",
+   "weekday": {
+    "n": 1,
+    "first": "09:51",
+    "last": "09:51",
+    "fastest_min": 467,
+    "median_min": 467
+   },
+   "saturday": {
+    "n": 1,
+    "first": "09:51",
+    "last": "09:51",
+    "fastest_min": 467,
+    "median_min": 467
+   },
+   "sunday": {
+    "n": 1,
+    "first": "09:51",
+    "last": "09:51",
+    "fastest_min": 467,
+    "median_min": 467
+   }
+  },
+  {
+   "from": "Steinkjer",
+   "to": "Fauske",
+   "weekday": {
+    "n": 1,
+    "first": "09:51",
+    "last": "09:51",
+    "fastest_min": 414,
+    "median_min": 414
+   },
+   "saturday": {
+    "n": 1,
+    "first": "09:51",
+    "last": "09:51",
+    "fastest_min": 414,
+    "median_min": 414
+   },
+   "sunday": {
+    "n": 1,
+    "first": "09:51",
+    "last": "09:51",
+    "fastest_min": 414,
+    "median_min": 414
+   }
+  },
+  {
+   "from": "Steinkjer",
    "to": "Mo i Rana",
    "weekday": {
     "n": 2,
@@ -4706,6 +5118,56 @@
   },
   {
    "from": "Trondheim Airport",
+   "to": "Bodø",
+   "weekday": {
+    "n": 1,
+    "first": "08:24",
+    "last": "08:24",
+    "fastest_min": 554,
+    "median_min": 554
+   },
+   "saturday": {
+    "n": 1,
+    "first": "08:24",
+    "last": "08:24",
+    "fastest_min": 554,
+    "median_min": 554
+   },
+   "sunday": {
+    "n": 1,
+    "first": "08:24",
+    "last": "08:24",
+    "fastest_min": 554,
+    "median_min": 554
+   }
+  },
+  {
+   "from": "Trondheim Airport",
+   "to": "Fauske",
+   "weekday": {
+    "n": 1,
+    "first": "08:24",
+    "last": "08:24",
+    "fastest_min": 501,
+    "median_min": 501
+   },
+   "saturday": {
+    "n": 1,
+    "first": "08:24",
+    "last": "08:24",
+    "fastest_min": 501,
+    "median_min": 501
+   },
+   "sunday": {
+    "n": 1,
+    "first": "08:24",
+    "last": "08:24",
+    "fastest_min": 501,
+    "median_min": 501
+   }
+  },
+  {
+   "from": "Trondheim Airport",
    "to": "Mo i Rana",
    "weekday": {
     "n": 2,
@@ -4727,6 +5189,17 @@
     "last": "16:36",
     "fastest_min": 364,
     "median_min": 368
+   }
+  },
+  {
+   "from": "Trondheim Airport",
+   "to": "Røros",
+   "weekday": {
+    "n": 1,
+    "first": "15:33",
+    "last": "15:33",
+    "fastest_min": 209,
+    "median_min": 209
    }
   },
   {
@@ -4781,6 +5254,31 @@
   },
   {
    "from": "Trondheim S",
+   "to": "Bodø",
+   "weekday": {
+    "n": 1,
+    "first": "07:49",
+    "last": "07:49",
+    "fastest_min": 589,
+    "median_min": 589
+   },
+   "saturday": {
+    "n": 1,
+    "first": "07:49",
+    "last": "07:49",
+    "fastest_min": 589,
+    "median_min": 589
+   },
+   "sunday": {
+    "n": 1,
+    "first": "07:49",
+    "last": "07:49",
+    "fastest_min": 589,
+    "median_min": 589
+   }
+  },
+  {
+   "from": "Trondheim S",
    "to": "Dombås",
    "weekday": {
     "n": 6,
@@ -4795,6 +5293,31 @@
     "last": "23:17",
     "fastest_min": 177,
     "median_min": 177
+   }
+  },
+  {
+   "from": "Trondheim S",
+   "to": "Fauske",
+   "weekday": {
+    "n": 1,
+    "first": "07:49",
+    "last": "07:49",
+    "fastest_min": 536,
+    "median_min": 536
+   },
+   "saturday": {
+    "n": 1,
+    "first": "07:49",
+    "last": "07:49",
+    "fastest_min": 536,
+    "median_min": 536
+   },
+   "sunday": {
+    "n": 1,
+    "first": "07:49",
+    "last": "07:49",
+    "fastest_min": 536,
+    "median_min": 536
    }
   },
   {
@@ -5025,6 +5548,17 @@
   },
   {
    "from": "Tønsberg",
+   "to": "Hamar",
+   "weekday": {
+    "n": 1,
+    "first": "23:09",
+    "last": "23:09",
+    "fastest_min": 148,
+    "median_min": 148
+   }
+  },
+  {
+   "from": "Tønsberg",
    "to": "Larvik",
    "weekday": {
     "n": 25,
@@ -5032,6 +5566,17 @@
     "last": "00:52",
     "fastest_min": 32,
     "median_min": 39
+   }
+  },
+  {
+   "from": "Tønsberg",
+   "to": "Lillehammer",
+   "weekday": {
+    "n": 1,
+    "first": "23:09",
+    "last": "23:09",
+    "fastest_min": 195,
+    "median_min": 195
    }
   },
   {

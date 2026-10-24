@@ -23,6 +23,16 @@ Bodø,Fauske,sunday,12:27,23:15,3,42,43,"Entur (NLOD), processed by glosx.app",h
 Bodø,Mo i Rana,weekday,07:36,17:46,3,168,169,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Bodø,Mo i Rana,saturday,12:27,17:46,2,169,182,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Bodø,Mo i Rana,sunday,12:27,17:46,2,169,182,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Steinkjer,weekday,12:27,12:27,1,474,474,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Steinkjer,saturday,12:27,12:27,1,474,474,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Steinkjer,sunday,12:27,12:27,1,474,474,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Trondheim Airport,weekday,12:27,12:27,1,560,560,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Trondheim Airport,saturday,12:27,12:27,1,560,560,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Trondheim Airport,sunday,12:27,12:27,1,560,560,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Trondheim S,weekday,12:27,12:27,1,586,586,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Trondheim S,saturday,12:27,12:27,1,586,586,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Bodø,Trondheim S,sunday,12:27,12:27,1,586,586,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Dombås,Drammen,weekday,05:23,05:23,1,279,279,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Dombås,Hamar,weekday,05:23,02:18,7,157,164,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Dombås,Hamar,saturday,05:23,05:23,1,166,166,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Dombås,Hamar,sunday,02:18,02:18,1,194,194,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -46,6 +56,8 @@ Dombås,Åndalsnes,sunday,12:08,20:15,3,82,82,"Entur (NLOD), processed by glosx.
 Drammen,Bergen,weekday,07:00,23:38,5,360,378,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Bergen,saturday,07:00,17:00,4,360,375,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Bergen,sunday,09:00,23:38,4,360,384,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Dombås,weekday,17:57,17:57,1,277,277,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Dombås,sunday,17:57,17:57,1,277,277,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Egersund,weekday,08:00,23:00,6,363,370,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Egersund,saturday,08:00,16:00,4,363,367,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Egersund,sunday,08:00,23:00,5,363,368,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -78,6 +90,8 @@ Drammen,Oslo Airport,sunday,04:02,00:17,112,60,60,"Entur (NLOD), processed by gl
 Drammen,Oslo S,weekday,04:02,00:05,169,31,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Oslo S,saturday,04:02,00:12,156,32,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Oslo S,sunday,04:02,00:17,157,31,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Otta,weekday,17:57,17:57,1,245,245,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Drammen,Otta,sunday,17:57,17:57,1,245,245,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Sandefjord,weekday,04:28,00:14,23,57,62,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Sandnes,weekday,08:00,23:00,6,420,421,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Drammen,Sandnes,saturday,08:00,16:00,4,420,421,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -114,6 +128,15 @@ Fauske,Bodø,sunday,16:53,20:22,2,39,42,"Entur (NLOD), processed by glosx.app",h
 Fauske,Mo i Rana,weekday,08:21,18:28,3,123,127,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Fauske,Mo i Rana,saturday,13:16,18:28,2,127,136,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Fauske,Mo i Rana,sunday,13:16,18:28,2,127,136,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Steinkjer,weekday,13:16,13:16,1,425,425,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Steinkjer,saturday,13:16,13:16,1,425,425,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Steinkjer,sunday,13:16,13:16,1,425,425,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Trondheim Airport,weekday,13:16,13:16,1,511,511,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Trondheim Airport,saturday,13:16,13:16,1,511,511,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Trondheim Airport,sunday,13:16,13:16,1,511,511,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Trondheim S,weekday,13:16,13:16,1,537,537,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Trondheim S,saturday,13:16,13:16,1,537,537,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Fauske,Trondheim S,sunday,13:16,13:16,1,537,537,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Finse,Bergen,weekday,10:50,03:49,5,142,149,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Finse,Bergen,saturday,10:50,20:49,4,142,146,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Finse,Bergen,sunday,12:37,03:49,5,143,153,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -196,6 +219,7 @@ Hamar,Dombås,weekday,09:12,00:25,7,162,173,"Entur (NLOD), processed by glosx.ap
 Hamar,Dombås,sunday,19:13,00:25,3,162,162,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Drammen,weekday,04:24,22:11,19,104,111,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Drammen,sunday,19:09,22:11,4,111,111,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Larvik,weekday,04:24,04:24,1,201,201,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Lillehammer,weekday,06:52,01:39,26,45,49,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Lillehammer,saturday,08:52,00:45,17,45,49,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Lillehammer,sunday,08:52,00:45,19,45,49,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -210,9 +234,12 @@ Hamar,Otta,sunday,19:13,00:25,3,130,131,"Entur (NLOD), processed by glosx.app",h
 Hamar,Røros,weekday,08:11,20:11,6,206,208,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Røros,saturday,10:11,16:08,2,211,211,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Røros,sunday,12:11,20:11,4,206,208,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Sandefjord,weekday,04:24,04:24,1,180,180,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Skien,weekday,04:24,04:24,1,223,223,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Trondheim S,weekday,09:12,00:25,8,327,343,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Trondheim S,saturday,16:08,16:08,1,378,378,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Hamar,Trondheim S,sunday,12:11,00:25,4,327,376,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Hamar,Tønsberg,weekday,04:24,04:24,1,153,153,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Kongsberg,Drammen,weekday,03:34,23:17,29,33,41,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Kongsberg,Drammen,saturday,05:34,22:34,23,33,41,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Kongsberg,Drammen,sunday,05:34,23:17,24,33,41,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -256,6 +283,8 @@ Kristiansand,Stavanger,weekday,05:02,03:45,8,180,196,"Entur (NLOD), processed by
 Kristiansand,Stavanger,saturday,09:05,19:59,5,180,195,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Kristiansand,Stavanger,sunday,09:05,03:45,6,180,194,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Larvik,Drammen,weekday,04:31,23:32,23,73,73,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Hamar,weekday,22:32,22:32,1,185,185,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Larvik,Lillehammer,weekday,22:32,22:32,1,232,232,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Larvik,Lillestrøm,weekday,04:31,22:32,20,122,122,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Larvik,Oslo Airport,weekday,04:31,22:32,20,135,135,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Larvik,Oslo S,weekday,04:31,22:32,24,106,109,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -273,6 +302,7 @@ Lillehammer,Drammen,sunday,18:15,21:15,4,167,167,"Entur (NLOD), processed by glo
 Lillehammer,Hamar,weekday,03:36,21:15,24,44,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Hamar,saturday,05:31,21:15,17,45,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Hamar,sunday,05:31,21:15,17,45,50,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Larvik,weekday,03:36,03:36,1,249,249,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Lillestrøm,weekday,03:36,21:15,24,103,120,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Lillestrøm,sunday,18:15,21:15,4,120,120,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Oslo Airport,weekday,03:36,21:15,24,87,106,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -281,8 +311,11 @@ Lillehammer,Oslo S,weekday,03:36,21:15,24,115,131,"Entur (NLOD), processed by gl
 Lillehammer,Oslo S,sunday,18:15,21:15,4,131,131,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Otta,weekday,10:01,01:19,7,77,88,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Otta,sunday,20:03,01:19,3,77,81,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Sandefjord,weekday,03:36,03:36,1,228,228,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Skien,weekday,03:36,03:36,1,271,271,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Trondheim S,weekday,10:01,01:19,6,277,286,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillehammer,Trondheim S,sunday,20:03,01:19,2,277,299,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Lillehammer,Tønsberg,weekday,03:36,03:36,1,201,201,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillestrøm,Dombås,weekday,08:13,23:20,7,222,231,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillestrøm,Dombås,sunday,18:13,23:20,3,222,229,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Lillestrøm,Drammen,weekday,05:26,01:04,154,45,46,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -456,6 +489,7 @@ Oslo S,Voss,saturday,06:25,16:23,4,323,338,"Entur (NLOD), processed by glosx.app
 Oslo S,Voss,sunday,08:25,23:03,4,323,343,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Otta,Dombås,weekday,11:29,02:57,7,29,29,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Otta,Dombås,sunday,21:26,02:57,3,29,31,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Otta,Drammen,weekday,05:54,05:54,1,248,248,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Otta,Hamar,weekday,05:54,03:11,7,127,133,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Otta,Hamar,saturday,05:54,05:54,1,135,135,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Otta,Hamar,sunday,03:11,03:11,1,141,141,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -477,9 +511,11 @@ Røros,Trondheim S,weekday,05:00,19:45,3,161,161,"Entur (NLOD), processed by glo
 Røros,Trondheim S,saturday,07:00,19:45,3,148,154,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Røros,Trondheim S,sunday,16:10,19:45,2,150,155,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandefjord,Drammen,weekday,04:46,23:47,23,58,58,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Hamar,weekday,22:47,22:47,1,170,170,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandefjord,Larvik,weekday,07:03,01:12,25,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandefjord,Larvik,saturday,07:45,01:42,19,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandefjord,Larvik,sunday,09:48,01:42,17,12,13,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Sandefjord,Lillehammer,weekday,22:47,22:47,1,217,217,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandefjord,Lillestrøm,weekday,04:46,22:47,20,107,107,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandefjord,Oslo Airport,weekday,04:46,22:47,20,120,120,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandefjord,Oslo S,weekday,04:46,22:47,24,92,94,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -506,9 +542,11 @@ Sandnes,Stavanger,weekday,05:07,00:14,77,13,16,"Entur (NLOD), processed by glosx
 Sandnes,Stavanger,saturday,07:14,02:14,37,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Sandnes,Stavanger,sunday,10:14,00:14,32,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Skien,Drammen,weekday,04:10,23:09,23,94,96,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Hamar,weekday,22:09,22:09,1,208,208,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Skien,Larvik,weekday,04:10,23:09,25,20,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Skien,Larvik,saturday,05:11,22:39,18,20,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Skien,Larvik,sunday,06:07,23:39,18,20,20,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Skien,Lillehammer,weekday,22:09,22:09,1,255,255,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Skien,Lillestrøm,weekday,04:10,22:09,20,143,145,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Skien,Oslo Airport,weekday,04:10,22:09,20,156,158,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Skien,Oslo S,weekday,04:10,22:09,24,129,132,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -534,6 +572,12 @@ Stavanger,Oslo S,sunday,08:47,22:15,6,458,495,"Entur (NLOD), processed by glosx.
 Stavanger,Sandnes,weekday,04:20,23:53,77,13,15,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Stavanger,Sandnes,saturday,05:47,01:53,38,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Stavanger,Sandnes,sunday,08:47,23:53,34,13,16,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Bodø,weekday,09:51,09:51,1,467,467,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Bodø,saturday,09:51,09:51,1,467,467,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Bodø,sunday,09:51,09:51,1,467,467,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Fauske,weekday,09:51,09:51,1,414,414,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Fauske,saturday,09:51,09:51,1,414,414,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Steinkjer,Fauske,sunday,09:51,09:51,1,414,414,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Steinkjer,Mo i Rana,weekday,09:51,18:07,2,277,279,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Steinkjer,Mo i Rana,saturday,09:51,09:51,1,277,277,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Steinkjer,Mo i Rana,sunday,09:51,18:07,2,277,279,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -546,17 +590,30 @@ Steinkjer,Trondheim S,sunday,07:34,21:34,15,102,124,"Entur (NLOD), processed by 
 Stockholm C,Oslo S,weekday,05:38,18:15,5,337,356,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Stockholm C,Oslo S,saturday,07:23,15:23,4,351,358,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Stockholm C,Oslo S,sunday,07:23,18:15,5,351,359,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Bodø,weekday,08:24,08:24,1,554,554,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Bodø,saturday,08:24,08:24,1,554,554,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Bodø,sunday,08:24,08:24,1,554,554,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Fauske,weekday,08:24,08:24,1,501,501,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Fauske,saturday,08:24,08:24,1,501,501,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Fauske,sunday,08:24,08:24,1,501,501,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Mo i Rana,weekday,08:24,16:36,2,364,368,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Mo i Rana,saturday,08:24,08:24,1,364,364,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Mo i Rana,sunday,08:24,16:36,2,364,368,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim Airport,Røros,weekday,15:33,15:33,1,209,209,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Steinkjer,weekday,05:45,23:53,23,84,92,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Steinkjer,saturday,07:53,21:53,13,85,92,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Steinkjer,sunday,08:24,23:53,15,84,92,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Trondheim S,weekday,05:54,23:03,24,25,38,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Trondheim S,saturday,09:03,23:03,14,25,38,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim Airport,Trondheim S,sunday,09:03,23:03,15,25,38,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Bodø,weekday,07:49,07:49,1,589,589,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Bodø,saturday,07:49,07:49,1,589,589,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Bodø,sunday,07:49,07:49,1,589,589,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim S,Dombås,weekday,05:55,23:17,6,154,163,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim S,Dombås,sunday,23:17,23:17,1,177,177,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Fauske,weekday,07:49,07:49,1,536,536,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Fauske,saturday,07:49,07:49,1,536,536,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Trondheim S,Fauske,sunday,07:49,07:49,1,536,536,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim S,Hamar,weekday,05:37,23:17,8,319,336,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim S,Hamar,saturday,09:34,09:34,1,379,379,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim S,Hamar,sunday,09:34,23:17,3,375,379,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
@@ -583,7 +640,9 @@ Trondheim S,Trondheim Airport,weekday,05:09,23:16,23,34,36,"Entur (NLOD), proces
 Trondheim S,Trondheim Airport,saturday,07:14,21:17,13,34,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Trondheim S,Trondheim Airport,sunday,07:49,23:16,15,34,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Tønsberg,Drammen,weekday,05:09,00:08,23,36,36,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Hamar,weekday,23:09,23:09,1,148,148,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Tønsberg,Larvik,weekday,06:25,00:52,25,32,39,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
+Tønsberg,Lillehammer,weekday,23:09,23:09,1,195,195,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Tønsberg,Lillestrøm,weekday,05:09,23:09,20,84,85,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Tønsberg,Oslo Airport,weekday,05:09,23:09,20,98,98,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/
 Tønsberg,Oslo S,weekday,05:09,23:09,24,68,72,"Entur (NLOD), processed by glosx.app",https://glosx.app/norway-trains/

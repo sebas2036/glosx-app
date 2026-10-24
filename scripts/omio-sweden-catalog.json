@@ -1,0 +1,46 @@
+{
+"es": [
+"Göteborg C|København H",
+"Göteborg C|Malmö C",
+"Göteborg C|Oslo S",
+"Göteborg C|Stockholm C",
+"Kiruna|Stockholm C",
+"København H|Malmö C",
+"Malmö C|Oslo S",
+"Malmö C|Stockholm C",
+"Oslo S|Stockholm C"
+],
+"fr": [
+"Göteborg C|København H",
+"Göteborg C|Malmö C",
+"Göteborg C|Oslo S",
+"Göteborg C|Stockholm C",
+"Kiruna|Stockholm C",
+"København H|Malmö C",
+"Malmö C|Oslo S",
+"Malmö C|Stockholm C",
+"Oslo S|Stockholm C"
+],
+"it": [
+"Göteborg C|København H",
+"Göteborg C|Malmö C",
+"Göteborg C|Oslo S",
+"Göteborg C|Stockholm C",
+"Kiruna|Stockholm C",
+"København H|Malmö C",
+"Malmö C|Oslo S",
+"Malmö C|Stockholm C",
+"Oslo S|Stockholm C"
+],
+"de": [
+"Göteborg C|København H",
+"Göteborg C|Malmö C",
+"Göteborg C|Oslo S",
+"Göteborg C|Stockholm C",
+"Kiruna|Stockholm C",
+"København H|Malmö C",
+"Malmö C|Oslo S",
+"Malmö C|Stockholm C",
+"Oslo S|Stockholm C"
+]
+}

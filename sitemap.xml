@@ -21239,4 +21239,55 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/norway-trains/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/norway-trains/" />
   </url>
+
+  <url>
+    <loc>https://glosx.app/sweden-trains/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suecia/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suede/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svezia/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/sweden-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/trenes-suecia/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suecia/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suede/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svezia/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/sweden-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/trains-suede/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suecia/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suede/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svezia/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/sweden-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/treni-svezia/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suecia/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suede/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svezia/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/sweden-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/sweden-trains/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suecia/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suede/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svezia/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/sweden-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/sweden-trains/" />
+  </url>
 </urlset>

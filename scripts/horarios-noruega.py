@@ -73,7 +73,7 @@ for (k, ag, num), st in trains.items():
         a, b = seq[i][1], seq[j][1]
         if a == b: continue
         dep, arr = seq[i][0], seq[j][2]
-        if arr <= dep or arr - dep > 12 * 3600 or dep >= 28 * 3600: continue   # >28:00 = mañana del día siguiente de un servicio nocturno
+        if arr <= dep or arr - dep > 24 * 3600 or dep >= 28 * 3600: continue   # >28:00 = mañana del día siguiente de un servicio nocturno
         res[(a, b)][k][(ag, num)] = (dep, arr - dep)
 out = []
 for (a, b), byk in sorted(res.items()):
@@ -83,7 +83,7 @@ for (a, b), byk in sorted(res.items()):
         if not tr: continue
         deps = sorted(v[0] for v in tr.values()); durs = [v[1] // 60 for v in tr.values()]
         rec[k] = {'n': len(deps), 'first': fmt(deps[0]), 'last': fmt(deps[-1]), 'fastest_min': min(durs), 'median_min': int(statistics.median(durs))}
-    if 'weekday' in rec and rec['weekday']['n'] >= 2: out.append(rec)
+    if 'weekday' in rec and rec['weekday']['n'] >= 1: out.append(rec)
 dates = [r['start_date'] for r in cal.values()] + [d for v in cd.values() for d in v]
 json.dump({'source': {'name': 'Entur', 'url': 'https://developer.entur.org/', 'license': 'NLOD', 'file': ZIP.rsplit('/', 1)[-1]},
            'reference_week': {k: v.isoformat() for k, v in REF.items()}, 'pairs': out}, open(OUT, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
