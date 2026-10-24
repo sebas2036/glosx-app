@@ -15,7 +15,10 @@ CITY = {'Zurich HB': 'zurich', 'Genève': 'geneva', 'Bern': 'bern', 'Basel SBB':
         'Lauterbrunnen': 'lauterbrunnen', 'Zermatt': 'zermatt', 'Montreux': 'montreux', 'St. Moritz': 'stmoritz', 'Lugano': 'lugano'}
 SLUGS = {d for d in os.listdir(os.path.join(ROOT, 'rutas')) if os.path.isfile(os.path.join(ROOT, 'rutas', d, 'index.html'))}
 SWISS_GUIDES = sorted(s for s in SLUGS if all(p in CITY.values() for p in s.split('-')))
-NAMES = {'es': {'zurich': 'Zúrich', 'geneva': 'Ginebra', 'basel': 'Basilea', 'lucerne': 'Lucerna', 'bern': 'Berna', 'stmoritz': 'St. Moritz'}, 'en': {'stmoritz': 'St. Moritz'}}
+NAMES = {'es': {'zurich': 'Zúrich', 'geneva': 'Ginebra', 'basel': 'Basilea', 'lucerne': 'Lucerna', 'bern': 'Berna', 'stmoritz': 'St. Moritz'}, 'en': {'stmoritz': 'St. Moritz'},
+         'fr': {'geneva': 'Genève', 'basel': 'Bâle', 'bern': 'Berne', 'stmoritz': 'Saint-Moritz'},
+         'it': {'zurich': 'Zurigo', 'geneva': 'Ginevra', 'basel': 'Basilea', 'lucerne': 'Lucerna', 'bern': 'Berna', 'stmoritz': 'St. Moritz'},
+         'ja': {'zurich': 'チューリッヒ', 'geneva': 'ジュネーブ', 'basel': 'バーゼル', 'lucerne': 'ルツェルン', 'bern': 'ベルン', 'interlaken': 'インターラーケン', 'lauterbrunnen': 'ラウターブルンネン', 'zermatt': 'ツェルマット', 'montreux': 'モントルー', 'stmoritz': 'サンモリッツ'}}
 SHOWCASE = 'https://data.opentransportdata.swiss/en/showcase/wow-train'
 SRC = D['source']['url']
 
@@ -62,7 +65,48 @@ T = {
    cite='Cómo citar estos datos', citetxt='Datos de horarios: opentransportdata.swiss (SBB), procesados por <strong>glosx.app</strong>, <a href="{url}">{url}</a>.',
    showcase='WoW Train figura en los <a href="{sc}" rel="noopener">showcases de opentransportdata.swiss</a>.', dl='Conexiones suizas'),
 }
-fdate = lambda s, l: datetime.date.fromisoformat(s).strftime('%d/%m/%Y' if l == 'es' else '%-d %B %Y')
+
+T['fr'] = dict(dir='fr/trains-suisse', tpl='fr/rutas/index.html', home='/fr/', all_routes='/fr/rutas/', back='&larr; Tous les trajets', suffix='fr/',
+   title='Horaires des trains en Suisse avec les données ouvertes des CFF · glosx.app',
+   desc='Premier train, dernier train, trains directs par jour et trajet le plus rapide pour {n} liaisons ferroviaires suisses, d’après l’horaire ouvert d’opentransportdata.swiss (CFF). Tableau, CSV et guides de trajets.',
+   h1='Trains en Suisse', sub='Premier et dernier train, trains directs par jour et trajet le plus rapide pour {n} liaisons suisses, calculés par glosx.app à partir de l’horaire ouvert officiel d’opentransportdata.swiss (CFF).',
+   guides='Guides de trajets en Suisse', cols=['Trajet', 'Premier train', 'Dernier train', 'Semaine', 'Samedi', 'Dimanche', 'Le plus rapide'],
+   src='Source : glosx.app, d’après l’horaire ouvert d’opentransportdata.swiss (CFF).', csv='Télécharger les données en CSV',
+   csvnote='(une ligne par liaison, sens et type de jour).', how='Méthode de calcul',
+   li=['<strong>Source :</strong> l’horaire GTFS officiel d’<a href="{src}" rel="noopener">opentransportdata.swiss</a>, la plateforme de données ouvertes des transports publics suisses, fichier {file}.',
+       '<strong>Semaine de référence :</strong> mardi {wd} (semaine), samedi {sa} et dimanche {su}. Des travaux modifient certains services à d’autres dates (par exemple, fin octobre 2026, aucun train entre Viège et Zermatt).',
+       '<strong>Ce qui est compté :</strong> les trains directs de toutes catégories (IC, IR, RE, régionaux et trains de montagne) qui s’arrêtent dans les deux gares dans ce sens. Bus, trams, bateaux et téléphériques non inclus.',
+       '<strong>Le plus rapide :</strong> le train direct le plus rapide du jour de semaine. Les horaires changent : vérifiez votre date avant de voyager.'],
+   cite='Comment citer ces données', citetxt='Données horaires : opentransportdata.swiss (CFF), traitées par <strong>glosx.app</strong>, <a href="{url}">{url}</a>.',
+   showcase='WoW Train figure parmi les <a href="{sc}" rel="noopener">showcases d’opentransportdata.swiss</a>.', dl='Liaisons suisses')
+T['it'] = dict(dir='it/treni-svizzera', tpl='it/rutas/index.html', home='/it/', all_routes='/it/rutas/', back='&larr; Tutte le tratte', suffix='it/',
+   title='Orari dei treni in Svizzera con i dati aperti delle FFS · glosx.app',
+   desc='Primo treno, ultimo treno, treni diretti al giorno e viaggio più veloce per {n} collegamenti ferroviari svizzeri, dall’orario aperto di opentransportdata.swiss (FFS). Tabella, CSV e guide delle tratte.',
+   h1='Treni in Svizzera', sub='Primo e ultimo treno, treni diretti al giorno e viaggio più veloce per {n} collegamenti svizzeri, calcolati da glosx.app dall’orario aperto ufficiale di opentransportdata.swiss (FFS).',
+   guides='Guide delle tratte in Svizzera', cols=['Tratta', 'Primo treno', 'Ultimo treno', 'Feriale', 'Sabato', 'Domenica', 'Più veloce'],
+   src='Fonte: glosx.app, dall’orario aperto di opentransportdata.swiss (FFS).', csv='Scarica i dati in CSV',
+   csvnote='(una riga per collegamento, direzione e tipo di giorno).', how='Come sono stati calcolati',
+   li=['<strong>Fonte:</strong> l’orario GTFS ufficiale di <a href="{src}" rel="noopener">opentransportdata.swiss</a>, la piattaforma open data del trasporto pubblico svizzero, file {file}.',
+       '<strong>Settimana di riferimento:</strong> martedì {wd} (feriale), sabato {sa} e domenica {su}. I lavori modificano alcuni servizi in altre date (ad esempio, a fine ottobre 2026 non c’erano treni tra Visp e Zermatt).',
+       '<strong>Cosa viene contato:</strong> treni diretti di tutte le categorie (IC, IR, RE, regionali e treni di montagna) che fermano in entrambe le stazioni in quella direzione. Esclusi autobus, tram, battelli e funivie.',
+       '<strong>Più veloce:</strong> il treno diretto più rapido del giorno feriale. Gli orari cambiano: controlla la tua data prima di partire.'],
+   cite='Come citare questi dati', citetxt='Dati orari: opentransportdata.swiss (FFS), elaborati da <strong>glosx.app</strong>, <a href="{url}">{url}</a>.',
+   showcase='WoW Train è presente tra gli <a href="{sc}" rel="noopener">showcase di opentransportdata.swiss</a>.', dl='Collegamenti svizzeri')
+T['ja'] = dict(dir='ja/swiss-trains', tpl='ja/rutas/index.html', home='/ja/', all_routes='/ja/rutas/', back='&larr; すべての路線', suffix='ja/',
+   title='スイスの列車時刻（SBBオープンデータ）· glosx.app',
+   desc='スイスの鉄道{n}区間の始発・終電・1日の直通本数・最速所要時間を、opentransportdata.swiss（SBB）のオープン時刻表から集計。表とCSV、路線ガイド付き。',
+   h1='スイスの列車', sub='スイスの{n}区間について、始発・終電・1日の直通本数・最速所要時間を、opentransportdata.swiss（SBB）の公式オープン時刻表からglosx.appが集計しました。',
+   guides='スイスの路線ガイド', cols=['区間', '始発', '終電', '平日', '土曜', '日曜', '最速'],
+   src='出典：opentransportdata.swiss（SBB）のオープン時刻表をもとにglosx.appが作成。', csv='CSVでデータをダウンロード',
+   csvnote='（区間・方向・曜日ごとに1行）。', how='集計方法',
+   li=['<strong>出典：</strong><a href="{src}" rel="noopener">opentransportdata.swiss</a>（スイス公共交通のオープンデータ基盤）の公式GTFS時刻表、ファイル {file}。',
+       '<strong>基準週：</strong>平日は{wd}（火）、土曜{sa}、日曜{su}。ほかの日は工事で運行が変わることがあります（例：2026年10月下旬はフィスプ–ツェルマット間の列車運休）。',
+       '<strong>対象：</strong>その方向で両駅に停車する全種別（IC、IR、RE、普通、登山鉄道）の直通列車。バス・トラム・船・ロープウェイは含みません。',
+       '<strong>最速：</strong>平日のいちばん速い直通列車。時刻は変わるため、乗車日の時刻を確認してください。'],
+   cite='データの引用方法', citetxt='時刻表データ：opentransportdata.swiss（SBB）、<strong>glosx.app</strong>が加工、<a href="{url}">{url}</a>。',
+   showcase='WoW Trainは<a href="{sc}" rel="noopener">opentransportdata.swissのショーケース</a>で紹介されています。', dl='スイスの区間')
+
+fdate = lambda s, l: (lambda d: d.strftime('%d/%m/%Y') if l in ('es', 'fr', 'it') else f'{d.year}年{d.month}月{d.day}日' if l == 'ja' else d.strftime('%-d %B %Y'))(datetime.date.fromisoformat(s))
 os.makedirs(os.path.join(ROOT, 'assets/data'), exist_ok=True)
 with open(os.path.join(ROOT, 'assets/data/horarios-suiza.csv'), 'w', encoding='utf8', newline='') as f:
     w = csv.writer(f)

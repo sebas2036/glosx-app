@@ -21140,16 +21140,52 @@
 
   <url>
     <loc>https://glosx.app/swiss-trains/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suisse/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svizzera/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/swiss-trains/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
   </url>
   <url>
     <loc>https://glosx.app/es/trenes-suiza/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-24</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suisse/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svizzera/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/trains-suisse/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suisse/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svizzera/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/treni-svizzera/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suisse/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svizzera/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/swiss-trains/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suisse/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svizzera/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/swiss-trains/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
   </url>
 </urlset>

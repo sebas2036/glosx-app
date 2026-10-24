@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orari dei treni in Svizzera con i dati aperti delle FFS · glosx.app</title>
+  <meta name="description" content="Primo treno, ultimo treno, treni diretti al giorno e viaggio più veloce per 125 collegamenti ferroviari svizzeri, dall’orario aperto di opentransportdata.swiss (FFS). Tabella, CSV e guide delle tratte." />
+  <link rel="canonical" href="https://glosx.app/it/treni-svizzera/" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/swiss-trains/" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/es/trenes-suiza/" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/trains-suisse/" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/it/treni-svizzera/" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/swiss-trains/" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/swiss-trains/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Orari dei treni in Svizzera con i dati aperti delle FFS · glosx.app" />
+  <meta property="og:url" content="https://glosx.app/it/treni-svizzera/" />
+  <meta property="og:image" content="https://glosx.app/og-image.jpg" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#fafaf8; --text:#14151a; --muted:#55565f; --primary2:#C10016; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.5; }
+    .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:18px 28px; border-bottom:1.5px solid var(--text); }
+    nav a { color:var(--text); text-decoration:none; font-weight:600; }
+    nav .back { color:var(--muted); font-size:14px; }
+    header { text-align:center; padding:56px 24px 24px; }
+    header h1 { font-size:34px; margin:0 0 12px; letter-spacing:-0.5px; }
+    header p { color:var(--muted); max-width:620px; margin:0 auto; }
+    .routes-index { max-width:1100px; margin:24px auto 60px; padding:0 24px; }
+    .routes-index h2 { font-size:14px; text-transform:uppercase; letter-spacing:1px; color:var(--primary2); margin-bottom:18px; text-align:center; font-weight:700; }
+    .routes-index-list { list-style:none; padding:0; margin:0; columns:3; column-gap:30px; font-size:14px; }
+    .routes-index-list li { break-inside:avoid; margin-bottom:10px; line-height:1.4; }
+    .routes-index-list a { color:var(--muted); text-decoration:none; }
+    .routes-index-list a:hover { color:var(--text); text-decoration:underline; }
+    .routes-index-list .ri-es { color:var(--primary2); font-size:11px; font-weight:700; margin-left:5px; letter-spacing:0.5px; }
+    footer { text-align:center; padding:28px; color:var(--muted); font-size:13px; border-top:1px solid rgba(20,21,26,0.14); }
+    footer a { color:var(--muted); }
+    @media (max-width:760px) { .routes-index-list { columns:2; } header h1 { font-size:26px; } }
+    @media (max-width:460px) { .routes-index-list { columns:1; } }
+  </style>
+  <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Orari dei treni in Svizzera con i dati aperti delle FFS", "description": "Primo treno, ultimo treno, treni diretti al giorno e viaggio più veloce per 125 collegamenti ferroviari svizzeri, dall’orario aperto di opentransportdata.swiss (FFS). Tabella, CSV e guide delle tratte.", "url": "https://glosx.app/it/treni-svizzera/", "inLanguage": "it", "isBasedOn": "https://data.opentransportdata.swiss/dataset/timetable-2026-gtfs2020", "creator": {"@type": "Organization", "name": "glosx.app", "url": "https://glosx.app/"}, "citation": "opentransportdata.swiss (SBB), processed by glosx.app", "temporalCoverage": "2026-12-01/2026-12-06", "spatialCoverage": {"@type": "Country", "name": "Switzerland"}, "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://glosx.app/assets/data/horarios-suiza.csv"}]}</script>
+<style>
+.hx{max-width:1100px;margin:0 auto;padding:8px 24px 56px}.hx h2{font-size:20px;margin:34px 0 10px}.hx p,.hx li{line-height:1.6;font-size:15px}
+.hx .tw{overflow-x:auto;border:1px solid rgba(20,21,26,.14);border-radius:12px;background:#fff}.hx table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+.hx th,.hx td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(20,21,26,.08);white-space:nowrap}.hx th{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:#6b6c75;background:#faf8f5;position:sticky;top:0}
+.hx td:nth-child(n+2){font-variant-numeric:tabular-nums}.hx tr:last-child td{border-bottom:0}.hx a{color:#C10016}.hx .cita{background:#faf8f5;border-radius:12px;padding:14px 16px;font-size:14px}
+.hx .gl{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}.hx .gl a{display:inline-block;padding:8px 14px;border:1px solid rgba(20,21,26,.14);border-radius:999px;text-decoration:none;color:#14151a;font-size:14px}.hx .gl a:hover{border-color:#C10016}
+</style>
+</head>
+<body>
+  <nav>
+    <a href="/it/">WoW Train</a>
+    <div class="nav-right"><a href="/it/rutas/" style="font-weight:600;text-decoration:none;color:inherit">&larr; Tutte le tratte</a></div>
+  </nav>
+  <header>
+    <h1>Treni in Svizzera <span style="color:#C10016">· glosx.app</span></h1>
+    <p>Primo e ultimo treno, treni diretti al giorno e viaggio più veloce per 125 collegamenti svizzeri, calcolati da glosx.app dall’orario aperto ufficiale di opentransportdata.swiss (FFS).</p>
+  </header>
+  <main class="hx">
+    <h2>Guide delle tratte in Svizzera</h2>
+    <ul class="gl"><li><a href="/rutas/basel-lauterbrunnen/it/">Basilea &rarr; Lauterbrunnen</a></li><li><a href="/rutas/geneva-zermatt/it/">Ginevra &rarr; Zermatt</a></li><li><a href="/rutas/interlaken-lauterbrunnen/it/">Interlaken &rarr; Lauterbrunnen</a></li><li><a href="/rutas/interlaken-lucerne/it/">Interlaken &rarr; Lucerna</a></li><li><a href="/rutas/lucerne-bern/it/">Lucerna &rarr; Berna</a></li><li><a href="/rutas/lucerne-zermatt/it/">Lucerna &rarr; Zermatt</a></li><li><a href="/rutas/montreux-interlaken/it/">Montreux &rarr; Interlaken</a></li><li><a href="/rutas/stmoritz-zermatt/it/">St. Moritz &rarr; Zermatt</a></li><li><a href="/rutas/zurich-geneva/it/">Zurigo &rarr; Ginevra</a></li><li><a href="/rutas/zurich-lucerne/it/">Zurigo &rarr; Lucerna</a></li></ul>
+    <h2>Collegamenti svizzeri</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Tratta</th><th>Primo treno</th><th>Ultimo treno</th><th>Feriale</th><th>Sabato</th><th>Domenica</th><th>Più veloce</th></tr></thead>
+      <tbody>
+<tr><td>Basel SBB &rarr; Bellinzona</td><td>05:04</td><td>21:04</td><td>17</td><td>17</td><td>17</td><td>2 h 38</td></tr>
+<tr><td>Basel SBB &rarr; Bern</td><td>05:24</td><td>22:28</td><td>35</td><td>35</td><td>35</td><td>56 min</td></tr>
+<tr><td>Basel SBB &rarr; Brig</td><td>06:30</td><td>22:28</td><td>10</td><td>10</td><td>9</td><td>2 h 10</td></tr>
+<tr><td>Basel SBB &rarr; Chur</td><td>06:07</td><td>20:33</td><td>19</td><td>17</td><td>17</td><td>2 h 15</td></tr>
+<tr><td>Basel SBB &rarr; Lausanne</td><td>06:32</td><td>20:32</td><td>15</td><td>16</td><td>15</td><td>2 h 24</td></tr>
+<tr><td>Basel SBB &rarr; Locarno</td><td>06:04</td><td>16:04</td><td>6</td><td>6</td><td>6</td><td>4 h 23</td></tr>
+<tr><td>Basel SBB &rarr; Lugano</td><td>05:04</td><td>21:04</td><td>10</td><td>10</td><td>10</td><td>2 h 54</td></tr>
+<tr><td>Basel SBB &rarr; Luzern</td><td>05:04</td><td>22:58</td><td>35</td><td>36</td><td>36</td><td>1 h 01</td></tr>
+<tr><td>Basel SBB &rarr; Neuchâtel</td><td>06:32</td><td>20:32</td><td>15</td><td>16</td><td>15</td><td>1 h 35</td></tr>
+<tr><td>Basel SBB &rarr; Spiez</td><td>05:24</td><td>22:28</td><td>34</td><td>17</td><td>17</td><td>1 h 33</td></tr>
+<tr><td>Basel SBB &rarr; Thun</td><td>05:24</td><td>22:28</td><td>34</td><td>17</td><td>17</td><td>1 h 23</td></tr>
+<tr><td>Basel SBB &rarr; Visp</td><td>06:30</td><td>22:28</td><td>10</td><td>10</td><td>8</td><td>2 h 01</td></tr>
+<tr><td>Basel SBB &rarr; Zurich Airport</td><td>04:36</td><td>19:36</td><td>16</td><td>16</td><td>16</td><td>1 h 28</td></tr>
+<tr><td>Basel SBB &rarr; Zurich HB</td><td>04:36</td><td>00:07</td><td>88</td><td>91</td><td>90</td><td>53 min</td></tr>
+<tr><td>Bellinzona &rarr; Locarno</td><td>04:49</td><td>22:19</td><td>50</td><td>57</td><td>51</td><td>23 min</td></tr>
+<tr><td>Bellinzona &rarr; Lugano</td><td>04:33</td><td>00:53</td><td>77</td><td>78</td><td>75</td><td>14 min</td></tr>
+<tr><td>Bellinzona &rarr; Luzern</td><td>05:59</td><td>22:17</td><td>17</td><td>17</td><td>18</td><td>1 h 24</td></tr>
+<tr><td>Bellinzona &rarr; Zurich HB</td><td>05:07</td><td>21:47</td><td>33</td><td>32</td><td>31</td><td>1 h 38</td></tr>
+<tr><td>Bern &rarr; Brig</td><td>06:07</td><td>23:40</td><td>26</td><td>28</td><td>26</td><td>1 h 06</td></tr>
+<tr><td>Bern &rarr; Chur</td><td>04:38</td><td>19:38</td><td>15</td><td>20</td><td>20</td><td>3 h 10</td></tr>
+<tr><td>Bern &rarr; Fribourg</td><td>05:04</td><td>00:09</td><td>86</td><td>92</td><td>92</td><td>22 min</td></tr>
+<tr><td>Bern &rarr; Genève</td><td>05:04</td><td>19:34</td><td>30</td><td>16</td><td>15</td><td>1 h 51</td></tr>
+<tr><td>Bern &rarr; Genève-Aéroport</td><td>05:04</td><td>19:34</td><td>30</td><td>16</td><td>15</td><td>2 h 03</td></tr>
+<tr><td>Bern &rarr; Lausanne</td><td>05:04</td><td>23:08</td><td>36</td><td>37</td><td>37</td><td>1 h 09</td></tr>
+<tr><td><a href="/rutas/lucerne-bern/it/">Bern &rarr; Luzern</a></td><td>06:00</td><td>23:00</td><td>18</td><td>18</td><td>18</td><td>1 h 01</td></tr>
+<tr><td>Bern &rarr; Neuchâtel</td><td>05:04</td><td>22:53</td><td>20</td><td>17</td><td>19</td><td>35 min</td></tr>
+<tr><td>Bern &rarr; Spiez</td><td>06:04</td><td>00:08</td><td>66</td><td>69</td><td>67</td><td>29 min</td></tr>
+<tr><td>Bern &rarr; St. Gallen</td><td>05:29</td><td>21:31</td><td>17</td><td>12</td><td>12</td><td>2 h 21</td></tr>
+<tr><td>Bern &rarr; Thun</td><td>05:02</td><td>00:16</td><td>140</td><td>110</td><td>106</td><td>19 min</td></tr>
+<tr><td>Bern &rarr; Visp</td><td>06:07</td><td>23:40</td><td>26</td><td>28</td><td>24</td><td>56 min</td></tr>
+<tr><td>Bern &rarr; Winterthur</td><td>05:29</td><td>22:02</td><td>33</td><td>29</td><td>29</td><td>1 h 25</td></tr>
+<tr><td>Bern &rarr; Zurich Airport</td><td>04:18</td><td>22:02</td><td>34</td><td>30</td><td>30</td><td>1 h 11</td></tr>
+<tr><td>Bern &rarr; Zurich HB</td><td>04:18</td><td>00:02</td><td>72</td><td>72</td><td>70</td><td>56 min</td></tr>
+<tr><td>Brig &rarr; Genève</td><td>04:18</td><td>21:52</td><td>36</td><td>24</td><td>23</td><td>2 h 11</td></tr>
+<tr><td>Brig &rarr; Genève-Aéroport</td><td>04:18</td><td>20:57</td><td>31</td><td>20</td><td>18</td><td>2 h 39</td></tr>
+<tr><td>Brig &rarr; Lausanne</td><td>04:18</td><td>21:52</td><td>38</td><td>40</td><td>38</td><td>1 h 28</td></tr>
+<tr><td>Brig &rarr; Montreux</td><td>04:18</td><td>21:52</td><td>35</td><td>36</td><td>35</td><td>1 h 07</td></tr>
+<tr><td>Brig &rarr; Sion</td><td>04:18</td><td>00:40</td><td>75</td><td>76</td><td>60</td><td>29 min</td></tr>
+<tr><td>Brig &rarr; Spiez</td><td>05:11</td><td>22:18</td><td>43</td><td>44</td><td>46</td><td>35 min</td></tr>
+<tr><td>Brig &rarr; Thun</td><td>05:16</td><td>22:18</td><td>26</td><td>27</td><td>29</td><td>45 min</td></tr>
+<tr><td>Brig &rarr; Visp</td><td>04:18</td><td>00:40</td><td>99</td><td>99</td><td>85</td><td>6 min</td></tr>
+<tr><td>Brig &rarr; Winterthur</td><td>05:42</td><td>19:45</td><td>14</td><td>14</td><td>14</td><td>2 h 44</td></tr>
+<tr><td>Brig &rarr; Zurich Airport</td><td>05:42</td><td>19:45</td><td>14</td><td>14</td><td>14</td><td>2 h 28</td></tr>
+<tr><td>Brig &rarr; Zurich HB</td><td>05:42</td><td>19:45</td><td>15</td><td>15</td><td>16</td><td>2 h 13</td></tr>
+<tr><td>Chur &rarr; St. Gallen</td><td>05:42</td><td>20:42</td><td>16</td><td>16</td><td>16</td><td>1 h 22</td></tr>
+<tr><td>Chur &rarr; St. Moritz</td><td>05:08</td><td>20:55</td><td>16</td><td>17</td><td>16</td><td>1 h 57</td></tr>
+<tr><td>Chur &rarr; Zurich HB</td><td>04:11</td><td>23:11</td><td>50</td><td>49</td><td>49</td><td>1 h 14</td></tr>
+<tr><td>Fribourg &rarr; Genève</td><td>05:27</td><td>19:57</td><td>30</td><td>16</td><td>15</td><td>1 h 28</td></tr>
+<tr><td>Fribourg &rarr; Genève-Aéroport</td><td>05:27</td><td>19:57</td><td>30</td><td>16</td><td>15</td><td>1 h 40</td></tr>
+<tr><td>Fribourg &rarr; Lausanne</td><td>05:27</td><td>23:31</td><td>69</td><td>76</td><td>74</td><td>46 min</td></tr>
+<tr><td>Fribourg &rarr; Luzern</td><td>05:33</td><td>22:33</td><td>18</td><td>18</td><td>18</td><td>1 h 28</td></tr>
+<tr><td>Fribourg &rarr; Neuchâtel</td><td>04:28</td><td>23:47</td><td>38</td><td>38</td><td>38</td><td>55 min</td></tr>
+<tr><td>Fribourg &rarr; St. Gallen</td><td>06:03</td><td>21:03</td><td>16</td><td>11</td><td>11</td><td>2 h 49</td></tr>
+<tr><td>Fribourg &rarr; Thun</td><td>05:09</td><td>21:42</td><td>34</td><td>2</td><td>2</td><td>1 h 04</td></tr>
+<tr><td>Fribourg &rarr; Winterthur</td><td>06:03</td><td>21:03</td><td>16</td><td>11</td><td>11</td><td>2 h 03</td></tr>
+<tr><td>Fribourg &rarr; Zurich Airport</td><td>06:03</td><td>21:03</td><td>16</td><td>11</td><td>11</td><td>1 h 46</td></tr>
+<tr><td>Fribourg &rarr; Zurich HB</td><td>06:03</td><td>23:03</td><td>18</td><td>18</td><td>18</td><td>1 h 25</td></tr>
+<tr><td>Genève &rarr; Genève-Aéroport</td><td>04:46</td><td>00:34</td><td>81</td><td>79</td><td>75</td><td>6 min</td></tr>
+<tr><td>Genève &rarr; Lausanne</td><td>04:08</td><td>00:27</td><td>111</td><td>79</td><td>79</td><td>39 min</td></tr>
+<tr><td>Genève &rarr; Luzern</td><td>05:54</td><td>19:54</td><td>15</td><td>–</td><td>–</td><td>3 h 07</td></tr>
+<tr><td>Genève &rarr; Montreux</td><td>04:46</td><td>23:15</td><td>70</td><td>60</td><td>53</td><td>1 h 03</td></tr>
+<tr><td>Genève &rarr; Neuchâtel</td><td>06:15</td><td>19:15</td><td>6</td><td>–</td><td>–</td><td>1 h 27</td></tr>
+<tr><td>Genève &rarr; Sion</td><td>04:46</td><td>22:19</td><td>39</td><td>25</td><td>22</td><td>1 h 40</td></tr>
+<tr><td>Genève &rarr; St. Gallen</td><td>05:33</td><td>19:35</td><td>15</td><td>10</td><td>10</td><td>4 h 17</td></tr>
+<tr><td>Genève &rarr; Visp</td><td>04:46</td><td>22:19</td><td>34</td><td>20</td><td>18</td><td>2 h 18</td></tr>
+<tr><td>Genève &rarr; Winterthur</td><td>05:33</td><td>19:35</td><td>15</td><td>10</td><td>10</td><td>3 h 31</td></tr>
+<tr><td>Genève &rarr; Zurich Airport</td><td>05:33</td><td>19:35</td><td>15</td><td>10</td><td>10</td><td>3 h 14</td></tr>
+<tr><td><a href="/rutas/zurich-geneva/it/">Genève &rarr; Zurich HB</a></td><td>05:33</td><td>20:35</td><td>16</td><td>16</td><td>16</td><td>2 h 53</td></tr>
+<tr><td>Genève-Aéroport &rarr; Lausanne</td><td>04:58</td><td>00:19</td><td>72</td><td>72</td><td>72</td><td>49 min</td></tr>
+<tr><td>Genève-Aéroport &rarr; Luzern</td><td>05:45</td><td>19:45</td><td>15</td><td>–</td><td>–</td><td>3 h 16</td></tr>
+<tr><td>Genève-Aéroport &rarr; Montreux</td><td>04:58</td><td>23:06</td><td>35</td><td>54</td><td>47</td><td>1 h 14</td></tr>
+<tr><td>Genève-Aéroport &rarr; Neuchâtel</td><td>06:06</td><td>19:06</td><td>6</td><td>–</td><td>–</td><td>1 h 36</td></tr>
+<tr><td>Genève-Aéroport &rarr; Sion</td><td>05:14</td><td>22:09</td><td>32</td><td>20</td><td>17</td><td>2 h 01</td></tr>
+<tr><td>Genève-Aéroport &rarr; St. Gallen</td><td>05:25</td><td>19:25</td><td>15</td><td>10</td><td>10</td><td>4 h 27</td></tr>
+<tr><td>Genève-Aéroport &rarr; Visp</td><td>05:14</td><td>22:09</td><td>32</td><td>19</td><td>17</td><td>2 h 28</td></tr>
+<tr><td>Genève-Aéroport &rarr; Winterthur</td><td>05:25</td><td>19:25</td><td>15</td><td>10</td><td>10</td><td>3 h 41</td></tr>
+<tr><td>Genève-Aéroport &rarr; Zurich Airport</td><td>05:25</td><td>19:25</td><td>15</td><td>10</td><td>10</td><td>3 h 24</td></tr>
+<tr><td>Genève-Aéroport &rarr; Zurich HB</td><td>05:25</td><td>20:25</td><td>16</td><td>16</td><td>16</td><td>3 h 03</td></tr>
+<tr><td>Grindelwald &rarr; Interlaken Ost</td><td>05:15</td><td>21:17</td><td>32</td><td>32</td><td>32</td><td>36 min</td></tr>
+<tr><td><a href="/rutas/interlaken-lauterbrunnen/it/">Interlaken Ost &rarr; Lauterbrunnen</a></td><td>06:02</td><td>22:05</td><td>32</td><td>32</td><td>32</td><td>22 min</td></tr>
+<tr><td><a href="/rutas/interlaken-lucerne/it/">Interlaken Ost &rarr; Luzern</a></td><td>07:04</td><td>20:09</td><td>14</td><td>14</td><td>14</td><td>1 h 46</td></tr>
+<tr><td>Lausanne &rarr; Luzern</td><td>05:40</td><td>21:40</td><td>17</td><td>17</td><td>17</td><td>2 h 21</td></tr>
+<tr><td>Lausanne &rarr; Montreux</td><td>04:55</td><td>00:24</td><td>114</td><td>121</td><td>115</td><td>19 min</td></tr>
+<tr><td>Lausanne &rarr; Neuchâtel</td><td>05:34</td><td>00:04</td><td>37</td><td>38</td><td>38</td><td>47 min</td></tr>
+<tr><td>Lausanne &rarr; Sion</td><td>05:04</td><td>23:14</td><td>42</td><td>44</td><td>41</td><td>57 min</td></tr>
+<tr><td>Lausanne &rarr; St. Gallen</td><td>05:34</td><td>20:17</td><td>28</td><td>23</td><td>23</td><td>3 h 28</td></tr>
+<tr><td>Lausanne &rarr; Visp</td><td>05:04</td><td>23:14</td><td>37</td><td>38</td><td>37</td><td>1 h 35</td></tr>
+<tr><td>Lausanne &rarr; Winterthur</td><td>05:34</td><td>20:17</td><td>28</td><td>23</td><td>23</td><td>2 h 49</td></tr>
+<tr><td>Lausanne &rarr; Zurich Airport</td><td>05:34</td><td>20:17</td><td>28</td><td>23</td><td>23</td><td>2 h 32</td></tr>
+<tr><td>Lausanne &rarr; Zurich HB</td><td>05:34</td><td>22:34</td><td>35</td><td>35</td><td>35</td><td>2 h 11</td></tr>
+<tr><td>Locarno &rarr; Lugano</td><td>05:52</td><td>22:52</td><td>35</td><td>37</td><td>35</td><td>32 min</td></tr>
+<tr><td>Locarno &rarr; Luzern</td><td>07:33</td><td>19:33</td><td>7</td><td>7</td><td>8</td><td>3 h 08</td></tr>
+<tr><td>Locarno &rarr; Zurich HB</td><td>08:33</td><td>20:33</td><td>7</td><td>7</td><td>7</td><td>3 h 22</td></tr>
+<tr><td>Lugano &rarr; Luzern</td><td>06:00</td><td>22:02</td><td>9</td><td>9</td><td>9</td><td>1 h 39</td></tr>
+<tr><td>Lugano &rarr; Zurich HB</td><td>06:30</td><td>21:30</td><td>24</td><td>23</td><td>23</td><td>1 h 53</td></tr>
+<tr><td>Luzern &rarr; St. Gallen</td><td>07:39</td><td>19:39</td><td>13</td><td>13</td><td>13</td><td>2 h 16</td></tr>
+<tr><td>Luzern &rarr; Winterthur</td><td>05:35</td><td>19:35</td><td>11</td><td>14</td><td>14</td><td>1 h 24</td></tr>
+<tr><td>Luzern &rarr; Zurich Airport</td><td>05:35</td><td>19:35</td><td>11</td><td>14</td><td>14</td><td>1 h 09</td></tr>
+<tr><td><a href="/rutas/zurich-lucerne/it/">Luzern &rarr; Zurich HB</a></td><td>04:52</td><td>23:35</td><td>40</td><td>42</td><td>42</td><td>42 min</td></tr>
+<tr><td>Montreux &rarr; Sion</td><td>05:26</td><td>23:36</td><td>42</td><td>44</td><td>41</td><td>36 min</td></tr>
+<tr><td>Montreux &rarr; Visp</td><td>05:26</td><td>23:36</td><td>37</td><td>38</td><td>37</td><td>1 h 13</td></tr>
+<tr><td>Neuchâtel &rarr; St. Gallen</td><td>06:22</td><td>18:22</td><td>13</td><td>13</td><td>13</td><td>2 h 40</td></tr>
+<tr><td>Neuchâtel &rarr; Winterthur</td><td>06:22</td><td>18:22</td><td>13</td><td>13</td><td>13</td><td>2 h 05</td></tr>
+<tr><td>Neuchâtel &rarr; Zurich Airport</td><td>06:22</td><td>18:22</td><td>13</td><td>13</td><td>13</td><td>1 h 49</td></tr>
+<tr><td>Neuchâtel &rarr; Zurich HB</td><td>06:22</td><td>23:22</td><td>18</td><td>18</td><td>18</td><td>1 h 34</td></tr>
+<tr><td>Sion &rarr; Visp</td><td>04:46</td><td>00:27</td><td>75</td><td>75</td><td>58</td><td>26 min</td></tr>
+<tr><td>Spiez &rarr; Thun</td><td>05:18</td><td>23:22</td><td>66</td><td>68</td><td>69</td><td>8 min</td></tr>
+<tr><td>Spiez &rarr; Visp</td><td>06:38</td><td>00:14</td><td>26</td><td>29</td><td>24</td><td>25 min</td></tr>
+<tr><td>Spiez &rarr; Winterthur</td><td>06:22</td><td>20:22</td><td>14</td><td>14</td><td>14</td><td>2 h 07</td></tr>
+<tr><td>Spiez &rarr; Zurich Airport</td><td>06:22</td><td>20:22</td><td>14</td><td>14</td><td>14</td><td>1 h 51</td></tr>
+<tr><td>Spiez &rarr; Zurich HB</td><td>06:22</td><td>20:22</td><td>15</td><td>15</td><td>16</td><td>1 h 36</td></tr>
+<tr><td>St. Gallen &rarr; Winterthur</td><td>04:37</td><td>23:37</td><td>69</td><td>66</td><td>69</td><td>32 min</td></tr>
+<tr><td>St. Gallen &rarr; Zurich Airport</td><td>04:37</td><td>23:37</td><td>68</td><td>61</td><td>63</td><td>48 min</td></tr>
+<tr><td>St. Gallen &rarr; Zurich HB</td><td>04:37</td><td>23:37</td><td>68</td><td>61</td><td>63</td><td>59 min</td></tr>
+<tr><td>Thun &rarr; Visp</td><td>06:27</td><td>00:03</td><td>26</td><td>29</td><td>24</td><td>36 min</td></tr>
+<tr><td>Thun &rarr; Winterthur</td><td>06:33</td><td>20:33</td><td>14</td><td>14</td><td>14</td><td>1 h 56</td></tr>
+<tr><td>Thun &rarr; Zurich Airport</td><td>06:33</td><td>20:33</td><td>14</td><td>14</td><td>14</td><td>1 h 40</td></tr>
+<tr><td>Thun &rarr; Zurich HB</td><td>06:33</td><td>20:33</td><td>15</td><td>15</td><td>16</td><td>1 h 25</td></tr>
+<tr><td>Visp &rarr; Winterthur</td><td>05:51</td><td>19:54</td><td>14</td><td>14</td><td>14</td><td>2 h 35</td></tr>
+<tr><td>Visp &rarr; Zermatt</td><td>05:30</td><td>22:37</td><td>31</td><td>31</td><td>31</td><td>1 h 03</td></tr>
+<tr><td>Visp &rarr; Zurich Airport</td><td>05:51</td><td>19:54</td><td>14</td><td>14</td><td>14</td><td>2 h 19</td></tr>
+<tr><td>Visp &rarr; Zurich HB</td><td>05:51</td><td>19:54</td><td>15</td><td>15</td><td>16</td><td>2 h 04</td></tr>
+<tr><td>Winterthur &rarr; Zurich Airport</td><td>04:30</td><td>00:28</td><td>139</td><td>131</td><td>133</td><td>12 min</td></tr>
+<tr><td>Winterthur &rarr; Zurich HB</td><td>04:42</td><td>00:28</td><td>285</td><td>292</td><td>294</td><td>19 min</td></tr>
+<tr><td>Zurich Airport &rarr; Zurich HB</td><td>05:00</td><td>00:42</td><td>234</td><td>227</td><td>229</td><td>9 min</td></tr>
+      </tbody>
+    </table></div>
+    <p style="font-size:13px;color:#6b6c75;margin-top:8px">Fonte: glosx.app, dall’orario aperto di opentransportdata.swiss (FFS).</p>
+    <p><a href="/assets/data/horarios-suiza.csv" download>Scarica i dati in CSV</a> (una riga per collegamento, direzione e tipo di giorno).</p>
+    <h2>Come sono stati calcolati</h2>
+    <ul><li><strong>Fonte:</strong> l’orario GTFS ufficiale di <a href="https://data.opentransportdata.swiss/dataset/timetable-2026-gtfs2020" rel="noopener">opentransportdata.swiss</a>, la piattaforma open data del trasporto pubblico svizzero, file sbb_gtfs.zip.</li><li><strong>Settimana di riferimento:</strong> martedì 01/12/2026 (feriale), sabato 05/12/2026 e domenica 06/12/2026. I lavori modificano alcuni servizi in altre date (ad esempio, a fine ottobre 2026 non c’erano treni tra Visp e Zermatt).</li><li><strong>Cosa viene contato:</strong> treni diretti di tutte le categorie (IC, IR, RE, regionali e treni di montagna) che fermano in entrambe le stazioni in quella direzione. Esclusi autobus, tram, battelli e funivie.</li><li><strong>Più veloce:</strong> il treno diretto più rapido del giorno feriale. Gli orari cambiano: controlla la tua data prima di partire.</li></ul>
+    <h2>Come citare questi dati</h2>
+    <p class="cita">Dati orari: opentransportdata.swiss (FFS), elaborati da <strong>glosx.app</strong>, <a href="https://glosx.app/it/treni-svizzera/">https://glosx.app/it/treni-svizzera/</a>.</p>
+    <p>WoW Train è presente tra gli <a href="https://data.opentransportdata.swiss/en/showcase/wow-train" rel="noopener">showcase di opentransportdata.swiss</a>.</p>
+  </main>
+  <footer>
+    <p>&copy; 2026 GLOSX &middot; <a href="/it/">glosx.app</a> &middot; <a href="/it/explore/">Esplora</a> &middot; <a href="/it/blog.html">Blog</a></p>
+  </footer>
+</body>
+</html>
