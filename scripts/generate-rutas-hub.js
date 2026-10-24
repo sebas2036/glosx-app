@@ -3,7 +3,7 @@
  * Genera el índice de rutas en es / fr / it / ja (/{lang}/rutas/) a partir de /rutas/index.html (inglés):
  * mismos listados (rutas de Europa y de Japón), con nombres de ciudad traducidos y enlaces a la versión de cada ruta
  * en ese idioma. Añade hreflang a las 5 versiones y las URLs al sitemap. Idempotente.
- * Uso: node scripts/generate-rutas-hub.js   (después: node scripts/sync-lang-chip.js)
+ * Uso: node scripts/generate-rutas-hub.js   (después: node scripts/sync-lang-chip.js y python3 scripts/hub-paises.py)
  */
 const fs = require('fs');
 const path = require('path');
