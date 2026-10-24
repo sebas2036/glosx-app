@@ -22,9 +22,15 @@ NAMES = {'es': {'zurich': 'Zúrich', 'geneva': 'Ginebra', 'basel': 'Basilea', 'l
 OMIO_SLUG = {'Zurich HB': 'zurich', 'Genève': 'geneva', 'Basel SBB': 'basel', 'Luzern': 'lucerne', 'Interlaken Ost': 'interlaken',
              'St. Gallen': 'st-gallen', 'Zurich Airport': 'zurich-airport', 'Genève-Aéroport': 'geneva-airport', 'Fribourg': 'fribourg',
              'Neuchâtel': 'neuchatel', 'St. Moritz': 'st-moritz'}
+# conexiones con página oficial en el catálogo de Omio, por idioma (comprobado contra el backend el 24-oct-2026; ver omio-swiss-catalog.json)
+CAT = {l: {tuple(x.split('|')) for x in v} for l, v in json.load(open(os.path.join(ROOT, 'scripts/omio-swiss-catalog.json'), encoding='utf8')).items()}
+CAT_LANG = {'es': 'es', 'fr': 'fr', 'it': 'it', 'en': 'de', 'ja': 'de'}   # Omio no tiene catálogo en inglés ni japonés: página oficial en alemán
+def has_omio(a, b, lang):
+    k = tuple(sorted((a, b)))
+    return k in CAT.get(CAT_LANG[lang], set())
 def omio(a, b, lang):
     sl = lambda x: OMIO_SLUG.get(x, x.lower().replace(' ', '-'))
-    return 'https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=%s&to=%s&src=swiss_table&lang=%s' % (sl(a), sl(b), lang)
+    return 'https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=%s&to=%s&src=swiss_table&lang=%s' % (sl(a), sl(b), CAT_LANG[lang])
 BOOK = {'en': ('Book', 'Book on Omio'), 'es': ('Reservar', 'Reservar en Omio'), 'fr': ('Réserver', 'Réserver sur Omio'), 'it': ('Prenota', 'Prenota su Omio'), 'ja': ('予約', 'Omioで予約')}
 SHOWCASE = 'https://data.opentransportdata.swiss/en/showcase/wow-train'
 SRC = D['source']['url']
@@ -163,7 +169,8 @@ for lang, t in T.items():
         g = guide(p['from'], p['to'])
         name = '%s &rarr; %s' % (html.escape(p['from']), html.escape(p['to']))
         if g: name = '<a href="/rutas/%s/%s">%s</a>' % (g, t['suffix'], name)
-        tr += '<tr><td>%s</td><td><a class="bk" href="%s" target="_blank" rel="noopener sponsored" aria-label="%s: %s" onclick="try{gtag(\'event\',\'omio_click\',{source:\'swiss_table\'})}catch(e){}">%s &rarr;</a></td><td>%s</td><td>%s</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (name, html.escape(omio(p['from'], p['to'], lang)), BOOK[lang][1], html.escape(p['from'] + ' – ' + p['to']), BOOK[lang][0], w['first'], w['last'], w['n'], s.get('n', '–'), u.get('n', '–'), dur(w['fastest_min']))
+        bkc = ('<a class="bk" href="%s" target="_blank" rel="noopener sponsored" aria-label="%s: %s" onclick="try{gtag(\'event\',\'omio_click\',{source:\'swiss_table\'})}catch(e){}">%s &rarr;</a>' % (html.escape(omio(p['from'], p['to'], lang)), BOOK[lang][1], html.escape(p['from'] + ' – ' + p['to']), BOOK[lang][0])) if has_omio(p['from'], p['to'], lang) else ''
+        tr += '<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (name, bkc, w['first'], w['last'], w['n'], s.get('n', '–'), u.get('n', '–'), dur(w['fastest_min']))
     li = ''.join('<li>%s</li>' % x.format(src=SRC, file=html.escape(D['source']['file']), wd=fdate(REF['weekday'], lang), sa=fdate(REF['saturday'], lang), su=fdate(REF['sunday'], lang)) for x in t['li'])
     body = '''<header>
     <h1>%s <span style="color:#C10016">· glosx.app</span></h1>
