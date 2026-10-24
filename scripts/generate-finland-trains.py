@@ -25,7 +25,7 @@ def omio(a, b, lang):
     sl = lambda x: OMIO_SLUG.get(x, x.lower().replace(' ', '-'))
     return 'https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=%s&to=%s&src=finland_table&lang=%s' % (sl(a), sl(b), CAT_LANG[lang])
 BOOK = {'en': ('Book', 'Book on Omio'), 'es': ('Reservar', 'Reservar en Omio'), 'fr': ('Réserver', 'Réserver sur Omio'), 'it': ('Prenota', 'Prenota su Omio'), 'ja': ('予約', 'Omioで予約')}
-SHOWCASE = 'https://data.Digitraffic / Fintraffic (CC BY 4.0)/en/showcase/wow-train'
+SHOWCASE = 'https://data.opentransportdata.swiss/en/showcase/wow-train'
 SRC = D['source']['url']
 
 def dur(m): return f'{m // 60} h {m % 60:02d}' if m >= 60 else f'{m} min'
