@@ -44,6 +44,19 @@ for p in sorted(D['pairs'], key=lambda p: (p['from'], p['to'])):
     seen.add(k); rows.append(p)
 
 
+# Bloque "Qué hacer en Laponia": excursiones de Klook vía el backend (marker de afiliado). Sin precios ni puntuaciones (cambian).
+LAP = {
+ 'en': ('What to do in Lapland', 'Many travellers take the train to Rovaniemi for the northern lights and Santa Claus Village. The aurora season runs from late August to early April.', [('tours', 'Lapland tours', 'Northern lights, husky and reindeer tours from Rovaniemi'), ('santa', 'Santa Claus Village', 'Guided visit from central Rovaniemi'), ('daytrips', 'Day trips in Lapland', 'Excursions and activities for a day')], 'See on Klook'),
+ 'es': ('Qué hacer en Laponia', 'Mucha gente toma el tren a Rovaniemi para ver auroras boreales y visitar Santa Claus Village. La temporada de auroras va de fines de agosto a principios de abril.', [('tours', 'Excursiones en Laponia', 'Auroras boreales, huskies y renos desde Rovaniemi'), ('santa', 'Santa Claus Village', 'Visita guiada desde el centro de Rovaniemi'), ('daytrips', 'Excursiones de un día', 'Actividades y paseos para un día')], 'Ver en Klook'),
+ 'fr': ('Que faire en Laponie', 'Beaucoup de voyageurs prennent le train pour Rovaniemi pour les aurores boréales et le village du Père Noël. La saison des aurores va de fin août à début avril.', [('tours', 'Excursions en Laponie', 'Aurores boréales, huskies et rennes au départ de Rovaniemi'), ('santa', 'Village du Père Noël', 'Visite guidée depuis le centre de Rovaniemi'), ('daytrips', 'Excursions d’une journée', 'Activités et sorties à la journée')], 'Voir sur Klook'),
+ 'it': ('Cosa fare in Lapponia', 'Molti viaggiatori prendono il treno per Rovaniemi per l’aurora boreale e il Villaggio di Babbo Natale. La stagione dell’aurora va da fine agosto a inizio aprile.', [('tours', 'Escursioni in Lapponia', 'Aurora boreale, husky e renne da Rovaniemi'), ('santa', 'Villaggio di Babbo Natale', 'Visita guidata dal centro di Rovaniemi'), ('daytrips', 'Gite di un giorno', 'Attività ed escursioni in giornata')], 'Vedi su Klook'),
+ 'ja': ('ラップランドでの過ごし方', 'オーロラやサンタクロース村を目当てにロヴァニエミまで列車で向かう旅行者が多くいます。オーロラのシーズンは8月下旬から4月上旬です。', [('tours', 'ラップランドのツアー', 'ロヴァニエミ発のオーロラ・ハスキー・トナカイツアー'), ('santa', 'サンタクロース村', 'ロヴァニエミ中心部からのガイド付き訪問'), ('daytrips', 'ラップランドの日帰りツアー', '1日で楽しめるアクティビティ')], 'Klookで見る'),
+}
+def lap_html(lang):
+    h, intro, items, cta = LAP[lang]
+    cards = ''.join('<a class="lap-card" href="https://voxa-production-dc15.up.railway.app/affiliate/klook-lapland?item=%s&amp;lang=%s" target="_blank" rel="noopener sponsored" onclick="try{gtag(\'event\',\'klook_click\',{source:\'finland_lapland\',item:\'%s\'})}catch(e){}"><strong>%s</strong><span>%s</span><em>%s &rarr;</em></a>' % (k, lang, k, html.escape(t), html.escape(d), html.escape(cta)) for k, t, d in items)
+    return '<h2>%s</h2>\n    <p>%s</p>\n    <div class="lap">%s</div>\n    ' % (h, html.escape(intro), cards)
+
 T = {
  'en': dict(dir='finland-trains', tpl='rutas/index.html', home='/', all_routes='/rutas/', back='&larr; All routes', suffix='',
    title='Train times in Finland from open Digitraffic data · glosx.app',
@@ -152,6 +165,7 @@ for lang, t in T.items():
         '.hx th,.hx td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(20,21,26,.08);white-space:nowrap}.hx th{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:#6b6c75;background:#faf8f5;position:sticky;top:0}\n'
         '.hx td:nth-child(n+3){font-variant-numeric:tabular-nums}.hx tr:last-child td{border-bottom:0}.hx a{color:#C10016}.hx .cita{background:#faf8f5;border-radius:12px;padding:14px 16px;font-size:14px}\n'
         '.hx a.bk{display:inline-block;background:#C10016;color:#fff;font-weight:700;font-size:13px;padding:7px 12px;border-radius:999px;text-decoration:none}.hx a.bk:hover{background:#A8000F}\n'
+        '.hx .lap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0 8px}.hx a.lap-card{display:flex;flex-direction:column;gap:6px;padding:16px;border:1px solid rgba(20,21,26,.14);border-radius:12px;background:#fff;text-decoration:none;color:#14151a}.hx a.lap-card:hover{border-color:#C10016}.hx a.lap-card span{font-size:14px;color:#4a4b55;line-height:1.45}.hx a.lap-card em{font-style:normal;font-weight:700;color:#C10016;font-size:14px;margin-top:auto}\n'
         '.hx .gl{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}.hx .gl a{display:inline-block;padding:8px 14px;border:1px solid rgba(20,21,26,.14);border-radius:999px;text-decoration:none;color:#14151a;font-size:14px}.hx .gl a:hover{border-color:#C10016}\n'
         '</style>\n</head>' % json.dumps(ld, ensure_ascii=False))
     nav = '<nav>\n    <a href="%s">WoW Train</a>\n    <div class="nav-right"><a href="%s" style="font-weight:600;text-decoration:none;color:inherit">%s</a></div>\n  </nav>' % (t['home'], t['all_routes'], t['back'])
@@ -172,7 +186,7 @@ for lang, t in T.items():
   <main class="hx">
     <h2>%s</h2>
     <ul class="gl">%s</ul>
-    <h2>%s</h2>
+    %s<h2>%s</h2>
     <div class="tw"><table>
       <thead><tr>%s</tr></thead>
       <tbody>
@@ -186,7 +200,7 @@ for lang, t in T.items():
     <p class="cita">%s</p>
     <p>%s</p>
   </main>
-  ''' % (t['h1'], t['sub'].format(n=len(rows)), t['guides'], gl, t['dl'], ''.join('<th>%s</th>' % c for c in t['cols'][:1] + [''] + t['cols'][1:]), tr, t['src'],
+  ''' % (t['h1'], t['sub'].format(n=len(rows)), t['guides'], gl, lap_html(lang), t['dl'], ''.join('<th>%s</th>' % c for c in t['cols'][:1] + [''] + t['cols'][1:]), tr, t['src'],
          t['csv'], t['csvnote'], t['how'], li, t['cite'], t['citetxt'].format(url=url), t['showcase'].format(sc=SHOWCASE))
     out = head + nav + '\n  ' + body + foot + '\n</body>\n</html>\n'
     os.makedirs(os.path.join(ROOT, t['dir']), exist_ok=True)
