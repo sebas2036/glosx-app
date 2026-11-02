@@ -54,10 +54,11 @@
   // Fondo: la cabecera de Omio (índigo a celeste) desde el primer fotograma, para generar confianza
   var BG_CSS = [
     '.bg1,.bg2{position:absolute;inset:0}',
-    // foto de tren desenfocada (URL absoluta: la pestaña nueva es about:blank) bajo un velo índigo-coral de Omio
-    '.bg1{background:#182C66 url(https://glosx.app/assets/img/tgv-route.jpg) center/cover no-repeat;filter:blur(14px) saturate(1.1);transform:scale(1.12);animation:ombDrift 9s ease-in-out infinite alternate}',
+    // foto de tren ya desenfocada en el archivo (sin filter: Safari se colgaba con blur animado), URL absoluta
+    // porque la pestaña nueva es about:blank; encima, un velo índigo-coral de Omio
+    '.bg1{background:#182C66 url(https://glosx.app/assets/img/omio-bridge-bg.jpg) center/cover no-repeat;transform:scale(1.08);animation:ombDrift 9s ease-in-out infinite alternate}',
     '.bg2{background:radial-gradient(55% 45% at 50% 42%,rgba(251,107,108,.24) 0%,rgba(251,107,108,0) 70%),linear-gradient(160deg,rgba(15,27,92,.84) 0%,rgba(24,44,102,.64) 55%,rgba(119,157,206,.56) 100%)}',
-    '@keyframes ombDrift{from{transform:scale(1.12)}to{transform:scale(1.18) translate(-1.5%,-1%)}}',
+    '@keyframes ombDrift{from{transform:scale(1.08)}to{transform:scale(1.14) translate(-1.5%,-1%)}}',
     '@media (prefers-reduced-motion:reduce){.bg1{animation:none}}'
   ].join('');
 
