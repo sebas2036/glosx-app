@@ -51,10 +51,12 @@
   // Fondo: el naranja de Klook desde el primer fotograma, para generar confianza
   var BG_CSS = [
     '.bg1,.bg2{position:absolute;inset:0}',
-    '.bg1{background:linear-gradient(160deg,#FF8A3D 0%,#FF5B00 100%)}',
-    '.bg2{background:radial-gradient(60% 50% at 50% 38%,rgba(255,255,255,.28) 0%,rgba(255,255,255,0) 70%);opacity:0;animation:klbGlow 1.8s ease-out forwards}',
-    '@keyframes klbGlow{0%{opacity:0}100%{opacity:1}}',
-    '@media (prefers-reduced-motion:reduce){.bg2{animation:none;opacity:1}}'
+    // Shinkansen ya desenfocado en el archivo (sin filter, que cuelga Safari), URL absoluta porque la pestaña
+    // nueva es about:blank; encima, un velo naranja de Klook con un brillo claro detrás de la tarjeta
+    '.bg1{background:#FF5B00 url(https://glosx.app/assets/img/klook-bridge-bg.jpg) center/cover no-repeat;transform:scale(1.08);animation:klbDrift 9s ease-in-out infinite alternate}',
+    '.bg2{background:radial-gradient(55% 45% at 50% 42%,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 70%),linear-gradient(160deg,rgba(255,138,61,.78) 0%,rgba(255,91,0,.72) 60%,rgba(200,60,0,.78) 100%)}',
+    '@keyframes klbDrift{from{transform:scale(1.08)}to{transform:scale(1.14) translate(-1.5%,-1%)}}',
+    '@media (prefers-reduced-motion:reduce){.bg1{animation:none}}'
   ].join('');
 
   var PAGE_CSS = '*{box-sizing:border-box}html,body{height:100%;margin:0}' +
