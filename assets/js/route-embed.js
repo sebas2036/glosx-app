@@ -14,11 +14,11 @@
   'use strict';
 
   var T = {
-    en: { title: 'Add this route to your blog', sub: 'Writing about this route? Copy this card with times and paste it into your post, free.', copy: 'Copy code', copied: 'Code copied', preview: 'Preview', eyebrow: 'Train route', first: 'First train', last: 'Last train', n: 'Trains per weekday', avg: 'Typical journey', credit: 'Times', guide: 'Route guide', source: 'Official timetable', insert: 'Insert', close: 'Close', fastest: 'Fastest' },
-    es: { title: 'Lleva esta ruta a tu blog', sub: '¿Escribes sobre esta ruta? Copia esta ficha con horarios y pégala en tu artículo, gratis.', copy: 'Copiar código', copied: 'Código copiado', preview: 'Vista previa', eyebrow: 'Ruta en tren', first: 'Primer tren', last: 'Último tren', n: 'Trenes por día laborable', avg: 'Duración habitual', credit: 'Horarios', guide: 'Guía de la ruta', source: 'Horario oficial', insert: 'Insertar', close: 'Cerrar', fastest: 'Más rápido' },
-    fr: { title: 'Ajoutez cet itinéraire à votre blog', sub: 'Vous écrivez sur cet itinéraire ? Copiez cette fiche avec les horaires et collez-la dans votre article, gratuitement.', copy: 'Copier le code', copied: 'Code copié', preview: 'Aperçu', eyebrow: 'Itinéraire en train', first: 'Premier train', last: 'Dernier train', n: 'Trains par jour de semaine', avg: 'Durée habituelle', credit: 'Horaires', guide: 'Guide de l’itinéraire', source: 'Horaire officiel', insert: 'Insérer', close: 'Fermer', fastest: 'Le plus rapide' },
-    it: { title: 'Porta questo percorso sul tuo blog', sub: 'Scrivi di questo percorso? Copia questa scheda con gli orari e incollala nel tuo articolo, gratis.', copy: 'Copia il codice', copied: 'Codice copiato', preview: 'Anteprima', eyebrow: 'Percorso in treno', first: 'Primo treno', last: 'Ultimo treno', n: 'Treni nei giorni feriali', avg: 'Durata abituale', credit: 'Orari', guide: 'Guida al percorso', source: 'Orario ufficiale', insert: 'Inserisci', close: 'Chiudi', fastest: 'Il più veloce' },
-    ja: { title: 'このルートをあなたのブログに', sub: 'このルートについて書いていますか？時刻入りのカードをコピーして、記事に無料で貼り付けられます。', copy: 'コードをコピー', copied: 'コピーしました', preview: 'プレビュー', eyebrow: '鉄道ルート', first: '始発', last: '終電', n: '平日の本数', avg: '標準的な所要時間', credit: '時刻', guide: 'ルートガイド', source: '公式時刻表', insert: '埋め込む', close: '閉じる', fastest: '最速' }
+    en: { title: 'Add this route to your blog', sub: 'Writing about this route? Tell us your blog and take this card with live times, free.', url: 'Your blog (URL)', name: 'Your name or brand', get: 'Get my card', bad: 'Enter your blog address (https://...) and your name.', ready: 'Paste this code into your post. The card shows up with the link to WoW Train; keep both together.', by: 'Shared by', copy: 'Copy code', copied: 'Code copied', preview: 'Preview', eyebrow: 'Train route', first: 'First train', last: 'Last train', n: 'Trains per weekday', avg: 'Typical journey', credit: 'Times', guide: 'Route guide', source: 'Official timetable', insert: 'Insert', close: 'Close', fastest: 'Fastest' },
+    es: { title: 'Lleva esta ruta a tu blog', sub: '¿Escribes sobre esta ruta? Dinos tu blog y llévate esta ficha con horarios actualizados, gratis.', url: 'Tu blog (URL)', name: 'Tu nombre o marca', get: 'Obtener mi ficha', bad: 'Escribe la dirección de tu blog (https://...) y tu nombre.', ready: 'Pega este código en tu artículo. La ficha aparece junto con el enlace a WoW Train; mantenlos juntos.', by: 'Compartido por', copy: 'Copiar código', copied: 'Código copiado', preview: 'Vista previa', eyebrow: 'Ruta en tren', first: 'Primer tren', last: 'Último tren', n: 'Trenes por día laborable', avg: 'Duración habitual', credit: 'Horarios', guide: 'Guía de la ruta', source: 'Horario oficial', insert: 'Insertar', close: 'Cerrar', fastest: 'Más rápido' },
+    fr: { title: 'Ajoutez cet itinéraire à votre blog', sub: 'Vous écrivez sur cet itinéraire ? Indiquez votre blog et emportez cette fiche aux horaires à jour, gratuitement.', url: 'Votre blog (URL)', name: 'Votre nom ou marque', get: 'Obtenir ma fiche', bad: 'Indiquez l’adresse de votre blog (https://...) et votre nom.', ready: 'Collez ce code dans votre article. La fiche s’affiche avec le lien vers WoW Train ; gardez-les ensemble.', by: 'Partagé par', copy: 'Copier le code', copied: 'Code copié', preview: 'Aperçu', eyebrow: 'Itinéraire en train', first: 'Premier train', last: 'Dernier train', n: 'Trains par jour de semaine', avg: 'Durée habituelle', credit: 'Horaires', guide: 'Guide de l’itinéraire', source: 'Horaire officiel', insert: 'Insérer', close: 'Fermer', fastest: 'Le plus rapide' },
+    it: { title: 'Porta questo percorso sul tuo blog', sub: 'Scrivi di questo percorso? Indica il tuo blog e porta via questa scheda con orari aggiornati, gratis.', url: 'Il tuo blog (URL)', name: 'Il tuo nome o marchio', get: 'Ottieni la mia scheda', bad: 'Inserisci l’indirizzo del tuo blog (https://...) e il tuo nome.', ready: 'Incolla questo codice nel tuo articolo. La scheda appare insieme al link a WoW Train; tienili insieme.', by: 'Condiviso da', copy: 'Copia il codice', copied: 'Codice copiato', preview: 'Anteprima', eyebrow: 'Percorso in treno', first: 'Primo treno', last: 'Ultimo treno', n: 'Treni nei giorni feriali', avg: 'Durata abituale', credit: 'Orari', guide: 'Guida al percorso', source: 'Orario ufficiale', insert: 'Inserisci', close: 'Chiudi', fastest: 'Il più veloce' },
+    ja: { title: 'このルートをあなたのブログに', sub: 'このルートについて書いていますか？ブログを教えていただければ、最新の時刻入りカードを無料でお使いいただけます。', url: 'ブログのURL', name: 'お名前またはブランド', get: 'カードを取得', bad: 'ブログのアドレス（https://...）とお名前を入力してください。', ready: 'このコードを記事に貼り付けてください。カードはWoW Trainへのリンクと一緒に表示されます。両方をそのまま残してください。', by: '提供', copy: 'コードをコピー', copied: 'コピーしました', preview: 'プレビュー', eyebrow: '鉄道ルート', first: '始発', last: '終電', n: '平日の本数', avg: '標準的な所要時間', credit: '時刻', guide: 'ルートガイド', source: '公式時刻表', insert: '埋め込む', close: '閉じる', fastest: '最速' }
   };
 
   var l = String(document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
@@ -93,21 +93,47 @@
       '.rte-box{position:relative;width:min(560px,100%);max-height:100%;overflow-y:auto}' +
       '.rte-box .rte{margin:0}' +
       '.rte-x{position:absolute;top:8px;right:10px;z-index:1;font:inherit;font-size:24px;line-height:1;border:0;background:none;color:#55565f;cursor:pointer;padding:4px 8px}' +
+      '.rte-form{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 10px}.rte-in{flex:1 1 200px;min-width:0;font:inherit;font-size:14px;padding:10px 14px;border:1px solid rgba(20,21,26,.18);border-radius:10px;background:#faf8f5;color:#14151a}' +
+      '.rte-in:focus{outline:2px solid #14151a;outline-offset:1px;background:#fff}.rte-err{color:#A8000F;font-size:13px;margin:0 0 10px}' +
+      '.rte-out{margin-top:6px}.rte-code{box-sizing:border-box;width:100%;font:12px/1.5 ui-monospace,Menlo,monospace;padding:10px 12px;border:1px solid rgba(20,21,26,.14);border-radius:10px;background:#faf8f5;color:#44454d;margin:0 0 10px;resize:vertical}' +
       '@media (max-width:600px){.rte{padding:16px}.rte-btn{width:100%}}';
     document.head.appendChild(st);
   }
 
+  // Caja de llenado: sin blog y nombre no hay código; el código es el enlace a glosx.app + embed.js,
+  // y la ficha solo se dibuja si ese enlace está y en el blog registrado (ver /embed.js).
   function block(d, compact) {
-    var code = cardHTML(d);
     var el = document.createElement('section');
     el.className = 'rte';
     el.setAttribute('aria-label', tx.title);
     el.innerHTML = (compact ? '' : '<h2 class="rte-h">' + esc(tx.title) + '</h2>') +
-      '<p class="rte-sub">' + esc(tx.sub.replace('{r}', d.route)) + '</p>' +
-      '<div class="rte-prev"><span class="rte-prev-l">' + esc(tx.preview) + '</span>' + code + '</div>' +
-      '<button type="button" class="rte-btn">' + esc(tx.copy) + '</button>';
-    var btn = el.querySelector('.rte-btn');
-    btn.addEventListener('click', function () { copy(code, btn); });
+      '<p class="rte-sub">' + esc(tx.sub) + '</p>' +
+      '<form class="rte-form" novalidate>' +
+        '<input class="rte-in" type="url" name="u" placeholder="' + esc(tx.url) + '" aria-label="' + esc(tx.url) + '" required>' +
+        '<input class="rte-in" type="text" name="n" maxlength="60" placeholder="' + esc(tx.name) + '" aria-label="' + esc(tx.name) + '" required>' +
+        '<button type="submit" class="rte-btn">' + esc(tx.get) + '</button>' +
+      '</form><p class="rte-err" role="alert" hidden></p><div class="rte-out" hidden></div>';
+    var form = el.querySelector('form'), err = el.querySelector('.rte-err'), out = el.querySelector('.rte-out');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var raw = form.u.value.trim(), name = form.n.value.trim().replace(/[<>"]/g, '').slice(0, 60), host = '';
+      if (raw && !/^https?:\/\//i.test(raw)) raw = 'https://' + raw;
+      try { var u = new URL(raw); if (/^https?:$/.test(u.protocol) && u.hostname.indexOf('.') > 0) host = u.hostname.toLowerCase().replace(/^www\./, ''); } catch (x) {}
+      if (!host || !name) { err.textContent = tx.bad; err.hidden = false; return; }
+      err.hidden = true;
+      var code = '<a class="wow-train-card" href="' + esc(d.url) + '" data-site="' + esc(host) + '" data-by="' + esc(name) + '"' +
+        (d.titleAttr ? ' data-title="' + esc(d.titleAttr) + '"' : '') + '>' + esc(d.stats ? tx.credit : tx.guide) + ': WoW Train (glosx.app)</a>\n' +
+        '<script src="https://glosx.app/embed.js" async></' + 'script>';
+      var prev = cardHTML(d).replace(/<\/div>$/, '<p style="margin:6px 0 0;font-size:12px;color:#6b6c75">' + esc(tx.by + ' ' + name) + '</p></div>');
+      out.innerHTML = '<div class="rte-prev"><span class="rte-prev-l">' + esc(tx.preview) + '</span>' + prev + '</div>' +
+        '<p class="rte-sub">' + esc(tx.ready) + '</p><textarea class="rte-code" readonly rows="4"></textarea>' +
+        '<button type="button" class="rte-btn">' + esc(tx.copy) + '</button>';
+      out.querySelector('.rte-code').value = code;
+      out.hidden = false;
+      var btn = out.querySelector('.rte-btn');
+      btn.addEventListener('click', function () { copy(code, btn); });
+      if (window.gtag) window.gtag('event', 'embed_register', { blog_host: host, blog_brand: name, page_path: location.pathname });
+    });
     return el;
   }
 
@@ -190,7 +216,7 @@
       b.addEventListener('click', function () {
         var route = td[0].textContent.trim();
         var d = {
-          title: route, route: route, lead: '', url: url, source: src,
+          title: route, titleAttr: route, route: route, lead: '', url: url, source: src,
           stats: [[tx.first, td[2].textContent.trim()], [tx.last, td[3].textContent.trim()], [tx.n, td[4].textContent.trim()], [tx.fastest, td[7].textContent.trim()]]
         };
         modal(block(d), b);
