@@ -371,7 +371,7 @@
           <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">Vedi tutti gli essenziali →</a>
         </div>
       </div>
-      <a href="#features" class="nav-extra" data-i18n="nav_features">Caratteristiche</a>
+      <div class="partners-wrapper nav-extra"><a href="/it/rutas/" class="nav-partners-btn" aria-haspopup="true" onclick="event.preventDefault();event.stopPropagation();var d=document.getElementById('bloggersDropdown');d.classList.toggle('open');var o=document.getElementById('partnersDropdown');if(o)o.classList.remove('open');">Per i blogger <span style="font-size:10px;opacity:0.6">▾</span></a><div class="partners-dropdown" id="bloggersDropdown"><a href="/it/rutas/" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">Schede percorsi</span><span class="partner-sub">Gli orari di ogni tratta, pronti per il tuo articolo →</span></a><a href="/it/blog.html" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">Schede guide</span><span class="partner-sub">Le nostre guide di viaggio, pronte per il tuo articolo →</span></a></div></div><script>document.addEventListener("click",function(e){var d=document.getElementById("bloggersDropdown");if(d&&!e.target.closest("#bloggersDropdown"))d.classList.remove("open")});</script>
       <a href="/it/ai-planner/" class="nav-extra" data-i18n="nav_ai">Pianificatore IA</a>
       <a href="/it/explore/" class="nav-extra" data-i18n="nav_explore">Esplora</a>
       <a href="#aiPlanner" class="nav-cta" data-i18n="nav_download">Inizia</a>

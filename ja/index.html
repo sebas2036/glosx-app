@@ -371,7 +371,7 @@
           <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">必需品をすべて見る →</a>
         </div>
       </div>
-      <a href="#features" class="nav-extra" data-i18n="nav_features">機能</a>
+      <div class="partners-wrapper nav-extra"><a href="/ja/rutas/" class="nav-partners-btn" aria-haspopup="true" onclick="event.preventDefault();event.stopPropagation();var d=document.getElementById('bloggersDropdown');d.classList.toggle('open');var o=document.getElementById('partnersDropdown');if(o)o.classList.remove('open');">ブロガーの方へ <span style="font-size:10px;opacity:0.6">▾</span></a><div class="partners-dropdown" id="bloggersDropdown"><a href="/ja/rutas/" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">ルートカード</span><span class="partner-sub">各ルートの時刻を記事にそのまま掲載 →</span></a><a href="/ja/blog.html" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">ガイドカード</span><span class="partner-sub">旅行ガイドを記事にそのまま掲載 →</span></a></div></div><script>document.addEventListener("click",function(e){var d=document.getElementById("bloggersDropdown");if(d&&!e.target.closest("#bloggersDropdown"))d.classList.remove("open")});</script>
       <a href="/ai-planner/" class="nav-extra" data-i18n="nav_ai">AIプランナー</a>
       <a href="/ja/explore/" class="nav-extra" data-i18n="nav_explore">探す</a>
       <a href="#aiPlanner" class="nav-cta" data-i18n="nav_download">はじめる</a>

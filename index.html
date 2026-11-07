@@ -370,7 +370,7 @@
           <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">See all essentials →</a>
         </div>
       </div>
-      <a href="#features" class="nav-extra" data-i18n="nav_features">Features</a>
+      <div class="partners-wrapper nav-extra"><a href="/rutas/" class="nav-partners-btn" aria-haspopup="true" onclick="event.preventDefault();event.stopPropagation();var d=document.getElementById('bloggersDropdown');d.classList.toggle('open');var o=document.getElementById('partnersDropdown');if(o)o.classList.remove('open');">For bloggers <span style="font-size:10px;opacity:0.6">▾</span></a><div class="partners-dropdown" id="bloggersDropdown"><a href="/rutas/" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">Route cards</span><span class="partner-sub">Times for any train route, ready for your post →</span></a><a href="/blog.html" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">Guide cards</span><span class="partner-sub">Any of our travel guides, ready for your post →</span></a></div></div><script>document.addEventListener("click",function(e){var d=document.getElementById("bloggersDropdown");if(d&&!e.target.closest("#bloggersDropdown"))d.classList.remove("open")});</script>
       <a href="/ai-planner/" class="nav-extra" data-i18n="nav_ai">AI Planner</a>
       <a href="/explore/" class="nav-extra" data-i18n="nav_explore">Explore</a>
       <a href="#aiPlanner" class="nav-cta" data-i18n="nav_download">Get started</a>
