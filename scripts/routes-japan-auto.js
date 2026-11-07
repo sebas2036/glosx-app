@@ -46,6 +46,9 @@ const photoFor = (r, s, b, shin) => {
   // foto verificada de la ciudad de destino (scripts/japan-city-photos.json) antes que la genérica por tipo
   if (CITY_PHOTO[b]) return CITY_PHOTO[b];
   if (shin) return pick(r, PHOTOS.shinkansen);
+  // sin foto verificada de la ciudad: un tren (no representa mal a ningún lugar). Las genéricas por tipo
+  // mostraban otra ciudad (castillo de Hiroshima para Matsumoto, Matsushima para Tsuruga): revisado 08-nov-2026.
+  return pick(r, PHOTOS.shinkansen);
   const t = META[b][1];
   if (META[b][0] === 'Hokkaido' && ['port', 'city', 'coast', 'onsen'].includes(t)) return pick(r, PHOTOS.snow);
   return pick(r, PHOTOS[t] || PHOTOS.default);

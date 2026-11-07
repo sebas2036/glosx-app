@@ -12,7 +12,7 @@ const CITY = require('./japan-city-photos.json');
 const auto = require('./routes-japan-auto');
 let pages = 0, routes = 0;
 for (const r of auto) {
-  const want = CITY[r.toKey];
+  const want = r.photo;   // foto ya resuelta por routes-japan-auto (ciudad verificada o tren)
   if (!want) continue;
   let touched = false;
   for (const l of ['', 'es', 'fr', 'it', 'ja']) {
