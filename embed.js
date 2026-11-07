@@ -62,7 +62,9 @@
       if (f) src.push(f.name + (f.license ? ' (' + f.license + ')' : ''));
     });
     if (!n) return null;
-    return { rows: [[tx.first, first], [tx.last, last], [tx.n, String(n)], [tx.avg, hm(Math.min.apply(null, med))]], source: tx.source + ': ' + src.join(', ') };
+    var dayN = function (d) { var t = r.dirs[key][d], c = 0; if (t) Object.keys(t).forEach(function (s) { c += t[s].n || 0; }); return c; };
+    var sat = dayN('saturday'), sun = dayN('sunday');
+    return { rows: [[tx.first, first], [tx.last, last], [tx.n, String(n)]].concat(sat ? [[tx.sat, String(sat)]] : []).concat(sun ? [[tx.sun, String(sun)]] : []).concat([[tx.avg, hm(Math.min.apply(null, med))]]), source: tx.source + ': ' + src.join(', ') };
   }
 
   // Tablas por país: la fila de la conexión (Viaje | | Primer tren | Último tren | Laborable | Sábado | Domingo | Más rápido)
@@ -79,17 +81,35 @@
   }
 
   // Datos clave de la página: primeras respuestas de su FAQ (JSON-LD), primera oración de cada una, sin menciones de terceros
+  // Foto de portada de la página: fondo del hero (rutas y blog) o og:image si no es la genérica del sitio
+  function heroImg(doc) {
+    var e = doc.querySelector('.route-hero, .blog-hero, [class*="hero"][style*="url("]');
+    var m = e && (e.getAttribute('style') || '').match(/url\(['"]?([^'")]+)/);
+    var u = m ? m[1] : '';
+    if (!u) {   // las rutas la llevan en la regla .route-hero del <style>
+      var css = Array.prototype.map.call(doc.querySelectorAll('style'), function (x) { return x.textContent; }).join(' ');
+      var h = css.match(/\.route-hero\s*\{[^}]*url\(['"]?([^'")]+)/);
+      if (h) u = h[1];
+    }
+    if (!u) { var og = doc.querySelector('meta[property="og:image"]'); u = og ? og.getAttribute('content') : ''; }
+    if (!/^https:\/\//.test(u) || /hero-bg\.jpg/.test(u)) return '';
+    if (/images\.pexels\.com/.test(u)) u = u.replace(/\?.*$/, '') + '?auto=compress&cs=tinysrgb&w=800';
+    return u;
+  }
+
   function facts(doc, lead) {
     var out = [];
     var walk = function (o) {
-      if (!o || typeof o !== 'object' || out.length >= 3) return;
+      if (!o || typeof o !== 'object' || out.length >= 5) return;
       if (Array.isArray(o)) { o.forEach(walk); return; }
       if (o['@type'] === 'FAQPage' && Array.isArray(o.mainEntity)) {
         o.mainEntity.forEach(function (q) {
-          if (out.length >= 3 || !q || !q.acceptedAnswer) return;
+          if (out.length >= 5 || !q || !q.acceptedAnswer) return;
           var t = String(q.acceptedAnswer.text || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-          var m = t.match(/^(.+?[.!?。！？])(\s|$)/);
-          t = (m ? m[1] : t);
+          // primera oración; si es un "Sí." o "Depende…" se suma la segunda, que es la que trae el dato
+          var m = t.match(/^(.+?[.!?。！？])(\s|$)(.+?[.!?。！？])?/);
+          t = m ? (m[1].length < 45 && m[3] ? m[1] + ' ' + m[3] : m[1]) : t;
+          if (t.length < 25) return;
           if (!t || /omio|klook|booking/i.test(t)) return;
           // respuestas de relleno ("mira el horario en vivo", "sí, se puede ir en tren") no aportan a la ficha
           if (/en vivo|live schedule|en direct|in tempo reale|リアルタイム|se cubre en tren|is covered by train|desservi en train|coperto in treno|cambian según|vary by|change by day|varient selon|variano in base/i.test(t)) return;
@@ -119,6 +139,11 @@
   // Construye la ficha con DOM (sin innerHTML: el texto viene de otra página y del atributo data-by)
   function build(a, d, tx) {
     var box = el('div', 'box-sizing:border-box;max-width:520px;margin:20px auto;padding:18px 20px;background:#ffffff;border:1px solid #e6e2db;border-radius:14px;font-family:' + FONT + ';color:#14151a;line-height:1.5;text-align:left');
+    if (d.img) {
+      var im = el('img', 'display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin:0 0 12px;border:0');
+      im.src = d.img; im.alt = d.title; im.loading = 'lazy';
+      box.appendChild(im);
+    }
     box.appendChild(el('p', 'margin:0 0 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#C10016', d.article ? tx.guide : tx.eyebrow));
     box.appendChild(el('p', 'margin:0 0 8px;font-size:18px;font-weight:700;color:#14151a', d.title));
     if (d.lead) box.appendChild(el('p', 'margin:0 0 12px;font-size:14px;color:#44454d', d.lead));
@@ -176,6 +201,7 @@
         article: /\/blog-[^/]+\.html$/.test(url.pathname),
         lead: lead ? clip(lead.textContent) : '',
         facts: facts(doc, lead ? lead.textContent : ''),
+        img: heroImg(doc),
         st: m ? stats(res[1], m[1], tx) : tableRow(doc, a.getAttribute('data-title'), tx)
       };
       if (!d.title) return;
