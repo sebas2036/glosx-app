@@ -34,6 +34,7 @@ const operatorOf = t => { for (const k of Object.keys(PRIVATE)) if (PRIVATE[k].i
 const hash = s => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h; };
 const pick = (slug, arr) => arr[hash(slug) % arr.length];
 
+const CITY_PHOTO = require('./japan-city-photos.json');
 const PHOTOS = {
   shinkansen: [23345456, 27666787, 38364303, 29058311],
   castle: [38601506, 31040540], onsen: [39396773, 31133221], snow: [16500575, 35505746], garden: [29393691],
@@ -42,6 +43,8 @@ const PHOTOS = {
   gateway: [4059410, 31385483], themepark: [39396773], default: [2641279]
 };
 const photoFor = (r, s, b, shin) => {
+  // foto verificada de la ciudad de destino (scripts/japan-city-photos.json) antes que la genérica por tipo
+  if (CITY_PHOTO[b]) return CITY_PHOTO[b];
   if (shin) return pick(r, PHOTOS.shinkansen);
   const t = META[b][1];
   if (META[b][0] === 'Hokkaido' && ['port', 'city', 'coast', 'onsen'].includes(t)) return pick(r, PHOTOS.snow);
