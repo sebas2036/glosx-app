@@ -57,7 +57,7 @@ const C = {
   en: {
     meta: 'By WoW Train · November 2026 · 6 min read', back: 'All articles', bc: ['Home', 'Blog'], read: 'Read',
     embedH: 'Writing about one of these routes? Take our times with you',
-    embedP: l => `Every route page on WoW Train has a block called <strong>“Add this route to your blog”</strong>: a small card with the route summary and, where we have the official timetable, first train, last train and trains per day. One click copies the code, and it looks right in WordPress, Ghost or any editor. It is free and needs no sign-up. Try it on ${route(l, 'paris-amsterdam', 'Paris → Amsterdam')} or ${route(l, 'tokyo-kyoto', 'Tokyo → Kyoto')}, or find your route in the <a href="/rutas/">route index</a>.`,
+    embedP: l => `Every route page on WoW Train has a block called <strong>“Add this route to your blog”</strong>: a small card with the route summary and, where we have the official timetable, first train, last train and trains per day. Enter your blog and your name, and you get a short code that shows the card in WordPress, Ghost or any editor, with times that update by themselves. It is free. Try it on ${route(l, 'paris-amsterdam', 'Paris → Amsterdam')} or ${route(l, 'tokyo-kyoto', 'Tokyo → Kyoto')}, or find your route in the <a href="/rutas/">route index</a>.`,
     ctaTitle: 'Plan the whole route in one go.', ctaText: 'Describe your trip and WoW Train suggests the trains for every leg, with booking links.', ctaBtn: 'Plan my trip →',
     europe: {
       title: '5 Blogs Worth Reading Before You Travel Europe by Train', tag: 'Recommended blogs',
@@ -108,7 +108,7 @@ const C = {
   es: {
     meta: 'Por WoW Train · Noviembre de 2026 · 6 min de lectura', back: 'Todos los artículos', bc: ['Inicio', 'Blog'], read: 'Leer',
     embedH: '¿Escribes sobre alguna de estas rutas? Llévate nuestros horarios',
-    embedP: l => `Cada página de ruta de WoW Train tiene un bloque llamado <strong>«Lleva esta ruta a tu blog»</strong>: una ficha con el resumen de la ruta y, cuando tenemos el horario oficial, el primer tren, el último y los trenes por día. Con un clic copias el código, y se ve bien en WordPress, Ghost o cualquier editor. Es gratis y no necesitas registrarte. Pruébalo en ${route(l, 'paris-amsterdam', 'París → Ámsterdam')} o ${route(l, 'tokyo-kyoto', 'Tokio → Kioto')}, o busca tu ruta en el <a href="/es/rutas/">índice de rutas</a>.`,
+    embedP: l => `Cada página de ruta de WoW Train tiene un bloque llamado <strong>«Lleva esta ruta a tu blog»</strong>: una ficha con el resumen de la ruta y, cuando tenemos el horario oficial, el primer tren, el último y los trenes por día. Escribes tu blog y tu nombre, y recibes un código corto que muestra la ficha en WordPress, Ghost o cualquier editor, con horarios que se actualizan solos. Es gratis. Pruébalo en ${route(l, 'paris-amsterdam', 'París → Ámsterdam')} o ${route(l, 'tokyo-kyoto', 'Tokio → Kioto')}, o busca tu ruta en el <a href="/es/rutas/">índice de rutas</a>.`,
     ctaTitle: 'Planifica toda la ruta de una vez.', ctaText: 'Describe tu viaje y WoW Train te sugiere los trenes de cada tramo, con enlaces para reservar.', ctaBtn: 'Planificar mi viaje →',
     europe: {
       title: '5 blogs que vale la pena leer antes de viajar por Europa en tren', tag: 'Blogs recomendados',
@@ -159,7 +159,7 @@ const C = {
   fr: {
     meta: 'Par WoW Train · Novembre 2026 · 6 min de lecture', back: 'Tous les articles', bc: ['Accueil', 'Blog'], read: 'Lire',
     embedH: 'Vous écrivez sur l’un de ces itinéraires ? Emportez nos horaires',
-    embedP: l => `Chaque page d’itinéraire de WoW Train propose un bloc <strong>« Ajoutez cet itinéraire à votre blog »</strong> : une fiche avec le résumé du trajet et, quand nous avons l’horaire officiel, le premier train, le dernier et le nombre de trains par jour. Un clic copie le code, qui s’affiche bien dans WordPress, Ghost ou tout autre éditeur. C’est gratuit et sans inscription. Essayez-le sur ${route(l, 'paris-amsterdam', 'Paris → Amsterdam')} ou ${route(l, 'tokyo-kyoto', 'Tokyo → Kyoto')}, ou cherchez votre trajet dans l’<a href="/fr/rutas/">index des itinéraires</a>.`,
+    embedP: l => `Chaque page d’itinéraire de WoW Train propose un bloc <strong>« Ajoutez cet itinéraire à votre blog »</strong> : une fiche avec le résumé du trajet et, quand nous avons l’horaire officiel, le premier train, le dernier et le nombre de trains par jour. Indiquez votre blog et votre nom : vous recevez un code court qui affiche la fiche dans WordPress, Ghost ou tout autre éditeur, avec des horaires qui se mettent à jour tout seuls. C’est gratuit. Essayez-le sur ${route(l, 'paris-amsterdam', 'Paris → Amsterdam')} ou ${route(l, 'tokyo-kyoto', 'Tokyo → Kyoto')}, ou cherchez votre trajet dans l’<a href="/fr/rutas/">index des itinéraires</a>.`,
     ctaTitle: 'Planifiez tout l’itinéraire en une fois.', ctaText: 'Décrivez votre voyage et WoW Train propose les trains de chaque étape, avec les liens de réservation.', ctaBtn: 'Planifier mon voyage →',
     europe: {
       title: '5 blogs à lire avant de voyager en train en Europe', tag: 'Blogs recommandés',
@@ -210,7 +210,7 @@ const C = {
   it: {
     meta: 'Di WoW Train · Novembre 2026 · 6 min di lettura', back: 'Tutti gli articoli', bc: ['Home', 'Blog'], read: 'Leggi',
     embedH: 'Scrivi di uno di questi percorsi? Porta con te i nostri orari',
-    embedP: l => `Ogni pagina di percorso di WoW Train ha un blocco chiamato <strong>«Porta questo percorso sul tuo blog»</strong>: una scheda con il riassunto del tragitto e, quando abbiamo l’orario ufficiale, primo treno, ultimo treno e treni al giorno. Con un clic copi il codice, che si vede bene in WordPress, Ghost o qualsiasi editor. È gratis e non serve registrarsi. Provalo su ${route(l, 'paris-amsterdam', 'Parigi → Amsterdam')} o ${route(l, 'tokyo-kyoto', 'Tokyo → Kyoto')}, oppure cerca il tuo percorso nell’<a href="/it/rutas/">indice dei percorsi</a>.`,
+    embedP: l => `Ogni pagina di percorso di WoW Train ha un blocco chiamato <strong>«Porta questo percorso sul tuo blog»</strong>: una scheda con il riassunto del tragitto e, quando abbiamo l’orario ufficiale, primo treno, ultimo treno e treni al giorno. Indichi il tuo blog e il tuo nome e ricevi un codice breve che mostra la scheda in WordPress, Ghost o qualsiasi editor, con orari che si aggiornano da soli. È gratis. Provalo su ${route(l, 'paris-amsterdam', 'Parigi → Amsterdam')} o ${route(l, 'tokyo-kyoto', 'Tokyo → Kyoto')}, oppure cerca il tuo percorso nell’<a href="/it/rutas/">indice dei percorsi</a>.`,
     ctaTitle: 'Pianifica tutto il percorso in una volta.', ctaText: 'Descrivi il tuo viaggio e WoW Train suggerisce i treni di ogni tratta, con i link per prenotare.', ctaBtn: 'Pianifica il mio viaggio →',
     europe: {
       title: '5 blog da leggere prima di viaggiare in treno in Europa', tag: 'Blog consigliati',
@@ -261,7 +261,7 @@ const C = {
   ja: {
     meta: 'WoW Train · 2026年11月 · 6分で読めます', back: '記事一覧', bc: ['ホーム', 'ブログ'], read: '読む',
     embedH: 'これらのルートについて書いていますか？時刻情報をお持ち帰りください',
-    embedP: l => `WoW Trainの各ルートページには<strong>「このルートをあなたのブログに」</strong>というブロックがあります。ルートの概要に加え、公式時刻表があるルートでは始発・終電・1日の本数を載せたカードです。ワンクリックでコードをコピーでき、WordPressやGhostなどどのエディタでもきれいに表示されます。無料で、登録も不要です。${route(l, 'tokyo-kyoto', '東京 → 京都')}や${route(l, 'paris-amsterdam', 'パリ → アムステルダム')}で試すか、<a href="/ja/rutas/">ルート一覧</a>からお探しください。`,
+    embedP: l => `WoW Trainの各ルートページには<strong>「このルートをあなたのブログに」</strong>というブロックがあります。ルートの概要に加え、公式時刻表があるルートでは始発・終電・1日の本数を載せたカードです。ブログとお名前を入力すると短いコードが表示され、WordPressやGhostなどどのエディタでもカードが表示されます。時刻は自動で更新されます。無料です。${route(l, 'tokyo-kyoto', '東京 → 京都')}や${route(l, 'paris-amsterdam', 'パリ → アムステルダム')}で試すか、<a href="/ja/rutas/">ルート一覧</a>からお探しください。`,
     ctaTitle: 'ルート全体をまとめて計画。', ctaText: '旅の内容を入力すると、WoW Trainが各区間の列車と予約リンクを提案します。', ctaBtn: '旅を計画する →',
     europe: {
       title: 'ヨーロッパを列車で旅する前に読みたいブログ5選', tag: 'おすすめブログ',
