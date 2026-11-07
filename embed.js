@@ -180,7 +180,12 @@
     lg.src = ORIGIN + '/logo.png'; lg.alt = 'WoW Train'; lg.width = 26; lg.height = 26;
     seal.appendChild(lg);
     seal.appendChild(el('span', 'font-size:12px;font-weight:600;letter-spacing:.02em;color:#2b2c33', 'WoW Train · glosx.app'));
-    box.appendChild(seal);
+    // candado: el sello vive en un shadow root (el CSS del blog no entra) y el contenedor lleva estilos
+    // en línea con !important, que le ganan a cualquier regla de la hoja de estilos del blog
+    var host = document.createElement('div');
+    host.style.cssText = 'display:block!important;visibility:visible!important;opacity:1!important;height:auto!important;max-height:none!important;overflow:visible!important;position:static!important;clip:auto!important;clip-path:none!important;transform:none!important;filter:none!important;margin:0!important;padding:0!important';
+    if (host.attachShadow) { host.attachShadow({ mode: 'closed' }).appendChild(seal); } else { host.appendChild(seal); }
+    box.appendChild(host);
     return box;
   }
 
