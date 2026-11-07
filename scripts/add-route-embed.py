@@ -8,7 +8,7 @@ Uso: python3 scripts/add-route-embed.py
 import glob, os, re
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
-V = 6
+V = 7
 TAG = '  <script src="/assets/js/route-embed.js?v=%d" defer></script>\n' % V
 TABLES = ['swiss-trains', 'es/trenes-suiza', 'fr/trains-suisse', 'it/treni-svizzera', 'ja/swiss-trains',
           'austria-trains', 'es/trenes-austria', 'fr/trains-autriche', 'it/treni-austria', 'ja/austria-trains',

@@ -35,6 +35,18 @@
     return h ? h + ' h ' + (m < 10 ? '0' : '') + m : m + ' min';
   }
 
+  // Atribución que pide la licencia: el paréntesis con CC BY / NLOD / CC0 / Licence (también paréntesis japoneses （）)
+  function licenseOf(ps) {
+    for (var j = 0; j < ps.length; j++) {
+      var mm = ps[j].textContent.match(/[(（]([^()（）]*(?:CC BY|NLOD|CC0|Licen)[^()（）]*)[)）]/);
+      if (mm) return mm[1].trim();
+    }
+    return '';
+  }
+  // "00:08 (+1)" es después de medianoche: cuenta como 24:08 al comparar
+  function tkey(t) { return (/\(\+1\)/.test(t) ? 1440 : 0) + (parseInt(t, 10) * 60 + parseInt(t.slice(3, 5), 10)); }
+  function clip(t) { t = t.replace(/\s+/g, ' ').trim(); return t.length > 240 ? t.slice(0, 237).replace(/\s+\S*$/, '') + '…' : t; }
+
   function stats(j, slug, tx) {
     var r = j && j.routes && j.routes[slug];
     if (!r || !r.dirs) return null;
@@ -45,7 +57,7 @@
     var n = 0, first = '99:99', last = '00:00', med = [], src = [];
     Object.keys(wk).forEach(function (s) {
       var v = wk[s];
-      n += v.n; if (v.first < first) first = v.first; if (v.last > last) last = v.last; med.push(v.median_min);
+      n += v.n; if (tkey(v.first) < tkey(first)) first = v.first; if (tkey(v.last) > tkey(last)) last = v.last; med.push(v.median_min);
       var f = j.feeds && j.feeds[s];
       if (f) src.push(f.name + (f.license ? ' (' + f.license + ')' : ''));
     });
@@ -60,11 +72,7 @@
     for (var i = 0; i < trs.length; i++) {
       var td = trs[i].children;
       if (td.length < 8 || td[0].textContent.trim() !== title) continue;
-      var src = '', ps = doc.querySelectorAll('main.hx p');
-      for (var j = 0; j < ps.length; j++) {
-        var mm = ps[j].textContent.match(/\(([^)]*(CC BY|NLOD|CC0|Licen)[^)]*)\)/);
-        if (mm) { src = mm[1]; break; }
-      }
+      var src = licenseOf(doc.querySelectorAll('main.hx p'));
       return { rows: [[tx.first, td[2].textContent.trim()], [tx.last, td[3].textContent.trim()], [tx.n, td[4].textContent.trim()], [tx.fast, td[7].textContent.trim()]], source: tx.source + ': ' + src };
     }
     return null;
@@ -116,7 +124,7 @@
     try { url = new URL(a.href); } catch (e) { return; }
     if (url.origin !== ORIGIN || !hostOk(a.getAttribute('data-site'))) return;   // queda el enlace simple
     var m = url.pathname.match(/^\/rutas\/([a-z0-9-]+)\//);
-    Promise.all([fetch(url.href).then(function (r) { return r.ok ? r.text() : ''; }), routes()]).then(function (res) {
+    Promise.all([fetch(url.href).then(function (r) { return r.ok ? r.text() : ''; }), m ? routes() : null]).then(function (res) {
       if (!res[0]) return;
       var doc = new DOMParser().parseFromString(res[0], 'text/html');
       var l = String(doc.documentElement.lang || 'en').slice(0, 2);
@@ -125,7 +133,7 @@
       var d = {
         title: a.getAttribute('data-title') || (h1 ? h1.textContent.trim() : ''),
         article: /\/blog-[^/]+\.html$/.test(url.pathname),
-        lead: lead ? lead.textContent.trim().replace(/\s+/g, ' ').slice(0, 240) : '',
+        lead: lead ? clip(lead.textContent) : '',
         st: m ? stats(res[1], m[1], tx) : tableRow(doc, a.getAttribute('data-title'), tx)
       };
       if (!d.title) return;
@@ -140,4 +148,6 @@
     for (var i = 0; i < list.length; i++) render(list[i]);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan); else scan();
+  // Blogs que cargan el contenido después (temas con navegación por JS, páginas infinitas): volver a buscar enlaces nuevos
+  if (window.MutationObserver) new MutationObserver(function () { scan(); }).observe(document.documentElement, { childList: true, subtree: true });
 })();

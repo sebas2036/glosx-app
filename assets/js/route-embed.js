@@ -34,6 +34,9 @@
     var h = Math.floor(min / 60), m = min % 60;
     return h ? h + ' h ' + (m < 10 ? '0' : '') + m : m + ' min';
   }
+  // "00:08 (+1)" es después de medianoche (igual que embed.js)
+  function tkey(t) { return (/\(\+1\)/.test(t) ? 1440 : 0) + (parseInt(t, 10) * 60 + parseInt(t.slice(3, 5), 10)); }
+  function clip(t) { t = t.replace(/\s+/g, ' ').trim(); return t.length > 240 ? t.slice(0, 237).replace(/\s+\S*$/, '') + '…' : t; }
   function canonical() {
     var c = document.querySelector('link[rel="canonical"]');
     return c ? c.href : location.href.split('#')[0].split('?')[0];
@@ -69,7 +72,7 @@
       var ta = document.createElement('textarea');
       ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); done(); } catch (e) {}
+      try { if (document.execCommand('copy')) done(); } catch (e) {}
       document.body.removeChild(ta);
     }
   }
@@ -135,8 +138,9 @@
       out.hidden = false;
       var btn = out.querySelector('.rte-btn');
       btn.addEventListener('click', function () { copy(code, btn); });
-      // link_url / link_domain / link_text son dimensiones estándar de GA4: se leen sin definir dimensiones personalizadas
-      if (window.gtag) window.gtag('event', 'embed_register', { link_url: raw, link_domain: host, link_text: name, page_path: location.pathname });
+      // Solo el dominio (dimensión estándar link_domain): nada de nombres ni URLs completas, GA4 no admite datos personales.
+      // La marca queda en el código que pega el bloguero (data-by) y check-embeds.js la lee de su página.
+      if (window.gtag) window.gtag('event', 'embed_register', { link_domain: host, page_path: location.pathname });
     });
     return el;
   }
@@ -159,7 +163,7 @@
     var n = 0, first = '99:99', last = '00:00', med = [], src = [];
     Object.keys(wk).forEach(function (s) {
       var v = wk[s];
-      n += v.n; if (v.first < first) first = v.first; if (v.last > last) last = v.last; med.push(v.median_min);
+      n += v.n; if (tkey(v.first) < tkey(first)) first = v.first; if (tkey(v.last) > tkey(last)) last = v.last; med.push(v.median_min);
       var f = json.feeds && json.feeds[s];
       if (f) src.push(f.name + (f.license ? ' (' + f.license + ')' : ''));
     });
@@ -195,8 +199,7 @@
     var lead = main.querySelector('p.lead');
     var before = main.querySelector('.cta') || main.lastElementChild;
     if (!before) return;
-    var txt = lead ? lead.textContent.trim().replace(/\s+/g, ' ') : '';
-    if (txt.length > 240) txt = txt.slice(0, 237).replace(/\s+\S*$/, '') + '…';
+    var txt = lead ? clip(lead.textContent) : '';
     css();
     mount({ article: true, eyebrow: tx.eyebrowA, title: h1.textContent.trim(), titleAttr: '', lead: txt, url: canonical() }, before, lead);
   }
@@ -214,7 +217,7 @@
     var d = {
       title: title,
       route: title.replace(/\s+(by train|en tren|en train|in treno)$/i, ''),
-      lead: lead ? lead.textContent.trim() : '',
+      lead: lead ? clip(lead.textContent) : '',
       url: canonical()
     };
     css();
@@ -232,10 +235,10 @@
     if (!table) return;
     var src = '';
     var ps = document.querySelectorAll('main.hx p');
-    for (var i = 0; i < ps.length; i++) if (/CC BY|NLOD|CC0|Licen|licen/.test(ps[i].textContent) && ps[i].textContent.length < 160) {
-      var m = ps[i].textContent.match(/\(([^)]+)\)/);  // "(Datenquelle: ÖBB, CC BY 4.0)" → la atribución que pide la licencia
-      src = tx.source + ': ' + (m ? m[1] : ps[i].textContent.replace(/^[^:]*:\s*/, '')).trim().replace(/\.$/, '');
-      break;
+    // misma regla que embed.js (licenseOf): el paréntesis con la licencia, también （） en japonés
+    for (var i = 0; i < ps.length; i++) {
+      var m = ps[i].textContent.match(/[(（]([^()（）]*(?:CC BY|NLOD|CC0|Licen)[^()（）]*)[)）]/);
+      if (m) { src = tx.source + ': ' + m[1].trim(); break; }
     }
     var head = table.querySelectorAll('thead th');
     var lab = [];

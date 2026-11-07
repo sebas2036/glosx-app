@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * ¿Quién publicó la ficha? Lee en GA4 los registros de la caja "Lleva esta ruta a tu blog" (evento embed_register:
- * link_url = blog, link_domain = dominio, link_text = marca, pagePath = ruta o artículo de glosx.app) y visita cada blog
+ * link_domain = dominio del blog, pagePath = ruta o artículo de glosx.app; sin datos personales: la marca se lee del data-by publicado) y visita cada blog
  * para ver si tiene publicado un enlace a glosx.app (portada + hasta 300 páginas de su sitemap).
  *
  * Resultado: tabla en consola y registro acumulado en ~/.config/glosx/embed-registros.json
@@ -61,7 +61,7 @@ async function registrations(days) {
   const t = await token();
   const body = JSON.stringify({
     dateRanges: [{ startDate: days + 'daysAgo', endDate: 'today' }],
-    dimensions: [{ name: 'linkDomain' }, { name: 'linkUrl' }, { name: 'linkText' }, { name: 'pagePath' }, { name: 'date' }],
+    dimensions: [{ name: 'linkDomain' }, { name: 'pagePath' }, { name: 'date' }],
     metrics: [{ name: 'eventCount' }],
     dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: 'embed_register' } } },
     limit: 1000
@@ -71,12 +71,13 @@ async function registrations(days) {
   if (r.status !== 200) throw new Error('GA4 ' + r.status + ': ' + r.body.slice(0, 300));
   const rows = (JSON.parse(r.body).rows || []).map(x => {
     const v = x.dimensionValues.map(d => d.value);
-    return { domain: v[0], url: v[1], brand: v[2], page: v[3], date: v[4] };
+    return { domain: v[0], url: '', brand: '', page: v[1], date: v[2] };
   });
   return rows.filter(x => x.domain && x.domain !== '(not set)');
 }
 
 const LINK = /<a\b[^>]*href=["']https?:\/\/(?:www\.)?glosx\.app[^"']*["'][^>]*>/i;
+const BY = /class=["']wow-train-card["'][^>]*data-by=["']([^"']{1,60})["']/i;
 
 async function pagesOf(base) {
   const out = new Set([base]);
@@ -105,7 +106,7 @@ async function findLink(base) {
   for (const p of [pages[0]].concat(pages.slice(1).reverse())) {
     try {
       const r = await request(p, { headers: { 'User-Agent': UA } });
-      if (r.status === 200 && LINK.test(r.body)) return p;
+      if (r.status === 200 && LINK.test(r.body)) { const b = r.body.match(BY); return { page: p, brand: b ? b[1] : '' }; }
     } catch (e) { /* página caída: seguimos */ }
   }
   return null;
@@ -129,7 +130,7 @@ async function findLink(base) {
     process.stdout.write('Revisando ' + d + '… ');
     const where = await findLink(base).catch(() => null);
     s.lastCheck = new Date().toISOString().slice(0, 10);
-    if (where) { s.published = where; s.firstSeen = s.firstSeen || s.lastCheck; console.log('PUBLICÓ → ' + where); }
+    if (where) { s.brand = where.brand || s.brand; s.published = where.page; s.firstSeen = s.firstSeen || s.lastCheck; console.log('PUBLICÓ → ' + where); }
     else { s.published = null; console.log('no encontrado'); }
   }
   fs.mkdirSync(path.dirname(STORE), { recursive: true });
