@@ -101,6 +101,9 @@
     return '<div style="box-sizing:border-box;max-width:520px;margin:20px auto;padding:18px 20px;background:#ffffff;' +
       'border:1px solid #e6e2db;border-radius:14px;font-family:' + FONT + ';color:#14151a;line-height:1.5">' +
       (d.img ? '<img src="' + esc(d.img) + '" alt="' + esc(d.title) + '" loading="lazy" style="display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:10px;margin:0 0 12px;border:0">' : '') +
+      '<div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:-4px 0 12px">' +
+      '<img src="/logo.png" alt="WoW Train" width="26" height="26" style="width:26px;height:26px;border-radius:6px;display:block;border:0;margin:0">' +
+      '<span style="font-size:12px;font-weight:600;letter-spacing:.02em;color:#2b2c33">WoW Train · glosx.app</span></div>' +
       '<p style="margin:0 0 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#C10016">' + esc(d.eyebrow || tx.eyebrow) + '</p>' +
       '<p style="margin:0 0 8px;font-size:18px;font-weight:700">' + esc(d.title) + '</p>' +
       (d.lead ? '<p style="margin:0 0 12px;font-size:14px;color:#44454d">' + esc(d.lead) + '</p>' : '') +
@@ -182,9 +185,7 @@
         (d.titleAttr ? ' data-title="' + esc(d.titleAttr) + '"' : '') + '>' + esc(d.stats ? tx.credit : (d.article ? tx.eyebrowA : tx.guide)) + ': WoW Train (glosx.app)</a>\n' +
         '<script src="https://glosx.app/embed.js" async></' + 'script>';
       var prev = cardHTML(d).replace(/<\/div>$/, '<p style="margin:6px 0 0;font-size:12px;color:#6b6c75">' + esc(tx.by + ' ' + name) + '</p>' +
-        '<div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:12px 0 0;padding-top:10px;border-top:1px solid #ececef">' +
-        '<img src="/logo.png" alt="WoW Train" width="26" height="26" style="width:26px;height:26px;border-radius:6px;display:block;border:0">' +
-        '<span style="font-size:12px;font-weight:600;letter-spacing:.02em;color:#2b2c33">WoW Train · glosx.app</span></div></div>');
+        '</div>');
       out.innerHTML = '<div class="rte-prev"><span class="rte-prev-l">' + esc(tx.preview) + '</span>' + prev + '</div>' +
         '<p class="rte-sub">' + esc(tx.ready) + '</p><textarea class="rte-code" readonly rows="4"></textarea>' +
         '<button type="button" class="rte-btn">' + esc(tx.copy) + '</button>';

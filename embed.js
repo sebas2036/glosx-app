@@ -175,7 +175,7 @@
     var by = (a.getAttribute('data-by') || '').trim().slice(0, 60);
     if (by) box.appendChild(el('p', 'margin:6px 0 0;font-size:12px;color:#6b6c75', tx.by + ' ' + by));
     // sello de la marca al pie de cada ficha
-    var seal = el('div', 'display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:12px 0 0;padding-top:10px;border-top:1px solid #ececef');
+    var seal = el('div', 'display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:-4px 0 12px');
     var lg = el('img', 'width:26px;height:26px;border-radius:6px;display:block;border:0');
     lg.src = ORIGIN + '/logo.png'; lg.alt = 'WoW Train'; lg.width = 26; lg.height = 26;
     seal.appendChild(lg);
@@ -185,7 +185,9 @@
     var host = document.createElement('div');
     host.style.cssText = 'display:block!important;visibility:visible!important;opacity:1!important;height:auto!important;max-height:none!important;overflow:visible!important;position:static!important;clip:auto!important;clip-path:none!important;transform:none!important;filter:none!important;margin:0!important;padding:0!important';
     if (host.attachShadow) { host.attachShadow({ mode: 'closed' }).appendChild(seal); } else { host.appendChild(seal); }
-    box.appendChild(host);
+    // va justo debajo de la foto (o arriba de todo si no hay foto): si recortan el final, el sello queda
+    var ph = box.querySelector('img');
+    box.insertBefore(host, ph ? ph.nextSibling : box.firstChild);
     return box;
   }
 
