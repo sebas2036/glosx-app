@@ -297,7 +297,8 @@ ROUTES.forEach(r => {
   if (!j) return;
   r.from.ja = j.from; r.to.ja = j.to; r.seo.ja = j.seo; r.lead.ja = j.lead; r.facts.ja = j.facts; r.choose.ja = j.choose; r.tips.ja = j.tips; r.faqs.ja = j.faqs;
 });
-const missingJa = ROUTES.filter(r => !r.seo.ja).map(r => r.slug);
+const RELATED = fs.existsSync(path.join(__dirname, 'japan-related.json')) ? require('./japan-related.json') : {};
+const missingJa =ROUTES.filter(r => !r.seo.ja).map(r => r.slug);
 if (missingJa.length) { console.error('Faltan datos en japonés:', missingJa.join(', ')); process.exit(1); }
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -332,7 +333,9 @@ function mainHtml(r, lang) {
   // Hasta 6 rutas relacionadas: primero las que comparten ciudad, luego el resto
   const shares = x => [x.fromKey, x.toKey].some(k => k === r.fromKey || k === r.toKey);
   const others = ROUTES.filter(x => x.slug !== r.slug);
-  const related = others.filter(shares).concat(others.filter(x => !shares(x))).slice(0, 6)
+  // reparto equilibrado de scripts/japan-related-links.js (todas las rutas reciben ≥5 enlaces); si no está, el criterio viejo
+  const planned = RELATED[r.slug] && RELATED[r.slug].map(s => ROUTES.find(x => x.slug === s)).filter(Boolean);
+  const related = (planned && planned.length ? planned : others.filter(shares).concat(others.filter(x => !shares(x))).slice(0, 6))
     .map(x => `<a href="/rutas/${x.slug}${SUFFIX[lang]}" class="related-link">${x.from[lang]} &rarr; ${x.to[lang]}</a>`).join('\n        ');
   const li = a => a.map(t => `<li>${esc(t)}</li>`).join('\n      ');
   const faq = r.faqs[lang].map(([q, a]) => `

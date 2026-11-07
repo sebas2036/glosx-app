@@ -1,0 +1,1978 @@
+{
+ "tokyo-kyoto": [
+  "kansai-airport-kyoto",
+  "kyoto-fukuchiyama",
+  "kyoto-gifu",
+  "kyoto-kinosaki",
+  "kyoto-nagoya",
+  "kyoto-tsuruga",
+  "kyoto-wakayama",
+  "osaka-kyoto"
+ ],
+ "tokyo-osaka": [
+  "osaka-shin-fuji",
+  "osaka-shirahama",
+  "osaka-toyohashi",
+  "osaka-toyooka",
+  "osaka-tsuruga",
+  "osaka-wakayama",
+  "kansai-airport-osaka",
+  "kansai-airport-tennoji"
+ ],
+ "osaka-kyoto": [
+  "tokyo-kyoto",
+  "kansai-airport-kyoto",
+  "kyoto-fukuchiyama",
+  "kyoto-gifu",
+  "kyoto-kinosaki",
+  "kyoto-nagoya",
+  "kyoto-wakayama",
+  "kyoto-himeji"
+ ],
+ "kyoto-hiroshima": [
+  "hiroshima-fukuyama",
+  "hiroshima-onomichi",
+  "hiroshima-shin-yamaguchi",
+  "osaka-hiroshima",
+  "tokyo-hiroshima",
+  "hiroshima-kokura",
+  "hiroshima-kumamoto",
+  "hiroshima-okayama"
+ ],
+ "narita-tokyo": [
+  "tokyo-yokohama",
+  "asakusa-kinugawa-onsen",
+  "asakusa-nikko",
+  "narita-airport-shinagawa",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko",
+  "shinjuku-kofu",
+  "shinjuku-narita-airport",
+  "utsunomiya-fukushima"
+ ],
+ "tokyo-nagoya": [
+  "nagoya-gifu",
+  "nagoya-hamamatsu",
+  "nagoya-matsumoto",
+  "nagoya-takayama",
+  "nagoya-toyohashi",
+  "osaka-nagoya",
+  "kyoto-nagoya",
+  "nagoya-himeji"
+ ],
+ "tokyo-kanazawa": [
+  "kanazawa-nanao",
+  "kanazawa-fukui",
+  "kanazawa-kaga-onsen",
+  "kanazawa-komatsu",
+  "kanazawa-toyama",
+  "kanazawa-tsuruga",
+  "kanazawa-ueda",
+  "kanazawa-nagano"
+ ],
+ "kansai-airport-kyoto": [
+  "kansai-airport-tennoji",
+  "kansai-airport-osaka",
+  "kyoto-kinosaki",
+  "kyoto-tsuruga",
+  "kyoto-wakayama",
+  "osaka-kyoto",
+  "tokyo-kyoto",
+  "kyoto-fukuchiyama"
+ ],
+ "tokyo-hiroshima": [
+  "hiroshima-fukuoka",
+  "hiroshima-fukuyama",
+  "hiroshima-kokura",
+  "hiroshima-kumamoto",
+  "hiroshima-onomichi",
+  "hiroshima-shin-yamaguchi",
+  "kyoto-hiroshima",
+  "nagoya-hiroshima"
+ ],
+ "tokyo-fukuoka": [
+  "fukuoka-oita",
+  "fukuoka-saga",
+  "fukuoka-takeo-onsen",
+  "fukuoka-yufuin",
+  "fukuoka-beppu",
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-kagoshima"
+ ],
+ "nagoya-takayama": [
+  "takayama-gero",
+  "takayama-gifu",
+  "takayama-hida-furukawa",
+  "nagoya-hiroshima",
+  "nagoya-maibara",
+  "nagoya-matsumoto",
+  "nagoya-okayama",
+  "nagoya-shizuoka"
+ ],
+ "sapporo-otaru": [
+  "sapporo-new-chitose-airport",
+  "sapporo-noboribetsu",
+  "sapporo-obihiro",
+  "sapporo-shin-sapporo",
+  "sapporo-tomakomai",
+  "sapporo-wakkanai",
+  "hakodate-sapporo",
+  "sapporo-asahikawa"
+ ],
+ "tokyo-sendai": [
+  "sendai-fukushima",
+  "sendai-ichinoseki",
+  "sendai-koriyama",
+  "sendai-morioka",
+  "sendai-akita",
+  "sendai-aomori",
+  "sendai-hachinohe",
+  "tokyo-maibara"
+ ],
+ "shinjuku-hakone": [
+  "narita-tokyo",
+  "shinjuku-otsuki",
+  "tokyo-ichinoseki",
+  "tokyo-ito",
+  "tokyo-karuizawa",
+  "tokyo-kobe",
+  "tokyo-matsumoto",
+  "tokyo-mito",
+  "utsunomiya-nasu-shiobara"
+ ],
+ "fukuoka-yufuin": [
+  "beppu-yufuin",
+  "fukuoka-kagoshima",
+  "fukuoka-kokura",
+  "fukuoka-kumamoto",
+  "fukuoka-kurume",
+  "fukuoka-nakatsu",
+  "fukuoka-oita",
+  "fukuoka-saga"
+ ],
+ "aomori-hachinohe": [
+  "tokyo-hachinohe",
+  "aomori-hirosaki",
+  "morioka-hachinohe",
+  "sendai-hachinohe",
+  "aomori-shin-hakodate-hokuto",
+  "tokyo-aomori",
+  "morioka-aomori",
+  "sendai-aomori",
+  "hakodate-shin-hakodate-hokuto"
+ ],
+ "aomori-hirosaki": [
+  "aomori-hachinohe",
+  "morioka-aomori",
+  "sendai-aomori",
+  "tokyo-aomori",
+  "aomori-shin-hakodate-hokuto",
+  "morioka-hachinohe",
+  "morioka-shin-hanamaki",
+  "sendai-morioka"
+ ],
+ "aomori-shin-hakodate-hokuto": [
+  "aomori-hirosaki",
+  "hakodate-shin-hakodate-hokuto",
+  "tokyo-shin-hakodate-hokuto",
+  "aomori-hachinohe",
+  "sendai-aomori",
+  "tokyo-aomori",
+  "morioka-aomori",
+  "tokyo-kanazawa",
+  "hakodate-noboribetsu"
+ ],
+ "asakusa-kinugawa-onsen": [
+  "tokyo-mito",
+  "tokyo-takasaki",
+  "tokyo-yamagata",
+  "asakusa-nikko",
+  "narita-tokyo",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko",
+  "shinjuku-kofu",
+  "narita-airport-yokohama"
+ ],
+ "asakusa-nikko": [
+  "asakusa-kinugawa-onsen",
+  "shinjuku-narita-airport",
+  "shinjuku-otsuki",
+  "tokyo-karuizawa",
+  "tokyo-mito",
+  "tokyo-nagaoka",
+  "tokyo-takasaki",
+  "tokyo-yamagata",
+  "narita-airport-yokohama"
+ ],
+ "atami-ito": [
+  "atami-mishima",
+  "atami-shizuoka",
+  "odawara-atami",
+  "shin-yokohama-atami",
+  "tokyo-atami",
+  "tokyo-ito",
+  "mishima-shin-fuji",
+  "mishima-shizuoka"
+ ],
+ "atami-mishima": [
+  "atami-ito",
+  "atami-shizuoka",
+  "mishima-shin-fuji",
+  "odawara-atami",
+  "shin-yokohama-atami",
+  "shin-yokohama-mishima",
+  "tokyo-mishima",
+  "mishima-shizuoka"
+ ],
+ "atami-shizuoka": [
+  "nagoya-shizuoka",
+  "odawara-shizuoka",
+  "osaka-shizuoka",
+  "tokyo-shizuoka",
+  "atami-ito",
+  "odawara-atami",
+  "shin-yokohama-atami",
+  "tokyo-atami"
+ ],
+ "beppu-kokura": [
+  "hiroshima-kokura",
+  "osaka-kokura",
+  "tokyo-kokura",
+  "beppu-oita",
+  "beppu-yufuin",
+  "fukuoka-kokura",
+  "fukuoka-beppu",
+  "fukuoka-shin-yamaguchi"
+ ],
+ "beppu-oita": [
+  "beppu-kokura",
+  "beppu-yufuin",
+  "fukuoka-beppu",
+  "fukuoka-oita",
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-kagoshima",
+  "fukuoka-kokura"
+ ],
+ "beppu-yufuin": [
+  "beppu-oita",
+  "fukuoka-yufuin",
+  "beppu-kokura",
+  "fukuoka-beppu",
+  "fukuoka-kumamoto",
+  "fukuoka-kurume",
+  "fukuoka-nakatsu",
+  "fukuoka-saga"
+ ],
+ "fukuoka-beppu": [
+  "beppu-kokura",
+  "beppu-oita",
+  "beppu-yufuin",
+  "tokyo-fukuoka",
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-kagoshima",
+  "fukuoka-kokura"
+ ],
+ "fukuoka-hita": [
+  "fukuoka-takeo-onsen",
+  "osaka-fukuoka",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-kagoshima",
+  "fukuoka-kurume",
+  "fukuoka-nakatsu",
+  "fukuoka-oita",
+  "fukuoka-saga",
+  "beppu-oita"
+ ],
+ "fukuoka-huis-ten-bosch": [
+  "fukuoka-hita",
+  "fukuoka-takeo-onsen",
+  "fukuoka-yufuin",
+  "osaka-fukuoka",
+  "tokyo-fukuoka",
+  "fukuoka-kagoshima",
+  "fukuoka-kumamoto",
+  "fukuoka-kurume",
+  "beppu-yufuin"
+ ],
+ "fukuoka-kagoshima": [
+  "osaka-kagoshima",
+  "fukuoka-kurume",
+  "fukuoka-nakatsu",
+  "fukuoka-oita",
+  "fukuoka-saga",
+  "fukuoka-shin-yamaguchi",
+  "fukuoka-takeo-onsen",
+  "fukuoka-yufuin"
+ ],
+ "fukuoka-kokura": [
+  "osaka-kokura",
+  "tokyo-kokura",
+  "beppu-kokura",
+  "hiroshima-kokura",
+  "fukuoka-saga",
+  "fukuoka-shin-yamaguchi",
+  "fukuoka-takeo-onsen",
+  "fukuoka-yufuin"
+ ],
+ "fukuoka-kumamoto": [
+  "osaka-kumamoto",
+  "hiroshima-kumamoto",
+  "fukuoka-shin-yamaguchi",
+  "fukuoka-takeo-onsen",
+  "fukuoka-yufuin",
+  "hiroshima-fukuoka",
+  "okayama-fukuoka",
+  "osaka-fukuoka"
+ ],
+ "fukuoka-kurume": [
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-nakatsu",
+  "fukuoka-oita",
+  "fukuoka-saga",
+  "fukuoka-shin-yamaguchi",
+  "fukuoka-takeo-onsen",
+  "fukuoka-yufuin"
+ ],
+ "fukuoka-nakatsu": [
+  "osaka-fukuoka",
+  "tokyo-fukuoka",
+  "fukuoka-beppu",
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-kagoshima",
+  "fukuoka-kokura",
+  "fukuoka-kumamoto"
+ ],
+ "fukuoka-oita": [
+  "beppu-oita",
+  "hiroshima-fukuoka",
+  "okayama-fukuoka",
+  "osaka-fukuoka",
+  "tokyo-fukuoka",
+  "fukuoka-beppu",
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch"
+ ],
+ "fukuoka-saga": [
+  "fukuoka-kurume",
+  "fukuoka-nakatsu",
+  "fukuoka-oita",
+  "fukuoka-shin-yamaguchi",
+  "fukuoka-takeo-onsen",
+  "fukuoka-yufuin",
+  "okayama-fukuoka",
+  "osaka-fukuoka"
+ ],
+ "fukuoka-shin-yamaguchi": [
+  "osaka-shin-yamaguchi",
+  "tokyo-shin-yamaguchi",
+  "hiroshima-shin-yamaguchi",
+  "fukuoka-beppu",
+  "fukuoka-kumamoto",
+  "fukuoka-kurume",
+  "fukuoka-nakatsu",
+  "fukuoka-oita"
+ ],
+ "fukuoka-takeo-onsen": [
+  "fukuoka-saga",
+  "tokyo-fukuoka",
+  "fukuoka-beppu",
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-kagoshima",
+  "fukuoka-kokura",
+  "fukuoka-kumamoto"
+ ],
+ "hakodate-noboribetsu": [
+  "hakodate-sapporo",
+  "hakodate-shin-hakodate-hokuto",
+  "sapporo-noboribetsu",
+  "aomori-shin-hakodate-hokuto",
+  "sapporo-asahikawa",
+  "sapporo-chitose",
+  "sapporo-kushiro",
+  "sapporo-new-chitose-airport"
+ ],
+ "hakodate-sapporo": [
+  "hakodate-noboribetsu",
+  "hakodate-shin-hakodate-hokuto",
+  "sapporo-noboribetsu",
+  "sapporo-wakkanai",
+  "sapporo-asahikawa",
+  "sapporo-chitose",
+  "sapporo-kushiro",
+  "sapporo-new-chitose-airport"
+ ],
+ "hakodate-shin-hakodate-hokuto": [
+  "hakodate-noboribetsu",
+  "tokyo-shin-hakodate-hokuto",
+  "aomori-shin-hakodate-hokuto",
+  "hakodate-sapporo",
+  "aomori-hachinohe",
+  "aomori-hirosaki",
+  "morioka-aomori",
+  "sapporo-obihiro"
+ ],
+ "hiroshima-fukuoka": [
+  "hiroshima-fukuyama",
+  "hiroshima-himeji",
+  "hiroshima-kokura",
+  "hiroshima-kumamoto",
+  "hiroshima-onomichi",
+  "hiroshima-shin-yamaguchi",
+  "kyoto-hiroshima",
+  "nagoya-hiroshima"
+ ],
+ "hiroshima-fukuyama": [
+  "hiroshima-kumamoto",
+  "hiroshima-onomichi",
+  "nagoya-hiroshima",
+  "osaka-fukuyama",
+  "osaka-hiroshima",
+  "tokyo-hiroshima",
+  "hiroshima-fukuoka",
+  "hiroshima-himeji"
+ ],
+ "hiroshima-himeji": [
+  "osaka-himeji",
+  "nagoya-himeji",
+  "tokyo-himeji",
+  "hiroshima-fukuyama",
+  "hiroshima-kokura",
+  "hiroshima-kumamoto",
+  "hiroshima-okayama",
+  "hiroshima-onomichi"
+ ],
+ "hiroshima-kokura": [
+  "osaka-kokura",
+  "tokyo-kokura",
+  "beppu-kokura",
+  "fukuoka-kokura",
+  "hiroshima-shin-yamaguchi",
+  "osaka-hiroshima",
+  "tokyo-hiroshima",
+  "hiroshima-fukuoka"
+ ],
+ "hiroshima-kumamoto": [
+  "hiroshima-onomichi",
+  "osaka-kumamoto",
+  "fukuoka-kumamoto",
+  "hiroshima-fukuoka",
+  "hiroshima-fukuyama",
+  "hiroshima-himeji",
+  "hiroshima-shin-yamaguchi",
+  "kyoto-hiroshima"
+ ],
+ "hiroshima-okayama": [
+  "okayama-fukuyama",
+  "okayama-kurashiki",
+  "okayama-matsue",
+  "okayama-yonago",
+  "osaka-hiroshima",
+  "osaka-okayama",
+  "tokyo-hiroshima",
+  "tokyo-okayama"
+ ],
+ "hiroshima-onomichi": [
+  "hiroshima-fukuoka",
+  "hiroshima-fukuyama",
+  "hiroshima-himeji",
+  "hiroshima-kumamoto",
+  "hiroshima-shin-yamaguchi",
+  "kyoto-hiroshima",
+  "osaka-hiroshima",
+  "hiroshima-kokura"
+ ],
+ "hiroshima-shin-yamaguchi": [
+  "osaka-shin-yamaguchi",
+  "tokyo-shin-yamaguchi",
+  "fukuoka-shin-yamaguchi",
+  "hiroshima-kokura",
+  "hiroshima-kumamoto",
+  "hiroshima-onomichi",
+  "kyoto-hiroshima",
+  "nagoya-hiroshima"
+ ],
+ "kanazawa-fukui": [
+  "kanazawa-kaga-onsen",
+  "kanazawa-komatsu",
+  "kanazawa-nanao",
+  "kanazawa-tsuruga",
+  "kanazawa-ueda",
+  "kanazawa-nagano",
+  "kanazawa-toyama",
+  "tokyo-kanazawa"
+ ],
+ "kanazawa-kaga-onsen": [
+  "kanazawa-fukui",
+  "kanazawa-komatsu",
+  "kanazawa-nanao",
+  "kanazawa-tsuruga",
+  "kanazawa-ueda",
+  "kanazawa-nagano",
+  "kanazawa-toyama",
+  "tokyo-kanazawa"
+ ],
+ "kanazawa-komatsu": [
+  "kanazawa-kaga-onsen",
+  "kanazawa-fukui",
+  "kanazawa-nanao",
+  "kanazawa-tsuruga",
+  "kanazawa-ueda",
+  "kanazawa-nagano",
+  "kanazawa-toyama",
+  "tokyo-kanazawa"
+ ],
+ "kanazawa-nagano": [
+  "nagano-karuizawa",
+  "nagano-matsumoto",
+  "nagano-ueda",
+  "nagoya-nagano",
+  "tokyo-nagano",
+  "kanazawa-fukui",
+  "kanazawa-kaga-onsen",
+  "kanazawa-komatsu"
+ ],
+ "kanazawa-nanao": [
+  "kanazawa-kaga-onsen",
+  "kanazawa-komatsu",
+  "kanazawa-fukui",
+  "kanazawa-tsuruga",
+  "kanazawa-ueda",
+  "kanazawa-nagano",
+  "kanazawa-toyama",
+  "tokyo-kanazawa"
+ ],
+ "kanazawa-toyama": [
+  "nagoya-toyama",
+  "tokyo-toyama",
+  "takayama-toyama",
+  "kanazawa-kaga-onsen",
+  "kanazawa-komatsu",
+  "kanazawa-nanao",
+  "kanazawa-tsuruga",
+  "nagano-toyama",
+  "takayama-gero"
+ ],
+ "kanazawa-tsuruga": [
+  "kyoto-tsuruga",
+  "osaka-tsuruga",
+  "kanazawa-kaga-onsen",
+  "kanazawa-komatsu",
+  "kanazawa-nanao",
+  "kanazawa-fukui",
+  "kanazawa-ueda",
+  "tokyo-kanazawa"
+ ],
+ "kanazawa-ueda": [
+  "tokyo-ueda",
+  "nagano-ueda",
+  "kanazawa-kaga-onsen",
+  "kanazawa-komatsu",
+  "kanazawa-nanao",
+  "kanazawa-tsuruga",
+  "kanazawa-fukui",
+  "kanazawa-nagano"
+ ],
+ "kansai-airport-osaka": [
+  "osaka-kii-tanabe",
+  "osaka-kinosaki",
+  "osaka-kobe",
+  "osaka-kumamoto",
+  "osaka-maibara",
+  "osaka-shin-fuji",
+  "osaka-shin-yamaguchi",
+  "osaka-shirahama"
+ ],
+ "kansai-airport-tennoji": [
+  "osaka-toyohashi",
+  "osaka-toyooka",
+  "osaka-tsuruga",
+  "osaka-wakayama",
+  "tokyo-osaka",
+  "kansai-airport-osaka",
+  "osaka-fukuchiyama",
+  "osaka-fukuyama"
+ ],
+ "kyoto-fukuchiyama": [
+  "kyoto-himeji",
+  "kyoto-kinosaki",
+  "kyoto-maibara",
+  "kyoto-wakayama",
+  "osaka-fukuchiyama",
+  "osaka-kyoto",
+  "kansai-airport-kyoto",
+  "kyoto-nagoya"
+ ],
+ "kyoto-gifu": [
+  "nagoya-gifu",
+  "kansai-airport-kyoto",
+  "kyoto-himeji",
+  "kyoto-hiroshima",
+  "kyoto-kinosaki",
+  "kyoto-maibara",
+  "kyoto-nagoya",
+  "kyoto-okayama",
+  "takayama-gifu"
+ ],
+ "kyoto-himeji": [
+  "osaka-himeji",
+  "okayama-himeji",
+  "tokyo-himeji",
+  "hiroshima-himeji",
+  "kyoto-maibara",
+  "kyoto-nagoya",
+  "kyoto-okayama",
+  "kyoto-tsuruga"
+ ],
+ "kyoto-kinosaki": [
+  "osaka-kinosaki",
+  "kyoto-fukuchiyama",
+  "kyoto-himeji",
+  "kyoto-maibara",
+  "kyoto-tsuruga",
+  "kyoto-wakayama",
+  "osaka-kyoto",
+  "tokyo-kyoto"
+ ],
+ "kyoto-maibara": [
+  "nagoya-maibara",
+  "osaka-maibara",
+  "tokyo-maibara",
+  "kyoto-tsuruga",
+  "kyoto-gifu",
+  "kyoto-himeji",
+  "kyoto-hiroshima",
+  "kyoto-kinosaki"
+ ],
+ "kyoto-nagoya": [
+  "kyoto-fukuchiyama",
+  "kyoto-gifu",
+  "kyoto-kinosaki",
+  "kyoto-maibara",
+  "kyoto-tsuruga",
+  "kyoto-wakayama",
+  "osaka-kyoto",
+  "shin-yokohama-kyoto",
+  "takayama-hida-furukawa"
+ ],
+ "kyoto-okayama": [
+  "hiroshima-okayama",
+  "okayama-fukuyama",
+  "okayama-kurashiki",
+  "okayama-matsue",
+  "okayama-yonago",
+  "osaka-okayama",
+  "tokyo-okayama",
+  "kansai-airport-kyoto"
+ ],
+ "kyoto-tsuruga": [
+  "osaka-tsuruga",
+  "kyoto-gifu",
+  "kyoto-wakayama",
+  "osaka-kyoto",
+  "shin-yokohama-kyoto",
+  "tokyo-kyoto",
+  "kansai-airport-kyoto",
+  "kyoto-fukuchiyama"
+ ],
+ "kyoto-wakayama": [
+  "osaka-wakayama",
+  "kyoto-kinosaki",
+  "kansai-airport-kyoto",
+  "kyoto-fukuchiyama",
+  "kyoto-gifu",
+  "kyoto-himeji",
+  "kyoto-maibara",
+  "kyoto-nagoya"
+ ],
+ "mishima-shin-fuji": [
+  "osaka-shin-fuji",
+  "shin-yokohama-mishima",
+  "tokyo-mishima",
+  "tokyo-shin-fuji",
+  "atami-mishima",
+  "mishima-shizuoka",
+  "atami-ito",
+  "kansai-airport-osaka"
+ ],
+ "mishima-shizuoka": [
+  "nagoya-shizuoka",
+  "odawara-shizuoka",
+  "osaka-shizuoka",
+  "tokyo-shizuoka",
+  "atami-mishima",
+  "atami-shizuoka",
+  "mishima-shin-fuji",
+  "shin-yokohama-mishima"
+ ],
+ "morioka-akita": [
+  "morioka-shin-hanamaki",
+  "tokyo-morioka",
+  "tokyo-akita",
+  "morioka-hachinohe",
+  "niigata-akita",
+  "sendai-akita",
+  "sendai-morioka",
+  "morioka-aomori",
+  "niigata-joetsu-myoko"
+ ],
+ "morioka-aomori": [
+  "aomori-hirosaki",
+  "morioka-shin-hanamaki",
+  "tokyo-morioka",
+  "aomori-hachinohe",
+  "aomori-shin-hakodate-hokuto",
+  "morioka-akita",
+  "morioka-hachinohe",
+  "tokyo-aomori"
+ ],
+ "morioka-hachinohe": [
+  "morioka-shin-hanamaki",
+  "tokyo-hachinohe",
+  "tokyo-morioka",
+  "aomori-hachinohe",
+  "morioka-akita",
+  "sendai-hachinohe",
+  "sendai-morioka",
+  "morioka-aomori"
+ ],
+ "morioka-shin-hanamaki": [
+  "tokyo-morioka",
+  "morioka-akita",
+  "morioka-hachinohe",
+  "sendai-morioka",
+  "morioka-aomori",
+  "tokyo-hachinohe",
+  "tokyo-hamamatsu",
+  "tokyo-himeji"
+ ],
+ "nagano-karuizawa": [
+  "kanazawa-nagano",
+  "nagano-matsumoto",
+  "nagano-ueda",
+  "nagoya-nagano",
+  "tokyo-karuizawa",
+  "tokyo-nagano",
+  "nagano-toyama",
+  "kanazawa-fukui"
+ ],
+ "nagano-matsumoto": [
+  "nagoya-matsumoto",
+  "tokyo-matsumoto",
+  "nagano-karuizawa",
+  "nagano-ueda",
+  "shinjuku-matsumoto",
+  "nagoya-nagano",
+  "tokyo-nagano",
+  "nagano-toyama"
+ ],
+ "nagano-toyama": [
+  "nagoya-toyama",
+  "tokyo-toyama",
+  "nagano-karuizawa",
+  "nagano-matsumoto",
+  "nagano-ueda",
+  "nagoya-nagano",
+  "takayama-toyama",
+  "tokyo-nagano"
+ ],
+ "nagano-ueda": [
+  "nagano-karuizawa",
+  "tokyo-ueda",
+  "nagano-matsumoto",
+  "nagoya-nagano",
+  "tokyo-nagano",
+  "nagano-toyama",
+  "kanazawa-ueda",
+  "kanazawa-nagano"
+ ],
+ "nagoya-gifu": [
+  "nagoya-toyohashi",
+  "osaka-nagoya",
+  "tokyo-nagoya",
+  "nagoya-hamamatsu",
+  "nagoya-maibara",
+  "nagoya-matsumoto",
+  "nagoya-himeji",
+  "nagoya-hiroshima"
+ ],
+ "nagoya-hamamatsu": [
+  "osaka-hamamatsu",
+  "nagoya-toyohashi",
+  "osaka-nagoya",
+  "tokyo-hamamatsu",
+  "tokyo-nagoya",
+  "nagoya-maibara",
+  "nagoya-matsumoto",
+  "nagoya-gifu"
+ ],
+ "nagoya-himeji": [
+  "osaka-himeji",
+  "nagoya-toyama",
+  "okayama-himeji",
+  "tokyo-himeji",
+  "hiroshima-himeji",
+  "kyoto-himeji",
+  "nagoya-hamamatsu",
+  "nagoya-hiroshima"
+ ],
+ "nagoya-hiroshima": [
+  "hiroshima-fukuyama",
+  "hiroshima-onomichi",
+  "hiroshima-shin-yamaguchi",
+  "kyoto-hiroshima",
+  "osaka-hiroshima",
+  "tokyo-hiroshima",
+  "tokyo-nagoya",
+  "hiroshima-fukuoka"
+ ],
+ "nagoya-maibara": [
+  "osaka-maibara",
+  "tokyo-maibara",
+  "nagoya-toyohashi",
+  "nagoya-hamamatsu",
+  "nagoya-shizuoka",
+  "nagoya-toyama",
+  "osaka-nagoya",
+  "shin-yokohama-nagoya"
+ ],
+ "nagoya-matsumoto": [
+  "tokyo-matsumoto",
+  "shinjuku-matsumoto",
+  "nagoya-toyohashi",
+  "tokyo-nagoya",
+  "nagano-matsumoto",
+  "nagoya-gifu",
+  "nagoya-hamamatsu",
+  "nagoya-himeji"
+ ],
+ "nagoya-nagano": [
+  "nagano-karuizawa",
+  "nagano-matsumoto",
+  "nagano-ueda",
+  "nagoya-okayama",
+  "nagoya-shizuoka",
+  "nagoya-takayama",
+  "nagoya-toyama",
+  "nagoya-toyohashi"
+ ],
+ "nagoya-okayama": [
+  "kyoto-okayama",
+  "okayama-fukuyama",
+  "okayama-himeji",
+  "okayama-kurashiki",
+  "okayama-matsue",
+  "okayama-yonago",
+  "osaka-okayama",
+  "shin-yokohama-nagoya"
+ ],
+ "nagoya-shizuoka": [
+  "osaka-shizuoka",
+  "tokyo-shizuoka",
+  "atami-shizuoka",
+  "mishima-shizuoka",
+  "odawara-shizuoka",
+  "nagoya-himeji",
+  "nagoya-maibara",
+  "nagoya-matsumoto"
+ ],
+ "nagoya-toyama": [
+  "tokyo-toyama",
+  "nagoya-takayama",
+  "nagoya-toyohashi",
+  "osaka-nagoya",
+  "shin-yokohama-nagoya",
+  "tokyo-nagoya",
+  "kyoto-nagoya",
+  "nagoya-gifu"
+ ],
+ "nagoya-toyohashi": [
+  "osaka-toyohashi",
+  "tokyo-toyohashi",
+  "nagoya-hamamatsu",
+  "osaka-nagoya",
+  "tokyo-nagoya",
+  "nagoya-maibara",
+  "nagoya-matsumoto",
+  "nagoya-okayama"
+ ],
+ "narita-airport-shinagawa": [
+  "narita-airport-yokohama",
+  "shinjuku-narita-airport",
+  "shinjuku-otsuki",
+  "tokyo-akita",
+  "tokyo-atami",
+  "tokyo-fukushima",
+  "tokyo-fukuyama",
+  "tokyo-hachinohe",
+  "niigata-murakami"
+ ],
+ "narita-airport-yokohama": [
+  "shinjuku-narita-airport",
+  "tokyo-yokohama",
+  "narita-airport-shinagawa",
+  "shinjuku-kawaguchiko",
+  "shinjuku-kofu",
+  "shinjuku-matsumoto",
+  "shinjuku-odawara",
+  "shinjuku-otsuki"
+ ],
+ "niigata-akita": [
+  "sendai-akita",
+  "tokyo-akita",
+  "morioka-akita",
+  "niigata-joetsu-myoko",
+  "niigata-murakami",
+  "niigata-nagaoka",
+  "tokyo-niigata",
+  "tokyo-kobe"
+ ],
+ "niigata-joetsu-myoko": [
+  "niigata-akita",
+  "niigata-murakami",
+  "niigata-nagaoka",
+  "tokyo-niigata",
+  "morioka-akita",
+  "sendai-akita",
+  "tokyo-akita",
+  "tokyo-aomori"
+ ],
+ "niigata-murakami": [
+  "niigata-joetsu-myoko",
+  "niigata-akita",
+  "niigata-nagaoka",
+  "tokyo-niigata",
+  "tokyo-atami",
+  "tokyo-fukuoka",
+  "tokyo-fukushima",
+  "tokyo-fukuyama"
+ ],
+ "niigata-nagaoka": [
+  "tokyo-nagaoka",
+  "niigata-joetsu-myoko",
+  "niigata-murakami",
+  "niigata-akita",
+  "tokyo-niigata",
+  "tokyo-hiroshima",
+  "tokyo-ichinoseki",
+  "tokyo-ito"
+ ],
+ "odawara-atami": [
+  "osaka-odawara",
+  "shin-yokohama-odawara",
+  "tokyo-odawara",
+  "shinjuku-odawara",
+  "odawara-shizuoka",
+  "atami-ito",
+  "atami-mishima",
+  "atami-shizuoka"
+ ],
+ "odawara-shizuoka": [
+  "osaka-odawara",
+  "shin-yokohama-odawara",
+  "tokyo-odawara",
+  "nagoya-shizuoka",
+  "osaka-shizuoka",
+  "shinjuku-odawara",
+  "tokyo-shizuoka",
+  "mishima-shizuoka"
+ ],
+ "okayama-fukuoka": [
+  "tokyo-okayama",
+  "hiroshima-okayama",
+  "kyoto-okayama",
+  "nagoya-okayama",
+  "okayama-fukuyama",
+  "okayama-himeji",
+  "okayama-kurashiki",
+  "okayama-matsue"
+ ],
+ "okayama-fukuyama": [
+  "osaka-fukuyama",
+  "okayama-yonago",
+  "tokyo-fukuyama",
+  "hiroshima-fukuyama",
+  "okayama-fukuoka",
+  "okayama-himeji",
+  "okayama-kurashiki",
+  "okayama-matsue"
+ ],
+ "okayama-himeji": [
+  "osaka-himeji",
+  "nagoya-himeji",
+  "tokyo-himeji",
+  "okayama-fukuyama",
+  "okayama-yonago",
+  "osaka-okayama",
+  "tokyo-okayama",
+  "hiroshima-himeji"
+ ],
+ "okayama-kurashiki": [
+  "hiroshima-okayama",
+  "kyoto-okayama",
+  "nagoya-okayama",
+  "okayama-fukuoka",
+  "okayama-fukuyama",
+  "okayama-himeji",
+  "okayama-matsue",
+  "okayama-yonago"
+ ],
+ "okayama-matsue": [
+  "okayama-kurashiki",
+  "osaka-okayama",
+  "tokyo-okayama",
+  "hiroshima-okayama",
+  "kyoto-okayama",
+  "nagoya-okayama",
+  "okayama-fukuoka",
+  "okayama-fukuyama"
+ ],
+ "okayama-yonago": [
+  "okayama-himeji",
+  "okayama-kurashiki",
+  "okayama-matsue",
+  "osaka-okayama",
+  "tokyo-okayama",
+  "hiroshima-okayama",
+  "kyoto-okayama",
+  "nagoya-okayama"
+ ],
+ "osaka-fukuchiyama": [
+  "kansai-airport-tennoji",
+  "osaka-hamamatsu",
+  "osaka-kagoshima",
+  "osaka-kii-tanabe",
+  "osaka-kinosaki",
+  "osaka-kobe",
+  "osaka-kokura",
+  "osaka-kumamoto"
+ ],
+ "osaka-fukuoka": [
+  "tokyo-fukuoka",
+  "fukuoka-beppu",
+  "fukuoka-hita",
+  "fukuoka-huis-ten-bosch",
+  "fukuoka-kagoshima",
+  "fukuoka-kumamoto",
+  "fukuoka-kurume",
+  "fukuoka-nakatsu"
+ ],
+ "osaka-fukuyama": [
+  "tokyo-fukuyama",
+  "osaka-kagoshima",
+  "osaka-kii-tanabe",
+  "osaka-kinosaki",
+  "osaka-kobe",
+  "osaka-kokura",
+  "osaka-kumamoto",
+  "osaka-kyoto"
+ ],
+ "osaka-hamamatsu": [
+  "tokyo-hamamatsu",
+  "osaka-wakayama",
+  "tokyo-osaka",
+  "kansai-airport-osaka",
+  "kansai-airport-tennoji",
+  "osaka-fukuchiyama",
+  "osaka-fukuyama",
+  "osaka-himeji"
+ ],
+ "osaka-himeji": [
+  "tokyo-himeji",
+  "kyoto-himeji",
+  "nagoya-himeji",
+  "hiroshima-himeji",
+  "okayama-himeji",
+  "osaka-fukuchiyama",
+  "osaka-fukuoka",
+  "osaka-fukuyama"
+ ],
+ "osaka-hiroshima": [
+  "tokyo-hiroshima",
+  "hiroshima-fukuoka",
+  "hiroshima-fukuyama",
+  "hiroshima-kumamoto",
+  "hiroshima-onomichi",
+  "hiroshima-shin-yamaguchi",
+  "kyoto-hiroshima",
+  "nagoya-hiroshima"
+ ],
+ "osaka-kagoshima": [
+  "osaka-maibara",
+  "osaka-odawara",
+  "osaka-shin-fuji",
+  "osaka-shin-yamaguchi",
+  "osaka-shirahama",
+  "osaka-toyohashi",
+  "osaka-toyooka",
+  "osaka-tsuruga"
+ ],
+ "osaka-kii-tanabe": [
+  "osaka-kobe",
+  "osaka-shirahama",
+  "osaka-toyooka",
+  "tokyo-osaka",
+  "kansai-airport-tennoji",
+  "osaka-fukuchiyama",
+  "osaka-hamamatsu",
+  "osaka-kagoshima"
+ ],
+ "osaka-kinosaki": [
+  "osaka-wakayama",
+  "tokyo-osaka",
+  "kansai-airport-osaka",
+  "kansai-airport-tennoji",
+  "osaka-fukuchiyama",
+  "osaka-fukuyama",
+  "osaka-hamamatsu",
+  "osaka-himeji"
+ ],
+ "osaka-kobe": [
+  "tokyo-kobe",
+  "osaka-kagoshima",
+  "osaka-kii-tanabe",
+  "osaka-kinosaki",
+  "osaka-kokura",
+  "osaka-kumamoto",
+  "osaka-maibara",
+  "osaka-odawara"
+ ],
+ "osaka-kokura": [
+  "tokyo-kokura",
+  "beppu-kokura",
+  "shin-yokohama-osaka",
+  "tokyo-osaka",
+  "fukuoka-kokura",
+  "hiroshima-kokura",
+  "kansai-airport-osaka",
+  "kansai-airport-tennoji"
+ ],
+ "osaka-kumamoto": [
+  "osaka-hamamatsu",
+  "osaka-kagoshima",
+  "osaka-kii-tanabe",
+  "osaka-kinosaki",
+  "osaka-kobe",
+  "osaka-kokura",
+  "osaka-maibara",
+  "osaka-odawara"
+ ],
+ "osaka-maibara": [
+  "tokyo-maibara",
+  "kyoto-maibara",
+  "nagoya-maibara",
+  "osaka-nagoya",
+  "osaka-odawara",
+  "osaka-okayama",
+  "osaka-shin-fuji",
+  "osaka-shin-yamaguchi"
+ ],
+ "osaka-nagoya": [
+  "nagoya-gifu",
+  "nagoya-hamamatsu",
+  "nagoya-matsumoto",
+  "nagoya-nagano",
+  "nagoya-takayama",
+  "nagoya-toyama",
+  "nagoya-toyohashi",
+  "tokyo-nagoya"
+ ],
+ "osaka-odawara": [
+  "tokyo-odawara",
+  "odawara-atami",
+  "shinjuku-odawara",
+  "odawara-shizuoka",
+  "shin-yokohama-odawara",
+  "osaka-hamamatsu",
+  "osaka-himeji",
+  "osaka-hiroshima"
+ ],
+ "osaka-okayama": [
+  "okayama-fukuoka",
+  "okayama-yonago",
+  "tokyo-okayama",
+  "hiroshima-okayama",
+  "kyoto-okayama",
+  "nagoya-okayama",
+  "okayama-fukuyama",
+  "okayama-kurashiki"
+ ],
+ "osaka-shin-fuji": [
+  "tokyo-shin-fuji",
+  "mishima-shin-fuji",
+  "osaka-kumamoto",
+  "osaka-shin-yamaguchi",
+  "osaka-shirahama",
+  "osaka-shizuoka",
+  "osaka-toyohashi",
+  "osaka-toyooka"
+ ],
+ "osaka-shin-yamaguchi": [
+  "tokyo-shin-yamaguchi",
+  "osaka-maibara",
+  "osaka-shirahama",
+  "osaka-shizuoka",
+  "osaka-toyohashi",
+  "osaka-toyooka",
+  "osaka-tsuruga",
+  "osaka-wakayama"
+ ],
+ "osaka-shirahama": [
+  "osaka-kii-tanabe",
+  "osaka-kinosaki",
+  "osaka-kobe",
+  "osaka-shin-fuji",
+  "osaka-toyohashi",
+  "osaka-toyooka",
+  "osaka-wakayama",
+  "tokyo-osaka"
+ ],
+ "osaka-shizuoka": [
+  "tokyo-shizuoka",
+  "atami-shizuoka",
+  "mishima-shizuoka",
+  "nagoya-shizuoka",
+  "odawara-shizuoka",
+  "osaka-kagoshima",
+  "osaka-kii-tanabe",
+  "osaka-kinosaki"
+ ],
+ "osaka-toyohashi": [
+  "tokyo-toyohashi",
+  "osaka-shin-fuji",
+  "osaka-tsuruga",
+  "osaka-wakayama",
+  "shin-yokohama-osaka",
+  "tokyo-osaka",
+  "kansai-airport-osaka",
+  "kansai-airport-tennoji"
+ ],
+ "osaka-toyooka": [
+  "osaka-kii-tanabe",
+  "osaka-shirahama",
+  "kansai-airport-osaka",
+  "kansai-airport-tennoji",
+  "osaka-fukuchiyama",
+  "osaka-fukuyama",
+  "osaka-hamamatsu",
+  "osaka-kagoshima"
+ ],
+ "osaka-tsuruga": [
+  "kanazawa-tsuruga",
+  "kyoto-tsuruga",
+  "osaka-fukuchiyama",
+  "osaka-fukuoka",
+  "osaka-fukuyama",
+  "osaka-hamamatsu",
+  "osaka-himeji",
+  "osaka-hiroshima"
+ ],
+ "osaka-wakayama": [
+  "osaka-kobe",
+  "osaka-shin-fuji",
+  "osaka-shin-yamaguchi",
+  "osaka-shirahama",
+  "osaka-shizuoka",
+  "osaka-toyohashi",
+  "osaka-toyooka",
+  "osaka-tsuruga"
+ ],
+ "sapporo-asahikawa": [
+  "sapporo-otaru",
+  "sapporo-shin-sapporo",
+  "sapporo-tomakomai",
+  "sapporo-wakkanai",
+  "sapporo-chitose",
+  "sapporo-kushiro",
+  "sapporo-new-chitose-airport",
+  "sapporo-noboribetsu",
+  "hakodate-noboribetsu"
+ ],
+ "sapporo-chitose": [
+  "sapporo-asahikawa",
+  "sapporo-obihiro",
+  "sapporo-otaru",
+  "sapporo-shin-sapporo",
+  "sapporo-tomakomai",
+  "sapporo-wakkanai",
+  "hakodate-sapporo",
+  "sapporo-kushiro"
+ ],
+ "sapporo-kushiro": [
+  "sapporo-asahikawa",
+  "sapporo-chitose",
+  "sapporo-new-chitose-airport",
+  "sapporo-noboribetsu",
+  "sapporo-obihiro",
+  "sapporo-otaru",
+  "sapporo-shin-sapporo",
+  "sapporo-tomakomai"
+ ],
+ "sapporo-new-chitose-airport": [
+  "sapporo-wakkanai",
+  "hakodate-sapporo",
+  "sapporo-asahikawa",
+  "sapporo-chitose",
+  "sapporo-kushiro",
+  "sapporo-noboribetsu",
+  "sapporo-obihiro",
+  "sapporo-otaru"
+ ],
+ "sapporo-noboribetsu": [
+  "hakodate-noboribetsu",
+  "sapporo-wakkanai",
+  "sapporo-new-chitose-airport",
+  "sapporo-obihiro",
+  "sapporo-otaru",
+  "sapporo-shin-sapporo",
+  "sapporo-tomakomai",
+  "hakodate-sapporo"
+ ],
+ "sapporo-obihiro": [
+  "sapporo-new-chitose-airport",
+  "sapporo-shin-sapporo",
+  "sapporo-tomakomai",
+  "sapporo-wakkanai",
+  "hakodate-sapporo",
+  "sapporo-asahikawa",
+  "sapporo-chitose",
+  "sapporo-kushiro"
+ ],
+ "sapporo-shin-sapporo": [
+  "sapporo-otaru",
+  "sapporo-chitose",
+  "sapporo-kushiro",
+  "sapporo-new-chitose-airport",
+  "sapporo-noboribetsu",
+  "sapporo-obihiro",
+  "sapporo-tomakomai",
+  "sapporo-wakkanai"
+ ],
+ "sapporo-tomakomai": [
+  "sapporo-otaru",
+  "sapporo-shin-sapporo",
+  "hakodate-sapporo",
+  "sapporo-asahikawa",
+  "sapporo-chitose",
+  "sapporo-kushiro",
+  "sapporo-new-chitose-airport",
+  "sapporo-noboribetsu"
+ ],
+ "sapporo-wakkanai": [
+  "sapporo-obihiro",
+  "sapporo-otaru",
+  "sapporo-shin-sapporo",
+  "sapporo-tomakomai",
+  "hakodate-sapporo",
+  "sapporo-asahikawa",
+  "sapporo-chitose",
+  "sapporo-kushiro"
+ ],
+ "sendai-akita": [
+  "sendai-ichinoseki",
+  "sendai-koriyama",
+  "tokyo-akita",
+  "tokyo-sendai",
+  "niigata-akita",
+  "sendai-fukushima",
+  "morioka-akita",
+  "sendai-hachinohe"
+ ],
+ "sendai-aomori": [
+  "aomori-hirosaki",
+  "aomori-shin-hakodate-hokuto",
+  "sendai-ichinoseki",
+  "sendai-koriyama",
+  "tokyo-aomori",
+  "tokyo-sendai",
+  "aomori-hachinohe",
+  "sendai-fukushima"
+ ],
+ "sendai-fukushima": [
+  "utsunomiya-fukushima",
+  "sendai-ichinoseki",
+  "sendai-koriyama",
+  "tokyo-fukushima",
+  "tokyo-sendai",
+  "sendai-akita",
+  "sendai-hachinohe",
+  "sendai-aomori",
+  "utsunomiya-nasu-shiobara"
+ ],
+ "sendai-hachinohe": [
+  "tokyo-hachinohe",
+  "sendai-ichinoseki",
+  "sendai-koriyama",
+  "tokyo-sendai",
+  "aomori-hachinohe",
+  "morioka-hachinohe",
+  "sendai-fukushima",
+  "sendai-akita"
+ ],
+ "sendai-ichinoseki": [
+  "sendai-koriyama",
+  "tokyo-ichinoseki",
+  "tokyo-sendai",
+  "sendai-fukushima",
+  "sendai-akita",
+  "sendai-hachinohe",
+  "sendai-aomori",
+  "sendai-morioka"
+ ],
+ "sendai-koriyama": [
+  "tokyo-sendai",
+  "sendai-hachinohe",
+  "sendai-ichinoseki",
+  "sendai-akita",
+  "sendai-fukushima",
+  "sendai-morioka",
+  "sendai-aomori",
+  "tokyo-kyoto"
+ ],
+ "sendai-morioka": [
+  "morioka-shin-hanamaki",
+  "tokyo-morioka",
+  "morioka-akita",
+  "morioka-hachinohe",
+  "sendai-ichinoseki",
+  "sendai-koriyama",
+  "tokyo-sendai",
+  "morioka-aomori"
+ ],
+ "shinjuku-kawaguchiko": [
+  "tokyo-nagaoka",
+  "tokyo-shin-fuji",
+  "tokyo-shin-hakodate-hokuto",
+  "tokyo-takasaki",
+  "tokyo-toyohashi",
+  "tokyo-ueda",
+  "tokyo-utsunomiya",
+  "tokyo-yamagata",
+  "utsunomiya-nasu-shiobara"
+ ],
+ "shinjuku-kofu": [
+  "tokyo-yokohama",
+  "asakusa-kinugawa-onsen",
+  "asakusa-nikko",
+  "narita-airport-shinagawa",
+  "narita-tokyo",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko",
+  "shinjuku-matsumoto"
+ ],
+ "shinjuku-matsumoto": [
+  "tokyo-nagaoka",
+  "tokyo-niigata",
+  "tokyo-odawara",
+  "tokyo-shin-fuji",
+  "tokyo-shin-hakodate-hokuto",
+  "tokyo-shin-yamaguchi",
+  "tokyo-shizuoka",
+  "tokyo-takasaki"
+ ],
+ "shinjuku-narita-airport": [
+  "narita-airport-yokohama",
+  "tokyo-hamamatsu",
+  "tokyo-ichinoseki",
+  "tokyo-ito",
+  "tokyo-karuizawa",
+  "tokyo-kobe",
+  "tokyo-kokura",
+  "tokyo-maibara"
+ ],
+ "shinjuku-odawara": [
+  "odawara-atami",
+  "odawara-shizuoka",
+  "osaka-odawara",
+  "shin-yokohama-odawara",
+  "tokyo-mito",
+  "tokyo-morioka",
+  "tokyo-nagano",
+  "tokyo-nagaoka"
+ ],
+ "shinjuku-otsuki": [
+  "shinjuku-kofu",
+  "shinjuku-narita-airport",
+  "tokyo-fukushima",
+  "tokyo-fukuyama",
+  "tokyo-hamamatsu",
+  "tokyo-ichinoseki",
+  "tokyo-ito",
+  "tokyo-karuizawa"
+ ],
+ "shin-yokohama-atami": [
+  "shin-yokohama-kyoto",
+  "shin-yokohama-nagoya",
+  "shin-yokohama-osaka",
+  "tokyo-shin-yokohama",
+  "odawara-atami",
+  "shin-yokohama-mishima",
+  "shin-yokohama-odawara",
+  "tokyo-atami"
+ ],
+ "shin-yokohama-kyoto": [
+  "shin-yokohama-osaka",
+  "tokyo-shin-yokohama",
+  "kyoto-wakayama",
+  "osaka-kyoto",
+  "shin-yokohama-atami",
+  "shin-yokohama-mishima",
+  "shin-yokohama-odawara",
+  "tokyo-kyoto"
+ ],
+ "shin-yokohama-mishima": [
+  "shin-yokohama-kyoto",
+  "shin-yokohama-nagoya",
+  "shin-yokohama-osaka",
+  "tokyo-shin-yokohama",
+  "shin-yokohama-odawara",
+  "tokyo-mishima",
+  "mishima-shin-fuji",
+  "shin-yokohama-atami"
+ ],
+ "shin-yokohama-nagoya": [
+  "shin-yokohama-kyoto",
+  "shin-yokohama-osaka",
+  "tokyo-shin-yokohama",
+  "nagoya-nagano",
+  "osaka-nagoya",
+  "shin-yokohama-atami",
+  "shin-yokohama-mishima",
+  "shin-yokohama-odawara"
+ ],
+ "shin-yokohama-odawara": [
+  "osaka-odawara",
+  "shin-yokohama-kyoto",
+  "shin-yokohama-nagoya",
+  "shin-yokohama-osaka",
+  "tokyo-odawara",
+  "tokyo-shin-yokohama",
+  "odawara-shizuoka",
+  "shinjuku-odawara"
+ ],
+ "shin-yokohama-osaka": [
+  "tokyo-shin-yokohama",
+  "shin-yokohama-atami",
+  "shin-yokohama-kyoto",
+  "shin-yokohama-mishima",
+  "shin-yokohama-nagoya",
+  "osaka-kobe",
+  "osaka-kokura",
+  "osaka-kumamoto"
+ ],
+ "takayama-gero": [
+  "nagoya-takayama",
+  "takayama-gifu",
+  "takayama-hida-furukawa",
+  "takayama-toyama",
+  "kanazawa-toyama",
+  "kyoto-gifu",
+  "kyoto-nagoya",
+  "nagano-toyama"
+ ],
+ "takayama-gifu": [
+  "kyoto-gifu",
+  "nagoya-gifu",
+  "takayama-gero",
+  "takayama-hida-furukawa",
+  "nagoya-takayama",
+  "takayama-toyama",
+  "kansai-airport-kyoto",
+  "kyoto-fukuchiyama"
+ ],
+ "takayama-hida-furukawa": [
+  "takayama-gero",
+  "nagoya-takayama",
+  "takayama-gifu",
+  "takayama-toyama",
+  "nagoya-gifu",
+  "nagoya-hamamatsu",
+  "nagoya-himeji",
+  "nagoya-hiroshima"
+ ],
+ "takayama-toyama": [
+  "nagoya-toyama",
+  "tokyo-toyama",
+  "takayama-gero",
+  "takayama-gifu",
+  "takayama-hida-furukawa",
+  "nagano-toyama",
+  "nagoya-takayama",
+  "kanazawa-toyama"
+ ],
+ "tokyo-akita": [
+  "niigata-akita",
+  "tokyo-utsunomiya",
+  "morioka-akita",
+  "narita-tokyo",
+  "sendai-akita",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko",
+  "shinjuku-kofu"
+ ],
+ "tokyo-aomori": [
+  "aomori-hirosaki",
+  "aomori-shin-hakodate-hokuto",
+  "sendai-aomori",
+  "aomori-hachinohe",
+  "morioka-aomori",
+  "shinjuku-narita-airport",
+  "shinjuku-odawara",
+  "shinjuku-otsuki"
+ ],
+ "tokyo-atami": [
+  "atami-ito",
+  "atami-mishima",
+  "atami-shizuoka",
+  "odawara-atami",
+  "shin-yokohama-atami",
+  "tokyo-akita",
+  "tokyo-aomori",
+  "tokyo-fukuoka"
+ ],
+ "tokyo-fukushima": [
+  "utsunomiya-fukushima",
+  "tokyo-toyama",
+  "tokyo-toyohashi",
+  "tokyo-ueda",
+  "tokyo-utsunomiya",
+  "tokyo-yamagata",
+  "tokyo-yokohama",
+  "asakusa-kinugawa-onsen"
+ ],
+ "tokyo-fukuyama": [
+  "shinjuku-matsumoto",
+  "shinjuku-narita-airport",
+  "shinjuku-odawara",
+  "shinjuku-otsuki",
+  "tokyo-akita",
+  "tokyo-aomori",
+  "tokyo-atami",
+  "tokyo-fukuoka"
+ ],
+ "tokyo-hachinohe": [
+  "aomori-hachinohe",
+  "morioka-hachinohe",
+  "sendai-hachinohe",
+  "tokyo-fukushima",
+  "tokyo-fukuyama",
+  "tokyo-hamamatsu",
+  "tokyo-himeji",
+  "tokyo-hiroshima"
+ ],
+ "tokyo-hamamatsu": [
+  "asakusa-nikko",
+  "narita-airport-shinagawa",
+  "narita-tokyo",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko",
+  "shinjuku-kofu",
+  "shinjuku-matsumoto",
+  "shinjuku-narita-airport"
+ ],
+ "tokyo-himeji": [
+  "nagoya-himeji",
+  "hiroshima-himeji",
+  "kyoto-himeji",
+  "okayama-himeji",
+  "osaka-himeji",
+  "tokyo-atami",
+  "tokyo-fukushima",
+  "tokyo-fukuyama"
+ ],
+ "tokyo-ichinoseki": [
+  "tokyo-matsumoto",
+  "tokyo-mishima",
+  "tokyo-mito",
+  "tokyo-nagaoka",
+  "tokyo-niigata",
+  "tokyo-odawara",
+  "tokyo-shin-fuji",
+  "tokyo-shin-hakodate-hokuto"
+ ],
+ "tokyo-ito": [
+  "atami-ito",
+  "tokyo-shin-yamaguchi",
+  "tokyo-takasaki",
+  "tokyo-toyama",
+  "tokyo-toyohashi",
+  "tokyo-ueda",
+  "tokyo-utsunomiya",
+  "tokyo-yamagata"
+ ],
+ "tokyo-karuizawa": [
+  "tokyo-yokohama",
+  "asakusa-kinugawa-onsen",
+  "asakusa-nikko",
+  "nagano-karuizawa",
+  "narita-airport-shinagawa",
+  "narita-tokyo",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko"
+ ],
+ "tokyo-kobe": [
+  "shinjuku-kofu",
+  "shinjuku-matsumoto",
+  "shinjuku-narita-airport",
+  "shinjuku-odawara",
+  "shinjuku-otsuki",
+  "tokyo-akita",
+  "tokyo-atami",
+  "tokyo-fukushima"
+ ],
+ "tokyo-kokura": [
+  "beppu-kokura",
+  "tokyo-nagoya",
+  "tokyo-niigata",
+  "tokyo-odawara",
+  "tokyo-okayama",
+  "tokyo-osaka",
+  "tokyo-sendai",
+  "tokyo-shin-fuji"
+ ],
+ "tokyo-maibara": [
+  "kyoto-maibara",
+  "nagoya-maibara",
+  "osaka-maibara",
+  "tokyo-hachinohe",
+  "tokyo-ichinoseki",
+  "tokyo-ito",
+  "tokyo-kanazawa",
+  "tokyo-karuizawa"
+ ],
+ "tokyo-matsumoto": [
+  "nagano-matsumoto",
+  "shinjuku-odawara",
+  "shinjuku-otsuki",
+  "tokyo-akita",
+  "tokyo-aomori",
+  "tokyo-atami",
+  "tokyo-fukushima",
+  "tokyo-fukuyama"
+ ],
+ "tokyo-mishima": [
+  "atami-mishima",
+  "mishima-shin-fuji",
+  "mishima-shizuoka",
+  "shin-yokohama-mishima",
+  "tokyo-shin-hakodate-hokuto",
+  "tokyo-shin-yamaguchi",
+  "tokyo-shin-yokohama",
+  "tokyo-shizuoka"
+ ],
+ "tokyo-mito": [
+  "shinjuku-otsuki",
+  "tokyo-kobe",
+  "tokyo-maibara",
+  "tokyo-matsumoto",
+  "tokyo-mishima",
+  "tokyo-nagaoka",
+  "tokyo-shin-fuji",
+  "tokyo-shin-hakodate-hokuto"
+ ],
+ "tokyo-morioka": [
+  "morioka-shin-hanamaki",
+  "sendai-morioka",
+  "morioka-akita",
+  "morioka-hachinohe",
+  "tokyo-hachinohe",
+  "tokyo-hamamatsu",
+  "tokyo-himeji",
+  "tokyo-hiroshima"
+ ],
+ "tokyo-nagano": [
+  "nagano-karuizawa",
+  "kanazawa-nagano",
+  "nagano-matsumoto",
+  "nagano-toyama",
+  "nagano-ueda",
+  "nagoya-nagano",
+  "tokyo-karuizawa",
+  "tokyo-kobe"
+ ],
+ "tokyo-nagaoka": [
+  "niigata-nagaoka",
+  "tokyo-fukuyama",
+  "tokyo-hachinohe",
+  "tokyo-hamamatsu",
+  "tokyo-ichinoseki",
+  "tokyo-ito",
+  "tokyo-karuizawa",
+  "tokyo-kobe"
+ ],
+ "tokyo-niigata": [
+  "niigata-joetsu-myoko",
+  "niigata-murakami",
+  "niigata-nagaoka",
+  "niigata-akita",
+  "tokyo-takasaki",
+  "tokyo-toyama",
+  "tokyo-toyohashi",
+  "tokyo-ueda"
+ ],
+ "tokyo-odawara": [
+  "odawara-atami",
+  "tokyo-utsunomiya",
+  "tokyo-yamagata",
+  "tokyo-yokohama",
+  "asakusa-kinugawa-onsen",
+  "asakusa-nikko",
+  "narita-airport-shinagawa",
+  "narita-tokyo"
+ ],
+ "tokyo-okayama": [
+  "okayama-fukuoka",
+  "okayama-matsue",
+  "okayama-yonago",
+  "osaka-okayama",
+  "hiroshima-okayama",
+  "kyoto-okayama",
+  "nagoya-okayama",
+  "okayama-fukuyama"
+ ],
+ "tokyo-shin-fuji": [
+  "mishima-shin-fuji",
+  "tokyo-hachinohe",
+  "tokyo-hamamatsu",
+  "tokyo-himeji",
+  "tokyo-ichinoseki",
+  "tokyo-ito",
+  "tokyo-kanazawa",
+  "tokyo-karuizawa"
+ ],
+ "tokyo-shin-hakodate-hokuto": [
+  "hakodate-shin-hakodate-hokuto",
+  "aomori-shin-hakodate-hokuto",
+  "tokyo-kobe",
+  "tokyo-kokura",
+  "tokyo-kyoto",
+  "tokyo-maibara",
+  "tokyo-matsumoto",
+  "tokyo-mishima"
+ ],
+ "tokyo-shin-yamaguchi": [
+  "fukuoka-shin-yamaguchi",
+  "osaka-shin-yamaguchi",
+  "tokyo-kobe",
+  "tokyo-kokura",
+  "tokyo-kyoto",
+  "tokyo-maibara",
+  "tokyo-matsumoto",
+  "tokyo-mishima"
+ ],
+ "tokyo-shin-yokohama": [
+  "shin-yokohama-kyoto",
+  "shin-yokohama-nagoya",
+  "shin-yokohama-osaka",
+  "shin-yokohama-atami",
+  "shin-yokohama-mishima",
+  "shin-yokohama-odawara",
+  "tokyo-kokura",
+  "tokyo-kyoto"
+ ],
+ "tokyo-shizuoka": [
+  "atami-shizuoka",
+  "mishima-shizuoka",
+  "nagoya-shizuoka",
+  "osaka-shizuoka",
+  "odawara-shizuoka",
+  "tokyo-ichinoseki",
+  "tokyo-ito",
+  "tokyo-kanazawa"
+ ],
+ "tokyo-takasaki": [
+  "tokyo-mito",
+  "tokyo-shin-yamaguchi",
+  "tokyo-toyohashi",
+  "tokyo-ueda",
+  "tokyo-utsunomiya",
+  "tokyo-yamagata",
+  "tokyo-yokohama",
+  "asakusa-kinugawa-onsen"
+ ],
+ "tokyo-toyama": [
+  "takayama-toyama",
+  "kanazawa-toyama",
+  "nagano-toyama",
+  "nagoya-toyama",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko",
+  "shinjuku-kofu",
+  "shinjuku-matsumoto"
+ ],
+ "tokyo-toyohashi": [
+  "tokyo-mito",
+  "tokyo-morioka",
+  "tokyo-nagano",
+  "tokyo-nagaoka",
+  "tokyo-niigata",
+  "tokyo-odawara",
+  "tokyo-shin-fuji",
+  "tokyo-shin-hakodate-hokuto"
+ ],
+ "tokyo-ueda": [
+  "kanazawa-ueda",
+  "nagano-ueda",
+  "tokyo-shin-yamaguchi",
+  "tokyo-shin-yokohama",
+  "tokyo-shizuoka",
+  "tokyo-takasaki",
+  "tokyo-toyama",
+  "tokyo-toyohashi"
+ ],
+ "tokyo-utsunomiya": [
+  "utsunomiya-nasu-shiobara",
+  "utsunomiya-fukushima",
+  "tokyo-ueda",
+  "tokyo-yamagata",
+  "tokyo-yokohama",
+  "asakusa-kinugawa-onsen",
+  "asakusa-nikko",
+  "narita-airport-shinagawa"
+ ],
+ "tokyo-yamagata": [
+  "tokyo-takasaki",
+  "asakusa-nikko",
+  "narita-airport-shinagawa",
+  "narita-tokyo",
+  "shinjuku-hakone",
+  "shinjuku-kawaguchiko",
+  "shinjuku-kofu",
+  "shinjuku-matsumoto"
+ ],
+ "tokyo-yokohama": [
+  "narita-airport-yokohama",
+  "tokyo-kokura",
+  "tokyo-maibara",
+  "tokyo-matsumoto",
+  "tokyo-mishima",
+  "tokyo-mito",
+  "tokyo-morioka",
+  "tokyo-nagano"
+ ],
+ "utsunomiya-fukushima": [
+  "utsunomiya-nasu-shiobara",
+  "sendai-fukushima",
+  "tokyo-fukushima",
+  "tokyo-utsunomiya",
+  "sendai-aomori",
+  "sendai-hachinohe",
+  "sendai-ichinoseki",
+  "sendai-koriyama"
+ ],
+ "utsunomiya-nasu-shiobara": [
+  "tokyo-utsunomiya",
+  "utsunomiya-fukushima",
+  "asakusa-kinugawa-onsen",
+  "asakusa-nikko",
+  "narita-airport-shinagawa",
+  "narita-tokyo",
+  "sendai-fukushima",
+  "shinjuku-hakone"
+ ]
+}
