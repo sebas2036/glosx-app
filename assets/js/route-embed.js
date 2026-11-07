@@ -135,7 +135,8 @@
       out.hidden = false;
       var btn = out.querySelector('.rte-btn');
       btn.addEventListener('click', function () { copy(code, btn); });
-      if (window.gtag) window.gtag('event', 'embed_register', { blog_host: host, blog_brand: name, page_path: location.pathname });
+      // link_url / link_domain / link_text son dimensiones estándar de GA4: se leen sin definir dimensiones personalizadas
+      if (window.gtag) window.gtag('event', 'embed_register', { link_url: raw, link_domain: host, link_text: name, page_path: location.pathname });
     });
     return el;
   }

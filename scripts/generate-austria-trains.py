@@ -190,7 +190,7 @@ for lang, t in T.items():
   </main>
   ''' % (t['h1'], t['sub'].format(n=len(rows)), t['guides'], gl, '', t['dl'], ''.join('<th>%s</th>' % c for c in t['cols'][:1] + [''] + t['cols'][1:]), tr, t['src'],
          t['csv'], t['csvnote'], t['how'], li, t['cite'], t['citetxt'].format(url=url), t['showcase'].format(sc=SHOWCASE))
-    out = head + nav + '\n  ' + body + foot + '\n  <script src="/assets/js/route-embed.js?v=5" defer></script>\n</body>\n</html>\n'
+    out = head + nav + '\n  ' + body + foot + '\n  <script src="/assets/js/route-embed.js?v=6" defer></script>\n</body>\n</html>\n'
     os.makedirs(os.path.join(ROOT, t['dir']), exist_ok=True)
     open(os.path.join(ROOT, t['dir'], 'index.html'), 'w', encoding='utf8').write(out)
     print(lang, url, 'filas', len(rows), 'guias', len(GUIDES))
