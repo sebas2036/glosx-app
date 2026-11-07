@@ -93,7 +93,10 @@
       '.rte-box{position:relative;width:min(560px,100%);max-height:100%;overflow-y:auto}' +
       '.rte-box .rte{margin:0}' +
       '.rte-x{position:absolute;top:8px;right:10px;z-index:1;font:inherit;font-size:24px;line-height:1;border:0;background:none;color:#55565f;cursor:pointer;padding:4px 8px}' +
-      '.rte-form{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 10px}.rte-in{flex:1 1 200px;min-width:0;font:inherit;font-size:14px;padding:10px 14px;border:1px solid rgba(20,21,26,.18);border-radius:10px;background:#faf8f5;color:#14151a}' +
+      '.rte-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0;padding:12px 16px;border:1px solid rgba(20,21,26,.12);border-radius:14px;background:#fff;font-size:15px;font-weight:600;color:#14151a}' +
+      '.rte-bar-btn{font:inherit;font-size:13px;font-weight:700;color:#C10016;background:#fff;border:1px solid rgba(193,0,22,.4);border-radius:999px;padding:7px 14px;cursor:pointer}.rte-bar-btn:hover{background:#fff4f4}.rte-bar-btn:focus-visible{outline:2px solid #14151a;outline-offset:2px}' +
+      '.rte-bar + .rte{margin-top:0}' +
+            '.rte-form{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 10px}.rte-in{flex:1 1 200px;min-width:0;font:inherit;font-size:14px;padding:10px 14px;border:1px solid rgba(20,21,26,.18);border-radius:10px;background:#faf8f5;color:#14151a}' +
       '.rte-in:focus{outline:2px solid #14151a;outline-offset:1px;background:#fff}.rte-err{color:#A8000F;font-size:13px;margin:0 0 10px}' +
       '.rte-out{margin-top:6px}.rte-code{box-sizing:border-box;width:100%;font:12px/1.5 ui-monospace,Menlo,monospace;padding:10px 12px;border:1px solid rgba(20,21,26,.14);border-radius:10px;background:#faf8f5;color:#44454d;margin:0 0 10px;resize:vertical}' +
       '@media (max-width:600px){.rte{padding:16px}.rte-btn{width:100%}}';
@@ -186,6 +189,21 @@
     var place = function (extra) {
       if (extra) { d.stats = extra.stats; d.source = extra.source; }
       faq.parentNode.insertBefore(block(d), faq);
+      // Arriba, bajo la foto y el resumen: barra corta que despliega la misma caja (para el que no lee hasta el final)
+      if (lead) {
+        var bar = document.createElement('div');
+        bar.className = 'rte-bar';
+        bar.innerHTML = '<span>' + esc(tx.title) + '</span><button type="button" class="rte-bar-btn" aria-expanded="false">' + esc(tx.get) + '</button>';
+        var open = null;
+        bar.querySelector('button').addEventListener('click', function () {
+          if (open) { open.remove(); open = null; this.setAttribute('aria-expanded', 'false'); return; }
+          open = block(d, true);
+          bar.parentNode.insertBefore(open, bar.nextSibling);
+          this.setAttribute('aria-expanded', 'true');
+          open.querySelector('input').focus();
+        });
+        lead.parentNode.insertBefore(bar, lead.nextSibling);
+      }
     };
     fetch('/assets/data/horarios-rutas.json').then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) { place(officialStats(j, slug, title)); }, function () { place(null); });
