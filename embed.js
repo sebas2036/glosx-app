@@ -17,11 +17,11 @@
   var ORIGIN = 'https://glosx.app';
   var FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
   var T = {
-    en: { guide: 'Train travel guide', fast: 'Fastest', eyebrow: 'Train route', first: 'First train', last: 'Last train', n: 'Trains per weekday', avg: 'Typical journey', source: 'Official timetable', by: 'Shared by' },
-    es: { guide: 'Guía de viaje en tren', fast: 'Más rápido', eyebrow: 'Ruta en tren', first: 'Primer tren', last: 'Último tren', n: 'Trenes por día laborable', avg: 'Duración habitual', source: 'Horario oficial', by: 'Compartido por' },
-    fr: { guide: 'Guide du voyage en train', fast: 'Le plus rapide', eyebrow: 'Itinéraire en train', first: 'Premier train', last: 'Dernier train', n: 'Trains par jour de semaine', avg: 'Durée habituelle', source: 'Horaire officiel', by: 'Partagé par' },
-    it: { guide: 'Guida al viaggio in treno', fast: 'Il più veloce', eyebrow: 'Percorso in treno', first: 'Primo treno', last: 'Ultimo treno', n: 'Treni nei giorni feriali', avg: 'Durata abituale', source: 'Orario ufficiale', by: 'Condiviso da' },
-    ja: { guide: '鉄道旅行ガイド', fast: '最速', eyebrow: '鉄道ルート', first: '始発', last: '終電', n: '平日の本数', avg: '標準的な所要時間', source: '公式時刻表', by: '提供' }
+    en: { sat: 'Trains on Saturday', sun: 'Trains on Sunday', guide: 'Train travel guide', fast: 'Fastest', eyebrow: 'Train route', first: 'First train', last: 'Last train', n: 'Trains per weekday', avg: 'Typical journey', source: 'Official timetable', by: 'Shared by' },
+    es: { sat: 'Trenes el sábado', sun: 'Trenes el domingo', guide: 'Guía de viaje en tren', fast: 'Más rápido', eyebrow: 'Ruta en tren', first: 'Primer tren', last: 'Último tren', n: 'Trenes por día laborable', avg: 'Duración habitual', source: 'Horario oficial', by: 'Compartido por' },
+    fr: { sat: 'Trains le samedi', sun: 'Trains le dimanche', guide: 'Guide du voyage en train', fast: 'Le plus rapide', eyebrow: 'Itinéraire en train', first: 'Premier train', last: 'Dernier train', n: 'Trains par jour de semaine', avg: 'Durée habituelle', source: 'Horaire officiel', by: 'Partagé par' },
+    it: { sat: 'Treni il sabato', sun: 'Treni la domenica', guide: 'Guida al viaggio in treno', fast: 'Il più veloce', eyebrow: 'Percorso in treno', first: 'Primo treno', last: 'Ultimo treno', n: 'Treni nei giorni feriali', avg: 'Durata abituale', source: 'Orario ufficiale', by: 'Condiviso da' },
+    ja: { sat: '土曜日の本数', sun: '日曜日の本数', guide: '鉄道旅行ガイド', fast: '最速', eyebrow: '鉄道ルート', first: '始発', last: '終電', n: '平日の本数', avg: '標準的な所要時間', source: '公式時刻表', by: '提供' }
   };
 
   var json = null;
@@ -73,9 +73,40 @@
       var td = trs[i].children;
       if (td.length < 8 || td[0].textContent.trim() !== title) continue;
       var src = licenseOf(doc.querySelectorAll('main.hx p'));
-      return { rows: [[tx.first, td[2].textContent.trim()], [tx.last, td[3].textContent.trim()], [tx.n, td[4].textContent.trim()], [tx.fast, td[7].textContent.trim()]], source: tx.source + ': ' + src };
+      return { rows: [[tx.first, td[2].textContent.trim()], [tx.last, td[3].textContent.trim()], [tx.n, td[4].textContent.trim()], [tx.sat, td[5].textContent.trim()], [tx.sun, td[6].textContent.trim()], [tx.fast, td[7].textContent.trim()]], source: tx.source + ': ' + src };
     }
     return null;
+  }
+
+  // Datos clave de la página: primeras respuestas de su FAQ (JSON-LD), primera oración de cada una, sin menciones de terceros
+  function facts(doc, lead) {
+    var out = [];
+    var walk = function (o) {
+      if (!o || typeof o !== 'object' || out.length >= 3) return;
+      if (Array.isArray(o)) { o.forEach(walk); return; }
+      if (o['@type'] === 'FAQPage' && Array.isArray(o.mainEntity)) {
+        o.mainEntity.forEach(function (q) {
+          if (out.length >= 3 || !q || !q.acceptedAnswer) return;
+          var t = String(q.acceptedAnswer.text || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+          var m = t.match(/^(.+?[.!?。！？])(\s|$)/);
+          t = (m ? m[1] : t);
+          if (!t || /omio|klook|booking/i.test(t)) return;
+          // respuestas de relleno ("mira el horario en vivo", "sí, se puede ir en tren") no aportan a la ficha
+          if (/en vivo|live schedule|en direct|in tempo reale|リアルタイム|se cubre en tren|is covered by train|desservi en train|coperto in treno|cambian según|vary by|change by day|varient selon|variano in base/i.test(t)) return;
+          var nums = t.match(/\d+/g);
+          if (lead && nums && nums.every(function (n) { return lead.indexOf(n) > -1; })) return;   // ya lo dice el resumen
+          if (t.length > 170) t = t.slice(0, 167).replace(/\s+\S*$/, '') + '…';
+          var qn = String(q.name || '').replace(/\s+/g, ' ').trim();
+          if (qn.length > 90) qn = '';
+          out.push([qn, t]);
+        });
+        return;
+      }
+      Object.keys(o).forEach(function (k) { walk(o[k]); });
+    };
+    var ss = doc.querySelectorAll('script[type="application/ld+json"]');
+    for (var i = 0; i < ss.length; i++) { try { walk(JSON.parse(ss[i].textContent)); } catch (e) {} }
+    return out;
   }
 
   function el(tag, css, text) {
@@ -91,6 +122,16 @@
     box.appendChild(el('p', 'margin:0 0 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#C10016', d.article ? tx.guide : tx.eyebrow));
     box.appendChild(el('p', 'margin:0 0 8px;font-size:18px;font-weight:700;color:#14151a', d.title));
     if (d.lead) box.appendChild(el('p', 'margin:0 0 12px;font-size:14px;color:#44454d', d.lead));
+    if (d.facts && d.facts.length) {
+      var ul = el('ul', 'margin:0 0 12px;padding:0;list-style:none;font-size:13px;color:#44454d');
+      d.facts.forEach(function (f) {
+        var li = el('li', 'margin:0 0 6px');
+        if (f[0]) { li.appendChild(el('b', 'display:block;font-weight:600;color:#14151a', f[0])); }
+        li.appendChild(document.createTextNode(f[1]));
+        ul.appendChild(li);
+      });
+      box.appendChild(ul);
+    }
     if (d.st) {
       var t = el('table', 'width:100%;border-collapse:collapse;margin:0 0 12px;border-top:1px solid #efece6');
       d.st.rows.forEach(function (r) {
@@ -134,6 +175,7 @@
         title: a.getAttribute('data-title') || (h1 ? h1.textContent.trim() : ''),
         article: /\/blog-[^/]+\.html$/.test(url.pathname),
         lead: lead ? clip(lead.textContent) : '',
+        facts: facts(doc, lead ? lead.textContent : ''),
         st: m ? stats(res[1], m[1], tx) : tableRow(doc, a.getAttribute('data-title'), tx)
       };
       if (!d.title) return;
