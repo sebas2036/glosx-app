@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
 Añade la ficha "Lleva esta ruta a tu blog" (assets/js/route-embed.js) a todas las páginas de ruta
-(/rutas/*/ en 5 idiomas, Europa y Japón) y a las tablas de datos abiertos por país.
+(/rutas/*/ en 5 idiomas, Europa y Japón), a las tablas de datos abiertos por país y a los artículos del blog (blog-*.html).
 Idempotente: reemplaza la versión si ya está. Correrlo después de regenerar rutas o tablas.
 Uso: python3 scripts/add-route-embed.py
 """
 import glob, os, re
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
-V = 4
+V = 5
 TAG = '  <script src="/assets/js/route-embed.js?v=%d" defer></script>\n' % V
 TABLES = ['swiss-trains', 'es/trenes-suiza', 'fr/trains-suisse', 'it/treni-svizzera', 'ja/swiss-trains',
           'austria-trains', 'es/trenes-austria', 'fr/trains-autriche', 'it/treni-austria', 'ja/austria-trains',
@@ -18,6 +18,7 @@ TABLES = ['swiss-trains', 'es/trenes-suiza', 'fr/trains-suisse', 'it/treni-svizz
 
 files = glob.glob(os.path.join(ROOT, 'rutas', '*', 'index.html')) + glob.glob(os.path.join(ROOT, 'rutas', '*', '*', 'index.html'))
 files += [os.path.join(ROOT, t, 'index.html') for t in TABLES]
+files += [f for f in glob.glob(os.path.join(ROOT, 'blog-*.html')) + glob.glob(os.path.join(ROOT, '*', 'blog-*.html')) if '/node_modules/' not in f]
 n = 0
 for p in files:
     if not os.path.isfile(p):

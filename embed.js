@@ -17,11 +17,11 @@
   var ORIGIN = 'https://glosx.app';
   var FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
   var T = {
-    en: { fast: 'Fastest', eyebrow: 'Train route', first: 'First train', last: 'Last train', n: 'Trains per weekday', avg: 'Typical journey', source: 'Official timetable', by: 'Shared by' },
-    es: { fast: 'Más rápido', eyebrow: 'Ruta en tren', first: 'Primer tren', last: 'Último tren', n: 'Trenes por día laborable', avg: 'Duración habitual', source: 'Horario oficial', by: 'Compartido por' },
-    fr: { fast: 'Le plus rapide', eyebrow: 'Itinéraire en train', first: 'Premier train', last: 'Dernier train', n: 'Trains par jour de semaine', avg: 'Durée habituelle', source: 'Horaire officiel', by: 'Partagé par' },
-    it: { fast: 'Il più veloce', eyebrow: 'Percorso in treno', first: 'Primo treno', last: 'Ultimo treno', n: 'Treni nei giorni feriali', avg: 'Durata abituale', source: 'Orario ufficiale', by: 'Condiviso da' },
-    ja: { fast: '最速', eyebrow: '鉄道ルート', first: '始発', last: '終電', n: '平日の本数', avg: '標準的な所要時間', source: '公式時刻表', by: '提供' }
+    en: { guide: 'Train travel guide', fast: 'Fastest', eyebrow: 'Train route', first: 'First train', last: 'Last train', n: 'Trains per weekday', avg: 'Typical journey', source: 'Official timetable', by: 'Shared by' },
+    es: { guide: 'Guía de viaje en tren', fast: 'Más rápido', eyebrow: 'Ruta en tren', first: 'Primer tren', last: 'Último tren', n: 'Trenes por día laborable', avg: 'Duración habitual', source: 'Horario oficial', by: 'Compartido por' },
+    fr: { guide: 'Guide du voyage en train', fast: 'Le plus rapide', eyebrow: 'Itinéraire en train', first: 'Premier train', last: 'Dernier train', n: 'Trains par jour de semaine', avg: 'Durée habituelle', source: 'Horaire officiel', by: 'Partagé par' },
+    it: { guide: 'Guida al viaggio in treno', fast: 'Il più veloce', eyebrow: 'Percorso in treno', first: 'Primo treno', last: 'Ultimo treno', n: 'Treni nei giorni feriali', avg: 'Durata abituale', source: 'Orario ufficiale', by: 'Condiviso da' },
+    ja: { guide: '鉄道旅行ガイド', fast: '最速', eyebrow: '鉄道ルート', first: '始発', last: '終電', n: '平日の本数', avg: '標準的な所要時間', source: '公式時刻表', by: '提供' }
   };
 
   var json = null;
@@ -80,7 +80,7 @@
   // Construye la ficha con DOM (sin innerHTML: el texto viene de otra página y del atributo data-by)
   function build(a, d, tx) {
     var box = el('div', 'box-sizing:border-box;max-width:520px;margin:20px auto;padding:18px 20px;background:#ffffff;border:1px solid #e6e2db;border-radius:14px;font-family:' + FONT + ';color:#14151a;line-height:1.5;text-align:left');
-    box.appendChild(el('p', 'margin:0 0 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#C10016', tx.eyebrow));
+    box.appendChild(el('p', 'margin:0 0 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#C10016', d.article ? tx.guide : tx.eyebrow));
     box.appendChild(el('p', 'margin:0 0 8px;font-size:18px;font-weight:700;color:#14151a', d.title));
     if (d.lead) box.appendChild(el('p', 'margin:0 0 12px;font-size:14px;color:#44454d', d.lead));
     if (d.st) {
@@ -124,7 +124,8 @@
       var h1 = doc.querySelector('h1'), lead = doc.querySelector('p.lead');
       var d = {
         title: a.getAttribute('data-title') || (h1 ? h1.textContent.trim() : ''),
-        lead: lead ? lead.textContent.trim() : '',
+        article: /\/blog-[^/]+\.html$/.test(url.pathname),
+        lead: lead ? lead.textContent.trim().replace(/\s+/g, ' ').slice(0, 240) : '',
         st: m ? stats(res[1], m[1], tx) : tableRow(doc, a.getAttribute('data-title'), tx)
       };
       if (!d.title) return;
