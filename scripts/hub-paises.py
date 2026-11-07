@@ -40,13 +40,32 @@ T = {
                c={'es': 'スペイン', 'ch': 'スイス', 'at': 'オーストリア', 'no': 'ノルウェー', 'se': 'スウェーデン', 'fi': 'フィンランド'}),
 }
 HUBS = ['/trains-from-london/', '/trains-from-paris/', '/trains-from-uk-to-europe/']
+# Mosaico: 12 rutas con su foto de portada (Pexels, la misma del hero de cada ruta); nombres tomados del propio índice
+MOSAIC = [('paris-amsterdam', 4237160), ('lucerne-zermatt', 19244970), ('oslo-bergen', 6291547), ('tokyo-kyoto', 23345456),
+          ('milan-rome', 27541217), ('barcelona-lyon', 8430273), ('london-edinburgh', 35769512), ('vienna-salzburg', 37861319),
+          ('kyoto-himeji', 27666787), ('lisbon-porto', 10959393), ('munich-berlin', 37120347), ('nice-monaco', 11956743)]
+BLOG = {'en': ('For bloggers', 'Writing about one of these routes? Every route has a card with its times that you can add to your post. Open the route and look for <strong>Add this route to your blog</strong>.'),
+        'es': ('Para blogueros', '¿Escribes sobre alguna de estas rutas? Cada ruta tiene una ficha con sus horarios para llevarte a tu artículo. Abre la ruta y busca <strong>Lleva esta ruta a tu blog</strong>.'),
+        'fr': ('Pour les blogueurs', 'Vous écrivez sur l’un de ces trajets ? Chaque itinéraire a une fiche avec ses horaires à ajouter à votre article. Ouvrez l’itinéraire et cherchez <strong>Ajoutez cet itinéraire à votre blog</strong>.'),
+        'it': ('Per i blogger', 'Scrivi di uno di questi percorsi? Ogni percorso ha una scheda con i suoi orari da aggiungere al tuo articolo. Apri il percorso e cerca <strong>Porta questo percorso sul tuo blog</strong>.'),
+        'ja': ('ブロガーの方へ', 'これらのルートについて書いていますか？各ルートには時刻入りのカードがあり、記事に掲載できます。ルートを開いて<strong>「このルートをあなたのブログに」</strong>をご覧ください。')}
+PX = lambda i, w: 'https://images.pexels.com/photos/%d/pexels-photo-%d.jpeg?auto=compress&cs=tinysrgb&w=%d' % (i, i, w)
 CSS = ('    .hub { max-width:760px; margin:22px auto 0; display:grid; gap:16px; }\n'
        '    .hub-group h2 { font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin:0 0 8px; font-weight:700; }\n'
        '    .hub-group h2 span { text-transform:none; letter-spacing:0; font-weight:400; }\n'
        '    .hub-chips { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }\n'
        '    .hub-chips a { display:inline-block; padding:7px 14px; border:1px solid rgba(20,21,26,.16); border-radius:999px; background:#fff; color:var(--text); text-decoration:none; font-size:14px; }\n'
        '    .hub-chips a:hover { border-color:#C10016; color:#C10016; }\n'
-       '    .hub-chips small { color:var(--muted); font-size:12px; }\n')
+       '    .hub-chips small { color:var(--muted); font-size:12px; }\n'
+       '    .hub-mosaic { order:-1; display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; margin:4px 0 6px; }\n'
+       '    .hub-tile { position:relative; display:block; aspect-ratio:4/3; border-radius:10px; overflow:hidden; background:#e9e4dc; }\n'
+       '    .hub-tile img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }\n'
+       '    .hub-tile:hover img { transform:scale(1.06); }\n'
+       '    .hub-tile span { position:absolute; left:0; right:0; bottom:0; padding:14px 8px 6px; font-size:12px; font-weight:600; color:#fff; text-align:left; background:linear-gradient(transparent,rgba(0,0,0,.65)); }\n'
+       '    .hub-blog { margin:4px auto 0; max-width:640px; font-size:14px; color:var(--muted); padding:10px 14px; border:1px solid rgba(20,21,26,.12); border-radius:12px; background:#fff; }\n'
+       '    .hub-blog b { color:#C10016; }\n'
+       '    @media (max-width:760px) { .hub-mosaic { grid-template-columns:repeat(3,minmax(0,1fr)); } .hub-tile:nth-child(n+7) { display:none; } }\n'
+       '    @media (prefers-reduced-motion:reduce) { .hub-tile img { transition:none; } }\n')
 
 for lang, t in T.items():
     p = os.path.join(ROOT, t['f'])
@@ -54,13 +73,21 @@ for lang, t in T.items():
     chips = lambda items: '<ul class="hub-chips">' + ''.join('<li><a href="%s">%s</a></li>' % x for x in items) + '</ul>'
     starts = [(HUBS[i], t['hubs'][i] + ('<small>%s</small>' % t['hubnote'] if t['hubnote'] else '')) for i in range(3)]
     countries = [(paths[lang], t['c'][k] + ('<small>%s</small>' % t['esnote'] if k == 'es' and t['esnote'] else '')) for k, paths in COUNTRIES]
+    pref = '' if lang == 'en' else lang + '/'
+    tiles = ''
+    for slug, pid in MOSAIC:
+        m = re.search(r'<a href="/rutas/%s/%s">([^<]+)</a>' % (slug, pref), s)
+        if not m: continue
+        tiles += '<a class="hub-tile" href="/rutas/%s/%s"><img src="%s" alt="" loading="lazy" width="400" height="300"><span>%s</span></a>' % (slug, pref, PX(pid, 400), m.group(1))
+    bh, bp = BLOG[lang]
+    extra = ('      <div class="hub-mosaic">%s</div>\n' % tiles) + ('      <p class="hub-blog"><b>%s</b> · %s</p>\n' % (bh, bp))
     block = ('\n    <p>%s</p>\n    <div class="hub">\n'
              '      <div class="hub-group"><h2>%s</h2>%s</div>\n'
              '      <div class="hub-group"><h2>%s <span>· %s</span></h2>%s</div>\n'
-             '    </div>\n  ') % (t['intro'], t['start'], chips(starts), t['times'], t['note'], chips(countries))
+             '%s    </div>\n  ') % (t['intro'], t['start'], chips(starts), t['times'], t['note'], chips(countries), extra)
     s, n = re.subn(r'(<header>\s*<h1>.*?</h1>).*?(</header>)', lambda m: m.group(1) + block + m.group(2), s, count=1, flags=re.S)
     assert n == 1, p
-    if '.hub-chips' not in s:
-        s = s.replace('</style>', CSS + '  </style>', 1)
+    s = re.sub(r'    \.hub \{[\s\S]*?(?=  </style>)', '', s, count=1)
+    s = s.replace('</style>', CSS + '  </style>', 1)
     open(p, 'w', encoding='utf8').write(s)
     print(lang, p)
