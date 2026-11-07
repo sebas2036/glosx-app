@@ -44,7 +44,19 @@ for (const lg of LANGS) {
   const t = T[lg], n = euSlugs.length, j = JP.length;
   const li = (slug, label) => `      <li><a href="/rutas/${slug}/${SUF[lg]}">${label.replace('→', '&rarr;')}</a></li>`;
   const euList = euSlugs.map((s) => li(s, nm(lg, EU[s][0]) + ' → ' + nm(lg, EU[s][1]))).join('\n');
-  const jpList = JP.slice().sort((a, b) => a.slug.localeCompare(b.slug)).map((r) => li(r.slug, jpLabel(lg, r))).join('\n');
+  // Japón agrupado por región de salida (antes era una sola lista alfabética de 196)
+  const { REGIONS, regionOf } = require('./japan-regions');
+  const jpSorted = JP.slice().sort((a, b) => a.slug.localeCompare(b.slug));
+  const orphans = jpSorted.filter((r) => !regionOf(r.fromKey));
+  if (orphans.length) throw new Error('Ciudades sin región en japan-regions.js: ' + orphans.map((r) => r.fromKey).join(', '));
+  const jpList = REGIONS.map((reg) => {
+    const rs = jpSorted.filter((r) => regionOf(r.fromKey) === reg);
+    if (!rs.length) return '';
+    return `    <h3 class="routes-region" id="jp-${reg.key}">${reg.name[lg]} <span>(${rs.length})</span></h3>\n    <ul class="routes-index-list">\n` +
+      rs.map((r) => li(r.slug, jpLabel(lg, r))).join('\n') + '\n    </ul>';
+  }).filter(Boolean).join('\n');
+  const jpNav = REGIONS.filter((reg) => JP.some((r) => regionOf(r.fromKey) === reg))
+    .map((reg) => `<a href="#jp-${reg.key}">${reg.name[lg]}</a>`).join(' · ');
   const fill = (s) => s.replace('{n}', n).replace('{j}', j);
   const html = `<!DOCTYPE html>
 <html lang="${lg}">
@@ -62,6 +74,12 @@ ${hreflang(lg)}
   <meta property="og:image" content="https://glosx.app/og-image.jpg" />
 ${en.match(/  <link rel="icon"[\s\S]*?<\/style>/)[0]}
   <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
+  <style>
+    .routes-region { font-size: 17px; margin: 28px 0 10px; }
+    .routes-region span { font-weight: 400; opacity: .6; font-size: 14px; }
+    .routes-region-nav { line-height: 2; font-size: 14px; }
+    .routes-region-nav a { color: #C10016; text-decoration: none; font-weight: 600; }
+  </style>
 </head>
 <body>
   <nav>
@@ -78,10 +96,9 @@ ${en.match(/  <link rel="icon"[\s\S]*?<\/style>/)[0]}
     <ul class="routes-index-list">
 ${euList}
     </ul>
-    <h2>${fill(t.h2j)}</h2>
-    <ul class="routes-index-list">
+    <h2 id="japan">${fill(t.h2j)}</h2>
+    <p class="routes-region-nav">${jpNav}</p>
 ${jpList}
-    </ul>
   </section>
   <footer>
     <p>&copy; 2026 GLOSX &middot; <a href="/${lg}/">glosx.app</a> &middot; <a href="/${lg}/explore/">${t.explore}</a> &middot; <a href="/${lg}/blog.html">Blog</a></p>
