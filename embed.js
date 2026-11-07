@@ -174,6 +174,13 @@
     box.appendChild(foot);
     var by = (a.getAttribute('data-by') || '').trim().slice(0, 60);
     if (by) box.appendChild(el('p', 'margin:6px 0 0;font-size:12px;color:#6b6c75', tx.by + ' ' + by));
+    // sello de la marca al pie de cada ficha
+    var seal = el('div', 'display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:12px 0 0;padding-top:10px;border-top:1px solid #ececef');
+    var lg = el('img', 'width:26px;height:26px;border-radius:6px;display:block;border:0');
+    lg.src = ORIGIN + '/logo.png'; lg.alt = 'WoW Train'; lg.width = 26; lg.height = 26;
+    seal.appendChild(lg);
+    seal.appendChild(el('span', 'font-size:12px;font-weight:600;letter-spacing:.02em;color:#2b2c33', 'WoW Train · glosx.app'));
+    box.appendChild(seal);
     return box;
   }
 

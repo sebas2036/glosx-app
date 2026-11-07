@@ -181,7 +181,10 @@
       var code = '<a class="wow-train-card" href="' + esc(d.url) + '" data-site="' + esc(host) + '" data-by="' + esc(name) + '"' +
         (d.titleAttr ? ' data-title="' + esc(d.titleAttr) + '"' : '') + '>' + esc(d.stats ? tx.credit : (d.article ? tx.eyebrowA : tx.guide)) + ': WoW Train (glosx.app)</a>\n' +
         '<script src="https://glosx.app/embed.js" async></' + 'script>';
-      var prev = cardHTML(d).replace(/<\/div>$/, '<p style="margin:6px 0 0;font-size:12px;color:#6b6c75">' + esc(tx.by + ' ' + name) + '</p></div>');
+      var prev = cardHTML(d).replace(/<\/div>$/, '<p style="margin:6px 0 0;font-size:12px;color:#6b6c75">' + esc(tx.by + ' ' + name) + '</p>' +
+        '<div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:12px 0 0;padding-top:10px;border-top:1px solid #ececef">' +
+        '<img src="/logo.png" alt="WoW Train" width="26" height="26" style="width:26px;height:26px;border-radius:6px;display:block;border:0">' +
+        '<span style="font-size:12px;font-weight:600;letter-spacing:.02em;color:#2b2c33">WoW Train · glosx.app</span></div></div>');
       out.innerHTML = '<div class="rte-prev"><span class="rte-prev-l">' + esc(tx.preview) + '</span>' + prev + '</div>' +
         '<p class="rte-sub">' + esc(tx.ready) + '</p><textarea class="rte-code" readonly rows="4"></textarea>' +
         '<button type="button" class="rte-btn">' + esc(tx.copy) + '</button>';
