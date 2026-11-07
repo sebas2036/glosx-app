@@ -200,6 +200,8 @@ function build(p) {
   <meta name="keywords" content="${esc(p.kw)}" />
   <link rel="canonical" href="${url(p)}" />
   <link rel="alternate" hreflang="ja" href="${url(p)}" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/${p.slug}" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/${p.slug}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${esc(p.title)}" />
   <meta property="og:description" content="${esc(p.desc)}" />
