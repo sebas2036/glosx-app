@@ -751,3 +751,25 @@ body.home-v2 .search-card .region-btn.on { background: #fff; color: #C10016; box
 body.home-v2 .search-card .search-panel .region-switch { background: #eef0f5; }
 body.home-v2 .search-card .search-panel .region-btn { color: #3d4152; }
 body.home-v2 .search-card .search-panel .region-btn.on { background: #fff; color: #C10016; }
+
+/* selector de región: arriba de la tarjeta, visible en Planificador IA y en Hoteles, oculto en las demás pestañas */
+body.home-v2 .search-card > .region-switch { display: inline-flex; background: #eef0f5; margin: 0 0 14px; }
+body.home-v2:not(.hotels-mode) .search-card:not(:has(> [data-panel="ai"].on)) > .region-switch { display: none; }
+body.home-v2.hotels-mode .search-card > .region-switch { background: #eef0f5; }
+body.home-v2 .search-card > .region-switch .region-btn { color: #3d4152; }
+body.home-v2 .search-card > .region-switch .region-btn.on { background: #fff; color: #C10016; box-shadow: 0 1px 3px rgba(20,21,26,.14); }
+@media (max-width: 760px) { body.home-v2 .search-card > .region-switch { display: flex; width: 100%; } }
+
+/* botones de hoteles: iguales, blancos con borde fino y logo; el color de cada marca aparece en el borde al pasar el mouse
+   (experimento Klook vs Booking: los dos con el mismo peso visual) */
+body.home-v2 .hotels-bar > .hotels-go-kl, body.home-v2 .hotels-bar > .hotels-go-bk {
+  background: #fff; color: #1d2030; border: 1.5px solid #dfe2ea; border-radius: 12px;
+  min-height: 52px; padding: 0 22px; font-size: 16px; font-weight: 600; box-shadow: 0 1px 2px rgba(20,21,26,.05);
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+body.home-v2 .hotels-bar > .hotels-go-kl:hover { border-color: #ff5b00; box-shadow: 0 0 0 3px rgba(255,91,0,.12); filter: none; }
+body.home-v2 .hotels-bar > .hotels-go-bk:hover { border-color: #0057b8; box-shadow: 0 0 0 3px rgba(0,87,184,.12); filter: none; }
+body.home-v2 .hotels-bar > .hotels-go-kl:focus-visible, body.home-v2 .hotels-bar > .hotels-go-bk:focus-visible { outline: 3px solid #C10016; outline-offset: 2px; }
+/* en modo Hoteles se marca Hoteles (no la región) */
+body.home-v2.hotels-mode .search-card > .region-switch .region-btn.on:not(.region-hotels) { background: transparent !important; color: #3d4152 !important; box-shadow: none; }
+body.home-v2.hotels-mode .search-card > .region-switch .region-hotels.on { background: #fff; color: #C10016; box-shadow: 0 1px 3px rgba(20,21,26,.14); }
