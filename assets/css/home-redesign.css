@@ -808,3 +808,8 @@ body.home-v2 .ai-results a.pi-gcard .pi-gcard-img { width: 64px; height: 48px; f
   body.home-v2 .ai-results .ai-segment { padding: 14px 14px; }
   body.home-v2 .ai-results .ai-segment-route, body.home-v2 .ai-results .ai-segment-time { font-size: 18px; }
 }
+/* línea "Qué hacer al llegar" en el resultado del planificador */
+body.home-v2 .ai-results .pi-exp { margin: 8px 2px 0; font-size: 13.5px; color: #5a5f73; }
+body.home-v2 .ai-results .pi-exp .pi-exp-lab { font-weight: 600; color: #1d2030; }
+body.home-v2 .ai-results .pi-exp a { color: #C10016; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(193,0,22,.3); }
+body.home-v2 .ai-results .pi-exp a:hover { border-bottom-color: #C10016; }
