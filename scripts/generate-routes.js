@@ -915,6 +915,14 @@ const routes = [
       it: 'Omio indica SBB come operatore principale su questa tratta di 224 km: circa 38 treni al giorno, 8 dei quali diretti. Il viaggio più veloce dura 2 h 34 min e la durata media è di circa 3 h 16 min. I dati tariffari di Omio suggeriscono di prenotare circa 77 giorni prima per ottenere i prezzi più bassi. Dati Omio di ottobre 2026; orari e tariffe cambiano in base alla data.',
     }
   },
+  { slug: 'koblenz-mainz', from: 'Koblenz', to: 'Mainz', country: 'Germany', duration: '50 min', operator: 'DB Intercity / regional', price: '', badge: 'Route guide · Germany',
+    customSEO: { en: { title: 'Koblenz to Mainz by Train: the Rhine Valley in about 50 min', description: 'Koblenz to Mainz by train along the Rhine in about 50 min on the fastest trains. Castles, vineyards and the Lorelei from your window, which side to sit and how to book.' } },
+    localInsight: {
+      en: 'Between Koblenz and Mainz the left-bank railway follows the Upper Middle Rhine Valley, a UNESCO World Heritage Site since 2002. The fastest Intercity trains take about 50 minutes; the slower regional trains take longer but stop in Boppard, St. Goar, Oberwesel and Bacharach, which is handy if you want to get off for a castle or a walk. Heading to Mainz, the river is on the left side of the train: sit there for the views of the Lorelei rock across the water and of Pfalzgrafenstein, the toll castle standing in the middle of the Rhine near Kaub.',
+      es: 'Entre Coblenza y Maguncia el tren de la orilla izquierda sigue el valle del Alto Rin Medio, Patrimonio de la Humanidad de la UNESCO desde 2002. Los Intercity más rápidos tardan unos 50 minutos; los regionales van más lento pero paran en Boppard, St. Goar, Oberwesel y Bacharach, algo útil si quieres bajar para ver un castillo o caminar. Rumbo a Maguncia el río queda a la izquierda del tren: siéntate de ese lado para ver la roca de Loreley al otro lado del agua y Pfalzgrafenstein, el castillo aduana que se levanta en medio del Rin junto a Kaub.',
+      fr: 'Entre Coblence et Mayence, la ligne de la rive gauche suit la vallée du Haut-Rhin moyen, inscrite au patrimoine mondial de l’UNESCO depuis 2002. Les Intercity les plus rapides mettent environ 50 minutes ; les trains régionaux sont plus lents mais s’arrêtent à Boppard, St. Goar, Oberwesel et Bacharach, pratique pour descendre voir un château ou marcher. En direction de Mayence, le fleuve est du côté gauche du train : asseyez-vous de ce côté pour voir le rocher de la Lorelei sur l’autre rive et Pfalzgrafenstein, le château-péage posé au milieu du Rhin près de Kaub.',
+      it: 'Tra Coblenza e Magonza la linea della riva sinistra segue la valle del Medio Reno superiore, patrimonio UNESCO dal 2002. Gli Intercity più veloci impiegano circa 50 minuti; i regionali sono più lenti ma fermano a Boppard, St. Goar, Oberwesel e Bacharach, comodo se vuoi scendere per un castello o una passeggiata. Andando verso Magonza il fiume è sul lato sinistro del treno: siediti lì per vedere la rupe di Loreley sull’altra sponda e Pfalzgrafenstein, il castello-dogana in mezzo al Reno vicino a Kaub.'
+    } },
   { slug: 'zurich-munich', from: 'Zurich', to: 'Munich', country: 'Switzerland-Germany', duration: '3h 45m', operator: 'SBB / DB / ÖBB EuroCity', price: '', badge: 'Route guide · Switzerland-Germany',
     customSEO: { en: { title: 'Zurich to Munich by Train: about 3h45, schedules and tickets', description: 'Zurich to Munich by train in about 3h45. Compare times with bus and flight, check today\'s schedule and book on Omio.' } },
     localInsight: {
@@ -947,6 +955,7 @@ const routes = [
 // Hoteles reales curados por ciudad de destino (mismos criterios que CURATED_HOTELS
 // en assets/js/main.js: hoteles reales existentes, no genericos/ficticios).
 const REAL_HOTELS = {
+  mainz: { name: "Hyatt Regency Mainz", loc: "Mainz, Germany", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mainz._das_%E2%80%9EFort_Malakoff%E2%80%9C_und_das_Hyatt_Regency_Hotel.jpg/1280px-Mainz._das_%E2%80%9EFort_Malakoff%E2%80%9C_und_das_Hyatt_Regency_Hotel.jpg" },
   amsterdam: { name: "De L'Europe Amsterdam", loc: "Amsterdam, Netherlands", image: "https://www.deleurope.com/wp-content/uploads/2024/02/homepage-hero-1.webp" },
   barcelona: { name: "Hotel Casa Fuster", loc: "Barcelona, Spain", image: "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/343/casa-fuster_header-historia_section.jpg" },
   bergen: { name: "Hotel Norge by Scandic", loc: "Bergen, Norway", image: "https://www.scandichotels.com/globalassets/hotels/norway/bergen/scandic-norge/scandic-norge-exterior.jpg" },
@@ -1013,6 +1022,7 @@ const REAL_HOTELS = {
 
 // Foto hero real por ciudad de destino (Pexels), evita la misma foto generica en las 174 paginas.
 const HERO_PHOTOS = {
+  mainz: 'https://images.pexels.com/photos/33991980/pexels-photo-33991980.jpeg?auto=compress&cs=tinysrgb&w=1600',
   geneva: 'https://glosx.app/assets/img/hero/zurich.jpg',
   bern: 'https://images.pexels.com/photos/18429608/pexels-photo-18429608.jpeg?auto=compress&cs=tinysrgb&w=1600',
   madrid: 'https://images.pexels.com/photos/36482790/pexels-photo-36482790.jpeg?auto=compress&cs=tinysrgb&w=1600',
@@ -1105,6 +1115,8 @@ const CITY_JA = (function () {
   map.Porto = 'ポルト';
   map.Oslo = 'オスロ';
   map.Bergen = 'ベルゲン';
+  if (!map['Koblenz']) map['Koblenz'] = 'コブレンツ';
+  if (!map['Mainz']) map['Mainz'] = 'マインツ';
   if (!map['Segovia']) map['Segovia'] = 'セゴビア';
   if (!map['Toledo']) map['Toledo'] = 'トレド';
   if (!map['Granada']) map['Granada'] = 'グラナダ';
@@ -1118,11 +1130,11 @@ const CITY_JA = (function () {
 })();
 // Nombres de ciudad localizados (es/fr/it) solo para las rutas nuevas del 16-oct-2026; el resto de
 // rutas conserva por ahora los nombres en inglés, así que no se traduce fuera de estas.
-const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich', 'alicante-madrid', 'madrid-segovia', 'barcelona-seville', 'madrid-toledo', 'santiago-madrid', 'madrid-cordoba', 'madrid-granada', 'malaga-barcelona', 'seville-cordoba', 'madrid-salamanca', 'zurich-munich']);
+const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich', 'alicante-madrid', 'madrid-segovia', 'barcelona-seville', 'madrid-toledo', 'santiago-madrid', 'madrid-cordoba', 'madrid-granada', 'malaga-barcelona', 'seville-cordoba', 'madrid-salamanca', 'zurich-munich', 'koblenz-mainz']);
 const CITY_LOCAL = {
-  es: { Seville: 'Sevilla', Cordoba: 'Córdoba', Malaga: 'Málaga', Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich', Zurich: 'Zúrich' },
-  fr: { Seville: 'Séville', Cordoba: 'Cordoue', Barcelona: 'Barcelone', Segovia: 'Ségovie', Toledo: 'Tolède', Granada: 'Grenade', Salamanca: 'Salamanque', 'Santiago de Compostela': 'Saint-Jacques-de-Compostelle', Lisbon: 'Lisbonne', Gothenburg: 'Göteborg', Vienna: 'Vienne', Salzburg: 'Salzbourg' },
-  it: { Seville: 'Siviglia', Cordoba: 'Cordova', Barcelona: 'Barcellona', 'Santiago de Compostela': 'Santiago di Compostela', Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera', Zurich: 'Zurigo' }
+  es: { Seville: 'Sevilla', Cordoba: 'Córdoba', Malaga: 'Málaga', Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich', Zurich: 'Zúrich', Koblenz: 'Coblenza', Mainz: 'Maguncia' },
+  fr: { Koblenz: 'Coblence', Mainz: 'Mayence', Seville: 'Séville', Cordoba: 'Cordoue', Barcelona: 'Barcelone', Segovia: 'Ségovie', Toledo: 'Tolède', Granada: 'Grenade', Salamanca: 'Salamanque', 'Santiago de Compostela': 'Saint-Jacques-de-Compostelle', Lisbon: 'Lisbonne', Gothenburg: 'Göteborg', Vienna: 'Vienne', Salzburg: 'Salzbourg' },
+  it: { Koblenz: 'Coblenza', Mainz: 'Magonza', Seville: 'Siviglia', Cordoba: 'Cordova', Barcelona: 'Barcellona', 'Santiago de Compostela': 'Santiago di Compostela', Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera', Zurich: 'Zurigo' }
 };
 function cityLabel(name, lang, slug) {
   if (lang === 'ja') return CITY_JA[name] || name;
