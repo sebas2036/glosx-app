@@ -57,11 +57,11 @@ CSS = ('    .hub { max-width:760px; margin:22px auto 0; display:grid; gap:16px; 
        '    .hub-chips a { display:inline-block; padding:7px 14px; border:1px solid rgba(20,21,26,.16); border-radius:999px; background:#fff; color:var(--text); text-decoration:none; font-size:14px; }\n'
        '    .hub-chips a:hover { border-color:#C10016; color:#C10016; }\n'
        '    .hub-chips small { color:var(--muted); font-size:12px; }\n'
-       '    .hub-mosaic { order:-1; display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; margin:4px 0 6px; }\n'
-       '    .hub-tile { position:relative; display:block; aspect-ratio:4/3; border-radius:10px; overflow:hidden; background:#e9e4dc; }\n'
+       '    .hub-mosaic { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; width:100%; max-width:none; margin:0; padding:6px; box-sizing:border-box; }\n'
+       '    .hub-tile { position:relative; display:block; aspect-ratio:1/1; border-radius:12px; overflow:hidden; background:#e9e4dc; }\n'
        '    .hub-tile img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }\n'
        '    .hub-tile:hover img { transform:scale(1.06); }\n'
-       '    .hub-tile span { position:absolute; left:0; right:0; bottom:0; padding:14px 8px 6px; font-size:12px; font-weight:600; color:#fff; text-align:left; background:linear-gradient(transparent,rgba(0,0,0,.65)); }\n'
+       '    .hub-tile span { position:absolute; left:0; right:0; bottom:0; padding:28px 14px 12px; font-size:clamp(13px,1.25vw,19px); font-weight:700; color:#fff; text-align:left; background:linear-gradient(transparent,rgba(0,0,0,.65)); }\n'
        '    .hub-blog { margin:4px auto 0; max-width:640px; font-size:14px; color:var(--muted); padding:10px 14px; border:1px solid rgba(20,21,26,.12); border-radius:12px; background:#fff; }\n'
        '    .hub-blog b { color:#C10016; }\n'
        '    @media (max-width:760px) { .hub-mosaic { grid-template-columns:repeat(3,minmax(0,1fr)); } .hub-tile:nth-child(n+7) { display:none; } }\n'
@@ -80,13 +80,16 @@ for lang, t in T.items():
         if not m: continue
         tiles += '<a class="hub-tile" href="/rutas/%s/%s"><img src="%s" alt="" loading="lazy" width="400" height="300"><span>%s</span></a>' % (slug, pref, PX(pid, 400), m.group(1))
     bh, bp = BLOG[lang]
-    extra = ('      <div class="hub-mosaic">%s</div>\n' % tiles) + ('      <p class="hub-blog"><b>%s</b> · %s</p>\n' % (bh, bp))
+    extra = ('') + ('      <p class="hub-blog"><b>%s</b> · %s</p>\n' % (bh, bp))
     block = ('\n    <p>%s</p>\n    <div class="hub">\n'
              '      <div class="hub-group"><h2>%s</h2>%s</div>\n'
              '      <div class="hub-group"><h2>%s <span>· %s</span></h2>%s</div>\n'
              '%s    </div>\n  ') % (t['intro'], t['start'], chips(starts), t['times'], t['note'], chips(countries), extra)
     s, n = re.subn(r'(<header>\s*<h1>.*?</h1>).*?(</header>)', lambda m: m.group(1) + block + m.group(2), s, count=1, flags=re.S)
     assert n == 1, p
+    # mosaico: banda a todo el ancho arriba de todo (debajo del menú, antes del <header> con el título)
+    s = re.sub(r'  <div class="hub-mosaic">.*?</div>\n', '', s, flags=re.S)
+    s = s.replace('  <header>', '  <div class="hub-mosaic">%s</div>\n  <header>' % tiles.replace('width="400" height="300"', 'width="600" height="600"').replace('w=400', 'w=600'), 1)
     s = re.sub(r'    \.hub \{[\s\S]*?(?=  </style>)', '', s, count=1)
     s = s.replace('</style>', CSS + '  </style>', 1)
     open(p, 'w', encoding='utf8').write(s)
