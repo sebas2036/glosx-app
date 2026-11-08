@@ -112,7 +112,7 @@ for lang, t in T.items():
     ld = {'@context': 'https://schema.org', '@type': 'Dataset', 'name': t['title'], 'description': t['desc'], 'url': t['url'],
           'license': 'https://creativecommons.org/licenses/by/4.0/', 'creator': {'@type': 'Organization', 'name': 'WoW Train', 'url': 'https://glosx.app/'},
           'sameAs': 'https://doi.org/10.5281/zenodo.23827431', 'temporalCoverage': '2026-11/2026-12', 'isAccessibleForFree': True,
-          'spatialCoverage': ['Switzerland', 'Austria', 'Sweden', 'Finland', 'Norway', 'Spain']}
+          'spatialCoverage': [{'@type': 'Place', 'name': c} for c in ['Switzerland', 'Austria', 'Sweden', 'Finland', 'Norway', 'Spain']]}
     html = '''<!DOCTYPE html>
 <html lang="%(lang)s">
 <head>
