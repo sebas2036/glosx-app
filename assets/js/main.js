@@ -1401,14 +1401,7 @@
 
 
     // Guía de ruta de cada tren panorámico (página /rutas/ propia) + texto "Ver guía" por idioma
-    const SCENIC_GUIDES = { 'zermatt>st-moritz': 'stmoritz-zermatt', 'montreux>interlaken': 'montreux-interlaken', 'paris>geneva': 'geneva-paris', 'nice>tende': 'tende-nice', 'rome>venice': 'rome-venice', 'munich>salzburg': 'munich-salzburg', 'amsterdam>brussels': 'amsterdam-brussels', 'brussels>paris': 'brussels-paris' };
-    function scenicGuide(t, lang) {
-      const slug = SCENIC_GUIDES[t.from + '>' + t.to];
-      if (!slug) return '';
-      const suf = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/' }[lang] || '';
-      const label = { en: 'See guide', es: 'Ver guía', fr: 'Voir le guide', it: 'Vedi la guida', ja: 'ガイドを見る', de: 'Zum Guide', pt: 'Ver guia' }[lang] || 'See guide';
-      return `<a class="scenic-guide" href="/rutas/${slug}/${suf}" onclick="event.stopPropagation()">${label} →</a>`;
-    }
+    const SCENIC_GUIDES={'zermatt>st-moritz':'r:stmoritz-zermatt','montreux>interlaken':'r:montreux-interlaken','paris>geneva':'r:geneva-paris','nice>tende':'r:tende-nice','rome>venice':'r:rome-venice','munich>salzburg':'r:munich-salzburg','amsterdam>brussels':'r:amsterdam-brussels','brussels>paris':'r:brussels-paris','vienna>graz':'r:graz-vienna','la-spezia>riomaggiore':'p:blog-scenic-train-routes-europe.html:en,es,fr,it,ja','innsbruck>bregenz':'p:austria-trains/:en,ja'};function scenicGuide(t,lang){const g=SCENIC_GUIDES[t.from+'>'+t.to];if(!g)return'';const pre=l=>({es:'es/',fr:'fr/',it:'it/',ja:'ja/'}[l]||'');let href;if(g.startsWith('r:')){href='/rutas/'+g.slice(2)+'/'+pre(lang)}else{const [,path,langs]=g.split(':');const l=langs.split(',').includes(lang)?lang:'en';href='/'+pre(l)+path}const label={en:'See guide',es:'Ver guía',fr:'Voir le guide',it:'Vedi la guida',ja:'ガイドを見る',de:'Zum Guide',pt:'Ver guia'}[lang]||'See guide';return`<a class="scenic-guide" href="${href}" onclick="event.stopPropagation()">${label} →</a>`}
     function renderScenic() {
       const grid = document.getElementById('scenicGrid');
       const lang = document.documentElement.lang || 'en';
