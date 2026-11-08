@@ -134,24 +134,27 @@
       box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
     }
     var res = seg.closest('.ai-results');
-    if (res && !res.querySelector('.pi-exp')) box.appendChild(expLine());   // una sola vez por resultado
+    if (res && !res.querySelector('.pi-exp')) {   // una sola vez por resultado, con la ciudad de destino
+      var rte = seg.querySelector('.ai-segment-route'), dn = rte ? (rte.textContent.split('→')[1] || '').trim() : '';
+      box.appendChild(expLine(norm(b), dn));
+    }
     seg.insertBefore(box, buy);   // bloque propio del grid (el cuerpo de la tarjeta compacta está oculto por el tema)
   }
 
   // "Qué hacer al llegar": una línea con Klook (tours) y Tripadvisor (opiniones), con afiliación vía backend; sin agrandar la tarjeta
   var EXL = {
-    en: ['What to do when you arrive:', 'Tours on Klook', 'Reviews on Tripadvisor'],
-    es: ['Qué hacer al llegar:', 'Tours en Klook', 'Opiniones en Tripadvisor'],
-    fr: ['Que faire à l’arrivée :', 'Activités sur Klook', 'Avis sur Tripadvisor'],
-    it: ['Cosa fare all’arrivo:', 'Tour su Klook', 'Recensioni su Tripadvisor'],
-    ja: ['到着後の楽しみ方：', 'Klookでツアーを探す', 'Tripadvisorで口コミを見る']
+    en: ['What to do in {c}:', 'Tours on Klook', 'Reviews on Tripadvisor'],
+    es: ['Qué hacer en {c}:', 'Tours en Klook', 'Opiniones en Tripadvisor'],
+    fr: ['Que faire à {c} :', 'Activités sur Klook', 'Avis sur Tripadvisor'],
+    it: ['Cosa fare a {c}:', 'Tour su Klook', 'Recensioni su Tripadvisor'],
+    ja: ['{c}での楽しみ方：', 'Klookでツアーを探す', 'Tripadvisorで口コミを見る']
   };
-  function expLine() {
+  function expLine(slug, name) {
     var l = lang(), t = EXL[l] || EXL.en;
     var base = typeof PROXY_BASE === 'string' ? PROXY_BASE : 'https://voxa-production-dc15.up.railway.app/affiliate';
     var p = document.createElement('p');
     p.className = 'pi-exp';
-    p.innerHTML = '<span class="pi-exp-lab">' + esc(t[0]) + '</span> <a href="' + base + '/klook-experiences?lang=' + l + '" target="_blank" rel="sponsored noopener" data-k="klook">' + esc(t[1]) + '</a> · <a href="' + base + '/tripadvisor" target="_blank" rel="sponsored noopener" data-k="tripadvisor">' + esc(t[2]) + '</a>';
+    p.innerHTML = '<span class="pi-exp-lab">' + esc(t[0].replace('{c}', name || slug)) + '</span> <a href="' + base + '/klook-experiences?lang=' + l + '&city=' + encodeURIComponent(slug) + '" target="_blank" rel="sponsored noopener" data-k="klook">' + esc(t[1]) + '</a> · <a href="' + base + '/tripadvisor?city=' + encodeURIComponent(slug.replace(/-/g, ' ')) + '" target="_blank" rel="sponsored noopener" data-k="tripadvisor">' + esc(t[2]) + '</a>';
     p.addEventListener('click', function (e) { var x = e.target.closest && e.target.closest('a'); if (!x) return; try { if (window.gtag) gtag('event', 'ui_click', { source: 'planner_exp_' + x.getAttribute('data-k') }); } catch (er) {} });
     return p;
   }
