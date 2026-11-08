@@ -149,6 +149,7 @@
     it: ['Cosa fare a {c}:', 'Tour su Klook', 'Recensioni su Tripadvisor'],
     ja: ['{c}での楽しみ方：', 'Klookでツアーを探す', 'Tripadvisorで口コミを見る']
   };
+  window.glosxExpLine = function (slug, name) { return expLine(slug, name); };   // lo usa japan.js en el resultado de Japón
   function expLine(slug, name) {
     var l = lang(), t = EXL[l] || EXL.en;
     var base = typeof PROXY_BASE === 'string' ? PROXY_BASE : 'https://voxa-production-dc15.up.railway.app/affiliate';

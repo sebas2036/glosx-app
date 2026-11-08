@@ -460,6 +460,12 @@
       if (window.glosxGuideCard) box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
       else box.insertAdjacentHTML('beforeend', '<a class="pi-guide" href="' + esc(g) + '">' + esc(t.guide) + ' <span aria-hidden="true">→</span></a>');
     }
+    // "Qué hacer en {destino}" (Klook + Tripadvisor de la ciudad elegida), una vez por resultado
+    var res = seg.closest('.ai-results');
+    if (window.glosxExpLine && res && !res.querySelector('.pi-exp')) {
+      var rte = seg.querySelector('.ai-segment-route'), dn = rte ? (rte.textContent.split('→')[1] || '').trim() : '';
+      box.appendChild(window.glosxExpLine(String(b).toLowerCase(), dn));
+    }
     seg.insertBefore(box, buy);
     seg.setAttribute('data-pi-jp', key);
   }
