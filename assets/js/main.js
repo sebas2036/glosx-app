@@ -1391,6 +1391,7 @@
           <div class="sf-route">${routeLine}</div>
           <div class="sf-desc">${desc}</div>
           <button class="sf-btn" onclick="goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})">${book} →</button>
+          ${scenicGuide(t, lang)}
         </div>`;
       const c = fe.querySelector('.sf-content');
       if (c) { c.style.opacity = '0'; requestAnimationFrame(() => { c.style.opacity = '1'; }); }

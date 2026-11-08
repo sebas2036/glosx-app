@@ -733,3 +733,7 @@ body.home-v2 .section-label { color: #a30012; }
 .scenic-card .scenic-guide:hover { border-bottom-color: #C10016; }
 .scenic-card .scenic-guide:focus-visible { outline: 3px solid #C10016; outline-offset: 3px; border-radius: 4px; }
 .scenic-wrapper .scenic-desc { display: none; } /* el texto ahora va dentro de la tarjeta */
+/* "Ver guía" dentro del panel destacado (fondo oscuro, junto a Reservar) */
+#scenicFeature .scenic-guide { display: inline-block; margin-left: 18px; font-weight: 700; font-size: 16px; color: #fff; text-decoration: none; border-bottom: 1.5px solid rgba(255,255,255,.6); padding-bottom: 1px; vertical-align: middle; }
+#scenicFeature .scenic-guide:hover { border-bottom-color: #fff; }
+#scenicFeature .scenic-guide:focus-visible { outline: 3px solid #fff; outline-offset: 3px; border-radius: 4px; }
