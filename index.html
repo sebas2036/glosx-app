@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=53" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=55" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -352,10 +352,8 @@
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="#aiPlanner" data-i18n="nav_plan">Plan</a>
       <a href="/rutas/" data-i18n="nav_routes">Routes</a>
       <a href="/blog.html" data-i18n="footer_blog">Blog</a>
-      <a href="#discover" class="nav-extra" data-i18n="nav_discover">Discover together</a>
       <a href="#scenic" class="nav-extra" data-i18n="nav_scenic">Scenic Trains</a>
       <div class="partners-wrapper nav-extra">
         <a href="#partners" class="nav-partners-btn" onclick="togglePartners(event)" data-i18n="nav_essentials">Travel Essentials <span style="font-size:10px;opacity:0.6">▾</span></a>
@@ -434,16 +432,16 @@
     <div class="search-shell">
       <div class="search-tabs" role="group" aria-label="Search">
         <button type="button" class="search-tab on" aria-pressed="true" data-tab="ai" data-i18n="tab_ai">AI planner</button>
-        <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
-          <button type="button" class="region-btn on" data-region="europe" aria-pressed="true" data-i18n="region_europe">Europe</button>
-          <button type="button" class="region-btn" data-region="japan" aria-pressed="false" data-i18n="region_japan">Japan</button>
-          <button type="button" class="region-btn region-hotels" data-hotels="1" aria-label="Hotels">Hotels</button>
-        </div>
         <button type="button" class="search-tab" aria-pressed="false" data-tab="countries" data-i18n="tab_countries">Routes by country</button>
         <button type="button" class="search-tab" aria-pressed="false" data-tab="roulette" data-i18n="tab_roulette">Destination roulette</button>
       </div>
       <div class="search-card">
         <div class="search-panel on" data-panel="ai">
+          <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
+          <button type="button" class="region-btn on" data-region="europe" aria-pressed="true" data-i18n="region_europe">Europe</button>
+          <button type="button" class="region-btn" data-region="japan" aria-pressed="false" data-i18n="region_japan">Japan</button>
+          <button type="button" class="region-btn region-hotels" data-hotels="1" aria-label="Hotels">Hotels</button>
+        </div>
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
         <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">Your trip</span><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>

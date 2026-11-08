@@ -737,3 +737,17 @@ body.home-v2 .section-label { color: #a30012; }
 #scenicFeature .scenic-guide { display: inline-block; margin-left: 18px; font-weight: 700; font-size: 16px; color: #fff; text-decoration: none; border-bottom: 1.5px solid rgba(255,255,255,.6); padding-bottom: 1px; vertical-align: middle; }
 #scenicFeature .scenic-guide:hover { border-bottom-color: #fff; }
 #scenicFeature .scenic-guide:focus-visible { outline: 3px solid #fff; outline-offset: 3px; border-radius: 4px; }
+
+/* selector Europa / Japón / Hoteles dentro de la tarjeta (antes flotaba en la fila de pestañas) */
+body.home-v2 .search-card .region-switch { display: inline-flex; background: #eef0f5; -webkit-backdrop-filter: none; backdrop-filter: none; margin: 0 0 14px; }
+body.home-v2 .search-card .region-btn { color: #3d4152; padding: 8px 18px; }
+body.home-v2 .search-card .region-btn:hover { background: rgba(20,21,26,.06); }
+body.home-v2 .search-card .region-btn.on { background: #fff; color: #C10016; box-shadow: 0 1px 3px rgba(20,21,26,.14); }
+@media (max-width: 760px) {
+  body.home-v2 .search-card .region-switch { display: flex; width: 100%; }
+  body.home-v2 .search-card .region-btn { flex: 1 1 0; text-align: center; padding: 9px 10px; }
+}
+/* refuerzo: otras hojas pintan el selector oscuro en móvil */
+body.home-v2 .search-card .search-panel .region-switch { background: #eef0f5; }
+body.home-v2 .search-card .search-panel .region-btn { color: #3d4152; }
+body.home-v2 .search-card .search-panel .region-btn.on { background: #fff; color: #C10016; }
