@@ -199,8 +199,12 @@ body.home-v2 .search-tab {
 body.home-v2 .search-tab.on { background: #fff; color: #C10016; }
 body.home-v2 .search-tab:focus-visible { outline: 3px solid #C10016; outline-offset: 2px; }
 body.home-v2 .search-card {
-  background: #fff; border-radius: 0 18px 18px 18px; padding: 26px;
-  box-shadow: 0 24px 60px rgba(60,30,20,.2);
+  /* degradé entre blancos: blanco puro arriba a la izquierda, brillo suave y un blanco perla apenas frío abajo */
+  background:
+    radial-gradient(120% 90% at 0% 0%, #ffffff 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(135deg, #ffffff 0%, #fbfcfe 45%, #f3f5fa 100%);
+  border-radius: 0 18px 18px 18px; padding: 26px;
+  box-shadow: 0 24px 60px rgba(60,30,20,.2), inset 0 1px 0 #ffffff, inset 0 0 0 1px rgba(255,255,255,.9);
 }
 body.home-v2 .search-panel { display: none; }
 body.home-v2 .search-panel.on { display: block; }
