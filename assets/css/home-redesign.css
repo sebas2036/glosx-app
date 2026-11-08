@@ -793,3 +793,18 @@ body.hotels-mode .hero-title-card .hotel-mosaic::after { content: ""; position: 
 body.home-v2 .search-tab:not(.on) { background: rgba(255,255,255,.82) !important; color: #1d2030 !important; text-shadow: none !important;
   -webkit-backdrop-filter: blur(8px) !important; backdrop-filter: blur(8px) !important; box-shadow: 0 1px 6px rgba(0,0,0,.12) !important; }
 body.home-v2 .search-tab:not(.on):hover { background: rgba(255,255,255,.95) !important; }
+
+/* tarjeta de resultado del planificador más compacta (antes ~460px de alto) */
+body.home-v2 .ai-results .ai-segment { padding: 16px 20px; }
+body.home-v2 .ai-results .ai-segment-route, body.home-v2 .ai-results .ai-segment-time { font-size: 21px; }
+body.home-v2 .ai-results .ai-segment-header { min-height: 0; }
+body.home-v2 .ai-results a.ai-segment-buy { padding: 11px 24px; font-size: 15px; }
+body.home-v2 .ai-results .pi { padding-top: 10px; }
+body.home-v2 .ai-results .pi-modes .rp-row { padding: 5px 0; }
+body.home-v2 .ai-results .pi-note { padding-top: 2px; font-size: 11.5px; }
+body.home-v2 .ai-results a.pi-gcard { padding: 8px 14px 8px 8px; margin-top: 10px; }
+body.home-v2 .ai-results a.pi-gcard .pi-gcard-img { width: 64px; height: 48px; flex: 0 0 64px; }
+@media (max-width: 760px) {
+  body.home-v2 .ai-results .ai-segment { padding: 14px 14px; }
+  body.home-v2 .ai-results .ai-segment-route, body.home-v2 .ai-results .ai-segment-time { font-size: 18px; }
+}
