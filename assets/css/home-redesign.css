@@ -773,3 +773,14 @@ body.home-v2 .hotels-bar > .hotels-go-kl:focus-visible, body.home-v2 .hotels-bar
 /* en modo Hoteles se marca Hoteles (no la región) */
 body.home-v2.hotels-mode .search-card > .region-switch .region-btn.on:not(.region-hotels) { background: transparent !important; color: #3d4152 !important; box-shadow: none; }
 body.home-v2.hotels-mode .search-card > .region-switch .region-hotels.on { background: #fff; color: #C10016; box-shadow: 0 1px 3px rgba(20,21,26,.14); }
+/* hoteles: destinos populares según la región (Japón = las 12 ciudades de Klook; Europa = las europeas) */
+.hotels-pop-row .hc-jp { display: none; }
+body[data-region="japan"] .hotels-pop-row .hc-jp { display: inline-flex; }
+body[data-region="japan"] .hotels-pop-row .hc-eu { display: none; }
+
+/* selector dentro de la tarjeta: estilo único en todos los modos (pisa reglas viejas de omio-handoff para Japón/hoteles) */
+body.home-v2 .search-card > .region-switch { background: #eef0f5 !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; box-shadow: none !important; }
+body.home-v2 .search-card > .region-switch .region-btn { background: transparent !important; color: #3d4152 !important; box-shadow: none !important; text-shadow: none !important; }
+body.home-v2 .search-card > .region-switch .region-btn:hover { background: rgba(20,21,26,.06) !important; }
+body.home-v2:not(.hotels-mode) .search-card > .region-switch .region-btn.on,
+body.home-v2.hotels-mode .search-card > .region-switch .region-hotels.on { background: #fff !important; color: #C10016 !important; box-shadow: 0 1px 3px rgba(20,21,26,.14) !important; }
