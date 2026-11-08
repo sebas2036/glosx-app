@@ -724,3 +724,12 @@ body.home-v2 #adventure:not(.is-near) .wt-route-btn::before,
 body.home-v2 #download:not(.is-near) { background-image: none !important; }
 /* Accesibilidad: las etiquetas rojas pequeñas sobre el fondo beige más oscuro no llegaban a 4.5:1 */
 body.home-v2 .section-label { color: #a30012; }
+
+/* tarjetas de trenes panorámicos: línea de lo que se ve + enlace a la guía de la ruta */
+.scenic-card { cursor: pointer; }
+.scenic-card .scenic-sub { margin-top: 8px; font-size: 14px; line-height: 1.45; color: #5a5f73; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.scenic-card .scenic-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.scenic-card .scenic-guide { font-weight: 700; font-size: 15px; color: #C10016; text-decoration: none; border-bottom: 1.5px solid rgba(193,0,22,.35); padding-bottom: 1px; }
+.scenic-card .scenic-guide:hover { border-bottom-color: #C10016; }
+.scenic-card .scenic-guide:focus-visible { outline: 3px solid #C10016; outline-offset: 3px; border-radius: 4px; }
+.scenic-wrapper .scenic-desc { display: none; } /* el texto ahora va dentro de la tarjeta */

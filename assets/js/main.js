@@ -1399,6 +1399,16 @@
         w.classList.toggle('scenic-active', idx === i));
     }
 
+
+    // Guía de ruta de cada tren panorámico (página /rutas/ propia) + texto "Ver guía" por idioma
+    const SCENIC_GUIDES = { 'zermatt>st-moritz': 'stmoritz-zermatt', 'montreux>interlaken': 'montreux-interlaken', 'paris>geneva': 'geneva-paris', 'nice>tende': 'tende-nice', 'rome>venice': 'rome-venice', 'munich>salzburg': 'munich-salzburg', 'amsterdam>brussels': 'amsterdam-brussels', 'brussels>paris': 'brussels-paris' };
+    function scenicGuide(t, lang) {
+      const slug = SCENIC_GUIDES[t.from + '>' + t.to];
+      if (!slug) return '';
+      const suf = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/' }[lang] || '';
+      const label = { en: 'See guide', es: 'Ver guía', fr: 'Voir le guide', it: 'Vedi la guida', ja: 'ガイドを見る', de: 'Zum Guide', pt: 'Ver guia' }[lang] || 'See guide';
+      return `<a class="scenic-guide" href="/rutas/${slug}/${suf}" onclick="event.stopPropagation()">${label} →</a>`;
+    }
     function renderScenic() {
       const grid = document.getElementById('scenicGrid');
       const lang = document.documentElement.lang || 'en';
@@ -1408,14 +1418,15 @@
       const routeLine = (lang === 'ja' && t.route_ja) || t.route;
         return `
         <div class="scenic-wrapper${i === scenicFeatured ? ' scenic-active' : ''}">
-          <a href="#" class="scenic-card" onclick="featureScenic(${i}); var f=document.getElementById('scenicFeature'); if(f) f.scrollIntoView({behavior:'smooth',block:'center'}); return false;">
+          <div role="button" tabindex="0" class="scenic-card" onclick="featureScenic(${i}); var f=document.getElementById('scenicFeature'); if(f) f.scrollIntoView({behavior:'smooth',block:'center'}); return false;">
             <div class="scenic-photo${t.tourUrl ? '' : ' via-omio'}" style="background-image:${t.photo?`url('${t.photo}')`:`linear-gradient(135deg, ${t.g1}, ${t.g2})`}"><span class="scenic-dur">${String(routeLine).split(" · ")[1]||""}</span></div>
             <div class="scenic-body">
               <div class="scenic-name">${t.name}</div>
               <div class="scenic-route">${String(routeLine).split(" · ")[0]}</div>
+              <div class="scenic-sub">${desc}</div>
             </div>
-            <div class="scenic-cta" onclick="event.stopPropagation(); goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>
-          </a>
+            <div class="scenic-actions"><div class="scenic-cta" onclick="event.stopPropagation(); goScenic('${t.from}','${t.to}', event, ${t.tourUrl ? `'${t.tourUrl}'` : 'null'})" data-i18n="scenic_book">${(TRANSLATIONS[lang] || TRANSLATIONS.en).scenic_book || 'Book now'}</div>${scenicGuide(t, lang)}</div>
+          </div>
           <div class="scenic-desc">${desc}</div>
         </div>`;
       }).join('');
