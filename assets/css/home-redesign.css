@@ -784,3 +784,12 @@ body.home-v2 .search-card > .region-switch .region-btn { background: transparent
 body.home-v2 .search-card > .region-switch .region-btn:hover { background: rgba(20,21,26,.06) !important; }
 body.home-v2:not(.hotels-mode) .search-card > .region-switch .region-btn.on,
 body.home-v2.hotels-mode .search-card > .region-switch .region-hotels.on { background: #fff !important; color: #C10016 !important; box-shadow: 0 1px 3px rgba(20,21,26,.14) !important; }
+
+/* título legible sobre el mosaico de hoteles: velo oscuro suave detrás del texto */
+body.hotels-mode .hero-title-card .hotel-mosaic::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 70% 60% at 50% 42%, rgba(12,14,22,.58), rgba(12,14,22,.22) 75%); }
+
+/* pestañas sin seleccionar: blanco semitransparente con texto oscuro, igual en todos los modos (se leen sobre fotos claras u oscuras) */
+body.home-v2 .search-tab:not(.on) { background: rgba(255,255,255,.82) !important; color: #1d2030 !important; text-shadow: none !important;
+  -webkit-backdrop-filter: blur(8px) !important; backdrop-filter: blur(8px) !important; box-shadow: 0 1px 6px rgba(0,0,0,.12) !important; }
+body.home-v2 .search-tab:not(.on):hover { background: rgba(255,255,255,.95) !important; }
