@@ -813,3 +813,15 @@ body.home-v2 .ai-results .pi-exp { margin: 8px 2px 0; font-size: 13.5px; color: 
 body.home-v2 .ai-results .pi-exp .pi-exp-lab { font-weight: 600; color: #1d2030; }
 body.home-v2 .ai-results .pi-exp a { color: #C10016; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(193,0,22,.3); }
 body.home-v2 .ai-results .pi-exp a:hover { border-bottom-color: #C10016; }
+
+/* cupón NEW10 compacto: una sola franja baja; la letra chica queda en una línea más pequeña */
+body.home-v2 .omo.omo-strip { padding: 10px 16px !important; margin-top: 10px !important; border-radius: 12px !important; }
+body.home-v2 .omo.omo-strip .omo-row { gap: 12px; align-items: center; }
+body.home-v2 .omo.omo-strip .omo-row > div:first-child { font-size: 14px; line-height: 1.35; }
+body.home-v2 .omo.omo-strip .omo-row > div:first-child > :first-child { font-size: 10.5px; letter-spacing: .08em; margin-bottom: 2px; }
+body.home-v2 .omo.omo-strip .omo-btn { padding: 6px 14px; font-size: 13px; min-height: 0; }
+body.home-v2 .omo.omo-strip .omo-note { font-size: 11px; line-height: 1.35; margin-top: 4px; opacity: .8; }
+body.home-v2 .omo.omo-strip p.omo-eyebrow { font-size: 10.5px !important; letter-spacing: .08em !important; margin: 0 0 2px !important; }
+body.home-v2 .omo.omo-strip p.omo-text { font-size: 14px !important; line-height: 1.35 !important; margin: 0 !important; }
+body.home-v2 .omo.omo-strip p.omo-note { font-size: 11px !important; line-height: 1.35 !important; margin: 4px 0 0 !important; }
+body.home-v2 .omo.omo-strip .omo-btn { padding: 6px 14px !important; font-size: 13px !important; }
