@@ -943,3 +943,8 @@ html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card:
 html body.home-v2.hotels-mode .hero-title-card::before { background-color: #15171b !important; background-size: cover, cover, auto 100% !important; background-position: 0 0, 0 0, 50% 50% !important; }
 html body.home-v2.hotels-mode .hero-title-card::before { background-color: transparent !important; background-size: cover, cover, cover !important; background-position: 0 0, 0 0, 50% 50% !important; }
 html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { background-color: transparent !important; background-position: 0 0, 0 0, 50% 0 !important; }
+
+/* Halo blanco que respira en la pestaña Planificador IA */
+@keyframes aiTabHalo { 0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,.55), 0 0 10px 2px rgba(255,255,255,.35); } 50% { box-shadow: 0 0 0 6px rgba(255,255,255,0), 0 0 26px 10px rgba(255,255,255,.55); } }
+html body.home-v2 .search-tabs .search-tab:first-of-type { position: relative; z-index: 2; animation: aiTabHalo 2.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { html body.home-v2 .search-tabs .search-tab:first-of-type { animation: none; box-shadow: 0 0 16px 4px rgba(255,255,255,.45); } }
