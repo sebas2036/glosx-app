@@ -74,8 +74,8 @@
         <div class="search-panel on" data-panel="ai">
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
-        <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">Your trip</span><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="Example: Zurich to Milan" autocomplete="off" />
+        <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">Your train trip</span><svg class="ai-search-icon eu-only" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg><svg class="ai-search-icon jp-only" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16h13c3.5 0 6.5-1.5 7-4-1-2.5-5-4-9-4H4a2 2 0 0 0-2 2z"/><path d="M6 8v4h11"/><path d="M3 20h18"/></svg>
+          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="Train from Zurich to Milan" autocomplete="off" />
           <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Generate Itinerary</button>
