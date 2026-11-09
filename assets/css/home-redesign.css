@@ -870,7 +870,7 @@ body.home-v2 .search-card .ai-search-icon { color: #3d4152; }
 /* Portadas v3 con barrido (09-nov-2026): una foto por modo + desplazamiento lento */
 @keyframes heroSweep { from { background-position: 0% 50%, 0 0, 42% 50%; } to { background-position: 0% 50%, 0 0, 58% 50%; } }
 html body.home-v2 .hero-title-card::before {
-  background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-2000.webp?v=2') !important;
+  background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-2000.webp?v=3') !important;
   background-size: cover, cover, 115% auto !important; background-repeat: no-repeat !important;
   animation: heroSweep 22s ease-in-out infinite alternate;
 }
@@ -883,7 +883,7 @@ html body.home-v2.hotels-mode .hero-title-card::before {
 }
 html body.home-v2.hotels-mode .hotel-mosaic { display: none !important; }
 @media (max-width: 760px) {
-  html body.home-v2 .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-1000.webp?v=2') !important; background-size: cover, cover, auto 100% !important; }
+  html body.home-v2 .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-1000.webp?v=3') !important; background-size: cover, cover, auto 100% !important; }
   html body.home-v2[data-region="japan"] .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-jp-1000.webp') !important; }
   html body.home-v2.hotels-mode .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-1000.webp?v=2') !important; }
 }
@@ -893,31 +893,31 @@ html body.home-v2.hotels-mode .hotel-mosaic { display: none !important; }
 html body.home-v2.hotels-mode .hero .hero-badge { font-size: 0 !important; }
 html body.home-v2.hotels-mode .hero .hero-badge.jp-only { display: none !important; }
 html body.home-v2.hotels-mode .hero .hero-badge.eu-only { display: inline-block !important; }
-html body.home-v2.hotels-mode .hero .hero-badge::after { font-size: 12px; content: "Hotels near your station"; }
-html[lang="es"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hoteles cerca de tu estación"; }
-html[lang="fr"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hôtels près de votre gare"; }
-html[lang="it"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotel vicino alla tua stazione"; }
-html[lang="de"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotels nahe deinem Bahnhof"; }
-html[lang="pt"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotéis perto da tua estação"; }
-html[lang="ja"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "駅近くのホテル"; }
+html body.home-v2.hotels-mode .hero .hero-badge::after { font-size: 12px; content: "Hotels at your destination"; }
+html[lang="es"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hoteles en tu destino"; }
+html[lang="fr"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hôtels à destination"; }
+html[lang="it"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotel nella tua meta"; }
+html[lang="de"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotels an deinem Ziel"; }
+html[lang="pt"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotéis no teu destino"; }
+html[lang="ja"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "行き先のホテル"; }
 
 /* Modo Hoteles: título propio */
 html body.home-v2.hotels-mode .hero h1 > * { display: none !important; }
 html body.home-v2.hotels-mode .hero h1::before { display: block; color: #fff; }
 html body.home-v2.hotels-mode .hero h1::after { display: block; color: rgb(255,122,138); }
-html body.home-v2.hotels-mode .hero h1::before { content: "Sleep near the station."; }
+html body.home-v2.hotels-mode .hero h1::before { content: "Pick your destination."; }
 html body.home-v2.hotels-mode .hero h1::after { content: "We find the hotel."; }
-html[lang="es"] body.home-v2.hotels-mode .hero h1::before { content: "Duerme cerca de la estación."; }
+html[lang="es"] body.home-v2.hotels-mode .hero h1::before { content: "Elige tu destino."; }
 html[lang="es"] body.home-v2.hotels-mode .hero h1::after { content: "Nosotros buscamos el hotel."; }
-html[lang="fr"] body.home-v2.hotels-mode .hero h1::before { content: "Dormez près de la gare."; }
+html[lang="fr"] body.home-v2.hotels-mode .hero h1::before { content: "Choisissez votre destination."; }
 html[lang="fr"] body.home-v2.hotels-mode .hero h1::after { content: "Nous trouvons l’hôtel."; }
-html[lang="it"] body.home-v2.hotels-mode .hero h1::before { content: "Dormi vicino alla stazione."; }
+html[lang="it"] body.home-v2.hotels-mode .hero h1::before { content: "Scegli la tua meta."; }
 html[lang="it"] body.home-v2.hotels-mode .hero h1::after { content: "Noi troviamo l’hotel."; }
-html[lang="de"] body.home-v2.hotels-mode .hero h1::before { content: "Schlaf nah am Bahnhof."; }
+html[lang="de"] body.home-v2.hotels-mode .hero h1::before { content: "Wähle dein Ziel."; }
 html[lang="de"] body.home-v2.hotels-mode .hero h1::after { content: "Wir finden das Hotel."; }
-html[lang="pt"] body.home-v2.hotels-mode .hero h1::before { content: "Dorme perto da estação."; }
+html[lang="pt"] body.home-v2.hotels-mode .hero h1::before { content: "Escolhe o teu destino."; }
 html[lang="pt"] body.home-v2.hotels-mode .hero h1::after { content: "Nós encontramos o hotel."; }
-html[lang="ja"] body.home-v2.hotels-mode .hero h1::before { content: "駅の近くに泊まろう。"; }
+html[lang="ja"] body.home-v2.hotels-mode .hero h1::before { content: "行き先を選ぶだけ。"; }
 html[lang="ja"] body.home-v2.hotels-mode .hero h1::after { content: "ホテルはこちらで探します。"; }
 
 /* Encuadre de las portadas v3: se ve el tren / la cama */
@@ -936,3 +936,5 @@ html body.home-v2[data-region="japan"]:not(.hotels-mode) .hero-title-card::befor
 html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { --hy: 55%; }
 html body.home-v2.hotels-mode .hero-title-card::before { background-size: cover, cover, cover !important; animation: none !important; background-position: 0 0, 0 0, 50% 50% !important; }
 html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { --hy: 20%; }
+
+html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { --hy: 50%; background-size: cover, cover, cover !important; animation: none !important; background-position: 0 0, 0 0, 50% 50% !important; }
