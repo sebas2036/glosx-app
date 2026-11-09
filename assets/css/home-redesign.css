@@ -951,3 +951,5 @@ html body.home-v2 .search-tabs .search-tab:first-of-type { position: relative; z
 /* Modo Japón: el halo va en una capa aparte (el subrayado naranja usa box-shadow con !important) */
 html body.home-v2[data-region="japan"] .search-tabs .search-tab:first-of-type::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; animation: aiTabHalo 2.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { html body.home-v2[data-region="japan"] .search-tabs .search-tab:first-of-type::after { animation: none; box-shadow: 0 0 16px 4px rgba(255,255,255,.45); } }
+html body.home-v2.hotels-mode .search-tabs .search-tab:first-of-type::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; animation: aiTabHalo 2.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { html body.home-v2.hotels-mode .search-tabs .search-tab:first-of-type::after { animation: none; box-shadow: 0 0 16px 4px rgba(255,255,255,.45); } }
