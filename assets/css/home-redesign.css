@@ -953,3 +953,13 @@ html body.home-v2[data-region="japan"] .search-tabs .search-tab:first-of-type::a
 @media (prefers-reduced-motion: reduce) { html body.home-v2[data-region="japan"] .search-tabs .search-tab:first-of-type::after { animation: none; box-shadow: 0 0 16px 4px rgba(255,255,255,.45); } }
 html body.home-v2.hotels-mode .search-tabs .search-tab:first-of-type::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; animation: aiTabHalo 2.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { html body.home-v2.hotels-mode .search-tabs .search-tab:first-of-type::after { animation: none; box-shadow: 0 0 16px 4px rgba(255,255,255,.45); } }
+/* Celular: la foto cubre toda la portada (sin franja vacía entre el título y el planificador) */
+@media (max-width: 760px) {
+  html body.home-v2 .hero-title-card::before,
+  html body.home-v2[data-region="japan"] .hero-title-card::before,
+  html body.home-v2.hotels-mode .hero-title-card::before,
+  html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before {
+    background-size: cover, cover, cover !important; background-position: 0 0, 0 0, 30% 50% !important; animation: none !important;
+  }
+  html body.home-v2[data-region="japan"]:not(.hotels-mode) .hero-title-card::before { background-position: 0 0, 0 0, 75% 50% !important; }
+}
