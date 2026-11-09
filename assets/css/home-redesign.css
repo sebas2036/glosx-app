@@ -888,3 +888,15 @@ html body.home-v2.hotels-mode .hotel-mosaic { display: none !important; }
   html body.home-v2.hotels-mode .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-1000.webp') !important; }
 }
 @media (prefers-reduced-motion: reduce) { html body.home-v2 .hero-title-card::before { animation: none; background-position: center !important; } }
+
+/* Modo Hoteles: el rótulo de la portada habla de hoteles */
+html body.home-v2.hotels-mode .hero .hero-badge { font-size: 0 !important; }
+html body.home-v2.hotels-mode .hero .hero-badge.jp-only { display: none !important; }
+html body.home-v2.hotels-mode .hero .hero-badge.eu-only { display: inline-block !important; }
+html body.home-v2.hotels-mode .hero .hero-badge::after { font-size: 12px; content: "Hotels near your station"; }
+html[lang="es"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hoteles cerca de tu estación"; }
+html[lang="fr"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hôtels près de votre gare"; }
+html[lang="it"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotel vicino alla tua stazione"; }
+html[lang="de"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotels nahe deinem Bahnhof"; }
+html[lang="pt"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "Hotéis perto da tua estação"; }
+html[lang="ja"] body.home-v2.hotels-mode .hero .hero-badge::after { content: "駅近くのホテル"; }
