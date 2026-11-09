@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=69" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=70" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -445,8 +445,8 @@
         <div class="search-panel on" data-panel="ai">
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
-        <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">Il tuo viaggio</span><svg class="ai-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="Esempio: Zurigo a Milano" autocomplete="off" />
+        <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">Il tuo viaggio in treno</span><svg class="ai-search-icon eu-only" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg><svg class="ai-search-icon jp-only" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16h13c3.5 0 6.5-1.5 7-4-1-2.5-5-4-9-4H4a2 2 0 0 0-2 2z"/><path d="M6 8v4h11"/><path d="M3 20h18"/></svg>
+          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="Treno da Zurigo a Milano" autocomplete="off" />
           <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" data-i18n-aria-label="ai_swap" aria-label="Inverti partenza e arrivo" title="Swap origin and destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">Genera itinerario</button>
@@ -1352,11 +1352,11 @@
     .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
     .pwa-install-btn:hover { background: #8b5cf6; }
     </style>
-  <script src="/assets/js/main.min.js?v=74" defer></script>
+  <script src="/assets/js/main.min.js?v=75" defer></script>
   <script src="/assets/js/omio-bridge.js?v=12" defer></script>
   <script src="/assets/js/klook-bridge.js?v=2" defer></script>
   <script src="/assets/js/planner-info.js?v=7" defer></script>
-  <script src="/assets/js/japan.js?v=53" defer></script>
+  <script src="/assets/js/japan.js?v=54" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
