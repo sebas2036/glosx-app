@@ -825,3 +825,14 @@ body.home-v2 .omo.omo-strip p.omo-eyebrow { font-size: 10.5px !important; letter
 body.home-v2 .omo.omo-strip p.omo-text { font-size: 14px !important; line-height: 1.35 !important; margin: 0 !important; }
 body.home-v2 .omo.omo-strip p.omo-note { font-size: 11px !important; line-height: 1.35 !important; margin: 4px 0 0 !important; }
 body.home-v2 .omo.omo-strip .omo-btn { padding: 6px 14px !important; font-size: 13px !important; }
+
+/* Tipografía más fina en el planificador (08-nov-2026): pesos 400/500 como referencia Omio */
+body.home-v2 .search-tab { font-weight: 500 !important; letter-spacing: 0 !important; }
+body.home-v2 .search-tab.on { font-weight: 600 !important; }
+body.home-v2 .search-card .region-btn { font-weight: 500 !important; }
+body.home-v2 .search-card .ai-input-container input { font-weight: 400 !important; letter-spacing: 0 !important; color: #1f2333 !important; }
+body.home-v2 .search-card .ai-input-container input::placeholder { font-weight: 400 !important; color: #8a8fa0 !important; }
+body.home-v2 .search-card label, body.home-v2 .search-card .ai-input-label { font-weight: 400 !important; }
+body.home-v2 .search-card .ai-generate-btn { font-weight: 600 !important; letter-spacing: 0 !important; }
+body.home-v2 .search-card .ai-chip, body.home-v2 .search-card .chip, body.home-v2 .search-card [class*="chip"] { font-weight: 400 !important; }
+body.home-v2 .search-card p { font-weight: 400 !important; }
