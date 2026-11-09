@@ -919,3 +919,11 @@ html[lang="pt"] body.home-v2.hotels-mode .hero h1::before { content: "Dorme pert
 html[lang="pt"] body.home-v2.hotels-mode .hero h1::after { content: "Nós encontramos o hotel."; }
 html[lang="ja"] body.home-v2.hotels-mode .hero h1::before { content: "駅の近くに泊まろう。"; }
 html[lang="ja"] body.home-v2.hotels-mode .hero h1::after { content: "ホテルはこちらで探します。"; }
+
+/* Encuadre de las portadas v3: se ve el tren / la cama */
+@keyframes heroSweep2 { from { background-position: 0 0, 0 0, 45% var(--hy, 40%); } to { background-position: 0 0, 0 0, 55% var(--hy, 40%); } }
+html body.home-v2 .hero-title-card::before { --hy: 38%; background-size: cover, cover, 108% auto !important; animation: heroSweep2 22s ease-in-out infinite alternate !important; }
+html body.home-v2[data-region="japan"] .hero-title-card::before { --hy: 32%; }
+html body.home-v2.hotels-mode .hero-title-card::before { --hy: 62%; }
+@media (max-width: 760px) { html body.home-v2 .hero-title-card::before { background-size: cover, cover, cover !important; } }
+@media (prefers-reduced-motion: reduce) { html body.home-v2 .hero-title-card::before { animation: none !important; background-position: 0 0, 0 0, 50% var(--hy, 40%) !important; } }
