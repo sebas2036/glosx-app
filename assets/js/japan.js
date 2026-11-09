@@ -619,6 +619,7 @@
     if (euClose && wrap && !wrap.hidden) euClose.click();
 
     if (jpEls.grid) jpEls.grid.addEventListener('click', function (e) {
+      if (e.target.closest('.scenic-guide')) return;
       var cta = e.target.closest('.scenic-cta');
       var card = e.target.closest('.scenic-wrapper');
       if (!card) return;
@@ -660,17 +661,22 @@
       '<div class="sf-name">' + esc(s.name) + '</div>' +
       '<div class="sf-route">' + esc(city(s.a)) + ' → ' + esc(city(s.b)) + (d ? ' · ' + esc(ht('from')) + ' ' + fmtMin(d.m) : '') + '</div>' +
       '<div class="sf-desc">' + esc(s.desc[lang()] || s.desc.en) + '</div>' +
-      '<button type="button" class="sf-btn">' + esc(ht('book')) + ' →</button></div>';
+      '<button type="button" class="sf-btn">' + esc(ht('book')) + ' →</button>' + jpGuide(s, 'scenic-guide') + '</div>';
     Array.prototype.forEach.call(jpEls.grid ? jpEls.grid.children : [], function (w, idx) { w.classList.toggle('scenic-active', idx === i); });
+  }
+  function jpGuide(sc, cls) {
+    var l = lang(), pre = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/' }[l] || '';
+    var label = { en: 'See guide', es: 'Ver guía', fr: 'Voir le guide', it: 'Vedi la guida', ja: 'ガイドを見る', de: 'Zum Guide', pt: 'Ver guia' }[l] || 'See guide';
+    return '<a class="' + cls + '" href="/rutas/' + sc.from + '-' + sc.to + '/' + pre + '">' + esc(label) + ' →</a>';
   }
   function renderJpScenic() {
     if (!jpEls.grid) return;
     jpEls.grid.innerHTML = JP_SCENIC.map(function (s, i) {
       var d = legInfo(s.from, s.to);
       return '<div class="scenic-wrapper' + (i === jpFeatured ? ' scenic-active' : '') + '" data-i="' + i + '">' +
-        '<a href="#" class="scenic-card"><div class="scenic-photo" style="background-image:url(\'' + s.photo + '\')"><span class="scenic-dur">' + (d ? fmtMin(d.m) : '') + '</span></div>' +
+        '<div class="scenic-card" role="button" tabindex="0"><div class="scenic-photo" style="background-image:url(\'' + s.photo + '\')"><span class="scenic-dur">' + (d ? fmtMin(d.m) : '') + '</span></div>' +
         '<div class="scenic-body"><div class="scenic-name">' + esc(s.name) + '</div><div class="scenic-route">' + esc(city(s.a)) + ' → ' + esc(city(s.b)) + '</div></div>' +
-        '<div class="scenic-cta">' + esc(ht('book')) + '</div></a>' +
+        '<div class="scenic-actions"><div class="scenic-cta">' + esc(ht('book')) + '</div>' + jpGuide(s, 'scenic-guide') + '</div></div>' +
         '<div class="scenic-desc">' + esc(s.desc[lang()] || s.desc.en) + '</div></div>';
     }).join('');
     featureJp(jpFeatured);
