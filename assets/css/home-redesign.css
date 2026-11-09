@@ -870,7 +870,7 @@ body.home-v2 .search-card .ai-search-icon { color: #3d4152; }
 /* Portadas v3 con barrido (09-nov-2026): una foto por modo + desplazamiento lento */
 @keyframes heroSweep { from { background-position: 0% 50%, 0 0, 42% 50%; } to { background-position: 0% 50%, 0 0, 58% 50%; } }
 html body.home-v2 .hero-title-card::before {
-  background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-2000.webp?v=4') !important;
+  background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-2000.webp?v=5') !important;
   background-size: cover, cover, 115% auto !important; background-repeat: no-repeat !important;
   animation: heroSweep 22s ease-in-out infinite alternate;
 }
@@ -883,7 +883,7 @@ html body.home-v2.hotels-mode .hero-title-card::before {
 }
 html body.home-v2.hotels-mode .hotel-mosaic { display: none !important; }
 @media (max-width: 760px) {
-  html body.home-v2 .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-1000.webp?v=4') !important; background-size: cover, cover, auto 100% !important; }
+  html body.home-v2 .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-1000.webp?v=5') !important; background-size: cover, cover, auto 100% !important; }
   html body.home-v2[data-region="japan"] .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-jp-1000.webp') !important; }
   html body.home-v2.hotels-mode .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-1000.webp?v=2') !important; }
 }
@@ -939,3 +939,4 @@ html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card:
 
 html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { --hy: 50%; background-size: cover, cover, cover !important; animation: none !important; background-position: 0 0, 0 0, 50% 50% !important; }
 html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { background-position: 0 0, 0 0, 50% 0% !important; }
+html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { background-color: #15171b !important; background-size: cover, cover, 100% auto !important; background-position: 0 0, 0 0, 50% 64px !important; }
