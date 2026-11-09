@@ -927,3 +927,6 @@ html body.home-v2[data-region="japan"] .hero-title-card::before { --hy: 32%; }
 html body.home-v2.hotels-mode .hero-title-card::before { --hy: 62%; }
 @media (max-width: 760px) { html body.home-v2 .hero-title-card::before { background-size: cover, cover, cover !important; } }
 @media (prefers-reduced-motion: reduce) { html body.home-v2 .hero-title-card::before { animation: none !important; background-position: 0 0, 0 0, 50% var(--hy, 40%) !important; } }
+html body.home-v2.hotels-mode .hero-title-card::before { --hy: 55%; background-size: cover, cover, 100% auto !important; }
+@keyframes heroSweepHotel { from { background-position: 0 0, 0 0, 50% 52%; } to { background-position: 0 0, 0 0, 50% 58%; } }
+html body.home-v2.hotels-mode .hero-title-card::before { animation-name: heroSweepHotel !important; }
