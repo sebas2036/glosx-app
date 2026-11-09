@@ -879,13 +879,13 @@ html body.home-v2[data-region="japan"] .hero-title-card::before {
 }
 html body.home-v2.hotels-mode .hero-title-card::before {
   opacity: 1 !important;
-  background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-2000.webp?v=3') !important;
+  background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-2000.webp?v=4') !important;
 }
 html body.home-v2.hotels-mode .hotel-mosaic { display: none !important; }
 @media (max-width: 760px) {
   html body.home-v2 .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-eu-1000.webp?v=5') !important; background-size: cover, cover, auto 100% !important; }
   html body.home-v2[data-region="japan"] .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-jp-1000.webp') !important; }
-  html body.home-v2.hotels-mode .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-1000.webp?v=3') !important; }
+  html body.home-v2.hotels-mode .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-1000.webp?v=4') !important; }
 }
 @media (prefers-reduced-motion: reduce) { html body.home-v2 .hero-title-card::before { animation: none; background-position: center !important; } }
 
