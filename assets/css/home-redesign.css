@@ -941,3 +941,4 @@ html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card:
 html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { background-position: 0 0, 0 0, 50% 0% !important; }
 html body.home-v2:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { background-color: #15171b !important; background-size: cover, cover, 100% auto !important; background-position: 0 0, 0 0, 50% 64px !important; }
 html body.home-v2.hotels-mode .hero-title-card::before { background-color: #15171b !important; background-size: cover, cover, auto 100% !important; background-position: 0 0, 0 0, 50% 50% !important; }
+html body.home-v2.hotels-mode .hero-title-card::before { background-color: transparent !important; background-size: cover, cover, cover !important; background-position: 0 0, 0 0, 50% 50% !important; }
