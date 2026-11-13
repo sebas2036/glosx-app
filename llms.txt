@@ -1,31 +1,43 @@
 # WoW Train (glosx.app)
 
-> Free AI-powered train travel planner for Europe. Describe a trip in plain language and get a complete rail itinerary — routes, journey times, operators and booking links — covering rail travel across 16 European countries, with 103 individual route guides. No account, no signup. Independent project by GLOSX, not affiliated with any rail operator.
+> Free train trip planner for Europe and Japan. Describe a trip in plain language and get a rail itinerary with routes, journey times, operators and booking links. 326 route guides (130 in Europe, 196 in Japan) in English, Spanish, French, Italian and Japanese, plus open-data timetable pages built from official rail operator data. No account, no signup. Independent project by GLOSX, not affiliated with any rail operator.
 
-WoW Train is a website, not a mobile app. Bookings are completed on partner platforms (Omio, Klook and others); WoW Train never processes payments itself and earns a small affiliate commission at no extra cost to the traveler.
+WoW Train is a website, not a mobile app. Bookings are completed on partner platforms (Omio for Europe, Klook for Japan); WoW Train never processes payments and earns an affiliate commission at no extra cost to the traveller. Prices shown on the site are indicative; the final fare is the one on the partner site for the chosen date.
 
-## Core
+## Planner and route guides
 
-- [Homepage / AI trip planner](https://glosx.app/): describe a trip in plain language, get a full itinerary with connections and booking links
-- [Destination roulette](https://glosx.app/hoy/): spin a real European city pair and build the rail itinerary
-- [AI Planner (dedicated page)](https://glosx.app/ai-planner/): how the AI planner works, step by step
-- [Explore routes](https://glosx.app/explore/): browse all covered routes and pick guides by email/WhatsApp
-- [Route guides hub](https://glosx.app/rutas/): index of all individual route guides (e.g. Paris–Barcelona, Madrid–Seville, London–Paris)
+- [AI trip planner](https://glosx.app/): describe a trip ("Zurich to Milan", "Tokyo to Kyoto") and get each leg with journey time and a booking link; Europe and Japan modes
+- [All route guides](https://glosx.app/rutas/): index of the 326 route guides, Japan grouped by region; each guide has journey time, operator, stations, FAQ and a route map
+- [Trains from London](https://glosx.app/trains-from-london/) and [trains from Paris](https://glosx.app/trains-from-paris/): hub pages with every direct route from those cities
+- [Trains from the UK to Europe](https://glosx.app/trains-from-uk-to-europe/), [France to Spain](https://glosx.app/trains-from-france-to-spain/), [France to Italy](https://glosx.app/trains-from-france-to-italy/), [Germany to Italy](https://glosx.app/trains-from-germany-to-italy/): cross-border guides
 
-## Blog
+## Open-data timetables (first train, last train, trains per day, fastest journey)
 
-- [Blog index](https://glosx.app/blog.html): guides on European train travel — pricing, night trains, scenic routes, Eurail vs point-to-point, and more
+Calculated by glosx.app from official open GTFS/timetable data; each page states its source, method and a CSV download.
 
-## About
+- [Trains in Switzerland](https://glosx.app/swiss-trains/): 125 connections from opentransportdata.swiss (SBB); WoW Train is listed as a showcase on opentransportdata.swiss
+- [Trains in Austria](https://glosx.app/austria-trains/): 368 connections from ÖBB open data
+- [Trains in Spain](https://glosx.app/horarios-trenes-espana/): from Renfe open data
+- [Trains in Norway](https://glosx.app/norway-trains/): from Entur open data
+- [Trains in Sweden](https://glosx.app/sweden-trains/): from Trafiklab open data
+- [Trains in Finland](https://glosx.app/finland-trains/): from Digitraffic open data
+- [How late is the last train in Europe?](https://glosx.app/last-train-europe/): study of last departures across European routes; dataset on Zenodo (doi 10.5281/zenodo.23827431)
 
-- [About / our story](https://glosx.app/about.html)
-- [Support / FAQ](https://glosx.app/support.html)
-- [Privacy policy](https://glosx.app/privacy.html)
-- [Terms of use](https://glosx.app/terms.html)
+## Guides
+
+- [Blog](https://glosx.app/blog.html): European and Japanese train travel guides (scenic routes, night trains, rail passes vs point-to-point tickets, limited express trains in Japan)
+- [Scenic trains](https://glosx.app/blog-scenic-train-routes-europe.html): the most scenic rail routes in Europe
 
 ## Languages
 
-Available in English, Spanish (español neutro), French and Italian. Language-specific homepages: [/es/](https://glosx.app/es/), [/fr/](https://glosx.app/fr/), [/it/](https://glosx.app/it/).
+English (default), Spanish (/es/), French (/fr/), Italian (/it/) and Japanese (/ja/). Every route guide exists in all five languages, e.g. https://glosx.app/rutas/tokyo-kyoto/ja/.
+
+## About
+
+- [About](https://glosx.app/about.html)
+- [Support / FAQ](https://glosx.app/support.html)
+- [Privacy policy](https://glosx.app/privacy.html)
+- [Terms of use](https://glosx.app/terms.html)
 
 ## Optional
 
