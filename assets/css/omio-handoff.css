@@ -529,7 +529,7 @@ body:not([data-region="japan"]) .hotels-bar > .hotels-field:not(.hotels-date) { 
 body:not([data-region="japan"]) .hotels-bar > .hotels-date { flex: 1 1 150px; }
 body:not([data-region="japan"]) .hotels-bar > .hotels-go-kl, body:not([data-region="japan"]) .hotels-bar > .hotels-go-bk { flex: 1 1 calc(50% - 6px); padding: 15px 18px; }
 
-/* Pestaña Experiencias: Tripadvisor + Klook */
+/* Pestaña Experiencias: GetYourGuide + Klook */
 .exp-panel { padding: 6px 4px 2px; }
 .exp-head { margin: 0 0 14px; }
 .exp-title { margin: 0 0 4px; font-size: 20px; font-weight: 700; color: #14151a; }
@@ -542,7 +542,7 @@ body:not([data-region="japan"]) .hotels-bar > .hotels-go-kl, body:not([data-regi
 .exp-desc { grid-column: 2; font-size: 14px; line-height: 1.35; color: #55565f; }
 .exp-go { grid-column: 2; margin-top: 6px; font-size: 14px; font-weight: 700; }
 .exp-klook .exp-go { color: #e04f00; }
-.exp-tripadvisor .exp-go { color: #00875f; }
+.exp-gyg .exp-go { color: #e8401c; }
 @media (max-width: 640px) { .exp-grid { grid-template-columns: 1fr; } .exp-title { font-size: 18px; } }
 
 /* Botones de hoteles con la tipografía y el logo de cada marca: Klook = Poppins; Booking = tipografía del sistema (la de su web) */

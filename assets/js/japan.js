@@ -460,7 +460,7 @@
       if (window.glosxGuideCard) box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
       else box.insertAdjacentHTML('beforeend', '<a class="pi-guide" href="' + esc(g) + '">' + esc(t.guide) + ' <span aria-hidden="true">→</span></a>');
     }
-    // "Qué hacer en {destino}" (Klook + Tripadvisor de la ciudad elegida), una vez por resultado
+    // "Qué hacer en {destino}" (Klook + GetYourGuide de la ciudad elegida), una vez por resultado
     var res = seg.closest('.ai-results');
     if (window.glosxExpLine && res && !res.querySelector('.pi-exp')) {
       var rte = seg.querySelector('.ai-segment-route'), dn = rte ? (rte.textContent.split('→')[1] || '').trim() : '';
@@ -959,7 +959,7 @@
   (function () {
     var L = JPH[lang()] || JPH.en, lg = lang();
     // Esenciales: el subtítulo y las tarjetas que no aplican a Japón
-    // Booking y Tripadvisor también aplican a Japón: se dejan visibles para que la fila de partners de confianza no quede con una sola tarjeta
+    // Booking y GetYourGuide también aplican a Japón: se dejan visibles para que la fila de partners de confianza no quede con una sola tarjeta
     // Guías: la guía japonesa sustituye a las tres europeas
     var gl = document.querySelector('[data-i18n="guides_lead"]');
     twinHome(gl, function (c) { c.textContent = L.gl; });
@@ -1254,15 +1254,15 @@
     new MutationObserver(function () { setTimeout(localize, 0); }).observe(res, { childList: true, subtree: true, characterData: true });
   })();
 
-  // Pestaña "Experiencias" (junto a Ruleta de destinos): Tripadvisor + tours y actividades de Klook, ambos por el proxy de afiliados.
+  // Pestaña "Experiencias" (junto a Ruleta de destinos): GetYourGuide + tours y actividades de Klook, ambos por el proxy de afiliados.
   var EXP = {
-    en: { tab: 'Experiences', t: 'Experiences and reviews', s: 'Find things to do and read traveler reviews before you book.', kl: 'Klook', kld: 'Tours, tickets and activities with instant confirmation', tr: 'Tripadvisor', trd: 'Traveler reviews and top-rated experiences', go: 'Explore' },
-    es: { tab: 'Experiencias', t: 'Experiencias y reseñas', s: 'Descubre qué hacer y lee opiniones de viajeros antes de reservar.', kl: 'Klook', kld: 'Tours, entradas y actividades con confirmación inmediata', tr: 'Tripadvisor', trd: 'Opiniones de viajeros y experiencias mejor valoradas', go: 'Explorar' },
-    fr: { tab: 'Expériences', t: 'Expériences et avis', s: 'Découvrez quoi faire et lisez les avis de voyageurs avant de réserver.', kl: 'Klook', kld: 'Visites, billets et activités avec confirmation immédiate', tr: 'Tripadvisor', trd: 'Avis de voyageurs et expériences les mieux notées', go: 'Explorer' },
-    it: { tab: 'Esperienze', t: 'Esperienze e recensioni', s: 'Scopri cosa fare e leggi le recensioni dei viaggiatori prima di prenotare.', kl: 'Klook', kld: 'Tour, biglietti e attività con conferma immediata', tr: 'Tripadvisor', trd: 'Recensioni dei viaggiatori ed esperienze più apprezzate', go: 'Esplora' },
-    de: { tab: 'Erlebnisse', t: 'Erlebnisse und Bewertungen', s: 'Entdecke, was du unternehmen kannst, und lies Bewertungen, bevor du buchst.', kl: 'Klook', kld: 'Touren, Tickets und Aktivitäten mit sofortiger Bestätigung', tr: 'Tripadvisor', trd: 'Reisebewertungen und bestbewertete Erlebnisse', go: 'Entdecken' },
-    pt: { tab: 'Experiências', t: 'Experiências e avaliações', s: 'Descubra o que fazer e leia avaliações de viajantes antes de reservar.', kl: 'Klook', kld: 'Passeios, ingressos e atividades com confirmação imediata', tr: 'Tripadvisor', trd: 'Avaliações de viajantes e experiências mais bem avaliadas', go: 'Explorar' },
-    ja: { tab: '体験', t: '体験とクチコミ', s: '予約の前に、やることを探して旅行者のクチコミを確認しましょう。', kl: 'Klook', kld: 'ツアー・チケット・アクティビティを即時確認で', tr: 'Tripadvisor', trd: '旅行者のクチコミと高評価の体験', go: '見る' }
+    en: { tab: 'Experiences', t: 'Tours and experiences', s: 'Find things to do at your destination before you book.', kl: 'Klook', kld: 'Tours, tickets and activities with instant confirmation', tr: 'GetYourGuide', trd: 'Tours, day trips and skip-the-line tickets', go: 'Explore' },
+    es: { tab: 'Experiencias', t: 'Tours y experiencias', s: 'Descubre qué hacer en tu destino antes de reservar.', kl: 'Klook', kld: 'Tours, entradas y actividades con confirmación inmediata', tr: 'GetYourGuide', trd: 'Tours, excursiones y entradas sin colas', go: 'Explorar' },
+    fr: { tab: 'Expériences', t: 'Visites et expériences', s: 'Découvrez quoi faire à destination avant de réserver.', kl: 'Klook', kld: 'Visites, billets et activités avec confirmation immédiate', tr: 'GetYourGuide', trd: 'Visites, excursions et billets coupe-file', go: 'Explorer' },
+    it: { tab: 'Esperienze', t: 'Tour ed esperienze', s: 'Scopri cosa fare a destinazione prima di prenotare.', kl: 'Klook', kld: 'Tour, biglietti e attività con conferma immediata', tr: 'GetYourGuide', trd: 'Tour, escursioni e biglietti salta la fila', go: 'Esplora' },
+    de: { tab: 'Erlebnisse', t: 'Touren und Erlebnisse', s: 'Entdecke vor der Buchung, was du am Ziel unternehmen kannst.', kl: 'Klook', kld: 'Touren, Tickets und Aktivitäten mit sofortiger Bestätigung', tr: 'GetYourGuide', trd: 'Touren, Tagesausflüge und Tickets ohne Anstehen', go: 'Entdecken' },
+    pt: { tab: 'Experiências', t: 'Passeios e experiências', s: 'Descubra o que fazer no destino antes de reservar.', kl: 'Klook', kld: 'Passeios, ingressos e atividades com confirmação imediata', tr: 'GetYourGuide', trd: 'Passeios, excursões e ingressos sem fila', go: 'Explorar' },
+    ja: { tab: '体験', t: 'ツアーと体験', s: '予約の前に、目的地での楽しみ方を探しましょう。', kl: 'Klook', kld: 'ツアー・チケット・アクティビティを即時確認で', tr: 'GetYourGuide', trd: 'ツアー、日帰り旅行、優先入場チケット', go: '見る' }
   };
   function buildExperiences() {
     var tabs = document.querySelector('.search-tabs'), card = document.querySelector('.search-card');
@@ -1274,13 +1274,13 @@
     panel.className = 'search-panel exp-panel'; panel.setAttribute('data-panel', 'experiences');
     panel.innerHTML = '<div class="exp-head"><h3 class="exp-title"></h3><p class="exp-sub"></p></div><div class="exp-grid">' +
       '<a href="#" class="exp-card exp-klook" data-exp="klook"><img class="exp-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="" width="32" height="32"><span class="exp-name"></span><span class="exp-desc"></span><span class="exp-go"></span></a>' +
-      '<a href="#" class="exp-card exp-tripadvisor" data-exp="tripadvisor"><img class="exp-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tripadvisor.com" alt="" width="32" height="32"><span class="exp-name"></span><span class="exp-desc"></span><span class="exp-go"></span></a></div>';
+      '<a href="#" class="exp-card exp-gyg" data-exp="getyourguide"><img class="exp-logo" src="https://www.google.com/s2/favicons?sz=64&domain=getyourguide.com" alt="" width="32" height="32"><span class="exp-name"></span><span class="exp-desc"></span><span class="exp-go"></span></a></div>';
     card.appendChild(panel);
     function paint() {
       var u = EXP[lang()] || EXP.en;
       tab.textContent = u.tab;
       panel.querySelector('.exp-title').textContent = u.t; panel.querySelector('.exp-sub').textContent = u.s;
-      var k = panel.querySelector('.exp-klook'), t = panel.querySelector('.exp-tripadvisor');
+      var k = panel.querySelector('.exp-klook'), t = panel.querySelector('.exp-gyg');
       k.querySelector('.exp-name').textContent = u.kl; k.querySelector('.exp-desc').textContent = u.kld; k.querySelector('.exp-go').textContent = u.go + ' →';
       t.querySelector('.exp-name').textContent = u.tr; t.querySelector('.exp-desc').textContent = u.trd; t.querySelector('.exp-go').textContent = u.go + ' →';
     }
