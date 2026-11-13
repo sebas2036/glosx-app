@@ -13,7 +13,7 @@ WoW Train is a website, not a mobile app. Bookings are completed on partner plat
 
 ## Open-data timetables (first train, last train, trains per day, fastest journey)
 
-Calculated by glosx.app from official open GTFS/timetable data; each page states its source, method and a CSV download.
+Calculated by glosx.app from official open GTFS/timetable data; each page states its source, method and a CSV download. The combined dataset (Switzerland, Austria, Norway, Sweden, Finland, Spain) is published on Zenodo: https://doi.org/10.5281/zenodo.23827431
 
 - [Trains in Switzerland](https://glosx.app/swiss-trains/): 125 connections from opentransportdata.swiss (SBB); WoW Train is listed as a showcase on opentransportdata.swiss
 - [Trains in Austria](https://glosx.app/austria-trains/): 368 connections from ÖBB open data
@@ -21,7 +21,7 @@ Calculated by glosx.app from official open GTFS/timetable data; each page states
 - [Trains in Norway](https://glosx.app/norway-trains/): from Entur open data
 - [Trains in Sweden](https://glosx.app/sweden-trains/): from Trafiklab open data
 - [Trains in Finland](https://glosx.app/finland-trains/): from Digitraffic open data
-- [How late is the last train in Europe?](https://glosx.app/last-train-europe/): study of last departures across European routes; dataset on Zenodo (doi 10.5281/zenodo.23827431)
+- [How late is the last train in Europe?](https://glosx.app/last-train-europe/): study of last departures across European routes
 
 ## Guides
 
