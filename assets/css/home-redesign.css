@@ -963,3 +963,6 @@ html body.home-v2.hotels-mode .search-tabs .search-tab:first-of-type::after { co
   }
   html body.home-v2[data-region="japan"]:not(.hotels-mode) .hero-title-card::before { background-position: 0 0, 0 0, 75% 50% !important; }
 }
+/* Accesibilidad: "Ver guía" con área táctil de al menos 44px y separada del resto de la tarjeta */
+.scenic-card .scenic-actions { gap: 20px; }
+.scenic-card .scenic-guide, #scenicFeature .scenic-guide, .scenic-feature .scenic-guide { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; margin: -4px 0; border-bottom: 0 !important; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
