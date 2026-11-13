@@ -126,7 +126,7 @@ function page(lang) {
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":${JSON.stringify(faqJson)}}
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ"></script>
+  <script>/* GA4 se carga con la primera interacción real (mover el mouse, tocar, scroll, tecla): los robots que solo abren la página no se cuentan como visitas. Los eventos quedan en dataLayer hasta entonces. */(function(){var E=["pointermove","pointerdown","scroll","keydown","touchstart"],d=0;function L(){if(d)return;d=1;E.forEach(function(e){removeEventListener(e,L,true)});var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ";document.head.appendChild(s)}E.forEach(function(e){addEventListener(e,L,{capture:true,passive:true})})})();</script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}

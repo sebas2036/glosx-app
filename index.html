@@ -219,7 +219,7 @@
         try { if (window.__glosxLoadTp) window.__glosxLoadTp(); } catch (e) {}
       }
       evs.forEach(function (e) { window.addEventListener(e, go, { capture: true, passive: true }); });
-      window.addEventListener('load', function () { setTimeout(go, 5000); });
+      // Sin carga automática a los 5 s: los robots que no interactúan no cuentan como visitas.
     })();
   </script>
 
