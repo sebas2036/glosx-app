@@ -129,6 +129,8 @@
     var title = anchor.querySelector('.train-segment-title') || document.querySelector('.route-hero h1');
     var parts = title ? title.textContent.split('→') : [];
     var names = [(parts[0] || '').trim() || slug.split('-')[0], (parts[1] || '').trim() || slug.split('-')[1]];
+    var hh = document.querySelector('.route-hero h1');
+    if (hh && hh.dataset && hh.dataset.a) names = [hh.dataset.a, hh.dataset.b];
     var sec = build(d, names, L10N[lang()]);
     anchor.parentNode.insertBefore(sec, anchor.nextSibling);
     var started = false;
