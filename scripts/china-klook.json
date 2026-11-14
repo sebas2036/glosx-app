@@ -1,0 +1,112 @@
+{
+ "_fuente": "Klook rails-35/1020-mainland-china, búsqueda real del 27-nov-2026 consultada el 13-nov-2026. GUID = ciudad (Ciudad/Zona).",
+ "stations": {
+  "beijing": "6b3b36ba-54bd-4bb0-9a0f-fb1be8dac6c5",
+  "shanghai": "319cdcce-a281-4342-8e5b-5b2d20ac189c",
+  "hangzhou": "d62a9858-18ba-4239-8ee7-e4b5b9d63d7d",
+  "suzhou": "d05587ec-6c1b-40a6-b108-f19c516e0dfc",
+  "nanjing": "d12750d0-9e50-48c3-bd43-da40935d07ff",
+  "xian": "66c737aa-5baf-4c89-877f-9f6294a175a5",
+  "tianjin": "753f0712-200b-447b-97ab-05aabb066dc3",
+  "guangzhou": "99c5e5bf-38b5-491e-add5-841d25b2811b",
+  "shenzhen": "16e4266c-44c7-41b0-bc02-a466680792a8",
+  "hongkong": "dfd76e07-ca3b-4ad2-b43f-081cbf786ffb",
+  "chengdu": "9ea8b48b-380a-4f10-97aa-d97a95cce809",
+  "chongqing": "a58c8c77-8399-430a-bbe0-0649ec82e74c",
+  "guilin": "9e1454a3-3879-4b0d-a0d1-43737cf2135c",
+  "huangshan": "a4a052e5-846d-4762-b516-5649d8c2edae"
+ },
+ "routes": {
+  "beijing-shanghai": {
+   "trains": 45,
+   "fastest_min": 258,
+   "first": "06:08",
+   "last": "19:24",
+   "main": "Beijing South → Shanghai Hongqiao"
+  },
+  "shanghai-hangzhou": {
+   "trains": 357,
+   "fastest_min": 45,
+   "first": "04:08",
+   "last": "22:30",
+   "main": "Shanghai Hongqiao → Hangzhou East"
+  },
+  "shanghai-suzhou": {
+   "trains": 619,
+   "fastest_min": 21,
+   "first": "03:52",
+   "last": "22:24",
+   "main": "Shanghai Hongqiao → Suzhou North"
+  },
+  "shanghai-nanjing": {
+   "trains": 323,
+   "fastest_min": 59,
+   "first": "03:52",
+   "last": "22:05",
+   "main": "Shanghai Hongqiao → Nanjing South"
+  },
+  "beijing-xian": {
+   "trains": 26,
+   "fastest_min": 250,
+   "first": "06:38",
+   "last": "19:00",
+   "main": "Beijing West → Xi'an North"
+  },
+  "beijing-tianjin": {
+   "trains": 317,
+   "fastest_min": 30,
+   "first": "00:22",
+   "last": "23:17",
+   "main": "Beijing South → Tianjin"
+  },
+  "guangzhou-shenzhen": {
+   "trains": 517,
+   "fastest_min": 29,
+   "first": "05:31",
+   "last": "23:25",
+   "main": "Guangzhou South → Shenzhen North"
+  },
+  "shenzhen-hongkong": {
+   "trains": 156,
+   "fastest_min": 14,
+   "first": "06:33",
+   "last": "22:19",
+   "main": "Shenzhen North / Futian → Hong Kong West Kowloon"
+  },
+  "guangzhou-hongkong": {
+   "trains": 70,
+   "fastest_min": 47,
+   "first": "06:32",
+   "last": "21:28",
+   "main": "Guangzhou South → Hong Kong West Kowloon"
+  },
+  "chengdu-chongqing": {
+   "trains": 144,
+   "fastest_min": 66,
+   "first": "06:10",
+   "last": "22:15",
+   "main": "Chengdu East → Chongqing West"
+  },
+  "xian-chengdu": {
+   "trains": 72,
+   "fastest_min": 185,
+   "first": "05:13",
+   "last": "19:58",
+   "main": "Xi'an North → Chengdu East"
+  },
+  "guangzhou-guilin": {
+   "trains": 69,
+   "fastest_min": 124,
+   "first": "06:37",
+   "last": "20:57",
+   "main": "Guangzhou South → Guilin West"
+  },
+  "hangzhou-huangshan": {
+   "trains": 55,
+   "fastest_min": 73,
+   "first": "07:15",
+   "last": "21:41",
+   "main": "Hangzhou West → Huangshan North"
+  }
+ }
+}

@@ -14,13 +14,13 @@
   var ROUTES = [["aomori","hachinohe"],["aomori","hirosaki"],["aomori","shinhakodatehokuto"],["asakusa","kinugawaonsen"],["asakusa","nikko"],["atami","ito"],["atami","mishima"],["atami","shizuoka"],["beppu","kokura"],["beppu","oita"],["beppu","yufuin"],["fukuoka","beppu"],["fukuoka","hita"],["fukuoka","huistenbosch"],["fukuoka","kagoshima"],["fukuoka","kokura"],["fukuoka","kumamoto"],["fukuoka","kurume"],["fukuoka","nakatsu"],["fukuoka","oita"],["fukuoka","saga"],["fukuoka","shinyamaguchi"],["fukuoka","takeoonsen"],["fukuoka","yufuin"],["hakodate","noboribetsu"],["hakodate","sapporo"],["hakodate","shinhakodatehokuto"],["hiroshima","fukuoka"],["hiroshima","fukuyama"],["hiroshima","himeji"],["hiroshima","kokura"],["hiroshima","kumamoto"],["hiroshima","okayama"],["hiroshima","onomichi"],["hiroshima","shinyamaguchi"],["kanazawa","fukui"],["kanazawa","kagaonsen"],["kanazawa","komatsu"],["kanazawa","nagano"],["kanazawa","nanao"],["kanazawa","toyama"],["kanazawa","tsuruga"],["kanazawa","ueda"],["kansaiairport","kyoto"],["kansaiairport","osaka"],["kansaiairport","tennoji"],["kyoto","fukuchiyama"],["kyoto","gifu"],["kyoto","himeji"],["kyoto","hiroshima"],["kyoto","kinosaki"],["kyoto","maibara"],["kyoto","nagoya"],["kyoto","okayama"],["kyoto","tsuruga"],["kyoto","wakayama"],["mishima","shinfuji"],["mishima","shizuoka"],["morioka","akita"],["morioka","aomori"],["morioka","hachinohe"],["morioka","shinhanamaki"],["nagano","karuizawa"],["nagano","matsumoto"],["nagano","toyama"],["nagano","ueda"],["nagoya","gifu"],["nagoya","hamamatsu"],["nagoya","himeji"],["nagoya","hiroshima"],["nagoya","maibara"],["nagoya","matsumoto"],["nagoya","nagano"],["nagoya","okayama"],["nagoya","shizuoka"],["nagoya","takayama"],["nagoya","toyama"],["nagoya","toyohashi"],["naritaairport","shinagawa"],["naritaairport","tokyo"],["naritaairport","yokohama"],["niigata","akita"],["niigata","joetsumyoko"],["niigata","murakami"],["niigata","nagaoka"],["odawara","atami"],["odawara","shizuoka"],["okayama","fukuoka"],["okayama","fukuyama"],["okayama","himeji"],["okayama","kurashiki"],["okayama","matsue"],["okayama","yonago"],["osaka","fukuchiyama"],["osaka","fukuoka"],["osaka","fukuyama"],["osaka","hamamatsu"],["osaka","himeji"],["osaka","hiroshima"],["osaka","kagoshima"],["osaka","kiitanabe"],["osaka","kinosaki"],["osaka","kobe"],["osaka","kokura"],["osaka","kumamoto"],["osaka","kyoto"],["osaka","maibara"],["osaka","nagoya"],["osaka","odawara"],["osaka","okayama"],["osaka","shinfuji"],["osaka","shinyamaguchi"],["osaka","shirahama"],["osaka","shizuoka"],["osaka","toyohashi"],["osaka","toyooka"],["osaka","tsuruga"],["osaka","wakayama"],["sapporo","asahikawa"],["sapporo","chitose"],["sapporo","kushiro"],["sapporo","newchitoseairport"],["sapporo","noboribetsu"],["sapporo","obihiro"],["sapporo","otaru"],["sapporo","shinsapporo"],["sapporo","tomakomai"],["sapporo","wakkanai"],["sendai","akita"],["sendai","aomori"],["sendai","fukushima"],["sendai","hachinohe"],["sendai","ichinoseki"],["sendai","koriyama"],["sendai","morioka"],["shinjuku","hakone"],["shinjuku","kawaguchiko"],["shinjuku","kofu"],["shinjuku","matsumoto"],["shinjuku","naritaairport"],["shinjuku","odawara"],["shinjuku","otsuki"],["shinyokohama","atami"],["shinyokohama","kyoto"],["shinyokohama","mishima"],["shinyokohama","nagoya"],["shinyokohama","odawara"],["shinyokohama","osaka"],["takayama","gero"],["takayama","gifu"],["takayama","hidafurukawa"],["takayama","toyama"],["tokyo","akita"],["tokyo","aomori"],["tokyo","atami"],["tokyo","fukuoka"],["tokyo","fukushima"],["tokyo","fukuyama"],["tokyo","hachinohe"],["tokyo","hamamatsu"],["tokyo","himeji"],["tokyo","hiroshima"],["tokyo","ichinoseki"],["tokyo","ito"],["tokyo","kanazawa"],["tokyo","karuizawa"],["tokyo","kobe"],["tokyo","kokura"],["tokyo","kyoto"],["tokyo","maibara"],["tokyo","matsumoto"],["tokyo","mishima"],["tokyo","mito"],["tokyo","morioka"],["tokyo","nagano"],["tokyo","nagaoka"],["tokyo","nagoya"],["tokyo","niigata"],["tokyo","odawara"],["tokyo","okayama"],["tokyo","osaka"],["tokyo","sendai"],["tokyo","shinfuji"],["tokyo","shinhakodatehokuto"],["tokyo","shinyamaguchi"],["tokyo","shinyokohama"],["tokyo","shizuoka"],["tokyo","takasaki"],["tokyo","toyama"],["tokyo","toyohashi"],["tokyo","ueda"],["tokyo","utsunomiya"],["tokyo","yamagata"],["tokyo","yokohama"],["utsunomiya","fukushima"],["utsunomiya","nasushiobara"]];
 
   var I18N = {
-    en: { hotels: 'Hotels', europe: 'Europe', japan: 'Japan', aria: 'Region', leg: 'We have no verified direct train between {a} and {b}. Try another order or pick a popular route.', two: 'Enter two or more cities, in the order you will travel.', ph: 'Train from Tokyo to Kyoto', nopair: 'Pick one of the popular routes, or try another pair of Japanese cities.' },
-    es: { hotels: 'Hoteles', europe: 'Europa', japan: 'Japón', aria: 'Región', leg: 'No tenemos un tren directo verificado entre {a} y {b}. Prueba otro orden o elige una ruta popular.', two: 'Escribe dos o más ciudades, en el orden del viaje.', ph: 'Tren de Tokio a Kioto', nopair: 'Elige una de las rutas populares o prueba otro par de ciudades japonesas.' },
-    fr: { hotels: 'Hôtels', europe: 'Europe', japan: 'Japon', aria: 'Région', leg: 'Nous n’avons pas de train direct vérifié entre {a} et {b}. Essayez un autre ordre ou choisissez une route populaire.', two: 'Indiquez deux villes ou plus, dans l’ordre du voyage.', ph: 'Train de Tokyo à Kyoto', nopair: 'Choisissez l’une des routes populaires ou essayez une autre paire de villes japonaises.' },
-    it: { hotels: 'Hotel', europe: 'Europa', japan: 'Giappone', aria: 'Regione', leg: 'Non abbiamo un treno diretto verificato tra {a} e {b}. Prova un altro ordine o scegli un percorso popolare.', two: 'Scrivi due o più città, nell’ordine del viaggio.', ph: 'Treno da Tokyo a Kyoto', nopair: 'Scegli uno dei percorsi popolari o prova un’altra coppia di città giapponesi.' },
-    de: { hotels: 'Hotels', europe: 'Europa', japan: 'Japan', aria: 'Region', leg: 'Zwischen {a} und {b} haben wir keine geprüfte Direktverbindung. Probiere eine andere Reihenfolge oder wähle eine beliebte Strecke.', two: 'Gib zwei oder mehr Städte ein, in der Reihenfolge der Reise.', ph: 'Zug von Tokio nach Kyoto', nopair: 'Wähle eine der beliebten Strecken oder probiere ein anderes Städtepaar in Japan.' },
-    pt: { hotels: 'Hotéis', europe: 'Europa', japan: 'Japão', aria: 'Região', leg: 'Não temos um trem direto verificado entre {a} e {b}. Tente outra ordem ou escolha uma rota popular.', two: 'Digite duas ou mais cidades, na ordem da viagem.', ph: 'Comboio de Tóquio a Quioto', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades japonesas.' },
-    ja: { hotels: 'ホテル', europe: 'ヨーロッパ', japan: '日本', aria: '地域', leg: '{a} と {b} のあいだに、確認済みの直通列車はありません。順番を変えるか、人気の路線を選んでください。', two: '行く順に、2つ以上の都市を入力してください。', ph: '例：東京から京都への列車', nopair: '人気の路線を選ぶか、別の日本の都市の組み合わせを試してください。' }
+    en: { china: 'China', hotels: 'Hotels', europe: 'Europe', japan: 'Japan', aria: 'Region', leg: 'We have no verified direct train between {a} and {b}. Try another order or pick a popular route.', two: 'Enter two or more cities, in the order you will travel.', ph: 'Train from Tokyo to Kyoto', nopair: 'Pick one of the popular routes, or try another pair of Japanese cities.' },
+    es: { china: 'China', hotels: 'Hoteles', europe: 'Europa', japan: 'Japón', aria: 'Región', leg: 'No tenemos un tren directo verificado entre {a} y {b}. Prueba otro orden o elige una ruta popular.', two: 'Escribe dos o más ciudades, en el orden del viaje.', ph: 'Tren de Tokio a Kioto', nopair: 'Elige una de las rutas populares o prueba otro par de ciudades japonesas.' },
+    fr: { china: 'Chine', hotels: 'Hôtels', europe: 'Europe', japan: 'Japon', aria: 'Région', leg: 'Nous n’avons pas de train direct vérifié entre {a} et {b}. Essayez un autre ordre ou choisissez une route populaire.', two: 'Indiquez deux villes ou plus, dans l’ordre du voyage.', ph: 'Train de Tokyo à Kyoto', nopair: 'Choisissez l’une des routes populaires ou essayez une autre paire de villes japonaises.' },
+    it: { china: 'Cina', hotels: 'Hotel', europe: 'Europa', japan: 'Giappone', aria: 'Regione', leg: 'Non abbiamo un treno diretto verificato tra {a} e {b}. Prova un altro ordine o scegli un percorso popolare.', two: 'Scrivi due o più città, nell’ordine del viaggio.', ph: 'Treno da Tokyo a Kyoto', nopair: 'Scegli uno dei percorsi popolari o prova un’altra coppia di città giapponesi.' },
+    de: { china: 'China', hotels: 'Hotels', europe: 'Europa', japan: 'Japan', aria: 'Region', leg: 'Zwischen {a} und {b} haben wir keine geprüfte Direktverbindung. Probiere eine andere Reihenfolge oder wähle eine beliebte Strecke.', two: 'Gib zwei oder mehr Städte ein, in der Reihenfolge der Reise.', ph: 'Zug von Tokio nach Kyoto', nopair: 'Wähle eine der beliebten Strecken oder probiere ein anderes Städtepaar in Japan.' },
+    pt: { china: 'China', hotels: 'Hotéis', europe: 'Europa', japan: 'Japão', aria: 'Região', leg: 'Não temos um trem direto verificado entre {a} e {b}. Tente outra ordem ou escolha uma rota popular.', two: 'Digite duas ou mais cidades, na ordem da viagem.', ph: 'Comboio de Tóquio a Quioto', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades japonesas.' },
+    ja: { china: '中国', hotels: 'ホテル', europe: 'ヨーロッパ', japan: '日本', aria: '地域', leg: '{a} と {b} のあいだに、確認済みの直通列車はありません。順番を変えるか、人気の路線を選んでください。', two: '行く順に、2つ以上の都市を入力してください。', ph: '例：東京から京都への列車', nopair: '人気の路線を選ぶか、別の日本の都市の組み合わせを試してください。' }
   };
 
   var GROUPS = [
@@ -72,7 +72,7 @@
     var l = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
     return I18N[l] ? l : 'en';
   }
-  function t(key) { return I18N[lang()][key]; }
+  function t(key) { if (region === 'china' && CN_TXT[lang()] && CN_TXT[lang()][key] != null) return CN_TXT[lang()][key]; return I18N[lang()][key]; }
   function track(r) {
     try { if (typeof gtag === 'function') gtag('event', 'ui_click', { source: 'region_switch', region: r }); } catch (e) {}
   }
@@ -181,7 +181,7 @@
 
   function paintMode() {
     paintSwitch();
-    if (region === 'japan') {
+    if (region !== 'europe') {
       inputEl.setAttribute('placeholder', t('ph'));
       buildChips();
       buildSuggestions();
@@ -202,22 +202,22 @@
 
   // "Ver mi última ruta": cada región recuerda la suya. La de Europa la guarda el sitio (ruta del
   // planificador IA); la de Japón se guarda acá, para no mostrar una ruta de Europa dentro de Japón.
-  var JP_KEY = 'glosx_japan_last_route';
+  function lastKey() { return 'glosx_' + region + '_last_route'; }
   function readJapanLast() {
     try {
-      var o = JSON.parse(localStorage.getItem(JP_KEY) || 'null');
+      var o = JSON.parse(localStorage.getItem(lastKey()) || 'null');
       if (o && Array.isArray(o.legs) && o.legs.length && Date.now() - o.ts < 24 * 3600 * 1000) return o;
     } catch (e) {}
     return null;
   }
   function saveJapanLast(legs) {
-    try { localStorage.setItem(JP_KEY, JSON.stringify({ legs: legs, ts: Date.now() })); } catch (e) {}
+    try { localStorage.setItem(lastKey(), JSON.stringify({ legs: legs, ts: Date.now() })); } catch (e) {}
     syncRestoreBtn();
   }
   function syncRestoreBtn() {
     var btn = document.getElementById('aiRestoreBtn');
     if (!btn) return;
-    if (region === 'japan') { btn.style.display = readJapanLast() ? 'block' : 'none'; return; }
+    if (region !== 'europe') { btn.style.display = readJapanLast() ? 'block' : 'none'; return; }
     var show = false;
     try {
       var ts = parseInt(localStorage.getItem('ai_last_route_timestamp'), 10);
@@ -226,7 +226,7 @@
     btn.style.display = show ? 'block' : 'none';
   }
   document.addEventListener('click', function (e) {
-    if (region !== 'japan' || !e.target.closest || !e.target.closest('#aiRestoreBtn')) return;
+    if (region === 'europe' || !e.target.closest || !e.target.closest('#aiRestoreBtn')) return;
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
@@ -256,8 +256,8 @@
     if (!subEl || subBusy) return;
     subBusy = true;
     var txt = subEl.textContent;
-    if (region === 'japan' && /Omio/.test(txt)) { subEl.setAttribute('data-eu-text', txt); subEl.textContent = txt.replace(/Omio/g, 'Klook'); }
-    else if (region !== 'japan' && subEl.hasAttribute('data-eu-text')) { subEl.textContent = subEl.getAttribute('data-eu-text'); subEl.removeAttribute('data-eu-text'); }
+    if (region !== 'europe' && /Omio/.test(txt)) { subEl.setAttribute('data-eu-text', txt); subEl.textContent = txt.replace(/Omio/g, 'Klook'); }
+    else if (region === 'europe' && subEl.hasAttribute('data-eu-text')) { subEl.textContent = subEl.getAttribute('data-eu-text'); subEl.removeAttribute('data-eu-text'); }
     if (subObs) subObs.takeRecords();
     subBusy = false;
   }
@@ -271,18 +271,21 @@
       europePages = window.GLOSX_ROUTE_PAGES ? new Set(window.GLOSX_ROUTE_PAGES) : new Set();
     }
     region = r;
-    document.body.setAttribute('data-region', r);
+    // China usa el mismo estilo Klook que Japón: data-region="japan" + data-klook="china"
+    document.body.setAttribute('data-region', r === 'europe' ? 'europe' : 'japan');
+    if (r === 'china') document.body.setAttribute('data-klook', 'china'); else document.body.removeAttribute('data-klook');
+    if (r !== 'europe') useData(r);
     inputEl.value = '';
     var aurora = document.getElementById('aiInputAurora');
     if (aurora) aurora.classList.remove('active');
     var err = document.getElementById('aiPlannerError');
     if (err) err.remove();
-    if (r === 'japan') {
+    if (r !== 'europe') {
       setCities(CITIES);
       window.GLOSX_ROUTE_PAGES = japanPages;
       var res = document.getElementById('aiResults');
       if (res) res.style.display = 'none';
-      resetBoard(valueOf('tokyo'), valueOf('kyoto'));
+      resetBoard(valueOf(QUICK[0][0]), valueOf(QUICK[0][1]));
     } else {
       setCities(europeCities);
       window.GLOSX_ROUTE_PAGES = europePages;
@@ -294,7 +297,7 @@
     if (!silent) {
       track(r);
       // la dirección refleja la región elegida, así el cambio de idioma la conserva
-      try { history.replaceState(null, '', location.pathname + location.search + (r === 'japan' ? '#japan' : '')); } catch (e) {}
+      try { history.replaceState(null, '', location.pathname + location.search + (r === 'europe' ? '' : '#' + r)); } catch (e) {}
     }
   }
 
@@ -381,11 +384,11 @@
     showMsg(cities.length ? 'two' : 'nopair');
   }
   window.generateAIRoute = function () {
-    if (region === 'japan') return japanGenerate();
+    if (region !== 'europe') return japanGenerate();
     return originalGenerate.apply(this, arguments);
   };
   inputEl.addEventListener('keydown', function (e) {
-    if (region === 'japan' && e.key === 'Enter') {
+    if (region !== 'europe' && e.key === 'Enter') {
       e.preventDefault();
       e.stopImmediatePropagation();
       japanGenerate();
@@ -454,7 +457,7 @@
       '<div class="rp-row is-train"><span class="rp-ico">' + TRAIN_ICON + '</span>' +
       '<div><div class="rp-label">' + esc(t.train) + '</div><div class="rp-bar" aria-hidden="true"><i style="width:100%"></i></div></div>' +
       '<span class="rp-meta"><span class="rp-time">' + esc(tx.from.replace('{d}', fmtMin(d.m))) + '</span><span class="rp-price">' + esc(tx.direct) + '</span></span></div>' +
-      '</div><p class="rp-note pi-note">' + esc(t.note) + '</p>';
+      '</div><p class="rp-note pi-note">' + esc(region === 'china' ? cx('note') : t.note) + '</p>';
     if (g) {
       var rt = seg.querySelector('.ai-segment-route');
       if (window.glosxGuideCard) box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
@@ -480,13 +483,14 @@
   var infoObs = null;
   function trainLabel(d, tx) {
     var parts = [];
-    if (d.s) parts.push('Shinkansen');
+    if (d.s) parts.push(hsName());
     if (d.t.length) parts.push(d.t.join(', '));
+    if (d.n) parts.push(cx('perday').replace('{n}', d.n));
     parts.push(tx.direct);
     return parts.join(' · ');
   }
   function paintInfo() {
-    if (region !== 'japan' || !segsEl || infoBusy) return;
+    if (region === 'europe' || !segsEl || infoBusy) return;
     var segs = segsEl.querySelectorAll('.ai-segment');
     if (!segs.length) return;
     var tx = INFO_I18N[lang()] || INFO_I18N.en;
@@ -540,9 +544,13 @@
     pt: { ess: 'para o Jap\u00e3o.', badge: 'Planejador IA de comboios no Japão', label: 'Rotas icónicas do Japão', lead: 'As viagens de comboio mais bonitas do Japão, reserve diretamente aqui.', featured: 'Rota em destaque', book: 'Reservar na Klook', buy: 'Ver hor\u00e1rios e reservar na Klook', arrival: 'Chegada', from: 'desde' },
     ja: { ess: '日本編。', badge: '日本の列車AIプランナー', label: '日本の名路線', lead: '日本でいちばん景色のいい列車の旅。ここからそのまま予約できます。', featured: '注目の路線', book: 'Klookで予約', buy: '時刻を見てKlookで予約', arrival: '到着', from: '最短' }
   };
-  function ht(k) { return (HOME_I18N[lang()] || HOME_I18N.en)[k]; }
+  function ht(k) { if (region === 'china') { var c = cx(k); if (c != null) return c; } return (HOME_I18N[lang()] || HOME_I18N.en)[k]; }
   var CITY_LOC = { es: { Tokyo: 'Tokio', Kyoto: 'Kioto' }, pt: { Tokyo: 'Tóquio', Kyoto: 'Quioto' }, ja: { Tokyo: '東京', Kyoto: '京都', 'Fukuoka (Hakata)': '福岡（博多）', Yufuin: '由布院', 'Ito (Izu)': '伊東（伊豆）', Shinjuku: '新宿', Hakone: '箱根', Asakusa: '浅草', Nikko: '日光', Nagoya: '名古屋', Takayama: '高山' } };
-  function city(n) { var m = CITY_LOC[lang()]; return (m && m[n]) || n; }
+  function city(n) {
+    var m = CITY_LOC[lang()]; if (m && m[n]) return m[n];
+    for (var k in displayBySlug) if (displayBySlug[k] === n) return labelOf(k);
+    return n;
+  }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
   function bookUrl(a, b) { return BOOK_API + '?from=' + encodeURIComponent(a) + '&to=' + encodeURIComponent(b); }
 
@@ -658,14 +666,16 @@
     var d = legInfo(s.from, s.to);
     jpEls.feature.style.background = "url('" + s.photo + "') center/cover no-repeat";
     jpEls.feature.innerHTML = '<div class="sf-content"><span class="sf-badge">' + esc(ht('featured')) + '</span>' +
-      '<div class="sf-name">' + esc(s.name) + '</div>' +
+      '<div class="sf-name">' + esc(scName(s)) + '</div>' +
       '<div class="sf-route">' + esc(city(s.a)) + ' → ' + esc(city(s.b)) + (d ? ' · ' + esc(ht('from')) + ' ' + fmtMin(d.m) : '') + '</div>' +
       '<div class="sf-desc">' + esc(s.desc[lang()] || s.desc.en) + '</div>' +
       '<button type="button" class="sf-btn">' + esc(ht('book')) + ' →</button>' + jpGuide(s, 'scenic-guide') + '</div>';
     Array.prototype.forEach.call(jpEls.grid ? jpEls.grid.children : [], function (w, idx) { w.classList.toggle('scenic-active', idx === i); });
   }
+  function scName(sc) { return typeof sc.name === 'object' ? (sc.name[lang()] || sc.name.en) : sc.name; }
   function jpGuide(sc, cls) {
     var l = lang(), pre = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/' }[l] || '';
+    if (JP_GUIDES.indexOf(' ' + sc.from + '-' + sc.to + ' ') === -1) return '';
     var label = { en: 'See guide', es: 'Ver guía', fr: 'Voir le guide', it: 'Vedi la guida', ja: 'ガイドを見る', de: 'Zum Guide', pt: 'Ver guia' }[l] || 'See guide';
     return '<a class="' + cls + '" href="/rutas/' + sc.from + '-' + sc.to + '/' + pre + '">' + esc(label) + ' →</a>';
   }
@@ -675,7 +685,7 @@
       var d = legInfo(s.from, s.to);
       return '<div class="scenic-wrapper' + (i === jpFeatured ? ' scenic-active' : '') + '" data-i="' + i + '">' +
         '<div class="scenic-card" role="button" tabindex="0"><div class="scenic-photo" style="background-image:url(\'' + s.photo + '\')"><span class="scenic-dur">' + (d ? fmtMin(d.m) : '') + '</span></div>' +
-        '<div class="scenic-body"><div class="scenic-name">' + esc(s.name) + '</div><div class="scenic-route">' + esc(city(s.a)) + ' → ' + esc(city(s.b)) + '</div></div>' +
+        '<div class="scenic-body"><div class="scenic-name">' + esc(scName(s)) + '</div><div class="scenic-route">' + esc(city(s.a)) + ' → ' + esc(city(s.b)) + '</div></div>' +
         '<div class="scenic-actions"><div class="scenic-cta">' + esc(ht('book')) + '</div>' + jpGuide(s, 'scenic-guide') + '</div></div>' +
         '<div class="scenic-desc">' + esc(s.desc[lang()] || s.desc.en) + '</div></div>';
     }).join('');
@@ -684,7 +694,7 @@
   }
   function positionJpDescs() {
     var g = jpEls.grid;
-    if (!g || region !== 'japan') return;
+    if (!g || region === 'europe') return;
     var c = g.getBoundingClientRect().left + g.offsetWidth / 2;
     Array.prototype.forEach.call(g.children, function (w) {
       w.classList.toggle('desc-left', w.getBoundingClientRect().left + w.offsetWidth / 2 < c);
@@ -718,23 +728,24 @@
     w.querySelector('ol').innerHTML = r.stops.map(function (s, i) {
       var next = r.stops[i + 1];
       var d = next ? legInfo(s, next) : null;
-      var chip = next ? ((d && d.t.length ? d.t.slice(0, 2).join(', ') : '') + (d ? ' · ' + fmtMin(d.m) : '')) : ht('arrival');
+      var chip = next ? [d && d.t.length ? d.t.slice(0, 2).join(', ') : '', d ? fmtMin(d.m) : ''].filter(Boolean).join(' · ') : ht('arrival');
       return '<li class="wt-stop" style="animation-delay:' + (i * 0.12) + 's">' +
         '<span class="wt-stop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="M8 19l-2 3"/><path d="M18 22l-2-3"/><circle cx="7.5" cy="14.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="16.5" cy="14.5" r="1.4" fill="currentColor" stroke="none"/></svg></span>' +
         '<p class="wt-stop-station">' + esc(labelOf(s)) + '</p>' +
-        '<span class="wt-stop-train">' + (next ? '&#8594; ' : '') + esc(chip) + (d && d.s ? ' · Shinkansen' : '') + (next ? ' · ' + esc(tx.direct) : '') + '</span>' +
+        '<span class="wt-stop-train">' + (next ? '&#8594; ' : '') + esc(chip) + (d && d.s ? ' · ' + esc(hsName()) : '') + (next ? ' · ' + esc(tx.direct) : '') + '</span>' +
         (next ? '<button type="button" class="wt-stop-buy" data-a="' + s + '" data-b="' + next + '">' + esc(ht('buy')) + ' →</button>' : '') +
         '</li>';
     }).join('');
     paintRouteButtons();
   }
   function paintHome() {
-    if (region !== 'japan') return;
+    if (region === 'europe') return;
     setupHome();
     if (jpEls.badge) jpEls.badge.textContent = ht('badge');
     if (jpEls.label) jpEls.label.textContent = ht('label');
     if (jpEls.lead) jpEls.lead.textContent = ht('lead');
     if (jpEls.essTitle) jpEls.essTitle.textContent = ht('ess');
+    if (essEsim) essEsim.textContent = region === 'china' ? (CN_ESIM[lang()] || CN_ESIM.en) : essEsimJp;
     renderJpScenic();
     paintRouteButtons();
     if (jpRouteKey) renderJpRoute(jpRouteKey);
@@ -784,7 +795,7 @@
     Array.prototype.forEach.call(src.querySelectorAll('.klook-city-item'), function (n) { cities.push(n.textContent.trim()); });
     var popEu = HOTEL_POP.filter(function (c) { return cities.indexOf(c) !== -1 && HOTEL_POP_JP.indexOf(c) === -1; });
     var popJp = HOTEL_POP_JP.filter(function (c) { return cities.indexOf(c) !== -1; });
-    var isJp = function () { return document.body.getAttribute('data-region') === 'japan'; };
+    var isJp = function () { return region === 'japan'; };
     panel = document.createElement('div');
     panel.className = 'search-panel hotels-panel';
     panel.setAttribute('data-panel', 'hotels');
@@ -951,7 +962,7 @@
     c.removeAttribute('id'); c.setAttribute('data-jp-twin', '1');
     c.querySelectorAll('[data-i18n]').forEach(function (n) { n.removeAttribute('data-i18n'); });
     c.removeAttribute('data-i18n');
-    el.classList.add('eu-only'); c.classList.add('jp-only');
+    el.classList.add('eu-static'); c.classList.add('jp-static');
     el.parentNode.insertBefore(c, el.nextSibling);
     if (edit) edit(c);
     return c;
@@ -973,8 +984,8 @@
       gc.querySelector('.guide-tag').textContent = L.gtag;
       gc.querySelector('h3').textContent = L.gt;
       var im = gc.querySelector('.guide-photo'); if (im) im.setAttribute('src', '/scenic/jp-hakone.webp');
-      gc.classList.add('jp-only');
-      cards.forEach(function (c) { c.classList.add('eu-only'); });
+      gc.classList.add('jp-static');
+      cards.forEach(function (c) { c.classList.add('eu-static'); });
       first.parentNode.insertBefore(gc, first);
     }
     // FAQ: respuestas de Japón y una pregunta nueva sobre el JR Pass
@@ -985,8 +996,8 @@
       var jr = items[1].cloneNode(true); jr.removeAttribute('data-jp-twin');
       jr.querySelectorAll('[data-i18n]').forEach(function (n) { n.removeAttribute('data-i18n'); });
       jr.querySelector('.faq-q span').textContent = L.fq; jr.querySelector('.faq-a').textContent = L.fa;
-      jr.classList.remove('eu-only'); jr.classList.add('jp-only');
-      var lastTwin = document.querySelectorAll('#faq .faq-item.jp-only'); lastTwin = lastTwin[lastTwin.length - 1];
+      jr.classList.remove('eu-static'); jr.classList.add('jp-static');
+      var lastTwin = document.querySelectorAll('#faq .faq-item.jp-static'); lastTwin = lastTwin[lastTwin.length - 1];
       lastTwin.parentNode.insertBefore(jr, lastTwin.nextSibling);
     }
     // Explorar rutas: pastillas de rutas japonesas
@@ -1079,11 +1090,15 @@
   })();
 
   // ── Esenciales en modo Japón: eSIM de Japón y Klook (tours) en lugar de Tiqets, que es de atracciones europeas ──
+  var essEsim = null, essEsimJp = '';
+  var CN_ESIM = { en: 'eSIM China', es: 'eSIM China', fr: 'eSIM Chine', it: 'eSIM Cina', de: 'eSIM China', pt: 'eSIM China', ja: '中国のeSIM' };
   var JP_ESS = {"en": ["eSIM Japan", "Tours & activities", "See activities →"], "es": ["eSIM Japón", "Tours y actividades", "Ver actividades →"], "fr": ["eSIM Japon", "Visites et activités", "Voir les activités →"], "it": ["eSIM Giappone", "Tour e attività", "Vedi le attività →"], "de": ["eSIM Japan", "Touren & Aktivitäten", "Aktivitäten ansehen →"], "pt": ["eSIM Japão", "Passeios e atividades", "Ver atividades →"], "ja": ["日本のeSIM", "ツアーとアクティビティ", "アクティビティを見る →"]};
   (function () {
     var E = JP_ESS[lang()] || JP_ESS.en;
     var yt = document.querySelector('.essentials-bar [data-i18n="p_yesim_title"]');
-    twinHome(yt, function (c) { c.textContent = E[0]; });
+    // eSIM y tours valen para Japón y China: estas dos piezas se muestran en ambas regiones (jp-only) y cambian de texto
+    essEsim = twinHome(yt, function (c) { c.textContent = E[0]; }); essEsimJp = E[0];
+    if (essEsim) { essEsim.classList.replace('jp-static', 'jp-only'); yt.classList.replace('eu-static', 'eu-only'); }
     var tq = null;
     document.querySelectorAll('.essentials-bar .essential-item').forEach(function (a) { if (/goPartner\('tiqets'/.test(a.getAttribute('onclick') || '')) tq = a; });
     if (tq) {
@@ -1205,6 +1220,124 @@
     ben.parentNode.insertBefore(band, ben); band.appendChild(ben); band.appendChild(ext);
   })();
 
+  // ══ Modo China (fase 4, 14-nov-2026): mismo motor Klook que Japón, con sus propios datos ══════════════
+  // Rutas, duración del tren más rápido y trenes por día: búsqueda real en Klook (rails-35, Mainland China),
+  // consultada el 13-nov-2026 (scripts/china-klook.json). La reserva va a /affiliate/klook-china-train.
+  var CN_JA = { beijing: '北京', shanghai: '上海', hangzhou: '杭州', suzhou: '蘇州', nanjing: '南京', xian: '西安', tianjin: '天津', guangzhou: '広州', shenzhen: '深圳', hongkong: '香港', chengdu: '成都', chongqing: '重慶', guilin: '桂林', huangshan: '黄山' };
+  var CN_DATA = {
+    cities: [
+      { display: 'Beijing', slug: 'beijing', keywords: ['beijing', 'pekin', 'pekín', 'pékin', 'peking', 'pechino', 'pequim', '北京'] },
+      { display: 'Shanghai', slug: 'shanghai', keywords: ['shanghai', 'shanghái', 'xangai', '上海'] },
+      { display: 'Hangzhou', slug: 'hangzhou', keywords: ['hangzhou', '杭州'] },
+      { display: 'Suzhou', slug: 'suzhou', keywords: ['suzhou', '苏州', '蘇州'] },
+      { display: 'Nanjing', slug: 'nanjing', keywords: ['nanjing', 'nankin', 'nankín', 'nanchino', 'nanking', 'nanquim', '南京'] },
+      { display: "Xi'an", slug: 'xian', keywords: ["xi'an", 'xian', 'xi an', '西安'] },
+      { display: 'Tianjin', slug: 'tianjin', keywords: ['tianjin', 'tianjín', '天津'] },
+      { display: 'Guangzhou', slug: 'guangzhou', keywords: ['guangzhou', 'canton', 'cantón', 'kanton', 'cantão', '广州', '広州'] },
+      { display: 'Shenzhen', slug: 'shenzhen', keywords: ['shenzhen', '深圳'] },
+      { display: 'Hong Kong', slug: 'hongkong', keywords: ['hong kong', 'hongkong', '香港'] },
+      { display: 'Chengdu', slug: 'chengdu', keywords: ['chengdu', 'chengdú', '成都'] },
+      { display: 'Chongqing', slug: 'chongqing', keywords: ['chongqing', 'chongquing', '重庆', '重慶'] },
+      { display: 'Guilin', slug: 'guilin', keywords: ['guilin', '桂林'] },
+      { display: 'Huangshan', slug: 'huangshan', keywords: ['huangshan', '黄山'] }
+    ],
+    routes: [['beijing', 'shanghai'], ['shanghai', 'hangzhou'], ['shanghai', 'suzhou'], ['shanghai', 'nanjing'], ['beijing', 'xian'], ['beijing', 'tianjin'], ['guangzhou', 'shenzhen'], ['shenzhen', 'hongkong'], ['guangzhou', 'hongkong'], ['chengdu', 'chongqing'], ['xian', 'chengdu'], ['guangzhou', 'guilin'], ['hangzhou', 'huangshan']],
+    // duración (min) del tren más rápido, alta velocidad, -, trenes en el día consultado
+    info: 'beijing-shanghai,258,1,,45;shanghai-hangzhou,45,1,,357;shanghai-suzhou,21,1,,619;shanghai-nanjing,59,1,,323;beijing-xian,250,1,,26;beijing-tianjin,30,1,,317;guangzhou-shenzhen,29,1,,517;shenzhen-hongkong,14,1,,156;guangzhou-hongkong,47,1,,70;chengdu-chongqing,66,1,,144;xian-chengdu,185,1,,72;guangzhou-guilin,124,1,,69;hangzhou-huangshan,73,1,,55',
+    groups: [
+      { id: 'north', names: { en: 'Beijing & the north', es: 'Pekín y el norte', fr: 'Pékin et le nord', it: 'Pechino e il nord', de: 'Peking & der Norden', pt: 'Pequim e o norte', ja: '北京・華北' },
+        pairs: [['beijing', 'shanghai'], ['beijing', 'xian'], ['beijing', 'tianjin']] },
+      { id: 'east', names: { en: 'Shanghai & Yangtze Delta', es: 'Shanghái y el delta del Yangtsé', fr: 'Shanghai et delta du Yangtsé', it: 'Shanghai e delta dello Yangtze', de: 'Shanghai & Jangtse-Delta', pt: 'Xangai e delta do Yangtzé', ja: '上海・長江デルタ' },
+        pairs: [['shanghai', 'hangzhou'], ['shanghai', 'suzhou'], ['shanghai', 'nanjing'], ['hangzhou', 'huangshan']] },
+      { id: 'south', names: { en: 'South China & Hong Kong', es: 'Sur de China y Hong Kong', fr: 'Chine du Sud et Hong Kong', it: 'Cina meridionale e Hong Kong', de: 'Südchina & Hongkong', pt: 'Sul da China e Hong Kong', ja: '華南・香港' },
+        pairs: [['guangzhou', 'shenzhen'], ['shenzhen', 'hongkong'], ['guangzhou', 'hongkong'], ['guangzhou', 'guilin']] },
+      { id: 'west', names: { en: 'Western China', es: 'Oeste de China', fr: 'Ouest de la Chine', it: 'Cina occidentale', de: 'Westchina', pt: 'Oeste da China', ja: '中国西部' },
+        pairs: [['beijing', 'xian'], ['xian', 'chengdu'], ['chengdu', 'chongqing']] }
+    ],
+    quick: [['beijing', 'shanghai'], ['shanghai', 'hangzhou'], ['guangzhou', 'shenzhen'], ['shenzhen', 'hongkong'], ['beijing', 'xian']],
+    valLoc: {
+      es: { beijing: 'Pekín', shanghai: 'Shanghái', guangzhou: 'Cantón', nanjing: 'Nankín' },
+      fr: { beijing: 'Pékin', guangzhou: 'Canton', nanjing: 'Nankin' },
+      it: { beijing: 'Pechino', guangzhou: 'Canton', nanjing: 'Nanchino' },
+      de: { beijing: 'Peking', guangzhou: 'Kanton', nanjing: 'Nanking' },
+      pt: { beijing: 'Pequim', shanghai: 'Xangai', guangzhou: 'Cantão', nanjing: 'Nanquim' },
+      ja: CN_JA
+    },
+    scenic: [
+      { name: { en: 'Fuxing high-speed', es: 'Fuxing de alta velocidad', fr: 'Fuxing à grande vitesse', it: 'Fuxing ad alta velocità', de: 'Fuxing-Schnellzug', pt: 'Fuxing de alta velocidade', ja: '復興号' }, from: 'beijing', to: 'shanghai', a: 'Beijing', b: 'Shanghai', photo: '/scenic/cn-beijing.webp',
+        desc: { en: 'Fuxing trains link China’s two great cities at up to 350 km/h, in a little over four hours.', es: 'Los trenes Fuxing unen las dos grandes ciudades de China a hasta 350 km/h, en algo más de cuatro horas.', fr: 'Les trains Fuxing relient les deux grandes villes de Chine jusqu’à 350 km/h, en un peu plus de quatre heures.', it: 'I treni Fuxing collegano le due grandi città della Cina fino a 350 km/h, in poco più di quattro ore.', de: 'Fuxing-Züge verbinden Chinas zwei große Städte mit bis zu 350 km/h in gut vier Stunden.', pt: 'Os comboios Fuxing ligam as duas grandes cidades da China a até 350 km/h, em pouco mais de quatro horas.', ja: '復興号が中国の二大都市を最高時速350kmで結びます。所要は4時間余り。' } },
+      { name: { en: 'To West Lake', es: 'Hacia el Lago del Oeste', fr: 'Vers le lac de l’Ouest', it: 'Verso il Lago dell’Ovest', de: 'Zum Westsee', pt: 'Rumo ao Lago do Oeste', ja: '西湖へ' }, from: 'shanghai', to: 'hangzhou', a: 'Shanghai', b: 'Hangzhou', photo: '/scenic/cn-hangzhou.webp',
+        desc: { en: 'Under an hour from Shanghai to Hangzhou and its West Lake, with hundreds of trains a day.', es: 'Menos de una hora de Shanghái a Hangzhou y su Lago del Oeste, con cientos de trenes al día.', fr: 'Moins d’une heure de Shanghai à Hangzhou et son lac de l’Ouest, avec des centaines de trains par jour.', it: 'Meno di un’ora da Shanghai a Hangzhou e al suo Lago dell’Ovest, con centinaia di treni al giorno.', de: 'Unter einer Stunde von Shanghai nach Hangzhou und zum Westsee, mit Hunderten Zügen am Tag.', pt: 'Menos de uma hora de Xangai a Hangzhou e ao seu Lago do Oeste, com centenas de comboios por dia.', ja: '上海から杭州と西湖まで1時間足らず。1日に数百本の列車が走ります。' } },
+      { name: { en: 'Yellow Mountain line', es: 'Línea de la Montaña Amarilla', fr: 'Ligne de la Montagne Jaune', it: 'Linea della Montagna Gialla', de: 'Strecke zum Gelben Berg', pt: 'Linha da Montanha Amarela', ja: '黄山への路線' }, from: 'hangzhou', to: 'huangshan', a: 'Hangzhou', b: 'Huangshan', photo: '/scenic/cn-huangshan.webp',
+        desc: { en: 'The high-speed line to the Yellow Mountain, with its granite peaks and pines, in just over an hour.', es: 'La línea de alta velocidad a la Montaña Amarilla, con sus picos de granito y pinos, en algo más de una hora.', fr: 'La ligne à grande vitesse vers la Montagne Jaune, ses pics de granit et ses pins, en un peu plus d’une heure.', it: 'La linea ad alta velocità verso la Montagna Gialla, con le sue vette di granito e i pini, in poco più di un’ora.', de: 'Die Schnellfahrstrecke zum Gelben Berg mit Granitgipfeln und Kiefern, in gut einer Stunde.', pt: 'A linha de alta velocidade até à Montanha Amarela, com os seus picos de granito e pinheiros, em pouco mais de uma hora.', ja: '花崗岩の峰と松で知られる黄山へ、高速鉄道で1時間ほど。' } },
+      { name: { en: 'Into karst country', es: 'Hacia el país del karst', fr: 'Au pays du karst', it: 'Nella terra del carsismo', de: 'Ins Karstland', pt: 'Rumo à terra do carste', ja: 'カルストの郷へ' }, from: 'guangzhou', to: 'guilin', a: 'Guangzhou', b: 'Guilin', photo: '/scenic/cn-guilin.webp',
+        desc: { en: 'High-speed line from Guangzhou to Guilin, gateway to the karst peaks of the Li River.', es: 'Línea de alta velocidad de Cantón a Guilin, puerta a los picos kársticos del río Li.', fr: 'Ligne à grande vitesse de Canton à Guilin, porte des pics karstiques de la rivière Li.', it: 'Linea ad alta velocità da Canton a Guilin, porta delle vette carsiche del fiume Li.', de: 'Schnellfahrstrecke von Kanton nach Guilin, Tor zu den Karstbergen am Li-Fluss.', pt: 'Linha de alta velocidade de Cantão a Guilin, porta para os picos cársticos do rio Li.', ja: '広州から桂林へ。漓江のカルスト地形への入口となる高速鉄道です。' } },
+      { name: { en: 'Hong Kong XRL', es: 'Hong Kong XRL', fr: 'Hong Kong XRL', it: 'Hong Kong XRL', de: 'Hong Kong XRL', pt: 'Hong Kong XRL', ja: '広深港高速鉄道' }, from: 'shenzhen', to: 'hongkong', a: 'Shenzhen', b: 'Hong Kong', photo: '/scenic/cn-hongkong.webp',
+        desc: { en: 'In about 15 minutes from Shenzhen to West Kowloon station, in the heart of Hong Kong.', es: 'En unos 15 minutos de Shenzhen a la estación de West Kowloon, en pleno Hong Kong.', fr: 'En une quinzaine de minutes de Shenzhen à la gare de West Kowloon, au cœur de Hong Kong.', it: 'In circa 15 minuti da Shenzhen alla stazione di West Kowloon, nel cuore di Hong Kong.', de: 'In rund 15 Minuten von Shenzhen zum Bahnhof West Kowloon mitten in Hongkong.', pt: 'Em cerca de 15 minutos de Shenzhen à estação de West Kowloon, no coração de Hong Kong.', ja: '深圳から香港中心部の西九龍駅まで約15分。' } },
+      { name: { en: 'Sichuan to Chongqing', es: 'De Sichuan a Chongqing', fr: 'Du Sichuan à Chongqing', it: 'Dal Sichuan a Chongqing', de: 'Von Sichuan nach Chongqing', pt: 'De Sichuan a Chongqing', ja: '成渝高速鉄道' }, from: 'chengdu', to: 'chongqing', a: 'Chengdu', b: 'Chongqing', photo: '/scenic/cn-chongqing.webp',
+        desc: { en: 'About an hour between Sichuan’s capital and Chongqing, the mountain city on the Yangtze.', es: 'Alrededor de una hora entre la capital de Sichuan y Chongqing, la ciudad de montaña a orillas del Yangtsé.', fr: 'Environ une heure entre la capitale du Sichuan et Chongqing, la ville-montagne au bord du Yangtsé.', it: 'Circa un’ora tra la capitale del Sichuan e Chongqing, la città di montagna sullo Yangtze.', de: 'Rund eine Stunde zwischen Sichuans Hauptstadt und Chongqing, der Bergstadt am Jangtse.', pt: 'Cerca de uma hora entre a capital de Sichuan e Chongqing, a cidade das montanhas junto ao Yangtzé.', ja: '四川省の省都・成都と、長江沿いの山の街・重慶を約1時間で。' } }
+    ],
+    adventures: {
+      'cn-classic': { stops: ['beijing', 'xian', 'chengdu', 'chongqing'],
+        title: { en: 'Imperial China & Sichuan', es: 'China imperial y Sichuan', fr: 'Chine impériale et Sichuan', it: 'Cina imperiale e Sichuan', de: 'Kaiserliches China & Sichuan', pt: 'China imperial e Sichuan', ja: '古都と四川のルート' },
+        meta: { en: 'Terracotta Army in Xi’an · pandas in Chengdu', es: 'Guerreros de terracota en Xi’an · pandas en Chengdu', fr: 'Armée de terre cuite à Xi’an · pandas à Chengdu', it: 'Esercito di terracotta a Xi’an · panda a Chengdu', de: 'Terrakotta-Armee in Xi’an · Pandas in Chengdu', pt: 'Guerreiros de terracota em Xi’an · pandas em Chengdu', ja: '西安の兵馬俑・成都のパンダ' } },
+      'cn-east': { stops: ['beijing', 'shanghai', 'hangzhou', 'huangshan'],
+        title: { en: 'Beijing to the Yellow Mountain', es: 'De Pekín a la Montaña Amarilla', fr: 'De Pékin à la Montagne Jaune', it: 'Da Pechino alla Montagna Gialla', de: 'Von Peking zum Gelben Berg', pt: 'De Pequim à Montanha Amarela', ja: '北京から黄山へ' },
+        meta: { en: 'High-speed rail · West Lake and Huangshan', es: 'Alta velocidad · Lago del Oeste y Huangshan', fr: 'Grande vitesse · lac de l’Ouest et Huangshan', it: 'Alta velocità · Lago dell’Ovest e Huangshan', de: 'Hochgeschwindigkeit · Westsee und Huangshan', pt: 'Alta velocidade · Lago do Oeste e Huangshan', ja: '高速鉄道・西湖と黄山' } },
+      'cn-south': { stops: ['guilin', 'guangzhou', 'shenzhen', 'hongkong'],
+        title: { en: 'Guilin to Hong Kong', es: 'De Guilin a Hong Kong', fr: 'De Guilin à Hong Kong', it: 'Da Guilin a Hong Kong', de: 'Von Guilin nach Hongkong', pt: 'De Guilin a Hong Kong', ja: '桂林から香港へ' },
+        meta: { en: 'Karst peaks, Pearl River Delta and Hong Kong', es: 'Picos kársticos, delta del río Perla y Hong Kong', fr: 'Pics karstiques, delta de la rivière des Perles et Hong Kong', it: 'Vette carsiche, delta del Fiume delle Perle e Hong Kong', de: 'Karstberge, Perlflussdelta und Hongkong', pt: 'Picos cársticos, delta do rio das Pérolas e Hong Kong', ja: 'カルストの峰、珠江デルタ、香港' } }
+    },
+    adventureOrder: ['cn-classic', 'cn-east', 'cn-south'],
+    operators: [['China Railway', 'www.12306.cn'], ['MTR', 'www.mtr.com.hk']]
+  };
+  var CN_TXT = {
+    en: { ph: 'Train from Beijing to Shanghai', nopair: 'Pick one of the popular routes, or try another pair of Chinese cities.', ess: 'for China.', badge: 'AI rail planner for China', label: 'Iconic Chinese routes', lead: 'China’s great high-speed rail journeys — book directly from here.', hs: 'High-speed', perday: '{n} trains a day', note: 'Journey time of the fastest direct train and number of trains in a day, from Klook data (checked 13 Nov 2026). Seats and fares for your date are shown on Klook.' },
+    es: { ph: 'Tren de Pekín a Shanghái', nopair: 'Elige una de las rutas populares o prueba otro par de ciudades chinas.', ess: 'para China.', badge: 'Planificador IA de trenes de China', label: 'Rutas icónicas de China', lead: 'Los grandes viajes en tren de alta velocidad de China, con reserva directa desde aquí.', hs: 'Alta velocidad', perday: '{n} trenes al día', note: 'Duración del tren directo más rápido y cantidad de trenes en un día, según datos de Klook (consulta del 13 de noviembre de 2026). Los asientos y tarifas de tu fecha se muestran en Klook.' },
+    fr: { ph: 'Train de Pékin à Shanghai', nopair: 'Choisissez l’une des routes populaires ou essayez une autre paire de villes chinoises.', ess: 'pour la Chine.', badge: 'Planificateur IA de trains en Chine', label: 'Itinéraires emblématiques de Chine', lead: 'Les grands trajets à grande vitesse de Chine, à réserver directement ici.', hs: 'Grande vitesse', perday: '{n} trains par jour', note: 'Durée du train direct le plus rapide et nombre de trains sur une journée, d’après les données de Klook (consultation du 13 novembre 2026). Les places et tarifs de votre date s’affichent sur Klook.' },
+    it: { ph: 'Treno da Pechino a Shanghai', nopair: 'Scegli uno dei percorsi popolari o prova un’altra coppia di città cinesi.', ess: 'per la Cina.', badge: 'Pianificatore IA di treni in Cina', label: 'Percorsi iconici della Cina', lead: 'I grandi viaggi in treno ad alta velocità della Cina, da prenotare direttamente qui.', hs: 'Alta velocità', perday: '{n} treni al giorno', note: 'Durata del treno diretto più veloce e numero di treni in un giorno, secondo i dati di Klook (consultazione del 13 novembre 2026). Posti e tariffe per la tua data sono su Klook.' },
+    de: { ph: 'Zug von Peking nach Shanghai', nopair: 'Wähle eine der beliebten Strecken oder probiere ein anderes Städtepaar in China.', ess: 'für China.', badge: 'KI-Zugplaner für China', label: 'Ikonische Strecken in China', lead: 'Chinas große Hochgeschwindigkeitsreisen – direkt hier buchen.', hs: 'Hochgeschwindigkeit', perday: '{n} Züge am Tag', note: 'Fahrzeit des schnellsten Direktzugs und Zahl der Züge an einem Tag laut Klook-Daten (Stand 13. November 2026). Plätze und Preise für dein Datum siehst du bei Klook.' },
+    pt: { ph: 'Comboio de Pequim a Xangai', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades chinesas.', ess: 'para a China.', badge: 'Planejador IA de comboios na China', label: 'Rotas icónicas da China', lead: 'As grandes viagens de alta velocidade da China, reserve diretamente aqui.', hs: 'Alta velocidade', perday: '{n} comboios por dia', note: 'Duração do comboio direto mais rápido e número de comboios num dia, segundo dados da Klook (consulta de 13 de novembro de 2026). Lugares e tarifas para a tua data aparecem na Klook.' },
+    ja: { ph: '例：北京から上海への列車', nopair: '人気の路線を選ぶか、別の中国の都市の組み合わせを試してください。', ess: '中国編。', badge: '中国の列車AIプランナー', label: '中国の名路線', lead: '中国の高速鉄道の旅。ここからそのまま予約できます。', hs: '高速鉄道', perday: '1日{n}本', note: 'Klookのデータによる、直通で最も速い列車の所要時間と1日の本数です（2026年11月13日確認）。ご希望日の座席と運賃はKlookでご確認ください。' }
+  };
+  function cx(k) { var m = CN_TXT[lang()] || CN_TXT.en; return m[k] != null ? m[k] : CN_TXT.en[k]; }
+  function hsName() { return region === 'china' ? cx('hs') : 'Shinkansen'; }
+  function parseInfo(str) {
+    var out = {};
+    str.split(';').forEach(function (row) {
+      var p = row.split(',');
+      var v = { m: +p[1], s: p[2] === '1', t: p[3] ? p[3].split('/') : [], n: p[4] ? +p[4] : 0 };
+      var k = p[0].split('-');
+      out[k[0] + '-' + k[1]] = v; out[k[1] + '-' + k[0]] = v;
+    });
+    return out;
+  }
+  // Datos de Japón tal como quedaron arriba, para volver a ellos al cambiar de China a Japón
+  var JP_DATA = { cities: CITIES, routes: ROUTES, groups: GROUPS, quick: QUICK, valLoc: VAL_LOC, airports: AIRPORT_LOC, info: INFO, api: BOOK_API, scenic: JP_SCENIC, adventures: JP_ROUTES, adventureOrder: JP_ROUTE_ORDER, operators: OPERATORS, guides: JP_GUIDES };
+  var CN_READY = { cities: CN_DATA.cities, routes: CN_DATA.routes, groups: CN_DATA.groups, quick: CN_DATA.quick, valLoc: CN_DATA.valLoc, airports: {}, info: parseInfo(CN_DATA.info),
+    api: 'https://voxa-production-dc15.up.railway.app/affiliate/klook-china-train', scenic: CN_DATA.scenic, adventures: CN_DATA.adventures, adventureOrder: CN_DATA.adventureOrder, operators: CN_DATA.operators, guides: ' ' };
+  var dataFor = null;
+  function useData(r) {
+    if (dataFor === r) return;
+    var d = r === 'china' ? CN_READY : JP_DATA;
+    dataFor = r;
+    CITIES = d.cities; ROUTES = d.routes; GROUPS = d.groups; QUICK = d.quick; VAL_LOC = d.valLoc; AIRPORT_LOC = d.airports;
+    INFO = d.info; BOOK_API = d.api; JP_SCENIC = d.scenic; JP_ROUTES = d.adventures; JP_ROUTE_ORDER = d.adventureOrder; JP_GUIDES = d.guides;
+    japanPages = new Set();
+    ROUTES.forEach(function (x) { japanPages.add(x[0] + '-' + x[1]); japanPages.add(x[1] + '-' + x[0]); });
+    displayBySlug = {};
+    CITIES.forEach(function (c) { displayBySlug[c.slug] = c.display; });
+    kwIndex = null;
+    jpFeatured = 0; jpRouteKey = null;
+    if (jpEls.wrap) jpEls.wrap.hidden = true;
+    // los operadores se pintan una vez al crear la portada: se vuelven a pintar con los de la región
+    OPERATORS = d.operators;
+    (jpEls.ops || []).forEach(function (el) {
+      el.innerHTML = OPERATORS.map(function (o) { return '<span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=' + o[1] + '" alt="' + o[0] + '" loading="lazy"/>' + o[0] + '</span>'; }).join('');
+    });
+  }
+  useData('japan');
+
   switchEl.addEventListener('click', function (e) {
     var b = e.target.closest ? e.target.closest('.region-btn') : null;
     if (!b) return;
@@ -1228,6 +1361,15 @@
     jp.addEventListener('click', go);
     jp.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(e); } });
     countriesEl.insertBefore(jp, more);
+    var cn = document.createElement('span');
+    cn.className = 'country-chip country-chip-japan country-chip-china';
+    cn.setAttribute('role', 'button');
+    cn.tabIndex = 0;
+    cn.textContent = I18N[lang()].china;
+    var goCn = function (e) { e.stopPropagation(); setRegion('china'); };
+    cn.addEventListener('click', goCn);
+    cn.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goCn(e); } });
+    countriesEl.insertBefore(cn, more);
   })();
 
   // Resultado del planificador: la IA y la biblioteca devuelven las ciudades en inglés ("Rome", "Seville");
@@ -1315,4 +1457,5 @@
   paintSwitch();
   // Enlace directo al modo Japón (por ejemplo, desde anuncios): glosx.app/#japan
   if (/^#(japan|japon|giappone|japao)$/i.test(location.hash)) setRegion('japan', true);
+  else if (/^#(china|chine|cina)$/i.test(location.hash)) setRegion('china', true);
 })();

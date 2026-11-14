@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=91" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=92" />
   <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -446,6 +446,7 @@
         <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
           <button type="button" class="region-btn on" data-region="europe" aria-pressed="true" data-i18n="region_europe">Europe</button>
           <button type="button" class="region-btn" data-region="japan" aria-pressed="false" data-i18n="region_japan">Japon</button>
+          <button type="button" class="region-btn" data-region="china" aria-pressed="false">China</button>
           <button type="button" class="region-btn region-hotels" data-hotels="1" aria-label="Hotels">Hotels</button>
         </div>
         <div class="search-panel on" data-panel="ai">
@@ -1362,7 +1363,7 @@
   <script src="/assets/js/omio-bridge.js?v=12" defer></script>
   <script src="/assets/js/klook-bridge.js?v=2" defer></script>
   <script src="/assets/js/planner-info.js?v=8" defer></script>
-  <script src="/assets/js/japan.js?v=55" defer></script>
+  <script src="/assets/js/japan.js?v=56" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
