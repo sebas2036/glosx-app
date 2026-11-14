@@ -1346,7 +1346,7 @@
     });
   }
   // ══ Chino simplificado (fase 6, 14-nov-2026): textos del buscador y de los modos Japón y China ══════════
-  var ZH_PAGES = ' beijing-shanghai shanghai-hangzhou shanghai-suzhou shanghai-nanjing beijing-xian beijing-tianjin guangzhou-shenzhen shenzhen-hong-kong guangzhou-hong-kong chengdu-chongqing xian-chengdu guangzhou-guilin hangzhou-huangshan ';
+  var ZH_PAGES = ' beijing-shanghai shanghai-hangzhou shanghai-suzhou shanghai-nanjing beijing-xian beijing-tianjin guangzhou-shenzhen shenzhen-hong-kong guangzhou-hong-kong chengdu-chongqing xian-chengdu guangzhou-guilin hangzhou-huangshan tokyo-kyoto tokyo-osaka osaka-kyoto kyoto-hiroshima narita-tokyo tokyo-nagoya osaka-hiroshima shinjuku-hakone tokyo-kanazawa osaka-fukuoka hiroshima-fukuoka nagoya-takayama kansai-airport-kyoto kansai-airport-osaka tokyo-sendai ';
   INFO_I18N.zh = { from: '最快 {d}', direct: '直达' };
   BUY_KLOOK.zh = '查看时刻并在 Klook 预订 →';
   PI_JP.zh = { opts: '出行方式', train: '火车', note: '根据 Klook 数据（2026 年 10 月 5 日查询），这是最快直达列车的行程时长。你所选日期的座位和票价请在 Klook 查看。', guide: '查看完整线路指南' };

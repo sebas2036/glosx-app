@@ -238,7 +238,8 @@
     es: { eyebrow: 'Para clientes nuevos de Omio', text: 'Código NEW10: 10% de descuento en tu primera reserva, en compras de hasta 80 €.', copy: 'Copiar código', copied: 'Código copiado', note: 'Oferta de Omio válida hasta el 30 de noviembre de 2026. Las condiciones y la disponibilidad dependen de Omio, que reúne más de 800 compañías de transporte europeas.' },
     fr: { eyebrow: 'Pour les nouveaux clients Omio', text: 'Code NEW10 : 10 % de réduction sur votre première réservation, pour un panier jusqu’à 80 €.', copy: 'Copier le code', copied: 'Code copié', note: 'Offre Omio valable jusqu’au 30 novembre 2026. Les conditions et la disponibilité dépendent d’Omio, qui réunit plus de 800 partenaires de transport européens.' },
     it: { eyebrow: 'Per i nuovi clienti Omio', text: 'Codice NEW10: 10% di sconto sulla prima prenotazione, per acquisti fino a 80 €.', copy: 'Copia il codice', copied: 'Codice copiato', note: 'Offerta Omio valida fino al 30 novembre 2026. Condizioni e disponibilità dipendono da Omio, che riunisce oltre 800 fornitori di trasporto europei.' },
-    ja: { eyebrow: '新規のOmioご利用の方へ', text: 'コードNEW10：初回のご予約が10％オフ（80ユーロまでのご利用）。', copy: 'コードをコピー', copied: 'コピーしました', note: 'Omioの特典で、2026年11月30日まで有効です。条件や利用可否はOmioが定めます。Omioは800社以上のヨーロッパの交通事業者をまとめています。' }
+    ja: { eyebrow: '新規のOmioご利用の方へ', text: 'コードNEW10：初回のご予約が10％オフ（80ユーロまでのご利用）。', copy: 'コードをコピー', copied: 'コピーしました', note: 'Omioの特典で、2026年11月30日まで有効です。条件や利用可否はOmioが定めます。Omioは800社以上のヨーロッパの交通事業者をまとめています。' },
+    zh: { eyebrow: 'Omio 新用户专享', text: '优惠码 NEW10：首次预订立减 10%（订单金额 80 欧元以内）。', copy: '复制优惠码', copied: '已复制', note: 'Omio 优惠有效期至 2026 年 11 月 30 日。条款和余票以 Omio 为准，Omio 汇集了 800 多家欧洲交通公司。' }
   };
 
   function offerCopy(code, done) {
@@ -272,7 +273,7 @@
 
   // Tarjeta con el código: se usa bajo el botón de reserva de las páginas de ruta y dentro del resultado del planificador
   function buildOffer(src) {
-    var t = OFFER[lang()] || OFFER.en;
+    var t = OFFER[String(document.documentElement.lang || 'en').slice(0, 2).toLowerCase()] || OFFER[lang()] || OFFER.en;
     offerStyle();
     var box = document.createElement('div');
     box.className = 'omo';
