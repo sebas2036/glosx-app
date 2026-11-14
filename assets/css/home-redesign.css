@@ -987,3 +987,10 @@ html body.home-v2[data-klook="china"]:not(.hotels-mode) .hero-title-card::before
 html body.home-v2[data-klook="china"].hotels-mode .hero-title-card::before {
   background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-hotel-2000.webp?v=4') !important;
 }
+/* Aventuras de China: foto de fondo de cada tarjeta y de la cabecera del itinerario */
+body.home-v2 .wt-route-btn[data-route="cn-classic"]::before { background-image: url('/scenic/cn-xian.webp'); }
+body.home-v2 .wt-route-btn[data-route="cn-east"]::before { background-image: url('/scenic/cn-huangshan.webp'); }
+body.home-v2 .wt-route-btn[data-route="cn-south"]::before { background-image: url('/scenic/cn-guilin.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="cn-classic"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/cn-xian.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="cn-east"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/cn-huangshan.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="cn-south"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/cn-guilin.webp'); }
