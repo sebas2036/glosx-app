@@ -1,264 +1,420 @@
 {
- "_fuente": "Klook rails-35/1020-mainland-china, búsqueda real del 27-nov-2026 consultada el 13-nov-2026. GUID = ciudad (Ciudad/Zona).",
- "stations": {
-  "beijing": "6b3b36ba-54bd-4bb0-9a0f-fb1be8dac6c5",
-  "shanghai": "319cdcce-a281-4342-8e5b-5b2d20ac189c",
-  "hangzhou": "d62a9858-18ba-4239-8ee7-e4b5b9d63d7d",
-  "suzhou": "d05587ec-6c1b-40a6-b108-f19c516e0dfc",
-  "nanjing": "d12750d0-9e50-48c3-bd43-da40935d07ff",
-  "xian": "66c737aa-5baf-4c89-877f-9f6294a175a5",
-  "tianjin": "753f0712-200b-447b-97ab-05aabb066dc3",
-  "guangzhou": "99c5e5bf-38b5-491e-add5-841d25b2811b",
-  "shenzhen": "16e4266c-44c7-41b0-bc02-a466680792a8",
-  "hongkong": "dfd76e07-ca3b-4ad2-b43f-081cbf786ffb",
-  "chengdu": "9ea8b48b-380a-4f10-97aa-d97a95cce809",
-  "chongqing": "a58c8c77-8399-430a-bbe0-0649ec82e74c",
-  "guilin": "9e1454a3-3879-4b0d-a0d1-43737cf2135c",
-  "huangshan": "a4a052e5-846d-4762-b516-5649d8c2edae",
-  "qingdao": "c9dbbc1b-f74e-47f1-9e6b-62c15671d771",
-  "harbin": "8ddf786c-952c-4a7c-9a7d-93e598abdfe7",
-  "luoyang": "d6fe3f17-ab96-44d3-af45-37c546fd2935",
-  "kunming": "3dfe08ec-1471-45ee-9a97-b77b041240c4",
-  "dali": "bb5e57ea-5d7f-4e0b-b11c-295af9c5a4fd",
-  "lijiang": "b274f3fa-8272-4e67-911d-94f72c5472a2",
-  "changsha": "de3c2ebb-a145-487b-b0c6-4710a586d2b1",
-  "zhangjiajie": "982684a3-89de-4f02-8f7d-2c1f38f28c67",
-  "wuhan": "4c07650c-dbc6-44f7-b534-12445d49d274",
-  "xiamen": "852763c5-0c61-499f-b99a-35926525a4b4",
-  "leshan": "641c1de2-5828-4b88-bb8e-527abec31617"
- },
- "routes": {
-  "beijing-shanghai": {
-   "trains": 45,
-   "fastest_min": 258,
-   "first": "06:08",
-   "last": "19:24",
-   "main": "Beijing South → Shanghai Hongqiao"
+  "_fuente": "Klook rails-35/1020-mainland-china, búsqueda real del 27-nov-2026 consultada el 13-nov-2026. GUID = ciudad (Ciudad/Zona).",
+  "stations": {
+    "beijing": "6b3b36ba-54bd-4bb0-9a0f-fb1be8dac6c5",
+    "shanghai": "319cdcce-a281-4342-8e5b-5b2d20ac189c",
+    "hangzhou": "d62a9858-18ba-4239-8ee7-e4b5b9d63d7d",
+    "suzhou": "d05587ec-6c1b-40a6-b108-f19c516e0dfc",
+    "nanjing": "d12750d0-9e50-48c3-bd43-da40935d07ff",
+    "xian": "66c737aa-5baf-4c89-877f-9f6294a175a5",
+    "tianjin": "753f0712-200b-447b-97ab-05aabb066dc3",
+    "guangzhou": "99c5e5bf-38b5-491e-add5-841d25b2811b",
+    "shenzhen": "16e4266c-44c7-41b0-bc02-a466680792a8",
+    "hongkong": "dfd76e07-ca3b-4ad2-b43f-081cbf786ffb",
+    "chengdu": "9ea8b48b-380a-4f10-97aa-d97a95cce809",
+    "chongqing": "a58c8c77-8399-430a-bbe0-0649ec82e74c",
+    "guilin": "9e1454a3-3879-4b0d-a0d1-43737cf2135c",
+    "huangshan": "a4a052e5-846d-4762-b516-5649d8c2edae",
+    "qingdao": "c9dbbc1b-f74e-47f1-9e6b-62c15671d771",
+    "harbin": "8ddf786c-952c-4a7c-9a7d-93e598abdfe7",
+    "luoyang": "d6fe3f17-ab96-44d3-af45-37c546fd2935",
+    "kunming": "3dfe08ec-1471-45ee-9a97-b77b041240c4",
+    "dali": "bb5e57ea-5d7f-4e0b-b11c-295af9c5a4fd",
+    "lijiang": "b274f3fa-8272-4e67-911d-94f72c5472a2",
+    "changsha": "de3c2ebb-a145-487b-b0c6-4710a586d2b1",
+    "zhangjiajie": "982684a3-89de-4f02-8f7d-2c1f38f28c67",
+    "wuhan": "4c07650c-dbc6-44f7-b534-12445d49d274",
+    "xiamen": "852763c5-0c61-499f-b99a-35926525a4b4",
+    "leshan": "641c1de2-5828-4b88-bb8e-527abec31617",
+    "shenyang": "9d27bdcc-8e9f-4394-a62e-9e44b93149c2",
+    "dalian": "d1a02657-2211-474f-8448-b7f4dee6dd66",
+    "changchun": "5f40293d-1f13-466d-a1d6-e9220c34aa26",
+    "datong": "eaa36b8e-ec0d-48e1-aeaf-89962bffbf29",
+    "lanzhou": "a901e94f-74de-445a-b6f6-32c335cf2e11",
+    "zhengzhou": "f4999655-889a-4c1d-8979-73cf6e681d1d",
+    "ningbo": "4c2f9c51-8019-42f5-8a44-f02654e4d36e",
+    "wuxi": "8361057b-7cb1-4a5e-8356-6fd770429f8d",
+    "shaoxing": "0756cd9d-2d86-4ca2-95c0-7f1e7782790c",
+    "nanning": "104bb1c2-cb51-4311-a399-28086a11dcd8",
+    "haikou": "a983444b-7490-4871-b946-83a9d7716269",
+    "sanya": "37203f93-d29a-4d20-bd01-6d2819222630",
+    "fuzhou": "4bb3a670-c6ac-4612-a039-f4ebaaab0f1b",
+    "guiyang": "05372114-7840-403e-bf1d-eecc2846cbda",
+    "jinan": "0ddc62a7-f43e-440e-a220-41a13ad80d37"
   },
-  "shanghai-hangzhou": {
-   "trains": 357,
-   "fastest_min": 45,
-   "first": "04:08",
-   "last": "22:30",
-   "main": "Shanghai Hongqiao → Hangzhou East"
+  "routes": {
+    "beijing-shanghai": {
+      "trains": 45,
+      "fastest_min": 258,
+      "first": "06:08",
+      "last": "19:24",
+      "main": "Beijing South → Shanghai Hongqiao"
+    },
+    "shanghai-hangzhou": {
+      "trains": 357,
+      "fastest_min": 45,
+      "first": "04:08",
+      "last": "22:30",
+      "main": "Shanghai Hongqiao → Hangzhou East"
+    },
+    "shanghai-suzhou": {
+      "trains": 619,
+      "fastest_min": 21,
+      "first": "03:52",
+      "last": "22:24",
+      "main": "Shanghai Hongqiao → Suzhou North"
+    },
+    "shanghai-nanjing": {
+      "trains": 323,
+      "fastest_min": 59,
+      "first": "03:52",
+      "last": "22:05",
+      "main": "Shanghai Hongqiao → Nanjing South"
+    },
+    "beijing-xian": {
+      "trains": 26,
+      "fastest_min": 250,
+      "first": "06:38",
+      "last": "19:00",
+      "main": "Beijing West → Xi'an North"
+    },
+    "beijing-tianjin": {
+      "trains": 317,
+      "fastest_min": 30,
+      "first": "00:22",
+      "last": "23:17",
+      "main": "Beijing South → Tianjin"
+    },
+    "guangzhou-shenzhen": {
+      "trains": 517,
+      "fastest_min": 29,
+      "first": "05:31",
+      "last": "23:25",
+      "main": "Guangzhou South → Shenzhen North"
+    },
+    "shenzhen-hongkong": {
+      "trains": 156,
+      "fastest_min": 14,
+      "first": "06:33",
+      "last": "22:19",
+      "main": "Shenzhen North / Futian → Hong Kong West Kowloon"
+    },
+    "guangzhou-hongkong": {
+      "trains": 70,
+      "fastest_min": 47,
+      "first": "06:32",
+      "last": "21:28",
+      "main": "Guangzhou South → Hong Kong West Kowloon"
+    },
+    "chengdu-chongqing": {
+      "trains": 144,
+      "fastest_min": 66,
+      "first": "06:10",
+      "last": "22:15",
+      "main": "Chengdu East → Chongqing West"
+    },
+    "xian-chengdu": {
+      "trains": 72,
+      "fastest_min": 185,
+      "first": "05:13",
+      "last": "19:58",
+      "main": "Xi'an North → Chengdu East"
+    },
+    "guangzhou-guilin": {
+      "trains": 69,
+      "fastest_min": 124,
+      "first": "06:37",
+      "last": "20:57",
+      "main": "Guangzhou South → Guilin West"
+    },
+    "hangzhou-huangshan": {
+      "trains": 55,
+      "fastest_min": 73,
+      "first": "07:15",
+      "last": "21:41",
+      "main": "Hangzhou West → Huangshan North"
+    },
+    "beijing-hangzhou": {
+      "trains": 25,
+      "fastest_min": 257,
+      "first": "07:04",
+      "last": "19:04",
+      "main": "Beijing South → Hangzhou East"
+    },
+    "beijing-nanjing": {
+      "trains": 66,
+      "fastest_min": 194,
+      "first": "06:08",
+      "last": "19:50",
+      "main": "Beijing South → Nanjing South"
+    },
+    "nanjing-hangzhou": {
+      "trains": 147,
+      "fastest_min": 61,
+      "first": "00:08",
+      "last": "22:20",
+      "main": "Nanjing South → Hangzhou East"
+    },
+    "suzhou-hangzhou": {
+      "trains": 181,
+      "fastest_min": 37,
+      "first": "02:29",
+      "last": "22:58",
+      "main": "Suzhou South → Hangzhou West"
+    },
+    "shanghai-huangshan": {
+      "trains": 64,
+      "fastest_min": 119,
+      "first": "06:27",
+      "last": "19:34",
+      "main": "Shanghai Hongqiao → Huangshan North"
+    },
+    "beijing-qingdao": {
+      "trains": 23,
+      "fastest_min": 187,
+      "first": "07:00",
+      "last": "19:36",
+      "main": "Beijing South → Qingdao"
+    },
+    "beijing-harbin": {
+      "trains": 20,
+      "fastest_min": 273,
+      "first": "05:54",
+      "last": "16:05",
+      "main": "Beijing Chaoyang → Harbin West"
+    },
+    "xian-luoyang": {
+      "trains": 108,
+      "fastest_min": 75,
+      "first": "00:27",
+      "last": "21:02",
+      "main": "Xi'an North → Luoyang Longmen"
+    },
+    "kunming-dali": {
+      "trains": 95,
+      "fastest_min": 115,
+      "first": "06:00",
+      "last": "21:24",
+      "main": "Kunming → Dali"
+    },
+    "kunming-lijiang": {
+      "trains": 12,
+      "fastest_min": 209,
+      "first": "08:29",
+      "last": "19:23",
+      "main": "Kunming → Lijiang"
+    },
+    "changsha-zhangjiajie": {
+      "trains": 41,
+      "fastest_min": 105,
+      "first": "02:10",
+      "last": "21:10",
+      "main": "Changsha → Zhangjiajie West"
+    },
+    "guangzhou-changsha": {
+      "trains": 159,
+      "fastest_min": 117,
+      "first": "06:18",
+      "last": "21:51",
+      "main": "Guangzhou South → Changsha South"
+    },
+    "shanghai-wuhan": {
+      "trains": 52,
+      "fastest_min": 212,
+      "first": "06:01",
+      "last": "18:27",
+      "main": "Shanghai Hongqiao → Wuhan"
+    },
+    "guangzhou-xiamen": {
+      "trains": 33,
+      "fastest_min": 181,
+      "first": "06:18",
+      "last": "19:33",
+      "main": "Guangzhou East → Xiamen North"
+    },
+    "shenzhen-xiamen": {
+      "trains": 60,
+      "fastest_min": 157,
+      "first": "06:46",
+      "last": "20:41",
+      "main": "Shenzhen North → Xiamen North"
+    },
+    "chengdu-leshan": {
+      "trains": 66,
+      "fastest_min": 41,
+      "first": "06:15",
+      "last": "21:49",
+      "main": "Chengdu East → Leshan"
+    },
+    "shenzhen-guilin": {
+      "trains": 14,
+      "fastest_min": 159,
+      "first": "07:46",
+      "last": "18:32",
+      "main": "Shenzhen North → Guilin North"
+    },
+    "beijing-wuhan": {
+      "trains": 43,
+      "fastest_min": 228,
+      "first": "05:19",
+      "last": "18:55",
+      "main": "Beijing West → Wuhan"
+    },
+    "hangzhou-xiamen": {
+      "trains": 44,
+      "fastest_min": 255,
+      "first": "07:03",
+      "last": "16:36",
+      "main": "Hangzhou East → Xiamen North"
+    },
+    "wuhan-changsha": {
+      "trains": 156,
+      "fastest_min": 71,
+      "first": "00:23",
+      "last": "22:13",
+      "main": "Wuhan → Changsha South"
+    },
+    "beijing-shenyang": {
+      "trains": 64,
+      "fastest_min": 149,
+      "first": "05:54",
+      "last": "20:43",
+      "main": "Beijing Chaoyang → Shenyang North"
+    },
+    "shenyang-dalian": {
+      "trains": 75,
+      "fastest_min": 85,
+      "first": "00:06",
+      "last": "21:33",
+      "main": "Shenyang → Dalian North"
+    },
+    "harbin-changchun": {
+      "trains": 111,
+      "fastest_min": 55,
+      "first": "01:45",
+      "last": "21:17",
+      "main": "Harbin West → Changchun West"
+    },
+    "beijing-datong": {
+      "trains": 53,
+      "fastest_min": 105,
+      "first": "00:07",
+      "last": "20:16",
+      "main": "Qinghe → Datong South"
+    },
+    "xian-lanzhou": {
+      "trains": 104,
+      "fastest_min": 148,
+      "first": "02:34",
+      "last": "20:30",
+      "main": "Xi'an North → Lanzhou West"
+    },
+    "hangzhou-shaoxing": {
+      "trains": 64,
+      "fastest_min": 18,
+      "first": "04:51",
+      "last": "21:47",
+      "main": "Hangzhou East → Shaoxing North"
+    },
+    "beijing-zhengzhou": {
+      "trains": 109,
+      "fastest_min": 131,
+      "first": "05:19",
+      "last": "21:01",
+      "main": "Beijing West → Zhengzhou East"
+    },
+    "zhengzhou-xian": {
+      "trains": 133,
+      "fastest_min": 104,
+      "first": "00:34",
+      "last": "21:54",
+      "main": "Zhengzhou East → Xi'an North"
+    },
+    "shanghai-ningbo": {
+      "trains": 59,
+      "fastest_min": 96,
+      "first": "04:32",
+      "last": "21:04",
+      "main": "Shanghai Hongqiao → Ningbo"
+    },
+    "shanghai-wuxi": {
+      "trains": 286,
+      "fastest_min": 25,
+      "first": "03:52",
+      "last": "22:23",
+      "main": "Shanghai Station → Wuxi"
+    },
+    "guangzhou-nanning": {
+      "trains": 81,
+      "fastest_min": 165,
+      "first": "05:37",
+      "last": "20:37",
+      "main": "Guangzhou South → Nanning East"
+    },
+    "nanning-guilin": {
+      "trains": 108,
+      "fastest_min": 119,
+      "first": "06:25",
+      "last": "20:52",
+      "main": "Nanning East → Guilin"
+    },
+    "haikou-sanya": {
+      "trains": 213,
+      "fastest_min": 74,
+      "first": "06:25",
+      "last": "22:11",
+      "main": "Haikou East → Sanya"
+    },
+    "xiamen-fuzhou": {
+      "trains": 222,
+      "fastest_min": 56,
+      "first": "06:29",
+      "last": "22:11",
+      "main": "Xiamen North → Fuzhou South"
+    },
+    "shanghai-xiamen": {
+      "trains": 28,
+      "fastest_min": 303,
+      "first": "06:20",
+      "last": "15:15",
+      "main": "Shanghai Hongqiao → Xiamen North"
+    },
+    "chengdu-guiyang": {
+      "trains": 92,
+      "fastest_min": 181,
+      "first": "06:38",
+      "last": "19:49",
+      "main": "Chengdu East → Guiyang North"
+    },
+    "guiyang-guilin": {
+      "trains": 61,
+      "fastest_min": 94,
+      "first": "06:19",
+      "last": "20:34",
+      "main": "Guiyang East → Guilin West"
+    },
+    "kunming-guiyang": {
+      "trains": 57,
+      "fastest_min": 144,
+      "first": "06:48",
+      "last": "20:22",
+      "main": "Kunming South → Guiyang North"
+    },
+    "beijing-jinan": {
+      "trains": 130,
+      "fastest_min": 82,
+      "first": "06:18",
+      "last": "21:45",
+      "main": "Beijing South → Jinan West"
+    },
+    "jinan-qingdao": {
+      "trains": 162,
+      "fastest_min": 74,
+      "first": "01:21",
+      "last": "21:40",
+      "main": "Jinan → Qingdao"
+    }
   },
-  "shanghai-suzhou": {
-   "trains": 619,
-   "fastest_min": 21,
-   "first": "03:52",
-   "last": "22:24",
-   "main": "Shanghai Hongqiao → Suzhou North"
-  },
-  "shanghai-nanjing": {
-   "trains": 323,
-   "fastest_min": 59,
-   "first": "03:52",
-   "last": "22:05",
-   "main": "Shanghai Hongqiao → Nanjing South"
-  },
-  "beijing-xian": {
-   "trains": 26,
-   "fastest_min": 250,
-   "first": "06:38",
-   "last": "19:00",
-   "main": "Beijing West → Xi'an North"
-  },
-  "beijing-tianjin": {
-   "trains": 317,
-   "fastest_min": 30,
-   "first": "00:22",
-   "last": "23:17",
-   "main": "Beijing South → Tianjin"
-  },
-  "guangzhou-shenzhen": {
-   "trains": 517,
-   "fastest_min": 29,
-   "first": "05:31",
-   "last": "23:25",
-   "main": "Guangzhou South → Shenzhen North"
-  },
-  "shenzhen-hongkong": {
-   "trains": 156,
-   "fastest_min": 14,
-   "first": "06:33",
-   "last": "22:19",
-   "main": "Shenzhen North / Futian → Hong Kong West Kowloon"
-  },
-  "guangzhou-hongkong": {
-   "trains": 70,
-   "fastest_min": 47,
-   "first": "06:32",
-   "last": "21:28",
-   "main": "Guangzhou South → Hong Kong West Kowloon"
-  },
-  "chengdu-chongqing": {
-   "trains": 144,
-   "fastest_min": 66,
-   "first": "06:10",
-   "last": "22:15",
-   "main": "Chengdu East → Chongqing West"
-  },
-  "xian-chengdu": {
-   "trains": 72,
-   "fastest_min": 185,
-   "first": "05:13",
-   "last": "19:58",
-   "main": "Xi'an North → Chengdu East"
-  },
-  "guangzhou-guilin": {
-   "trains": 69,
-   "fastest_min": 124,
-   "first": "06:37",
-   "last": "20:57",
-   "main": "Guangzhou South → Guilin West"
-  },
-  "hangzhou-huangshan": {
-   "trains": 55,
-   "fastest_min": 73,
-   "first": "07:15",
-   "last": "21:41",
-   "main": "Hangzhou West → Huangshan North"
-  },
-  "beijing-hangzhou": {
-   "trains": 25,
-   "fastest_min": 257,
-   "first": "07:04",
-   "last": "19:04",
-   "main": "Beijing South → Hangzhou East"
-  },
-  "beijing-nanjing": {
-   "trains": 66,
-   "fastest_min": 194,
-   "first": "06:08",
-   "last": "19:50",
-   "main": "Beijing South → Nanjing South"
-  },
-  "nanjing-hangzhou": {
-   "trains": 110,
-   "fastest_min": 61,
-   "first": "00:08",
-   "last": "22:20",
-   "main": "Nanjing South → Hangzhou East"
-  },
-  "suzhou-hangzhou": {
-   "trains": 102,
-   "fastest_min": 61,
-   "first": "02:29",
-   "last": "21:31",
-   "main": "Suzhou → Hangzhou East"
-  },
-  "shanghai-huangshan": {
-   "trains": 63,
-   "fastest_min": 119,
-   "first": "06:27",
-   "last": "19:34",
-   "main": "Shanghai Hongqiao → Huangshan North"
-  },
-  "beijing-qingdao": {
-   "trains": 23,
-   "fastest_min": 187,
-   "first": "07:00",
-   "last": "19:36",
-   "main": "Beijing South → Qingdao"
-  },
-  "beijing-harbin": {
-   "trains": 20,
-   "fastest_min": 273,
-   "first": "05:54",
-   "last": "16:05",
-   "main": "Beijing Chaoyang → Harbin West"
-  },
-  "xian-luoyang": {
-   "trains": 102,
-   "fastest_min": 75,
-   "first": "00:33",
-   "last": "21:02",
-   "main": "Xi'an North → Luoyang Longmen"
-  },
-  "kunming-dali": {
-   "trains": 92,
-   "fastest_min": 115,
-   "first": "06:00",
-   "last": "21:24",
-   "main": "Kunming → Dali"
-  },
-  "kunming-lijiang": {
-   "trains": 12,
-   "fastest_min": 209,
-   "first": "08:29",
-   "last": "19:23",
-   "main": "Kunming → Lijiang"
-  },
-  "changsha-zhangjiajie": {
-   "trains": 41,
-   "fastest_min": 105,
-   "first": "02:10",
-   "last": "21:10",
-   "main": "Changsha → Zhangjiajie West"
-  },
-  "guangzhou-changsha": {
-   "trains": 154,
-   "fastest_min": 117,
-   "first": "06:18",
-   "last": "21:51",
-   "main": "Guangzhou South → Changsha South"
-  },
-  "shanghai-wuhan": {
-   "trains": 50,
-   "fastest_min": 212,
-   "first": "06:01",
-   "last": "18:27",
-   "main": "Shanghai Hongqiao → Wuhan"
-  },
-  "guangzhou-xiamen": {
-   "trains": 31,
-   "fastest_min": 181,
-   "first": "06:18",
-   "last": "18:29",
-   "main": "Guangzhou East → Xiamen North"
-  },
-  "shenzhen-xiamen": {
-   "trains": 55,
-   "fastest_min": 157,
-   "first": "06:46",
-   "last": "19:43",
-   "main": "Shenzhen North → Xiamen North"
-  },
-  "chengdu-leshan": {
-   "trains": 8,
-   "fastest_min": 64,
-   "first": "06:39",
-   "last": "18:58",
-   "main": "Chengdu East → Leshan"
-  },
-  "shenzhen-guilin": {
-   "trains": 14,
-   "fastest_min": 159,
-   "first": "07:46",
-   "last": "18:32",
-   "main": "Shenzhen North → Guilin North"
-  },
-  "beijing-wuhan": {
-   "trains": 42,
-   "fastest_min": 228,
-   "first": "05:19",
-   "last": "18:55",
-   "main": "Beijing West → Wuhan"
-  },
-  "hangzhou-xiamen": {
-   "trains": 43,
-   "fastest_min": 255,
-   "first": "07:03",
-   "last": "16:36",
-   "main": "Hangzhou East → Xiamen North"
-  },
-  "wuhan-changsha": {
-   "trains": 137,
-   "fastest_min": 71,
-   "first": "00:23",
-   "last": "22:13",
-   "main": "Wuhan → Changsha South"
-  }
- },
- "_lote2": "Lote 2 (20 rutas) verificado 14-nov-2026 en la página de resultados de Klook para el 27-nov-2026"
+  "_lote2": "Lote 2 (20 rutas) re-medido 14-nov-2026 con el parser corregido (cuenta trenes \"N mins\" y \"Sold out\"), búsqueda Klook para el 27-nov-2026",
+  "_lote3": "Lote 3 (20 rutas) verificado 14-nov-2026 en la página de resultados de Klook para el 27-nov-2026"
 }
