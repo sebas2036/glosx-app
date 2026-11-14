@@ -1,13 +1,13 @@
 # WoW Train (glosx.app)
 
-> Free train trip planner for Europe and Japan. Describe a trip in plain language and get a rail itinerary with routes, journey times, operators and booking links. 326 route guides (130 in Europe, 196 in Japan) in English, Spanish, French, Italian and Japanese, plus open-data timetable pages built from official rail operator data. No account, no signup. Independent project by GLOSX, not affiliated with any rail operator.
+> Free train trip planner for Europe, Japan and China. Describe a trip in plain language and get a rail itinerary with routes, journey times, operators and booking links. 339 route guides (130 in Europe, 196 in Japan, 13 in China) in English, Spanish, French, Italian and Japanese, plus open-data timetable pages built from official rail operator data. No account, no signup. Independent project by GLOSX, not affiliated with any rail operator.
 
-WoW Train is a website, not a mobile app. Bookings are completed on partner platforms (Omio for Europe, Klook for Japan); WoW Train never processes payments and earns an affiliate commission at no extra cost to the traveller. Prices shown on the site are indicative; the final fare is the one on the partner site for the chosen date.
+WoW Train is a website, not a mobile app. Bookings are completed on partner platforms (Omio for Europe, Klook for Japan and China); WoW Train never processes payments and earns an affiliate commission at no extra cost to the traveller. Prices shown on the site are indicative; the final fare is the one on the partner site for the chosen date.
 
 ## Planner and route guides
 
-- [AI trip planner](https://glosx.app/): describe a trip ("Zurich to Milan", "Tokyo to Kyoto") and get each leg with journey time and a booking link; Europe and Japan modes
-- [All route guides](https://glosx.app/rutas/): index of the 326 route guides, Japan grouped by region; each guide has journey time, operator, stations, FAQ and a route map
+- [AI trip planner](https://glosx.app/): describe a trip ("Zurich to Milan", "Tokyo to Kyoto", "Beijing to Shanghai") and get each leg with journey time and a booking link; Europe, Japan and China modes
+- [All route guides](https://glosx.app/rutas/): index of the 339 route guides, Japan grouped by region, plus China's high-speed routes (Beijing, Shanghai, Guangzhou, Hong Kong, Chengdu, Xi'an); each guide has journey time, stations and FAQ
 - [Trains from London](https://glosx.app/trains-from-london/) and [trains from Paris](https://glosx.app/trains-from-paris/): hub pages with every direct route from those cities
 - [Trains from the UK to Europe](https://glosx.app/trains-from-uk-to-europe/), [France to Spain](https://glosx.app/trains-from-france-to-spain/), [France to Italy](https://glosx.app/trains-from-france-to-italy/), [Germany to Italy](https://glosx.app/trains-from-germany-to-italy/): cross-border guides
 
