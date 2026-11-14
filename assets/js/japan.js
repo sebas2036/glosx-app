@@ -1498,6 +1498,63 @@
         Austria: '奥地利', Belgium: '比利时', 'Czech Republic': '捷克', Denmark: '丹麦', France: '法国', Germany: '德国', Hungary: '匈牙利', Norway: '挪威', Portugal: '葡萄牙', Slovenia: '斯洛文尼亚', Italy: '意大利', Monaco: '摩纳哥', Netherlands: '荷兰', Spain: '西班牙', Sweden: '瑞典', Switzerland: '瑞士', 'United Kingdom': '英国' } };
     Object.keys(CN).forEach(function (lg) { HOTEL_NAMES[lg] = HOTEL_NAMES[lg] || {}; Object.keys(CN[lg]).forEach(function (k) { if (!HOTEL_NAMES[lg][k]) HOTEL_NAMES[lg][k] = CN[lg][k]; }); });
   })();
+  // ── Modo China: secciones de abajo que seguían hablando de Europa (FAQ, características, franja, explorar) ──
+  var CNH = {
+    en: { f1: 'An independent and free platform to plan train trips in China, Japan and Europe. No account, no subscription — explore routes, see journey times and book through certified partners.', f2: 'We connect you to official partners. For China we use Klook: search your route, press the Klook button and complete the booking on their secure platform, in English and with a foreign card.', fq: 'Do I need my passport for trains in China?', fa: 'Yes. Train tickets in mainland China are issued in the passenger’s name: you book with your passport number and show the same passport at the station.',
+      lead: 'No subscriptions, no paywalls. Just real journey times and smart tools.', f1t: 'Journey times at a glance', f1d: 'The fastest direct train and the number of trains in a day on each Chinese route, from Klook data.', f2t: 'China, Japan & Europe, one site', f2d: 'China’s high-speed network, Japan’s Shinkansen and Europe’s railways in a single interface.', f3t: 'Journey search', f3d: 'Find the fastest direct train between Chinese cities, with journey time and a link to book.', f4d: 'Plan multi-city trips across China 100% free. No travel agent required.',
+      et: 'Explore China’s train routes', es: 'Journey times, stations and tips for 13 high-speed routes across China.', stats: 'Book trains across China with Klook: <strong>13 routes</strong> between <strong>14 cities</strong>, with the search already loaded — free, no signup.' },
+    es: { f1: 'Una plataforma independiente y gratuita para planificar viajes en tren por China, Japón y Europa. Sin cuenta ni suscripción: explora rutas, mira los tiempos de viaje y reserva con socios certificados.', f2: 'Te conectamos con socios oficiales. Para China usamos Klook: busca tu ruta, pulsa el botón de Klook y completa la reserva en su plataforma segura, en inglés y con una tarjeta extranjera.', fq: '¿Necesito el pasaporte para los trenes en China?', fa: 'Sí. En China continental los billetes de tren son nominales: reservas con el número de pasaporte y muestras ese mismo pasaporte en la estación.',
+      lead: 'Sin suscripciones ni muros de pago. Solo tiempos de viaje reales y herramientas inteligentes.', f1t: 'Tiempos de viaje de un vistazo', f1d: 'El tren directo más rápido y la cantidad de trenes en un día de cada ruta china, con datos de Klook.', f2t: 'China, Japón y Europa, un solo sitio', f2d: 'La alta velocidad china, el Shinkansen japonés y los trenes de Europa en una sola interfaz.', f3t: 'Búsqueda de trayectos', f3d: 'Encuentra el tren directo más rápido entre ciudades chinas, con el tiempo de viaje y un enlace para reservar.', f4d: 'Diseña viajes por varias ciudades de China 100% gratis. Sin agente de viajes.',
+      et: 'Explora las rutas de tren de China', es: 'Tiempos de viaje, estaciones y consejos de 13 rutas de alta velocidad por China.', stats: 'Reserva trenes por toda China con Klook: <strong>13 rutas</strong> entre <strong>14 ciudades</strong>, con la búsqueda ya cargada — gratis, sin registro.' },
+    fr: { f1: 'Une plateforme indépendante et gratuite pour planifier des voyages en train en Chine, au Japon et en Europe. Sans compte ni abonnement : explorez les itinéraires, consultez les durées et réservez auprès de partenaires certifiés.', f2: 'Nous vous mettons en relation avec des partenaires officiels. Pour la Chine, nous utilisons Klook : cherchez votre trajet, cliquez sur le bouton Klook et réservez sur leur plateforme sécurisée, en anglais et avec une carte étrangère.', fq: 'Faut-il un passeport pour les trains en Chine ?', fa: 'Oui. En Chine continentale, les billets de train sont nominatifs : vous réservez avec votre numéro de passeport et présentez ce même passeport en gare.',
+      lead: 'Sans abonnement ni accès payant. Seulement des durées réelles et des outils intelligents.', f1t: 'Les durées en un coup d’œil', f1d: 'Le train direct le plus rapide et le nombre de trains sur une journée pour chaque itinéraire chinois, d’après les données de Klook.', f2t: 'Chine, Japon et Europe, un seul site', f2d: 'La grande vitesse chinoise, le Shinkansen japonais et les trains d’Europe dans une seule interface.', f3t: 'Recherche de trajets', f3d: 'Trouvez le train direct le plus rapide entre villes chinoises, avec la durée et un lien pour réserver.', f4d: 'Concevez des voyages multi-villes en Chine 100 % gratuitement. Sans agent de voyage.',
+      et: 'Explorez les itinéraires en train en Chine', es: 'Durées, gares et conseils pour 13 itinéraires à grande vitesse en Chine.', stats: 'Réservez vos trains en Chine avec Klook : <strong>13 itinéraires</strong> entre <strong>14 villes</strong>, recherche déjà remplie — gratuit, sans inscription.' },
+    it: { f1: 'Una piattaforma indipendente e gratuita per pianificare viaggi in treno in Cina, Giappone ed Europa. Senza account né abbonamento: esplora i percorsi, guarda i tempi di viaggio e prenota con partner certificati.', f2: 'Ti colleghiamo a partner ufficiali. Per la Cina usiamo Klook: cerca il tuo percorso, premi il pulsante di Klook e completa la prenotazione sulla loro piattaforma sicura, in inglese e con una carta straniera.', fq: 'Serve il passaporto per i treni in Cina?', fa: 'Sì. Nella Cina continentale i biglietti del treno sono nominativi: prenoti con il numero di passaporto e mostri lo stesso passaporto in stazione.',
+      lead: 'Niente abbonamenti né paywall. Solo tempi di viaggio reali e strumenti intelligenti.', f1t: 'Tempi di viaggio a colpo d’occhio', f1d: 'Il treno diretto più veloce e il numero di treni in un giorno su ogni percorso cinese, secondo i dati di Klook.', f2t: 'Cina, Giappone ed Europa, un solo sito', f2d: 'L’alta velocità cinese, lo Shinkansen giapponese e i treni d’Europa in un’unica interfaccia.', f3t: 'Ricerca dei tragitti', f3d: 'Trova il treno diretto più veloce tra le città cinesi, con il tempo di viaggio e un link per prenotare.', f4d: 'Progetta viaggi in più città della Cina 100% gratis. Nessun agente di viaggio.',
+      et: 'Esplora i percorsi in treno in Cina', es: 'Tempi di viaggio, stazioni e consigli per 13 percorsi ad alta velocità in Cina.', stats: 'Prenota i treni in tutta la Cina con Klook: <strong>13 percorsi</strong> tra <strong>14 città</strong>, con la ricerca già compilata — gratis, senza registrazione.' },
+    ja: { f1: '中国・日本・ヨーロッパの鉄道旅を計画できる、独立した無料のプラットフォームです。アカウントも登録も不要。路線を調べ、所要時間を確かめて、認定パートナーで予約できます。', f2: '公式パートナーにつなぎます。中国ではKlookを利用します。区間を検索してKlookのボタンを押し、外国のカードで安全に予約できます。', fq: '中国の列車にパスポートは必要？', fa: 'はい。中国本土の列車のきっぷは実名制で、パスポート番号で予約し、駅で同じパスポートを提示します。',
+      lead: '登録も有料の壁もありません。実際の所要時間と、便利な機能だけ。', f1t: '所要時間がひと目でわかる', f1d: '中国の各区間で最も速い直通列車と1日の本数を、Klookのデータから表示します。', f2t: '中国も日本もヨーロッパも、ひとつのサイトで', f2d: '中国の高速鉄道、日本の新幹線、ヨーロッパの鉄道を、ひとつの画面で。', f3t: '区間検索', f3d: '中国の都市を結ぶ最速の直通列車を、所要時間と予約リンク付きで探せます。', f4d: '中国の複数都市をめぐる旅を、完全無料で計画できます。',
+      et: '中国の鉄道ルートを探す', es: '中国の高速鉄道13区間の所要時間、駅、旅のヒント。', stats: 'Klookで中国の列車を予約：<strong>14都市</strong>・<strong>13区間</strong>は検索条件が入力済み。無料、登録不要。' },
+    zh: { f1: '一个独立、免费的平台，用来规划中国、日本和欧洲的火车旅行。无需账户，无需订阅：查看线路和行程时长，再通过认证合作伙伴预订。', f2: '我们把你连接到官方合作伙伴。中国使用 Klook：搜索线路，点击 Klook 按钮，用境外银行卡在其安全平台完成预订。', fq: '在中国坐火车需要护照吗？', fa: '需要。中国内地火车票实行实名制：用护照号码购票，进站时出示同一本护照。',
+      lead: '没有订阅，没有付费墙。只有真实的行程时长和好用的工具。', f1t: '行程时长一目了然', f1d: '根据 Klook 数据，显示每条中国线路最快的直达列车和当天的车次数量。', f2t: '中国、日本和欧洲，一个网站', f2d: '中国高铁、日本新干线和欧洲铁路，都在一个界面里。', f3t: '线路搜索', f3d: '查找中国城市之间最快的直达列车，附行程时长和预订链接。', f4d: '免费规划中国多城市行程，无需旅行社。',
+      et: '探索中国火车线路', es: '中国 13 条高铁线路的时长、车站和实用建议。', stats: '用 Klook 预订中国各地的火车：<strong>14 座城市</strong>之间的 <strong>13 条线路</strong>已填好搜索条件——免费，无需注册。' }
+  };
+  var CN_PILLS = [['beijing-shanghai', 'beijing', 'shanghai'], ['shanghai-hangzhou', 'shanghai', 'hangzhou'], ['beijing-xian', 'beijing', 'xian'], ['guangzhou-guilin', 'guangzhou', 'guilin'], ['shenzhen-hong-kong', 'shenzhen', 'hongkong'], ['chengdu-chongqing', 'chengdu', 'chongqing'], ['shanghai-suzhou', 'shanghai', 'suzhou'], ['hangzhou-huangshan', 'hangzhou', 'huangshan']];
+  (function () {
+    var lg = lang(), H = CNH[lg] || CNH.en;
+    var nm = function (slug) { var m = CN_DATA.valLoc[lg]; var c = CN_DATA.cities.filter(function (x) { return x.slug === slug; })[0]; return (m && m[slug]) || (c ? c.display : slug); };
+    var cn = function (orig, edit) { var c = twinHome(orig, edit); if (c) { orig.classList.add('cn-has'); c.classList.replace('jp-static', 'cn-static'); c.classList.remove('eu-static'); } return c; };
+    // FAQ: respuestas de China y la pregunta del pasaporte
+    var items = document.querySelectorAll('#faq .faq-item.eu-static');
+    if (items.length >= 2) {
+      cn(items[0], function (c) { c.querySelector('.faq-a').textContent = H.f1; });
+      var c2 = cn(items[1], function (c) { c.querySelector('.faq-a').textContent = H.f2; });
+      if (c2) {
+        var q = c2.cloneNode(true);
+        q.querySelector('.faq-q span').textContent = H.fq; q.querySelector('.faq-a').textContent = H.fa;
+        c2.parentNode.insertBefore(q, c2.nextSibling);
+      }
+    }
+    // Características
+    var rep = function (sel, txt) { var el = document.querySelector('#features ' + sel + '.eu-static'); if (el) cn(el, function (c) { c.textContent = txt; }); };
+    rep('[data-i18n="features_lead"]', H.lead);
+    rep('[data-i18n="f1_title"]', H.f1t); rep('[data-i18n="f1_desc"]', H.f1d);
+    rep('[data-i18n="f2_title"]', H.f2t); rep('[data-i18n="f2_desc"]', H.f2d);
+    rep('[data-i18n="f3_title"]', H.f3t); rep('[data-i18n="f3_desc"]', H.f3d);
+    rep('[data-i18n="f4_desc"]', H.f4d);
+    // Explorar rutas
+    var suf = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/', zh: 'zh/' }[lg] || '';
+    var et = document.querySelector('[data-i18n="explore_routes_title"].eu-static'), es = document.querySelector('[data-i18n="explore_routes_sub"].eu-static'), pills = document.querySelector('.explore-pills.eu-static');
+    if (et) cn(et, function (c) { c.textContent = H.et; });
+    if (es) cn(es, function (c) { c.textContent = H.es; });
+    if (pills) cn(pills, function (c) { c.innerHTML = CN_PILLS.map(function (p) { return '<a href="/rutas/' + p[0] + '/' + suf + '" class="explore-route-pill">' + nm(p[1]) + ' → ' + nm(p[2]) + '</a>'; }).join(''); });
+    // Franja de rutas y frase de estadísticas
+    var prose = document.getElementById('statsProse');
+    if (prose) cn(prose, function (c) { c.innerHTML = H.stats; });
+    var marq = document.querySelector('.stats-marquee.eu-static');
+    if (marq) cn(marq, function (c) { var chips = CN_PILLS.map(function (p) { return '<span class="route-chip">' + nm(p[1]) + ' → ' + nm(p[2]) + '</span>'; }).join(''); c.innerHTML = '<div class="stats-track">' + chips + chips + '</div>'; });
+  })();
+
   useData('japan');
 
   switchEl.addEventListener('click', function (e) {

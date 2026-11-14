@@ -999,3 +999,4 @@ body.home-v2 .wt-timeline-wrap[data-route="cn-south"] .wt-timeline-head { backgr
 body:not([data-klook="china"]) .cn-static { display: none !important; }
 body[data-klook="china"] #discover .eu-static { display: none !important; }
 body[data-klook="china"] #guides .eu-static { display: none !important; }
+body[data-klook="china"] .cn-has { display: none !important; }
