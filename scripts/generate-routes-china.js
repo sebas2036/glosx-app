@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Páginas de ruta de China (/rutas/<slug>/ + es/fr/it/ja), mismo molde que las de Japón
+ * Páginas de ruta de China (/rutas/<slug>/ + es/fr/de/it/pt/ja/zh), mismo molde que las de Japón
  * (cabecera, estilos, nav y pie de scripts/route-template.html). Datos reales de Klook
  * (scripts/china-klook.json, consulta 13-nov-2026 para el 27-nov-2026). Sin precios.
  * Además (idempotente): bloque "China" en los índices /rutas/ de los 5 idiomas y URLs en sitemap.xml.
@@ -12,12 +12,12 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const { DATA, CITY, STATION_JA, STATION_ZH, LIST, KEY, HIGHLIGHT, TIP } = require('./routes-china-data');
 
-const LANGS = ['en', 'es', 'fr', 'it', 'ja', 'zh'];
-const HREFLANG = { en: 'en', es: 'es', fr: 'fr', it: 'it', ja: 'ja', zh: 'zh-Hans' };
-const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', it: '/it/', ja: '/ja/', zh: '/zh/' };
-const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT', ja: 'JA', zh: '中文' };
-const LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', it: 'Italiano', ja: '日本語', zh: '中文' };
-const BC = { en: { home: 'Home', routes: 'Routes' }, es: { home: 'Inicio', routes: 'Rutas' }, fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' }, ja: { home: 'ホーム', routes: 'ルート一覧' }, zh: { home: '首页', routes: '线路' } };
+const LANGS = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ja', 'zh'];
+const HREFLANG = { en: 'en', es: 'es', fr: 'fr', de: 'de', it: 'it', pt: 'pt', ja: 'ja', zh: 'zh-Hans' };
+const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', de: '/de/', it: '/it/', pt: '/pt/', ja: '/ja/', zh: '/zh/' };
+const LANG_LABELS = { en: 'EN', es: 'ES', fr: 'FR', de: 'DE', it: 'IT', pt: 'PT', ja: 'JA', zh: '中文' };
+const LANG_NAMES = { en: 'English', es: 'Español', fr: 'Français', de: 'Deutsch', it: 'Italiano', pt: 'Português', ja: '日本語', zh: '中文' };
+const BC = { en: { home: 'Home', routes: 'Routes' }, es: { home: 'Inicio', routes: 'Rutas' }, fr: { home: 'Accueil', routes: 'Itinéraires' }, it: { home: 'Home', routes: 'Percorsi' }, de: { home: 'Startseite', routes: 'Strecken' }, pt: { home: 'Início', routes: 'Rotas' }, ja: { home: 'ホーム', routes: 'ルート一覧' }, zh: { home: '首页', routes: '线路' } };
 const UI = {
   en: { back: 'All routes', badge: 'Route guide · China', meta: 'By WoW Train · Updated November 2026 · 3 min read', btn: 'Book Ticket',
     cta: (a, b) => `Check times and book <span class="klook-cta-city">${a}</span> &rarr; <span class="klook-cta-city">${b}</span> on Klook`,
@@ -35,6 +35,14 @@ const UI = {
     cta: (a, b) => `Controlla gli orari e prenota <span class="klook-cta-city">${a}</span> &rarr; <span class="klook-cta-city">${b}</span> su Klook`,
     sub: 'Orari in tempo reale per la tua data · le tariffe cambiano ogni giorno', facts: 'Dati essenziali', choose: 'Quale treno scegliere', tips: 'Consigli prima di partire',
     faq: 'Domande frequenti', more: 'Altri percorsi in treno in Cina', ready: 'Pronto a partire? Guarda gli orari e le tariffe per la tua data e prenota il tuo posto su Klook.', note: 'Si apre in una nuova scheda', cmp: 'Confronta orari e tariffe:', check: 'Vedi gli orari' },
+  de: { back: 'Alle Strecken', badge: 'Streckenführer · China', meta: 'Von WoW Train · Aktualisiert im November 2026 · 3 Min. Lesezeit', btn: 'Ticket buchen',
+    cta: (a, b) => `Fahrzeiten prüfen und <span class="klook-cta-city">${a}</span> &rarr; <span class="klook-cta-city">${b}</span> auf Klook buchen`,
+    sub: 'Live-Fahrplan für dein Datum · Preise ändern sich täglich', facts: 'Das Wichtigste', choose: 'Welchen Zug nehmen', tips: 'Tipps vor der Reise',
+    faq: 'Häufige Fragen', more: 'Weitere Zugstrecken in China', ready: 'Bereit zur Abfahrt? Sieh dir Fahrzeiten und Preise für dein Datum an und buche deinen Platz auf Klook.', note: 'Öffnet sich in einem neuen Tab', cmp: 'Fahrzeiten und Preise vergleichen:', check: 'Fahrpläne ansehen' },
+  pt: { back: 'Todas as rotas', badge: 'Guia de rota · China', meta: 'Por WoW Train · Atualizado em novembro de 2026 · 3 min de leitura', btn: 'Reservar',
+    cta: (a, b) => `Consulte os horários e reserve <span class="klook-cta-city">${a}</span> &rarr; <span class="klook-cta-city">${b}</span> na Klook`,
+    sub: 'Horário em tempo real para a sua data · os preços mudam todos os dias', facts: 'Dados essenciais', choose: 'Que comboio escolher', tips: 'Conselhos antes de partir',
+    faq: 'Perguntas frequentes', more: 'Mais rotas de comboio na China', ready: 'Pronto para partir? Veja os horários e os preços para a sua data e reserve o seu lugar na Klook.', note: 'Abre num novo separador', cmp: 'Compare horários e preços:', check: 'Ver horários' },
   ja: { back: 'ルート一覧', badge: 'ルートガイド · 中国', meta: 'WoW Train · 2026年11月更新 · 読了目安3分', btn: '予約する',
     cta: (a, b) => `<span class="klook-cta-city">${a}</span> &rarr; <span class="klook-cta-city">${b}</span> の時刻を確認してKlookで予約`,
     sub: '出発日の最新時刻を表示 · 運賃は日々変動します', facts: '基本情報', choose: 'どの列車を選ぶ？', tips: '出発前のチェックポイント',
@@ -51,6 +59,7 @@ function short(m, l) {
   const [h, r] = hm(m), rr = String(r).padStart(2, '0');
   if (l === 'ja') return h ? `${h}時間${r ? r + '分' : ''}` : `${m}分`;
   if (l === 'zh') return h ? `${h}小时${r ? r + '分' : ''}` : `${m}分钟`;
+  if (l === 'de') return h ? (r ? `${h} Std. ${r} Min.` : `${h} Std.`) : `${m} Min.`;
   if (!h) return `${m} min`;
   if (l === 'es' || l === 'fr') return r ? `${h} h ${rr}` : `${h} h`;
   return r ? `${h}h${rr}` : `${h}h`;
@@ -59,11 +68,11 @@ function long(m, l) {
   const [h, r] = hm(m);
   if (l === 'ja' || l === 'zh') return short(m, l);
   if (l === 'fr') return h ? (r ? `${h} h ${String(r).padStart(2, '0')}` : `${h} h`) : `${m} minutes`;
-  const W = { en: ['hour', 'hours', 'minute', 'minutes', ' '], es: ['hora', 'horas', 'minuto', 'minutos', ' y '], it: ['ora', 'ore', 'minuto', 'minuti', ' e '] }[l];
+  const W = { en: ['hour', 'hours', 'minute', 'minutes', ' '], es: ['hora', 'horas', 'minuto', 'minutos', ' y '], it: ['ora', 'ore', 'minuto', 'minuti', ' e '], de: ['Stunde', 'Stunden', 'Minute', 'Minuten', ' und '], pt: ['hora', 'horas', 'minuto', 'minutos', ' e '] }[l];
   const hs = h ? `${h} ${h === 1 ? W[0] : W[1]}` : '', ms = r ? `${r} ${r === 1 ? W[2] : W[3]}` : '';
   return hs && ms ? hs + W[4] + ms : hs || ms;
 }
-const about = (m, l) => ({ en: 'about', fr: 'environ', it: 'circa', es: m >= 120 || (m >= 60 && m < 120) ? 'unas' : 'unos' }[l]);
+const about = (m, l) => ({ en: 'about', fr: 'environ', it: 'circa', de: 'etwa', pt: 'cerca de', es: m >= 120 || (m >= 60 && m < 120) ? 'unas' : 'unos' }[l]);
 
 
 // 4 preguntas más por ruta (se muestran con "ver más", data-more="1", como en Japón)
@@ -85,6 +94,14 @@ function extraFaqs(l, A, B, st, many) {
       [`Come prenoto il treno da ${A} a ${B} dall’estero?`, 'Cerca la tratta su Klook, scegli il treno e la classe, inserisci i dati del passaporto del viaggiatore e paga con una carta straniera. Il biglietto resta collegato a quel passaporto.'],
       ['Quale classe conviene scegliere?', 'La seconda classe è la scelta abituale ed è comoda per la maggior parte dei viaggi. La prima classe ha sedili più larghi e più spazio, e sui treni più veloci la business class ha sedili che si reclinano quasi del tutto.'],
       [`Con quanto anticipo conviene prenotare il treno da ${A} a ${B}?`, (many ? 'Su questa tratta i treni sono molti, quindi di solito bastano pochi giorni di anticipo, tranne intorno al Capodanno cinese e alla Settimana d’oro di ottobre.' : 'Su questa tratta i treni sono meno frequenti, quindi prenota il prima possibile, soprattutto intorno al Capodanno cinese e alla Settimana d’oro di ottobre.') + ' Klook può prendere la prenotazione prima dell’apertura delle vendite e acquista il biglietto appena aprono.']],
+    de: [[`Welche Bahnhöfe nutzt der Zug von ${A} nach ${B}?`, `Die meisten Züge fahren ${st}. Große chinesische Städte haben oft mehrere Bahnhöfe, also prüfe die auf deinem Ticket.`],
+      [`Wie buche ich den Zug von ${A} nach ${B} aus dem Ausland?`, 'Suche die Strecke auf Klook, wähle Zug und Wagenklasse, gib die Passdaten des Fahrgasts ein und bezahle mit einer ausländischen Karte. Das Ticket ist an diesen Reisepass gebunden.'],
+      ['Welche Wagenklasse soll ich wählen?', 'Die zweite Klasse ist die übliche Wahl und für die meisten Fahrten bequem. Die erste Klasse hat breitere Sitze und mehr Beinfreiheit, und in den schnellsten Zügen hat die Business Class Sitze, die sich fast flach zurücklehnen lassen.'],
+      [`Wie früh sollte ich den Zug von ${A} nach ${B} buchen?`, (many ? 'Auf dieser Strecke fahren viele Züge, daher reichen meist ein paar Tage Vorlauf, außer rund um das chinesische Neujahr und die Goldene Woche im Oktober.' : 'Auf dieser Strecke fahren weniger Züge, also buche so früh wie möglich, besonders rund um das chinesische Neujahr und die Goldene Woche im Oktober.') + ' Klook nimmt deine Buchung schon vor Verkaufsstart an und kauft das Ticket, sobald der Verkauf beginnt.']],
+    pt: [[`De que estações parte e a que estações chega o comboio de ${A} para ${B}?`, `A maioria dos comboios circula ${st}. As grandes cidades chinesas têm muitas vezes várias estações, por isso confirme as do seu bilhete.`],
+      [`Como reservo o comboio de ${A} para ${B} a partir do estrangeiro?`, 'Procure o trajeto na Klook, escolha o comboio e a classe, introduza os dados do passaporte do passageiro e pague com um cartão estrangeiro. O bilhete fica associado a esse passaporte.'],
+      ['Que classe devo escolher?', 'A segunda classe é a escolha habitual e é confortável para a maioria das viagens. A primeira classe tem lugares mais largos e mais espaço para as pernas e, nos comboios mais rápidos, a classe executiva tem lugares que reclinam quase na horizontal.'],
+      [`Com quanta antecedência devo reservar o comboio de ${A} para ${B}?`, (many ? 'Há muitos comboios nesta rota, por isso costumam bastar alguns dias de antecedência, exceto à volta do Ano Novo Chinês e da Semana Dourada de outubro.' : 'Há menos comboios nesta rota, por isso reserve o mais cedo possível, sobretudo à volta do Ano Novo Chinês e da Semana Dourada de outubro.') + ' A Klook pode aceitar a sua reserva antes da abertura das vendas e compra o bilhete assim que abrem.']],
     ja: [[`${A}から${B}への列車はどの駅を使う？`, `多くの列車は${st}を結びます。中国の大都市には駅が複数あることが多いので、切符の駅を確認してください。`],
       [`海外から${A}〜${B}の列車を予約するには？`, 'Klookで区間を検索し、列車と座席クラスを選んで、乗客のパスポート情報を入力し、海外のカードで支払います。きっぷはそのパスポートにひも付けられます。'],
       ['どの座席クラスを選べばいい？', '二等座が一般的で、ほとんどの区間で快適に過ごせます。一等座は座席が広くゆったりしており、最速列車の商務座はほぼ水平まで倒せるシートです。'],
@@ -111,6 +128,12 @@ const MORE_FAQS = {
   it: [['Posso portare una valigia in treno?', 'Sì. Ci sono portabagagli sopra i sedili e spazio per le valigie grandi in fondo a ogni carrozza. I bagagli passano allo scanner all’ingresso della stazione.'],
     ['C’è da mangiare sui treni ad alta velocità cinesi?', 'La maggior parte dei treni ad alta velocità ha una carrozza ristorante o un carrello con pasti, snack e bevande, e tutti hanno acqua calda per il tè o i noodles istantanei.'],
     ['Ci sono prese di corrente e Wi-Fi a bordo?', 'La maggior parte dei treni ad alta velocità ha prese ai sedili. Il Wi-Fi non c’è su tutti i treni, quindi una SIM locale o una eSIM è il modo più semplice per restare online.']],
+  de: [['Kann ich einen Koffer mit in den Zug nehmen?', 'Ja. Über den Sitzen gibt es Gepäckablagen und am Ende jedes Wagens Platz für größere Koffer. Das Gepäck wird am Bahnhofseingang durchleuchtet.'],
+    ['Gibt es in Chinas Schnellzügen etwas zu essen?', 'Die meisten Schnellzüge haben einen Speisewagen oder einen Wagen mit Mahlzeiten, Snacks und Getränken, und in jedem Zug gibt es heißes Wasser für Tee oder Instantnudeln.'],
+    ['Gibt es Steckdosen und WLAN an Bord?', 'Die meisten Schnellzüge haben Steckdosen an den Sitzen. WLAN gibt es nicht in jedem Zug, daher ist eine lokale SIM-Karte oder eine eSIM der einfachste Weg, online zu bleiben.']],
+  pt: [['Posso levar mala no comboio?', 'Sim. Há porta-bagagens por cima dos lugares e espaço para malas grandes no fim de cada carruagem. A bagagem passa por um scanner à entrada da estação.'],
+    ['Há comida nos comboios de alta velocidade da China?', 'A maioria dos comboios de alta velocidade tem carruagem-restaurante ou um carrinho com refeições, snacks e bebidas, e todos têm água quente para chá ou massa instantânea.'],
+    ['Há tomadas e Wi-Fi a bordo?', 'A maioria dos comboios de alta velocidade tem tomadas nos lugares. O Wi-Fi não está disponível em todos os comboios, por isso um cartão SIM local ou um eSIM é a forma mais simples de ter internet.']],
   ja: [['スーツケースを持って乗れる？', 'はい。座席の上に荷物棚があり、各車両の端には大きなスーツケースを置くスペースがあります。荷物は駅の入口でX線検査を通ります。'],
     ['中国の高速鉄道で食事はできる？', 'ほとんどの高速列車には食堂車や車内販売があり、食事・軽食・飲み物を買えます。どの列車にもお茶やカップ麺用のお湯があります。'],
     ['車内に電源やWi-Fiはある？', 'ほとんどの高速列車は座席に電源があります。Wi-Fiはすべての列車にあるわけではないので、現地SIMやeSIMを用意しておくと便利です。']],
@@ -166,6 +189,24 @@ function build([slug, a, b, photo]) {
       r.faqs.it = [[`Quanto dura il treno da ${A} a ${B}?`, `Il treno diretto più veloce impiega circa ${L}. La durata cambia da treno a treno, quindi controlla quella del treno che prenoti.`],
         [`Quanti treni ci sono tra ${A} e ${B}?`, `Nel giorno che abbiamo consultato (27 novembre 2026), Klook mostrava ${n} treni diretti, il primo alle ${f1} e l’ultimo alle ${f2}.`],
         ['Serve il passaporto per prendere il treno in Cina?', 'Sì. I biglietti sono nominativi e in stazione vengono controllati con il passaporto.']];
+    } else if (l === 'de') {
+      r.seo.de = { title: `Zug von ${A} nach ${B}: ${S} mit dem Schnellzug`, description: `Mit dem Schnellzug von ${A} nach ${B} in etwa ${S}. ${n} Direktzüge am geprüften Tag, erste und letzte Abfahrt, Bahnhöfe und Buchung.` };
+      r.lead.de = `Der schnellste Direktzug von ${A} nach ${B} braucht etwa ${L}. ${hl}`;
+      r.facts.de = [`Schnellste Fahrt: etwa ${S}.`, `Direktzüge am geprüften Tag (27. November 2026): ${n}.`, `Erste und letzte Abfahrt an diesem Tag: ${f1} und ${f2}.`, `Wichtigste Bahnhöfe: ${st}.`];
+      r.choose.de = `An dem Tag, den wir geprüft haben, zeigte Klook ${n} Direktzüge zwischen ${A} und ${B}. Der schnellste braucht etwa ${S}; andere halten öfter und brauchen länger, also vergleiche die Fahrzeiten vor der Buchung. ` + (many ? 'Bei so vielen Zügen findest du meist einen Platz nahe deiner Wunschzeit.' : 'Auf dieser Strecke fahren weniger Züge, also buche in Stoßzeiten wie dem chinesischen Neujahr und der Goldenen Woche im Oktober ein paar Tage im Voraus.');
+      r.tips.de = [tip, 'Zugtickets in Festlandchina sind personalisiert: Du brauchst deinen Reisepass zum Buchen und zum Einsteigen.', 'Plane 30 bis 45 Minuten vor der Abfahrt für die Sicherheitskontrolle und die Ticket- und Ausweiskontrolle im Bahnhof ein.'];
+      r.faqs.de = [[`Wie lange dauert die Zugfahrt von ${A} nach ${B}?`, `Der schnellste Direktzug braucht etwa ${L}. Die Fahrzeit ist je nach Zug unterschiedlich, also prüfe die deines Zuges.`],
+        [`Wie viele Züge fahren zwischen ${A} und ${B}?`, `An dem Tag, den wir geprüft haben (27. November 2026), zeigte Klook ${n} Direktzüge, den ersten um ${f1} und den letzten um ${f2}.`],
+        ['Brauche ich in China einen Reisepass für die Zugfahrt?', 'Ja. Die Tickets sind auf den Namen des Fahrgasts ausgestellt und werden im Bahnhof mit deinem Reisepass abgeglichen.']];
+    } else if (l === 'pt') {
+      r.seo.pt = { title: `Comboio de ${A} para ${B}: ${S} em alta velocidade`, description: `De ${A} para ${B} em comboio de alta velocidade em cerca de ${S}. ${n} comboios diretos no dia consultado, primeira e última partida, estações e reserva.` };
+      r.lead.pt = `O comboio direto mais rápido de ${A} para ${B} demora cerca de ${L}. ${hl}`;
+      r.facts.pt = [`Viagem mais rápida: cerca de ${S}.`, `Comboios diretos no dia consultado (27 de novembro de 2026): ${n}.`, `Primeira e última partida nesse dia: ${f1} e ${f2}.`, `Estações principais: ${st}.`];
+      r.choose.pt = `No dia que consultámos, a Klook mostrava ${n} comboios diretos entre ${A} e ${B}. O mais rápido demora cerca de ${S}; os outros param mais vezes e demoram mais, por isso compare os tempos de viagem antes de reservar. ` + (many ? 'Com tantos comboios, normalmente encontra lugar perto da hora que pretende.' : 'Há menos comboios nesta rota, por isso reserve com alguns dias de antecedência em épocas de muita procura, como o Ano Novo Chinês e a Semana Dourada de outubro.');
+      r.tips.pt = [tip, 'Na China continental, os bilhetes de comboio são nominativos: precisa do passaporte para reservar e para embarcar.', 'Chegue 30 a 45 minutos antes da partida para o controlo de segurança e a verificação do bilhete e do documento na estação.'];
+      r.faqs.pt = [[`Quanto tempo demora o comboio de ${A} para ${B}?`, `O comboio direto mais rápido demora cerca de ${L}. A duração varia de comboio para comboio, por isso confirme a do comboio que reservar.`],
+        [`Quantos comboios há entre ${A} e ${B}?`, `No dia que consultámos (27 de novembro de 2026), a Klook mostrava ${n} comboios diretos, o primeiro às ${f1} e o último às ${f2}.`],
+        ['Preciso do passaporte para andar de comboio na China?', 'Sim. Os bilhetes são nominativos e são verificados com o seu passaporte na estação.']];
     } else if (l === 'zh') {
       r.seo.zh = { title: `${A}到${B}火车：最快${S}，每天${n}班`, description: `乘高铁从${A}到${B}，最快约${S}。查询当天有${n}班直达列车，附首末班时间、车站和 Klook 订票方法。` };
       r.lead.zh = `从${A}到${B}的直达列车最快约${L}。${hl}`;
@@ -189,7 +230,7 @@ function build([slug, a, b, photo]) {
   for (const l of LANGS) {
     const SM = l === 'ja' ? STATION_JA : l === 'zh' ? STATION_ZH : null;
     const [o, t] = d.main.split(' → ').map(x => (SM && SM[x]) || x);
-    const st = { en: `from ${o} to ${t}`, es: `de ${o} a ${t}`, fr: `${o} et ${t}`, it: `${o} e ${t}`, ja: `${o}と${t}`, zh: `${o}和${t}之间` }[l];
+    const st = { en: `from ${o} to ${t}`, es: `de ${o} a ${t}`, fr: `${o} et ${t}`, it: `${o} e ${t}`, de: `von ${o} nach ${t}`, pt: `entre ${o} e ${t}`, ja: `${o}と${t}`, zh: `${o}和${t}之间` }[l];
     r.faqs[l].push(...extraFaqs(l, CITY[a][l], CITY[b][l], st, n >= 100));
     r.faqs[l].push(...MORE_FAQS[l]);
   }
@@ -209,7 +250,7 @@ function schema(r, lang) {
   const seo = r.seo[lang];
   const graph = [
     { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: BC[lang].home, item: lang === 'ja' || lang === 'zh' ? `https://glosx.app/${lang}/` : 'https://glosx.app/' },
+      { '@type': 'ListItem', position: 1, name: BC[lang].home, item: lang === 'en' ? 'https://glosx.app/' : `https://glosx.app/${lang}/` },
       { '@type': 'ListItem', position: 2, name: BC[lang].routes, item: lang === 'en' ? 'https://glosx.app/rutas/' : `https://glosx.app/${lang}/rutas/` },
       { '@type': 'ListItem', position: 3, name: `${r.from[lang]} → ${r.to[lang]}`, item: url(r.slug, lang) }] },
     { '@type': 'FAQPage', mainEntity: r.faqs[lang].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
@@ -229,6 +270,8 @@ const HOTEL = {
   es: { h: 'Dónde alojarte', t: c => `Hoteles en ${c}`, c: 'China', btn: 'Ver precio actual →', bk: 'Comparar en Booking.com →' },
   fr: { h: 'Où dormir', t: c => `Hôtels à ${c}`, c: 'Chine', btn: 'Voir le prix actuel →', bk: 'Comparer sur Booking.com →' },
   it: { h: 'Dove dormire', t: c => `Hotel a ${c}`, c: 'Cina', btn: 'Vedi il prezzo attuale →', bk: 'Confronta su Booking.com →' },
+  de: { h: 'Wo übernachten', t: c => `Hotels in ${c}`, c: 'China', btn: 'Aktuellen Preis ansehen →', bk: 'Auf Booking.com vergleichen →' },
+  pt: { h: 'Onde ficar', t: c => `Hotéis em ${c}`, c: 'China', btn: 'Ver preço atual →', bk: 'Comparar no Booking.com →' },
   ja: { h: 'おすすめの宿泊先', t: c => `${c}のホテル`, c: '中国', btn: '現在の料金を見る →', bk: 'Booking.comで比較 →' },
   zh: { h: '住宿推荐', t: c => `${c}酒店`, c: '中国', btn: '查看当前价格 →', bk: '在 Booking.com 比较 →' }
 };
@@ -324,7 +367,7 @@ function render(r, lang) {
     '{{ogTitle}}': esc(seo.title), '{{ogDescription}}': esc(seo.description),
     '{{twitterTitle}}': esc(seo.title), '{{twitterDescription}}': esc(seo.description),
     '{{videoCss}}': '', '{{schema}}': schema(r, lang), '{{langSwitch}}': langSwitch(r.slug, lang), '{{backText}}': u.back,
-    '{{homeHref}}': lang === 'ja' ? '/ja/' : lang === 'zh' ? '/zh/' : '/', '{{routesHref}}': lang === 'en' ? '/rutas/' : `/${lang}/rutas/`,
+    '{{homeHref}}': lang === 'en' ? '/' : `/${lang}/`, '{{routesHref}}': lang === 'en' ? '/rutas/' : `/${lang}/rutas/`,
     '{{footerLinks}}': lang === 'ja'
       ? '<a href="/blog.html">ブログ</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/privacy.html">プライバシー</a> · <a href="/terms.html">利用規約</a>'
       : '<a href="/blog.html">Blog</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>',
@@ -334,7 +377,7 @@ function render(r, lang) {
   html = html.split('{{heroImage}}').join(`https://images.pexels.com/photos/${r.photo}/pexels-photo-${r.photo}.jpeg?auto=compress&cs=tinysrgb&w=1600`);
   for (const [k, v] of Object.entries(map)) html = html.split(k).join(v);
   // hreflang de las 5 versiones (la plantilla no los trae)
-  html = html.replace(/  <link rel="alternate" hreflang="ja" href="([^"]+)" \/>\n/, (m, u) => m + `  <link rel="alternate" hreflang="zh-Hans" href="${url(r.slug, 'zh')}" />\n`);
+  html = html.replace(/  <link rel="alternate" hreflang="ja" href="([^"]+)" \/>\n/, (m, u) => m + ['de', 'pt', 'zh'].map(l => `  <link rel="alternate" hreflang="${HREFLANG[l]}" href="${url(r.slug, l)}" />\n`).join(''));
   if (lang === 'zh') html = html.replace('<html lang="zh"', '<html lang="zh-Hans"');
   return html;
 }
@@ -353,6 +396,8 @@ const HUB = {
   en: { file: 'rutas/index.html', h2: `China route guides &middot; ${ROUTES.length} routes` },
   es: { file: 'es/rutas/index.html', h2: `Guías de rutas de China · ${ROUTES.length} rutas` },
   fr: { file: 'fr/rutas/index.html', h2: `Guides d’itinéraires en Chine · ${ROUTES.length} itinéraires` },
+  de: { file: 'de/rutas/index.html', h2: `Streckenführer für China · ${ROUTES.length} Strecken` },
+  pt: { file: 'pt/rutas/index.html', h2: `Guias de rotas na China · ${ROUTES.length} rotas` },
   it: { file: 'it/rutas/index.html', h2: `Guide ai percorsi in Cina · ${ROUTES.length} percorsi` },
   ja: { file: 'ja/rutas/index.html', h2: `中国のルートガイド・${ROUTES.length}路線` },
   zh: { file: 'zh/rutas/index.html', h2: `中国线路指南 · ${ROUTES.length} 条` }

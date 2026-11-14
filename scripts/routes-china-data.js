@@ -109,4 +109,16 @@ const L6 = require('./routes-china-lote6');
 Object.assign(CITY, L6.CITY); Object.assign(STATION_JA, L6.STATION_JA); Object.assign(STATION_ZH, L6.STATION_ZH);
 LIST.push(...L6.LIST); Object.assign(HIGHLIGHT, L6.HIGHLIGHT); Object.assign(TIP, L6.TIP);
 
+// Alemán y portugués (europeo): nombres de ciudad (por defecto el inglés) y highlight/tip traducidos
+// desde el texto en inglés (scripts/routes-china-de-pt.json, clave = frase en inglés → [de, pt])
+const DE_PT = require('./routes-china-de-pt.json');
+const CITY_DE = { beijing: 'Peking', guangzhou: 'Kanton', nanjing: 'Nanking', hongkong: 'Hongkong' };
+const CITY_PT = { beijing: 'Pequim', shanghai: 'Xangai', guangzhou: 'Cantão', nanjing: 'Nanquim' };
+for (const [k, c] of Object.entries(CITY)) { c.de = CITY_DE[k] || c.en; c.pt = CITY_PT[k] || c.en; }
+for (const T of [HIGHLIGHT, TIP]) for (const [slug, o] of Object.entries(T)) {
+  const tr = DE_PT[o.en];
+  if (!tr) throw new Error('Falta traducción de/pt: ' + slug + ' · ' + o.en);
+  o.de = tr[0]; o.pt = tr[1];
+}
+
 module.exports = { DATA, CITY, STATION_JA, STATION_ZH, LIST, KEY, HIGHLIGHT, TIP };

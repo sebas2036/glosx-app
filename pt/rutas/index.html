@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guias de rotas de comboio: China, Japão e Europa · WoW Train · glosx.app</title>
+  <meta name="description" content="Guias de rotas de comboio da WoW Train em português: 113 rotas de alta velocidade na China, com duração, estações, conselhos e reserva." />
+  <link rel="canonical" href="https://glosx.app/pt/rutas/" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/rutas/" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/" />
+  <link rel="alternate" hreflang="de" href="https://glosx.app/de/rutas/" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/" />
+  <link rel="alternate" hreflang="pt" href="https://glosx.app/pt/rutas/" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/rutas/" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Guias de rotas de comboio · WoW Train" />
+  <meta property="og:url" content="https://glosx.app/pt/rutas/" />
+  <meta property="og:image" content="https://glosx.app/og-image.jpg" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#fafaf8; --text:#14151a; --muted:#55565f; --primary2:#C10016; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.5; }
+    .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:18px 28px; border-bottom:1.5px solid var(--text); }
+    nav a { color:var(--text); text-decoration:none; font-weight:600; }
+    nav .back { color:var(--muted); font-size:14px; }
+    header { text-align:center; padding:56px 24px 24px; }
+    header h1 { font-size:34px; margin:0 0 12px; letter-spacing:-0.5px; }
+    header p { color:var(--muted); max-width:620px; margin:0 auto; }
+    .routes-index { max-width:1100px; margin:24px auto 60px; padding:0 24px; }
+    .routes-index h2 { font-size:14px; text-transform:uppercase; letter-spacing:1px; color:var(--primary2); margin-bottom:18px; text-align:center; font-weight:700; }
+    .routes-index-list { list-style:none; padding:0; margin:0; columns:3; column-gap:30px; font-size:14px; }
+    .routes-index-list li { break-inside:avoid; margin-bottom:10px; line-height:1.4; }
+    .routes-index-list a { color:var(--muted); text-decoration:none; }
+    .routes-index-list a:hover { color:var(--text); text-decoration:underline; }
+    .routes-index-list .ri-es { color:var(--primary2); font-size:11px; font-weight:700; margin-left:5px; letter-spacing:0.5px; }
+    footer { text-align:center; padding:28px; color:var(--muted); font-size:13px; border-top:1px solid rgba(20,21,26,0.14); }
+    footer a { color:var(--muted); }
+    @media (max-width:760px) { .routes-index-list { columns:2; } header h1 { font-size:26px; } }
+    @media (max-width:460px) { .routes-index-list { columns:1; } }
+            .hub { max-width:760px; margin:22px auto 0; display:grid; gap:16px; }
+    .hub-group h2 { font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin:0 0 8px; font-weight:700; }
+    .hub-group h2 span { text-transform:none; letter-spacing:0; font-weight:400; }
+    .hub-chips { list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+    .hub-chips a { display:inline-block; padding:7px 14px; border:1px solid rgba(20,21,26,.16); border-radius:999px; background:#fff; color:var(--text); text-decoration:none; font-size:14px; }
+    .hub-chips a:hover { border-color:#C10016; color:#C10016; }
+    .hub-chips small { color:var(--muted); font-size:12px; }
+    .hub-mosaic { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; width:100%; max-width:none; margin:0; padding:6px; box-sizing:border-box; }
+    .hub-tile { position:relative; display:block; aspect-ratio:1/1; border-radius:12px; overflow:hidden; background:#e9e4dc; }
+    .hub-tile img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+    .hub-tile:hover img { transform:scale(1.06); }
+    .hub-tile span { position:absolute; left:0; right:0; bottom:0; padding:28px 14px 12px; font-size:clamp(13px,1.25vw,19px); font-weight:700; color:#fff; text-align:left; background:linear-gradient(transparent,rgba(0,0,0,.65)); }
+    .hub-blog { margin:4px auto 0; max-width:640px; font-size:14px; color:var(--muted); padding:10px 14px; border:1px solid rgba(20,21,26,.12); border-radius:12px; background:#fff; }
+    .hub-blog b { color:#C10016; }
+    @media (max-width:760px) { .hub-mosaic { grid-template-columns:repeat(3,minmax(0,1fr)); } .hub-tile:nth-child(n+7) { display:none; } }
+    @media (prefers-reduced-motion:reduce) { .hub-tile img { transition:none; } }
+  </style>
+  <link rel="stylesheet" href="/assets/css/lang-chip.css?v=1">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guias de rotas de comboio · WoW Train" />
+  <meta name="twitter:description" content="Guias de rotas de comboio da WoW Train em português: 113 rotas de alta velocidade na China, com duração, estações, conselhos e reserva." />
+  <meta name="twitter:image" content="https://glosx.app/og-image.jpg" />
+</head>
+<body>
+  <nav>
+    <a href="/pt/">WoW Train</a>
+    <div class="nav-right"><div class="lang-wrapper" data-lang-chip><button type="button" class="lang-btn" id="langBtn" aria-label="Language" aria-haspopup="true" aria-expanded="false"><span id="langCode">PT</span><span style="font-size:10px;opacity:0.6">▾</span></button><div class="lang-dropdown" id="langDropdown"><a class="lang-option" href="/rutas/" hreflang="en" lang="en">English</a><a class="lang-option" href="/es/rutas/" hreflang="es" lang="es">Español</a><a class="lang-option" href="/fr/rutas/" hreflang="fr" lang="fr">Français</a><a class="lang-option" href="/de/rutas/" hreflang="de" lang="de">Deutsch</a><a class="lang-option" href="/it/rutas/" hreflang="it" lang="it">Italiano</a><a class="lang-option active" href="/pt/rutas/" hreflang="pt" lang="pt">Português</a><a class="lang-option" href="/ja/rutas/" hreflang="ja" lang="ja">日本語</a><a class="lang-option" href="/zh/rutas/" hreflang="zh-Hans" lang="zh-Hans">中文</a></div></div><a href="/pt/" class="back">&larr; Início</a></div>
+  </nav>
+  <header>
+    <h1>Guias de rotas de comboio</h1>
+    <p>Duração, estações, conselhos práticos e reserva para cada rota. As outras rotas estão, por agora, em inglês e noutras línguas em <a href="/rutas/">todas as rotas (inglês)</a>.</p>
+  </header>
+  <section class="routes-index" aria-label="Guias de rotas">
+    <!-- china-guides:start -->
+    <h2 id="china">Guias de rotas na China · 113 rotas</h2>
+    <ul class="routes-index-list">
+      <li><a href="/rutas/beijing-chengde/pt/">Pequim &rarr; Chengde</a></li>
+      <li><a href="/rutas/beijing-chengdu/pt/">Pequim &rarr; Chengdu</a></li>
+      <li><a href="/rutas/beijing-chongqing/pt/">Pequim &rarr; Chongqing</a></li>
+      <li><a href="/rutas/beijing-dalian/pt/">Pequim &rarr; Dalian</a></li>
+      <li><a href="/rutas/beijing-datong/pt/">Pequim &rarr; Datong</a></li>
+      <li><a href="/rutas/beijing-guangzhou/pt/">Pequim &rarr; Cantão</a></li>
+      <li><a href="/rutas/beijing-guilin/pt/">Pequim &rarr; Guilin</a></li>
+      <li><a href="/rutas/beijing-hangzhou/pt/">Pequim &rarr; Hangzhou</a></li>
+      <li><a href="/rutas/beijing-harbin/pt/">Pequim &rarr; Harbin</a></li>
+      <li><a href="/rutas/beijing-hohhot/pt/">Pequim &rarr; Hohhot</a></li>
+      <li><a href="/rutas/beijing-jinan/pt/">Pequim &rarr; Jinan</a></li>
+      <li><a href="/rutas/beijing-nanjing/pt/">Pequim &rarr; Nanquim</a></li>
+      <li><a href="/rutas/beijing-qingdao/pt/">Pequim &rarr; Qingdao</a></li>
+      <li><a href="/rutas/beijing-qinhuangdao/pt/">Pequim &rarr; Qinhuangdao</a></li>
+      <li><a href="/rutas/beijing-qufu/pt/">Pequim &rarr; Qufu</a></li>
+      <li><a href="/rutas/beijing-shanghai/pt/">Pequim &rarr; Xangai</a></li>
+      <li><a href="/rutas/beijing-shenyang/pt/">Pequim &rarr; Shenyang</a></li>
+      <li><a href="/rutas/beijing-shijiazhuang/pt/">Pequim &rarr; Shijiazhuang</a></li>
+      <li><a href="/rutas/beijing-taian/pt/">Pequim &rarr; Tai'an</a></li>
+      <li><a href="/rutas/beijing-taiyuan/pt/">Pequim &rarr; Taiyuan</a></li>
+      <li><a href="/rutas/beijing-tianjin/pt/">Pequim &rarr; Tianjin</a></li>
+      <li><a href="/rutas/beijing-wuhan/pt/">Pequim &rarr; Wuhan</a></li>
+      <li><a href="/rutas/beijing-xian/pt/">Pequim &rarr; Xi'an</a></li>
+      <li><a href="/rutas/beijing-zhengzhou/pt/">Pequim &rarr; Zhengzhou</a></li>
+      <li><a href="/rutas/changsha-guilin/pt/">Changsha &rarr; Guilin</a></li>
+      <li><a href="/rutas/changsha-zhangjiajie/pt/">Changsha &rarr; Zhangjiajie</a></li>
+      <li><a href="/rutas/chengdu-chongqing/pt/">Chengdu &rarr; Chongqing</a></li>
+      <li><a href="/rutas/chengdu-guiyang/pt/">Chengdu &rarr; Guiyang</a></li>
+      <li><a href="/rutas/chengdu-kunming/pt/">Chengdu &rarr; Kunming</a></li>
+      <li><a href="/rutas/chengdu-leshan/pt/">Chengdu &rarr; Leshan</a></li>
+      <li><a href="/rutas/chongqing-guiyang/pt/">Chongqing &rarr; Guiyang</a></li>
+      <li><a href="/rutas/chongqing-kunming/pt/">Chongqing &rarr; Kunming</a></li>
+      <li><a href="/rutas/chongqing-wuhan/pt/">Chongqing &rarr; Wuhan</a></li>
+      <li><a href="/rutas/guangzhou-changsha/pt/">Cantão &rarr; Changsha</a></li>
+      <li><a href="/rutas/guangzhou-chongqing/pt/">Cantão &rarr; Chongqing</a></li>
+      <li><a href="/rutas/guangzhou-guilin/pt/">Cantão &rarr; Guilin</a></li>
+      <li><a href="/rutas/guangzhou-hong-kong/pt/">Cantão &rarr; Hong Kong</a></li>
+      <li><a href="/rutas/guangzhou-kunming/pt/">Cantão &rarr; Kunming</a></li>
+      <li><a href="/rutas/guangzhou-nanning/pt/">Cantão &rarr; Nanning</a></li>
+      <li><a href="/rutas/guangzhou-shenzhen/pt/">Cantão &rarr; Shenzhen</a></li>
+      <li><a href="/rutas/guangzhou-wuhan/pt/">Cantão &rarr; Wuhan</a></li>
+      <li><a href="/rutas/guangzhou-xiamen/pt/">Cantão &rarr; Xiamen</a></li>
+      <li><a href="/rutas/guangzhou-zhuhai/pt/">Cantão &rarr; Zhuhai</a></li>
+      <li><a href="/rutas/guilin-kunming/pt/">Guilin &rarr; Kunming</a></li>
+      <li><a href="/rutas/guiyang-guilin/pt/">Guiyang &rarr; Guilin</a></li>
+      <li><a href="/rutas/haikou-sanya/pt/">Haikou &rarr; Sanya</a></li>
+      <li><a href="/rutas/hangzhou-changsha/pt/">Hangzhou &rarr; Changsha</a></li>
+      <li><a href="/rutas/hangzhou-fuzhou/pt/">Hangzhou &rarr; Fuzhou</a></li>
+      <li><a href="/rutas/hangzhou-huangshan/pt/">Hangzhou &rarr; Huangshan</a></li>
+      <li><a href="/rutas/hangzhou-ningbo/pt/">Hangzhou &rarr; Ningbo</a></li>
+      <li><a href="/rutas/hangzhou-shaoxing/pt/">Hangzhou &rarr; Shaoxing</a></li>
+      <li><a href="/rutas/hangzhou-wenzhou/pt/">Hangzhou &rarr; Wenzhou</a></li>
+      <li><a href="/rutas/hangzhou-xiamen/pt/">Hangzhou &rarr; Xiamen</a></li>
+      <li><a href="/rutas/harbin-changchun/pt/">Harbin &rarr; Changchun</a></li>
+      <li><a href="/rutas/hefei-huangshan/pt/">Hefei &rarr; Huangshan</a></li>
+      <li><a href="/rutas/huangshan-jingdezhen/pt/">Huangshan &rarr; Jingdezhen</a></li>
+      <li><a href="/rutas/jinan-qingdao/pt/">Jinan &rarr; Qingdao</a></li>
+      <li><a href="/rutas/kunming-dali/pt/">Kunming &rarr; Dali</a></li>
+      <li><a href="/rutas/kunming-guiyang/pt/">Kunming &rarr; Guiyang</a></li>
+      <li><a href="/rutas/kunming-lijiang/pt/">Kunming &rarr; Lijiang</a></li>
+      <li><a href="/rutas/lanzhou-jiayuguan/pt/">Lanzhou &rarr; Jiayuguan</a></li>
+      <li><a href="/rutas/lanzhou-xining/pt/">Lanzhou &rarr; Xining</a></li>
+      <li><a href="/rutas/lanzhou-zhangye/pt/">Lanzhou &rarr; Zhangye</a></li>
+      <li><a href="/rutas/nanchang-jingdezhen/pt/">Nanchang &rarr; Jingdezhen</a></li>
+      <li><a href="/rutas/nanchang-jiujiang/pt/">Nanchang &rarr; Jiujiang</a></li>
+      <li><a href="/rutas/nanjing-hangzhou/pt/">Nanquim &rarr; Hangzhou</a></li>
+      <li><a href="/rutas/nanjing-hefei/pt/">Nanquim &rarr; Hefei</a></li>
+      <li><a href="/rutas/nanjing-suzhou/pt/">Nanquim &rarr; Suzhou</a></li>
+      <li><a href="/rutas/nanjing-wuhan/pt/">Nanquim &rarr; Wuhan</a></li>
+      <li><a href="/rutas/nanjing-yangzhou/pt/">Nanquim &rarr; Yangzhou</a></li>
+      <li><a href="/rutas/nanning-beihai/pt/">Nanning &rarr; Beihai</a></li>
+      <li><a href="/rutas/nanning-guilin/pt/">Nanning &rarr; Guilin</a></li>
+      <li><a href="/rutas/qingdao-weihai/pt/">Qingdao &rarr; Weihai</a></li>
+      <li><a href="/rutas/qingdao-yantai/pt/">Qingdao &rarr; Yantai</a></li>
+      <li><a href="/rutas/shanghai-changsha/pt/">Xangai &rarr; Changsha</a></li>
+      <li><a href="/rutas/shanghai-changzhou/pt/">Xangai &rarr; Changzhou</a></li>
+      <li><a href="/rutas/shanghai-chengdu/pt/">Xangai &rarr; Chengdu</a></li>
+      <li><a href="/rutas/shanghai-guangzhou/pt/">Xangai &rarr; Cantão</a></li>
+      <li><a href="/rutas/shanghai-hangzhou/pt/">Xangai &rarr; Hangzhou</a></li>
+      <li><a href="/rutas/shanghai-hefei/pt/">Xangai &rarr; Hefei</a></li>
+      <li><a href="/rutas/shanghai-huangshan/pt/">Xangai &rarr; Huangshan</a></li>
+      <li><a href="/rutas/shanghai-nanchang/pt/">Xangai &rarr; Nanchang</a></li>
+      <li><a href="/rutas/shanghai-nanjing/pt/">Xangai &rarr; Nanquim</a></li>
+      <li><a href="/rutas/shanghai-ningbo/pt/">Xangai &rarr; Ningbo</a></li>
+      <li><a href="/rutas/shanghai-qingdao/pt/">Xangai &rarr; Qingdao</a></li>
+      <li><a href="/rutas/shanghai-shenzhen/pt/">Xangai &rarr; Shenzhen</a></li>
+      <li><a href="/rutas/shanghai-suzhou/pt/">Xangai &rarr; Suzhou</a></li>
+      <li><a href="/rutas/shanghai-wuhan/pt/">Xangai &rarr; Wuhan</a></li>
+      <li><a href="/rutas/shanghai-wuxi/pt/">Xangai &rarr; Wuxi</a></li>
+      <li><a href="/rutas/shanghai-xiamen/pt/">Xangai &rarr; Xiamen</a></li>
+      <li><a href="/rutas/shanghai-xian/pt/">Xangai &rarr; Xi'an</a></li>
+      <li><a href="/rutas/shenyang-dalian/pt/">Shenyang &rarr; Dalian</a></li>
+      <li><a href="/rutas/shenzhen-changsha/pt/">Shenzhen &rarr; Changsha</a></li>
+      <li><a href="/rutas/shenzhen-guilin/pt/">Shenzhen &rarr; Guilin</a></li>
+      <li><a href="/rutas/shenzhen-hong-kong/pt/">Shenzhen &rarr; Hong Kong</a></li>
+      <li><a href="/rutas/shenzhen-wuhan/pt/">Shenzhen &rarr; Wuhan</a></li>
+      <li><a href="/rutas/shenzhen-xiamen/pt/">Shenzhen &rarr; Xiamen</a></li>
+      <li><a href="/rutas/suzhou-hangzhou/pt/">Suzhou &rarr; Hangzhou</a></li>
+      <li><a href="/rutas/wuhan-changsha/pt/">Wuhan &rarr; Changsha</a></li>
+      <li><a href="/rutas/wuhan-xian/pt/">Wuhan &rarr; Xi'an</a></li>
+      <li><a href="/rutas/wuhan-yichang/pt/">Wuhan &rarr; Yichang</a></li>
+      <li><a href="/rutas/xiamen-fuzhou/pt/">Xiamen &rarr; Fuzhou</a></li>
+      <li><a href="/rutas/xiamen-quanzhou/pt/">Xiamen &rarr; Quanzhou</a></li>
+      <li><a href="/rutas/xian-chengdu/pt/">Xi'an &rarr; Chengdu</a></li>
+      <li><a href="/rutas/xian-chongqing/pt/">Xi'an &rarr; Chongqing</a></li>
+      <li><a href="/rutas/xian-lanzhou/pt/">Xi'an &rarr; Lanzhou</a></li>
+      <li><a href="/rutas/xian-luoyang/pt/">Xi'an &rarr; Luoyang</a></li>
+      <li><a href="/rutas/xian-taiyuan/pt/">Xi'an &rarr; Taiyuan</a></li>
+      <li><a href="/rutas/xian-yinchuan/pt/">Xi'an &rarr; Yinchuan</a></li>
+      <li><a href="/rutas/zhengzhou-kaifeng/pt/">Zhengzhou &rarr; Kaifeng</a></li>
+      <li><a href="/rutas/zhengzhou-luoyang/pt/">Zhengzhou &rarr; Luoyang</a></li>
+      <li><a href="/rutas/zhengzhou-wuhan/pt/">Zhengzhou &rarr; Wuhan</a></li>
+      <li><a href="/rutas/zhengzhou-xian/pt/">Zhengzhou &rarr; Xi'an</a></li>
+    </ul>
+    <!-- china-guides:end -->
+  </section>
+  <footer>
+    <p>&copy; 2026 GLOSX &middot; <a href="/pt/">glosx.app</a> &middot; <a href="/rutas/">Todas as rotas (inglês)</a></p>
+  </footer>
+  <script src="/assets/js/lang-chip.js?v=1" defer></script>
+</body>
+</html>

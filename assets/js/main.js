@@ -907,13 +907,13 @@
     }
 
     function localeFromPath() {
-      const m = (location.pathname || '/').match(/^\/(es|fr|it|ja|zh)(?:\/|$)/);
+      const m = (location.pathname || '/').match(/^\/(es|fr|it|ja|zh|de|pt)(?:\/|$)/);
       return m ? m[1] : null;
     }
 
     function homePathForLang(lang) {
       if (lang === 'en') return '/';
-      if (lang === 'es' || lang === 'fr' || lang === 'it' || lang === 'ja' || lang === 'zh') return '/' + lang + '/';
+      if (lang === 'es' || lang === 'fr' || lang === 'it' || lang === 'ja' || lang === 'zh' || lang === 'de' || lang === 'pt') return '/' + lang + '/';
       return null;
     }
 
@@ -929,7 +929,7 @@
 
     function isHomePath() {
       const p = location.pathname || '/';
-      return p === '/' || p === '/index.html' || /^\/(es|fr|it|ja|zh)\/?$/.test(p);
+      return p === '/' || p === '/index.html' || /^\/(es|fr|it|ja|zh|de|pt)\/?$/.test(p);
     }
 
     function detectLang() {
