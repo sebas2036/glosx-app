@@ -167,7 +167,7 @@ function render(r) {
   const graph = [
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: '首页', item: 'https://glosx.app/zh/' },
-      { '@type': 'ListItem', position: 2, name: '线路', item: 'https://glosx.app/rutas/' },
+      { '@type': 'ListItem', position: 2, name: '线路', item: 'https://glosx.app/zh/rutas/' },
       { '@type': 'ListItem', position: 3, name: `${r.A} → ${r.B}`, item: url(r.slug, 'zh') }] },
     { '@type': 'FAQPage', mainEntity: r.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     { '@type': 'Article', headline: r.seoT, description: r.seoD, image: r.hero, datePublished: '2026-11-14', dateModified: '2026-11-14',
@@ -179,7 +179,7 @@ function render(r) {
     '{{title}}': esc(r.seoT), '{{description}}': esc(r.seoD), '{{ogTitle}}': esc(r.seoT), '{{ogDescription}}': esc(r.seoD),
     '{{twitterTitle}}': esc(r.seoT), '{{twitterDescription}}': esc(r.seoD), '{{videoCss}}': '',
     '{{schema}}': `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>`,
-    '{{langSwitch}}': langSwitch, '{{backText}}': '全部线路', '{{homeHref}}': '/zh/', '{{routesHref}}': '/rutas/',
+    '{{langSwitch}}': langSwitch, '{{backText}}': '全部线路', '{{homeHref}}': '/zh/', '{{routesHref}}': '/zh/rutas/',
     '{{footerLinks}}': '<a href="/blog.html">博客</a> · <a href="/about.html">关于我们</a> · <a href="/privacy.html">隐私政策</a> · <a href="/terms.html">使用条款</a>',
     '{{badge}}': r.region === 'jp' ? '线路指南 · 日本' : '线路指南 · 欧洲', '{{mainTitle}}': esc(`${r.A} → ${r.B}`), '{{metaText}}': 'WoW Train · 2026 年 11 月更新 · 阅读约 3 分钟'
   };

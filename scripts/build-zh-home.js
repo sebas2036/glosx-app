@@ -50,6 +50,7 @@ s = s.replace(/(data-i18n="([a-z0-9_]+)"[^>]*>)([^<]*)(<)/g, (m, open, key, txt,
 });
 s = s.replace(/(data-i18n-placeholder="([a-z0-9_]+)"[^>]*?placeholder=")[^"]*(")/g, (m, a, key, b) => ZH[key] ? a + attr(ZH[key]) + b : m);
 s = s.replace(/(<[^>]*id="statsProse"[^>]*>)[\s\S]*?(<\/p>)/, (m, a, b) => a + ZH.stats_prose + b);
+s = s.split('href="/rutas/"').join('href="/zh/rutas/"');
 fs.mkdirSync(path.join(ROOT, 'zh'), { recursive: true });
 
 // hreflang zh-Hans + opción 中文 en las 6 portadas

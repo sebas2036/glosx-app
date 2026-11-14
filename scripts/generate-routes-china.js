@@ -150,7 +150,7 @@ function schema(r, lang) {
   const graph = [
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: BC[lang].home, item: lang === 'ja' || lang === 'zh' ? `https://glosx.app/${lang}/` : 'https://glosx.app/' },
-      { '@type': 'ListItem', position: 2, name: BC[lang].routes, item: lang === 'en' || lang === 'zh' ? 'https://glosx.app/rutas/' : `https://glosx.app/${lang}/rutas/` },
+      { '@type': 'ListItem', position: 2, name: BC[lang].routes, item: lang === 'en' ? 'https://glosx.app/rutas/' : `https://glosx.app/${lang}/rutas/` },
       { '@type': 'ListItem', position: 3, name: `${r.from[lang]} → ${r.to[lang]}`, item: url(r.slug, lang) }] },
     { '@type': 'FAQPage', mainEntity: r.faqs[lang].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     { '@type': 'Article', headline: seo.title, description: seo.description, image: `https://images.pexels.com/photos/${r.photo}/pexels-photo-${r.photo}.jpeg?auto=compress&cs=tinysrgb&w=1200`,
@@ -230,7 +230,7 @@ function render(r, lang) {
     '{{ogTitle}}': esc(seo.title), '{{ogDescription}}': esc(seo.description),
     '{{twitterTitle}}': esc(seo.title), '{{twitterDescription}}': esc(seo.description),
     '{{videoCss}}': '', '{{schema}}': schema(r, lang), '{{langSwitch}}': langSwitch(r.slug, lang), '{{backText}}': u.back,
-    '{{homeHref}}': lang === 'ja' ? '/ja/' : lang === 'zh' ? '/zh/' : '/', '{{routesHref}}': lang === 'en' || lang === 'zh' ? '/rutas/' : `/${lang}/rutas/`,
+    '{{homeHref}}': lang === 'ja' ? '/ja/' : lang === 'zh' ? '/zh/' : '/', '{{routesHref}}': lang === 'en' ? '/rutas/' : `/${lang}/rutas/`,
     '{{footerLinks}}': lang === 'ja'
       ? '<a href="/blog.html">ブログ</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/privacy.html">プライバシー</a> · <a href="/terms.html">利用規約</a>'
       : '<a href="/blog.html">Blog</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>',
