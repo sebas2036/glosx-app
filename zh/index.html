@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta name='impact-site-verification' value='dfa46fd6-c679-455a-b489-eabfa01d3637'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- glosxEarlyLang: el idioma se decide antes de bajar estilos e imágenes. Misma regla que main.js
+       (elección manual > ?lang > idioma del equipo); solo actúa en la portada en inglés (/), y nunca con
+       buscadores, que siguen viendo / en inglés. Evita cargar dos portadas a quien usa es/fr/it. -->
+  <script>
+    (function () {
+      try {
+        var p = location.pathname;
+        if (p !== '/' && p !== '/index.html') return;
+        if (/googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|facebookexternalhit|twitterbot|linkedinbot|applebot|gptbot|chatgpt|claudebot|anthropic|bytespider|ccbot/i.test(navigator.userAgent || '')) return;
+        var known = { en: 1, es: 1, fr: 1, de: 1, it: 1, pt: 1, ja: 1 }, lang = null;
+        if (localStorage.getItem('glosx_lang_manual') === '1') {
+          var saved = localStorage.getItem('glosx_lang');
+          if (saved && known[saved]) lang = saved;
+        }
+        if (!lang) {
+          var q = new URLSearchParams(location.search).get('lang');
+          if (q && known[q]) lang = q;
+        }
+        if (!lang) {
+          var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+          for (var i = 0; i < list.length; i++) {
+            var c = String(list[i] || '').split('-')[0].toLowerCase();
+            if (known[c]) { lang = c; break; }
+          }
+        }
+        if (lang === 'es' || lang === 'fr' || lang === 'it' || lang === 'ja') location.replace('/' + lang + '/' + location.search + location.hash);
+      } catch (e) {}
+    })();
+  </script>
+  <!-- CSS render-blocking lo mas arriba posible: antes estaba casi al final
+       del head (linea ~202), detras de JSON-LD y varios scripts, retrasando
+       cuando el navegador arranca a pedirlo -- eso disparaba el LCP en
+       conexiones lentas porque el hero no puede pintarse hasta que carga. -->
+  <link rel="stylesheet" href="/assets/css/main.min.css" />
+  <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=92" />
+  <!-- Una sola familia (IBM Plex): Poppins se pedía y no está en el CSS.
+       3 pesos, display=swap. media=print + onload para no bloquear el primer paint
+       en 3G; el sistema tipográfico pinta el H1 al toque. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" /></noscript>
+  <!-- LCP real en mobile: la primera foto del carrusel del título, no el mapa
+       de fondo (hero-bg). Precargar los dos robaba banda al 3G. -->
+  <script>
+    (function () {
+      var lowEnd = (navigator.deviceMemory && navigator.deviceMemory <= 4) ||
+        (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (lowEnd) document.documentElement.classList.add('lite-mode');
+    })();
+  </script>
+  <meta name="google-site-verification" content="wydgWqGcYChD0ADQ8MZPtBQm1DdwU8a7c1OFLr1BkSM" />
+  <meta name="p:domain_verify" content="8a24b802656b2c8765ecc39a37901e99" />
+  <meta name="verify-admitad" content="39691b1050" />
+  <title>WoW Train (glosx.app) — 免费 AI 火车行程规划：欧洲、日本、中国</title>
+  <meta name="application-name" content="WoW Train" />
+  <meta name="apple-mobile-web-app-title" content="WoW Train" />
+  <meta name="description" content="免费的 AI 火车行程规划工具。说出你的旅行，就能得到欧洲、日本和中国的完整火车行程，含换乘、酒店和订票链接。" />
+  <meta name="author" content="WoW Train" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:title" content="WoW Train — AI 火车行程规划" />
+  <meta property="og:description" content="说出你的旅行，AI 几秒钟就能排好欧洲、日本和中国的火车行程：换乘、酒店和车票。" />
+  <meta property="og:url" content="https://glosx.app/zh/" />
+  <meta property="og:site_name" content="WoW Train" />
+  <meta property="og:image" content="https://glosx.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WoW Train — AI 火车行程规划" />
+  <meta name="twitter:description" content="说出你的旅行，AI 几秒钟就能排好欧洲、日本和中国的火车行程：换乘、酒店和车票。" />
+  <meta name="twitter:image" content="https://glosx.app/og-image.jpg" />
+  <link rel="canonical" href="https://glosx.app/zh/" id="canonicalLink" />
+  <link rel="alternate" hreflang="en" href="https://glosx.app/" />
+  <link rel="alternate" hreflang="es" href="https://glosx.app/es/" />
+  <link rel="alternate" hreflang="fr" href="https://glosx.app/fr/" />
+  <link rel="alternate" hreflang="it" href="https://glosx.app/it/" />
+  <link rel="alternate" hreflang="ja" href="https://glosx.app/ja/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://glosx.app/" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#6c3fc5" />
+  <!-- Security headers via meta (GitHub Pages) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+  <!-- Google Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      // #dev marca este navegador como interno (dev testeando) para siempre,
+      // vía localStorage; GA4 excluye estos hits con un Data Filter de trafico interno.
+      try {
+        if (location.hash.indexOf('dev') !== -1) localStorage.setItem('glosx_dev_ga', '1');
+        if (localStorage.getItem('glosx_dev_ga') === '1') gtag('set', 'traffic_type', 'internal');
+      } catch (e) {}
+      // Trafico de automatizacion (Puppeteer/Selenium/Playwright ponen
+      // navigator.webdriver=true; un usuario real nunca lo tiene en true) --
+      // se detecto un patron de bot en GA4 (Singapur, 100% direct/desktop
+      // Chrome, ~0.2s de duracion, 98% bounce) que la lista de bots conocidos
+      // de GA4 no filtra. Reusa el mismo Data Filter de trafico interno.
+      try {
+        if (navigator.webdriver) gtag('set', 'traffic_type', 'internal');
+      } catch (e) {}
+      // localhost/127.0.0.1 = server local de desarrollo -- nunca debe
+      // contarse como trafico real en GA4 (se detecto el 01-sep-2026,
+      // pageviews de pruebas locales inflando el realtime de produccion
+      // porque el mismo Measurement ID esta hardcodeado en todos lados).
+      try {
+        if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) gtag('set', 'traffic_type', 'internal');
+      } catch (e) {}
+    })();
+    gtag('js', new Date());
+    // page_location con la URL original: gtag.js se carga más tarde (al interactuar) y para entonces
+    // la limpieza de la URL ya quitó los utm_*; así la atribución de campañas no se pierde.
+    gtag('config', 'G-XPTSM1EJQJ', { page_location: location.href });
+    // Evento: click saliente hacia el partner (para medir demanda enviada al partner)
+    window.trackPartnerClick = function (src) {
+      try {
+        var dest = (window.event && window.event.currentTarget && window.event.currentTarget.href) || undefined;
+        gtag('event', 'klook_click', { source: src || 'unknown', destination: dest });
+        if (typeof fbq === 'function') { fbq('track', 'Lead', { content_name: 'affiliate_click', source: src || 'unknown' }); }
+      } catch (e) {}
+    };
+  </script>
+  <!-- Meta Pixel Code — cargado tras load para no bloquear render -->
+  <script>
+  // Stub para que los eventos antes del load no se pierdan
+  window.fbq = function() { (window._fbqQueue = window._fbqQueue || []).push(arguments); };
+  window._fbq = window.fbq;
+  window.__glosxLoadFbq = function() {
+    (function() {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq && f._fbqLoaded)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      window._fbqLoaded = true;
+      fbq('init', '1542138090730880');
+      // Replay queued events
+      (window._fbqQueue||[]).forEach(function(a){fbq.apply(null,a)});
+      fbq('track', 'PageView');
+    })();
+  };
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1542138090730880&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Travelpayouts Drive — pixel diferido; URL cleanup corre inmediato -->
+  <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+    (function () {
+      window.__glosxLoadTp = function() {
+        var script = document.createElement("script");
+        script.async = 1;
+        script.src = 'https://emrldtp.com/NTM0NTcw.js?t=534570';
+        document.head.appendChild(script);
+      };
+    })();
+    // Limpiar parámetros de tracking de la URL para que no se vean
+    // (conserva from/to, usados por los CTA del blog para precargar el planner AI,
+    // y los click-id de ads porque gtag.js es async y corre DESPUES de este script:
+    // si los borramos antes de que gtag los lea, todo el trafico pago de Google/Meta
+    // queda mal atribuido como (direct)/(none) en vez de google/cpc en GA4)
+    // Corre INMEDIATO (no en un setTimeout) para minimizar la ventana en la que
+    // el navegador puede guardar en el historial/autocompletado una URL con
+    // marker/trs de afiliado expuestos.
+    (function () {
+      if (window.location.search) {
+        var p = new URLSearchParams(window.location.search);
+        var from = p.get('from'); var to = p.get('to');
+        var keep = new URLSearchParams();
+        if (from) keep.set('from', from);
+        if (to) keep.set('to', to);
+        var q = p.get('q');
+        if (q) keep.set('q', q);
+        ['gclid', 'gbraid', 'wbraid', 'dclid', 'msclkid', 'fbclid'].forEach(function (k) {
+          var v = p.get(k);
+          if (v) keep.set(k, v);
+        });
+        var qs = keep.toString();
+        window.history.replaceState({}, '', window.location.pathname + (qs ? '?' + qs : '') + window.location.hash);
+      }
+    })();
+  </script>
+
+  <!-- Analytics, Meta Pixel y Travelpayouts se cargan con la primera interacción (toque, scroll, tecla,
+       mouse) o 5 s después de la carga, lo que pase primero: así no compiten con la carga inicial en
+       móvil (PageSpeed medía ~780 ms de bloqueo solo por estos scripts). Los eventos anteriores quedan
+       en cola (dataLayer / _fbqQueue) y se envían al cargar. -->
+  <script>
+    (function () {
+      var done = false, evs = ['pointerdown', 'touchstart', 'keydown', 'scroll', 'mousemove'];
+      function go() {
+        if (done) return; done = true;
+        evs.forEach(function (e) { window.removeEventListener(e, go, true); });
+        var g = document.createElement('script'); g.async = true;
+        g.src = 'https://www.googletagmanager.com/gtag/js?id=G-XPTSM1EJQJ';
+        document.head.appendChild(g);
+        try { if (window.__glosxLoadFbq) window.__glosxLoadFbq(); } catch (e) {}
+        try { if (window.__glosxLoadTp) window.__glosxLoadTp(); } catch (e) {}
+      }
+      evs.forEach(function (e) { window.addEventListener(e, go, { capture: true, passive: true }); });
+      // Sin carga automática a los 5 s: los robots que no interactúan no cuentan como visitas.
+    })();
+  </script>
+
+
+  <!-- Schema.org Mobile App -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "WoW Train",
+  "alternateName": [
+    "Glosx",
+    "WoW Train app",
+    "glosx.app"
+  ],
+  "operatingSystem": "iOS, Android, Web",
+  "applicationCategory": "TravelApplication",
+  "browserRequirements": "Requires JavaScript",
+  "description": "AI-powered European train route planner. Describe your trip and get a full itinerary with connections across 30 countries — including Spain, France, Germany, Italy, Switzerland, Portugal, Austria, Belgium, Netherlands, United Kingdom, Poland, Czechia, Hungary, Croatia, Slovenia, Denmark, Sweden and Norway.",
+  "featureList": [
+    "AI train route planning",
+    "Real-time schedules",
+    "Scenic train routes",
+    "Hotel suggestions",
+    "Multi-country itineraries"
+  ],
+  "url": "https://glosx.app/zh/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "WoW Train",
+    "@id": "https://glosx.app/#organization",
+    "url": "https://glosx.app/zh/",
+    "sameAs": [
+      "https://www.instagram.com/glosxapp/",
+      "https://www.facebook.com/glosx.app",
+      "https://www.tiktok.com/@wowtrain0",
+      "https://www.pinterest.com/glosxapp/",
+      "https://data.opentransportdata.swiss/en/showcase/wow-train",
+      "https://doi.org/10.5281/zenodo.23827431"
+    ]
+  }
+}</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WoW Train",
+    "alternateName": ["Glosx", "glosx", "glosx.app", "WoW Train app"],
+    "url": "https://glosx.app",
+    "publisher": { "@id": "https://glosx.app/#organization" },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://glosx.app/zh/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WoW Train",
+    "alternateName": [
+      "GLOSX",
+      "glosx.app"
+    ],
+    "url": "https://glosx.app/zh/",
+    "logo": "https://glosx.app/logo.png",
+    "email": "contact@glosx.app",
+    "sameAs": [
+      "https://www.facebook.com/glosx.app",
+      "https://www.instagram.com/glosxapp",
+      "https://www.tiktok.com/@wowtrain0",
+      "https://www.pinterest.com/glosxapp"
+    ],
+    "@id": "https://glosx.app/#organization"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "WoW Train 是什么？",
+        "acceptedAnswer": { "@type": "Answer", "text": "一个独立、免费的平台，用来规划欧洲、日本和中国的火车行程。无需账户，无需订阅——查看线路，规划行程，再通过认证合作伙伴预订。" }
+      },
+      {
+        "@type": "Question",
+        "name": "怎样订票？",
+        "acceptedAnswer": { "@type": "Answer", "text": "我们会把你直接、透明地连接到 Omio、Klook 等官方合作伙伴。搜索线路，点击“查看时刻 →”，在合作伙伴的安全平台上完成预订。" }
+      },
+      {
+        "@type": "Question",
+        "name": "你们收费吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "对用户 100% 免费。WoW Train 的收入来自官方合作伙伴，不会让你多付任何费用。透明、独立，始终站在你这一边。" }
+      },
+      {
+        "@type": "Question",
+        "name": "我的数据安全吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "无需注册账户。我们使用必要的 Cookie 和匿名的 Google Analytics 了解访问情况——详见隐私政策和 Cookie 政策。我们不出售个人数据。" }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/css/omio-handoff.css?v=66">
+  <link rel="stylesheet" href="/assets/css/route-premium.css?v=8">
+<script>try{localStorage.setItem('glosx_lang','zh');localStorage.setItem('glosx_lang_manual','1');}catch(e){}</script>
+</head>
+<body class="home-v2">
+  <!-- Cookie consent banner — GDPR -->
+  <div id="cookieBanner" class="cookie-banner" style="display:none;position:fixed;bottom:16px;left:16px;right:16px;max-width:560px;margin:0 auto;background:#ffffff;border:1px solid rgba(20,21,26,0.14);border-radius:14px;padding:18px 20px;z-index:9999;box-shadow:0 12px 40px rgba(20,21,26,0.18);font-family:-apple-system,BlinkMacSystemFont,sans-serif;">
+    <p style="font-size:13px;color:#55565f;line-height:1.5;margin-bottom:12px;" data-i18n="cookie_text">我们使用必要的 Cookie 保证网站正常运行，并使用匿名统计来改进你的体验。<a href="/cookies.html" style="color:#C10016;text-decoration:underline;" data-i18n="footer_cookies">Cookie 政策</a>.</p>
+    <div style="display:flex;gap:8px;justify-content:flex-end;">
+      <button onclick="cookieChoice('declined')" class="cookie-btn-decline" style="background:transparent;border:1px solid rgba(20,21,26,0.2);color:#55565f;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;" data-i18n="cookie_decline">拒绝</button>
+      <button onclick="cookieChoice('accepted')" class="cookie-btn-accept" style="background:#C10016;border:none;color:#fff;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;" data-i18n="cookie_accept">接受</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if (!localStorage.getItem('cookie_consent')) {
+        document.getElementById('cookieBanner').style.display = 'block';
+      }
+    })();
+    function cookieChoice(choice) {
+      localStorage.setItem('cookie_consent', choice);
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+  </script>
+
+
+  <!-- Nav -->
+  <nav>
+    <a href="/" class="nav-logo wt-logo" aria-label="WoW Train" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-right:12px;flex-shrink:0;"><svg class="wt-logo-icon" width="30" height="30" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="10" fill="#C10016"/><polyline points="8,12 15,29 20,18 25,29 32,12" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="12" r="2.6" fill="#fff"/><circle cx="20" cy="18" r="2.6" fill="#fff"/><circle cx="32" cy="12" r="2.6" fill="#fff"/></svg><span class="wt-logo-word" style="font-size:clamp(17px,4.6vw,22px);line-height:1;letter-spacing:-.04em;color:#14151a;white-space:nowrap;"><b style="font-weight:700;">WoW</b> <i style="font-style:normal;font-weight:300;">Train</i></span></a>
+    <button class="nav-toggle" id="navToggle" onclick="toggleMenu(event)" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="/rutas/" data-i18n="nav_routes">线路</a>
+      <a href="/blog.html" data-i18n="footer_blog">博客</a>
+      <a href="#scenic" class="nav-extra" data-i18n="nav_scenic">观光列车</a>
+      <div class="partners-wrapper nav-extra">
+        <a href="#partners" class="nav-partners-btn" onclick="togglePartners(event)" data-i18n="nav_essentials">旅行必备<span style="font-size:10px;opacity:0.6">▾</span></a>
+        <div class="partners-dropdown" id="partnersDropdown">
+          <a href="#partners" onclick="goKlookMenu(event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=klook.com" alt="Klook" onerror="this.style.visibility='hidden'" width="22" height="22"><span class="partner-name" style="color:#FF6A2B">Klook</span><span class="partner-sub" data-i18n="partner_hotels_city">按城市找酒店 →</span></a>
+          <a href="#" onclick="goPartner('tiqets',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=tiqets.com" alt="Tiqets" onerror="this.style.visibility='hidden'" width="22" height="22"><span class="partner-name" style="color:#FF4E6A">Tiqets</span><span class="partner-sub" data-i18n="partner_attractions">景点门票</span></a>
+          <a href="#" onclick="goPartner('kiwitaxi',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=kiwitaxi.com" alt="Kiwitaxi" onerror="this.style.visibility='hidden'" width="22" height="22"><span class="partner-name" style="color:#F7B500">Kiwitaxi</span><span class="partner-sub" data-i18n="partner_transfers">接送机</span></a>
+          <a href="#" onclick="goPartner('yesim',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=yesim.com" alt="Yesim" onerror="this.style.visibility='hidden'" width="22" height="22"><span class="partner-name" style="color:#A78BFA">Yesim</span><span class="partner-sub" data-i18n="partner_esim">eSIM</span></a>
+          <a href="#" onclick="goPartner('insurance',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=ektatraveling.com" alt="EKTA" onerror="this.style.visibility='hidden'" width="22" height="22"><span class="partner-name" style="color:#2DD4BF">EKTA</span><span class="partner-sub" data-i18n="partner_insurance">旅行保险</span></a>
+          <a href="#" onclick="goPartner('storage',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=radicalstorage.com" alt="Radical Storage" onerror="this.style.visibility='hidden'" width="22" height="22"><span class="partner-name" style="color:#FF5C8A">Radical Storage</span><span class="partner-sub" data-i18n="partner_luggage">行李寄存</span></a>
+          <a href="#" onclick="goPartner('booking',event)" class="partner-row"><img class="partner-logo" src="https://www.google.com/s2/favicons?sz=64&domain=booking.com" alt="Booking.com" onerror="this.style.visibility='hidden'" width="22" height="22"><span class="partner-name" style="color:#5B9BFF">Booking.com</span><span class="partner-sub" data-i18n="partner_hotels">酒店</span></a>
+          <a href="#partners" class="partners-all" onclick="document.getElementById('partnersDropdown').classList.remove('open')" data-i18n="partners_see_all">查看全部旅行必备 →</a>
+        </div>
+      </div>
+      <div class="partners-wrapper nav-extra"><a href="/rutas/" class="nav-partners-btn" aria-haspopup="true" onclick="event.preventDefault();event.stopPropagation();var d=document.getElementById('bloggersDropdown');d.classList.toggle('open');var o=document.getElementById('partnersDropdown');if(o)o.classList.remove('open');">For bloggers <span style="font-size:10px;opacity:0.6">▾</span></a><div class="partners-dropdown" id="bloggersDropdown"><a href="/rutas/" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">Route cards</span><span class="partner-sub">Times for any train route, ready for your post →</span></a><a href="/blog.html" class="partner-row" style="flex-wrap:wrap"><span class="partner-name" style="color:#C10016">Guide cards</span><span class="partner-sub">Any of our travel guides, ready for your post →</span></a></div></div><script>document.addEventListener("click",function(e){var d=document.getElementById("bloggersDropdown");if(d&&!e.target.closest("#bloggersDropdown"))d.classList.remove("open")});</script>
+      <a href="/ai-planner/" class="nav-extra" data-i18n="nav_ai">AI 规划</a>
+      <a href="/explore/" class="nav-extra" data-i18n="nav_explore">探索</a>
+      <a href="#aiPlanner" class="nav-cta" data-i18n="nav_download">开始使用</a>
+      <div class="lang-wrapper">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang(event)" data-i18n-aria-label="lang_aria" aria-label="Language">
+          <span id="langCode">EN</span>
+          <span style="font-size:10px;opacity:0.6">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option" data-lang="en" onclick="setLang('en')"><span>English</span></div>
+          <div class="lang-option" data-lang="es" onclick="setLang('es')"><span>Español</span></div>
+          <div class="lang-option" data-lang="fr" onclick="setLang('fr')"><span>Français</span></div>
+          <div class="lang-option" data-lang="de" onclick="setLang('de')"><span>Deutsch</span></div>
+          <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>Italiano</span></div>
+          <div class="lang-option" data-lang="pt" onclick="setLang('pt')"><span>Português</span></div>
+          <div class="lang-option" data-lang="ja" onclick="setLang('ja')"><span>日本語</span></div>
+          <div class="lang-option" data-lang="zh" onclick="setLang('zh')"><span>中文</span></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+  <!-- Fondo del mapa: envuelve hero + chips -->
+  <div class="hero-bgwrap">
+
+  <!-- Puntos luminosos sutiles sobre las ciudades europeas del mapa de fondo — efecto
+       decorativo permanente, se prenden/apagan con delays distintos para sensacion de
+       red viva. Puramente estetico, no interactivo. -->
+  <div class="hero-city-dots" aria-hidden="true">
+    <span class="hero-dot" style="top:21.4%;left:49.9%;animation-delay:0.2s"></span>
+    <span class="hero-dot" style="top:22.9%;left:50.6%;animation-delay:1.8s"></span>
+    <span class="hero-dot" style="top:27.5%;left:49.0%;animation-delay:3.1s"></span>
+    <span class="hero-dot" style="top:26.7%;left:53.5%;animation-delay:0.9s"></span>
+    <span class="hero-dot" style="top:20.8%;left:53.7%;animation-delay:4.2s"></span>
+    <span class="hero-dot" style="top:23.2%;left:54.6%;animation-delay:2.4s"></span>
+    <span class="hero-dot" style="top:22.2%;left:54.0%;animation-delay:5.0s"></span>
+    <span class="hero-dot" style="top:21.0%;left:51.4%;animation-delay:1.2s"></span>
+    <span class="hero-dot" style="top:23.7%;left:52.4%;animation-delay:3.7s"></span>
+    <span class="hero-dot" style="top:27.2%;left:50.6%;animation-delay:0.5s"></span>
+    <span class="hero-dot" style="top:24.5%;left:56.5%;animation-delay:4.8s"></span>
+    <span class="hero-dot" style="top:19.5%;left:52.8%;animation-delay:2.9s"></span>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero hero-home">
+    <div class="hero-title-card">
+    <div class="hero-title-inner">
+      <span class="hero-badge" data-i18n="hero_badge">AI 欧洲火车行程规划</span>
+    </div>
+    <div class="hero-title-photo-wrap">
+      
+      <h1><span data-i18n="hero_title1">说出你的旅行。</span><br /><span data-i18n="hero_title2">火车我们来安排。</span></h1>
+    </div>
+    </div>
+  </section>
+
+  <!-- AI Route Planner -->
+  <section class="ai-planner" id="aiPlanner" style="padding-top:12px;">
+    <div class="ai-planner-header" style="display:none;"></div>
+
+    <div class="search-shell">
+      <div class="search-tabs" role="group" aria-label="Search">
+        <button type="button" class="search-tab on" aria-pressed="true" data-tab="ai" data-i18n="tab_ai">AI 规划</button>
+        <button type="button" class="search-tab" aria-pressed="false" data-tab="countries" data-i18n="tab_countries">按国家查线路</button>
+        <button type="button" class="search-tab" aria-pressed="false" data-tab="roulette" data-i18n="tab_roulette">目的地转盘</button>
+      </div>
+      <div class="search-card">
+        <div class="region-switch" id="regionSwitch" role="group" aria-label="Region">
+          <button type="button" class="region-btn on" data-region="europe" aria-pressed="true" data-i18n="region_europe">欧洲</button>
+          <button type="button" class="region-btn" data-region="japan" aria-pressed="false" data-i18n="region_japan">日本</button>
+          <button type="button" class="region-btn" data-region="china" aria-pressed="false">China</button>
+          <button type="button" class="region-btn region-hotels" data-hotels="1" aria-label="Hotels">Hotels</button>
+        </div>
+        <div class="search-panel on" data-panel="ai">
+    <div class="ai-input-wrapper" id="aiInputWrapper">
+      <div class="ai-input-container">
+        <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">你的火车旅程</span><svg class="ai-search-icon eu-only" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg><svg class="ai-search-icon jp-only" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16h13c3.5 0 6.5-1.5 7-4-1-2.5-5-4-9-4H4a2 2 0 0 0-2 2z"/><path d="M6 8v4h11"/><path d="M3 20h18"/></svg>
+          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="从苏黎世到米兰的火车" autocomplete="off" />
+          <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" data-i18n-aria-label="ai_swap" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
+        </div>
+        <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">生成行程</button>
+      </div>
+      <div class="ai-suggestions">
+        <span class="ai-suggestions-label" data-i18n="ai_suggest_label">热门线路：</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">马德里 → 巴塞罗那</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">巴黎 → 伦敦</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">巴黎 → 巴塞罗那</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">慕尼黑 → 威尼斯</span>
+        <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">罗马 → 威尼斯</span>
+      </div>
+      <p class="search-note" data-i18n="hero_subtitle">告诉我们你想去哪里——AI 会生成完整行程，带你去购票，并帮你找到沿途的酒店。</p>
+      <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">查看我上次的线路 →</button>
+    </div>
+        </div>
+        <div class="search-panel" data-panel="roulette">
+    <div class="discover-cta" id="hoy">
+      <h3 data-i18n="disc_cta_title">今天我们去……？</h3>
+      <p data-i18n="disc_cta_text">转出一组真实的城市组合，行程自动生成。</p>
+      <div class="pair-roulette" id="pairRoulette" aria-live="polite">
+        <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
+        <span class="pair-roulette-arrow" aria-hidden="true">→</span>
+        <span class="pair-roulette-to" id="rouletteTo">Barcelona</span>
+      </div>
+      <div class="discover-cta-actions">
+        <button type="button" class="discover-cta-btn" id="discoverCtaBtn" data-i18n="disc_cta_btn" onclick="spinPairRoulette()">转动转盘</button>
+        <a class="discover-cta-btn" id="discoverCtaBook" data-i18n="disc_cta_this" hidden target="_blank" rel="noopener noreferrer" onclick="try{if(typeof gtag==='function')gtag('event','klook_click',{source:'pair_roulette_this'});}catch(e){}">就选这个</a>
+      </div>
+      <p class="hoy-seo-link"><a href="/hoy/" data-i18n="hoy_seo_cta">目的地转盘</a></p>
+    </div>
+        </div>
+        <div class="search-panel" data-panel="countries">
+  <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ 热门线路 · 即时预订</p>
+  <div class="countries" id="countries" style="padding: 0 24px 0;">
+    <span class="country-chip"><span data-i18n="chip_spain">西班牙</span><span class="country-popup"><img class="country-photo" src="/country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/madrid-barcelona/" onclick="planRouteFromChip(event,'Madrid','Barcelona')">Madrid → Barcelona</a>
+      <a href="/rutas/barcelona-valencia/" onclick="planRouteFromChip(event,'Barcelona','Valencia')">Barcelona → Valencia</a>
+      <a href="/rutas/madrid-seville/" onclick="planRouteFromChip(event,'Madrid','Seville')">Madrid → Seville</a>
+      <a href="/rutas/madrid-zaragoza/" onclick="planRouteFromChip(event,'Madrid','Zaragoza')">Madrid → Zaragoza</a>
+      <a href="/rutas/barcelona-girona/" onclick="planRouteFromChip(event,'Barcelona','Girona')">Barcelona → Girona</a>
+      <a href="/rutas/girona-figueres/" onclick="planRouteFromChip(event,'Girona','Figueres')">Girona → Figueres</a>
+      <a href="/rutas/madrid-malaga/" onclick="planRouteFromChip(event,'Madrid','Malaga')">Madrid → Malaga</a>
+      <a href="/rutas/madrid-valencia/" onclick="planRouteFromChip(event,'Madrid','Valencia')">Madrid → Valencia</a>
+      <a href="/rutas/zaragoza-barcelona/" onclick="planRouteFromChip(event,'Barcelona','Zaragoza')">Barcelona → Zaragoza</a>
+      <a href="/rutas/barcelona-lyon/" onclick="planRouteFromChip(event,'Barcelona','Lyon')">Barcelona → Lyon</a>
+          <a href="/rutas/alicante-madrid/" onclick="planRouteFromChip(event,'Alicante','Madrid')">Alicante → Madrid</a>
+      <a href="/rutas/madrid-segovia/" onclick="planRouteFromChip(event,'Madrid','Segovia')">Madrid → Segovia</a>
+      <a href="/rutas/barcelona-seville/" onclick="planRouteFromChip(event,'Barcelona','Seville')">Barcelona → Seville</a>
+      <a href="/rutas/madrid-toledo/" onclick="planRouteFromChip(event,'Madrid','Toledo')">Madrid → Toledo</a>
+      <a href="/rutas/santiago-madrid/" onclick="planRouteFromChip(event,'Santiago de Compostela','Madrid')">Santiago de Compostela → Madrid</a>
+      <a href="/rutas/madrid-cordoba/" onclick="planRouteFromChip(event,'Madrid','Cordoba')">Madrid → Cordoba</a>
+      <a href="/rutas/madrid-granada/" onclick="planRouteFromChip(event,'Madrid','Granada')">Madrid → Granada</a>
+      <a href="/rutas/malaga-barcelona/" onclick="planRouteFromChip(event,'Malaga','Barcelona')">Malaga → Barcelona</a>
+      <a href="/rutas/seville-cordoba/" onclick="planRouteFromChip(event,'Seville','Cordoba')">Seville → Cordoba</a>
+      <a href="/rutas/madrid-salamanca/" onclick="planRouteFromChip(event,'Madrid','Salamanca')">Madrid → Salamanca</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_switzerland">瑞士</span><span class="country-popup"><img class="country-photo" src="/country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/zurich-lucerne/" onclick="planRouteFromChip(event,'Zurich','Lucerne')">Zurich → Lucerne</a>
+      <a href="/rutas/zurich-milan/" onclick="planRouteFromChip(event,'Zurich','Milan')">Zurich → Milan</a>
+      <a href="/rutas/geneva-zermatt/" onclick="planRouteFromChip(event,'Geneva','Zermatt')">Geneva → Zermatt</a>
+      <a href="/rutas/interlaken-lauterbrunnen/" onclick="planRouteFromChip(event,'Interlaken','Lauterbrunnen')">Interlaken → Lauterbrunnen</a>
+      <a href="/rutas/" onclick="planRouteFromChip(event,'Bern','Basel')">Bern → Basel</a>
+      <a href="/rutas/basel-paris/" onclick="planRouteFromChip(event,'Basel','Paris')">Basel → Paris</a>
+      <a href="/rutas/montreux-interlaken/" onclick="planRouteFromChip(event,'Montreux','Interlaken')">Montreux → Interlaken</a>
+      <a href="/rutas/basel-lauterbrunnen/" onclick="planRouteFromChip(event,'Basel','Lauterbrunnen')">Basel → Lauterbrunnen</a>
+      <a href="/rutas/interlaken-lucerne/" onclick="planRouteFromChip(event,'Interlaken','Lucerne')">Interlaken → Lucerne</a>
+      <a href="/rutas/lucerne-zermatt/" onclick="planRouteFromChip(event,'Lucerne','Zermatt')">Lucerne → Zermatt</a>
+      <a href="/rutas/bern-paris/" onclick="planRouteFromChip(event,'Bern','Paris')">Bern → Paris</a>
+      <a href="/rutas/stmoritz-zermatt/" onclick="planRouteFromChip(event,'St. Moritz','Zermatt')">St. Moritz → Zermatt</a>
+      <a href="/rutas/lucerne-bern/" onclick="planRouteFromChip(event,'Lucerne','Bern')">Lucerne → Bern</a>
+      <a href="/rutas/geneva-paris/" onclick="planRouteFromChip(event,'Geneva','Paris')">Geneva → Paris</a>
+      <a href="/rutas/paris-lucerne/" onclick="planRouteFromChip(event,'Paris','Lucerne')">Paris → Lucerne</a>
+      <a href="/rutas/paris-zurich/" onclick="planRouteFromChip(event,'Paris','Zurich')">Paris → Zurich</a>
+      <a href="/rutas/zurich-geneva/" onclick="planRouteFromChip(event,'Zurich','Geneva')">Zurich → Geneva</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_france">法国</span><span class="country-popup"><img class="country-photo" src="/country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/paris-london/" onclick="planRouteFromChip(event,'Paris','London')">Paris → London</a>
+      <a href="/rutas/paris-nice/" onclick="planRouteFromChip(event,'Paris','Nice')">Paris → Nice</a>
+      <a href="/rutas/nice-monaco/" onclick="planRouteFromChip(event,'Nice','Monaco')">Nice → Monaco</a>
+      <a href="/rutas/lyon-turin/" onclick="planRouteFromChip(event,'Lyon','Turin')">Lyon → Turin</a>
+      <a href="/rutas/paris-toulouse/" onclick="planRouteFromChip(event,'Paris','Toulouse')">Paris → Toulouse</a>
+      <a href="/rutas/toulouse-lourdes/" onclick="planRouteFromChip(event,'Toulouse','Lourdes')">Toulouse → Lourdes</a>
+      <a href="/rutas/paris-bordeaux/" onclick="planRouteFromChip(event,'Paris','Bordeaux')">Paris → Bordeaux</a>
+      <a href="/rutas/marseille-miramas/" onclick="planRouteFromChip(event,'Marseille','Miramas')">Marseille → Miramas</a>
+      <a href="/rutas/bordeaux-lourdes/" onclick="planRouteFromChip(event,'Bordeaux','Lourdes')">Bordeaux → Lourdes</a>
+      <a href="/rutas/bern-paris/" onclick="planRouteFromChip(event,'Paris','Bern')">Paris → Bern</a>
+      <a href="/rutas/paris-milan/" onclick="planRouteFromChip(event,'Paris','Milan')">Paris → Milan</a>
+      <a href="/rutas/paris-barcelona/" onclick="planRouteFromChip(event,'Barcelona','Paris')">Barcelona → Paris</a>
+      <a href="/rutas/paris-berlin/" onclick="planRouteFromChip(event,'Berlin','Paris')">Berlin → Paris</a>
+      <a href="/rutas/brussels-paris/" onclick="planRouteFromChip(event,'Brussels','Paris')">Brussels → Paris</a>
+      <a href="/rutas/geneva-paris/" onclick="planRouteFromChip(event,'Geneva','Paris')">Geneva → Paris</a>
+      <a href="/rutas/paris-lourdes/" onclick="planRouteFromChip(event,'Paris','Lourdes')">Paris → Lourdes</a>
+      <a href="/rutas/paris-lucerne/" onclick="planRouteFromChip(event,'Paris','Lucerne')">Paris → Lucerne</a>
+      <a href="/rutas/paris-lyon/" onclick="planRouteFromChip(event,'Paris','Lyon')">Paris → Lyon</a>
+      <a href="/rutas/paris-rome/" onclick="planRouteFromChip(event,'Paris','Rome')">Paris → Rome</a>
+      <a href="/rutas/paris-zurich/" onclick="planRouteFromChip(event,'Paris','Zurich')">Paris → Zurich</a>
+      <a href="/rutas/paris-venice/" onclick="planRouteFromChip(event,'Paris','Venice')">Paris → Venice</a>
+      <a href="/rutas/barcelona-lyon/" onclick="planRouteFromChip(event,'Barcelona','Lyon')">Barcelona → Lyon</a>
+      <a href="/rutas/strasbourg-paris/" onclick="planRouteFromChip(event,'Strasbourg','Paris')">Strasbourg → Paris</a>
+      <a href="/rutas/munich-paris/" onclick="planRouteFromChip(event,'Munich','Paris')">Munich → Paris</a>
+      <a href="/rutas/tende-nice/" onclick="planRouteFromChip(event,'Tende','Nice')">Tende → Nice</a>
+      <a href="/rutas/basel-paris/" onclick="planRouteFromChip(event,'Basel','Paris')">Basel → Paris</a>
+      <a href="/rutas/frankfurt-paris/" onclick="planRouteFromChip(event,'Frankfurt','Paris')">Frankfurt → Paris</a>
+      <a href="/rutas/paris-marseille/" onclick="planRouteFromChip(event,'Paris','Marseille')">Paris → Marseille</a>
+      <a href="/rutas/lyon-marseille/" onclick="planRouteFromChip(event,'Lyon','Marseille')">Lyon → Marseille</a>
+      <a href="/rutas/marseille-nice/" onclick="planRouteFromChip(event,'Marseille','Nice')">Marseille → Nice</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_germany">德国</span><span class="country-popup"><img class="country-photo" src="/country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
+      <a href="/rutas/berlin-prague/" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlin → Prague</a>
+      <a href="/rutas/munich-venice/" onclick="planRouteFromChip(event,'Munich','Venice')">Munich → Venice</a>
+      <a href="/rutas/frankfurt-paris/" onclick="planRouteFromChip(event,'Frankfurt','Paris')">Frankfurt → Paris</a>
+      <a href="/rutas/berlin-hamburg/" onclick="planRouteFromChip(event,'Hamburg','Berlin')">Hamburg → Berlin</a>
+      <a href="/rutas/dortmund-munich/" onclick="planRouteFromChip(event,'Dortmund','Munich')">Dortmund → Munich</a>
+      <a href="/rutas/frankfurt-cologne/" onclick="planRouteFromChip(event,'Frankfurt','Cologne')">Frankfurt → Cologne</a>
+      <a href="/rutas/frankfurt-munich/" onclick="planRouteFromChip(event,'Frankfurt','Munich')">Frankfurt → Munich</a>
+      <a href="/rutas/frankfurt-berlin/" onclick="planRouteFromChip(event,'Frankfurt','Berlin')">Frankfurt → Berlin</a>
+      <a href="/rutas/munich-vienna/" onclick="planRouteFromChip(event,'Munich','Vienna')">Munich → Vienna</a>
+      <a href="/rutas/munich-berlin/" onclick="planRouteFromChip(event,'Berlin','Munich')">Berlin → Munich</a>
+      <a href="/rutas/munich-prague/" onclick="planRouteFromChip(event,'Munich','Prague')">Munich → Prague</a>
+      <a href="/rutas/paris-berlin/" onclick="planRouteFromChip(event,'Paris','Berlin')">Paris → Berlin</a>
+      <a href="/rutas/munich-paris/" onclick="planRouteFromChip(event,'Munich','Paris')">Munich → Paris</a>
+      <a href="/rutas/cologne-brussels/" onclick="planRouteFromChip(event,'Cologne','Brussels')">Cologne → Brussels</a>
+      <a href="/rutas/munich-salzburg/" onclick="planRouteFromChip(event,'Munich','Salzburg')">Munich → Salzburg</a>
+      <a href="/rutas/koblenz-mainz/" onclick="planRouteFromChip(event,'Koblenz','Mainz')">Koblenz → Mainz</a>
+      <a href="/rutas/amsterdam-cologne/" onclick="planRouteFromChip(event,'Amsterdam','Cologne')">Amsterdam → Cologne</a>
+      <a href="/rutas/ljubljana-munich/" onclick="planRouteFromChip(event,'Ljubljana','Munich')">Ljubljana → Munich</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_italy">意大利</span><span class="country-popup"><img class="country-photo" src="/country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/rome-florence/" onclick="planRouteFromChip(event,'Rome','Florence')">Rome → Florence</a>
+      <a href="/rutas/florence-venice/" onclick="planRouteFromChip(event,'Florence','Venice')">Florence → Venice</a>
+      <a href="/rutas/milan-rome/" onclick="planRouteFromChip(event,'Milan','Rome')">Milan → Rome</a>
+      <a href="/rutas/naples-sorrento/" onclick="planRouteFromChip(event,'Naples','Sorrento')">Naples → Sorrento</a>
+      <a href="/rutas/" onclick="planRouteFromChip(event,'Sorrento','Positano')">Sorrento → Positano</a>
+      <a href="/rutas/venice-milan/" onclick="planRouteFromChip(event,'Venice','Milan')">Venice → Milan</a>
+      <a href="/rutas/florence-pisa/" onclick="planRouteFromChip(event,'Florence','Pisa')">Florence → Pisa</a>
+      <a href="/rutas/florence-siena/" onclick="planRouteFromChip(event,'Florence','Siena')">Florence → Siena</a>
+      <a href="/rutas/rome-venice/" onclick="planRouteFromChip(event,'Rome','Venice')">Rome → Venice</a>
+      <a href="/rutas/milan-florence/" onclick="planRouteFromChip(event,'Florence','Milan')">Florence → Milan</a>
+      <a href="/rutas/turin-milan/" onclick="planRouteFromChip(event,'Milan','Turin')">Milan → Turin</a>
+      <a href="/rutas/rome-naples/" onclick="planRouteFromChip(event,'Naples','Rome')">Naples → Rome</a>
+      <a href="/rutas/naples-salerno/" onclick="planRouteFromChip(event,'Naples','Salerno')">Naples → Salerno</a>
+      <a href="/rutas/lyon-turin/" onclick="planRouteFromChip(event,'Lyon','Turin')">Lyon → Turin</a>
+      <a href="/rutas/munich-venice/" onclick="planRouteFromChip(event,'Munich','Venice')">Munich → Venice</a>
+      <a href="/rutas/paris-milan/" onclick="planRouteFromChip(event,'Paris','Milan')">Paris → Milan</a>
+      <a href="/rutas/paris-rome/" onclick="planRouteFromChip(event,'Paris','Rome')">Paris → Rome</a>
+      <a href="/rutas/paris-venice/" onclick="planRouteFromChip(event,'Paris','Venice')">Paris → Venice</a>
+      <a href="/rutas/rome-naples/" onclick="planRouteFromChip(event,'Rome','Naples')">Rome → Naples</a>
+      <a href="/rutas/milan-naples/" onclick="planRouteFromChip(event,'Milan','Naples')">Milan → Naples</a>
+      <a href="/rutas/tende-nice/" onclick="planRouteFromChip(event,'Tende','Nice')">Tende → Nice</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_belgium">比利时</span><span class="country-popup"><img class="country-photo" src="/country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/paris-bruges/" onclick="planRouteFromChip(event,'Paris','Bruges')">Paris → Bruges</a>
+      <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
+      <a href="/rutas/cologne-brussels/" onclick="planRouteFromChip(event,'Brussels','Cologne')">Brussels → Cologne</a>
+      <a href="/rutas/brussels-bruges/" onclick="planRouteFromChip(event,'Brussels','Bruges')">Brussels → Bruges</a>
+      <a href="/rutas/brussels-paris/" onclick="planRouteFromChip(event,'Brussels','Paris')">Brussels → Paris</a>
+      <a href="/rutas/london-brussels/" onclick="planRouteFromChip(event,'London','Brussels')">London → Brussels</a>
+      <a href="/rutas/amsterdam-bruges/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Bruges</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_netherlands">荷兰</span><span class="country-popup"><img class="country-photo" src="/country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/paris-amsterdam/" onclick="planRouteFromChip(event,'Paris','Amsterdam')">Paris → Amsterdam</a>
+      <a href="/rutas/london-amsterdam/" onclick="planRouteFromChip(event,'London','Amsterdam')">London → Amsterdam</a>
+      <a href="/rutas/amsterdam-berlin/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
+      <a href="/rutas/amsterdam-brussels/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
+      <a href="/rutas/amsterdam-bruges/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Bruges</a>
+      <a href="/rutas/amsterdam-cologne/" onclick="planRouteFromChip(event,'Amsterdam','Cologne')">Amsterdam → Cologne</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_austria">奥地利</span><span class="country-popup"><img class="country-photo" src="/country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/vienna-salzburg/" onclick="planRouteFromChip(event,'Vienna','Salzburg')">Vienna → Salzburg</a>
+      <a href="/rutas/vienna-prague/" onclick="planRouteFromChip(event,'Vienna','Prague')">Vienna → Prague</a>
+      <a href="/rutas/vienna-budapest/" onclick="planRouteFromChip(event,'Vienna','Budapest')">Vienna → Budapest</a>
+      <a href="/rutas/" onclick="planRouteFromChip(event,'Innsbruck','Salzburg')">Innsbruck → Salzburg</a>
+      <a href="/rutas/vienna-krems/" onclick="planRouteFromChip(event,'Vienna','Krems')">Vienna → Krems</a>
+      <a href="/rutas/innsbruck-vienna/" onclick="planRouteFromChip(event,'Innsbruck','Vienna')">Innsbruck → Vienna</a>
+      <a href="/rutas/graz-vienna/" onclick="planRouteFromChip(event,'Graz','Vienna')">Graz → Vienna</a>
+      <a href="/rutas/munich-salzburg/" onclick="planRouteFromChip(event,'Munich','Salzburg')">Munich → Salzburg</a>
+      <a href="/rutas/koblenz-mainz/" onclick="planRouteFromChip(event,'Koblenz','Mainz')">Koblenz → Mainz</a>
+      <a href="/rutas/brno-vienna/" onclick="planRouteFromChip(event,'Brno','Vienna')">Brno → Vienna</a>
+      <a href="/rutas/munich-vienna/" onclick="planRouteFromChip(event,'Munich','Vienna')">Munich → Vienna</a>
+      <a href="/rutas/ljubljana-vienna/" onclick="planRouteFromChip(event,'Ljubljana','Vienna')">Ljubljana → Vienna</a>
+      <a href="/rutas/ljubljana-graz/" onclick="planRouteFromChip(event,'Ljubljana','Graz')">Ljubljana → Graz</a>
+      <a href="/rutas/ljubljana-salzburg/" onclick="planRouteFromChip(event,'Ljubljana','Salzburg')">Ljubljana → Salzburg</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="chip_uk">英国</span><span class="country-popup"><img class="country-photo" src="/country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
+      <a href="/rutas/london-paris/" onclick="planRouteFromChip(event,'London','Paris')">London → Paris</a>
+      <a href="/rutas/london-manchester/" onclick="planRouteFromChip(event,'London','Manchester')">London → Manchester</a>
+      <a href="/rutas/london-liverpool/" onclick="planRouteFromChip(event,'London','Liverpool')">London → Liverpool</a>
+      <a href="/rutas/london-edinburgh/" onclick="planRouteFromChip(event,'London','Edinburgh')">London → Edinburgh</a>
+      <a href="/rutas/london-brussels/" onclick="planRouteFromChip(event,'London','Brussels')">London → Brussels</a>
+      <a href="/rutas/london-cambridge/" onclick="planRouteFromChip(event,'London','Cambridge')">London → Cambridge</a>
+      <a href="/rutas/london-oxford/" onclick="planRouteFromChip(event,'London','Oxford')">London → Oxford</a>
+      <a href="/rutas/london-york/" onclick="planRouteFromChip(event,'London','York')">London → York</a>
+      <a href="/rutas/london-amsterdam/" onclick="planRouteFromChip(event,'London','Amsterdam')">London → Amsterdam</a>
+    </span></span></span>
+    <span class="country-chip"><span data-i18n="more_countries">更多国家</span><span class="country-popup wide"><span class="country-routes">
+      <span class="group-label" data-i18n="chip_czechia">捷克</span>
+      <a href="/rutas/prague-brno/" onclick="planRouteFromChip(event,'Brno','Prague')">Brno → Prague</a>
+      <a href="/rutas/brno-vienna/" onclick="planRouteFromChip(event,'Brno','Vienna')">Brno → Vienna</a>
+      <a href="/rutas/prague-budapest/" onclick="planRouteFromChip(event,'Budapest','Prague')">Budapest → Prague</a>
+      <a href="/rutas/copenhagen-prague/" onclick="planRouteFromChip(event,'Copenhagen','Prague')">Copenhagen → Prague</a>
+      <a href="/rutas/munich-prague/" onclick="planRouteFromChip(event,'Munich','Prague')">Munich → Prague</a>
+      <a href="/rutas/berlin-prague/" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlin → Prague</a>
+      <a href="/rutas/vienna-prague/" onclick="planRouteFromChip(event,'Vienna','Prague')">Vienna → Prague</a>
+      <span class="group-label" data-i18n="chip_denmark">丹麦</span>
+      <a href="/rutas/copenhagen-stockholm/" onclick="planRouteFromChip(event,'Copenhagen','Stockholm')">Copenhagen → Stockholm</a>
+      <span class="group-label" data-i18n="chip_hungary">匈牙利</span>
+      <a href="/rutas/budapest-ljubljana/" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Ljubljana</a>
+      <a href="/rutas/vienna-budapest/" onclick="planRouteFromChip(event,'Vienna','Budapest')">Vienna → Budapest</a>
+      <span class="group-label" data-i18n="chip_norway">挪威</span>
+      <a href="/rutas/oslo-bergen/" onclick="planRouteFromChip(event,'Oslo','Bergen')">Oslo → Bergen</a>
+      <a href="/rutas/oslo-trondheim/" onclick="planRouteFromChip(event,'Oslo','Trondheim')">Oslo → Trondheim</a>
+      <a href="/rutas/oslo-gothenburg/" onclick="planRouteFromChip(event,'Oslo','Gothenburg')">Oslo → Gothenburg</a>
+      <a href="/rutas/stockholm-oslo/" onclick="planRouteFromChip(event,'Stockholm','Oslo')">Stockholm → Oslo</a>
+      <span class="group-label" data-i18n="chip_portugal">葡萄牙</span>
+      <a href="/rutas/lisbon-porto/" onclick="planRouteFromChip(event,'Lisbon','Porto')">Lisbon → Porto</a>
+      <a href="/rutas/lisbon-faro/" onclick="planRouteFromChip(event,'Lisbon','Faro')">Lisbon → Faro</a>
+      <span class="group-label" data-i18n="chip_slovenia">斯洛文尼亚</span>
+      <a href="/rutas/budapest-ljubljana/" onclick="planRouteFromChip(event,'Budapest','Ljubljana')">Budapest → Ljubljana</a>
+      <a href="/rutas/ljubljana-vienna/" onclick="planRouteFromChip(event,'Ljubljana','Vienna')">Ljubljana → Vienna</a>
+      <a href="/rutas/ljubljana-graz/" onclick="planRouteFromChip(event,'Ljubljana','Graz')">Ljubljana → Graz</a>
+      <a href="/rutas/ljubljana-salzburg/" onclick="planRouteFromChip(event,'Ljubljana','Salzburg')">Ljubljana → Salzburg</a>
+      <a href="/rutas/ljubljana-munich/" onclick="planRouteFromChip(event,'Ljubljana','Munich')">Ljubljana → Munich</a>
+      <span class="group-label" data-i18n="chip_sweden">瑞典</span>
+      <a href="/rutas/copenhagen-stockholm/" onclick="planRouteFromChip(event,'Copenhagen','Stockholm')">Copenhagen → Stockholm</a>
+      <a href="/rutas/stockholm-oslo/" onclick="planRouteFromChip(event,'Stockholm','Oslo')">Stockholm → Oslo</a>
+      <a href="/rutas/oslo-gothenburg/" onclick="planRouteFromChip(event,'Oslo','Gothenburg')">Oslo → Gothenburg</a>
+    </span></span></span>
+  </div>
+        </div>
+        <div class="search-results-slot">
+    <div class="ai-results" id="aiResults" style="display:none;">
+      <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
+      <div class="ai-results-header">
+        <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">示例 · 每张卡片是一张车票（城市 → 城市）</span>
+        <h3 id="aiRouteTitle" data-i18n="hero_h1">AI 欧洲火车线路规划</h3>
+        <p id="aiRouteDuration"></p>
+        <p class="ai-route-meta" id="aiRouteMeta"></p>
+        <div id="aiQuickBook" class="ai-quick-book" style="display:none"></div>
+      </div>
+      <div class="ai-route-line" id="aiRouteLine">
+        <svg class="route-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="auroraLineGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+              <stop offset="0%" stop-color="#C10016"/>
+              <stop offset="30%" stop-color="#f97066"/>
+              <stop offset="60%" stop-color="#22d3ee"/>
+              <stop offset="85%" stop-color="#C10016"/>
+              <stop offset="100%" stop-color="#C10016"/>
+              <animateTransform attributeName="gradientTransform" type="translate" from="-1000 0" to="1000 0" dur="5s" repeatCount="indefinite"/>
+            </linearGradient>
+          </defs>
+          <path class="route-path" d="" />
+          <circle class="route-dot" cx="50" cy="100" r="8" />
+          <circle class="route-dot" cx="950" cy="100" r="8" />
+        </svg>
+      </div>
+      <div class="ai-stops" id="aiStops"></div>
+      <p class="ai-multileg-note" id="aiMultiLegNote" style="display:none;"></p>
+      <div class="ai-segments" id="aiSegments"></div>
+      <div class="ai-hotels" id="aiHotels"></div>
+      <p class="ai-trust-note eu-only" data-i18n="ai_trust_note_omio">通过我们的 Omio 官方合作安全预订</p><p class="ai-trust-note jp-only" data-i18n="ai_trust_note">通过我们的 Klook 官方合作安全预订</p>
+
+      <button class="ai-copy-btn" onclick="copyTripPlan()" id="tripCopyBtn" data-i18n="modal_copy_btn">复制行程</button>
+      <div class="ai-cta-video">
+        <video class="ai-cta-video-el" autoplay muted loop playsinline preload="none" data-poster="/assets/video/planner-cta-poster.jpg">
+          <source data-src="/assets/video/planner-cta.mp4" type="video/mp4">
+        </video>
+        <button class="ai-reset-btn-video" onclick="resetAIPlanner()" data-i18n="ai_reset">↺ 规划另一条线路</button>
+      </div>
+    </div>
+        </div>
+      </div>
+    <div class="search-benefits">
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p><b class="eu-only" data-i18n="ben_omio_t">通过 Omio 预订</b><b class="jp-only" data-i18n="ben_klook_t">通过 Klook 预订</b><span data-i18n="ben_klook_d">在其官方平台安全支付。</span></p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><p><b data-i18n="ben_rt_t">实时数据</b><span data-i18n="ben_rt_d">时刻和晚点信息来自官方来源。</span></p></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/></svg><p><b data-i18n="ben_free_t">免费，无需注册</b><span data-i18n="ben_free_d">没有订阅，没有隐藏费用。</span></p></div>
+    </div>
+    <div class="search-extras">
+      <div class="hero-ops" aria-label="Rail operators">
+        <div class="trust-ops">
+          <span class="op-chip"><img src="/assets/icons/ops/renfe.png" alt="Renfe" loading="lazy"/>Renfe</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="Deutsche Bahn" loading="lazy"/>Deutsche Bahn</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="SBB" loading="lazy"/>SBB</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=www.trenitalia.com" alt="Trenitalia" loading="lazy"/>Trenitalia</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="ÖBB" loading="lazy"/>ÖBB</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="NS" loading="lazy"/>NS</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=www.belgiantrain.be" alt="SNCB" loading="lazy"/>SNCB</span>
+          <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="CP" loading="lazy"/>CP</span>
+        </div>
+        <p class="hero-ops-klook eu-only" data-i18n="trust_omio">预订由 Omio 官方处理</p><p class="hero-ops-klook jp-only" data-i18n="trust_klook">预订由 Klook 官方处理</p>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <div class="route-connector" aria-hidden="true">
+    <svg viewBox="0 0 220 20" preserveAspectRatio="none"><line x1="10" y1="10" x2="210" y2="10" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1 8" stroke-linecap="round"/></svg>
+  </div>
+
+  </div><!-- /hero-bgwrap -->
+
+  <!-- Scenic trains -->
+  <section class="section" id="scenic">
+    <div class="scenic-top">
+      <div class="scenic-head">
+        <p class="section-label" data-i18n="scenic_label">欧洲经典线路</p>
+        <h2><span data-i18n="scenic_title1">观光列车</span><br /><span data-i18n="scenic_title2">体验。</span></h2>
+        <p class="lead" data-i18n="scenic_lead">欧洲最壮观的火车旅程——可直接在这里预订。</p>
+      </div>
+      <div class="scenic-feature" id="scenicFeature">
+        <!-- Filled by JS (featured route) -->
+      </div>
+    </div>
+
+    <div class="scenic-grid" id="scenicGrid">
+      <!-- Filled by JS -->
+    </div>
+    <div style="text-align:center; margin-top: 24px;">
+      <button id="scenicToggle" class="scenic-toggle" onclick="toggleScenic()" data-i18n="scenic_more">查看更多线路</button>
+    </div>
+  </section>
+  <!-- Arma tu propia aventura — justo debajo de la cuadrícula de destinos -->
+  <section class="section wt-adventure" id="adventure">
+  <div class="section-head-split">
+    <div class="section-head-text">
+      <p class="section-label" data-i18n="adv_label">规划你的冒险</p>
+      <h2><span data-i18n="adv_title1">打造属于你的</span><br /><span data-i18n="adv_title2">冒险。</span></h2>
+      <p class="lead" data-i18n="adv_lead">选一种旅程类型，我们会串起真实的火车班次，带你一城接一城——每次换乘，都是一道风景。</p>
+    </div>
+  </div>
+
+  <div class="wt-route-buttons" role="group" aria-label="Choose a route">
+    <button class="wt-route-btn" data-route="classic" aria-pressed="false">
+      <span data-i18n="route_classic">经典线路（法国–意大利）</span>
+      <span class="wt-route-stops" data-i18n="route_classic_stops">巴黎 → 里昂 → 都灵 → 米兰 · 高速列车，约 7–8 小时</span>
+      <span class="wt-route-go" data-i18n="route_see">查看行程</span>
+    </button>
+    <button class="wt-route-btn" data-route="alpine" aria-pressed="false">
+      <span data-i18n="route_alpine">阿尔卑斯线路（瑞士–奥地利）</span>
+      <span class="wt-route-stops" data-i18n="route_alpine_stops">苏黎世 → 萨尔甘斯 → 因斯布鲁克 → 维也纳 · ÖBB/SBB Railjet</span>
+      <span class="wt-route-go" data-i18n="route_see">查看行程</span>
+    </button>
+    <button class="wt-route-btn" data-route="imperial" aria-pressed="false">
+      <span data-i18n="route_imperial">帝国线路（中欧）</span>
+      <span class="wt-route-stops" data-i18n="route_imperial_stops">布拉格 → 布尔诺 → 维也纳 → 布达佩斯 · Railjet / EuroCity</span>
+      <span class="wt-route-go" data-i18n="route_see">查看行程</span>
+    </button>
+  </div>
+
+  <div class="wt-timeline-wrap" id="wt-wrap" hidden>
+    <button class="wt-close" id="wt-close" type="button" data-i18n-aria-label="wt_close_aria" aria-label="Close route" title="Close route" hidden>&times;</button>
+    <div class="wt-timeline-head" id="wt-timeline-head">
+      <h3 id="wt-route-title" data-i18n="scenic_board">欧洲观光列车线路</h3>
+      <span class="wt-route-meta" id="wt-route-meta"></span>
+    </div>
+    <ol class="wt-timeline" id="wt-timeline"></ol>
+    <div id="wt-cta-slot"></div>
+  </div>
+  </section>
+  <!-- Travel essentials (partners) — barra dividida, alto en la página -->
+  <section class="section" id="partners">
+    <div class="section-head-split">
+      <div class="section-head-text">
+        <p class="section-label" data-i18n="partners_label">旅行所需的一切</p>
+        <h2><span data-i18n="partners_title1">旅行必备</span><br /><span data-i18n="partners_title2">欧洲篇。</span></h2>
+        <p class="lead" data-i18n="partners_lead">精选服务，让火车旅行更完整。</p>
+      </div>
+      <img class="section-head-photo" src="/assets/img/community/travel-essentials.webp" alt="Travel essentials: map, hat, camera, watch" width="480" height="300" loading="lazy">
+    </div>
+
+  <div class="vip-bar">
+    <p class="vip-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7z"/></svg><span data-i18n="vip_label">可信赖的合作伙伴</span></p>
+    <div class="vip-inner">
+      <a href="#" onclick="goPartner('booking',event)" class="vip-card">
+        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=booking.com" alt="Booking.com" loading="lazy"/></div>
+        <div class="vip-text">
+          <span class="vip-brand">Booking.com</span>
+          <span class="vip-sub" data-i18n="vip_booking">酒店与住宿 →</span>
+        </div>
+      </a>
+      <a href="#" onclick="goPartner('getyourguide',event)" class="vip-card">
+        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=getyourguide.com" alt="GetYourGuide" loading="lazy"/></div>
+        <div class="vip-text">
+          <span class="vip-brand">GetYourGuide</span>
+          <span class="vip-sub" data-i18n="vip_tripadvisor">旅游团与活动 →</span>
+        </div>
+      </a>
+      <div class="vip-card klook-city-picker" style="position:relative;">
+        <div class="vip-icon"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=klook.com" alt="Klook" loading="lazy"/></div>
+        <div class="vip-text">
+          <span class="vip-brand" data-hotels-brand>Hotels</span>
+          <span class="vip-sub" data-i18n="vip_klook_hotels">选择城市 →</span>
+        </div>
+        <button type="button" class="klook-city-toggle" onclick="toggleKlookCityMenu(event)" aria-haspopup="true" aria-label="Choose a city" style="position:absolute;inset:0;width:100%;height:100%;background:none;border:none;cursor:pointer;padding:0;"></button>
+        <div class="klook-city-menu" id="klookCityMenu"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="essentials-bar">
+    <div class="essentials-inner">
+      <a href="#" class="essential-item" onclick="goPartner('kiwitaxi', event)">
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-6H7L5 12z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-brand">Kiwitaxi</span>
+          <span class="essential-title" data-i18n="p_kiwi_title">接送机</span>
+          <span class="essential-cta" data-i18n="p_kiwi_cta">预订接送 →</span>
+        </div>
+      </a>
+
+      <a href="#" class="essential-item" onclick="goPartner('yesim', event)">
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 11h.01"/><path d="M12 15h.01"/><path d="M10 13h4"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-brand">Yesim</span>
+          <span class="essential-title" data-i18n="p_yesim_title">欧洲 eSIM</span>
+          <span class="essential-cta" data-i18n="p_yesim_cta">激活 eSIM →</span>
+        </div>
+      </a>
+
+      <a href="#" class="essential-item" onclick="goPartner('tiqets', event)">
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-brand">Tiqets</span>
+          <span class="essential-title" data-i18n="p_tiqets_title">景点门票</span>
+          <span class="essential-cta" data-i18n="p_tiqets_cta">查看门票 →</span>
+        </div>
+      </a>
+
+      <a href="#" class="essential-item" onclick="goPartner('storage', event)">
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="14" x="4" y="6" rx="2"/><path d="M9 6V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/><path d="M8 22h.01"/><path d="M16 22h.01"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-brand">Radical Storage</span>
+          <span class="essential-title" data-i18n="p_storage_title">行李寄存</span>
+          <span class="essential-cta" data-i18n="p_storage_cta">查找寄存点 →</span>
+        </div>
+      </a>
+
+      <a href="#" class="essential-item" onclick="goPartner('insurance', event)">
+        <div class="essential-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div class="essential-text">
+          <span class="essential-brand">EKTA</span>
+          <span class="essential-title" data-i18n="p_insurance_title">旅行保险</span>
+          <span class="essential-cta" data-i18n="p_insurance_cta">购买保险 →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="partner-widgets">
+    <!-- Kiwitaxi · Shuttles Search Form -->
+    <div class="pw-panel" id="pw-kiwitaxi" data-widget-src="https://tpwidg.com/content?currency=USD&trs=534570&shmarker=734304&language=en&theme=1&powered_by=true&campaign_id=1&promo_id=1486">
+      <button class="pw-close" onclick="closeWidget()" aria-label="Close">×</button>
+    </div>
+  </div>
+  </section>
+
+
+  <!-- Descubramos juntos (comunidad) -->
+  <section class="section" id="discover">
+    <div class="section-head-split">
+      <div class="section-head-text">
+        <p class="section-label" data-i18n="disc_label">社区</p>
+        <h2><span data-i18n="disc_title1">让我们一起</span><br /><span data-i18n="disc_title2">去发现。</span></h2>
+        <p class="lead" data-i18n="disc_lead">只有坐火车才能找到的欧洲小镇和角落——由旅行者分享，为旅行者而写。</p>
+      </div>
+    </div>
+
+
+    <div class="discover-grid">
+      <a href="/destinos/hallstatt/" class="discover-card is-featured" style="background-image:url('/destinos/video/hallstatt-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_1_country">奥地利 · 隐藏宝地</div>
+        <div class="discover-place" data-i18n="discover_1_place">哈尔施塔特</div>
+        <div class="discover-route" data-i18n="discover_1_route">坐火车到哈尔施塔特 + 湖上渡轮</div>
+        <div class="discover-season" data-i18n="discover_1_season">最佳季节：5–9 月 · 从萨尔茨堡约 3 小时 30 分</div>
+        <div class="discover-tip" data-i18n="discover_1_tip">童话般的小村庄，坐落在平静如镜的高山湖边。火车把你送到对岸，再坐小渡轮过湖——开车来可没有这种感觉。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+      <a href="/destinos/lake-bled/" class="discover-card is-featured" style="background-image:url('/destinos/video/bled-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_2_country">斯洛文尼亚 · 隐藏宝地</div>
+        <div class="discover-place" data-i18n="discover_2_place">布莱德湖</div>
+        <div class="discover-route" data-i18n="discover_2_route">经卢布尔雅那 · 博希尼铁路</div>
+        <div class="discover-season" data-i18n="discover_2_season">最佳季节：6–9 月 · 湖心岛教堂和城堡</div>
+        <div class="discover-tip" data-i18n="discover_2_tip">翡翠色湖面上的小岛教堂，崖顶还有一座城堡。有两个车站，选对那个，火车就把你送到湖边。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+      <a href="/destinos/lauterbrunnen/" class="discover-card is-featured" style="background-image:url('/destinos/video/lauterbrunnen-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_3_country">瑞士 · 隐藏宝地</div>
+        <div class="discover-place" data-i18n="discover_3_place">劳特布伦嫩</div>
+        <div class="discover-route" data-i18n="discover_3_route">经因特拉肯 · 伯尔尼高地铁路</div>
+        <div class="discover-season" data-i18n="discover_3_season">最佳季节：6–10 月 · 72 道瀑布奔流</div>
+        <div class="discover-tip" data-i18n="discover_3_tip">峭壁下的山谷里有 72 道瀑布。没有直达车——在因特拉肯换乘登山铁路，旅程本身就是一半的魅力。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+      <a href="/destinos/colmar/" class="discover-card is-featured" style="background-image:url('/destinos/video/colmar-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_4_country">法国 · 隐藏宝地</div>
+        <div class="discover-place" data-i18n="discover_4_place">科尔马</div>
+        <div class="discover-route" data-i18n="discover_4_route">巴黎直达 TGV（约 2 小时 20 分）</div>
+        <div class="discover-season" data-i18n="discover_4_season">最佳季节：12 月圣诞市集和春天的花</div>
+        <div class="discover-tip" data-i18n="discover_4_tip">阿尔萨斯的“小威尼斯”——木筋房屋和开满鲜花的运河，离 TGV 直达车站只有几步路。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+      <a href="/rutas/munich-venice/" class="discover-card is-featured" style="background-image:url('/rutas/video/munich-venice-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_5_country">德国 → 意大利</div>
+        <div class="discover-place" data-i18n="discover_5_place">慕尼黑 → 威尼斯</div>
+        <div class="discover-route" data-i18n="discover_5_route">EuroCity 翻越布伦纳山口</div>
+        <div class="discover-season" data-i18n="discover_5_season">约 7 小时 · 阿尔卑斯、蒂罗尔和阿迪杰河谷</div>
+        <div class="discover-tip" data-i18n="discover_5_tip">欧洲最美的火车之旅之一——从巴伐利亚翻越阿尔卑斯，穿过葡萄园，一路来到威尼斯泻湖边。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+      <a href="/rutas/lyon-turin/" class="discover-card is-featured" style="background-image:url('/rutas/video/lyon-turin-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_6_country">法国 → 意大利</div>
+        <div class="discover-place" data-i18n="discover_6_place">里昂 → 都灵</div>
+        <div class="discover-route" data-i18n="discover_6_route">TGV / Frecciarossa · 弗雷瑞斯隧道</div>
+        <div class="discover-season" data-i18n="discover_6_season">穿越阿尔卑斯 · 从法国到皮埃蒙特</div>
+        <div class="discover-tip" data-i18n="discover_6_tip">从里昂的河畔到巴洛克风格的都灵，穿过莫列讷河谷和历史悠久的阿尔卑斯隧道进入意大利。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+      <a href="/rutas/paris-barcelona/" class="discover-card is-featured" style="background-image:url('/rutas/video/paris-barcelona-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_7_country">法国 → 西班牙</div>
+        <div class="discover-place" data-i18n="discover_7_place">巴黎 → 巴塞罗那</div>
+        <div class="discover-route" data-i18n="discover_7_route">TGV 高速直达</div>
+        <div class="discover-season" data-i18n="discover_7_season">约 6 小时 30 分 · 市中心到市中心</div>
+        <div class="discover-tip" data-i18n="discover_7_tip">一趟火车从巴黎出发，穿过法国南部和比利牛斯山，直达巴塞罗那市中心。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+      <a href="/rutas/paris-amsterdam/" class="discover-card is-featured" style="background-image:url('/rutas/video/paris-amsterdam-card.webp')">
+        <span class="discover-pin"></span>
+        <div class="discover-country" data-i18n="discover_8_country">法国 → 荷兰</div>
+        <div class="discover-place" data-i18n="discover_8_place">巴黎 → 阿姆斯特丹</div>
+        <div class="discover-route" data-i18n="discover_8_route">Eurostar 直达 · 经布鲁塞尔</div>
+        <div class="discover-season" data-i18n="discover_8_season">约 3 小时 20 分 · 每天多班</div>
+        <div class="discover-tip" data-i18n="discover_8_tip">从巴黎的咖啡馆到阿姆斯特丹的运河，一趟高铁就到——门到门比飞机还快。</div>
+        <span class="discover-watch" data-i18n="discover_watch">▶ 视频 + 指南</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Trust strip: official railway data sources -->
+  <div class="trust-strip">
+    <p class="trust-label" data-i18n="trust_data">覆盖欧洲主要铁路网的 AI 行程规划</p>
+    <div class="trust-ops">
+      <span class="op-chip"><img src="/assets/icons/ops/renfe.png" alt="Renfe" loading="lazy"/>Renfe</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="Deutsche Bahn" loading="lazy"/>Deutsche Bahn</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="SBB" loading="lazy"/>SBB</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=www.trenitalia.com" alt="Trenitalia" loading="lazy"/>Trenitalia</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=oebb.at" alt="ÖBB" loading="lazy"/>ÖBB</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=ns.nl" alt="NS" loading="lazy"/>NS</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=www.belgiantrain.be" alt="SNCB" loading="lazy"/>SNCB</span>
+      <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=cp.pt" alt="CP" loading="lazy"/>CP</span>
+    </div>
+    <div class="trust-badges">
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="trust_b1">AI 生成行程</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="trust_b2">通过认证合作伙伴预订</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg><span data-i18n="trust_b3">无需注册</span></span>
+      <span class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg><span data-i18n="trust_b4">免费使用</span></span>
+    </div>
+    <p class="trust-klook eu-only" data-i18n="trust_omio" style="margin-top:14px;font-size:12px;color:#66667a;">预订由 Omio 官方处理</p><p class="trust-klook jp-only" data-i18n="trust_klook" style="margin-top:14px;font-size:12px;color:#66667a;">预订由 Klook 官方处理</p>
+    <p class="trust-showcase" style="margin-top:8px;font-size:12px;color:#66667a;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:6px"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/></svg>Featured in the showcases of <a href="https://data.opentransportdata.swiss/en/showcase/wow-train" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">opentransportdata.swiss</a>, Switzerland's open data platform for mobility (SBB)</p>
+  </div>
+
+  <!-- Photo carousel -->
+  <div class="photo-carousel">
+    <div class="carousel-track">
+      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
+      <!-- duplicate for seamless loop -->
+      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
+      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <p class="stats-prose" id="statsProse">通过 Omio 预订 <strong>30 个国家</strong>的火车——任意线路，搜索条件已填好。<strong>165 个城市</strong>之间 <strong>4500 多条线路</strong>——免费，无需注册。</p>
+    <div class="stats-marquee">
+      <div class="stats-track">
+        <span class="route-chip">Madrid → Barcelona</span>
+        <span class="route-chip">Vienna → Prague</span>
+        <span class="route-chip">Nice → Monaco</span>
+        <span class="route-chip">Paris → Amsterdam</span>
+        <span class="route-chip">Zurich → Milan</span>
+        <span class="route-chip">London → Edinburgh</span>
+        <span class="route-chip">Berlin → Prague</span>
+        <span class="route-chip">Lyon → Turin</span>
+        <span class="route-chip">Madrid → Barcelona</span>
+        <span class="route-chip">Vienna → Prague</span>
+        <span class="route-chip">Nice → Monaco</span>
+        <span class="route-chip">Paris → Amsterdam</span>
+        <span class="route-chip">Zurich → Milan</span>
+        <span class="route-chip">London → Edinburgh</span>
+        <span class="route-chip">Berlin → Prague</span>
+        <span class="route-chip">Lyon → Turin</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="section-head-split">
+      <div class="section-head-text">
+        <p class="section-label" data-i18n="features_label">为什么选择 WoW Train</p>
+        <h2><span data-i18n="features_title1">为说走就走的</span><br /><span data-i18n="features_title2">旅行者打造。</span></h2>
+        <p class="lead" data-i18n="features_lead">没有订阅，没有付费墙。只有实时数据和好用的工具。</p>
+      </div>
+    </div>
+
+        <div class="features-banner">
+      <img src="/assets/img/community/made-for-travelers.webp" alt="Two travelers walking toward their train" width="1000" height="1000" loading="lazy">
+      <p data-i18n="features_banner">为背包旅行者打造。</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+        <h3 data-i18n="f1_title">每条线路的时刻信息</h3>
+        <p data-i18n="f1_desc">根据运营商公开数据，提供每条线路的首末班车、每日车次和行程时长。瑞士支持实时发车信息。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+        <h3 data-i18n="f2_title">欧洲及更多地区，一站搞定</h3>
+        <p data-i18n="f2_desc">西班牙、法国、德国、瑞士、意大利等——全部在一个界面里。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span>
+        <h3 data-i18n="f3_title">欧洲、日本和中国的火车</h3>
+        <p data-i18n="f3_desc">搜索欧洲、日本和中国主要城市之间的火车，在 Omio 或 Klook 订票。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>
+        <h3 data-i18n="f4_title">零咨询费</h3>
+        <p data-i18n="f4_desc">免费规划复杂的欧洲多国线路，无需旅行社。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+        <h3 data-i18n="f5_title">AI 行程</h3>
+        <p data-i18n="f5_desc">描述你的旅行，AI 会规划每一段，并推荐每一站的酒店和玩法。</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+        <h3 data-i18n="f6_title">一站式服务</h3>
+        <p data-i18n="f6_desc">火车线路、eSIM 和旅行必备——旅行所需都在一处。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <!-- Guides & inspiration -->
+  <section class="section guides-home" id="guides">
+    <div class="guides-head">
+      <p class="section-label" data-i18n="guides_label">指南与灵感</p>
+      <h2 data-i18n="guides_title">上车前需要知道的一切。</h2>
+      <p class="lead" data-i18n="guides_lead">乘火车游欧洲的实用建议：要避开的错误、便宜车票和通票。</p>
+    </div>
+    <div class="guides-grid">
+      <a class="guide-card" href="/blog-train-europe-survival-guide.html">
+        <span class="guide-tag" data-i18n="g1_tag">旅行指南</span>
+        <h3 data-i18n="g1_title">欧洲火车生存指南：5 个代价不小的错误</h3>
+        <span class="guide-by"><i aria-hidden="true">W</i><span data-i18n="guides_by">WoW Train 团队</span></span>
+        <img class="guide-photo" src="/assets/img/community/made-for-travelers.webp" alt="Two backpackers on a train station platform" loading="lazy" width="400" height="260">
+      </a>
+      <a class="guide-card" href="/blog-cheap-train-tickets-europe.html">
+        <span class="guide-tag" data-i18n="g2_tag">省钱出行</span>
+        <h3 data-i18n="g2_title">2026 欧洲便宜火车票：如何买到最划算的票</h3>
+        <span class="guide-by"><i aria-hidden="true">W</i><span data-i18n="guides_by">WoW Train 团队</span></span>
+        <img class="guide-photo" src="/assets/img/community/plan-adventure.webp" alt="Two travellers reading a map in an old town street" loading="lazy" width="400" height="260">
+      </a>
+      <a class="guide-card" href="/blog-eurail-pass-vs-point-to-point.html">
+        <span class="guide-tag" data-i18n="g3_tag">火车旅行</span>
+        <h3 data-i18n="g3_title">2026 欧铁通票 vs 单程票：哪个更省钱？</h3>
+        <span class="guide-by"><i aria-hidden="true">W</i><span data-i18n="guides_by">WoW Train 团队</span></span>
+        <img class="guide-photo" src="/assets/img/community/voices-of-the-journey.webp" alt="Smiling people giving a thumbs up around a laptop" loading="lazy" width="400" height="260">
+      </a>
+    </div>
+    <div class="guides-more"><a class="guides-btn" href="/blog.html" data-i18n="guides_all">查看全部指南</a></div>
+  </section>
+
+  <section class="section" id="faq">
+    <p class="section-label" data-i18n="faq_label">常见问题</p>
+    <h2><span data-i18n="faq_title1">你需要知道的</span><br /><span data-i18n="faq_title2">一切。</span></h2>
+    <div style="margin-top:32px;max-width:720px;">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq1_q">WoW Train 是什么？</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq1_a">一个独立、免费的平台，用来规划欧洲、日本和中国的火车行程。无需账户，无需订阅——查看线路，规划行程，再通过认证合作伙伴预订。</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq2_q">怎样订票？</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq2_a">我们会把你直接、透明地连接到 Omio、Klook 等官方合作伙伴。搜索线路，点击“查看时刻 →”，在合作伙伴的安全平台上完成预订。</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq4_q">你们收费吗？</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq4_a">对用户 100% 免费。WoW Train 的收入来自官方合作伙伴，不会让你多付任何费用。透明、独立，始终站在你这一边。</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q"><span data-i18n="faq5_q">我的数据安全吗？</span> <span class="faq-arrow">▾</span></div>
+        <div class="faq-a" data-i18n="faq5_a">无需注册账户。我们使用必要的 Cookie 和匿名的 Google Analytics 了解访问情况——详见隐私政策和 Cookie 政策。我们不出售个人数据。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA -->
+  <section class="download" id="download">
+    <h2 data-i18n="dl_title">现在就出发吧。</h2>
+    <p data-i18n="dl_subtitle">搜索火车、浏览观光线路，并通过认证合作伙伴预订——全部在浏览器中完成，无需下载应用。</p>
+    <div class="download-cta">
+      <a href="#aiPlanner" class="btn-primary" id="webBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span data-i18n="dl_web">立即搜索火车</span></a>
+      <a href="#scenic" class="btn-secondary" id="scenicBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><path d="M4 15l0-8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8"/><path d="M4 15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/></svg><span data-i18n="dl_scenic">探索观光线路</span></a>
+    </div>
+  </section>
+
+  <!-- Explore Routes -->
+  <section style="max-width:1100px;margin:0 auto;padding:64px 24px 0;">
+    <h2 style="font-size:28px;font-weight:800;letter-spacing:-0.8px;margin-bottom:8px;" data-i18n="explore_routes_title">探索欧洲火车线路</h2>
+    <p style="font-size:15px;color:#8888aa;margin-bottom:28px;" data-i18n="explore_routes_sub">欧洲热门火车线路的时刻、价格和实用建议。</p>
+    <div class="explore-pills" style="display:flex;flex-wrap:wrap;gap:10px;">
+      <a href="/rutas/paris-london/" class="explore-route-pill">Paris → London</a>
+      <a href="/rutas/paris-amsterdam/" class="explore-route-pill">Paris → Amsterdam</a>
+      <a href="/rutas/paris-barcelona/" class="explore-route-pill">Paris → Barcelona</a>
+      <a href="/rutas/madrid-barcelona/" class="explore-route-pill">Madrid → Barcelona</a>
+      <a href="/rutas/milan-rome/" class="explore-route-pill">Milan → Rome</a>
+      <a href="/rutas/rome-florence/" class="explore-route-pill">Rome → Florence</a>
+      <a href="/rutas/florence-venice/" class="explore-route-pill">Florence → Venice</a>
+      <a href="/rutas/munich-venice/" class="explore-route-pill">Munich → Venice</a>
+      <a href="/rutas/munich-berlin/" class="explore-route-pill">Munich → Berlin</a>
+      <a href="/rutas/amsterdam-berlin/" class="explore-route-pill">Amsterdam → Berlin</a>
+      <a href="/rutas/amsterdam-brussels/" class="explore-route-pill">Amsterdam → Brussels</a>
+      <a href="/rutas/brussels-paris/" class="explore-route-pill">Brussels → Paris</a>
+      <a href="/rutas/vienna-prague/" class="explore-route-pill">Vienna → Prague</a>
+      <a href="/rutas/vienna-budapest/" class="explore-route-pill">Vienna → Budapest</a>
+      <a href="/rutas/vienna-salzburg/" class="explore-route-pill">Vienna → Salzburg</a>
+      <a href="/rutas/berlin-prague/" class="explore-route-pill">Berlin → Prague</a>
+      <a href="/rutas/prague-budapest/" class="explore-route-pill">Prague → Budapest</a>
+      <a href="/rutas/barcelona-valencia/" class="explore-route-pill">Barcelona → Valencia</a>
+    </div>
+    <div id="exploreRoutesMore" style="display:none;flex-wrap:wrap;gap:10px;margin-top:10px;">
+      <a href="/rutas/madrid-seville/" class="explore-route-pill">Madrid → Seville</a>
+      <a href="/rutas/london-edinburgh/" class="explore-route-pill">London → Edinburgh</a>
+      <a href="/rutas/paris-nice/" class="explore-route-pill">Paris → Nice</a>
+      <a href="/rutas/nice-monaco/" class="explore-route-pill">Nice → Monaco</a>
+      <a href="/rutas/lyon-turin/" class="explore-route-pill">Lyon → Turin</a>
+      <a href="/rutas/zurich-milan/" class="explore-route-pill">Zurich → Milan</a>
+      <a href="/rutas/geneva-zermatt/" class="explore-route-pill">Geneva → Zermatt</a>
+      <a href="/rutas/interlaken-lauterbrunnen/" class="explore-route-pill">Interlaken → Lauterbrunnen</a>
+      <a href="/rutas/copenhagen-stockholm/" class="explore-route-pill">Copenhagen → Stockholm</a>
+      <a href="/rutas/london-manchester/" class="explore-route-pill">London → Manchester</a>
+      <a href="/rutas/zurich-lucerne/" class="explore-route-pill">Zurich → Lucerne</a>
+      <a href="/rutas/frankfurt-paris/" class="explore-route-pill">Frankfurt → Paris</a>
+      <a href="/rutas/paris-bruges/" class="explore-route-pill">Paris → Bruges</a>
+      <a href="/rutas/london-liverpool/" class="explore-route-pill">London → Liverpool</a>
+      <a href="/rutas/london-amsterdam/" class="explore-route-pill">London → Amsterdam</a>
+      <a href="/rutas/paris-toulouse/" class="explore-route-pill">Paris → Toulouse</a>
+      <a href="/rutas/paris-bordeaux/" class="explore-route-pill">Paris → Bordeaux</a>
+      <a href="/rutas/toulouse-lourdes/" class="explore-route-pill">Toulouse → Lourdes</a>
+      <a href="/rutas/bordeaux-lourdes/" class="explore-route-pill">Bordeaux → Lourdes</a>
+      <a href="/rutas/madrid-zaragoza/" class="explore-route-pill">Madrid → Zaragoza</a>
+      <a href="/rutas/zaragoza-barcelona/" class="explore-route-pill">Zaragoza → Barcelona</a>
+      <a href="/rutas/barcelona-girona/" class="explore-route-pill">Barcelona → Girona</a>
+      <a href="/rutas/girona-figueres/" class="explore-route-pill">Girona → Figueres</a>
+      <a href="/rutas/naples-sorrento/" class="explore-route-pill">Naples → Sorrento</a>
+      <a href="/rutas/naples-salerno/" class="explore-route-pill">Naples → Salerno</a>
+      <a href="/rutas/vienna-krems/" class="explore-route-pill">Vienna → Krems</a>
+      <a href="/rutas/basel-lauterbrunnen/" class="explore-route-pill">Basel → Lauterbrunnen</a>
+      <a href="/rutas/budapest-ljubljana/" class="explore-route-pill">Budapest → Ljubljana</a>
+      <a href="/rutas/marseille-miramas/" class="explore-route-pill">Marseille → Miramas</a>
+      <a href="/rutas/barcelona-lyon/" class="explore-route-pill">Barcelona → Lyon</a>
+      <a href="/rutas/basel-paris/" class="explore-route-pill">Basel → Paris</a>
+      <a href="/rutas/berlin-hamburg/" class="explore-route-pill">Berlin → Hamburg</a>
+      <a href="/rutas/brno-vienna/" class="explore-route-pill">Brno → Vienna</a>
+      <a href="/rutas/brussels-bruges/" class="explore-route-pill">Brussels → Bruges</a>
+      <a href="/rutas/dortmund-munich/" class="explore-route-pill">Dortmund → Munich</a>
+      <a href="/rutas/florence-pisa/" class="explore-route-pill">Florence → Pisa</a>
+      <a href="/rutas/frankfurt-cologne/" class="explore-route-pill">Frankfurt → Cologne</a>
+      <a href="/rutas/frankfurt-munich/" class="explore-route-pill">Frankfurt → Munich</a>
+      <a href="/rutas/geneva-paris/" class="explore-route-pill">Geneva → Paris</a>
+      <a href="/rutas/lisbon-porto/" class="explore-route-pill">Lisbon → Porto</a>
+      <a href="/rutas/london-brussels/" class="explore-route-pill">London → Brussels</a>
+      <a href="/rutas/london-cambridge/" class="explore-route-pill">London → Cambridge</a>
+      <a href="/rutas/london-oxford/" class="explore-route-pill">London → Oxford</a>
+      <a href="/rutas/london-paris/" class="explore-route-pill">London → Paris</a>
+      <a href="/rutas/london-york/" class="explore-route-pill">London → York</a>
+      <a href="/rutas/madrid-malaga/" class="explore-route-pill">Madrid → Málaga</a>
+      <a href="/rutas/madrid-valencia/" class="explore-route-pill">Madrid → Valencia</a>
+      <a href="/rutas/milan-florence/" class="explore-route-pill">Milan → Florence</a>
+      <a href="/rutas/milan-zurich/" class="explore-route-pill">Milan → Zurich</a>
+      <a href="/rutas/montreux-interlaken/" class="explore-route-pill">Montreux → Interlaken</a>
+      <a href="/rutas/munich-prague/" class="explore-route-pill">Munich → Prague</a>
+      <a href="/rutas/munich-vienna/" class="explore-route-pill">Munich → Vienna</a>
+      <a href="/rutas/oslo-bergen/" class="explore-route-pill">Oslo → Bergen</a>
+      <a href="/rutas/paris-berlin/" class="explore-route-pill">Paris → Berlin</a>
+      <a href="/rutas/paris-lourdes/" class="explore-route-pill">Paris → Lourdes</a>
+      <a href="/rutas/paris-lucerne/" class="explore-route-pill">Paris → Lucerne</a>
+      <a href="/rutas/paris-lyon/" class="explore-route-pill">Paris → Lyon</a>
+      <a href="/rutas/paris-milan/" class="explore-route-pill">Paris → Milan</a>
+      <a href="/rutas/paris-rome/" class="explore-route-pill">Paris → Rome</a>
+      <a href="/rutas/paris-zurich/" class="explore-route-pill">Paris → Zurich</a>
+      <a href="/rutas/prague-brno/" class="explore-route-pill">Prague → Brno</a>
+      <a href="/rutas/prague-vienna/" class="explore-route-pill">Prague → Vienna</a>
+      <a href="/rutas/rome-naples/" class="explore-route-pill">Rome → Naples</a>
+      <a href="/rutas/rome-venice/" class="explore-route-pill">Rome → Venice</a>
+      <a href="/rutas/stockholm-oslo/" class="explore-route-pill">Stockholm → Oslo</a>
+      <a href="/rutas/turin-milan/" class="explore-route-pill">Turin → Milan</a>
+      <a href="/rutas/venice-milan/" class="explore-route-pill">Venice → Milan</a>
+    </div>
+    <div style="display:flex;justify-content:center;width:100%;margin-top:32px;">
+      <button id="exploreRoutesToggle" onclick="var m=document.getElementById('exploreRoutesMore');var expanded=m.style.display==='flex';m.style.display=expanded?'none':'flex';var lang=(typeof detectLang==='function')?detectLang():'en';var dict=(typeof TRANSLATIONS!=='undefined'&&TRANSLATIONS[lang])||{};document.getElementById('exploreRoutesToggleLabel').textContent=expanded?(dict.explore_show_all||'Show all 82 routes'):(dict.explore_show_fewer||'Show fewer routes');document.getElementById('exploreRoutesToggleArrow').style.transform=expanded?'rotate(0deg)':'rotate(180deg)';" style="display:inline-flex;align-items:center;gap:10px;background:#C10016;border:2px solid #C10016;border-radius:100px;padding:14px 32px;font-size:12px;font-weight:800;letter-spacing:1px;color:#fff;cursor:pointer;text-transform:uppercase;"><span id="exploreRoutesToggleLabel" data-i18n="explore_show_all">显示全部线路</span><svg id="exploreRoutesToggleArrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" style="transition:transform 0.2s;"><path d="M6 9l6 6 6-6"/></svg></button>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="/rutas/" data-i18n="nav_routes">线路</a>
+      <a href="/explore/" data-i18n="nav_explore">探索</a>
+      <a href="#scenic" data-i18n="nav_scenic">观光列车</a>
+      <a href="#partners" data-i18n="nav_essentials">旅行必备</a>
+      <a href="/ai-planner/" data-i18n="nav_ai">AI 规划</a>
+      <a href="/blog.html" data-i18n="footer_blog">博客</a>
+      <a href="/about.html"   data-i18n="footer_about">关于我们</a>
+      <a href="/privacy.html" data-i18n="footer_privacy">隐私政策</a>
+      <a href="/cookies.html" data-i18n="footer_cookies">Cookie 政策</a>
+      <a href="/terms.html"   data-i18n="footer_terms">使用条款</a>
+      <a href="/imprint.html" data-i18n="footer_imprint">法律声明</a>
+      <a href="/support.html" data-i18n="footer_support">帮助</a>
+      <a href="mailto:contact@glosx.app" data-i18n="footer_contact">联系我们</a>
+    </div>
+    <p data-i18n="footer_copy">© 2026 GLOSX — 保留所有权利。</p>
+    <p class="disclaimer" data-i18n="footer_disclaimer">WoW Train 是独立的旅行平台。预订由 Omio、Klook 等认证合作伙伴按其条款处理，我们不是交易的一方。符合条件的购买可能为我们带来佣金，你不需要多付任何费用。</p>
+  </footer>
+
+  <div id="glosxTramoModal" class="glosx-tramo-modal" role="dialog" aria-label="Booking tab helper" style="display:none;">
+    <div class="glosx-tramo-modal-content">
+      <h3 id="glosxTramoModalTitle" data-i18n="ai_tramo_modal_title">WoW Train</h3>
+      <p id="glosxTramoModalBody" data-i18n="ai_tramo_modal_body">我们正在查询这一段的时刻。请在刚打开的 Omio 页面里选好车次，然后回到这里继续。</p>
+      <p id="glosxTramoModalRoute" class="glosx-tramo-modal-route"></p>
+      <button type="button" id="glosxTramoModalBtn" class="glosx-tramo-modal-btn" onclick="confirmarTramoModal()" data-i18n="ai_tramo_modal_btn">选好了 → 下一段</button>
+    </div>
+  </div>
+
+  <div id="iosInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+    <div class="ios-install-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
+    </div>
+    <div class="ios-install-copy">
+      <p class="ios-install-title" data-i18n="ios_install_title">安装 WoW Train</p>
+      <p class="ios-install-text" data-i18n="ios_install_text">点击分享图标，然后选择“添加到主屏幕”。</p>
+    </div>
+    <button type="button" class="ios-install-close" id="iosInstallClose" data-i18n-aria-label="ios_install_dismiss" aria-label="Dismiss">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div id="pwaInstallBanner" class="ios-install-banner" role="dialog" aria-label="Install app" hidden>
+    <div class="ios-install-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><rect x="4" y="14" width="16" height="7" rx="2"/></svg>
+    </div>
+    <div class="ios-install-copy">
+      <p class="ios-install-title" data-i18n="pwa_install_title">安装 WoW Train</p>
+      <p class="ios-install-text" data-i18n="pwa_install_text">添加到主屏幕，随时快速打开，无需在应用商店下载。</p>
+      <button type="button" class="pwa-install-btn" id="pwaInstallBtn" data-i18n="pwa_install_cta">安装</button>
+    </div>
+    <button type="button" class="ios-install-close" id="pwaInstallClose" data-i18n-aria-label="ios_install_dismiss" aria-label="Dismiss">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <style>
+    .ios-install-banner { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 999; display: flex; align-items: flex-start; gap: 12px; max-width: 420px; margin: 0 auto; padding: 14px 16px; background: rgba(24,22,34,0.97); backdrop-filter: blur(12px); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .ios-install-banner[hidden] { display: none; }
+    .ios-install-icon { flex-shrink: 0; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(193,0,22,0.08); border: 1px solid rgba(193,0,22,0.25); border-radius: 10px; color: #C10016; }
+    .ios-install-copy { flex: 1; min-width: 0; }
+    .ios-install-title { font-size: 14px; font-weight: 700; color: #f0f0f5; margin: 0 0 2px; }
+    .ios-install-text { font-size: 13px; color: #b9b9c9; margin: 0; line-height: 1.4; }
+    .ios-install-close { flex-shrink: 0; width: 32px; height: 32px; min-width: 44px; min-height: 44px; margin: -8px -8px 0 0; display: flex; align-items: center; justify-content: center; background: none; border: none; color: #8888aa; cursor: pointer; border-radius: 8px; }
+    .ios-install-close:hover { color: #f0f0f5; background: rgba(255,255,255,0.06); }
+    .pwa-install-btn { margin-top: 10px; background: #C10016; border: none; color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .pwa-install-btn:hover { background: #8b5cf6; }
+    </style>
+  <script src="/assets/js/main.min.js?v=78" defer></script>
+  <script src="/assets/js/omio-bridge.js?v=12" defer></script>
+  <script src="/assets/js/klook-bridge.js?v=2" defer></script>
+  <script src="/assets/js/planner-info.js?v=8" defer></script>
+  <script src="/assets/js/japan.js?v=58" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {});
+      });
+    }
+  </script>
+  <script>
+    (function () {
+      var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isSafari = /safari/i.test(navigator.userAgent) && !/crios|fxios|edgios|opios/i.test(navigator.userAgent);
+      var isStandalone = window.navigator.standalone === true ||
+        window.matchMedia('(display-mode: standalone)').matches;
+      var dismissed = localStorage.getItem('glosx_ios_install_dismissed') === '1';
+
+      if (!isIOS || !isSafari || isStandalone || dismissed) return;
+
+      var banner = document.getElementById('iosInstallBanner');
+      var closeBtn = document.getElementById('iosInstallClose');
+      if (!banner || !closeBtn) return;
+
+      setTimeout(function () {
+        banner.hidden = false;
+      }, 2500);
+
+      closeBtn.addEventListener('click', function () {
+        banner.hidden = true;
+        localStorage.setItem('glosx_ios_install_dismissed', '1');
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      window.__wtInstallPrompt = null;
+      var banner = document.getElementById('pwaInstallBanner');
+      var installBtn = document.getElementById('pwaInstallBtn');
+      var closeBtn = document.getElementById('pwaInstallClose');
+
+      var isStandalone = window.navigator.standalone === true ||
+        window.matchMedia('(display-mode: standalone)').matches;
+      var dismissed = localStorage.getItem('glosx_pwa_install_dismissed') === '1';
+
+      // window.__wtInstallPrompt queda disponible global para que el boton
+      // "Download" del nav (wtStartOnboarding en main.js) dispare el
+      // instalador nativo en vez de solo navegar a /explore/.
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        window.__wtInstallPrompt = e;
+        if (banner && !isStandalone && !dismissed) {
+          setTimeout(function () { banner.hidden = false; }, 2500);
+        }
+      });
+
+      if (installBtn) installBtn.addEventListener('click', function () {
+        if (!window.__wtInstallPrompt) return;
+        if (banner) banner.hidden = true;
+        window.__wtInstallPrompt.prompt();
+        window.__wtInstallPrompt.userChoice.finally(function () { window.__wtInstallPrompt = null; });
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', function () {
+        if (banner) banner.hidden = true;
+        localStorage.setItem('glosx_pwa_install_dismissed', '1');
+      });
+
+      window.addEventListener('appinstalled', function () {
+        if (banner) banner.hidden = true;
+        localStorage.setItem('glosx_pwa_install_dismissed', '1');
+      });
+    })();
+  </script>
+  <!-- Auditor universal de clics: un solo listener (delegacion, fase de captura)
+       registra CADA clic del sitio con qué se toco, en qué seccion y de donde
+       viene el usuario. Cubre todo automaticamente, incluso botones sin tracking
+       propio (barra de partners, menu Klook, etc.). Debug: agregar ?audit=1. -->
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      // ?audit=1 o #audit activa el modo debug (loguea cada clic en consola).
+      // En la home el ?audit se strippea por la limpieza de URL, por eso tambien
+      // se acepta #audit y se persiste en la sesion una vez activado.
+      var DEBUG = params.has('audit') || location.hash.indexOf('audit') > -1;
+      try {
+        if (DEBUG) sessionStorage.setItem('glosx_audit', '1');
+        else if (sessionStorage.getItem('glosx_audit') === '1') DEBUG = true;
+      } catch (e) {}
+      var src;
+      try {
+        src = sessionStorage.getItem('glosx_src');
+        if (!src) {
+          src = params.get('utm_source') || params.get('ref') ||
+            (document.referrer ? (function () { try { return new URL(document.referrer).hostname; } catch (e) { return 'direct'; } })() : 'direct');
+          sessionStorage.setItem('glosx_src', src);
+        }
+      } catch (e) { src = 'unknown'; }
+
+      function sectionOf(el) {
+        var s = el.closest('[data-section]');
+        if (s) return s.getAttribute('data-section');
+        var k = el.closest('nav, footer, .vip-bar, .hero-bgwrap, .ai-planner, .ai-results, .countries, .scenic-grid, .wt-timeline-wrap, .partners-dropdown, section[id], main');
+        if (!k) return 'other';
+        if (k.tagName === 'NAV') return 'nav';
+        if (k.tagName === 'FOOTER') return 'footer';
+        return k.id || (k.className || '').toString().split(' ')[0] || k.tagName.toLowerCase();
+      }
+      function labelOf(el) {
+        return (el.getAttribute('data-track') || el.getAttribute('aria-label') ||
+          (el.textContent || '').trim().replace(/\s+/g, ' ') || el.getAttribute('href') || el.tagName).slice(0, 80);
+      }
+
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest('a[href], button, [onclick], [role="button"]');
+        if (!el) return;
+        var data = {
+          elem_label: labelOf(el),
+          elem_section: sectionOf(el),
+          elem_href: (el.getAttribute('href') || '').slice(0, 120),
+          page_path: location.pathname,
+          visit_source: src
+        };
+        if (DEBUG) console.log('[AUDIT]', data);
+        try { if (typeof gtag === 'function') gtag('event', 'ui_click', data); } catch (_) {}
+      }, true);
+    })();
+  </script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.search-tab'), panels = document.querySelectorAll('.search-panel');
+  if (!tabs.length) return;
+  function show(name) {
+    tabs.forEach(function (t) { var on = t.dataset.tab === name; t.classList.toggle('on', on); t.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    panels.forEach(function (p) { p.classList.toggle('on', p.dataset.panel === name); });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.tab); }); });
+  function fromHash() { if (location.hash === '#hoy') show('roulette'); else if (location.hash === '#countries') show('countries'); }
+  fromHash(); window.addEventListener('hashchange', fromHash);
+  document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('#countries a')) show('ai'); }, true);
+})();
+</script>
+  <script>
+    // Portada: marca las secciones bajo el pliegue cuando se acercan a la pantalla, para cargar
+    // sus fotos de fondo recién entonces (ver home-redesign.css, .is-near). Si algo falla, a los
+    // 4 s de la carga se marcan todas igual, así nunca quedan sin foto.
+    (function () {
+      var ids = ['scenic', 'discover', 'adventure', 'download'];
+      var els = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+      function near(el) { el.classList.add('is-near'); }
+      if (!('IntersectionObserver' in window)) { els.forEach(near); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { near(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '300px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+      window.addEventListener('load', function () { setTimeout(function () { els.forEach(near); }, 4000); });
+    })();
+  </script>
+</body>
+</html>

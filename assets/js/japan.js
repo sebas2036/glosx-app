@@ -20,7 +20,8 @@
     it: { china: 'Cina', hotels: 'Hotel', europe: 'Europa', japan: 'Giappone', aria: 'Regione', leg: 'Non abbiamo un treno diretto verificato tra {a} e {b}. Prova un altro ordine o scegli un percorso popolare.', two: 'Scrivi due o più città, nell’ordine del viaggio.', ph: 'Treno da Tokyo a Kyoto', nopair: 'Scegli uno dei percorsi popolari o prova un’altra coppia di città giapponesi.' },
     de: { china: 'China', hotels: 'Hotels', europe: 'Europa', japan: 'Japan', aria: 'Region', leg: 'Zwischen {a} und {b} haben wir keine geprüfte Direktverbindung. Probiere eine andere Reihenfolge oder wähle eine beliebte Strecke.', two: 'Gib zwei oder mehr Städte ein, in der Reihenfolge der Reise.', ph: 'Zug von Tokio nach Kyoto', nopair: 'Wähle eine der beliebten Strecken oder probiere ein anderes Städtepaar in Japan.' },
     pt: { china: 'China', hotels: 'Hotéis', europe: 'Europa', japan: 'Japão', aria: 'Região', leg: 'Não temos um trem direto verificado entre {a} e {b}. Tente outra ordem ou escolha uma rota popular.', two: 'Digite duas ou mais cidades, na ordem da viagem.', ph: 'Comboio de Tóquio a Quioto', nopair: 'Escolha uma das rotas populares ou tente outro par de cidades japonesas.' },
-    ja: { china: '中国', hotels: 'ホテル', europe: 'ヨーロッパ', japan: '日本', aria: '地域', leg: '{a} と {b} のあいだに、確認済みの直通列車はありません。順番を変えるか、人気の路線を選んでください。', two: '行く順に、2つ以上の都市を入力してください。', ph: '例：東京から京都への列車', nopair: '人気の路線を選ぶか、別の日本の都市の組み合わせを試してください。' }
+    ja: { china: '中国', hotels: 'ホテル', europe: 'ヨーロッパ', japan: '日本', aria: '地域', leg: '{a} と {b} のあいだに、確認済みの直通列車はありません。順番を変えるか、人気の路線を選んでください。', two: '行く順に、2つ以上の都市を入力してください。', ph: '例：東京から京都への列車', nopair: '人気の路線を選ぶか、別の日本の都市の組み合わせを試してください。' },
+    zh: { china: '中国', hotels: '酒店', europe: '欧洲', japan: '日本', aria: '地区', leg: '{a} 和 {b} 之间没有经过核实的直达列车。请换个顺序，或选择一条热门线路。', two: '按出行顺序输入两个或更多城市。', ph: '例如：从东京到京都的火车', nopair: '请选择一条热门线路，或换一组日本城市试试。' }
   };
 
   var GROUPS = [
@@ -128,7 +129,7 @@
     });
   }
 
-  var CONN = { en: 'to', es: 'a', fr: '\u00e0', it: 'a', de: 'nach', pt: 'a', ja: 'から' };
+  var CONN = { en: 'to', es: 'a', fr: '\u00e0', it: 'a', de: 'nach', pt: 'a', ja: 'から', zh: '到' };
   var QUICK = [['tokyo', 'kyoto'], ['tokyo', 'osaka'], ['osaka', 'kyoto'], ['tokyo', 'hiroshima'], ['nagoya', 'kyoto']];
   var europeSuggestEl = document.querySelector('.ai-suggestions');
   var japanSuggestEl = null;
@@ -306,7 +307,7 @@
   // de ciudades dentro del texto (el más largo primero, así "Shin Osaka" gana a "Osaka").
   function fold(x) {
     return String(x || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-      .replace(/から/g, ' ')
+      .replace(/から|到|至/g, ' ')
       .replace(/[^a-z0-9\u3040-\u30ff\u3400-\u9fff]+/g, ' ')
       .replace(/\s+/g, ' ').trim();
   }
@@ -439,7 +440,7 @@
     var l = lang(), suffix = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/' }[l] || '';
     var fa = SLUG_FIX[a] || a, fb = SLUG_FIX[b] || b;
     var c = [fa + '-' + fb, fb + '-' + fa, a + '-' + b, b + '-' + a], i;
-    for (i = 0; i < c.length; i++) if (JP_GUIDES.indexOf(' ' + c[i] + ' ') > -1) return '/rutas/' + c[i] + '/' + suffix;
+    for (i = 0; i < c.length; i++) if (JP_GUIDES.indexOf(' ' + c[i] + ' ') > -1) return '/rutas/' + c[i] + '/' + (l === 'zh' ? (ZH_PAGES.indexOf(' ' + c[i] + ' ') > -1 ? 'zh/' : '') : suffix);
     return null;
   }
   function paintPanel(seg, d, a, b, tx) {
@@ -675,9 +676,10 @@
   function scName(sc) { return typeof sc.name === 'object' ? (sc.name[lang()] || sc.name.en) : sc.name; }
   function jpGuide(sc, cls) {
     var l = lang(), pre = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/' }[l] || '';
+    if (l === 'zh') pre = ZH_PAGES.indexOf(' ' + (SLUG_FIX[sc.from] || sc.from) + '-' + (SLUG_FIX[sc.to] || sc.to) + ' ') > -1 ? 'zh/' : '';
     var gs = (SLUG_FIX[sc.from] || sc.from) + '-' + (SLUG_FIX[sc.to] || sc.to);
     if (JP_GUIDES.indexOf(' ' + gs + ' ') === -1) return '';
-    var label = { en: 'See guide', es: 'Ver guía', fr: 'Voir le guide', it: 'Vedi la guida', ja: 'ガイドを見る', de: 'Zum Guide', pt: 'Ver guia' }[l] || 'See guide';
+    var label = { en: 'See guide', es: 'Ver guía', fr: 'Voir le guide', it: 'Vedi la guida', ja: 'ガイドを見る', de: 'Zum Guide', pt: 'Ver guia', zh: '查看指南' }[l] || 'See guide';
     return '<a class="' + cls + '" href="/rutas/' + gs + '/' + pre + '">' + esc(label) + ' →</a>';
   }
   function renderJpScenic() {
@@ -711,7 +713,7 @@
       return '<button class="wt-route-btn" data-route="' + k + '" aria-pressed="' + (k === jpRouteKey ? 'true' : 'false') + '">' +
         '<span>' + esc(r.title[lang()] || r.title.en) + '</span>' +
         '<span class="wt-route-stops">' + esc(stopsLabel(k)) + '</span>' +
-        '<span class="wt-route-go">' + esc({ en: 'View itinerary', es: 'Ver itinerario', fr: 'Voir l’itinéraire', it: 'Vedi itinerario', de: 'Reiseplan ansehen', pt: 'Ver itinerário', ja: '旅程を見る' }[lang()] || 'View itinerary') + '</span></button>';
+        '<span class="wt-route-go">' + esc({ en: 'View itinerary', es: 'Ver itinerario', fr: 'Voir l’itinéraire', it: 'Vedi itinerario', de: 'Reiseplan ansehen', pt: 'Ver itinerário', ja: '旅程を見る', zh: '查看行程' }[lang()] || 'View itinerary') + '</span></button>';
     }).join('');
   }
   function renderJpRoute(key) {
@@ -953,7 +955,12 @@
       f1: '日本とヨーロッパの鉄道旅を計画できる、独立した無料のプラットフォームです。アカウントも登録も不要。路線を調べ、所要時間を確かめて、認定パートナーで予約できます。',
       f2: '公式パートナーにつなぎます。日本ではKlookを利用します。区間を検索してKlookのボタンを押し、予約はKlookの安全なサイトで完了します。',
       fq: 'JRパスは必要ですか？', fa: '多くの場合は不要です。2023年の値上げ以降、JRパスが得になるのは、長い新幹線に何度も乗る長期の旅程に限られます。ほとんどの旅では、区間ごとのきっぷのほうが安くなります。決める前に、両方を比べてみてください。',
-      et: '日本の鉄道ルートを探す', es: '日本全国196区間の時刻、所要時間、旅のヒント。' }
+      et: '日本の鉄道ルートを探す', es: '日本全国196区間の時刻、所要時間、旅のヒント。' },
+    zh: { t2: '日本篇。', gl: '乘火车游日本的实用指南：新干线、车票和通票。', gtag: '日本指南', gt: 'How to Travel Japan by Train: A First-Timer\'s Guide to the Shinkansen', gf: '/blog-japan-train-guide.html',
+      f1: '一个独立、免费的平台，用来规划日本、欧洲和中国的火车旅行。无需账户，无需订阅：查看线路和行程时长，再通过认证合作伙伴预订。',
+      f2: '我们把你连接到官方合作伙伴。日本使用 Klook：搜索线路，点击 Klook 按钮，在其安全平台完成预订。',
+      fq: '我需要 JR Pass 吗？', fa: '很多时候不需要。2023 年涨价后，JR Pass 只在多次乘坐长途新干线的长行程中才划算。大多数旅行买单程票更便宜，决定前请两种都比较一下。',
+      et: '探索日本火车线路', es: '日本各地 196 段火车行程的时刻、时长和实用建议。' }
   };
   var JP_PILLS = [['tokyo-kyoto', 'Tokyo', 'Kyoto'], ['tokyo-osaka', 'Tokyo', 'Osaka'], ['osaka-kyoto', 'Osaka', 'Kyoto'], ['osaka-hiroshima', 'Osaka', 'Hiroshima'], ['tokyo-nagoya', 'Tokyo', 'Nagoya'], ['shinjuku-hakone', 'Shinjuku', 'Hakone'], ['tokyo-kanazawa', 'Tokyo', 'Kanazawa'], ['osaka-fukuoka', 'Osaka', 'Fukuoka']];
   var JP_SHINJUKU = { ja: '新宿', es: 'Shinjuku', fr: 'Shinjuku', it: 'Shinjuku' };
@@ -1059,7 +1066,7 @@
   })();
 
   // ── Características en modo Japón (fase 3): textos que hablaban solo de Europa o de datos en vivo ──
-  var JP_FEAT = {"en": {"lead": "No subscriptions, no paywalls. Just clear journey times and smart tools.", "f1t": "Journey times at a glance", "f1d": "The duration of the fastest direct service on each Japanese route, taken from Klook data.", "f2t": "Japan & Europe, one site", "f2d": "Shinkansen, limited expresses and local lines from Hokkaido to Kyushu — and Europe too — in a single interface.", "f3t": "Journey search", "f3d": "Find the fastest direct service between Japanese cities, with journey times and a link to book.", "f4d": "Design multi-city trips across Japan 100% free. No travel agent required."}, "es": {"lead": "Sin suscripciones ni muros de pago. Solo tiempos de viaje claros y herramientas inteligentes.", "f1t": "Tiempos de viaje de un vistazo", "f1d": "La duración del servicio directo más rápido de cada ruta japonesa, con datos de Klook.", "f2t": "Japón y Europa, un solo sitio", "f2d": "Shinkansen, expresos limitados y líneas locales de Hokkaido a Kyushu —y también Europa— en una sola interfaz.", "f3t": "Búsqueda de trayectos", "f3d": "Encuentra el servicio directo más rápido entre ciudades japonesas, con el tiempo de viaje y un enlace para reservar.", "f4d": "Diseña viajes por varias ciudades de Japón 100% gratis. Sin agente de viajes."}, "fr": {"lead": "Sans abonnement ni accès payant. Seulement des durées de trajet claires et des outils intelligents.", "f1t": "Les durées de trajet en un coup d’œil", "f1d": "La durée du service direct le plus rapide de chaque itinéraire japonais, d’après les données de Klook.", "f2t": "Japon et Europe, un seul site", "f2d": "Shinkansen, express limités et lignes locales de Hokkaido à Kyushu — et l’Europe aussi — dans une seule interface.", "f3t": "Recherche de trajets", "f3d": "Trouvez le service direct le plus rapide entre villes japonaises, avec la durée du trajet et un lien pour réserver.", "f4d": "Concevez des voyages multi-villes au Japon 100 % gratuitement. Sans agent de voyage."}, "it": {"lead": "Niente abbonamenti né paywall. Solo tempi di viaggio chiari e strumenti intelligenti.", "f1t": "Tempi di viaggio a colpo d’occhio", "f1d": "La durata del servizio diretto più rapido su ogni percorso giapponese, secondo i dati di Klook.", "f2t": "Giappone ed Europa, un solo sito", "f2d": "Shinkansen, limited express e linee locali da Hokkaido a Kyushu — e anche l’Europa — in un’unica interfaccia.", "f3t": "Ricerca dei tragitti", "f3d": "Trova il servizio diretto più rapido tra le città giapponesi, con il tempo di viaggio e un link per prenotare.", "f4d": "Progetta viaggi in più città del Giappone 100% gratis. Nessun agente di viaggio."}, "de": {"lead": "Keine Abos, keine Paywalls. Nur klare Fahrzeiten und smarte Tools.", "f1t": "Fahrzeiten auf einen Blick", "f1d": "Die Dauer der schnellsten Direktverbindung auf jeder Strecke in Japan, nach Klook-Daten.", "f2t": "Japan & Europa, eine Seite", "f2d": "Shinkansen, Limited Express und Lokalbahnen von Hokkaido bis Kyushu — und Europa — in einer Oberfläche.", "f3t": "Verbindungssuche", "f3d": "Finde die schnellste Direktverbindung zwischen japanischen Städten, mit Fahrzeit und Buchungslink.", "f4d": "Plane Reisen durch mehrere Städte Japans 100 % kostenlos. Kein Reisebüro nötig."}, "pt": {"lead": "Sem assinaturas nem acesso pago. Só tempos de viagem claros e ferramentas inteligentes.", "f1t": "Tempos de viagem num relance", "f1d": "A duração do serviço direto mais rápido de cada rota japonesa, com dados da Klook.", "f2t": "Japão e Europa, um só site", "f2d": "Shinkansen, expressos limitados e linhas locais de Hokkaido a Kyushu — e também a Europa — numa única interface.", "f3t": "Busca de trajetos", "f3d": "Encontre o serviço direto mais rápido entre cidades japonesas, com o tempo de viagem e um link para reservar.", "f4d": "Planeje viagens por várias cidades do Japão 100% grátis. Sem agente de viagens."}, "ja": {"lead": "登録も有料の壁もありません。わかりやすい所要時間と、便利な機能だけ。", "f1t": "所要時間がひと目でわかる", "f1d": "日本の各区間で、いちばん速い直通列車の所要時間をKlookのデータから表示します。", "f2t": "日本もヨーロッパも、ひとつのサイトで", "f2d": "北海道から九州まで、新幹線も特急もローカル線も。ヨーロッパも、ひとつの画面で。", "f3t": "区間検索", "f3d": "日本の都市どうしを結ぶ、いちばん速い直通列車を探せます。所要時間と予約へのリンク付き。", "f4d": "日本の複数都市をめぐる旅を、完全無料で計画できます。旅行会社は不要です。"}};
+  var JP_FEAT = {"en": {"lead": "No subscriptions, no paywalls. Just clear journey times and smart tools.", "f1t": "Journey times at a glance", "f1d": "The duration of the fastest direct service on each Japanese route, taken from Klook data.", "f2t": "Japan & Europe, one site", "f2d": "Shinkansen, limited expresses and local lines from Hokkaido to Kyushu — and Europe too — in a single interface.", "f3t": "Journey search", "f3d": "Find the fastest direct service between Japanese cities, with journey times and a link to book.", "f4d": "Design multi-city trips across Japan 100% free. No travel agent required."}, "es": {"lead": "Sin suscripciones ni muros de pago. Solo tiempos de viaje claros y herramientas inteligentes.", "f1t": "Tiempos de viaje de un vistazo", "f1d": "La duración del servicio directo más rápido de cada ruta japonesa, con datos de Klook.", "f2t": "Japón y Europa, un solo sitio", "f2d": "Shinkansen, expresos limitados y líneas locales de Hokkaido a Kyushu —y también Europa— en una sola interfaz.", "f3t": "Búsqueda de trayectos", "f3d": "Encuentra el servicio directo más rápido entre ciudades japonesas, con el tiempo de viaje y un enlace para reservar.", "f4d": "Diseña viajes por varias ciudades de Japón 100% gratis. Sin agente de viajes."}, "fr": {"lead": "Sans abonnement ni accès payant. Seulement des durées de trajet claires et des outils intelligents.", "f1t": "Les durées de trajet en un coup d’œil", "f1d": "La durée du service direct le plus rapide de chaque itinéraire japonais, d’après les données de Klook.", "f2t": "Japon et Europe, un seul site", "f2d": "Shinkansen, express limités et lignes locales de Hokkaido à Kyushu — et l’Europe aussi — dans une seule interface.", "f3t": "Recherche de trajets", "f3d": "Trouvez le service direct le plus rapide entre villes japonaises, avec la durée du trajet et un lien pour réserver.", "f4d": "Concevez des voyages multi-villes au Japon 100 % gratuitement. Sans agent de voyage."}, "it": {"lead": "Niente abbonamenti né paywall. Solo tempi di viaggio chiari e strumenti intelligenti.", "f1t": "Tempi di viaggio a colpo d’occhio", "f1d": "La durata del servizio diretto più rapido su ogni percorso giapponese, secondo i dati di Klook.", "f2t": "Giappone ed Europa, un solo sito", "f2d": "Shinkansen, limited express e linee locali da Hokkaido a Kyushu — e anche l’Europa — in un’unica interfaccia.", "f3t": "Ricerca dei tragitti", "f3d": "Trova il servizio diretto più rapido tra le città giapponesi, con il tempo di viaggio e un link per prenotare.", "f4d": "Progetta viaggi in più città del Giappone 100% gratis. Nessun agente di viaggio."}, "de": {"lead": "Keine Abos, keine Paywalls. Nur klare Fahrzeiten und smarte Tools.", "f1t": "Fahrzeiten auf einen Blick", "f1d": "Die Dauer der schnellsten Direktverbindung auf jeder Strecke in Japan, nach Klook-Daten.", "f2t": "Japan & Europa, eine Seite", "f2d": "Shinkansen, Limited Express und Lokalbahnen von Hokkaido bis Kyushu — und Europa — in einer Oberfläche.", "f3t": "Verbindungssuche", "f3d": "Finde die schnellste Direktverbindung zwischen japanischen Städten, mit Fahrzeit und Buchungslink.", "f4d": "Plane Reisen durch mehrere Städte Japans 100 % kostenlos. Kein Reisebüro nötig."}, "pt": {"lead": "Sem assinaturas nem acesso pago. Só tempos de viagem claros e ferramentas inteligentes.", "f1t": "Tempos de viagem num relance", "f1d": "A duração do serviço direto mais rápido de cada rota japonesa, com dados da Klook.", "f2t": "Japão e Europa, um só site", "f2d": "Shinkansen, expressos limitados e linhas locais de Hokkaido a Kyushu — e também a Europa — numa única interface.", "f3t": "Busca de trajetos", "f3d": "Encontre o serviço direto mais rápido entre cidades japonesas, com o tempo de viagem e um link para reservar.", "f4d": "Planeje viagens por várias cidades do Japão 100% grátis. Sem agente de viagens."}, "ja": {"lead": "登録も有料の壁もありません。わかりやすい所要時間と、便利な機能だけ。", "f1t": "所要時間がひと目でわかる", "f1d": "日本の各区間で、いちばん速い直通列車の所要時間をKlookのデータから表示します。", "f2t": "日本もヨーロッパも、ひとつのサイトで", "f2d": "北海道から九州まで、新幹線も特急もローカル線も。ヨーロッパも、ひとつの画面で。", "f3t": "区間検索", "f3d": "日本の都市どうしを結ぶ、いちばん速い直通列車を探せます。所要時間と予約へのリンク付き。", "f4d": "日本の複数都市をめぐる旅を、完全無料で計画できます。旅行会社は不要です。"}, "zh": {"lead":"没有订阅，没有付费墙。只有清楚的行程时长和好用的工具。","f1t":"行程时长一目了然","f1d":"根据 Klook 数据，显示每条日本线路最快直达列车的时长。","f2t":"日本和欧洲，一个网站","f2d":"从北海道到九州的新干线、特急和地方线路——还有欧洲——都在一个界面里。","f3t":"线路搜索","f3d":"查找日本城市之间最快的直达列车，附行程时长和预订链接。","f4d":"免费规划日本多城市行程，无需旅行社。"}};
   (function () {
     var F = JP_FEAT[lang()] || JP_FEAT.en;
     var rep = function (sel, txt) { var el = document.querySelector('#features ' + sel); if (el) twinHome(el, function (c) { c.textContent = txt; }); };
@@ -1071,7 +1078,7 @@
   })();
 
   // ── Franja de rutas (estadísticas): nombres de ciudad traducidos y versión de Japón ──────────────
-  var JP_STATS = {"en": "Book trains across Japan with Klook: <strong>198 connections</strong> between <strong>105 stations</strong>, search already loaded — free, no signup.", "es": "Reserva trenes por todo Japón con Klook: <strong>198 conexiones</strong> entre <strong>105 estaciones</strong>, con la búsqueda ya cargada — gratis, sin registro.", "fr": "Réservez vos trains au Japon avec Klook : <strong>198 liaisons</strong> entre <strong>105 gares</strong>, recherche déjà remplie — gratuit, sans inscription.", "it": "Prenota i treni in tutto il Giappone con Klook: <strong>198 collegamenti</strong> tra <strong>105 stazioni</strong>, con la ricerca già compilata — gratis, senza registrazione.", "de": "Buche Züge in ganz Japan mit Klook: <strong>198 Verbindungen</strong> zwischen <strong>105 Bahnhöfen</strong>, Suche bereits ausgefüllt — kostenlos, ohne Anmeldung.", "pt": "Reserve comboios em todo o Japão com a Klook: <strong>198 ligações</strong> entre <strong>105 estações</strong>, com a pesquisa já preenchida — grátis, sem cadastro.", "ja": "Klookで日本全国の列車を予約：<strong>105駅</strong>・<strong>198区間</strong>は検索条件が入力済み。無料、登録不要。"};
+  var JP_STATS = {"en": "Book trains across Japan with Klook: <strong>198 connections</strong> between <strong>105 stations</strong>, search already loaded — free, no signup.", "es": "Reserva trenes por todo Japón con Klook: <strong>198 conexiones</strong> entre <strong>105 estaciones</strong>, con la búsqueda ya cargada — gratis, sin registro.", "fr": "Réservez vos trains au Japon avec Klook : <strong>198 liaisons</strong> entre <strong>105 gares</strong>, recherche déjà remplie — gratuit, sans inscription.", "it": "Prenota i treni in tutto il Giappone con Klook: <strong>198 collegamenti</strong> tra <strong>105 stazioni</strong>, con la ricerca già compilata — gratis, senza registrazione.", "de": "Buche Züge in ganz Japan mit Klook: <strong>198 Verbindungen</strong> zwischen <strong>105 Bahnhöfen</strong>, Suche bereits ausgefüllt — kostenlos, ohne Anmeldung.", "pt": "Reserve comboios em todo o Japão com a Klook: <strong>198 ligações</strong> entre <strong>105 estações</strong>, com a pesquisa já preenchida — grátis, sem cadastro.", "ja": "Klookで日本全国の列車を予約：<strong>105駅</strong>・<strong>198区間</strong>は検索条件が入力済み。無料、登録不要。", "zh": "用 Klook 预订日本各地的火车：<strong>105 个车站</strong>之间的 <strong>198 条线路</strong>已填好搜索条件——免费，无需注册。"};
   (function () {
     var lg = lang();
     var marq = document.querySelector('.stats-marquee');
@@ -1092,8 +1099,8 @@
 
   // ── Esenciales en modo Japón: eSIM de Japón y Klook (tours) en lugar de Tiqets, que es de atracciones europeas ──
   var essEsim = null, essEsimJp = '';
-  var CN_ESIM = { en: 'eSIM China', es: 'eSIM China', fr: 'eSIM Chine', it: 'eSIM Cina', de: 'eSIM China', pt: 'eSIM China', ja: '中国のeSIM' };
-  var JP_ESS = {"en": ["eSIM Japan", "Tours & activities", "See activities →"], "es": ["eSIM Japón", "Tours y actividades", "Ver actividades →"], "fr": ["eSIM Japon", "Visites et activités", "Voir les activités →"], "it": ["eSIM Giappone", "Tour e attività", "Vedi le attività →"], "de": ["eSIM Japan", "Touren & Aktivitäten", "Aktivitäten ansehen →"], "pt": ["eSIM Japão", "Passeios e atividades", "Ver atividades →"], "ja": ["日本のeSIM", "ツアーとアクティビティ", "アクティビティを見る →"]};
+  var CN_ESIM = { en: 'eSIM China', es: 'eSIM China', fr: 'eSIM Chine', it: 'eSIM Cina', de: 'eSIM China', pt: 'eSIM China', ja: '中国のeSIM', zh: '中国 eSIM' };
+  var JP_ESS = {"en": ["eSIM Japan", "Tours & activities", "See activities →"], "es": ["eSIM Japón", "Tours y actividades", "Ver actividades →"], "fr": ["eSIM Japon", "Visites et activités", "Voir les activités →"], "it": ["eSIM Giappone", "Tour e attività", "Vedi le attività →"], "de": ["eSIM Japan", "Touren & Aktivitäten", "Aktivitäten ansehen →"], "pt": ["eSIM Japão", "Passeios e atividades", "Ver atividades →"], "ja": ["日本のeSIM", "ツアーとアクティビティ", "アクティビティを見る →"], "zh": ["日本 eSIM","旅游团与活动","查看活动 →"]};
   (function () {
     var E = JP_ESS[lang()] || JP_ESS.en;
     var yt = document.querySelector('.essentials-bar [data-i18n="p_yesim_title"]');
@@ -1302,7 +1309,7 @@
     ja: { ph: '例：北京から上海への列車', nopair: '人気の路線を選ぶか、別の中国の都市の組み合わせを試してください。', ess: '中国編。', badge: '中国の列車AIプランナー', label: '中国の名路線', lead: '中国の高速鉄道の旅。ここからそのまま予約できます。', hs: '高速鉄道', perday: '1日{n}本', note: 'Klookのデータによる、直通で最も速い列車の所要時間と1日の本数です（2026年11月13日確認）。ご希望日の座席と運賃はKlookでご確認ください。' }
   };
   function cx(k) { var m = CN_TXT[lang()] || CN_TXT.en; return m[k] != null ? m[k] : CN_TXT.en[k]; }
-  function hsName() { return region === 'china' ? cx('hs') : 'Shinkansen'; }
+  function hsName() { return region === 'china' ? cx('hs') : (lang() === 'zh' ? '新干线' : 'Shinkansen'); }
   function parseInfo(str) {
     var out = {};
     str.split(';').forEach(function (row) {
@@ -1338,6 +1345,37 @@
       el.innerHTML = OPERATORS.map(function (o) { return '<span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=' + o[1] + '" alt="' + o[0] + '" loading="lazy"/>' + o[0] + '</span>'; }).join('');
     });
   }
+  // ══ Chino simplificado (fase 6, 14-nov-2026): textos del buscador y de los modos Japón y China ══════════
+  var ZH_PAGES = ' beijing-shanghai shanghai-hangzhou shanghai-suzhou shanghai-nanjing beijing-xian beijing-tianjin guangzhou-shenzhen shenzhen-hong-kong guangzhou-hong-kong chengdu-chongqing xian-chengdu guangzhou-guilin hangzhou-huangshan ';
+  INFO_I18N.zh = { from: '最快 {d}', direct: '直达' };
+  BUY_KLOOK.zh = '查看时刻并在 Klook 预订 →';
+  PI_JP.zh = { opts: '出行方式', train: '火车', note: '根据 Klook 数据（2026 年 10 月 5 日查询），这是最快直达列车的行程时长。你所选日期的座位和票价请在 Klook 查看。', guide: '查看完整线路指南' };
+  HOME_I18N.zh = { ess: '日本篇。', badge: '日本火车 AI 规划', label: '日本经典线路', lead: '日本最美的火车之旅——可直接在这里预订。', featured: '推荐线路', book: '在 Klook 预订', buy: '查看时刻并在 Klook 预订', arrival: '到达', from: '最快' };
+  HOTEL_UI.zh = { all: '全部城市', ci: '入住', co: '退房', ph: '城市或区域', lab: '去哪里？', pop: '热门目的地', go: '搜索酒店', none: '没有结果，请换个城市试试' };
+  HOTEL_BTN.zh = { kl: '在 Klook 搜索', bk: '在 Booking 搜索' };
+  BK_DEAL.zh = { tag: 'Booking.com 优惠', t: '临时出行优惠：参与活动的住宿至少 85 折。2027 年 1 月 7 日前预订。', go: '查看优惠' };
+  PL_MSG.zh = { gen: '正在生成…', still: '仍在处理，可能需要几秒钟…', empty: '输入一个目的地或旅行想法即可开始。', conn: '无法连接，请重试。', slow: '比平时花的时间更长。请重试，或选择上方的热门线路。', rate: '你连续查询了好几次。请等一分钟再试。', inc: '无法包含：{x}。请把这一部分作为单独的行程来查询。' };
+  CN_TXT.zh = { ph: '例如：从北京到上海的火车', nopair: '请选择一条热门线路，或换一组中国城市试试。', ess: '中国篇。', badge: '中国火车 AI 规划', label: '中国经典线路', lead: '中国的高铁之旅——可直接在这里预订。', hs: '高铁', perday: '每天 {n} 班', note: '根据 Klook 数据（2026 年 11 月 13 日查询），这是最快直达列车的时长和当天的车次数量。你所选日期的座位和票价请在 Klook 查看。' };
+  // nombres de ciudad en chino (lo que se escribe en el buscador también se reconoce)
+  CN_DATA.valLoc.zh = { beijing: '北京', shanghai: '上海', hangzhou: '杭州', suzhou: '苏州', nanjing: '南京', xian: '西安', tianjin: '天津', guangzhou: '广州', shenzhen: '深圳', hongkong: '香港', chengdu: '成都', chongqing: '重庆', guilin: '桂林', huangshan: '黄山' };
+  var JP_ZH = { tokyo: '东京', kyoto: '京都', osaka: '大阪', nagoya: '名古屋', hiroshima: '广岛', fukuoka: '福冈', sapporo: '札幌', sendai: '仙台', kanazawa: '金泽', yokohama: '横滨', kobe: '神户', okayama: '冈山', himeji: '姬路', nara: '奈良', hakone: '箱根', nikko: '日光', takayama: '高山', matsumoto: '松本', nagano: '长野', toyama: '富山', kagoshima: '鹿儿岛', kumamoto: '熊本', beppu: '别府', yufuin: '由布院', hakodate: '函馆', otaru: '小樽', aomori: '青森', akita: '秋田', morioka: '盛冈', niigata: '新潟', shinjuku: '新宿', asakusa: '浅草', karuizawa: '轻井泽', kawaguchiko: '河口湖', atami: '热海', ito: '伊东', odawara: '小田原', kinosaki: '城崎', naritaairport: '成田机场', kansaiairport: '关西机场', newchitoseairport: '新千岁机场', shizuoka: '静冈', kokura: '小仓', nagasaki: '长崎' };
+  VAL_LOC.zh = JP_ZH;
+  AIRPORT_LOC.zh = { naritaairport: '成田机场', kansaiairport: '关西机场', newchitoseairport: '新千岁机场' };
+  CITIES.forEach(function (c) { if (JP_ZH[c.slug] && c.keywords.indexOf(JP_ZH[c.slug]) === -1) c.keywords.push(JP_ZH[c.slug]); });
+  CITY_LOC.zh = { Tokyo: '东京', Kyoto: '京都', 'Fukuoka (Hakata)': '福冈（博多）', Yufuin: '由布院', 'Ito (Izu)': '伊东（伊豆）', Shinjuku: '新宿', Hakone: '箱根', Asakusa: '浅草', Nikko: '日光', Nagoya: '名古屋', Takayama: '高山' };
+  // grupos, panorámicos y aventuras
+  var ZH_GROUPS = { shinkansen: '新干线', kanto: '东京和关东', kansai: '关西', chubu: '中部和北陆', west: '日本西部和九州', north: '东北和北海道' };
+  GROUPS.forEach(function (g) { if (ZH_GROUPS[g.id]) g.names.zh = ZH_GROUPS[g.id]; });
+  var ZH_CN_GROUPS = { north: '北京和华北', east: '上海和长三角', south: '华南和香港', west: '中国西部' };
+  CN_DATA.groups.forEach(function (g) { g.names.zh = ZH_CN_GROUPS[g.id]; });
+  var ZH_JP_SCENIC = ['JR 九州的设计列车，木质内饰，开往温泉小镇由布院。', 'JR 东日本的豪华列车，大窗面朝太平洋，开往伊豆半岛。', '小田急的特急列车，从新宿开往箱根——温泉和富士山美景的门户。', '东武的旗舰列车，从浅草开往日光的神社和群山。', '从名古屋沿飞驒溪谷一路爬升到高山的特急列车。', '“希望号”连接东京和京都；天气晴朗时能看到富士山。'];
+  JP_SCENIC.forEach(function (sc, i) { if (ZH_JP_SCENIC[i]) sc.desc.zh = ZH_JP_SCENIC[i]; });
+  var ZH_CN_SCENIC = [['复兴号高铁', '复兴号以最高 350 公里的时速连接中国两大城市，四个多小时就到。'], ['前往西湖', '从上海到杭州和西湖不到一小时，每天有几百班列车。'], ['黄山线', '高铁开往以花岗岩奇峰和松树闻名的黄山，一个多小时即可到达。'], ['走进喀斯特', '从广州到桂林的高铁，通往漓江喀斯特山峰的门户。'], ['香港高铁', '从深圳到香港中心的西九龙站，大约 15 分钟。'], ['从四川到重庆', '四川省会和长江边的山城重庆，大约一小时车程。']];
+  CN_DATA.scenic.forEach(function (sc, i) { sc.name.zh = ZH_CN_SCENIC[i][0]; sc.desc.zh = ZH_CN_SCENIC[i][1]; });
+  var ZH_ADV = { 'jp-tokaido': ['东海道经典线路', '新干线 · 从小田原去箱根'], 'jp-alps': ['日本阿尔卑斯线路', '飞驒特急和北陆新干线'], 'jp-kyushu': ['九州精华', '由布院之森、温泉和音速号特急'],
+    'cn-classic': ['古都与四川', '西安兵马俑 · 成都大熊猫'], 'cn-east': ['从北京到黄山', '高铁 · 西湖和黄山'], 'cn-south': ['从桂林到香港', '喀斯特山峰、珠三角和香港'] };
+  [JP_ROUTES, CN_DATA.adventures].forEach(function (set) { Object.keys(set).forEach(function (k) { if (ZH_ADV[k]) { set[k].title.zh = ZH_ADV[k][0]; set[k].meta.zh = ZH_ADV[k][1]; } }); });
+  CN_ESIM.zh = '中国 eSIM';
   useData('japan');
 
   switchEl.addEventListener('click', function (e) {
@@ -1406,7 +1444,8 @@
     it: { tab: 'Esperienze', t: 'Tour ed esperienze', s: 'Scopri cosa fare a destinazione prima di prenotare.', kl: 'Klook', kld: 'Tour, biglietti e attività con conferma immediata', tr: 'GetYourGuide', trd: 'Tour, escursioni e biglietti salta la fila', go: 'Esplora' },
     de: { tab: 'Erlebnisse', t: 'Touren und Erlebnisse', s: 'Entdecke vor der Buchung, was du am Ziel unternehmen kannst.', kl: 'Klook', kld: 'Touren, Tickets und Aktivitäten mit sofortiger Bestätigung', tr: 'GetYourGuide', trd: 'Touren, Tagesausflüge und Tickets ohne Anstehen', go: 'Entdecken' },
     pt: { tab: 'Experiências', t: 'Passeios e experiências', s: 'Descubra o que fazer no destino antes de reservar.', kl: 'Klook', kld: 'Passeios, ingressos e atividades com confirmação imediata', tr: 'GetYourGuide', trd: 'Passeios, excursões e ingressos sem fila', go: 'Explorar' },
-    ja: { tab: '体験', t: 'ツアーと体験', s: '予約の前に、目的地での楽しみ方を探しましょう。', kl: 'Klook', kld: 'ツアー・チケット・アクティビティを即時確認で', tr: 'GetYourGuide', trd: 'ツアー、日帰り旅行、優先入場チケット', go: '見る' }
+    ja: { tab: '体験', t: 'ツアーと体験', s: '予約の前に、目的地での楽しみ方を探しましょう。', kl: 'Klook', kld: 'ツアー・チケット・アクティビティを即時確認で', tr: 'GetYourGuide', trd: 'ツアー、日帰り旅行、優先入場チケット', go: '見る' },
+    zh: { tab: '体验', t: '旅游团与体验', s: '预订前，先看看目的地有什么好玩的。', kl: 'Klook', kld: '旅游团、门票和活动，即时确认', tr: 'GetYourGuide', trd: '旅游团、一日游和免排队门票', go: '探索' }
   };
   function buildExperiences() {
     var tabs = document.querySelector('.search-tabs'), card = document.querySelector('.search-card');
