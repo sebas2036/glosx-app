@@ -96,6 +96,28 @@ function extraFaqs(l, A, B, st, many) {
   };
   return X[l];
 }
+
+// 3 preguntas generales más (equipaje, comida, enchufes y wifi), para llegar a 10 como Japón
+const MORE_FAQS = {
+  en: [['Can I take a suitcase on the train?', 'Yes. There are luggage racks above the seats and space for larger suitcases at the end of each carriage. Bags go through an X-ray scanner at the station entrance.'],
+    ['Is there food on Chinese high-speed trains?', 'Most high-speed trains have a dining car or a trolley selling meals, snacks and drinks, and every train has hot water for tea or instant noodles.'],
+    ['Are there power sockets and Wi-Fi on board?', 'Most high-speed trains have power sockets at the seats. Wi-Fi is not available on every train, so a local SIM or an eSIM is the easiest way to stay online.']],
+  es: [['¿Puedo llevar maleta en el tren?', 'Sí. Hay portaequipajes sobre los asientos y espacio para maletas grandes al final de cada vagón. El equipaje pasa por un escáner en la entrada de la estación.'],
+    ['¿Hay comida en los trenes de alta velocidad de China?', 'La mayoría de los trenes de alta velocidad tienen vagón restaurante o un carrito con comidas, snacks y bebidas, y todos tienen agua caliente para té o fideos instantáneos.'],
+    ['¿Hay enchufes y wifi a bordo?', 'La mayoría de los trenes de alta velocidad tienen enchufes en los asientos. El wifi no está en todos los trenes, así que una SIM local o una eSIM es la forma más fácil de tener internet.']],
+  fr: [['Peut-on prendre une valise dans le train ?', 'Oui. Il y a des porte-bagages au-dessus des sièges et de la place pour les grandes valises au bout de chaque voiture. Les bagages passent au scanner à l’entrée de la gare.'],
+    ['Peut-on manger dans les trains à grande vitesse chinois ?', 'La plupart des trains à grande vitesse ont une voiture-restaurant ou un chariot avec repas, en-cas et boissons, et tous ont de l’eau chaude pour le thé ou les nouilles instantanées.'],
+    ['Y a-t-il des prises et le Wi-Fi à bord ?', 'La plupart des trains à grande vitesse ont des prises aux sièges. Le Wi-Fi n’est pas disponible dans tous les trains : une SIM locale ou une eSIM est le moyen le plus simple de rester connecté.']],
+  it: [['Posso portare una valigia in treno?', 'Sì. Ci sono portabagagli sopra i sedili e spazio per le valigie grandi in fondo a ogni carrozza. I bagagli passano allo scanner all’ingresso della stazione.'],
+    ['C’è da mangiare sui treni ad alta velocità cinesi?', 'La maggior parte dei treni ad alta velocità ha una carrozza ristorante o un carrello con pasti, snack e bevande, e tutti hanno acqua calda per il tè o i noodles istantanei.'],
+    ['Ci sono prese di corrente e Wi-Fi a bordo?', 'La maggior parte dei treni ad alta velocità ha prese ai sedili. Il Wi-Fi non c’è su tutti i treni, quindi una SIM locale o una eSIM è il modo più semplice per restare online.']],
+  ja: [['スーツケースを持って乗れる？', 'はい。座席の上に荷物棚があり、各車両の端には大きなスーツケースを置くスペースがあります。荷物は駅の入口でX線検査を通ります。'],
+    ['中国の高速鉄道で食事はできる？', 'ほとんどの高速列車には食堂車や車内販売があり、食事・軽食・飲み物を買えます。どの列車にもお茶やカップ麺用のお湯があります。'],
+    ['車内に電源やWi-Fiはある？', 'ほとんどの高速列車は座席に電源があります。Wi-Fiはすべての列車にあるわけではないので、現地SIMやeSIMを用意しておくと便利です。']],
+  zh: [['可以带行李箱上车吗？', '可以。座位上方有行李架，每节车厢的一端还有放大件行李的地方。进站时行李要过安检机。'],
+    ['中国高铁上有吃的吗？', '大多数高铁有餐车或推车售卖餐食、零食和饮料，每趟车都有开水，可以泡茶或泡面。'],
+    ['车上有充电插座和 Wi-Fi 吗？', '大多数高铁座位旁有电源插座。并非每趟车都有 Wi-Fi，用当地 SIM 卡或 eSIM 上网最方便。']]
+};
 function build([slug, a, b, photo]) {
   const d = DATA[KEY[slug] || slug];
   if (!d) throw new Error('Sin datos de Klook: ' + slug);
@@ -169,6 +191,7 @@ function build([slug, a, b, photo]) {
     const [o, t] = d.main.split(' → ').map(x => (SM && SM[x]) || x);
     const st = { en: `from ${o} to ${t}`, es: `de ${o} a ${t}`, fr: `${o} et ${t}`, it: `${o} e ${t}`, ja: `${o}と${t}`, zh: `${o}和${t}之间` }[l];
     r.faqs[l].push(...extraFaqs(l, CITY[a][l], CITY[b][l], st, n >= 100));
+    r.faqs[l].push(...MORE_FAQS[l]);
   }
   return r;
 }
