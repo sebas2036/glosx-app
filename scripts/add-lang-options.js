@@ -55,7 +55,8 @@ for (const file of walk(ROOT, [])) {
   const fallback = l => (isRoute && fs.existsSync(path.join(ROOT, l, 'rutas', 'index.html'))) ? `/${l}/rutas/` : `/${l}/`;
   const html = LANGS.map(([code, hl, name]) => {
     let href = opts[code];
-    if (!href) { const g = guess(code); href = g && exists(g) ? g : fallback(code); }
+    // sin opción, o con la de respaldo (portada / índice de rutas): usar la versión real si ya existe
+    if (!href || (code !== active && /^\/[a-z]{2}\/(rutas\/)?$/.test(href))) { const g = guess(code); href = g && exists(g) ? g : (href || fallback(code)); }
     return `<a class="lang-option${code === active ? ' active' : ''}" href="${href}" hreflang="${hl}" lang="${hl}">${name}</a>`;
   }).join('');
   if (html === inner) continue;
