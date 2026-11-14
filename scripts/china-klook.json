@@ -55,7 +55,17 @@
     "nanchang": "c932d3ec-8d1c-4dab-a4ff-a2ac747185b5",
     "hohhot": "872bd5d7-a5f7-4aef-a7ea-5165e4e60bb9",
     "zhangye": "a7b936d2-5510-4806-b6cb-362f5664b29b",
-    "kaifeng": "0fba351c-216d-4ef2-a8bf-e691b3c1b57b"
+    "kaifeng": "0fba351c-216d-4ef2-a8bf-e691b3c1b57b",
+    "qinhuangdao": "96a9c753-0e6a-41aa-885d-5e8831d05e27",
+    "chengde": "b337c732-25dd-46c4-adec-cb0c6463e2da",
+    "weihai": "fd601a39-cd4f-4cc0-ab36-224d7224cc17",
+    "jingdezhen": "161bc76b-2efc-4e82-9b83-7c854048bdb2",
+    "jiujiang": "a1968d55-ffd3-4b08-9722-f2e51fcc9ba9",
+    "beihai": "8593db3b-28d2-4c9a-bfbd-d47df571ed63",
+    "quanzhou": "1a94b347-092c-4c35-8cc4-f9f398940e34",
+    "jiayuguan": "51904962-a43b-4cc8-985e-a81263b4219e",
+    "changzhou": "be8f2f24-aba4-4c07-b5ed-80d40191a7fd",
+    "yinchuan": "e0f3e055-6720-40ee-b243-7b07c7b52a06"
   },
   "routes": {
     "beijing-shanghai": {
@@ -708,11 +718,152 @@
       "first": "06:07",
       "last": "21:08",
       "main": "Shanghai Hongqiao → Changsha South"
+    },
+    "beijing-qinhuangdao": {
+      "trains": 28,
+      "fastest_min": 101,
+      "first": "00:22",
+      "last": "18:50",
+      "main": "Beijing Station → Qinhuangdao"
+    },
+    "beijing-chengde": {
+      "trains": 64,
+      "fastest_min": 49,
+      "first": "06:08",
+      "last": "23:40",
+      "main": "Beijing Chaoyang → Chengde South"
+    },
+    "qingdao-weihai": {
+      "trains": 29,
+      "fastest_min": 69,
+      "first": "06:29",
+      "last": "19:56",
+      "main": "Qingdao North → Weihai"
+    },
+    "nanchang-jingdezhen": {
+      "trains": 58,
+      "fastest_min": 42,
+      "first": "07:00",
+      "last": "20:51",
+      "main": "Nanchang East → Jingdezhen North"
+    },
+    "nanchang-jiujiang": {
+      "trains": 102,
+      "fastest_min": 42,
+      "first": "01:20",
+      "last": "23:52",
+      "main": "Nanchang → Jiujiang"
+    },
+    "nanning-beihai": {
+      "trains": 50,
+      "fastest_min": 59,
+      "first": "07:05",
+      "last": "21:54",
+      "main": "Nanning East → Beihai"
+    },
+    "xiamen-quanzhou": {
+      "trains": 187,
+      "fastest_min": 17,
+      "first": "06:29",
+      "last": "22:11",
+      "main": "Xiamen North → Quanzhou"
+    },
+    "lanzhou-jiayuguan": {
+      "trains": 43,
+      "fastest_min": 240,
+      "first": "04:23",
+      "last": "23:32",
+      "main": "Lanzhou → Jiayuguan South"
+    },
+    "shanghai-changzhou": {
+      "trains": 276,
+      "fastest_min": 35,
+      "first": "03:52",
+      "last": "23:40",
+      "main": "Shanghai Station → Changzhou"
+    },
+    "guangzhou-kunming": {
+      "trains": 28,
+      "fastest_min": 400,
+      "first": "05:37",
+      "last": "16:43",
+      "main": "Guangzhou South → Kunming South"
+    },
+    "shanghai-xian": {
+      "trains": 37,
+      "fastest_min": 339,
+      "first": "06:09",
+      "last": "18:33",
+      "main": "Shanghai Hongqiao → Xi'an North"
+    },
+    "guangzhou-chongqing": {
+      "trains": 34,
+      "fastest_min": 342,
+      "first": "07:31",
+      "last": "22:41",
+      "main": "Guangzhou South → Chongqing West"
+    },
+    "wuhan-xian": {
+      "trains": 31,
+      "fastest_min": 187,
+      "first": "06:10",
+      "last": "23:36",
+      "main": "Wuhan → Xi'an North"
+    },
+    "nanjing-wuhan": {
+      "trains": 61,
+      "fastest_min": 147,
+      "first": "06:53",
+      "last": "20:12",
+      "main": "Nanjing South → Wuhan"
+    },
+    "hangzhou-changsha": {
+      "trains": 51,
+      "fastest_min": 193,
+      "first": "06:06",
+      "last": "22:46",
+      "main": "Hangzhou East → Changsha South"
+    },
+    "shenzhen-wuhan": {
+      "trains": 46,
+      "fastest_min": 230,
+      "first": "06:06",
+      "last": "19:28",
+      "main": "Shenzhen North → Wuhan"
+    },
+    "beijing-guilin": {
+      "trains": 8,
+      "fastest_min": 478,
+      "first": "08:13",
+      "last": "21:56",
+      "main": "Beijing West → Guilin North"
+    },
+    "huangshan-jingdezhen": {
+      "trains": 20,
+      "fastest_min": 41,
+      "first": "09:59",
+      "last": "21:57",
+      "main": "Huangshan North → Jingdezhen North"
+    },
+    "zhengzhou-luoyang": {
+      "trains": 139,
+      "fastest_min": 25,
+      "first": "00:34",
+      "last": "23:47",
+      "main": "Zhengzhou East → Luoyang Longmen"
+    },
+    "xian-yinchuan": {
+      "trains": 39,
+      "fastest_min": 170,
+      "first": "05:25",
+      "last": "21:39",
+      "main": "Xi'an North → Yinchuan"
     }
   },
   "_lote2": "Lote 2 (20 rutas) re-medido 14-nov-2026 con el parser corregido (cuenta trenes \"N mins\" y \"Sold out\"), búsqueda Klook para el 27-nov-2026",
   "_lote3": "Lote 3 (20 rutas) verificado 14-nov-2026 en la página de resultados de Klook para el 27-nov-2026",
   "_remedicion": "14-nov-2026: las 53 rutas re-medidas con el parser que cuenta trenes que llegan al día siguiente (+1); se actualizan trenes/primera/última, la duración más rápida publicada se mantiene",
   "_lote4": "Lote 4 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (qufu = estación Qufu East)",
-  "_lote5": "Lote 5 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (Chaozhou descartada: sin trenes directos en Klook)"
+  "_lote5": "Lote 5 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (Chaozhou descartada: sin trenes directos en Klook)",
+  "_lote6": "Lote 6 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (Beijing–Chengde: Klook llama \"Chengdu South\" a Chengde South)"
 }
