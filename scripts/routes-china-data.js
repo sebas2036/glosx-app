@@ -84,4 +84,9 @@ const TIP = {
   'hangzhou-huangshan': { en: 'Huangshan North station is a bus ride from the mountain’s scenic area, so plan that leg before you go.', es: 'La estación de Huangshan North queda a un trayecto en autobús del área escénica de la montaña: planifica ese tramo antes de ir.', fr: 'La gare de Huangshan North est à un trajet en bus du site de la montagne : prévoyez ce tronçon avant de partir.', it: 'La stazione di Huangshan North dista un tragitto in autobus dall’area panoramica della montagna: pianifica quel tratto prima di partire.', ja: '黄山北駅から山の景勝地まではバスでの移動になります。出発前にその区間も計画しておきましょう。', zh: '黄山北站到黄山风景区还要坐一段巴士，出发前先安排好这一段。' }
 };
 
+// Lote 2 (14-nov-2026): 20 rutas más
+const L2 = require('./routes-china-lote2');
+Object.assign(CITY, L2.CITY); Object.assign(STATION_JA, L2.STATION_JA); Object.assign(STATION_ZH, L2.STATION_ZH);
+LIST.push(...L2.LIST); Object.assign(HIGHLIGHT, L2.HIGHLIGHT); Object.assign(TIP, L2.TIP);
+
 module.exports = { DATA, CITY, STATION_JA, STATION_ZH, LIST, KEY, HIGHLIGHT, TIP };
