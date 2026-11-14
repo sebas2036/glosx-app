@@ -14,11 +14,12 @@
   var LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
 
   var L10N = {
-    en: { noteJ: 'Journey time of the fastest direct service, from Klook data (checked 5 Oct 2026). Seats and fares for your date are shown on Klook.', eyebrow: 'Travel options', title: 'How to get from {a} to {b}', train: 'Train', bus: 'Bus', flight: 'Flight', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Approximate typical journey times and low-fare prices based on Omio data. Final prices depend on date, operator and how early you book.', noteT: 'Approximate typical journey times based on Omio and operator timetable data. Check live prices for your date.' },
-    es: { noteJ: 'Duración del servicio directo más rápido, según datos de Klook (consulta del 5 de octubre de 2026). Los asientos y tarifas de tu fecha se muestran en Klook.', eyebrow: 'Opciones de viaje', title: 'Cómo ir de {a} a {b}', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones y precios orientativos según datos de Omio. El precio final depende de la fecha, el operador y la antelación de la compra.', noteT: 'Duraciones orientativas según datos de Omio y horarios de los operadores. Consulta el precio actual para tu fecha.' },
-    fr: { noteJ: 'Durée du service direct le plus rapide, d’après les données de Klook (consultation du 5 octobre 2026). Les places et tarifs de votre date s’affichent sur Klook.', eyebrow: 'Options de voyage', title: 'Comment aller de {a} à {b}', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées et prix indicatifs d’après les données d’Omio. Le prix final dépend de la date, de l’opérateur et de l’avance de réservation.', noteT: 'Durées indicatives d’après les données d’Omio et les horaires des opérateurs. Consultez le prix actuel pour votre date.' },
-    it: { noteJ: 'Durata del servizio diretto più veloce, secondo i dati di Klook (consultazione del 5 ottobre 2026). Posti e tariffe per la tua data sono su Klook.', eyebrow: 'Come viaggiare', title: 'Come andare da {a} a {b}', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate e prezzi indicativi secondo i dati di Omio. Il prezzo finale dipende da data, operatore e anticipo di prenotazione.', noteT: 'Durate indicative secondo i dati di Omio e gli orari degli operatori. Controlla il prezzo aggiornato per la tua data.' },
-    ja: { noteJ: 'Klookのデータによる、直通で最も速い列車の所要時間です（2026年10月5日確認）。ご希望日の座席と運賃はKlookでご確認ください。', eyebrow: '移動手段', title: '{a}から{b}への行き方', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間と料金の目安です。最終料金は日付、運行会社、予約時期によって変わります。', noteT: 'Omioと運行会社の時刻表に基づくおおよその所要時間です。最新の料金は日付ごとにご確認ください。' }
+    en: { noteC: "Journey time of the fastest direct train, from Klook data (checked 13 Nov 2026). Seats and fares for your date are shown on Klook.", noteJ: 'Journey time of the fastest direct service, from Klook data (checked 5 Oct 2026). Seats and fares for your date are shown on Klook.', eyebrow: 'Travel options', title: 'How to get from {a} to {b}', train: 'Train', bus: 'Bus', flight: 'Flight', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Approximate typical journey times and low-fare prices based on Omio data. Final prices depend on date, operator and how early you book.', noteT: 'Approximate typical journey times based on Omio and operator timetable data. Check live prices for your date.' },
+    es: { noteC: "Duración del tren directo más rápido, según datos de Klook (consulta del 13 de noviembre de 2026). Los asientos y tarifas de tu fecha se muestran en Klook.", noteJ: 'Duración del servicio directo más rápido, según datos de Klook (consulta del 5 de octubre de 2026). Los asientos y tarifas de tu fecha se muestran en Klook.', eyebrow: 'Opciones de viaje', title: 'Cómo ir de {a} a {b}', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones y precios orientativos según datos de Omio. El precio final depende de la fecha, el operador y la antelación de la compra.', noteT: 'Duraciones orientativas según datos de Omio y horarios de los operadores. Consulta el precio actual para tu fecha.' },
+    fr: { noteC: "Durée du train direct le plus rapide, d’après les données de Klook (consultation du 13 novembre 2026). Les places et tarifs de votre date s’affichent sur Klook.", noteJ: 'Durée du service direct le plus rapide, d’après les données de Klook (consultation du 5 octobre 2026). Les places et tarifs de votre date s’affichent sur Klook.', eyebrow: 'Options de voyage', title: 'Comment aller de {a} à {b}', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées et prix indicatifs d’après les données d’Omio. Le prix final dépend de la date, de l’opérateur et de l’avance de réservation.', noteT: 'Durées indicatives d’après les données d’Omio et les horaires des opérateurs. Consultez le prix actuel pour votre date.' },
+    it: { noteC: "Durata del treno diretto più veloce, secondo i dati di Klook (consultazione del 13 novembre 2026). Posti e tariffe per la tua data sono su Klook.", noteJ: 'Durata del servizio diretto più veloce, secondo i dati di Klook (consultazione del 5 ottobre 2026). Posti e tariffe per la tua data sono su Klook.', eyebrow: 'Come viaggiare', title: 'Come andare da {a} a {b}', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate e prezzi indicativi secondo i dati di Omio. Il prezzo finale dipende da data, operatore e anticipo di prenotazione.', noteT: 'Durate indicative secondo i dati di Omio e gli orari degli operatori. Controlla il prezzo aggiornato per la tua data.' },
+    ja: { noteC: "Klookのデータによる、直通で最も速い列車の所要時間です（2026年11月13日確認）。ご希望日の座席と運賃はKlookでご確認ください。", noteJ: 'Klookのデータによる、直通で最も速い列車の所要時間です（2026年10月5日確認）。ご希望日の座席と運賃はKlookでご確認ください。', eyebrow: '移動手段', title: '{a}から{b}への行き方', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間と料金の目安です。最終料金は日付、運行会社、予約時期によって変わります。', noteT: 'Omioと運行会社の時刻表に基づくおおよその所要時間です。最新の料金は日付ごとにご確認ください。' },
+    zh: { noteC: '根据 Klook 数据（2026 年 11 月 13 日查询），这是最快直达列车的行程时长。你所选日期的座位和票价请在 Klook 查看。', noteJ: '根据 Klook 数据（2026 年 10 月 5 日查询），这是最快直达列车的行程时长。你所选日期的座位和票价请在 Klook 查看。', eyebrow: '出行方式', title: '从{a}到{b}怎么走', train: '火车', bus: '巴士', flight: '飞机', ferry: '轮渡', h: '小时', m: '分', note: '根据 Omio 数据得出的大致行程时间和低价参考。最终价格取决于日期、运营商和预订时间。', noteT: '根据 Omio 和运营商时刻表得出的大致行程时间。请查看所选日期的实时价格。' }
   };
 
   // Íconos de línea (monocromos), sin emojis
@@ -47,7 +48,7 @@
   }
 
   function fmtPrice(v, l) {
-    return (l === 'en' || l === 'ja') ? '≈ €' + v : '≈ ' + v + ' €';
+    return (l === 'en' || l === 'ja' || l === 'zh') ? '≈ €' + v : '≈ ' + v + ' €';
   }
 
   function esc(s) {
@@ -58,7 +59,7 @@
     var modes = ['train', 'bus', 'flight', 'ferry'].filter(function (k) { return d.m[k]; });
     var max = Math.max.apply(null, modes.map(function (k) { return d.m[k]; }));
     var rows = '';
-    if (modes.length > 1 || d.jp) {
+    if (modes.length > 1 || d.jp || d.cn) {
       rows = '<div class="rp-modes">' + modes.map(function (k) {
         var pct = Math.max(8, Math.round(d.m[k] / max * 100));
         return '<div class="rp-row' + (k === 'train' ? ' is-train' : '') + '">' +
@@ -66,7 +67,7 @@
           '<div><div class="rp-label">' + esc(t[k]) + '</div><div class="rp-bar" aria-hidden="true"><i style="width:' + pct + '%"></i></div></div>' +
           '<span class="rp-meta"><span class="rp-time">' + fmt(d.m[k], t) + '</span>' +
           (d.p && d.p[k] ? '<span class="rp-price">' + fmtPrice(d.p[k], lang()) + '</span>' : '') + '</span></div>';
-      }).join('') + '</div><p class="rp-note">' + esc(d.jp ? t.noteJ : ((d.p && modes.some(function (k) { return d.p[k]; })) ? t.note : (t.noteT || t.note))) + '</p>';
+      }).join('') + '</div><p class="rp-note">' + esc(d.cn ? t.noteC : d.jp ? t.noteJ : ((d.p && modes.some(function (k) { return d.p[k]; })) ? t.note : (t.noteT || t.note))) + '</p>';
     }
     var sec = document.createElement('section');
     sec.className = 'rp';
@@ -124,7 +125,7 @@
     var slug = slugFromPath();
     var d = slug && data[slug];
     // Europa: debajo del tramo de tren; Japón: debajo del botón de Klook (los nombres salen del h1 "A → B")
-    var anchor = document.querySelector('.train-segment') || (d && d.jp && document.querySelector('.klook-cta'));
+    var anchor = document.querySelector('.train-segment') || (d && (d.jp || d.cn) && document.querySelector('.klook-cta')) || (d && document.querySelector('.omio-cta'));
     if (!d || !anchor || document.querySelector('.rp')) return;
     var title = anchor.querySelector('.train-segment-title') || document.querySelector('.route-hero h1');
     var parts = title ? title.textContent.split('→') : [];
