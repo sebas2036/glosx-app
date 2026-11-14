@@ -252,7 +252,7 @@ function hotelHtml(r, l, B) {
 `;
 }
 
-const template = fs.readFileSync(path.join(__dirname, 'route-template.html'), 'utf8').replace('<script src="/assets/js/omio-bridge.js?v=12" defer></script>', '<script src="/assets/js/lang-chip.js?v=1" defer></script>');
+const template = fs.readFileSync(path.join(__dirname, 'route-template.html'), 'utf8').replace('<script src="/assets/js/omio-bridge.js?v=13" defer></script>', '<script src="/assets/js/lang-chip.js?v=1" defer></script>');
 const head = template.slice(0, template.indexOf('<main>'));
 const tail = template.slice(template.indexOf('</main>') + '</main>'.length);
 const BY_SLUG = Object.fromEntries(ROUTES.map(r => [r.slug, r]));
