@@ -61,6 +61,52 @@ function euData(slug) {
 const zt = m => { const h = Math.floor(m / 60), r = m % 60; return h ? `${h}小时${r ? r + '分' : ''}` : `${m}分钟`; };
 const JP_TRAIN = { Nozomi: '希望号', Hikari: '光号', Kodama: '回声号', Sakura: '樱花号', Mizuho: '瑞穗号', 'Narita Express': '成田特快', Romancecar: '浪漫特快', Kagayaki: '光辉号', Hakutaka: '白鹰号', Hida: '飞驒号', Haruka: '遥号', Yamabiko: '山彦号', Hayabusa: '隼号' };
 
+
+// 7 preguntas más por región (para llegar a 10, como Japón) y tarjeta de hotel con el mismo hotel de la página inglesa
+const ZH_MORE = {
+  jp: [['需要提前订票吗？', '平时一般当天也能买到票；黄金周、盂兰盆节和年末年初人很多，请尽早预订。'],
+    ['车上可以吃东西吗？', '可以。在新干线和特急列车上吃车站便当很常见，很多车站都有便当店。'],
+    ['车上有 Wi-Fi 和充电插座吗？', '大多数新干线有免费 Wi-Fi，很多座位旁有插座；特急列车的设施因车型而异。'],
+    ['儿童票怎么算？', '6 至 11 岁儿童一般为成人票价的一半；未满 6 岁的幼儿不占座位时通常免费，具体以铁路公司规定为准。'],
+    ['指定席和自由席有什么区别？', '指定席有固定座位，自由席先到先坐。部分列车全车对号入座；旺季建议买指定席。'],
+    ['可以带大件行李吗？', '一般的行李箱可以放在行李架或车厢两端。东海道、山阳、九州新干线上三边之和 160–250 厘米的大件行李需预约带行李空间的座位。'],
+    ['怎样在 Klook 订票？', '在 Klook 搜索线路，选好日期和车次，用境外银行卡付款，再按确认邮件里的说明取票或使用电子票。']],
+  eu: [['需要提前订票吗？', '高速列车越早订通常越便宜；区域列车的票价一般是固定的，当天买也可以。'],
+    ['车上可以吃东西吗？', '大多数长途列车有餐车或售卖车，也可以自带食物和饮料。'],
+    ['车上有 Wi-Fi 和充电插座吗？', '大多数高速列车有插座，很多还有 Wi-Fi，但信号好坏取决于线路。'],
+    ['儿童票怎么算？', '大多数欧洲铁路公司都有儿童优惠，年龄和折扣因国家而异。在 Omio 输入乘客年龄就能看到对应票价。'],
+    ['可以用欧铁通票（Eurail）吗？', '欧铁通票可以乘坐大多数线路，但很多高速列车和夜车需要另付订座费。'],
+    ['行李有限制吗？', '大多数欧洲火车对行李没有严格的重量限制，只要自己能搬上车、放在行李架上即可；欧洲之星等少数列车有件数规定。'],
+    ['怎样在 Omio 订票？', '在 Omio 搜索线路，比较车次和票价，用银行卡付款，电子车票会发到你的邮箱和 Omio App。']]
+};
+const ZH_COUNTRY = { Japan: '日本', France: '法国', Italy: '意大利', Spain: '西班牙', Germany: '德国', Switzerland: '瑞士', Austria: '奥地利', 'United Kingdom': '英国', Netherlands: '荷兰', Belgium: '比利时', 'Czech Republic': '捷克', Hungary: '匈牙利', Portugal: '葡萄牙', Denmark: '丹麦', Sweden: '瑞典', Norway: '挪威', Slovenia: '斯洛文尼亚', Monaco: '摩纳哥' };
+function hotelZh(slug, B) {
+  const en = enPage(slug), i = en.indexOf('<div class="hotel-card">');
+  if (i < 0) return '';
+  const blk = en.slice(i, en.indexOf('</div>\n    </div>', i));
+  const img = (blk.match(/hotel-card-image" src="([^"]+)"/) || [])[1], name = (blk.match(/hotel-card-name">([^<]+)</) || [])[1];
+  const loc = ((blk.match(/hotel-card-location">([^<]+)</) || [])[1] || '').split(',').pop().trim();
+  const city = (blk.match(/klook-hotel\?city=([^"&\s]+)/) || [])[1];
+  if (!img || !name || !city) return '';
+  const API = 'https://voxa-production-dc15.up.railway.app/affiliate';
+  return `
+    <h2>住宿推荐</h2>
+    <div class="hotel-card">
+      <div class="hotel-card-header">
+        <img class="hotel-card-image" src="${img}" alt="${esc(name)}" loading="lazy">
+        <div class="hotel-card-info">
+          <div class="hotel-card-name">${esc(name)}</div>
+          <div class="hotel-card-location">${esc(B)}・${ZH_COUNTRY[loc] || esc(loc)}</div>
+        </div>
+      </div>
+      <div class="hotel-card-actions">
+        <a href="${API}/klook-hotel?city=${city}" class="cta-btn" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('hotel_${slug}_zh')">查看当前价格 →</a>
+        <br>
+        <a href="${API}/booking-hotel?city=${city}" class="economic-link" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('hotel_booking_${slug}_zh')">在 Booking.com 比较 →</a>
+      </div>
+    </div>
+`;
+}
 function enPage(slug) { return fs.readFileSync(path.join(ROOT, 'rutas', slug, 'index.html'), 'utf8'); }
 function build([slug, A, B, st, hl, tip], region) {
   const en = enPage(slug);
@@ -93,6 +139,7 @@ function build([slug, A, B, st, hl, tip], region) {
     faq2 = [`${A}到${B}的火车票多少钱？`, `参考价格为 ${d.price}，实际票价取决于日期、车次和订票时间。`];
   }
   const faqs = [[`从${A}到${B}坐火车要多久？`, region === 'jp' ? `最快约${facts[0].replace('最快行程：约', '')}。不同车次用时不同，请以所订车次为准。` : `大约${facts[0].replace('行程时间：约', '')}。不同车次用时不同，请以所订车次为准。`], faq2, [`在哪里订${A}到${B}的火车票？`, `可以通过本页的链接在 ${partner} 查看时刻并订票。WoW Train 不收取额外费用。`]];
+  faqs.push(...ZH_MORE[region]);
   return { slug, A, B, hero, book, partner, seoT, seoD, lead, facts, choose, tips: [tip], faqs, region };
 }
 const ROUTES = JP.map(r => build(r, 'jp')).concat(EU.map(r => build(r, 'eu')));
@@ -139,9 +186,10 @@ function render(r) {
       ${li(r.tips)}
     </ul>
 
+${hotelZh(r.slug, r.B)}
     <section class="faq">
-      <h2>常见问题</h2>${r.faqs.map(([q, a]) => `
-      <div class="faq-item">
+      <h2>常见问题</h2>${r.faqs.map(([q, a], i) => `
+      <div class="faq-item"${i >= 3 ? ' data-more="1"' : ''}>
         <h3 class="faq-q">${esc(q)}</h3>
         <p class="faq-a">${esc(a)}</p>
       </div>`).join('')}
