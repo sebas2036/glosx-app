@@ -99,4 +99,9 @@ const L4 = require('./routes-china-lote4');
 Object.assign(CITY, L4.CITY); Object.assign(STATION_JA, L4.STATION_JA); Object.assign(STATION_ZH, L4.STATION_ZH);
 LIST.push(...L4.LIST); Object.assign(HIGHLIGHT, L4.HIGHLIGHT); Object.assign(TIP, L4.TIP);
 
+// Lote 5 (14-nov-2026): 20 rutas más
+const L5 = require('./routes-china-lote5');
+Object.assign(CITY, L5.CITY); Object.assign(STATION_JA, L5.STATION_JA); Object.assign(STATION_ZH, L5.STATION_ZH);
+LIST.push(...L5.LIST); Object.assign(HIGHLIGHT, L5.HIGHLIGHT); Object.assign(TIP, L5.TIP);
+
 module.exports = { DATA, CITY, STATION_JA, STATION_ZH, LIST, KEY, HIGHLIGHT, TIP };

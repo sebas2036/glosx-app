@@ -1282,7 +1282,7 @@
       'Portugal': ['Faro', 'Lisbon', 'Porto'],
       'Slovenia': ['Ljubljana'],
       'Japan': ['Fukuoka', 'Hakone', 'Hiroshima', 'Kanazawa', 'Kobe', 'Kyoto', 'Nagoya', 'Nara', 'Osaka', 'Sapporo', 'Tokyo', 'Yokohama'],
-      'China': ["Beijing", "Changchun", "Changsha", "Chengdu", "Chongqing", "Dali", "Dalian", "Datong", "Fuzhou", "Guangzhou", "Guilin", "Guiyang", "Haikou", "Hangzhou", "Harbin", "Hefei", "Hong Kong", "Huangshan", "Jinan", "Kunming", "Lanzhou", "Leshan", "Lijiang", "Luoyang", "Nanjing", "Nanning", "Ningbo", "Qingdao", "Qufu", "Sanya", "Shanghai", "Shaoxing", "Shenyang", "Shenzhen", "Suzhou", "Tai’an", "Taiyuan", "Tianjin", "Wenzhou", "Wuhan", "Wuxi", "Xi’an", "Xiamen", "Xining", "Yantai", "Zhangjiajie", "Zhengzhou", "Zhuhai"],
+      'China': ["Beijing", "Changchun", "Changsha", "Chengdu", "Chongqing", "Dali", "Dalian", "Datong", "Fuzhou", "Guangzhou", "Guilin", "Guiyang", "Haikou", "Hangzhou", "Harbin", "Hefei", "Hohhot", "Hong Kong", "Huangshan", "Jinan", "Kaifeng", "Kunming", "Lanzhou", "Leshan", "Lijiang", "Luoyang", "Nanchang", "Nanjing", "Nanning", "Ningbo", "Qingdao", "Qufu", "Sanya", "Shanghai", "Shaoxing", "Shenyang", "Shenzhen", "Shijiazhuang", "Suzhou", "Tai’an", "Taiyuan", "Tianjin", "Wenzhou", "Wuhan", "Wuxi", "Xi’an", "Xiamen", "Xining", "Yangzhou", "Yantai", "Yichang", "Zhangjiajie", "Zhangye", "Zhengzhou", "Zhuhai"],
       'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Siena', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],

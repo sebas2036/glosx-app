@@ -48,7 +48,14 @@
     "wenzhou": "aeeb6954-116c-4aba-869f-a86c74ad397d",
     "xining": "091fb984-2ce4-4db1-8d2a-a8b526903f7d",
     "yantai": "a75192b7-4489-4851-a902-3a004cfdb8ad",
-    "hefei": "b56bdcfc-c708-4b24-a4c7-479794713827"
+    "hefei": "b56bdcfc-c708-4b24-a4c7-479794713827",
+    "yangzhou": "d1a80e40-5ea0-4cf8-a0c9-9ecdc81c402d",
+    "yichang": "63846860-fff3-41fc-8c93-be715e87c68a",
+    "shijiazhuang": "a2e459d3-e3d2-4f26-9718-a7a80651993b",
+    "nanchang": "c932d3ec-8d1c-4dab-a4ff-a2ac747185b5",
+    "hohhot": "872bd5d7-a5f7-4aef-a7ea-5165e4e60bb9",
+    "zhangye": "a7b936d2-5510-4806-b6cb-362f5664b29b",
+    "kaifeng": "0fba351c-216d-4ef2-a8bf-e691b3c1b57b"
   },
   "routes": {
     "beijing-shanghai": {
@@ -561,10 +568,151 @@
       "first": "06:01",
       "last": "23:28",
       "main": "Shanghai Hongqiao → Hefei South"
+    },
+    "shanghai-shenzhen": {
+      "trains": 23,
+      "fastest_min": 395,
+      "first": "06:52",
+      "last": "20:15",
+      "main": "Shanghai Hongqiao → Shenzhen North"
+    },
+    "chongqing-wuhan": {
+      "trains": 49,
+      "fastest_min": 233,
+      "first": "06:01",
+      "last": "18:36",
+      "main": "Chongqing North → Wuhan"
+    },
+    "chongqing-kunming": {
+      "trains": 22,
+      "fastest_min": 291,
+      "first": "06:41",
+      "last": "18:13",
+      "main": "Chongqing West → Kunming South"
+    },
+    "guilin-kunming": {
+      "trains": 16,
+      "fastest_min": 272,
+      "first": "06:58",
+      "last": "17:52",
+      "main": "Guilin North → Kunming South"
+    },
+    "nanjing-hefei": {
+      "trains": 129,
+      "fastest_min": 48,
+      "first": "03:27",
+      "last": "22:08",
+      "main": "Nanjing South → Hefei South"
+    },
+    "hefei-huangshan": {
+      "trains": 42,
+      "fastest_min": 74,
+      "first": "03:00",
+      "last": "20:24",
+      "main": "Hefei South → Huangshan North"
+    },
+    "xian-taiyuan": {
+      "trains": 55,
+      "fastest_min": 165,
+      "first": "00:05",
+      "last": "20:29",
+      "main": "Xi'an North → Taiyuan South"
+    },
+    "zhengzhou-wuhan": {
+      "trains": 126,
+      "fastest_min": 93,
+      "first": "00:05",
+      "last": "23:59",
+      "main": "Zhengzhou East → Wuhan"
+    },
+    "changsha-guilin": {
+      "trains": 30,
+      "fastest_min": 155,
+      "first": "03:51",
+      "last": "21:38",
+      "main": "Changsha South → Guilin North"
+    },
+    "hangzhou-fuzhou": {
+      "trains": 68,
+      "fastest_min": 172,
+      "first": "07:03",
+      "last": "18:13",
+      "main": "Hangzhou East → Fuzhou South"
+    },
+    "shenzhen-changsha": {
+      "trains": 65,
+      "fastest_min": 153,
+      "first": "06:06",
+      "last": "21:31",
+      "main": "Shenzhen North → Changsha South"
+    },
+    "beijing-dalian": {
+      "trains": 11,
+      "fastest_min": 216,
+      "first": "08:10",
+      "last": "20:10",
+      "main": "Beijing Chaoyang → Dalian North"
+    },
+    "nanjing-yangzhou": {
+      "trains": 52,
+      "fastest_min": 46,
+      "first": "06:00",
+      "last": "20:48",
+      "main": "Nanjing South → Yangzhou East"
+    },
+    "wuhan-yichang": {
+      "trains": 80,
+      "fastest_min": 94,
+      "first": "03:34",
+      "last": "22:00",
+      "main": "Wuhan → Yichang East"
+    },
+    "beijing-shijiazhuang": {
+      "trains": 218,
+      "fastest_min": 60,
+      "first": "05:19",
+      "last": "23:45",
+      "main": "Beijing West → Shijiazhuang"
+    },
+    "shanghai-nanchang": {
+      "trains": 72,
+      "fastest_min": 166,
+      "first": "06:07",
+      "last": "21:18",
+      "main": "Shanghai Hongqiao → Nanchang West"
+    },
+    "beijing-hohhot": {
+      "trains": 63,
+      "fastest_min": 129,
+      "first": "03:38",
+      "last": "23:58",
+      "main": "Qinghe → Huhehaote East"
+    },
+    "lanzhou-zhangye": {
+      "trains": 51,
+      "fastest_min": 128,
+      "first": "04:23",
+      "last": "23:32",
+      "main": "Lanzhou West → Zhangye West"
+    },
+    "zhengzhou-kaifeng": {
+      "trains": 249,
+      "fastest_min": 17,
+      "first": "00:18",
+      "last": "23:54",
+      "main": "Zhengzhou East → Kaifeng"
+    },
+    "shanghai-changsha": {
+      "trains": 46,
+      "fastest_min": 240,
+      "first": "06:07",
+      "last": "21:08",
+      "main": "Shanghai Hongqiao → Changsha South"
     }
   },
   "_lote2": "Lote 2 (20 rutas) re-medido 14-nov-2026 con el parser corregido (cuenta trenes \"N mins\" y \"Sold out\"), búsqueda Klook para el 27-nov-2026",
   "_lote3": "Lote 3 (20 rutas) verificado 14-nov-2026 en la página de resultados de Klook para el 27-nov-2026",
   "_remedicion": "14-nov-2026: las 53 rutas re-medidas con el parser que cuenta trenes que llegan al día siguiente (+1); se actualizan trenes/primera/última, la duración más rápida publicada se mantiene",
-  "_lote4": "Lote 4 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (qufu = estación Qufu East)"
+  "_lote4": "Lote 4 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (qufu = estación Qufu East)",
+  "_lote5": "Lote 5 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (Chaozhou descartada: sin trenes directos en Klook)"
 }
