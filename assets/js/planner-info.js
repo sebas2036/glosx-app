@@ -12,7 +12,8 @@
     es: { opts: 'Opciones de viaje', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones y precios orientativos según datos de Omio. El precio final depende de la fecha, el operador y la antelación de la compra.', guide: 'Ver la guía completa de la ruta' },
     fr: { opts: 'Options de voyage', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées et prix indicatifs d’après les données d’Omio. Le prix final dépend de la date, de l’opérateur et de l’avance de réservation.', guide: 'Voir le guide complet de la ligne' },
     it: { opts: 'Come viaggiare', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate e prezzi indicativi secondo i dati di Omio. Il prezzo finale dipende da data, operatore e anticipo di prenotazione.', guide: 'Vedi la guida completa del percorso' },
-    ja: { opts: '移動手段', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間と料金の目安です。最終料金は日付、運行会社、予約時期によって変わります。', guide: 'ルートガイドを見る' }
+    ja: { opts: '移動手段', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間と料金の目安です。最終料金は日付、運行会社、予約時期によって変わります。', guide: 'ルートガイドを見る' },
+    zh: { opts: '出行方式', train: '火车', bus: '巴士', flight: '飞机', ferry: '轮渡', h: '小时', m: '分', note: '根据 Omio 数据得出的大致行程时间和低价参考。最终价格取决于日期、运营商和预订时间。', guide: '查看完整线路指南' }
   };
   var ICON = {
     train: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg>',
@@ -53,7 +54,8 @@
     es: { eye: 'Guía de la ruta', sub: '{r}: horarios, estaciones, hotel y consejos', meta: 'Primer tren {f} · {n} trenes directos al día' },
     fr: { eye: 'Guide du trajet', sub: '{r} : horaires, gares, hôtel et conseils', meta: 'Premier train {f} · {n} trains directs par jour' },
     it: { eye: 'Guida al percorso', sub: '{r}: orari, stazioni, hotel e consigli', meta: 'Primo treno {f} · {n} treni diretti al giorno' },
-    ja: { eye: 'ルートガイド', sub: '{r}：時刻表・駅・ホテル・旅のコツ', meta: '始発 {f}・直通 1日{n}本' }
+    ja: { eye: 'ルートガイド', sub: '{r}：時刻表・駅・ホテル・旅のコツ', meta: '始発 {f}・直通 1日{n}本' },
+    zh: { eye: '线路指南', sub: '{r}：时刻、车站、酒店和建议', meta: '首班 {f} · 每天 {n} 班直达' }
   };
   var cards = null;
   function loadCards() {
