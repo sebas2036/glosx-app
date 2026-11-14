@@ -1282,7 +1282,7 @@
       'Portugal': ['Faro', 'Lisbon', 'Porto'],
       'Slovenia': ['Ljubljana'],
       'Japan': ['Fukuoka', 'Hakone', 'Hiroshima', 'Kanazawa', 'Kobe', 'Kyoto', 'Nagoya', 'Nara', 'Osaka', 'Sapporo', 'Tokyo', 'Yokohama'],
-      'China': ["Beijing", "Chengdu", "Chongqing", "Guangzhou", "Guilin", "Hangzhou", "Hong Kong", "Huangshan", "Nanjing", "Shanghai", "Shenzhen", "Suzhou", "Tianjin", "Xi’an"],
+      'China': ["Beijing", "Changsha", "Chengdu", "Chongqing", "Dali", "Guangzhou", "Guilin", "Hangzhou", "Harbin", "Hong Kong", "Huangshan", "Kunming", "Leshan", "Lijiang", "Luoyang", "Nanjing", "Qingdao", "Shanghai", "Shenzhen", "Suzhou", "Tianjin", "Wuhan", "Xiamen", "Xi’an", "Zhangjiajie"],
       'Italy': ['Florence', 'Milan', 'Naples', 'Pisa', 'Positano', 'Rome', 'Salerno', 'Siena', 'Sorrento', 'Turin', 'Venice'],
       'Monaco': ['Monaco'],
       'Netherlands': ['Amsterdam'],
