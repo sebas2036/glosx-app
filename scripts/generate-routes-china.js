@@ -65,6 +65,37 @@ function long(m, l) {
 }
 const about = (m, l) => ({ en: 'about', fr: 'environ', it: 'circa', es: m >= 120 || (m >= 60 && m < 120) ? 'unas' : 'unos' }[l]);
 
+
+// 4 preguntas más por ruta (se muestran con "ver más", data-more="1", como en Japón)
+function extraFaqs(l, A, B, st, many) {
+  const X = {
+    en: [[`Which stations does the train from ${A} to ${B} use?`, `Most trains run ${st}. Big Chinese cities often have several stations, so check the ones on your ticket.`],
+      [`How do I book the train from ${A} to ${B} from abroad?`, 'Search the route on Klook, choose your train and seat class, enter the passenger’s passport details and pay with a foreign card. The ticket is linked to that passport.'],
+      ['Which seat class should I choose?', 'Second class is the standard choice and is comfortable for most trips. First class has wider seats and more legroom, and on the fastest trains business class has seats that recline almost flat.'],
+      [`How far in advance should I book the train from ${A} to ${B}?`, (many ? 'There are many trains on this route, so a few days ahead is usually enough, except around Chinese New Year and the October Golden Week.' : 'There are fewer trains on this route, so book as early as you can, especially around Chinese New Year and the October Golden Week.') + ' Klook can take your booking before sales open and buys the ticket as soon as they do.']],
+    es: [[`¿De qué estaciones sale y a cuáles llega el tren de ${A} a ${B}?`, `La mayoría de los trenes van ${st}. Las grandes ciudades chinas suelen tener varias estaciones, así que revisa las de tu billete.`],
+      [`¿Cómo reservo el tren de ${A} a ${B} desde el extranjero?`, 'Busca la ruta en Klook, elige el tren y la clase, escribe los datos del pasaporte del viajero y paga con una tarjeta extranjera. El billete queda vinculado a ese pasaporte.'],
+      ['¿Qué clase de asiento conviene elegir?', 'La segunda clase es la opción habitual y resulta cómoda para la mayoría de los viajes. La primera clase tiene asientos más anchos y más espacio, y en los trenes más rápidos la clase business tiene asientos que se reclinan casi por completo.'],
+      [`¿Con cuánta antelación conviene reservar el tren de ${A} a ${B}?`, (many ? 'En esta ruta hay muchos trenes, así que suele bastar con unos días de antelación, salvo en el Año Nuevo chino y la Semana Dorada de octubre.' : 'En esta ruta hay menos trenes, así que reserva lo antes posible, sobre todo en el Año Nuevo chino y la Semana Dorada de octubre.') + ' Klook puede tomar tu reserva antes de que abra la venta y compra el billete en cuanto se abre.']],
+    fr: [[`De quelles gares part et arrive le train de ${A} à ${B} ?`, `La plupart des trains relient ${st}. Les grandes villes chinoises ont souvent plusieurs gares : vérifiez celles de votre billet.`],
+      [`Comment réserver le train de ${A} à ${B} depuis l’étranger ?`, 'Cherchez le trajet sur Klook, choisissez le train et la classe, saisissez les données du passeport du voyageur et payez avec une carte étrangère. Le billet est lié à ce passeport.'],
+      ['Quelle classe choisir ?', 'La deuxième classe est le choix habituel et reste confortable pour la plupart des trajets. La première classe offre des sièges plus larges et plus d’espace, et dans les trains les plus rapides la classe affaires propose des sièges presque entièrement inclinables.'],
+      [`Combien de temps à l’avance réserver le train de ${A} à ${B} ?`, (many ? 'Les trains sont nombreux sur ce trajet : quelques jours à l’avance suffisent en général, sauf autour du Nouvel An chinois et de la Semaine d’or d’octobre.' : 'Les trains sont moins nombreux sur ce trajet : réservez le plus tôt possible, surtout autour du Nouvel An chinois et de la Semaine d’or d’octobre.') + ' Klook peut prendre votre réservation avant l’ouverture des ventes et achète le billet dès qu’elles ouvrent.']],
+    it: [[`Da quali stazioni parte e arriva il treno da ${A} a ${B}?`, `La maggior parte dei treni collega ${st}. Le grandi città cinesi hanno spesso più stazioni, quindi controlla quelle sul biglietto.`],
+      [`Come prenoto il treno da ${A} a ${B} dall’estero?`, 'Cerca la tratta su Klook, scegli il treno e la classe, inserisci i dati del passaporto del viaggiatore e paga con una carta straniera. Il biglietto resta collegato a quel passaporto.'],
+      ['Quale classe conviene scegliere?', 'La seconda classe è la scelta abituale ed è comoda per la maggior parte dei viaggi. La prima classe ha sedili più larghi e più spazio, e sui treni più veloci la business class ha sedili che si reclinano quasi del tutto.'],
+      [`Con quanto anticipo conviene prenotare il treno da ${A} a ${B}?`, (many ? 'Su questa tratta i treni sono molti, quindi di solito bastano pochi giorni di anticipo, tranne intorno al Capodanno cinese e alla Settimana d’oro di ottobre.' : 'Su questa tratta i treni sono meno frequenti, quindi prenota il prima possibile, soprattutto intorno al Capodanno cinese e alla Settimana d’oro di ottobre.') + ' Klook può prendere la prenotazione prima dell’apertura delle vendite e acquista il biglietto appena aprono.']],
+    ja: [[`${A}から${B}への列車はどの駅を使う？`, `多くの列車は${st}を結びます。中国の大都市には駅が複数あることが多いので、切符の駅を確認してください。`],
+      [`海外から${A}〜${B}の列車を予約するには？`, 'Klookで区間を検索し、列車と座席クラスを選んで、乗客のパスポート情報を入力し、海外のカードで支払います。きっぷはそのパスポートにひも付けられます。'],
+      ['どの座席クラスを選べばいい？', '二等座が一般的で、ほとんどの区間で快適に過ごせます。一等座は座席が広くゆったりしており、最速列車の商務座はほぼ水平まで倒せるシートです。'],
+      [`${A}〜${B}の列車はどのくらい前に予約すべき？`, (many ? '本数が多い区間なので、春節や10月の国慶節の連休を除けば数日前の予約で十分なことが多いです。' : '本数が少ない区間なので、特に春節や10月の国慶節の連休はできるだけ早めに予約しましょう。') + 'Klookでは発売開始前に予約を受け付け、発売と同時にきっぷを手配してくれます。']],
+    zh: [[`从${A}到${B}的火车在哪些车站上下车？`, `多数列车往返于${st}。中国大城市往往有好几个火车站，请看清车票上的车站。`],
+      [`在国外怎样预订${A}到${B}的火车票？`, '在 Klook 搜索线路，选好车次和席别，填写乘客的护照信息，用境外银行卡付款。车票会绑定这本护照。'],
+      ['选哪种席别比较好？', '二等座是最常见的选择，大多数行程都很舒适。一等座座位更宽、空间更大；最快的车次还有商务座，座椅几乎可以放平。'],
+      [`${A}到${B}的火车票要提前多久订？`, (many ? '这条线路车次很多，除春节和十一黄金周外，一般提前几天预订就够了。' : '这条线路车次较少，尤其在春节和十一黄金周期间，请尽早预订。') + 'Klook 可以在开售前接受预订，开售后立即为你购票。']]
+  };
+  return X[l];
+}
 function build([slug, a, b, photo]) {
   const d = DATA[KEY[slug] || slug];
   if (!d) throw new Error('Sin datos de Klook: ' + slug);
@@ -132,6 +163,12 @@ function build([slug, a, b, photo]) {
         [`${A}〜${B}間の列車は1日何本？`, `調査日（2026年11月27日）には、Klookで直通列車が${n}本表示され、始発は${f1}、最終は${f2}でした。`],
         ['中国で列車に乗るのにパスポートは必要？', 'はい。きっぷは実名制で、駅でパスポートと照合されます。']];
     }
+  }
+  for (const l of LANGS) {
+    const SM = l === 'ja' ? STATION_JA : l === 'zh' ? STATION_ZH : null;
+    const [o, t] = d.main.split(' → ').map(x => (SM && SM[x]) || x);
+    const st = { en: `from ${o} to ${t}`, es: `de ${o} a ${t}`, fr: `${o} et ${t}`, it: `${o} e ${t}`, ja: `${o}と${t}`, zh: `${o}和${t}之间` }[l];
+    r.faqs[l].push(...extraFaqs(l, CITY[a][l], CITY[b][l], st, n >= 100));
   }
   return r;
 }
@@ -201,8 +238,8 @@ function mainHtml(r, lang) {
   const related = others.filter(shares).concat(others.filter(x => !shares(x))).slice(0, 6)
     .map(x => `<a href="/rutas/${x.slug}${SUFFIX[lang]}" class="related-link">${esc(x.from[lang])} &rarr; ${esc(x.to[lang])}</a>`).join('\n        ');
   const li = a => a.map(t => `<li>${esc(t)}</li>`).join('\n      ');
-  const faq = r.faqs[lang].map(([q, a]) => `
-      <div class="faq-item">
+  const faq = r.faqs[lang].map(([q, a], i) => `
+      <div class="faq-item"${i >= 3 ? ' data-more="1"' : ''}>
         <h3 class="faq-q">${esc(q)}</h3>
         <p class="faq-a">${esc(a)}</p>
       </div>`).join('');
