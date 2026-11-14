@@ -161,6 +161,39 @@ function schema(r, lang) {
   ];
   return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
 }
+
+// ── tarjeta "Dónde alojarte" (mismo molde que las rutas de Japón): hoteles en la ciudad de destino,
+// Klook (city_id verificados en el backend) + comparar en Booking ──
+const HOTEL = {
+  en: { h: 'Where to stay', t: c => `Hotels in ${c}`, c: 'China', btn: 'See current price →', bk: 'Compare on Booking.com →' },
+  es: { h: 'Dónde alojarte', t: c => `Hoteles en ${c}`, c: 'China', btn: 'Ver precio actual →', bk: 'Comparar en Booking.com →' },
+  fr: { h: 'Où dormir', t: c => `Hôtels à ${c}`, c: 'Chine', btn: 'Voir le prix actuel →', bk: 'Comparer sur Booking.com →' },
+  it: { h: 'Dove dormire', t: c => `Hotel a ${c}`, c: 'Cina', btn: 'Vedi il prezzo attuale →', bk: 'Confronta su Booking.com →' },
+  ja: { h: 'おすすめの宿泊先', t: c => `${c}のホテル`, c: '中国', btn: '現在の料金を見る →', bk: 'Booking.comで比較 →' },
+  zh: { h: '住宿推荐', t: c => `${c}酒店`, c: '中国', btn: '查看当前价格 →', bk: '在 Booking.com 比较 →' }
+};
+const API = 'https://voxa-production-dc15.up.railway.app/affiliate';
+function hotelHtml(r, lang) {
+  const H = HOTEL[lang], city = r.to[lang], en = encodeURIComponent(CITY[r.toKey].en.replace("'", '’'));
+  const sep = lang === 'ja' || lang === 'zh' ? '・' : ', ';
+  return `
+    <h2>${H.h}</h2>
+    <div class="hotel-card">
+      <div class="hotel-card-header">
+        <img class="hotel-card-image" src="https://images.pexels.com/photos/${r.photo}/pexels-photo-${r.photo}.jpeg?auto=compress&cs=tinysrgb&w=330" alt="${esc(H.t(city))}" loading="lazy">
+        <div class="hotel-card-info">
+          <div class="hotel-card-name">${esc(H.t(city))}</div>
+          <div class="hotel-card-location">${esc(city)}${sep}${H.c}</div>
+        </div>
+      </div>
+      <div class="hotel-card-actions">
+        <a href="${API}/klook-hotel?city=${en}" class="cta-btn" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('hotel_${r.slug}_${lang}')">${H.btn}</a>
+        <br>
+        <a href="${API}/booking-hotel?city=${en}" class="economic-link" target="_blank" rel="noopener sponsored" onclick="trackPartnerClick('hotel_booking_${r.slug}_${lang}')">${H.bk}</a>
+      </div>
+    </div>
+`;
+}
 function mainHtml(r, lang) {
   const u = UI[lang], from = r.from[lang], to = r.to[lang];
   const shares = x => [x.fromKey, x.toKey].some(k => k === r.fromKey || k === r.toKey);
@@ -199,6 +232,7 @@ function mainHtml(r, lang) {
       ${li(r.tips[lang])}
     </ul>
 
+${hotelHtml(r, lang)}
     <section class="faq">
       <h2>${u.faq}</h2>${faq}
     </section>
