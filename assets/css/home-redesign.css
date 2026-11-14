@@ -994,3 +994,6 @@ body.home-v2 .wt-route-btn[data-route="cn-south"]::before { background-image: ur
 body.home-v2 .wt-timeline-wrap[data-route="cn-classic"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/cn-xian.webp'); }
 body.home-v2 .wt-timeline-wrap[data-route="cn-east"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/cn-huangshan.webp'); }
 body.home-v2 .wt-timeline-wrap[data-route="cn-south"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/scenic/cn-guilin.webp'); }
+/* Descubramos juntos en modo China: tarjetas propias (.cn-static); las de Europa se ocultan */
+body:not([data-klook="china"]) .cn-static { display: none !important; }
+body[data-klook="china"] #discover .eu-static { display: none !important; }

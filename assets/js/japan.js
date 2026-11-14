@@ -1065,6 +1065,89 @@
     }
   })();
 
+  // ── Descubramos juntos en modo China (14-nov-2026): 8 destinos chinos con guía de ruta ──────────────
+  // [ruta, foto, { idioma: [región, lugar, tren, época/tiempo, texto] }]. Tiempos: Klook (consulta 13-nov-2026).
+  var CN_DISCOVER = [
+    ['shanghai-hangzhou', 'cn-hangzhou', {
+      en: ['Zhejiang · Lakes & tea hills', 'Hangzhou', 'Shanghai → Hangzhou by high-speed train', 'From about 45 min · hundreds of trains a day', 'West Lake, its causeways and pagodas, and the Longjing tea villages in the hills around it — an easy day trip from Shanghai.'],
+      es: ['Zhejiang · Lagos y colinas de té', 'Hangzhou', 'Shanghái → Hangzhou en tren de alta velocidad', 'Desde unos 45 min · cientos de trenes al día', 'El Lago del Oeste, sus diques y pagodas, y las aldeas de té Longjing en las colinas: una escapada fácil desde Shanghái.'],
+      fr: ['Zhejiang · Lacs et collines de thé', 'Hangzhou', 'Shanghai → Hangzhou en train à grande vitesse', 'Dès 45 min environ · des centaines de trains par jour', 'Le lac de l’Ouest, ses digues et ses pagodes, et les villages de thé Longjing sur les collines : une escapade facile depuis Shanghai.'],
+      it: ['Zhejiang · Laghi e colline del tè', 'Hangzhou', 'Shanghai → Hangzhou in treno ad alta velocità', 'Da circa 45 min · centinaia di treni al giorno', 'Il Lago dell’Ovest, i suoi argini e le pagode, e i villaggi del tè Longjing sulle colline: una gita facile da Shanghai.'],
+      ja: ['浙江・湖と茶畑の丘', '杭州', '上海 → 杭州　高速鉄道', '最速約45分・1日数百本', '西湖の堤や塔、そして丘に広がる龍井茶の村。上海から気軽に日帰りできます。'],
+      zh: ['浙江 · 湖光与茶山', '杭州', '上海 → 杭州　高铁', '最快约 45 分钟 · 每天几百班', '西湖的长堤和宝塔，还有周围山间的龙井茶村——从上海出发一日游很轻松。'] }],
+    ['shanghai-suzhou', 'cn-suzhou', {
+      en: ['Jiangsu · Gardens & canals', 'Suzhou', 'Shanghai → Suzhou by high-speed train', 'From about 21 min', 'Classical gardens and canal streets lined with old houses, close enough to Shanghai for half a day.'],
+      es: ['Jiangsu · Jardines y canales', 'Suzhou', 'Shanghái → Suzhou en tren de alta velocidad', 'Desde unos 21 min', 'Jardines clásicos y calles junto a canales con casas antiguas, tan cerca de Shanghái que basta medio día.'],
+      fr: ['Jiangsu · Jardins et canaux', 'Suzhou', 'Shanghai → Suzhou en train à grande vitesse', 'Dès 21 min environ', 'Jardins classiques et ruelles au bord des canaux bordées de vieilles maisons, assez proches de Shanghai pour une demi-journée.'],
+      it: ['Jiangsu · Giardini e canali', 'Suzhou', 'Shanghai → Suzhou in treno ad alta velocità', 'Da circa 21 min', 'Giardini classici e vie lungo i canali con case antiche, così vicine a Shanghai che basta mezza giornata.'],
+      ja: ['江蘇・庭園と運河', '蘇州', '上海 → 蘇州　高速鉄道', '最速約21分', '古典庭園と、古い家並みが続く運河沿いの路地。上海から半日でも訪ねられる近さです。'],
+      zh: ['江苏 · 园林与水乡', '苏州', '上海 → 苏州　高铁', '最快约 21 分钟', '古典园林和临河的老街，离上海很近，半天就能逛一逛。'] }],
+    ['hangzhou-huangshan', 'cn-huangshan', {
+      en: ['Anhui · Granite peaks', 'Huangshan', 'Hangzhou → Huangshan North by high-speed train', 'From about 1 h 13 min · then a bus to the mountain', 'The Yellow Mountain: granite peaks, twisted pines and, on many mornings, a sea of cloud below the summits.'],
+      es: ['Anhui · Picos de granito', 'Huangshan', 'Hangzhou → Huangshan North en tren de alta velocidad', 'Desde 1 h 13 min · luego autobús a la montaña', 'La Montaña Amarilla: picos de granito, pinos retorcidos y, muchas mañanas, un mar de nubes bajo las cumbres.'],
+      fr: ['Anhui · Pics de granit', 'Huangshan', 'Hangzhou → Huangshan North en train à grande vitesse', 'Dès 1 h 13 · puis bus jusqu’à la montagne', 'La Montagne Jaune : pics de granit, pins tordus et, bien des matins, une mer de nuages sous les sommets.'],
+      it: ['Anhui · Vette di granito', 'Huangshan', 'Hangzhou → Huangshan North in treno ad alta velocità', 'Da 1h13 · poi autobus fino alla montagna', 'La Montagna Gialla: vette di granito, pini contorti e, molte mattine, un mare di nuvole sotto le cime.'],
+      ja: ['安徽・花崗岩の峰', '黄山', '杭州 → 黄山北　高速鉄道', '最速約1時間13分・山まではバス', '花崗岩の峰とねじれた松、そして朝には山頂の下に広がる雲海。'],
+      zh: ['安徽 · 花岗岩奇峰', '黄山', '杭州 → 黄山北　高铁', '最快约 1 小时 13 分 · 再坐巴士上山', '花岗岩奇峰、虬曲的松树，很多清晨山顶下还会出现云海。'] }],
+    ['guangzhou-guilin', 'cn-guilin', {
+      en: ['Guangxi · Karst & rivers', 'Guilin · Li River', 'Guangzhou → Guilin by high-speed train', 'From about 2 h 04 min', 'Gateway to the karst peaks of the Li River; many travellers continue to Yangshuo by boat, bus or train.'],
+      es: ['Guangxi · Karst y ríos', 'Guilin · río Li', 'Cantón → Guilin en tren de alta velocidad', 'Desde unas 2 h 04', 'La puerta a los picos kársticos del río Li; muchos viajeros siguen a Yangshuo en barco, autobús o tren.'],
+      fr: ['Guangxi · Karst et rivières', 'Guilin · rivière Li', 'Canton → Guilin en train à grande vitesse', 'Dès 2 h 04 environ', 'La porte des pics karstiques de la rivière Li ; beaucoup de voyageurs continuent vers Yangshuo en bateau, bus ou train.'],
+      it: ['Guangxi · Carsismo e fiumi', 'Guilin · fiume Li', 'Canton → Guilin in treno ad alta velocità', 'Da circa 2h04', 'La porta delle vette carsiche del fiume Li; molti proseguono verso Yangshuo in barca, autobus o treno.'],
+      ja: ['広西・カルストと川', '桂林・漓江', '広州 → 桂林　高速鉄道', '最速約2時間4分', '漓江のカルストの峰々への玄関口。船やバス、列車で陽朔へ向かう人も多くいます。'],
+      zh: ['广西 · 喀斯特山水', '桂林 · 漓江', '广州 → 桂林　高铁', '最快约 2 小时 4 分', '漓江喀斯特山峰的门户；很多游客会再坐船、巴士或火车去阳朔。'] }],
+    ['beijing-xian', 'cn-xian', {
+      en: ['Shaanxi · Ancient capital', 'Xi’an', 'Beijing → Xi’an by high-speed train', 'From about 4 h 10 min', 'The old city wall you can cycle on top of, and the Terracotta Army a separate trip east of the city.'],
+      es: ['Shaanxi · Antigua capital', 'Xi’an', 'Pekín → Xi’an en tren de alta velocidad', 'Desde unas 4 h 10', 'La muralla antigua, que se puede recorrer en bici por arriba, y los Guerreros de Terracota en una excursión al este de la ciudad.'],
+      fr: ['Shaanxi · Ancienne capitale', 'Xi’an', 'Pékin → Xi’an en train à grande vitesse', 'Dès 4 h 10 environ', 'Les vieux remparts, que l’on parcourt à vélo, et l’Armée de terre cuite dans une excursion à l’est de la ville.'],
+      it: ['Shaanxi · Antica capitale', 'Xi’an', 'Pechino → Xi’an in treno ad alta velocità', 'Da circa 4h10', 'Le antiche mura, da percorrere in bici, e l’Esercito di terracotta con un’escursione a est della città.'],
+      ja: ['陝西・古都', '西安', '北京 → 西安　高速鉄道', '最速約4時間10分', '上を自転車で走れる古い城壁と、市の東にある兵馬俑。'],
+      zh: ['陕西 · 千年古都', '西安', '北京 → 西安　高铁', '最快约 4 小时 10 分', '可以在城墙上骑自行车，兵马俑则在城东，需要另外安排。'] }],
+    ['chengdu-chongqing', 'cn-chongqing', {
+      en: ['Chongqing · Mountain city', 'Chongqing', 'Chengdu → Chongqing by high-speed train', 'From about 1 h 06 min', 'A city built on hills where the Jialing meets the Yangtze, famous for its night views and hotpot.'],
+      es: ['Chongqing · Ciudad de montaña', 'Chongqing', 'Chengdu → Chongqing en tren de alta velocidad', 'Desde 1 h 06', 'Una ciudad sobre colinas donde el Jialing se une al Yangtsé, famosa por sus vistas nocturnas y su olla caliente.'],
+      fr: ['Chongqing · Ville-montagne', 'Chongqing', 'Chengdu → Chongqing en train à grande vitesse', 'Dès 1 h 06', 'Une ville bâtie sur des collines, au confluent du Jialing et du Yangtsé, célèbre pour ses vues nocturnes et sa fondue.'],
+      it: ['Chongqing · Città di montagna', 'Chongqing', 'Chengdu → Chongqing in treno ad alta velocità', 'Da 1h06', 'Una città sulle colline dove il Jialing incontra lo Yangtze, famosa per le viste notturne e l’hotpot.'],
+      ja: ['重慶・山の都市', '重慶', '成都 → 重慶　高速鉄道', '最速約1時間6分', '嘉陵江と長江が合流する丘の上の街。夜景と火鍋で知られます。'],
+      zh: ['重庆 · 山城', '重庆', '成都 → 重庆　高铁', '最快约 1 小时 6 分', '建在山上的城市，嘉陵江在这里汇入长江，以夜景和火锅闻名。'] }],
+    ['shenzhen-hong-kong', 'cn-hongkong', {
+      en: ['Hong Kong · Harbour city', 'Hong Kong', 'Shenzhen → Hong Kong West Kowloon', 'From about 14 min · border checks in the station', 'Victoria Harbour, the Peak and ferries across the bay, a short high-speed ride from Shenzhen.'],
+      es: ['Hong Kong · Ciudad puerto', 'Hong Kong', 'Shenzhen → Hong Kong West Kowloon', 'Desde unos 14 min · controles fronterizos en la estación', 'La bahía Victoria, el Peak y los ferris que la cruzan, a un tramo corto de alta velocidad desde Shenzhen.'],
+      fr: ['Hong Kong · Ville portuaire', 'Hong Kong', 'Shenzhen → Hong Kong West Kowloon', 'Dès 14 min environ · contrôles frontaliers en gare', 'Le port Victoria, le Peak et les ferries qui traversent la baie, à un court trajet à grande vitesse de Shenzhen.'],
+      it: ['Hong Kong · Città porto', 'Hong Kong', 'Shenzhen → Hong Kong West Kowloon', 'Da circa 14 min · controlli di frontiera in stazione', 'Il porto Victoria, il Peak e i traghetti nella baia, a un breve tragitto ad alta velocità da Shenzhen.'],
+      ja: ['香港・港の街', '香港', '深圳 → 香港西九龍', '最速約14分・出入境審査は駅構内', 'ヴィクトリア・ハーバー、ピーク、湾を渡るフェリー。深圳から高速鉄道ですぐです。'],
+      zh: ['香港 · 海港城市', '香港', '深圳 → 香港西九龙', '最快约 14 分钟 · 站内办理出入境', '维多利亚港、太平山顶和穿梭海湾的渡轮，从深圳坐高铁很快就到。'] }],
+    ['beijing-shanghai', 'cn-beijing', {
+      en: ['Beijing → Shanghai', 'Fuxing high-speed', 'China’s classic high-speed ride', 'From about 4 h 18 min', 'The busiest intercity line in China, linking the capital with its largest city at up to 350 km/h.'],
+      es: ['Pekín → Shanghái', 'Fuxing de alta velocidad', 'El clásico de la alta velocidad china', 'Desde unas 4 h 18', 'La línea interurbana más concurrida de China: une la capital con su ciudad más grande a hasta 350 km/h.'],
+      fr: ['Pékin → Shanghai', 'Fuxing à grande vitesse', 'Le grand classique de la grande vitesse chinoise', 'Dès 4 h 18 environ', 'La ligne interurbaine la plus fréquentée de Chine, entre la capitale et sa plus grande ville, jusqu’à 350 km/h.'],
+      it: ['Pechino → Shanghai', 'Fuxing ad alta velocità', 'Il classico dell’alta velocità cinese', 'Da circa 4h18', 'La linea intercity più trafficata della Cina: collega la capitale con la città più grande fino a 350 km/h.'],
+      ja: ['北京 → 上海', '復興号', '中国高速鉄道の定番', '最速約4時間18分', '中国でいちばん利用者の多い都市間路線。首都と最大都市を最高時速350kmで結びます。'],
+      zh: ['北京 → 上海', '复兴号高铁', '中国高铁的经典线路', '最快约 4 小时 18 分', '中国最繁忙的城际线路，以最高 350 公里的时速连接首都和最大城市。'] }]
+  ];
+  var CN_DISC_LEAD = { en: 'Cities and landscapes of China that are best reached by high-speed train — lakes, gardens, mountains and harbours.', es: 'Ciudades y paisajes de China que se disfrutan mejor en tren de alta velocidad: lagos, jardines, montañas y puertos.', fr: 'Des villes et des paysages de Chine à rejoindre en train à grande vitesse : lacs, jardins, montagnes et ports.', it: 'Città e paesaggi della Cina da raggiungere in treno ad alta velocità: laghi, giardini, montagne e porti.', ja: '高速鉄道で行きたい中国の街と風景。湖、庭園、山、そして港。', zh: '最适合坐高铁去的中国城市和风景：湖泊、园林、名山和海港。' };
+  JP_DISC_WATCH.zh = '查看指南 →'; JP_DISC_LEAD.zh = '最适合坐火车去的日本小镇和角落：温泉村、老街和山间铁路。';
+  (function () {
+    var grid = document.querySelector('#discover .discover-grid');
+    if (!grid || grid.getAttribute('data-jp-twin')) return;
+    var lg = lang(), key = CN_DISCOVER[0][2][lg] ? lg : 'en';
+    var suf = { es: 'es/', fr: 'fr/', it: 'it/', ja: 'ja/', zh: 'zh/' }[lg] || '';
+    var e = function (x) { return String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+    var lead = document.querySelector('[data-i18n="disc_lead"]');
+    var lc = twinHome(lead, function (c) { c.textContent = CN_DISC_LEAD[key]; });
+    if (lc) lc.classList.replace('jp-static', 'cn-static'), lc.classList.remove('eu-static');
+    var gc = twinHome(grid, function (c) {
+      c.classList.add('jp-discover-grid', 'cn-discover-grid');
+      c.innerHTML = CN_DISCOVER.map(function (d) {
+        var t = d[2][key];
+        return '<a href="/rutas/' + d[0] + '/' + suf + '" class="discover-card is-featured" style="background-image:url(\'/scenic/' + d[1] + '.webp\')"><span class="discover-pin"></span>' +
+          '<div class="discover-country">' + e(t[0]) + '</div><div class="discover-place">' + e(t[1]) + '</div><div class="discover-route">' + e(t[2]) + '</div>' +
+          '<div class="discover-season">' + e(t[3]) + '</div><div class="discover-tip">' + e(t[4]) + '</div><span class="discover-watch">' + e(JP_DISC_WATCH[key] || JP_DISC_WATCH.en) + '</span></a>';
+      }).join('');
+    });
+    if (gc) gc.classList.replace('jp-static', 'cn-static'), gc.classList.remove('eu-static');
+  })();
+
   // ── Características en modo Japón (fase 3): textos que hablaban solo de Europa o de datos en vivo ──
   var JP_FEAT = {"en": {"lead": "No subscriptions, no paywalls. Just clear journey times and smart tools.", "f1t": "Journey times at a glance", "f1d": "The duration of the fastest direct service on each Japanese route, taken from Klook data.", "f2t": "Japan & Europe, one site", "f2d": "Shinkansen, limited expresses and local lines from Hokkaido to Kyushu — and Europe too — in a single interface.", "f3t": "Journey search", "f3d": "Find the fastest direct service between Japanese cities, with journey times and a link to book.", "f4d": "Design multi-city trips across Japan 100% free. No travel agent required."}, "es": {"lead": "Sin suscripciones ni muros de pago. Solo tiempos de viaje claros y herramientas inteligentes.", "f1t": "Tiempos de viaje de un vistazo", "f1d": "La duración del servicio directo más rápido de cada ruta japonesa, con datos de Klook.", "f2t": "Japón y Europa, un solo sitio", "f2d": "Shinkansen, expresos limitados y líneas locales de Hokkaido a Kyushu —y también Europa— en una sola interfaz.", "f3t": "Búsqueda de trayectos", "f3d": "Encuentra el servicio directo más rápido entre ciudades japonesas, con el tiempo de viaje y un enlace para reservar.", "f4d": "Diseña viajes por varias ciudades de Japón 100% gratis. Sin agente de viajes."}, "fr": {"lead": "Sans abonnement ni accès payant. Seulement des durées de trajet claires et des outils intelligents.", "f1t": "Les durées de trajet en un coup d’œil", "f1d": "La durée du service direct le plus rapide de chaque itinéraire japonais, d’après les données de Klook.", "f2t": "Japon et Europe, un seul site", "f2d": "Shinkansen, express limités et lignes locales de Hokkaido à Kyushu — et l’Europe aussi — dans une seule interface.", "f3t": "Recherche de trajets", "f3d": "Trouvez le service direct le plus rapide entre villes japonaises, avec la durée du trajet et un lien pour réserver.", "f4d": "Concevez des voyages multi-villes au Japon 100 % gratuitement. Sans agent de voyage."}, "it": {"lead": "Niente abbonamenti né paywall. Solo tempi di viaggio chiari e strumenti intelligenti.", "f1t": "Tempi di viaggio a colpo d’occhio", "f1d": "La durata del servizio diretto più rapido su ogni percorso giapponese, secondo i dati di Klook.", "f2t": "Giappone ed Europa, un solo sito", "f2d": "Shinkansen, limited express e linee locali da Hokkaido a Kyushu — e anche l’Europa — in un’unica interfaccia.", "f3t": "Ricerca dei tragitti", "f3d": "Trova il servizio diretto più rapido tra le città giapponesi, con il tempo di viaggio e un link per prenotare.", "f4d": "Progetta viaggi in più città del Giappone 100% gratis. Nessun agente di viaggio."}, "de": {"lead": "Keine Abos, keine Paywalls. Nur klare Fahrzeiten und smarte Tools.", "f1t": "Fahrzeiten auf einen Blick", "f1d": "Die Dauer der schnellsten Direktverbindung auf jeder Strecke in Japan, nach Klook-Daten.", "f2t": "Japan & Europa, eine Seite", "f2d": "Shinkansen, Limited Express und Lokalbahnen von Hokkaido bis Kyushu — und Europa — in einer Oberfläche.", "f3t": "Verbindungssuche", "f3d": "Finde die schnellste Direktverbindung zwischen japanischen Städten, mit Fahrzeit und Buchungslink.", "f4d": "Plane Reisen durch mehrere Städte Japans 100 % kostenlos. Kein Reisebüro nötig."}, "pt": {"lead": "Sem assinaturas nem acesso pago. Só tempos de viagem claros e ferramentas inteligentes.", "f1t": "Tempos de viagem num relance", "f1d": "A duração do serviço direto mais rápido de cada rota japonesa, com dados da Klook.", "f2t": "Japão e Europa, um só site", "f2d": "Shinkansen, expressos limitados e linhas locais de Hokkaido a Kyushu — e também a Europa — numa única interface.", "f3t": "Busca de trajetos", "f3d": "Encontre o serviço direto mais rápido entre cidades japonesas, com o tempo de viagem e um link para reservar.", "f4d": "Planeje viagens por várias cidades do Japão 100% grátis. Sem agente de viagens."}, "ja": {"lead": "登録も有料の壁もありません。わかりやすい所要時間と、便利な機能だけ。", "f1t": "所要時間がひと目でわかる", "f1d": "日本の各区間で、いちばん速い直通列車の所要時間をKlookのデータから表示します。", "f2t": "日本もヨーロッパも、ひとつのサイトで", "f2d": "北海道から九州まで、新幹線も特急もローカル線も。ヨーロッパも、ひとつの画面で。", "f3t": "区間検索", "f3d": "日本の都市どうしを結ぶ、いちばん速い直通列車を探せます。所要時間と予約へのリンク付き。", "f4d": "日本の複数都市をめぐる旅を、完全無料で計画できます。旅行会社は不要です。"}, "zh": {"lead":"没有订阅，没有付费墙。只有清楚的行程时长和好用的工具。","f1t":"行程时长一目了然","f1d":"根据 Klook 数据，显示每条日本线路最快直达列车的时长。","f2t":"日本和欧洲，一个网站","f2d":"从北海道到九州的新干线、特急和地方线路——还有欧洲——都在一个界面里。","f3t":"线路搜索","f3d":"查找日本城市之间最快的直达列车，附行程时长和预订链接。","f4d":"免费规划日本多城市行程，无需旅行社。"}};
   (function () {
