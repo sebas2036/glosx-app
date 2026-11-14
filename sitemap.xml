@@ -120,66 +120,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/" />
   </url>
-  <url>
-    <loc>https://glosx.app/hoy/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
-      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/es/hoy/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
-      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/fr/hoy/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
-      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/it/hoy/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
-      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/ja/hoy/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
-      <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
-      <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
-      <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
-      <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
-      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
-  </url>
 <url>
     <loc>https://glosx.app/blog-fastest-growing-train-routes-europe-2026.html</loc>
     <lastmod>2026-10-17</lastmod>
@@ -55035,5 +54975,485 @@
       <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/rutas/milan-naples/ja/" />
       <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/rutas/milan-naples/zh/" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/milan-naples/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/de/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/pt/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/zh/hoy/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/hoy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/hoy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/hoy/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/hoy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/hoy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/hoy/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/hoy/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/hoy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/hoy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/de/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/pt/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/zh/ai-planner/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/ai-planner/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/ai-planner/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/de/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/pt/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/zh/explore/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/explore/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/explore/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/explore/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/explore/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/explore/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/explore/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/explore/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/explore/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/de/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/pt/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/zh/about.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/about.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/about.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/about.html" />
   </url>
 </urlset>
