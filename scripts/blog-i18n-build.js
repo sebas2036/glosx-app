@@ -22,6 +22,20 @@ const slug = file.replace(/\.html$/, '');
 const EN = require(`./i18n-blog/${slug}.en.json`);
 const byText = new Map(Object.entries(EN).filter(([k]) => !k.startsWith('_')).map(([k, v]) => [v, k]));
 const src = fs.readFileSync(path.join(ROOT, file), 'utf8');
+
+// bloques que se repiten en todos los artículos (pie, rutas relacionadas): diccionario común por texto inglés,
+// y los enlaces a rutas toman el nombre del h1 de la página de la ruta en ese idioma
+const COMMON = {};
+function common(en, l) {
+  if (!COMMON[l]) { const f = path.join(__dirname, 'i18n-blog', `_common.${l}.json`); COMMON[l] = fs.existsSync(f) ? require(f) : {}; }
+  if (COMMON[l][en] !== undefined) return COMMON[l][en];
+  const m = en.match(/^<a href="\/rutas\/([a-z0-9-]+)\/">[^<]*<\/a>$/);
+  if (m && exists(`rutas/${m[1]}/${l}/index.html`)) {
+    const t = (fs.readFileSync(path.join(ROOT, 'rutas', m[1], l, 'index.html'), 'utf8').match(/<h1[^>]*>([^<]+)<\/h1>/) || [])[1];
+    if (t) return `<a href="/rutas/${m[1]}/">${t.trim().replace('→', '&rarr;').replace('&rarr;', '→')}</a>`;
+  }
+  return undefined;
+}
 const pagePath = l => l === 'en' ? file : `${l}/${file}`;
 const pageUrl = l => 'https://glosx.app/' + pagePath(l);
 
@@ -40,9 +54,14 @@ function build(l) {
     const inner = m[3];
     if (nested.test(inner)) { re.lastIndex = m.index + m[1].length + 1; continue; }
     const k = byText.get(inner.trim());
-    if (k && T[k] !== undefined) { const s0 = m.index + m[0].indexOf('>') + 1; reps.push([s0, s0 + inner.length, inner.replace(inner.trim(), T[k])]); }
+    const tr = (k && T[k] !== undefined) ? T[k] : common(inner.trim(), l);
+    if (tr !== undefined) { const s0 = m.index + m[0].indexOf('>') + 1; reps.push([s0, s0 + inner.length, inner.replace(inner.trim(), tr)]); continue; }
+    if (false) { const s0 = m.index + m[0].indexOf('>') + 1; reps.push([s0, s0 + inner.length, inner.replace(inner.trim(), T[k])]); }
   }
   for (const [s0, e0, t] of reps.reverse()) body = body.slice(0, s0) + t + body.slice(e0);
+  const tr2 = inner => { const k = byText.get(inner.trim()); return k && T[k] !== undefined ? T[k] : common(inner.trim(), l); };
+  body = body.replace(/(<span class="klook-cta-(?:title|sub)">)(.*)(<\/span>\s*)$/gm, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
+  body = body.replace(/(<a [^>]*class="cta-btn[^"]*"[^>]*>)([^<]+)(<\/a>)/g, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
   body = body.replace(/\u0000(\d+)\u0000/g, (m, i) => keep[+i]);
   // datos estructurados: textos de las preguntas y titulares traducidos
   const pairs = [];

@@ -35,6 +35,10 @@ const title = (h.match(/<title[^>]*>([^<]*)<\/title>/) || [])[1];
 const desc = (h.match(/<meta name="description" content="([^"]*)"/) || [])[1];
 const out = { _title: title, _desc: desc };
 for (const b of blocks(h)) add(b);
+// botones: <span class="klook-cta-title|sub">…</span> (una línea, con spans de ciudad adentro) y <a class="cta-btn">…</a>
+const bodyOnly = h.slice(h.indexOf('<body')).replace(/<script[\s\S]*?<\/script>/g, '');
+for (const m of bodyOnly.matchAll(/<span class="klook-cta-(?:title|sub)">(.*)<\/span>\s*$/gm)) if (/[A-Za-z]{2}/.test(m[1])) add(m[1]);
+for (const m of bodyOnly.matchAll(/<a [^>]*class="cta-btn[^"]*"[^>]*>([^<]+)<\/a>/g)) if (/[A-Za-z]{2}/.test(m[1])) add(m[1].trim());
 for (const [s, id] of seen) out[id] = s;
 const dir = path.join(__dirname, 'i18n-blog');
 fs.mkdirSync(dir, { recursive: true });
