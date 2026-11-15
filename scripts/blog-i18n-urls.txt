@@ -450,3 +450,10 @@ https://glosx.app/it/trains-from-france-to-spain/
 https://glosx.app/pt/trains-from-france-to-spain/
 https://glosx.app/ja/trains-from-france-to-spain/
 https://glosx.app/zh/trains-from-france-to-spain/
+https://glosx.app/es/trains-from-germany-to-italy/
+https://glosx.app/fr/trains-from-germany-to-italy/
+https://glosx.app/de/trains-from-germany-to-italy/
+https://glosx.app/it/trains-from-germany-to-italy/
+https://glosx.app/pt/trains-from-germany-to-italy/
+https://glosx.app/ja/trains-from-germany-to-italy/
+https://glosx.app/zh/trains-from-germany-to-italy/
