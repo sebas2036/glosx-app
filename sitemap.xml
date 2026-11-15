@@ -1767,14 +1767,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/destinos/lucerne/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/destinos/lucerne/" />
   </url>
-  <url>
-    <loc>https://glosx.app/horarios-trenes-espana/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/horarios-trenes-espana/"/>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
 
 
@@ -59921,5 +59913,125 @@
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/en/horarios-trenes-espana/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/horarios-trenes-espana/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/horarios-trenes-espana/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/de/horarios-trenes-espana/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/horarios-trenes-espana/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/pt/horarios-trenes-espana/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/horarios-trenes-espana/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/zh/horarios-trenes-espana/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/en/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/horarios-trenes-espana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/en/horarios-trenes-espana/" />
   </url>
 </urlset>

@@ -505,3 +505,10 @@ https://glosx.app/it/last-train-europe/
 https://glosx.app/pt/last-train-europe/
 https://glosx.app/ja/last-train-europe/
 https://glosx.app/zh/last-train-europe/
+https://glosx.app/en/horarios-trenes-espana/
+https://glosx.app/fr/horarios-trenes-espana/
+https://glosx.app/de/horarios-trenes-espana/
+https://glosx.app/it/horarios-trenes-espana/
+https://glosx.app/pt/horarios-trenes-espana/
+https://glosx.app/ja/horarios-trenes-espana/
+https://glosx.app/zh/horarios-trenes-espana/

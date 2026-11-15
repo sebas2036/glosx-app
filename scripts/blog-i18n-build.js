@@ -36,7 +36,8 @@ function common(en, l) {
   }
   return undefined;
 }
-const pagePath = l => l === 'en' ? file : `${l}/${file}`;
+const SRC = process.env.SRC_LANG || 'en';   // idioma de la página raíz (horarios-trenes-espana está en español)
+const pagePath = l => l === SRC ? file : `${l}/${file}`;
 const pageUrl = l => 'https://glosx.app/' + pagePath(l).replace(/index\.html$/, '');
 
 function build(l) {
@@ -77,7 +78,7 @@ function build(l) {
   const fixLd = s => s.replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/g, (m, a, json, b) => {
     for (const [e, t] of pairs) if (e.length > 3) json = json.split(JSON.stringify(e).slice(1, -1)).join(JSON.stringify(t).slice(1, -1));
     json = json.replace(/("name":\s*)"Home"/g, `$1"${{ de: 'Startseite', pt: 'Início', zh: '首页', es: 'Inicio', fr: 'Accueil', it: 'Home', ja: 'ホーム' }[l] || 'Home'}"`).replace(/("item":\s*)"https:\/\/glosx\.app\/"/g, `$1"https://glosx.app/${l}/"`);
-    json = json.split(`"https://glosx.app/${file}"`).join(`"${pageUrl(l)}"`).split(`"${pageUrl('en')}"`).join(`"${pageUrl(l)}"`).replace(/"inLanguage":\s*"[a-z-]+"/g, `"inLanguage":"${HL(l)}"`);
+    json = json.split(`"https://glosx.app/${file}"`).join(`"${pageUrl(l)}"`).split(`"${pageUrl(SRC)}"`).join(`"${pageUrl(l)}"`).replace(/"inLanguage":\s*"[a-z-]+"/g, `"inLanguage":"${HL(l)}"`);
     return a + json + b;
   });
   head = fixLd(head); body = fixLd(body);
