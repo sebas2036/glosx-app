@@ -172,3 +172,6 @@ https://glosx.app/zh/blog-scenic-train-routes-europe.html
 https://glosx.app/de/blog-train-europe-survival-guide.html
 https://glosx.app/pt/blog-train-europe-survival-guide.html
 https://glosx.app/zh/blog-train-europe-survival-guide.html
+https://glosx.app/de/blog-ai-train-trip-planner-europe.html
+https://glosx.app/pt/blog-ai-train-trip-planner-europe.html
+https://glosx.app/zh/blog-ai-train-trip-planner-europe.html
