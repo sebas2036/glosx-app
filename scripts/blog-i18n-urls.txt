@@ -436,3 +436,10 @@ https://glosx.app/it/trains-from-uk-to-europe/
 https://glosx.app/pt/trains-from-uk-to-europe/
 https://glosx.app/ja/trains-from-uk-to-europe/
 https://glosx.app/zh/trains-from-uk-to-europe/
+https://glosx.app/es/trains-from-france-to-italy/
+https://glosx.app/fr/trains-from-france-to-italy/
+https://glosx.app/de/trains-from-france-to-italy/
+https://glosx.app/it/trains-from-france-to-italy/
+https://glosx.app/pt/trains-from-france-to-italy/
+https://glosx.app/ja/trains-from-france-to-italy/
+https://glosx.app/zh/trains-from-france-to-italy/
