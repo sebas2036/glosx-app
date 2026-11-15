@@ -37,7 +37,8 @@ function common(en, l) {
   return undefined;
 }
 const SRC = process.env.SRC_LANG || 'en';   // idioma de la página raíz (horarios-trenes-espana está en español)
-const pagePath = l => l === SRC ? file : `${l}/${file}`;
+const SUFFIX = !!process.env.LANG_SUFFIX;   // destinos: /destinos/x/<lang>/ en vez de /<lang>/destinos/x/
+const pagePath = l => l === SRC ? file : SUFFIX ? file.replace(/index\.html$/, `${l}/index.html`) : `${l}/${file}`;
 const pageUrl = l => 'https://glosx.app/' + pagePath(l).replace(/index\.html$/, '');
 
 function build(l) {
