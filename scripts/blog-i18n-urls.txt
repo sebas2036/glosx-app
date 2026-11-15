@@ -103,3 +103,6 @@ https://glosx.app/zh/blog-florence-siena-day-trip.html
 https://glosx.app/de/blog-japan-train-guide.html
 https://glosx.app/pt/blog-japan-train-guide.html
 https://glosx.app/zh/blog-japan-train-guide.html
+https://glosx.app/de/blog-paris-lourdes-pilgrimage-train.html
+https://glosx.app/pt/blog-paris-lourdes-pilgrimage-train.html
+https://glosx.app/zh/blog-paris-lourdes-pilgrimage-train.html
