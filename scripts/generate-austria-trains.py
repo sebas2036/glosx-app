@@ -115,6 +115,7 @@ T = {
 }
 
 fdate = lambda s, l: (lambda d: d.strftime('%d/%m/%Y') if l in ('es', 'fr', 'it') else f'{d.year}年{d.month}月{d.day}日' if l == 'ja' else d.strftime('%-d %B %Y'))(datetime.date.fromisoformat(s))
+import sys as _sys; _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from country_trains_i18n import extend as _ext; _ext(globals(), 'austria')
 os.makedirs(os.path.join(ROOT, 'assets/data'), exist_ok=True)
 with open(os.path.join(ROOT, 'assets/data/horarios-austria.csv'), 'w', encoding='utf8', newline='') as f:
     w = csv.writer(f)
@@ -140,7 +141,7 @@ for lang, t in T.items():
                      (r'<meta name="twitter:description"[^>]*>', '<meta name="twitter:description" content="%s" />' % html.escape(desc))]:
         head = re.sub(pat, val, head)
     head = re.sub(r'\s*<link rel="alternate" hreflang[^>]*>', '', head)
-    alts = ''.join('\n  <link rel="alternate" hreflang="%s" href="https://glosx.app/%s/" />' % (l, T[l]['dir']) for l in T) + \
+    alts = ''.join('\n  <link rel="alternate" hreflang="%s" href="https://glosx.app/%s/" />' % ('zh-Hans' if l == 'zh' else l, T[l]['dir']) for l in T) + \
            '\n  <link rel="alternate" hreflang="x-default" href="https://glosx.app/%s/" />' % T['en']['dir']
     head = head.replace('<link rel="canonical" href="%s" />' % url, '<link rel="canonical" href="%s" />%s' % (url, alts), 1)
     ld = {'@context': 'https://schema.org', '@type': 'Dataset', 'name': title.split(' · ')[0], 'description': desc, 'url': url, 'inLanguage': lang,
