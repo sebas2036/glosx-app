@@ -18,7 +18,7 @@ const attr = s => esc(s).replace(/"/g, '&quot;');
 const plain = s => String(s).replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;|&rsquo;/g, '’').trim();
 const exists = f => fs.existsSync(path.join(ROOT, f));
 const [file, ...langs] = process.argv.slice(2);
-const slug = file.replace(/\.html$/, '');
+const slug = file.replace(/\/index\.html$/, '').replace(/\.html$/, '');
 const EN = require(`./i18n-blog/${slug}.en.json`);
 const byText = new Map(Object.entries(EN).filter(([k]) => !k.startsWith('_')).map(([k, v]) => [v, k]));
 const src = fs.readFileSync(path.join(ROOT, file), 'utf8');
@@ -37,7 +37,7 @@ function common(en, l) {
   return undefined;
 }
 const pagePath = l => l === 'en' ? file : `${l}/${file}`;
-const pageUrl = l => 'https://glosx.app/' + pagePath(l);
+const pageUrl = l => 'https://glosx.app/' + pagePath(l).replace(/index\.html$/, '');
 
 function build(l) {
   const T = require(`./i18n-blog/${slug}.${l}.json`);
@@ -63,6 +63,7 @@ function build(l) {
   body = body.replace(/(<span class="klook-cta-(?:title|sub)">)(.*)(<\/span>\s*)$/gm, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
   body = body.replace(/(<a [^>]*class="cta-btn[^"]*"[^>]*>)([^<]+)(<\/a>)/g, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
   body = body.replace(/(<div(?:\s[^>]*)?>)([^<]*(?:<(?:strong|em|b|i|a|br|code)[^>]*>[^<]*(?:<\/(?:strong|em|b|i|a|code)>)?[^<]*)*)(<\/div>)/g, (m, a, inner, b) => { if (!inner.trim()) return m; const t = tr2(inner); return t === undefined ? m : a + inner.replace(inner.trim(), t) + b; });
+  body = body.replace(/(<span class="(?:badge|tag)">)([^<]*[A-Za-z]{3}[^<]*)(<\/span>)/g, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
   body = body.replace(/(<span>)([^<]*[A-Za-z]{3}[^<]*)(<\/span>)/g, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
   // nombre de la ruta en las tarjetas de rutas relacionadas
   body = body.replace(/(<a href="\/rutas\/([a-z0-9-]+)\/"[^>]*class="related-link"[^>]*>)([^<]+)/g, (m, a, s2, name) => { const t = common(`<a href="/rutas/${s2}/">${name.trim()}</a>`, l); const n = t && (t.match(/>([^<]+)<\/a>$/) || [])[1]; return n ? a + n : m; });
@@ -76,7 +77,7 @@ function build(l) {
   const fixLd = s => s.replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/g, (m, a, json, b) => {
     for (const [e, t] of pairs) if (e.length > 3) json = json.split(JSON.stringify(e).slice(1, -1)).join(JSON.stringify(t).slice(1, -1));
     json = json.replace(/("name":\s*)"Home"/g, `$1"${{ de: 'Startseite', pt: 'Início', zh: '首页', es: 'Inicio', fr: 'Accueil', it: 'Home', ja: 'ホーム' }[l] || 'Home'}"`).replace(/("item":\s*)"https:\/\/glosx\.app\/"/g, `$1"https://glosx.app/${l}/"`);
-    json = json.split(`"https://glosx.app/${file}"`).join(`"${pageUrl(l)}"`).replace(/"inLanguage":\s*"[a-z-]+"/g, `"inLanguage":"${HL(l)}"`);
+    json = json.split(`"https://glosx.app/${file}"`).join(`"${pageUrl(l)}"`).split(`"${pageUrl('en')}"`).join(`"${pageUrl(l)}"`).replace(/"inLanguage":\s*"[a-z-]+"/g, `"inLanguage":"${HL(l)}"`);
     return a + json + b;
   });
   head = fixLd(head); body = fixLd(body);
@@ -103,6 +104,7 @@ function build(l) {
   h = h.replace(/href="\/rutas\/([a-z0-9-]+)\/"/g, (m, s) => exists(`rutas/${s}/${l}/index.html`) ? `href="/rutas/${s}/${l}/"` : m);
   h = h.replace(/href="\/((?:blog|guide)[a-z0-9-]*\.html|about\.html)"/g, (m, f) => exists(`${l}/${f}`) || f === file ? `href="/${l}/${f}"` : m);
   h = h.replace(/href="\/(ai-planner|explore|hoy)\/"/g, (m, f) => exists(`${l}/${f}/index.html`) ? `href="/${l}/${f}/"` : m);
+  fs.mkdirSync(path.dirname(path.join(ROOT, pagePath(l))), { recursive: true });
   fs.writeFileSync(path.join(ROOT, pagePath(l)), h);
 }
 for (const l of langs) build(l);

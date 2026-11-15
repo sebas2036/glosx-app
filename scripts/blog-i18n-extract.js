@@ -42,10 +42,11 @@ for (const m of bodyOnly.matchAll(/<a [^>]*class="cta-btn[^"]*"[^>]*>([^<]+)<\/a
 // divs que solo tienen texto (preguntas frecuentes, títulos de tarjetas) y <span> sin atributos (subtítulos)
 for (const m of bodyOnly.replace(/<style[\s\S]*?<\/style>|<svg[\s\S]*?<\/svg>/g, '').matchAll(/<div(?:\s[^>]*)?>([^<]*(?:<(?:strong|em|b|i|a|br|code)[^>]*>[^<]*(?:<\/(?:strong|em|b|i|a|code)>)?[^<]*)*)<\/div>/g)) if (/[A-Za-z]{3}/.test(m[1].replace(/<[^>]+>/g, ''))) add(m[1].trim());
 for (const m of bodyOnly.matchAll(/<span>([^<]*[A-Za-z]{3}[^<]*)<\/span>/g)) add(m[1].trim());
+for (const m of bodyOnly.matchAll(/<span class="(?:badge|tag)">([^<]*[A-Za-z]{3}[^<]*)<\/span>/g)) add(m[1].trim());
 for (const [s, id] of seen) out[id] = s;
 const dir = path.join(__dirname, 'i18n-blog');
 fs.mkdirSync(dir, { recursive: true });
-const slug = file.replace(/\.html$/, '');
+const slug = file.replace(/\/index\.html$/, '').replace(/\.html$/, '');
 fs.writeFileSync(path.join(dir, slug + '.en.json'), JSON.stringify(out, null, 1));
 const words = Object.values(out).join(' ').replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
 console.log(slug, Object.keys(out).length, 'bloques,', words, 'palabras');
