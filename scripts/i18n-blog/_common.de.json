@@ -5,5 +5,10 @@
  "© 2026 GLOSX. All rights reserved.": "© 2026 GLOSX. Alle Rechte vorbehalten.",
  "Your train. Your world.": "Dein Zug. Deine Welt.",
  "Frequently asked questions": "Häufige Fragen",
- "Plan with AI →": "Mit KI planen →"
+ "Plan with AI →": "Mit KI planen →",
+ "<a href=\"/rutas/\">More train routes in Japan →</a>": "<a href=\"/rutas/\">Weitere Zugstrecken in Japan →</a>",
+ "<a href=\"/\">WoW Train</a> · <a href=\"/blog.html\">Blog</a> · <a href=\"/rutas/\">All routes</a> · <a href=\"/about.html\">About</a>": "<a href=\"/\">WoW Train</a> · <a href=\"/blog.html\">Blog</a> · <a href=\"/rutas/\">Alle Strecken</a> · <a href=\"/about.html\">Über uns</a>",
+ "Try Japan mode →": "Japan-Modus ausprobieren →",
+ "Search by dates and compare": "Nach Datum suchen und vergleichen",
+ "Experiences, day trips and activities": "Erlebnisse, Tagesausflüge und Aktivitäten"
 }
