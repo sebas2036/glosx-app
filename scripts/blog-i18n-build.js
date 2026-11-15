@@ -19,7 +19,7 @@ const plain = s => String(s).replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').rep
 const exists = f => fs.existsSync(path.join(ROOT, f));
 const [file, ...langs] = process.argv.slice(2);
 const slug = file.replace(/\/index\.html$/, '').replace(/\.html$/, '');
-const EN = require(`./i18n-blog/${slug}.en.json`);
+const EN = require(`./i18n-blog/${slug}.${process.env.SRC_LANG || 'en'}.json`);   // textos de la página raíz
 const byText = new Map(Object.entries(EN).filter(([k]) => !k.startsWith('_')).map(([k, v]) => [v, k]));
 const src = fs.readFileSync(path.join(ROOT, file), 'utf8');
 
