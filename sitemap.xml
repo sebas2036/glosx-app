@@ -1780,20 +1780,6 @@
 
 
   <url>
-    <loc>https://glosx.app/last-train-europe/</loc>
-    <lastmod>2026-10-31</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
-  </url>
-  <url>
-    <loc>https://glosx.app/es/ultimo-tren-europa/</loc>
-    <lastmod>2026-10-31</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
-  </url>
-  <url>
     <loc>https://glosx.app/zh/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -59815,5 +59801,125 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/trains-from-germany-to-italy/" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/trains-from-germany-to-italy/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/trains-from-germany-to-italy/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/last-train-europe/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/fr/last-train-europe/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/de/last-train-europe/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/it/last-train-europe/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/pt/last-train-europe/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/last-train-europe/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/zh/last-train-europe/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/es/ultimo-tren-europa/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/last-train-europe/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/ultimo-tren-europa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/last-train-europe/" />
   </url>
 </urlset>

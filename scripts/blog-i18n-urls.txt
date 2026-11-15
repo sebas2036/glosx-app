@@ -499,3 +499,9 @@ https://glosx.app/it/trains-from-germany-to-italy/
 https://glosx.app/pt/trains-from-germany-to-italy/
 https://glosx.app/ja/trains-from-germany-to-italy/
 https://glosx.app/zh/trains-from-germany-to-italy/
+https://glosx.app/fr/last-train-europe/
+https://glosx.app/de/last-train-europe/
+https://glosx.app/it/last-train-europe/
+https://glosx.app/pt/last-train-europe/
+https://glosx.app/ja/last-train-europe/
+https://glosx.app/zh/last-train-europe/
