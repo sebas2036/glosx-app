@@ -64,7 +64,8 @@ const pad = (s, n) => String(s).padEnd(n).slice(0, n);
     const send = urls.slice(0, q.DailyQuota);
     for (let k = 0; k < send.length; k += 500) await call('SubmitUrlBatch', {}, { siteUrl: SITE, urlList: send.slice(k, k + 500) });
     console.log(`Enviadas ${send.length} de ${urls.length} (cupo diario era ${q.DailyQuota}).`);
-    if (send.length < urls.length) console.log('Sin enviar por cupo:\n' + urls.slice(send.length).join('\n'));
+    // la cola queda solo con lo que falta enviar (las aceptadas salen del archivo)
+    if (send.length) { fs.writeFileSync(arg2, urls.slice(send.length).join('\n') + (urls.length > send.length ? '\n' : '')); console.log(`Cola actualizada: quedan ${urls.length - send.length} en ${arg2}`); }
   } else {
     console.error('Comando desconocido:', cmd); process.exit(1);
   }
