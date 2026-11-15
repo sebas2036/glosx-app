@@ -115,3 +115,6 @@ https://glosx.app/zh/blog-italy-interrail-itinerary.html
 https://glosx.app/de/blog-backpacking-italy.html
 https://glosx.app/pt/blog-backpacking-italy.html
 https://glosx.app/zh/blog-backpacking-italy.html
+https://glosx.app/de/blog-europe-train-itinerary.html
+https://glosx.app/pt/blog-europe-train-itinerary.html
+https://glosx.app/zh/blog-europe-train-itinerary.html
