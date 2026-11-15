@@ -103,6 +103,7 @@ function build(l) {
   h = h.replace(/href="\/rutas\/"/g, exists(`${l}/rutas/index.html`) ? `href="/${l}/rutas/"` : 'href="/rutas/"');
   h = h.replace(/href="\/rutas\/([a-z0-9-]+)\/"/g, (m, s) => exists(`rutas/${s}/${l}/index.html`) ? `href="/rutas/${s}/${l}/"` : m);
   h = h.replace(/href="\/((?:blog|guide)[a-z0-9-]*\.html|about\.html)"/g, (m, f) => exists(`${l}/${f}`) || f === file ? `href="/${l}/${f}"` : m);
+  h = h.replace(/href="\/(trains-from-[a-z-]+)\/"/g, (m, f) => exists(`${l}/${f}/index.html`) ? `href="/${l}/${f}/"` : m);
   h = h.replace(/href="\/(ai-planner|explore|hoy)\/"/g, (m, f) => exists(`${l}/${f}/index.html`) ? `href="/${l}/${f}/"` : m);
   fs.mkdirSync(path.dirname(path.join(ROOT, pagePath(l))), { recursive: true });
   fs.writeFileSync(path.join(ROOT, pagePath(l)), h);
