@@ -574,3 +574,9 @@ https://glosx.app/destinos/zermatt/it/
 https://glosx.app/destinos/zermatt/pt/
 https://glosx.app/destinos/zermatt/ja/
 https://glosx.app/destinos/zermatt/zh/
+https://glosx.app/es/support.html
+https://glosx.app/fr/support.html
+https://glosx.app/de/support.html
+https://glosx.app/it/support.html
+https://glosx.app/pt/support.html
+https://glosx.app/zh/support.html

@@ -1,0 +1,21 @@
+{
+ "_title": "Support — WoW Train · glosx.app",
+ "_desc": "Need help with WoW Train? Get support for the AI train planner, booking links, and travel essentials for your European train trip.",
+ "b0": "<span id=\"langCode\">EN</span><span style=\"font-size:10px;opacity:0.6\">▾</span>",
+ "b1": "We're here to help",
+ "b2": "WoW Train is built by a small team. We respond to every message, usually within 24 hours.",
+ "b3": "Contact us directly",
+ "b4": "For bug reports, feature requests, or anything else — send us an email. Include which browser and page you were on if reporting a bug.",
+ "b5": "Frequently asked questions",
+ "b6": "Which countries does WoW Train cover?",
+ "b7": "Rail travel across 16 European countries, and we're expanding coverage regularly. If a route isn't showing yet, try describing it differently or check back soon.",
+ "b8": "How do I book my train tickets?",
+ "b9": "WoW Train doesn't sell tickets directly. Once the AI builds your itinerary, each leg links out to Omio, our booking partner, where you compare prices and complete the purchase securely.",
+ "b10": "Do you store my personal data?",
+ "b11": "WoW Train doesn't require an account. We use standard analytics to understand traffic — see our <a href=\"/privacy.html\">Privacy Policy</a> for details.",
+ "b12": "I found a bug — how do I report it?",
+ "b13": "Email us at <a href=\"mailto:contact@glosx.app\">contact@glosx.app</a> with a description of what happened, which browser you used, and the page you were on. Screenshots are always helpful.",
+ "b14": "© 2026 GLOSX · <a href=\"/\">glosx.app</a> · <a href=\"/privacy.html\">Privacy Policy</a>",
+ "b15": "<a class=\"lang-option active\" href=\"/support.html\" hreflang=\"en\" lang=\"en\">English</a><a class=\"lang-option\" href=\"/es/\" hreflang=\"es\" lang=\"es\">Español</a><a class=\"lang-option\" href=\"/fr/\" hreflang=\"fr\" lang=\"fr\">Français</a><a class=\"lang-option\" href=\"/de/\" hreflang=\"de\" lang=\"de\">Deutsch</a><a class=\"lang-option\" href=\"/it/\" hreflang=\"it\" lang=\"it\">Italiano</a><a class=\"lang-option\" href=\"/pt/\" hreflang=\"pt\" lang=\"pt\">Português</a><a class=\"lang-option\" href=\"/ja/support.html\" hreflang=\"ja\" lang=\"ja\">日本語</a><a class=\"lang-option\" href=\"/zh/\" hreflang=\"zh-Hans\" lang=\"zh-Hans\">中文</a>",
+ "b16": "Support"
+}
