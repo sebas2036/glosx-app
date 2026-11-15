@@ -2244,13 +2244,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-blogs-hoteles-viaje-tren.html" />
   </url>
   <url>
-    <loc>https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html"/>
-    <lastmod>2026-11-08</lastmod>
-  </url>
-  <url>
     <loc>https://glosx.app/ja/blog-thunderbird-tsuruga-norikae.html</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-thunderbird-tsuruga-norikae.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-thunderbird-tsuruga-norikae.html"/>
@@ -2262,13 +2255,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-kuroshio-nanki.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-kuroshio-nanki.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-kuroshio-nanki.html"/>
-    <lastmod>2026-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://glosx.app/blog-tokkyu-azusa-matsumoto.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html"/>
     <lastmod>2026-11-08</lastmod>
   </url>
   <url>
@@ -57625,5 +57611,65 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-ai-train-trip-planner-europe.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/blog-ai-train-trip-planner-europe.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-ai-train-trip-planner-europe.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/blog-tokkyu-azusa-matsumoto.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/de/blog-tokkyu-azusa-matsumoto.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/pt/blog-tokkyu-azusa-matsumoto.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+  </url>
+  <url>
+    <loc>https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/blog-tokkyu-azusa-matsumoto.html" />
   </url>
 </urlset>
