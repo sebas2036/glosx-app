@@ -169,3 +169,6 @@ https://glosx.app/zh/blog-sagano-romantic-train.html
 https://glosx.app/de/blog-scenic-train-routes-europe.html
 https://glosx.app/pt/blog-scenic-train-routes-europe.html
 https://glosx.app/zh/blog-scenic-train-routes-europe.html
+https://glosx.app/de/blog-train-europe-survival-guide.html
+https://glosx.app/pt/blog-train-europe-survival-guide.html
+https://glosx.app/zh/blog-train-europe-survival-guide.html
