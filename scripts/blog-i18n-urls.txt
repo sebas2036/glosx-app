@@ -181,3 +181,6 @@ https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html
 https://glosx.app/de/blog-fastest-growing-train-routes-europe-2026.html
 https://glosx.app/pt/blog-fastest-growing-train-routes-europe-2026.html
 https://glosx.app/zh/blog-fastest-growing-train-routes-europe-2026.html
+https://glosx.app/de/blog-tren-arraigo-pueblos.html
+https://glosx.app/pt/blog-tren-arraigo-pueblos.html
+https://glosx.app/zh/blog-tren-arraigo-pueblos.html
