@@ -111,9 +111,11 @@ async function notifyUrl(token, url, type) {
 async function main() {
   const args = process.argv.slice(2);
   let urls = [];
+  let QUEUE_FILE = null;
 
   if (args[0] === '--file') {
     const filePath = args[1];
+    QUEUE_FILE = filePath;
     urls = fs.readFileSync(filePath, 'utf8').split('\n').map((l) => l.trim()).filter(Boolean);
   } else {
     urls = args.filter((a) => a.startsWith('http'));
@@ -134,6 +136,7 @@ async function main() {
   const token = await getAccessToken(key);
 
   let ok = 0, fail = 0;
+  const failed = [];
   for (const url of urls) {
     const res = await notifyUrl(token, url, 'URL_UPDATED');
     if (res.status === 200) {
@@ -141,9 +144,12 @@ async function main() {
       console.log(`OK   ${url}`);
     } else {
       fail++;
+      failed.push(url);
       console.log(`FAIL ${url} -> ${res.status} ${JSON.stringify(res.body)}`);
     }
   }
+  // Con --file, deja en el archivo solo las que fallaron (las aceptadas salen de la cola).
+  if (QUEUE_FILE && ok > 0) { fs.writeFileSync(QUEUE_FILE, failed.join('\n') + (failed.length ? '\n' : '')); console.log(`Cola actualizada: quedan ${failed.length} en ${QUEUE_FILE}`); }
   console.log(`\nListo: ${ok} indexadas, ${fail} con error, de ${urls.length} totales.`);
 }
 
