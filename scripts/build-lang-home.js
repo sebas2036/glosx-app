@@ -87,6 +87,13 @@ for (const f of ['index.html', 'es/index.html', 'fr/index.html', 'it/index.html'
   const p = path.join(ROOT, f);
   fs.writeFileSync(p, setHreflang(fs.readFileSync(p, 'utf8')));
 }
+// portadas zh y ja (tienen generador propio): enlaces a rutas en su idioma si la versión existe.
+// En oct-2026 Google no descubría las versiones en otros idiomas porque las portadas enlazaban la versión inglesa.
+for (const l of ['zh', 'ja']) {
+  const p = path.join(ROOT, l, 'index.html');
+  const h = fs.readFileSync(p, 'utf8').replace(/href="\/rutas\/([a-z0-9-]+)\/"/g, (m, s) => fs.existsSync(path.join(ROOT, 'rutas', s, l, 'index.html')) ? `href="/rutas/${s}/${l}/"` : m);
+  fs.writeFileSync(p, h);
+}
 // sitemap: /de/ y /pt/ + hreflang completos en los bloques de portada
 const sm = path.join(ROOT, 'sitemap.xml');
 let x = fs.readFileSync(sm, 'utf8');
