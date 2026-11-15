@@ -60,5 +60,17 @@
  "b56": "AVE · 2h 30m · from €14",
  "b57": "Book <span class=\"klook-cta-city\">Paris</span> → <span class=\"klook-cta-city\">London</span> on Omio",
  "b58": "Eurostar · 2h 20m · from €39",
- "b59": "Plan with AI →"
+ "b59": "Plan with AI →",
+ "b60": "<a class=\"lang-option active\" href=\"/blog-flying-vs-train-europe.html\" hreflang=\"en\" lang=\"en\">English</a><a class=\"lang-option\" href=\"/es/blog-flying-vs-train-europe.html\" hreflang=\"es\" lang=\"es\">Español</a><a class=\"lang-option\" href=\"/fr/blog-flying-vs-train-europe.html\" hreflang=\"fr\" lang=\"fr\">Français</a><a class=\"lang-option\" href=\"/de/\" hreflang=\"de\" lang=\"de\">Deutsch</a><a class=\"lang-option\" href=\"/it/blog-flying-vs-train-europe.html\" hreflang=\"it\" lang=\"it\">Italiano</a><a class=\"lang-option\" href=\"/pt/\" hreflang=\"pt\" lang=\"pt\">Português</a><a class=\"lang-option\" href=\"/ja/blog-flying-vs-train-europe.html\" hreflang=\"ja\" lang=\"ja\">日本語</a><a class=\"lang-option\" href=\"/zh/\" hreflang=\"zh-Hans\" lang=\"zh-Hans\">中文</a>",
+ "b61": "Is the train cheaper than flying in Europe?",
+ "b62": "On many routes, yes — once you add airport transfers, checked luggage fees, security time and the cost of getting to/from a city-centre station vs a remote airport. Routes under 700 km are almost always cheaper and faster by train door-to-door.",
+ "b63": "Is the train faster than flying in Europe?",
+ "b64": "For city pairs under 4–5 hours by rail, the train is usually faster door-to-door. A 2h 30m AVE from Madrid to Barcelona beats any flight once you add 90 min of airport process on each end. Above 6–7 hours by train, flying starts to win on time.",
+ "b65": "How much CO2 does a train save vs a flight?",
+ "b66": "A typical European flight emits roughly 15–25x more CO2 per passenger than a high-speed train on the same corridor. On the Paris–London route specifically, Eurostar estimates roughly 96% lower emissions than the equivalent flight.",
+ "b67": "When is flying actually better than the train in Europe?",
+ "b68": "For routes over 700–900 km with no direct rail connection, island destinations, or when you genuinely need to be somewhere in under 3 hours and the train takes 7. Flying wins on pure speed for very long distances.",
+ "b69": "Eurostar · 2h 15m · from €39",
+ "b70": "Thalys · 3h 20m · from €29",
+ "b71": "Frecciarossa · 1h 30m · from €9"
 }

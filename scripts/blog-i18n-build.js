@@ -62,6 +62,10 @@ function build(l) {
   const tr2 = inner => { const k = byText.get(inner.trim()); return k && T[k] !== undefined ? T[k] : common(inner.trim(), l); };
   body = body.replace(/(<span class="klook-cta-(?:title|sub)">)(.*)(<\/span>\s*)$/gm, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
   body = body.replace(/(<a [^>]*class="cta-btn[^"]*"[^>]*>)([^<]+)(<\/a>)/g, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
+  body = body.replace(/(<div(?:\s[^>]*)?>)([^<]*(?:<(?:strong|em|b|i|a|br|code)[^>]*>[^<]*(?:<\/(?:strong|em|b|i|a|code)>)?[^<]*)*)(<\/div>)/g, (m, a, inner, b) => { if (!inner.trim()) return m; const t = tr2(inner); return t === undefined ? m : a + inner.replace(inner.trim(), t) + b; });
+  body = body.replace(/(<span>)([^<]*[A-Za-z]{3}[^<]*)(<\/span>)/g, (m, a, inner, b) => { const t = tr2(inner); return t === undefined ? m : a + t + b; });
+  // nombre de la ruta en las tarjetas de rutas relacionadas
+  body = body.replace(/(<a href="\/rutas\/([a-z0-9-]+)\/"[^>]*class="related-link"[^>]*>)([^<]+)/g, (m, a, s2, name) => { const t = common(`<a href="/rutas/${s2}/">${name.trim()}</a>`, l); const n = t && (t.match(/>([^<]+)<\/a>$/) || [])[1]; return n ? a + n : m; });
   body = body.replace(/\u0000(\d+)\u0000/g, (m, i) => keep[+i]);
   // datos estructurados: textos de las preguntas y titulares traducidos
   const pairs = [];
