@@ -18,12 +18,12 @@ const NETS = [
 ];
 const icons = NETS.map(([n, u, svg]) =>
   `<a href="${u}" target="_blank" rel="noopener me" aria-label="${n}" title="${n}"><svg viewBox="0 0 24 24" width="20" height="20" ${A} aria-hidden="true">${svg}</svg></a>`).join('');
-const STYLE = '.glx-social{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 18px}'
-  + '.glx-social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;'
+const STYLE = '.glx-social{position:static;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 18px}'
+  + '.glx-social a{position:static;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;'
   + 'border:1px solid rgba(20,21,26,.22);color:#14151a;text-decoration:none;transition:border-color .2s,color .2s,transform .2s}'
   + '.glx-social a:hover,.glx-social a:focus-visible{border-color:#C10016;color:#C10016;transform:translateY(-1px)}'
   + '@media (prefers-reduced-motion:reduce){.glx-social a{transition:none}.glx-social a:hover{transform:none}}';
-const BLOCK = `<!-- glx-social --><style>${STYLE}</style><nav class="glx-social" aria-label="glosx.app">${icons}</nav><!-- /glx-social -->`;
+const BLOCK = `<!-- glx-social --><style>${STYLE}</style><div class="glx-social" role="group" aria-label="glosx.app">${icons}</div><!-- /glx-social -->`;
 
 if (process.env.SOCIAL_PREVIEW) {   // vista previa: SOCIAL_PREVIEW=/ruta/salida.html node scripts/add-social-footer.js
   fs.writeFileSync(process.env.SOCIAL_PREVIEW, `<!doctype html><meta charset="utf-8"><body style="margin:0;background:#fafaf8;font-family:sans-serif"><div style="height:40px"></div><footer style="border-top:1px solid #ddd;padding:32px 24px;text-align:center;font-size:12px;color:#55565f">${BLOCK}<p>© 2026 GLOSX — WoW Train · glosx.app</p></footer>`);
