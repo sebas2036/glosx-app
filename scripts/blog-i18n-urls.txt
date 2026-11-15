@@ -271,3 +271,9 @@ https://glosx.app/zh/blog-tokkyu-kuroshio-nanki.html
 https://glosx.app/es/blog-tokkyu-kuroshio-nanki.html
 https://glosx.app/fr/blog-tokkyu-kuroshio-nanki.html
 https://glosx.app/it/blog-tokkyu-kuroshio-nanki.html
+https://glosx.app/de/blog-tokkyu-azusa-matsumoto.html
+https://glosx.app/pt/blog-tokkyu-azusa-matsumoto.html
+https://glosx.app/zh/blog-tokkyu-azusa-matsumoto.html
+https://glosx.app/es/blog-tokkyu-azusa-matsumoto.html
+https://glosx.app/fr/blog-tokkyu-azusa-matsumoto.html
+https://glosx.app/it/blog-tokkyu-azusa-matsumoto.html
