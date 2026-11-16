@@ -384,15 +384,55 @@
     }
     showMsg(cities.length ? 'two' : 'nopair');
   }
-  window.generateAIRoute = function () {
+  // Detección automática de región (16-nov-2026): la persona no sabe que hay pestañas por país.
+  // Si escribe ciudades de Japón o China en Europa (o al revés), se cambia sola a la pestaña correcta
+  // y se arma la ruta ahí con el mismo texto.
+  var EU_CITIES = window._GLOSX_CITIES.slice();
+  var regIdx = {};
+  function idxFor(r) {
+    if (regIdx[r]) return regIdx[r];
+    var list = [], src = r === 'europe' ? EU_CITIES : r === 'china' ? CN_READY.cities : JP_DATA.cities;
+    src.forEach(function (c) {
+      [c.display, c.slug].concat(c.keywords || []).forEach(function (k) { var f = fold(k); if (f && f.length > 1) list.push(f); });
+    });
+    list.sort(function (a, b) { return b.length - a.length; });
+    return (regIdx[r] = list);
+  }
+  function scoreIn(r, text) {
+    var t = ' ' + fold(text) + ' ', n = 0, used = [];
+    idxFor(r).forEach(function (k) {
+      var i = t.indexOf(' ' + k + ' ');
+      if (i !== -1 && !used.some(function (u) { return i < u[1] && i + k.length + 1 > u[0]; })) { used.push([i, i + k.length + 1]); n++; }
+    });
+    return n;
+  }
+  function detectRegion(text) {
+    if (!String(text || '').trim()) return null;
+    var sc = { europe: scoreIn('europe', text), japan: scoreIn('japan', text), china: scoreIn('china', text) };
+    var best = ['japan', 'china', 'europe'].sort(function (a, b) { return sc[b] - sc[a]; })[0];
+    if (sc[best] === 0) return region === 'europe' ? null : 'europe'; // nada conocido de Asia: el planificador IA de Europa
+    if (sc[region] === sc[best]) return null;                          // empate: se queda donde está
+    return best;
+  }
+  function plannerGo(ctx, args) {
+    var text = inputEl.value;
+    var r = detectRegion(text);
+    if (r && r !== region) {
+      setRegion(r);
+      inputEl.value = text;
+      var aurora = document.getElementById('aiInputAurora');
+      if (aurora) aurora.classList.add('active');
+    }
     if (region !== 'europe') return japanGenerate();
-    return originalGenerate.apply(this, arguments);
-  };
+    return originalGenerate.apply(ctx, args);
+  }
+  window.glosxDetectRegion = detectRegion;
+  window.generateAIRoute = function () { return plannerGo(this, arguments); };
   inputEl.addEventListener('keydown', function (e) {
-    if (region !== 'europe' && e.key === 'Enter') {
+    if (e.key === 'Enter') {
       e.preventDefault();
       e.stopImmediatePropagation();
-      japanGenerate();
+      plannerGo(this, []);
     }
   }, true);
 
