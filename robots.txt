@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://glosx.app/sitemap.xml
+Sitemap: https://glosx.app/sitemap-index.xml
