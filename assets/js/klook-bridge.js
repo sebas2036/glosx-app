@@ -12,7 +12,7 @@
 
   var MARK = '/affiliate/klook-train';
   var MARK_CN = '/affiliate/klook-china-train';
-  var HOLD_MS = 1800;      // duración de la animación antes de redirigir
+  var HOLD_MS = 250;      // duración de la animación antes de redirigir
   var TOAST_MS = 6500;
 
   var T = {
@@ -28,7 +28,7 @@
 
   // Tarjeta de transición (la misma en la pestaña nueva y en el respaldo de esta pestaña)
   var CARD_CSS = [
-    '.klb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#2A2118;border:1px solid rgba(255,91,0,.22);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:klbIn .55s cubic-bezier(.2,.7,.2,1) both}',
+    '.klb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#2A2118;border:1px solid rgba(255,91,0,.22);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:klbIn .22s cubic-bezier(.2,.7,.2,1) both}',
     '.klb-brand{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-.02em;color:#2A2118}',
     '.klb-brand img{width:36px;height:36px;border-radius:10px;background:#fff;box-shadow:0 0 0 1px rgba(255,91,0,.25);padding:5px}',
     '.klb-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0 0 16px}',
@@ -41,7 +41,7 @@
     '.klb-node.is-klook{width:42px;height:42px;background:#fff;border:2px solid #FF5B00;border-radius:50%;animation:klbPulseOrange 1.4s ease-in-out infinite}',
     '.klb-node.is-klook img{width:24px;height:24px;border-radius:5px}',
     '.klb-bar{flex:1;height:5px;border-radius:5px;background:rgba(255,91,0,.14);overflow:hidden}',
-    '.klb-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#C10016,#FF5B00);border-radius:5px;animation:klbFill 1.7s cubic-bezier(.3,.6,.3,1) forwards}',
+    '.klb-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#C10016,#FF5B00);border-radius:5px;animation:klbFill 2.4s cubic-bezier(.1,.8,.3,1) forwards}',
     '.klb-fid{font-size:13px;line-height:1.5;color:#2A2118;background:#FFF1E8;border-radius:8px;padding:10px 12px;margin:0}',
     '@keyframes klbIn{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}',
     '@keyframes klbFill{from{width:6%}to{width:100%}}',
@@ -116,12 +116,12 @@
     var go = JSON.stringify(String(url)).replace(/</g, '\\u003c');
     return '<!DOCTYPE html><html lang="' + l + '"><head><meta charset="utf-8">' +
       '<meta name="viewport" content="width=device-width,initial-scale=1">' +
-      '<meta name="robots" content="noindex"><title>' + esc(tx.title) + '</title>' +
+      '<meta name="robots" content="noindex"><link rel="preconnect" href="https://voxa-production-dc15.up.railway.app"><link rel="preconnect" href="https://www.klook.com"><title>' + esc(tx.title) + '</title>' +
       '<style>' + PAGE_CSS + BG_CSS + CARD_CSS + '</style></head><body>' +
       '<div class="bg1"></div><div class="bg2"></div>' + cardHTML(r, tx) +
       '<script>try{window.opener=null}catch(e){}' +
       'var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;' +
-      'setTimeout(function(){location.replace(' + go + ')},reduce?500:' + HOLD_MS + ');</' + 'script>' +
+      'setTimeout(function(){location.replace(' + go + ')},reduce?150:' + HOLD_MS + ');</' + 'script>' +
       '</body></html>';
   }
 
@@ -180,7 +180,7 @@
     overlay.querySelector('.klb-card').style.position = 'relative';
     document.body.appendChild(overlay);
     var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setTimeout(function () { location.assign(url); }, reduce ? 500 : HOLD_MS);
+    setTimeout(function () { location.assign(url); }, reduce ? 150 : HOLD_MS);
   }
 
   var nativeOpen = window.open;
