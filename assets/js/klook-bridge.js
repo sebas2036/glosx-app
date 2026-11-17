@@ -30,7 +30,7 @@
   var CARD_CSS = [
     '.klb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#2A2118;border:1px solid rgba(255,91,0,.22);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:klbIn .55s cubic-bezier(.2,.7,.2,1) both}',
     '.klb-brand{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-.02em;color:#2A2118}',
-    '.klb-logo{flex:none;width:36px;height:36px;border-radius:10px;background:#FF5B00;color:#fff;display:inline-flex;align-items:center;justify-content:center;font:800 20px/1 system-ui,-apple-system,sans-serif;letter-spacing:0}',
+    '.klb-brand img{width:36px;height:36px;border-radius:10px;background:#fff;box-shadow:0 0 0 1px rgba(255,91,0,.25);padding:5px}',
     '.klb-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0 0 16px}',
     '.klb-route svg{width:18px;height:18px;flex:none;stroke:#FF5B00;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}',
     '.klb-title{font-size:15px;font-weight:600;margin:0 0 4px}',
@@ -39,7 +39,7 @@
     '.klb-node{flex:none;width:38px;height:38px;display:flex;align-items:center;justify-content:center}',
     '.klb-node.is-glosx{background:#C10016;color:#fff;border-radius:10px;font-weight:700;font-size:19px;animation:klbPulse 1.4s ease-in-out infinite}',
     '.klb-node.is-klook{width:42px;height:42px;background:#fff;border:2px solid #FF5B00;border-radius:50%;animation:klbPulseOrange 1.4s ease-in-out infinite}',
-    '.klb-logo.sm{width:24px;height:24px;border-radius:6px;font-size:14px}',
+    '.klb-node.is-klook img{width:24px;height:24px;border-radius:5px}',
     '.klb-bar{flex:1;height:5px;border-radius:5px;background:rgba(255,91,0,.14);overflow:hidden}',
     '.klb-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#C10016,#FF5B00);border-radius:5px;animation:klbFill 1.7s cubic-bezier(.3,.6,.3,1) forwards}',
     '.klb-fid{font-size:13px;line-height:1.5;color:#2A2118;background:#FFF1E8;border-radius:8px;padding:10px 12px;margin:0}',
@@ -96,7 +96,7 @@
 
   function cardHTML(r, tx) {
     return '<div class="klb-card" role="status" aria-live="polite">' +
-      '<div class="klb-brand"><span class="klb-logo" aria-hidden="true">K</span><span>Klook</span></div>' +
+      '<div class="klb-brand"><img src="https://glosx.app/assets/img/klook-logo.png" alt="Klook" width="36" height="36"><span>Klook</span></div>' +
       '<p class="klb-route"><span>' + esc(r.from) + '</span>' +
         '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
         '<span>' + esc(r.to) + '</span></p>' +
@@ -105,7 +105,7 @@
       '<div class="klb-track" aria-hidden="true">' +
         '<span class="klb-node is-glosx">W</span>' +
         '<div class="klb-bar"><i></i></div>' +
-        '<span class="klb-node is-klook"><span class="klb-logo sm" aria-hidden="true">K</span></span>' +
+        '<span class="klb-node is-klook"><img src="https://glosx.app/assets/img/klook-logo.png" alt="" width="24" height="24"></span>' +
       '</div>' +
       '<p class="klb-fid">' + esc(tx.fidelity) + '</p>' +
     '</div>';
