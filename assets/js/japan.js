@@ -515,6 +515,10 @@
   }
   function fmtMin(m) {
     var h = Math.floor(m / 60), r = m % 60;
+    // En japonés se escribe ya con sus unidades: si se deja "2 h 7 min", el traductor de resultados (más abajo)
+    // lo convierte a "2時間7分", este código lo vuelve a escribir y los dos se pisan miles de veces por segundo.
+    if (lang() === 'ja') return h ? h + '時間' + (r ? r + '分' : '') : m + '分';
+    if (lang() === 'zh') return h ? h + '小时' + (r ? r + '分钟' : '') : m + '分钟';
     return h ? (r ? h + ' h ' + r + ' min' : h + ' h') : m + ' min';
   }
   var durEl = document.getElementById('aiRouteDuration');

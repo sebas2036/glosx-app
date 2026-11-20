@@ -243,8 +243,9 @@
     load().then(function (d) { segs.forEach(function (s) { fill(s, d); }); });
   }
 
-  var timer;
-  new MutationObserver(function () { clearTimeout(timer); timer = setTimeout(scan, 60); })
+  // Limitado (no 'debounce'): si otra pieza de la página modifica el DOM sin parar, el escaneo igual corre cada ~80 ms.
+  var pending = false;
+  new MutationObserver(function () { if (pending) return; pending = true; setTimeout(function () { pending = false; scan(); }, 80); })
     .observe(document.documentElement, { childList: true, subtree: true });
   scan();
 })();
