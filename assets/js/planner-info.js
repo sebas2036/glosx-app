@@ -97,6 +97,68 @@
     return '/rutas/' + hit + '/' + (l === 'en' ? '' : l + '/');
   }
 
+  // "Cómo llegar a la estación": enlace a Google Maps SIN origen, así Maps usa el GPS del dispositivo y guía en transporte público o a pie.
+  // Con nombre de estación (tramos de la IA) va a esa estación; en la tarjeta simple solo se conoce la ciudad de salida.
+  var GO = {
+    en: { st: 'Directions to {s}', ci: 'Directions to the station in {c}', tip: 'Opens Google Maps from your current location', ey: 'Getting to the station', tx: 'From wherever you are now, on foot or by public transport.' },
+    es: { st: 'Cómo llegar a {s}', ci: 'Cómo llegar a la estación de {c}', tip: 'Abre Google Maps desde tu ubicación actual', ey: 'Llegar a la estación', tx: 'Desde donde estás ahora, a pie o en transporte público.' },
+    fr: { st: 'Itinéraire vers {s}', ci: 'Itinéraire vers la gare de {c}', tip: 'Ouvre Google Maps depuis votre position actuelle', ey: 'Rejoindre la gare', tx: 'Depuis votre position actuelle, à pied ou en transport en commun.' },
+    de: { st: 'Route zu {s}', ci: 'Route zum Bahnhof {c}', tip: 'Öffnet Google Maps ab deinem aktuellen Standort', ey: 'Zum Bahnhof kommen', tx: 'Von deinem aktuellen Standort, zu Fuß oder mit öffentlichen Verkehrsmitteln.' },
+    it: { st: 'Indicazioni per {s}', ci: 'Indicazioni per la stazione di {c}', tip: 'Apre Google Maps dalla tua posizione attuale', ey: 'Raggiungere la stazione', tx: 'Da dove ti trovi ora, a piedi o con i mezzi pubblici.' },
+    pt: { st: 'Como chegar a {s}', ci: 'Como chegar à estação de {c}', tip: 'Abre o Google Maps a partir da sua localização atual', ey: 'Chegar à estação', tx: 'A partir da sua localização atual, a pé ou de transporte público.' },
+    ja: { st: '{s}への行き方', ci: '{c}駅への行き方', tip: '現在地からGoogleマップを開きます', ey: '駅までの行き方', tx: '現在地から、徒歩または公共交通機関で。' },
+    zh: { st: '前往{s}的路线', ci: '前往{c}火车站的路线', tip: '从您当前位置打开谷歌地图', ey: '前往车站', tx: '从您当前位置出发，步行或乘坐公共交通。' }
+  };
+  var PIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>';
+  function goLang() {
+    var l = String(document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+    return GO[l] ? l : 'en';
+  }
+  function goUrl(station, city) {
+    var q = station ? (city && station.toLowerCase().indexOf(String(city).toLowerCase()) < 0 ? station + ', ' + city : station) : city + ' train station';
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q) + '&travelmode=transit';
+  }
+  function goLink(station, city, source, inline) {
+    var t = GO[goLang()];
+    var a = document.createElement('a');
+    a.className = 'pi-go' + (inline ? ' pi-go-inline' : '');
+    a.href = goUrl(station, city);
+    a.target = '_blank'; a.rel = 'noopener';
+    a.title = t.tip;
+    a.innerHTML = PIN + '<span>' + esc(station ? t.st.replace('{s}', station) : t.ci.replace('{c}', city)) + '</span>';
+    a.addEventListener('click', function () {
+      try { if (window.gtag) gtag('event', 'station_directions', { source: source, kind: station ? 'station' : 'city', lang: goLang() }); } catch (e) {}
+    });
+    return a;
+  }
+  function addGoAi(el) {
+    el.setAttribute('data-go', '1');
+    var first = el.firstChild, station = first && first.nodeType === 3 ? first.textContent.trim() : '';
+    if (!station) return;
+    var seg = el.closest('.ai-segment'), rt = seg && seg.querySelector('.ai-segment-route');
+    var city = rt ? (rt.textContent.split('→')[0] || '').trim() : '';
+    el.insertAdjacentElement('afterend', goLink(station, city, 'planner_ai', true));
+  }
+
+  // Panel propio, independiente del botón de Omio: guía desde el GPS del dispositivo hasta la estación de salida.
+  function stationPanel(city, source) {
+    var t = GO[goLang()];
+    var d = document.createElement('div');
+    d.className = 'pi-station';
+    d.innerHTML = '<div class="pi-station-eye">' + esc(t.ey) + '</div><p class="pi-station-text">' + esc(t.tx) + '</p>';
+    d.appendChild(goLink('', city, source));
+    return d;
+  }
+  function addStationPanel(seg) {
+    if (seg.getAttribute('data-gp')) return;
+    seg.setAttribute('data-gp', '1');
+    var rt = seg.querySelector('.ai-segment-route'), city = rt ? (rt.textContent.split('→')[0] || '').trim() : '';
+    if (!city) return;
+    var panel = stationPanel(city, 'planner_region'), pi = seg.querySelector('.pi');
+    if (pi) pi.appendChild(panel);                       // misma columna lateral que en Europa
+    else seg.insertBefore(panel, seg.querySelector('a.ai-segment-buy') || null);
+  }
+
   function fill(seg, d) {
     if (seg.getAttribute('data-pi')) return;
     var desc = seg.querySelector('.ai-segment-desc'), time = seg.querySelector('.ai-segment-time'), body = seg.querySelector('.ai-segment-body');
@@ -135,6 +197,9 @@
       var rt = seg.querySelector('.ai-segment-route');
       box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
     }
+    var dep0 = seg.querySelector('.ai-segment-route');
+    var depCity = dep0 ? (dep0.textContent.split('→')[0] || '').trim() : '';
+    if (depCity) { seg.setAttribute('data-gp', '1'); box.appendChild(stationPanel(depCity, 'planner_simple')); }
     var res = seg.closest('.ai-results');
     if (res && !res.querySelector('.pi-exp')) {   // una sola vez por resultado, con la ciudad de destino
       var rte = seg.querySelector('.ai-segment-route'), dn = rte ? (rte.textContent.split('→')[1] || '').trim() : '';
@@ -163,6 +228,15 @@
   }
 
   function scan() {
+    document.querySelectorAll('.ai-segment-stations:not([data-go])').forEach(addGoAi);
+    document.querySelectorAll('.ai-segment:not([data-gp])').forEach(function (seg) {
+      if (seg.querySelector('.ai-segment-stations') || seg.querySelector('a.ai-segment-buy[href*="europe-train"]')) return;   // IA: enlace en línea; Europa: lo arma fill()
+      var body = seg.querySelector('.ai-segment-body'), desc = seg.querySelector('.ai-segment-desc');
+      if (body && desc && desc.textContent.trim()) return;   // tarjeta con texto de la IA
+      if (!seg.querySelector('a.ai-segment-buy[href*="klook"]') || seg.getAttribute('data-gpw')) return;
+      seg.setAttribute('data-gpw', '1');
+      setTimeout(function () { addStationPanel(seg); }, 1200);   // espera al bloque de opciones (.pi); si no llega, va igual
+    });
     var segs = document.querySelectorAll('.ai-segment:not([data-pi])');
     if (!segs.length) return;
     load().then(function (d) { segs.forEach(function (s) { fill(s, d); }); });

@@ -1011,3 +1011,28 @@ body.home-v2 .search-card .ai-segment-route { font-size: clamp(19px, 2vw, 24px);
 body.home-v2 .search-card .ai-segment-time { font-size: clamp(17px, 1.8vw, 20px); font-weight: 500; color: #5a5f73; }
 body.home-v2 .search-card .ai-segment-buy,
 body.home-v2 .search-card .ai-generate-btn { font-weight: 600; }
+
+/* Guía a la estación: panel propio e independiente del botón de Omio (planner-info.js).
+   Escritorio: columna al costado del bloque de opciones; móvil: debajo. */
+body.home-v2 .search-card .pi:has(.pi-station) { display: grid; grid-template-columns: minmax(0, 1fr) 300px; column-gap: 24px; align-items: start; }
+body.home-v2 .search-card .pi:has(.pi-station) > * { grid-column: 1; }
+body.home-v2 .search-card .pi:has(.pi-station) > .pi-station { grid-column: 2; grid-row: 1 / span 8; }
+body.home-v2 .search-card .pi-station { margin: 12px 0 0; padding: 16px 18px; border: 1px solid rgba(15, 27, 92, .1); border-radius: 14px; background: rgba(15, 27, 92, .035); }
+body.home-v2 .search-card .pi-station-eye { font-size: 13px; font-weight: 500; color: #5a5f73; }
+body.home-v2 .search-card .pi-station-text { margin: 6px 0 0; font-size: 14px; line-height: 1.45; color: #1d2030; }
+body.home-v2 .search-card .pi-go { display: inline-flex; align-items: center; gap: 8px; max-width: 100%; padding: 9px 16px; border: 1px solid rgba(15, 27, 92, .16); border-radius: 100px; background: #fff; color: #0F1B5C; font-size: 14px; font-weight: 500; line-height: 1.3; text-decoration: none; transition: border-color .2s, color .2s; }
+body.home-v2 .search-card .pi-station .pi-go { width: 100%; margin-top: 14px; justify-content: center; text-align: center; }
+body.home-v2 .search-card .pi-go svg { flex: none; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+body.home-v2 .search-card .pi-go:hover, body.home-v2 .search-card .pi-go:focus-visible { border-color: #FB6B6C; color: #C10016; }
+body.home-v2 .search-card .pi-go-inline { margin-top: 8px; padding: 6px 12px; font-size: 13px; }
+@media (max-width: 760px) {
+  body.home-v2 .search-card .pi:has(.pi-station) { display: block; }
+  body.home-v2 .search-card .pi:has(.pi-station) > .pi-station { grid-row: auto; }
+}
+@media (prefers-reduced-motion: reduce) { body.home-v2 .search-card .pi-go { transition: none; } }
+
+/* Japón / China (tema cálido de Klook) */
+body.home-v2[data-region="japan"] .search-card .pi-station { border-color: rgba(255, 91, 0, .2); background: rgba(255, 91, 0, .05); }
+body.home-v2[data-region="japan"] .search-card .pi-station-text { color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .pi-go { color: #2A2118; border-color: rgba(255, 91, 0, .3); }
+body.home-v2[data-region="japan"] .search-card .pi-go:hover, body.home-v2[data-region="japan"] .search-card .pi-go:focus-visible { border-color: #FF5B00; color: #C2410C; }
