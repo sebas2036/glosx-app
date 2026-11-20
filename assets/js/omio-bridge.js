@@ -14,7 +14,7 @@
   'use strict';
 
   var MARK = '/affiliate/europe-train';
-  var HOLD_MS = 1800;      // duración de la animación antes de redirigir
+  var HOLD_MS = 300;      // duración de la animación antes de redirigir
   var TOAST_MS = 6500;
 
   var T = {
@@ -30,7 +30,7 @@
 
   // Tarjeta de transición (la misma en la pestaña nueva y en el respaldo de esta pestaña)
   var CARD_CSS = [
-    '.omb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#182C66;border:1px solid rgba(24,44,102,.14);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:ombIn .55s cubic-bezier(.2,.7,.2,1) both}',
+    '.omb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#182C66;border:1px solid rgba(24,44,102,.14);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.14);font-family:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:ombIn .22s cubic-bezier(.2,.7,.2,1) both}',
     '.omb-brand{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-.02em;color:#182C66}',
     '.omb-brand img{width:36px;height:36px;border-radius:10px;background:#fff;box-shadow:0 0 0 1px rgba(24,44,102,.12);padding:5px}',
     '.omb-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0 0 16px}',
@@ -43,7 +43,7 @@
     '.omb-node.is-omio{width:42px;height:42px;background:#fff;border:2px solid #FB6B6C;border-radius:50%;animation:ombPulseCoral 1.4s ease-in-out infinite}',
     '.omb-node.is-omio img{width:24px;height:24px;border-radius:5px}',
     '.omb-bar{flex:1;height:5px;border-radius:5px;background:rgba(24,44,102,.12);overflow:hidden}',
-    '.omb-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#C10016,#FB6B6C);border-radius:5px;animation:ombFill 1.7s cubic-bezier(.3,.6,.3,1) forwards}',
+    '.omb-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#C10016,#FB6B6C);border-radius:5px;animation:ombFill 2.4s cubic-bezier(.1,.8,.3,1) forwards}',
     '.omb-fid{font-size:13px;line-height:1.5;color:#182C66;background:#EEF3FB;border-radius:8px;padding:10px 12px;margin:0}',
     '@keyframes ombIn{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}',
     '@keyframes ombFill{from{width:6%}to{width:100%}}',
@@ -57,8 +57,8 @@
     '.bg1,.bg2{position:absolute;inset:0}',
     // foto de tren ya desenfocada en el archivo (sin filter: Safari se colgaba con blur animado), URL absoluta
     // porque la pestaña nueva es about:blank; encima, un velo índigo-coral de Omio
-    '.bg1{background:#182C66 url(https://glosx.app/assets/img/omio-bridge-bg.jpg) center/cover no-repeat;transform:scale(1.08);animation:ombDrift 9s ease-in-out infinite alternate}',
-    '.bg2{background:radial-gradient(55% 45% at 50% 42%,rgba(251,107,108,.24) 0%,rgba(251,107,108,0) 70%),linear-gradient(160deg,rgba(15,27,92,.84) 0%,rgba(24,44,102,.64) 55%,rgba(119,157,206,.56) 100%)}',
+    '.bg1{background:#EEF1F7 url(https://glosx.app/assets/img/omio-bridge-bg.jpg) center/cover no-repeat;transform:scale(1.08);animation:ombDrift 9s ease-in-out infinite alternate}',
+    '.bg2{background:radial-gradient(55% 45% at 50% 42%,rgba(251,107,108,.14) 0%,rgba(251,107,108,0) 70%),linear-gradient(160deg,rgba(245,246,248,.92) 0%,rgba(236,240,248,.84) 55%,rgba(214,226,244,.74) 100%)}',
     '@keyframes ombDrift{from{transform:scale(1.08)}to{transform:scale(1.14) translate(-1.5%,-1%)}}',
     '@media (prefers-reduced-motion:reduce){.bg1{animation:none}}'
   ].join('');
@@ -113,12 +113,12 @@
     var go = JSON.stringify(String(url)).replace(/</g, '\\u003c');
     return '<!DOCTYPE html><html lang="' + l + '"><head><meta charset="utf-8">' +
       '<meta name="viewport" content="width=device-width,initial-scale=1">' +
-      '<meta name="robots" content="noindex"><title>' + esc(tx.title) + '</title>' +
+      '<meta name="robots" content="noindex"><link rel="preconnect" href="https://omio.sjv.io"><link rel="preconnect" href="https://www.omio.com"><title>' + esc(tx.title) + '</title>' +
       '<style>' + PAGE_CSS + BG_CSS + CARD_CSS + '</style></head><body>' +
       '<div class="bg1"></div><div class="bg2"></div>' + cardHTML(r, tx) +
       '<script>try{window.opener=null}catch(e){}' +
       'var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;' +
-      'setTimeout(function(){location.replace(' + go + ')},reduce?500:' + HOLD_MS + ');</' + 'script>' +
+      'setTimeout(function(){location.replace(' + go + ')},reduce?150:' + HOLD_MS + ');</' + 'script>' +
       '</body></html>';
   }
 
@@ -177,7 +177,7 @@
     overlay.querySelector('.omb-card').style.position = 'relative';
     document.body.appendChild(overlay);
     var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setTimeout(function () { location.assign(url); }, reduce ? 500 : HOLD_MS);
+    setTimeout(function () { location.assign(url); }, reduce ? 150 : HOLD_MS);
   }
 
   var nativeOpen = window.open;
