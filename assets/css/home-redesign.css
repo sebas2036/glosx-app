@@ -1015,11 +1015,8 @@ body.home-v2 .search-card .ai-segment-time { font-size: clamp(17px, 1.8vw, 20px)
 body.home-v2 .search-card .ai-segment-buy,
 body.home-v2 .search-card .ai-generate-btn { font-weight: 600; }
 
-/* Guía a la estación: panel propio e independiente del botón de Omio (planner-info.js).
-   Escritorio: columna al costado del bloque de opciones; móvil: debajo. */
-body.home-v2 .search-card .pi:has(.pi-station) { display: grid; grid-template-columns: minmax(0, 1fr) 300px; column-gap: 24px; align-items: start; }
-body.home-v2 .search-card .pi:has(.pi-station) > * { grid-column: 1; }
-body.home-v2 .search-card .pi:has(.pi-station) > .pi-station { grid-column: 2; grid-row: 1 / span 8; }
+/* Guía a la estación: panel propio e independiente del botón de Omio/Klook (planner-info.js).
+   Móvil: panel apilado debajo. Escritorio: tarjeta gemela de la guía de la ruta (ver bloque de escritorio más abajo). */
 body.home-v2 .search-card .pi-station { margin: 12px 0 0; padding: 16px 18px; border: 1px solid rgba(15, 27, 92, .1); border-radius: 14px; background: rgba(15, 27, 92, .035); }
 body.home-v2 .search-card .pi-station-eye { font-size: 13px; font-weight: 500; color: #5a5f73; }
 body.home-v2 .search-card .pi-station-note { margin: 10px 0 0; font-size: 12.5px; line-height: 1.4; color: #6a6f82; text-align: center; }
@@ -1029,14 +1026,65 @@ body.home-v2 .search-card .pi-station .pi-go { width: 100%; margin-top: 14px; ju
 body.home-v2 .search-card .pi-go svg { flex: none; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 body.home-v2 .search-card .pi-go:hover, body.home-v2 .search-card .pi-go:focus-visible { border-color: #FB6B6C; color: #C10016; }
 body.home-v2 .search-card .pi-go-inline { margin-top: 8px; padding: 6px 12px; font-size: 13px; }
-@media (max-width: 760px) {
-  body.home-v2 .search-card .pi:has(.pi-station) { display: block; }
-  body.home-v2 .search-card .pi:has(.pi-station) > .pi-station { grid-row: auto; }
-}
 @media (prefers-reduced-motion: reduce) { body.home-v2 .search-card .pi-go { transition: none; } }
 
+/* ===== Resultado en escritorio: jerarquía clara =====
+   1) ruta, duración y botón de reserva forman una sola unidad; 2) sin duración repetida ni barra con una sola opción;
+   3) guía de la ruta y llegada a la estación como tarjetas gemelas, lado a lado; 4) el aviso de datos, en una línea al pie. */
+@media (min-width: 761px) {
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-header { grid-column: 1; grid-row: 1; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-buy { grid-column: 2; grid-row: 1; justify-self: start; margin-left: 20px; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-train { grid-column: 1 / -1; grid-row: 2; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment > .pi { grid-column: 1 / -1; }
+  body.home-v2 .search-card .ai-segment-route { font-size: clamp(20px, 1.8vw, 24px); }
+  body.home-v2 .search-card .ai-segment-time { font-size: clamp(16px, 1.4vw, 18px); font-weight: 400; }
+  /* una sola opción visible (solo tren): sin barra, sin duración repetida y sin el rótulo "Opciones de viaje" */
+  body.home-v2 .search-card .pi-modes:has(.rp-row:only-child) .rp-bar,
+  body.home-v2 .search-card .pi-modes:has(.rp-row:only-child) .rp-time,
+  body.home-v2 .search-card .ai-segment.has-offer .pi-modes .rp-bar,
+  body.home-v2 .search-card .ai-segment.has-offer .pi-modes .rp-time,
+  body.home-v2 .search-card .pi:has(.pi-modes .rp-row:only-child) > .rp-eyebrow,
+  body.home-v2 .search-card .ai-segment.has-offer .pi > .rp-eyebrow { display: none; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment { padding: 18px 24px; row-gap: 2px; }
+  /* esa única opción, en una línea: "Tren · ≈ 27 €" (el precio pegado a la etiqueta, no al borde derecho) */
+  body.home-v2 .search-card .pi-modes:has(.rp-row:only-child) .rp-row,
+  body.home-v2 .search-card .ai-segment.has-offer .pi-modes .rp-row { display: flex; align-items: center; gap: 10px; padding: 2px 0 4px; border-top: 0; }
+  body.home-v2 .search-card .pi-modes:has(.rp-row:only-child) .rp-meta,
+  body.home-v2 .search-card .ai-segment.has-offer .pi-modes .rp-meta { margin-left: 0; text-align: left; }
+  body.home-v2 .search-card .pi-modes:has(.rp-row:only-child) .rp-price::before,
+  body.home-v2 .search-card .ai-segment.has-offer .pi-modes .rp-price::before { content: '\00b7\00a0\00a0' attr(data-est) '\00a0'; white-space: pre; font-weight: 400; color: #5a5f73; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-train { justify-self: start; }
+  body.home-v2[data-region="japan"] .search-card .pi-modes:has(.rp-row:only-child) { display: none; }   /* Japón: la etiqueta del tren ya dice "Directo" */
+  body.home-v2 .search-card .pi:has(.pi-station) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; align-items: stretch; }
+  body.home-v2 .search-card .pi:has(.pi-station) > * { grid-column: 1 / -1; }
+  body.home-v2 .search-card .pi:has(.pi-station) > .rp-eyebrow { grid-row: 1; }
+  body.home-v2 .search-card .pi:has(.pi-station) > .pi-modes { grid-row: 2; }
+  body.home-v2 .search-card .pi:has(.pi-station) > .pi-gcard:not(.pi-station) { grid-column: 1; grid-row: 3; margin: 0; }
+  body.home-v2 .search-card .pi:has(.pi-station) > .pi-station { grid-column: 2; grid-row: 3; margin: 0; }
+  body.home-v2 .search-card .pi:has(.pi-station) > .pi-exp { grid-row: 4; }
+  body.home-v2 .search-card .pi:has(.pi-station) > .pi-note { grid-row: 5; margin: 0; font-size: 12px; }
+  body.home-v2 .ai-results .pi-gcard-title { font-weight: 600; }
+  body.home-v2 .ai-results .pi-exp .pi-exp-lab { font-weight: 400; color: #5a5f73; }
+  /* tarjeta de la estación = gemela de la guía: blanca, borde fino, toda clicable */
+  body.home-v2 .search-card .pi-station,
+  body.home-v2[data-region="japan"] .search-card .pi-station { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 10px 16px; background: #fff; border: 1px solid rgba(40, 28, 20, .12); border-radius: 14px; transition: border-color .15s, box-shadow .15s; }
+  body.home-v2 .search-card .pi-station:hover { border-color: rgba(168, 0, 15, .45); box-shadow: 0 6px 18px rgba(20, 21, 26, .08); }
+  body.home-v2 .search-card .pi-station-text { display: none; }
+  body.home-v2 .search-card .pi-station .pi-go,
+  body.home-v2[data-region="japan"] .search-card .pi-station .pi-go { width: 100%; margin: 3px 0 0; padding: 0; border: 0; border-radius: 0; background: none; justify-content: flex-start; text-align: left; font-size: 16px; font-weight: 600; color: #14151a; }
+  body.home-v2 .search-card .pi-station .pi-go::before { content: ''; position: absolute; inset: 0; border-radius: 14px; }
+  body.home-v2 .search-card .pi-station .pi-go::after { content: '\2192'; margin-left: auto; font-size: 22px; font-weight: 700; color: #A8000F; transition: transform .15s; }
+  body.home-v2 .search-card .pi-station:hover .pi-go::after { transform: translateX(3px); }
+  body.home-v2 .search-card .pi-station .pi-go:hover, body.home-v2 .search-card .pi-station .pi-go:focus-visible { color: #14151a; }
+  body.home-v2 .search-card .pi-station-eye { font-size: 13px; font-weight: 400; color: #5a5f73; }
+  body.home-v2 .search-card .pi-station-note { margin: 3px 0 0; text-align: left; font-size: 13px; color: #4a4b55; }
+}
+@media (min-width: 761px) and (prefers-reduced-motion: reduce) { body.home-v2 .search-card .pi-station, body.home-v2 .search-card .pi-station .pi-go::after { transition: none; } }
+
 /* Japón / China (tema cálido de Klook) */
-body.home-v2[data-region="japan"] .search-card .pi-station { border-color: rgba(255, 91, 0, .2); background: rgba(255, 91, 0, .05); }
-body.home-v2[data-region="japan"] .search-card .pi-station-text { color: #2A2118; }
-body.home-v2[data-region="japan"] .search-card .pi-go { color: #2A2118; border-color: rgba(255, 91, 0, .3); }
-body.home-v2[data-region="japan"] .search-card .pi-go:hover, body.home-v2[data-region="japan"] .search-card .pi-go:focus-visible { border-color: #FF5B00; color: #C2410C; }
+@media (max-width: 760px) {
+  body.home-v2[data-region="japan"] .search-card .pi-station { border-color: rgba(255, 91, 0, .2); background: rgba(255, 91, 0, .05); }
+  body.home-v2[data-region="japan"] .search-card .pi-station-text { color: #2A2118; }
+  body.home-v2[data-region="japan"] .search-card .pi-go { color: #2A2118; border-color: rgba(255, 91, 0, .3); }
+  body.home-v2[data-region="japan"] .search-card .pi-go:hover, body.home-v2[data-region="japan"] .search-card .pi-go:focus-visible { border-color: #FF5B00; color: #C2410C; }
+}

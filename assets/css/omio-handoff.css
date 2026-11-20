@@ -179,11 +179,12 @@ body.home-v2[data-region="japan"] .search-card .pi-gcard-arrow { color: #FF5B00;
 body.home-v2[data-region="japan"] .search-card .pi-gcard:hover { border-color: #FF5B00; }
 
 /* Botón de reserva en Japón: naranja de Klook con su ícono */
+/* Mismo naranja, texto y sombra que "Generar itinerario" (home-redesign.css), en móvil y escritorio */
 body.home-v2[data-region="japan"] .ai-segment-buy[data-klook] {
-  background: #FF5B00; background-image: none; color: #2A2118; font-weight: 700; border-color: #FF5B00;
-  box-shadow: 0 6px 16px rgba(255, 91, 0, .35); transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  background: #FF7A33; background-image: none; color: #fff; font-weight: 500; border-color: #FF7A33;
+  box-shadow: 0 6px 16px rgba(255, 122, 51, .22); transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-body.home-v2[data-region="japan"] .ai-segment-buy[data-klook]:hover { background: #F25200; box-shadow: 0 8px 20px rgba(255, 91, 0, .45); }
+body.home-v2[data-region="japan"] .ai-segment-buy[data-klook]:hover { background: #F06A22; border-color: #F06A22; box-shadow: 0 8px 20px rgba(255, 122, 51, .3); }
 body.home-v2[data-region="japan"] .ai-segment-buy[data-klook]::before {
   content: ""; display: inline-block; width: 22px; height: 22px; margin-right: 10px; vertical-align: middle; border-radius: 6px;
   background: #fff url("https://www.google.com/s2/favicons?sz=64&domain=klook.com") center / 16px 16px no-repeat;

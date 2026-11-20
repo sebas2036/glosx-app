@@ -109,6 +109,7 @@
     ja: { st: '{s}への行き方', ci: '{c}駅への行き方', tip: '現在地からGoogleマップを開きます', ey: '駅までの行き方', tx: '現在地から、徒歩または公共交通機関で。', nt: '出発地の街に着いてからご利用ください。' },
     zh: { st: '前往{s}的路线', ci: '前往{c}火车站的路线', tip: '从您当前位置打开谷歌地图', ey: '前往车站', tx: '从您当前位置出发，步行或乘坐公共交通。', nt: '到达出发城市后再使用。' }
   };
+  var EST = {en: 'Estimated price', es: 'Precio estimado', fr: 'Prix estimé', de: 'Geschätzter Preis', it: 'Prezzo stimato', pt: 'Preço estimado', ja: '目安価格', zh: '预估价格'};
   var PIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>';
   function goLang() {
     var l = String(document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
@@ -185,7 +186,7 @@
         return '<div class="rp-row' + (k === 'train' ? ' is-train' : '') + '"><span class="rp-ico">' + ICON[k] + '</span>' +
           '<div><div class="rp-label">' + esc(t[k]) + '</div><div class="rp-bar" aria-hidden="true"><i style="width:' + pct + '%"></i></div></div>' +
           '<span class="rp-meta"><span class="rp-time">' + fmt(v, t) + '</span>' +
-          (prices[MODES.indexOf(k)] > 0 ? '<span class="rp-price">' + fmtPrice(prices[MODES.indexOf(k)], lang()) + '</span>' : '') + '</span></div>';
+          (prices[MODES.indexOf(k)] > 0 ? '<span class="rp-price" data-est="' + esc(EST[goLang()]) + '">' + fmtPrice(prices[MODES.indexOf(k)], lang()) + '</span>' : '') + '</span></div>';
       }).join('') + '</div><p class="rp-note pi-note">' + esc(t.note) + '</p>';
       if (vals[0] > 0 && time) time.textContent = fmt(vals[0], t);
     }
