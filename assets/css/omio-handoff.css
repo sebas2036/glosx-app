@@ -399,7 +399,7 @@ body.home-v2 .search-card:has(.search-panel[data-panel="countries"].on) { backgr
 body.home-v2[data-region="japan"] .search-card:has(.search-panel[data-panel="countries"].on) { background: linear-gradient(180deg, #FFF1E5 0%, #FFE2CC 100%); }
 body.home-v2 .search-panel[data-panel="countries"] .section-label { color: var(--omio-navy, #0F1B5C) !important; }
 body.home-v2[data-region="japan"] .search-panel[data-panel="countries"] .section-label { color: #8A3A10 !important; }
-body.home-v2 .search-panel[data-panel="countries"] .country-chip { background: #fff !important; border: 1px solid rgba(15, 27, 92, .16) !important; color: var(--omio-navy, #0F1B5C) !important; box-shadow: 0 2px 8px rgba(15, 27, 92, .08) !important; font-weight: 600 !important; }
+body.home-v2 .search-panel[data-panel="countries"] .country-chip { background: #fff !important; border: 1px solid rgba(15, 27, 92, .16) !important; color: var(--omio-navy, #0F1B5C) !important; box-shadow: 0 2px 8px rgba(15, 27, 92, .08) !important; font-weight: 500 !important; }
 body.home-v2 .search-panel[data-panel="countries"] .country-chip:hover,
 body.home-v2 .search-panel[data-panel="countries"] .country-chip.show-photo { border-color: var(--omio-coral, #FB6B6C) !important; background: #fff !important; color: var(--omio-navy, #0F1B5C) !important; box-shadow: 0 6px 16px rgba(251, 107, 108, .22) !important; }
 body.home-v2[data-region="japan"] .search-panel[data-panel="countries"] .country-chip { border-color: rgba(255, 91, 0, .3) !important; color: #2A2118 !important; box-shadow: 0 2px 8px rgba(138, 58, 16, .1) !important; }
