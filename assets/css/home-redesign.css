@@ -299,6 +299,9 @@ body.home-v2 .search-card .ai-segment-buy {
   body.home-v2 .search-card .ai-segment-train,
   body.home-v2 .search-card .ai-segment-body { grid-column: 1; grid-row: auto; }
   body.home-v2 .search-card .ai-segment-buy { grid-column: 1; grid-row: auto; justify-self: stretch; text-align: center; margin-top: 8px; }
+  /* Móvil: el botón de reserva (Omio/Klook) va arriba, justo después del título de la ruta; opciones, guía y estación debajo */
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-buy { order: 1; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment > .pi { order: 2; }
 }
 
 /* ===== beneficios debajo de la tarjeta ===== */
