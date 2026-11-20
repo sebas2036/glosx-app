@@ -1000,3 +1000,14 @@ body:not([data-klook="china"]) .cn-static { display: none !important; }
 body[data-klook="china"] #discover .eu-static { display: none !important; }
 body[data-klook="china"] #guides .eu-static { display: none !important; }
 body[data-klook="china"] .cn-has { display: none !important; }
+
+/* Tipografía de la tarjeta de búsqueda (Figtree): escala 13 / 15 / 18-24, pesos 400 / 500 / 600.
+   Etiquetas en minúscula normal y sin espaciado; ruta en 600 y duración en 500 más apagada. */
+body.home-v2 .search-card { font-variant-numeric: tabular-nums; }
+body.home-v2 .search-card .pi-eyebrow,
+body.home-v2 .search-card .pi-gcard-eye,
+body.home-v2 .search-card .omo-eyebrow { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 500; color: #5a5f73; }
+body.home-v2 .search-card .ai-segment-route { font-size: clamp(19px, 2vw, 24px); font-weight: 600; }
+body.home-v2 .search-card .ai-segment-time { font-size: clamp(17px, 1.8vw, 20px); font-weight: 500; color: #5a5f73; }
+body.home-v2 .search-card .ai-segment-buy,
+body.home-v2 .search-card .ai-generate-btn { font-weight: 600; }

@@ -610,9 +610,8 @@ body[data-region="japan"] .hotels-promo { display: none; }
   .country-popup { max-height: min(560px, 72vh); overflow-y: auto; overscroll-behavior: contain; }
 }
 
-/* Móvil: con una ruta generada se ocultan los pares populares y la nota de la búsqueda para acortar la tarjeta;
-   vuelven solos cuando no hay resultado (#aiResults oculto) o el campo está vacío. */
-@media (max-width: 760px) {
-  body:has(#aiResults:not([style*="display:none"]):not([style*="display: none"])):has(#aiInput:not(:placeholder-shown)) .ai-suggestions,
-  body:has(#aiResults:not([style*="display:none"]):not([style*="display: none"])):has(#aiInput:not(:placeholder-shown)) .search-note { display: none; }
-}
+/* Con una ruta generada se ocultan los pares populares y la nota de la búsqueda para acortar la tarjeta (móvil y escritorio);
+   vuelven solos cuando no hay resultado (#aiResults oculto) o el campo está vacío (modo reposo). */
+body:has(#aiResults:not([style*="display:none"]):not([style*="display: none"])):has(#aiInput:not(:placeholder-shown)) .ai-suggestions,
+body:has(#aiResults:not([style*="display:none"]):not([style*="display: none"])):has(#aiInput:not(:placeholder-shown)) .search-note { display: none; }
+

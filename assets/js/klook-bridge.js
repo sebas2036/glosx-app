@@ -28,7 +28,7 @@
 
   // Tarjeta de transición (la misma en la pestaña nueva y en el respaldo de esta pestaña)
   var CARD_CSS = [
-    '.klb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#2A2118;border:1px solid rgba(255,91,0,.22);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:klbIn .22s cubic-bezier(.2,.7,.2,1) both}',
+    '.klb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#2A2118;border:1px solid rgba(255,91,0,.22);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:klbIn .22s cubic-bezier(.2,.7,.2,1) both}',
     '.klb-brand{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-.02em;color:#2A2118}',
     '.klb-brand img{width:36px;height:36px;border-radius:10px;background:#fff;box-shadow:0 0 0 1px rgba(255,91,0,.25);padding:5px}',
     '.klb-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0 0 16px}',
@@ -142,7 +142,7 @@
     if (!document.getElementById('klb-style')) {
       var st = document.createElement('style');
       st.id = 'klb-style';
-      st.textContent = '.klb-toast{position:fixed;left:50%;bottom:20px;z-index:2147483000;transform:translate(-50%,16px);opacity:0;pointer-events:none;transition:opacity .35s ease,transform .35s ease;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;max-width:min(520px,calc(100vw - 24px));background:linear-gradient(135deg,#FFF6EF 0%,#FFE9DA 100%);color:#2A2118;border:1px solid rgba(255,91,0,.55);border-radius:14px;padding:12px 16px;box-shadow:0 12px 32px rgba(20,21,26,.2);font:500 14px/1.4 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
+      st.textContent = '.klb-toast{position:fixed;left:50%;bottom:20px;z-index:2147483000;transform:translate(-50%,16px);opacity:0;pointer-events:none;transition:opacity .35s ease,transform .35s ease;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;max-width:min(520px,calc(100vw - 24px));background:linear-gradient(135deg,#FFF6EF 0%,#FFE9DA 100%);color:#2A2118;border:1px solid rgba(255,91,0,.55);border-radius:14px;padding:12px 16px;box-shadow:0 12px 32px rgba(20,21,26,.2);font:500 14px/1.4 "Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
         '.klb-toast.is-open{opacity:1;transform:translate(-50%,0);pointer-events:auto}' +
         '.klb-toast a{font-weight:600;color:#2A2118;text-decoration:underline;white-space:nowrap}' +
         '.klb-toast button{font:inherit;font-weight:600;border:1px solid rgba(20,21,26,.14);background:#fff;color:#2A2118;border-radius:8px;padding:6px 12px;cursor:pointer}' +

@@ -30,7 +30,7 @@
 
   // Tarjeta de transición (la misma en la pestaña nueva y en el respaldo de esta pestaña)
   var CARD_CSS = [
-    '.omb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#182C66;border:1px solid rgba(24,44,102,.14);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:ombIn .55s cubic-bezier(.2,.7,.2,1) both}',
+    '.omb-card{width:min(440px,100%);box-sizing:border-box;background:rgba(255,255,255,.84);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#182C66;border:1px solid rgba(24,44,102,.14);border-radius:16px;padding:24px 24px 22px;box-shadow:0 18px 48px rgba(20,21,26,.22);font-family:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;animation:ombIn .55s cubic-bezier(.2,.7,.2,1) both}',
     '.omb-brand{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-.02em;color:#182C66}',
     '.omb-brand img{width:36px;height:36px;border-radius:10px;background:#fff;box-shadow:0 0 0 1px rgba(24,44,102,.12);padding:5px}',
     '.omb-route{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0 0 16px}',
@@ -139,7 +139,7 @@
     if (!document.getElementById('omb-style')) {
       var st = document.createElement('style');
       st.id = 'omb-style';
-      st.textContent = '.omb-toast{position:fixed;left:50%;bottom:20px;z-index:2147483000;transform:translate(-50%,16px);opacity:0;pointer-events:none;transition:opacity .35s ease,transform .35s ease;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;max-width:min(520px,calc(100vw - 24px));background:linear-gradient(135deg,#F1F2F6 0%,#E8F1FC 100%);color:#182C66;border:1px solid rgba(251,107,108,.6);border-radius:14px;padding:12px 16px;box-shadow:0 12px 32px rgba(20,21,26,.2);font:500 14px/1.4 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
+      st.textContent = '.omb-toast{position:fixed;left:50%;bottom:20px;z-index:2147483000;transform:translate(-50%,16px);opacity:0;pointer-events:none;transition:opacity .35s ease,transform .35s ease;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;max-width:min(520px,calc(100vw - 24px));background:linear-gradient(135deg,#F1F2F6 0%,#E8F1FC 100%);color:#182C66;border:1px solid rgba(251,107,108,.6);border-radius:14px;padding:12px 16px;box-shadow:0 12px 32px rgba(20,21,26,.2);font:500 14px/1.4 "Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
         '.omb-toast.is-open{opacity:1;transform:translate(-50%,0);pointer-events:auto}' +
         '.omb-toast a{font-weight:600;color:#182C66;text-decoration:underline;white-space:nowrap}' +
         '.omb-toast button{font:inherit;font-weight:600;border:1px solid rgba(20,21,26,.14);background:#fff;color:#182C66;border-radius:8px;padding:6px 12px;cursor:pointer}' +
@@ -261,7 +261,7 @@
     if (document.getElementById('omo-style')) return;
     var st = document.createElement('style');
     st.id = 'omo-style';
-    st.textContent = '.omo{margin:12px 0 4px;padding:14px 16px;border:1px solid rgba(251,107,108,.55);border-radius:14px;background:linear-gradient(135deg,#F1F2F6 0%,#E8F1FC 100%);color:#182C66;font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
+    st.textContent = '.omo{margin:12px 0 4px;padding:14px 16px;border:1px solid rgba(251,107,108,.55);border-radius:14px;background:linear-gradient(135deg,#F1F2F6 0%,#E8F1FC 100%);color:#182C66;font-family:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}' +
       '.omo-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}' +
       '.omo-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#4A5578;margin:0 0 4px}' +
       '.omo-text{margin:0;font-size:14px;line-height:1.45;font-weight:600}' +

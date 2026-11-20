@@ -14,7 +14,7 @@
       --amber:    #a6650a;
       --text:     #14151a;
       --muted:    #55565f;
-      --font-display: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-display: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
 
 
@@ -2670,7 +2670,7 @@
   /* ══════════════════════════════════════════════════════════════════════
      DIRECCION B — Señalética ferroviaria (prueba, solo hero + nav)
      Fondo claro, rojo oficial de vía en vez de violeta, sin brillos ni
-     particulas, tipografia tecnica (IBM Plex). El resto del sitio sigue
+     particulas, tipografia tecnica (Figtree). El resto del sitio sigue
      con el tema oscuro por ahora -- esto se extiende recien despues de
      confirmar que el rumbo esta bien.
      ══════════════════════════════════════════════════════════════════════ */
@@ -2680,7 +2680,7 @@
     --rail-red: #C10016;
     --rail-muted: #55565f;
     --rail-line: #14151a;
-    --font-rail: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-rail: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   nav {
