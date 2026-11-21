@@ -346,7 +346,7 @@
       if (!segs.length) return;
       segs.forEach(function (seg) {
         if (seg.querySelector('.pi-station')) return;
-        if (segs.length === 1 && seg.querySelector('.ai-segment-stations') && useStationCard(seg, null)) return;
+        if (seg.querySelector('.ai-segment-stations') && useStationCard(seg, null)) return;
         if (!seg.querySelector('a.pi-go')) addStationPanel(seg);
       });
       addExp(segs[segs.length - 1]);
