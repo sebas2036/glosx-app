@@ -1088,3 +1088,12 @@ body.home-v2 .search-card .pi-go-inline { margin-top: 8px; padding: 6px 12px; fo
   body.home-v2[data-region="japan"] .search-card .pi-go { color: #2A2118; border-color: rgba(255, 91, 0, .3); }
   body.home-v2[data-region="japan"] .search-card .pi-go:hover, body.home-v2[data-region="japan"] .search-card .pi-go:focus-visible { border-color: #FF5B00; color: #C2410C; }
 }
+
+/* Mini mapa ilustrativo (punto a punto, línea punteada) en el espacio libre de la tarjeta "Llegar a la estación".
+   Es solo un dibujo: no usa ningún mapa ni clave, y no cambia con la ruta. Solo en tarjetas anchas de escritorio. */
+@media (min-width: 761px) {
+  body.home-v2 .search-card .pi-station { container-type: inline-size; }
+  body.home-v2 .search-card .pi-station::after { display: none; }
+  @container (min-width: 440px) { body.home-v2 .search-card .pi-station::after { display: block; } body.home-v2 .search-card .pi-station .pi-go span { margin-right: 138px; } }
+  body.home-v2 .search-card .pi-station::after { content: ''; position: absolute; top: 50%; right: 54px; width: 124px; height: 48px; transform: translateY(-50%); border-radius: 10px; background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 168 64%22 width=%22168%22 height=%2264%22%3E%3Crect width=%22168%22 height=%2264%22 rx=%2210%22 fill=%22%23EEF1F7%22/%3E%3Cg fill=%22none%22 stroke=%22%23fff%22 stroke-width=%226%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M-4 46L172 32%22/%3E%3Cpath d=%22M44 -4L62 68%22/%3E%3Cpath d=%22M112 -4L98 68%22/%3E%3Cpath d=%22M-4 14L172 8%22/%3E%3C/g%3E%3Cg fill=%22none%22 stroke=%22%23DDE2EC%22 stroke-width=%221%22%3E%3Cpath d=%22M-4 46L172 32%22/%3E%3Cpath d=%22M44 -4L62 68%22/%3E%3Cpath d=%22M112 -4L98 68%22/%3E%3Cpath d=%22M-4 14L172 8%22/%3E%3C/g%3E%3Cpath d=%22M26 47C52 47 60 24 86 29S126 42 142 20%22 fill=%22none%22 stroke=%22%23A8000F%22 stroke-width=%222.4%22 stroke-dasharray=%220.1 5.6%22 stroke-linecap=%22round%22/%3E%3Ccircle cx=%2226%22 cy=%2247%22 r=%225%22 fill=%22%23fff%22 stroke=%22%2314151a%22 stroke-width=%222.4%22/%3E%3Cpath d=%22M142 31C137 25 134 22 134 17a8 8 0 0 1 16 0c0 5-3 8-8 14z%22 fill=%22%23A8000F%22/%3E%3Ccircle cx=%22142%22 cy=%2217%22 r=%223%22 fill=%22%23fff%22/%3E%3C/svg%3E") center/100% 100% no-repeat; box-shadow: inset 0 0 0 1px rgba(20, 21, 26, .06); pointer-events: none; }
+}
