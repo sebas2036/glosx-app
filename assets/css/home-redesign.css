@@ -1097,3 +1097,22 @@ body.home-v2 .search-card .pi-go-inline { margin-top: 8px; padding: 6px 12px; fo
   @container (min-width: 440px) { body.home-v2 .search-card .pi-station::after { display: block; } body.home-v2 .search-card .pi-station .pi-go span { margin-right: 138px; } }
   body.home-v2 .search-card .pi-station::after { content: ''; position: absolute; top: 50%; right: 54px; width: 124px; height: 48px; transform: translateY(-50%); border-radius: 10px; background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 168 64%22 width=%22168%22 height=%2264%22%3E%3Crect width=%22168%22 height=%2264%22 rx=%2210%22 fill=%22%23EEF1F7%22/%3E%3Cg fill=%22none%22 stroke=%22%23fff%22 stroke-width=%226%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M-4 46L172 32%22/%3E%3Cpath d=%22M44 -4L62 68%22/%3E%3Cpath d=%22M112 -4L98 68%22/%3E%3Cpath d=%22M-4 14L172 8%22/%3E%3C/g%3E%3Cg fill=%22none%22 stroke=%22%23DDE2EC%22 stroke-width=%221%22%3E%3Cpath d=%22M-4 46L172 32%22/%3E%3Cpath d=%22M44 -4L62 68%22/%3E%3Cpath d=%22M112 -4L98 68%22/%3E%3Cpath d=%22M-4 14L172 8%22/%3E%3C/g%3E%3Cpath d=%22M26 47C52 47 60 24 86 29S126 42 142 20%22 fill=%22none%22 stroke=%22%23A8000F%22 stroke-width=%222.4%22 stroke-dasharray=%220.1 5.6%22 stroke-linecap=%22round%22/%3E%3Ccircle cx=%2226%22 cy=%2247%22 r=%225%22 fill=%22%23fff%22 stroke=%22%2314151a%22 stroke-width=%222.4%22/%3E%3Cpath d=%22M142 31C137 25 134 22 134 17a8 8 0 0 1 16 0c0 5-3 8-8 14z%22 fill=%22%23A8000F%22/%3E%3Ccircle cx=%22142%22 cy=%2217%22 r=%223%22 fill=%22%23fff%22/%3E%3C/svg%3E") center/100% 100% no-repeat; box-shadow: inset 0 0 0 1px rgba(20, 21, 26, .06); pointer-events: none; }
 }
+
+/* Cabecera del resultado (Europa, escritorio): viaje dibujado + fila de datos. En móvil y con varios tramos se mantiene el diseño anterior. */
+body.home-v2 .search-card .rt-visual { display: none; }
+body.home-v2 .search-card .rt-facts { flex: 0 0 100%; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+body.home-v2 .search-card .rt-chip { padding: 5px 12px; border: 1px solid rgba(29, 32, 48, .12); border-radius: 999px; background: #fff; font-size: 13px; line-height: 1.3; color: #4a4b55; }
+@media (max-width: 760px) { body.home-v2 .search-card .rt-facts { gap: 6px; margin-top: 8px; } body.home-v2 .search-card .rt-chip { padding: 4px 10px; font-size: 12px; } }
+body.home-v2 .search-card .rt-chip.is-price { font-weight: 600; color: #1d2030; border-color: rgba(168, 0, 15, .28); }
+@media (min-width: 761px) {
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-header:has(.rt-visual) { flex-wrap: wrap; align-items: center; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-header:has(.rt-visual) > .ai-segment-route,
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment-header:has(.rt-visual) > .ai-segment-time { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .rt-visual { display: flex; flex: 1 1 auto; max-width: 620px; align-items: center; gap: 14px; font-size: clamp(22px, 2vw, 28px); font-weight: 700; letter-spacing: -.01em; color: #1d2030; }
+  body.home-v2 .search-card .rt-track { position: relative; display: flex; align-items: center; justify-content: center; flex: 1 1 200px; max-width: 320px; min-width: 150px; height: 30px; }
+  body.home-v2 .search-card .rt-track::before { content: ''; position: absolute; left: 7px; right: 7px; top: 50%; border-top: 2.5px dotted rgba(168, 0, 15, .7); }
+  body.home-v2 .search-card .rt-dot { position: absolute; top: 50%; width: 11px; height: 11px; box-sizing: border-box; border-radius: 50%; transform: translateY(-50%); }
+  body.home-v2 .search-card .rt-dot:first-child { left: 0; background: #fff; border: 2.5px solid #1d2030; }
+  body.home-v2 .search-card .rt-dot:last-child { right: 0; background: #A8000F; border: 2.5px solid #A8000F; }
+  body.home-v2 .search-card .rt-dur { position: relative; z-index: 1; padding: 3px 11px; border: 1px solid rgba(29, 32, 48, .12); border-radius: 999px; background: #fff; font-size: 14px; font-weight: 600; letter-spacing: 0; color: #4a4b55; white-space: nowrap; }
+}

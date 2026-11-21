@@ -208,6 +208,52 @@
       box.appendChild(expLine(norm(b), dn));
     }
     seg.insertBefore(box, buy);   // bloque propio del grid (el cuerpo de la tarjeta compacta está oculto por el tema)
+    decorateHeader(seg, box);
+  }
+
+  // Cabecera del resultado con más información: el viaje dibujado (origen ┄ duración ┄ destino) y una fila de datos reales
+  // (primer tren, trenes por día y precio desde) tomados de lo que ya muestra la tarjeta. Si un dato no existe, no se muestra.
+  var FROMP = {
+    en: function (p) { return 'from ' + p; }, es: function (p) { return 'desde ' + p; }, fr: function (p) { return 'dès ' + p; },
+    de: function (p) { return 'ab ' + p; }, it: function (p) { return 'da ' + p; }, pt: function (p) { return 'desde ' + p; },
+    ja: function (p) { return p + '〜'; }, zh: function (p) { return p + ' 起'; }
+  };
+  function decorateHeader(seg, box) {
+    var hd = seg.querySelector('.ai-segment-header');
+    if (!hd || hd.querySelector('.rt-visual')) return;
+    var rt = hd.querySelector('.ai-segment-route'), tm = hd.querySelector('.ai-segment-time');
+    var parts = rt ? rt.textContent.split('\u2192') : [];
+    if (parts.length === 2) {
+      var v = document.createElement('span'); v.className = 'rt-visual'; v.setAttribute('aria-hidden', 'true');
+      var o = document.createElement('span'); o.className = 'rt-o'; o.textContent = parts[0].trim();
+      var tr = document.createElement('span'); tr.className = 'rt-track';
+      var d1 = document.createElement('i'); d1.className = 'rt-dot';
+      var du = document.createElement('span'); du.className = 'rt-dur'; du.textContent = tm ? tm.textContent.trim() : '';
+      var d2 = document.createElement('i'); d2.className = 'rt-dot';
+      tr.appendChild(d1); if (du.textContent) tr.appendChild(du); tr.appendChild(d2);
+      var de = document.createElement('span'); de.className = 'rt-d'; de.textContent = parts[1].trim();
+      v.appendChild(o); v.appendChild(tr); v.appendChild(de);
+      hd.appendChild(v);
+    }
+    function facts() {
+      var old = hd.querySelector('.rt-facts'); if (old) old.remove();
+      var chips = [];
+      var meta = box.querySelector('.pi-gcard-meta');
+      if (meta) meta.textContent.split(' \u00b7 ').forEach(function (t) { t = t.trim(); if (t) chips.push([t, false]); });
+      var pr = box.querySelector('.rp-row.is-train .rp-price');
+      if (pr && pr.textContent.trim()) chips.push([(FROMP[goLang()] || FROMP.en)(pr.textContent.trim()), true]);
+      if (!chips.length) return;
+      var f = document.createElement('div'); f.className = 'rt-facts';
+      chips.forEach(function (c) { var s = document.createElement('span'); s.className = 'rt-chip' + (c[1] ? ' is-price' : ''); s.textContent = c[0]; f.appendChild(s); });
+      hd.appendChild(f);
+    }
+    facts();
+    // el dato del primer tren / trenes por día llega después de dibujar la tarjeta de guía: se vuelve a armar una vez
+    var gm = box.querySelector('.pi-gcard-meta');
+    if (gm && !gm.textContent.trim() && window.MutationObserver) {
+      var mo = new MutationObserver(function () { if (gm.textContent.trim()) { mo.disconnect(); facts(); } });
+      mo.observe(gm, { childList: true, characterData: true, subtree: true });
+    }
   }
 
   // "Qué hacer al llegar": una línea con Klook (tours) y GetYourGuide (actividades), con afiliación vía backend; sin agrandar la tarjeta
