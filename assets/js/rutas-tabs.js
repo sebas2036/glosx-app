@@ -32,7 +32,19 @@
     '.ri-tabbed>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
     '.ri-tabbed{margin-top:12px}' +
     'body.ri-searching .ri-tabbed>h2{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}' +
-    'body.ri-searching .ri-tabs{display:none}';
+    'body.ri-searching .ri-tabs{display:none}' +
+    // Filas con forma: cada ruta es una fila blanca con borde suave
+    '.routes-index .routes-index-list{columns:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;font-size:15px}' +
+    '.routes-index .routes-index-list li{margin:0;break-inside:auto}' +
+    '.routes-index .routes-index-list li a{display:flex;align-items:center;gap:8px;padding:11px 14px;background:#fff;border:1px solid rgba(20,21,26,.12);border-radius:10px;color:#14151a;text-decoration:none;transition:border-color .15s,box-shadow .15s}' +
+    '.routes-index .routes-index-list li a:hover,.routes-index .routes-index-list li a:focus-visible{border-color:#C10016;box-shadow:0 2px 10px rgba(20,21,26,.06);text-decoration:none;color:#14151a}' +
+    '.ri-o{color:#6b6c75}.ri-arr{color:#C10016;transition:transform .15s}' +
+    '.routes-index .routes-index-list li a:hover .ri-arr{transform:translateX(3px)}' +
+    '.ri-group{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#14151a;margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(20,21,26,.14);text-align:left}' +
+    '.ri-group:first-of-type{margin-top:14px}' +
+    '@media (max-width:860px){.routes-index .routes-index-list{grid-template-columns:repeat(2,minmax(0,1fr))}}' +
+    '@media (max-width:520px){.routes-index .routes-index-list{grid-template-columns:1fr}}' +
+    '@media (prefers-reduced-motion:reduce){.routes-index .routes-index-list li a,.ri-arr{transition:none}.routes-index .routes-index-list li a:hover .ri-arr{transform:none}}';
   document.head.appendChild(st);
 
   // Parte el contenido en paneles, cada uno con su H2. El id del H2 dice la región; sin id = Europa.
@@ -54,6 +66,69 @@
   panels = panels.filter(Boolean);
   panels.forEach(function (p) { sec.parentNode.insertBefore(p, sec); });
   sec.parentNode.removeChild(sec);
+
+  // Origen en gris, flecha en rojo y destino en negro (el texto completo no cambia)
+  panels.forEach(function (p) {
+    p.querySelectorAll('.routes-index-list li a').forEach(function (a) {
+      var parts = a.textContent.split(/\s*[→]\s*/);
+      if (parts.length !== 2) return;
+      a.textContent = '';
+      var o = document.createElement('span'); o.className = 'ri-o'; o.textContent = parts[0];
+      var ar = document.createElement('span'); ar.className = 'ri-arr'; ar.setAttribute('aria-hidden', 'true'); ar.textContent = '→';
+      var d = document.createElement('span'); d.className = 'ri-d'; d.textContent = parts[1];
+      a.appendChild(o); a.appendChild(ar); a.appendChild(d);
+    });
+  });
+
+  // Europa: agrupa las rutas por país de origen y ordena cada grupo A-Z en el idioma de la página
+  var CITY = {
+    amsterdam: 'NL', brussels: 'BE', paris: 'FR', bordeaux: 'FR', lyon: 'FR', marseille: 'FR', nice: 'FR', strasbourg: 'FR', tende: 'FR', toulouse: 'FR',
+    madrid: 'ES', barcelona: 'ES', alicante: 'ES', santiago: 'ES', malaga: 'ES', seville: 'ES', girona: 'ES', zaragoza: 'ES',
+    milan: 'IT', rome: 'IT', florence: 'IT', naples: 'IT', venice: 'IT', turin: 'IT',
+    berlin: 'DE', munich: 'DE', frankfurt: 'DE', cologne: 'DE', dortmund: 'DE', koblenz: 'DE', hamburg: 'DE',
+    basel: 'CH', bern: 'CH', geneva: 'CH', interlaken: 'CH', lucerne: 'CH', montreux: 'CH', stmoritz: 'CH', zurich: 'CH', zermatt: 'CH',
+    london: 'GB', vienna: 'AT', graz: 'AT', innsbruck: 'AT', salzburg: 'AT', prague: 'CZ', brno: 'CZ', budapest: 'HU', ljubljana: 'SI',
+    lisbon: 'PT', oslo: 'NO', stockholm: 'SE', copenhagen: 'DK'
+  };
+  var COUNTRY = {
+    en: { ES: 'Spain', FR: 'France', IT: 'Italy', DE: 'Germany', CH: 'Switzerland', GB: 'United Kingdom', AT: 'Austria', NL: 'Netherlands', BE: 'Belgium', CZ: 'Czechia', HU: 'Hungary', SI: 'Slovenia', PT: 'Portugal', NO: 'Norway', SE: 'Sweden', DK: 'Denmark', XX: 'Other' },
+    es: { ES: 'España', FR: 'Francia', IT: 'Italia', DE: 'Alemania', CH: 'Suiza', GB: 'Reino Unido', AT: 'Austria', NL: 'Países Bajos', BE: 'Bélgica', CZ: 'Chequia', HU: 'Hungría', SI: 'Eslovenia', PT: 'Portugal', NO: 'Noruega', SE: 'Suecia', DK: 'Dinamarca', XX: 'Otras' },
+    fr: { ES: 'Espagne', FR: 'France', IT: 'Italie', DE: 'Allemagne', CH: 'Suisse', GB: 'Royaume-Uni', AT: 'Autriche', NL: 'Pays-Bas', BE: 'Belgique', CZ: 'Tchéquie', HU: 'Hongrie', SI: 'Slovénie', PT: 'Portugal', NO: 'Norvège', SE: 'Suède', DK: 'Danemark', XX: 'Autres' },
+    de: { ES: 'Spanien', FR: 'Frankreich', IT: 'Italien', DE: 'Deutschland', CH: 'Schweiz', GB: 'Vereinigtes Königreich', AT: 'Österreich', NL: 'Niederlande', BE: 'Belgien', CZ: 'Tschechien', HU: 'Ungarn', SI: 'Slowenien', PT: 'Portugal', NO: 'Norwegen', SE: 'Schweden', DK: 'Dänemark', XX: 'Weitere' },
+    it: { ES: 'Spagna', FR: 'Francia', IT: 'Italia', DE: 'Germania', CH: 'Svizzera', GB: 'Regno Unito', AT: 'Austria', NL: 'Paesi Bassi', BE: 'Belgio', CZ: 'Cechia', HU: 'Ungheria', SI: 'Slovenia', PT: 'Portogallo', NO: 'Norvegia', SE: 'Svezia', DK: 'Danimarca', XX: 'Altre' },
+    pt: { ES: 'Espanha', FR: 'França', IT: 'Itália', DE: 'Alemanha', CH: 'Suíça', GB: 'Reino Unido', AT: 'Áustria', NL: 'Países Baixos', BE: 'Bélgica', CZ: 'Chéquia', HU: 'Hungria', SI: 'Eslovénia', PT: 'Portugal', NO: 'Noruega', SE: 'Suécia', DK: 'Dinamarca', XX: 'Outras' },
+    ja: { ES: 'スペイン', FR: 'フランス', IT: 'イタリア', DE: 'ドイツ', CH: 'スイス', GB: 'イギリス', AT: 'オーストリア', NL: 'オランダ', BE: 'ベルギー', CZ: 'チェコ', HU: 'ハンガリー', SI: 'スロベニア', PT: 'ポルトガル', NO: 'ノルウェー', SE: 'スウェーデン', DK: 'デンマーク', XX: 'その他' },
+    zh: { ES: '西班牙', FR: '法国', IT: '意大利', DE: '德国', CH: '瑞士', GB: '英国', AT: '奥地利', NL: '荷兰', BE: '比利时', CZ: '捷克', HU: '匈牙利', SI: '斯洛文尼亚', PT: '葡萄牙', NO: '挪威', SE: '瑞典', DK: '丹麦', XX: '其他' }
+  };
+  var CN = COUNTRY[LANG] || COUNTRY.en;
+  (function groupEurope() {
+    var list = panels[0].querySelector('.routes-index-list');
+    if (!list) return;
+    var groups = {};
+    Array.prototype.slice.call(list.children).forEach(function (li) {
+      var a = li.querySelector('a');
+      var m = a && a.getAttribute('href').match(/\/rutas\/([^\/]+)\//);
+      var origin = m ? m[1].split('-')[0] : '';
+      var c = CITY[origin] || 'XX';
+      (groups[c] = groups[c] || []).push(li);
+    });
+    var order = Object.keys(groups).sort(function (x, y) {
+      if (x === 'XX') return 1; if (y === 'XX') return -1;
+      return groups[y].length - groups[x].length || x.localeCompare(y);
+    });
+    var frag = document.createDocumentFragment();
+    order.forEach(function (c) {
+      var h = document.createElement('h3');
+      h.className = 'ri-group';
+      h.textContent = CN[c] || c;
+      var ul = document.createElement('ul');
+      ul.className = 'routes-index-list';
+      groups[c].sort(function (a, b) { return a.textContent.localeCompare(b.textContent, LANG); }).forEach(function (li) { ul.appendChild(li); });
+      frag.appendChild(h); frag.appendChild(ul);
+    });
+    list.parentNode.insertBefore(frag, list);
+    list.parentNode.removeChild(list);
+  })();
 
   var bar = document.createElement('div');
   bar.className = 'ri-tabs';
