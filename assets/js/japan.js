@@ -1285,7 +1285,7 @@
     var H = { es: ['h', 'min', 'por'], fr: ['h', 'min', 'via'], it: ['h', 'min', 'via'], de: ['Std.', 'Min.', 'über'], pt: ['h', 'min', 'via'], ja: ['時間', '分', '経由'] }[lg];
     if (!H) return;
     var res = document.getElementById('aiResults'); if (!res || !window.MutationObserver) return;
-    var rx = /(\d+)\s*(?:hours?|hrs?|h)\b(?:\s*(?:and\s*)?(\d+)\s*(?:minutes?|mins?|min))?|(\d+)\s*(?:minutes?|mins?)\b/gi;
+    var rx = /(\d+)\s*(?:hours?|hrs?|h)\b(?:\s*(?:and\s*)?(\d+)\s*(?:minutes?|mins?|min)(?!\.))?|(\d+)\s*(?:minutes?|mins?)\b(?!\.)/gi;   // (?!\.): no vuelve a traducir "Min." (alemán), que antes crecía en bucle con puntos
     function fix(txt) {
       var t = txt.replace(rx, function (m, h, mm, only) {
         if (only) return lg === 'ja' ? only + H[1] : only + ' ' + H[1];

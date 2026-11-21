@@ -1116,3 +1116,15 @@ body.home-v2 .search-card .rt-chip.is-price { font-weight: 600; color: #1d2030; 
   body.home-v2 .search-card .rt-dot:last-child { right: 0; background: #A8000F; border: 2.5px solid #A8000F; }
   body.home-v2 .search-card .rt-dur { position: relative; z-index: 1; padding: 3px 11px; border: 1px solid rgba(29, 32, 48, .12); border-radius: 999px; background: #fff; font-size: 14px; font-weight: 600; letter-spacing: 0; color: #4a4b55; white-space: nowrap; }
 }
+
+/* Japón y China: mismo viaje dibujado con el naranja del modo. Y el botón de reserva alineado con la línea del viaje. */
+body.home-v2[data-region="japan"] .search-card .rt-visual { color: #2A2118; }
+body.home-v2[data-region="japan"] .search-card .rt-track::before { border-top-color: rgba(255, 91, 0, .75); }
+body.home-v2[data-region="japan"] .search-card .rt-dot:last-child { background: #FF5B00; border-color: #FF5B00; }
+body.home-v2[data-region="japan"] .search-card .rt-dur { color: #5a4a3c; border-color: rgba(42, 33, 24, .14); }
+@media (min-width: 761px) {
+  /* botón de reserva: siempre al borde derecho y alineado con la línea del viaje, sin depender del largo del texto de cada ruta */
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment:has(.rt-visual) { grid-template-columns: minmax(0, 1fr) auto; column-gap: 20px; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment:has(.rt-visual) > .ai-segment-header { grid-column: 1; grid-row: 1; }
+  body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment:has(.rt-visual) > .ai-segment-buy { grid-column: 2; grid-row: 1; justify-self: end; align-self: start; margin: -2px 0 0; }
+}

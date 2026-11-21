@@ -12,6 +12,8 @@
     es: { opts: 'Opciones de viaje', train: 'Tren', bus: 'Autobús', flight: 'Avión', ferry: 'Ferri', h: ' h ', m: ' min', note: 'Duraciones y precios orientativos según datos de Omio. El precio final depende de la fecha, el operador y la antelación de la compra.', guide: 'Ver la guía completa de la ruta' },
     fr: { opts: 'Options de voyage', train: 'Train', bus: 'Bus', flight: 'Avion', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durées et prix indicatifs d’après les données d’Omio. Le prix final dépend de la date, de l’opérateur et de l’avance de réservation.', guide: 'Voir le guide complet de la ligne' },
     it: { opts: 'Come viaggiare', train: 'Treno', bus: 'Autobus', flight: 'Aereo', ferry: 'Traghetto', h: ' h ', m: ' min', note: 'Durate e prezzi indicativi secondo i dati di Omio. Il prezzo finale dipende da data, operatore e anticipo di prenotazione.', guide: 'Vedi la guida completa del percorso' },
+    de: { opts: 'Reiseoptionen', train: 'Zug', bus: 'Bus', flight: 'Flug', ferry: 'Fähre', h: ' Std. ', m: ' Min.', note: 'Ungefähre Fahrzeiten und Preise nach Omio-Daten. Der endgültige Preis hängt von Datum, Betreiber und Buchungszeitpunkt ab.', guide: 'Den ganzen Streckenführer ansehen' },
+    pt: { opts: 'Opções de viagem', train: 'Comboio', bus: 'Autocarro', flight: 'Voo', ferry: 'Ferry', h: ' h ', m: ' min', note: 'Durações e preços indicativos segundo dados da Omio. O preço final depende da data, do operador e da antecedência da compra.', guide: 'Ver o guia completo da rota' },
     ja: { opts: '移動手段', train: '電車', bus: 'バス', flight: '飛行機', ferry: 'フェリー', h: '時間', m: '分', note: 'Omioのデータに基づくおおよその所要時間と料金の目安です。最終料金は日付、運行会社、予約時期によって変わります。', guide: 'ルートガイドを見る' },
     zh: { opts: '出行方式', train: '火车', bus: '巴士', flight: '飞机', ferry: '轮渡', h: '小时', m: '分', note: '根据 Omio 数据得出的大致行程时间和低价参考。最终价格取决于日期、运营商和预订时间。', guide: '查看完整线路指南' }
   };
@@ -54,6 +56,8 @@
     es: { eye: 'Guía de la ruta', sub: '{r}: horarios, estaciones, hotel y consejos', meta: 'Primer tren {f} · {n} trenes directos al día' },
     fr: { eye: 'Guide du trajet', sub: '{r} : horaires, gares, hôtel et conseils', meta: 'Premier train {f} · {n} trains directs par jour' },
     it: { eye: 'Guida al percorso', sub: '{r}: orari, stazioni, hotel e consigli', meta: 'Primo treno {f} · {n} treni diretti al giorno' },
+    de: { eye: 'Streckenführer', sub: '{r}: Fahrplan, Bahnhöfe, Hotel und Tipps', meta: 'Erster Zug {f} · {n} Direktzüge pro Tag' },
+    pt: { eye: 'Guia da rota', sub: '{r}: horários, estações, hotel e dicas', meta: 'Primeiro comboio {f} · {n} comboios diretos por dia' },
     ja: { eye: 'ルートガイド', sub: '{r}：時刻表・駅・ホテル・旅のコツ', meta: '始発 {f}・直通 1日{n}本' },
     zh: { eye: '线路指南', sub: '{r}：时刻、车站、酒店和建议', meta: '首班 {f} · 每天 {n} 班直达' }
   };
@@ -218,23 +222,43 @@
     de: function (p) { return 'ab ' + p; }, it: function (p) { return 'da ' + p; }, pt: function (p) { return 'desde ' + p; },
     ja: function (p) { return p + '〜'; }, zh: function (p) { return p + ' 起'; }
   };
-  function decorateHeader(seg, box) {
-    var hd = seg.querySelector('.ai-segment-header');
+  // El viaje dibujado en la cabecera: origen ○┄┄ duración ┄┄● destino. Los textos originales siguen en el HTML (lectores de pantalla)
+  // y se mantienen sincronizados si otro script los cambia (idioma, duración).
+  function drawTrip(hd) {
     if (!hd || hd.querySelector('.rt-visual')) return;
     var rt = hd.querySelector('.ai-segment-route'), tm = hd.querySelector('.ai-segment-time');
-    var parts = rt ? rt.textContent.split('\u2192') : [];
-    if (parts.length === 2) {
-      var v = document.createElement('span'); v.className = 'rt-visual'; v.setAttribute('aria-hidden', 'true');
-      var o = document.createElement('span'); o.className = 'rt-o'; o.textContent = parts[0].trim();
-      var tr = document.createElement('span'); tr.className = 'rt-track';
-      var d1 = document.createElement('i'); d1.className = 'rt-dot';
-      var du = document.createElement('span'); du.className = 'rt-dur'; du.textContent = tm ? tm.textContent.trim() : '';
-      var d2 = document.createElement('i'); d2.className = 'rt-dot';
-      tr.appendChild(d1); if (du.textContent) tr.appendChild(du); tr.appendChild(d2);
-      var de = document.createElement('span'); de.className = 'rt-d'; de.textContent = parts[1].trim();
-      v.appendChild(o); v.appendChild(tr); v.appendChild(de);
-      hd.appendChild(v);
+    if (!rt || rt.textContent.split('\u2192').length !== 2) return;
+    var v = document.createElement('span'); v.className = 'rt-visual'; v.setAttribute('aria-hidden', 'true');
+    var o = document.createElement('span'); o.className = 'rt-o';
+    var tr = document.createElement('span'); tr.className = 'rt-track';
+    var d1 = document.createElement('i'); d1.className = 'rt-dot';
+    var du = document.createElement('span'); du.className = 'rt-dur';
+    var d2 = document.createElement('i'); d2.className = 'rt-dot';
+    var de = document.createElement('span'); de.className = 'rt-d';
+    tr.appendChild(d1); tr.appendChild(du); tr.appendChild(d2);
+    v.appendChild(o); v.appendChild(tr); v.appendChild(de);
+    // Solo se escribe si el texto cambió, y el observador se desconecta solo si algo lo dispara en bucle (otro script reescribiendo la duración).
+    function put(el, val) { if (el.textContent !== val) el.textContent = val; }
+    var calls = 0, t0 = Date.now(), mo = null;
+    function sync() {
+      if (Date.now() - t0 > 1000) { t0 = Date.now(); calls = 0; }
+      if (++calls > 40) { if (mo) mo.disconnect(); return; }
+      var parts = rt.textContent.split('\u2192');
+      if (parts.length === 2) { put(o, parts[0].trim()); put(de, parts[1].trim()); }
+      var t = tm ? tm.textContent.trim() : '';
+      put(du, t); if (du.hidden !== !t) du.hidden = !t;
     }
+    sync();
+    hd.appendChild(v);
+    if (window.MutationObserver) {
+      mo = new MutationObserver(sync);
+      [rt, tm].forEach(function (n) { if (n) mo.observe(n, { childList: true, characterData: true, subtree: true }); });
+    }
+  }
+  function decorateHeader(seg, box) {
+    var hd = seg.querySelector('.ai-segment-header');
+    if (!hd || hd.querySelector('.rt-facts')) return;
+    drawTrip(hd);
     function facts() {
       var old = hd.querySelector('.rt-facts'); if (old) old.remove();
       var chips = [];
@@ -262,6 +286,9 @@
     es: ['Qué hacer en {c}:', 'Tours en Klook', 'Actividades en GetYourGuide'],
     fr: ['Que faire à {c} :', 'Activités sur Klook', 'Activités sur GetYourGuide'],
     it: ['Cosa fare a {c}:', 'Tour su Klook', 'Attività su GetYourGuide'],
+    de: ['Was es in {c} zu tun gibt:', 'Touren auf Klook', 'Aktivitäten auf GetYourGuide'],
+    pt: ['O que fazer em {c}:', 'Tours na Klook', 'Atividades no GetYourGuide'],
+    zh: ['在{c}可以做什么：', '在 Klook 上找旅游团', '在 GetYourGuide 上找活动'],
     ja: ['{c}での楽しみ方：', 'Klookでツアーを探す', 'GetYourGuideでアクティビティを探す']
   };
   window.glosxExpLine = function (slug, name) { return expLine(slug, name); };   // lo usa japan.js en el resultado de Japón
@@ -276,6 +303,7 @@
   }
 
   function scan() {
+    document.querySelectorAll('.ai-segment[data-pi-jp]:not([data-rt])').forEach(function (seg) { seg.setAttribute('data-rt', '1'); drawTrip(seg.querySelector('.ai-segment-header')); });   // Japón y China: solo el viaje dibujado (ya traen sus propias etiquetas)
     document.querySelectorAll('.ai-segment-stations:not([data-go])').forEach(addGoAi);
     document.querySelectorAll('.ai-segment:not([data-gp])').forEach(function (seg) {
       if (seg.querySelector('.ai-segment-stations') || seg.querySelector('a.ai-segment-buy[href*="europe-train"]')) return;   // IA: enlace en línea; Europa: lo arma fill()
