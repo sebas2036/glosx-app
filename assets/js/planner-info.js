@@ -66,7 +66,7 @@
     if (!cards) cards = fetch('/assets/data/route-cards.json').then(function (r) { return r.json(); }).catch(function () { return {}; });
     return cards;
   }
-  window.glosxGuideCard = function (href, route, fromSlug) {
+  window.glosxGuideCard = function (href, route, fromSlug, cities) {
     var l = lang(), t = GC[l] || GC.en;
     var m = String(href).match(/\/rutas\/([^\/]+)\//), slug = m ? m[1] : '';
     var a = document.createElement('a');
@@ -77,13 +77,21 @@
       '<span class="pi-gcard-arrow" aria-hidden="true">→</span>';
     a.addEventListener('click', function () { try { if (window.gtag) gtag('event', 'route_guide_card', { route: slug, lang: l }); } catch (e) {} });
     loadCards().then(function (d) {
-      var c = d && d[slug];
+      var c = d && d[slug], own = !!c;
+      if (!c && d && cities) {   // sin página propia: foto de la primera ruta que pase por una de las ciudades (destino primero)
+        for (var ci = 0; ci < cities.length && !c; ci++) {
+          var cn = String(cities[ci] || '');
+          if (!cn) continue;
+          for (var k in d) { if (k.split('-').indexOf(cn) > -1) { c = d[k]; break; } }
+        }
+      }
       if (!c) return;
       if (c.i) {
         var img = new Image();
-        img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.src = c.i;
+        img.alt = ''; img.decoding = 'async'; img.src = c.i;
         a.querySelector('.pi-gcard-img').appendChild(img);
       }
+      if (!own) return;   // los horarios de otra ruta no se muestran
       var fwd = !fromSlug || slug.indexOf(String(fromSlug).toLowerCase().replace(/[^a-z]/g, '').slice(0, 4)) === 0;
       var h = fwd ? c.f : c.r;
       if (h) { var me = a.querySelector('.pi-gcard-meta'); me.textContent = t.meta.replace('{f}', h[0]).replace('{n}', h[1]); me.hidden = false; }
@@ -231,7 +239,7 @@
     box.innerHTML = html;
     if (g) {
       var rt = seg.querySelector('.ai-segment-route');
-      box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
+      box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a, [norm(b), norm(a)]));
     }
     var dep0 = seg.querySelector('.ai-segment-route');
     var depCity = dep0 ? (dep0.textContent.split('→')[0] || '').trim() : '';

@@ -491,7 +491,11 @@
     var buy = seg.querySelector('a.ai-segment-buy');
     if (!buy) return;
     var t = PI_JP[lang()] || PI_JP.en;
-    var g = guideHref(a, b);
+    var g = guideHref(a, b), gfb = false;
+    if (!g) {   // sin pagina propia: la misma tarjeta de guia, que lleva a las rutas del destino
+      var dn1 = (((seg.querySelector('.ai-segment-route') || {}).textContent || '').split('\u2192')[1] || '').trim();
+      if (dn1) { g = (lang() === 'en' ? '' : '/' + lang()) + '/rutas/?q=' + encodeURIComponent(dn1); gfb = true; }
+    }
     var box = document.createElement('div');
     box.className = 'pi pi-jp';
     box.innerHTML = '<div class="rp-eyebrow pi-eyebrow">' + esc(t.opts) + '</div><div class="rp-modes pi-modes">' +
@@ -501,7 +505,7 @@
       '</div><p class="rp-note pi-note">' + esc(region === 'china' ? cx('note') : t.note) + '</p>';
     if (g) {
       var rt = seg.querySelector('.ai-segment-route');
-      if (window.glosxGuideCard) box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a));
+      if (window.glosxGuideCard) box.appendChild(window.glosxGuideCard(g, rt ? rt.textContent.trim() : '', a, [String(b).toLowerCase(), String(a).toLowerCase()]));
       else box.insertAdjacentHTML('beforeend', '<a class="pi-guide" href="' + esc(g) + '">' + esc(t.guide) + ' <span aria-hidden="true">→</span></a>');
     }
     // "Qué hacer en {destino}" (Klook + GetYourGuide de la ciudad elegida), una vez por resultado
