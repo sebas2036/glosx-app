@@ -1174,3 +1174,5 @@ body.home-v2 .search-card .ai-results .ai-segment:has(> .ai-segment-stations) > 
 @media (min-width: 761px) {
   body.home-v2 .search-card .ai-results:has(.ai-segments.cols-2) { max-width: none; }
 }
+  /* si ya esta la tarjeta completa de la estacion, no duplicar con el boton chico */
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment:has(> .pi-station) > a.pi-go { display: none; }
