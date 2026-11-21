@@ -545,7 +545,17 @@
       var r = seg.querySelector('.ai-segment-route');
       var c = r ? findCities(r.textContent) : [];
       var d = c.length >= 2 ? INFO[c[0] + '-' + c[1]] : null;
-      if (!d) { all = false; return; }
+      if (!d) {
+        all = false;
+        // Par sin datos propios: en Japón y China la reserva SIEMPRE es en Klook. Si el planificador dejó el enlace de Europa (Omio), se cambia por el de Klook con el mismo par.
+        var b0 = seg.querySelector('a.ai-segment-buy');
+        if (b0 && /\/affiliate\/europe-train/.test(b0.getAttribute('href') || '')) {
+          try { var q0 = new URL(b0.href).searchParams; b0.setAttribute('href', bookUrl(q0.get('from') || '', q0.get('to') || '')); } catch (e0) { /* se deja el enlace */ }
+          b0.setAttribute('data-klook', '1');
+          b0.textContent = BUY_KLOOK[lang()] || BUY_KLOOK.en;
+        }
+        return;
+      }
       if (!first) first = d;
       chain.push([c[0], c[1]]);
       total += d.m;
