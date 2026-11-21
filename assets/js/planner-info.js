@@ -168,8 +168,15 @@
   function fill(seg, d) {
     if (seg.getAttribute('data-pi')) return;
     var desc = seg.querySelector('.ai-segment-desc'), time = seg.querySelector('.ai-segment-time'), body = seg.querySelector('.ai-segment-body');
-    // solo las tarjetas compactas vacías (las de la IA ya traen su propio texto)
-    if (!body || (desc && desc.textContent.trim()) || (time && time.textContent.trim())) return;
+    // Tarjetas compactas vacías: se arman completas. Tarjetas de la IA (traen su propio texto o duración): si el resultado es de UN solo tramo
+    // también reciben las opciones de viaje, la guía de la ruta con foto, las etiquetas y "Qué hacer", para que una ruta conocida se vea igual
+    // la escriba quien la escriba. En recorridos de varios tramos no se agrega nada (quedarían demasiado cargados).
+    if (!body) return;
+    var isAi = !!((desc && desc.textContent.trim()) || (time && time.textContent.trim()));
+    if (isAi) {
+      var holder = seg.closest('.ai-segments');
+      if (!holder || holder.querySelectorAll('.ai-segment').length !== 1) return;
+    }
     var buy = seg.querySelector('a.ai-segment-buy[href*="europe-train"]');
     if (!buy) return;
     var q;
@@ -192,7 +199,7 @@
           '<span class="rp-meta"><span class="rp-time">' + fmt(v, t) + '</span>' +
           (prices[MODES.indexOf(k)] > 0 ? '<span class="rp-price" data-est="' + esc(EST[goLang()]) + '">' + fmtPrice(prices[MODES.indexOf(k)], lang()) + '</span>' : '') + '</span></div>';
       }).join('') + '</div><p class="rp-note pi-note">' + esc(t.note) + '</p>';
-      if (vals[0] > 0 && time) time.textContent = fmt(vals[0], t);
+      if (vals[0] > 0 && time && !isAi) time.textContent = fmt(vals[0], t);
     }
     var g = guideUrl(a, b);
     if (!html && !g) return;
@@ -205,7 +212,8 @@
     }
     var dep0 = seg.querySelector('.ai-segment-route');
     var depCity = dep0 ? (dep0.textContent.split('→')[0] || '').trim() : '';
-    if (depCity) { seg.setAttribute('data-gp', '1'); box.appendChild(stationPanel(depCity, 'planner_simple')); }
+    if (isAi) seg.setAttribute('data-gp', '1');   // la IA ya trae su propio enlace "Cómo llegar" con el nombre exacto de la estación
+    else if (depCity) { seg.setAttribute('data-gp', '1'); box.appendChild(stationPanel(depCity, 'planner_simple')); }
     var res = seg.closest('.ai-results');
     if (res && !res.querySelector('.pi-exp')) {   // una sola vez por resultado, con la ciudad de destino
       var rte = seg.querySelector('.ai-segment-route'), dn = rte ? (rte.textContent.split('→')[1] || '').trim() : '';
