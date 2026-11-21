@@ -370,7 +370,40 @@
     });
   }
 
+  // Aviso de varios tramos con tono de venta: Europa se reserva en Omio; Japón y China en Klook. Reemplaza el texto genérico de main.js.
+  var SELL = {
+    omio: {
+      en: 'Your trip has {n} legs \u2014 book each one on Omio: compare times and fares and reserve in a few clicks.',
+      es: 'Tu viaje tiene {n} tramos: reserva cada uno en Omio, compara horarios y precios y confirma en pocos clics.',
+      fr: 'Votre voyage compte {n} \u00e9tapes : r\u00e9servez chacune sur Omio, comparez horaires et prix et validez en quelques clics.',
+      de: 'Deine Reise hat {n} Etappen: Buche jede auf Omio, vergleiche Zeiten und Preise und reserviere mit wenigen Klicks.',
+      it: 'Il tuo viaggio ha {n} tappe: prenota ognuna su Omio, confronta orari e prezzi e conferma in pochi clic.',
+      pt: 'Sua viagem tem {n} trechos: reserve cada um na Omio, compare hor\u00e1rios e pre\u00e7os e confirme em poucos cliques.',
+      ja: '\u3053\u306e\u65c5\u306f{n}\u533a\u9593\u3067\u3059\u3002\u5404\u533a\u9593\u3092Omio\u3067\u4e88\u7d04\u2014\u6642\u523b\u3068\u6599\u91d1\u3092\u6bd4\u3079\u3066\u3001\u6570\u30af\u30ea\u30c3\u30af\u3067\u624b\u914d\u3067\u304d\u307e\u3059\u3002',
+      zh: '\u8fd9\u6bb5\u65c5\u7a0b\u5171\u6709 {n} \u6bb5\u2014\u2014\u6bcf\u6bb5\u90fd\u53ef\u5728 Omio \u9884\u8ba2\uff0c\u6bd4\u8f83\u65f6\u523b\u548c\u4ef7\u683c\uff0c\u51e0\u6b65\u5373\u53ef\u5b8c\u6210\u3002'
+    },
+    klook: {
+      en: 'Your trip has {n} legs \u2014 book each one on Klook: see seats and fares for your date and reserve in a few clicks.',
+      es: 'Tu viaje tiene {n} tramos: reserva cada uno en Klook, mira asientos y tarifas para tu fecha y confirma en pocos clics.',
+      fr: 'Votre voyage compte {n} \u00e9tapes : r\u00e9servez chacune sur Klook, consultez places et tarifs \u00e0 votre date et validez en quelques clics.',
+      de: 'Deine Reise hat {n} Etappen: Buche jede auf Klook, sieh Pl\u00e4tze und Preise f\u00fcr dein Datum und reserviere mit wenigen Klicks.',
+      it: 'Il tuo viaggio ha {n} tappe: prenota ognuna su Klook, vedi posti e tariffe per la tua data e conferma in pochi clic.',
+      pt: 'Sua viagem tem {n} trechos: reserve cada um na Klook, veja lugares e tarifas para a sua data e confirme em poucos cliques.',
+      ja: '\u3053\u306e\u65c5\u306f{n}\u533a\u9593\u3067\u3059\u3002\u5404\u533a\u9593\u3092Klook\u3067\u4e88\u7d04\u2014\u65e5\u4ed8\u3054\u3068\u306e\u5ea7\u5e2d\u3068\u6599\u91d1\u3092\u78ba\u8a8d\u3057\u3066\u3001\u6570\u30af\u30ea\u30c3\u30af\u3067\u624b\u914d\u3067\u304d\u307e\u3059\u3002',
+      zh: '\u8fd9\u6bb5\u65c5\u7a0b\u5171\u6709 {n} \u6bb5\u2014\u2014\u6bcf\u6bb5\u90fd\u53ef\u5728 Klook \u9884\u8ba2\uff0c\u67e5\u770b\u6240\u9009\u65e5\u671f\u7684\u5ea7\u4f4d\u548c\u7968\u4ef7\uff0c\u51e0\u6b65\u5373\u53ef\u5b8c\u6210\u3002'
+    }
+  };
+  function sellNote() {
+    var el = document.getElementById('aiMultiLegNote');
+    if (!el || el.style.display === 'none') return;
+    var n = document.querySelectorAll('#aiSegments > .ai-segment').length;
+    if (n < 2) return;
+    var kind = document.body.getAttribute('data-region') === 'japan' ? 'klook' : 'omio';
+    var tpl = (SELL[kind][lang()] || SELL[kind].en).replace('{n}', n);
+    if (el.textContent !== tpl) el.textContent = tpl;
+  }
   function scan() {
+    sellNote();
     if (!finT) finT = setTimeout(finishCards, 2200);
     document.querySelectorAll('.ai-segment:not([data-rt])').forEach(function (seg) { var h = seg.querySelector('.ai-segment-header'); if (!h) return; seg.setAttribute('data-rt', '1'); drawTrip(h); });   // todas las tarjetas: viaje dibujado (incluye las de la IA)
     document.querySelectorAll('.ai-segment-stations:not([data-go])').forEach(addGoAi);
