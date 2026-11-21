@@ -1143,17 +1143,17 @@ body.home-v2 .search-card .ai-results .ai-segment > .pi-exp { grid-column: 1 / -
 /* Recorridos de 3 o más tramos en escritorio: lista vertical (una fila por tramo) en vez de 3 o 4 columnas estrechas.
    Fila: ruta y duración a la izquierda, estaciones + cómo llegar + tipo de tren al centro, botón de reserva a la derecha. */
 @media (min-width: 761px) {
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment {
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment {
     display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) auto; column-gap: 24px; row-gap: 6px; align-items: center; padding: 16px 22px; height: auto;
   }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment > .ai-segment-header { grid-column: 1; grid-row: 1 / span 3; margin: 0; align-self: center; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment > .ai-segment-stations { grid-column: 2; grid-row: 1; margin: 0; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment > a.pi-go { grid-column: 2; grid-row: 2; justify-self: start; width: auto; max-width: 100%; margin: 0; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment > .ai-segment-train { grid-column: 2; grid-row: 3; justify-self: start; margin: 0; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment > .ai-segment-body { grid-column: 1 / -1; grid-row: 4; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment > .ai-segment-buy { grid-column: 3; grid-row: 1 / span 3; align-self: center; justify-self: end; width: auto; white-space: nowrap; padding: 12px 22px; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-3, .cols-4) > .ai-segment > .pi-exp { grid-column: 1 / -1; grid-row: 5; margin: 4px 2px 0; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header { grid-column: 1; grid-row: 1 / span 3; margin: 0; align-self: center; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-stations { grid-column: 2; grid-row: 1; margin: 0; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > a.pi-go { grid-column: 2; grid-row: 2; justify-self: start; width: auto; max-width: 100%; margin: 0; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-train { grid-column: 2; grid-row: 3; justify-self: start; margin: 0; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-body { grid-column: 1 / -1; grid-row: 4; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-buy { grid-column: 3; grid-row: 1 / span 3; align-self: center; justify-self: end; width: auto; white-space: nowrap; padding: 12px 22px; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-exp { grid-column: 1 / -1; grid-row: 5; margin: 4px 2px 0; }
 }
 
 /* Tarjeta de la IA con bloque de opciones/guía (ruta conocida): el bloque va debajo de todo y el aviso de datos al final, igual que en las otras tarjetas. */
@@ -1161,5 +1161,10 @@ body.home-v2 .search-card .ai-results .ai-segment:has(> .ai-segment-stations) > 
 body.home-v2 .search-card .ai-results .ai-segment:has(> .ai-segment-stations) > .pi:not(:has(.pi-station)) > .pi-note { order: 9; margin: 0 2px; }
 @media (min-width: 761px) {
   body.home-v2 .search-card .ai-results .ai-segment:has(> .ai-segment-stations) > .pi { grid-column: 1 / -1; grid-row: 5; }
-  body.home-v2 .search-card .ai-results .ai-segments:not(:is(.cols-3, .cols-4)) .ai-segment > .pi-exp { grid-row: 6; }
+  body.home-v2 .search-card .ai-results .ai-segments:not(:is(.cols-2, .cols-3, .cols-4)) .ai-segment > .pi-exp { grid-row: 6; }
+}
+
+/* Recorridos de 2 tramos: el contenedor de resultados ya no se limita a 760 px (todo quedaba apretado y arrimado a la izquierda); ocupa el ancho de la tarjeta, igual que con 3 o 4 tramos. */
+@media (min-width: 761px) {
+  body.home-v2 .search-card .ai-results:has(.ai-segments.cols-2) { max-width: none; }
 }
