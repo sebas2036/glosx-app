@@ -303,7 +303,7 @@
   }
 
   function scan() {
-    document.querySelectorAll('.ai-segment[data-pi-jp]:not([data-rt])').forEach(function (seg) { seg.setAttribute('data-rt', '1'); drawTrip(seg.querySelector('.ai-segment-header')); });   // Japón y China: solo el viaje dibujado (ya traen sus propias etiquetas)
+    document.querySelectorAll('.ai-segment:not([data-rt])').forEach(function (seg) { var h = seg.querySelector('.ai-segment-header'); if (!h) return; seg.setAttribute('data-rt', '1'); drawTrip(h); });   // todas las tarjetas: viaje dibujado (incluye las de la IA)
     document.querySelectorAll('.ai-segment-stations:not([data-go])').forEach(addGoAi);
     document.querySelectorAll('.ai-segment:not([data-gp])').forEach(function (seg) {
       if (seg.querySelector('.ai-segment-stations') || seg.querySelector('a.ai-segment-buy[href*="europe-train"]')) return;   // IA: enlace en línea; Europa: lo arma fill()
