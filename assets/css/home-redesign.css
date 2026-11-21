@@ -1190,3 +1190,8 @@ body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4)
 body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment:has(> .pi-station) > .ai-segment-stations { display: none; }
 body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-station { position: relative; margin-top: 16px; }
 body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-station::before { content: ''; position: absolute; left: 0; right: 0; top: -9px; border-top: 1px solid rgba(168, 0, 15, .2); }
+/* Europa en varios tramos con guia: guia de la ruta y llegar a la estacion lado a lado, como en Japon */
+body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi:has(.pi-gcard) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; border-top: 1px solid rgba(168, 0, 15, .2); padding-top: 10px; align-items: stretch; }
+body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi:has(.pi-gcard) > .pi-station { margin: 0; }
+body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi:has(.pi-gcard) > .pi-station::before { display: none; }
+@media (max-width: 760px) { body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi:has(.pi-gcard) { grid-template-columns: minmax(0, 1fr); } }

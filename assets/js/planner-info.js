@@ -187,9 +187,11 @@
     // la escriba quien la escriba. En recorridos de varios tramos no se agrega nada (quedarían demasiado cargados).
     if (!body) return;
     var isAi = !!((desc && desc.textContent.trim()) || (time && time.textContent.trim()));
+    var multi = false;
     if (isAi) {
       var holder = seg.closest('.ai-segments');
-      if (!holder || holder.querySelectorAll('.ai-segment').length !== 1) return;
+      if (!holder) return;
+      multi = holder.querySelectorAll('.ai-segment').length !== 1;   // varios tramos: solo la guía de la ruta (si existe) + la tarjeta de estación, sin opciones ni etiquetas
     }
     var buy = seg.querySelector('a.ai-segment-buy[href*="europe-train"]');
     if (!buy) return;
@@ -204,7 +206,7 @@
     var prices = parts[1] ? parts[1].split(',').map(Number) : [];
     var present = MODES.filter(function (k, i) { return vals[i] > 0; });
     var html = '';
-    if (present.length) {
+    if (present.length && !multi) {
       var max = Math.max.apply(null, present.map(function (k) { return vals[MODES.indexOf(k)]; }));
       html += '<div class="rp-eyebrow pi-eyebrow">' + esc(t.opts) + '</div><div class="rp-modes pi-modes">' + present.map(function (k) {
         var v = vals[MODES.indexOf(k)], pct = Math.max(8, Math.round(v / max * 100));
@@ -229,12 +231,12 @@
     if (isAi) { if (!useStationCard(seg, box)) seg.setAttribute('data-gp', '1'); }
     else if (depCity) { seg.setAttribute('data-gp', '1'); box.appendChild(stationPanel(depCity, 'planner_simple')); }
     var res = seg.closest('.ai-results');
-    if (res && !res.querySelector('.pi-exp')) {   // una sola vez por resultado, con la ciudad de destino
+    if (!multi && res && !res.querySelector('.pi-exp')) {   // una sola vez por resultado, con la ciudad de destino
       var rte = seg.querySelector('.ai-segment-route'), dn = rte ? (rte.textContent.split('→')[1] || '').trim() : '';
       box.appendChild(expLine(norm(b), dn));
     }
     seg.insertBefore(box, buy);   // bloque propio del grid (el cuerpo de la tarjeta compacta está oculto por el tema)
-    decorateHeader(seg, box);
+    if (!multi) decorateHeader(seg, box);
   }
 
   // Cabecera del resultado con más información: el viaje dibujado (origen ┄ duración ┄ destino) y una fila de datos reales
