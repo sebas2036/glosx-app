@@ -1180,7 +1180,7 @@ body.home-v2 .search-card .ai-results .ai-segment:has(> .ai-segment-stations) > 
 @media (min-width: 761px) {
   body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header:has(.rt-visual) > .ai-segment-route,
   body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header:has(.rt-visual) > .ai-segment-time { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header .rt-visual { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 19px; font-weight: 700; letter-spacing: -.01em; color: #1d2030; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header .rt-track { flex: 1 1 110px; min-width: 110px; max-width: 170px; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header .rt-dur { font-size: 13px; padding: 2px 9px; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header .rt-visual { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 18px; font-weight: 700; letter-spacing: -.01em; color: #1d2030; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header .rt-track { flex: 1 1 150px; min-width: 150px; max-width: 200px; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-header .rt-dur { font-size: 12px; padding: 1px 7px; }
 }
