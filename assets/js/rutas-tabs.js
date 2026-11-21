@@ -48,7 +48,16 @@
   document.head.appendChild(st);
 
   // Parte el contenido en paneles, cada uno con su H2. El id del H2 dice la región; sin id = Europa.
-  function regionOf(h) { return h.id === 'japan' ? 1 : (h.id === 'china' ? 2 : 0); }
+  // Si un H2 no tiene id (en la versión en inglés Japón tampoco lo tiene), toma el primer hueco libre en orden de aparición.
+  var taken = {};
+  heads.forEach(function (h) { if (h.id === 'europe') taken[0] = 1; if (h.id === 'japan') taken[1] = 1; if (h.id === 'china') taken[2] = 1; });
+  var assigned = new Map();
+  heads.forEach(function (h) {
+    var r = h.id === 'europe' ? 0 : (h.id === 'japan' ? 1 : (h.id === 'china' ? 2 : -1));
+    if (r === -1) { r = 0; while (taken[r]) r++; taken[r] = 1; }
+    assigned.set(h, r);
+  });
+  function regionOf(h) { return assigned.get(h); }
   var panels = [];
   heads.forEach(function (h, i) {
     var p = document.createElement('section');
@@ -126,6 +135,43 @@
       groups[c].sort(function (a, b) { return a.textContent.localeCompare(b.textContent, LANG); }).forEach(function (li) { ul.appendChild(li); });
       frag.appendChild(h); frag.appendChild(ul);
     });
+    list.parentNode.insertBefore(frag, list);
+    list.parentNode.removeChild(list);
+  })();
+
+  // China: agrupa por ciudad de origen. Las ciudades con pocas rutas van juntas en "Otras ciudades"
+  // (cuando una ciudad llegue a 3 rutas tendrá su propio grupo sola).
+  var OTHER = { en: 'Other cities', es: 'Otras ciudades', fr: 'Autres villes', de: 'Weitere Städte', it: 'Altre città', pt: 'Outras cidades', ja: 'その他の都市', zh: '其他城市' };
+  var GROUP_CHINA = false; // se activa cuando el usuario apruebe la agrupación de China por ciudad de origen
+  if (GROUP_CHINA) (function groupChina() {
+    var panel = panels[2];
+    var list = panel && panel.querySelector('.routes-index-list');
+    if (!list) return;
+    var byCity = {};
+    Array.prototype.slice.call(list.children).forEach(function (li) {
+      var a = li.querySelector('a');
+      var m = a && a.getAttribute('href').match(/\/rutas\/([^\/]+)\//);
+      var k = m ? m[1].split('-')[0] : 'x';
+      (byCity[k] = byCity[k] || []).push(li);
+    });
+    var big = [], rest = [];
+    Object.keys(byCity).forEach(function (k) { (byCity[k].length >= 3 ? big : rest).push(k); });
+    function txt(li, cls) { var e = li.querySelector(cls); return e ? e.textContent : li.textContent; }
+    big.sort(function (x, y) { return byCity[y].length - byCity[x].length || txt(byCity[x][0], '.ri-o').localeCompare(txt(byCity[y][0], '.ri-o'), LANG); });
+    var frag = document.createDocumentFragment();
+    function addGroup(title, lis, byOrigin) {
+      var h = document.createElement('h3'); h.className = 'ri-group'; h.textContent = title;
+      var ul = document.createElement('ul'); ul.className = 'routes-index-list';
+      lis.sort(function (p, q) {
+        var o = byOrigin ? txt(p, '.ri-o').localeCompare(txt(q, '.ri-o'), LANG) : 0;
+        return o || txt(p, '.ri-d').localeCompare(txt(q, '.ri-d'), LANG);
+      }).forEach(function (li) { ul.appendChild(li); });
+      frag.appendChild(h); frag.appendChild(ul);
+    }
+    big.forEach(function (k) { addGroup(txt(byCity[k][0], '.ri-o'), byCity[k], false); });
+    var others = [];
+    rest.forEach(function (k) { others = others.concat(byCity[k]); });
+    if (others.length) addGroup(OTHER[LANG] || OTHER.en, others, true);
     list.parentNode.insertBefore(frag, list);
     list.parentNode.removeChild(list);
   })();
