@@ -4,7 +4,7 @@
 const fs = require('fs'), path = require('path');
 const ROOT = path.join(__dirname, '..');
 const FILES = ['rutas', 'es/rutas', 'fr/rutas', 'it/rutas', 'de/rutas', 'pt/rutas', 'ja/rutas', 'zh/rutas'].map(d => path.join(d, 'index.html'));
-const TAG = '  <script src="/assets/js/rutas-tabs.js?v=3" defer></script>\n';
+const TAG = '  <script src="/assets/js/rutas-tabs.js?v=4" defer></script>\n';
 let n = 0;
 for (const f of FILES) {
   const p = path.join(ROOT, f);

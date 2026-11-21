@@ -142,7 +142,7 @@
   // China: agrupa por ciudad de origen. Las ciudades con pocas rutas van juntas en "Otras ciudades"
   // (cuando una ciudad llegue a 3 rutas tendrá su propio grupo sola).
   var OTHER = { en: 'Other cities', es: 'Otras ciudades', fr: 'Autres villes', de: 'Weitere Städte', it: 'Altre città', pt: 'Outras cidades', ja: 'その他の都市', zh: '其他城市' };
-  var GROUP_CHINA = false; // se activa cuando el usuario apruebe la agrupación de China por ciudad de origen
+  var GROUP_CHINA = true;
   if (GROUP_CHINA) (function groupChina() {
     var panel = panels[2];
     var list = panel && panel.querySelector('.routes-index-list');
