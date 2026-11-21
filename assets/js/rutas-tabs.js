@@ -91,7 +91,7 @@
 
   // Europa: agrupa las rutas por país de origen y ordena cada grupo A-Z en el idioma de la página
   var CITY = {
-    amsterdam: 'NL', brussels: 'BE', paris: 'FR', bordeaux: 'FR', lyon: 'FR', marseille: 'FR', nice: 'FR', strasbourg: 'FR', tende: 'FR', toulouse: 'FR',
+    amsterdam: 'NL', brussels: 'BE', paris: 'FR', bordeaux: 'FR', lyon: 'FR', marseille: 'FR', nice: 'FR', strasbourg: 'FR', colmar: 'FR', tende: 'FR', toulouse: 'FR',
     madrid: 'ES', barcelona: 'ES', alicante: 'ES', santiago: 'ES', malaga: 'ES', seville: 'ES', girona: 'ES', zaragoza: 'ES',
     milan: 'IT', rome: 'IT', florence: 'IT', naples: 'IT', venice: 'IT', turin: 'IT',
     berlin: 'DE', munich: 'DE', frankfurt: 'DE', cologne: 'DE', dortmund: 'DE', koblenz: 'DE', hamburg: 'DE',

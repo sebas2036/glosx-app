@@ -37,7 +37,7 @@ const CITY = {
   Strasbourg: ['Straßburg', 'Estrasburgo', '斯特拉斯堡'], Innsbruck: [, , '因斯布鲁克'], Graz: [, , '格拉茨'], Bern: [, 'Berna', '伯尔尼'], 'St. Moritz': [, , '圣莫里茨'], Tende: [, , '唐德'],
   Faro: [, , '法鲁'], Trondheim: [, , '特隆赫姆'], Gothenburg: ['Göteborg', 'Gotemburgo', '哥德堡'], Alicante: [, , '阿利坎特'], Cordoba: ['Córdoba', 'Córdova', '科尔多瓦'], Córdoba: [, 'Córdova', '科尔多瓦'],
   Granada: [, , '格拉纳达'], Salamanca: [, , '萨拉曼卡'], Segovia: [, 'Segóvia', '塞哥维亚'], Toledo: [, , '托莱多'], Santiago: ['Santiago de Compostela', 'Santiago de Compostela', '圣地亚哥-德孔波斯特拉'],
-  'Santiago de Compostela': [, , '圣地亚哥-德孔波斯特拉'], Koblenz: [, , '科布伦茨'], Mainz: [, , '美因茨']
+  'Santiago de Compostela': [, , '圣地亚哥-德孔波斯特拉'], Koblenz: [, , '科布伦茨'], Mainz: [, , '美因茨'], Colmar: [, , '科尔马']
 };
 const IDX = { de: 0, pt: 1, zh: 2 };
 function cn(name, l) {
@@ -248,7 +248,7 @@ const tail = template.slice(template.indexOf('</main>') + '</main>'.length);
 
 function render(r, l) {
   const o = content(r, l), u = UI[l], en = enPage(r.slug);
-  const hero = (en.match(/url\('(https:\/\/images\.pexels\.com\/[^']+)'\)/) || [])[1] || 'https://glosx.app/hero-bg.jpg';
+  const hero = (en.match(/url\('(https:\/\/(?:images\.pexels\.com|glosx\.app\/assets\/img\/hero)\/[^']+)'\)/) || [])[1] || 'https://glosx.app/hero-bg.jpg';
   const book = (en.match(/href="(https:\/\/voxa-production-dc15\.up\.railway\.app\/affiliate\/europe-train\?[^"]+)"/) || [])[1] || `${API}/europe-train?from=${r.from.toLowerCase()}&to=${r.to.toLowerCase()}`;
   const cs = countries(r);
   const shares = x => [x.from, x.to].some(c => c === r.from || c === r.to);

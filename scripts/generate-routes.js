@@ -786,6 +786,14 @@ const routes = [
   // (KLOOK_POSITION_PAIRS en backend/affiliate.ts) pero sin página /rutas/ todavía.
   { slug: 'strasbourg-paris', from: 'Strasbourg', to: 'Paris', country: 'France', duration: '1h 50m', operator: 'TGV', price: '€30-50', badge: 'Route guide · France',
     customSEO: { en: { title: 'Strasbourg to Paris Train Guide: 1h50 on TGV', description: 'Everything you need for the Strasbourg to Paris train: 1h50 on TGV, fares from €30, and today\'s live schedule.' } } },
+  { slug: 'strasbourg-colmar', from: 'Strasbourg', to: 'Colmar', country: 'France', duration: '30 min', operator: 'TER Alsace (SNCF)', price: '', badge: 'Route guide · France',
+    customSEO: { en: { title: 'Strasbourg to Colmar by Train: About 30 Minutes', description: 'Direct TER trains from Strasbourg to Colmar take about 30 minutes. See today\'s departures and book your ticket in a few clicks.' } },
+    localInsight: {
+      en: 'Colmar lies on the Strasbourg\u2013Basel line in Alsace, so the direct regional TER trains from Strasbourg call here. The old town, with the canalside Petite Venise quarter, is compact enough to explore on foot, which makes this an easy day trip from Strasbourg.',
+      es: 'Colmar est\u00e1 en la l\u00ednea Estrasburgo\u2013Basilea, en Alsacia, por lo que los trenes regionales TER directos desde Estrasburgo paran aqu\u00ed. El casco antiguo, con el barrio de la Petite Venise junto a los canales, es lo bastante compacto para recorrerlo a pie, lo que lo convierte en una excursi\u00f3n f\u00e1cil de un d\u00eda desde Estrasburgo.',
+      fr: 'Colmar se trouve sur la ligne Strasbourg\u2013B\u00e2le, en Alsace : les TER directs au d\u00e9part de Strasbourg y font arr\u00eat. La vieille ville, avec le quartier de la Petite Venise le long des canaux, se parcourt facilement \u00e0 pied, ce qui en fait une excursion simple d\u2019une journ\u00e9e depuis Strasbourg.',
+      it: 'Colmar si trova sulla linea Strasburgo\u2013Basilea, in Alsazia, e vi fermano i treni regionali TER diretti da Strasburgo. Il centro storico, con il quartiere della Petite Venise lungo i canali, \u00e8 abbastanza compatto da girarlo a piedi: una facile gita in giornata da Strasburgo.'
+    } },
   { slug: 'munich-paris', from: 'Munich', to: 'Paris', country: 'Germany-France', duration: '6h 00m', operator: 'TGV/ICE', price: '€60-90', badge: 'Route guide · Germany-France',
     customSEO: { en: { title: 'How to Get from Munich to Paris by Train (6h)', description: 'The Munich to Paris train takes 6 hours on TGV/ICE. See today\'s departures and book tickets from €60.' } },
     localInsight: {
@@ -955,6 +963,7 @@ const routes = [
 // Hoteles reales curados por ciudad de destino (mismos criterios que CURATED_HOTELS
 // en assets/js/main.js: hoteles reales existentes, no genericos/ficticios).
 const REAL_HOTELS = {
+  colmar: { name: "Hostellerie Le Mar\u00e9chal", loc: "Colmar, France", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Hostellerie_le_Mar%C3%A9chal_%28Colmar%29.jpg/1280px-Hostellerie_le_Mar%C3%A9chal_%28Colmar%29.jpg" },
   mainz: { name: "Hyatt Regency Mainz", loc: "Mainz, Germany", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mainz._das_%E2%80%9EFort_Malakoff%E2%80%9C_und_das_Hyatt_Regency_Hotel.jpg/1280px-Mainz._das_%E2%80%9EFort_Malakoff%E2%80%9C_und_das_Hyatt_Regency_Hotel.jpg" },
   amsterdam: { name: "De L'Europe Amsterdam", loc: "Amsterdam, Netherlands", image: "https://www.deleurope.com/wp-content/uploads/2024/02/homepage-hero-1.webp" },
   barcelona: { name: "Hotel Casa Fuster", loc: "Barcelona, Spain", image: "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/343/casa-fuster_header-historia_section.jpg" },
@@ -1022,6 +1031,7 @@ const REAL_HOTELS = {
 
 // Foto hero real por ciudad de destino (Pexels), evita la misma foto generica en las 174 paginas.
 const HERO_PHOTOS = {
+  colmar: 'https://glosx.app/assets/img/hero/colmar.jpg',
   mainz: 'https://images.pexels.com/photos/33991980/pexels-photo-33991980.jpeg?auto=compress&cs=tinysrgb&w=1600',
   geneva: 'https://glosx.app/assets/img/hero/zurich.jpg',
   bern: 'https://images.pexels.com/photos/18429608/pexels-photo-18429608.jpeg?auto=compress&cs=tinysrgb&w=1600',
@@ -1125,16 +1135,18 @@ const CITY_JA = (function () {
   if (!map['Cordoba']) map['Cordoba'] = 'コルドバ';
   if (!map['Seville']) map['Seville'] = 'セビリア';
   if (!map['Malaga']) map['Malaga'] = 'マラガ';
+  if (!map['Strasbourg']) map['Strasbourg'] = 'ストラスブール';
+  if (!map['Colmar']) map['Colmar'] = 'コルマール';
   if (!map['Santiago de Compostela']) map['Santiago de Compostela'] = 'サンティアゴ・デ・コンポステーラ';
   return map;
 })();
 // Nombres de ciudad localizados (es/fr/it) solo para las rutas nuevas del 16-oct-2026; el resto de
 // rutas conserva por ahora los nombres en inglés, así que no se traduce fuera de estas.
-const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich', 'alicante-madrid', 'madrid-segovia', 'barcelona-seville', 'madrid-toledo', 'santiago-madrid', 'madrid-cordoba', 'madrid-granada', 'malaga-barcelona', 'seville-cordoba', 'madrid-salamanca', 'zurich-munich', 'koblenz-mainz']);
+const NEW_ROUTE_SLUGS = new Set(['lisbon-faro', 'oslo-trondheim', 'oslo-gothenburg', 'ljubljana-vienna', 'ljubljana-graz', 'ljubljana-salzburg', 'ljubljana-munich', 'alicante-madrid', 'madrid-segovia', 'barcelona-seville', 'madrid-toledo', 'santiago-madrid', 'madrid-cordoba', 'madrid-granada', 'malaga-barcelona', 'seville-cordoba', 'madrid-salamanca', 'zurich-munich', 'koblenz-mainz', 'strasbourg-colmar']);
 const CITY_LOCAL = {
-  es: { Seville: 'Sevilla', Cordoba: 'Córdoba', Malaga: 'Málaga', Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich', Zurich: 'Zúrich', Koblenz: 'Coblenza', Mainz: 'Maguncia' },
+  es: { Strasbourg: 'Estrasburgo', Seville: 'Sevilla', Cordoba: 'Córdoba', Malaga: 'Málaga', Lisbon: 'Lisboa', Gothenburg: 'Gotemburgo', Ljubljana: 'Liubliana', Vienna: 'Viena', Salzburg: 'Salzburgo', Munich: 'Múnich', Zurich: 'Zúrich', Koblenz: 'Coblenza', Mainz: 'Maguncia' },
   fr: { Koblenz: 'Coblence', Mainz: 'Mayence', Seville: 'Séville', Cordoba: 'Cordoue', Barcelona: 'Barcelone', Segovia: 'Ségovie', Toledo: 'Tolède', Granada: 'Grenade', Salamanca: 'Salamanque', 'Santiago de Compostela': 'Saint-Jacques-de-Compostelle', Lisbon: 'Lisbonne', Gothenburg: 'Göteborg', Vienna: 'Vienne', Salzburg: 'Salzbourg' },
-  it: { Koblenz: 'Coblenza', Mainz: 'Magonza', Seville: 'Siviglia', Cordoba: 'Cordova', Barcelona: 'Barcellona', 'Santiago de Compostela': 'Santiago di Compostela', Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera', Zurich: 'Zurigo' }
+  it: { Strasbourg: 'Strasburgo', Koblenz: 'Coblenza', Mainz: 'Magonza', Seville: 'Siviglia', Cordoba: 'Cordova', Barcelona: 'Barcellona', 'Santiago de Compostela': 'Santiago di Compostela', Lisbon: 'Lisbona', Gothenburg: 'Göteborg', Ljubljana: 'Lubiana', Salzburg: 'Salisburgo', Munich: 'Monaco di Baviera', Zurich: 'Zurigo' }
 };
 function cityLabel(name, lang, slug) {
   if (lang === 'ja') return CITY_JA[name] || name;
