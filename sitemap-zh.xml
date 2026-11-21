@@ -17,7 +17,16 @@
   </url>
   <url>
     <loc>https://glosx.app/zh/rutas/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glosx.app/es/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://glosx.app/fr/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glosx.app/de/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://glosx.app/it/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://glosx.app/pt/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://glosx.app/ja/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/zh/rutas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/"/>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
