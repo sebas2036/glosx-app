@@ -1151,9 +1151,11 @@ body.home-v2 .search-card .ai-results .ai-segment > .pi-exp { grid-column: 1 / -
   body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-stations { grid-column: 2; grid-row: 1; margin: 0; }
   body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > a.pi-go { grid-column: 2; grid-row: 2; justify-self: start; width: auto; max-width: 100%; margin: 0; }
   body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-train { grid-column: 2; grid-row: 3; justify-self: start; margin: 0; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-body { grid-column: 1 / -1; grid-row: 4; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi,
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-station { grid-column: 1 / -1; grid-row: 4; margin: 4px 0 0; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-body { grid-column: 1 / -1; grid-row: 5; }
   body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .ai-segment-buy { grid-column: 3; grid-row: 1 / span 3; align-self: center; justify-self: end; width: auto; white-space: nowrap; padding: 12px 22px; }
-  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-exp { grid-column: 1 / -1; grid-row: 5; margin: 4px 2px 0; }
+  body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-exp { grid-column: 1 / -1; grid-row: 6; margin: 4px 2px 0; }
 }
 
 /* Tarjeta de la IA con bloque de opciones/guía (ruta conocida): el bloque va debajo de todo y el aviso de datos al final, igual que en las otras tarjetas. */
