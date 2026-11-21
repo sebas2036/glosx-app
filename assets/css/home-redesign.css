@@ -1186,3 +1186,7 @@ body.home-v2 .search-card .ai-results .ai-segment:has(> .ai-segment-stations) > 
 }
 /* varios tramos: solo la tarjeta cuadrada de la estacion, sin la pastilla */
 body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > a.pi-go { display: none; }
+/* Europa en varios tramos: igual que Japon (sin linea de estaciones suelta, con separador sobre la tarjeta) */
+body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment:has(> .pi-station) > .ai-segment-stations { display: none; }
+body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-station { position: relative; margin-top: 16px; }
+body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment > .pi-station::before { content: ''; position: absolute; left: 0; right: 0; top: -9px; border-top: 1px solid rgba(168, 0, 15, .2); }
