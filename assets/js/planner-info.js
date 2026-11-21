@@ -355,6 +355,30 @@
     if (!slug) return;
     seg.appendChild(expLine(norm(slug), dn));
   }
+  // Medicion: un evento por tramo mostrado por el planificador (que pares se piden, en que modo e idioma y si tienen guia propia).
+  // Sale del resultado ya armado (no del texto que escribe la persona). Una vez por par en cada carga de la pagina.
+  var pairSent = {};
+  function pairEvents(segs) {
+    if (typeof window.gtag !== 'function') return;
+    var region = document.body.getAttribute('data-region') === 'japan' ? (document.body.getAttribute('data-klook') === 'china' ? 'china' : 'japan') : 'europe';
+    segs.forEach(function (seg) {
+      if (seg.getAttribute('data-pair')) return;
+      var buy = seg.querySelector('a.ai-segment-buy'), a = '', b = '';
+      try { var q = new URL(buy.href).searchParams; a = q.get('from') || ''; b = q.get('to') || ''; } catch (e) {}
+      if (!a || !b) {
+        var rt = (seg.querySelector('.ai-segment-route') || {}).textContent || '', pp = rt.split('\u2192');
+        a = (pp[0] || '').trim(); b = (pp[1] || '').trim();
+      }
+      if (!a || !b) return;
+      seg.setAttribute('data-pair', '1');
+      a = String(a).toLowerCase(); b = String(b).toLowerCase();
+      var key = region + '|' + a + '|' + b;
+      if (pairSent[key]) return;
+      pairSent[key] = 1;
+      var g = seg.querySelector('.pi-gcard'), href = g ? (g.getAttribute('href') || '') : '';
+      try { gtag('event', 'planner_pair', { from_city: a, to_city: b, region: region, lang: lang(), has_guide: /\/rutas\/[^\/?]+\//.test(href) ? 1 : 0, legs: segs.length }); } catch (e) {}
+    });
+  }
   var finT = null;
   function finishCards() {
     finT = null;
@@ -367,6 +391,7 @@
         if (!seg.querySelector('a.pi-go')) addStationPanel(seg);
       });
       addExp(segs[segs.length - 1]);
+      pairEvents(segs);
     });
   }
 
