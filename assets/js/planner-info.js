@@ -146,14 +146,28 @@
   }
 
   // Panel propio, independiente del botón de Omio: guía desde el GPS del dispositivo hasta la estación de salida.
-  function stationPanel(city, source) {
+  function stationPanel(city, source, station) {
     var t = GO[goLang()];
     var d = document.createElement('div');
     d.className = 'pi-station';
     d.innerHTML = '<div class="pi-station-eye">' + esc(t.ey) + '</div><p class="pi-station-text">' + esc(t.tx) + '</p>';
-    d.appendChild(goLink('', city, source));
+    d.appendChild(goLink(station || '', city, source));
     var n = document.createElement('p'); n.className = 'pi-station-note'; n.textContent = t.nt; d.appendChild(n);
     return d;
+  }
+  // Tarjetas de la IA (un solo tramo): "Cómo llegar a la estación" como tarjeta completa (con mapa), igual que en las demás,
+  // usando el nombre exacto de la estación que trae la IA, en lugar de la pastilla chica.
+  function useStationCard(seg, box) {
+    var st = seg.querySelector('.ai-segment-stations');
+    var first = st && st.firstChild, station = first && first.nodeType === 3 ? first.textContent.trim() : '';
+    if (!station) return false;
+    var rt = seg.querySelector('.ai-segment-route'), city = rt ? (rt.textContent.split('\u2192')[0] || '').trim() : '';
+    st.setAttribute('data-go', '1');
+    seg.querySelectorAll('a.pi-go-inline').forEach(function (a) { a.remove(); });
+    var panel = stationPanel(city, 'planner_ai', station);
+    if (box) box.appendChild(panel); else seg.insertBefore(panel, seg.querySelector('a.ai-segment-buy') || null);
+    seg.setAttribute('data-gp', '1');
+    return true;
   }
   function addStationPanel(seg) {
     if (seg.getAttribute('data-gp')) return;
@@ -212,7 +226,7 @@
     }
     var dep0 = seg.querySelector('.ai-segment-route');
     var depCity = dep0 ? (dep0.textContent.split('→')[0] || '').trim() : '';
-    if (isAi) seg.setAttribute('data-gp', '1');   // la IA ya trae su propio enlace "Cómo llegar" con el nombre exacto de la estación
+    if (isAi) { if (!useStationCard(seg, box)) seg.setAttribute('data-gp', '1'); }
     else if (depCity) { seg.setAttribute('data-gp', '1'); box.appendChild(stationPanel(depCity, 'planner_simple')); }
     var res = seg.closest('.ai-results');
     if (res && !res.querySelector('.pi-exp')) {   // una sola vez por resultado, con la ciudad de destino
@@ -331,7 +345,9 @@
       var segs = res.querySelectorAll('.ai-segment');
       if (!segs.length) return;
       segs.forEach(function (seg) {
-        if (!seg.querySelector('.pi-station') && !seg.querySelector('a.pi-go')) addStationPanel(seg);
+        if (seg.querySelector('.pi-station')) return;
+        if (segs.length === 1 && seg.querySelector('.ai-segment-stations') && useStationCard(seg, null)) return;
+        if (!seg.querySelector('a.pi-go')) addStationPanel(seg);
       });
       addExp(segs[segs.length - 1]);
     });
