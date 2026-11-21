@@ -302,7 +302,35 @@
     return p;
   }
 
+  // Tarjetas sin datos propios (rutas que alguien inventa y no están precargadas): igual llevan "Cómo llegar a la estación" y "Qué hacer en <destino>"
+  // (Klook y GetYourGuide, con tu afiliación vía backend). Una sola línea por resultado, con el destino del último tramo.
+  function addExp(seg) {
+    var res = seg.closest('.ai-results');
+    if (!res || res.querySelector('.pi-exp')) return;
+    var all = res.querySelectorAll('.ai-segment');
+    if (all[all.length - 1] !== seg) return;
+    var rt = seg.querySelector('.ai-segment-route'), dn = rt ? (rt.textContent.split('\u2192')[1] || '').trim() : '';
+    var buy = seg.querySelector('a.ai-segment-buy'), slug = '';
+    try { slug = new URL(buy.href).searchParams.get('to') || ''; } catch (e) {}
+    if (!slug) slug = dn.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z]+/g, '-').replace(/^-+|-+$/g, '');
+    if (!slug) return;
+    seg.appendChild(expLine(norm(slug), dn));
+  }
+  var finT = null;
+  function finishCards() {
+    finT = null;
+    document.querySelectorAll('.ai-results').forEach(function (res) {
+      var segs = res.querySelectorAll('.ai-segment');
+      if (!segs.length) return;
+      segs.forEach(function (seg) {
+        if (!seg.querySelector('.pi-station') && !seg.querySelector('a.pi-go')) addStationPanel(seg);
+      });
+      addExp(segs[segs.length - 1]);
+    });
+  }
+
   function scan() {
+    if (!finT) finT = setTimeout(finishCards, 2200);
     document.querySelectorAll('.ai-segment:not([data-rt])').forEach(function (seg) { var h = seg.querySelector('.ai-segment-header'); if (!h) return; seg.setAttribute('data-rt', '1'); drawTrip(h); });   // todas las tarjetas: viaje dibujado (incluye las de la IA)
     document.querySelectorAll('.ai-segment-stations:not([data-go])').forEach(addGoAi);
     document.querySelectorAll('.ai-segment:not([data-gp])').forEach(function (seg) {

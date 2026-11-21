@@ -1136,3 +1136,6 @@ body.home-v2[data-region="japan"] .search-card .rt-dur { color: #5a4a3c; border-
   body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment:has(> .ai-segment-stations) > .ai-segment-body { grid-column: 1 / -1; grid-row: 4; }
   body.home-v2 .search-card .ai-results:has(#aiSegments > .ai-segment:only-child) .ai-segment:has(> .ai-segment-stations) > a.pi-go { grid-column: 2; grid-row: 2; justify-self: end; align-self: center; margin: 0; }
 }
+
+/* "Qué hacer en <destino>" en tarjetas sin datos propios: fila completa debajo de todo */
+body.home-v2 .search-card .ai-results .ai-segment > .pi-exp { grid-column: 1 / -1; order: 3; margin: 8px 2px 0; }
