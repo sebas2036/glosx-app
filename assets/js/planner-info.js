@@ -219,6 +219,12 @@
       if (vals[0] > 0 && time && !isAi) time.textContent = fmt(vals[0], t);
     }
     var g = guideUrl(a, b);
+    // Rutas armadas por la IA sin página propia: la misma tarjeta de guía, que lleva a las rutas del destino (buscador de /rutas/)
+    if (!g && isAi) {
+      var dn0 = ((seg.querySelector('.ai-segment-route') || {}).textContent || '').split('\u2192')[1];
+      dn0 = (dn0 || '').trim();
+      if (dn0) { var lg = lang(); g = (lg === 'en' ? '' : '/' + lg) + '/rutas/?q=' + encodeURIComponent(dn0); }
+    }
     if (!html && !g) return;
     var box = document.createElement('div');
     box.className = 'pi';
