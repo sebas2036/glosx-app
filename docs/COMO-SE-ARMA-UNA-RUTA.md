@@ -62,3 +62,5 @@ for sl in slug1 slug2; do node scripts/generate-routes.js $sl; ONLY_LANG=ja node
 - Regenerar todo → 150+ archivos modificados por deriva.
 - Falta de `HERO_PHOTOS` / `REAL_HOTELS` / `route-data.json` → página sin foto, hotel o mapa.
 - Precios del catálogo de Omio no son fiables (mezclan tren, bus y vuelo): no mostrarlos.
+
+**Guía de la ruta en el planificador:** tras agregar una ruta, correr `python3 scripts/update-guide-pages.py` (regenera la lista completa dentro de `assets/js/planner-info.js`) y subir el `?v=` de `planner-info.js` en los 8 `index.html`.
