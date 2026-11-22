@@ -8,6 +8,7 @@
  *   node scripts/bing-webmaster.js pages [n]      páginas con más impresiones
  *   node scripts/bing-webmaster.js crawl          rastreo (páginas rastreadas, errores, en índice)
  *   node scripts/bing-webmaster.js quota          cupo diario de envío de URLs
+ *   node scripts/bing-webmaster.js settings       ajustes de rastreo (solo lectura)
  *   node scripts/bing-webmaster.js submit --file lista.txt   envía URLs (una por línea), respetando el cupo
  */
 const fs = require('fs');
@@ -54,6 +55,9 @@ const pad = (s, n) => String(s).padEnd(n).slice(0, n);
     const rows = (await call('GetCrawlStats')) || [];
     rows.sort((a, b) => day(a.Date).localeCompare(day(b.Date))).slice(-14).forEach(r =>
       console.log(day(r.Date), 'rastreadas', String(r.CrawledPages).padStart(5), ' errores', String(r.CrawlErrors).padStart(4), ' en índice', String(r.InIndex).padStart(6), ' bloqueadas robots', r.BlockedByRobotsTxt));
+  } else if (cmd === 'settings') {
+    const r = await call('GetCrawlSettings');
+    console.log(JSON.stringify(r, null, 1).slice(0, 1500));
   } else if (cmd === 'quota') {
     const q = await call('GetUrlSubmissionQuota');
     console.log('Cupo diario restante:', q.DailyQuota, '· mensual:', q.MonthlyQuota);
