@@ -74,7 +74,7 @@ const routes = [
     }
   },
   { slug: 'basel-lauterbrunnen', from: 'Basel', to: 'Lauterbrunnen', country: 'Switzerland', duration: '2h 30m', operator: 'SBB', price: '€35-50', badge: 'Route guide · Switzerland',
-    customSEO: { en: { title: 'Basel to Lauterbrunnen by Train: 2h30 SBB', description: 'Direct SBB from Basel to Lauterbrunnen in 2h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
+    customSEO: { en: { title: 'Basel to Lauterbrunnen by Train: Times, 2h30 & Price', description: 'Direct SBB from Basel to Lauterbrunnen in 2h30. Compare today\'s schedule and book fares from €35 — no layovers.' } } },
   { slug: 'basel-paris', from: 'Basel', to: 'Paris', country: 'Switzerland-France', duration: '3h 00m', operator: 'TGV Lyria', price: '€40-60', badge: 'Route guide · Switzerland-France',
     customSEO: { en: { title: 'Basel to Paris Train: 3h', description: 'TGV Lyria connection from Basel to Paris in 3 hours. Check live schedules and book tickets from €40.' } } },
   { slug: 'berlin-hamburg', from: 'Berlin', to: 'Hamburg', country: 'Germany', duration: '1h 45m', operator: 'DB ICE', price: '€25-40', badge: 'Route guide · Germany',
@@ -105,7 +105,7 @@ const routes = [
     }
   },
   { slug: 'brno-vienna', from: 'Brno', to: 'Vienna', country: 'Czech-Austria', duration: '1h 30m', operator: 'ÖBB', price: '€15-25', badge: 'Route guide · Czech-Austria',
-    customSEO: { en: { title: 'Brno to Vienna by Train: 1h30 ÖBB', description: 'Direct ÖBB from Brno to Vienna in 1h30. Compare today\'s schedule and book fares from €15 — no layovers.' } },
+    customSEO: { en: { title: 'Brno to Vienna by Train: Times, Duration (1h30) & Price', description: 'Direct ÖBB from Brno to Vienna in 1h30. Compare today\'s schedule and book fares from €15 — no layovers.' } },
     localInsight: {
       en: 'The short distance and frequent service on this route have turned it into a genuine cross-border commuter corridor in recent years, with a growing number of people living in Brno and working in Vienna (or the reverse) — something that would have been unthinkable before both countries joined the EU\'s open Schengen border area.',
       es: 'La corta distancia y la alta frecuencia de esta ruta la han convertido en los últimos años en un auténtico corredor de commuters transfronterizos, con cada vez más gente que vive en Brno y trabaja en Viena (o al revés) — algo impensable antes de que ambos países entraran en el espacio Schengen de fronteras abiertas de la UE.',
@@ -150,7 +150,7 @@ const routes = [
     }
   },
   { slug: 'dortmund-munich', from: 'Dortmund', to: 'Munich', country: 'Germany', duration: '5h 30m', operator: 'DB ICE', price: '€35-55', badge: 'Route guide · Germany',
-    customSEO: { en: { title: 'Dortmund to Munich by Train: 5h30 DB ICE', description: 'Direct DB ICE from Dortmund to Munich in 5h30. Compare today\'s schedule and book fares from €35 — no layovers.' } },
+    customSEO: { en: { title: 'Dortmund to Munich by Train: Times, Duration (5h30) & Price', description: 'Direct DB ICE from Dortmund to Munich in 5h30. Compare today\'s schedule and book fares from €35 — no layovers.' } },
     localInsight: {
       en: 'Dortmund sits at the heart of the Ruhr, once Europe\'s largest coal and steel region and the engine of Germany\'s post-war industrial boom. This train ride effectively runs from that post-industrial landscape all the way to Bavaria — two very different pictures of modern Germany connected by a single ICE line.',
       es: 'Dortmund está en el corazón del Ruhr, que fue la mayor región carbonera y siderúrgica de Europa y el motor del auge industrial alemán de posguerra. Este viaje en tren va, en la práctica, desde ese paisaje postindustrial hasta Baviera — dos imágenes muy distintas de la Alemania moderna conectadas por una sola línea ICE.',
@@ -179,7 +179,7 @@ const routes = [
     }
   },
   { slug: 'frankfurt-cologne', from: 'Frankfurt', to: 'Cologne', country: 'Germany', duration: '1h 15m', operator: 'DB ICE', price: '€25-40', badge: 'Route guide · Germany',
-    customSEO: { en: { title: 'Frankfurt to Cologne by Train: 1h15 DB ICE', description: 'Direct DB ICE from Frankfurt to Cologne in 1h15. Compare today\'s schedule and book fares from €25 — no layovers.' } } },
+    customSEO: { en: { title: 'Frankfurt to Cologne by Train: Times, Duration (1h15) & Price', description: 'Direct DB ICE from Frankfurt to Cologne in 1h15. Compare today\'s schedule and book fares from €25 — no layovers.' } } },
   { slug: 'frankfurt-munich', from: 'Frankfurt', to: 'Munich', country: 'Germany', duration: '3h 30m', operator: 'DB ICE', price: '€30-50', badge: 'Route guide · Germany',
     customSEO: { en: { title: 'Frankfurt to Munich Train: 3h30 ICE', description: 'Direct DB ICE from Frankfurt to Munich in 3.5 hours, no layovers. Compare fares from €30 and book your seat today.' } },
     localInsight: {
@@ -729,7 +729,7 @@ const routes = [
     }
   },
   { slug: 'vienna-krems', from: 'Vienna', to: 'Krems', country: 'Austria', duration: '1h 00m', operator: 'ÖBB', price: '€10-15', badge: 'Route guide · Austria',
-    customSEO: { en: { title: 'How to Get from Vienna to Krems by Train (1h)', description: 'The Vienna to Krems train takes 1 hour on ÖBB. See today\'s departures and book tickets from €10.' } },
+    customSEO: { en: { title: 'Vienna to Krems by Train: Times, Duration (1h) & Price', description: 'The Vienna to Krems train takes 1 hour on ÖBB. See today\'s departures and book tickets from €10.' } },
     localInsight: {
       en: 'Krems sits at the edge of the Wachau Valley, a UNESCO World Heritage cultural landscape along the Danube known for centuries-old terraced vineyards climbing steep hillsides — recognised specifically because the valley\'s architecture, urban design and agriculture have developed together in harmony over a very long time, not just for the scenery.',
       es: 'Krems está a la entrada del valle de Wachau, un paisaje cultural Patrimonio de la Humanidad de la UNESCO a orillas del Danubio, conocido por sus viñedos en terrazas centenarios que trepan por laderas empinadas — reconocido específicamente porque la arquitectura, el urbanismo y la agricultura del valle se desarrollaron juntos en armonía durante mucho tiempo, no solo por el paisaje.',
