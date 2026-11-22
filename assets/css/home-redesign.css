@@ -251,7 +251,7 @@ body.home-v2 .search-card .country-chip.show-photo { color: #C10016; }
 /* ===== ajuste al diseno aprobado: texto y resultado dentro de la tarjeta ===== */
 body.home-v2 .ai-field-label {
   position: absolute; left: 52px; top: 11px; z-index: 2; pointer-events: none;
-  font-size: 12px; font-weight: 500; color: #7a6f68;
+  font-size: 12px; font-weight: 500; color: #665b54;
 }
 body.home-v2 .search-card .ai-input-container input { padding-top: 32px !important; padding-bottom: 12px !important; }
 body.home-v2 .search-card .ai-search-icon { top: 58% !important; }
@@ -804,7 +804,7 @@ body.home-v2 .ai-results .ai-segment-header { min-height: 0; }
 body.home-v2 .ai-results a.ai-segment-buy { padding: 11px 24px; font-size: 15px; }
 body.home-v2 .ai-results .pi { padding-top: 10px; }
 body.home-v2 .ai-results .pi-modes .rp-row { padding: 5px 0; }
-body.home-v2 .ai-results .pi-note { padding-top: 2px; font-size: 11.5px; }
+body.home-v2 .ai-results .pi-note { padding-top: 2px; font-size: 12px; }
 body.home-v2 .ai-results a.pi-gcard { padding: 8px 14px 8px 8px; margin-top: 10px; }
 body.home-v2 .ai-results a.pi-gcard .pi-gcard-img { width: 64px; height: 48px; flex: 0 0 64px; }
 @media (max-width: 760px) {
@@ -821,10 +821,10 @@ body.home-v2 .ai-results .pi-exp a:hover { border-bottom-color: #C10016; }
 body.home-v2 .omo.omo-strip { padding: 10px 16px !important; margin-top: 10px !important; border-radius: 12px !important; }
 body.home-v2 .omo.omo-strip .omo-row { gap: 12px; align-items: center; }
 body.home-v2 .omo.omo-strip .omo-row > div:first-child { font-size: 14px; line-height: 1.35; }
-body.home-v2 .omo.omo-strip .omo-row > div:first-child > :first-child { font-size: 10.5px; letter-spacing: .08em; margin-bottom: 2px; }
+body.home-v2 .omo.omo-strip .omo-row > div:first-child > :first-child { font-size: 11px; letter-spacing: .08em; margin-bottom: 2px; }
 body.home-v2 .omo.omo-strip .omo-btn { padding: 6px 14px; font-size: 13px; min-height: 0; }
 body.home-v2 .omo.omo-strip .omo-note { font-size: 11px; line-height: 1.35; margin-top: 4px; opacity: .8; }
-body.home-v2 .omo.omo-strip p.omo-eyebrow { font-size: 10.5px !important; letter-spacing: .08em !important; margin: 0 0 2px !important; }
+body.home-v2 .omo.omo-strip p.omo-eyebrow { font-size: 11px !important; letter-spacing: .08em !important; margin: 0 0 2px !important; }
 body.home-v2 .omo.omo-strip p.omo-text { font-size: 14px !important; line-height: 1.35 !important; margin: 0 !important; }
 body.home-v2 .omo.omo-strip p.omo-note { font-size: 11px !important; line-height: 1.35 !important; margin: 4px 0 0 !important; }
 body.home-v2 .omo.omo-strip .omo-btn { padding: 6px 14px !important; font-size: 13px !important; }
@@ -834,7 +834,7 @@ body.home-v2 .search-tab { font-weight: 500 !important; letter-spacing: 0 !impor
 body.home-v2 .search-tab.on { font-weight: 600 !important; }
 body.home-v2 .search-card .region-btn { font-weight: 500 !important; }
 body.home-v2 .search-card .ai-input-container input { font-weight: 400 !important; letter-spacing: 0 !important; color: #1f2333 !important; }
-body.home-v2 .search-card .ai-input-container input::placeholder { font-weight: 400 !important; color: #8a8fa0 !important; }
+body.home-v2 .search-card .ai-input-container input::placeholder { font-weight: 400 !important; color: #5f6577 !important; }
 body.home-v2 .search-card label, body.home-v2 .search-card .ai-input-label { font-weight: 400 !important; }
 body.home-v2 .search-card .ai-generate-btn { font-weight: 600 !important; letter-spacing: 0 !important; }
 body.home-v2 .search-card .ai-chip, body.home-v2 .search-card .chip, body.home-v2 .search-card [class*="chip"] { font-weight: 400 !important; }
@@ -1208,4 +1208,15 @@ body.home-v2 .ai-input-container:focus-within { box-shadow: 0 0 0 3px rgba(193, 
 button, a, input, select, textarea, summary, [role="button"] { touch-action: manipulation; }
 h1, h2, h3 { text-wrap: balance; }
 .ai-segment-time, .rt-dur, .rp-time, .rp-price, .pi-gcard-meta, #aiRouteDuration { font-variant-numeric: tabular-nums; }
+
+/* Tanda B (auditoria 21-nov): movimiento reducido en carruseles, pausa con foco y tamanos minimos legibles */
+@media (prefers-reduced-motion: reduce) {
+  .stats-track, .discover-carousel-track, .carousel-track, .hero-carousel-track { animation: none !important; transform: none !important; }
+  .stats-marquee, .discover-carousel, .photo-carousel { overflow-x: auto !important; }
+}
+.stats-marquee:hover .stats-track, .stats-marquee:focus-within .stats-track,
+.discover-carousel:focus-within .discover-carousel-track, .photo-carousel:focus-within .carousel-track { animation-play-state: paused; }
+.country-routes .group-label { font-size: 12px; }
+.discover-route { font-size: 11.5px; }
+body.home-v2 .wt-route-stops { line-height: 1.4 !important; }
 
