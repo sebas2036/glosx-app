@@ -154,15 +154,11 @@
     if (label) japanSuggestEl.appendChild(label.cloneNode(true));
     QUICK.forEach(function (p) {
       var from = valueOf(p[0]), to = valueOf(p[1]);
-      var chip = document.createElement('span');
+      var chip = document.createElement('button');
+      chip.type = 'button';
       chip.className = 'ai-suggestion';
-      chip.setAttribute('role', 'button');
-      chip.setAttribute('tabindex', '0');
       chip.textContent = labelOf(p[0]) + ' \u2192 ' + labelOf(p[1]);
       chip.addEventListener('click', function () { applyQuick(from, to); });
-      chip.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); applyQuick(from, to); }
-      });
       japanSuggestEl.appendChild(chip);
     });
   }

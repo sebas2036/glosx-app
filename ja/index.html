@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=128" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=129" />
   <!-- Una sola familia (Figtree): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -464,11 +464,11 @@
       </div>
       <div class="ai-suggestions">
         <span class="ai-suggestions-label" data-i18n="ai_suggest_label">人気の区間：</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">マドリード → バルセロナ</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">パリ → ロンドン</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">パリ → バルセロナ</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">ミュンヘン → ベネチア</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">ローマ → ベネチア</span>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">マドリード → バルセロナ</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">パリ → ロンドン</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">パリ → バルセロナ</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">ミュンヘン → ベネチア</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">ローマ → ベネチア</button>
       </div>
       <p class="search-note" data-i18n="hero_subtitle">行きたい場所を教えてください。AIが旅程を組み、切符の購入につなぎ、途中のホテルも探します。</p>
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">直前のルートを見る →</button>
@@ -476,7 +476,7 @@
         </div>
         <div class="search-panel" data-panel="roulette">
     <div class="discover-cta" id="hoy">
-      <h3 role="heading" aria-level="2" data-i18n="disc_cta_title">今日はどこへ行く？</h3>
+      <h2 data-i18n="disc_cta_title">今日はどこへ行く？</h2>
       <p data-i18n="disc_cta_text">実在する都市の組み合わせを回すと、旅程がひとりでに組まれます。</p>
       <div class="pair-roulette" id="pairRoulette" aria-live="polite">
         <span class="pair-roulette-from" id="rouletteFrom">マドリード</span>
@@ -1169,21 +1169,21 @@
     <p class="section-label" data-i18n="faq_label">よくある質問</p>
     <h2><span data-i18n="faq_title1">知っておきたい</span><br /><span data-i18n="faq_title2">こと。</span></h2>
     <div style="margin-top:32px;max-width:720px;">
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq1_q">WoW Trainとは？</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq1_a">ヨーロッパの列車の旅を組む、独立した無料のサイトです。アカウントも月額も不要。見て、組んで、認定パートナーから予約します。</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq1-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq1_q">WoW Trainとは？</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq1-a" data-i18n="faq1_a">ヨーロッパの列車の旅を組む、独立した無料のサイトです。アカウントも月額も不要。見て、組んで、認定パートナーから予約します。</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq2_q">切符はどう予約しますか？</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq2_a">Omioなどの公式パートナーへ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq2-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq2_q">切符はどう予約しますか？</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq2-a" data-i18n="faq2_a">Omioなどの公式パートナーへ、そのままつなぎます。区間を検索し、「時刻を見る →」を押して、パートナーの安全な画面で予約を終えます。</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq4_q">手数料はかかりますか？</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq4_a">使う人は100%無料です。WoW Trainは公式パートナーからの報酬を受け取りますが、あなたへの上乗せはありません。</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq3-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq4_q">手数料はかかりますか？</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq3-a" data-i18n="faq4_a">使う人は100%無料です。WoW Trainは公式パートナーからの報酬を受け取りますが、あなたへの上乗せはありません。</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq5_q">データは守られますか？</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq5_a">アカウントは不要です。サイトに必要なクッキーと、匿名のGoogleアナリティクスだけを使います。個人データを売ることはありません。</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq4-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq5_q">データは守られますか？</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq4-a" data-i18n="faq5_a">アカウントは不要です。サイトに必要なクッキーと、匿名のGoogleアナリティクスだけを使います。個人データを売ることはありません。</div>
       </div>
     </div>
   </section>
@@ -1369,7 +1369,7 @@
   <script src="/assets/js/omio-bridge.js?v=14" defer></script>
   <script src="/assets/js/klook-bridge.js?v=5" defer></script>
   <script src="/assets/js/planner-info.js?v=30" defer></script>
-  <script src="/assets/js/japan.js?v=78" defer></script>
+  <script src="/assets/js/japan.js?v=79" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

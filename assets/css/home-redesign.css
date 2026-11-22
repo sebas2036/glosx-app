@@ -1220,3 +1220,9 @@ h1, h2, h3 { text-wrap: balance; }
 .discover-route { font-size: 11.5px; }
 body.home-v2 .wt-route-stops { line-height: 1.4 !important; }
 
+/* Cierre de accesibilidad: sugerencias y preguntas del FAQ como botones reales, con el aspecto de antes */
+:where(button.ai-suggestion) { font-family: inherit; line-height: inherit; margin: 0; -webkit-appearance: none; appearance: none; }
+button.faq-q { width: 100%; padding: 0; margin: 0; background: none; border: 0; font-family: inherit; text-align: start; line-height: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
+button.faq-q:focus-visible { outline: 3px solid #C10016; outline-offset: 4px; border-radius: 4px; }
+.faq-item { cursor: auto; }
+

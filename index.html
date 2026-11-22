@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=128" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=129" />
   <!-- Una sola familia (Figtree): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -463,11 +463,11 @@
       </div>
       <div class="ai-suggestions">
         <span class="ai-suggestions-label" data-i18n="ai_suggest_label">Popular pairs:</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">Madrid → Barcelona</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">Paris → London</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">Paris → Barcelona</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">Munich → Venice</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">Rome → Venice</span>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">Madrid → Barcelona</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">Paris → London</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">Paris → Barcelona</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">Munich → Venice</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">Rome → Venice</button>
       </div>
       <p class="search-note" data-i18n="hero_subtitle">
         Tell us where you want to go — our AI builds the full itinerary, connects you to buy tickets, and finds hotels along the way.
@@ -477,7 +477,7 @@
         </div>
         <div class="search-panel" data-panel="roulette">
     <div class="discover-cta" id="hoy">
-      <h3 role="heading" aria-level="2" data-i18n="disc_cta_title">Today we're going to…?</h3>
+      <h2 data-i18n="disc_cta_title">Today we're going to…?</h2>
       <p data-i18n="disc_cta_text">Spin a real city pair. The itinerary builds itself.</p>
       <div class="pair-roulette" id="pairRoulette" aria-live="polite">
         <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
@@ -1170,21 +1170,21 @@
     <p class="section-label" data-i18n="faq_label">Frequently asked questions</p>
     <h2><span data-i18n="faq_title1">Everything you</span><br /><span data-i18n="faq_title2">need to know.</span></h2>
     <div style="margin-top:32px;max-width:720px;">
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq1_q">What is WoW Train?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq1_a">An independent and free platform to design scenic train itineraries across Europe. No account, no subscription — just explore, plan and book through certified partners.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq1-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq1_q">What is WoW Train?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq1-a" data-i18n="faq1_a">An independent and free platform to design scenic train itineraries across Europe. No account, no subscription — just explore, plan and book through certified partners.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq2_q">How do I book a ticket?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq2_a">We connect you directly and transparently to official partners such as Omio. Search your route, click "Check schedules →" and complete the booking on the partner's secure platform.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq2-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq2_q">How do I book a ticket?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq2-a" data-i18n="faq2_a">We connect you directly and transparently to official partners such as Omio. Search your route, click "Check schedules →" and complete the booking on the partner's secure platform.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq4_q">Do you charge any fees?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq4_a">100% free for the user. WoW Train receives support from official partners without any extra cost to you. Transparent, independent and always on your side.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq3-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq4_q">Do you charge any fees?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq3-a" data-i18n="faq4_a">100% free for the user. WoW Train receives support from official partners without any extra cost to you. Transparent, independent and always on your side.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq5_q">Is my data private?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq5_a">No account is required. We use essential cookies and anonymous Google Analytics to understand traffic — see our Privacy Policy and Cookie Policy. We do not sell personal data.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq4-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq5_q">Is my data private?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq4-a" data-i18n="faq5_a">No account is required. We use essential cookies and anonymous Google Analytics to understand traffic — see our Privacy Policy and Cookie Policy. We do not sell personal data.</div>
       </div>
     </div>
   </section>
@@ -1372,7 +1372,7 @@
   <script src="/assets/js/omio-bridge.js?v=14" defer></script>
   <script src="/assets/js/klook-bridge.js?v=5" defer></script>
   <script src="/assets/js/planner-info.js?v=30" defer></script>
-  <script src="/assets/js/japan.js?v=78" defer></script>
+  <script src="/assets/js/japan.js?v=79" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

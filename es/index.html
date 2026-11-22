@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=128" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=129" />
   <!-- Una sola familia (Figtree): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -464,11 +464,11 @@
       </div>
       <div class="ai-suggestions">
         <span class="ai-suggestions-label" data-i18n="ai_suggest_label">Pares populares:</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">Madrid → Barcelona</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">París → Londres</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">París → Barcelona</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">Múnich → Venecia</span>
-        <span class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">Roma → Venecia</span>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_mb" onclick="applyPopularPair('mb')">Madrid → Barcelona</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_pl" onclick="applyPopularPair('pl')">París → Londres</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_pb" onclick="applyPopularPair('pb')">París → Barcelona</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_mv" onclick="applyPopularPair('mv')">Múnich → Venecia</button>
+        <button type="button" class="ai-suggestion" data-i18n="ai_suggest_rv" onclick="applyPopularPair('rv')">Roma → Venecia</button>
       </div>
       <p class="search-note" data-i18n="hero_subtitle">Cuéntanos a dónde quieres ir — nuestra IA arma el itinerario completo, te conecta para comprar los billetes vía Omio y encuentra hoteles en cada parada.</p>
       <button class="ai-restore-btn" id="aiRestoreBtn" onclick="restoreLastRoute()" style="display:none;" data-i18n="ai_restore">Ver mi última ruta →</button>
@@ -476,7 +476,7 @@
         </div>
         <div class="search-panel" data-panel="roulette">
     <div class="discover-cta" id="hoy">
-      <h3 role="heading" aria-level="2" data-i18n="disc_cta_title">¿Hoy nos vamos a…?</h3>
+      <h2 data-i18n="disc_cta_title">¿Hoy nos vamos a…?</h2>
       <p data-i18n="disc_cta_text">Gira la ruleta: un par real y el itinerario se arma solo.</p>
       <div class="pair-roulette" id="pairRoulette" aria-live="polite">
         <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
@@ -1169,21 +1169,21 @@
     <p class="section-label" data-i18n="faq_label">Preguntas frecuentes</p>
     <h2><span data-i18n="faq_title1">Todo lo que</span><br /><span data-i18n="faq_title2">necesitas saber.</span></h2>
     <div style="margin-top:32px;max-width:720px;">
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq1_q">¿Qué es WoW Train?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq1_a">Una plataforma independiente y gratuita para diseñar itinerarios escénicos en tren por Europa. Sin cuenta, sin suscripción — explora, planifica y reserva a través de socios certificados.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq1-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq1_q">¿Qué es WoW Train?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq1-a" data-i18n="faq1_a">Una plataforma independiente y gratuita para diseñar itinerarios escénicos en tren por Europa. Sin cuenta, sin suscripción — explora, planifica y reserva a través de socios certificados.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq2_q">¿Cómo reservo un billete?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq2_a">Te conectamos de forma directa y transparente con socios oficiales como Omio y Klook. Busca tu ruta, haz clic en "Ver horarios →" y completa la reserva en la plataforma segura de Klook.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq2-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq2_q">¿Cómo reservo un billete?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq2-a" data-i18n="faq2_a">Te conectamos de forma directa y transparente con socios oficiales como Omio y Klook. Busca tu ruta, haz clic en "Ver horarios →" y completa la reserva en la plataforma segura de Klook.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq4_q">¿Cobran comisiones?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq4_a">100% gratis para el usuario. WoW Train recibe una comisión de socios oficiales como Omio y Klook cuando reservas, sin costo adicional para ti. Transparente, independiente y siempre de tu lado.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq3-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq4_q">¿Cobran comisiones?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq3-a" data-i18n="faq4_a">100% gratis para el usuario. WoW Train recibe una comisión de socios oficiales como Omio y Klook cuando reservas, sin costo adicional para ti. Transparente, independiente y siempre de tu lado.</div>
       </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-q"><span data-i18n="faq5_q">¿Son privados mis datos?</span> <span class="faq-arrow">▾</span></div>
-        <div class="faq-a" data-i18n="faq5_a">No hace falta cuenta. Usamos cookies esenciales y Google Analytics anónimo para entender el tráfico — ver la Política de privacidad y la Política de cookies. No vendemos datos personales.</div>
+      <div class="faq-item">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq4-a" onclick="toggleFaq(this.parentNode);this.setAttribute('aria-expanded',this.parentNode.classList.contains('open'))"><span data-i18n="faq5_q">¿Son privados mis datos?</span> <span class="faq-arrow">▾</span></button>
+        <div class="faq-a" id="faq4-a" data-i18n="faq5_a">No hace falta cuenta. Usamos cookies esenciales y Google Analytics anónimo para entender el tráfico — ver la Política de privacidad y la Política de cookies. No vendemos datos personales.</div>
       </div>
     </div>
   </section>
@@ -1369,7 +1369,7 @@
   <script src="/assets/js/omio-bridge.js?v=14" defer></script>
   <script src="/assets/js/klook-bridge.js?v=5" defer></script>
   <script src="/assets/js/planner-info.js?v=30" defer></script>
-  <script src="/assets/js/japan.js?v=78" defer></script>
+  <script src="/assets/js/japan.js?v=79" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

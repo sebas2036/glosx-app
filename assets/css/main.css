@@ -1111,7 +1111,8 @@
       background: linear-gradient(180deg, rgba(10,8,16,0.62) 0%, rgba(10,8,16,0.78) 100%);
     }
     .discover-cta > * { position: relative; z-index: 1; }
-    .discover-cta h3 {
+    .discover-cta h3,
+    .discover-cta h2 {
       color: #fff; font-size: 22px; font-weight: 800; line-height: 1.2;
       max-width: 100%; margin: 0 auto 8px;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -1192,7 +1193,8 @@
       padding: 22px 24px 20px;
     }
     .ai-planner.is-roulette-done .discover-cta p { display: none; }
-    .ai-planner.is-roulette-done .discover-cta h3 {
+    .ai-planner.is-roulette-done .discover-cta h3,
+    .ai-planner.is-roulette-done .discover-cta h2 {
       font-size: 18px; margin-bottom: 8px;
     }
     .ai-planner.is-roulette-done .pair-roulette { margin: 0 auto 12px; }
