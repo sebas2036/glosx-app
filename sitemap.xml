@@ -59752,4 +59752,44 @@
       <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://glosx.app/rutas/strasbourg-colmar/zh/" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/rutas/strasbourg-colmar/" />
   </url>
+  <url>
+    <loc>https://glosx.app/germany-trains/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/germany-trains/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/germany-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/spain-trains/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/spain-trains/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/spain-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/italy-trains/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/italy-trains/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/italy-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/france-trains/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/france-trains/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/france-trains/" />
+  </url>
+  <url>
+    <loc>https://glosx.app/benelux-trains/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/benelux-trains/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/benelux-trains/" />
+  </url>
 </urlset>

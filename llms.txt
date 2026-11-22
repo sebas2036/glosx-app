@@ -23,6 +23,14 @@ Calculated by glosx.app from official open GTFS/timetable data; each page states
 - [Trains in Finland](https://glosx.app/finland-trains/): from Digitraffic open data
 - [How late is the last train in Europe?](https://glosx.app/last-train-europe/): study of last departures across European routes
 
+## Country train guides (operators, train types and main routes)
+
+- [Trains in Germany](https://glosx.app/germany-trains/): Deutsche Bahn, ICE and regional trains, with typical journey times for popular routes
+- [Trains in Spain](https://glosx.app/spain-trains/): Renfe AVE, Avlo, Ouigo and Iryo, with typical journey times for popular routes
+- [Trains in Italy](https://glosx.app/italy-trains/): Trenitalia Frecciarossa, Italo and regional trains, with typical journey times for popular routes
+- [Trains in France](https://glosx.app/france-trains/): TGV INOUI, OUIGO, Intercités and TER, with typical journey times for popular routes
+- [Trains in Belgium and the Netherlands](https://glosx.app/benelux-trains/): Eurostar, NS and SNCB, with typical journey times for popular routes
+
 ## Guides
 
 - [Blog](https://glosx.app/blog.html): European and Japanese train travel guides (scenic routes, night trains, rail passes vs point-to-point tickets, limited express trains in Japan)
