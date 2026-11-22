@@ -70,6 +70,24 @@ const pad = (s, n) => String(s).padEnd(n).slice(0, n);
     console.log(`Enviadas ${send.length} de ${urls.length} (cupo diario era ${q.DailyQuota}).`);
     // la cola queda solo con lo que falta enviar (las aceptadas salen del archivo)
     if (send.length) { fs.writeFileSync(arg2, urls.slice(send.length).join('\n') + (urls.length > send.length ? '\n' : '')); console.log(`Cola actualizada: quedan ${urls.length - send.length} en ${arg2}`); }
+  } else if (cmd === 'prune') {
+    // Consulta GetUrlInfo (solo lectura) por cada URL y saca de la lista las que Bing ya rastreó (LastCrawledDate + HTTP 200).
+    if (arg !== '--file' || !arg2) { console.error('Uso: prune --file lista.txt [--dry] [--limit N]'); process.exit(1); }
+    const dry = process.argv.includes('--dry');
+    const li = process.argv.indexOf('--limit'); const lim = li > 0 ? +process.argv[li + 1] : Infinity;
+    const urls = fs.readFileSync(arg2, 'utf8').split('\n').map(s => s.trim()).filter(u => u.startsWith(SITE));
+    const todo = urls.slice(0, lim), known = new Set(); let errs = 0, k = 0;
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+    const worker = async () => { while (k < todo.length) { const u = todo[k++]; let ok = false;
+      for (let t = 0; t < 6 && !ok; t++) { try {
+        const r = await call('GetUrlInfo', { url: u }); ok = true;
+        if (r && r.LastCrawledDate && day(r.LastCrawledDate) > '2000') known.add(u);
+      } catch (e) { await sleep(2000 * (t + 1)); } }
+      if (!ok) errs++;
+      await sleep(400); if (k % 100 === 0) console.log(`... ${k}/${todo.length} (ya rastreadas: ${known.size})`); } };
+    await Promise.all(Array.from({ length: 2 }, worker));
+    console.log(`Revisadas ${todo.length}: ya rastreadas por Bing ${known.size}, sin rastrear ${todo.length - known.size - errs}, errores ${errs}.`);
+    if (!dry) { fs.writeFileSync(arg2, urls.filter(u => !known.has(u)).join('\n') + '\n'); console.log(`Lista actualizada: quedan ${urls.length - known.size} en ${arg2}`); }
   } else {
     console.error('Comando desconocido:', cmd); process.exit(1);
   }
