@@ -27,6 +27,9 @@ add('benelux-trains', ['brussels-bruges', 'amsterdam-brussels', 'brussels-paris'
 add('swiss-trains', ['basel-paris', 'geneva-paris', 'paris-zurich'])
 add('france-trains', ['nice-monaco', 'paris-toulouse', 'paris-lyon', 'paris-milan'])
 add('germany-trains', ['munich-berlin', 'frankfurt-paris'])
+# tanda 2 (22-nov-2026): las 6 rutas principales de las tablas de spain-trains e italy-trains
+add('spain-trains', ['madrid-valencia', 'madrid-barcelona', 'madrid-seville', 'madrid-malaga', 'madrid-zaragoza', 'barcelona-seville'])
+add('italy-trains', ['rome-venice', 'rome-naples', 'milan-rome', 'venice-milan', 'florence-venice', 'rome-florence'])
 # hubs existentes que hoy no recibian enlace de vuelta
 add('austria-trains', ['graz-vienna', 'innsbruck-vienna', 'vienna-salzburg', 'vienna-krems'])
 add('trains-from-france-to-spain', ['lyon-turin', 'paris-amsterdam', 'paris-barcelona', 'paris-nice'])
