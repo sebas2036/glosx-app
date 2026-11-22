@@ -30,6 +30,7 @@ Calculated by glosx.app from official open GTFS/timetable data; each page states
 - [Trains in Italy](https://glosx.app/italy-trains/): Trenitalia Frecciarossa, Italo and regional trains, with typical journey times for popular routes
 - [Trains in France](https://glosx.app/france-trains/): TGV INOUI, OUIGO, Intercités and TER, with typical journey times for popular routes
 - [Trains in Belgium and the Netherlands](https://glosx.app/benelux-trains/): Eurostar, NS and SNCB, with typical journey times for popular routes
+- [Trains in China](https://glosx.app/china-trains/): G and D high-speed trains, passport-based tickets and main stations, with the fastest journey times for 113 routes
 
 ## Guides
 

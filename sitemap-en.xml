@@ -7531,4 +7531,12 @@
       <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/benelux-trains/" />
       <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/benelux-trains/" />
   </url>
+  <url>
+    <loc>https://glosx.app/china-trains/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://glosx.app/china-trains/" />
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://glosx.app/china-trains/" />
+  </url>
 </urlset>
