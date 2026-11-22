@@ -1868,7 +1868,7 @@
   .ai-input-wrapper {
     max-width: 820px;
     margin: 0 auto;
-    transition: all 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease, max-width 0.4s ease, margin 0.4s ease;
   }
   .ai-input-container {
     display: flex;
@@ -2065,7 +2065,7 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: color 0.2s, background-color 0.2s;
   }
   .ai-close-btn:hover {
     color: var(--text);
@@ -2423,7 +2423,7 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
-    transition: all 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
   }
   .ai-partner-btn:hover {
     background: var(--surface);

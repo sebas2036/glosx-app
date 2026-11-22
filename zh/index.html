@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-1000.webp" media="(max-width: 760px)" fetchpriority="high" />
   <link rel="preload" as="image" href="/assets/img/hero/home-tren-2000.webp" media="(min-width: 761px)" fetchpriority="high" />
-  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=126" />
+  <link rel="stylesheet" href="/assets/css/home-redesign.css?v=127" />
   <!-- Una sola familia (Figtree): Poppins se pedía y no está en el CSS.
        3 pesos, display=swap. media=print + onload para no bloquear el primer paint
        en 3G; el sistema tipográfico pinta el H1 al toque. -->
@@ -388,14 +388,14 @@
           <span style="font-size:10px;opacity:0.6">▾</span>
         </button>
         <div class="lang-dropdown" id="langDropdown">
-          <div class="lang-option" data-lang="en" onclick="setLang('en')"><span>English</span></div>
-          <div class="lang-option" data-lang="es" onclick="setLang('es')"><span>Español</span></div>
-          <div class="lang-option" data-lang="fr" onclick="setLang('fr')"><span>Français</span></div>
-          <div class="lang-option" data-lang="de" onclick="setLang('de')"><span>Deutsch</span></div>
-          <div class="lang-option" data-lang="it" onclick="setLang('it')"><span>Italiano</span></div>
-          <div class="lang-option" data-lang="pt" onclick="setLang('pt')"><span>Português</span></div>
-          <div class="lang-option" data-lang="ja" onclick="setLang('ja')"><span>日本語</span></div>
-          <div class="lang-option" data-lang="zh" onclick="setLang('zh')"><span>中文</span></div>
+          <button type="button" class="lang-option" data-lang="en" lang="en" onclick="setLang('en')"><span>English</span></button>
+          <button type="button" class="lang-option" data-lang="es" lang="es" onclick="setLang('es')"><span>Español</span></button>
+          <button type="button" class="lang-option" data-lang="fr" lang="fr" onclick="setLang('fr')"><span>Français</span></button>
+          <button type="button" class="lang-option" data-lang="de" lang="de" onclick="setLang('de')"><span>Deutsch</span></button>
+          <button type="button" class="lang-option" data-lang="it" lang="it" onclick="setLang('it')"><span>Italiano</span></button>
+          <button type="button" class="lang-option" data-lang="pt" lang="pt" onclick="setLang('pt')"><span>Português</span></button>
+          <button type="button" class="lang-option" data-lang="ja" lang="ja" onclick="setLang('ja')"><span>日本語</span></button>
+          <button type="button" class="lang-option" data-lang="zh" lang="zh" onclick="setLang('zh')"><span>中文</span></button>
         </div>
       </div>
     </div>
@@ -456,8 +456,8 @@
         <div class="search-panel on" data-panel="ai">
     <div class="ai-input-wrapper" id="aiInputWrapper">
       <div class="ai-input-container">
-        <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" data-i18n="search_label">你的火车旅程</span><svg class="ai-search-icon eu-only" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg><svg class="ai-search-icon jp-only" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16h13c3.5 0 6.5-1.5 7-4-1-2.5-5-4-9-4H4a2 2 0 0 0-2 2z"/><path d="M6 8v4h11"/><path d="M3 20h18"/></svg>
-          <input type="text" id="aiInput" data-i18n-placeholder="ai_input_ph" placeholder="从苏黎世到米兰的火车" autocomplete="off" />
+        <div class="ai-input-aurora" id="aiInputAurora"><span class="ai-field-label" id="aiFieldLabel" data-i18n="search_label">你的火车旅程</span><svg class="ai-search-icon eu-only" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M9 21l2-4M15 21l-2-4"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></svg><svg class="ai-search-icon jp-only" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16h13c3.5 0 6.5-1.5 7-4-1-2.5-5-4-9-4H4a2 2 0 0 0-2 2z"/><path d="M6 8v4h11"/><path d="M3 20h18"/></svg>
+          <input type="text" id="aiInput" aria-labelledby="aiFieldLabel" data-i18n-placeholder="ai_input_ph" placeholder="从苏黎世到米兰的火车" autocomplete="off" />
           <button type="button" class="ai-swap-btn" onclick="invertAIRoute()" data-i18n-aria-label="ai_swap" aria-label="Swap origin and destination" title="Swap origin and destination">⇄</button>
         </div>
         <button class="ai-generate-btn" onclick="generateAIRoute()" data-i18n="ai_generate">生成行程</button>
@@ -476,7 +476,7 @@
         </div>
         <div class="search-panel" data-panel="roulette">
     <div class="discover-cta" id="hoy">
-      <h3 data-i18n="disc_cta_title">今天我们去……？</h3>
+      <h3 role="heading" aria-level="2" data-i18n="disc_cta_title">今天我们去……？</h3>
       <p data-i18n="disc_cta_text">转出一组真实的城市组合，行程自动生成。</p>
       <div class="pair-roulette" id="pairRoulette" aria-live="polite">
         <span class="pair-roulette-from" id="rouletteFrom">Madrid</span>
@@ -493,7 +493,7 @@
         <div class="search-panel" data-panel="countries">
   <p class="section-label" style="text-align:center; margin: 4px 0 10px; color:#ffffff;" data-i18n="popular_routes_label">★ 热门线路 · 即时预订</p>
   <div class="countries" id="countries" style="padding: 0 24px 0;">
-    <span class="country-chip"><span data-i18n="chip_spain">西班牙</span><span class="country-popup"><img class="country-photo" src="/country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_spain">西班牙</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/es.webp" alt="Spain" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/madrid-barcelona/zh/" onclick="planRouteFromChip(event,'Madrid','Barcelona')">Madrid → Barcelona</a>
       <a href="/rutas/barcelona-valencia/zh/" onclick="planRouteFromChip(event,'Barcelona','Valencia')">Barcelona → Valencia</a>
       <a href="/rutas/madrid-seville/zh/" onclick="planRouteFromChip(event,'Madrid','Seville')">Madrid → Seville</a>
@@ -515,7 +515,7 @@
       <a href="/rutas/seville-cordoba/zh/" onclick="planRouteFromChip(event,'Seville','Cordoba')">Seville → Cordoba</a>
       <a href="/rutas/madrid-salamanca/zh/" onclick="planRouteFromChip(event,'Madrid','Salamanca')">Madrid → Salamanca</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_switzerland">瑞士</span><span class="country-popup"><img class="country-photo" src="/country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_switzerland">瑞士</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/ch.webp" alt="Switzerland" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/zurich-lucerne/zh/" onclick="planRouteFromChip(event,'Zurich','Lucerne')">Zurich → Lucerne</a>
       <a href="/rutas/zurich-milan/zh/" onclick="planRouteFromChip(event,'Zurich','Milan')">Zurich → Milan</a>
       <a href="/rutas/geneva-zermatt/zh/" onclick="planRouteFromChip(event,'Geneva','Zermatt')">Geneva → Zermatt</a>
@@ -534,7 +534,7 @@
       <a href="/rutas/paris-zurich/zh/" onclick="planRouteFromChip(event,'Paris','Zurich')">Paris → Zurich</a>
       <a href="/rutas/zurich-geneva/zh/" onclick="planRouteFromChip(event,'Zurich','Geneva')">Zurich → Geneva</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_france">法国</span><span class="country-popup"><img class="country-photo" src="/country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_france">法国</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/fr.webp" alt="France" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-london/zh/" onclick="planRouteFromChip(event,'Paris','London')">Paris → London</a>
       <a href="/rutas/paris-nice/zh/" onclick="planRouteFromChip(event,'Paris','Nice')">Paris → Nice</a>
       <a href="/rutas/nice-monaco/zh/" onclick="planRouteFromChip(event,'Nice','Monaco')">Nice → Monaco</a>
@@ -567,7 +567,7 @@
       <a href="/rutas/lyon-marseille/zh/" onclick="planRouteFromChip(event,'Lyon','Marseille')">Lyon → Marseille</a>
       <a href="/rutas/marseille-nice/zh/" onclick="planRouteFromChip(event,'Marseille','Nice')">Marseille → Nice</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_germany">德国</span><span class="country-popup"><img class="country-photo" src="/country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_germany">德国</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/de.webp" alt="Germany" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/amsterdam-berlin/zh/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
       <a href="/rutas/berlin-prague/zh/" onclick="planRouteFromChip(event,'Berlin','Prague')">Berlin → Prague</a>
       <a href="/rutas/munich-venice/zh/" onclick="planRouteFromChip(event,'Munich','Venice')">Munich → Venice</a>
@@ -588,7 +588,7 @@
       <a href="/rutas/amsterdam-cologne/zh/" onclick="planRouteFromChip(event,'Amsterdam','Cologne')">Amsterdam → Cologne</a>
       <a href="/rutas/ljubljana-munich/zh/" onclick="planRouteFromChip(event,'Ljubljana','Munich')">Ljubljana → Munich</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_italy">意大利</span><span class="country-popup"><img class="country-photo" src="/country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_italy">意大利</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/it.webp" alt="Italy" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/rome-florence/zh/" onclick="planRouteFromChip(event,'Rome','Florence')">Rome → Florence</a>
       <a href="/rutas/florence-venice/zh/" onclick="planRouteFromChip(event,'Florence','Venice')">Florence → Venice</a>
       <a href="/rutas/milan-rome/zh/" onclick="planRouteFromChip(event,'Milan','Rome')">Milan → Rome</a>
@@ -611,7 +611,7 @@
       <a href="/rutas/milan-naples/zh/" onclick="planRouteFromChip(event,'Milan','Naples')">Milan → Naples</a>
       <a href="/rutas/tende-nice/zh/" onclick="planRouteFromChip(event,'Tende','Nice')">Tende → Nice</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_belgium">比利时</span><span class="country-popup"><img class="country-photo" src="/country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_belgium">比利时</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/be.webp" alt="Belgium" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-bruges/zh/" onclick="planRouteFromChip(event,'Paris','Bruges')">Paris → Bruges</a>
       <a href="/rutas/amsterdam-brussels/zh/" onclick="planRouteFromChip(event,'Amsterdam','Brussels')">Amsterdam → Brussels</a>
       <a href="/rutas/cologne-brussels/zh/" onclick="planRouteFromChip(event,'Brussels','Cologne')">Brussels → Cologne</a>
@@ -620,7 +620,7 @@
       <a href="/rutas/london-brussels/zh/" onclick="planRouteFromChip(event,'London','Brussels')">London → Brussels</a>
       <a href="/rutas/amsterdam-bruges/zh/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Bruges</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_netherlands">荷兰</span><span class="country-popup"><img class="country-photo" src="/country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_netherlands">荷兰</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/nl.webp" alt="Netherlands" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/paris-amsterdam/zh/" onclick="planRouteFromChip(event,'Paris','Amsterdam')">Paris → Amsterdam</a>
       <a href="/rutas/london-amsterdam/zh/" onclick="planRouteFromChip(event,'London','Amsterdam')">London → Amsterdam</a>
       <a href="/rutas/amsterdam-berlin/zh/" onclick="planRouteFromChip(event,'Amsterdam','Berlin')">Amsterdam → Berlin</a>
@@ -628,7 +628,7 @@
       <a href="/rutas/amsterdam-bruges/zh/" onclick="planRouteFromChip(event,'Amsterdam','Bruges')">Amsterdam → Bruges</a>
       <a href="/rutas/amsterdam-cologne/zh/" onclick="planRouteFromChip(event,'Amsterdam','Cologne')">Amsterdam → Cologne</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_austria">奥地利</span><span class="country-popup"><img class="country-photo" src="/country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_austria">奥地利</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/at.webp" alt="Austria" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/vienna-salzburg/zh/" onclick="planRouteFromChip(event,'Vienna','Salzburg')">Vienna → Salzburg</a>
       <a href="/rutas/vienna-prague/zh/" onclick="planRouteFromChip(event,'Vienna','Prague')">Vienna → Prague</a>
       <a href="/rutas/vienna-budapest/zh/" onclick="planRouteFromChip(event,'Vienna','Budapest')">Vienna → Budapest</a>
@@ -644,7 +644,7 @@
       <a href="/rutas/ljubljana-graz/zh/" onclick="planRouteFromChip(event,'Ljubljana','Graz')">Ljubljana → Graz</a>
       <a href="/rutas/ljubljana-salzburg/zh/" onclick="planRouteFromChip(event,'Ljubljana','Salzburg')">Ljubljana → Salzburg</a>
     </span></span></span>
-    <span class="country-chip"><span data-i18n="chip_uk">英国</span><span class="country-popup"><img class="country-photo" src="/country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
+    <span class="country-chip"><span data-i18n="chip_uk">英国</span><span class="country-popup"><img width="330" height="220" class="country-photo" src="/country-pics/gb.webp" alt="United Kingdom" loading="lazy" onerror="this.remove()"><span class="country-routes">
       <a href="/rutas/london-paris/zh/" onclick="planRouteFromChip(event,'London','Paris')">London → Paris</a>
       <a href="/rutas/london-manchester/zh/" onclick="planRouteFromChip(event,'London','Manchester')">London → Manchester</a>
       <a href="/rutas/london-liverpool/zh/" onclick="planRouteFromChip(event,'London','Liverpool')">London → Liverpool</a>
@@ -693,7 +693,7 @@
         <div class="search-results-slot">
     <div class="ai-results" id="aiResults" style="display:none;">
       <button class="ai-close-btn" onclick="resetAIPlanner()" aria-label="Close">×</button>
-      <div class="ai-results-header">
+      <div class="ai-results-header" aria-live="polite" aria-atomic="true">
         <span id="aiDemoBadge" class="ai-demo-badge" data-i18n="ai_demo_badge" style="display:none">示例 · 每张卡片是一张车票（城市 → 城市）</span>
         <h3 id="aiRouteTitle" data-i18n="hero_h1">AI 欧洲火车线路规划</h3>
         <p id="aiRouteDuration"></p>
@@ -741,7 +741,7 @@
     <div class="search-extras">
       <div class="hero-ops" aria-label="Rail operators">
         <div class="trust-ops">
-          <span class="op-chip"><img src="/assets/icons/ops/renfe.png" alt="Renfe" loading="lazy"/>Renfe</span>
+          <span class="op-chip"><img width="64" height="64" src="/assets/icons/ops/renfe.png" alt="Renfe" loading="lazy"/>Renfe</span>
           <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
           <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="Deutsche Bahn" loading="lazy"/>Deutsche Bahn</span>
           <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="SBB" loading="lazy"/>SBB</span>
@@ -1013,7 +1013,7 @@
   <div class="trust-strip">
     <p class="trust-label" data-i18n="trust_data">覆盖欧洲主要铁路网的 AI 行程规划</p>
     <div class="trust-ops">
-      <span class="op-chip"><img src="/assets/icons/ops/renfe.png" alt="Renfe" loading="lazy"/>Renfe</span>
+      <span class="op-chip"><img width="64" height="64" src="/assets/icons/ops/renfe.png" alt="Renfe" loading="lazy"/>Renfe</span>
       <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sncf.com" alt="SNCF" loading="lazy"/>SNCF</span>
       <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=bahn.de" alt="Deutsche Bahn" loading="lazy"/>Deutsche Bahn</span>
       <span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=sbb.ch" alt="SBB" loading="lazy"/>SBB</span>
@@ -1036,25 +1036,25 @@
   <!-- Photo carousel -->
   <div class="photo-carousel">
     <div class="carousel-track">
-      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
+      <img width="640" height="963" class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
+      <img width="640" height="960" class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
+      <img width="640" height="381" class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
+      <img width="640" height="960" class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
+      <img width="640" height="960" class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
       <!-- duplicate for seamless loop -->
-      <img class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
-      <img class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/bernina-express.webp" alt="Bernina Express" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/glacier-express.webp" alt="Glacier Express nieve" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/tren-lago.webp" alt="Tren junto al lago" loading="lazy" decoding="async">
+      <img width="640" height="963" class="carousel-photo" src="/assets/img/carousel/cinque-terre.webp" alt="Cinque Terre" loading="lazy" decoding="async">
+      <img width="640" height="960" class="carousel-photo" src="/assets/img/carousel/viaducto-montana.webp" alt="Tren en viaducto de montaña" loading="lazy" decoding="async">
+      <img width="640" height="381" class="carousel-photo" src="/assets/img/carousel/valle-alpino.webp" alt="Valle alpino" loading="lazy" decoding="async">
+      <img width="640" height="960" class="carousel-photo" src="/assets/img/carousel/vista-alpes.webp" alt="Vista desde tren Alpes" loading="lazy" decoding="async">
+      <img width="640" height="960" class="carousel-photo" src="/assets/img/carousel/cascada-alpes.webp" alt="Cascada Alpes" loading="lazy" decoding="async">
+      <img width="640" height="427" class="carousel-photo" src="/assets/img/carousel/cumbre-montana.webp" alt="Cumbre montaña" loading="lazy" decoding="async">
     </div>
   </div>
 

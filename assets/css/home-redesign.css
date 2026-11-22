@@ -1198,3 +1198,14 @@ body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4)
 /* con la tarjeta de estacion (suelta o dentro de .pi) no va la linea de estaciones y la cabecera usa las dos columnas */
 body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment:has(.pi-station) > .ai-segment-stations { display: none; }
 body.home-v2 .search-card .ai-results .ai-segments:is(.cols-2, .cols-3, .cols-4) > .ai-segment:has(.pi-station) > .ai-segment-header { grid-column: 1 / 3; }
+
+/* Accesibilidad y pulido tecnico (auditoria 21-nov): selector de idioma como botones, foco visible, imagenes con proporcion, tipografia */
+.lang-option { display: block; width: 100%; box-sizing: border-box; background: transparent; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.lang-option:focus-visible { outline: 3px solid #C10016; outline-offset: -3px; }
+.lang-btn:focus-visible { outline: 3px solid #C10016; outline-offset: 2px; }
+:where(img[width][height]) { height: auto; }
+body.home-v2 .ai-input-container:focus-within { box-shadow: 0 0 0 3px rgba(193, 0, 22, .4); }
+button, a, input, select, textarea, summary, [role="button"] { touch-action: manipulation; }
+h1, h2, h3 { text-wrap: balance; }
+.ai-segment-time, .rt-dur, .rp-time, .rp-price, .pi-gcard-meta, #aiRouteDuration { font-variant-numeric: tabular-nums; }
+
