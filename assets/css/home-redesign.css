@@ -1225,4 +1225,7 @@ body.home-v2 .wt-route-stops { line-height: 1.4 !important; }
 button.faq-q { width: 100%; padding: 0; margin: 0; background: none; border: 0; font-family: inherit; text-align: start; line-height: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
 button.faq-q:focus-visible { outline: 3px solid #C10016; outline-offset: 4px; border-radius: 4px; }
 .faq-item { cursor: auto; }
+/* El titulo de "¿Hoy nos vamos a...?" pasa de h3 a h2 con exactamente el mismo aspecto (reglas copiadas aqui para no depender de la cache de main.min.css) */
+.discover-cta h2 { font-size: 22px; line-height: 1.2; max-width: 100%; margin: 0 auto 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; font-weight: 800; text-shadow: 0 2px 10px rgba(0, 0, 0, .9); }
+.ai-planner.is-roulette-done .discover-cta h2 { font-size: 18px; margin-bottom: 8px; }
 
