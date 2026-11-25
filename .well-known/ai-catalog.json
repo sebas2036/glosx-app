@@ -1,0 +1,60 @@
+{
+  "tools": [
+    {
+      "name": "plan_train_itinerary",
+      "description": "Generates a train itinerary including segments, estimated times, and affiliate booking links (Klook/Omio) for a given trip description, region, and optional language.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "trip_description": {
+            "type": "string",
+            "description": "A free-text description of the desired train trip, e.g., 'Madrid to Barcelona', 'Zurich to Milan in 5 days', or 'Scenic route through the Swiss Alps'."
+          },
+          "region": {
+            "type": "string",
+            "enum": ["Europe", "Japan", "China"],
+            "description": "The geographical region for the train trip."
+          },
+          "language": {
+            "type": "string",
+            "description": "Optional language for the response (e.g., 'en', 'es', 'fr'). Defaults to English if not provided."
+          }
+        },
+        "required": ["trip_description", "region"]
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "segments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "origin": { "type": "string" },
+                "destination": { "type": "string" },
+                "operator": { "type": "string" },
+                "duration": { "type": "string" },
+                "departure_time": { "type": "string" },
+                "arrival_time": { "type": "string" },
+                "booking_link_klook": { "type": "string", "format": "uri" },
+                "booking_link_omio": { "type": "string", "format": "uri" }
+              },
+              "required": ["origin", "destination", "operator", "duration", "departure_time", "arrival_time"]
+            }
+          },
+          "estimated_duration": { "type": "string" },
+          "total_price_estimate": { "type": "string" },
+          "affiliate_links": {
+            "type": "object",
+            "properties": {
+              "omio": { "type": "string", "format": "uri", "nullable": true },
+              "klook": { "type": "string", "format": "uri", "nullable": true },
+              "hotels": { "type": "string", "format": "uri", "nullable": true }
+            }
+          }
+        },
+        "required": ["segments", "estimated_duration", "total_price_estimate", "affiliate_links"]
+      }
+    }
+  ]
+}
