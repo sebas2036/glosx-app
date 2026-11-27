@@ -15,3 +15,5 @@ Esta carpeta contiene todo el paquete aislado de **Estados Unidos** (736 rutas +
 2. Asignar foto `.webp` de respaldo (por corredor/estado o completando desde Pexels) a las **31 ciudades** de las 82 que aún no tienen `.webp` propio en `eeuu-produccion/assets/img/ciudades/`.
 3. Generar en lote las **736 páginas de ruta × 8 idiomas (`5.888 HTML`)** + las **82 Guías de Ciudad × 8 idiomas (`656 HTML`)** usando `plantilla_eeuu.html` + `i18n_eeuu.json`, manteniendo 0 ocurrencias de términos/monedas europeas.
 4. Crear el hub `usa-trains/` (8 idiomas), sumar Estados Unidos en `index.html`, `/rutas/`, `/explore/` y `#scenic` (12 trenes panorámicos), regenerar `sitemap-us.xml` + `sitemap-index.xml` y actualizar `CHANGELOG.md`.
+
+- **Plan Maestro SEO específico de EE. UU.:** leer y aplicar obligatoriamente `eeuu-produccion/SEO_MAESTRO_EEUU.md`.

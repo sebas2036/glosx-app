@@ -19,3 +19,4 @@
 - **Dataset generado y validado:** **736 rutas verificadas** de Estados Unidos sin duplicados (`California: 240`, `Northeast Corridor & Regionales: 182`, `Midwest Hub: 156`, `Noroeste: 90`, `Florida: 56`, `Panorámicos: 12`).
 - **Afiliación validada contra `voxa` (`affiliate.ts`):** Las rutas Amtrak/Brightline (`partner: "omio"`) apuntan a `/affiliate/europe-train?from=...&to=...` (`OMIO_DIRECT_LINK` + `omioPosTerm` con atribución Impact), y los 12 trenes turísticos privados quedan separados con `partner: "experiencias"`.
 - **Aislamiento total:** Todo reside en `_staging_eeuu/` fuera de producción (`0` archivos públicos modificados), listo para auditoría e integración por Claude Code (`_staging_eeuu/AUDITORIA_EEUU_OMIO.md`).
+- **Plan Maestro SEO EE. UU. ():** añadida arquitectura Hub & Spoke, 82 Guías de Ciudad, 3 guías pilar Amtrak/Brightline/Panorámicos, validación 0 errores 404 y `sitemap-us.xml`.
