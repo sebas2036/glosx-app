@@ -1,0 +1,42 @@
+{
+  "en": {
+    "GUIA": "ROUTE GUIDE \u00b7 UNITED STATES",
+    "FAQ": "Frequently asked questions",
+    "BOOK": "Book Ticket"
+  },
+  "es": {
+    "GUIA": "GU\u00cdA DE RUTA \u00b7 ESTADOS UNIDOS",
+    "FAQ": "Preguntas frecuentes",
+    "BOOK": "Reservar billete"
+  },
+  "fr": {
+    "GUIA": "GUIDE DE ROUTE \u00b7 \u00c9TATS-UNIS",
+    "FAQ": "Questions fr\u00e9quentes",
+    "BOOK": "R\u00e9server"
+  },
+  "de": {
+    "GUIA": "STRECKENF\u00dcHRER \u00b7 VEREINIGTE STAATEN",
+    "FAQ": "H\u00e4ufige Fragen",
+    "BOOK": "Ticket buchen"
+  },
+  "it": {
+    "GUIA": "GUIDA AL PERCORSO \u00b7 STATI UNITI",
+    "FAQ": "Domande frequenti",
+    "BOOK": "Prenota"
+  },
+  "pt": {
+    "GUIA": "GUIA DE ROTA \u00b7 ESTADOS UNIDOS",
+    "FAQ": "Perguntas frequentes",
+    "BOOK": "Reservar"
+  },
+  "ja": {
+    "GUIA": "\u30eb\u30fc\u30c8\u30ac\u30a4\u30c9 \u00b7 \u30a2\u30e1\u30ea\u30ab\u5408\u8846\u56fd",
+    "FAQ": "\u3088\u304f\u3042\u308b\u8cea\u554f",
+    "BOOK": "\u30c1\u30b1\u30c3\u30c8\u3092\u4e88\u7d04"
+  },
+  "zh": {
+    "GUIA": "\u8def\u7ebf\u6307\u5357 \u00b7 \u7f8e\u56fd",
+    "FAQ": "\u5e38\u89c1\u95ee\u9898",
+    "BOOK": "\u9884\u8ba2\u8f66\u7968"
+  }
+}

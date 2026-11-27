@@ -1,0 +1,5154 @@
+[
+  {
+    "origen": "boston",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "boston",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boston&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "providence",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=providence&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-haven",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-haven&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "stamford",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=stamford&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "new-york",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=new-york&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "newark",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=newark&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "philadelphia",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=philadelphia&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "baltimore",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=baltimore&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "washington-dc",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=washington-dc&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "richmond",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=richmond&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "raleigh",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=raleigh&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "charlotte",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=charlotte&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "savannah",
+    "destino": "jacksonville",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=savannah&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "boston",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=boston",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "providence",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=providence",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "new-haven",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=new-haven",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "stamford",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=stamford",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "new-york",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=new-york",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "newark",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=newark",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "philadelphia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=philadelphia",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "baltimore",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=baltimore",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "washington-dc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=washington-dc",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "richmond",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=richmond",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "raleigh",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=raleigh",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "charlotte",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=charlotte",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "savannah",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=savannah",
+    "partner": "omio"
+  },
+  {
+    "origen": "miami",
+    "destino": "aventura",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=miami&to=aventura",
+    "partner": "omio"
+  },
+  {
+    "origen": "miami",
+    "destino": "fort-lauderdale",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=miami&to=fort-lauderdale",
+    "partner": "omio"
+  },
+  {
+    "origen": "miami",
+    "destino": "boca-raton",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=miami&to=boca-raton",
+    "partner": "omio"
+  },
+  {
+    "origen": "miami",
+    "destino": "west-palm-beach",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=miami&to=west-palm-beach",
+    "partner": "omio"
+  },
+  {
+    "origen": "miami",
+    "destino": "orlando",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=miami&to=orlando",
+    "partner": "omio"
+  },
+  {
+    "origen": "miami",
+    "destino": "tampa",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=miami&to=tampa",
+    "partner": "omio"
+  },
+  {
+    "origen": "miami",
+    "destino": "jacksonville",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=miami&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "aventura",
+    "destino": "miami",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=aventura&to=miami",
+    "partner": "omio"
+  },
+  {
+    "origen": "aventura",
+    "destino": "fort-lauderdale",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=aventura&to=fort-lauderdale",
+    "partner": "omio"
+  },
+  {
+    "origen": "aventura",
+    "destino": "boca-raton",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=aventura&to=boca-raton",
+    "partner": "omio"
+  },
+  {
+    "origen": "aventura",
+    "destino": "west-palm-beach",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=aventura&to=west-palm-beach",
+    "partner": "omio"
+  },
+  {
+    "origen": "aventura",
+    "destino": "orlando",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=aventura&to=orlando",
+    "partner": "omio"
+  },
+  {
+    "origen": "aventura",
+    "destino": "tampa",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=aventura&to=tampa",
+    "partner": "omio"
+  },
+  {
+    "origen": "aventura",
+    "destino": "jacksonville",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=aventura&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "fort-lauderdale",
+    "destino": "miami",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fort-lauderdale&to=miami",
+    "partner": "omio"
+  },
+  {
+    "origen": "fort-lauderdale",
+    "destino": "aventura",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fort-lauderdale&to=aventura",
+    "partner": "omio"
+  },
+  {
+    "origen": "fort-lauderdale",
+    "destino": "boca-raton",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fort-lauderdale&to=boca-raton",
+    "partner": "omio"
+  },
+  {
+    "origen": "fort-lauderdale",
+    "destino": "west-palm-beach",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fort-lauderdale&to=west-palm-beach",
+    "partner": "omio"
+  },
+  {
+    "origen": "fort-lauderdale",
+    "destino": "orlando",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fort-lauderdale&to=orlando",
+    "partner": "omio"
+  },
+  {
+    "origen": "fort-lauderdale",
+    "destino": "tampa",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fort-lauderdale&to=tampa",
+    "partner": "omio"
+  },
+  {
+    "origen": "fort-lauderdale",
+    "destino": "jacksonville",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fort-lauderdale&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "boca-raton",
+    "destino": "miami",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boca-raton&to=miami",
+    "partner": "omio"
+  },
+  {
+    "origen": "boca-raton",
+    "destino": "aventura",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boca-raton&to=aventura",
+    "partner": "omio"
+  },
+  {
+    "origen": "boca-raton",
+    "destino": "fort-lauderdale",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boca-raton&to=fort-lauderdale",
+    "partner": "omio"
+  },
+  {
+    "origen": "boca-raton",
+    "destino": "west-palm-beach",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boca-raton&to=west-palm-beach",
+    "partner": "omio"
+  },
+  {
+    "origen": "boca-raton",
+    "destino": "orlando",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boca-raton&to=orlando",
+    "partner": "omio"
+  },
+  {
+    "origen": "boca-raton",
+    "destino": "tampa",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boca-raton&to=tampa",
+    "partner": "omio"
+  },
+  {
+    "origen": "boca-raton",
+    "destino": "jacksonville",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=boca-raton&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "west-palm-beach",
+    "destino": "miami",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=west-palm-beach&to=miami",
+    "partner": "omio"
+  },
+  {
+    "origen": "west-palm-beach",
+    "destino": "aventura",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=west-palm-beach&to=aventura",
+    "partner": "omio"
+  },
+  {
+    "origen": "west-palm-beach",
+    "destino": "fort-lauderdale",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=west-palm-beach&to=fort-lauderdale",
+    "partner": "omio"
+  },
+  {
+    "origen": "west-palm-beach",
+    "destino": "boca-raton",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=west-palm-beach&to=boca-raton",
+    "partner": "omio"
+  },
+  {
+    "origen": "west-palm-beach",
+    "destino": "orlando",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=west-palm-beach&to=orlando",
+    "partner": "omio"
+  },
+  {
+    "origen": "west-palm-beach",
+    "destino": "tampa",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=west-palm-beach&to=tampa",
+    "partner": "omio"
+  },
+  {
+    "origen": "west-palm-beach",
+    "destino": "jacksonville",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=west-palm-beach&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "orlando",
+    "destino": "miami",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=orlando&to=miami",
+    "partner": "omio"
+  },
+  {
+    "origen": "orlando",
+    "destino": "aventura",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=orlando&to=aventura",
+    "partner": "omio"
+  },
+  {
+    "origen": "orlando",
+    "destino": "fort-lauderdale",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=orlando&to=fort-lauderdale",
+    "partner": "omio"
+  },
+  {
+    "origen": "orlando",
+    "destino": "boca-raton",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=orlando&to=boca-raton",
+    "partner": "omio"
+  },
+  {
+    "origen": "orlando",
+    "destino": "west-palm-beach",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=orlando&to=west-palm-beach",
+    "partner": "omio"
+  },
+  {
+    "origen": "orlando",
+    "destino": "tampa",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=orlando&to=tampa",
+    "partner": "omio"
+  },
+  {
+    "origen": "orlando",
+    "destino": "jacksonville",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=orlando&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "tampa",
+    "destino": "miami",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tampa&to=miami",
+    "partner": "omio"
+  },
+  {
+    "origen": "tampa",
+    "destino": "aventura",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tampa&to=aventura",
+    "partner": "omio"
+  },
+  {
+    "origen": "tampa",
+    "destino": "fort-lauderdale",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tampa&to=fort-lauderdale",
+    "partner": "omio"
+  },
+  {
+    "origen": "tampa",
+    "destino": "boca-raton",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tampa&to=boca-raton",
+    "partner": "omio"
+  },
+  {
+    "origen": "tampa",
+    "destino": "west-palm-beach",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tampa&to=west-palm-beach",
+    "partner": "omio"
+  },
+  {
+    "origen": "tampa",
+    "destino": "orlando",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tampa&to=orlando",
+    "partner": "omio"
+  },
+  {
+    "origen": "tampa",
+    "destino": "jacksonville",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tampa&to=jacksonville",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "miami",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=miami",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "aventura",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=aventura",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "fort-lauderdale",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=fort-lauderdale",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "boca-raton",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=boca-raton",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "west-palm-beach",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=west-palm-beach",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "orlando",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=orlando",
+    "partner": "omio"
+  },
+  {
+    "origen": "jacksonville",
+    "destino": "tampa",
+    "operador": "Brightline/Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=jacksonville&to=tampa",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-diego",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-diego&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "oceanside",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oceanside&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "irvine",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=irvine&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "anaheim",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=anaheim&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "los-angeles",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=los-angeles&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "burbank",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=burbank&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "santa-barbara",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=santa-barbara&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-luis-obispo",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-luis-obispo&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "salinas",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salinas&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "san-jose",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=san-jose&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "oakland",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=oakland&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "berkeley",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=berkeley&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "davis",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=davis&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "sacramento",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=sacramento&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "fresno",
+    "destino": "bakersfield",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=fresno&to=bakersfield",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "san-diego",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=san-diego",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "oceanside",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=oceanside",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "irvine",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=irvine",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "anaheim",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=anaheim",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "los-angeles",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=los-angeles",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "burbank",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=burbank",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "santa-barbara",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=santa-barbara",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "san-luis-obispo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=san-luis-obispo",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "salinas",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=salinas",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "san-jose",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=san-jose",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "oakland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=oakland",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "berkeley",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=berkeley",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "davis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=davis",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "sacramento",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=sacramento",
+    "partner": "omio"
+  },
+  {
+    "origen": "bakersfield",
+    "destino": "fresno",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bakersfield&to=fresno",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "chicago",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=chicago&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "milwaukee",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=milwaukee&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-paul",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-paul&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "st-louis",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=st-louis&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "kansas-city",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kansas-city&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "detroit",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=detroit&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "ann-arbor",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=ann-arbor&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "kalamazoo",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=kalamazoo&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "grand-rapids",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=grand-rapids&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "indianapolis",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=indianapolis&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "cincinnati",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cincinnati&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "cleveland",
+    "destino": "toledo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=cleveland&to=toledo",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "chicago",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=chicago",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "milwaukee",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=milwaukee",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "st-paul",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=st-paul",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "st-louis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=st-louis",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "kansas-city",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=kansas-city",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "detroit",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=detroit",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "ann-arbor",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=ann-arbor",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "kalamazoo",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=kalamazoo",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "grand-rapids",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=grand-rapids",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "indianapolis",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=indianapolis",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "cincinnati",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=cincinnati",
+    "partner": "omio"
+  },
+  {
+    "origen": "toledo",
+    "destino": "cleveland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=toledo&to=cleveland",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "eugene",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=eugene&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "salem",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=salem&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "portland",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=portland&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-wa",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-wa&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "olympia",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=olympia&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "tacoma",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=tacoma&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "seattle",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=seattle&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "everett",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=everett&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "bellingham",
+    "destino": "vancouver-bc",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=bellingham&to=vancouver-bc",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "eugene",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=eugene",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "salem",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=salem",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "portland",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=portland",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "vancouver-wa",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=vancouver-wa",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "olympia",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=olympia",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "tacoma",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=tacoma",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "seattle",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=seattle",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "everett",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=everett",
+    "partner": "omio"
+  },
+  {
+    "origen": "vancouver-bc",
+    "destino": "bellingham",
+    "operador": "Amtrak",
+    "url": "https://voxa-production-dc15.up.railway.app/affiliate/europe-train?from=vancouver-bc&to=bellingham",
+    "partner": "omio"
+  },
+  {
+    "origen": "durango",
+    "destino": "silverton",
+    "operador": "Durango & Silverton",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "williams",
+    "destino": "grand-canyon",
+    "operador": "Grand Canyon Railway",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "anchorage",
+    "destino": "denali",
+    "operador": "Alaska Railroad",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "seward",
+    "destino": "anchorage",
+    "operador": "Alaska Railroad",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "mount-washington",
+    "destino": "summit",
+    "operador": "Mount Washington Cog",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "alamosa",
+    "destino": "antonito",
+    "operador": "Cumbres & Toltec",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "georgetown",
+    "destino": "silver-plume",
+    "operador": "Georgetown Loop",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "napa",
+    "destino": "st-helena",
+    "operador": "Napa Valley Wine Train",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "bryson-city",
+    "destino": "dillsboro",
+    "operador": "Great Smoky Mountains",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "cass",
+    "destino": "bald-knob",
+    "operador": "Cass Scenic",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "conway",
+    "destino": "bartlett",
+    "operador": "Conway Scenic",
+    "url": "#",
+    "partner": "experiencias"
+  },
+  {
+    "origen": "williams",
+    "destino": "kaibab",
+    "operador": "Verde Canyon",
+    "url": "#",
+    "partner": "experiencias"
+  }
+]
