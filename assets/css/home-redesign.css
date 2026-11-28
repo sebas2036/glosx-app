@@ -1229,3 +1229,31 @@ button.faq-q:focus-visible { outline: 3px solid #C10016; outline-offset: 4px; bo
 .discover-cta h2 { font-size: 22px; line-height: 1.2; max-width: 100%; margin: 0 auto 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; font-weight: 800; text-shadow: 0 2px 10px rgba(0, 0, 0, .9); }
 .ai-planner.is-roulette-done .discover-cta h2 { font-size: 18px; margin-bottom: 8px; }
 
+
+/* Modo EE. UU. (27-nov-2026): piezas de Europa (.no-us) y sus versiones de EE. UU. (.us-only), ver assets/js/usa.js */
+body:not([data-region="usa"]) .us-only { display: none !important; }
+body[data-region="usa"] .no-us, body[data-region="usa"] .region-hotels, body[data-region="usa"] #aiRestoreBtn, body[data-region="usa"] #aiResults .omo { display: none !important; }
+/* Portada de EE. UU.: Amtrak entre las colinas de California (Pexels 30856553, Bill Silveira); el tren va abajo a la derecha */
+html body.home-v2[data-region="usa"] .hero-title-card::before {
+  background-image: linear-gradient(180deg, rgba(10,12,14,.5) 0%, rgba(10,12,14,.16) 55%, rgba(10,12,14,.34) 100%), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-us-2000.webp') !important;
+}
+html body.home-v2[data-region="usa"]:not(.hotels-mode) .hero-title-card::before { --hy: 72%; }
+@media (max-width: 760px) {
+  html body.home-v2[data-region="usa"]:not(.hotels-mode) .hero-title-card::before { background-image: linear-gradient(180deg, rgba(10,12,14,.5), rgba(10,12,14,.3)), linear-gradient(transparent, transparent), url('/assets/img/hero/home-v3-us-1000.webp') !important; background-position: 0 0, 0 0, 70% 75% !important; }
+}
+/* EE. UU.: encuadre propio (las reglas de Europa ponen la foto arriba a todo lo ancho y aquí cortaban el tren) */
+html body.home-v2[data-region="usa"]:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { background-size: cover, cover, cover !important; background-position: 0 0, 0 0, 50% 80% !important; }
+@media (max-width: 760px) {
+  html body.home-v2[data-region="usa"]:not(.hotels-mode):not([data-region="japan"]) .hero-title-card::before { background-position: 0 0, 0 0, 70% 75% !important; }
+}
+/* EE. UU.: fotos de "Arma tu aventura" y de la cabecera del itinerario (Pexels: 36811123, 19705160, 32593516) */
+body.home-v2 .wt-route-btn[data-route="us-ne"]::before { background-image: url('/assets/img/adventure/us-ne.webp'); }
+body.home-v2 .wt-route-btn[data-route="us-fl"]::before { background-image: url('/assets/img/adventure/us-fl.webp'); }
+body.home-v2 .wt-route-btn[data-route="us-ca"]::before { background-image: url('/assets/img/adventure/us-ca.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="us-ne"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/assets/img/adventure/us-ne.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="us-fl"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/assets/img/adventure/us-fl.webp'); }
+body.home-v2 .wt-timeline-wrap[data-route="us-ca"] .wt-timeline-head { background-image: linear-gradient(180deg, rgba(10,12,14,.15), rgba(10,12,14,.8)), url('/assets/img/adventure/us-ca.webp'); }
+/* EE. UU.: itinerario más legible (etiqueta del tramo y aire entre paradas) */
+body.home-v2 .wt-timeline-wrap.us-only .wt-stop-train { font-size: 13.5px; }
+body.home-v2 .wt-timeline-wrap.us-only .wt-stop { margin-bottom: 10px; }
+body.home-v2 .wt-timeline-wrap.us-only .wt-stop-buy { margin-top: 8px; }

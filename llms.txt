@@ -30,6 +30,7 @@ Calculated by glosx.app from official open GTFS/timetable data; each page states
 - [Trains in Italy](https://glosx.app/italy-trains/): Trenitalia Frecciarossa, Italo, and regional trains.
 - [Trains in France](https://glosx.app/france-trains/): TGV INOUI, OUIGO, Intercités, and TER.
 - [Trains in China](https://glosx.app/china-trains/): G and D high-speed trains, passport ticketing, and major stations.
+- [Trains in the United States](https://glosx.app/usa-trains/): Amtrak corridors, Brightline in Florida and long-distance trains, with 260 routes and timetable data from the official GTFS feeds
 
 ## Languages
 Available in 8 languages with dedicated localized paths: English, Spanish, French, Italian, Japanese, and more. Every route guide and core section is accessible in all supported languages.

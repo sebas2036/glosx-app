@@ -169,8 +169,9 @@
     switchEl.querySelectorAll('.region-btn').forEach(function (b) {
       var r = b.getAttribute('data-region');
       if (!r) { b.textContent = t('hotels'); return; }
+      if (r === 'usa') return; // el botón de EE. UU. lo pinta usa.js
       b.textContent = t(r);
-      var on = r === region;
+      var on = r === region && !(window.glosxUsaActive && window.glosxUsaActive());
       b.classList.toggle('on', on);
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
@@ -654,7 +655,7 @@
     if (homeReady) return;
     homeReady = true;
     jpEls.badge = twin(document.querySelector('[data-i18n="hero_badge"]'));
-    jpEls.ops = Array.prototype.map.call(document.querySelectorAll('.trust-ops'), function (o) {
+    jpEls.ops = Array.prototype.map.call(document.querySelectorAll('.trust-ops:not(.us-only)'), function (o) {
       var el = twin(o, 'div', 'trust-ops');
       el.innerHTML = OPERATORS.map(function (o) { return '<span class="op-chip"><img src="https://www.google.com/s2/favicons?sz=64&amp;domain=' + o[1] + '" alt="' + o[0] + '" loading="lazy"/>' + o[0] + '</span>'; }).join('');
       return el;
@@ -1672,7 +1673,7 @@
 
   switchEl.addEventListener('click', function (e) {
     var b = e.target.closest ? e.target.closest('.region-btn') : null;
-    if (!b) return;
+    if (!b || b.getAttribute('data-region') === 'usa') return; // EE. UU.: lo maneja usa.js
     if (b.hasAttribute('data-hotels')) { toggleHotels(b); return; }
     if (document.body.classList.contains('hotels-mode')) closeHotels();
     setRegion(b.getAttribute('data-region'));
@@ -1786,6 +1787,10 @@
   }
   buildExperiences();
   document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('[data-tab="experiences"]') && !document.getElementById('poppinsFont')) { var pl = document.createElement('link'); pl.id = 'poppinsFont'; pl.rel = 'stylesheet'; pl.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap'; document.head.appendChild(pl); } });
+
+  // Para usa.js: leer o cambiar la región de este módulo (sin tocar la dirección) y repintar el buscador
+  window.glosxJapanRegion = function (r) { if (r) setRegion(r, true); return region; };
+  window.glosxJapanRepaint = paintMode;
 
   paintSwitch();
   // Enlace directo al modo Japón (por ejemplo, desde anuncios): glosx.app/#japan

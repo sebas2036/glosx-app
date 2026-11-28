@@ -2569,7 +2569,7 @@
       }
       if (routeData.error && !routeData.valido) {
         const dict = (TRANSLATIONS[document.documentElement.lang] || TRANSLATIONS.en);
-        showAIPlannerError(dict.ai_high_demand || "We're experiencing high demand right now — please try again in a bit, or pick one of the popular routes above.");
+        showAIPlannerError((typeof routeData.error === 'string' && routeData.error) || dict.ai_high_demand || "We're experiencing high demand right now — please try again in a bit, or pick one of the popular routes above.");
       } else if (routeData.valido === false) {
         showAIPlannerError(routeData.mensajeError || 'Cuéntanos a dónde quieres viajar por Europa.');
       } else {
@@ -3640,7 +3640,11 @@
     el.style.cssText = 'color:#C10016;font-size:15px;margin-top:16px;text-align:center;font-weight:600;';
     el.textContent = msg;
     document.getElementById('aiInputWrapper').appendChild(el);
-    setTimeout(() => el.remove(), 6000);
+    // No dejar a la vista el resultado de la busqueda anterior (parecia que la ruta y la guia no cambiaban)
+    const res = document.getElementById('aiResults');
+    if (res) res.style.display = 'none';
+    try { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) {}
+    setTimeout(() => el.remove(), 9000);
   }
 
   // Exponer funciones al scope global (llamadas desde onclick en el HTML)

@@ -61,6 +61,9 @@
     ja: { eye: 'ルートガイド', sub: '{r}：時刻表・駅・ホテル・旅のコツ', meta: '始発 {f}・直通 1日{n}本' },
     zh: { eye: '线路指南', sub: '{r}：时刻、车站、酒店和建议', meta: '首班 {f} · 每天 {n} 班直达' }
   };
+  // Guías de EE. UU.: no traen hotel
+  var GC_US = { en: '{r}: timetable, stations and tips', es: '{r}: horarios, estaciones y consejos', fr: '{r} : horaires, gares et conseils', it: '{r}: orari, stazioni e consigli',
+    de: '{r}: Fahrplan, Bahnhöfe und Tipps', pt: '{r}: horários, estações e dicas', ja: '{r}：時刻表・駅・旅のコツ', zh: '{r}：时刻、车站和建议' };
   var cards = null;
   function loadCards() {
     if (!cards) cards = fetch('/assets/data/route-cards.json').then(function (r) { return r.json(); }).catch(function () { return {}; });
@@ -73,7 +76,7 @@
     a.className = 'pi-gcard';
     a.href = href;
     a.innerHTML = '<span class="pi-gcard-img" aria-hidden="true"></span><span class="pi-gcard-body"><span class="pi-gcard-eye">' + esc(t.eye) + '</span>' +
-      '<span class="pi-gcard-title">' + esc(t.sub.replace('{r}', route)) + '</span><span class="pi-gcard-meta" hidden></span></span>' +
+      '<span class="pi-gcard-title">' + esc((document.body.getAttribute('data-region') === 'usa' ? (GC_US[l] || GC_US.en) : t.sub).replace('{r}', route)) + '</span><span class="pi-gcard-meta" hidden></span></span>' +
       '<span class="pi-gcard-arrow" aria-hidden="true">→</span>';
     a.addEventListener('click', function () { try { if (window.gtag) gtag('event', 'route_guide_card', { route: slug, lang: l }); } catch (e) {} });
     loadCards().then(function (d) {
@@ -92,7 +95,7 @@
         a.querySelector('.pi-gcard-img').appendChild(img);
       }
       if (!own) return;   // los horarios de otra ruta no se muestran
-      var fwd = !fromSlug || slug.indexOf(String(fromSlug).toLowerCase().replace(/[^a-z]/g, '').slice(0, 4)) === 0;
+      var fwd = !fromSlug || slug.replace(/[^a-z]/g, '').indexOf(String(fromSlug).toLowerCase().replace(/[^a-z]/g, '').slice(0, 4)) === 0;
       var h = fwd ? c.f : c.r;
       if (h) { var me = a.querySelector('.pi-gcard-meta'); me.textContent = t.meta.replace('{f}', h[0]).replace('{n}', h[1]); me.hidden = false; }
     });
@@ -104,6 +107,9 @@
   function guideUrl(a, b) {
     var pages = window.GLOSX_ROUTE_PAGES;
     var cand = [norm(a) + '-' + norm(b), a + '-' + b, norm(b) + '-' + norm(a), b + '-' + a], hit = null;
+    // nombres de varias palabras ("new york"): también como slug ("new-york-washington")
+    var sa = String(a || '').toLowerCase().replace(/[\s,.]+/g, '-'), sb = String(b || '').toLowerCase().replace(/[\s,.]+/g, '-');
+    if (sa !== a || sb !== b) cand.push(sa + '-' + sb, sb + '-' + sa);
     for (var i = 0; i < cand.length && !hit; i++) if (ALL_GUIDES.has(cand[i]) || (pages && pages.has(cand[i]))) hit = cand[i];
     if (!hit) return null;
     var l = lang();

@@ -1,0 +1,319 @@
+{
+ "albany": {
+  "query": "Albany New York capitol",
+  "id": 5117228,
+  "photographer": "Karen W",
+  "url": "https://www.pexels.com/photo/grayscale-photo-of-the-new-york-state-capitol-5117228/",
+  "alt": "Monochrome photo of the New York State Capitol building with its reflection in water, emphasizing architectural symmetry."
+ },
+ "albuquerque": {
+  "query": "Albuquerque New Mexico",
+  "id": 9790429,
+  "photographer": "Raychel Sanner",
+  "url": "https://www.pexels.com/photo/hot-air-balloons-in-the-sky-9790429/",
+  "alt": "Stunning aerial display of colorful hot air balloons at the Albuquerque festival."
+ },
+ "atlanta": {
+  "query": "Atlanta skyline",
+  "id": 33133727,
+  "photographer": "K",
+  "url": "https://www.pexels.com/photo/aerial-view-of-atlanta-skyline-at-dusk-33133727/",
+  "alt": "Stunning aerial view of Atlanta, Georgia skyline during sunset, showcasing modern architecture."
+ },
+ "austin": {
+  "query": "Austin Texas skyline",
+  "id": 20185085,
+  "photographer": "Elsie Soto",
+  "url": "https://www.pexels.com/photo/skyscrapers-by-river-in-austin-at-night-20185085/",
+  "alt": "Illuminated skyscrapers reflecting in the river at night in downtown Austin, Texas."
+ },
+ "bridgeport": {
+  "query": "Bridgeport Connecticut",
+  "id": 34969236,
+  "photographer": "Jason Sherrod",
+  "url": "https://www.pexels.com/photo/captain-s-cove-seaport-at-sunset-with-docked-boats-34969236/",
+  "alt": "Serene view of Captain's Cove Seaport at sunset with various boats docked, reflecting on calm waters."
+ },
+ "charleston": {
+  "query": "Charleston South Carolina",
+  "id": 13976391,
+  "photographer": "John Hill",
+  "url": "https://www.pexels.com/photo/aerial-view-of-city-buildings-and-river-13976391/",
+  "alt": "A stunning aerial photograph of Charleston, South Carolina, showcasing the city's layout and the iconic Arthur Ravenel Jr. Bridge."
+ },
+ "charlottesville": {
+  "query": "Charlottesville Virginia",
+  "id": 16662446,
+  "photographer": "Sawyer Sutton",
+  "url": "https://www.pexels.com/photo/facade-of-historical-residence-16662446/",
+  "alt": "Exterior view of Monticello, a historic neoclassical landmark in Charlottesville, VA."
+ },
+ "dallas": {
+  "query": "Dallas skyline",
+  "id": 13250722,
+  "photographer": "Anat Morad",
+  "url": "https://www.pexels.com/photo/city-view-under-blue-sky-13250722/",
+  "alt": "Aerial view of Dallas skyline featuring modern skyscrapers under a clear blue sky."
+ },
+ "flagstaff": {
+  "query": "Flagstaff Arizona",
+  "id": 595167,
+  "photographer": "Quintin Gellar",
+  "url": "https://www.pexels.com/photo/empty-road-between-trees-595167/",
+  "alt": "A tranquil road through a lush forest in Flagstaff, AZ, under a dramatic, cloudy sky."
+ },
+ "fort-worth": {
+  "query": "Fort Worth Texas",
+  "id": 10393078,
+  "photographer": "Talena Reese",
+  "url": "https://www.pexels.com/photo/buildings-in-a-city-10393078/",
+  "alt": "Urban cityscape of buildings in Fort Worth, Texas showcasing modern architecture."
+ },
+ "fresno": {
+  "query": "Fresno California",
+  "id": 19097251,
+  "photographer": "Level 23 Media",
+  "url": "https://www.pexels.com/photo/the-fresno-tollgate-california-usa-19097251/",
+  "alt": "Iconic entrance sign to Van Ness Ave in sunny Fresno, CA."
+ },
+ "lancaster": {
+  "query": "Lancaster Pennsylvania",
+  "id": 11374465,
+  "photographer": "Da Khatri",
+  "url": "https://www.pexels.com/photo/road-covered-with-snow-11374465/",
+  "alt": "A winter street view in Lancaster, PA showcasing snowy roads, traffic signs, and parked vehicles."
+ },
+ "memphis": {
+  "query": "Memphis Tennessee",
+  "id": 36698953,
+  "photographer": "Demarius Bell",
+  "url": "https://www.pexels.com/photo/iconic-memphis-sign-with-city-skyline-36698953/",
+  "alt": "View of the Memphis sign set against the historic city skyline, showcasing iconic architecture."
+ },
+ "montreal": {
+  "query": "Montreal skyline",
+  "id": 1193808,
+  "photographer": "Jack Winbow",
+  "url": "https://www.pexels.com/photo/monochrome-photo-of-a-city-1193808/",
+  "alt": "Black and white view of Montréal's iconic skyline with skyscrapers and urban landscape."
+ },
+ "new-london": {
+  "query": "New London Connecticut",
+  "id": 14779899,
+  "photographer": "Taylor Hunt",
+  "url": "https://www.pexels.com/photo/lighthouse-in-new-london-in-usa-14779899/",
+  "alt": "Stunning aerial view of the New London lighthouse and coastline on a sunny day in Connecticut USA."
+ },
+ "new-orleans": {
+  "query": "New Orleans French Quarter",
+  "id": 10595356,
+  "photographer": "Anthony Franklin",
+  "url": "https://www.pexels.com/photo/sunlight-over-cathedral-in-garden-10595356/",
+  "alt": "St. Louis Cathedral in New Orleans with an American flag, trees, and a garden at dusk. Iconic religious landmark."
+ },
+ "niagara-falls": {
+  "query": "Niagara Falls",
+  "id": 35119417,
+  "photographer": "Ali   Soheil",
+  "url": "https://www.pexels.com/photo/majestic-view-of-niagara-falls-from-canada-35119417/",
+  "alt": "Scenic view of Niagara Falls with cascading water and a distant bridge under a clear sky."
+ },
+ "oxnard": {
+  "query": "Oxnard California beach",
+  "id": 1666383,
+  "photographer": "Lewis McNeal",
+  "url": "https://www.pexels.com/photo/yachts-in-body-of-water-1666383/",
+  "alt": "Beautiful view of Channel Islands Harbor in Oxnard, CA with palm trees and mountains in the background."
+ },
+ "pittsburgh": {
+  "query": "Pittsburgh skyline",
+  "id": 12493795,
+  "photographer": "Federated Art",
+  "url": "https://www.pexels.com/photo/cityscape-of-pittsburgh-12493795/",
+  "alt": "Stunning aerial view of Pittsburgh skyline with vibrant sunset colors in the sky."
+ },
+ "poughkeepsie": {
+  "query": "Poughkeepsie Walkway over the Hudson",
+  "id": 38545758,
+  "photographer": "Brett A",
+  "url": "https://www.pexels.com/photo/scenic-view-of-mid-hudson-bridge-over-river-38545758/",
+  "alt": "A serene daytime view of the Mid-Hudson Bridge spanning over the river with lush green forests in the background."
+ },
+ "raleigh": {
+  "query": "Raleigh North Carolina skyline",
+  "id": 5489599,
+  "photographer": "Curtis Adams",
+  "url": "https://www.pexels.com/photo/an-aerial-shot-of-a-city-5489599/",
+  "alt": "A clear view of Raleigh's skyline, showcasing modern skyscrapers and urban greenery."
+ },
+ "salt-lake-city": {
+  "query": "Salt Lake City",
+  "id": 35120541,
+  "photographer": "Stephen Leonardi",
+  "url": "https://www.pexels.com/photo/illuminated-salt-lake-city-skyline-at-night-35120541/",
+  "alt": "Stunning aerial view of Salt Lake City skyline featuring the Utah State Capitol illuminated at night."
+ },
+ "san-antonio": {
+  "query": "San Antonio River Walk",
+  "id": 39387658,
+  "photographer": "Mariya Eskina",
+  "url": "https://www.pexels.com/photo/scenic-riverwalk-boat-tour-with-tourists-39387658/",
+  "alt": "Tourists enjoy a scenic boat tour on a vibrant riverwalk lined with cafes."
+ },
+ "syracuse": {
+  "query": "Syracuse New York",
+  "id": 34204678,
+  "photographer": "James Mirakian",
+  "url": "https://www.pexels.com/photo/scenic-syracuse-skyline-above-onondaga-lake-34204678/",
+  "alt": "Panoramic view of Syracuse, New York skyline above Onondaga Lake during fall."
+ },
+ "ventura": {
+  "query": "Ventura California pier",
+  "id": 14645782,
+  "photographer": "Dom Sch-veg-man",
+  "url": "https://www.pexels.com/photo/photo-of-a-pier-14645782/",
+  "alt": "Captivating twilight view of Ventura Pier extending into calm ocean waters."
+ },
+ "williamsburg": {
+  "query": "Colonial Williamsburg",
+  "id": 577791,
+  "photographer": "C. Spencer van Gulick",
+  "url": "https://www.pexels.com/photo/beige-and-grey-brick-houses-577791/",
+  "alt": "Charming colonial architecture of historic buildings in Williamsburg, showcasing classic design."
+ },
+ "wilmington": {
+  "query": "Wilmington Delaware",
+  "id": 29753605,
+  "photographer": "Andre  Ellis",
+  "url": "https://www.pexels.com/photo/scenic-wilmington-riverfront-holiday-decor-29753605/",
+  "alt": "Festively decorated Wilmington riverfront with holiday lights and bows along the walkway."
+ },
+ "alexandria": {
+  "query": "Alexandria Virginia old town",
+  "id": 34067900,
+  "photographer": "Jason Gooljar",
+  "url": "https://www.pexels.com/photo/serene-view-of-boats-at-dyke-marsh-34067900/",
+  "alt": "Tranquil scene of sailboats anchored at Dyke Marsh Wildlife Preserve, Alexandria."
+ },
+ "buffalo": {
+  "query": "Buffalo New York",
+  "id": 38703535,
+  "photographer": "Bill F",
+  "url": "https://www.pexels.com/photo/aerial-view-of-buffalo-harbor-and-waterfront-38703535/",
+  "alt": "Aerial view of Buffalo waterfront marina and cityscape, showcasing boats, green spaces, and urban environment."
+ },
+ "kalamazoo": {
+  "query": "Kalamazoo Michigan",
+  "id": 14984806,
+  "photographer": "Lynda Sanchez",
+  "url": "https://www.pexels.com/photo/neon-of-theater-14984806/",
+  "alt": "State Theatre facade in Kalamazoo with marquee announcing event."
+ },
+ "lynchburg": {
+  "query": "Lynchburg Virginia",
+  "id": 253924,
+  "photographer": "Andrea",
+  "url": "https://www.pexels.com/photo/view-of-waterfall-253924/",
+  "alt": "Beautiful waterfall cascading over a stone wall surrounded by fall foliage in Lynchburg, Virginia."
+ },
+ "martinez": {
+  "query": "Martinez California",
+  "id": 30892011,
+  "photographer": "Bill Silveira",
+  "url": "https://www.pexels.com/photo/amtrak-train-on-scenic-martinez-railway-30892011/",
+  "alt": "Amtrak train traveling through Martinez with picturesque hills in the background."
+ },
+ "st-louis": {
+  "query": "Gateway Arch St. Louis",
+  "id": 34204551,
+  "photographer": "James L",
+  "url": "https://www.pexels.com/photo/silhouetted-tourists-at-gateway-arch-in-st-louis-34204551/",
+  "alt": "Tourists enjoy an outdoor view of the Gateway Arch in sunny St. Louis, Missouri."
+ },
+ "west-palm-beach": {
+  "query": "West Palm Beach Florida",
+  "id": 10906970,
+  "photographer": "Lauren Hedges",
+  "url": "https://www.pexels.com/photo/people-walking-on-a-beach-under-a-blue-sky-10906970/",
+  "alt": "Beautiful sunny day at West Palm Beach with palm trees and ocean view."
+ },
+ "miami": {
+  "id": 13356920,
+  "photographer": "David Iglesias",
+  "url": "https://www.pexels.com/photo/13356920/",
+  "source": "Pexels"
+ },
+ "adventure/us-ne": {
+  "id": 36811123,
+  "photographer": "Bill Silveira",
+  "url": "https://www.pexels.com/photo/36811123/",
+  "source": "Pexels"
+ },
+ "adventure/us-fl": {
+  "id": 19705160,
+  "photographer": "Alain Garcia",
+  "url": "https://www.pexels.com/photo/19705160/",
+  "source": "Pexels"
+ },
+ "adventure/us-ca": {
+  "id": 32593516,
+  "photographer": "Bill Silveira",
+  "url": "https://www.pexels.com/photo/32593516/",
+  "source": "Pexels"
+ },
+ "hero/home-v3-us": {
+  "id": 30856553,
+  "photographer": "Bill Silveira",
+  "url": "https://www.pexels.com/photo/30856553/",
+  "source": "Pexels"
+ },
+ "portland-maine": {
+  "query": "Portland Maine lighthouse",
+  "id": 13029244,
+  "photographer": "Skyler Ewing",
+  "url": "https://www.pexels.com/photo/grayscale-photo-of-a-lighthouse-in-cape-elizabeth-maine-13029244/",
+  "alt": "Iconic Portland Head Light in grayscale, set against a dramatic sky and ocean view."
+ },
+ "oklahoma-city": {
+  "query": "Oklahoma City skyline",
+  "id": 19728944,
+  "photographer": "An Vuong",
+  "url": "https://www.pexels.com/photo/a-river-in-a-city-19728944/",
+  "alt": "View of Oklahoma City's canal featuring a footbridge, murals, and skyscrapers in the background."
+ },
+ "grand-rapids": {
+  "query": "Grand Rapids Michigan",
+  "id": 34081796,
+  "photographer": "fish socks",
+  "url": "https://www.pexels.com/photo/grand-rapids-blue-bridge-cityscape-skyline-view-34081796/",
+  "alt": "Scenic view of Grand Rapids skyline featuring the iconic Blue Bridge and modern architecture by the Grand River in Michigan."
+ },
+ "hartford": {
+  "query": "Hartford Connecticut",
+  "id": 7883961,
+  "photographer": "Garrison Gao",
+  "url": "https://www.pexels.com/photo/a-street-in-an-urban-area-7883961/",
+  "alt": "Street view of downtown Hartford, CT featuring modern and historic architecture with an overhead walkway."
+ },
+ "norfolk": {
+  "query": "Norfolk Virginia",
+  "id": 38933412,
+  "photographer": "Zion Smith",
+  "url": "https://www.pexels.com/photo/historic-sailboats-docked-in-norfolk-virginia-38933412/",
+  "alt": "Scenic view of historic sailboats moored in Norfolk, Virginia harbor under a blue sky."
+ },
+ "adventure/ld-zephyr": {
+  "id": 11165837,
+  "photographer": "Christina Russell",
+  "url": "https://www.pexels.com/photo/road-near-a-train-track-11165837/",
+  "alt": "Aerial view of railway tracks and road in the stunning landscape of Grand Junction, Colorado.",
+  "source": "Pexels"
+ },
+ "adventure/ld-window": {
+  "id": 13064249,
+  "photographer": "Erik Schereder",
+  "url": "https://www.pexels.com/photo/a-person-sitting-by-a-vehicle-window-with-a-view-of-mountain-13064249/",
+  "alt": "A person gazes out a vehicle window at a rugged mountain landscape, capturing solitude and wanderlust.",
+  "source": "Pexels"
+ }
+}
