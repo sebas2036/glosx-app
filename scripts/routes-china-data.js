@@ -109,9 +109,14 @@ const L6 = require('./routes-china-lote6');
 Object.assign(CITY, L6.CITY); Object.assign(STATION_JA, L6.STATION_JA); Object.assign(STATION_ZH, L6.STATION_ZH);
 LIST.push(...L6.LIST); Object.assign(HIGHLIGHT, L6.HIGHLIGHT); Object.assign(TIP, L6.TIP);
 
+// Lote 7 (28-nov-2026, consultado para el 10-dic-2026): 54 rutas más; trae su propio de/pt (DEPT)
+const L7 = require('./routes-china-lote7');
+Object.assign(CITY, L7.CITY); Object.assign(STATION_JA, L7.STATION_JA); Object.assign(STATION_ZH, L7.STATION_ZH);
+LIST.push(...L7.LIST); Object.assign(HIGHLIGHT, L7.HIGHLIGHT); Object.assign(TIP, L7.TIP);
+
 // Alemán y portugués (europeo): nombres de ciudad (por defecto el inglés) y highlight/tip traducidos
 // desde el texto en inglés (scripts/routes-china-de-pt.json, clave = frase en inglés → [de, pt])
-const DE_PT = require('./routes-china-de-pt.json');
+const DE_PT = Object.assign({}, require('./routes-china-de-pt.json'), L7.DEPT);
 const CITY_DE = { beijing: 'Peking', guangzhou: 'Kanton', nanjing: 'Nanking', hongkong: 'Hongkong' };
 const CITY_PT = { beijing: 'Pequim', shanghai: 'Xangai', guangzhou: 'Cantão', nanjing: 'Nanquim' };
 for (const [k, c] of Object.entries(CITY)) { c.de = CITY_DE[k] || c.en; c.pt = CITY_PT[k] || c.en; }

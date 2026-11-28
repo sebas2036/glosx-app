@@ -12,6 +12,11 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const { DATA, CITY, STATION_JA, STATION_ZH, LIST, KEY, HIGHLIGHT, TIP } = require('./routes-china-data');
 
+// Día consultado en Klook (cada lote guarda su fecha en china-klook.json; por defecto el 27-nov-2026)
+const DATES = {
+  '2026-11-27': { en: '27 November 2026', es: '27 de noviembre de 2026', fr: '27 novembre 2026', it: '27 novembre 2026', de: '27. November 2026', pt: '27 de novembro de 2026', zh: '2026 年 11 月 27 日', ja: '2026年11月27日' },
+  '2026-12-10': { en: '10 December 2026', es: '10 de diciembre de 2026', fr: '10 décembre 2026', it: '10 dicembre 2026', de: '10. Dezember 2026', pt: '10 de dezembro de 2026', zh: '2026 年 12 月 10 日', ja: '2026年12月10日' }
+};
 const LANGS = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ja', 'zh'];
 const HREFLANG = { en: 'en', es: 'es', fr: 'fr', de: 'de', it: 'it', pt: 'pt', ja: 'ja', zh: 'zh-Hans' };
 const SUFFIX = { en: '/', es: '/es/', fr: '/fr/', de: '/de/', it: '/it/', pt: '/pt/', ja: '/ja/', zh: '/zh/' };
@@ -146,6 +151,7 @@ function build([slug, a, b, photo]) {
   if (!d) throw new Error('Sin datos de Klook: ' + slug);
   const r = { slug, photo, fromKey: a, toKey: b, from: {}, to: {}, seo: {}, lead: {}, facts: {}, choose: {}, tips: {}, faqs: {} };
   const n = d.trains, m = d.fastest_min, f1 = d.first, f2 = d.last;
+  const DT = DATES[d.date || '2026-11-27'];
   for (const l of LANGS) {
     const A = CITY[a][l], B = CITY[b][l], S = short(m, l), L = long(m, l), ab = about(m, l);
     const SM = l === 'ja' ? STATION_JA : l === 'zh' ? STATION_ZH : null;
@@ -156,75 +162,89 @@ function build([slug, a, b, photo]) {
     if (l === 'en') {
       r.seo.en = { title: `${A} to ${B} by Train: ${S} on High-Speed Rail`, description: `${A} to ${B} by high-speed train in about ${S}. ${n} direct trains on the day we checked, first and last departures, stations and how to book.` };
       r.lead.en = `The fastest direct train from ${A} to ${B} takes about ${L}. ${hl}`;
-      r.facts.en = [`Fastest journey: about ${S}.`, `Direct trains on the day we checked (27 November 2026): ${n}.`, `First and last departure that day: ${f1} and ${f2}.`, `Main stations: ${st}.`];
+      r.facts.en = [`Fastest journey: about ${S}.`, `Direct trains on the day we checked (${DT.en}): ${n}.`, `First and last departure that day: ${f1} and ${f2}.`, `Main stations: ${st}.`];
       r.choose.en = `On the day we checked, Klook listed ${n} direct trains between ${A} and ${B}. The fastest takes about ${S}; others stop more often and take longer, so compare journey times before you book. ` + (many ? 'With this many trains, you can usually find a seat close to the time you want.' : 'There are fewer trains on this route, so book a few days ahead in busy periods such as Chinese New Year and the October Golden Week.');
       r.tips.en = [tip, 'Train tickets in mainland China are issued in the passenger’s name: you need your passport to book and to board.', 'Allow 30 to 45 minutes before departure for the security check and the ticket and ID check at the station.'];
       r.faqs.en = [[`How long is the train from ${A} to ${B}?`, `The fastest direct train takes about ${L}. Journey times vary from train to train, so check the one you book.`],
-        [`How many trains run between ${A} and ${B}?`, `On the day we checked (27 November 2026), Klook listed ${n} direct trains, the first at ${f1} and the last at ${f2}.`],
+        [`How many trains run between ${A} and ${B}?`, `On the day we checked (${DT.en}), Klook listed ${n} direct trains, the first at ${f1} and the last at ${f2}.`],
         ['Do I need my passport to take the train in China?', 'Yes. Tickets are issued in the passenger’s name and are checked against your passport at the station.']];
     } else if (l === 'es') {
       r.seo.es = { title: `Tren de ${A} a ${B}: ${S} en alta velocidad`, description: `De ${A} a ${B} en tren de alta velocidad en ${ab} ${S}. ${n} trenes directos el día consultado, primera y última salida, estaciones y cómo reservar.` };
       r.lead.es = `El tren directo más rápido de ${A} a ${B} tarda ${ab} ${L}. ${hl}`;
-      r.facts.es = [`Trayecto más rápido: ${ab} ${S}.`, `Trenes directos el día consultado (27 de noviembre de 2026): ${n}.`, `Primera y última salida ese día: ${f1} y ${f2}.`, `Estaciones principales: ${st}.`];
+      r.facts.es = [`Trayecto más rápido: ${ab} ${S}.`, `Trenes directos el día consultado (${DT.es}): ${n}.`, `Primera y última salida ese día: ${f1} y ${f2}.`, `Estaciones principales: ${st}.`];
       r.choose.es = `El día que consultamos, Klook mostraba ${n} trenes directos entre ${A} y ${B}. El más rápido tarda ${ab} ${S}; los demás paran más y tardan más, así que compara los tiempos antes de reservar. ` + (many ? 'Con tantos trenes, normalmente encuentras asiento cerca de la hora que quieres.' : 'En esta ruta hay menos trenes, así que reserva con unos días de antelación en épocas de mucha demanda, como el Año Nuevo chino y la Semana Dorada de octubre.');
       r.tips.es = [tip, 'En China continental los billetes de tren son nominales: necesitas el pasaporte para reservar y para subir al tren.', 'Llega entre 30 y 45 minutos antes de la salida para pasar el control de seguridad y el control de billete y documento en la estación.'];
       r.faqs.es = [[`¿Cuánto dura el tren de ${A} a ${B}?`, `El tren directo más rápido tarda ${ab} ${L}. La duración cambia según el tren, así que revisa la del que reserves.`],
-        [`¿Cuántos trenes hay entre ${A} y ${B}?`, `El día que consultamos (27 de noviembre de 2026), Klook mostraba ${n} trenes directos: el primero a las ${f1} y el último a las ${f2}.`],
+        [`¿Cuántos trenes hay entre ${A} y ${B}?`, `El día que consultamos (${DT.es}), Klook mostraba ${n} trenes directos: el primero a las ${f1} y el último a las ${f2}.`],
         ['¿Necesito el pasaporte para viajar en tren en China?', 'Sí. Los billetes son nominales y en la estación se comprueban con tu pasaporte.']];
     } else if (l === 'fr') {
       r.seo.fr = { title: `Train ${A} ${B} : ${S} en grande vitesse`, description: `De ${A} à ${B} en train à grande vitesse en environ ${S}. ${n} trains directs le jour consulté, premier et dernier départ, gares et réservation.` };
       r.lead.fr = `Le train direct le plus rapide de ${A} à ${B} met environ ${L}. ${hl}`;
-      r.facts.fr = [`Trajet le plus rapide : environ ${S}.`, `Trains directs le jour consulté (27 novembre 2026) : ${n}.`, `Premier et dernier départ ce jour-là : ${f1} et ${f2}.`, `Gares principales : ${st}.`];
+      r.facts.fr = [`Trajet le plus rapide : environ ${S}.`, `Trains directs le jour consulté (${DT.fr}) : ${n}.`, `Premier et dernier départ ce jour-là : ${f1} et ${f2}.`, `Gares principales : ${st}.`];
       r.choose.fr = `Le jour de notre recherche, Klook affichait ${n} trains directs entre ${A} et ${B}. Le plus rapide met environ ${S} ; les autres s’arrêtent plus souvent et sont plus longs, alors comparez les durées avant de réserver. ` + (many ? 'Avec autant de trains, on trouve en général une place proche de l’heure souhaitée.' : 'Les trains sont moins nombreux sur cet itinéraire : réservez quelques jours à l’avance en période chargée, comme le Nouvel An chinois et la Semaine d’or d’octobre.');
       r.tips.fr = [tip, 'En Chine continentale, les billets de train sont nominatifs : il faut votre passeport pour réserver et pour monter à bord.', 'Prévoyez 30 à 45 minutes avant le départ pour le contrôle de sécurité et le contrôle du billet et de l’identité en gare.'];
       r.faqs.fr = [[`Combien de temps dure le train de ${A} à ${B} ?`, `Le train direct le plus rapide met environ ${L}. La durée varie selon le train : vérifiez celle du train que vous réservez.`],
-        [`Combien de trains circulent entre ${A} et ${B} ?`, `Le jour de notre recherche (27 novembre 2026), Klook affichait ${n} trains directs, le premier à ${f1} et le dernier à ${f2}.`],
+        [`Combien de trains circulent entre ${A} et ${B} ?`, `Le jour de notre recherche (${DT.fr}), Klook affichait ${n} trains directs, le premier à ${f1} et le dernier à ${f2}.`],
         ['Faut-il un passeport pour prendre le train en Chine ?', 'Oui. Les billets sont nominatifs et sont contrôlés avec votre passeport en gare.']];
     } else if (l === 'it') {
       r.seo.it = { title: `Treno ${A} ${B}: ${S} in alta velocità`, description: `Da ${A} a ${B} in treno ad alta velocità in circa ${S}. ${n} treni diretti nel giorno consultato, prima e ultima partenza, stazioni e prenotazione.` };
       r.lead.it = `Il treno diretto più veloce da ${A} a ${B} impiega circa ${L}. ${hl}`;
-      r.facts.it = [`Viaggio più veloce: circa ${S}.`, `Treni diretti nel giorno consultato (27 novembre 2026): ${n}.`, `Prima e ultima partenza quel giorno: ${f1} e ${f2}.`, `Stazioni principali: ${st}.`];
+      r.facts.it = [`Viaggio più veloce: circa ${S}.`, `Treni diretti nel giorno consultato (${DT.it}): ${n}.`, `Prima e ultima partenza quel giorno: ${f1} e ${f2}.`, `Stazioni principali: ${st}.`];
       r.choose.it = `Nel giorno che abbiamo consultato, Klook mostrava ${n} treni diretti tra ${A} e ${B}. Il più veloce impiega circa ${S}; gli altri fermano più spesso e impiegano di più, quindi confronta i tempi prima di prenotare. ` + (many ? 'Con così tanti treni, di solito trovi posto vicino all’orario che preferisci.' : 'Su questa tratta i treni sono meno frequenti: prenota qualche giorno prima nei periodi di punta, come il Capodanno cinese e la Settimana d’oro di ottobre.');
       r.tips.it = [tip, 'Nella Cina continentale i biglietti del treno sono nominativi: serve il passaporto per prenotare e per salire a bordo.', 'Arriva 30-45 minuti prima della partenza per il controllo di sicurezza e il controllo di biglietto e documento in stazione.'];
       r.faqs.it = [[`Quanto dura il treno da ${A} a ${B}?`, `Il treno diretto più veloce impiega circa ${L}. La durata cambia da treno a treno, quindi controlla quella del treno che prenoti.`],
-        [`Quanti treni ci sono tra ${A} e ${B}?`, `Nel giorno che abbiamo consultato (27 novembre 2026), Klook mostrava ${n} treni diretti, il primo alle ${f1} e l’ultimo alle ${f2}.`],
+        [`Quanti treni ci sono tra ${A} e ${B}?`, `Nel giorno che abbiamo consultato (${DT.it}), Klook mostrava ${n} treni diretti, il primo alle ${f1} e l’ultimo alle ${f2}.`],
         ['Serve il passaporto per prendere il treno in Cina?', 'Sì. I biglietti sono nominativi e in stazione vengono controllati con il passaporto.']];
     } else if (l === 'de') {
       r.seo.de = { title: `Zug von ${A} nach ${B}: ${S} mit dem Schnellzug`, description: `Mit dem Schnellzug von ${A} nach ${B} in etwa ${S}. ${n} Direktzüge am geprüften Tag, erste und letzte Abfahrt, Bahnhöfe und Buchung.` };
       r.lead.de = `Der schnellste Direktzug von ${A} nach ${B} braucht etwa ${L}. ${hl}`;
-      r.facts.de = [`Schnellste Fahrt: etwa ${S}.`, `Direktzüge am geprüften Tag (27. November 2026): ${n}.`, `Erste und letzte Abfahrt an diesem Tag: ${f1} und ${f2}.`, `Wichtigste Bahnhöfe: ${st}.`];
+      r.facts.de = [`Schnellste Fahrt: etwa ${S}.`, `Direktzüge am geprüften Tag (${DT.de}): ${n}.`, `Erste und letzte Abfahrt an diesem Tag: ${f1} und ${f2}.`, `Wichtigste Bahnhöfe: ${st}.`];
       r.choose.de = `An dem Tag, den wir geprüft haben, zeigte Klook ${n} Direktzüge zwischen ${A} und ${B}. Der schnellste braucht etwa ${S}; andere halten öfter und brauchen länger, also vergleiche die Fahrzeiten vor der Buchung. ` + (many ? 'Bei so vielen Zügen findest du meist einen Platz nahe deiner Wunschzeit.' : 'Auf dieser Strecke fahren weniger Züge, also buche in Stoßzeiten wie dem chinesischen Neujahr und der Goldenen Woche im Oktober ein paar Tage im Voraus.');
       r.tips.de = [tip, 'Zugtickets in Festlandchina sind personalisiert: Du brauchst deinen Reisepass zum Buchen und zum Einsteigen.', 'Plane 30 bis 45 Minuten vor der Abfahrt für die Sicherheitskontrolle und die Ticket- und Ausweiskontrolle im Bahnhof ein.'];
       r.faqs.de = [[`Wie lange dauert die Zugfahrt von ${A} nach ${B}?`, `Der schnellste Direktzug braucht etwa ${L}. Die Fahrzeit ist je nach Zug unterschiedlich, also prüfe die deines Zuges.`],
-        [`Wie viele Züge fahren zwischen ${A} und ${B}?`, `An dem Tag, den wir geprüft haben (27. November 2026), zeigte Klook ${n} Direktzüge, den ersten um ${f1} und den letzten um ${f2}.`],
+        [`Wie viele Züge fahren zwischen ${A} und ${B}?`, `An dem Tag, den wir geprüft haben (${DT.de}), zeigte Klook ${n} Direktzüge, den ersten um ${f1} und den letzten um ${f2}.`],
         ['Brauche ich in China einen Reisepass für die Zugfahrt?', 'Ja. Die Tickets sind auf den Namen des Fahrgasts ausgestellt und werden im Bahnhof mit deinem Reisepass abgeglichen.']];
     } else if (l === 'pt') {
       r.seo.pt = { title: `Comboio de ${A} para ${B}: ${S} em alta velocidade`, description: `De ${A} para ${B} em comboio de alta velocidade em cerca de ${S}. ${n} comboios diretos no dia consultado, primeira e última partida, estações e reserva.` };
       r.lead.pt = `O comboio direto mais rápido de ${A} para ${B} demora cerca de ${L}. ${hl}`;
-      r.facts.pt = [`Viagem mais rápida: cerca de ${S}.`, `Comboios diretos no dia consultado (27 de novembro de 2026): ${n}.`, `Primeira e última partida nesse dia: ${f1} e ${f2}.`, `Estações principais: ${st}.`];
+      r.facts.pt = [`Viagem mais rápida: cerca de ${S}.`, `Comboios diretos no dia consultado (${DT.pt}): ${n}.`, `Primeira e última partida nesse dia: ${f1} e ${f2}.`, `Estações principais: ${st}.`];
       r.choose.pt = `No dia que consultámos, a Klook mostrava ${n} comboios diretos entre ${A} e ${B}. O mais rápido demora cerca de ${S}; os outros param mais vezes e demoram mais, por isso compare os tempos de viagem antes de reservar. ` + (many ? 'Com tantos comboios, normalmente encontra lugar perto da hora que pretende.' : 'Há menos comboios nesta rota, por isso reserve com alguns dias de antecedência em épocas de muita procura, como o Ano Novo Chinês e a Semana Dourada de outubro.');
       r.tips.pt = [tip, 'Na China continental, os bilhetes de comboio são nominativos: precisa do passaporte para reservar e para embarcar.', 'Chegue 30 a 45 minutos antes da partida para o controlo de segurança e a verificação do bilhete e do documento na estação.'];
       r.faqs.pt = [[`Quanto tempo demora o comboio de ${A} para ${B}?`, `O comboio direto mais rápido demora cerca de ${L}. A duração varia de comboio para comboio, por isso confirme a do comboio que reservar.`],
-        [`Quantos comboios há entre ${A} e ${B}?`, `No dia que consultámos (27 de novembro de 2026), a Klook mostrava ${n} comboios diretos, o primeiro às ${f1} e o último às ${f2}.`],
+        [`Quantos comboios há entre ${A} e ${B}?`, `No dia que consultámos (${DT.pt}), a Klook mostrava ${n} comboios diretos, o primeiro às ${f1} e o último às ${f2}.`],
         ['Preciso do passaporte para andar de comboio na China?', 'Sim. Os bilhetes são nominativos e são verificados com o seu passaporte na estação.']];
     } else if (l === 'zh') {
       r.seo.zh = { title: `${A}到${B}火车：最快${S}，每天${n}班`, description: `乘高铁从${A}到${B}，最快约${S}。查询当天有${n}班直达列车，附首末班时间、车站和 Klook 订票方法。` };
       r.lead.zh = `从${A}到${B}的直达列车最快约${L}。${hl}`;
-      r.facts.zh = [`最快行程：约${S}`, `查询当天（2026 年 11 月 27 日）的直达列车：${n} 班`, `当天首班和末班：${f1} 和 ${f2}`, `主要车站：${st}`];
+      r.facts.zh = [`最快行程：约${S}`, `查询当天（${DT.zh}）的直达列车：${n} 班`, `当天首班和末班：${f1} 和 ${f2}`, `主要车站：${st}`];
       r.choose.zh = `我们查询的那天，Klook 上显示${A}和${B}之间有 ${n} 班直达列车。最快约${S}；其他车次停站更多、用时更长，订票前请比较一下时长。` + (many ? '车次很多，一般都能找到接近你想要时间的座位。' : '这条线路车次不多，春节和十一黄金周等高峰期请提前几天预订。');
       r.tips.zh = [tip, '中国内地火车票实行实名制：购票和乘车都需要护照。', '车站有安检和验票、验证件，请在发车前 30 到 45 分钟到达。'];
       r.faqs.zh = [[`从${A}到${B}坐火车要多久？`, `直达列车最快约${L}。不同车次用时不同，请查看你所订车次的时长。`],
-        [`${A}和${B}之间每天有多少班火车？`, `我们查询的那天（2026 年 11 月 27 日），Klook 上显示有 ${n} 班直达列车，首班 ${f1}，末班 ${f2}。`],
+        [`${A}和${B}之间每天有多少班火车？`, `我们查询的那天（${DT.zh}），Klook 上显示有 ${n} 班直达列车，首班 ${f1}，末班 ${f2}。`],
         ['在中国坐火车需要护照吗？', '需要。车票实行实名制，在车站会核对你的护照。']];
     } else {
       r.seo.ja = { title: `${A}から${B}への列車｜最速${S}・1日${n}本`, description: `${A}から${B}まで高速鉄道で最速約${S}。調査日の直通列車${n}本、始発と最終の時刻、発着駅、Klookでの予約方法をまとめました。` };
       r.lead.ja = `${A}から${B}までの直通列車は、最速で約${L}です。${hl}`;
-      r.facts.ja = [`最速の所要時間：約${S}`, `調査日（2026年11月27日）の直通列車：${n}本`, `その日の始発と最終：${f1}・${f2}`, `主な発着駅：${st}`];
+      r.facts.ja = [`最速の所要時間：約${S}`, `調査日（${DT.ja}）の直通列車：${n}本`, `その日の始発と最終：${f1}・${f2}`, `主な発着駅：${st}`];
       r.choose.ja = `調査日には、Klookで${A}〜${B}間の直通列車が${n}本表示されていました。最速は約${S}で、ほかの列車は停車駅が多く時間がかかるため、予約前に所要時間を比べましょう。` + (many ? '本数が多いので、希望の時間に近い列車を見つけやすい区間です。' : '本数は多くないので、春節や10月の国慶節の連休など混雑期は数日前までに予約しておくと安心です。');
       r.tips.ja = [tip, '中国本土の列車のきっぷは実名制です。予約にも乗車にもパスポートが必要です。', '駅では保安検査ときっぷ・身分証の確認があるため、出発の30〜45分前には着いておきましょう。'];
       r.faqs.ja = [[`${A}から${B}まで列車で何時間？`, `直通列車の最速は約${L}です。列車によって所要時間が異なるので、予約する列車の時間を確認してください。`],
-        [`${A}〜${B}間の列車は1日何本？`, `調査日（2026年11月27日）には、Klookで直通列車が${n}本表示され、始発は${f1}、最終は${f2}でした。`],
+        [`${A}〜${B}間の列車は1日何本？`, `調査日（${DT.ja}）には、Klookで直通列車が${n}本表示され、始発は${f1}、最終は${f2}でした。`],
         ['中国で列車に乗るのにパスポートは必要？', 'はい。きっぷは実名制で、駅でパスポートと照合されます。']];
+    }
+    // Un solo tren directo el día consultado (p. ej. Pekín–Hong Kong): textos en singular, sin "primera y última"
+    if (n === 1) {
+      const ONE = {
+        en: [`Departure that day: ${f1}.`, `On the day we checked, Klook listed a single direct train between ${A} and ${B}, taking about ${S}. With only one train, book a few days ahead, especially around Chinese New Year and the October Golden Week.`, `On the day we checked (${DT.en}), Klook listed one direct train, leaving at ${f1}.`, `${A} to ${B} by high-speed train in about ${S}. One direct train on the day we checked, its departure time, stations and how to book.`],
+        es: [`Salida ese día: ${f1}.`, `El día que consultamos, Klook mostraba un solo tren directo entre ${A} y ${B}, que tarda ${ab} ${S}. Al haber un único tren, reserva con unos días de antelación, sobre todo en el Año Nuevo chino y la Semana Dorada de octubre.`, `El día que consultamos (${DT.es}), Klook mostraba un tren directo, que salía a las ${f1}.`, `De ${A} a ${B} en tren de alta velocidad en ${ab} ${S}. Un tren directo el día consultado, su hora de salida, estaciones y cómo reservar.`],
+        fr: [`Départ ce jour-là : ${f1}.`, `Le jour de notre recherche, Klook affichait un seul train direct entre ${A} et ${B}, qui met environ ${S}. Avec un seul train, réservez quelques jours à l’avance, surtout autour du Nouvel An chinois et de la Semaine d’or d’octobre.`, `Le jour de notre recherche (${DT.fr}), Klook affichait un train direct, au départ à ${f1}.`, `De ${A} à ${B} en train à grande vitesse en environ ${S}. Un train direct le jour consulté, son heure de départ, les gares et la réservation.`],
+        it: [`Partenza quel giorno: ${f1}.`, `Nel giorno che abbiamo consultato, Klook mostrava un solo treno diretto tra ${A} e ${B}, che impiega circa ${S}. Con un solo treno, prenota qualche giorno prima, soprattutto per il Capodanno cinese e la Settimana d’oro di ottobre.`, `Nel giorno che abbiamo consultato (${DT.it}), Klook mostrava un treno diretto, in partenza alle ${f1}.`, `Da ${A} a ${B} in treno ad alta velocità in circa ${S}. Un treno diretto nel giorno consultato, orario di partenza, stazioni e prenotazione.`],
+        de: [`Abfahrt an diesem Tag: ${f1}.`, `An dem Tag, den wir geprüft haben, zeigte Klook nur einen Direktzug zwischen ${A} und ${B}, der etwa ${S} braucht. Bei nur einem Zug buche ein paar Tage im Voraus, vor allem um das chinesische Neujahr und die Goldene Woche im Oktober.`, `An dem Tag, den wir geprüft haben (${DT.de}), zeigte Klook einen Direktzug mit Abfahrt um ${f1}.`, `Mit dem Schnellzug von ${A} nach ${B} in etwa ${S}. Ein Direktzug am geprüften Tag, seine Abfahrtszeit, Bahnhöfe und Buchung.`],
+        pt: [`Partida nesse dia: ${f1}.`, `No dia que consultámos, a Klook mostrava um único comboio direto entre ${A} e ${B}, que demora cerca de ${S}. Com um só comboio, reserve com alguns dias de antecedência, sobretudo no Ano Novo Chinês e na Semana Dourada de outubro.`, `No dia que consultámos (${DT.pt}), a Klook mostrava um comboio direto, com partida às ${f1}.`, `De ${A} para ${B} em comboio de alta velocidade em cerca de ${S}. Um comboio direto no dia consultado, a hora de partida, estações e reserva.`],
+        zh: [`当天发车时间：${f1}`, `我们查询的那天，Klook 上显示${A}和${B}之间只有一班直达列车，约${S}。只有一班车，请提前几天预订，春节和十一黄金周期间尤其如此。`, `我们查询的那天（${DT.zh}），Klook 上显示有一班直达列车，${f1} 发车。`, `乘高铁从${A}到${B}，最快约${S}。查询当天有一班直达列车，附发车时间、车站和 Klook 订票方法。`],
+        ja: [`その日の発車時刻：${f1}`, `調査日には、Klookで${A}〜${B}間の直通列車は1本だけ表示され、所要時間は約${S}でした。1本しかないので、春節や10月の国慶節の連休などは特に、数日前までに予約しておきましょう。`, `調査日（${DT.ja}）には、Klookで直通列車が1本表示され、${f1}発でした。`, `${A}から${B}まで高速鉄道で約${S}。調査日の直通列車1本の発車時刻、発着駅、Klookでの予約方法をまとめました。`]
+      }[l];
+      r.facts[l][2] = ONE[0]; r.choose[l] = ONE[1]; r.faqs[l][1][1] = ONE[2]; r.seo[l].description = ONE[3];
     }
   }
   for (const l of LANGS) {

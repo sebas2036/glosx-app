@@ -65,7 +65,9 @@
     "quanzhou": "1a94b347-092c-4c35-8cc4-f9f398940e34",
     "jiayuguan": "51904962-a43b-4cc8-985e-a81263b4219e",
     "changzhou": "be8f2f24-aba4-4c07-b5ed-80d40191a7fd",
-    "yinchuan": "e0f3e055-6720-40ee-b243-7b07c7b52a06"
+    "yinchuan": "e0f3e055-6720-40ee-b243-7b07c7b52a06",
+    "dunhuang": "02e870cf-6ad6-441e-95c8-ea37e1f30fcf",
+    "emeishan": "3569b7bf-1e39-496e-aab3-a9bd301b7be0"
   },
   "routes": {
     "beijing-shanghai": {
@@ -858,6 +860,438 @@
       "first": "05:25",
       "last": "21:39",
       "main": "Xi'an North → Yinchuan"
+    },
+    "beijing-shenzhen": {
+      "trains": 8,
+      "fastest_min": 470,
+      "first": "03:49",
+      "last": "23:53",
+      "main": "Beijing West → Shenzhen North",
+      "date": "2026-12-10"
+    },
+    "beijing-changsha": {
+      "trains": 36,
+      "fastest_min": 310,
+      "first": "05:19",
+      "last": "22:29",
+      "main": "Beijing West → Changsha South",
+      "date": "2026-12-10"
+    },
+    "beijing-fuzhou": {
+      "trains": 12,
+      "fastest_min": 471,
+      "first": "06:56",
+      "last": "16:21",
+      "main": "Beijing South → Fuzhou",
+      "date": "2026-12-10"
+    },
+    "beijing-guiyang": {
+      "trains": 9,
+      "fastest_min": 499,
+      "first": "07:05",
+      "last": "22:29",
+      "main": "Beijing West → Guiyang North",
+      "date": "2026-12-10"
+    },
+    "beijing-hongkong": {
+      "trains": 1,
+      "fastest_min": 492,
+      "first": "10:00",
+      "last": "10:00",
+      "main": "Beijing West → Hong Kong West Kowloon",
+      "date": "2026-12-10"
+    },
+    "beijing-huangshan": {
+      "trains": 12,
+      "fastest_min": 317,
+      "first": "06:56",
+      "last": "14:41",
+      "main": "Beijing South → Huangshan North",
+      "date": "2026-12-10"
+    },
+    "beijing-kunming": {
+      "trains": 4,
+      "fastest_min": 649,
+      "first": "07:05",
+      "last": "22:29",
+      "main": "Beijing West → Kunming South",
+      "date": "2026-12-10"
+    },
+    "beijing-lanzhou": {
+      "trains": 16,
+      "fastest_min": 403,
+      "first": "06:09",
+      "last": "19:48",
+      "main": "Beijing West → Lanzhou West",
+      "date": "2026-12-10"
+    },
+    "beijing-nanchang": {
+      "trains": 17,
+      "fastest_min": 352,
+      "first": "03:49",
+      "last": "23:53",
+      "main": "Beijing West → Nanchang West",
+      "date": "2026-12-10"
+    },
+    "beijing-ningbo": {
+      "trains": 6,
+      "fastest_min": 318,
+      "first": "07:04",
+      "last": "16:17",
+      "main": "Beijing South → Ningbo",
+      "date": "2026-12-10"
+    },
+    "beijing-suzhou": {
+      "trains": 26,
+      "fastest_min": 248,
+      "first": "06:30",
+      "last": "19:36",
+      "main": "Beijing South → Suzhou North",
+      "date": "2026-12-10"
+    },
+    "beijing-wuxi": {
+      "trains": 22,
+      "fastest_min": 235,
+      "first": "06:18",
+      "last": "19:10",
+      "main": "Beijing South → Wuxi East",
+      "date": "2026-12-10"
+    },
+    "beijing-xiamen": {
+      "trains": 7,
+      "fastest_min": 640,
+      "first": "08:46",
+      "last": "16:34",
+      "main": "Beijing South → Xiamen North",
+      "date": "2026-12-10"
+    },
+    "beijing-xining": {
+      "trains": 6,
+      "fastest_min": 573,
+      "first": "06:09",
+      "last": "19:48",
+      "main": "Beijing West → Xining",
+      "date": "2026-12-10"
+    },
+    "chengdu-guangzhou": {
+      "trains": 19,
+      "fastest_min": 414,
+      "first": "07:00",
+      "last": "19:30",
+      "main": "Chengdu East → Guangzhou South",
+      "date": "2026-12-10"
+    },
+    "chengdu-shenzhen": {
+      "trains": 3,
+      "fastest_min": 470,
+      "first": "10:41",
+      "last": "19:30",
+      "main": "Chengdu East → Shenzhen North",
+      "date": "2026-12-10"
+    },
+    "chongqing-shanghai": {
+      "trains": 22,
+      "fastest_min": 541,
+      "first": "07:08",
+      "last": "20:26",
+      "main": "Chongqing West → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "chongqing-shenzhen": {
+      "trains": 9,
+      "fastest_min": 388,
+      "first": "06:51",
+      "last": "23:59",
+      "main": "Chongqing West → Shenzhen North",
+      "date": "2026-12-10"
+    },
+    "dali-guangzhou": {
+      "trains": 7,
+      "fastest_min": 565,
+      "first": "08:00",
+      "last": "11:52",
+      "main": "Dali → Guangzhou South",
+      "date": "2026-12-10"
+    },
+    "dali-lijiang": {
+      "trains": 7,
+      "fastest_min": 96,
+      "first": "07:00",
+      "last": "18:18",
+      "main": "Dali → Lijiang",
+      "date": "2026-12-10"
+    },
+    "fuzhou-guangzhou": {
+      "trains": 33,
+      "fastest_min": 256,
+      "first": "07:30",
+      "last": "18:24",
+      "main": "Fuzhou South → Guangzhou Xintang",
+      "date": "2026-12-10"
+    },
+    "fuzhou-shanghai": {
+      "trains": 43,
+      "fastest_min": 221,
+      "first": "06:41",
+      "last": "18:49",
+      "main": "Fuzhou → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "guangzhou-guiyang": {
+      "trains": 69,
+      "fastest_min": 206,
+      "first": "06:37",
+      "last": "18:10",
+      "main": "Guangzhou South → Longdongbao",
+      "date": "2026-12-10"
+    },
+    "guangzhou-hangzhou": {
+      "trains": 26,
+      "fastest_min": 322,
+      "first": "07:48",
+      "last": "20:30",
+      "main": "Guangzhou North → Hangzhou East",
+      "date": "2026-12-10"
+    },
+    "guangzhou-huangshan": {
+      "trains": 7,
+      "fastest_min": 293,
+      "first": "08:41",
+      "last": "15:25",
+      "main": "Guangzhou Xintang → Huangshan North",
+      "date": "2026-12-10"
+    },
+    "guangzhou-jinan": {
+      "trains": 14,
+      "fastest_min": 438,
+      "first": "06:51",
+      "last": "20:43",
+      "main": "Guangzhou Baiyun → Jinan West",
+      "date": "2026-12-10"
+    },
+    "guangzhou-lanzhou": {
+      "trains": 6,
+      "fastest_min": 600,
+      "first": "08:05",
+      "last": "19:11",
+      "main": "Guangzhou South → Lanzhou West",
+      "date": "2026-12-10"
+    },
+    "guangzhou-leshan": {
+      "trains": 5,
+      "fastest_min": 380,
+      "first": "06:37",
+      "last": "11:13",
+      "main": "Guangzhou South → Leshan",
+      "date": "2026-12-10"
+    },
+    "guangzhou-nanchang": {
+      "trains": 55,
+      "fastest_min": 198,
+      "first": "06:30",
+      "last": "23:15",
+      "main": "Guangzhou North → Nanchang West",
+      "date": "2026-12-10"
+    },
+    "guangzhou-nanjing": {
+      "trains": 5,
+      "fastest_min": 369,
+      "first": "06:18",
+      "last": "15:01",
+      "main": "Guangzhou South → Nanjing South",
+      "date": "2026-12-10"
+    },
+    "guangzhou-ningbo": {
+      "trains": 2,
+      "fastest_min": 644,
+      "first": "10:38",
+      "last": "10:54",
+      "main": "Guangzhou Xintang → Ningbo",
+      "date": "2026-12-10"
+    },
+    "guangzhou-qingdao": {
+      "trains": 10,
+      "fastest_min": 531,
+      "first": "06:18",
+      "last": "18:57",
+      "main": "Guangzhou South → Qingdao North",
+      "date": "2026-12-10"
+    },
+    "guangzhou-shijiazhuang": {
+      "trains": 17,
+      "fastest_min": 374,
+      "first": "07:22",
+      "last": "20:00",
+      "main": "Guangzhou South → Shijiazhuang",
+      "date": "2026-12-10"
+    },
+    "guangzhou-suzhou": {
+      "trains": 10,
+      "fastest_min": 417,
+      "first": "06:56",
+      "last": "15:25",
+      "main": "Guangzhou Xintang → Suzhou South",
+      "date": "2026-12-10"
+    },
+    "guangzhou-taiyuan": {
+      "trains": 4,
+      "fastest_min": 484,
+      "first": "07:17",
+      "last": "17:19",
+      "main": "Guangzhou South → Taiyuan South",
+      "date": "2026-12-10"
+    },
+    "guangzhou-xian": {
+      "trains": 14,
+      "fastest_min": 421,
+      "first": "08:05",
+      "last": "19:11",
+      "main": "Guangzhou South → Xi'an North",
+      "date": "2026-12-10"
+    },
+    "guangzhou-zhangjiajie": {
+      "trains": 13,
+      "fastest_min": 321,
+      "first": "07:27",
+      "last": "16:00",
+      "main": "Guangzhou North → Zhangjiajie West",
+      "date": "2026-12-10"
+    },
+    "guangzhou-zhengzhou": {
+      "trains": 48,
+      "fastest_min": 294,
+      "first": "06:51",
+      "last": "20:43",
+      "main": "Guangzhou South → Zhengzhou East",
+      "date": "2026-12-10"
+    },
+    "guilin-shanghai": {
+      "trains": 5,
+      "fastest_min": 445,
+      "first": "04:00",
+      "last": "19:16",
+      "main": "Guilin → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "guiyang-shanghai": {
+      "trains": 18,
+      "fastest_min": 417,
+      "first": "02:36",
+      "last": "20:38",
+      "main": "Guiyang East → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "hongkong-shanghai": {
+      "trains": 2,
+      "fastest_min": 488,
+      "first": "11:35",
+      "last": "13:58",
+      "main": "Hong Kong West Kowloon → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "jinan-shanghai": {
+      "trains": 71,
+      "fastest_min": 181,
+      "first": "02:45",
+      "last": "20:50",
+      "main": "Jinan West → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "kunming-shanghai": {
+      "trains": 6,
+      "fastest_min": 575,
+      "first": "07:12",
+      "last": "23:40",
+      "main": "Kunming South → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "lanzhou-shanghai": {
+      "trains": 16,
+      "fastest_min": 606,
+      "first": "07:17",
+      "last": "23:00",
+      "main": "Lanzhou West → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "nanning-shanghai": {
+      "trains": 8,
+      "fastest_min": 570,
+      "first": "07:10",
+      "last": "22:38",
+      "main": "Nanning East → Shanghai Hongqiao",
+      "date": "2026-12-10"
+    },
+    "shanghai-shenyang": {
+      "trains": 12,
+      "fastest_min": 475,
+      "first": "07:47",
+      "last": "20:15",
+      "main": "Shanghai Hongqiao → Shenyang North",
+      "date": "2026-12-10"
+    },
+    "shanghai-shijiazhuang": {
+      "trains": 13,
+      "fastest_min": 300,
+      "first": "07:32",
+      "last": "18:00",
+      "main": "Shanghai Hongqiao → Shijiazhuang",
+      "date": "2026-12-10"
+    },
+    "shanghai-taiyuan": {
+      "trains": 12,
+      "fastest_min": 418,
+      "first": "06:43",
+      "last": "18:00",
+      "main": "Shanghai Hongqiao → Taiyuan",
+      "date": "2026-12-10"
+    },
+    "shanghai-tianjin": {
+      "trains": 40,
+      "fastest_min": 239,
+      "first": "06:31",
+      "last": "21:15",
+      "main": "Shanghai Hongqiao → Tianjin South",
+      "date": "2026-12-10"
+    },
+    "shanghai-zhangjiajie": {
+      "trains": 4,
+      "fastest_min": 435,
+      "first": "07:04",
+      "last": "16:34",
+      "main": "Shanghai Hongqiao → Zhangjiajie West",
+      "date": "2026-12-10"
+    },
+    "shanghai-zhengzhou": {
+      "trains": 75,
+      "fastest_min": 222,
+      "first": "06:09",
+      "last": "20:45",
+      "main": "Shanghai Hongqiao → Zhengzhou East",
+      "date": "2026-12-10"
+    },
+    "shijiazhuang-taiyuan": {
+      "trains": 87,
+      "fastest_min": 75,
+      "first": "04:14",
+      "last": "22:44",
+      "main": "Shijiazhuang → Taiyuan",
+      "date": "2026-12-10"
+    },
+    "dunhuang-lanzhou": {
+      "trains": 5,
+      "fastest_min": 438,
+      "first": "07:30",
+      "last": "20:30",
+      "main": "Dunhuang → Lanzhou West",
+      "date": "2026-12-10"
+    },
+    "emeishan-leshan": {
+      "trains": 24,
+      "fastest_min": 11,
+      "first": "06:46",
+      "last": "20:31",
+      "main": "Emei → Leshan",
+      "date": "2026-12-10"
     }
   },
   "_lote2": "Lote 2 (20 rutas) re-medido 14-nov-2026 con el parser corregido (cuenta trenes \"N mins\" y \"Sold out\"), búsqueda Klook para el 27-nov-2026",
@@ -865,5 +1299,6 @@
   "_remedicion": "14-nov-2026: las 53 rutas re-medidas con el parser que cuenta trenes que llegan al día siguiente (+1); se actualizan trenes/primera/última, la duración más rápida publicada se mantiene",
   "_lote4": "Lote 4 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (qufu = estación Qufu East)",
   "_lote5": "Lote 5 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (Chaozhou descartada: sin trenes directos en Klook)",
-  "_lote6": "Lote 6 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (Beijing–Chengde: Klook llama \"Chengdu South\" a Chengde South)"
+  "_lote6": "Lote 6 (20 rutas) verificado 14-nov-2026 en Klook para el 27-nov-2026 (Beijing–Chengde: Klook llama \"Chengdu South\" a Chengde South)",
+  "_lote7": "Lote 7 (54 rutas) verificado 28-nov-2026 en Klook para el 10-dic-2026 (campo date). trains = todos los trenes directos listados; first/last = primera y última salida de todos; fastest_min y main = el tren de alta velocidad (G/D/C) más rápido. Se mantienen las rutas con al menos 2 trenes de alta velocidad (más Pekín–Hong Kong, 1 diario). Guangzhou–Guiyang: el más rápido llega a la estación Longdongbao (nombre tal cual en Klook). Descartadas: Lhasa (sin trenes en Klook), Jiuzhaigou (sin estación vendible), pares sin alta velocidad o con un solo tren."
 }
