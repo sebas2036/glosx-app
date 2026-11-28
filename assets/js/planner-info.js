@@ -61,6 +61,9 @@
     ja: { eye: 'ルートガイド', sub: '{r}：時刻表・駅・ホテル・旅のコツ', meta: '始発 {f}・直通 1日{n}本' },
     zh: { eye: '线路指南', sub: '{r}：时刻、车站、酒店和建议', meta: '首班 {f} · 每天 {n} 班直达' }
   };
+  // Un solo tren al día: sin "1 trenes"
+  var GC_ONE = { en: 'First train {f} · 1 direct train a day', es: 'Primer tren {f} · 1 tren directo al día', fr: 'Premier train {f} · 1 train direct par jour',
+    it: 'Primo treno {f} · 1 treno diretto al giorno', de: 'Erster Zug {f} · 1 Direktzug pro Tag', pt: 'Primeiro comboio {f} · 1 comboio direto por dia' };
   // Guías de EE. UU.: no traen hotel
   var GC_US = { en: '{r}: timetable, stations and tips', es: '{r}: horarios, estaciones y consejos', fr: '{r} : horaires, gares et conseils', it: '{r}: orari, stazioni e consigli',
     de: '{r}: Fahrplan, Bahnhöfe und Tipps', pt: '{r}: horários, estações e dicas', ja: '{r}：時刻表・駅・旅のコツ', zh: '{r}：时刻、车站和建议' };
@@ -97,7 +100,7 @@
       if (!own) return;   // los horarios de otra ruta no se muestran
       var fwd = !fromSlug || slug.replace(/[^a-z]/g, '').indexOf(String(fromSlug).toLowerCase().replace(/[^a-z]/g, '').slice(0, 4)) === 0;
       var h = fwd ? c.f : c.r;
-      if (h) { var me = a.querySelector('.pi-gcard-meta'); me.textContent = t.meta.replace('{f}', h[0]).replace('{n}', h[1]); me.hidden = false; }
+      if (h) { var me = a.querySelector('.pi-gcard-meta'); me.textContent = (h[1] === 1 && GC_ONE[l] ? GC_ONE[l] : t.meta).replace('{f}', h[0]).replace('{n}', h[1]); me.hidden = false; }
     });
     return a;
   };
